@@ -1,0 +1,19 @@
+{
+  "id" : "ajcc7_year_validation",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC7 Year Validation",
+  "title" : "AJCC7 Year Validation",
+  "notes" : "",
+  "last_modified" : "2015-01-21T10:35:58.716Z",
+  "definition" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "cs_input_version_original",
+    "name" : "CS Version Input Original",
+    "type" : "INPUT"
+  } ],
+  "rows" : [ [ "2010-{{ctx_year_current}}", "*" ], [ "", "020000-999999" ] ]
+}

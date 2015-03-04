@@ -1,0 +1,21 @@
+{
+  "id" : "schema_selection_endocrine_other",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection EndocrineOther",
+  "title" : "Schema selection for EndocrineOther",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C379,C750,C754-C755,C758-C759", "8000-9136,9141-9582,9700-9701", "MATCH" ] ]
+}

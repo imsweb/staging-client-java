@@ -1,0 +1,21 @@
+{
+  "id" : "schema_selection_lymphoma_ocular_adnexa",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection LymphomaOcularAdnexa",
+  "title" : "Schema selection for LymphomaOcularAdnexa",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C441,C690,C695-C696", "9590-9699,9702-9738,9811-9818,9820-9837", "MATCH" ] ]
+}

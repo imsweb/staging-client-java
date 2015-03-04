@@ -1,0 +1,1014 @@
+{
+  "id" : "cns_other",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "CNSOther",
+  "title" : "Other Parts of Central Nervous System",
+  "notes" : "DISCONTINUED SITE-SPECIFIC FACTORS:  SSF2, SSF3, SSF7, SSF8\n\nC70.1 - Spinal meninges\nC70.9 - Meninges, NOS\nC72.0 - Spinal cord\nC72.1 - Cauda equina\nC72.2 - Olfactory nerve\nC72.3 - Optic nerve\nC72.4 - Acoustic nerve\nC72.5 - Cranial nerve, NOS\nC72.8 - Overlapping lesion of brain and central nervous system\nC72.9 - Nervous system, NOS\n\n**Note 1**: This schema is compatible with the AJCC fourth edition TNM for spinal cord. \n\n**Note 2**: AJCC does not define TNM staging for this site in the sixth or seventh editions.",
+  "schema_num" : 144,
+  "schema_selection_table" : "schema_selection_cns_other",
+  "initial_context" : [ {
+    "key" : "schema_number",
+    "value" : "144"
+  }, {
+    "key" : "csver_derived",
+    "value" : "020550"
+  } ],
+  "inputs" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "cs_year_validation",
+    "used_for_staging" : true
+  }, {
+    "key" : "cs_input_version_original",
+    "name" : "CS Version Input Original",
+    "naaccr_item" : 2935,
+    "table" : "cs_input_version_original",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior ICD-O-3",
+    "naaccr_item" : 523,
+    "table" : "behavior",
+    "used_for_staging" : false
+  }, {
+    "key" : "grade",
+    "name" : "Grade",
+    "naaccr_item" : 440,
+    "table" : "grade",
+    "used_for_staging" : false
+  }, {
+    "key" : "age_dx",
+    "name" : "Age at Diagnosis",
+    "naaccr_item" : 230,
+    "used_for_staging" : false
+  }, {
+    "key" : "lvi",
+    "name" : "Lymph-vascular Invasion",
+    "naaccr_item" : 1182,
+    "default" : "8",
+    "table" : "lvi",
+    "used_for_staging" : false
+  }, {
+    "key" : "size",
+    "name" : "CS Tumor Size",
+    "naaccr_item" : 2800,
+    "default" : "999",
+    "table" : "size_apa",
+    "used_for_staging" : false
+  }, {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "naaccr_item" : 2810,
+    "default" : "999",
+    "table" : "extension_bcd",
+    "used_for_staging" : true
+  }, {
+    "key" : "extension_eval",
+    "name" : "CS Tumor Size/Ext Eval",
+    "naaccr_item" : 2820,
+    "default" : "9",
+    "table" : "extension_eval_cna",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes",
+    "name" : "CS Lymph Nodes",
+    "naaccr_item" : 2830,
+    "default" : "988",
+    "table" : "nodes_dna",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes_eval",
+    "name" : "CS Lymph Nodes Eval",
+    "naaccr_item" : 2840,
+    "default" : "9",
+    "table" : "nodes_eval_ena",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "default" : "99",
+    "table" : "nodes_pos_fna",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_exam",
+    "name" : "Regional Nodes Examined",
+    "naaccr_item" : 830,
+    "default" : "99",
+    "table" : "nodes_exam_gna",
+    "used_for_staging" : false
+  }, {
+    "key" : "mets",
+    "name" : "CS Mets at DX",
+    "naaccr_item" : 2850,
+    "default" : "99",
+    "table" : "mets_hpa",
+    "used_for_staging" : true
+  }, {
+    "key" : "mets_eval",
+    "name" : "CS Mets Eval",
+    "naaccr_item" : 2860,
+    "default" : "9",
+    "table" : "mets_eval_ina",
+    "used_for_staging" : true
+  }, {
+    "key" : "ssf1",
+    "name" : "World Health Organization (WHO) Grade Classification",
+    "naaccr_item" : 2880,
+    "default" : "988",
+    "table" : "ssf1_jpo",
+    "used_for_staging" : false,
+    "metadata" : [ "CCCR_III_COLLECTED_IN_CSV1", "NPCR_REQUIRED_BY_NPCR_2011_FORWARD", "COC_ALREADY_COLLECTED", "SEER_ALREADY_COLLECTED" ]
+  }, {
+    "key" : "ssf2",
+    "name" : "Ki-67/MIB-1 Labeling Index (LI): Brain",
+    "naaccr_item" : 2890,
+    "default" : "988",
+    "table" : "ssf2_kpl",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf3",
+    "name" : "Functional Neurologic Status - Karnofsky Performance Scale (KPS)",
+    "naaccr_item" : 2900,
+    "default" : "988",
+    "table" : "ssf3_lpm",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf4",
+    "name" : "Methylation of O6-Methylguanine-Methyltransferase (MGMT)",
+    "naaccr_item" : 2910,
+    "default" : "988",
+    "table" : "ssf4_mpn",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_CLINICALLY_SIGNIFICANT", "CCCR_IVB_COLLECT_IF_IN_CLINICAL_CHART" ]
+  }, {
+    "key" : "ssf5",
+    "name" : "Chromosome 1p: Loss of Heterozygosity (LOH)",
+    "naaccr_item" : 2920,
+    "default" : "988",
+    "table" : "ssf5_nph",
+    "used_for_staging" : false,
+    "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT" ]
+  }, {
+    "key" : "ssf6",
+    "name" : "Chromosome 19q: Loss of Heterozygosity (LOH)",
+    "naaccr_item" : 2930,
+    "default" : "988",
+    "table" : "ssf6_opf",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_CLINICALLY_SIGNIFICANT", "CCCR_IVB_COLLECT_IF_IN_CLINICAL_CHART" ]
+  }, {
+    "key" : "ssf7",
+    "name" : "Surgical Resection",
+    "naaccr_item" : 2861,
+    "default" : "988",
+    "table" : "ssf7_sfl",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf8",
+    "name" : "Unifocal vs Multifocal Tumor",
+    "naaccr_item" : 2862,
+    "default" : "988",
+    "table" : "ssf8_sql",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf9",
+    "name" : "CS Site-Specific Factor 9",
+    "naaccr_item" : 2863,
+    "default" : "988",
+    "table" : "ssf9_snd",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf10",
+    "name" : "CS Site-Specific Factor 10",
+    "naaccr_item" : 2864,
+    "default" : "988",
+    "table" : "ssf10_sne",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf11",
+    "name" : "CS Site-Specific Factor 11",
+    "naaccr_item" : 2865,
+    "default" : "988",
+    "table" : "ssf11_snf",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf12",
+    "name" : "CS Site-Specific Factor 12",
+    "naaccr_item" : 2866,
+    "default" : "988",
+    "table" : "ssf12_sng",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf13",
+    "name" : "CS Site-Specific Factor 13",
+    "naaccr_item" : 2867,
+    "default" : "988",
+    "table" : "ssf13_snh",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf14",
+    "name" : "CS Site-Specific Factor 14",
+    "naaccr_item" : 2868,
+    "default" : "988",
+    "table" : "ssf14_sni",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf15",
+    "name" : "CS Site-Specific Factor 15",
+    "naaccr_item" : 2869,
+    "default" : "988",
+    "table" : "ssf15_snj",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf16",
+    "name" : "CS Site-Specific Factor 16",
+    "naaccr_item" : 2870,
+    "default" : "988",
+    "table" : "ssf16_snk",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf17",
+    "name" : "CS Site-Specific Factor 17",
+    "naaccr_item" : 2871,
+    "default" : "988",
+    "table" : "ssf17_snl",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf18",
+    "name" : "CS Site-Specific Factor 18",
+    "naaccr_item" : 2872,
+    "default" : "988",
+    "table" : "ssf18_snm",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf19",
+    "name" : "CS Site-Specific Factor 19",
+    "naaccr_item" : 2873,
+    "default" : "988",
+    "table" : "ssf19_snn",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf20",
+    "name" : "CS Site-Specific Factor 20",
+    "naaccr_item" : 2874,
+    "default" : "988",
+    "table" : "ssf20_sno",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf21",
+    "name" : "CS Site-Specific Factor 21",
+    "naaccr_item" : 2875,
+    "default" : "988",
+    "table" : "ssf21_snp",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf22",
+    "name" : "CS Site-Specific Factor 22",
+    "naaccr_item" : 2876,
+    "default" : "988",
+    "table" : "ssf22_snq",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf23",
+    "name" : "CS Site-Specific Factor 23",
+    "naaccr_item" : 2877,
+    "default" : "988",
+    "table" : "ssf23_snr",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf24",
+    "name" : "CS Site-Specific Factor 24",
+    "naaccr_item" : 2878,
+    "default" : "988",
+    "table" : "ssf24_sns",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf25",
+    "name" : "CS Site-Specific Factor 25",
+    "naaccr_item" : 2879,
+    "default" : "988",
+    "table" : "ssf25_snt",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  } ],
+  "mappings" : [ {
+    "id" : "mapping_t",
+    "name" : "T",
+    "initial_context" : [ {
+      "key" : "ajcc7_t",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc7_t",
+      "value" : ""
+    }, {
+      "key" : "ajcc7_tdescriptor",
+      "value" : "ERROR"
+    }, {
+      "key" : "stor_ajcc7_tdescriptor",
+      "value" : ""
+    }, {
+      "key" : "ajcc6_t",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc6_t",
+      "value" : ""
+    }, {
+      "key" : "ajcc6_tdescriptor",
+      "value" : "ERROR"
+    }, {
+      "key" : "stor_ajcc6_tdescriptor",
+      "value" : ""
+    }, {
+      "key" : "t77",
+      "value" : ""
+    }, {
+      "key" : "t2000",
+      "value" : ""
+    } ],
+    "tables" : [ {
+      "id" : "extension_bcd",
+      "inputs" : [ "extension" ],
+      "outputs" : [ "t77", "t2000", "ajcc7_t", "ajcc6_t" ]
+    }, {
+      "id" : "extension_eval_cna",
+      "output_mapping" : [ {
+        "from" : "tdescriptor",
+        "to" : "ajcc7_tdescriptor"
+      } ],
+      "inputs" : [ "extension_eval" ],
+      "outputs" : [ "ajcc7_tdescriptor" ]
+    }, {
+      "id" : "ajcc_descriptor_codes",
+      "input_mapping" : [ {
+        "from" : "ajcc7_tdescriptor",
+        "to" : "descriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stor_descriptor",
+        "to" : "stor_ajcc7_tdescriptor"
+      } ],
+      "inputs" : [ "ajcc7_tdescriptor" ],
+      "outputs" : [ "stor_ajcc7_tdescriptor" ]
+    }, {
+      "id" : "ajcc_tdescriptor_cleanup",
+      "input_mapping" : [ {
+        "from" : "ajcc7_t",
+        "to" : "t"
+      }, {
+        "from" : "ajcc7_tdescriptor",
+        "to" : "tdescriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "tdescriptor",
+        "to" : "ajcc7_tdescriptor"
+      }, {
+        "from" : "stor_tdescriptor",
+        "to" : "stor_ajcc7_tdescriptor"
+      } ],
+      "inputs" : [ "ajcc7_tdescriptor", "ajcc7_t" ],
+      "outputs" : [ "ajcc7_tdescriptor", "stor_ajcc7_tdescriptor" ]
+    }, {
+      "id" : "ajcc7_t_codes",
+      "inputs" : [ "ajcc7_t" ],
+      "outputs" : [ "stor_ajcc7_t" ]
+    }, {
+      "id" : "extension_eval_cna",
+      "output_mapping" : [ {
+        "from" : "tdescriptor",
+        "to" : "ajcc6_tdescriptor"
+      } ],
+      "inputs" : [ "extension_eval" ],
+      "outputs" : [ "ajcc6_tdescriptor" ]
+    }, {
+      "id" : "ajcc_descriptor_codes",
+      "input_mapping" : [ {
+        "from" : "ajcc6_tdescriptor",
+        "to" : "descriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stor_descriptor",
+        "to" : "stor_ajcc6_tdescriptor"
+      } ],
+      "inputs" : [ "ajcc6_tdescriptor" ],
+      "outputs" : [ "stor_ajcc6_tdescriptor" ]
+    }, {
+      "id" : "ajcc_tdescriptor_cleanup",
+      "input_mapping" : [ {
+        "from" : "ajcc6_t",
+        "to" : "t"
+      }, {
+        "from" : "ajcc6_tdescriptor",
+        "to" : "tdescriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "tdescriptor",
+        "to" : "ajcc6_tdescriptor"
+      }, {
+        "from" : "stor_tdescriptor",
+        "to" : "stor_ajcc6_tdescriptor"
+      } ],
+      "inputs" : [ "ajcc6_tdescriptor", "ajcc6_t" ],
+      "outputs" : [ "ajcc6_tdescriptor", "stor_ajcc6_tdescriptor" ]
+    }, {
+      "id" : "ajcc6_t_codes",
+      "inputs" : [ "ajcc6_t" ],
+      "outputs" : [ "stor_ajcc6_t" ]
+    } ]
+  }, {
+    "id" : "mapping_n",
+    "name" : "N",
+    "initial_context" : [ {
+      "key" : "ajcc7_n",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc7_n",
+      "value" : ""
+    }, {
+      "key" : "ajcc7_ndescriptor",
+      "value" : "ERROR"
+    }, {
+      "key" : "stor_ajcc7_ndescriptor",
+      "value" : ""
+    }, {
+      "key" : "ajcc6_n",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc6_n",
+      "value" : ""
+    }, {
+      "key" : "ajcc6_ndescriptor",
+      "value" : "ERROR"
+    }, {
+      "key" : "stor_ajcc6_ndescriptor",
+      "value" : ""
+    }, {
+      "key" : "n77",
+      "value" : ""
+    }, {
+      "key" : "n2000",
+      "value" : ""
+    } ],
+    "tables" : [ {
+      "id" : "nodes_dna",
+      "inputs" : [ "nodes" ],
+      "outputs" : [ "ajcc7_n", "ajcc6_n", "n2000", "n77" ]
+    }, {
+      "id" : "nodes_eval_ena",
+      "output_mapping" : [ {
+        "from" : "ndescriptor",
+        "to" : "ajcc7_ndescriptor"
+      } ],
+      "inputs" : [ "nodes_eval" ],
+      "outputs" : [ "ajcc7_ndescriptor" ]
+    }, {
+      "id" : "ajcc_descriptor_codes",
+      "input_mapping" : [ {
+        "from" : "ajcc7_ndescriptor",
+        "to" : "descriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stor_descriptor",
+        "to" : "stor_ajcc7_ndescriptor"
+      } ],
+      "inputs" : [ "ajcc7_ndescriptor" ],
+      "outputs" : [ "stor_ajcc7_ndescriptor" ]
+    }, {
+      "id" : "ajcc_ndescriptor_cleanup",
+      "input_mapping" : [ {
+        "from" : "ajcc7_n",
+        "to" : "n"
+      }, {
+        "from" : "ajcc7_ndescriptor",
+        "to" : "ndescriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "ndescriptor",
+        "to" : "ajcc7_ndescriptor"
+      }, {
+        "from" : "stor_ndescriptor",
+        "to" : "stor_ajcc7_ndescriptor"
+      } ],
+      "inputs" : [ "ajcc7_n", "ajcc7_ndescriptor" ],
+      "outputs" : [ "ajcc7_ndescriptor", "stor_ajcc7_ndescriptor" ]
+    }, {
+      "id" : "ajcc7_n_codes",
+      "inputs" : [ "ajcc7_n" ],
+      "outputs" : [ "stor_ajcc7_n" ]
+    }, {
+      "id" : "nodes_eval_ena",
+      "output_mapping" : [ {
+        "from" : "ndescriptor",
+        "to" : "ajcc6_ndescriptor"
+      } ],
+      "inputs" : [ "nodes_eval" ],
+      "outputs" : [ "ajcc6_ndescriptor" ]
+    }, {
+      "id" : "ajcc_descriptor_codes",
+      "input_mapping" : [ {
+        "from" : "ajcc6_ndescriptor",
+        "to" : "descriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stor_descriptor",
+        "to" : "stor_ajcc6_ndescriptor"
+      } ],
+      "inputs" : [ "ajcc6_ndescriptor" ],
+      "outputs" : [ "stor_ajcc6_ndescriptor" ]
+    }, {
+      "id" : "ajcc_ndescriptor_cleanup",
+      "input_mapping" : [ {
+        "from" : "ajcc6_n",
+        "to" : "n"
+      }, {
+        "from" : "ajcc6_ndescriptor",
+        "to" : "ndescriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "ndescriptor",
+        "to" : "ajcc6_ndescriptor"
+      }, {
+        "from" : "stor_ndescriptor",
+        "to" : "stor_ajcc6_ndescriptor"
+      } ],
+      "inputs" : [ "ajcc6_ndescriptor", "ajcc6_n" ],
+      "outputs" : [ "ajcc6_ndescriptor", "stor_ajcc6_ndescriptor" ]
+    }, {
+      "id" : "ajcc6_n_codes",
+      "inputs" : [ "ajcc6_n" ],
+      "outputs" : [ "stor_ajcc6_n" ]
+    } ]
+  }, {
+    "id" : "mapping_m",
+    "name" : "M",
+    "initial_context" : [ {
+      "key" : "ajcc7_m",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc7_m",
+      "value" : ""
+    }, {
+      "key" : "ajcc7_mdescriptor",
+      "value" : "ERROR"
+    }, {
+      "key" : "stor_ajcc7_mdescriptor",
+      "value" : ""
+    }, {
+      "key" : "ajcc6_m",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc6_m",
+      "value" : ""
+    }, {
+      "key" : "ajcc6_mdescriptor",
+      "value" : "ERROR"
+    }, {
+      "key" : "stor_ajcc6_mdescriptor",
+      "value" : ""
+    }, {
+      "key" : "m77",
+      "value" : ""
+    }, {
+      "key" : "m2000",
+      "value" : ""
+    } ],
+    "tables" : [ {
+      "id" : "mets_hpa",
+      "inputs" : [ "mets" ],
+      "outputs" : [ "ajcc7_m", "ajcc6_m", "m77", "m2000" ]
+    }, {
+      "id" : "mets_eval_ina",
+      "output_mapping" : [ {
+        "from" : "mdescriptor",
+        "to" : "ajcc7_mdescriptor"
+      } ],
+      "inputs" : [ "mets_eval" ],
+      "outputs" : [ "ajcc7_mdescriptor" ]
+    }, {
+      "id" : "ajcc_descriptor_codes",
+      "input_mapping" : [ {
+        "from" : "ajcc7_mdescriptor",
+        "to" : "descriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stor_descriptor",
+        "to" : "stor_ajcc7_mdescriptor"
+      } ],
+      "inputs" : [ "ajcc7_mdescriptor" ],
+      "outputs" : [ "stor_ajcc7_mdescriptor" ]
+    }, {
+      "id" : "ajcc_mdescriptor_cleanup",
+      "input_mapping" : [ {
+        "from" : "ajcc7_m",
+        "to" : "m"
+      }, {
+        "from" : "ajcc7_mdescriptor",
+        "to" : "mdescriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "mdescriptor",
+        "to" : "ajcc7_mdescriptor"
+      }, {
+        "from" : "stor_mdescriptor",
+        "to" : "stor_ajcc7_mdescriptor"
+      } ],
+      "inputs" : [ "ajcc7_mdescriptor", "ajcc7_m" ],
+      "outputs" : [ "ajcc7_mdescriptor", "stor_ajcc7_mdescriptor" ]
+    }, {
+      "id" : "ajcc7_m_codes",
+      "inputs" : [ "ajcc7_m" ],
+      "outputs" : [ "stor_ajcc7_m" ]
+    }, {
+      "id" : "mets_eval_ina",
+      "output_mapping" : [ {
+        "from" : "mdescriptor",
+        "to" : "ajcc6_mdescriptor"
+      } ],
+      "inputs" : [ "mets_eval" ],
+      "outputs" : [ "ajcc6_mdescriptor" ]
+    }, {
+      "id" : "ajcc_descriptor_codes",
+      "input_mapping" : [ {
+        "from" : "ajcc6_mdescriptor",
+        "to" : "descriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stor_descriptor",
+        "to" : "stor_ajcc6_mdescriptor"
+      } ],
+      "inputs" : [ "ajcc6_mdescriptor" ],
+      "outputs" : [ "stor_ajcc6_mdescriptor" ]
+    }, {
+      "id" : "ajcc_mdescriptor_cleanup",
+      "input_mapping" : [ {
+        "from" : "ajcc6_m",
+        "to" : "m"
+      }, {
+        "from" : "ajcc6_mdescriptor",
+        "to" : "mdescriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "mdescriptor",
+        "to" : "ajcc6_mdescriptor"
+      }, {
+        "from" : "stor_mdescriptor",
+        "to" : "stor_ajcc6_mdescriptor"
+      } ],
+      "inputs" : [ "ajcc6_m", "ajcc6_mdescriptor" ],
+      "outputs" : [ "stor_ajcc6_mdescriptor", "ajcc6_mdescriptor" ]
+    }, {
+      "id" : "ajcc6_m_codes",
+      "inputs" : [ "ajcc6_m" ],
+      "outputs" : [ "stor_ajcc6_m" ]
+    } ]
+  }, {
+    "id" : "mapping_ajcc7",
+    "name" : "AJCC 7",
+    "inclusion_tables" : [ {
+      "id" : "ajcc7_inclusions_tqf",
+      "inputs" : [ "hist" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "ajcc7_stage",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc7_stage",
+      "value" : ""
+    } ],
+    "tables" : [ {
+      "id" : "ajcc7_stage_una",
+      "input_mapping" : [ {
+        "from" : "ajcc7_t",
+        "to" : "t"
+      }, {
+        "from" : "ajcc7_n",
+        "to" : "n"
+      }, {
+        "from" : "ajcc7_m",
+        "to" : "m"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "ajcc7_stage"
+      } ],
+      "inputs" : [ "ajcc7_n", "ajcc7_m", "ajcc7_t" ],
+      "outputs" : [ "ajcc7_stage" ]
+    }, {
+      "id" : "ajcc7_stage_codes",
+      "inputs" : [ "ajcc7_stage" ],
+      "outputs" : [ "stor_ajcc7_stage" ]
+    } ]
+  }, {
+    "id" : "mapping_ajcc7_excluded",
+    "name" : "AJCC 7 Excluded",
+    "exclusion_tables" : [ {
+      "id" : "ajcc7_inclusions_tqf",
+      "inputs" : [ "hist" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "ajcc7_t",
+      "value" : "NA"
+    }, {
+      "key" : "stor_ajcc7_t",
+      "value" : "888"
+    }, {
+      "key" : "ajcc7_tdescriptor",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc7_tdescriptor",
+      "value" : "N"
+    }, {
+      "key" : "ajcc7_n",
+      "value" : "NA"
+    }, {
+      "key" : "stor_ajcc7_n",
+      "value" : "888"
+    }, {
+      "key" : "ajcc7_ndescriptor",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc7_ndescriptor",
+      "value" : "N"
+    }, {
+      "key" : "ajcc7_m",
+      "value" : "NA"
+    }, {
+      "key" : "stor_ajcc7_m",
+      "value" : "888"
+    }, {
+      "key" : "ajcc7_mdescriptor",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc7_mdescriptor",
+      "value" : "N"
+    }, {
+      "key" : "ajcc7_stage",
+      "value" : "NA"
+    }, {
+      "key" : "stor_ajcc7_stage",
+      "value" : "888"
+    } ]
+  }, {
+    "id" : "mapping_ajcc6",
+    "name" : "AJCC 6",
+    "initial_context" : [ {
+      "key" : "ajcc6_stage",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc6_stage",
+      "value" : ""
+    } ],
+    "tables" : [ {
+      "id" : "ajcc6_stage_qna",
+      "input_mapping" : [ {
+        "from" : "ajcc6_t",
+        "to" : "t"
+      }, {
+        "from" : "ajcc6_n",
+        "to" : "n"
+      }, {
+        "from" : "ajcc6_m",
+        "to" : "m"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "ajcc6_stage"
+      } ],
+      "inputs" : [ "ajcc6_n", "ajcc6_m", "ajcc6_t" ],
+      "outputs" : [ "ajcc6_stage" ]
+    }, {
+      "id" : "ajcc6_stage_codes",
+      "inputs" : [ "ajcc6_stage" ],
+      "outputs" : [ "stor_ajcc6_stage" ]
+    } ]
+  }, {
+    "id" : "mapping_summary_stage",
+    "name" : "Summary Stage",
+    "tables" : [ {
+      "id" : "summary_stage_rpa",
+      "input_mapping" : [ {
+        "from" : "t77",
+        "to" : "t"
+      }, {
+        "from" : "n77",
+        "to" : "n"
+      }, {
+        "from" : "m77",
+        "to" : "m"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "ss77"
+      } ],
+      "inputs" : [ "t77", "m77", "n77" ],
+      "outputs" : [ "ss77" ]
+    }, {
+      "id" : "ss_codes",
+      "input_mapping" : [ {
+        "from" : "ss77",
+        "to" : "ss"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stor_ss",
+        "to" : "stor_ss77"
+      } ],
+      "inputs" : [ "ss77" ],
+      "outputs" : [ "stor_ss77" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "input_mapping" : [ {
+        "from" : "t2000",
+        "to" : "t"
+      }, {
+        "from" : "n2000",
+        "to" : "n"
+      }, {
+        "from" : "m2000",
+        "to" : "m"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "ss2000"
+      } ],
+      "inputs" : [ "t2000", "n2000", "m2000" ],
+      "outputs" : [ "ss2000" ]
+    }, {
+      "id" : "ss_codes",
+      "input_mapping" : [ {
+        "from" : "ss2000",
+        "to" : "ss"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stor_ss",
+        "to" : "stor_ss2000"
+      } ],
+      "inputs" : [ "ss2000" ],
+      "outputs" : [ "stor_ss2000" ]
+    } ]
+  }, {
+    "id" : "mapping_ajcc7_invalid_year",
+    "name" : "Validate AJCC7 Year",
+    "exclusion_tables" : [ {
+      "id" : "ajcc7_year_validation",
+      "inputs" : [ "year_dx", "cs_input_version_original" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "ajcc7_t",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc7_t",
+      "value" : ""
+    }, {
+      "key" : "ajcc7_tdescriptor",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc7_tdescriptor",
+      "value" : ""
+    }, {
+      "key" : "ajcc7_n",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc7_n",
+      "value" : ""
+    }, {
+      "key" : "ajcc7_ndescriptor",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc7_ndescriptor",
+      "value" : ""
+    }, {
+      "key" : "ajcc7_m",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc7_m",
+      "value" : ""
+    }, {
+      "key" : "ajcc7_mdescriptor",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc7_mdescriptor",
+      "value" : ""
+    }, {
+      "key" : "ajcc7_stage",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc7_stage",
+      "value" : ""
+    } ]
+  }, {
+    "id" : "mapping_ajcc6_invalid_year",
+    "name" : "Validate AJCC6 Year",
+    "exclusion_tables" : [ {
+      "id" : "ajcc6_year_validation",
+      "inputs" : [ "year_dx", "cs_input_version_original" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "ajcc6_t",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc6_t",
+      "value" : ""
+    }, {
+      "key" : "ajcc6_tdescriptor",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc6_tdescriptor",
+      "value" : ""
+    }, {
+      "key" : "ajcc6_n",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc6_n",
+      "value" : ""
+    }, {
+      "key" : "ajcc6_ndescriptor",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc6_ndescriptor",
+      "value" : ""
+    }, {
+      "key" : "ajcc6_m",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc6_m",
+      "value" : ""
+    }, {
+      "key" : "ajcc6_mdescriptor",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc6_mdescriptor",
+      "value" : ""
+    }, {
+      "key" : "ajcc6_stage",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc6_stage",
+      "value" : ""
+    }, {
+      "key" : "t77",
+      "value" : ""
+    }, {
+      "key" : "n77",
+      "value" : ""
+    }, {
+      "key" : "m77",
+      "value" : ""
+    }, {
+      "key" : "ss77",
+      "value" : ""
+    }, {
+      "key" : "t2000",
+      "value" : ""
+    }, {
+      "key" : "n2000",
+      "value" : ""
+    }, {
+      "key" : "m2000",
+      "value" : ""
+    }, {
+      "key" : "ss2000",
+      "value" : ""
+    }, {
+      "key" : "stor_ajcc7_stage",
+      "value" : ""
+    }, {
+      "key" : "stor_ss77",
+      "value" : ""
+    }, {
+      "key" : "stor_ss2000",
+      "value" : ""
+    } ]
+  } ],
+  "involved_tables" : [ "ssf25_snt", "ssf3_lpm", "ajcc7_stage_una", "ssf15_snj", "ajcc7_t_codes", "ssf6_opf", "ssf23_snr", "schema_selection_cns_other", "histology", "ssf1_jpo", "ajcc7_inclusions_tqf", "cs_input_version_original", "mets_hpa", "nodes_exam_gna", "ssf22_snq", "lvi", "ssf14_sni", "mets_eval_ina", "ajcc_tdescriptor_cleanup", "extension_eval_cna", "ajcc6_stage_qna", "ajcc7_year_validation", "ssf21_snp", "ssf17_snl", "ajcc_descriptor_codes", "ssf5_nph", "nodes_pos_fna", "grade", "summary_stage_rpa", "nodes_eval_ena", "ajcc7_m_codes", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "ajcc6_t_codes", "ajcc_mdescriptor_cleanup", "ssf11_snf", "ss_codes", "size_apa", "ajcc6_n_codes", "ssf2_kpl", "behavior", "nodes_dna", "ssf10_sne", "ssf18_snm", "ajcc7_n_codes", "ssf8_sql", "ajcc6_stage_codes", "ssf19_snn", "ajcc7_stage_codes", "ssf9_snd", "ssf13_snh", "extension_bcd", "ssf4_mpn", "primary_site", "ajcc6_year_validation", "ajcc6_m_codes", "cs_year_validation", "ssf24_sns", "ssf7_sfl", "ssf12_sng" ],
+  "last_modified" : "2015-02-20T21:05:21.772Z"
+}

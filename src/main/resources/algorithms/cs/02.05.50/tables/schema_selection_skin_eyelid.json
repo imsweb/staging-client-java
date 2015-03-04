@@ -1,0 +1,21 @@
+{
+  "id" : "schema_selection_skin_eyelid",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection SkinEyelid",
+  "title" : "Schema selection for SkinEyelid",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C441", "8000-8713,8800-9136,9141-9508,9510-9514,9520-9582", "MATCH" ] ]
+}

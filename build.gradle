@@ -1,0 +1,148 @@
+import org.gradle.internal.jvm.Jvm
+
+plugins {
+    id 'java'
+    id 'checkstyle'
+    id 'findbugs'
+    id 'maven-publish'
+    id 'com.jfrog.bintray' version '1.1'
+}
+
+group = 'com.imsweb'
+version = '1.0-SNAPSHOT'
+description = 'Java client library for staging calculations'
+
+println "Starting build using ${Jvm.current()}"
+
+// UTF-8 for all compilation tasks
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.fasterxml.jackson.core:jackson-core:2.4.4'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.4.4'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.4.4'
+
+    // morphia annotations are needed to make it easier to use in SEER*API
+    compile 'org.mongodb.morphia:morphia:0.108'
+
+    compile 'com.google.guava:guava:18.0'
+
+    testCompile 'junit:junit:4.11'
+    testCompile 'org.unitils:unitils-core:3.4'
+    testCompile 'us.monoid.web:resty:0.3.2'
+}
+
+jar {
+    manifest {
+        attributes('Implementation-Title': project.name,
+                'Implementation-Version': version,
+                'Implementation-Vendor': group,
+                'Created-By': System.properties['java.vm.version'] + " (" + System.properties['java.vm.vendor'] + ")",
+                'Built-By': System.getProperty('user.name'),
+                'Built-Date': new Date(),
+                'Built-JDK': System.getProperty('java.version'),
+        )
+    }
+}
+
+// custom tasks for creating source/javadoc jars
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+// add javadoc/source jar tasks as artifacts
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
+
+// checkstyle plugin settings
+checkstyle {
+    ignoreFailures = true
+    configFile = file("config/checkstyle/checkstyle.xml")
+}
+
+// findbugs plugin settings
+findbugs {
+    toolVersion = '2.0.1'
+    ignoreFailures = true
+    effort = 'max'
+    excludeFilter = file("config/findbugs/findbugs-exclude.xml")
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
+
+// run the full CS integration test suite
+task csIntegrationTest(type: JavaExec) {
+    main = 'com.imsweb.staging.cs.CsIntegrationTest'
+    classpath = sourceSets.test.runtimeClasspath
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            artifact sourcesJar
+            artifact javadocJar
+
+            pom.withXml {
+                def root = asNode()
+                root.appendNode('name', 'Staging Java Client')
+                root.appendNode('description', 'A cancer staging client library')
+                root.appendNode('url', 'https://github.com/imsweb/staging-client-java')
+                root.appendNode('inceptionYear', '2015')
+
+                def scm = root.appendNode('scm')
+                scm.appendNode('url', 'https://github.com/imsweb/staging-client-java')
+                scm.appendNode('connection', 'scm:https://github.com/imsweb/staging-client-java.git')
+                scm.appendNode('developerConnection', 'scm:git@github.com:imsweb/staging-client-java.git')
+
+                def license = root.appendNode('licenses').appendNode('license')
+                license.appendNode('name', 'A modified BSD License (BSD)')
+                license.appendNode('url', 'https://github.com/imsweb/staging-client-java/blob/master/LICENSE')
+                license.appendNode('distribution', 'repo')
+
+                def developers = root.appendNode('developers')
+                def ctmay4 = developers.appendNode('developer')
+                ctmay4.appendNode('id', 'ctmay4')
+                ctmay4.appendNode('name', 'Charles May')
+                ctmay4.appendNode('email', 'mayc@imsweb.com')
+                def depryf = developers.appendNode('developer')
+                depryf.appendNode('id', 'depryf')
+                depryf.appendNode('name', 'Fabian Depry')
+                depryf.appendNode('email', 'depryf@imsweb.com')
+            }
+        }
+    }
+}
+
+bintray {
+    user = project.hasProperty('bintrayUser') ? project.getProperty('bintrayUser') : "$System.env.BINTRAY_USER"
+    key = project.hasProperty('bintrayKey') ? project.getProperty('bintrayKey') : "$System.env.BINTRAY_KEY"
+    publications = ['mavenJava']
+    publish = true
+    pkg {
+        repo = 'seer'
+        userOrg = 'imsweb'
+        name = 'staging-client-java'
+        desc = 'A cancer staging client library'
+        licenses = ['BSD']
+        labels = ['staging', 'imsweb', 'cs', 'tnm']
+
+        websiteUrl = 'https://github.com/imsweb/staging-client-java'
+        issueTrackerUrl = 'https://github.com/imsweb/staging-client-java/issues'
+        vcsUrl = 'https://github.com/imsweb/staging-client-java.git'
+    }
+}

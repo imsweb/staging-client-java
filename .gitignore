@@ -1,0 +1,9 @@
+/target
+/build
+/classes
+/dist
+src/main/resources/git.properties
+/.idea
+*.iml
+.dbshell
+.gradle

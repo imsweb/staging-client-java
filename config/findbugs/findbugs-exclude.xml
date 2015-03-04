@@ -1,0 +1,5 @@
+<FindBugsFilter>
+    <Match>
+        <Bug category="MALICIOUS_CODE" />
+    </Match>
+</FindBugsFilter>
