@@ -297,6 +297,19 @@ public class DecisionEngineTest {
     }
 
     @Test
+    public void testEmptyTable() throws IOException {
+        BasicDataProvider provider = new BasicDataProvider();
+        BasicTable table = new BasicTable("basic_test_table");
+        table.addColumnDefinition("size", ColumnType.INPUT);
+        table.addColumnDefinition("description", ColumnType.DESCRIPTION);
+        table.addColumnDefinition("size_result", ColumnType.ENDPOINT);
+        provider.addTable(table);
+
+        Assert.assertTrue(provider.getTable("basic_test_table").getRawRows().isEmpty());
+        Assert.assertTrue(provider.getTable("basic_test_table").getTableRows().isEmpty());
+    }
+
+    @Test
     public void testMatchTable() throws IOException {
         BasicDataProvider provider = new BasicDataProvider();
         BasicTable table = new BasicTable("basic_test_table");

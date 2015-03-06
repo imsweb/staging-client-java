@@ -16,7 +16,7 @@ public class BasicTable implements Table {
     private String _id;
     private List<BasicColumnDefinition> _definitions;
     private Set<String> _extraInput;
-    private List<List<String>> _rows;
+    private List<List<String>> _rows = new ArrayList<List<String>>();
 
     // parsed fields
     private List<BasicTableRow> _parsedTableRows = new ArrayList<BasicTableRow>();

@@ -151,53 +151,55 @@ public abstract class StagingDataProvider implements DataProvider {
     public static StagingTable initTable(StagingTable table) {
         Set<String> extraInputs = new HashSet<String>();
 
-        for (List<String> row : table.getRawRows()) {
-            StagingTableRow tableRowEntity = new StagingTableRow();
+        if (table.getRawRows() != null) {
+            for (List<String> row : table.getRawRows()) {
+                StagingTableRow tableRowEntity = new StagingTableRow();
 
-            // make sure the number of cells in the row matches the number of columns defined
-            if (table.getColumnDefinitions().size() != row.size())
-                throw new IllegalStateException("Table '" + table.getId() + "' has a row with " + row.size() + " values but should have " + table.getColumnDefinitions().size() + ": " + row);
+                // make sure the number of cells in the row matches the number of columns defined
+                if (table.getColumnDefinitions().size() != row.size())
+                    throw new IllegalStateException("Table '" + table.getId() + "' has a row with " + row.size() + " values but should have " + table.getColumnDefinitions().size() + ": " + row);
 
-            // loop over the column definitions in order since the data needs to retrieved by array position
-            for (int i = 0; i < table.getColumnDefinitions().size(); i++) {
-                StagingColumnDefinition col = table.getColumnDefinitions().get(i);
-                String cellValue = row.get(i);
+                // loop over the column definitions in order since the data needs to retrieved by array position
+                for (int i = 0; i < table.getColumnDefinitions().size(); i++) {
+                    StagingColumnDefinition col = table.getColumnDefinitions().get(i);
+                    String cellValue = row.get(i);
 
-                switch (col.getType()) {
-                    case INPUT:
-                        // if there are no ranges in the list, that means the cell was "blank" and is not needed in the table row
-                        List<StagingStringRange> ranges = splitValues(cellValue);
-                        if (!ranges.isEmpty()) {
-                            tableRowEntity.addInput(col.getKey(), ranges);
+                    switch (col.getType()) {
+                        case INPUT:
+                            // if there are no ranges in the list, that means the cell was "blank" and is not needed in the table row
+                            List<StagingStringRange> ranges = splitValues(cellValue);
+                            if (!ranges.isEmpty()) {
+                                tableRowEntity.addInput(col.getKey(), ranges);
+
+                                // if there are key references used (values that reference other inputs) like {{key}}, then add them to the extra inputs list
+                                for (StagingStringRange range : ranges) {
+                                    if (DecisionEngine.isReferenceVariable(range.getLow()))
+                                        extraInputs.add(DecisionEngine.trimBraces(range.getLow()));
+                                    if (DecisionEngine.isReferenceVariable(range.getHigh()))
+                                        extraInputs.add(DecisionEngine.trimBraces(range.getHigh()));
+                                }
+                            }
+                            break;
+                        case ENDPOINT:
+                            StagingEndpoint endpoint = parseEndpoint(cellValue);
+                            if (EndpointType.VALUE.equals(endpoint.getType()))
+                                endpoint.setResultKey(col.getKey());
+                            tableRowEntity.addEndpoint(endpoint);
 
                             // if there are key references used (values that reference other inputs) like {{key}}, then add them to the extra inputs list
-                            for (StagingStringRange range : ranges) {
-                                if (DecisionEngine.isReferenceVariable(range.getLow()))
-                                    extraInputs.add(DecisionEngine.trimBraces(range.getLow()));
-                                if (DecisionEngine.isReferenceVariable(range.getHigh()))
-                                    extraInputs.add(DecisionEngine.trimBraces(range.getHigh()));
-                            }
-                        }
-                        break;
-                    case ENDPOINT:
-                        StagingEndpoint endpoint = parseEndpoint(cellValue);
-                        if (EndpointType.VALUE.equals(endpoint.getType()))
-                            endpoint.setResultKey(col.getKey());
-                        tableRowEntity.addEndpoint(endpoint);
-
-                        // if there are key references used (values that reference other inputs) like {{key}}, then add them to the extra inputs list
-                        if (EndpointType.VALUE.equals(endpoint.getType()) && DecisionEngine.isReferenceVariable(endpoint.getValue()))
-                            extraInputs.add(DecisionEngine.trimBraces(endpoint.getValue()));
-                        break;
-                    case DESCRIPTION:
-                        // do nothing
-                        break;
-                    default:
-                        throw new IllegalStateException("Table '" + table.getId() + " has an unknown column type: '" + col.getType() + "'");
+                            if (EndpointType.VALUE.equals(endpoint.getType()) && DecisionEngine.isReferenceVariable(endpoint.getValue()))
+                                extraInputs.add(DecisionEngine.trimBraces(endpoint.getValue()));
+                            break;
+                        case DESCRIPTION:
+                            // do nothing
+                            break;
+                        default:
+                            throw new IllegalStateException("Table '" + table.getId() + " has an unknown column type: '" + col.getType() + "'");
+                    }
                 }
-            }
 
-            table.getTableRows().add(tableRowEntity);
+                table.getTableRows().add(tableRowEntity);
+            }
         }
 
         // add extra inputs, if any; do not include context variables since they are not user input

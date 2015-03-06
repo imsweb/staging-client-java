@@ -56,40 +56,42 @@ public class BasicDataProvider implements DataProvider {
      * @param table a BasicTable
      */
     protected void initTable(BasicTable table) {
-        for (List<String> row : table.getRawRows()) {
-            BasicTableRow tableRowEntity = new BasicTableRow();
+        if (table.getRawRows() != null) {
+            for (List<String> row : table.getRawRows()) {
+                BasicTableRow tableRowEntity = new BasicTableRow();
 
-            // make sure the numer of cells in the row matches the number of columns defined
-            if (table.getColumnDefinitions().size() != row.size())
-                throw new IllegalStateException("Table '" + table.getId() + "' has a row with " + row.size() + " values but should have " + table.getColumnDefinitions().size() + ": " + row);
+                // make sure the numer of cells in the row matches the number of columns defined
+                if (table.getColumnDefinitions().size() != row.size())
+                    throw new IllegalStateException("Table '" + table.getId() + "' has a row with " + row.size() + " values but should have " + table.getColumnDefinitions().size() + ": " + row);
 
-            // loop over the column definitions in order since the data needs to retrieved by array position
-            for (int i = 0; i < table.getColumnDefinitions().size(); i++) {
-                BasicColumnDefinition col = table.getColumnDefinitions().get(i);
-                String cellValue = row.get(i);
+                // loop over the column definitions in order since the data needs to retrieved by array position
+                for (int i = 0; i < table.getColumnDefinitions().size(); i++) {
+                    BasicColumnDefinition col = table.getColumnDefinitions().get(i);
+                    String cellValue = row.get(i);
 
-                switch (col.getType()) {
-                    case INPUT:
-                        // if there are no ranges in the list, that means the cell was "blank" and is not needed in the table row
-                        List<BasicStringRange> ranges = splitValues(cellValue);
-                        if (!ranges.isEmpty())
-                            tableRowEntity.addInput(col.getKey(), ranges);
-                        break;
-                    case DESCRIPTION:
-                        tableRowEntity.setDescription(cellValue);
-                        break;
-                    case ENDPOINT:
-                        BasicEndpoint endpoint = parseEndpoint(cellValue);
-                        if (EndpointType.VALUE.equals(endpoint.getType()))
-                            endpoint.setResultKey(col.getKey());
-                        tableRowEntity.addEndpoint(endpoint);
-                        break;
-                    default:
-                        throw new IllegalStateException("Table '" + table.getId() + " has an unknown column type: '" + col.getType() + "'");
+                    switch (col.getType()) {
+                        case INPUT:
+                            // if there are no ranges in the list, that means the cell was "blank" and is not needed in the table row
+                            List<BasicStringRange> ranges = splitValues(cellValue);
+                            if (!ranges.isEmpty())
+                                tableRowEntity.addInput(col.getKey(), ranges);
+                            break;
+                        case DESCRIPTION:
+                            tableRowEntity.setDescription(cellValue);
+                            break;
+                        case ENDPOINT:
+                            BasicEndpoint endpoint = parseEndpoint(cellValue);
+                            if (EndpointType.VALUE.equals(endpoint.getType()))
+                                endpoint.setResultKey(col.getKey());
+                            tableRowEntity.addEndpoint(endpoint);
+                            break;
+                        default:
+                            throw new IllegalStateException("Table '" + table.getId() + " has an unknown column type: '" + col.getType() + "'");
+                    }
                 }
-            }
 
-            table.getTableRows().add(tableRowEntity);
+                table.getTableRows().add(tableRowEntity);
+            }
         }
     }
 

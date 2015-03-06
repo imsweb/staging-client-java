@@ -56,7 +56,7 @@ public class StagingTable implements Table {
     @Property("extra_input")
     private Set<String> _extraInput;
     @Property("rows")
-    private List<List<String>> _rows;
+    private List<List<String>> _rows = new ArrayList<List<String>>();
 
     // parsed fields
     @Embedded("parsed_table_rows")
