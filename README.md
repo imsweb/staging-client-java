@@ -40,7 +40,7 @@ compile 'com.imsweb.com:staging-client-java:1.0'
 
 ### Get a `Staging` instance
 
-Everything starts with getting an instance of the `Staging` object.  There are `DataProvider` objects which support each staging algorithm and version.  The `Staging`
+Everything starts with getting an instance of the `Staging` object.  There are `DataProvider` objects for each staging algorithm and version.  The `Staging`
 object is thread safe and cached so subsequent calls to `Staging.getInstance()` will return the same object.
 
 For example, to get an instance of the Collaborative Staging algorithm
@@ -54,7 +54,7 @@ Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.v0205
 Schemas represent sets of specific staging instructions.  Determining the schema to use for staging is based on primary site, histology and sometimes additional
 discrimator values.  Schemas include the following information:
 
-- unique identifier (i.e. "prostate")
+- schema identifier (i.e. "prostate")
 - algorithm identifier (i.e. "cs")
 - algorithm version (i.e. "02.05.50")
 - name
@@ -65,7 +65,7 @@ discrimator values.  Schemas include the following information:
 - a list of initial output values set at the start of staging
 - a list of mappings which represent the logic used to calculate staging output
 
-To get a list of all staging identifiers,
+To get a list of all schema identifiers,
 
 ```java
 Set<String> schemaIds = staging.getSchemaIds();
@@ -82,7 +82,7 @@ StagingSchema schema = staging.getSchema("prostate");
 Tables represent the building blocks of the staging instructions specified in schemas.  Tables are used to define schema selection criteria, input validation and staging logic.
 Tables include the following information:
 
-- unique identifier (i.e. "ajcc7_stage")
+- table identifier (i.e. "ajcc7_stage")
 - algorithm identifier (i.e. "cs")
 - algorithm version (i.e. "02.05.50")
 - name
@@ -111,7 +111,7 @@ StagingTable table = staging.getTable("ajcc7_stage");
 ### Lookup a schema
 
 A common operation is to look up a schema based on primary site, histology and optionally one or more discriminators.  Each staging algorithm has a `SchemaLookup` object
-customized for the specific inputs needed to stage.
+customized for the specific inputs needed to lookup a schema.
 
 For Collaborative Staging, use the `CsSchemaLookup` object.  Here is a lookup based on site and histology.
 
@@ -123,7 +123,7 @@ Assert.assertEquals("testis", lookup.get(0).getId());
 
 If the call returns a single result, then it was successful.  If it returns more than one result, then it needs a discriminator.  Information about the required discriminator
 is included in the list of results.  In the Collaborative Staging example, the field `ssf25` is always used as the discriminator.  Other staging algorithms may use different
-sets of discriminators so it will have to determined based on the result.
+sets of discriminators that can be determined based on the result.
 
 ```java
 // do not supply a discriminator
@@ -141,7 +141,7 @@ Assert.assertEquals(Integer.valueOf(34), lookup.get(0).getSchemaNum());
 
 ### Calculate stage
 
-Staging a case requires first knowing which schema you are working with.  Once you have the schema, you can tell which fields (keys) need to be collected and passed
+Staging a case requires first knowing which schema you are working with.  Once you have the schema, you can tell which fields (keys) need to be collected and supplied
 to the `stage` method call.
 
 A `StagingData` object is used to make staging calls.  All inputs to staging should be set on the `StagingData` object and the staging call will add the results.  The
