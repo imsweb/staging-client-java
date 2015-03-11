@@ -48,7 +48,10 @@ public class StagingData {
         FAILED_MULITPLE_MATCHING_SCHEMAS,
 
         // year of DX out of valid range
-        FAILED_INVALID_YEAR_DX
+        FAILED_INVALID_YEAR_DX,
+
+        // a field that was flagged as "fail_on_invalid" has an invalid value
+        FAILED_INVALID_INPUT
     }
 
     /**

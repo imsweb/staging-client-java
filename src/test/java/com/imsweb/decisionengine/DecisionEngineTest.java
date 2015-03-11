@@ -22,6 +22,7 @@ import com.google.common.collect.Sets;
 
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.Endpoint.EndpointType;
+import com.imsweb.decisionengine.Result.Type;
 import com.imsweb.decisionengine.basic.BasicDataProvider;
 import com.imsweb.decisionengine.basic.BasicDefinition;
 import com.imsweb.decisionengine.basic.BasicEndpoint;
@@ -176,7 +177,9 @@ public class DecisionEngineTest {
 
         BasicDefinition def = new BasicDefinition("starting_sample");
         def.addInput("a");
-        def.addInput("b", "table_lookup_sample");
+        BasicInput input = new BasicInput("b", "table_lookup_sample");
+        input.setFailOnInvalid(true);
+        def.addInput(input);
         def.addInput("c");
         def.addInitialContext("d", "HARD-CODE");
         BasicMapping mapping = new BasicMapping("m1");
@@ -666,16 +669,28 @@ public class DecisionEngineTest {
     @Test
     public void testParameterLookupValidation() {
         Map<String, String> input = new HashMap<String, String>();
-        input.put("a", "3");  // site is not in lookup table
-        input.put("b", "31");
+        input.put("a", "3");
+        input.put("b", "31");  // value is not in lookup table
 
         Result result = _ENGINE.process("starting_sample", input);
 
-        // one error for input, and one error each of the two tables because of no match
-        Assert.assertEquals(3, result.getErrors().size());
+        Assert.assertEquals(Type.FAILED_INPUT, result.getType());
 
-        // even though there is an invalid input, table processing should continue
-        Assert.assertEquals(2, result.getPath().size());
+        // since input "b" is fail_on_invalud, table processing should not continue
+        Assert.assertEquals(0, result.getPath().size());
+
+        // one error for input, and one error each of the two tables because of no match
+        Assert.assertEquals(1, result.getErrors().size());
+
+        // make "b" a valid value
+        input.put("b", "30");
+
+        result = _ENGINE.process("starting_sample", input);
+
+        Assert.assertEquals(Type.STAGED, result.getType());
+
+        // one error for input, and one error each of the two tables because of no match
+        Assert.assertEquals(2, result.getErrors().size());
     }
 
     @Test
@@ -949,6 +964,7 @@ public class DecisionEngineTest {
         input.put("a", "4");
         Result result = _ENGINE.process("starting_recursion", input);
 
+        Assert.assertEquals(Type.STAGED, result.getType());
         Assert.assertTrue(result.hasErrors());
         Assert.assertEquals(1, result.getErrors().size());
         Assert.assertEquals(1, result.getPath().size());
@@ -964,6 +980,7 @@ public class DecisionEngineTest {
         Result result = _ENGINE.process("starting_multiple_endpoints", input);
 
         Assert.assertFalse(result.hasErrors());
+        Assert.assertEquals(Type.STAGED, result.getType());
         Assert.assertEquals(1, result.getPath().size());
 
         Assert.assertEquals("1_LINE1", input.get("r1"));
@@ -975,6 +992,7 @@ public class DecisionEngineTest {
         input.put("a", "0");
         input.put("b", "25");
         result = _ENGINE.process("starting_multiple_endpoints", input);
+        Assert.assertEquals(Type.STAGED, result.getType());
         Assert.assertTrue(result.hasErrors());
         Assert.assertEquals(1, result.getErrors().size());
         Assert.assertEquals("2_LINE2", result.getErrors().get(0).getMessage());
@@ -990,6 +1008,7 @@ public class DecisionEngineTest {
         input.put("b", "20");
         result = _ENGINE.process("starting_multiple_endpoints", input);
 
+        Assert.assertEquals(Type.STAGED, result.getType());
         Assert.assertTrue(result.hasErrors());
         Assert.assertEquals("Match not found", result.getErrors().get(0).getMessage());
         Assert.assertNull(result.getErrors().get(0).getKey());
@@ -1001,6 +1020,7 @@ public class DecisionEngineTest {
         input.put("c", "A");
         result = _ENGINE.process("starting_multiple_endpoints", input);
 
+        Assert.assertEquals(Type.STAGED, result.getType());
         Assert.assertFalse(result.hasErrors());
         Assert.assertFalse(input.containsKey("r1"));
         Assert.assertEquals("A", input.get("result"));
@@ -1013,6 +1033,7 @@ public class DecisionEngineTest {
         input.put("b", "99");
         result = _ENGINE.process("starting_multiple_endpoints", input);
 
+        Assert.assertEquals(Type.STAGED, result.getType());
         Assert.assertTrue(result.hasErrors());
         Assert.assertEquals(3, result.getErrors().size());
         Assert.assertEquals("1_LINE4", result.getErrors().get(0).getMessage());
@@ -1035,6 +1056,7 @@ public class DecisionEngineTest {
         input.put("c", "A");
         Result result = _ENGINE.process("starting_multiple_endpoints", input);
 
+        Assert.assertEquals(Type.STAGED, result.getType());
         Assert.assertFalse(result.hasErrors());
         Assert.assertFalse(input.containsKey("r1"));
         Assert.assertFalse(input.containsKey("r3"));
@@ -1050,6 +1072,7 @@ public class DecisionEngineTest {
         input.put("c", "3");
         Result result = _ENGINE.process("starting_inclusions", input);
 
+        Assert.assertEquals(Type.STAGED, result.getType());
         Assert.assertFalse(result.hasErrors());
         Assert.assertEquals("2", input.get("result"));
         Assert.assertFalse(input.containsKey("special"));
@@ -1060,6 +1083,7 @@ public class DecisionEngineTest {
         input.put("c", "3");
         result = _ENGINE.process("starting_inclusions", input);
 
+        Assert.assertEquals(Type.STAGED, result.getType());
         Assert.assertFalse(result.hasErrors());
         Assert.assertEquals("3", input.get("result"));
         Assert.assertEquals("SUCCESS", input.get("special"));
@@ -1070,6 +1094,7 @@ public class DecisionEngineTest {
         input.put("c", "3");
         result = _ENGINE.process("starting_inclusions", input);
 
+        Assert.assertEquals(Type.STAGED, result.getType());
         Assert.assertFalse(result.hasErrors());
         Assert.assertFalse(input.containsKey("result"));
         Assert.assertEquals("SUCCESS", input.get("special"));

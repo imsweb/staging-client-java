@@ -17,6 +17,7 @@ import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.DecisionEngine;
 import com.imsweb.decisionengine.Error;
 import com.imsweb.decisionengine.Result;
+import com.imsweb.decisionengine.Result.Type;
 import com.imsweb.decisionengine.Table;
 import com.imsweb.staging.entities.StagingColumnDefinition;
 import com.imsweb.staging.entities.StagingMapping;
@@ -513,7 +514,11 @@ public final class Staging {
                     // remove the context variables
                     removeContextKeys(context);
 
-                    data.setResult(StagingData.Result.STAGED);
+                    // set the staging data result based on the Result returned from the DecisionEngine
+                    if (Type.FAILED_INPUT.equals(result.getType()))
+                        data.setResult(StagingData.Result.FAILED_INVALID_INPUT);
+                    else
+                        data.setResult(StagingData.Result.STAGED);
 
                     // remove the original input keys from the resulting context;  in addition, we want to remove any input keys
                     // from the resulting context that were set with a default value; to accomplish this remove all keys that are

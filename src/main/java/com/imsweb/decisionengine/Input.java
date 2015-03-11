@@ -40,4 +40,10 @@ public interface Input {
      */
     Boolean getUsedForStaging();
 
+    /**
+     * Return true if staging should not be attempted for invalid input values
+     * @return
+     */
+    Boolean getFailOnInvalid();
+
 }

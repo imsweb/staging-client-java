@@ -558,11 +558,12 @@ public class DecisionEngine {
     public Result process(Definition definition, Map<String, String> context) {
         Result result = new Result(context);
 
-        // trim all context Strings; " " will match ""
+        // trim all context Strings; " " will match ""; in addition, null values should be set to blank
         for (Entry<String, String> entry : context.entrySet())
-            entry.setValue(entry.getValue().trim());
+            entry.setValue(entry.getValue() == null ? "" : entry.getValue().trim());
 
         // validate inputs
+        boolean stopForBadInput = false;
         for (String key : definition.getInputMap().keySet()) {
             Input input = definition.getInputMap().get(key);
 
@@ -577,10 +578,14 @@ public class DecisionEngine {
             if (value != null) {
                 // if a list of valid values was given, validate against it
                 if (!input.getValues().isEmpty()) {
-                    if (!testMatch(input.getValues(), value, context))
+                    if (!testMatch(input.getValues(), value, context)) {
                         result.addError(new ErrorBuilder(Boolean.TRUE.equals(input.getUsedForStaging()) ? Type.INVALID_REQUIRED_INPUT : Type.INVALID_NON_REQUIRED_INPUT)
                                 .message("Invalid '" + input.getKey() + "' value: '" + value + "'")
                                 .key(input.getKey()).build());
+
+                        if (Boolean.TRUE.equals(input.getFailOnInvalid()))
+                            stopForBadInput = true;
+                    }
                 }
                 // otherwise validate value against associated table, if supplied
                 else if (input.getTable() != null) {
@@ -594,13 +599,23 @@ public class DecisionEngine {
                     }
 
                     List<? extends Endpoint> endpoints = matchTable(lookup, context);
-                    if (endpoints == null)
+                    if (endpoints == null) {
                         result.addError(new ErrorBuilder(Boolean.TRUE.equals(input.getUsedForStaging()) ? Type.INVALID_REQUIRED_INPUT : Type.INVALID_NON_REQUIRED_INPUT)
                                 .message("Invalid '" + input.getKey() + "' value: '" + value + "'")
                                 .key(input.getKey()).table(input.getTable())
                                 .build());
+
+                        if (Boolean.TRUE.equals(input.getFailOnInvalid()))
+                            stopForBadInput = true;
+                    }
                 }
             }
+        }
+
+        // if an invalid input was flagged to stop processing, set result and exit
+        if (stopForBadInput) {
+            result.setType(Result.Type.FAILED_INPUT);
+            return result;
         }
 
         // add the initial context

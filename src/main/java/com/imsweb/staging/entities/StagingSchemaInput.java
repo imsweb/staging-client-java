@@ -20,7 +20,7 @@ import com.google.common.base.Objects;
 
 import com.imsweb.decisionengine.Input;
 
-@JsonPropertyOrder({"key", "name", "naaccr_item", "values", "default", "table", "used_for_staging", "unit", "decimal_places", "metadata"})
+@JsonPropertyOrder({"key", "name", "naaccr_item", "values", "default", "table", "used_for_staging", "fail_on_invalid", "unit", "decimal_places", "metadata"})
 @Embedded
 public class StagingSchemaInput implements Input {
 
@@ -38,6 +38,8 @@ public class StagingSchemaInput implements Input {
     private String _table;
     @Property("used_for_staging")
     private Boolean _usedForStaging;
+    @Property("fail_on_invalid")
+    private Boolean _failOnInvalid;
     @Property("unit")
     private String _unit;
     @Property("decimal_places")
@@ -150,6 +152,16 @@ public class StagingSchemaInput implements Input {
 
     public void setUsedForStaging(Boolean usedForStaging) {
         _usedForStaging = usedForStaging;
+    }
+
+    @Override
+    @JsonProperty("fail_on_invalid")
+    public Boolean getFailOnInvalid() {
+        return _failOnInvalid;
+    }
+
+    public void setFailOnInvalid(Boolean failOnInvalid) {
+        _failOnInvalid = failOnInvalid;
     }
 
     @JsonProperty("decimal_places")

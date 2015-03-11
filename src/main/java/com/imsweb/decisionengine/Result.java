@@ -12,6 +12,15 @@ import java.util.Map;
  */
 public class Result {
 
+    public enum Type {
+        // staging was executed
+        STAGED,
+
+        // a field which was required to be valid failed validation; staging was not executed
+        FAILED_INPUT
+    }
+
+    private Type _type;
     private Map<String, String> _context;
     private List<Error> _errors = new ArrayList<Error>();
     private List<String> _path = new ArrayList<String>();
@@ -20,6 +29,7 @@ public class Result {
      * Default constructor
      */
     public Result() {
+        setType(Type.STAGED);
     }
 
     /**
@@ -27,7 +37,24 @@ public class Result {
      * @param context a Map representing the context
      */
     public Result(Map<String, String> context) {
+        setType(Type.STAGED);
         setContext(context);
+    }
+
+    /**
+     * Return the type of result
+     * @return a result type
+     */
+    public Type getType() {
+        return _type;
+    }
+
+    /**
+     * Set the type of result
+     * @param type a result type
+     */
+    public void setType(Type type) {
+        _type = type;
     }
 
     /**
