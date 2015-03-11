@@ -4,7 +4,7 @@ plugins {
     id 'java'
     id 'checkstyle'
     id 'findbugs'
-    id 'com.bmuschko.nexus' version '2.3'
+    id 'com.bmuschko.nexus' version '2.1.1'
 }
 
 group = 'com.imsweb'
