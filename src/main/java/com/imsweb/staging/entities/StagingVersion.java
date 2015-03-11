@@ -15,7 +15,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-@JsonPropertyOrder({"algorithm", "version", "type", "year_from", "year_to", "last_modified"})
+@JsonPropertyOrder({"algorithm", "version", "type", "last_modified"})
 @Entity(value = "staging_versions", noClassnameStored = true)
 public class StagingVersion {
 
@@ -29,10 +29,6 @@ public class StagingVersion {
     private String _version;
     @Property("type")
     private Type _type;
-    @Property("year_from")
-    private Integer _yearFrom;
-    @Property("year_to")
-    private Integer _yearTo;
     @Property("modified")
     private Date _lastModified;
 
@@ -81,24 +77,6 @@ public class StagingVersion {
 
     public void setType(Type type) {
         _type = type;
-    }
-
-    @JsonProperty("year_from")
-    public Integer getYearFrom() {
-        return _yearFrom;
-    }
-
-    public void setYearFrom(Integer yearFrom) {
-        _yearFrom = yearFrom;
-    }
-
-    @JsonProperty("year_to")
-    public Integer getYearTo() {
-        return _yearTo;
-    }
-
-    public void setYearTo(Integer yearTo) {
-        _yearTo = yearTo;
     }
 
     @JsonProperty("last_modified")
