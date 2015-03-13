@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.zip.GZIPInputStream;
 
@@ -18,7 +19,9 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import com.google.common.base.Strings;
 import com.google.common.collect.Sets;
+import com.google.common.primitives.Ints;
 
 import com.imsweb.decisionengine.Error.Type;
 import com.imsweb.staging.IntegrationUtils;
@@ -33,7 +36,9 @@ import com.imsweb.staging.cs.CsStagingData.CsOutput;
 import com.imsweb.staging.cs.CsStagingData.CsStagingInputBuilder;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingSchemaInput;
+import com.imsweb.staging.entities.StagingStringRange;
 import com.imsweb.staging.entities.StagingTable;
+import com.imsweb.staging.entities.StagingTableRow;
 
 public class CsStagingTest {
 
@@ -105,6 +110,15 @@ public class CsStagingTest {
 
         Assert.assertTrue(_STAGING.isValidHistology("8000"));
         Assert.assertTrue(_STAGING.isValidHistology("8201"));
+    }
+
+    @Test
+    public void testValidCode() {
+        Map<String, String> context = new HashMap<String, String>();
+        context.put("hist", "8000");
+        Assert.assertTrue(_STAGING.isContextValid("prostate", "hist", context));
+        context.put("hist", "8542");
+        Assert.assertTrue(_STAGING.isContextValid("prostate", "hist", context));
     }
 
     @Test
@@ -642,11 +656,11 @@ public class CsStagingTest {
     public void testStagingInputsAndOutputs() {
         StagingSchema schema = _STAGING.getSchema("testis");
 
-        Assert.assertEquals("Inputs do not match", asSet("cs_input_version_original", "extension", "extension_eval", "site", "hist", "lvi",
+        Assert.assertEquals("Inputs do not match", Sets.newHashSet("cs_input_version_original", "extension", "extension_eval", "site", "hist", "lvi",
                 "mets_eval", "mets", "nodes", "nodes_eval", "nodes_pos", "ssf1", "ssf2", "ssf3", "ssf4", "ssf5", "ssf13", "ssf15", "ssf16",
                 "year_dx"), _STAGING.getInputs(schema));
 
-        Assert.assertEquals("Outputs do not match", asSet("ss77", "stor_ajcc7_m", "t2000", "stor_ajcc7_n", "stor_ajcc6_tdescriptor",
+        Assert.assertEquals("Outputs do not match", Sets.newHashSet("ss77", "stor_ajcc7_m", "t2000", "stor_ajcc7_n", "stor_ajcc6_tdescriptor",
                 "ajcc7_stage", "stor_ajcc6_mdescriptor", "stor_ss2000", "ajcc6_tdescriptor", "stor_ajcc7_t", "ajcc6_stage", "n2000", "ajcc7_ndescriptor",
                 "ajcc6_ndescriptor", "ajcc7_mdescriptor", "ajcc6_mdescriptor", "stor_ajcc7_stage", "m77", "ajcc6_m", "ss2000", "stor_ajcc7_ndescriptor",
                 "ajcc7_m", "ajcc7_n", "stor_ajcc7_mdescriptor", "t77", "ajcc6_n", "s_123", "stor_ss77", "ajcc6_t", "stor_ajcc6_ndescriptor", "stor_ajcc6_stage",
@@ -788,12 +802,94 @@ public class CsStagingTest {
             Assert.fail("There are " + unusedTables.size() + " tables that are not used in any schema: " + unusedTables);
     }
 
-    /**
-     * Shortcut for constructing a Set using a List
-     * @param values list of values
-     * @return Set of values
-     */
-    private Set<String> asSet(String... values) {
-        return new HashSet<String>(Arrays.asList(values));
+    //@Test
+    public void testInvalidTableInputs() {
+        Set<String> skipTables = Sets.newHashSet("ajcc7_year_validation");
+        Set<String> errors = new HashSet<String>();
+
+        for (String schemaId : _STAGING.getSchemaIds()) {
+            StagingSchema schema = _STAGING.getSchema(schemaId);
+
+            // build a list of input tables that should be excluded
+            Set<String> inputTables = new HashSet<String>();
+            for (StagingSchemaInput input : schema.getInputs())
+                if (input.getTable() != null)
+                    inputTables.add(input.getTable());
+
+            System.out.println("Checking " + schemaId);
+
+            // loop over involved tables
+            for (String tableId : schema.getInvolvedTables()) {
+                if (inputTables.contains(tableId))
+                    continue;
+
+                if (tableId.startsWith("schema_selection_") || tableId.startsWith("ajcc7_inclusions") || skipTables.contains(tableId))
+                    continue;
+
+                StagingTable table = _STAGING.getTable(tableId);
+
+                // loop over each row
+                for (StagingTableRow row : table.getTableRows()) {
+                    // loop over all input cells
+                    for (Entry<String, List<StagingStringRange>> entry : row.getInputs().entrySet()) {
+                        String key = entry.getKey();
+
+                        // only validate keys that are actually INPUT values
+                        if (!schema.getInputMap().containsKey(key))
+                            continue;
+
+                        // only validate inputs that have an associated table
+                        String validationTableId = schema.getInputMap().get(key).getTable();
+                        if (validationTableId == null)
+                            continue;
+
+                        // loop over list of ranges
+                        Map<String, String> context = new HashMap<String, String>();
+                        for (StagingStringRange range : entry.getValue()) {
+                            // if it "matches all", continue
+                            if (range.matchesAll())
+                                continue;
+
+                            // skip blank values and context variable values
+                            if (!range.getLow().isEmpty() && !range.getLow().startsWith("{{") && !range.getHigh().startsWith("{{")) {
+                                // if the range is same low and high, no need for conversion
+                                if (range.getHigh().equals(range.getLow())) {
+                                    context.put(key, range.getLow());
+                                    if (!_STAGING.isContextValid(schemaId, key, context))
+                                        errors.add(schemaId + " -> " + tableId + ": " + key + " = '" + range.getLow() + "'");
+                                }
+                                else {
+                                    Integer low = Ints.tryParse(range.getLow());
+                                    Integer high = Ints.tryParse(range.getHigh());
+
+                                    // we are not currently handling non-numeric fields like primary site (Cnnn); skip these cases
+                                    if (low != null || high != null) {
+                                        // loop over all values in range
+                                        for (int i = low; i <= high; i++) {
+                                            context.clear();
+                                            String value = Strings.padStart(String.valueOf(i), range.getLow().length(), '0');
+                                            context.put(key, value);
+                                            if (!_STAGING.isContextValid(schemaId, key, context)) {
+                                                errors.add(schemaId + " -> " + tableId + ": " + key + " = '" + value + "'");
+
+                                                // only report one error per cell
+                                                break;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        if (!errors.isEmpty()) {
+            System.out.println("There were " + errors.size() + " instances of inputs values in tables which are not valid.");
+            for (String error : errors)
+                System.out.println(error);
+            Assert.fail();
+        }
     }
 }

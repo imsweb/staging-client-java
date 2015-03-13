@@ -58,7 +58,7 @@ public class StagingStringRange extends StringRange {
      * If low and high are both null, then this range matches all strings
      * @return true if this range matches all strings
      */
-    private boolean matchesAll() {
+    public boolean matchesAll() {
         return _low == null && _high == null;
     }
 
