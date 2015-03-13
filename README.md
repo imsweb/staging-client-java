@@ -1,6 +1,7 @@
 # staging-client-java
 
 [![Build Status](https://travis-ci.org/imsweb/staging-client-java.svg?branch=master)](https://travis-ci.org/imsweb/staging-client-java)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.imsweb/staging-client-java/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.imsweb/staging-client-java)
 
 A cancer staging client library for Java applications.
 
