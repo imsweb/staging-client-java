@@ -8,7 +8,7 @@ plugins {
 }
 
 group = 'com.imsweb'
-version = '1.0-SNAPSHOT'
+version = '1.0'
 description = 'Java client library for staging calculations'
 
 println "Starting build using ${Jvm.current()}"
