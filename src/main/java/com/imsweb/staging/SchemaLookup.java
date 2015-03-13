@@ -48,7 +48,7 @@ public class SchemaLookup {
      * Return a Map of all inputs
      * @return a Map of all inputs
      */
-    protected Map<String, String> getInputs() {
+    public Map<String, String> getInputs() {
         return _inputs;
     }
 
