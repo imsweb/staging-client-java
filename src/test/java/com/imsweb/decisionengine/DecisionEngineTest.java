@@ -750,7 +750,7 @@ public class DecisionEngineTest {
         Assert.assertTrue(result.hasErrors());
         Assert.assertEquals(3, result.getPath().size());
         Assert.assertEquals(1, result.getErrors().size());
-        Assert.assertEquals("Match not found", result.getErrors().get(0).getMessage());
+        Assert.assertTrue(result.getErrors().get(0).getMessage().startsWith("Match not found"));
         Assert.assertNull(result.getErrors().get(0).getKey());
         Assert.assertEquals("table_jump_sample", result.getErrors().get(0).getTable());
     }
@@ -1010,8 +1010,9 @@ public class DecisionEngineTest {
 
         Assert.assertEquals(Type.STAGED, result.getType());
         Assert.assertTrue(result.hasErrors());
-        Assert.assertEquals("Match not found", result.getErrors().get(0).getMessage());
+        Assert.assertTrue(result.getErrors().get(0).getMessage().startsWith("Match not found"));
         Assert.assertNull(result.getErrors().get(0).getKey());
+        Assert.assertEquals("table_jump_sample", result.getErrors().get(0).getTable());
 
         // test 1 JUMP and 2 VALUEs
         input.clear();
