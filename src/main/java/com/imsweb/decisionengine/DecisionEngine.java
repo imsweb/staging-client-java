@@ -724,7 +724,7 @@ public class DecisionEngine {
         // look for the match in the mapping table; if no match is found, used the table-specific no_match value
         List<? extends Endpoint> endpoints = matchTable(table, result.getContext());
         if (endpoints == null)
-            result.addError(new ErrorBuilder(Type.MATCH_NOT_FOUND).message("Match not found").table(tableId).build());
+            result.addError(new ErrorBuilder(Type.MATCH_NOT_FOUND).message("Match not found in table '" + tableId + "'").table(tableId).build());
         else {
             for (Endpoint endpoint : endpoints) {
                 if (EndpointType.STOP.equals(endpoint.getType()))
