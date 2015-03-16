@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -19,9 +20,7 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.google.common.base.Strings;
 import com.google.common.collect.Sets;
-import com.google.common.primitives.Ints;
 
 import com.imsweb.decisionengine.Error.Type;
 import com.imsweb.staging.IntegrationUtils;
@@ -849,28 +848,27 @@ public class CsStagingTest {
             Assert.fail("There are " + unusedTables.size() + " tables that are not used in any schema: " + unusedTables);
     }
 
-    //@Test
+    /**
+     * This tests that INPUT fields in tables that have a validation table associated with them are the correct length.  In other words,
+     * if a table has an INPUT column for "ssf4" but has a value for that column of "00" this would catch that that field should be
+     * 3 characters long based on the ssf4_lookup_table.
+     */
+    @Test
     public void testInvalidTableInputs() {
-        Set<String> skipTables = Sets.newHashSet("ajcc7_year_validation");
         Set<String> errors = new HashSet<String>();
 
         for (String schemaId : _STAGING.getSchemaIds()) {
             StagingSchema schema = _STAGING.getSchema(schemaId);
 
             // build a list of input tables that should be excluded
-            Set<String> inputTables = new HashSet<String>();
+            Map<String, Integer> inputTableLengths = new HashMap<String, Integer>();
             for (StagingSchemaInput input : schema.getInputs())
                 if (input.getTable() != null)
-                    inputTables.add(input.getTable());
-
-            System.out.println("Checking " + schemaId);
+                    inputTableLengths.put(input.getTable(), getInputLength(input.getTable(), input.getKey()));
 
             // loop over involved tables
             for (String tableId : schema.getInvolvedTables()) {
-                if (inputTables.contains(tableId))
-                    continue;
-
-                if (tableId.startsWith("schema_selection_") || tableId.startsWith("ajcc7_inclusions") || skipTables.contains(tableId))
+                if (inputTableLengths.containsKey(tableId))
                     continue;
 
                 StagingTable table = _STAGING.getTable(tableId);
@@ -890,41 +888,32 @@ public class CsStagingTest {
                         if (validationTableId == null)
                             continue;
 
+                        Integer expectedFieldLength = inputTableLengths.get(validationTableId);
+
                         // loop over list of ranges
-                        Map<String, String> context = new HashMap<String, String>();
                         for (StagingStringRange range : entry.getValue()) {
-                            // if it "matches all", continue
-                            if (range.matchesAll())
+                            String low = range.getLow();
+                            String high = range.getHigh();
+
+                            // if it matches all, continue
+                            if (range.matchesAll() || low.isEmpty())
                                 continue;
 
-                            // skip blank values and context variable values
-                            if (!range.getLow().isEmpty() && !range.getLow().startsWith("{{") && !range.getHigh().startsWith("{{")) {
-                                // if the range is same low and high, no need for conversion
-                                if (range.getHigh().equals(range.getLow())) {
-                                    context.put(key, range.getLow());
-                                    if (!_STAGING.isContextValid(schemaId, key, context))
-                                        errors.add(schemaId + " -> " + tableId + ": " + key + " = '" + range.getLow() + "'");
-                                }
-                                else {
-                                    Integer low = Ints.tryParse(range.getLow());
-                                    Integer high = Ints.tryParse(range.getHigh());
+                            if (low.startsWith("{{") && low.contains(Staging.CTX_YEAR_CURRENT))
+                                low = String.valueOf(Calendar.getInstance().get(Calendar.YEAR));
+                            if (high.startsWith("{{") && high.contains(Staging.CTX_YEAR_CURRENT))
+                                high = String.valueOf(Calendar.getInstance().get(Calendar.YEAR));
 
-                                    // we are not currently handling non-numeric fields like primary site (Cnnn); skip these cases
-                                    if (low != null || high != null) {
-                                        // loop over all values in range
-                                        for (int i = low; i <= high; i++) {
-                                            context.clear();
-                                            String value = Strings.padStart(String.valueOf(i), range.getLow().length(), '0');
-                                            context.put(key, value);
-                                            if (!_STAGING.isContextValid(schemaId, key, context)) {
-                                                errors.add(schemaId + " -> " + tableId + ": " + key + " = '" + value + "'");
+                            // change that ranges are the same length
+                            if (low.length() != high.length())
+                                errors.add(schemaId + " -> " + tableId + ": " + key + " = '" + low + "-" + high + "' : lengths differ");
 
-                                                // only report one error per cell
-                                                break;
-                                            }
-                                        }
-                                    }
-                                }
+                            // make sure the fields that have input validation match the length in that input validation table
+                            if (expectedFieldLength != null && (!expectedFieldLength.equals(low.length()) || !expectedFieldLength.equals(high.length()))) {
+                                if (low.equals(high))
+                                    errors.add(schemaId + " -> " + tableId + ": " + key + " = '" + low + "' : length does not match lookup table " + validationTableId);
+                                else
+                                    errors.add(schemaId + " -> " + tableId + ": " + key + " = '" + low + "-" + high + "' : lengths do not match lookup table " + validationTableId);
                             }
                         }
                     }
@@ -938,5 +927,41 @@ public class CsStagingTest {
                 System.out.println(error);
             Assert.fail();
         }
+    }
+
+    /**
+     * Return the input length from a specified table
+     * @param tableId table indentifier
+     * @param key input key
+     * @return null if no length couild be determined, or the length
+     */
+    private Integer getInputLength(String tableId, String key) {
+        StagingTable table = _STAGING.getTable(tableId);
+        Integer length = null;
+
+        // loop over each row
+        for (StagingTableRow row : table.getTableRows()) {
+            List<StagingStringRange> ranges = row.getInputs().get(key);
+
+            for (StagingStringRange range : ranges) {
+                String low = range.getLow();
+                String high = range.getHigh();
+
+                if (range.matchesAll() || low.isEmpty())
+                    continue;
+
+                if (low.startsWith("{{") && low.contains(Staging.CTX_YEAR_CURRENT))
+                    low = String.valueOf(Calendar.getInstance().get(Calendar.YEAR));
+                if (high.startsWith("{{") && high.contains(Staging.CTX_YEAR_CURRENT))
+                    high = String.valueOf(Calendar.getInstance().get(Calendar.YEAR));
+
+                if (length != null && (low.length() != length || high.length() != length))
+                    throw new IllegalStateException("Inconsistent lengths in table " + tableId + " for key " + key);
+
+                length = low.length();
+            }
+        }
+
+        return length;
     }
 }
