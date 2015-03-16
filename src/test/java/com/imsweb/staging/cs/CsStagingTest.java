@@ -321,6 +321,53 @@ public class CsStagingTest {
     }
 
     @Test
+    public void testBlankValues() {
+        CsStagingData data = new CsStagingData();
+        data.setInput(CsInput.PRIMARY_SITE, "C700");
+        data.setInput(CsInput.HISTOLOGY, "9530");
+        data.setInput(CsInput.BEHAVIOR, "0");
+        data.setInput(CsInput.GRADE, "9");
+        data.setInput(CsInput.DX_YEAR, "2010");
+        data.setInput(CsInput.CS_VERSION_ORIGINAL, "020520");
+        data.setInput(CsInput.TUMOR_SIZE, "999");
+        data.setInput(CsInput.EXTENSION, "050");
+        data.setInput(CsInput.EXTENSION_EVAL, "9");
+        data.setInput(CsInput.LYMPH_NODES, "988");
+        data.setInput(CsInput.LYMPH_NODES_EVAL, "9");
+        data.setInput(CsInput.REGIONAL_NODES_POSITIVE, "99");
+        data.setInput(CsInput.REGIONAL_NODES_EXAMINED, "99");
+        data.setInput(CsInput.METS_AT_DX, "00");
+        data.setInput(CsInput.METS_EVAL, "9");
+        data.setInput(CsInput.LVI, "8");
+        data.setInput(CsInput.AGE_AT_DX, "060");
+        data.setSsf(1, "999");
+        data.setSsf(2, "999");
+        data.setSsf(3, "999");
+        // do not supply SSF4
+        data.setSsf(5, "999");
+        data.setSsf(6, "999");
+        data.setSsf(7, "000");
+        data.setSsf(8, "001");
+
+        // perform the staging
+        _STAGING.stage(data);
+
+        Assert.assertEquals(Result.STAGED, data.getResult());
+        Assert.assertEquals("brain", data.getSchemaId());
+        Assert.assertEquals(0, data.getErrors().size());
+
+        // now change SSF4 to blank; it should produce an error now since the default will not be used
+        data.setSsf(4, "");
+
+        // perform the staging
+        _STAGING.stage(data);
+
+        Assert.assertEquals(Result.STAGED, data.getResult());
+        Assert.assertEquals("brain", data.getSchemaId());
+        Assert.assertEquals(1, data.getErrors().size());
+    }
+
+    @Test
     public void testStageUrethra() {
         // test this case:  http://seer.cancer.gov/seertools/cstest/?mets=10&lnexam=99&diagnosis_year=2013&grade=9&exteval=9&age=060&site=C680&metseval=9&hist=8000&ext=100&version=020550&nodeseval=9&behav=3&lnpos=99&nodes=100&csver_original=020440&lvi=9&ssf1=020&size=075
         CsStagingData data = new CsStagingData();
