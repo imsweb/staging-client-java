@@ -105,9 +105,3 @@ modifyPom {
         }
     }
 }
-
-nexus {
-    sign = false
-    repositoryUrl = 'http://cilantro.imsweb.com:8080/nexus/content/repositories/releases'
-    snapshotRepositoryUrl = 'http://cilantro.imsweb.com:8080/nexus/content/repositories/snapshots'
-}
