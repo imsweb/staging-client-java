@@ -4,11 +4,11 @@ plugins {
     id 'java'
     id 'checkstyle'
     id 'findbugs'
-    id 'com.bmuschko.nexus' version '2.1.1'
+    id 'com.bmuschko.nexus' version '2.3.1'
 }
 
 group = 'com.imsweb'
-version = '1.1'
+version = '1.2-SNAPSHOT'
 description = 'Java client library for staging calculations'
 
 println "Starting build using ${Jvm.current()}"
@@ -104,4 +104,10 @@ modifyPom {
             }
         }
     }
+}
+
+nexus {
+    sign = false
+    repositoryUrl = 'http://cilantro.imsweb.com:8080/nexus/content/repositories/releases'
+    snapshotRepositoryUrl = 'http://cilantro.imsweb.com:8080/nexus/content/repositories/snapshots'
 }
