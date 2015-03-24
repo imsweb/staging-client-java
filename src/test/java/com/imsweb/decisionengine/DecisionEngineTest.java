@@ -7,6 +7,7 @@ package com.imsweb.decisionengine;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -195,12 +196,12 @@ public class DecisionEngineTest {
         def.addInput("a");
         def.addInput("b");
         def.addInput("c");
-        def.addMapping(new BasicMapping("m1", Arrays.asList(new BasicTablePath("table_multiple_inputs"))));
+        def.addMapping(new BasicMapping("m1", Collections.singletonList(new BasicTablePath("table_multiple_inputs"))));
         provider.addDefinition(def);
 
         def = new BasicDefinition("starting_recursion");
         def.addInput("a");
-        def.addMapping(new BasicMapping("m1", Arrays.asList(new BasicTablePath("table_recursion"))));
+        def.addMapping(new BasicMapping("m1", Collections.singletonList(new BasicTablePath("table_recursion"))));
         provider.addDefinition(def);
 
         def = new BasicDefinition("starting_inclusions");
@@ -208,19 +209,19 @@ public class DecisionEngineTest {
         def.addInput("b");
         def.addInput("c");
         mapping = new BasicMapping("m1");
-        mapping.setInclusionTables(Arrays.asList(new BasicTablePath("table_inclusion1")));
+        mapping.setInclusionTables(Collections.singletonList(new BasicTablePath("table_inclusion1")));
         BasicTablePath path = new BasicTablePath("table_part1");
         path.addInputMapping("b", "val");
         mapping.addTablePath(path);
         def.addMapping(mapping);
         mapping = new BasicMapping("m2");
-        mapping.setInclusionTables(Arrays.asList(new BasicTablePath("table_inclusion2")));
+        mapping.setInclusionTables(Collections.singletonList(new BasicTablePath("table_inclusion2")));
         path = new BasicTablePath("table_part1");
         path.addInputMapping("c", "val");
         mapping.addTablePath(path);
         def.addMapping(mapping);
         mapping = new BasicMapping("m3");
-        mapping.setExclusionTables(Arrays.asList(new BasicTablePath("table_exclusion1")));
+        mapping.setExclusionTables(Collections.singletonList(new BasicTablePath("table_exclusion1")));
         path = new BasicTablePath("table_part2");
         mapping.addTablePath(path);
         def.addMapping(mapping);
@@ -239,7 +240,7 @@ public class DecisionEngineTest {
         def.addInput("b");
         def.addInput("c");
         mapping = new BasicMapping("m1");
-        mapping.setInclusionTables(Arrays.asList(new BasicTablePath("table_inclusion3")));
+        mapping.setInclusionTables(Collections.singletonList(new BasicTablePath("table_inclusion3")));
         path = new BasicTablePath("table_part1");
         path.addInputMapping("b", "val");
         path.addOutputMapping("result", "mapped_result");
@@ -335,7 +336,7 @@ public class DecisionEngineTest {
         Assert.assertNull(DecisionEngine.matchTable(matchTable, input));
 
         input.put("size", "003");
-        ReflectionAssert.assertReflectionEquals(Arrays.asList(new BasicEndpoint(EndpointType.JUMP, "some_crazy_table")), DecisionEngine.matchTable(matchTable, input));
+        ReflectionAssert.assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.JUMP, "some_crazy_table")), DecisionEngine.matchTable(matchTable, input));
 
         input.put("size", "014");
         List<? extends Endpoint> results = DecisionEngine.matchTable(matchTable, input);
@@ -345,7 +346,7 @@ public class DecisionEngineTest {
         Assert.assertEquals("size_result", results.get(0).getResultKey());
 
         input.put("size", "086");
-        ReflectionAssert.assertReflectionEquals(Arrays.asList(new BasicEndpoint(EndpointType.ERROR, "Get that huge stuff out of here!")), DecisionEngine.matchTable(matchTable, input));
+        ReflectionAssert.assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.ERROR, "Get that huge stuff out of here!")), DecisionEngine.matchTable(matchTable, input));
 
         // try with a value not in the table
         input.put("size", "021");
@@ -378,21 +379,21 @@ public class DecisionEngineTest {
         Assert.assertNull(DecisionEngine.matchTable(matchTable, input));
 
         // specify to only match on key1, there should be a match to the first line
-        ReflectionAssert.assertReflectionEquals(Arrays.asList(new BasicEndpoint(EndpointType.MATCH, "LINE1")), DecisionEngine.matchTable(matchTable, input, Sets.newHashSet("key1")));
+        ReflectionAssert.assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1")), DecisionEngine.matchTable(matchTable, input, Sets.newHashSet("key1")));
 
         // add key2 to the input map and there should be a match
         input.put("key2", "7");
-        ReflectionAssert.assertReflectionEquals(Arrays.asList(new BasicEndpoint(EndpointType.MATCH, "LINE2")), DecisionEngine.matchTable(matchTable, input));
+        ReflectionAssert.assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE2")), DecisionEngine.matchTable(matchTable, input));
 
         // if searching on key1 only, even though key2 was supplied should still match to first line
-        ReflectionAssert.assertReflectionEquals(Arrays.asList(new BasicEndpoint(EndpointType.MATCH, "LINE1")), DecisionEngine.matchTable(matchTable, input, Sets.newHashSet("key1")));
+        ReflectionAssert.assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1")), DecisionEngine.matchTable(matchTable, input, Sets.newHashSet("key1")));
 
         // supply an empty set of keys (the same meaning as not passing any keys
-        ReflectionAssert.assertReflectionEquals(Arrays.asList(new BasicEndpoint(EndpointType.MATCH, "LINE1")), DecisionEngine.matchTable(matchTable, input, new HashSet<String>()));
+        ReflectionAssert.assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1")), DecisionEngine.matchTable(matchTable, input, new HashSet<String>()));
 
         // supply an invalid key.  I think this should find nothing, but for the moment finds a match to the first row since none of the cells were compared to.  It
         // is the same as matching to a table with no INPUTS which would currently find a match to the first row.
-        ReflectionAssert.assertReflectionEquals(Arrays.asList(new BasicEndpoint(EndpointType.MATCH, "LINE1")), DecisionEngine.matchTable(matchTable, input, Sets.newHashSet("bad_key")));
+        ReflectionAssert.assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1")), DecisionEngine.matchTable(matchTable, input, Sets.newHashSet("bad_key")));
     }
 
     @Test
@@ -445,7 +446,7 @@ public class DecisionEngineTest {
         BasicDefinition def = new BasicDefinition("alg_key_references");
         def.addInput("a");
         def.addInput("b");
-        def.addMapping(new BasicMapping("m1", Arrays.asList(new BasicTablePath("table_key_references"))));
+        def.addMapping(new BasicMapping("m1", Collections.singletonList(new BasicTablePath("table_key_references"))));
         provider.addDefinition(def);
         DecisionEngine engine = new DecisionEngine(provider);
 
@@ -789,7 +790,7 @@ public class DecisionEngineTest {
         inputKey.setDefault("0");
         def.addInput(inputKey);
         def.addInitialContext("result", "0");
-        def.addMapping(new BasicMapping("m1", Arrays.asList(new BasicTablePath("table_null_values"))));
+        def.addMapping(new BasicMapping("m1", Collections.singletonList(new BasicTablePath("table_null_values"))));
         provider.addDefinition(def);
         DecisionEngine engine = new DecisionEngine(provider);
 

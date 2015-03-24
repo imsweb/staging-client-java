@@ -5,7 +5,7 @@ package com.imsweb.decisionengine;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -750,7 +750,7 @@ public class DecisionEngine {
 
                     // if the value if null, that is indicating that the key should be removed from the context; otherwise set the value into the context
                     if (mappedKeys.isEmpty())
-                        mappedKeys = Arrays.asList(endpoint.getResultKey());
+                        mappedKeys = Collections.singletonList(endpoint.getResultKey());
 
                     // iterate over all the mappings for this endpoint key
                     for (String key : mappedKeys) {
