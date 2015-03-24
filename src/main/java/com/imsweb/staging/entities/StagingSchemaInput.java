@@ -219,6 +219,7 @@ public class StagingSchemaInput implements Input {
                 Objects.equal(_default, that._default) &&
                 Objects.equal(_table, that._table) &&
                 Objects.equal(_usedForStaging, that._usedForStaging) &&
+                Objects.equal(_failOnInvalid, that._failOnInvalid) &&
                 Objects.equal(_unit, that._unit) &&
                 Objects.equal(_decimalPlaces, that._decimalPlaces) &&
                 Objects.equal(_metadata, that._metadata);
@@ -227,6 +228,6 @@ public class StagingSchemaInput implements Input {
     @Override
     public int hashCode() {
         // do not include _parsedValues
-        return Objects.hashCode(_key, _name, _naaccrItem, _values, _default, _table, _usedForStaging, _unit, _decimalPlaces, _metadata);
+        return Objects.hashCode(_key, _name, _naaccrItem, _values, _default, _table, _usedForStaging, _failOnInvalid, _unit, _decimalPlaces, _metadata);
     }
 }
