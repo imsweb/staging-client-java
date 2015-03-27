@@ -1,5 +1,7 @@
 package com.imsweb.staging.entities;
 
+import java.util.Collections;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -26,5 +28,10 @@ public class StagingSchemaInputTest {
         input2.setMetadata(Sets.newHashSet("META2"));
 
         Assert.assertNotEquals(input1, input2);
+
+        input1.setMetadata(null);
+        input2.setMetadata(Collections.<String>emptySet());
+
+        Assert.assertEquals(input1, input2);
     }
 }

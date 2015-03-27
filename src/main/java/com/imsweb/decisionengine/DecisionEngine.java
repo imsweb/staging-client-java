@@ -558,9 +558,10 @@ public class DecisionEngine {
     public Result process(Definition definition, Map<String, String> context) {
         Result result = new Result(context);
 
-        // trim all context Strings; " " will match ""; in addition, null values should be set to blank
+        // trim all context Strings; " " will match ""
         for (Entry<String, String> entry : context.entrySet())
-            entry.setValue(entry.getValue() == null ? "" : entry.getValue().trim());
+            if (entry.getValue() != null)
+                context.put(entry.getKey(), entry.getValue().trim());
 
         // validate inputs
         boolean stopForBadInput = false;
@@ -569,47 +570,47 @@ public class DecisionEngine {
 
             String value = context.get(input.getKey());
 
-            // if value not supplied, use the default and set it back into the context
+            // if value not supplied, use the default and set it back into the context; if not supplied and no default, set the input the blank
             if (value == null) {
-                value = input.getDefault();
+                value = (input.getDefault() != null ? input.getDefault() : "");
                 context.put(input.getKey(), value);
             }
 
-            if (value != null) {
-                // if a list of valid values was given, validate against it
-                if (!input.getValues().isEmpty()) {
-                    if (!testMatch(input.getValues(), value, context)) {
-                        result.addError(new ErrorBuilder(Boolean.TRUE.equals(input.getUsedForStaging()) ? Type.INVALID_REQUIRED_INPUT : Type.INVALID_NON_REQUIRED_INPUT)
-                                .message("Invalid '" + input.getKey() + "' value: '" + value + "'")
-                                .key(input.getKey()).build());
+            // if a list of valid values was given, validate against it
+            if (!input.getValues().isEmpty()) {
+                if (!testMatch(input.getValues(), value, context)) {
+                    result.addError(new ErrorBuilder(Boolean.TRUE.equals(input.getUsedForStaging()) ? Type.INVALID_REQUIRED_INPUT : Type.INVALID_NON_REQUIRED_INPUT)
+                            .message("Invalid '" + input.getKey() + "' value: '" + value + "'")
+                            .key(input.getKey()).build());
 
-                        if (Boolean.TRUE.equals(input.getFailOnInvalid()))
-                            stopForBadInput = true;
-                    }
-                }
-                // otherwise validate value against associated table, if supplied
-                else if (input.getTable() != null) {
-                    Table lookup = getProvider().getTable(input.getTable());
-
-                    if (lookup == null) {
-                        result.addError(new ErrorBuilder(Type.UNKNOWN_TABLE)
-                                .message("Input table does not exist: " + input.getTable())
-                                .key(input.getKey()).build());
-                        continue;
-                    }
-
-                    List<? extends Endpoint> endpoints = matchTable(lookup, context);
-                    if (endpoints == null) {
-                        result.addError(new ErrorBuilder(Boolean.TRUE.equals(input.getUsedForStaging()) ? Type.INVALID_REQUIRED_INPUT : Type.INVALID_NON_REQUIRED_INPUT)
-                                .message("Invalid '" + input.getKey() + "' value: '" + value + "'")
-                                .key(input.getKey()).table(input.getTable())
-                                .build());
-
-                        if (Boolean.TRUE.equals(input.getFailOnInvalid()))
-                            stopForBadInput = true;
-                    }
+                    if (Boolean.TRUE.equals(input.getFailOnInvalid()))
+                        stopForBadInput = true;
                 }
             }
+
+            // otherwise validate value against associated table, if supplied
+            if (input.getTable() != null) {
+                Table lookup = getProvider().getTable(input.getTable());
+
+                if (lookup == null) {
+                    result.addError(new ErrorBuilder(Type.UNKNOWN_TABLE)
+                            .message("Input table does not exist: " + input.getTable())
+                            .key(input.getKey()).build());
+                    continue;
+                }
+
+                List<? extends Endpoint> endpoints = matchTable(lookup, context);
+                if (endpoints == null) {
+                    result.addError(new ErrorBuilder(Boolean.TRUE.equals(input.getUsedForStaging()) ? Type.INVALID_REQUIRED_INPUT : Type.INVALID_NON_REQUIRED_INPUT)
+                            .message("Invalid '" + input.getKey() + "' value: '" + value + "'")
+                            .key(input.getKey()).table(input.getTable())
+                            .build());
+
+                    if (Boolean.TRUE.equals(input.getFailOnInvalid()))
+                        stopForBadInput = true;
+                }
+            }
+
         }
 
         // if an invalid input was flagged to stop processing, set result and exit

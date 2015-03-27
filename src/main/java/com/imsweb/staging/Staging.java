@@ -496,10 +496,8 @@ public final class Staging {
                 // add schema id to result
                 data.setSchemaId(schema.getId());
 
-                // copy the input into a new context making sure to trim all values; if the value is null, replace it with an empty string
-                Map<String, String> context = new HashMap<String, String>();
-                for (Entry<String, String> entry : data.getInput().entrySet())
-                    context.put(entry.getKey(), entry.getValue() != null ? entry.getValue().trim() : "");
+                // copy the input into a new context
+                Map<String, String> context = new HashMap<String, String>(data.getInput());
 
                 // add context variables
                 addContextKeys(context);
