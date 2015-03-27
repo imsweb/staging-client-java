@@ -52,6 +52,7 @@ public class DecisionEngineTest {
         table.addRawRow("20-29", "Third 10");
         table.addRawRow("30", "Thirty");
         table.addRawRow("99", "Ninety-nine");
+        table.addRawRow("", "blank");
         provider.addTable(table);
 
         table = new BasicTable("table_jump_sample");
