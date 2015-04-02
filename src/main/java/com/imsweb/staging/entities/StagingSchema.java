@@ -62,7 +62,7 @@ public class StagingSchema implements Definition {
     @Embedded("inputs")
     private List<StagingSchemaInput> _inputs;
     @Embedded("initial_context")
-    private List<StagingKeyValue> _initialContext;
+    private Set<StagingKeyValue> _initialContext;
     @Embedded("mappings")
     private List<StagingMapping> _mappings;
     @Property("involved_tables")
@@ -208,11 +208,12 @@ public class StagingSchema implements Definition {
 
     @Override
     @JsonProperty("initial_context")
-    public List<StagingKeyValue> getInitialContext() {
+    public Set<StagingKeyValue> getInitialContext() {
         return _initialContext;
     }
 
-    public void setInitialContext(List<StagingKeyValue> initialContext) {
+    @JsonDeserialize(as = LinkedHashSet.class)
+    public void setInitialContext(Set<StagingKeyValue> initialContext) {
         _initialContext = initialContext;
     }
 

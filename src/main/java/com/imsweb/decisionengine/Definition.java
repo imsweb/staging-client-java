@@ -5,6 +5,7 @@ package com.imsweb.decisionengine;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * A definition which can be processed by DecisionEngine
@@ -27,7 +28,7 @@ public interface Definition {
      * A list of initial key/value pairs which will be set at the start of process
      * @return a List of key/value pairs
      */
-    List<? extends KeyValue> getInitialContext();
+    Set<? extends KeyValue> getInitialContext();
 
     /**
      * The list of mappings, in order, which will be processed
