@@ -4,7 +4,9 @@
 package com.imsweb.decisionengine.basic;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import com.imsweb.decisionengine.Mapping;
 
@@ -13,7 +15,7 @@ public class BasicMapping implements Mapping {
     private String _id;
     private List<BasicTablePath> _inclusionTables;
     private List<BasicTablePath> _exclusionTables;
-    private List<BasicKeyValue> _initialContext;
+    private Set<BasicKeyValue> _initialContext;
     private List<BasicTablePath> _tablePaths;
 
     /**
@@ -62,17 +64,17 @@ public class BasicMapping implements Mapping {
     }
 
     @Override
-    public List<BasicKeyValue> getInitialContext() {
+    public Set<BasicKeyValue> getInitialContext() {
         return _initialContext;
     }
 
-    public void setInitialContext(List<BasicKeyValue> initialContext) {
+    public void setInitialContext(Set<BasicKeyValue> initialContext) {
         _initialContext = initialContext;
     }
 
     public void addInitialContext(String key, String value) {
         if (_initialContext == null)
-            _initialContext = new ArrayList<BasicKeyValue>();
+            _initialContext = new HashSet<BasicKeyValue>();
 
         _initialContext.add(new BasicKeyValue(key, value));
     }

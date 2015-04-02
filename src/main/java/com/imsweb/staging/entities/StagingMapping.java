@@ -3,14 +3,16 @@
  */
 package com.imsweb.staging.entities;
 
-import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.mongodb.morphia.annotations.Embedded;
 import org.mongodb.morphia.annotations.Property;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.google.common.base.Objects;
 
 import com.imsweb.decisionengine.Mapping;
@@ -28,7 +30,7 @@ public class StagingMapping implements Mapping {
     @Embedded("exclusion_tables")
     private List<StagingTablePath> _exclusionTables;
     @Embedded("initial_context")
-    private List<StagingKeyValue> _initialContext;
+    private Set<StagingKeyValue> _initialContext;
     @Embedded("tables")
     private List<StagingTablePath> _tablePaths;
 
@@ -89,19 +91,13 @@ public class StagingMapping implements Mapping {
 
     @Override
     @JsonProperty("initial_context")
-    public List<StagingKeyValue> getInitialContext() {
+    public Set<StagingKeyValue> getInitialContext() {
         return _initialContext;
     }
 
-    public void setInitialContext(List<StagingKeyValue> initialContext) {
+    @JsonDeserialize(as = LinkedHashSet.class)
+    public void setInitialContext(Set<StagingKeyValue> initialContext) {
         _initialContext = initialContext;
-    }
-
-    public void addInitialContext(String key, String value) {
-        if (_initialContext == null)
-            _initialContext = new ArrayList<StagingKeyValue>();
-
-        _initialContext.add(new StagingKeyValue(key, value));
     }
 
     @Override
