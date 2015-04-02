@@ -807,7 +807,7 @@ public class CsStagingTest {
 
         System.out.println("Processed " + reader.getLineNumber() + " lines.");
 
-        is.close();
+        reader.close();
     }
 
     @Test

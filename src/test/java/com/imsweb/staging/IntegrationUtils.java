@@ -305,14 +305,14 @@ public final class IntegrationUtils {
                             List<String> mismatches = new ArrayList<String>();
 
                             // compare results
-                            for (String key : output.keySet()) {
-                                String expected = output.get(key).trim();
-                                String actual = data.getOutput().get(key);
+                            for (Map.Entry<String, String> entry : output.entrySet()) {
+                                String expected = output.get(entry.getKey()).trim();
+                                String actual = data.getOutput().get(entry.getKey());
                                 if (actual == null)
                                     actual = "";
 
                                 if (!expected.equals(actual))
-                                    mismatches.add("   " + lineNum + " --> " + key + ": EXPECTED '" + expected + "' ACTUAL: '" + actual + "'");
+                                    mismatches.add("   " + lineNum + " --> " + entry.getKey() + ": EXPECTED '" + expected + "' ACTUAL: '" + actual + "'");
                             }
 
                             if (!mismatches.isEmpty()) {
@@ -368,8 +368,8 @@ public final class IntegrationUtils {
 
     private static String convertInputMap(Map<String, String> input) {
         List<String> inputValues = new ArrayList<String>();
-        for (String key : input.keySet())
-            inputValues.add("\"" + key + "\": \"" + input.get(key) + "\"");
+        for (Map.Entry<String, String> entry : input.entrySet())
+            inputValues.add("\"" + entry.getKey() + "\": \"" + entry.getValue() + "\"");
         return "{ " + Joiner.on(", ").join(inputValues) + " }";
     }
 }
