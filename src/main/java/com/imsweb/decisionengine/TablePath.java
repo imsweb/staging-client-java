@@ -3,7 +3,7 @@
  */
 package com.imsweb.decisionengine;
 
-import java.util.List;
+import java.util.Set;
 
 /**
  * A single table which is processed during the algorithm along with any redirection of input and output field values
@@ -21,13 +21,13 @@ public interface TablePath {
      * for a single table to be called multiple times and use different input.
      * @return a List of KeyMapping objects
      */
-    List<? extends KeyMapping> getInputMapping();
+    Set<? extends KeyMapping> getInputMapping();
 
     /**
      * A List of output key redirections.  Each entry maps an output key that the table uses to a new output key.  It allows for a single table
      * to be called multiple times and produce output on different fields.
      * @return a List of KeyMapping objects
      */
-    List<? extends KeyMapping> getOutputMapping();
+    Set<? extends KeyMapping> getOutputMapping();
 
 }

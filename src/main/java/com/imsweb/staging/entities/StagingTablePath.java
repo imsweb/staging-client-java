@@ -4,7 +4,6 @@
 package com.imsweb.staging.entities;
 
 import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Set;
 
 import org.mongodb.morphia.annotations.Embedded;
@@ -24,9 +23,9 @@ public class StagingTablePath implements TablePath {
     @Property("id")
     private String _id;
     @Embedded("input_mapping")
-    private List<StagingKeyMapping> _inputMapping;
+    private Set<StagingKeyMapping> _inputMapping;
     @Embedded("output_mapping")
-    private List<StagingKeyMapping> _outputMapping;
+    private Set<StagingKeyMapping> _outputMapping;
     @Embedded("inputs")
     private Set<String> _inputs;
     @Embedded("outputs")
@@ -54,21 +53,23 @@ public class StagingTablePath implements TablePath {
 
     @Override
     @JsonProperty("input_mapping")
-    public List<StagingKeyMapping> getInputMapping() {
+    public Set<StagingKeyMapping> getInputMapping() {
         return _inputMapping;
     }
 
-    public void setInputMapping(List<StagingKeyMapping> input) {
+    @JsonDeserialize(as = LinkedHashSet.class)
+    public void setInputMapping(Set<StagingKeyMapping> input) {
         _inputMapping = input;
     }
 
     @Override
     @JsonProperty("output_mapping")
-    public List<StagingKeyMapping> getOutputMapping() {
+    public Set<StagingKeyMapping> getOutputMapping() {
         return _outputMapping;
     }
 
-    public void setOutputMapping(List<StagingKeyMapping> output) {
+    @JsonDeserialize(as = LinkedHashSet.class)
+    public void setOutputMapping(Set<StagingKeyMapping> output) {
         _outputMapping = output;
     }
 

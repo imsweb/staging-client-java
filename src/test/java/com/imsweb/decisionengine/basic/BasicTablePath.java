@@ -3,16 +3,16 @@
  */
 package com.imsweb.decisionengine.basic;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 import com.imsweb.decisionengine.TablePath;
 
 public class BasicTablePath implements TablePath {
 
     private String _id;
-    private List<BasicKeyMapping> _input;
-    private List<BasicKeyMapping> _output;
+    private Set<BasicKeyMapping> _input;
+    private Set<BasicKeyMapping> _output;
 
     /**
      * Default constructor
@@ -38,33 +38,33 @@ public class BasicTablePath implements TablePath {
     }
 
     @Override
-    public List<BasicKeyMapping> getInputMapping() {
+    public Set<BasicKeyMapping> getInputMapping() {
         return _input;
     }
 
-    public void setInputMapping(List<BasicKeyMapping> input) {
+    public void setInputMapping(Set<BasicKeyMapping> input) {
         _input = input;
     }
 
     public void addInputMapping(String from, String to) {
         if (_input == null)
-            _input = new ArrayList<BasicKeyMapping>();
+            _input = new HashSet<BasicKeyMapping>();
 
         _input.add(new BasicKeyMapping(from, to));
     }
 
     @Override
-    public List<BasicKeyMapping> getOutputMapping() {
+    public Set<BasicKeyMapping> getOutputMapping() {
         return _output;
     }
 
-    public void setOutputMapping(List<BasicKeyMapping> output) {
+    public void setOutputMapping(Set<BasicKeyMapping> output) {
         _output = output;
     }
 
     public void addOutputMapping(String from, String to) {
         if (_output == null)
-            _output = new ArrayList<BasicKeyMapping>();
+            _output = new HashSet<BasicKeyMapping>();
 
         _output.add(new BasicKeyMapping(from, to));
     }
