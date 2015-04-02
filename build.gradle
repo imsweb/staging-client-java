@@ -48,6 +48,10 @@ jar {
     }
 }
 
+test {
+    maxHeapSize = "1g"
+}
+
 checkstyle {
     ignoreFailures = true
     configFile = file('config/checkstyle/checkstyle.xml')
