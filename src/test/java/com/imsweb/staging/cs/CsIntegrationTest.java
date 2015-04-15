@@ -25,7 +25,7 @@ public class CsIntegrationTest {
 
     // set this to null to process all, or a list of schema filename to process
     private static final List<String> _SCHEMA_FILES = Collections.emptyList();
-    //private static final List<String> _SCHEMA_FILES = Arrays.asList("thyroid.gz");
+    //private static final List<String> _SCHEMA_FILES = Arrays.asList("corpus_carcinoma.gz");
 
     public static void main(String[] args) throws IOException, InterruptedException {
         Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.v020550));

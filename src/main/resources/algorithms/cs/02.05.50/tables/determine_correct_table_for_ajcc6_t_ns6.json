@@ -18,5 +18,5 @@
     "name" : "AJCC 6 T",
     "type" : "ENDPOINT"
   } ],
-  "rows" : [ [ "010401,010400,010300,010200,010100,010005,010004,010003,010002,010000,000937", ",2004-2009", "JUMP:extension_cytology_ajcc6_table_csv1_xkn" ], [ "020500-999999,020440,020302,020200,020100,020001,", ",2004-9999", "JUMP:extension_cytology_ajcc6_table_csv2_xkm" ], [ "000937-999999", "2010-9999", "JUMP:extension_cytology_ajcc6_table_csv2_xkm" ] ]
+  "rows" : [ [ "010401,010400,010300,010200,010100,010005,010004,010003,010002,010000,000937", "2004-2009", "JUMP:extension_cytology_ajcc6_table_csv1_xkn" ], [ "020500-999999,020440,020302,020200,020100,020001,", ",2004-9999", "JUMP:extension_cytology_ajcc6_table_csv2_xkm" ], [ "000937-999999", "2010-9999", "JUMP:extension_cytology_ajcc6_table_csv2_xkm" ] ]
 }
