@@ -39,6 +39,8 @@ compile 'com.imsweb.com:staging-client-java:1.2'
 
 ## Usage
 
+More detailed documentation can be found in the [Wiki](https://github.com/imsweb/staging-client-java/wiki/)
+
 ### Get a `Staging` instance
 
 Everything starts with getting an instance of the `Staging` object.  There are `DataProvider` objects for each staging algorithm and version.  The `Staging`
