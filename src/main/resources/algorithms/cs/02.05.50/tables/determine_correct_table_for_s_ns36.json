@@ -18,5 +18,5 @@
     "name" : "S Value",
     "type" : "ENDPOINT"
   } ],
-  "rows" : [ [ "010401,010400,010300,010200,010100,010005,010004,010003,010002,010000,000937", "2004-2009", "JUMP:combined_serum_tumor_marker_svalue_tablefor_yearof_diagnosis_less_than2010_xiz" ], [ "020500-999999,020440,020302,020200,020100,020001", ",2004-9999", "JUMP:combined_serum_tumor_marker_svalue_tablefor_yearof_diagnosis_greater_than2009_xiy" ], [ "000937-999999", "2010-9999", "JUMP:combined_serum_tumor_marker_svalue_tablefor_yearof_diagnosis_greater_than2009_xiy" ] ]
+  "rows" : [ [ "010401,010400,010300,010200,010100,010005,010004,010003,010002,010000,000937", ",2004-2009", "JUMP:combined_serum_tumor_marker_svalue_tablefor_yearof_diagnosis_less_than2010_xiz" ], [ "020500-999999,020440,020302,020200,020100,020001", ",2004-9999", "JUMP:combined_serum_tumor_marker_svalue_tablefor_yearof_diagnosis_greater_than2009_xiy" ], [ "000937-999999", "2010-9999", "JUMP:combined_serum_tumor_marker_svalue_tablefor_yearof_diagnosis_greater_than2009_xiy" ] ]
 }
