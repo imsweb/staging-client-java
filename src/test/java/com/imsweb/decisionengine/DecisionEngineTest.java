@@ -1147,4 +1147,37 @@ public class DecisionEngineTest {
         Assert.assertEquals(asSet("intermediate_output", "final_output"), _ENGINE.getOutputs(provider.getDefinition("starting_intermediate_values")));
     }
 
+    @Test
+    public void testGetTableInputsAsString() {
+        BasicTable table = new BasicTable("table_inputs");
+        table.addColumnDefinition("a", ColumnType.INPUT);
+        table.addColumnDefinition("b", ColumnType.INPUT);
+        table.addColumnDefinition("description", ColumnType.DESCRIPTION);
+        table.addColumnDefinition("result", ColumnType.ENDPOINT);
+        table.addRawRow("1,2,5-9", "00-12", "Line1", "VALUE:LINE1");
+        table.addRawRow("3,4", "17,19,22", "Line2", "JUMP:table_jump_sample");
+        table.addRawRow("0", "23-30", "Line3", "VALUE:LINE3");
+        table.addRawRow("5", "20", "Line4", "JUMP:table_jump_sample");
+        table.addRawRow("*", "55", "Line5", "VALUE:LINE5");
+        table.addRawRow("9", "99", "Line6", "ERROR:999");
+
+        Map<String, String> context = new HashMap<String, String>();
+
+        Assert.assertEquals("<blank>,<blank>", DecisionEngine.getTableInputsAsString(table, context));
+
+        context.put("b", "25");
+        Assert.assertEquals("<blank>,25", DecisionEngine.getTableInputsAsString(table, context));
+
+        context.put("a", "7");
+        Assert.assertEquals("7,25", DecisionEngine.getTableInputsAsString(table, context));
+        context.put("a", "    7");
+        Assert.assertEquals("7,25", DecisionEngine.getTableInputsAsString(table, context));
+        context.put("a", "7    ");
+        Assert.assertEquals("7,25", DecisionEngine.getTableInputsAsString(table, context));
+
+        table = new BasicTable("table_empty");
+        context = new HashMap<String, String>();
+        Assert.assertEquals("", DecisionEngine.getTableInputsAsString(table, context));
+    }
+
 }

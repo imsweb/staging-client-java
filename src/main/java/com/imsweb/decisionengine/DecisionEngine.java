@@ -17,6 +17,8 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.google.common.base.Joiner;
+
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.Endpoint.EndpointType;
 import com.imsweb.decisionengine.Error.ErrorBuilder;
@@ -725,7 +727,9 @@ public class DecisionEngine {
         // look for the match in the mapping table; if no match is found, used the table-specific no_match value
         List<? extends Endpoint> endpoints = matchTable(table, result.getContext());
         if (endpoints == null)
-            result.addError(new ErrorBuilder(Type.MATCH_NOT_FOUND).message("Match not found in table '" + tableId + "'").table(tableId).build());
+            result.addError(new ErrorBuilder(Type.MATCH_NOT_FOUND).message("Match not found in table '" + tableId + "' for inputs (" + getTableInputsAsString(table, result.getContext()) + ")").table(
+                    tableId)
+                    .build());
         else {
             for (Endpoint endpoint : endpoints) {
                 if (EndpointType.STOP.equals(endpoint.getType()))
@@ -735,7 +739,7 @@ public class DecisionEngine {
                 else if (EndpointType.ERROR.equals(endpoint.getType())) {
                     String message = endpoint.getValue();
                     if (message == null || message.isEmpty())
-                        message = "Processing table '" + tableId + "' resulted in an error";
+                        message = "Matching inputs (" + getTableInputsAsString(table, result.getContext()) + ") in '" + tableId + "' resulted in an error";
 
                     result.addError(new ErrorBuilder(Type.STAGING_ERROR).message(message).table(tableId).build());
                 }
@@ -768,6 +772,25 @@ public class DecisionEngine {
         stack.pop();
 
         return continueProcessing;
+    }
+
+    /**
+     * Return a comma-separated list of input values the table needs taken from the passed context.  Used for error message.
+     * @param table a Table
+     * @param context a Map of context
+     * @return a String representing the input for the table
+     */
+    protected static String getTableInputsAsString(Table table, Map<String, String> context) {
+        List<String> inputs = new ArrayList<String>();
+
+        if (table.getColumnDefinitions() != null)
+            for (ColumnDefinition def : table.getColumnDefinitions())
+                if (ColumnType.INPUT.equals(def.getType())) {
+                    String value = context.get(def.getKey());
+                    inputs.add((value == null || value.trim().isEmpty()) ? "<blank>" : value.trim());
+                }
+
+        return Joiner.on(",").join(inputs);
     }
 
 }
