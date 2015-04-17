@@ -735,7 +735,7 @@ public class DecisionEngine {
                 else if (EndpointType.ERROR.equals(endpoint.getType())) {
                     String message = endpoint.getValue();
                     if (message == null || message.isEmpty())
-                        message = "Processing resulted in an error";
+                        message = "Processing table '" + tableId + "' resulted in an error";
 
                     result.addError(new ErrorBuilder(Type.STAGING_ERROR).message(message).table(tableId).build());
                 }
