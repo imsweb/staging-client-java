@@ -727,9 +727,8 @@ public class DecisionEngine {
         // look for the match in the mapping table; if no match is found, used the table-specific no_match value
         List<? extends Endpoint> endpoints = matchTable(table, result.getContext());
         if (endpoints == null)
-            result.addError(new ErrorBuilder(Type.MATCH_NOT_FOUND).message("Match not found in table '" + tableId + "' for inputs (" + getTableInputsAsString(table, result.getContext()) + ")").table(
-                    tableId)
-                    .build());
+            result.addError(new ErrorBuilder(Type.MATCH_NOT_FOUND).message("Match not found in table '" + tableId + "' for inputs (" + getTableInputsAsString(table, result.getContext()) + ")")
+                    .table(tableId).build());
         else {
             for (Endpoint endpoint : endpoints) {
                 if (EndpointType.STOP.equals(endpoint.getType()))
@@ -739,7 +738,7 @@ public class DecisionEngine {
                 else if (EndpointType.ERROR.equals(endpoint.getType())) {
                     String message = endpoint.getValue();
                     if (message == null || message.isEmpty())
-                        message = "Matching inputs (" + getTableInputsAsString(table, result.getContext()) + ") in '" + tableId + "' resulted in an error";
+                        message = "Matching resulted in an error in table '" + tableId + "' for inputs (" + getTableInputsAsString(table, result.getContext()) + ")";
 
                     result.addError(new ErrorBuilder(Type.STAGING_ERROR).message(message).table(tableId).build());
                 }
