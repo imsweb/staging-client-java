@@ -31,6 +31,9 @@ public class DecisionEngine {
 
     private static Pattern _TEMPLATE_REFERENCE = Pattern.compile("\\{\\{(.*?)\\}\\}");
 
+    // string to use for blank or null in error strings
+    private static String _BLANK_OUTPUT = "<blank>";
+
     protected DataProvider _provider;
 
     /**
@@ -582,7 +585,7 @@ public class DecisionEngine {
             if (!input.getValues().isEmpty()) {
                 if (!testMatch(input.getValues(), value, context)) {
                     result.addError(new ErrorBuilder(Boolean.TRUE.equals(input.getUsedForStaging()) ? Type.INVALID_REQUIRED_INPUT : Type.INVALID_NON_REQUIRED_INPUT)
-                            .message("Invalid '" + input.getKey() + "' value: '" + value + "'")
+                            .message("Invalid '" + input.getKey() + "' value (" + (value.isEmpty() ? _BLANK_OUTPUT : value) + ")")
                             .key(input.getKey()).build());
 
                     if (Boolean.TRUE.equals(input.getFailOnInvalid()))
@@ -604,7 +607,7 @@ public class DecisionEngine {
                 List<? extends Endpoint> endpoints = matchTable(lookup, context);
                 if (endpoints == null) {
                     result.addError(new ErrorBuilder(Boolean.TRUE.equals(input.getUsedForStaging()) ? Type.INVALID_REQUIRED_INPUT : Type.INVALID_NON_REQUIRED_INPUT)
-                            .message("Invalid '" + input.getKey() + "' value: '" + value + "'")
+                            .message("Invalid '" + input.getKey() + "' value (" + (value.isEmpty() ? _BLANK_OUTPUT : value) + ")")
                             .key(input.getKey()).table(input.getTable())
                             .build());
 
@@ -786,7 +789,7 @@ public class DecisionEngine {
             for (ColumnDefinition def : table.getColumnDefinitions())
                 if (ColumnType.INPUT.equals(def.getType())) {
                     String value = context.get(def.getKey());
-                    inputs.add((value == null || value.trim().isEmpty()) ? "<blank>" : value.trim());
+                    inputs.add((value == null || value.trim().isEmpty()) ? _BLANK_OUTPUT : value.trim());
                 }
 
         return Joiner.on(",").join(inputs);
