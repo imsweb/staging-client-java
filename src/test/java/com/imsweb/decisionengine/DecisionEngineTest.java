@@ -1163,10 +1163,10 @@ public class DecisionEngineTest {
 
         Map<String, String> context = new HashMap<String, String>();
 
-        Assert.assertEquals("<blank>,<blank>", DecisionEngine.getTableInputsAsString(table, context));
+        Assert.assertEquals(DecisionEngine._BLANK_OUTPUT + "," + DecisionEngine._BLANK_OUTPUT, DecisionEngine.getTableInputsAsString(table, context));
 
         context.put("b", "25");
-        Assert.assertEquals("<blank>,25", DecisionEngine.getTableInputsAsString(table, context));
+        Assert.assertEquals(DecisionEngine._BLANK_OUTPUT + ",25", DecisionEngine.getTableInputsAsString(table, context));
 
         context.put("a", "7");
         Assert.assertEquals("7,25", DecisionEngine.getTableInputsAsString(table, context));
