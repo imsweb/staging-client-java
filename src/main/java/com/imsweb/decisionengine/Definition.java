@@ -19,8 +19,8 @@ public interface Definition {
         // stop staging and return an failed result
         FAIL,
 
-        // if the failed input is required for staging, stop staging and return an failed result; otherwise continue staging
-        FAIL_WHEN_REQUIRED_FOR_STAGING
+        // if the failed input is used for staging, stop staging and return an failed result; otherwise continue staging
+        FAIL_WHEN_USED_FOR_STAGING
     }
 
     /**

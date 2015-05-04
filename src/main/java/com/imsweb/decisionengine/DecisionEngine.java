@@ -600,7 +600,7 @@ public class DecisionEngine {
                     // if the schema error handling is set to FAIL or if the input is required for staging and the error handling is set to FAIL_WHEN_REQUIRED_FOR_STAGING,
                     // then stop processing and return a failure result
                     if (Definition.StagingInputErrorHandler.FAIL.equals(definition.getOnInvalidInput()) ||
-                            (Boolean.TRUE.equals(input.getUsedForStaging()) && Definition.StagingInputErrorHandler.FAIL_WHEN_REQUIRED_FOR_STAGING.equals(definition.getOnInvalidInput())))
+                            (Boolean.TRUE.equals(input.getUsedForStaging()) && Definition.StagingInputErrorHandler.FAIL_WHEN_USED_FOR_STAGING.equals(definition.getOnInvalidInput())))
                         stopForBadInput = true;
                 }
             }
