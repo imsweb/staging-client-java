@@ -119,19 +119,19 @@ public abstract class StagingDataProvider implements DataProvider {
         if (schema.getSchemaSelectionTable() == null)
             throw new IllegalStateException("Schemas must have a schema selection table.");
 
-        // parse the values into something that can searched more efficiently
+        // store the inputs in a Map that can searched more efficiently
         if (schema.getInputs() != null) {
             Map<String, StagingSchemaInput> parsedInputMap = new HashMap<String, StagingSchemaInput>();
+
             for (StagingSchemaInput input : schema.getInputs()) {
                 // verify that all inputs contain a key
                 if (input.getKey() == null)
                     throw new IllegalStateException("All input definitions must have a 'key' value defined.");
 
-                // make a copy of the StagingSchemaInput; the parsed input map provides an easy way to look up by key
-                StagingSchemaInput inputCopy = new StagingSchemaInput(input);
-                parsedInputMap.put(inputCopy.getKey(), inputCopy);
-                schema.setInputMap(parsedInputMap);
+                parsedInputMap.put(input.getKey(), input);
             }
+
+            schema.setInputMap(parsedInputMap);
         }
 
         return schema;
