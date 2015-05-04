@@ -178,9 +178,9 @@ public class DecisionEngineTest {
         provider.addTable(table);
 
         BasicDefinition def = new BasicDefinition("starting_sample");
+        def.setOnInvalidInput(Definition.StagingInputErrorHandler.FAIL);
         def.addInput("a");
         BasicInput input = new BasicInput("b", "table_lookup_sample");
-        input.setFailOnInvalid(true);
         def.addInput(input);
         def.addInput("c");
         def.addInitialContext("d", "HARD-CODE");

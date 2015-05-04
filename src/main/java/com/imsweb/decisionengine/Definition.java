@@ -12,6 +12,17 @@ import java.util.Set;
  */
 public interface Definition {
 
+    enum StagingInputErrorHandler {
+        // continue staging
+        CONTINUE,
+
+        // stop staging and return an failed result
+        FAIL,
+
+        // if the failed input is required for staging, stop staging and return an failed result; otherwise continue staging
+        FAIL_WHEN_REQUIRED_FOR_STAGING
+    }
+
     /**
      * A unique identifier for the definition
      * @return a String representing the definition identifier
@@ -35,5 +46,12 @@ public interface Definition {
      * @return a List of Mapping objects
      */
     List<? extends Mapping> getMappings();
+
+    /**
+     * How are invalid inputs handled during staging.  There are 3 choices.  First, continue processing.  Second, stop processing.  Third,
+     * stop processing only if the failed input is needed for staging.
+     * @return the way to handle invalid input during staging
+     */
+    StagingInputErrorHandler getOnInvalidInput();
 
 }

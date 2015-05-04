@@ -11,7 +11,6 @@ public class BasicInput implements Input {
     private String _default;
     private String _table;
     private Boolean _usedForStaging;
-    private Boolean _failOnInvalid;
 
     /**
      * Default constrctor
@@ -71,14 +70,5 @@ public class BasicInput implements Input {
 
     public void setUsedForStaging(Boolean usedForStaging) {
         _usedForStaging = usedForStaging;
-    }
-
-    @Override
-    public Boolean getFailOnInvalid() {
-        return _failOnInvalid;
-    }
-
-    public void setFailOnInvalid(Boolean failOnInvalid) {
-        _failOnInvalid = failOnInvalid;
     }
 }

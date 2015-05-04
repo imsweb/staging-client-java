@@ -586,9 +586,7 @@ public class DecisionEngine {
                 Table lookup = getProvider().getTable(input.getTable());
 
                 if (lookup == null) {
-                    result.addError(new ErrorBuilder(Type.UNKNOWN_TABLE)
-                            .message("Input table does not exist: " + input.getTable())
-                            .key(input.getKey()).build());
+                    result.addError(new ErrorBuilder(Type.UNKNOWN_TABLE).message("Input table does not exist: " + input.getTable()).key(input.getKey()).build());
                     continue;
                 }
 
@@ -599,7 +597,10 @@ public class DecisionEngine {
                             .key(input.getKey()).table(input.getTable())
                             .build());
 
-                    if (Boolean.TRUE.equals(input.getFailOnInvalid()))
+                    // if the schema error handling is set to FAIL or if the input is required for staging and the error handling is set to FAIL_WHEN_REQUIRED_FOR_STAGING,
+                    // then stop processing and return a failure result
+                    if (Definition.StagingInputErrorHandler.FAIL.equals(definition.getOnInvalidInput()) ||
+                            (Boolean.TRUE.equals(input.getUsedForStaging()) && Definition.StagingInputErrorHandler.FAIL_WHEN_REQUIRED_FOR_STAGING.equals(definition.getOnInvalidInput())))
                         stopForBadInput = true;
                 }
             }

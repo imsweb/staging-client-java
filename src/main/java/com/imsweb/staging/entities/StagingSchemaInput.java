@@ -33,8 +33,6 @@ public class StagingSchemaInput implements Input {
     private String _table;
     @Property("used_for_staging")
     private Boolean _usedForStaging;
-    @Property("fail_on_invalid")
-    private Boolean _failOnInvalid;
     @Property("unit")
     private String _unit;
     @Property("decimal_places")
@@ -134,16 +132,6 @@ public class StagingSchemaInput implements Input {
         _usedForStaging = usedForStaging;
     }
 
-    @Override
-    @JsonProperty("fail_on_invalid")
-    public Boolean getFailOnInvalid() {
-        return _failOnInvalid;
-    }
-
-    public void setFailOnInvalid(Boolean failOnInvalid) {
-        _failOnInvalid = failOnInvalid;
-    }
-
     @JsonProperty("decimal_places")
     public Integer getDecimalPlaces() {
         return _decimalPlaces;
@@ -188,7 +176,6 @@ public class StagingSchemaInput implements Input {
                 Objects.equal(_default, that._default) &&
                 Objects.equal(_table, that._table) &&
                 Objects.equal(_usedForStaging, that._usedForStaging) &&
-                Objects.equal(_failOnInvalid, that._failOnInvalid) &&
                 Objects.equal(_unit, that._unit) &&
                 Objects.equal(_decimalPlaces, that._decimalPlaces) &&
                 Objects.equal(_metadata, that._metadata);
@@ -197,6 +184,6 @@ public class StagingSchemaInput implements Input {
     @Override
     public int hashCode() {
         // do not include _parsedValues
-        return Objects.hashCode(_key, _name, _naaccrItem, _default, _table, _usedForStaging, _failOnInvalid, _unit, _decimalPlaces, _metadata);
+        return Objects.hashCode(_key, _name, _naaccrItem, _default, _table, _usedForStaging, _unit, _decimalPlaces, _metadata);
     }
 }

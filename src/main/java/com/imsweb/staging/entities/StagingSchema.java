@@ -26,7 +26,7 @@ import com.google.common.base.Objects;
 import com.imsweb.decisionengine.Definition;
 
 @JsonPropertyOrder({"id", "algorithm", "version", "name", "title", "subtitle", "description", "notes", "schema_num", "schema_selection_table",
-        "schema_discriminators", "initial_context", "inputs", "mappings", "involved_tables", "last_modified"})
+        "schema_discriminators", "initial_context", "inputs", "mappings", "involved_tables", "on_invalid_input", "last_modified"})
 @Entity(value = "staging_schemas", noClassnameStored = true)
 public class StagingSchema implements Definition {
 
@@ -67,6 +67,8 @@ public class StagingSchema implements Definition {
     private List<StagingMapping> _mappings;
     @Property("involved_tables")
     private Set<String> _involvedTables;
+    @Property("on_invalid_input")
+    private StagingInputErrorHandler _onInvalidInput;
 
     // parsed fields
     @Embedded("parsed_input_map")
@@ -248,6 +250,16 @@ public class StagingSchema implements Definition {
     }
 
     @Override
+    @JsonProperty("on_invalid_input")
+    public StagingInputErrorHandler getOnInvalidInput() {
+        return _onInvalidInput;
+    }
+
+    public void setOnInvalidInput(StagingInputErrorHandler onInvalidInput) {
+        _onInvalidInput = onInvalidInput;
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o)
             return true;
@@ -271,6 +283,7 @@ public class StagingSchema implements Definition {
                 Objects.equal(_inputs, schema._inputs) &&
                 Objects.equal(_initialContext, schema._initialContext) &&
                 Objects.equal(_mappings, schema._mappings) &&
+                Objects.equal(_onInvalidInput, schema._onInvalidInput) &&
                 Objects.equal(_involvedTables, schema._involvedTables);
     }
 
@@ -278,6 +291,6 @@ public class StagingSchema implements Definition {
     public int hashCode() {
         // do not include _id, _lastModified and _parsedInputMap
         return Objects.hashCode(_displayId, _algorithm, _version, _name, _title, _description, _subtitle, _notes, _schemaNum, _schemaSelectionTable,
-                _schemaDiscriminators, _inputs, _initialContext, _mappings, _involvedTables);
+                _schemaDiscriminators, _inputs, _initialContext, _mappings, _onInvalidInput, _involvedTables);
     }
 }

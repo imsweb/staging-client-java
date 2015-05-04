@@ -18,6 +18,7 @@ public class BasicDefinition implements Definition {
     private List<BasicInput> _inputs;
     private Set<BasicKeyValue> _initialContext;
     private List<BasicMapping> _mappings;
+    private StagingInputErrorHandler _onInvalidInput;
 
     // parsed fields
     private Map<String, BasicInput> _parsedInputMap = new HashMap<String, BasicInput>();
@@ -93,6 +94,15 @@ public class BasicDefinition implements Definition {
     @Override
     public List<BasicMapping> getMappings() {
         return _mappings;
+    }
+
+    @Override
+    public StagingInputErrorHandler getOnInvalidInput() {
+        return _onInvalidInput;
+    }
+
+    public void setOnInvalidInput(StagingInputErrorHandler onInvalidInput) {
+        _onInvalidInput = onInvalidInput;
     }
 
     public void setMappings(List<BasicMapping> mappings) {
