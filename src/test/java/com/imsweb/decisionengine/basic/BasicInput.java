@@ -3,22 +3,15 @@
  */
 package com.imsweb.decisionengine.basic;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.imsweb.decisionengine.Input;
 
 public class BasicInput implements Input {
 
     private String _key;
-    private String _values;
     private String _default;
     private String _table;
     private Boolean _usedForStaging;
     private Boolean _failOnInvalid;
-
-    // parsed fields
-    private List<BasicStringRange> _parsedValues = new ArrayList<BasicStringRange>();
 
     /**
      * Default constrctor
@@ -53,14 +46,6 @@ public class BasicInput implements Input {
         _key = key;
     }
 
-    public String getRawValues() {
-        return _values;
-    }
-
-    public void setRawValues(String values) {
-        _values = values;
-    }
-
     @Override
     public String getDefault() {
         return _default;
@@ -77,15 +62,6 @@ public class BasicInput implements Input {
 
     public void setTable(String table) {
         _table = table;
-    }
-
-    @Override
-    public List<BasicStringRange> getValues() {
-        return _parsedValues;
-    }
-
-    public void setValues(List<BasicStringRange> parsedValues) {
-        _parsedValues = parsedValues;
     }
 
     @Override

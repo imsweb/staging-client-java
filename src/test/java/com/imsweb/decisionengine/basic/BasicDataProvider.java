@@ -40,9 +40,6 @@ public class BasicDataProvider implements DataProvider {
                 if (input.getKey() == null)
                     throw new IllegalStateException("All input defintions must have a 'key' value defined.");
 
-                if (input.getRawValues() != null)
-                    input.setValues(splitValues(input.getRawValues()));
-
                 parsedInputMap.put(input.getKey(), input);
 
                 // the parsed input map provides an easy way to look up by key

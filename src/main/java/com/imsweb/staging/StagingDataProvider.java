@@ -127,15 +127,9 @@ public abstract class StagingDataProvider implements DataProvider {
                 if (input.getKey() == null)
                     throw new IllegalStateException("All input definitions must have a 'key' value defined.");
 
-                // make a copy of the StagingSchemaInput since the parsed values should only be in the map
+                // make a copy of the StagingSchemaInput; the parsed input map provides an easy way to look up by key
                 StagingSchemaInput inputCopy = new StagingSchemaInput(input);
-
-                if (inputCopy.getRawValues() != null)
-                    inputCopy.setValues(splitValues(inputCopy.getRawValues()));
-
                 parsedInputMap.put(inputCopy.getKey(), inputCopy);
-
-                // the parsed input map provides an easy way to look up by key
                 schema.setInputMap(parsedInputMap);
             }
         }

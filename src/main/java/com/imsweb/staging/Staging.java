@@ -23,7 +23,6 @@ import com.imsweb.staging.entities.StagingColumnDefinition;
 import com.imsweb.staging.entities.StagingMapping;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingSchemaInput;
-import com.imsweb.staging.entities.StagingStringRange;
 import com.imsweb.staging.entities.StagingTable;
 import com.imsweb.staging.entities.StagingTablePath;
 
@@ -180,19 +179,11 @@ public final class Staging {
         for (Entry<String, String> entry : context.entrySet())
             testContext.put(entry.getKey(), entry.getValue() != null ? entry.getValue().trim() : "");
 
-        // if the input has "values" specified then verify against them
-        if (input.getValues() != null && !input.getValues().isEmpty()) {
-            if (!DecisionEngine.testMatch(input.getValues(), testContext.get(key), testContext))
-                return false;
-        }
-
         // if the input specifies a table for validation, test against it
         if (input.getTable() != null) {
             Table table = getTable(input.getTable());
-            if (table == null)
-                return false;
 
-            return (DecisionEngine.matchTable(table, testContext) != null);
+            return table != null && (DecisionEngine.matchTable(table, testContext) != null);
         }
 
         return true;
@@ -368,23 +359,6 @@ public final class Staging {
                 for (StagingColumnDefinition def : table.getColumnDefinitions())
                     if (ColumnType.INPUT.equals(def.getType()))
                         inputs.add(def.getKey());
-            }
-        }
-
-        // add any key references, i.e. {{key}}, to list of input values
-        if (schema.getInputMap() != null) {
-            for (Entry<String, StagingSchemaInput> entry : schema.getInputMap().entrySet()) {
-                StagingSchemaInput input = entry.getValue();
-
-                // if there are key references used (values that reference other inputs) like {{key}}, then add them to the extra inputs list
-                if (input.getValues() != null) {
-                    for (StagingStringRange range : input.getValues()) {
-                        if (DecisionEngine.isReferenceVariable(range.getLow()))
-                            inputs.add(DecisionEngine.trimBraces(range.getLow()));
-                        if (DecisionEngine.isReferenceVariable(range.getHigh()))
-                            inputs.add(DecisionEngine.trimBraces(range.getHigh()));
-                    }
-                }
             }
         }
 

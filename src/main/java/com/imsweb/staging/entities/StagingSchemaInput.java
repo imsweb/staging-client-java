@@ -3,16 +3,13 @@
  */
 package com.imsweb.staging.entities;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Set;
 
 import org.mongodb.morphia.annotations.Embedded;
 import org.mongodb.morphia.annotations.Property;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
@@ -30,8 +27,6 @@ public class StagingSchemaInput implements Input {
     private String _name;
     @Property("naaccr_item")
     private Integer _naaccrItem;
-    @Property("values")
-    private String _values;
     @Property("default")
     private String _default;
     @Property("table")
@@ -46,10 +41,6 @@ public class StagingSchemaInput implements Input {
     private Integer _decimalPlaces;
     @Property("metadata")
     private Set<String> _metadata;
-
-    // parsed fields
-    @Embedded("parsed_values")
-    private List<StagingStringRange> _parsedValues = new ArrayList<StagingStringRange>();
 
     /**
      * Morphia requires a default constructor
@@ -76,7 +67,6 @@ public class StagingSchemaInput implements Input {
         setKey(other.getKey());
         setName(other.getName());
         setNaaccrItem(other.getNaaccrItem());
-        setRawValues(other.getRawValues());
         setDefault(other.getDefault());
         setTable(other.getTable());
         if (other.getMetadata() != null)
@@ -84,7 +74,6 @@ public class StagingSchemaInput implements Input {
         setUsedForStaging(other.getUsedForStaging());
         setUnit(other.getUnit());
         setDecimalPlaces(other.getDecimalPlaces());
-        setRawValues(other.getRawValues());
     }
 
     @Override
@@ -113,15 +102,6 @@ public class StagingSchemaInput implements Input {
 
     public void setNaaccrItem(Integer naaccrItem) {
         _naaccrItem = naaccrItem;
-    }
-
-    @JsonProperty("values")
-    public String getRawValues() {
-        return _values;
-    }
-
-    public void setRawValues(String values) {
-        _values = values;
     }
 
     @Override
@@ -193,16 +173,6 @@ public class StagingSchemaInput implements Input {
     }
 
     @Override
-    @JsonIgnore
-    public List<StagingStringRange> getValues() {
-        return _parsedValues;
-    }
-
-    public void setValues(List<StagingStringRange> parsedValues) {
-        _parsedValues = parsedValues;
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o)
             return true;
@@ -215,7 +185,6 @@ public class StagingSchemaInput implements Input {
         return Objects.equal(_key, that._key) &&
                 Objects.equal(_name, that._name) &&
                 Objects.equal(_naaccrItem, that._naaccrItem) &&
-                Objects.equal(_values, that._values) &&
                 Objects.equal(_default, that._default) &&
                 Objects.equal(_table, that._table) &&
                 Objects.equal(_usedForStaging, that._usedForStaging) &&
@@ -228,6 +197,6 @@ public class StagingSchemaInput implements Input {
     @Override
     public int hashCode() {
         // do not include _parsedValues
-        return Objects.hashCode(_key, _name, _naaccrItem, _values, _default, _table, _usedForStaging, _failOnInvalid, _unit, _decimalPlaces, _metadata);
+        return Objects.hashCode(_key, _name, _naaccrItem, _default, _table, _usedForStaging, _failOnInvalid, _unit, _decimalPlaces, _metadata);
     }
 }

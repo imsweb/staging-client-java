@@ -3,8 +3,6 @@
  */
 package com.imsweb.decisionengine;
 
-import java.util.List;
-
 /**
  * An input field in the definition
  */
@@ -27,12 +25,6 @@ public interface Input {
      * @return a String representing the lookup table name
      */
     String getTable();
-
-    /**
-     * If supplied, the value of the field must be contained in the list of string ranges
-     * @return a List of StringRange objects representing allowed values
-     */
-    List<? extends StringRange> getValues();
 
     /**
      * Return true if the field is used in the calculation

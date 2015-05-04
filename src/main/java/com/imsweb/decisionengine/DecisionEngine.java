@@ -581,18 +581,6 @@ public class DecisionEngine {
                 context.put(input.getKey(), value);
             }
 
-            // if a list of valid values was given, validate against it
-            if (!input.getValues().isEmpty()) {
-                if (!testMatch(input.getValues(), value, context)) {
-                    result.addError(new ErrorBuilder(Boolean.TRUE.equals(input.getUsedForStaging()) ? Type.INVALID_REQUIRED_INPUT : Type.INVALID_NON_REQUIRED_INPUT)
-                            .message("Invalid '" + input.getKey() + "' value (" + (value.isEmpty() ? _BLANK_OUTPUT : value) + ")")
-                            .key(input.getKey()).build());
-
-                    if (Boolean.TRUE.equals(input.getFailOnInvalid()))
-                        stopForBadInput = true;
-                }
-            }
-
             // otherwise validate value against associated table, if supplied
             if (input.getTable() != null) {
                 Table lookup = getProvider().getTable(input.getTable());
