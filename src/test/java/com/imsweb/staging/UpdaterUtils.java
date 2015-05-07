@@ -139,14 +139,23 @@ public final class UpdaterUtils {
 
     private static int purgeDirectory(File dir) {
         int count = 0;
-        for (File file : dir.listFiles()) {
-            if (!file.isDirectory()) {
-                if (!file.delete())
-                    throw new IllegalStateException("Unable to delete " + file.getName());
-                count += 1;
-            }
-        }
 
+        if (!dir.exists()) {
+            if (!dir.mkdirs())
+                throw new IllegalStateException("Unable to create directory: " + dir);
+        }
+        else {
+            File[] files = dir.listFiles();
+
+            if (files != null)
+                for (File file : files) {
+                    if (!file.isDirectory()) {
+                        if (!file.delete())
+                            throw new IllegalStateException("Unable to delete " + file.getName());
+                        count += 1;
+                    }
+                }
+        }
         return count;
     }
 
