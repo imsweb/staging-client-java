@@ -9,6 +9,7 @@ import java.util.Collections;
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
@@ -679,6 +680,44 @@ public class DecisionEngine {
             }
         }
 
+        // if outputs were specified, remove any extra keys and validate the others if a table was specified
+        if (definition.getOutputMap() != null && !definition.getOutputMap().isEmpty()) {
+            Iterator<Entry<String, String>> iter = context.entrySet().iterator();
+            while (iter.hasNext()) {
+                Map.Entry<String, String> entry = iter.next();
+                Output output = definition.getOutputMap().get(entry.getKey());
+
+                // if the key is not defined in the output, remove it
+                if (output == null)
+                    iter.remove();
+                else if (output.getTable() != null) {
+                    Table lookup = getProvider().getTable(output.getTable());
+
+                    if (lookup == null) {
+                        result.addError(new ErrorBuilder(Type.UNKNOWN_TABLE).message("Output table does not exist: " + output.getTable()).key(output.getKey()).build());
+                        continue;
+                    }
+
+                    // verify the value of the output key is contained in the associated table
+                    List<? extends Endpoint> endpoints = matchTable(lookup, context);
+                    if (endpoints == null) {
+                        String value = context.get(output.getKey());
+                        result.addError(new ErrorBuilder(Type.INVALID_OUTPUT)
+                                .message("Invalid '" + output.getKey() + "' value (" + (value.isEmpty() ? _BLANK_OUTPUT : value) + ")")
+                                .key(output.getKey()).table(output.getTable())
+                                .build());
+                    }
+                }
+            }
+
+            // if any outputs were defined but do not exist in the context, add them as blank
+            for (String key : definition.getOutputMap().keySet()) {
+                Output output = definition.getOutputMap().get(key);
+                if (!context.containsKey(output.getKey()))
+                    context.put(output.getKey(), "");
+            }
+        }
+
         return result;
     }
 
@@ -691,6 +730,7 @@ public class DecisionEngine {
      * @param stack a stack which tracks the path and makes sure the path doesn't enter an infinite recusive state
      * @return a boolean indicating whether processing should continue
      */
+
     protected boolean process(String mappingId, String tableId, TablePath path, Result result, Deque<String> stack) {
         boolean continueProcessing = true;
 

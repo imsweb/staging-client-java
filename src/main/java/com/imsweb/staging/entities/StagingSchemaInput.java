@@ -17,7 +17,7 @@ import com.google.common.base.Objects;
 
 import com.imsweb.decisionengine.Input;
 
-@JsonPropertyOrder({"key", "name", "naaccr_item", "values", "default", "table", "used_for_staging", "fail_on_invalid", "unit", "decimal_places", "metadata"})
+@JsonPropertyOrder({"key", "name", "description", "naaccr_item", "values", "default", "table", "used_for_staging", "fail_on_invalid", "unit", "decimal_places", "metadata"})
 @Embedded
 public class StagingSchemaInput implements Input {
 
@@ -25,6 +25,8 @@ public class StagingSchemaInput implements Input {
     private String _key;
     @Property("name")
     private String _name;
+    @Property("description")
+    private String _description;
     @Property("naaccr_item")
     private Integer _naaccrItem;
     @Property("default")
@@ -64,6 +66,7 @@ public class StagingSchemaInput implements Input {
     public StagingSchemaInput(StagingSchemaInput other) {
         setKey(other.getKey());
         setName(other.getName());
+        setDescription(other.getDescription());
         setNaaccrItem(other.getNaaccrItem());
         setDefault(other.getDefault());
         setTable(other.getTable());
@@ -91,6 +94,15 @@ public class StagingSchemaInput implements Input {
 
     public void setName(String name) {
         _name = name;
+    }
+
+    @JsonProperty("description")
+    public String getDescription() {
+        return _description;
+    }
+
+    public void setDescription(String description) {
+        _description = description;
     }
 
     @JsonProperty("naaccr_item")
@@ -172,6 +184,7 @@ public class StagingSchemaInput implements Input {
         // do not include _parsedValues
         return Objects.equal(_key, that._key) &&
                 Objects.equal(_name, that._name) &&
+                Objects.equal(_description, that._description) &&
                 Objects.equal(_naaccrItem, that._naaccrItem) &&
                 Objects.equal(_default, that._default) &&
                 Objects.equal(_table, that._table) &&
@@ -184,6 +197,6 @@ public class StagingSchemaInput implements Input {
     @Override
     public int hashCode() {
         // do not include _parsedValues
-        return Objects.hashCode(_key, _name, _naaccrItem, _default, _table, _usedForStaging, _unit, _decimalPlaces, _metadata);
+        return Objects.hashCode(_key, _name, _description, _naaccrItem, _default, _table, _usedForStaging, _unit, _decimalPlaces, _metadata);
     }
 }
