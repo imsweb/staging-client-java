@@ -473,6 +473,16 @@ public final class Staging {
                 // copy the input into a new context
                 Map<String, String> context = new HashMap<String, String>(data.getInput());
 
+                // make sure all supplied inputs are defined in the definition
+                for (Entry<String, String> entry : context.entrySet())
+                    if (!schema.getInputMap().containsKey(entry.getKey()))
+                        data.addError(new Error.ErrorBuilder(Error.Type.UNKNOWN_INPUT).message("Unknown input key supplied: " + entry.getKey()).key(entry.getKey()).build());
+
+                if (data.getErrors().size() > 0) {
+                    data.setResult(StagingData.Result.FAILED_INVALID_INPUT);
+                    return data;
+                }
+
                 // add context variables
                 addContextKeys(context);
 

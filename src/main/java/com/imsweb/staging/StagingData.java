@@ -137,6 +137,10 @@ public class StagingData {
         _errors = errors;
     }
 
+    public void addError(Error error) {
+        _errors.add(error);
+    }
+
     // path
 
     @JsonProperty("path")

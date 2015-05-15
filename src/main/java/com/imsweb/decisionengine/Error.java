@@ -18,6 +18,9 @@ public class Error {
     private String _message;
 
     public enum Type {
+        // an input key was supplied that is not defined in the input definition
+        UNKNOWN_INPUT,
+
         // a required input value was not contained in the input definition table
         INVALID_REQUIRED_INPUT,
 
