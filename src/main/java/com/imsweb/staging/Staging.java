@@ -453,70 +453,73 @@ public final class Staging {
         data.setErrors(new ArrayList<Error>());
         data.setPath(new ArrayList<String>());
 
-        if (data.getInput(StagingData.PRIMARY_SITE_KEY) == null || data.getInput(StagingData.HISTOLOGY_KEY) == null)
+        // make sure site and histology are supplied
+        if (data.getInput(StagingData.PRIMARY_SITE_KEY) == null || data.getInput(StagingData.HISTOLOGY_KEY) == null) {
             data.setResult(StagingData.Result.FAILED_MISSING_SITE_OR_HISTOLOGY);
-        else {
-            // get the schema; if a single schema is not found, return right away with an error
-            List<StagingSchema> schemas = lookupSchema(new SchemaLookup(data.getInput()));
-            if (schemas.size() != 1) {
-                if (schemas.size() == 0)
-                    data.setResult(StagingData.Result.FAILED_NO_MATCHING_SCHEMA);
-                else
-                    data.setResult(StagingData.Result.FAILED_MULITPLE_MATCHING_SCHEMAS);
-            }
-            else {
-                StagingSchema schema = schemas.get(0);
-
-                // add schema id to result
-                data.setSchemaId(schema.getId());
-
-                // copy the input into a new context
-                Map<String, String> context = new HashMap<String, String>(data.getInput());
-
-                // make sure all supplied inputs are defined in the definition
-                for (Entry<String, String> entry : context.entrySet())
-                    if (!schema.getInputMap().containsKey(entry.getKey()))
-                        data.addError(new Error.ErrorBuilder(Error.Type.UNKNOWN_INPUT).message("Unknown input key supplied: " + entry.getKey()).key(entry.getKey()).build());
-
-                if (data.getErrors().size() > 0) {
-                    data.setResult(StagingData.Result.FAILED_INVALID_INPUT);
-                    return data;
-                }
-
-                // add context variables
-                addContextKeys(context);
-
-                // check that year of DX is valid
-                if (!isContextValid(schema.getId(), StagingData.YEAR_DX_KEY, context))
-                    data.setResult(StagingData.Result.FAILED_INVALID_YEAR_DX);
-                else {
-                    // perform the staging
-                    Result result = _engine.process(schemas.get(0).getId(), context);
-
-                    // remove the context variables
-                    removeContextKeys(context);
-
-                    // set the staging data result based on the Result returned from the DecisionEngine
-                    if (Type.FAILED_INPUT.equals(result.getType()))
-                        data.setResult(StagingData.Result.FAILED_INVALID_INPUT);
-                    else
-                        data.setResult(StagingData.Result.STAGED);
-
-                    // remove the original input keys from the resulting context;  in addition, we want to remove any input keys
-                    // from the resulting context that were set with a default value; to accomplish this remove all keys that are
-                    // defined as input in the selected schema
-                    for (Entry<String, String> entry : data.getInput().entrySet())
-                        context.remove(entry.getKey());
-                    for (StagingSchemaInput input : schemas.get(0).getInputs())
-                        context.remove(input.getKey());
-
-                    // add the results to the data card
-                    data.setOutput(result.getContext());
-                    data.setErrors(result.getErrors());
-                    data.setPath(result.getPath());
-                }
-            }
+            return data;
         }
+
+        // get the schema; if a single schema is not found, return right away with an error
+        List<StagingSchema> schemas = lookupSchema(new SchemaLookup(data.getInput()));
+        if (schemas.size() != 1) {
+            if (schemas.size() == 0)
+                data.setResult(StagingData.Result.FAILED_NO_MATCHING_SCHEMA);
+            else
+                data.setResult(StagingData.Result.FAILED_MULITPLE_MATCHING_SCHEMAS);
+            return data;
+        }
+
+        StagingSchema schema = schemas.get(0);
+
+        // add schema id to result
+        data.setSchemaId(schema.getId());
+
+        // copy the input into a new context
+        Map<String, String> context = new HashMap<String, String>(data.getInput());
+
+        // make sure all supplied inputs are defined in the definition
+        for (Entry<String, String> entry : context.entrySet())
+            if (!schema.getInputMap().containsKey(entry.getKey()))
+                data.addError(new Error.ErrorBuilder(Error.Type.UNKNOWN_INPUT).message("Unknown input key supplied: " + entry.getKey()).key(entry.getKey()).build());
+
+        if (data.getErrors().size() > 0) {
+            data.setResult(StagingData.Result.FAILED_INVALID_INPUT);
+            return data;
+        }
+
+        // add context variables
+        addContextKeys(context);
+
+        // check that year of DX is valid
+        if (!isContextValid(schema.getId(), StagingData.YEAR_DX_KEY, context)) {
+            data.setResult(StagingData.Result.FAILED_INVALID_YEAR_DX);
+            return data;
+        }
+
+        // perform the staging
+        Result result = _engine.process(schemas.get(0).getId(), context);
+
+        // remove the context variables
+        removeContextKeys(context);
+
+        // set the staging data result based on the Result returned from the DecisionEngine
+        if (Type.FAILED_INPUT.equals(result.getType()))
+            data.setResult(StagingData.Result.FAILED_INVALID_INPUT);
+        else
+            data.setResult(StagingData.Result.STAGED);
+
+        // remove the original input keys from the resulting context;  in addition, we want to remove any input keys
+        // from the resulting context that were set with a default value; to accomplish this remove all keys that are
+        // defined as input in the selected schema
+        for (Entry<String, String> entry : data.getInput().entrySet())
+            context.remove(entry.getKey());
+        for (StagingSchemaInput input : schemas.get(0).getInputs())
+            context.remove(input.getKey());
+
+        // add the results to the data card
+        data.setOutput(result.getContext());
+        data.setErrors(result.getErrors());
+        data.setPath(result.getPath());
 
         return data;
     }
