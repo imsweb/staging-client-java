@@ -74,6 +74,7 @@ public class CsStagingData extends StagingData {
 
     // output key definitions
     public enum CsOutput {
+        SCHEMA_NAME("schema"),
         SCHEMA_NUMBER("schema_number"),
         CSVER_DERIVED("csver_derived"),
         AJCC6_T("ajcc6_t"),
