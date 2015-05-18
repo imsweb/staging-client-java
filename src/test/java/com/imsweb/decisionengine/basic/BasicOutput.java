@@ -9,6 +9,7 @@ public class BasicOutput implements Output {
 
     private String _key;
     private String _table;
+    private String _default;
 
     /**
      * Default constrctor
@@ -50,5 +51,14 @@ public class BasicOutput implements Output {
 
     public void setTable(String table) {
         _table = table;
+    }
+
+    @Override
+    public String getDefault() {
+        return _default;
+    }
+
+    public void setDefault(String aDefault) {
+        _default = aDefault;
     }
 }

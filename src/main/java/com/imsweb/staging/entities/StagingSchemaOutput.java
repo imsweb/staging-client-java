@@ -26,6 +26,8 @@ public class StagingSchemaOutput implements Output {
     private Integer _naaccrItem;
     @Property("table")
     private String _table;
+    @Property("default")
+    private String _default;
 
     /**
      * Morphia requires a default constructor
@@ -54,6 +56,7 @@ public class StagingSchemaOutput implements Output {
         setDescription(other.getDescription());
         setNaaccrItem(other.getNaaccrItem());
         setTable(other.getTable());
+        setDefault(other.getDefault());
     }
 
     @Override
@@ -104,6 +107,16 @@ public class StagingSchemaOutput implements Output {
     }
 
     @Override
+    @JsonProperty("default")
+    public String getDefault() {
+        return _default;
+    }
+
+    public void setDefault(String aDefault) {
+        _default = aDefault;
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o)
             return true;
@@ -117,12 +130,13 @@ public class StagingSchemaOutput implements Output {
                 Objects.equal(_name, that._name) &&
                 Objects.equal(_description, that._description) &&
                 Objects.equal(_naaccrItem, that._naaccrItem) &&
-                Objects.equal(_table, that._table);
+                Objects.equal(_table, that._table) &&
+                Objects.equal(_default, that._default);
     }
 
     @Override
     public int hashCode() {
         // do not include _parsedValues
-        return Objects.hashCode(_key, _name, _description, _naaccrItem, _table);
+        return Objects.hashCode(_key, _name, _description, _naaccrItem, _table, _default);
     }
 }

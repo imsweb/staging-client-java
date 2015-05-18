@@ -20,4 +20,10 @@ public interface Output {
      */
     String getTable();
 
+    /**
+     * If supplied, a default value to give the field at the beginning of the staging process
+     * @return
+     */
+    String getDefault();
+
 }

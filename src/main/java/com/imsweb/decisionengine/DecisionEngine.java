@@ -614,6 +614,10 @@ public class DecisionEngine {
             return result;
         }
 
+        // add all output keys to the context; if no default is supplied, use an empty string
+        for (Entry<String, ? extends Output> entry : definition.getOutputMap().entrySet())
+            context.put(entry.getValue().getKey(), entry.getValue().getDefault() != null ? entry.getValue().getDefault() : "");
+
         // add the initial context
         if (definition.getInitialContext() != null)
             for (KeyValue keyValue : definition.getInitialContext())
@@ -708,13 +712,6 @@ public class DecisionEngine {
                                 .build());
                     }
                 }
-            }
-
-            // if any outputs were defined but do not exist in the context, add them as blank
-            for (String key : definition.getOutputMap().keySet()) {
-                Output output = definition.getOutputMap().get(key);
-                if (!context.containsKey(output.getKey()))
-                    context.put(output.getKey(), "");
             }
         }
 
