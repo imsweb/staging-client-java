@@ -21,6 +21,7 @@ import us.monoid.json.JSONException;
 import com.imsweb.staging.Staging;
 import com.imsweb.staging.cs.CsDataProvider;
 import com.imsweb.staging.cs.CsDataProvider.CsVersion;
+import com.imsweb.staging.entities.StagingKeyValue;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingSchemaOutput;
 
@@ -48,9 +49,19 @@ public class CsStagingAddOutput {
             StagingSchema schema = staging.getSchema(schemaId);
 
             List<StagingSchemaOutput> outputs = new ArrayList<StagingSchemaOutput>();
-            outputs.add(new StagingSchemaOutput("schema", "Schema Name"));
-            outputs.add(new StagingSchemaOutput("schema_number", "Schema Number"));
-            outputs.add(new StagingSchemaOutput("csver_derived", "CS Version Derived"));
+
+            StagingSchemaOutput output = new StagingSchemaOutput("schema_number", "Schema Number");
+            for (StagingKeyValue value : schema.getInitialContext())
+                if ("schema_number".equals(value.getKey()))
+                    output.setDefault(value.getValue());
+            if (output.getDefault() == null)
+                throw new IllegalStateException("Unable to find schema number in context");
+            outputs.add(output);
+
+            output = new StagingSchemaOutput("csver_derived", "CS Version Derived");
+            output.setDefault("020550");
+            outputs.add(output);
+
             outputs.add(new StagingSchemaOutput("ajcc6_t", "AJCC6 T"));
             outputs.add(new StagingSchemaOutput("ajcc6_tdescriptor", "AJCC6 T Descriptor"));
             outputs.add(new StagingSchemaOutput("ajcc6_n", "AJCC6 N"));
@@ -91,6 +102,9 @@ public class CsStagingAddOutput {
             outputs.add(new StagingSchemaOutput("stor_ss2000", "Summary Stage Group 2000 (Storage)"));
 
             schema.setOutputs(outputs);
+
+            // defaults are now in the "outputs"; initial context is not needed anymore
+            schema.setInitialContext(null);
 
             schemaMap.put(schemaId, schema);
         }

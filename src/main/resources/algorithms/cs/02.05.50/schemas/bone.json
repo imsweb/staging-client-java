@@ -7,13 +7,6 @@
   "notes" : "DISCONTINUED SITE-SPECIFIC FACTORS:  SSF1, SSF2, SSF4\n\nC40.0 - Long bones of upper limb, scapula and associated joints\nC40.1 - Short bones of upper limb and associated joints\nC40.2 - Long bones of lower limb and associated joints\nC40.3 - Short bones of lower limb and associated joints\nC40.8 - Overlapping lesion of bones, joints and articular cartilage of limbs\nC40.9 - Bone of limb, NOS\nC41.0 - Bones of skull and face and associated joints (excludes mandible C41.1)\nC41.1 - Mandible\nC41.2 - Vertebral column (excludes sacrum and coccyx C41.4)\nC41.3 - Rib, sternum, clavicle and associated joints\nC41.4 - Pelvic bones, sacrum, coccyx and associated joints\nC41.8 - Overlapping lesion of bones, joints and articular cartilage\nC41.9 - Bone, NOS\n\n**Note 1**:  Laterality must be coded for C40.0-C40.3, and C41.3-C41.4.  For sternum, sacrum, coccyx, and symphysis pubis, laterality is coded 0.\n\n**Note 2**:  The determination of AJCC stage group from T, N, M, and grade for bone also depends on histologic type. The Histologies Stage Table shows the selection of the AJCC Stage table based on histology.",
   "schema_num" : 95,
   "schema_selection_table" : "schema_selection_bone",
-  "initial_context" : [ {
-    "key" : "schema_number",
-    "value" : "95"
-  }, {
-    "key" : "csver_derived",
-    "value" : "020550"
-  } ],
   "inputs" : [ {
     "key" : "site",
     "name" : "Primary Site",
@@ -323,172 +316,129 @@
     "used_for_staging" : false,
     "metadata" : [ "UNDEFINED_SSF" ]
   } ],
-  "outputs": [
-    {
-      "key": "schema",
-      "name": "Schema Name"
-    },
-    {
-      "key": "schema_number",
-      "name": "Schema Number"
-    },
-    {
-      "key": "csver_derived",
-      "name": "CS Version Derived"
-    },
-    {
-      "key": "ajcc6_t",
-      "name": "AJCC6 T"
-    },
-    {
-      "key": "ajcc6_tdescriptor",
-      "name": "AJCC6 T Descriptor"
-    },
-    {
-      "key": "ajcc6_n",
-      "name": "AJCC6 N"
-    },
-    {
-      "key": "ajcc6_ndescriptor",
-      "name": "AJCC6 N Descriptor"
-    },
-    {
-      "key": "ajcc6_m",
-      "name": "AJCC6 M"
-    },
-    {
-      "key": "ajcc6_mdescriptor",
-      "name": "AJCC6 M Descriptor"
-    },
-    {
-      "key": "ajcc6_stage",
-      "name": "AJCC6 Stage Group"
-    },
-    {
-      "key": "ajcc7_t",
-      "name": "AJCC7 T"
-    },
-    {
-      "key": "ajcc7_tdescriptor",
-      "name": "AJCC7 T Descriptor"
-    },
-    {
-      "key": "ajcc7_n",
-      "name": "AJCC7 N"
-    },
-    {
-      "key": "ajcc7_ndescriptor",
-      "name": "AJCC7 N Descriptor"
-    },
-    {
-      "key": "ajcc7_m",
-      "name": "AJCC7 M"
-    },
-    {
-      "key": "ajcc7_mdescriptor",
-      "name": "AJCC7 M Descriptor"
-    },
-    {
-      "key": "ajcc7_stage",
-      "name": "AJCC7 Stage Group"
-    },
-    {
-      "key": "t77",
-      "name": "Summary Stage T 1977"
-    },
-    {
-      "key": "n77",
-      "name": "Summary Stage N 1977"
-    },
-    {
-      "key": "m77",
-      "name": "Summary Stage M 1977"
-    },
-    {
-      "key": "ss77",
-      "name": "Summary Stage Group 1977"
-    },
-    {
-      "key": "t2000",
-      "name": "Summary Stage T 2000"
-    },
-    {
-      "key": "n2000",
-      "name": "Summary Stage N 2000"
-    },
-    {
-      "key": "m2000",
-      "name": "Summary Stage M 2000"
-    },
-    {
-      "key": "ss2000",
-      "name": "Summary Stage Group 2000"
-    },
-    {
-      "key": "stor_ajcc6_t",
-      "name": "AJCC6 T (Storage)"
-    },
-    {
-      "key": "stor_ajcc6_tdescriptor",
-      "name": "AJCC6 T Descriptor (Storage)"
-    },
-    {
-      "key": "stor_ajcc6_n",
-      "name": "AJCC6 N (Storage)"
-    },
-    {
-      "key": "stor_ajcc6_ndescriptor",
-      "name": "AJCC6 N Descriptor (Storage)"
-    },
-    {
-      "key": "stor_ajcc6_m",
-      "name": "AJCC6 M (Storage)"
-    },
-    {
-      "key": "stor_ajcc6_mdescriptor",
-      "name": "AJCC6 M Descriptor (Storage)"
-    },
-    {
-      "key": "stor_ajcc6_stage",
-      "name": "AJCC6 Stage Group (Storage)"
-    },
-    {
-      "key": "stor_ajcc7_t",
-      "name": "AJCC7 T (Storage)"
-    },
-    {
-      "key": "stor_ajcc7_tdescriptor",
-      "name": "AJCC7 T Descriptor (Storage)"
-    },
-    {
-      "key": "stor_ajcc7_n",
-      "name": "AJCC7 N (Storage)"
-    },
-    {
-      "key": "stor_ajcc7_ndescriptor",
-      "name": "AJCC7 N Descriptor (Storage)"
-    },
-    {
-      "key": "stor_ajcc7_m",
-      "name": "AJCC7 M (Storage)"
-    },
-    {
-      "key": "stor_ajcc7_mdescriptor",
-      "name": "AJCC7 M Descriptor (Storage)"
-    },
-    {
-      "key": "stor_ajcc7_stage",
-      "name": "AJCC7 Stage Group (Storage)"
-    },
-    {
-      "key": "stor_ss77",
-      "name": "Summary Stage Group 1977 (Storage)"
-    },
-    {
-      "key": "stor_ss2000",
-      "name": "Summary Stage Group 2000 (Storage)"
-    }
-  ],
+  "outputs" : [ {
+    "key" : "schema_number",
+    "name" : "Schema Number",
+    "default" : "95"
+  }, {
+    "key" : "csver_derived",
+    "name" : "CS Version Derived",
+    "default" : "020550"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC6 T"
+  }, {
+    "key" : "ajcc6_tdescriptor",
+    "name" : "AJCC6 T Descriptor"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "AJCC6 N"
+  }, {
+    "key" : "ajcc6_ndescriptor",
+    "name" : "AJCC6 N Descriptor"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC6 M"
+  }, {
+    "key" : "ajcc6_mdescriptor",
+    "name" : "AJCC6 M Descriptor"
+  }, {
+    "key" : "ajcc6_stage",
+    "name" : "AJCC6 Stage Group"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC7 T"
+  }, {
+    "key" : "ajcc7_tdescriptor",
+    "name" : "AJCC7 T Descriptor"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC7 N"
+  }, {
+    "key" : "ajcc7_ndescriptor",
+    "name" : "AJCC7 N Descriptor"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC7 M"
+  }, {
+    "key" : "ajcc7_mdescriptor",
+    "name" : "AJCC7 M Descriptor"
+  }, {
+    "key" : "ajcc7_stage",
+    "name" : "AJCC7 Stage Group"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage T 1977"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage N 1977"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage M 1977"
+  }, {
+    "key" : "ss77",
+    "name" : "Summary Stage Group 1977"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage T 2000"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage N 2000"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage M 2000"
+  }, {
+    "key" : "ss2000",
+    "name" : "Summary Stage Group 2000"
+  }, {
+    "key" : "stor_ajcc6_t",
+    "name" : "AJCC6 T (Storage)"
+  }, {
+    "key" : "stor_ajcc6_tdescriptor",
+    "name" : "AJCC6 T Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc6_n",
+    "name" : "AJCC6 N (Storage)"
+  }, {
+    "key" : "stor_ajcc6_ndescriptor",
+    "name" : "AJCC6 N Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc6_m",
+    "name" : "AJCC6 M (Storage)"
+  }, {
+    "key" : "stor_ajcc6_mdescriptor",
+    "name" : "AJCC6 M Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc6_stage",
+    "name" : "AJCC6 Stage Group (Storage)"
+  }, {
+    "key" : "stor_ajcc7_t",
+    "name" : "AJCC7 T (Storage)"
+  }, {
+    "key" : "stor_ajcc7_tdescriptor",
+    "name" : "AJCC7 T Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc7_n",
+    "name" : "AJCC7 N (Storage)"
+  }, {
+    "key" : "stor_ajcc7_ndescriptor",
+    "name" : "AJCC7 N Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc7_m",
+    "name" : "AJCC7 M (Storage)"
+  }, {
+    "key" : "stor_ajcc7_mdescriptor",
+    "name" : "AJCC7 M Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc7_stage",
+    "name" : "AJCC7 Stage Group (Storage)"
+  }, {
+    "key" : "stor_ss77",
+    "name" : "Summary Stage Group 1977 (Storage)"
+  }, {
+    "key" : "stor_ss2000",
+    "name" : "Summary Stage Group 2000 (Storage)"
+  } ],
   "mappings" : [ {
     "id" : "mapping_t",
     "name" : "T",
@@ -1231,5 +1181,5 @@
     } ]
   } ],
   "involved_tables" : [ "extension_bbq", "ajcc7_inclusions_tpy", "ajcc6_exclusions_ppc", "ssf25_snt", "ssf15_snj", "ajcc7_t_codes", "ssf23_snr", "histology", "size_aau", "cs_input_version_original", "ssf22_snq", "lvi", "ssf14_sni", "ajcc_tdescriptor_cleanup", "ajcc7_year_validation", "ssf21_snp", "ssf17_snl", "ssf2_kbl", "ajcc_descriptor_codes", "ssf4_mbd", "grade", "summary_stage_rpa", "schema_selection_bone", "ajcc7_m_codes", "ajcc7_stage_not_ewing_ube", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "histologies_stage_xhq_6", "histologies_stage_xhq_7", "nodes_dbh", "ajcc6_t_codes", "nodes_pos_fpa", "ajcc_mdescriptor_cleanup", "ssf7_snb", "ssf3_lay", "ssf11_snf", "ss_codes", "ssf6_ona", "nodes_exam_gpa", "ajcc6_n_codes", "behavior", "mets_hav", "ssf10_sne", "ssf18_snm", "mets_eval_ipa", "extension_eval_cpa", "ajcc7_n_codes", "ajcc6_stage_codes", "ssf5_nna", "ssf19_snn", "ajcc7_stage_codes", "ssf1_jbx", "ssf9_snd", "ssf13_snh", "primary_site", "ajcctnm6and7_stage_ewing_xho", "ajcc6_year_validation", "extension_size_xfu", "ajcc6_m_codes", "nodes_eval_epa", "cs_year_validation", "ajcc6_stage_not_ewing_qai", "ssf24_sns", "ssf8_snc", "ssf12_sng" ],
-  "last_modified": "2015-02-20T16:05:19.605Z"
+  "last_modified" : "2015-02-20T11:05:19.605Z"
 }
