@@ -29,6 +29,7 @@ import com.imsweb.decisionengine.basic.BasicDefinition;
 import com.imsweb.decisionengine.basic.BasicEndpoint;
 import com.imsweb.decisionengine.basic.BasicInput;
 import com.imsweb.decisionengine.basic.BasicMapping;
+import com.imsweb.decisionengine.basic.BasicOutput;
 import com.imsweb.decisionengine.basic.BasicStringRange;
 import com.imsweb.decisionengine.basic.BasicTable;
 import com.imsweb.decisionengine.basic.BasicTablePath;
@@ -1178,6 +1179,79 @@ public class DecisionEngineTest {
         table = new BasicTable("table_empty");
         context = new HashMap<String, String>();
         Assert.assertEquals("", DecisionEngine.getTableInputsAsString(table, context));
+    }
+
+    @Test
+    public void testOutputsAndDefaults() {
+        BasicDataProvider provider = new BasicDataProvider();
+
+        BasicTable table = new BasicTable("table_input");
+        table.addColumnDefinition("input1", ColumnType.INPUT);
+        table.addColumnDefinition("description", ColumnType.DESCRIPTION);
+        table.addRawRow("000", "Alpha");
+        table.addRawRow("001", "Beta");
+        table.addRawRow("002", "Gamma");
+        provider.addTable(table);
+
+        table = new BasicTable("table_output");
+        table.addColumnDefinition("output1", ColumnType.INPUT);
+        table.addColumnDefinition("description", ColumnType.DESCRIPTION);
+        table.addRawRow("A", "Alpha");
+        table.addRawRow("B", "Beta");
+        table.addRawRow("C", "Gamma");
+        provider.addTable(table);
+
+        BasicDefinition def = new BasicDefinition("sample_outputs");
+        def.setOnInvalidInput(Definition.StagingInputErrorHandler.FAIL);
+        def.addInput(new BasicInput("input1", "table_input"));
+
+        BasicOutput output = new BasicOutput("output1", "table_output");
+        output.setDefault("A");
+        def.addOutput(output);
+
+        output = new BasicOutput("output2");
+        def.addOutput(output);
+
+        BasicMapping mapping = new BasicMapping("mapping1");
+        def.addMapping(mapping);
+        provider.addDefinition(def);
+
+        DecisionEngine engine = new DecisionEngine(provider);
+
+        Map<String, String> input = new HashMap<String, String>();
+        input.put("input1", "000");
+        Result result = engine.process("sample_outputs", input);
+
+        Assert.assertEquals(Type.STAGED, result.getType());
+
+        // default value should be set
+        Assert.assertEquals("A", input.get("output1"));
+        // no default value so it should be blank
+        Assert.assertEquals("", input.get("output2"));
+
+        Assert.assertFalse(result.hasErrors());
+
+        Assert.assertEquals(Sets.newHashSet("table_input", "table_output"), engine.getInvolvedTables(def));
+
+        // modify the definition to create a bad default value for output1
+        def.getOutputs().get(0).setDefault("BAD");
+        provider.initDefinition(def);
+        engine = new DecisionEngine(provider);
+
+        input = new HashMap<String, String>();
+        input.put("input1", "000");
+        result = engine.process("sample_outputs", input);
+
+        Assert.assertEquals(Type.STAGED, result.getType());
+        Assert.assertTrue(result.hasErrors());
+        Assert.assertEquals(Error.Type.INVALID_OUTPUT, result.getErrors().get(0).getType());
+        Assert.assertEquals("table_output", result.getErrors().get(0).getTable());
+        Assert.assertEquals("output1", result.getErrors().get(0).getKey());
+
+        // default value should be set
+        Assert.assertEquals("BAD", input.get("output1"));
+        // no default value so it should be blank
+        Assert.assertEquals("", input.get("output2"));
     }
 
 }

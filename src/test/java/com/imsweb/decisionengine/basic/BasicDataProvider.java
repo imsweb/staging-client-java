@@ -31,7 +31,7 @@ public class BasicDataProvider implements DataProvider {
      * Initialize a definition.
      * @param definition a BasicDefinition
      */
-    protected void initDefinition(BasicDefinition definition) {
+    public void initDefinition(BasicDefinition definition) {
         // parse the values into something that can searched more efficiently
         if (definition.getInputs() != null) {
             Map<String, BasicInput> parsedInputMap = new HashMap<String, BasicInput>();
@@ -46,13 +46,28 @@ public class BasicDataProvider implements DataProvider {
                 definition.setInputMap(parsedInputMap);
             }
         }
+
+        // store the outputs in a Map that can searched more efficiently
+        if (definition.getOutputs() != null) {
+            Map<String, BasicOutput> parsedOutputMap = new HashMap<String, BasicOutput>();
+
+            for (BasicOutput output : definition.getOutputs()) {
+                // verify that all inputs contain a key
+                if (output.getKey() == null)
+                    throw new IllegalStateException("All output definitions must have a 'key' defined.");
+
+                parsedOutputMap.put(output.getKey(), output);
+            }
+
+            definition.setOutputMap(parsedOutputMap);
+        }
     }
 
     /**
      * Initialize a table.
      * @param table a BasicTable
      */
-    protected void initTable(BasicTable table) {
+    public void initTable(BasicTable table) {
         if (table.getRawRows() != null) {
             for (List<String> row : table.getRawRows()) {
                 BasicTableRow tableRowEntity = new BasicTableRow();

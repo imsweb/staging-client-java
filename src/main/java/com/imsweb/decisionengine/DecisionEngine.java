@@ -309,11 +309,16 @@ public class DecisionEngine {
     public Set<String> getInvolvedTables(Definition definition) {
         Set<String> tables = new LinkedHashSet<String>();
 
-        // first, evaluate inputs
+        // first, evaluate inputs and outputs
         for (String key : definition.getInputMap().keySet()) {
             Input input = definition.getInputMap().get(key);
             if (input.getTable() != null)
                 getInvolvedTables(getProvider().getTable(input.getTable()), tables);
+        }
+        for (String key : definition.getOutputMap().keySet()) {
+            Output output = definition.getOutputMap().get(key);
+            if (output.getTable() != null)
+                getInvolvedTables(getProvider().getTable(output.getTable()), tables);
         }
 
         // next loop over mappings and paths
