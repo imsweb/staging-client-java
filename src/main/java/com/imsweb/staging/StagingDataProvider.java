@@ -34,6 +34,7 @@ import com.imsweb.staging.entities.StagingColumnDefinition;
 import com.imsweb.staging.entities.StagingEndpoint;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingSchemaInput;
+import com.imsweb.staging.entities.StagingSchemaOutput;
 import com.imsweb.staging.entities.StagingStringRange;
 import com.imsweb.staging.entities.StagingTable;
 import com.imsweb.staging.entities.StagingTableRow;
@@ -126,12 +127,27 @@ public abstract class StagingDataProvider implements DataProvider {
             for (StagingSchemaInput input : schema.getInputs()) {
                 // verify that all inputs contain a key
                 if (input.getKey() == null)
-                    throw new IllegalStateException("All input definitions must have a 'key' value defined.");
+                    throw new IllegalStateException("All input definitions must have a 'key' defined.");
 
                 parsedInputMap.put(input.getKey(), input);
             }
 
             schema.setInputMap(parsedInputMap);
+        }
+
+        // store the outputs in a Map that can searched more efficiently
+        if (schema.getOutputs() != null) {
+            Map<String, StagingSchemaOutput> parsedOutputMap = new HashMap<String, StagingSchemaOutput>();
+
+            for (StagingSchemaOutput output : schema.getOutputs()) {
+                // verify that all inputs contain a key
+                if (output.getKey() == null)
+                    throw new IllegalStateException("All output definitions must have a 'key' defined.");
+
+                parsedOutputMap.put(output.getKey(), output);
+            }
+
+            schema.setOutputMap(parsedOutputMap);
         }
 
         return schema;

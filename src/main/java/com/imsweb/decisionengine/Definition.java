@@ -36,6 +36,12 @@ public interface Definition {
     Map<String, ? extends Input> getInputMap();
 
     /**
+     * The full list of outputs produced from processing the definition.
+     * @return a Map of input key to Output
+     */
+    Map<String, ? extends Output> getOutputMap();
+
+    /**
      * A list of initial key/value pairs which will be set at the start of process
      * @return a List of key/value pairs
      */

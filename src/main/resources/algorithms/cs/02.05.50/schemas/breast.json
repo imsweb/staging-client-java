@@ -7,13 +7,6 @@
   "notes" : "DISCONTINUED SITE-SPECIFIC FACTORS:  SSF17, SSF18, SSF19, SSF20, SSF24\n\nC50.0 - Nipple\nC50.1 - Central portion of breast\nC50.2 - Upper-inner quadrant of breast\nC50.3 - Lower-inner quadrant of breast\nC50.4 - Upper-outer quadrant of breast\nC50.5 - Lower-outer quadrant of breast\nC50.6 - Axillary Tail of breast\nC50.8 - Overlapping lesion of breast\nC50.9 - Breast, NOS\n\n**Note**:  Laterality must be coded for this site.",
   "schema_num" : 106,
   "schema_selection_table" : "schema_selection_breast",
-  "initial_context" : [ {
-    "key" : "schema_number",
-    "value" : "106"
-  }, {
-    "key" : "csver_derived",
-    "value" : "020550"
-  } ],
   "inputs" : [ {
     "key" : "site",
     "name" : "Primary Site",
@@ -320,6 +313,129 @@
     "table" : "ssf25_snt",
     "used_for_staging" : false,
     "metadata" : [ "UNDEFINED_SSF" ]
+  } ],
+  "outputs" : [ {
+    "key" : "schema_number",
+    "name" : "Schema Number",
+    "default" : "106"
+  }, {
+    "key" : "csver_derived",
+    "name" : "CS Version Derived",
+    "default" : "020550"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC6 T"
+  }, {
+    "key" : "ajcc6_tdescriptor",
+    "name" : "AJCC6 T Descriptor"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "AJCC6 N"
+  }, {
+    "key" : "ajcc6_ndescriptor",
+    "name" : "AJCC6 N Descriptor"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC6 M"
+  }, {
+    "key" : "ajcc6_mdescriptor",
+    "name" : "AJCC6 M Descriptor"
+  }, {
+    "key" : "ajcc6_stage",
+    "name" : "AJCC6 Stage Group"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC7 T"
+  }, {
+    "key" : "ajcc7_tdescriptor",
+    "name" : "AJCC7 T Descriptor"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC7 N"
+  }, {
+    "key" : "ajcc7_ndescriptor",
+    "name" : "AJCC7 N Descriptor"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC7 M"
+  }, {
+    "key" : "ajcc7_mdescriptor",
+    "name" : "AJCC7 M Descriptor"
+  }, {
+    "key" : "ajcc7_stage",
+    "name" : "AJCC7 Stage Group"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage T 1977"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage N 1977"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage M 1977"
+  }, {
+    "key" : "ss77",
+    "name" : "Summary Stage Group 1977"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage T 2000"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage N 2000"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage M 2000"
+  }, {
+    "key" : "ss2000",
+    "name" : "Summary Stage Group 2000"
+  }, {
+    "key" : "stor_ajcc6_t",
+    "name" : "AJCC6 T (Storage)"
+  }, {
+    "key" : "stor_ajcc6_tdescriptor",
+    "name" : "AJCC6 T Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc6_n",
+    "name" : "AJCC6 N (Storage)"
+  }, {
+    "key" : "stor_ajcc6_ndescriptor",
+    "name" : "AJCC6 N Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc6_m",
+    "name" : "AJCC6 M (Storage)"
+  }, {
+    "key" : "stor_ajcc6_mdescriptor",
+    "name" : "AJCC6 M Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc6_stage",
+    "name" : "AJCC6 Stage Group (Storage)"
+  }, {
+    "key" : "stor_ajcc7_t",
+    "name" : "AJCC7 T (Storage)"
+  }, {
+    "key" : "stor_ajcc7_tdescriptor",
+    "name" : "AJCC7 T Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc7_n",
+    "name" : "AJCC7 N (Storage)"
+  }, {
+    "key" : "stor_ajcc7_ndescriptor",
+    "name" : "AJCC7 N Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc7_m",
+    "name" : "AJCC7 M (Storage)"
+  }, {
+    "key" : "stor_ajcc7_mdescriptor",
+    "name" : "AJCC7 M Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc7_stage",
+    "name" : "AJCC7 Stage Group (Storage)"
+  }, {
+    "key" : "stor_ss77",
+    "name" : "Summary Stage Group 1977 (Storage)"
+  }, {
+    "key" : "stor_ss2000",
+    "name" : "Summary Stage Group 2000 (Storage)"
   } ],
   "mappings" : [ {
     "id" : "mapping_t",
@@ -1063,5 +1179,5 @@
     } ]
   } ],
   "involved_tables" : [ "lymph_nodes_clinical_evaluation_xcx", "size_aab", "ssf22_san", "ssf23_sao", "ssf5_naa", "ssf25_snt", "extension_behavior_xci", "schema_selection_breast", "lymph_nodes_positive_axillary_node_xcy", "ajcc7_t_codes", "extension_size_xar", "determine_correct_table_for_ajcc6_n_ns9", "histology", "ssf24_sap", "cs_input_version_original", "ajcc7_stage_uac", "nodes_pos_fab", "lvi", "ssf3_lac", "ajcc_tdescriptor_cleanup", "ssf11_sae", "ssf16_sah", "ssf14_sbf", "ssf20_sal", "ajcc7_year_validation", "nodes_daj", "ajcc_descriptor_codes", "ajcc7_inclusions_tpg", "ssf10_sad", "ssf15_sbg", "ajcc6_stage_qad", "ssf21_sam", "grade", "summary_stage_rpa", "ssf17_sai", "ajcc7_m_codes", "ssf1_jag", "ajcc_ndescriptor_cleanup", "extension_bak", "ssf19_sak", "ssf6_oaa", "ajcc6_t_codes", "ssf18_saj", "ajcc_mdescriptor_cleanup", "ajcc6_exclusions_pan", "ss_codes", "ssf7_saa", "nodes_exam_gpa", "ssf4_mab", "ajcc6_n_codes", "behavior", "mets_hau", "mets_eval_ipa", "ssf8_sab", "extension_eval_cpa", "ajcc7_n_codes", "ajcc6_stage_codes", "ssf12_saf", "ajcc7_stage_codes", "ihcmol_xcc", "primary_site", "ajcc6_year_validation", "ssf2_kac", "lymph_nodes_pathologic_evaluation_xcw", "ajcc6_m_codes", "nodes_eval_epa", "cs_year_validation", "ssf9_sac", "ssf13_sag" ],
-  "last_modified" : "2015-02-20T21:05:20.427Z"
+  "last_modified" : "2015-02-20T11:05:20.427Z"
 }

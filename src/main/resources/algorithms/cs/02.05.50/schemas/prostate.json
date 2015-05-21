@@ -7,13 +7,6 @@
   "notes" : "DISCONTINUED SITE-SPECIFIC FACTORS:  SSF14, SSF15\n\nC61.9 - Prostate gland\n\n**Note 1**: Transitional cell (urothelial) carcinoma of the prostatic urethra is to be coded to primary site C68.0, Urethra, and assigned Collaborative Stage codes according to the Urethra schema.\n\n**Note 2**: The 7th Edition AJCC stage group is derived not only from the T, N, and M categories but also from CS Site-Specific Factor 1 (PSA Lab Value) and CS Site-Specific Factor 8 or CS Site-Specific Factor 10 (Gleason's Score). The specific Gleason's Score used is dependent upon the values of CS Extension - Clinical Extension, CS Site-Specific Factor 3 (CS Extension - Pathologic Extension) and CS Tumor Size/Ext Eval as shown in the Special Calculation Table for TNM 7 Invasive/Unknown Pathologic Extension Eval and Special Calculation Table for TNM 7 Non-Invasive Pathologic Extension.",
   "schema_num" : 121,
   "schema_selection_table" : "schema_selection_prostate",
-  "initial_context" : [ {
-    "key" : "schema_number",
-    "value" : "121"
-  }, {
-    "key" : "csver_derived",
-    "value" : "020550"
-  } ],
   "inputs" : [ {
     "key" : "site",
     "name" : "Primary Site",
@@ -321,6 +314,129 @@
     "table" : "ssf25_snt",
     "used_for_staging" : false,
     "metadata" : [ "UNDEFINED_SSF" ]
+  } ],
+  "outputs" : [ {
+    "key" : "schema_number",
+    "name" : "Schema Number",
+    "default" : "121"
+  }, {
+    "key" : "csver_derived",
+    "name" : "CS Version Derived",
+    "default" : "020550"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC6 T"
+  }, {
+    "key" : "ajcc6_tdescriptor",
+    "name" : "AJCC6 T Descriptor"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "AJCC6 N"
+  }, {
+    "key" : "ajcc6_ndescriptor",
+    "name" : "AJCC6 N Descriptor"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC6 M"
+  }, {
+    "key" : "ajcc6_mdescriptor",
+    "name" : "AJCC6 M Descriptor"
+  }, {
+    "key" : "ajcc6_stage",
+    "name" : "AJCC6 Stage Group"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC7 T"
+  }, {
+    "key" : "ajcc7_tdescriptor",
+    "name" : "AJCC7 T Descriptor"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC7 N"
+  }, {
+    "key" : "ajcc7_ndescriptor",
+    "name" : "AJCC7 N Descriptor"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC7 M"
+  }, {
+    "key" : "ajcc7_mdescriptor",
+    "name" : "AJCC7 M Descriptor"
+  }, {
+    "key" : "ajcc7_stage",
+    "name" : "AJCC7 Stage Group"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage T 1977"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage N 1977"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage M 1977"
+  }, {
+    "key" : "ss77",
+    "name" : "Summary Stage Group 1977"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage T 2000"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage N 2000"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage M 2000"
+  }, {
+    "key" : "ss2000",
+    "name" : "Summary Stage Group 2000"
+  }, {
+    "key" : "stor_ajcc6_t",
+    "name" : "AJCC6 T (Storage)"
+  }, {
+    "key" : "stor_ajcc6_tdescriptor",
+    "name" : "AJCC6 T Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc6_n",
+    "name" : "AJCC6 N (Storage)"
+  }, {
+    "key" : "stor_ajcc6_ndescriptor",
+    "name" : "AJCC6 N Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc6_m",
+    "name" : "AJCC6 M (Storage)"
+  }, {
+    "key" : "stor_ajcc6_mdescriptor",
+    "name" : "AJCC6 M Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc6_stage",
+    "name" : "AJCC6 Stage Group (Storage)"
+  }, {
+    "key" : "stor_ajcc7_t",
+    "name" : "AJCC7 T (Storage)"
+  }, {
+    "key" : "stor_ajcc7_tdescriptor",
+    "name" : "AJCC7 T Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc7_n",
+    "name" : "AJCC7 N (Storage)"
+  }, {
+    "key" : "stor_ajcc7_ndescriptor",
+    "name" : "AJCC7 N Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc7_m",
+    "name" : "AJCC7 M (Storage)"
+  }, {
+    "key" : "stor_ajcc7_mdescriptor",
+    "name" : "AJCC7 M Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc7_stage",
+    "name" : "AJCC7 Stage Group (Storage)"
+  }, {
+    "key" : "stor_ss77",
+    "name" : "Summary Stage Group 1977 (Storage)"
+  }, {
+    "key" : "stor_ss2000",
+    "name" : "Summary Stage Group 2000 (Storage)"
   } ],
   "mappings" : [ {
     "id" : "mapping_t",
@@ -1048,5 +1164,5 @@
     } ]
   } ],
   "involved_tables" : [ "ajcc7_inclusions_tpv", "ssf25_snt", "ajcc7_t_codes", "ssf23_snr", "extension_eval_6_cab", "schema_selection_prostate", "histology", "special_calculation_non_invasive_pathologic_extension_xdr_xdt_xdq", "ssf14_sbd", "cs_input_version_original", "extension_sstg_bbo", "extension_bbo", "ssf22_snq", "lvi", "ssf3_sstg_lab", "ajcc_tdescriptor_cleanup", "ssf3_lab", "ajcc7_year_validation", "ssf21_snp", "ssf4_maf", "ssf17_snl", "ajcc_descriptor_codes", "special_calculation_invasive_unknown_pathologic_extension_xds_xdu_xdq", "ajcc6_stage_qaj", "extension_eval_cab", "ssf15_sbe", "grade", "summary_stage_rpa", "ajcc7_m_codes", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "ajcc6_stage_qaj_grade", "mets_hal", "ssf6_oad", "ssf11_sba", "ajcc6_t_codes", "ssf1_jav", "nodes_pos_fpa", "ajcc_mdescriptor_cleanup", "ssf7_saw", "nodes_dbf", "ss_codes", "size_apa", "nodes_exam_gpa", "ajcc6_exclusions_pag", "ajcc6_n_codes", "behavior", "ssf10_saz", "mets_eval_ipb", "ssf18_snm", "ssf13_sbc", "ajcc7_n_codes", "ajcc6_stage_codes", "ssf19_snn", "ajcc7_stage_codes", "ssf9_say", "ajcc7_stage_ubp", "ssf12_sbb", "primary_site", "ajcc6_year_validation", "ssf2_kab", "determine_correct_table_for_t_ns28", "ajcc6_m_codes", "nodes_eval_epa", "ssf8_sax", "cs_year_validation", "ssf5_nae", "ssf24_sns" ],
-  "last_modified" : "2015-02-20T21:05:44.450Z"
+  "last_modified" : "2015-02-20T11:05:44.450Z"
 }

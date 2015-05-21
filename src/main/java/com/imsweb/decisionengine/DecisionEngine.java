@@ -9,6 +9,7 @@ import java.util.Collections;
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
@@ -308,11 +309,16 @@ public class DecisionEngine {
     public Set<String> getInvolvedTables(Definition definition) {
         Set<String> tables = new LinkedHashSet<String>();
 
-        // first, evaluate inputs
+        // first, evaluate inputs and outputs
         for (String key : definition.getInputMap().keySet()) {
             Input input = definition.getInputMap().get(key);
             if (input.getTable() != null)
                 getInvolvedTables(getProvider().getTable(input.getTable()), tables);
+        }
+        for (String key : definition.getOutputMap().keySet()) {
+            Output output = definition.getOutputMap().get(key);
+            if (output.getTable() != null)
+                getInvolvedTables(getProvider().getTable(output.getTable()), tables);
         }
 
         // next loop over mappings and paths
@@ -613,6 +619,10 @@ public class DecisionEngine {
             return result;
         }
 
+        // add all output keys to the context; if no default is supplied, use an empty string
+        for (Entry<String, ? extends Output> entry : definition.getOutputMap().entrySet())
+            context.put(entry.getValue().getKey(), entry.getValue().getDefault() != null ? entry.getValue().getDefault() : "");
+
         // add the initial context
         if (definition.getInitialContext() != null)
             for (KeyValue keyValue : definition.getInitialContext())
@@ -679,6 +689,37 @@ public class DecisionEngine {
             }
         }
 
+        // if outputs were specified, remove any extra keys and validate the others if a table was specified
+        if (definition.getOutputMap() != null && !definition.getOutputMap().isEmpty()) {
+            Iterator<Entry<String, String>> iter = context.entrySet().iterator();
+            while (iter.hasNext()) {
+                Map.Entry<String, String> entry = iter.next();
+                Output output = definition.getOutputMap().get(entry.getKey());
+
+                // if the key is not defined in the output, remove it
+                if (output == null)
+                    iter.remove();
+                else if (output.getTable() != null) {
+                    Table lookup = getProvider().getTable(output.getTable());
+
+                    if (lookup == null) {
+                        result.addError(new ErrorBuilder(Type.UNKNOWN_TABLE).message("Output table does not exist: " + output.getTable()).key(output.getKey()).build());
+                        continue;
+                    }
+
+                    // verify the value of the output key is contained in the associated table
+                    List<? extends Endpoint> endpoints = matchTable(lookup, context);
+                    if (endpoints == null) {
+                        String value = context.get(output.getKey());
+                        result.addError(new ErrorBuilder(Type.INVALID_OUTPUT)
+                                .message("Invalid '" + output.getKey() + "' value (" + (value.isEmpty() ? _BLANK_OUTPUT : value) + ")")
+                                .key(output.getKey()).table(output.getTable())
+                                .build());
+                    }
+                }
+            }
+        }
+
         return result;
     }
 
@@ -691,6 +732,7 @@ public class DecisionEngine {
      * @param stack a stack which tracks the path and makes sure the path doesn't enter an infinite recusive state
      * @return a boolean indicating whether processing should continue
      */
+
     protected boolean process(String mappingId, String tableId, TablePath path, Result result, Deque<String> stack) {
         boolean continueProcessing = true;
 

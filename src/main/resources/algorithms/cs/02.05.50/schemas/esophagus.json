@@ -7,13 +7,6 @@
   "notes" : "DISCONTINUED SITE-SPECIFIC FACTORS:  SSF2, SSF3, SSF4, SSF5\n\nC15.0 - Cervical esophagus\nC15.1 - Thoracic esophagus\nC15.2 - Abdominal esophagus\nC15.3 - Upper third of esophagus\nC15.4 - Middle third of esophagus\nC15.5 - Lower third of esophagus\nC15.8 - Overlapping lesion of esophagus\nC15.9 - Esophagus, NOS\n\n**Note 1**:  The cardia/gastroesophageal junction (EGJ), and the proximal 5 centimeters (cm) of the fundus and body of the stomach (C16.0-C16.2) have been removed from the Stomach chapter and added to the Esophagus chapter effective with AJCC 7th Edition. A new schema EsophagusGEJunction was created in CSv2 to accommodate this change. Tumors arising at the EGJ, or arising in the stomach within 5 cm of the EGJ and crossing the EGJ are staged using the EsophagusGEJunction schema. All other cancers with a midpoint in the stomach lying more than 5 cm distal to the EGJ, or those within 5 cm of the EGJ but not extending into the EGJ or esophagus, are staged using the stomach schema.\n\n**Note 2**:  There are two widely used but incompatible systems of dividing the esophagus into subsites, one using anatomic landmarks and the other using using thirds of the total length.  Each of these two systems has been assigned topography codes in ICD-O-3; codes C15.0-C15.2 for the former, and C15.3-C15.5 for the latter.  As explained on page 23 of ICD-O-3, \"The terms cervical, thoracic, and abdominal are radiographic and intraoperative descriptors; upper, middle, and lower third are endoscopic and clinical descriptors.\"  In actual practice by physicians, and in publications of UICC and AJCC, the terms and codes for the upper, middle, and lower thirds are often applied to sub-sections of the thoracic esophagus, and the abdominal portion can be considered part of the lower thoracic esophagus. \n\n**Note 3**:  Anatomic Limits of Esophagus: \n\n*  Cervical Esophagus (C15.0):  From the lower border of the cricoid cartilage to the thoracic inlet (suprasternal notch), about 18 cm from the incisors.\n* Thoracic  Esophagus (C15.1) and Abdominal Esophagus (C15.2):\n    * Upper thoracic portion (C15.3): From the thoracic inlet to the level of the tracheal bifurcation (18-24 cm). \n    * Mid-thoracic portion (C15.4): From the tracheal bifurcation midway to the GEJ (24-32 cm).\n    * Lower thoracic portion (C15.5): From midway between the tracheal bifurcation and the EGJ to the EGJ including the abdominal esophagus (32-40 cm). \n\n**Note 4**:  Effective with AJCC TNM 7th Edition, there are separate stage groupings for squamous cell carcinoma and adenocarcinoma. Since squamous cell carcinoma typically has a poorer prognosis than adenocarcinoma, a tumor of mixed histopathologic type or a type that is not otherwise specified should be classified as squamous cell carcinoma. \n\n**Note 5**:  Effective with AJCC TNM 7th Edition, histologic grade is required for stage grouping.",
   "schema_num" : 41,
   "schema_selection_table" : "schema_selection_esophagus",
-  "initial_context" : [ {
-    "key" : "schema_number",
-    "value" : "41"
-  }, {
-    "key" : "csver_derived",
-    "value" : "020550"
-  } ],
   "inputs" : [ {
     "key" : "site",
     "name" : "Primary Site",
@@ -321,6 +314,129 @@
     "table" : "ssf25_snt",
     "used_for_staging" : false,
     "metadata" : [ "UNDEFINED_SSF" ]
+  } ],
+  "outputs" : [ {
+    "key" : "schema_number",
+    "name" : "Schema Number",
+    "default" : "41"
+  }, {
+    "key" : "csver_derived",
+    "name" : "CS Version Derived",
+    "default" : "020550"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC6 T"
+  }, {
+    "key" : "ajcc6_tdescriptor",
+    "name" : "AJCC6 T Descriptor"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "AJCC6 N"
+  }, {
+    "key" : "ajcc6_ndescriptor",
+    "name" : "AJCC6 N Descriptor"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC6 M"
+  }, {
+    "key" : "ajcc6_mdescriptor",
+    "name" : "AJCC6 M Descriptor"
+  }, {
+    "key" : "ajcc6_stage",
+    "name" : "AJCC6 Stage Group"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC7 T"
+  }, {
+    "key" : "ajcc7_tdescriptor",
+    "name" : "AJCC7 T Descriptor"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC7 N"
+  }, {
+    "key" : "ajcc7_ndescriptor",
+    "name" : "AJCC7 N Descriptor"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC7 M"
+  }, {
+    "key" : "ajcc7_mdescriptor",
+    "name" : "AJCC7 M Descriptor"
+  }, {
+    "key" : "ajcc7_stage",
+    "name" : "AJCC7 Stage Group"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage T 1977"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage N 1977"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage M 1977"
+  }, {
+    "key" : "ss77",
+    "name" : "Summary Stage Group 1977"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage T 2000"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage N 2000"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage M 2000"
+  }, {
+    "key" : "ss2000",
+    "name" : "Summary Stage Group 2000"
+  }, {
+    "key" : "stor_ajcc6_t",
+    "name" : "AJCC6 T (Storage)"
+  }, {
+    "key" : "stor_ajcc6_tdescriptor",
+    "name" : "AJCC6 T Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc6_n",
+    "name" : "AJCC6 N (Storage)"
+  }, {
+    "key" : "stor_ajcc6_ndescriptor",
+    "name" : "AJCC6 N Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc6_m",
+    "name" : "AJCC6 M (Storage)"
+  }, {
+    "key" : "stor_ajcc6_mdescriptor",
+    "name" : "AJCC6 M Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc6_stage",
+    "name" : "AJCC6 Stage Group (Storage)"
+  }, {
+    "key" : "stor_ajcc7_t",
+    "name" : "AJCC7 T (Storage)"
+  }, {
+    "key" : "stor_ajcc7_tdescriptor",
+    "name" : "AJCC7 T Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc7_n",
+    "name" : "AJCC7 N (Storage)"
+  }, {
+    "key" : "stor_ajcc7_ndescriptor",
+    "name" : "AJCC7 N Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc7_m",
+    "name" : "AJCC7 M (Storage)"
+  }, {
+    "key" : "stor_ajcc7_mdescriptor",
+    "name" : "AJCC7 M Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc7_stage",
+    "name" : "AJCC7 Stage Group (Storage)"
+  }, {
+    "key" : "stor_ss77",
+    "name" : "Summary Stage Group 1977 (Storage)"
+  }, {
+    "key" : "stor_ss2000",
+    "name" : "Summary Stage Group 2000 (Storage)"
   } ],
   "mappings" : [ {
     "id" : "mapping_t",
@@ -1064,5 +1180,5 @@
     } ]
   } ],
   "involved_tables" : [ "schema_selection_esophagus", "ssf2_kas", "ajcc6_exclusions_ppd", "ssf25_snt", "size_aag", "ssf3_lpl", "lymph_nodes_clinical_eval_v0205_ajcc7_xaw", "lymph_nodes_pathologic_evaluation_ajcc7_table_also_used_when_cslymph_nodes_eval_is_not_coded_xfr", "ssf15_snj", "ajcc7_t_codes", "extension_bbb", "ssf23_snr", "histology", "ssf1_jpn", "cs_input_version_original", "lymph_nodes_metsat_dxtable_ajcc6_xfv", "ssf22_snq", "lvi", "ssf14_sni", "ajcc_tdescriptor_cleanup", "ajcc7_year_validation", "ssf21_snp", "ajcc7_inclusions_tpb", "histologies_stage_xhw", "ssf5_npg", "ssf17_snl", "mets_hbg", "ajcc_descriptor_codes", "lymph_nodes_clinical_eval_priorto_v0205_ajcc7_xfq", "ajcc6_stage_qah", "ajcctnm7_stage_squamous_xhy", "grade", "summary_stage_rpa", "ajcc7_m_codes", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "ajcc6_t_codes", "ajcc_mdescriptor_cleanup", "ssf7_snb", "ssf11_snf", "ss_codes", "ssf6_ona", "nodes_exam_gpa", "ajcc6_n_codes", "behavior", "nodes_dat", "ssf10_sne", "ssf18_snm", "mets_eval_ipa", "extension_eval_cpa", "ajcc7_n_codes", "ajcc6_stage_codes", "ssf19_snn", "ajcc7_stage_codes", "ssf9_snd", "ssf13_snh", "ajcctnm7_stage_adenocarcinoma_xhz", "primary_site", "ajcc6_year_validation", "determine_correct_table_for_ajcc7_n_ns12", "nodes_pos_fpc", "ajcc6_m_codes", "nodes_eval_epa", "ssf4_mpg", "cs_year_validation", "ssf24_sns", "ssf8_snc", "ssf12_sng" ],
-  "last_modified" : "2015-02-20T21:05:23.737Z"
+  "last_modified" : "2015-02-20T11:05:23.737Z"
 }

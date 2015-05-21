@@ -26,7 +26,7 @@ import com.google.common.base.Objects;
 import com.imsweb.decisionengine.Definition;
 
 @JsonPropertyOrder({"id", "algorithm", "version", "name", "title", "subtitle", "description", "notes", "schema_num", "schema_selection_table",
-        "schema_discriminators", "initial_context", "inputs", "mappings", "involved_tables", "on_invalid_input", "last_modified"})
+        "schema_discriminators", "initial_context", "inputs", "outputs", "mappings", "involved_tables", "on_invalid_input", "last_modified"})
 @Entity(value = "staging_schemas", noClassnameStored = true)
 public class StagingSchema implements Definition {
 
@@ -61,6 +61,8 @@ public class StagingSchema implements Definition {
     private Set<String> _schemaDiscriminators;
     @Embedded("inputs")
     private List<StagingSchemaInput> _inputs;
+    @Embedded("outputs")
+    private List<StagingSchemaOutput> _outputs;
     @Embedded("initial_context")
     private Set<StagingKeyValue> _initialContext;
     @Embedded("mappings")
@@ -73,6 +75,8 @@ public class StagingSchema implements Definition {
     // parsed fields
     @Embedded("parsed_input_map")
     private Map<String, StagingSchemaInput> _parsedInputMap = new HashMap<String, StagingSchemaInput>();
+    @Embedded("parsed_output_map")
+    private Map<String, StagingSchemaOutput> _parsedOutputMap = new HashMap<String, StagingSchemaOutput>();
 
     /**
      * Morphia requires a default constructor
@@ -208,6 +212,15 @@ public class StagingSchema implements Definition {
         _inputs = inputs;
     }
 
+    @JsonProperty("outputs")
+    public List<StagingSchemaOutput> getOutputs() {
+        return _outputs;
+    }
+
+    public void setOutputs(List<StagingSchemaOutput> outputs) {
+        _outputs = outputs;
+    }
+
     @Override
     @JsonProperty("initial_context")
     public Set<StagingKeyValue> getInitialContext() {
@@ -237,6 +250,16 @@ public class StagingSchema implements Definition {
 
     public void setInputMap(Map<String, StagingSchemaInput> parsedInputMap) {
         _parsedInputMap = parsedInputMap;
+    }
+
+    @Override
+    @JsonIgnore
+    public Map<String, StagingSchemaOutput> getOutputMap() {
+        return _parsedOutputMap;
+    }
+
+    public void setOutputMap(Map<String, StagingSchemaOutput> parsedOutputMap) {
+        _parsedOutputMap = parsedOutputMap;
     }
 
     @JsonProperty("involved_tables")
@@ -281,6 +304,7 @@ public class StagingSchema implements Definition {
                 Objects.equal(_schemaSelectionTable, schema._schemaSelectionTable) &&
                 Objects.equal(_schemaDiscriminators, schema._schemaDiscriminators) &&
                 Objects.equal(_inputs, schema._inputs) &&
+                Objects.equal(_outputs, schema._outputs) &&
                 Objects.equal(_initialContext, schema._initialContext) &&
                 Objects.equal(_mappings, schema._mappings) &&
                 Objects.equal(_onInvalidInput, schema._onInvalidInput) &&
@@ -291,6 +315,6 @@ public class StagingSchema implements Definition {
     public int hashCode() {
         // do not include _id, _lastModified and _parsedInputMap
         return Objects.hashCode(_displayId, _algorithm, _version, _name, _title, _description, _subtitle, _notes, _schemaNum, _schemaSelectionTable,
-                _schemaDiscriminators, _inputs, _initialContext, _mappings, _onInvalidInput, _involvedTables);
+                _schemaDiscriminators, _inputs, _outputs, _initialContext, _mappings, _onInvalidInput, _involvedTables);
     }
 }

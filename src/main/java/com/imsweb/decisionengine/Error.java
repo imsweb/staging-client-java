@@ -18,10 +18,13 @@ public class Error {
     private String _message;
 
     public enum Type {
-        // a required input value does not conform to the table or allowed values
+        // an input key was supplied that is not defined in the input definition
+        UNKNOWN_INPUT,
+
+        // a required input value was not contained in the input definition table
         INVALID_REQUIRED_INPUT,
 
-        // a non-required input value does not conform to the table or allowed values
+        // a non-required input value was not contained in the input definition table
         INVALID_NON_REQUIRED_INPUT,
 
         // an input mapping from value did not exist
@@ -37,7 +40,10 @@ public class Error {
         UNKNOWN_TABLE,
 
         // processing a table ended up in an infinite loop due to JUMPs
-        INFINITE_LOOP
+        INFINITE_LOOP,
+
+        // an output value was produced which was not contained in the output definition table
+        INVALID_OUTPUT
     }
 
     /**

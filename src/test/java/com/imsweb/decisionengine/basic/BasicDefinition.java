@@ -16,12 +16,14 @@ public class BasicDefinition implements Definition {
 
     private String _id;
     private List<BasicInput> _inputs;
+    private List<BasicOutput> _outputs;
     private Set<BasicKeyValue> _initialContext;
     private List<BasicMapping> _mappings;
     private StagingInputErrorHandler _onInvalidInput;
 
     // parsed fields
     private Map<String, BasicInput> _parsedInputMap = new HashMap<String, BasicInput>();
+    private Map<String, BasicOutput> _parsedOutputMap = new HashMap<String, BasicOutput>();
 
     /**
      * Default constructor
@@ -75,6 +77,28 @@ public class BasicDefinition implements Definition {
         _inputs.add(new BasicInput(key, table));
     }
 
+    public List<BasicOutput> getOutputs() {
+        return _outputs;
+    }
+
+    public void setOutputs(List<BasicOutput> outputs) {
+        _outputs = outputs;
+    }
+
+    public void addOutput(String key) {
+        if (_outputs == null)
+            _outputs = new ArrayList<BasicOutput>();
+
+        _outputs.add(new BasicOutput(key));
+    }
+
+    public void addOutput(BasicOutput output) {
+        if (_outputs == null)
+            _outputs = new ArrayList<BasicOutput>();
+
+        _outputs.add(output);
+    }
+
     @Override
     public Set<BasicKeyValue> getInitialContext() {
         return _initialContext;
@@ -123,5 +147,14 @@ public class BasicDefinition implements Definition {
 
     public void setInputMap(Map<String, BasicInput> parsedInputMap) {
         _parsedInputMap = parsedInputMap;
+    }
+
+    @Override
+    public Map<String, BasicOutput> getOutputMap() {
+        return _parsedOutputMap;
+    }
+
+    public void setOutputMap(Map<String, BasicOutput> parsedOutputMap) {
+        _parsedOutputMap = parsedOutputMap;
     }
 }

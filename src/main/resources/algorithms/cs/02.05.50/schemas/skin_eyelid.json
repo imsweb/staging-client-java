@@ -7,13 +7,6 @@
   "notes" : "DISCONTINUED SITE-SPECIFIC FACTORS:  SSF1, SSF2, SSF4, SSF5, SSF7, SSF9, SSF11, SSF12, SSF13, SSF14, SSF15, SSF16\n\nC44.1 - Eyelid\n\n**Note**:  Laterality must be coded for this site.",
   "schema_num" : 97,
   "schema_selection_table" : "schema_selection_skin_eyelid",
-  "initial_context" : [ {
-    "key" : "schema_number",
-    "value" : "97"
-  }, {
-    "key" : "csver_derived",
-    "value" : "020550"
-  } ],
   "inputs" : [ {
     "key" : "site",
     "name" : "Primary Site",
@@ -313,6 +306,129 @@
     "table" : "ssf25_snt",
     "used_for_staging" : false,
     "metadata" : [ "UNDEFINED_SSF" ]
+  } ],
+  "outputs" : [ {
+    "key" : "schema_number",
+    "name" : "Schema Number",
+    "default" : "97"
+  }, {
+    "key" : "csver_derived",
+    "name" : "CS Version Derived",
+    "default" : "020550"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC6 T"
+  }, {
+    "key" : "ajcc6_tdescriptor",
+    "name" : "AJCC6 T Descriptor"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "AJCC6 N"
+  }, {
+    "key" : "ajcc6_ndescriptor",
+    "name" : "AJCC6 N Descriptor"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC6 M"
+  }, {
+    "key" : "ajcc6_mdescriptor",
+    "name" : "AJCC6 M Descriptor"
+  }, {
+    "key" : "ajcc6_stage",
+    "name" : "AJCC6 Stage Group"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC7 T"
+  }, {
+    "key" : "ajcc7_tdescriptor",
+    "name" : "AJCC7 T Descriptor"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC7 N"
+  }, {
+    "key" : "ajcc7_ndescriptor",
+    "name" : "AJCC7 N Descriptor"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC7 M"
+  }, {
+    "key" : "ajcc7_mdescriptor",
+    "name" : "AJCC7 M Descriptor"
+  }, {
+    "key" : "ajcc7_stage",
+    "name" : "AJCC7 Stage Group"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage T 1977"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage N 1977"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage M 1977"
+  }, {
+    "key" : "ss77",
+    "name" : "Summary Stage Group 1977"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage T 2000"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage N 2000"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage M 2000"
+  }, {
+    "key" : "ss2000",
+    "name" : "Summary Stage Group 2000"
+  }, {
+    "key" : "stor_ajcc6_t",
+    "name" : "AJCC6 T (Storage)"
+  }, {
+    "key" : "stor_ajcc6_tdescriptor",
+    "name" : "AJCC6 T Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc6_n",
+    "name" : "AJCC6 N (Storage)"
+  }, {
+    "key" : "stor_ajcc6_ndescriptor",
+    "name" : "AJCC6 N Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc6_m",
+    "name" : "AJCC6 M (Storage)"
+  }, {
+    "key" : "stor_ajcc6_mdescriptor",
+    "name" : "AJCC6 M Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc6_stage",
+    "name" : "AJCC6 Stage Group (Storage)"
+  }, {
+    "key" : "stor_ajcc7_t",
+    "name" : "AJCC7 T (Storage)"
+  }, {
+    "key" : "stor_ajcc7_tdescriptor",
+    "name" : "AJCC7 T Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc7_n",
+    "name" : "AJCC7 N (Storage)"
+  }, {
+    "key" : "stor_ajcc7_ndescriptor",
+    "name" : "AJCC7 N Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc7_m",
+    "name" : "AJCC7 M (Storage)"
+  }, {
+    "key" : "stor_ajcc7_mdescriptor",
+    "name" : "AJCC7 M Descriptor (Storage)"
+  }, {
+    "key" : "stor_ajcc7_stage",
+    "name" : "AJCC7 Stage Group (Storage)"
+  }, {
+    "key" : "stor_ss77",
+    "name" : "Summary Stage Group 1977 (Storage)"
+  }, {
+    "key" : "stor_ss2000",
+    "name" : "Summary Stage Group 2000 (Storage)"
   } ],
   "mappings" : [ {
     "id" : "mapping_t",
@@ -1056,5 +1172,5 @@
     } ]
   } ],
   "involved_tables" : [ "ssf8_sdd", "nodes_dde", "ssf7_scq", "ssf25_snt", "ssf4_mbg", "extension_size_perineural_invasion_positive_ajcc6_table_csv2_xgm", "extension_size_ajcc6_table_csv1_xjb", "ssf10_scm", "determine_correct_table_for_ajcc6_t_ns39", "ajcc7_t_codes", "ssf23_snr", "histology", "ajcc7_stage_uaf", "extension_size_perineural_invasion888988_ajcc7_xic", "cs_input_version_original", "mets_hcu", "ssf11_scj", "ssf22_snq", "ssf9_sdi", "ssf2_kaz", "lvi", "ajcc_tdescriptor_cleanup", "ajcc6_stage_qnb", "ssf12_sck", "ajcc7_year_validation", "ssf21_snp", "ajcc7_inclusions_tpb", "ssf17_snl", "ajcc_descriptor_codes", "determine_correct_table_for_ajcc7_t_ns38", "extension_size_perineural_invasion888988_ajcc6_table_csv2_xij", "grade", "extension_size_perineural_invasion_positive_ajcc7_xgk", "summary_stage_rpa", "ajcc7_m_codes", "ssf13_scl", "ssf20_sno", "ajcc_ndescriptor_cleanup", "extension_size_perineural_invasion_negativeor_unknown_ajcc6_table_csv2_xgl", "ajcc6_t_codes", "nodes_pos_fpa", "ajcc_mdescriptor_cleanup", "ssf6_oak", "ssf14_scn", "ajcc6_exclusions_pab", "ss_codes", "ssf3_lap", "nodes_exam_gpa", "extension_bdg", "ajcc6_n_codes", "behavior", "schema_selection_skin_eyelid", "extension_size_perineural_invasion_negativeor_unknown_ajcc7_xgj", "ssf15_sco", "ssf18_snm", "ssf1_jbl", "mets_eval_ipa", "size_app", "extension_eval_cpa", "ajcc7_n_codes", "ajcc6_stage_codes", "ssf19_snn", "ajcc7_stage_codes", "ssf16_scp", "primary_site", "ajcc6_year_validation", "ssf5_nar", "ajcc6_m_codes", "cs_year_validation", "nodes_eval_epb", "ssf24_sns" ],
-  "last_modified" : "2015-02-20T21:05:47.090Z"
+  "last_modified" : "2015-02-20T11:05:47.090Z"
 }
