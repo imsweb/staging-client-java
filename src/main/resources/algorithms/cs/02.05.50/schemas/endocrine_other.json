@@ -10,47 +10,55 @@
   "inputs" : [ {
     "key" : "site",
     "name" : "Primary Site",
+    "description" : "Code for the primary site of the tumor being reported using either ICD-O-2 or ICD-O-3.",
     "naaccr_item" : 400,
     "table" : "primary_site",
     "used_for_staging" : true
   }, {
     "key" : "hist",
     "name" : "Histology",
+    "description" : "Codes for the histologic type of the tumor being reported using ICD-O-3.",
     "naaccr_item" : 522,
     "table" : "histology",
     "used_for_staging" : true
   }, {
     "key" : "year_dx",
     "name" : "Year of Diagnosis",
+    "description" : "Date of initial diagnosis by a recognized medical practitioner for the tumor being reported whether clinically or microscopically confirmed.",
     "naaccr_item" : 390,
     "table" : "cs_year_validation",
     "used_for_staging" : true
   }, {
     "key" : "cs_input_version_original",
     "name" : "CS Version Input Original",
+    "description" : "This item indicates the number of the version initially used to code Collaborative Staging (CS) fields.",
     "naaccr_item" : 2935,
     "table" : "cs_input_version_original",
     "used_for_staging" : true
   }, {
     "key" : "behavior",
     "name" : "Behavior ICD-O-3",
+    "description" : "Code for the behavior of the tumor being reported using ICD-O-3.",
     "naaccr_item" : 523,
     "table" : "behavior",
     "used_for_staging" : false
   }, {
     "key" : "grade",
     "name" : "Grade",
+    "description" : "Code for the grade or degree of differentiation of the reportable tumor.",
     "naaccr_item" : 440,
     "table" : "grade",
     "used_for_staging" : false
   }, {
     "key" : "age_dx",
     "name" : "Age at Diagnosis",
+    "description" : "Age of the patient at diagnosis in complete years.",
     "naaccr_item" : 230,
     "used_for_staging" : false
   }, {
     "key" : "lvi",
     "name" : "Lymph-vascular Invasion",
+    "description" : "Indicates whether lymphatic duct or blood vessel (LVI) is identified in the pathology report.",
     "naaccr_item" : 1182,
     "default" : "8",
     "table" : "lvi",
@@ -58,6 +66,7 @@
   }, {
     "key" : "size",
     "name" : "CS Tumor Size",
+    "description" : "Records the largest dimension or diameter of the primary tumor in millimeters.",
     "naaccr_item" : 2800,
     "default" : "999",
     "table" : "size_apa",
@@ -65,6 +74,7 @@
   }, {
     "key" : "extension",
     "name" : "CS Extension",
+    "description" : "Identifies contiguous growth (extension) of the primary tumor within the organ of origin or its direct extension into neighboring organs. For certain sites such as ovary, discontinuous metastasis is coded in CS Extension.",
     "naaccr_item" : 2810,
     "default" : "999",
     "table" : "extension_bco",
@@ -72,6 +82,7 @@
   }, {
     "key" : "extension_eval",
     "name" : "CS Tumor Size/Ext Eval",
+    "description" : "Records how the codes for the two items CS Tumor Size and CS Extension were determined, based on the diagnostic methods employed.",
     "naaccr_item" : 2820,
     "default" : "9",
     "table" : "extension_eval_cna",
@@ -79,6 +90,7 @@
   }, {
     "key" : "nodes",
     "name" : "CS Lymph Nodes",
+    "description" : "Identifies the regional lymph nodes involved with cancer at the time of diagnosis.",
     "naaccr_item" : 2830,
     "default" : "999",
     "table" : "nodes_dcd",
@@ -86,6 +98,7 @@
   }, {
     "key" : "nodes_eval",
     "name" : "CS Lymph Nodes Eval",
+    "description" : "Records how the code for CS Lymph Nodes was determined, based on the diagnosticmethods employed.",
     "naaccr_item" : 2840,
     "default" : "9",
     "table" : "nodes_eval_ena",
@@ -93,6 +106,7 @@
   }, {
     "key" : "nodes_pos",
     "name" : "Regional Nodes Positive",
+    "description" : "Records the exact number of regional nodes examined by the pathologist and found to contain metastases. ",
     "naaccr_item" : 820,
     "default" : "99",
     "table" : "nodes_pos_fpd",
@@ -100,6 +114,7 @@
   }, {
     "key" : "nodes_exam",
     "name" : "Regional Nodes Examined",
+    "description" : "Records the total number of regional lymph nodes that were removed and examined by the pathologist. ",
     "naaccr_item" : 830,
     "default" : "99",
     "table" : "nodes_exam_gpb",
@@ -107,6 +122,7 @@
   }, {
     "key" : "mets",
     "name" : "CS Mets at DX",
+    "description" : "Identifies the distant site(s) of metastatic involvement at time of diagnosis.",
     "naaccr_item" : 2850,
     "default" : "99",
     "table" : "mets_hpa",
@@ -114,6 +130,7 @@
   }, {
     "key" : "mets_eval",
     "name" : "CS Mets Eval",
+    "description" : "Records how the code for CS Mets at Dx was determined based on the diagnosticmethods employed.",
     "naaccr_item" : 2860,
     "default" : "9",
     "table" : "mets_eval_ina",
@@ -321,10 +338,13 @@
   "outputs" : [ {
     "key" : "schema_number",
     "name" : "Schema Number",
+    "description" : "CS assigned schema number.",
     "default" : "148"
   }, {
     "key" : "csver_derived",
     "name" : "CS Version Derived",
+    "description" : "This data item is recorded the first time the CS output fields are derived and should be updated each time the CS Derived items are recomputed. The CS version number is returned as part of the output of the CS algorithm.",
+    "naaccr_item" : 2936,
     "default" : "020550"
   }, {
     "key" : "ajcc6_t",
@@ -394,52 +414,68 @@
     "name" : "Summary Stage Group 2000"
   }, {
     "key" : "stor_ajcc6_t",
-    "name" : "AJCC6 T (Storage)"
+    "name" : "AJCC6 T (Storage)",
+    "naaccr_item" : 2940
   }, {
     "key" : "stor_ajcc6_tdescriptor",
-    "name" : "AJCC6 T Descriptor (Storage)"
+    "name" : "AJCC6 T Descriptor (Storage)",
+    "naaccr_item" : 2950
   }, {
     "key" : "stor_ajcc6_n",
-    "name" : "AJCC6 N (Storage)"
+    "name" : "AJCC6 N (Storage)",
+    "naaccr_item" : 2960
   }, {
     "key" : "stor_ajcc6_ndescriptor",
-    "name" : "AJCC6 N Descriptor (Storage)"
+    "name" : "AJCC6 N Descriptor (Storage)",
+    "naaccr_item" : 2970
   }, {
     "key" : "stor_ajcc6_m",
-    "name" : "AJCC6 M (Storage)"
+    "name" : "AJCC6 M (Storage)",
+    "naaccr_item" : 2980
   }, {
     "key" : "stor_ajcc6_mdescriptor",
-    "name" : "AJCC6 M Descriptor (Storage)"
+    "name" : "AJCC6 M Descriptor (Storage)",
+    "naaccr_item" : 2990
   }, {
     "key" : "stor_ajcc6_stage",
-    "name" : "AJCC6 Stage Group (Storage)"
+    "name" : "AJCC6 Stage Group (Storage)",
+    "naaccr_item" : 3000
   }, {
     "key" : "stor_ajcc7_t",
-    "name" : "AJCC7 T (Storage)"
+    "name" : "AJCC7 T (Storage)",
+    "naaccr_item" : 3400
   }, {
     "key" : "stor_ajcc7_tdescriptor",
-    "name" : "AJCC7 T Descriptor (Storage)"
+    "name" : "AJCC7 T Descriptor (Storage)",
+    "naaccr_item" : 3402
   }, {
     "key" : "stor_ajcc7_n",
-    "name" : "AJCC7 N (Storage)"
+    "name" : "AJCC7 N (Storage)",
+    "naaccr_item" : 3410
   }, {
     "key" : "stor_ajcc7_ndescriptor",
-    "name" : "AJCC7 N Descriptor (Storage)"
+    "name" : "AJCC7 N Descriptor (Storage)",
+    "naaccr_item" : 3412
   }, {
     "key" : "stor_ajcc7_m",
-    "name" : "AJCC7 M (Storage)"
+    "name" : "AJCC7 M (Storage)",
+    "naaccr_item" : 3420
   }, {
     "key" : "stor_ajcc7_mdescriptor",
-    "name" : "AJCC7 M Descriptor (Storage)"
+    "name" : "AJCC7 M Descriptor (Storage)",
+    "naaccr_item" : 3422
   }, {
     "key" : "stor_ajcc7_stage",
-    "name" : "AJCC7 Stage Group (Storage)"
+    "name" : "AJCC7 Stage Group (Storage)",
+    "naaccr_item" : 3430
   }, {
     "key" : "stor_ss77",
-    "name" : "Summary Stage Group 1977 (Storage)"
+    "name" : "Summary Stage Group 1977 (Storage)",
+    "naaccr_item" : 3010
   }, {
     "key" : "stor_ss2000",
-    "name" : "Summary Stage Group 2000 (Storage)"
+    "name" : "Summary Stage Group 2000 (Storage)",
+    "naaccr_item" : 3020
   } ],
   "mappings" : [ {
     "id" : "mapping_t",
@@ -1088,5 +1124,5 @@
     } ]
   } ],
   "involved_tables" : [ "ssf2_kna", "ssf25_snt", "ssf15_snj", "ajcc7_t_codes", "ssf23_snr", "histology", "cs_input_version_original", "mets_hpa", "ssf22_snq", "lvi", "ssf14_sni", "mets_eval_ina", "ajcc_tdescriptor_cleanup", "ssf4_mna", "extension_eval_cna", "ajcc6_stage_qna", "ajcc7_year_validation", "ssf21_snp", "ssf17_snl", "ajcc_descriptor_codes", "grade", "summary_stage_rpa", "nodes_eval_ena", "ajcc7_m_codes", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "ajcc6_t_codes", "ajcc_mdescriptor_cleanup", "ssf1_jaw", "ssf7_snb", "ssf11_snf", "ssf3_lna", "ss_codes", "nodes_exam_gpb", "ssf6_ona", "size_apa", "ajcc6_n_codes", "schema_selection_endocrine_other", "behavior", "ssf10_sne", "ssf18_snm", "nodes_dcd", "ajcc7_n_codes", "ajcc6_stage_codes", "ssf5_nna", "ssf19_snn", "ssf9_snd", "ssf13_snh", "primary_site", "ajcc6_year_validation", "nodes_pos_fpd", "ajcc6_m_codes", "cs_year_validation", "extension_bco", "ssf24_sns", "ssf8_snc", "ssf12_sng" ],
-  "last_modified" : "2015-02-20T11:05:23.257Z"
+  "last_modified" : "2015-02-20T01:05:23.257Z"
 }
