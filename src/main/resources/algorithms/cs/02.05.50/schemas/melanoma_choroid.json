@@ -31,7 +31,7 @@
   }, {
     "key" : "cs_input_version_original",
     "name" : "CS Version Input Original",
-    "description" : "This item indicates the number of the version initially used to code Collaborative Staging (CS) fields.",
+    "description" : "Collaborative Staging (CS) version number initially used to code CS fields.",
     "naaccr_item" : 2935,
     "table" : "cs_input_version_original",
     "used_for_staging" : true
@@ -130,7 +130,7 @@
   }, {
     "key" : "mets_eval",
     "name" : "CS Mets Eval",
-    "description" : "Records how the code for CS Mets at Dx was determined based on the diagnosticmethods employed.",
+    "description" : "Records how the code for CS Mets at Dx was determined based on the diagnostic methods employed.",
     "naaccr_item" : 2860,
     "default" : "9",
     "table" : "mets_eval_ipa",
@@ -341,7 +341,7 @@
   }, {
     "key" : "csver_derived",
     "name" : "CS Version Derived",
-    "description" : "This data item is recorded the first time the CS output fields are derived and should be updated each time the CS Derived items are recomputed. The CS version number is returned as part of the output of the CS algorithm.",
+    "description" : "Collaborative Staging (CS) version used to derive the CS output fields.",
     "naaccr_item" : 2936,
     "default" : "020550"
   }, {
@@ -1163,5 +1163,5 @@
     } ]
   } ],
   "involved_tables" : [ "extension_size_category_ajcc7_xpm", "ssf13_sqq", "ssf12_sqb", "ssf25_snt", "ssf3_lpj", "ssf8_spx", "ssf15_snj", "ajcc7_t_codes", "ssf23_snr", "ajcc6_stage_qpx", "ssf6_opd", "nodes_dpa", "histology", "ssf1_jpq", "cs_input_version_original", "tumor_size_category_ajcc7_xpk", "ssf22_snq", "lvi", "mets_hpg", "ajcc_tdescriptor_cleanup", "schema_selection_melanoma_choroid", "ajcc7_year_validation", "ssf21_snp", "ajcc7_inclusions_tpa", "ssf17_snl", "ssf10_spz", "ssf5_npf", "ajcc_descriptor_codes", "ajcc7_stage_upv", "ssf11_sqa", "grade", "summary_stage_rpa", "ssf7_spw", "ajcc7_m_codes", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "ajcc6_t_codes", "nodes_pos_fpa", "ajcc_mdescriptor_cleanup", "ss_codes", "tumor_size_pair_ajcc6_xpl", "nodes_exam_gpa", "size_apb", "ajcc6_n_codes", "behavior", "ssf2_kpj", "extension_size_pair_ajcc6_xpn", "ssf18_snm", "mets_eval_ipa", "extension_eval_cpa", "ajcc7_n_codes", "ajcc6_stage_codes", "extension_bda", "ssf19_snn", "ajcc7_stage_codes", "size_metastasis_ajcc7_xpx", "ssf9_sqm", "primary_site", "ajcc6_year_validation", "ajcc6_m_codes", "nodes_eval_epa", "ssf14_sqr", "ssf4_mpe", "cs_year_validation", "ssf24_sns" ],
-  "last_modified" : "2015-02-20T01:05:31.316Z"
+  "last_modified" : "2015-02-19T20:05:31.316Z"
 }

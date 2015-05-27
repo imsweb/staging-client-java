@@ -31,7 +31,7 @@
   }, {
     "key" : "cs_input_version_original",
     "name" : "CS Version Input Original",
-    "description" : "This item indicates the number of the version initially used to code Collaborative Staging (CS) fields.",
+    "description" : "Collaborative Staging (CS) version number initially used to code CS fields.",
     "naaccr_item" : 2935,
     "table" : "cs_input_version_original",
     "used_for_staging" : true
@@ -130,7 +130,7 @@
   }, {
     "key" : "mets_eval",
     "name" : "CS Mets Eval",
-    "description" : "Records how the code for CS Mets at Dx was determined based on the diagnosticmethods employed.",
+    "description" : "Records how the code for CS Mets at Dx was determined based on the diagnostic methods employed.",
     "naaccr_item" : 2860,
     "default" : "9",
     "table" : "mets_eval_ipa",
@@ -344,7 +344,7 @@
   }, {
     "key" : "csver_derived",
     "name" : "CS Version Derived",
-    "description" : "This data item is recorded the first time the CS output fields are derived and should be updated each time the CS Derived items are recomputed. The CS version number is returned as part of the output of the CS algorithm.",
+    "description" : "Collaborative Staging (CS) version used to derive the CS output fields.",
     "naaccr_item" : 2936,
     "default" : "020550"
   }, {
@@ -1196,5 +1196,5 @@
     } ]
   } ],
   "involved_tables" : [ "size_extension_mets_ssf1_ajcc6_xjp_t", "size_extension_mets_ssf1_ajcc6_xjt_m", "size_extension_mets_ssf1_ajcc6_xjp_m", "determine_correct_table_for_ajcc7_t_ns43", "size_extension_mets_ssf1_ajcc6_xjx_t", "ssf25_snt", "size_extension_mets_ssf1_ajcc6_xjt_t", "size_extension_mets_ssf1_ajcc6_xjx_m", "ssf15_snj", "ajcc7_t_codes", "ssf23_snr", "extension_ssf1_summary_stage77_xkc", "extension_ssf1_summary_stage77_xkd", "histology", "cs_input_version_original", "lvi", "ajcc_tdescriptor_cleanup", "ssf1_sbh", "ssf21_snp", "nodes_dai", "extension_mets_ssf1_ajcc6_xjo_m", "ssf17_snl", "extension_eval_cae", "extension_mets_ssf1_ajcc6_xjo_t", "grade", "extension_baj", "determine_correct_table_for_ss77t_ns45", "size_extension_mets_ssf1_ajcc6_xjw_m", "extension_ssf1_summary_stage2000_xkf", "extension_ssf1_summary_stage2000_xke", "size_extension_mets_ssf1_ajcc6_xjs_m", "size_extension_mets_ssf1_ajcc6_xjw_t", "ajcc6_t_codes", "mets_hab", "determine_correct_table_for_ajcc6_tm_ns47", "nodes_pos_fpa", "size_extension_mets_ssf1_ajcc6_xjs_t", "determine_correct_table_for_ajcc6_tm_ns44", "nodes_eval_eag", "ssf11_snf", "ssf3_lna", "ssf6_ona", "ajcc6_n_codes", "behavior", "ssf18_snm", "mets_eval_ipa", "schema_selection_lung", "ajcc6_stage_codes", "ajcc7_stage_codes", "ssf13_snh", "ajcc6_m_codes", "ssf24_sns", "ssf8_snc", "size_extension_mets_ssf1_ajcc6_xjv_m", "size_aaa", "size_extension_mets_ssf1_ajcc6_xjr_m", "ajcc6_stage_qab", "size_extension_mets_ssf1_ajcc6_xjv_t", "size_extension_mets_ssf1_ajcc6_xjr_t", "determine_correct_table_for_ss00t_ns46", "ssf22_snq", "ssf14_sni", "ssf4_mna", "ssf2_sbi", "ajcc7_year_validation", "ajcc7_inclusions_tpb", "ajcc_descriptor_codes", "invalid_lung_m_values_ns49", "size_extension_ssf1_ajcc7_t_xjz", "extension_ssf1_ajcc7_t_xjy", "summary_stage_rpa", "ajcc7_m_codes", "size_extension_ssf1_ajcc7_t_xka", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "size_extension_mets_ssf1_ajcc6_xju_m", "size_extension_mets_ssf1_ajcc6_xjq_m", "size_extension_mets_ssf1_ajcc6_xju_t", "ajcc_mdescriptor_cleanup", "size_extension_mets_ssf1_ajcc6_xjq_t", "ssf7_snb", "ss_codes", "ajcc6_exclusions_paa", "nodes_exam_gpa", "size_metsat_dxajcc7_m_xkb", "ssf10_sne", "ajcc7_n_codes", "ssf5_nna", "ssf19_snn", "ajcc7_stage_ubq", "ssf9_snd", "primary_site", "ajcc6_year_validation", "determine_correct_table_for_m_ns48", "cs_year_validation", "ssf12_sng" ],
-  "last_modified" : "2015-02-20T01:05:29.858Z"
+  "last_modified" : "2015-02-19T20:05:29.858Z"
 }

@@ -31,7 +31,7 @@
   }, {
     "key" : "cs_input_version_original",
     "name" : "CS Version Input Original",
-    "description" : "This item indicates the number of the version initially used to code Collaborative Staging (CS) fields.",
+    "description" : "Collaborative Staging (CS) version number initially used to code CS fields.",
     "naaccr_item" : 2935,
     "table" : "cs_input_version_original",
     "used_for_staging" : true
@@ -130,7 +130,7 @@
   }, {
     "key" : "mets_eval",
     "name" : "CS Mets Eval",
-    "description" : "Records how the code for CS Mets at Dx was determined based on the diagnosticmethods employed.",
+    "description" : "Records how the code for CS Mets at Dx was determined based on the diagnostic methods employed.",
     "naaccr_item" : 2860,
     "default" : "9",
     "table" : "mets_eval_ipb",
@@ -341,7 +341,7 @@
   }, {
     "key" : "csver_derived",
     "name" : "CS Version Derived",
-    "description" : "This data item is recorded the first time the CS output fields are derived and should be updated each time the CS Derived items are recomputed. The CS version number is returned as part of the output of the CS algorithm.",
+    "description" : "Collaborative Staging (CS) version used to derive the CS output fields.",
     "naaccr_item" : 2936,
     "default" : "020550"
   }, {
@@ -1217,5 +1217,5 @@
     } ]
   } ],
   "involved_tables" : [ "ajcc6_exclusions_ppd", "lymph_nodes_clinical_eval_v0205_ajcc7_xaj", "size_aad", "ssf25_snt", "ssf7_spf", "ssf1_jpf", "ssf15_snj", "ajcc7_t_codes", "ssf23_snr", "ssf3_lpe", "histology", "ssf6_opb", "schema_selection_colon", "cs_input_version_original", "ssf22_snq", "ssf10_spi", "lvi", "ssf14_sni", "lymph_nodes_pathologic_evaluation_ajcc7_table_also_used_when_cslymph_nodes_evalis_not_coded_xqi", "ajcc_tdescriptor_cleanup", "extension_bao", "ajcc7_year_validation", "ssf21_snp", "ssf5_npb", "ssf17_snl", "ssf9_sph", "determine_correct_table_for_ajcc6_n_ns10", "ajcc_descriptor_codes", "lymph_nodes_clinical_evaluation_ajcc6_xbj", "ajcc7_inclusions_tpc", "ajcc7_stage_upw", "grade", "ssf8_spg", "summary_stage_rpa", "ajcc7_m_codes", "lymph_nodes_pathologic_evaluation_ajcc6_table_also_used_when_cslymph_nodes_eval_is_not_coded_xpr", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "ajcc6_t_codes", "nodes_pos_fpb", "mets_hae", "ajcc_mdescriptor_cleanup", "ssf11_snf", "ss_codes", "nodes_exam_gpa", "ssf2_kpp", "nodes_dan", "ajcc6_n_codes", "behavior", "mets_eval_ipb", "ssf18_snm", "ajcc6_stage_qpf", "extension_eval_cpa", "ajcc7_n_codes", "ssf4_mpb", "ajcc6_stage_codes", "ssf19_snn", "determine_correct_table_for_ajcc7_n_ns11", "lymph_nodes_clinical_eval_priorto_v0205_ajcc7_xqh", "ajcc7_stage_codes", "ssf13_snh", "primary_site", "ajcc6_year_validation", "ajcc6_m_codes", "nodes_eval_epa", "cs_year_validation", "ssf24_sns", "ssf12_sng" ],
-  "last_modified" : "2015-02-20T01:05:22.028Z"
+  "last_modified" : "2015-02-19T20:05:22.028Z"
 }

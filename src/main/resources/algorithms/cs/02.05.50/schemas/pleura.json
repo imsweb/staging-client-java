@@ -31,7 +31,7 @@
   }, {
     "key" : "cs_input_version_original",
     "name" : "CS Version Input Original",
-    "description" : "This item indicates the number of the version initially used to code Collaborative Staging (CS) fields.",
+    "description" : "Collaborative Staging (CS) version number initially used to code CS fields.",
     "naaccr_item" : 2935,
     "table" : "cs_input_version_original",
     "used_for_staging" : true
@@ -130,7 +130,7 @@
   }, {
     "key" : "mets_eval",
     "name" : "CS Mets Eval",
-    "description" : "Records how the code for CS Mets at Dx was determined based on the diagnosticmethods employed.",
+    "description" : "Records how the code for CS Mets at Dx was determined based on the diagnostic methods employed.",
     "naaccr_item" : 2860,
     "default" : "9",
     "table" : "mets_eval_ipa",
@@ -341,7 +341,7 @@
   }, {
     "key" : "csver_derived",
     "name" : "CS Version Derived",
-    "description" : "This data item is recorded the first time the CS output fields are derived and should be updated each time the CS Derived items are recomputed. The CS version number is returned as part of the output of the CS algorithm.",
+    "description" : "Collaborative Staging (CS) version used to derive the CS output fields.",
     "naaccr_item" : 2936,
     "default" : "020550"
   }, {
@@ -1217,5 +1217,5 @@
     } ]
   } ],
   "involved_tables" : [ "ssf25_snt", "extension_bbx", "ssf15_snj", "ajcc7_t_codes", "ajcc7_stage_uaq", "schema_selection_pleura", "ssf23_snr", "ssf2_kbf", "histology", "cs_input_version_original", "ssf22_snq", "lvi", "ssf14_sni", "ajcc_tdescriptor_cleanup", "ajcc7_year_validation", "ssf21_snp", "ssf17_snl", "ajcc_descriptor_codes", "pleural_effusion_extension_xbz", "lymph_nodes_metsat_dxajcc6_xki", "grade", "ajcc7_inclusions_tpf", "summary_stage_rpa", "ajcc7_m_codes", "ssf20_sno", "ajcc6_stage_qam", "ssf4_maz", "ajcc_ndescriptor_cleanup", "ssf16_snk", "ssf1_jam", "ajcc6_t_codes", "nodes_pos_fpa", "ajcc_mdescriptor_cleanup", "ajcc6_exclusions_pam", "ssf7_snb", "ssf11_snf", "ssf3_lat", "ss_codes", "ssf6_ona", "size_apa", "nodes_exam_gpa", "ajcc6_n_codes", "mets_hat", "behavior", "ssf10_sne", "ssf18_snm", "mets_eval_ipa", "extension_eval_cpa", "ajcc7_n_codes", "ajcc6_stage_codes", "ssf19_snn", "ajcc7_stage_codes", "ssf5_naw", "ssf9_snd", "ssf13_snh", "primary_site", "nodes_dbq", "ajcc6_year_validation", "ajcc6_m_codes", "nodes_eval_epa", "cs_year_validation", "ssf24_sns", "ssf8_snc", "ssf12_sng" ],
-  "last_modified" : "2015-02-20T01:05:43.051Z"
+  "last_modified" : "2015-02-19T20:05:43.051Z"
 }
