@@ -62,7 +62,7 @@ public class CsStagingAddOutputFields {
         descriptions.put("site", "Code for the primary site of the tumor being reported using either ICD-O-2 or ICD-O-3.");
         descriptions.put("hist", "Codes for the histologic type of the tumor being reported using ICD-O-3.");
         descriptions.put("year_dx", "Date of initial diagnosis by a recognized medical practitioner for the tumor being reported whether clinically or microscopically confirmed.");
-        descriptions.put("cs_input_version_original", "This item indicates the number of the version initially used to code Collaborative Staging (CS) fields.");
+        descriptions.put("cs_input_version_original", "Collaborative Staging (CS) version number initially used to code CS fields.");
         descriptions.put("behavior", "Code for the behavior of the tumor being reported using ICD-O-3.");
         descriptions.put("grade", "Code for the grade or degree of differentiation of the reportable tumor.");
         descriptions.put("age_dx", "Age of the patient at diagnosis in complete years.");
@@ -78,7 +78,7 @@ public class CsStagingAddOutputFields {
         descriptions.put("mets", "Identifies the distant site(s) of metastatic involvement at time of diagnosis.");
         descriptions.put("mets_eval", "Records how the code for CS Mets at Dx was determined based on the diagnostic methods employed.");
         descriptions.put("schema_number", "CS assigned schema number.");
-        descriptions.put("csver_derived", "This data item is recorded the first time the CS output fields are derived and should be updated each time the CS Derived items are recomputed.");
+        descriptions.put("csver_derived", "Collaborative Staging (CS) version used to derive the CS output fields.");
         descriptions.put("ajcc6_t", "");
         descriptions.put("ajcc6_tdescriptor", "");
         descriptions.put("ajcc6_n", "");
