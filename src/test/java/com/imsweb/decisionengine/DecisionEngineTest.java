@@ -1254,4 +1254,34 @@ public class DecisionEngineTest {
         Assert.assertEquals("", input.get("output2"));
     }
 
+    @Test
+    public void testMappingInputsWithReferenceInTable() {
+        BasicDataProvider provider = new BasicDataProvider();
+
+        // test a situation where an input is also used as a reference in an endpoint; when the definition remaps that input it should not show up
+        // as both values
+        BasicTable table = new BasicTable("table_input");
+        table.addColumnDefinition("input1", ColumnType.INPUT);
+        table.addColumnDefinition("output1", ColumnType.ENDPOINT);
+        table.addRawRow("000", "VALUE:001");
+        table.addRawRow("001", "VALUE:000");
+        table.addRawRow("002", "VALUE:{{input1}}");
+        provider.addTable(table);
+
+        BasicDefinition def = new BasicDefinition("sample_outputs");
+        def.setOnInvalidInput(Definition.StagingInputErrorHandler.FAIL);
+        def.addInput(new BasicInput("input1", "table_input"));
+
+        BasicMapping mapping = new BasicMapping("mapping1");
+        BasicTablePath path = new BasicTablePath("table_input");
+        path.addInputMapping("remapped1", "input1");
+        mapping.addTablePath(path);
+        def.addMapping(mapping);
+        provider.addDefinition(def);
+
+        DecisionEngine engine = new DecisionEngine(provider);
+
+        Assert.assertEquals(Sets.newHashSet("remapped1"), engine.getInputs(def.getMappings().get(0).getTablePaths().get(0)));
+    }
+
 }

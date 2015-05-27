@@ -5,11 +5,15 @@ package com.imsweb.decisionengine.basic;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import com.imsweb.decisionengine.DataProvider;
+import com.imsweb.decisionengine.DecisionEngine;
 import com.imsweb.decisionengine.Endpoint.EndpointType;
+import com.imsweb.staging.Staging;
 
 /**
  * In implementation of DataProvider which holds all data in memory
@@ -68,11 +72,13 @@ public class BasicDataProvider implements DataProvider {
      * @param table a BasicTable
      */
     public void initTable(BasicTable table) {
+        Set<String> extraInputs = new HashSet<String>();
+
         if (table.getRawRows() != null) {
             for (List<String> row : table.getRawRows()) {
                 BasicTableRow tableRowEntity = new BasicTableRow();
 
-                // make sure the numer of cells in the row matches the number of columns defined
+                // make sure the number of cells in the row matches the number of columns defined
                 if (table.getColumnDefinitions().size() != row.size())
                     throw new IllegalStateException("Table '" + table.getId() + "' has a row with " + row.size() + " values but should have " + table.getColumnDefinitions().size() + ": " + row);
 
@@ -85,17 +91,30 @@ public class BasicDataProvider implements DataProvider {
                         case INPUT:
                             // if there are no ranges in the list, that means the cell was "blank" and is not needed in the table row
                             List<BasicStringRange> ranges = splitValues(cellValue);
-                            if (!ranges.isEmpty())
+                            if (!ranges.isEmpty()) {
                                 tableRowEntity.addInput(col.getKey(), ranges);
-                            break;
-                        case DESCRIPTION:
-                            tableRowEntity.setDescription(cellValue);
+
+                                // if there are key references used (values that reference other inputs) like {{key}}, then add them to the extra inputs list
+                                for (BasicStringRange range : ranges) {
+                                    if (DecisionEngine.isReferenceVariable(range.getLow()))
+                                        extraInputs.add(DecisionEngine.trimBraces(range.getLow()));
+                                    if (DecisionEngine.isReferenceVariable(range.getHigh()))
+                                        extraInputs.add(DecisionEngine.trimBraces(range.getHigh()));
+                                }
+                            }
                             break;
                         case ENDPOINT:
                             BasicEndpoint endpoint = parseEndpoint(cellValue);
                             if (EndpointType.VALUE.equals(endpoint.getType()))
                                 endpoint.setResultKey(col.getKey());
                             tableRowEntity.addEndpoint(endpoint);
+
+                            // if there are key references used (values that reference other inputs) like {{key}}, then add them to the extra inputs list
+                            if (EndpointType.VALUE.equals(endpoint.getType()) && DecisionEngine.isReferenceVariable(endpoint.getValue()))
+                                extraInputs.add(DecisionEngine.trimBraces(endpoint.getValue()));
+                            break;
+                        case DESCRIPTION:
+                            // do nothing
                             break;
                         default:
                             throw new IllegalStateException("Table '" + table.getId() + " has an unknown column type: '" + col.getType() + "'");
@@ -105,6 +124,10 @@ public class BasicDataProvider implements DataProvider {
                 table.getTableRows().add(tableRowEntity);
             }
         }
+
+        // add extra inputs, if any; do not include context variables since they are not user input
+        extraInputs.removeAll(Staging.CONTEXT_KEYS);
+        table.setExtraInput(extraInputs.isEmpty() ? null : extraInputs);
     }
 
     /**

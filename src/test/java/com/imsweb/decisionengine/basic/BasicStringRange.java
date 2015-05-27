@@ -40,6 +40,14 @@ public class BasicStringRange extends StringRange {
         _usesContext = ((_low.startsWith("{{") && _low.endsWith("}}")) || (_high.startsWith("{{") && _high.endsWith("}}")));
     }
 
+    public String getLow() {
+        return _low;
+    }
+
+    public String getHigh() {
+        return _high;
+    }
+
     /**
      * If low and high are both null, then this range matches all strings
      * @return

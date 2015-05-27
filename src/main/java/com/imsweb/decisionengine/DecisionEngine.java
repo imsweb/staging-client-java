@@ -430,6 +430,10 @@ public class DecisionEngine {
                     // next add any inputs that are referenced in the table rows, i.e. format of {{key}}
                     if (table.getExtraInput() != null) {
                         for (String inputKey : table.getExtraInput()) {
+                            // variable references need to use input mappings as well
+                            if (inputMappings.containsKey(inputKey))
+                                inputKey = inputMappings.get(inputKey);
+
                             if (!excludedInputs.contains(inputKey))
                                 inputs.add(inputKey);
                         }
