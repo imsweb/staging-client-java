@@ -355,7 +355,7 @@ public class CsStagingTest {
         Assert.assertEquals("brain", data.getSchemaId());
         Assert.assertEquals(0, data.getErrors().size());
 
-        // now change SSF4 to blank; it should produce an error now since the default will not be used
+        // now change SSF4 to blank; blank values are not validated and since this is not used in staging there should be no errors
         data.setSsf(4, "");
 
         // perform the staging
@@ -363,7 +363,18 @@ public class CsStagingTest {
 
         Assert.assertEquals(Result.STAGED, data.getResult());
         Assert.assertEquals("brain", data.getSchemaId());
-        Assert.assertEquals(1, data.getErrors().size());
+        Assert.assertEquals(0, data.getErrors().size());
+
+        // now change extension to blank; the only errors we get should be of type MATCH_NOT_FOUND
+        data.setInput(CsInput.EXTENSION, "");
+
+        // perform the staging
+        _STAGING.stage(data);
+
+        Assert.assertEquals(Result.STAGED, data.getResult());
+        Assert.assertEquals("brain", data.getSchemaId());
+        for (com.imsweb.decisionengine.Error error : data.getErrors())
+            Assert.assertEquals(Type.MATCH_NOT_FOUND, error.getType());
     }
 
     @Test
