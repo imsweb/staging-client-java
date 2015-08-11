@@ -161,6 +161,9 @@ public abstract class StagingDataProvider implements DataProvider {
     public static StagingTable initTable(StagingTable table) {
         Set<String> extraInputs = new HashSet<String>();
 
+        // empty out the parsed rows
+        table.setTableRows(new ArrayList<StagingTableRow>());
+
         if (table.getRawRows() != null) {
             for (List<String> row : table.getRawRows()) {
                 StagingTableRow tableRowEntity = new StagingTableRow();
