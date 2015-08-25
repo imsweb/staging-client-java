@@ -6,7 +6,7 @@
   "title" : "CS Site-Specific Factor 16",
   "subtitle" : "Combinations of ER, PR, and HER2 Results",
   "notes" : "**Note 1**:  There is a clinical interest in triple negative breast cancer, or breast cancer that is negative for estrogen receptors (ER), progesterone receptors (PR), and Human Epidermal Growth Factor Receptor 2 (HER2) amplification or overexpression.\n\n**Note 2**:  This field is based on CS Site-Specific Factors 1, 2, and 15.\n\n**Note 3**:  ER results are coded in the first digit: 0 for negative and 1 for positive.\n\n**Note 4**:  PR results are coded in the second digit: 0 for negative and 1 for positive.\n\n**Note 5**:  HER2 results are coded in the third digit: 0 for negative and 1 for positive.\n\n**Note 6**:  If information is unknown or not available for one or more of the three types of tests, or if one or more of the three types of tests was not performed, code 999.",
-  "last_modified" : "2015-01-21T10:36:24.491Z",
+  "last_modified" : "2015-05-27T16:19:57.142Z",
   "definition" : [ {
     "key" : "ssf16",
     "name" : "Code",

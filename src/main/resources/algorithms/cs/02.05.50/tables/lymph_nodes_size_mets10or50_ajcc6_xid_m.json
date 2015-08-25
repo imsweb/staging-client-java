@@ -5,7 +5,7 @@
   "name" : "Lymph Nodes Size Mets 10 or 50 AJCC6 - For M",
   "title" : "Lymph Nodes Size Mets 10 or 50 AJCC 6 Table - For M",
   "notes" : "**Note**:  When CS Lymph Nodes is coded 150, 250, 350-450, or 505 and CS Mets at DX is coded 10 or 50, the AJCC 6 N and M categories are determined by the size of involved nodes as coded in CS Site-Specific Factor 2, Size of Metastasis in Lymph Nodes as shown in this table.",
-  "last_modified" : "2015-01-21T10:36:12.682Z",
+  "last_modified" : "2015-05-27T16:19:26.240Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "CS Lymph Nodes",

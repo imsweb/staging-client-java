@@ -5,7 +5,7 @@
   "name" : "Extension Size Pair AJCC6",
   "title" : "Extension Size Pair AJCC 6 Table",
   "notes" : "**Note**:  For CS Extension codes 150-180, 635, and 640, the T category for AJCC 6 staging is assigned based on the values of tumor basal diameter, recorded in CS Site-Specific Factor 2, and thickness, recorded in CS Site-Specific Factor 3. Diameter and thickness are mapped to tumor size pairs in the Tumor Size Pair AJCC 6 Table, and the CS Extension codes and tumor size pairs are mapped to T as shown in this table.",
-  "last_modified" : "2015-01-21T10:36:08.043Z",
+  "last_modified" : "2015-05-27T16:19:18.696Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

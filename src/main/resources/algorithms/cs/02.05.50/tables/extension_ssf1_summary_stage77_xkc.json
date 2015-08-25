@@ -6,7 +6,7 @@
   "title" : "Extension SSF1 Summary Stage 77 Table",
   "subtitle" : "Cases Coded in CSv2 (CS Version Input Original equals 02XXXX) or Year of Diagnosis is 2010 and After",
   "notes" : "**Note**:  For cases coded in CSv2 (CS Version Input Original equals 02XXXX) or Year of Diagnosis is 2010 and after, Stage 77 for CS Extension codes 000, 950, 980 and 999 is based on Extension and CS Site-Specific Factor 1. CS Site-Specific Factor 1 codes 000 and 999 map according to the extension value.",
-  "last_modified" : "2015-01-21T10:36:09.288Z",
+  "last_modified" : "2015-05-27T16:19:20.714Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension Code",

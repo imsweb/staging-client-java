@@ -5,7 +5,7 @@
   "name" : "Extension Mets AJCC6",
   "title" : "Extension Mets AJCC 6 Table",
   "notes" : "**Note**:  For CS Mets at DX codes 00 and 99, the M category for AJCC 6 staging is determined by the value of CS Extension as shown in this table.",
-  "last_modified" : "2015-01-21T10:36:06.520Z",
+  "last_modified" : "2015-05-27T16:19:15.637Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

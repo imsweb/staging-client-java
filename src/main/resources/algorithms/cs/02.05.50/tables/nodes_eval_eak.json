@@ -5,7 +5,7 @@
   "name" : "Nodes Eval",
   "title" : "CS Lymph Nodes Eval",
   "notes" : "**Note**:  The staging basis AJCC 7 for this schema is blank because AJCC stage is not applicable for this site and histology.  Data was collected in this item in CSv1 and is being retained.",
-  "last_modified" : "2015-01-21T10:36:18.944Z",
+  "last_modified" : "2015-05-27T16:19:39.339Z",
   "definition" : [ {
     "key" : "nodes_eval",
     "name" : "Code",

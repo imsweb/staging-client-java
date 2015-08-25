@@ -6,7 +6,7 @@
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in the field CS Mets at DX.\n\n**Note 2**:  Regional nodes include bilateral and contralateral involvement of named nodes.\n\n**Note 3**:  In some cases, determination of the N category for TNM 6 is based on this field and CS Mets at DX.",
   "footnotes" : "- For CS Lymph Nodes codes 150, 250, 350-450, and 505 ONLY, the N and M categories for AJCC 6 staging are assigned based on CS Lymph Nodes, CS Mets at DX, and CS Site-Specific Factor 2, Size of Metastasis in Lymph Nodes, as shown in the Lymph Nodes Size Mets 00 AJCC 6 Table, Lymph Nodes Size Mets 99 AJCC 6 Table, Lymph Nodes Size Mets 11, 40, 55, 60 AJCC 6 Table, and Lymph Nodes Size Mets 10 or 50 AJCC 6 Table.",
-  "last_modified" : "2015-01-21T10:36:16.468Z",
+  "last_modified" : "2015-05-27T16:19:34.603Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

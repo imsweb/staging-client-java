@@ -5,7 +5,7 @@
   "name" : "Extension",
   "title" : "CS Extension",
   "notes" : "**Note 1**:  In case of multifocal noninvasive Ta and Tis tumors, use code 060, 070, or 080 in preference to code 050.\n\n**Note 2**:  If CS Extension code is 050-080, Behavior Code ICD-O-3 must be coded as 2.  If CS Extension code is 100 or greater, Behavior Code ICD-O-3 must be coded as 3.\n\n**Note 3**:  The presence of muscle around the urethra varies between males and females and, in males, varies among the segments of the urethra. The outer muscular coat (muscularis) is absent in most of the male urethra except for the membranous portion. In females, the muscle coat is continuous from the bladder wall. In addition, in both males and females, there is sphincteric muscle, which may be smooth or skeletal muscle. Invasion of periurethral muscle is coded 200, unless it is specified as invasion of sphincter muscle, which is coded 400. Invasion of muscle at the neck of the bladder is coded with the bladder neck in 600. If the only information is \"invasion of muscle\", NOS, or \"invasion of periurethral muscle\", NOS, assign code 200.",
-  "last_modified" : "2015-01-21T10:36:03.803Z",
+  "last_modified" : "2015-05-27T16:19:10.461Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

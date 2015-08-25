@@ -5,7 +5,7 @@
   "name" : "Lymph Nodes Mets at DX AJCC6 - returning M",
   "title" : "Lymph Nodes Mets at DX AJCC 6 Table - returning M",
   "notes" : "**Note 1**:  For CS Lymph Nodes codes 200 and 250 ONLY, the N and M categories for AJCC 6 staging and the 'c' and 'p' descriptors for N and M are assigned based on the values in CS Lymph Nodes, CS Nodes Eval, CS Mets at DX, and CS Mets Eval as shown in this table.\n\n**Note 2**:  Not all users of Collaborative Stage collect the evaluation fields.  Each empty cell in the table represents a \"blank\" or invalid code in the respective CS Nodes Eval or CS Mets Eval field.\n\n**Note 3**:  If CS Nodes Eval and/or CS Mets Eval is \"blank\" or invalid (empty cell in the table),  the N and M categories where CS Lymph Nodes = 200 or 250 are derived as if CS Nodes Eval and/or CS Mets Eval were coded as unknown or \"9\".  No values are derived for the CS Lymph Nodes Eval and CS Mets Eval fields if both are \"blank\" or invalid; ERROR is derived for both CS Lymph Nodes Eval and CS Mets Eval if one is completed with a valid code and the other is invalid or empty.",
-  "last_modified" : "2015-01-21T10:36:11.728Z",
+  "last_modified" : "2015-05-27T16:19:24.419Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "CS Lymph Nodes",

@@ -5,7 +5,7 @@
   "name" : "Extension",
   "title" : "CS Extension",
   "notes" : "**Note 1**:  Ciliary body and Iris are both included in the ICD-O-3 site code of C69.4, but they are staged with different criteria by AJCC.  The Schema Discriminator is used to select the CS schema appropriate for coding extension for melanoma of the iris.  Obsolete codes identified for primaries of the ciliary body are found in this schema because melanomas of ciliary body and iris were included in a single schema in CS Version 1.\n\n**Note 2**:  Uveal melanomas arise most commonly in the choroid, less frequently in the ciliary body, and least often in the iris.  Melanomas of the iris tend to be small, and those arising from or extending to the ciliary body typically are large.\n\n**Note 3**:  AJCC does not recognize in situ melanoma of the iris.  Any case so coded will be mapped to unknown AJCC stage and in situ Summary Stage.",
-  "last_modified" : "2015-01-21T10:36:05.605Z",
+  "last_modified" : "2015-05-27T16:19:13.685Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

@@ -5,7 +5,7 @@
   "name" : "Special Calculation Table for Non-Invasive Pathologic Extension (AJCC 6, AJCC 7, and SEER Summary Stage)",
   "title" : "Special Calculation Table for Non-Invasive Pathologic Extension (AJCC 6, AJCC 7, and SEER Summary Stage)",
   "notes" : "**Note 1**:  For CS Site-Specific Factor 3 (CS Extension - Pathologic Extension) code 000, based on the values coded in CS Extension - Clinical Extension and CS Tumor Size/Ext Eval, the T category mappings and T descriptors for AJCC 6 and AJCC 7, the SEER Summary Stage T, and the Gleason Score are taken from the fields indicated in the table below. If the CS Tumor Size/Ext Eval code is invalid, an error is returned and no stage is calculated.\n\n**Note 2**: This table replaces Special Calculation Table for TNM 6 Non-Invasive Pathologic Extension, Special Calculation Table for TNM 7 Non-Invasive Pathologic Extension, and the SSF3 = 000 column of Special Calculation Table for SEER Summary Stage.",
-  "last_modified" : "2015-01-21T10:36:21.597Z",
+  "last_modified" : "2015-05-27T16:19:52.583Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

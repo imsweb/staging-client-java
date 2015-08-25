@@ -5,7 +5,7 @@
   "name" : "Lymph Nodes Pathologic Eval",
   "title" : "Lymph Nodes Pathologic Eval Table",
   "notes" : "**Note**:  This table is used when CS Lymph Nodes Eval is coded 2 (p), 3 (p), 6 (yp), or 8 (a) and CS Lymph Nodes is coded 100-500 ONLY. The N category is assigned based on the values of CS Site-Specific Factor 5, Size of Metastasis in Lymph Nodes, and Regional Nodes Positive.",
-  "last_modified" : "2015-01-21T10:36:12.238Z",
+  "last_modified" : "2015-05-27T16:19:25.651Z",
   "definition" : [ {
     "key" : "nodes_pos",
     "name" : "Regional Nodes Positive",

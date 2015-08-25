@@ -5,7 +5,7 @@
   "name" : "Size",
   "title" : "CS Tumor Size",
   "notes" : "**Note**:  Code the specific tumor size to the nearest millimeter (mm) as documented in the medical record.  Use codes 990-995 only if a specific measurement is not available.",
-  "last_modified" : "2015-01-21T10:36:20.320Z",
+  "last_modified" : "2015-05-27T16:19:50.289Z",
   "definition" : [ {
     "key" : "size",
     "name" : "Code",

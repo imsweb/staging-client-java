@@ -5,7 +5,7 @@
   "name" : "Nodes",
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field. Distant nodes are coded in the field CS Mets at DX.\n\n**Note 2**:  Regional nodes include bilateral and contralateral involvement of named nodes.\n\n**Note 3**:  Determine the size of the largest metastasis in a lymph node as documented in the pathology report to assign codes 100-300, not the size of the lymph node. If the size of the metastasis is not documented, determine the size of the largest involved lymph node as documented pathologically or clinically with pathology taking priority. Do not code the size of any node(s) coded in CS Mets at DX.\n\n**Note 4**:  The assignment of the N category is based both on number and size of metastasis.  Use codes as described here if the number and/or size of nodes involved is unknown:\n\n* Code 110:  Single node involved, size not stated.\n* Code 210:  Multiple nodes involved, size not stated.\n* Code 200:  Single or multiple nodes not stated, size stated and greater than 2 cm but less than or equal to 5 cm.\n* Code 300:  Single or multiple nodes not stated, size stated and greater than 5 cm.\n* Code 505:  Single or multiple nodes not stated, size not stated.",
-  "last_modified" : "2015-01-21T10:36:15.900Z",
+  "last_modified" : "2015-05-27T16:19:33.156Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

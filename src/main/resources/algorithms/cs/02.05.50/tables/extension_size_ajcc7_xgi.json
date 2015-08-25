@@ -5,7 +5,7 @@
   "name" : "Extension Size AJCC7",
   "title" : "Extension Size AJCC 7 Table",
   "notes" : "**Note**:  For CS Extension codes 200-310, 380-450, and 550 ONLY, the T category for AJCC 7 staging is assigned based on CS Tumor Size as shown in this table.",
-  "last_modified" : "2015-01-21T10:36:07.787Z",
+  "last_modified" : "2015-05-27T16:19:18.157Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

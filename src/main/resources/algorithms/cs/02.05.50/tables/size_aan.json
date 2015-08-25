@@ -5,7 +5,7 @@
   "name" : "Size",
   "title" : "CS Tumor Size",
   "notes" : "**Note**:  Code the specific tumor size as stated in the medical record.  Use code 992, 994, or 995 if the physician's statement about T value is the ONLY information available about the size of the tumor. (Refer to the CS Extension table for instructions on coding extension.)",
-  "last_modified" : "2015-01-21T10:36:20.134Z",
+  "last_modified" : "2015-05-27T16:19:49.817Z",
   "definition" : [ {
     "key" : "size",
     "name" : "Code",

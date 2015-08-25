@@ -6,7 +6,7 @@
   "title" : "CS Site-Specific Factor 3",
   "subtitle" : "Alpha Fetoprotein (AFP) Lab Value",
   "notes" : "**Note 1**:  The same laboratory test should be used to record information in CS Site-Specific Factor 1 and CS Site-Specific Factor 3.\n\n**Note 2**:  Record the range for the highest alpha fetoprotein (AFP) lab value in nanograms/ milliliter (ng/ml) as documented in the patient record prior to treatment. The lab value may be recorded in a lab report, history and physical, or clinical statement in the pathology report.   For example, code a pretreatment AFP of 20 ng/ml as 002; code pretreatment AFP of 11,000 ng/ml as 200.\n\n**Note 3**:  A lab value expressed in micrograms per liter (ug/l) is equivalent to the same value expressed in ng/ml.\n\n**Note 4**:  Code any measured value less than or equal to 1.0 ng/ml as 001.\n\n**Note 5**:  If the test was done but the actual value is not stated, code 997.",
-  "last_modified" : "2015-01-21T10:36:28.288Z",
+  "last_modified" : "2015-05-27T16:20:06.024Z",
   "definition" : [ {
     "key" : "ssf3",
     "name" : "Code",

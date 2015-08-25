@@ -5,7 +5,7 @@
   "name" : "Extension Size AJCC6",
   "title" : "Extension Size AJCC 6 Table",
   "notes" : "**Note**: For CS Extension codes 100 through 568, 575, and 580 ONLY, the T category for AJCC 6th Edition staging is assigned based on value of CS Tumor Size, as follows:",
-  "last_modified" : "2015-01-21T10:36:06.896Z",
+  "last_modified" : "2015-05-27T16:19:16.661Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

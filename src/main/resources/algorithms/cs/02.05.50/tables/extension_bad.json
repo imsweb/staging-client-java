@@ -5,7 +5,7 @@
   "name" : "Extension",
   "title" : "CS Extension",
   "notes" : "**Note 1**:  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage. FIGO Stage III is assigned based on tumor extension and/or regional lymph node involvement.  Code CS Extension based on a physician's statement of FIGO Stage III only if it is known that the stage value is assigned because of tumor extension.\n\n**Note 2**:  FIGO no longer includes Stage 0 (Tis) for this site.\n\n**Note 3**:  According to AJCC, pelvic wall is defined as muscle, fascia, neurovascular structures, or skeletal portions of the bony pelvis.",
-  "last_modified" : "2015-01-21T10:36:01.193Z",
+  "last_modified" : "2015-05-27T16:19:05.623Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

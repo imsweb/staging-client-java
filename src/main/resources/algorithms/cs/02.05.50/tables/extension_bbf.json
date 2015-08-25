@@ -5,7 +5,7 @@
   "name" : "Extension",
   "title" : "CS Extension",
   "notes" : "**Note 1**:  For rectosigmoid, ignore intraluminal extension to adjacent segment(s) of colon and rectum; code depth of invasion or extra-rectosigmoidal spread as indicated.\n\n**Note 2**:  Codes 600 - 750 are used for contiguous extension from the site of origin.  Discontinuous involvement is coded in CS Mets at DX.\n\n**Note 3**:  Tumor that is adherent to other organs or structures, macroscopically, is classified cT4b; If tumor is present in adhesion(s) upon microscopic examination, the tumor is classified as pT4b.  Use code 565 for macroscopic adhesions if no pathologic confirmation, and for pathologically confirmed tumor in adhesions.  However, if no tumor is present in adhesion(s) upon microscopic examination, the classification is based upon extent of tumor invasion into or through the wall; use codes 000 - 163, 200, 210, 400, 415, 455, 458, 500, and 555 as appropriate to describe the microscopically confirmed depth of tumor invasion for these cases. Use codes 610-800 to code invasion of underlying structures from the adherent tumor. \n\n**Note 4**:  High grade dysplasia and severe dysplasia are generally not reportable in cancer registries but, if a registry does collect these, codes 000 or 050 should be used.",
-  "last_modified" : "2015-01-21T10:36:02.143Z",
+  "last_modified" : "2015-05-27T16:19:07.373Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

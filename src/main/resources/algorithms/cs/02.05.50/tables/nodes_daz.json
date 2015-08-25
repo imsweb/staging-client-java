@@ -6,7 +6,7 @@
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field.  Regional nodes include bilateral and contralateral involvement of named nodes.  Distant nodes, including presacral and lateral sacral (laterosacral) nodes, are coded in CS Mets at DX.\n\n**Note 2**:  The Federation Internationale de Gynecologie et d'Obstetrique (FIGO) Stage IIIC is assigned based on tumor extension and/or regional lymph node involvement.  Code CS Lymph Nodes based on a physician's statement of FIGO Stage IIIC  if  the stage value is assigned because of regional lymph node involvement or there is no indication of the basis.\n\n**Note 3**:  If either exploratory or definitive surgery is done with no mention of lymph nodes, assume nodes are negative.\n\n**Note 4**:  If the clinician says \"adnexa palpated\" but does not mention lymph nodes, assume lymph nodes are not involved.\n\n**Note 5**:  Determination of the N category for AJCC 6 is based on this field and CS Mets at DX for specific codes in CS Mets at DX.",
   "footnotes" : "- For CS Lymph Nodes codes 000 and 999, the N category for AJCC 6 staging is based on the value of CS Mets at DX as shown in the Lymph Nodes Mets at DX AJCC 6 Table.",
-  "last_modified" : "2015-01-21T10:36:15.796Z",
+  "last_modified" : "2015-05-27T16:19:32.871Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

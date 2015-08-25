@@ -6,7 +6,7 @@
   "title" : "Size Extension Mets SSF1 AJCC 6 Table - T",
   "subtitle" : "CS SSF1 000, 988, or 999, Mets at DX 10, 39 with Tumor Size and Extension",
   "notes" : "**Note**:  When CS Site-Specific Factor 1 is coded 000, 988, or 999, no separate tumor nodules in the primary site, unknown if separate nodules, or information not collected, and CS Mets at DX is code 10 or 39, OBSOLETE DATA CONVERTED codes in CSv2, the values of T and M for AJCC 6 staging are determined as shown in this table.",
-  "last_modified" : "2015-01-21T10:36:21.362Z",
+  "last_modified" : "2015-05-27T16:19:52.257Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

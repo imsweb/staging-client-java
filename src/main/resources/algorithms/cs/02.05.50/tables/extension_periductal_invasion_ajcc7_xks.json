@@ -5,7 +5,7 @@
   "name" : "Extension Periductal Invasion AJCC7",
   "title" : "Extension Periductal Invasion AJCC 7 Table",
   "notes" : "**Note**:  For CS Extension codes 100-520, 580, 620, 631-650, 660-665, 675-755, 765-800 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Site-Specific Factor 10, as shown in this table.",
-  "last_modified" : "2015-01-21T10:36:06.665Z",
+  "last_modified" : "2015-05-27T16:19:16.155Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

@@ -6,7 +6,7 @@
   "title" : "CS Extension",
   "notes" : "**Note 1**:  When both FIGO stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage.\n\n**Note 2**:  FIGO Stage IIIB is assigned based on tumor extension and/or regional lymph node involvement; FIGO Stage IV, NOS is assigned based on tumor extension and/or metastasis.  Code CS Extension based on a physician's statement of FIGO Stage IIIB or FIGO Stage IV [NOS] only if it is known that the stage value is assigned because of tumor extension.  Code a statement of FIGO Stage IIIB in CS Lymph Nodes if unknown if based on extension.  Code a stage of FIGO Stage IV [NOS] in CS Mets at DX if unknown if based on extension.\n\n**Note 3**:  FIGO no longer includes Stage 0 (Tis) for this site.\n\n**Note 4**:  All macroscopically visible lesions, even with superficial invasion, are assigned toT1b/FIGO Stage IB.\n\n**Note 5**:  Involvement of the anterior and/or posterior septum, the tissue between the vagina and bladder and between the vagina and rectum, is coded as involvement of the vaginal wall.",
   "footnotes" : "- For CS Extension codes 200-310, 380-450, and 550 ONLY, the T category is assigned based on CS Tumor Size, as shown in the Extension Size AJCC 7 Table for for this schema.\n- For CS Extension codes 200-310, and 380-390 ONLY, the T category is assigned based on CS Tumor Size, as shown in the Extension Size AJCC 6 Table for this schema.",
-  "last_modified" : "2015-01-21T10:36:02.272Z",
+  "last_modified" : "2015-05-27T16:19:07.705Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

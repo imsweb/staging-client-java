@@ -5,7 +5,7 @@
   "name" : "AJCC6 Exclusions",
   "title" : "Histology Exclusion Table AJCC 6th ed.",
   "notes" : "**Note**:  Histology codes listed in this Histology Exclusion Table for this site are codes that are not TNM staged according to the AJCC 6th Edition Cancer Staging Manual.   When a case is coded in Collaborative Staging and the histology is on the exclusion list, TNM will not be calculated but SEER algorithm Summary Stage 1977 and 2000 can be  assigned.  For these cases, displayed results will be \"T NA N NA M NA and Stage Group NA\".",
-  "last_modified" : "2015-01-21T10:35:49.290Z",
+  "last_modified" : "2015-05-27T16:18:46.382Z",
   "definition" : [ {
     "key" : "hist",
     "name" : "Histology",

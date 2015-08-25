@@ -6,7 +6,7 @@
   "title" : "CS Site-Specific Factor 14",
   "subtitle" : "Post-Orchiectomy Human Chorionic Gonadotropin (hCG) Lab Value",
   "notes" : "**Note 1**:  Record the value of the human chorionic gonadotropin (hCG) test as documented in the patient record after orchiectomy and prior to further treatment.\n\n**Note 2**:  Use the same laboratory test to record values for CS Site-Specific Factors 14 and 15.\n\n**Note 3**:  Record a post-orchiectomy hCG of 20 milli-International Units (mIU/ml) as 002; record a post-orchiectomy hCG of 11, 000 mIU/ml as 200.\n\n**Note 4**:  Code 000 is reserved for exactly 0.0 mIU/ml (no measurable amount of hCG). Do not round tiny values down to 0.0 mIU/ml; any measured value less than or equal to 0.1 mIU/ml should be coded 001. For values greater than 001 mIU/ml, round values to the nearest mIU/ml.\n\n**Note 5**:  A lab value expressed in International Units/liter (IU/L) is equivalent to the same value expressed in milli-International Units/milliliter (mIU/ml).\n\n**Note 6**:  If the initial post-orchiectomy hCG test remains elevated, review the subsequent tests until normalization or plateau occurs and use that test to code this field. See Part I for further explanation of serum tumor marker half life.\n\n**Note 7**:  If the post-orchiectomy hCG test is done but the actual value is not stated, use code 997.\n\n**Note 8**:  For rare cases that are treated prior to orchiectomy or an orchiectomy is not performed, code the initial hCG lab value in this field and not in CS Site-Specific Factor 8.",
-  "last_modified" : "2015-01-21T10:36:24.176Z",
+  "last_modified" : "2015-05-27T16:19:56.453Z",
   "definition" : [ {
     "key" : "ssf14",
     "name" : "Code",

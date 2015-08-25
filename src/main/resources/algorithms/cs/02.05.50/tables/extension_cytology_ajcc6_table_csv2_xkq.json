@@ -5,7 +5,7 @@
   "name" : "Extension Cytology AJCC 6 Table CSv2",
   "title" : "Extension Cytology AJCC 6 Table CSv2",
   "notes" : "**Note**: For CS Version 2 cases (CS Version Input Original equals 02XXXX) or Year of Diagnosis greater than 2009) and for CS Extension codes 100-110, 116-120, 126-400, and 510-540 ONLY. The T category for AJCC 6 staging is assigned based on the value of CS Extension and peritoneal cytology status coded in CS Site Specific Factor 2 as shown in this table.",
-  "last_modified" : "2015-01-21T10:36:06.089Z",
+  "last_modified" : "2015-05-27T16:19:14.656Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

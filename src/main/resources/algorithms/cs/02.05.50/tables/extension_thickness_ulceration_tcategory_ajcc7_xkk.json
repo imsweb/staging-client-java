@@ -6,7 +6,7 @@
   "title" : "Extension Thickness Ulceration T Category AJCC 7 Table",
   "notes" : "**Note**:  For CS Extension codes 310-380, the T category for AJCC 7 staging is assigned based on thickness from CS Site-Specific Factor 1 and ulceration from CS Site-Specific Factor 2.  For tumor thickness 0.01-1.00 millimeter (mm), ulceration and mitotic rate are used to assign staging to T1a and T1b as shown in the Mitotic Rate Ulceration T1 AJCC 7 Table.",
   "footnotes" : "- For tumor thickness of 0.01-1.00 millimeter (mm), the T category for AJCC7 staging is assigned as shown in the Mitotic Rate Ulceration T1 AJCC 7 Table.",
-  "last_modified" : "2015-01-21T10:36:09.499Z",
+  "last_modified" : "2015-05-27T16:19:21.032Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

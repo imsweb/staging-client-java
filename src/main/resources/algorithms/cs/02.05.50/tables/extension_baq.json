@@ -6,7 +6,7 @@
   "title" : "CS Extension",
   "notes" : "**Note 1**:  The assignment of T1 and T2 categories for tumors of the oropharynx is based on tumor size.  A physician's statement of the T category may be used to code CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields.  However the two fields are coded independently: for example the record may document size but not extension, other than the physician's statement of the T category. Use codes 405, 410, 645, 735, 810, or 815 as appropriate to code CS Extension based on a statement of T when no other extension information is available.\n\n**Note 2**:  Use code 300 for localized tumor ONLY if no information is available to assign code 100, 200, 400, 405, or 410.",
   "footnotes" : "- For CSExtension codes 100-600  ONLY, the T category for AJCC staging is assigned based on the value of CS Tumor Size, as shown in the Extension Size AJCC 7 Table for this schema.\n- For CS Extension codes 100-645  ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Tumor Size, as shown in the Extension Size AJCC 6 Table for this schema.",
-  "last_modified" : "2015-01-21T10:36:01.670Z",
+  "last_modified" : "2015-05-27T16:19:06.382Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

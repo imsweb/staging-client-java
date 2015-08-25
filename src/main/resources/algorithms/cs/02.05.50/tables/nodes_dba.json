@@ -5,7 +5,7 @@
   "name" : "Nodes",
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**: Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in CS Mets at DX.  For the lower third of vagina, iliac (common, external, internal (hypogastric), and NOS), and pelvic, NOS lymph nodes are coded in CS Mets at DX.  For the upper two thirds of vagina, inguinal and femoral lymph nodes are coded in CS Mets at DX.\n\n**Note 2**:  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and regional lymph node detail are available, record the code with regional lymph node detail in preference to a statement of FIGO stage. FIGO Stage III is assigned based on tumor extension and/or regional lymph node involvement.  Code CS Lymph Nodes based on a physician's statement of FIGO Stage III based on regional lymph node involvement or if the basis is not stated.",
-  "last_modified" : "2015-01-21T10:36:15.816Z",
+  "last_modified" : "2015-05-27T16:19:32.933Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

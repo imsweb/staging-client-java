@@ -6,7 +6,7 @@
   "title" : "CS Extension",
   "notes" : "**Note 1**: As stated in the AJCC 7th Edition, p. 419, a primary peritoneal carcinoma may not involve the ovaries or only involve the ovaries \"with minimal surface implants. The clinical presentation, surgical therapy, chemotherapy, and prognosis of these peritoneal tumors mirror those of papillary serous carcinoma of the ovary. Patients who undergo prophylactic oophorectomy for a familial history of ovarian cancer appear to retain a 1 to 2% chance of developing peritoneal adenocarcinoma, which is histopathologically and clinically similar to primary ovarian cancer.\"\n\n**Note 2**:  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage. FIGO Stage IIIC is assigned based on tumor extension and/or regional lymph node involvement.  Code CS Extension based on a physician's statement of FIGO Stage IIIC if it is known that the stage value is assigned because of tumor extension or if the basis is unknown.\n\n**Note 3**:  For most histologies the T category for AJCC 6 staging is assigned as NA.",
   "footnotes" : "- For CS Extension codes 100-700, 710, and 720-795 ONLY, the T category for AJCC 6 staging for certain histologies is assigned based on the value of CS Tumor Size, as shown in the Extension Size Table for this schema.",
-  "last_modified" : "2015-01-21T10:36:05.776Z",
+  "last_modified" : "2015-05-27T16:19:14.002Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

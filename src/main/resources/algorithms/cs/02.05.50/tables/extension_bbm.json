@@ -5,7 +5,7 @@
   "name" : "Extension",
   "title" : "CS Extension",
   "notes" : "**Note 1**:  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage.\n\n**Note 2**: According to AJCC, metastasis to genital structures for gestational trophoblastic tumors (GTT) is considered T2 and not M1.  Metastasis to genital structures is coded in CS Extension and not in CS Mets at DX.\n\n**Note 3**: For CS Extension codes 100-850, substaging is determined by the values in CS Site-Specific Factor 1,  Prognostic Scoring Index.",
-  "last_modified" : "2015-01-21T10:36:02.337Z",
+  "last_modified" : "2015-05-27T16:19:07.836Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

@@ -5,7 +5,7 @@
   "name" : "Extension Size Perineural Invasion Positive AJCC6 Table CSv2",
   "title" : "Extension Size, Perineural Invasion Positive AJCC 6 Table CSv2",
   "notes" : "**Note**:  CS Version 2 cases, when CS Site-Specific Factor 6 Perineural Invasion = 010, for CS Extension codes 100-400 ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Extension as shown in this table.",
-  "last_modified" : "2015-01-21T10:36:08.219Z",
+  "last_modified" : "2015-05-27T16:19:18.950Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

@@ -5,7 +5,7 @@
   "name" : "Extension Size Perineural Invasion Negative or Unknown AJCC7",
   "title" : "Extension Size, Perineural Invasion Negative or Unknown AJCC 7 Table",
   "notes" : "**Note**:  When CS Site-Specific Factor 6 Perineural Invasion = 000, 997, 998, or 999, for CS Extension codes 100-400 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Tumor Size and CS Extension as shown in this table.",
-  "last_modified" : "2015-01-21T10:36:08.133Z",
+  "last_modified" : "2015-05-27T16:19:18.897Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

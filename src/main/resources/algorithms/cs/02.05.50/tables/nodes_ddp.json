@@ -6,7 +6,7 @@
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS , in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Superior and inferior mesenteric nodes are coded in CS Mets at DX.  Mesenteric nodes, NOS are coded in CS Lymph Nodes.",
   "footnotes" : "- For CS Lymph Nodes codes 100-300 ONLY: when CS Lymph Nodes Eval is 0, 1, 5, or 9, the N category is assigned from the Lymph Nodes Clinical Evaluation AJCC 6 Table, using Regional Nodes Positive and CS Site-Specific Factor 2; when CS Lymph Nodes Eval is 2, 3, 6, 8, or not coded, the N category is determined from the Lymph Nodes Pathologic Evaluation 6 Table Also Used When CS Reg Nodes Eval is Not Coded using Regional Nodes Positive.",
-  "last_modified" : "2015-01-21T10:36:17.290Z",
+  "last_modified" : "2015-05-27T16:19:35.927Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

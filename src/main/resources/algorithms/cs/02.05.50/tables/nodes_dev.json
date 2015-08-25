@@ -6,7 +6,7 @@
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Peripheral nodes are located in the upper and lower limbs, including axillary and inguinal nodes.  Central lymph nodes are located in the trunk, including mediastinal, para-aortic, and mesenteric nodes.\n\n**Note 2**:  Involvement of peripheral and central lymph nodes, distant nodes for ocular adnexal lymphomas, is coded in CS Lymph Nodes and not in CS Mets at DX.\n\n**Note 3**: When coding Regional Nodes Positive and Regional Nodes Examined, only include regional nodes. Do not include distant nodes coded in CS Lymph Nodes. If the only information available is for Lymph Nodes, NOS, coded as 800 in CS Lymph Nodes, assume these are regional nodes for coding Regional Nodes Positive and Regional Nodes Examined.",
   "footnotes" : "- Stage grouping for AJCC 6 staging of ocular adnexal lymphoma is derived from a combination of CS Extension, CS Lymph Nodes, and CS Mets at DX codes as shown in the AJCC TNM 6 Stage table.  A or B classification is appended to Stage I-IV based on coding of CS Site-Specific Factor 2,  Systemic Symptoms at Diagnosis.",
-  "last_modified" : "2015-01-21T10:36:18.038Z",
+  "last_modified" : "2015-05-27T16:19:37.282Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

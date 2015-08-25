@@ -5,7 +5,7 @@
   "name" : "Lymph Node and Nodal Status Clinical Eval AJCC6",
   "title" : "Lymph Node and Nodal Status Clinical Eval AJCC 6 Table",
   "notes" : "**Note**:  When nodes are clinically evaluated (CS Lymph Nodes Eval = 0, 1, 5, 9) for CS Lymph Nodes codes 010-118, 121-128, 152, 153, 155 and 158 ONLY, the N category for AJCC 6 staging is assigned based on the value of CS Lymph Nodes and CS Site-Specific Factor 3, Clinical Status of Lymph Node Mets, as shown in the following table.",
-  "last_modified" : "2015-01-21T10:36:09.968Z",
+  "last_modified" : "2015-05-27T16:19:21.887Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "CS Lymph Nodes",

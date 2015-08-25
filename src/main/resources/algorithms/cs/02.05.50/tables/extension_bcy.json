@@ -5,7 +5,7 @@
   "name" : "Extension",
   "title" : "CS Extension",
   "notes" : "**Note**:  If CS Extension code is 000 or 050, Behavior ICD-O-3 must be coded as 2.  If CS Extension code is 100 or greater, Behavior ICD-O-3 must be coded as 3.",
-  "last_modified" : "2015-01-21T10:36:03.578Z",
+  "last_modified" : "2015-05-27T16:19:09.976Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

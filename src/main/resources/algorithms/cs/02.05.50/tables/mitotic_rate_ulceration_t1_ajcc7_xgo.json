@@ -5,7 +5,7 @@
   "name" : "Mitotic Rate Ulceration T1 AJCC7",
   "title" : "Mitotic Rate Ulceration T1 AJCC 7 Table",
   "notes" : "**Note**:  For CS Extension codes 100 - 800 and 999 ONLY, and thickness 001 to 100 (0.01 to1.00 millimeter) coded in CS Site-Specific Factor 1, the value of the T1 category for AJCC 7 staging is assigned based on the values of ulceration from CS Site-Specific Factor 2 and mitotic rate from CS Site-Specific Factor 7.",
-  "last_modified" : "2015-01-21T10:36:15.195Z",
+  "last_modified" : "2015-05-27T16:19:31.500Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

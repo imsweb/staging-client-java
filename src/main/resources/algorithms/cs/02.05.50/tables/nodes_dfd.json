@@ -5,7 +5,7 @@
   "name" : "Nodes",
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Superior and inferior mesenteric nodes are coded in CS Mets at DX.  Mesenteric nodes, NOS are coded in CS Lymph Nodes.\n\n**Note 3**:  Nodal metastasis is very rare in gastrointestinal stromal tumors (GIST), and surgeons generally agree that nodal dissection is not indicated.  In the absence of information on regional lymph node status, N0 is appropriate; code 999 is mapped to N0 accordingly.",
-  "last_modified" : "2015-01-21T10:36:18.225Z",
+  "last_modified" : "2015-05-27T16:19:37.694Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

@@ -5,7 +5,7 @@
   "name" : "Extension",
   "title" : "CS Extension",
   "notes" : "**Note 1**:  Ignore intraluminal extension to adjacent segment(s) of esophagus or to cardia of stomach and code depth of invasion or extra-esophageal spread as indicated.\n\n**Note 2**:  The three layers of the mucosa (epithelium, lamina propria, and muscularis mucosae) may be called the m1, m2, and m3 layers.  The submucosa may be described as having inner, middle, and outer thirds called sm1, sm2, and sm3.\n\n**Note 3**:  For this schema, AJCC defines Tis as high-grade dysplasia, in which they include \"all non-invasive neoplastic epithelium that was formerly called carcinoma in situ\".  Cancers stated to be noninvasive or in situ are classified as Tis.  High grade dysplasia is generally not reportable in cancer registries; but if a registry does collect high grade dysplasia, code 000 should be used.\n\n**Note 4**:  If the tumor's extension is only described by a phrase like \"through the muscularis propria\", this could mean that the cancer has penetrated the outermost muscle cells but not beyond (T2); but usually \"through the muscularis\" is used to indicate that the cancer extends beyond the muscle and into adjacent tissue, consistent with a T3 tumor.  When the most specific description is a phrase like \"through the muscularis\" or \"through the esophageal wall\", then use code 400 unless a T3 is contraindicated by other information.",
-  "last_modified" : "2015-01-21T10:36:02.035Z",
+  "last_modified" : "2015-05-27T16:19:07.061Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

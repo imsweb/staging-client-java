@@ -5,7 +5,7 @@
   "name" : "Histology Grade Extension AJCC6",
   "title" : "Histology Grade Extension AJCC 6 Table",
   "notes" : "**Note**:  For CS Extension codes 000, 100-550, and 950-999 ONLY, where histology equals 8020, 8021, 8030, 8031, or 8032, or grade equals 4, the T category is assigned based on the value of CS Extension as shown here.",
-  "last_modified" : "2015-01-21T10:36:09.838Z",
+  "last_modified" : "2015-05-27T16:19:21.589Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

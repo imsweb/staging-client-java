@@ -6,7 +6,7 @@
   "title" : "CS Extension",
   "notes" : "**Note 1**:  \"Multiple (satellite) nodules/tumors\" include satellitosis, multifocal tumors, and intrahepatic metastases.\n\n**Note 2**:  Major vascular invasion is defined as invasion of the branches of the main portal vein (right or left portal vein, not including sectoral or segmental branches) or as invasion of one or more of the three hepatic veins (right, middle, or left).  Invasion of the hepatic artery or vena cava is coded to 660. \n\n**Note 3**:  Extension to gallbladder is not considered in AJCC staging for intrahepatic bile ducts but does affect Summary Stage.  Use appropriate combination codes when gallbladder is involved.\n\n**Note 4**:  All tumors with a periductal infiltrating growth pattern, a diffuse longitudinal growth pattern along the bile duct, are considered T4 by AJCC.  For tumors with periductal infiltrating growth pattern, code the most specific information available about the extent of the tumor in CS Extension, and code periductal infiltrating growth pattern in CS Site-Specific Factor 10.",
   "footnotes" : "- For CS Extension codes 100-520, 580, 620, 631-650, 660-665, 675-755, 765-800, and 999 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Site-Specific Factor 10, as shown in the Extension Periductal Invasion AJCC 7 Table for this schema. \n- For CS Extension codes 300, 400, 420, 460, 465, 560, and 650 ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Tumor Size, as shown in the Extension Size AJCC 6 Table for this schema.",
-  "last_modified" : "2015-01-21T10:36:05.079Z",
+  "last_modified" : "2015-05-27T16:19:12.746Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

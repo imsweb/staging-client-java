@@ -6,7 +6,7 @@
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field. Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Celiac nodes are classified as distant nodes for AJCC 7 staging.  These nodes are coded in CS Mets at DX.",
   "footnotes" : "- For CS Lymph Nodes code 000 and 999, the N category for AJCC 6 staging category is determined by the value in CS Mets at DX as shown in the Lymph Nodes Mets at DX AJCC 6 Table for this schema.",
-  "last_modified" : "2015-01-21T10:36:18.451Z",
+  "last_modified" : "2015-05-27T16:19:38.195Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

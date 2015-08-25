@@ -5,7 +5,7 @@
   "name" : "Extension Size AJCC7",
   "title" : "Extension Size AJCC 7 Table",
   "notes" : "**Note**: CS Extension codes 100-300 only; the T category for AJCC 7 staging is assigned based on the value of Tumor Size from this table.",
-  "last_modified" : "2015-01-21T10:36:07.703Z",
+  "last_modified" : "2015-05-27T16:19:18.007Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

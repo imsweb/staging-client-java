@@ -5,7 +5,7 @@
   "name" : "Size",
   "title" : "CS Tumor Size",
   "notes" : "**Note**:  Code the specific tumor size as documented in the medical record.  If tumor dimensions are stated, code the greatest dimension.  If only one dimension is recorded, code this.  For example, tumor is seen extending from 18 centimeter (cm) to 21 cm from the incisors: code 030 for a tumor length of 3 cm; tumor is 5.2 x 3.8 cm at 25 cm: code 052 because this is the greatest dimension.",
-  "last_modified" : "2015-01-21T10:36:19.996Z",
+  "last_modified" : "2015-05-27T16:19:49.532Z",
   "definition" : [ {
     "key" : "size",
     "name" : "Code",

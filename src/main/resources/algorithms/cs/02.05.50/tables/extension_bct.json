@@ -6,7 +6,7 @@
   "title" : "CS Extension",
   "notes" : "**Note 1**:  AJCC considers \"in situ carcinoma of lacrimal gland\" an impossible diagnosis.  Any case so coded is mapped  to TX for AJCC stage and in situ Summary Stage.\n\n**Note 2**:  As noted by the AJCC, \"As the maximum size of the lacrimal gland is 2 cm, T2 and greater tumors will usually extend into the orbital soft tissue.\"\n\n**Note 3**:  Periosteum is a fibrous membrane that wraps the outer surface of bones.",
   "footnotes" : "- For CS Extension codes 100, 300, and 600-630  ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Tumor Size as shown in the Extension Size AJCC 7 Table.\n- For CS Extension codes 100, 300, and 610-650 ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Tumor Size as shown in the Extension Size AJCC6 Table.",
-  "last_modified" : "2015-01-21T10:36:03.417Z",
+  "last_modified" : "2015-05-27T16:19:09.710Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

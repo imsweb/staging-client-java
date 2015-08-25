@@ -5,7 +5,7 @@
   "name" : "Extension",
   "title" : "CS Extension",
   "notes" : "**Note 1**: Plasmacytomas (9731 and 9734) and Multiple Myeloma (9732) have been moved to the MyelomaPlasmaCellDisorder schema effective with CS version 2: 0203\n\n**Note 2**: For histologies listed in code 100 it is possible to have lymph node involvement; however, at this time, lymph node invovement for these histologies is not collected.",
-  "last_modified" : "2015-01-21T10:36:02.900Z",
+  "last_modified" : "2015-05-27T16:19:09.163Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

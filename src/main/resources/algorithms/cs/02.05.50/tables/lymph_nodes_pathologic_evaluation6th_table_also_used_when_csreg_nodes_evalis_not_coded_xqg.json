@@ -5,7 +5,7 @@
   "name" : "Lymph Nodes Pathologic Evaluation 6th Table Also Used When CS Reg Nodes Eval Is Not Coded",
   "title" : "Lymph Nodes Pathologic Evaluation 6th Table Also Used When CS Reg Nodes Eval is Not Coded",
   "notes" : "**Note**:  When CS Lymph Nodes is 050-300 and CS Regional Nodes Eval is 2, 3, 6, 8, or not coded, the N category is assigned based on the number of positive nodes coded in Regional Nodes Positive, as shown in this table.",
-  "last_modified" : "2015-01-21T10:36:12.062Z",
+  "last_modified" : "2015-05-27T16:19:25.229Z",
   "definition" : [ {
     "key" : "nodes_pos",
     "name" : "Regional Nodes Positive",

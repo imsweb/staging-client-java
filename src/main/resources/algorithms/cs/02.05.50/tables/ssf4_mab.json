@@ -6,7 +6,7 @@
   "title" : "CS Site-Specific Factor 4",
   "subtitle" : "Immunohistochemistry (IHC) of Regional Lymph Nodes",
   "notes" : "**Note 1**:  Isolated tumor cells (ITCs) are defined as single tumor cells or small clusters not greater than 0.2 millimeter (mm), usually detected by immunohistochemistry (IHC), hematoxylin and eosin stains (H and E) (see CS Lymph Nodes code 050), or molecular (MOL) methods (Reverse Transcription Polymerase Chain Reaction, RT-PCR) (see CS Site-Specific Factor 5).  ITCs do not usually show evidence of malignant activity (e.g., proliferation or stromal reaction.)\n\n**Note 2**:  When CS Lymph Nodes is coded 000, use codes 000-009 only to report results of IHC. Otherwise code 987 in this field.\n\n**Note 3**:  If it is unstated whether or not tests are done for IHC, assume they are not done.\n\n**Note 4**:  If the record states N0(i+) and no other information, code to 009.",
-  "last_modified" : "2015-01-21T10:36:28.854Z",
+  "last_modified" : "2015-05-27T16:20:06.259Z",
   "definition" : [ {
     "key" : "ssf4",
     "name" : "Code",

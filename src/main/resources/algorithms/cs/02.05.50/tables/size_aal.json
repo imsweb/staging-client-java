@@ -5,7 +5,7 @@
   "name" : "Size",
   "title" : "CS Tumor Size",
   "notes" : "**Note**:  The assignment of T1, T1a, and T1b categories for carcinoid tumors of the appendix is based on tumor size.  A physician's statement of the T category may be used to code CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields.  However the two fields are coded independently: for example the record may document size but not extension, other than the physician's statement of the T category.  Use codes 991 and 992 as appropriate to code CS Tumor Size based on a statement of T when no other size information is available.",
-  "last_modified" : "2015-01-21T10:36:20.075Z",
+  "last_modified" : "2015-05-27T16:19:49.725Z",
   "definition" : [ {
     "key" : "size",
     "name" : "Code",

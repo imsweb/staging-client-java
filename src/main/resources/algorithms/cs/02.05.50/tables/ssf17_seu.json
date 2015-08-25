@@ -6,7 +6,7 @@
   "title" : "CS Site-Specific Factor 17",
   "subtitle" : "Extranodal Extension of Regional Lymph Nodes",
   "notes" : "**Note 1**:  Code the status of extranodal extension whether assessed clinically or pathologically of any involved regional lymph node(s) coded in CS Lymph Nodes. Do not code extranodal extension for any nodes coded in CS Mets at DX.\n\n**Note 2**:  A statement of the presence or absence of extranodal extension in a pathology report takes priority over clinical assessment. \n\n**Note 3**:  If nodes are involved but the clinical documentation and/or pathologic documentation does not indicate extranodal extension, assign code 010 (no extranodal extension documented on available reports).\n\n**Note 4**:  If the only documentation is a reference to clinically or pathologically involved nodes with no reference to extranodal extension, assign code 030 (no physical examination/imaging report and/or no pathology report available).",
-  "last_modified" : "2015-01-21T10:36:24.691Z",
+  "last_modified" : "2015-05-27T16:19:57.654Z",
   "definition" : [ {
     "key" : "ssf17",
     "name" : "Code",

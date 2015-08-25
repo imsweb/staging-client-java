@@ -5,7 +5,7 @@
   "name" : "Nodes",
   "title" : "CS Lymph Nodes",
   "notes" : "**Note**: Regional lymph node involvement is not applicable for cases coded with this schema beginning with CS Version 2.  Old data are retained, and new cases are coded 988.",
-  "last_modified" : "2015-01-21T10:36:18.618Z",
+  "last_modified" : "2015-05-27T16:19:38.555Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

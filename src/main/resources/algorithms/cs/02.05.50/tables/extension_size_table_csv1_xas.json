@@ -5,7 +5,7 @@
   "name" : "Extension Size Table Csv1",
   "title" : "Extension Size Table CSv1",
   "notes" : "**Note**:  For the obsolete CS Extension codes 100 and 300 ONLY, the T category for AJCC 6 staging for cases collected in CSv1 and not updated to CSv2 codes is assigned based on the value of CS Extension and the obsolete CS Tumor Size code as shown in this table.",
-  "last_modified" : "2015-01-21T10:36:08.476Z",
+  "last_modified" : "2015-05-27T16:19:19.327Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

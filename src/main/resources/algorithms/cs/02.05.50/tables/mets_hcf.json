@@ -6,7 +6,7 @@
   "title" : "CS Mets at DX",
   "notes" : "**Note**:  With the implementation of AJCC 7 staging, mucinous tumors (morphology codes 8480, 8481, and 8490) with peritoneal involvement confined to the right lower quadrant (RLQ) are classified as T4a.  Therefore, such peritoneal metastases are coded in CS Extension.",
   "footnotes" : "- For CS Mets at DX code 00 and 99, the M category for AJCC 6 staging is determined by the CS Extension code as shown in the Extension Mets AJCC 6 Table for this schema.",
-  "last_modified" : "2015-01-21T10:36:14.320Z",
+  "last_modified" : "2015-05-27T16:19:29.674Z",
   "definition" : [ {
     "key" : "mets",
     "name" : "Code",

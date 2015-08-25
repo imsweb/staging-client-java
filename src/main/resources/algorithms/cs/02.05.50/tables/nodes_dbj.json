@@ -6,7 +6,7 @@
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in the field CS Mets at DX.",
   "footnotes" : "- For CS Lymph nodes codes 100-270, 310-380, 500 and 505 ONLY, the N category for AJCC 7 staging is assigned based on the value of CS Site-Specific Factor 17, Extranodal Extension of Regional Lymph Nodes, as shown in the Lymph Node Extranodal Extension table for this schema.",
-  "last_modified" : "2015-01-21T10:36:15.999Z",
+  "last_modified" : "2015-05-27T16:19:33.412Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

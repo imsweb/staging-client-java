@@ -6,7 +6,7 @@
   "title" : "CS Site-Specific Factor 25",
   "subtitle" : "Schema Discriminator: BileDuctsDistal/BileDuctsPerihilar/CysticDuct",
   "notes" : "**Note 1**:  For cases coded to primary site code C24.0 (extrahepatic bile ducts), code the subsite in which the tumor arose.  This information will be used to determine which CS schemas will be used to assign T, N, M, and AJCC stage group.\n\n**Note 2**:  According to AJCC, perihilar tumors are defined as those located in the extrahepatic biliary tree proximal to the origin of the cystic duct.  These represent 70-80% of extrahepatic bile duct tumors.  Distal bile duct tumors are those arising between the junction of the cystic duct and the ampulla of Vater, including those arising in the intrapancreatic portion of the common bile duct.  These represent 20-30% of extrahepatic bile duct tumors.",
-  "last_modified" : "2015-01-21T10:36:26.573Z",
+  "last_modified" : "2015-05-27T16:20:02.129Z",
   "definition" : [ {
     "key" : "ssf25",
     "name" : "Code",

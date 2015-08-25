@@ -5,7 +5,7 @@
   "name" : "Extension",
   "title" : "CS Extension",
   "notes" : "**Note 1**:  AJCC does not include a Tis or TX category for melanoma of mucosa of head and neck sites. CS Extension codes of 000 and 999 are mapped to NA and AJCC stage group is derived as NA.\n\n**Note 2**:  AJCC does not include a T1 or T2 category for mucosal melanoma of head and neck sites.\n\n**Note 3**:  Use codes 205 and 310 for extension involving the mucosa only of adjacent sites.  Use higher codes for extension involving the deeper tissues of the primary or adjacent sites.\n\n**Note 4**:  Use code 300 for localized tumor only if no information is available to assign code 105, 205, or 320.\n\n**Note 5**:  Use code 320, 638, 810, or 815 if the physician's assignment of T category is the only information available about the extent of the tumor.",
-  "last_modified" : "2015-01-21T10:36:04.354Z",
+  "last_modified" : "2015-05-27T16:19:11.478Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

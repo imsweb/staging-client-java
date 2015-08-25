@@ -5,7 +5,7 @@
   "name" : "Pathologic Eval Extension Thickness AJCC6",
   "title" : "Pathologic Eval Extension Thickness AJCC 6 Table",
   "notes" : "**Note 1**:  When CS Tumor Size/Ext Eval is pathologic (2, 3, 6, 8), for CS Extension codes 005, 300-335, 415, 425-435 ONLY, the T category is assigned based on the value of CS Extension and CS Site-Specific Factor 1 - Thickness (Depth) as shown in this table.  The value in CS Site-Specific Factor 1 takes precedence over \"stated as\" T codes.\n\n**Note 2**:  When CS Tumor Size/Ext Eval is blank and CS Site-Specific Factor 1 does not equal 998, the T category is assigned as shown in this table.\n\n**Note 3**:  CS Extension code 325 refers to a T category that is included in clinical staging only.",
-  "last_modified" : "2015-01-21T10:36:19.489Z",
+  "last_modified" : "2015-05-27T16:19:40.251Z",
   "definition" : [ {
     "key" : "extension_eval",
     "name" : "CS TS/Ext Eval",

@@ -5,7 +5,7 @@
   "name" : "Extension Size",
   "title" : "Extension Size Table",
   "notes" : "**Note**: For CS Extension codes 100-140, 200, and 300 ONLY, the T category for AJCC 6 and AJCC 7 staging is assigned based on the value of CS Tumor Size, as shown in the this table.  A CS Tumor Size code takes precedence over a CS Extension \"stated as T\" code; however, if CS Tumor Size is coded as unknown, the T category may be assigned based on \"stated as T\" recorded in CS Extension.",
-  "last_modified" : "2015-01-21T10:36:08.766Z",
+  "last_modified" : "2015-05-27T16:19:19.840Z",
   "definition" : [ {
     "key" : "size",
     "name" : "CS Tumor Size",

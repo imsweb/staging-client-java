@@ -6,7 +6,7 @@
   "title" : "Size Extension Mets SSF1 AJCC 6 Table - M",
   "subtitle" : "CS SSF1 020 with CS Tumor Size and CS Extension",
   "notes" : "**Note**:  When CS Site-Specific Factor 1 is coded 020, separate tumor nodules in ipsilateral lung, different lobe, the values of T and M for AJCC 6 staging are assigned as shown in this table.  The T category is determined by the CS Tumor Size and CS Extension codes.  CS Site-Specific Factor 1 code 020 maps to M1 in AJCC 6 staging.  CS Tumor Size codes 997, diffuse involvement of lobe, and 998, diffuse involvement of the entire lung, both map to T4.",
-  "last_modified" : "2015-01-21T10:36:20.884Z",
+  "last_modified": "2015-05-27T16:19:51.510Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

@@ -6,7 +6,7 @@
   "title" : "CS Mets at DX",
   "notes" : "**Note 1**: Inferior phrenic nodes are classified as regional nodes for AJCC 7 staging and coded in CS Lymph Nodes.\n\n**Note 2**:  Periduodenal and peripancreatic nodes are distant for tumors in the left liver, and gastrohepatic nodes are distant for tumors in the right liver. If both lobes of liver are involved, code involvement of periduodenal/peripancreatic and gastrohepatic nodes in CS Lymph Nodes.\n\n**Note 3**:  Caval nodes are classified as distant for AJCC 7 staging.",
   "footnotes" : "- For CS Mets at DX codes 00-99, the N and M categories for AJCC 6 staging are assigned based on the coding of CS Lymph Nodes and CS Mets at DX as shown in the Lymph Nodes Mets at DX AJCC 6 Table for this schema.",
-  "last_modified" : "2015-01-21T10:36:14.188Z",
+  "last_modified" : "2015-05-27T16:19:29.351Z",
   "definition" : [ {
     "key" : "mets",
     "name" : "Code",

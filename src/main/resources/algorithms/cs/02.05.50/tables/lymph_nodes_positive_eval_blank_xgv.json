@@ -5,7 +5,7 @@
   "name" : "Lymph Nodes Positive Eval Blank",
   "title" : "Lymph Nodes Positive Eval Blank Table",
   "notes" : "**Note**:  This table is used when CS Lymph Nodes Eval is not coded and CS Lymph Nodes is coded 100-500 ONLY. The N category is assigned based on the values of CS Site-Specific Factor 5, Size of Metastasis in Lymph Nodes, and Regional Nodes Positive. The N category is based on the clinical definition except when Regional Nodes Positive is greater than 05; then the N category is based on the pathologic definition.",
-  "last_modified" : "2015-01-21T10:36:12.310Z",
+  "last_modified" : "2015-05-27T16:19:25.774Z",
   "definition" : [ {
     "key" : "nodes_pos",
     "name" : "Regional Nodes Positive",

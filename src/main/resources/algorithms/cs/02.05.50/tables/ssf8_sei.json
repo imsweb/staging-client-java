@@ -6,7 +6,7 @@
   "title" : "CS Site-Specific Factor 8",
   "subtitle" : "Pre-Orchiectomy Human Chorionic Gonadotropin (hCG) Lab Value",
   "notes" : "**Note 1**:  Record the value of the human chorionic gonadotropin (hCG) test as documented in the patient record prior to orchiectomy and other treatment.\n\n**Note 2**:  Use the same laboratory test to record values for CS Site-Specific Factor 8 and CS Site-Specific Factor 9.\n\n**Note 3**:  Record a pretreatment hCG of 20 milli-International Units/milliliter (mIU/ml) as 002; record a pretreatment hCG of 11, 000 mIU/ml as 200.\n\n**Note 4**:  Code 000 is reserved for exactly 0.0 mIU/ml (no measurable amount of hCG). Do not round tiny values down to 0.0 mIU/ml; any measured value less than or equal to 0.1 mIU/ml should be coded 001. For values greater than 001 mIU/ml, round values to the nearest mIU/ml.\n\n**Note 5**:  A lab value expressed in International Units/liter (IU/L) is equivalent to the same value expressed in milli-International Units/milliliter (mIU/ml).\n\n**Note 6**:  If the preorchiectomy hCG test is done but the actual value is not stated, use code 997.\n\n**Note 7**:  For rare cases that are treated prior to orchiectomy, use code 995 in this field and record the initial hCG lab value in CS Site-Specific Factor 14.\n\n**Note 8**:  For rare cases that an orchiectomy is not performed, use code 996 in this field and record the initial hCG lab value in CS Site-Specific Factor 14.",
-  "last_modified" : "2015-01-21T10:36:31.262Z",
+  "last_modified" : "2015-05-27T16:20:11.131Z",
   "definition" : [ {
     "key" : "ssf8",
     "name" : "Code",

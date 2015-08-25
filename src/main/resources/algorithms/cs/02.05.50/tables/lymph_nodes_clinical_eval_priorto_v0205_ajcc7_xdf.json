@@ -5,7 +5,7 @@
   "name" : "Lymph Nodes Clinical Eval Prior to V0205 AJCC7",
   "title" : "Lymph Nodes Clinical Eval Prior to V02.05 AJCC 7 Table",
   "notes" : "**Note**:  This table is used when CS Lymph Nodes is 100-300 and CS Lymph Nodes Eval is 1 or 9.  The N category for AJCC 7 staging is determined based on the number of positive regional nodes in Regional Nodes Positive and the value of CS Site-Specific Factor 2, Clinical Assessment of Regional Lymph Nodes.",
-  "last_modified" : "2015-01-21T10:36:11.349Z",
+  "last_modified" : "2015-05-27T16:19:23.685Z",
   "definition" : [ {
     "key" : "nodes_pos",
     "name" : "Regional Nodes Positive",

@@ -6,7 +6,7 @@
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in CS Mets at DX. \n\n**Note 2**:  Inferior phrenic nodes are classified as regional nodes for AJCC 7 staging. They are now coded in CS Lymph Nodes. \n\n**Note 3**:  Periduodenal and peripancreatic nodes are regional for tumors in the right liver, and gastrohepatic nodes are regional for tumors in the left liver, for AJCC 7 staging.  Use codes 120 and 130 only for regional nodes specific to the involved lobe of liver.  Use code 140 if both lobes of liver are involved and periduodenal/peripancreatic and gastrohepatic nodes are involved.  \n\n**Note 4**:  Caval nodes are classified as distant nodes and coded in CS Mets at DX.",
   "footnotes" : "- For CS Lymph Nodes codes 000-999, the N and M categories for AJCC 6 staging are assigned based on the coding of CS Lymph Nodes and CS Mets at DX as shown in the Lymph Nodes Mets at DX AJCC 6 Table for this schema.",
-  "last_modified" : "2015-01-21T10:36:18.072Z",
+  "last_modified" : "2015-05-27T16:19:37.329Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

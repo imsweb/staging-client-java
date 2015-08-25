@@ -6,7 +6,7 @@
   "title" : "CS Extension",
   "notes" : "**Note 1**:  If there is fixation of hemilarynx or larynx, code to 550, not 420 or 450.\n\n**Note 2**:  Use code 300 for localized tumor only if no information is available to assign code 100, 200, or 305.\n\n**Note 3**:  Use code 305, 455, 565, 638, 810, or 815  if the physician's assignment of T category is the only information available about the extent of the tumor.",
   "footnotes" : "- For CSExtension codes 100, 200, 300, 305, 400, 420, 450, and 500 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Tumor Size and CS Extension as shown in the Extension Size Table for this schema.\n- For CS Extension codes 100, 200, 300, 305, 400, 420, 450, and 500 ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Tumor Size and CS Extension as shown in the Extension Size Table for this schema.",
-  "last_modified" : "2015-01-21T10:36:01.712Z",
+  "last_modified" : "2015-05-27T16:19:06.431Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

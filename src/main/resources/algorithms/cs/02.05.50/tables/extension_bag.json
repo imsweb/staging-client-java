@@ -6,7 +6,7 @@
   "title" : "CS Extension",
   "notes" : "**Note 1**:  The orbital tissues are the support systems of the globe, confined to the space within the surrounding bony structure.  The tissues include fat, striated and smooth muscle, and fibroconnective, vascular, lymphoid, peripheral nerve, and optic nerve tissue.\n\n**Note 2**:  AJCC stages only sarcomas of the orbit. AJCC values are derived as NA for all non-sarcoma histologies coded to this site.\n\n**Note 3**:  Code 000 may be used only for non-sarcoma histologies coded to this site. Sarcomas do not present as in situ or noninvasive tumors.",
   "footnotes" : "- For CS Extension codes 100, 200, and 300 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Tumor Size, as shown in the Extension Size Table for this schema.  A CS Tumor Size code takes precedence over a CS Extension \"stated as T\" code; however, if CS Tumor Size is coded as unknown, the T category may be assigned based on \"stated as T\" recorded in CS Extension.\n- For CS Extension codes 100, 200, and 300 ONLY, the T category for AJCC 6staging is assigned based on the value of CS Tumor Size, as shown in the Extension Size Table for this schema.  A CS Tumor Size code takes precedence over a CS Extension \"stated as T\" code; however, if CS Tumor Size is coded as unknown, the T category may be assigned based on \"stated as T\" recorded in CS Extension.",
-  "last_modified" : "2015-01-21T10:36:01.305Z",
+  "last_modified" : "2015-05-27T16:19:05.810Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

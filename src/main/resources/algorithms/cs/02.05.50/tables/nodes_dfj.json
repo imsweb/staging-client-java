@@ -5,7 +5,7 @@
   "name" : "Nodes",
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Regional lymph nodes for any part of the esophagus fall in the range from periesophageal/cervical to the celiac region.  Contralateral and bilateral cervical, supraclavicular, and mediastinal lymph nodes are included.\n\n**Note 3**:  Celiac nodes are coded in CS Lymph Nodes for lower thoracic (abdominal) esophagus; they are coded in CS Mets at DX for cervical and intrathoracic (upper and middle) esophagus.  Cervical nodes, NOS are coded in CS Lymph Nodes for cervical esophagus; they are coded in CS Mets at DX for upper and lower thoracic (abdominal) esophagus.\n\n**Note 4**:  Lymph node stations/groups are listed in parentheses when applicable.  See Figure 10.3 in the AJCC 7th Edition Staging Manual or Handbook for illustrations.\n\n**Note 5**:  Nodal metastasis is very rare in gastrointestinal stromal tumors (GISTs), and surgeons generally agree that nodal dissection is not indicated.  In the absence of information on regional lymph node status, N0 is appropriate; code 999 is mapped to N0 accordingly.",
-  "last_modified" : "2015-01-21T10:36:18.363Z",
+  "last_modified" : "2015-05-27T16:19:37.993Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

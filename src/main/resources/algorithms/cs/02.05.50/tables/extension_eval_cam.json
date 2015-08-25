@@ -5,7 +5,7 @@
   "name" : "Extension Eval",
   "title" : "CS Tumor Size/Ext Eval",
   "notes" : "**Note**:  The staging basis AJCC 7 for this schema is blank because AJCC stage is not applicable for this site and histology.  Data was collected in this item in CSv1 and is being retained.",
-  "last_modified" : "2015-01-21T10:36:06.385Z",
+  "last_modified" : "2015-05-27T16:19:15.353Z",
   "definition" : [ {
     "key" : "extension_eval",
     "name" : "Code",

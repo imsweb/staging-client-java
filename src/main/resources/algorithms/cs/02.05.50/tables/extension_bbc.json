@@ -6,7 +6,7 @@
   "title" : "CS Extension",
   "notes" : "**Note 1**:  In codes 390, 400, and 440, \"multiple (satellite) nodules/tumors\" includes satellitosis, multifocal tumors, and intrahepatic metastases.\n\n**Note 2**:  Major vascular invasion (code 630) is defined as invasion of the branches of the main portal vein (right or left portal vein, not including sectoral or segmental branches) or as invasion of one or more of the three hepatic veins (right, middle, or left).  Invasion of hepatic artery or vena cava is coded to 660.",
   "footnotes" : "- For CS Extension codes 390, 400, 420, and 440 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Tumor Size, as shown in the Extension Size AJCC 7 Table for this schema.\n- For CS Extension codes 390, 400, 420, and 440 ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Tumor Size, as shown in the Extension Size AJCC 6 Table for this schema.",
-  "last_modified" : "2015-01-21T10:36:02.066Z",
+  "last_modified" : "2015-05-27T16:19:07.139Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

@@ -5,7 +5,7 @@
   "name" : "Extension Size",
   "title" : "Extension Size Table",
   "notes" : "**Note 1**:  Tumor size 000 should only be used with CS Extension 950.\n\n**Note 2**:  Tumor size codes 997-998 are not valid for this site.\n\n**Note 3**:  For Extension codes 100-800, the T category is assigned based on the value of Tumor Size, as follows:",
-  "last_modified" : "2015-01-21T10:36:09.128Z",
+  "last_modified" : "2015-05-27T16:19:20.509Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

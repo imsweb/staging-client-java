@@ -6,7 +6,7 @@
   "title" : "CS Site-Specific Factor 12",
   "subtitle" : "Post-Orchiectomy Alpha Fetoprotein (AFP) Lab Value",
   "notes" : "**Note 1**:  Record the value of the alpha fetoprotein (AFP) test as documented in the patient record after orchiectomy and prior to further treatment.\n\n**Note 2**:  Use the same laboratory test to record values for CS Site-Specific Factors 12 and 13.\n\n**Note 3**:  Record a post-orchiectomy AFP of 20 nanograms/milliliter (ng/ml) as 002; record a post-orchiectomy AFP of 11,000 ng/ml as 200.\n\n**Note 4**: Code 000 is reserved for exactly 0.0 ng/ml (no measurable amount of AFP). Do not round tiny values down to 0.0 ng/ml; any measured value less than or equal to 0.1 ng/ml should be coded 001. For values greater than 001 ng/ml, round values to the nearest ng/ml.\n\n**Note 5**:  A lab value expressed in micrograms/liter (ug/L) is equivalent to the same value expressed in ng/ml.\n\n**Note 6**:  If the initial post-orchiectomy AFP test remains elevated, review the subsequent tests until normalization or plateau occurs and use that test to code this field. See Part I for further explanation of serum tumor marker half life.\n\n**Note 7**:  If the post-orchiectomy AFP test is done but the actual value is not stated, use code 997.\n\n**Note 8**:  For rare cases that are treated prior to orchiectomy or an orchiectomy is not performed, code the initial AFP lab value in this field and not in CS Site-Specific Factor 6.",
-  "last_modified" : "2015-01-21T10:36:23.612Z",
+  "last_modified" : "2015-05-27T16:19:55.244Z",
   "definition" : [ {
     "key" : "ssf12",
     "name" : "Code",

@@ -5,7 +5,7 @@
   "name" : "Extension Size SSF1 AJCC7",
   "title" : "Extension Size SSF 1 AJCC 7 Table",
   "notes" : "**Note**:  For CS Extension codes 000, 100-550, 950, and 999 ONLY, where histology does not equal 8020, 8021, 8030, 8031, or 8032, and grade does not equal 4, the T category for AJCC 7 staging is assigned based on the value of CS Tumor Size and/or CS Extension and CS Site-Specific Factor 1 as shown in this table.",
-  "last_modified" : "2015-01-21T10:36:08.284Z",
+  "last_modified" : "2015-05-27T16:19:19.042Z",
   "definition" : [ {
     "key" : "grade",
     "name" : "Grade",

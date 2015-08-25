@@ -5,7 +5,7 @@
   "name" : "Nodes",
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field. Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Periaortic and pericaval lymph nodes are classified as regional nodes for AJCC 7 staging. They are now coded in CS Lymph Nodes.",
-  "last_modified" : "2015-01-21T10:36:18.554Z",
+  "last_modified" : "2015-05-27T16:19:38.408Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

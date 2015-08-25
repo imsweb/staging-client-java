@@ -6,7 +6,7 @@
   "title" : "CS Site-Specific Factor 5",
   "subtitle" : "Positron Emission Tomography (PET) Standardized Uptake Values (SUV)",
   "notes" : "**Note 1**: Cancer cells require sugar (glucose) for metabolism and growth. Positron emission tomography/computed tomography (PET/CT) scanning utilizes a radioactive form of glucose, called 18-fluoro-2-deoxyglucose (FDG) that accumulates within malignant cells because of their high rate of metabolism. \n\n**Note 2**: The value is expressed as a ratio of tissue radioactivity at the time of measurement to the injected dose at time of injection divided by body weight. Record the value for the Standardized Uptake Values (SUV) as reported in the medical record to one decimal place.",
-  "last_modified" : "2015-01-21T10:36:29.766Z",
+  "last_modified" : "2015-05-27T16:20:08.025Z",
   "definition" : [ {
     "key" : "ssf5",
     "name" : "Code",

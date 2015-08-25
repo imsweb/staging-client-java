@@ -5,7 +5,7 @@
   "name" : "Lymph Node and Nodal Status Eval Blank AJCC7",
   "title" : "Lymph Node and Nodal Status Eval Blank AJCC 7 Table",
   "notes" : "**Note**:  When CS Lymph Nodes Eval is blank, for CS Lymph Nodes codes 010-400 and 500 ONLY, the N category is assigned based on the value of CS Site-Specific Factor 3, Clinical Status of Lymph Node Mets, and Regional Nodes Positive, as shown in the following table.",
-  "last_modified" : "2015-01-21T10:36:10.481Z",
+  "last_modified" : "2015-05-27T16:19:22.574Z",
   "definition" : [ {
     "key" : "nodes_pos",
     "name" : "Regional Nodes Positive",

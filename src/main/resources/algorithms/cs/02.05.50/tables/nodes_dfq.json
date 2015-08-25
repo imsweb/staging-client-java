@@ -5,7 +5,7 @@
   "name" : "Nodes",
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Regional lymph nodes are defined as those in the vicinity of the primary tumor.\n\n**Note 3**:  Regional lymph node involvement is rare.  For this schema, if there is no mention of lymph node involvement clinically, assume that lymph nodes are negative Use code 999 (Unknown) only when there is no available information on the extent of the patient's disease, for example, when a lab-only case is abstracted from a biopsy report and no clinical history is available.",
-  "last_modified" : "2015-01-21T10:36:18.531Z",
+  "last_modified" : "2015-05-27T16:19:38.354Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

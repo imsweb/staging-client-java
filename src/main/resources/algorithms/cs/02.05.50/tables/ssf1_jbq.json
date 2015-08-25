@@ -6,7 +6,7 @@
   "title" : "CS Site-Specific Factor 1",
   "subtitle" : "FIGO Stage",
   "notes" : "**Note 1**:  The Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage definitions do not include Stage 0 (Tis) for vaginal cancer. Use code 987 for any case where CS Extension is coded 000.\n\n**Note 2**:  Code the FIGO stage as stated in the medical record. When lymph node(s) is/are clinically or pathologically positive or metastasis is present, make sure that the FIGO stage reflects the combination of T, N, and M and NOT just the T. If a stage group is stated but it does not specify that it is a FIGO stage, assume that it is a FIGO stage and code it. Do not attempt to code FIGO stage based only on T, N, and M. If you cannot make a determination of stage based on the previous information, use code 999, stage unknown.",
-  "last_modified" : "2015-01-21T10:36:25.247Z",
+  "last_modified" : "2015-05-27T16:19:59.201Z",
   "definition" : [ {
     "key" : "ssf1",
     "name" : "Code",

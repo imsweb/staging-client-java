@@ -5,7 +5,7 @@
   "name" : "Lymph Nodes Size AJCC 6 Table CSv1",
   "title" : "Lymph Nodes Size AJCC 6 Table CSv1",
   "notes" : "**Note**:  For OBSOLETE CS Lymph Node codes ONLY, the N category for cases coded in CSv1 is determined by the size of involved nodes coded in CS Site-Specific Factor 1, Size of Lymph Nodes, as shown in this table.",
-  "last_modified" : "2015-01-21T10:36:12.333Z",
+  "last_modified" : "2015-05-27T16:19:25.835Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "CS Lymph Nodes",

@@ -5,7 +5,7 @@
   "name" : "Extension Orchiectomy LVI AJCC 6 Table CSv2",
   "title" : "Extension Orchiectomy LVI AJCC 6 Table CSv2",
   "notes" : "**Note**:  For cases coded under CSv2 (CS Version Input Original greater than 020000) or Year of Diagnosis greater than 2009 with CS Extension codes 100-550 ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Site-Specific Factor 4, Radical Orchiectomy Performed, and Lymph-Vascular Invasion as follows:",
-  "last_modified" : "2015-01-21T10:36:06.614Z",
+  "last_modified" : "2015-05-27T16:19:16.048Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

@@ -5,7 +5,7 @@
   "name" : "Lymph Nodes Positive Axillary Node",
   "title" : "Lymph Nodes Positive Axillary Node Table",
   "notes" : "**Note**:  This table is used when CS Reg Nodes Eval is not coded and CS Lymph Nodes is coded 250, 258, 260, 280, 500, 510, 520, 600, 610, 620, 630, 720, or 748 ONLY.  The N category is assigned based on the value of CS Lymph Nodes and the value of CS Site-Specific Factor 3, Number of Positive Ipsilateral Axillary Lymph Nodes.",
-  "last_modified" : "2015-01-21T10:36:12.263Z",
+  "last_modified" : "2015-05-27T16:19:25.711Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "CS Lymph Nodes",

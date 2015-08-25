@@ -5,7 +5,7 @@
   "name" : "Extension Size Table Csv2",
   "title" : "Extension Size Table CSv2",
   "notes" : "**Note**:  For CS Extension codes 110- 150 and 350 ONLY, the T category for AJCC staging is assigned based on the value of CS Extension and CS Site-Specific Factor 1, Tumor Size, as shown in this table.  The CS Tumor Size table for this schema is obsolete in CS Version 2, and the collection of tumor size value moved to CS Site-Specific Factor 1, Tumor Size.",
-  "last_modified" : "2015-01-21T10:36:08.503Z",
+  "last_modified" : "2015-05-27T16:19:19.376Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

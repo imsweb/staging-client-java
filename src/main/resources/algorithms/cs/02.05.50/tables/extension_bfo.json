@@ -6,7 +6,7 @@
   "title" : "CS Extension",
   "notes" : "**Note 1**:  AJCC does not include a Tis category for Neuroendocrine Tumors (NET) of the ampulla of Vater. Extension code 000 is mapped to TX for AJCC stage and in situ Summary Stage.\n\n**Note 2**:  The assignment of the T1 and T2 categories for NETs of ampulla of Vater is based on tumor size.  A physician's statement of the T category may be used to code both CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields. However the two fields are coded independently; for example, the record may document size but not extension.  Use codes 310, 430, 600, and 810 as appropriate to code CS Extension based on a statement of T when no other extension information is available.\n\n**Note 3**:  Use code 300 for localized tumor only if no information is available to assign code 100 or 430.",
   "footnotes" : "- For CS Extension codes 100-430 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Tumor Size, as shown in the Extension Size AJCC 7 Table for this schema.",
-  "last_modified" : "2015-01-21T10:36:05.514Z",
+  "last_modified" : "2015-05-27T16:19:13.519Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

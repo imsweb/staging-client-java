@@ -5,7 +5,7 @@
   "name" : "Lymph Nodes Clinical Evaluation 6th",
   "title" : "Lymph Nodes Clinical Evaluation 6th Table",
   "notes" : "**Note**:  When CS Lymph Nodes is 050-300 and CS Regional Nodes Eval is 0, 1, 5, or 9, the N category for AJCC 6 staging is assigned based on the value of CS Site-Specific Factor 2, Clinical Assessment of Regional Lymph Nodes, and the number of positive nodes coded in Regional Nodes Positive as shown in this table.",
-  "last_modified" : "2015-01-21T10:36:11.173Z",
+  "last_modified" : "2015-05-27T16:19:23.301Z",
   "definition" : [ {
     "key" : "nodes_pos",
     "name" : "Regional Nodes Positive",

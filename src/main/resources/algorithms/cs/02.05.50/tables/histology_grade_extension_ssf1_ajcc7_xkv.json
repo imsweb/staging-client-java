@@ -5,7 +5,7 @@
   "name" : "Histology Grade Extension SSF1 AJCC7",
   "title" : "Histology Grade Extension SSF 1 AJCC 7 Table",
   "notes" : "**Note**:  For CS Extension codes 000, 100-550, and 950-999 ONLY, where histology equals 8020, 8021, 8030, 8031, or 8032, or grade equals4, the T category for AJCC 7 staging is assigned based on the value of CS Extension and CS Site-Specific Factor 1 as shown here.",
-  "last_modified" : "2015-01-21T10:36:09.855Z",
+  "last_modified" : "2015-05-27T16:19:21.638Z",
   "definition" : [ {
     "key" : "ssf1",
     "name" : "SSF1",

@@ -5,7 +5,7 @@
   "name" : "Mets",
   "title" : "CS Mets at DX",
   "notes" : "**Note 1**:  For this site, code all lymph node (regional and distant) involvement in CS Lymph Nodes field. Only visceral and bone marrow involvement are coded in CS Mets at DX. Peripheral blood involvement is coded in CS Site-Specific Factor 1.\n\n**Note 2**: Visceral involvement is considered metastatic and should be questioned in the absence of node or blood involvement.\n\n**Note 3**: For visceral disease (Stage IVB), documentation of involvement by only one organ outside the skin, nodes, or blood is needed.\n\n**Note 4**: Visceral involvement must be pathologically confirmed, except for the liver and spleen, which may be documented with imaging (code 10).  If liver or spleen is involved clinically without imaging, use code 05.",
-  "last_modified" : "2015-01-21T10:36:13.896Z",
+  "last_modified" : "2015-05-27T16:19:28.620Z",
   "definition" : [ {
     "key" : "mets",
     "name" : "Code",

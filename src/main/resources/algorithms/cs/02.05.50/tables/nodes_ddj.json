@@ -6,7 +6,7 @@
   "title" : "CS Lymph Nodes",
   "notes" : "**Note**:  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in CS Mets at DX.",
   "footnotes" : "- For CS Lymph Nodes codes 150-700  ONLY, the N category for AJCC 7 staging is assigned based on the value of CS Site-Specific Factor 16, Size of Lymph Nodes, using the Lymph Nodes Size AJCC 7 Table for this schema.",
-  "last_modified" : "2015-01-21T10:36:17.111Z",
+  "last_modified" : "2015-05-27T16:19:35.694Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

@@ -5,7 +5,7 @@
   "name" : "Nodes",
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Pericholedochal (common bile duct) lymph nodes are coded here for primaries of the duodenum.  They are coded in CS Mets at DX for primaries of other small intestine subsites.\n\n**Note 3**:  The assignment of T categories for gastrointestinal stromal tumors (GISTs) is based on tumor size.  A physician's statement of the T category may be used to code CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields.  However the two fields are coded independently: for example the record may document size but not extension, other than the physician's statement of the T category.  Use codes 170, 210, 250, and 270 as appropriate to code CS Extension based on a statement of T when no other extension information is available.\n\n**Note 4**:  Nodal metastasis is very rare in gastrointestinal stromal tumors and surgeons generally agree that nodal dissection is not indicated.  In the absence of information on regional lymph node status, N0 is appropriate; code 999 is mapped to N0 accordingly.",
-  "last_modified" : "2015-01-21T10:36:18.185Z",
+  "last_modified" : "2015-05-27T16:19:37.590Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

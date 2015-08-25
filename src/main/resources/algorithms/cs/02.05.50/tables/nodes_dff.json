@@ -6,7 +6,7 @@
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in the field Mets at DX.",
   "footnotes" : "- For CSLymph Nodes codes 050-300 ONLY: when CS Lymph Nodes Eval is 0, 1, 5, or 9, the N category for AJCC 6 staging is assigned as shown in the Lymph Nodes Clinical Evaluation AJCC 6 Table, using Regional Nodes Positive and CS Site-Specific Factor 2; when CS Regional Nodes Eval is 2, 3, 6, 8, or not coded, the N category for AJCC6 staging is assigned as shown in the Lymph Nodes Pathologic Evaluation AJCC 6 Table Also Used When CS Reg Nodes Eval Is Not Coded using Regional Nodes Positive.",
-  "last_modified" : "2015-01-21T10:36:18.272Z",
+  "last_modified" : "2015-05-27T16:19:37.804Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

@@ -6,7 +6,7 @@
   "title" : "CS Extension",
   "notes" : "**Note 1**:  AJCC stages carcinoma of pharyngeal tonsil using schema for oropharynx.\n\n**Note 2**:  The assignment of T1 and T2 categories for tumors of the oropharynx is based on tumor size.  A physician's statement of the T category may be used to code CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields.  However the two fields are coded independently: for example the record may document size but not extension, other than the physician's statement of the T category.  Use codes 330, 350, 575, 665, 810, or 815 as appropriate to code CS Extension based on a statement of T when no other extension information is available.\n\n**Note 3**:  Use code 305 for localized tumor only if no information is available to assign code 100, 200, 305, or 310.",
   "footnotes" : "- For CS Extension codes 105, 205, 305, 330, 350, 400, 500, 530, 555, and 565 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Tumor Size as shown in the Extension Size Table AJCC 7 for this schema.\n- For CS Extension codes 100 through 568, 575, and 580 ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Tumor Size as shown in the Extension Size Table AJCC 6 for this schema.",
-  "last_modified" : "2015-01-21T10:36:05.006Z",
+  "last_modified" : "2015-05-27T16:19:12.622Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

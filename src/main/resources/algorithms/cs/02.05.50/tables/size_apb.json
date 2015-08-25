@@ -5,7 +5,7 @@
   "name" : "Size",
   "title" : "OBSOLETE - CS Tumor Size",
   "notes" : "**Note**:  CS Tumor Size is obsolete beginning with CS Version 2 (codes and notes).  Old data are retained, but new cases are not coded with CS Tumor Size.  Use code 988 for this field.\n\n**OBSOLETE V0200 Note**:  Record the size of the tumor in the CS Tumor size table below, not depth or thickness.  Depth or thickness is recorded in CS Site-Specific Factor 1 in the Measured Thickness (Depth), Breslow Measurement table.",
-  "last_modified" : "2015-01-21T10:36:20.424Z",
+  "last_modified" : "2015-05-27T16:19:50.561Z",
   "definition" : [ {
     "key" : "size",
     "name" : "Code",

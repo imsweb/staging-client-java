@@ -5,7 +5,7 @@
   "name" : "Lymph Nodes Mets at DX AJCC6",
   "title" : "Lymph Nodes Mets at DX AJCC 6 Table",
   "notes" : "**Note**:  For CS Lymph Nodes codes 000 and 999, the N category for AJCC 6 staging is determined by the value in CS Mets at DX as shown in this table.",
-  "last_modified" : "2015-01-21T10:36:11.975Z",
+  "last_modified" : "2015-05-27T16:19:24.975Z",
   "definition" : [ {
     "key" : "mets",
     "name" : "CS Mets at DX",

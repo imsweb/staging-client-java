@@ -6,7 +6,7 @@
   "title" : "CS Extension",
   "notes" : "**Note 1**: Adenosarcomas of the corpus uteri were not staged in AJCC 6.\n\n**Note 2**: When both FIGO stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage.\n\n**Note 3**: FIGO and AJCC 7 stage do not include Tis for this site and histology. Any cases with a CS Extension code of 000 will derive TX for AJCC 7 staging, though In Situ will be derived Summary Stage.\n\n**Note 4**: FIGO Stage IV, NOS is assigned based on tumor extension and/or metastasis.  Code CS Extension based on a physician's statement of FIGO Stage IV, NOS only if it is known that the stage value is assigned because of tumor extension.\n\n**Note 5**: Positive cytology should be reported in CS Site-Specific Factor 2. It is not a staging element for AJCC 7 staging, but is a staging element for Summary Stage. Since \"cancer cells in ascites or in peritoneal washings\" was not specifically categorized in the 1977 Summary Staging Guide, is unclear to which stage previous cases may have been coded in that staging system.\n\n**Note 6**: According to the AJCC, extension to the bowel or bladder mucosa must be proven by biopsy in order to rule out bullous edema.",
   "footnotes" : "- For CS Extension codes 100-110, 115-120, 125-130, 135-140, and 160-400 ONLY.  The SS77 and SS2000 stages are assigned based on the value of CS Extension and peritoneal cytology status coded in CS-Site Specific Factor 2 as shown in the extra table Extension Cytology Summary Stage Table.",
-  "last_modified" : "2015-01-21T10:36:05.411Z",
+  "last_modified" : "2015-05-27T16:19:13.351Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

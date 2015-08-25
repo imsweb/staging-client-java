@@ -6,7 +6,7 @@
   "title" : "CS Mets at DX",
   "notes" : "**Note 1**:  Distant lymph node involvement is considered N2 for AJCC 7 staging for retinoblastoma and is coded in the CS Lymph Nodes field.  Distant lymph node involvement was considered M1 in AJCC 6 staging for retinoblastoma and was coded in CS Mets at DX in CS Version 1.\n\n**Note 2**:  Code single and multiple metastatic lesions in this field based on the presentation of metastases in all distant sites excluding distant lymph nodes.\n\n**Note 3**:  Consider metastasis to bone marrow as a single site of involvement.",
   "footnotes" : "- For CS Mets at DX code 65 ONLY, the M category for AJCC 7 staging is assigned based on the values of CS Mets at DX and CS Mets Eval, as shown in the Mets at DX Mets Eval AJCC 7 Table for this schema.\n- For CS Mets at DX codes 00 through 99, when CS Lymph Nodes code is only 000, 100, 800, or 999, the M category for AJCC 6 staging is assigned based on the values of CS Mets at DX and CS Mets Eval, as shown in the Mets at DX Mets Eval AJCC 6 Table for this schema.  When the CS Lymph Nodes code is 200 or 250, the M category for AJCC 6 staging is assigned based on the value of CS Lymph Nodes and CS Nodes Eval as shown in the Lymph Nodes Mets at DX AJCC 6 Table for this schema.",
-  "last_modified" : "2015-01-21T10:36:14.066Z",
+  "last_modified" : "2015-05-27T16:19:29.051Z",
   "definition" : [ {
     "key" : "mets",
     "name" : "Code",

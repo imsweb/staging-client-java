@@ -6,7 +6,7 @@
   "title" : "CS Site-Specific Factor 12",
   "subtitle" : "High Risk Features",
   "notes" : "**Note 1**:  For AJCC 7 staging, the T category is not only dependent on tumor size but also on several high-risk features that can upgrade the T category.\n\n**Note 2**:  Based on the information in the medical record, the registrar is required to count and code the number of high risk features (each feature equals 1 risk factor). If specific information is available about some but not all of the high risk features, count the number of features documented in the record.\n\n* Poorly differentiated/Undifferentiated (grade 3 or 4)\n* Depth greater than 2 millimeters (mm)  thickness\n* Clark level IV or V\n* Perineural invasion\n\n**Note 3**:  Use codes 991, 992, and 993 only if no specific information is available about the high risk features, but the record contains a general statement about the presence of high risk features.   \n\n**Note 4**:  The definition of high risk features was changed with the release of CSv2:V0203:  Lymph-vascular invasion was removed as a high-risk feature, and tumor depth was changed from greater than or equal to 4 mm to greater than 2 mm.  All cases with codes 000-004 coded in or updated to CSv2:V0202 should be reviewed and the correct number of high-risk features determined and coded.",
-  "last_modified" : "2015-01-21T10:36:23.487Z",
+  "last_modified" : "2015-05-27T16:19:55.096Z",
   "definition" : [ {
     "key" : "ssf12",
     "name" : "Code",

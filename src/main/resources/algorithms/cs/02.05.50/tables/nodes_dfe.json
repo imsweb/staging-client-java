@@ -6,7 +6,7 @@
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in the CS Mets at DX.\n\n**Note 2**:  Inferior mesenteric nodes are coded in CS Mets at DX for cecum, ascending colon, transverse colon, and hepatic flexure. Superior mesenteric nodes are coded in CS Mets at DX for all colon sites.",
   "footnotes" : "- For CSLymph Nodes codes 050-300 ONLY: when CS Lymph Nodes Eval is 0, 1, 5, or 9, the N category for AJCC 6 staging is assigned as shown in the Lymph Nodes Clinical Evaluation AJCC 6 Table, using Regional Nodes Positive and CS Site-Specific Factor 2; when CS Regional Nodes Eval is 2, 3, 6, 8, or not coded, the N category for AJCC 6 staging is assigned as shown in the Lymph Nodes Pathologic Evaluation AJCC 6 Table Also Used When CS Reg Nodes Eval is Not Coded, using Regional Nodes Positive.",
-  "last_modified" : "2015-01-21T10:36:18.254Z",
+  "last_modified" : "2015-05-27T16:19:37.753Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

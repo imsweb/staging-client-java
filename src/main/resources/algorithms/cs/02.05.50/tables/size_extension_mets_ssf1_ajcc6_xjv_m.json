@@ -6,7 +6,7 @@
   "title" : "Size Extension Mets SSF1 AJCC 6 Table - M",
   "subtitle" : "CS SSF1 000, 988, or 999, CS Mets at DX 16, 23, 26, 30, 35, 36, 37, 38, 40, 41, 50, 51, 70, 75 with CS Tumor Size and CS Extension",
   "notes" : "**Note**:  When CS Site-Specific Factor 1 is coded 000 or 999, no separate tumor nodules in the primary site, unknown if separate nodules, or information not collected, and CS Mets at DX is coded 16, 23, 26, 30, 35, 36, 37, 38, 40, 50, 51, 70, 75, metastatic involvement without pleural foci or pleural effusion involving the ipsilateral lung, the values of the T and M for AJCC 6 staging are assigned as shown in this table.  The T category is determined by the CS Tumor Size and CS Extension codes.  The CS Mets at DX codes map to M1.",
-  "last_modified" : "2015-01-21T10:36:21.098Z",
+  "last_modified" : "2015-05-27T16:19:51.946Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

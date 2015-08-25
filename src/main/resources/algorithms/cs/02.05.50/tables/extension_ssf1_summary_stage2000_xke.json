@@ -6,7 +6,7 @@
   "title" : "Extension SSF1 Summary Stage 2000 Table",
   "subtitle" : "Cases Coded in CSv2 (CS Version Input Original equals 02XXXX) or Year of Diagnosis is 2010 and After",
   "notes" : "**Note**:  For CS Version 2 cases (CS Version Input Original equals 02XXXX) or Year of Diagnosis is 2010 and after, Summary Stage 2000 for CS Extension codes 000-700, 740, 950, 980 and 999 is based on CS Extension and CS Site-Specific Factor 1. CS Site-Specific Factor 1 codes 000 and 999 map according to the extension value. CS Site-Specific Factor 1 codes 010 and 040 indicate separate tumor nodules in same lobe or unknown if in same lobe, and map to Regional. CS Site-Specific Factor 1 codes 020 and 030, separate tumor nodules in different or separate tumor nodules in same and different lobe, map to Distant. CS Site-Specific Factor 1 codes 888 and 988 map to ERROR.",
-  "last_modified" : "2015-01-21T10:36:09.175Z",
+  "last_modified" : "2015-05-27T16:19:20.609Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension Code",

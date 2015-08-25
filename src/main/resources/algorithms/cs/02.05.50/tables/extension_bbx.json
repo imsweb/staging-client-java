@@ -6,7 +6,7 @@
   "title" : "CS Extension",
   "notes" : "**Note 1**:  This AJCC staging system applies only to pleural mesotheliomas. Peritoneal and pericardial mesotheliomas are not TNM staged.\n\n**Note 2**:  Pleural effusion does not affect the coding of the CS Extension field, but is coded in CS Site-Specific Factor 1.",
   "footnotes" : "- For CS Extension codes 120-999, the assignment of Summary Stage 1977 and Summary Stage 2000 depends on the value of CS Site-Specific Factor 1, Pleural Effusion, as shown in the Extension Pleural Effusion Table for this schema.",
-  "last_modified" : "2015-01-21T10:36:02.561Z",
+  "last_modified" : "2015-05-27T16:19:08.514Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

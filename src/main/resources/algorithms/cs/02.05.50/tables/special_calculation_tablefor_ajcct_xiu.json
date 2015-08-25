@@ -5,7 +5,7 @@
   "name" : "Special Calculation Table for AJCC T",
   "title" : "Special Calculation Table for AJCC T",
   "notes" : "**Note**:  The T category is assigned based on the values coded in CS Extension, CS Site-Specific Factor 1 (Extension Evaluated at Enucleation), and CS Tumor Size/Ext Eval.  For each combination of CS Extension, CS Site-Specific Factor 1, and CS Tumor Size/Ext Eval, the AJCC T value is taken from the field shown in the table (CS Extension or CS Site-Specific Factor 1).  The stage descriptor is either assigned a \"p\" or taken from the coded value in CS Tumor Size Ext Eval, as shown in the table.  (The \"p\" assignment takes precedence over the coded value for CS Tumor Size/Ext Eval where information from enucleation is coded with a clinical eval code of \"0\", \"1\", or \"9\".)  ERROR is returned for invalid combinations of CS Extension and CS Site-Specific Factor 1 codes. (The combinations are invalid because the two codes were not available for coding at the same time in the same version of CS.)  If CS Tumor Size/Ext Eval is blank, the staging basis for T is left blank.",
-  "last_modified" : "2015-01-21T10:36:21.627Z",
+  "last_modified" : "2015-05-27T16:19:52.637Z",
   "definition" : [ {
     "key" : "extension_eval",
     "name" : "CS TS/Ext Eval",

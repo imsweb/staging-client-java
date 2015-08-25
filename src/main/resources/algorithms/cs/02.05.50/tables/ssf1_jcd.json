@@ -6,7 +6,7 @@
   "title" : "CS Site-Specific Factor 1",
   "subtitle" : "OBSOLETE - Carcinoembryonic Antigen (CEA)",
   "notes" : "**Note**:  This CS Site-Specific Factor is obsolete beginning with CS Version 2 (codes, code descriptions, and notes).  Old data are retained during conversion, but new cases are not coded 000 080 or 999.  Use only code 988 for this field for all cases entered in CS Version 2.",
-  "last_modified" : "2015-01-21T10:36:25.370Z",
+  "last_modified" : "2015-05-27T16:19:59.526Z",
   "definition" : [ {
     "key" : "ssf1",
     "name" : "Code",

@@ -5,7 +5,7 @@
   "name" : "Nodes",
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in the field CS Mets at DX. \n\n**Note 2**: Regional nodes include bilateral and contralateral named nodes. \n\n**Note 3**:  AJCC TNM values correspond to the stages accepted by the Federation Internationale de Gynecologie et d'Obstetrique (FIGO), and FIGO stages are included for coding where no more specific information is available in the record.  Note that FIGO uses a single stage value which corresponds to different groupings of T, N, and M values.  FIGO Stage IIIC is assigned based on tumor extension and/or regional lymph node involvement.  Code CS Lymph Nodes based on a physician's statement of FIGO Stage IIIC if it is known that the stage value is assigned because of regional lymph node involvement or it is not specified.\n\n**Note 4**:  If the clinician says \"adnexa palpated\" but doesn't mention lymph nodes, assume lymph nodes are not involved, code \"000\". \n\n**Note 5**:  If either exploratory or definitive surgery is done with no mention of lymph nodes, assume regional nodes are not involved.",
-  "last_modified" : "2015-01-21T10:36:15.759Z",
+  "last_modified" : "2015-05-27T16:19:32.816Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

@@ -5,7 +5,7 @@
   "name" : "Size",
   "title" : "CS Tumor Size",
   "notes" : "**Note 1**:  Code the specific tumor size as documented in the medical record. If the only information regarding tumor size is the physician's statement of the T category, assign code 990 (T1mi), 991 (T1b), 992 (T1 or T1c), or 995 (T2). If the physician's statement of the T category is T1a with no documentation of tumor size, code tumor size as 005. If the physician's statement of the T category is T3 with no documentation of tumor size or a statement specifying only that the tumor size is greater than 5 cm, code tumor size as 051.\n\n**Note 2**:  When coding pathologic size, code the measurement of the invasive component.  For example, if there is a large in situ component (e.g., 4 cm) and a small invasive component, see CS Site-Specific Factor 6 to code more information about the reported tumor size.  If the size of invasive component is not given, code the size of the entire tumor and record what the size value represents in CS Site-Specific Factor 6.  Note that some breast cancers cannot be sized pathologically.\n\n**Note 3**:  Microinvasion is the extension of cancer cells beyond the basement membrane into the adjacent tissues with no focus more than 0.1 cm in greatest dimension.  When there are multiple foci of microinvasion, the size of only the largest focus is used to classify the microinvasion.  (Do not use the sum of all the individual foci.)",
-  "last_modified" : "2015-01-21T10:36:19.909Z",
+  "last_modified" : "2015-05-27T16:19:49.306Z",
   "definition" : [ {
     "key" : "size",
     "name" : "Code",

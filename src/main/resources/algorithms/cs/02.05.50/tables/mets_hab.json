@@ -6,7 +6,7 @@
   "title" : "CS Mets at DX",
   "notes" : "**Note 1**:  Most pleural and pericardial effusions with lung cancer are due to tumor. In a few patients, however, multiple cytopathologic examinations of pleural and/or pericardial fluid are negative for tumor, and the fluid is nonbloody and is not an exudate. Where these elements and clinical judgment dictate that the effusion is not related to the tumor, the effusion should be excluded as a staging element and the tumor should be classified as M0.\n\n**Note 2**: For contralateral (different lung) pleural effusion, use code 16 instead of code 40.  For bilateral (same and different lung) pleural effusion, use code 17 instead of code 40.",
   "footnotes" : "- For CS Mets at DX codes 00 and 99, the M category for AJCC 7 staging is assigned based on the value of CS Tumor Size as shown in the Size Mets at DX AJCC 7 Table for this schema.\n- For all CS Met at Dx codes, the M category for AJCC 6 staging is assigned based on the values of CS Tumor Size, CS Extension, CS Mets at DX, and CS Site Specific Factor 1, as shown in the Size Extension Mets SSF1 AJCC 6 Tables for this schema.",
-  "last_modified" : "2015-01-21T10:36:13.315Z",
+  "last_modified" : "2015-05-27T16:19:27.467Z",
   "definition" : [ {
     "key" : "mets",
     "name" : "Code",

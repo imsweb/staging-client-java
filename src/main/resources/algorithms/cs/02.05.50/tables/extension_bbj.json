@@ -6,7 +6,7 @@
   "title" : "CS Extension",
   "notes" : "**Note 1**:  Palpebral and tarsal conjunctiva line the eyelid, bulbar conjunctiva covers the eyeball, forniceal conjunctiva covers the space between the eyelid and the globe.  According to the AJCC, tumors are most likely to arise at the exposed site where the conjunctival epithelium merges with the corneal epithelium, particularly at the temporal limbus.\n\n**Note 2**:  Use code 140 or 150 if the physician's assignment of T category is the only information available about the extent of the tumor.\n\n**Note 3**:  The CS Tumor Size table for this schema is obsolete in CS Version 2, and the collection of tumor size value moved to CS Site-Specific Factor 1, Tumor Size.",
   "footnotes" : "- For CS Extension codes 110-150, and 350 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Site-Specific Factor 1, Tumor Size, as shown in the Extension Size Table CSv2.\n- For CS Extension codes 110-150, and 350 ONLY, the T category for AJCC 6 staging collected in CSv2 is assigned based on the value of CS Site-Specific Factor 1, Tumor Size, as shown in the Extension Size Table CSv2.\n- For CS Extension codes 100 and 300 ONLY, the T category for AJCC 6 staging collected in CSv1 is assigned based on the value of CS Tumor Size as shown in the Extension Size Table CSv1.",
-  "last_modified" : "2015-01-21T10:36:02.246Z",
+  "last_modified" : "2015-05-27T16:19:07.634Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

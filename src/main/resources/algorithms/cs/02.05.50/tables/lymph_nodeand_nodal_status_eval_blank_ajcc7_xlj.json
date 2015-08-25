@@ -5,7 +5,7 @@
   "name" : "Lymph Node and Nodal Status Eval Blank AJCC7",
   "title" : "Lymph Node and Nodal Status Eval Blank AJCC 7 Table",
   "notes" : "**Note**:  When no CS Lymph Nodes Eval code is recorded, for CS Lymph Nodes codes 100-118, 121-128, 152, 153, 155, and 158 ONLY, the N category for AJCC 7 staging is assigned based on the value of Regional Nodes Positive, CS Lymph Nodes,  and CS Site-Specific Factor 3, Clinical Status of Lymph Node Mets, as shown in the following table.",
-  "last_modified" : "2015-01-21T10:36:10.266Z",
+  "last_modified" : "2015-05-27T16:19:22.389Z",
   "definition" : [ {
     "key" : "nodes_pos",
     "name" : "Regional Nodes Positive",

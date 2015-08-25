@@ -6,7 +6,7 @@
   "title" : "CS Extension",
   "notes" : "**Note 1**:  Islets of Langerhans are distributed throughout the pancreas; an islet tumor is coded to the subsite of the pancreas in which the tumor arises if the information is available.\n\n**Note 2**:  Codes 400-780 are used for contiguous extension of tumor from the site of origin.  Discontinuous involvement is coded in CS Mets at DX.\n\n**Note 3**:  The assignment of T1 and T2 categories for tumors of the pancreas is based on tumor size.  A physician's statement of the T category may be used to code CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields.  However the two fields are coded independently: for example the record may document size but not extension, other than the physician's statement of the T category.  Use codes 150 and 200 as appropriate to code CS Extension based on a statement of T when no other extension information is available.",
   "footnotes" : "- For CS Extension codes 100, 150, 200, and 300 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Tumor Size, as shown in the Extension Size Table for this schema.\n- For CS Extension codes 100, 150, 200, and 300 ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Tumor Size, as shown in the Extension Size Table for this schema.",
-  "last_modified" : "2015-01-21T10:36:02.511Z",
+  "last_modified" : "2015-05-27T16:19:08.389Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

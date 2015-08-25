@@ -5,7 +5,7 @@
   "name" : "Nodes",
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  If information about named regional lymph nodes is available, use codes 110, 400, or 420 rather than code 600.\n\n**Note 3**:  Hepatoduodenal nodes are regional for primaries of the lesser curvature of the stomach.  They are coded in CS Mets at DX for all other subsites in this schema.\n\n**Note 4**:  Nodal metastasis is very rare in gastrointestinal stromal tumors and surgeons generally agree that nodal dissection is not indicated.  In the absence of information on regional lymph node status, N0 is appropriate; code 999 is mapped to N0 accordingly.",
-  "last_modified" : "2015-01-21T10:36:18.159Z",
+  "last_modified" : "2015-05-27T16:19:37.541Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

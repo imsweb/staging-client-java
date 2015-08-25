@@ -6,7 +6,7 @@
   "title" : "Extension Cytology AJCC 6 Table CSv1",
   "subtitle" : "CS Version Input Original Equals 01XXXX and Year of Diagnosis is Before 2010",
   "notes" : "**Note**: For CS Version 1 cases (CS Version Input Original equals 01XXXX and Year of Diagnosis is before 2010) and for CS Extension codes 100-145 and 180-525 ONLY. The T category for AJCC 6 staging is assigned based on the value of CS Extension and peritoneal cytology status coded in CS Site Specific Factor 2 as shown in this table.",
-  "last_modified" : "2015-01-21T10:36:05.978Z",
+  "last_modified" : "2015-05-27T16:19:14.482Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

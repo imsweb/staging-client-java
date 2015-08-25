@@ -5,7 +5,7 @@
   "name" : "Extension",
   "title" : "CS Extension",
   "notes" : "**Note 1**:  For this site, AJCC defines Tis as high-grade dysplasia, which includes \"all non-invasive neoplastic epithelium that was previously called carcinoma in situ.\"  Cancers stated to be noninvasive or in situ are classified as Tis.  High-grade dysplasia is generally not reportable in cancer registries, but if a registry does collect it, code 000 should be used.\n\n**Note 2**:  Use codes 110, 120, and 160 in preference to code 150 if information about the depth of invasion into the layers of the polyp is available.\n\n**Note 3**:  Ignore intraluminal extension to adjacent segment(s) of esophagus or to more distal parts of stomach and code depth of invasion or extra-gastric spread as indicated.\n\n**Note 4**:  If the diagnosis states linitis plastica and no other information regarding extension is available, use code 350.  Linitis plastica is defined as diffuse involvement of the entire stomach wall.\n\n**Note 5**:  Codes 600-700 are used for contiguous extension from the site of origin.  Discontinuous involvement is coded in CS Mets at DX, except for implants within the stomach (code 300).",
-  "last_modified" : "2015-01-21T10:36:04.049Z",
+  "last_modified" : "2015-05-27T16:19:10.917Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

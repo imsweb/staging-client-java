@@ -6,7 +6,7 @@
   "title" : "CS Site-Specific Factor 2",
   "subtitle" : "Size of Metastasis in Lymph Nodes",
   "notes" : "**Note 1**:  If the only lymph node involvement is common iliac nodes, code 999. Ths size of metastasis in lymph nodes is required to derive the TNM 6 N category. Although common iliac nodes are included as regional nodes in AJCC 7th edition, they are considered distant lymph nodes in AJCC 6th edition. Therefore, only code the size of lymph node metastasis in iliac (internal, external, NOS), obturator, pelvic, perivesical, sacral, or regional nodes, NOS in this factor.\n\n**Note 2**:  Code the size of the largest metastasis in a lymph node as documented in the pathology report, not the size of the lymph node. If the size of the metastasis is not documented, code the size of the largest involved node as documented pathologically or clinically with pathology taking priority. Do not code the size of any node(s) coded in CS Mets at DX.",
-  "last_modified" : "2015-01-21T10:36:26.804Z",
+  "last_modified" : "2015-05-27T16:20:02.625Z",
   "definition" : [ {
     "key" : "ssf2",
     "name" : "Code",

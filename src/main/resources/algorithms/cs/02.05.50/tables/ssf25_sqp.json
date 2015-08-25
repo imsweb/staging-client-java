@@ -6,7 +6,7 @@
   "title" : "CS Site-Specific Factor 25",
   "subtitle" : "Schema Discriminator: Peritoneum/PeritoneumFemaleGen",
   "notes" : "**Note**:  For cases coded to primary site C48.1, C48.2, or C48.8, and histology in the ranges 8000-8576, 8590-8671, 8930-8934 or 8940-9110, the sex of the case is needed to determine the correct CS schema.  AJCC stages primary carcinomas of the peritoneum in females with the same staging criteria as for ovarian cancer.",
-  "last_modified" : "2015-01-21T10:36:26.590Z",
+  "last_modified" : "2015-05-27T16:20:02.175Z",
   "definition" : [ {
     "key" : "ssf25",
     "name" : "Code",

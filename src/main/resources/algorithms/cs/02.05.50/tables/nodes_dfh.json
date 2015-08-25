@@ -5,7 +5,7 @@
   "name" : "Nodes",
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Regional nodes include bilateral and contralateral involvement of named nodes.\n\n**Note 3**:  The Federation Internationale de Gynecologie et d'Obstetrique (FIGO), stages are included for coding where no more specific information is available in the record.  When both FIGO stage and regional lymph node detail are available, record the code with regional lymph node detail in preference to a statement of FIGO stage.\n\n**Note 4**: Code CS Lymph Nodes based on a physician's statement of FIGO Stage IIIB if it is known that the stage value is assigned because of lymph node involvement, or if there is no statement that FIGO Stage IIIB is assigned based on extension or lymph node involvement.\n\n**Note 5**:  If the clinician says \"adnexa palpated\" but does not mention lymph nodes, assume lymph nodes are not involved.",
-  "last_modified" : "2015-01-21T10:36:18.325Z",
+  "last_modified" : "2015-05-27T16:19:37.899Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

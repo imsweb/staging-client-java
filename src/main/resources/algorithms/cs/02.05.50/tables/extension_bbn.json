@@ -5,7 +5,7 @@
   "name" : "Extension",
   "title" : "CS Extension",
   "notes" : "**Note 1**:  In case of multifocal noninvasive Ta and Tis tumors, use code 060 in preference to code 050.\n\n**Note 2**:  Tumor involving both renal pelvis and ureter (unifocal or multifocal) is classified by the depth of greatest invasion in either organ for AJCC staging.  Use codes 120 and 220 for extension of tumor involving the wall of both renal pelvis and ureter.\n\n**Note 3**:  Direct invasion of the bladder by a ureteral tumor is classified by the depth of greatest invasion of the bladder or ureter for AJCC staging.  \n\n**Note 4**: If CS Extension code is 050 or 060, Behavior ICD-O-3 must be coded as 2.  If CS Extension code is 105 or greater, Behavior ICD-O-3 must be coded as 3.",
-  "last_modified" : "2015-01-21T10:36:02.355Z",
+  "last_modified" : "2015-05-27T16:19:07.901Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

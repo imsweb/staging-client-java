@@ -5,7 +5,7 @@
   "name" : "Extension Size AJCC6 Table Csv1",
   "title" : "Extension Size, AJCC 6 Table CSv1",
   "notes" : "**Note**:  For CS Version 1 cases (CS Version Input Original equals 01XXXX) and Year of Diagnosis is less than 2010 and CS Site-Specific Factor 6 Perineural Invasion = 988 or blank, for CS Extension codes 100-400 ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Tumor Size and CS Extension as shown in this table.",
-  "last_modified" : "2015-01-21T10:36:06.683Z",
+  "last_modified" : "2015-05-27T16:19:16.199Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

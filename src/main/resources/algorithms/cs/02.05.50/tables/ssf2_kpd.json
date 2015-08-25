@@ -6,7 +6,7 @@
   "title" : "CS Site-Specific Factor 2",
   "subtitle" : "Serum Chromogranin A (CgA) Lab Value",
   "notes" : "**Note 1**:  Chromogranins are a family of proteins in secretory granules found throughout the neuroendocrine system.  Serum Chromogranin A (CgA) has been shown to be a useful marker for neuroendocrine tumors.\n\n**Note 2**:  Record, to the nearest nanogram/milliliter (ng/ml), the highest CgA lab value documented in the medical record prior to treatment.  For example, a pretreatment CgA of 400 ng/ml would be recorded as 400.\n\n**Note 3**:  Code 000 is reserved for exactly 0 ng/ml (no measurable amount of CgA).  Do not round tiny values down to 0 ng/ml; any measured value less than or equal to 1 ng/ml should be coded 001.  For code 001, also round 1.1-1.4 ng/ml down to 1 ng/ml.  For codes 002-980, round values to the nearest ng/ml.\n\n**Note 4**:  Use code 997 if there is no actual pretreatment CgA lab value available but an interpretation of the test result is stated.\n\n**Note 5**:  Although CgA is generally a marker for neuroendocrine tumors, if a pretreatment CgA lab value is available for a non-endocrine tumor, code the value. If a pretreament CgA lab value is not available (endocrine or non-endocrine tumor), code 999.",
-  "last_modified" : "2015-01-21T10:36:27.236Z",
+  "last_modified" : "2015-05-27T16:20:03.910Z",
   "definition" : [ {
     "key" : "ssf2",
     "name" : "Code",

@@ -5,7 +5,7 @@
   "name" : "Size",
   "title" : "CS Tumor Size",
   "notes" : "**Note 1**:  The assignment of the T1 categories for neuroendocrine tumors (NET) of the colon/rectum is based on tumor size.  A physician's statement of the T category may be used to code both CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields. However the two fields are coded independently; for example, the record may document size but not extension.  Use codes 991 and 992 as appropriate to code CS Tumor Size based on a statement of T when no other size information is available.\n\n**Note 2**:  Codes 992-995 were obsolete in CS Version 2, V0201 and V0202.  They are made active in V0203.  Tumors that now fall into one of these categories would have been coded as 011, 021, or 999 in V0201/V0202.",
-  "last_modified" : "2015-01-21T10:36:20.608Z",
+  "last_modified" : "2015-05-27T16:19:50.962Z",
   "definition" : [ {
     "key" : "size",
     "name" : "Code",

@@ -6,7 +6,7 @@
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Distant lymph node involvement, considered N2 for AJCC 7 staging for retinoblastoma, is coded in CS Lymph Nodes.  Distant lymph node involvement was considered M1 for AJCC 6 staging, and was coded in CS Mets at DX in CS Version 1.\n\n**Note 2**: When coding Regional Nodes Positive and Regional Nodes Examined, only include regional nodes. Do not include distant nodes coded in CS Lymph Nodes. If the only information available is for lymph nodes, NOS, coded as 800 in CS Lymph Nodes, assume these are regional nodes for coding Regional Nodes Positive and Regional Nodes Examined.",
   "footnotes" : "- For CS Lymph Nodes codes 200 and 250 ONLY, the N category and M categories for AJCC 6 staging are assigned based on the values of CS Lymph Nodes, CS Lymph Nodes Eval, CS Mets at DX, and CS Mets Eval as shown in the Lymph Nodes Mets at DX AJCC 6 Table for this schema.",
-  "last_modified" : "2015-01-21T10:36:16.451Z",
+  "last_modified" : "2015-05-27T16:19:34.546Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

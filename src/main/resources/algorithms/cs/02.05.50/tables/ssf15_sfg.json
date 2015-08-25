@@ -6,7 +6,7 @@
   "title" : "CS Site-Specific Factor 15",
   "subtitle" : "Post-Orchiectomy Human Chorionic Gonadotropin (hCG) Range",
   "notes" : "**Note 1**:  Record the range of the human chorionic gonadotropin (hCG) test as documented in the patient record after orchiectomy and prior to further treatment.\n\n**Note 2**:  Use the same laboratory test to record values in CS Site-Specific Factors 14 and 15.\n\n**Note 3**:  A lab value expressed in International Units/liter (IU/L) is equivalent to the same value expressed in milli-International Units/milliliter (mIU/ml).\n\n**Note 4**:  If the initial post-orchiectomy hCG test remains elevated, review the subsequent tests until normalization or plateau occurs and use that test to code this field. See Part I for further explanation of serum tumor marker half life.\n\n**Note 5**:  If the post-orchiectomy hCG test is unknown but the preorchiectomy hCG test was normal, use code 990.\n\n**Note 6**:  If the post-orchiectomy hCG test is unavailable but a physician's statement of the result is documented, use codes 991-993.\n\n**Note 7**:  For rare cases that are treated prior to orchiectomy or an orchiectomy is not performed, code the initial hCG range in this field and not in CS Site-Specific Factor 9.",
-  "last_modified" : "2015-01-21T10:36:24.429Z",
+  "last_modified" : "2015-05-27T16:19:56.994Z",
   "definition" : [ {
     "key" : "ssf15",
     "name" : "Code",

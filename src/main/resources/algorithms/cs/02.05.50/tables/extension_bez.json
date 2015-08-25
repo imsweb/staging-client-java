@@ -6,7 +6,7 @@
   "title" : "CS Extension",
   "notes" : "**Note 1**:  Ocular adnexal lymphomas (OAL) originate in conjunctiva, eyelids, lacrimal gland, lacrimal drainage apparatus, and other orbital tissues surrounding the eye.  This schema should not be used for secondary lymphomatous involvement of ocular adnexa or for intraocular lymphomas.\n\n**Note 2**:  Preseptal eyelid involvement includes infiltration of the outer three layers of the eyelid:skin, subcutaneous connective tissue, and orbicularis oculi muscle.\n\n**Note 3**:  The orbit is the bony cavity containing the eye, lacrimal gland, lacrimal sac, nasolacrimal duct, extraocular muscles, fat. arteries, veins, and nerves, but no lymphatics.\n\n**Note 4**:  Unknown extension is coded 989.  Code 999, used for lymphoma staging in CS Version1, is an obsolete code for this schema.",
   "footnotes" : "- Stage grouping for AJCC 6 staging of ocular adnexal lymphoma for cases using obsolete codes is derived directly from the CS Extension code as shown in the AJCC TNM 6 Stage CSv1 table. A or B classification is appended to Stage I-IV based on coding of CS Site-Specific Factor 2, Systemic Symptoms at Diagnosis.\n- Stage grouping for AJCC 6 staging of ocular adnexal lymphoma is derived from a combination of CS Extension, CS Lymph Nodes, and CS Mets at DX codes as shown in the AJCC TNM 6 Stage table. A or B classification is appended to Stage I-IV based on coding of CS Site-Specific Factor 2, Systemic Symptoms at Diagnosis.",
-  "last_modified" : "2015-01-21T10:36:05.037Z",
+  "last_modified" : "2015-05-27T16:19:12.695Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

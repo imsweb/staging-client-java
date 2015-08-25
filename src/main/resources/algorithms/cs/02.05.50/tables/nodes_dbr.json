@@ -5,7 +5,7 @@
   "name" : "Nodes",
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  This field includes all lymph nodes defined as Levels I-VI and Other by AJCC.  The complete definitions are provided in the General Rules, Section 2 for head and neck cancers.\n\n**Note 3**:  Assignment of N value for thyroid does not depend on laterality.  All codes for nodal involvement include ipsilateral, bilateral, contralateral, and midline lymph nodes.\n\n**Note 4**:  The description of lymph nodes has been standardized across the head and neck schemas.  All lymph node levels and groups listed here are considered regional nodes for AJCC staging.  Summary Stage 1977 and Summary Stage 2000 divide these nodes into regional and distant groups.",
-  "last_modified" : "2015-01-21T10:36:16.165Z",
+  "last_modified" : "2015-05-27T16:19:33.779Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

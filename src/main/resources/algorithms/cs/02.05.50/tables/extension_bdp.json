@@ -6,7 +6,7 @@
   "title" : "CS Extension",
   "notes" : "**Note 1**:  AJCC considers \"in situ carcinoma of the adrenal gland\" an impossible diagnosis.  Any case so coded is mapped to TX for AJCC stage and in situ Summary Stage.\n\n**Note 2**:  The assignment of T1 and T2 categories for tumors limited to the adrenal gland is based on tumor size.  A physician's statement of the T category may be used to code CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields.  However the two fields are coded independently: for example the record may document size but not extension, other than the physician's statement of the T category. Use codes 200, 250, 400, or 810 as appropriate to code CS Extension based on a statement of T when no other extension information is available.\n\n**Note 3**:  Use code 300 (Localized, NOS) when no further information is available to assign code 100, 200, or 250.",
   "footnotes" : "- For CS Extension codes 100-300 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Tumor Size, as shown in the Extension Size Table for this schema.",
-  "last_modified" : "2015-01-21T10:36:04.017Z",
+  "last_modified" : "2015-05-27T16:19:10.869Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

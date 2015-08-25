@@ -6,7 +6,7 @@
   "title" : "Size Extension SSF1 AJCC 7 T Table",
   "subtitle" : "CS SSF1 000 or 999 with CS Tumor Size and CS Extension",
   "notes" : "**Note**:  When CS Site-Specific Factor 1 is coded 000 or 999, no separate tumor nodules in the primary site or unknown if separate nodules, and CS Extension is coded 000-230, 300-440, 455-520, 540-600, 730, 950-980, 999, the value of T for AJCC 7 staging is assigned as shown in this table.  The T category is determined by the CS Tumor Size and CS Extension codes.  CS Tumor Size codes 997, diffuse involvement of lobe, and 998, diffuse involvement of the entire lung, map to T4.",
-  "last_modified" : "2015-01-21T10:36:21.398Z",
+  "last_modified" : "2015-05-27T16:19:52.311Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

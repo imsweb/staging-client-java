@@ -6,7 +6,7 @@
   "title" : "CS Site-Specific Factor 5",
   "subtitle" : "Number of Examined Pelvic Nodes",
   "notes" : "**Note 1**:  Record the number of examined pelvic nodes documented in the patient record.  Apply the same instructions in General Rules, Part I for coding Regional Nodes Examined to this data item.\n\n**Note 2**: Under CSV0200, this site-specific factor incorrectly had different meanings for these codes.  All of the cases coded in CSv2 before CSv2:V0203 are reviewed and coded to the current codes.",
-  "last_modified" : "2015-01-21T10:36:29.730Z",
+  "last_modified" : "2015-05-27T16:20:07.933Z",
   "definition" : [ {
     "key" : "ssf5",
     "name" : "Code",

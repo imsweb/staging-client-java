@@ -5,7 +5,7 @@
   "name" : "Eval Extension T3 AJCC7",
   "title" : "Eval Extension T3 AJCC 7 Table",
   "notes" : "**Note 1**:  For CS Extension codes 710-740 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS TS/Ext Eval and CS Extension as shown here.\n\n**Note 2**:  Not all users of Collaborative Stagecollect the evaluation fields.  For this schema, if CS TS/Ext Eval is empty or invalid, the T3 category will be calculated as if CS TS/Ext Eval were '9'.",
-  "last_modified" : "2015-01-21T10:36:01.009Z",
+  "last_modified": "2015-05-27T16:19:05.377Z",
   "definition" : [ {
     "key" : "extension_eval",
     "name" : "CS TS/Ext Eval",

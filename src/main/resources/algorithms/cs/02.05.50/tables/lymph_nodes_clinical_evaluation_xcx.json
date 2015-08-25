@@ -5,7 +5,7 @@
   "name" : "Lymph Nodes Clinical Evaluation",
   "title" : "Lymph Nodes Clinical Evaluation Table",
   "notes" : "**Note**:  This table is used when CS Lymph Nodes Eval is coded 0 (c), 1 (c), 5 (c), or 9 (c) and CS Lymph Nodes is coded 250, 258, 260, 280, 500, 510, 520, 600, 610, 620, 630, 720, or 748 ONLY.  The N category is assigned based on the value of CS Lymph Nodes and the value of CS Site-Specific Factor 3, Number of Positive Ipsilateral Axillary Lymph Nodes.",
-  "last_modified" : "2015-01-21T10:36:11.328Z",
+  "last_modified" : "2015-05-27T16:19:23.639Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "CS Lymph Nodes",

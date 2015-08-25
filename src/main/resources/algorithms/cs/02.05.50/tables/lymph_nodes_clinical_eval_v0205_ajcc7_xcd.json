@@ -5,7 +5,7 @@
   "name" : "Lymph Nodes Clinical Eval V0205 AJCC7",
   "title" : "Lymph Nodes Clinical Eval V02.05 AJCC 7 Table",
   "notes" : "**Note**:  This table is used when CS Lymph Nodes is 100-300 and (CS Lymph Nodes = 0, 5 OR (CS Lymph Nodes Eval is 1, 9 and CS Coding System Original is at least V02.05)).  The N category is determined based on the value of CS Site-Specific Factor 2, Clinical Assessment of Regional Lymph Nodes.",
-  "last_modified" : "2015-01-21T10:36:11.651Z",
+  "last_modified" : "2015-05-27T16:19:24.220Z",
   "definition" : [ {
     "key" : "ssf2",
     "name" : "CS SSF2",

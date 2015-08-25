@@ -6,7 +6,7 @@
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Hepatoduodenal nodes are regional for primaries of the lesser curvature of the stomach.  They are coded in CS Mets at DX for all other subsites in this schema.\n\n**Note 3**:  If information about named regional lymph nodes is available, use codes 110, 400, or 420  rather than code 500 or 600.",
   "footnotes" : "- For CS Lymph Nodes codes 050-500 and 800 ONLY, when CS Lymph Nodes Eval is 0, 1, 5, or 9, the N category is assigned as shown in the Lymph Nodes Clinical Evaluation Table, using Regional Nodes Positive and CS Site-Specific Factor 1; when CS Lymph Nodes Eval is 2, 3, 6, 8, or not coded, the N category is assigned as shown in the Lymph Nodes Pathologic Evaluation Table Also Used When CS Reg Nodes Eval Is Not Coded using Regional Nodes Positive.",
-  "last_modified" : "2015-01-21T10:36:18.299Z",
+  "last_modified" : "2015-05-27T16:19:37.851Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

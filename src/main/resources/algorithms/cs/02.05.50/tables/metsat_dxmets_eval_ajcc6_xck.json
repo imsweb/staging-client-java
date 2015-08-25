@@ -5,7 +5,7 @@
   "name" : "Mets at DX Mets Eval AJCC6",
   "title" : "Mets at DX Mets Eval AJCC 6 Table",
   "notes" : "**Note 1**:  For CS Mets at DX codes 00 through 99, when CS Lymph Nodes code is 000, 100, 800, or 999, the M category is assigned based on the value of CS Mets at DX, as shown in this table.\n\n**Note 2**:  Not all users of Collaborative Stage collect the evaluation fields.  For this schema, if CS Mets Eval is empty or invalid, the M category is calculated as if CS Mets Eval were '9'.",
-  "last_modified" : "2015-01-21T10:36:13.069Z",
+  "last_modified" : "2015-05-27T16:19:26.951Z",
   "definition" : [ {
     "key" : "mets_eval",
     "name" : "CS Mets Eval",

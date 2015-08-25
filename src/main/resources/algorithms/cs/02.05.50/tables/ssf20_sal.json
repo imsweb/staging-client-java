@@ -6,7 +6,7 @@
   "title" : "CS Site-Specific Factor 20",
   "subtitle" : "Assessment of Positive Distant Metastases",
   "notes" : "**Note 1**:  Code the assessment method used for determining the presence of metastasis as coded in CS Mets at DX, CS Mets at DX - Bone, CS Mets at DX - Brain, CS Mets at DX - Liver, and CS Mets at DX - Lung.  If CS Mets at DX is coded as 00 (no positive metastasis), this field must be coded 000.\n\n**Note 2**:  If multiple methods of assessments determined positive metastases, use the highest code that applies.  See CSv2 General Rules Part I for types of tests to be included.",
-  "last_modified" : "2015-01-21T10:36:26.069Z",
+  "last_modified" : "2015-05-27T16:20:00.785Z",
   "definition" : [ {
     "key" : "ssf20",
     "name" : "Code",

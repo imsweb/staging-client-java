@@ -5,7 +5,7 @@
   "name" : "Lymph Nodes Clinical Eval",
   "title" : "Lymph Nodes Clinical Eval Table",
   "notes" : "**Note**:  This table is used when CS Lymph Nodes Eval is coded 0 (c), 1(c), 5 (c), or 9 (c) and CS Lymph Nodes is coded 100-500 ONLY. The N category is assigned based on the value of CS Site-Specific Factor 5, Size of Metastasis in Lymph Nodes.",
-  "last_modified" : "2015-01-21T10:36:11.691Z",
+  "last_modified" : "2015-05-27T16:19:24.318Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "CS Lymph Nodes",

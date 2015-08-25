@@ -5,7 +5,7 @@
   "name" : "Lymph Nodes Size CSv2",
   "title" : "Lymph Nodes Size CSv2 Table",
   "notes" : "**Note**:  For CS Lymph Node codes 105, 115, 125-190, 205, 215, 225, 290, 305, 315, 325, 405, 415, 425, 490, 505, 515, and 525-700 ONLY, the N category is determined by the size of involved nodes coded CS Site-Specific Factor 1, Size of Lymph Nodes, as shown in this table.",
-  "last_modified" : "2015-01-21T10:36:12.478Z",
+  "last_modified" : "2015-05-27T16:19:26.065Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "CS Lymph Nodes",

@@ -6,7 +6,7 @@
   "title" : "CS Site-Specific Factor 17",
   "subtitle" : "Urinary 5-Hydroxyindoleacetic Acid (5-HIAA) Lab Value",
   "notes" : "**Note 1**:  Carcinoid tumors can release large amounts of serotonin.  5-Hydroxyindoleacetic acid (5-HIAA) is a breakdown product of the hormone serotonin.  The 5-HIAA test measures the amount of acid secreted in the urine over a 24-hour period.\n\n**Note 2**:  Record to the nearest milligram (mg) the highest 5-HIAA lab value documented in the medical record prior to treatment.  For example, code a pre-treatment 5-HIAA of 550 mg over 24 hours as 550.\n\n**Note 3**:  Code 000 is reserved for exactly 0 mg (no measurable amount of 5-HIAA).  Do not round tiny values down to 0 ng/ml; any measured value less than or equal to 1 mg should be coded 001.  For code 001, also round 1.1-1.4 mg down to 1 ng/ml.  For codes 002-979, round values to the nearest mg.\n\n**Note 4**:  For an uncertain value, record the stated closest value.  For example, code a value stated as \"less than 5 mg\" as 005.",
-  "last_modified" : "2015-01-21T10:36:24.725Z",
+  "last_modified" : "2015-05-27T16:19:57.750Z",
   "definition" : [ {
     "key" : "ssf17",
     "name" : "Code",

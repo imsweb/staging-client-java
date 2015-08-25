@@ -5,7 +5,7 @@
   "name" : "Lymph Nodes Size",
   "title" : "Lymph Nodes Size Table",
   "notes" : "**Note**:  For CS Lymph Nodes codes 100-700 ONLY, the N category is determined by the size of involved nodes coded in  CS Site-Specific Factor 1, Size of Lymph Nodes,  as shown in this table.",
-  "last_modified" : "2015-01-21T10:36:12.953Z",
+  "last_modified" : "2015-05-27T16:19:26.732Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "CS Lymph Nodes",

@@ -5,7 +5,7 @@
   "name" : "Special Calculation Table for SEER Summary Stage",
   "title" : "Special Calculation Table for SEER Summary Stage",
   "notes" : "**Note**:  The T value for calculating SEER Summary Stage 1977 and 2000 is asisgned based on the values coded in CS Extension and CS Site-Specific Factor 1 (Extension Evaluated at Enucleation).  For each combination of CS Extension and CS Site-Specific Factor 1, the T value is taken from the field shown in the table.",
-  "last_modified" : "2015-01-21T10:36:21.943Z",
+  "last_modified" : "2015-05-27T16:19:52.926Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

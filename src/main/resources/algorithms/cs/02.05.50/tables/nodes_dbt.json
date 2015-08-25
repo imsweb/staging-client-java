@@ -6,7 +6,7 @@
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Bilateral or contralateral nodes are considered regional nodes  for head, neck, and truncal tumors with bidirectional drainage to primary nodal basins, as shown on lymphoscintigraphy.  Truncal tumors may also drain to both cephalad and caudal primary nodal basins as shown on lymphoscintigraphy.  Clinical assessment of bilateral/contralateral or cephalad/caudal regional nodal involvement is required for tumors where lymphoscintigraphy is not performed.\n\n**Note 3**:  Contiguous or secondary nodal basins are the next nodal drainage basins beyond the primary nodal basins.  Secondary basins are considered regional for AJCC staging but may be distant for Summary Stage.  Use code 270 for involvement of nodes in secondary nodal basins not specified in codes 150 and 160.",
   "footnotes" : "- For CS Lymph Nodes codes 150-700 ONLY, the N category for AJCC 7 staging is assigned based on the value of CS Site-Specific Factor 16, Size of Lymph Nodes, using the Lymph Nodes Size AJCC 7 Table for this schema.",
-  "last_modified" : "2015-01-21T10:36:16.209Z",
+  "last_modified" : "2015-05-27T16:19:33.886Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

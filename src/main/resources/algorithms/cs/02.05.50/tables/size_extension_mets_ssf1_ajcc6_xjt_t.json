@@ -6,7 +6,7 @@
   "title" : "Size Extension Mets SSF1 AJCC 6 Table - T",
   "subtitle" : "CS SSF1 000, 988, or 999, CS Mets at DX 15,18,20,24 with CS Tumor Size and CS Extension",
   "notes" : "**Note**:  When CS Site-Specific Factor 1 is coded 000, 988, or 999, no separate tumor nodules in the primary site, unknown if separate nodules, or information not collected, and CS Mets at DX is coded 15, 18, 20, or 24, pleural effusion or pleural foci on one side or pericardial effusion, the values of T and M for AJCC 6 staging are assigned as shown in this table.  The CS Mets at DX codes map to T4.  The CS Site-Specific Factor 1 and CS Mets at DX codes map to M0.  CS Tumor Size code 998, diffuse involvement of the entire lung, maps to M1.",
-  "last_modified" : "2015-01-21T10:36:21.041Z",
+  "last_modified" : "2015-05-27T16:19:51.805Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

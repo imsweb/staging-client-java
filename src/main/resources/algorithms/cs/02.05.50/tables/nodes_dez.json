@@ -5,7 +5,7 @@
   "name" : "Nodes",
   "title" : "CS Lymph Nodes",
   "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  For rectosigmoid primaries, middle and superior rectal nodes are coded 200, and inferior rectal nodes are coded in CS Mets at DX; for rectum primaries, the inferior, middle, and superior rectal nodes are coded 200.  Rectal nodes, NOS are coded 100 for both rectosigmoid and rectum primaries.\n\n**Note 3**:  For rectum primaries, obturator nodes and internal iliac (hypogastric) nodes, NOS are coded 200; for rectosigmoid primaries, these are coded in CS Mets at DX.\n\n**Note 4**:  For rectosigmoid primaries, left colic nodes and colic nodes, NOS are coded 200; for rectum primaries, these are coded in CS Mets at DX.\n\n**Note 5**:  Nodal metastasis is very rare in gastrointestinal stromal tumors and surgeons generally agree that nodal dissection is not indicated.  In the absence of information on regional lymph node status, N0 is appropriate; code 999 is mapped to N0 accordingly.",
-  "last_modified" : "2015-01-21T10:36:18.142Z",
+  "last_modified" : "2015-05-27T16:19:37.489Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "Code",

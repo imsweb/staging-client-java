@@ -5,7 +5,7 @@
   "name" : "IHC MOL",
   "title" : "IHC MOL Table",
   "notes" : "**Note**:  For CS Lymph Nodes code 000 ONLY, the N category is based on the value of CS Site-Specific Factor 4, IHC of Regional Lymph Nodes, and CS Site-Specific Factor 5, Molecular Studies of Regional Lymph Nodes, as shown in this table:",
-  "last_modified" : "2015-01-21T10:36:09.899Z",
+  "last_modified" : "2015-05-27T16:19:21.740Z",
   "definition" : [ {
     "key" : "ssf4",
     "name" : "CS SSF 4 IHC",

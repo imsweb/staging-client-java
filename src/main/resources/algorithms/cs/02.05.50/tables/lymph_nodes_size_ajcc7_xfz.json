@@ -5,7 +5,7 @@
   "name" : "Lymph Nodes Size AJCC7",
   "title" : "Lymph Nodes Size AJCC 7 Table",
   "notes" : "**Note**:  For CS Lymph Nodes codes 150-700 ONLY, the N category for AJCC 7 staging is determined by the size of involved nodes as coded in CS Site-Specific Factor 16, Size of Lymph Nodes, as shown in this table.",
-  "last_modified" : "2015-01-21T10:36:12.385Z",
+  "last_modified" : "2015-05-27T16:19:25.947Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "CS Lymph Nodes",

@@ -6,7 +6,7 @@
   "title" : "CS Extension",
   "notes" : "**Note 1**:  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage. FIGO Stage IVA is assigned based on tumor extension and/or regional lymph node involvement.  Code CS Extension based on a physician's statement of FIGO Stage IVA if it is based on tumor extension or the basis is unknown.\n\n**Note 2**:  FIGO no longer includes Stage 0 (Tis) for this site.\n\n**Note 3**:  FIGO Stage I, IA and IB are defined by size of tumor, involvement of vulva OR vulva and perineum, and depth of stromal invasion.\n\n**Note 4**:  The depth of invasion is defined as the measurement of the tumor from the epithelial-stromal junction of the adjacent most superficial dermal papilla to the deepest point of invasion.\n\n**Note 5**:  Use codes 110, and 120 in preference to 125 and 125 in preference to code 200.",
   "footnotes" : "- For CS Extension codes 110, 125-410, 425-450, and 470 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Tumor Size and CS Extension, as shown in the Extension Size AJCC 7 Table for this schema.\n- For CS Extension codes 110-470 ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Tumor Size and CS Extension, as shown in the Extension Size AJCC 6 Table for this schema.",
-  "last_modified" : "2015-01-21T10:36:02.221Z",
+  "last_modified" : "2015-05-27T16:19:07.577Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "Code",

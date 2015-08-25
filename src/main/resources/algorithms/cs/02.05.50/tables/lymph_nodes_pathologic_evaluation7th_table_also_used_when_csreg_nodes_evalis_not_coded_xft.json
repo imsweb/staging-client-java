@@ -5,7 +5,7 @@
   "name" : "Lymph Nodes Pathologic Evaluation 7th Table Also Used When CS Reg Nodes Eval Is Not Coded",
   "title" : "Lymph Nodes Pathologic Evaluation 7th Table Also Used When CS Reg Nodes Eval is Not Coded",
   "notes" : "**Note**:  This table is used when CS Lymph Nodes is 100-400, 450, and 500 ONLY and CS Lymph Nodes Eval is 2, 3, 6, 8, or not coded.  The N category is determined based on the number of positive regional nodes in Regional Nodes Positive.",
-  "last_modified" : "2015-01-21T10:36:12.082Z",
+  "last_modified" : "2015-05-27T16:19:25.273Z",
   "definition" : [ {
     "key" : "nodes_pos",
     "name" : "Regional Nodes Positive",

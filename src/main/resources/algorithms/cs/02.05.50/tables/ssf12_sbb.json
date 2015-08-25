@@ -6,7 +6,7 @@
   "title" : "CS Site-Specific Factor 12",
   "subtitle" : "Number of Cores Positive",
   "notes" : "**Note 1**:  Record the number of prostate core biopsies positive for cancer documented in the pathology report. Do not make assumptions on the number of cores positive based on the number of anatomic locations biopsied because often several cores are submitted per site. Fragments are not synonymous with cores and are not counted as cores unless the pathologist has included the fragments in the core count. If the number of cores positive is not specifically documented, code 991.\n\n**Note 2**:  If multiple needle core biopsy procedures are performed during the initial diagnostic workup, do not add together the positive cores from the separate procedures. Record the number of cores positive for cancer from the procedure with the highest number of cores positive.\n\n**Note 3**:  Transperineal template-guided saturation biopsy (TTSB) is a stereotactic prostate biopsy technique that typically produces 30 to 80 core biopsies. This is an alternative biopsy technique used for some high risk patients including men with persistently elevated PSA, those who have atypia on prior prostate biopsies, or men with biopsies showing high grade prostatic intraepithelial neoplasia (PIN).",
-  "last_modified" : "2015-01-21T10:36:23.248Z",
+  "last_modified" : "2015-05-27T16:19:54.784Z",
   "definition" : [ {
     "key" : "ssf12",
     "name" : "Code",

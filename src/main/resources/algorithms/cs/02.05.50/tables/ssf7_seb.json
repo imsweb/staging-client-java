@@ -6,7 +6,7 @@
   "title" : "CS Site-Specific Factor 7",
   "subtitle" : "Primary Tumor Mitotic Count/Rate",
   "notes" : "**Note 1**:  According to AJCC, p. 329, \"Data from the AJCC Melanoma Staging Database demonstrated a highly significant correlation with increasing mitotic rate and declining survival rates, especially within thin melanoma subgroups.\"\n\n**Note 2**:  Mitotic rate/count is assessed on primary melanomas, based on the number of mitotic figures in one square millimeter (mm) surrounding either a \"hot spot\" with the most mitotic figures or a field with a representative mitosis.\n\n**Note 3**:  Record the mitotic rate/count as documented in the pathology report. If there is more than one pathology report for the same melanoma at initial diagnosis and different mitotic counts are documented, code the highest mitotic count from any of the pathology reports.  Use code 999 if there is no documentation or no mention of mitotic rate in any pathology report for the same melanoma.",
-  "last_modified" : "2015-01-21T10:36:30.739Z",
+  "last_modified" : "2015-05-27T16:20:10.202Z",
   "definition" : [ {
     "key" : "ssf7",
     "name" : "Code",
