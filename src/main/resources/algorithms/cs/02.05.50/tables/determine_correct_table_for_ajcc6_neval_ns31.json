@@ -4,7 +4,7 @@
   "version" : "02.05.50",
   "name" : "Determine Correct Table for AJCC 6 N EvaL",
   "title" : "Determining Whether N Eval has already been set for AJCC 6",
-  "last_modified": "2015-05-27T16:19:02.770Z",
+  "last_modified" : "2015-05-27T16:19:02.770Z",
   "definition" : [ {
     "key" : "nodes",
     "name" : "CS Lymph Nodes",

@@ -5,7 +5,7 @@
   "name" : "Extension Size AJCC6",
   "title" : "Extension Size AJCC 6 Table",
   "notes" : "**Note**:  For CS Extension codes 100-310, 400, and 450 ONLY, the AJCC 6th Edition T category is assigned based on value of tumor size, as shown in this table.",
-  "last_modified": "2015-05-27T16:19:16.961Z",
+  "last_modified" : "2015-05-27T16:19:16.961Z",
   "definition" : [ {
     "key" : "extension",
     "name" : "CS Extension",

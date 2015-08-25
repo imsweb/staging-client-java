@@ -5,7 +5,7 @@
   "name" : "AJCC TNM 6 Stage CSv1",
   "title" : "AJCC TNM 6 Stage",
   "notes" : "**Note**: For cases with a year of diagnosis less than 2010 and originally coded in CSv1, the AJCC 6th Edition stage is assigned based on the following table. For cases with a year of diagnosis greater than 2009 or originally coded in CSv2, AJCC 6th Edition stage is assigned as shown in the AJCC TNM 6 Stage table.",
-  "last_modified": "2015-05-27T16:19:00.759Z",
+  "last_modified" : "2015-05-27T16:19:00.759Z",
   "definition" : [ {
     "key" : "t",
     "name" : "T",
