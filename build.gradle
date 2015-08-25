@@ -58,7 +58,6 @@ checkstyle {
 }
 
 findbugs {
-    toolVersion = '2.0.1'
     ignoreFailures = true
     effort = 'max'
     excludeFilter = file('config/findbugs/findbugs-exclude.xml')
