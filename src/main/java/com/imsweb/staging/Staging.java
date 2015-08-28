@@ -8,6 +8,7 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -16,6 +17,7 @@ import java.util.Set;
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.DecisionEngine;
 import com.imsweb.decisionengine.Error;
+import com.imsweb.decisionengine.Output;
 import com.imsweb.decisionengine.Result;
 import com.imsweb.decisionengine.Result.Type;
 import com.imsweb.decisionengine.Table;
@@ -426,7 +428,8 @@ public final class Staging {
 
     /**
      * Looks at all tables involved in all the mappings in the definition and returns a list of output keys that could be created.  It will also deal with mapped
-     * outputs.  The outputs from each mapping will only be included if it passes the inclusion/exclusion criteria based on the context.
+     * outputs.  The outputs from each mapping will only be included if it passes the inclusion/exclusion criteria based on the context.  If the schema has StagingOutputs
+     * defined, then the calulated output list will be trimmed to only include outputs that are defined there.
      * @param schema a StagingSchema
      * @param context a context of values used to to check mapping inclusion/exclusion
      * @return a Set of unique output keys
@@ -434,9 +437,27 @@ public final class Staging {
     public Set<String> getOutputs(StagingSchema schema, Map<String, String> context) {
         Set<String> outputs = new HashSet<String>();
 
+        // any outputs that have default values need to be included since they will produce output no matter what
+        if (schema.getOutputMap() != null) {
+            for (Entry<String, ? extends Output> entry : schema.getOutputMap().entrySet())
+                if (entry.getValue().getDefault() != null)
+                    outputs.add(entry.getKey());
+        }
+
         if (schema.getMappings() != null)
             for (StagingMapping mapping : schema.getMappings())
                 outputs.addAll(getOutputs(mapping, context));
+
+        // if valid outputs are defined on the schema level, only return outputs that defined; this removed "temporary" outputs that may be defined during the
+        // staging process
+        if (schema.getOutputMap() != null) {
+            Iterator<String> iter = outputs.iterator();
+            while (iter.hasNext()) {
+                String entry = iter.next();
+                if (!schema.getOutputMap().containsKey(entry))
+                    iter.remove();
+            }
+        }
 
         return outputs;
     }
