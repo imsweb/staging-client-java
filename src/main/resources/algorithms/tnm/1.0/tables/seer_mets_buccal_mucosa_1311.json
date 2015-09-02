@@ -1,0 +1,26 @@
+{
+  "id" : "seer_mets_buccal_mucosa_1311",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Mets Buccal Mucosa",
+  "title" : "SEER Mets",
+  "last_modified" : "2015-08-13T13:24:51.015Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/lymph node(s) involved\nDistant lymph node(s):\nMediastinal\nSupraclavicular (transverse cervical)\nOther distant lymph node(s)\nExtension to:\nBone (cortical):\nMandible##\nMaxilla##\nHard palate\nMaxillary sinus\nSkin of cheek (WITH or WITHOUT ulceration)##**\nSkull##\nSoft palate\nTongue##\nFurther contiguous extension\nMetastasis", "Mets present\n\nDistant lymph node(s):\n    Mediastinal (excluding superior mediastinal nodes)\n    Distant lymph node(s), NOS\n\nDistant metastases except distant lymph node(s)\nCarcinomatosis\n\n40+10\n\nDistant metastasis plus distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1 with no other information on distant metastasis\n\n\n\"Distant\n\nCortical bone of mandible\nCortical bone of maxilla\nMandible, NOS\nMaxilla, NOS\nCartilage, NOS\nCortical bone, NOS (not specified in higher codes)\nBone, NOS (not specified in higher codes)\n\n(550 or 600) + 525\n\nAny structure in code 550 or 600 plus  any structure in code 525\n\nHard palate including cortical palatine bone\nSoft palate\n\nSkin of cheek with or without ulceration\nTrabecular bone:\n    Mandible\n    Maxilla \n    Palatine bone\n\nMaxillary sinus (antrum) Nasal cavity\n\nTongue\nDeep (extrinsic) muscle of tongue:\n    Genioglossus\n    Hyoglossus\n    Palatoglossus\n    Styloglossus\n\n\nSpecified bone \n(Other than maxilla, mandible, palatine, or bones in codes 795 and 805)\n\nMasticator space\nPterygoid plates\n\nFurther contiguous extension including:\n    Internal carotid artery (encased)\n    Base of skull\n    Skull \n\nStated as T4b with no other  information on extension\n\nStated as T4 [NOS] with no other information on extension\"", "VALUE:D" ], [ "99", "Unknown\n\nUnknown; distant metastasis not stated\nDistant metastasis cannot be assessed  \nNot documented in patient record", "", "VALUE:U" ] ]
+}

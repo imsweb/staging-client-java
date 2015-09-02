@@ -1,0 +1,22 @@
+{
+  "id" : "tnm7_stage_ubw",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "TNM 7 Stage Group",
+  "title" : "TNM 7 Stage Group",
+  "last_modified" : "2015-08-13T13:24:18.148Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf2",
+    "name" : "SSF2",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "000,020", "VALUE:1A" ], [ "100", "010,030", "VALUE:1B" ], [ "100", "999", "VALUE:1" ], [ "100-999", "988", "ERROR:" ], [ "110", "000,020", "VALUE:IEA" ], [ "110", "010,030", "VALUE:IEB" ], [ "110", "999", "VALUE:IE" ], [ "120", "000,020", "VALUE:ISA" ], [ "120", "010,030", "VALUE:ISB" ], [ "120", "999", "VALUE:1S" ], [ "200", "000,020", "VALUE:2A" ], [ "200", "010,030", "VALUE:2B" ], [ "200", "999", "VALUE:2" ], [ "210", "000,020", "VALUE:IIEA " ], [ "210", "010,030", "VALUE:IIEB " ], [ "210", "999", "VALUE:IIE" ], [ "220", "000,020", "VALUE:IISA " ], [ "220", "010,030", "VALUE:IISB " ], [ "220", "999", "VALUE:IIS" ], [ "230", "000,020", "VALUE:IIESA" ], [ "230", "010,030", "VALUE:IIESB" ], [ "230", "999", "VALUE:IIES" ], [ "300", "000,020", "VALUE:3A" ], [ "300", "010,030", "VALUE:3B" ], [ "300", "999", "VALUE:3" ], [ "310", "000,020", "VALUE:IIIEA " ], [ "310", "010,030", "VALUE:IIIEB " ], [ "310", "999", "VALUE:IIIE" ], [ "320", "000,020", "VALUE:IIISA " ], [ "320", "010,030", "VALUE:IIISB " ], [ "320", "999", "VALUE:IIIS" ], [ "330", "000,020", "VALUE:IIIESA" ], [ "330", "010,030", "VALUE:IIIESB" ], [ "330", "999", "VALUE:IIIES" ], [ "800", "000,020", "VALUE:4A" ], [ "800", "010,030", "VALUE:4B" ], [ "800", "999", "VALUE:4" ], [ "999", "000,020", "VALUE:99" ], [ "999", "010,030", "VALUE:99" ], [ "999", "999", "VALUE:99" ] ]
+}

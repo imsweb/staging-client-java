@@ -1,0 +1,27 @@
+{
+  "id" : "merkel_cell_vulva_t_49226",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Merkel Cell Vulva T",
+  "title" : "Clinical and Pathological T",
+  "notes" : "**Note 1:**  In the case of multiple simultaneous tumors, code the tumor with the greatest extension.\n\n**Note 2:**  Skin ulceration does not alter the T category.\n\n**Note 3:**  In-transit metastasis is coded in regional lymph nodes.\n\n**Note 4:**  The depth of stromal invasion is defined as the measurement of the tumor from the epithelial-stromal junction of the adjacent most superficial dermal papilla to the deepest point of invasion.\n\n**Note 5:**  Assign T4 for tumors involving fascia or musculature of vulva and perineum.\n\n**Note 6:** Tumor size must be known to assign a value of T1, T2 or T3. You may use a physicianâs statement of the T category if this is the only information in the medical record. If the tumor appears to be in the T1, T2 or T3 categories, but no size or category is specified, assign TX.\n\n**Note 7:**  For the following descriptions, assign the appropriate T category based on the tumor size.\n\n    Submucosa invasion\n    Confined to vulva, NOS\n\n    Localized, NOS",
+  "last_modified" : "2015-08-13T13:26:04.328Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "IS", "Tis", "Carcinoma in situ", "Intraepidermal, intraepithelial, noninvasive\n\nStated as Tis" ], [ "1", "T1", "Tumor 2 cm or less in greatest dimension", "Stated as T1" ], [ "2", "T3", "Tumor more than 2 cm but not more than 5 cm in greatest dimension", "Stated as T2" ], [ "3", "T3", "Tumor more than 5 cm in greatest dimension", "Stated as T3" ], [ "4", "T4", "Tumor invades deep extradermal structures, \ni.e., cartilage, skeletal muscle, fascia, or bone", "Anus\nBladder wall or bladder\nExtension to underlying cartilage, bone\nFascia\nFixed to pubic bone\nMusculature, skeletal muscle\nPerianal skin\nPerineal body\nRectal mucosa\nRectal wall or rectum, NOS excluding mucosa\nUrethra (lower/distal 1/3 urethra or not stated) \nUrethra (upper/proximal 2/3 urethra)                                                                                                              \nVagina\nFurther contiguous extension\n\nStated as T4" ] ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "seer_mets_endocrineothervs2_4169",
+  "algorithm": "tnm",
+  "version": "1.0",
+  "name": "SEER Mets EndocrineOther",
+  "title": "SEER Mets",
+  "last_modified": "2015-08-13T13:25:11.680Z",
+  "definition": [
+    {
+      "key": "mets",
+      "name": "Code",
+      "type": "INPUT"
+    },
+    {
+      "key": "manual",
+      "name": "Summary Stage Manual",
+      "type": "DESCRIPTION"
+    },
+    {
+      "key": "notes",
+      "name": "Registrar Notes",
+      "type": "DESCRIPTION"
+    },
+    {
+      "key": "ss2000_m",
+      "name": "Summary Stage 2000 M",
+      "type": "ENDPOINT"
+    }
+  ],
+  "rows": [
+    [
+      "00",
+      "None\n\nNo distant metastasis",
+      "",
+      "VALUE:NONE"
+    ],
+    [
+      "70",
+      "Distant site(s)/lymph node(s) involved\nDistant lymph node(s)\nFurther contiguous extension\nMetastasis",
+      "Further contiguous extension (delete)\n\nDistant lymph node(s), NOS (change)\nDistant metastasis except distant lymph node(s) \n(change) (see below)\n\nDistant metastasis WITH or WITHOUT distant lymph nodes\n\nCarcinomatosis (keep)\n\n40 + 10 (delete)\n\nDistant metastasis plus distant lymph node(s) (delete)\nDistant metastasis, NOS (keep)",
+      "VALUE:D"
+    ],
+    [
+      "99",
+      "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record",
+      "",
+      "VALUE:U"
+    ]
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "id" : "peritoneum",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Peritoneum",
+  "title" : "Peritoneum (excluding Gastrointestinal Stromal Tumors and Peritoneum Female Genital M-8000-8576, 8590-8671, 8930-8934, 8940-9110 for females)",
+  "notes" : "M-8000-8934,8940-9136,9141-9582,9700-9701 for males\nM-8580-8589,8680-8921,9120-9136,9141-9582,9700-9701 for females\nC48.1 Specified parts of peritoneum (including omentum and mesentery)\nC48.2 Peritoneum, NOS\nC48.8 Overlapping lesion of retroperitoneum and peritoneum\n\n**Note:**  TNM includes these sites with soft tissue sarcomas (C47.0-C48.9)",
+  "schema_selection_table" : "schema_selection_peritoneum",
+  "schema_discriminators" : [ "sex" ],
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "input_version",
+    "name" : "Input Version",
+    "naaccr_item" : 2937,
+    "table" : "input_version_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "systemic_surg_seq",
+    "name" : "RX Summ Systemic/Surgery Sequence",
+    "naaccr_item" : 1639,
+    "table" : "systemic_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "radiation_surg_seq",
+    "name" : "RX Summ Surgery/Radiation Sequence",
+    "naaccr_item" : 1380,
+    "table" : "radiation_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "table" : "nodes_pos_fpa",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "naaccr_item" : 940,
+    "table" : "peritoneum_t_18850",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "naaccr_item" : 950,
+    "table" : "retroperitoneum_n_12750",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "naaccr_item" : 960,
+    "table" : "clin_m_hpc",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "naaccr_item" : 880,
+    "table" : "peritoneum_t_18850",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "naaccr_item" : 890,
+    "table" : "retroperitoneum_n_12750",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_m",
+    "name" : "Pathologic M",
+    "naaccr_item" : 900,
+    "table" : "path_m_hpc",
+    "used_for_staging" : true
+  }, {
+    "key" : "extension",
+    "name" : "Extension",
+    "default" : "999",
+    "table" : "extension_bbr",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes",
+    "name" : "Lymph Nodes",
+    "default" : "999",
+    "table" : "nodes_dbi",
+    "used_for_staging" : true
+  }, {
+    "key" : "mets",
+    "name" : "Mets",
+    "default" : "99",
+    "table" : "seer_mets_peritoneum_retroperitoneum_44461",
+    "used_for_staging" : true
+  }, {
+    "key" : "ssf1",
+    "name" : "Grade for Sarcomas",
+    "naaccr_item" : 2880,
+    "table" : "ssf1_jpm",
+    "used_for_staging" : true
+  }, {
+    "key" : "ssf2",
+    "name" : "Neurovascular Invasion",
+    "naaccr_item" : 2890,
+    "table" : "ssf2_kpk",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf3",
+    "name" : "Bone Invasion",
+    "naaccr_item" : 2900,
+    "table" : "ssf3_lpk",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf4",
+    "name" : "Pathologic M1: Source of Pathologic Metastatic Specimen",
+    "naaccr_item" : 2910,
+    "table" : "ssf4_mpf",
+    "used_for_staging" : false
+  }, {
+    "key" : "sex",
+    "name" : "Sex",
+    "naaccr_item" : 220,
+    "table" : "sex_19563",
+    "used_for_staging" : true
+  } ],
+  "mappings" : [ {
+    "id" : "tnm7_stage",
+    "name" : "TNM 7 Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpz",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "determine_default_t",
+      "inputs" : [ "clin_t", "path_t" ],
+      "outputs" : [ "source_t", "combined_t_in", "tmp_path_t", "ss2017_t", "tmp_clin_t" ]
+    }, {
+      "id" : "determine_default_n",
+      "inputs" : [ "clin_n", "path_n" ],
+      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+    }, {
+      "id" : "determine_default_m",
+      "inputs" : [ "path_m", "clin_m" ],
+      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_clin_m", "combined_m_in", "source_m" ]
+    }, {
+      "id" : "ssf1_jpm",
+      "inputs" : [ "ssf1" ],
+      "outputs" : [ "mapping_of_grade" ]
+    }, {
+      "id" : "tnm7_stage_upm",
+      "input_mapping" : [ {
+        "from" : "mapping_of_grade",
+        "to" : "grade_based_on_ssf#1"
+      }, {
+        "from" : "tmp_clin_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_clin_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_clin_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "clin_stage_group"
+      } ],
+      "inputs" : [ "tmp_clin_n", "tmp_clin_m", "mapping_of_grade", "tmp_clin_t" ],
+      "outputs" : [ "clin_stage_group" ]
+    }, {
+      "id" : "tnm7_stage_upm",
+      "input_mapping" : [ {
+        "from" : "mapping_of_grade",
+        "to" : "grade_based_on_ssf#1"
+      }, {
+        "from" : "tmp_path_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_path_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_path_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "path_stage_group"
+      } ],
+      "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t", "mapping_of_grade" ],
+      "outputs" : [ "path_stage_group" ]
+    }, {
+      "id" : "adjust_path_defaults",
+      "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
+      "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
+    } ]
+  }, {
+    "id" : "combined_stage",
+    "name" : "Combined Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpz",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "combined_t_no_tis",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_t",
+        "to" : "clin_t"
+      }, {
+        "from" : "tmp_path_t",
+        "to" : "path_t"
+      } ],
+      "inputs" : [ "radiation_surg_seq", "combined_t_in", "tmp_path_t", "tmp_clin_t", "systemic_surg_seq" ],
+      "outputs" : [ "source_t", "combined_t" ]
+    }, {
+      "id" : "combined_n",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_n",
+        "to" : "clin_n"
+      }, {
+        "from" : "tmp_path_n",
+        "to" : "path_n"
+      } ],
+      "inputs" : [ "nodes_pos", "tmp_clin_n", "radiation_surg_seq", "tmp_path_n", "combined_n_in", "systemic_surg_seq" ],
+      "outputs" : [ "combined_n", "source_n" ]
+    }, {
+      "id" : "combined_m",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_m",
+        "to" : "clin_m"
+      }, {
+        "from" : "tmp_path_m",
+        "to" : "path_m"
+      } ],
+      "inputs" : [ "tmp_path_m", "tmp_clin_m", "combined_m_in" ],
+      "outputs" : [ "combined_m", "source_m" ]
+    }, {
+      "id" : "tnm7_stage_upm",
+      "input_mapping" : [ {
+        "from" : "mapping_of_grade",
+        "to" : "grade_based_on_ssf#1"
+      }, {
+        "from" : "combined_m",
+        "to" : "m"
+      }, {
+        "from" : "combined_n",
+        "to" : "n"
+      }, {
+        "from" : "combined_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "combined_stage_group"
+      } ],
+      "inputs" : [ "combined_m", "combined_n", "mapping_of_grade", "combined_t" ],
+      "outputs" : [ "combined_stage_group" ]
+    }, {
+      "id" : "combined_to_summ_stage_t_80394",
+      "inputs" : [ "combined_t" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "combined_n_to_summ_stage_n_84054",
+      "inputs" : [ "combined_n" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "cpmbined_m_to_summ_stage_m_60564",
+      "inputs" : [ "combined_m" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  }, {
+    "id" : "summary_stage_2017",
+    "name" : "Summary Stage 2017",
+    "exclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpz",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "extension_bbr",
+      "inputs" : [ "extension" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "nodes_dbi",
+      "inputs" : [ "nodes" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "seer_mets_peritoneum_retroperitoneum_44461",
+      "inputs" : [ "mets" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  } ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "extension_bbr", "determine_default_t", "input_version_validation", "tnm7_stage_upm", "radiation_surg_seq", "schema_selection_peritoneum", "path_m_hpc", "ssf3_lpk", "determine_default_m", "nodes_dbi", "nodes_pos_fpa", "retroperitoneum_n_12750", "clin_m_hpc", "determine_default_n", "peritoneum_t_18850", "ssf1_jpm", "combined_n_to_summ_stage_n_84054", "histology", "sex_19563", "combined_t_no_tis", "ssf2_kpk", "seer_mets_peritoneum_retroperitoneum_44461", "adjust_path_defaults", "systemic_surg_seq", "tnm7_inclusions_tpz", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "year_dx_validation", "ssf4_mpf", "summary_stage_rpa" ],
+  "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
+  "last_modified" : "2015-08-25T18:33:31.922Z"
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_bbm",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin T",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage.\n\n**Note 2:** According to AJCC, metastasis to genital structures for gestational trophoblastic tumors (GTT) is considered T2 and not M1.  Metastasis to genital structures is coded in CS Extension and not in CS Mets at DX.\n\n**Note 3:** For CS Extension codes 100-850, substaging is determined by the values in CS Site-Specific Factor 1,  Prognostic Scoring Index.",
+  "last_modified" : "2015-08-13T13:24:08.819Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "T0", "No evidence of primary tumor", "" ], [ "1", "T1", "Tumor confined to uterus", "Confined to placenta\n- - - - - - - - - -\nLocalized, NOS\n- - - - - - - - - -\nConfined to uterus : cervix, corpus, and NOS\n- - - - - - - - - -\nFIGO Stage IA\n- - - - - - - - - -\nFIGO Stage IB\n- - - - - - - - - -\nFIGO Stage I [NOS]" ], [ "2", "T2", "Tumor extends to other genital structures: vagina, \novary, broad ligament, fallopian tube by metastasis\nor direction extension", "Adjacent connective tissue, NOS\n- - - - - - - - - -\nOther genital structures by direction extension or NOS:\n    Broad ligament\n    Fallopian tube(s)\n    Genital structures, NOS\n    Ovary(ies)\n    Vagina\n- - - - - - - - - -\nOther genital structures by metastasis:\n    Broad ligament\n    Cervix\n    Fallopian tube(s)\n    Genital structures, NOS\n    Ovary(ies)\n    Vagina\n- - - - - - - - - -\nFurther contiguous extension\n- - - - - - - - - -\nFIGO Stage IIA\n- - - - - - - - - -\nFIGO Stage IIB\n- - - - - - - - - -\nFIGO Stage II [NOS]" ], [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in patient record" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "path_t_bdh",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path T",
+  "title" : "Pathological T",
+  "notes" : "**Note 1:** pT for Tis, T1, T2 and T3 can only be assigned if a radical orchiectomy has been performed.\n\n**Note 1:**  Involvement of para-testicular (hilar/mediastinal) soft tissues does not alter the extension code. Code the primary tumor based on other criteria documented in the patient record.",
+  "last_modified" : "2015-08-13T13:23:35.878Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathological T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathological T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown extension\nPrimary tumor cannot be assessed\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "IS", "Tis", "Intratubular germ cell neoplasia (carcinoma in situ)", "In situ, intraepithelial, noninvasive; \nIntratubular germ cell neoplasia" ], [ "1", "T1", "Tumor limited to testis and epidydimis without vascular/lymphatic \ninvasion; tumor may invade tunical albuginea but not tunica vaginalis", "Body of testis\nRete testis\nTunica albuginea\n\nLocalized, NOS\n\nTunica, NOS\n\nStated as T1" ], [ "2", "T2", "Tumor limited to testis and epidydimis with vascular/lymphatic \ninvasion, or tumor extending through tunica albuginea with involvement\nof tunica vaginalis", "Tunica vaginalis involved\nTunica, NOS\nSurface implants (surface of tunica vaginalis)\n\nStated as T2" ], [ "3", "T3", "Tumor invades spermatic cord with or without vascular lymphatic/\ninvasion", "Epididymis WITH or WITHOUT tunica vaginalis or surface implants\nSpermatic cord, ipsilateral\nVas deferens\n\nStated as T3" ], [ "4", "T4", "Tumor invades scrotum with or without vascular lymphatic invasion", "Dartos muscle, ipsilateral\nExtension to scrotum, contralateral\nPenis\nScrotum, ipsilateral\nUlceration of scrotum\n\nFurther contiguous extension\n\nStated as T4" ] ]
+}

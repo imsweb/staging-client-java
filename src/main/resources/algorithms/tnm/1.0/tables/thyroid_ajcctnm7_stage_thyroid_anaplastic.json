@@ -1,0 +1,26 @@
+{
+  "id" : "thyroid_ajcctnm7_stage_thyroid_anaplastic",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "TNM 7 Stage Thyroid Anaplastic",
+  "title" : "TNM 7 Stage-Thyroid: Anaplastic",
+  "last_modified" : "2015-08-13T13:23:33.243Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "4A", "0", "0", "VALUE:4A" ], [ "4A", "1A", "0", "VALUE:4A" ], [ "4A", "1B", "0", "VALUE:4A" ], [ "4A", "1", "0", "VALUE:4A" ], [ "4A", "X", "0", "VALUE:4A" ], [ "4AS", "0", "0", "VALUE:4A" ], [ "4AS", "1A", "0", "VALUE:4A" ], [ "4AS", "1B", "0", "VALUE:4A" ], [ "4AS", "1", "0", "VALUE:4A" ], [ "4AS", "X", "0", "VALUE:4A" ], [ "4AM", "0", "0", "VALUE:4A" ], [ "4AM", "1A", "0", "VALUE:4A" ], [ "4AM", "1B", "0", "VALUE:4A" ], [ "4AM", "1", "0", "VALUE:4A" ], [ "4AM", "X", "0", "VALUE:4A" ], [ "4B", "0", "0", "VALUE:4B" ], [ "4B", "1A", "0", "VALUE:4B" ], [ "4B", "1B", "0", "VALUE:4B" ], [ "4B", "1", "0", "VALUE:4B" ], [ "4B", "X", "0", "VALUE:4B" ], [ "4BS", "0", "0", "VALUE:4B" ], [ "4BS", "1A", "0", "VALUE:4B" ], [ "4BS", "1B", "0", "VALUE:4B" ], [ "4BS", "1", "0", "VALUE:4B" ], [ "4BS", "X", "0", "VALUE:4B" ], [ "4BM", "0", "0", "VALUE:4B" ], [ "4BM", "1A", "0", "VALUE:4B" ], [ "4BM", "1B", "0", "VALUE:4B" ], [ "4BM", "1", "0", "VALUE:4B" ], [ "4BM", "X", "0", "VALUE:4B" ], [ "4", "0", "0", "VALUE:4" ], [ "4", "1A", "0", "VALUE:4" ], [ "4", "1B", "0", "VALUE:4" ], [ "4", "1", "0", "VALUE:4" ], [ "4", "X", "0", "VALUE:4" ], [ "4S", "0", "0", "VALUE:4" ], [ "4S", "1A", "0", "VALUE:4" ], [ "4S", "1B", "0", "VALUE:4" ], [ "4S", "1", "0", "VALUE:4" ], [ "4S", "X", "0", "VALUE:4" ], [ "4M", "0", "0", "VALUE:4" ], [ "4M", "1A", "0", "VALUE:4" ], [ "4M", "1B", "0", "VALUE:4" ], [ "4M", "1", "0", "VALUE:4" ], [ "4M", "X", "0", "VALUE:4" ], [ "4A", "0", "1", "VALUE:4C" ], [ "4A", "1A", "1", "VALUE:4C" ], [ "4A", "1B", "1", "VALUE:4C" ], [ "4A", "1", "1", "VALUE:4C" ], [ "4A", "X", "1", "VALUE:4C" ], [ "4AS", "0", "1", "VALUE:4C" ], [ "4AS", "1A", "1", "VALUE:4C" ], [ "4AS", "1B", "1", "VALUE:4C" ], [ "4AS", "1", "1", "VALUE:4C" ], [ "4AS", "X", "1", "VALUE:4C" ], [ "4AM", "0", "1", "VALUE:4C" ], [ "4AM", "1A", "1", "VALUE:4C" ], [ "4AM", "1B", "1", "VALUE:4C" ], [ "4AM", "1", "1", "VALUE:4C" ], [ "4AM", "X", "1", "VALUE:4C" ], [ "4B", "0", "1", "VALUE:4C" ], [ "4B", "1A", "1", "VALUE:4C" ], [ "4B", "1B", "1", "VALUE:4C" ], [ "4B", "1", "1", "VALUE:4C" ], [ "4B", "X", "1", "VALUE:4C" ], [ "4BS", "0", "1", "VALUE:4C" ], [ "4BS", "1A", "1", "VALUE:4C" ], [ "4BS", "1B", "1", "VALUE:4C" ], [ "4BS", "1", "1", "VALUE:4C" ], [ "4BS", "X", "1", "VALUE:4C" ], [ "4BM", "0", "1", "VALUE:4C" ], [ "4BM", "1A", "1", "VALUE:4C" ], [ "4BM", "1B", "1", "VALUE:4C" ], [ "4BM", "1", "1", "VALUE:4C" ], [ "4BM", "X", "1", "VALUE:4C" ], [ "4", "0", "1", "VALUE:4C" ], [ "4", "1A", "1", "VALUE:4C" ], [ "4", "1B", "1", "VALUE:4C" ], [ "4", "1NOS", "1", "VALUE:4C" ], [ "4", "X", "1", "VALUE:4C" ], [ "4S", "0", "1", "VALUE:4C" ], [ "4S", "1A", "1", "VALUE:4C" ], [ "4S", "1B", "1", "VALUE:4C" ], [ "4S", "1NOS", "1", "VALUE:4C" ], [ "4S", "X", "1", "VALUE:4C" ], [ "4M", "0", "1", "VALUE:4C" ], [ "4M", "1A", "1", "VALUE:4C" ], [ "4M", "1B", "1", "VALUE:4C" ], [ "4M", "1NOS", "1", "VALUE:4C" ], [ "4M", "X", "1", "VALUE:4C" ] ]
+}

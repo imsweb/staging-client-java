@@ -1,0 +1,26 @@
+{
+  "id" : "seer_mets_lip_97497",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Mets Lip",
+  "title" : "SEER Mets",
+  "last_modified" : "2015-08-13T13:23:54.504Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/lymph node(s) involved\nDistant lymph node(s):\nMediastinal\nSupraclavicular (transverse cervical)\nOther distant lymph node(s)\nExtension to:\nCortical bone\nFloor of mouth\nInferior alveolar nerve\nSkin of face/neck\nTongue\nUpper lip/commissure:\nNose**\nFurther contiguous extension\nMetastasis", "Distant\n\nNose\n\nTongue\n\nSkin of face/neck\n\nFloor of mouth\nInferior alveolar nerve\n\n780 + (740, 750, 760, or 775)\n\nUpper gingiva plus any structure in code 740, 750, 760, or 775\n\nBone of maxilla (from lower lip)\nMaxilla, NOS (from lower lip)\nSpecified bone \n(Other than mandible, maxilla from commissure, and bones in codes 790 and 800)\n\nMasticator space\nPterygoid plates\n\nFurther contiguous extension including: \n    Skull base         \n    Internal carotid artery (encased)\n\nStated as T4b with no other information on extension\n\nDistant lymph nodes\nRegional node involvement\n\nSingle positive ipsilateral regional node:\n    Level I:\n        Level IA - Submental        \n        Level IB - Submandibular (submaxillary), sublingual\n    Other groups:        \n        Mandibular\n        Parotid:\n            Infraauricular\n            Intraparotid\n            Periparotid\n            Preauricular\n    Regional lymph node, NOS\n\nSingle positive ipsilateral regional node:\n    Level II - Upper jugular:\n        Jugulodigastric (subdigastric)\n        Upper deep cervical\n    Level III - Middle jugular:\n        Middle deep cervical\n    Level IV - Lower jugular:\n        Jugulo-omohyoid (supraomohyoid)\n        Lower deep cervical\n        Virchow node\n    Cervical, NOS\n    Deep cervical, NOS\n    Internal jugular, NOS\n\nStated as N1 with no other information on regional lymph nodes\n\nStated as N2a with no other information on regional lymph nodes\n\nMultiple positive ipsilateral nodes listed in code 100\n\nMultiple positive ipsilateral nodes, any listed in code 110 \nWITH or WITHOUT nodes listed in code 100\n\nStated as N2b with no other information on regional lymph nodes\n\nPositive ipsilateral node(s) listed in code 100, not stated if single or multiple\n\nPositive ipsilateral node(s) listed in code 110, not stated if single or multiple\n\nPositive bilateral or contralateral nodes listed in code 100\n\nPositive bilateral or contralateral nodes, any listed in code 110\nWITH or WITHOUT nodes listed in code 100\n\nStated as N2c with no other information on regional lymph nodes\n\nPositive node(s) listed in code 100, not stated if ipsilateral, or bilateral, or contralateral,\nAND not stated if single or multiple\n\nPositive node(s) listed in code 110, not stated if ipsilateral, or bilateral, or contralateral,\nAND not stated if single or multiple\n\nStated as N2 [NOS] with no other information on regional lymph nodes\n\nStated as N3 with no other information on regional lymph nodes\n\nLymph nodes, NOS\"\n\n\nMets present\n\nDistant lymph node(s):\n    Mediastinal (excluding superior mediastinal nodes)\n    Distant lymph node(s), NOS\n\nDistant metastases except distant lymph node(s)\nCarcinomatosis\n\n40+10\n\nDistant metastasis plus distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1 with no other information on distant metastasis", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed  \nNot documented in patient record", "", "VALUE:U" ] ]
+}

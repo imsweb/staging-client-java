@@ -1,0 +1,28 @@
+{
+  "id" : "clin_t_bcv",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin T",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  AJCC considers \"in situ carcinoma of salivary gland\" an impossible diagnosis.  Any case so coded will be mapped to an unknown AJCC stage, in situ Summary Stage.\n\n**Note 2:**  Periosteum is a fibrous membrane that wraps the outer surface of bones.  Mucoperiosteum is a compound structure of mucous membrane and periosteum.  Cortical bone is the dense compact outer layer of bone.\n\n**Note 3:**  The assignment of T1 and T2 categories for tumors of major salivary glands without extraparenchymal extension is based on tumor size.  A physician's statement of the T category may be used to code CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields.  However the two fields are coded independently: for example the record may document size but not extension, other than the physician's statement of the T category.  Use codes 305, 310, 410, 725, 810, or 815 as appropriate to code CS Extension based on a statement of T when no other extension information is available.\n\n**Note 4:**  Use code 300 for localized tumor only if no information is available to assign codes 100, 305, or 310.",
+  "footnotes" : "- For CS Extension codes 100-350 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Tumor Size as shown in the Extension Size Table for this schema.\n- For CS Extension codes 100-350 ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Tumor Size as shown in the Extension Size Table for this schema.",
+  "last_modified" : "2015-08-13T13:24:49.925Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "T0", "", "No evidence of primary tumor" ], [ "3", "T3", "", "Macroscopic extraparenchymal extension to:\n    Periglandular soft/connective tissue\n    Another major salivary gland (submaxillary, sublingual)\n    Pharyngeal mucosa\n    Skeletal muscle:\n        Digastric\n        Masseter\n        Pterygoid\n        Sternocleidomastoid\n        Stylohyoid\n- - - - - - - - - -\nMaxillary artery\nFacial artery or vein\n- - - - - - - - - -\nSpinal accessory nerve\n- - - - - - - - - -\n405 + 402\n- - - - - - - - - -\nStated as T3 with no other information on extension" ], [ "4", "T4", "", "Stated as T4 [NOS] with no other information on extension" ], [ "4A", "T4a", "", "External auditory meatus\nSkin overlying gland\n- - - - - - - - - -\nPeriosteum of mandible\n- - - - - - - - - -\nAuricular nerve\nMandible\nMastoid process\n- - - - - - - - - -\n(420, 450, 500) +402\n- - - - - - - - - -\n(420, 450, 500) + 405 \n\nAny structure in code 420, 450, or 500 plus spinal accessory nerve\n- - - - - - - - - -\nFacial (7th) nerve\n- - - - - - - - - -\n700 + 402\n- - - - - - - - - -\n700 + 405\n- - - - - - - - - -\nStated as T4a with no other information on extension" ], [ "4B", "T4b", "", "Carotid artery (encased)\nJugular vein\n- - - - - - - - - -\n740 + 405 \n\nAny structure in code 740 plus spinal accessory nerve\n- - - - - - - - - -\n740 + 700 \n\nAny structure in code 740 plus facial nerve\n- - - - - - - - - -\nBase of skull\nSkull, NOS\n- - - - - - - - - -\nPterygoid plates\n- - - - - - - - - -\nFurther contiguous extension\n- - - - - - - - - -\nStated as T4b with no other information on extension" ], [ "X", "TX", "", "In situ, intraepithelial, noninvasive\n- - - - - - - - - -\nUnknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record" ], [ "[SME REVIEW]", "[SME REVIEW]", "", "Invasive tumor confined to gland/duct of origin\nMultiple foci confined to substance of parotid gland\n- - - - - - - - - -\nLocalized, NOS\n- - - - - - - - - -\nStated as T1 with no other information on extension\n- - - - - - - - - -\nStated as T2 with no other information on extension\n- - - - - - - - - -\nMicroscopic extraparenchymal extension ONLY to periglandular soft/connective tissue" ] ]
+}

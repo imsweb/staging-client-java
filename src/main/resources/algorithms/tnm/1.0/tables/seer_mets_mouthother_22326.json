@@ -1,0 +1,26 @@
+{
+  "id" : "seer_mets_mouthother_22326",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Mets MouthOther",
+  "title" : "SEER Mets",
+  "last_modified" : "2015-08-13T13:24:08.340Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/lymph node(s) involved\nDistant lymph node(s):\nMediastinal\nSupraclavicular (transverse cervical)\nOther distant lymph node(s)\nExtension to:\nBone (cortical):\nMandible##\nMaxilla##\nHard palate\nMaxillary sinus\nSkin of cheek (WITH or WITHOUT ulceration)##**\nSkull##\nSoft palate\nTongue##\nFurther contiguous extension\nMetastasis", "Distant\n\nCortical bone of mandible\nCortical bone of maxilla\nMandible, NOS\nMaxilla, NOS\nMaxillary antrum (sinus)\nCortical bone, NOS\nCartilage, NOS\nBone, NOS excluding base of skull\n\nNasal cavity\nSkin of face/neck\n\nDeep (extrinsic) muscle of tongue:\n    Genioglossus\n    Hyoglossus\n    Palatoglossus\n    Styloglossus \n\nContiguous extension:\n    Base of skull\n    Carotid artery (encased)\n    Masticator space\n    Pterygoid plates \n\nFurther contiguous extension:\n    Brain\n    Dura\n    Lower cranial nerves (IX, X, XI, XII)\n    Mediastinal structures\n    Prevertebral space\n\nStated as T4b with no other information on extension\n\nMets present\n\nDistant lymph node(s):\n    Mediastinal (excluding superior mediastinal nodes)\n    Distant lymph node(s), NOS\nPositive regional node(s):\n    Level V - Posterior triangle group:\n        Level VA - Spinal accessory\n        Level VB - Transverse cervical, supraclavicular (see Note 3)\n    Level VI - Anterior compartment group:\n        Laterotracheal\n        Paralaryngeal\n        Paratracheal - above suprasternal notch\n        Perithyroidal\n        Precricoid (Delphian)\n        Prelaryngeal\n        Pretracheal - above suprasternal notch\n        Recurrent laryngeal\n    Level VII - Superior mediastinal group (for other mediastinal nodes see CS Mets at DX):\n        Esophageal groove\n        Paratracheal - below suprasternal notch\n        Pretracheal - below suprasternal notch\n    Other groups:\n        Facial:\n            Buccinator (buccal)\n            Mandibular\n            Nasolabial\n        Parotid:\n            Infraauricular\n            Intraparotid\n            Periparotid\n            Preauricular\n        Parapharyngeal\n        Retroauricular (mastoid)\n        Retropharyngeal\n        Suboccipital\n\nDistant metastases except distant lymph node(s)\nCarcinomatosis\n\n40+10\n\nDistant metastasis plus distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1 with no other information on distant metastasis", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed  \nNot documented in patient record", "", "VALUE:U" ] ]
+}

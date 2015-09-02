@@ -1,0 +1,298 @@
+{
+  "id" : "bone",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Bone",
+  "title" : "Bone",
+  "description" : "Modified Notes",
+  "notes" : "C40.0  Long bones of upper limb, scapula and associated joints\nC40.1  Short bones of upper limb and associated joints\nC40.2  Long bones of lower limb and associated joints\nC40.3  Short bones of lower limb and associated joints\nC40.8  Overlapping lesion of bones, joints and articular cartilage of limbs\nC40.9  Bone of limb, NOS\nC41.0  Bones of skull and face and associated joints (excludes mandible C41.1)\nC41.1  Mandible\nC41.2  Vertebral column (excludes sacrum and coccyx C41.4)\nC41.3  Rib, sternum, clavicle and associated joints\nC41.4  Pelvic bones, sacrum, coccyx and associated joints\nC41.8  Overlapping lesion of bones, joints and articular cartilage\nC41.9  Bone, NOS\n\n**Note**  Laterality must be coded for C40.0-C40.3, and C41.3-C41.4.  For sternum, sacrum, coccyx, and symphysis pubis, laterality is coded 0.",
+  "schema_selection_table" : "schema_selection_bone",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "input_version",
+    "name" : "Input Version",
+    "naaccr_item" : 2937,
+    "table" : "input_version_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "grade",
+    "name" : "Grade",
+    "naaccr_item" : 440,
+    "table" : "grade",
+    "used_for_staging" : true
+  }, {
+    "key" : "systemic_surg_seq",
+    "name" : "RX Summ Systemic/Surgery Sequence",
+    "naaccr_item" : 1639,
+    "table" : "systemic_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "radiation_surg_seq",
+    "name" : "RX Summ Surgery/Radiation Sequence",
+    "naaccr_item" : 1380,
+    "table" : "radiation_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "table" : "nodes_pos_fpa",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "naaccr_item" : 940,
+    "table" : "clin_t_copy_49711",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "naaccr_item" : 950,
+    "table" : "bone_n_33333",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "naaccr_item" : 960,
+    "table" : "clin_m_hav",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "naaccr_item" : 880,
+    "table" : "clin_t_copy_49711",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "naaccr_item" : 890,
+    "table" : "bone_n_33333",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_m",
+    "name" : "Pathologic M",
+    "naaccr_item" : 900,
+    "table" : "path_m_hav",
+    "used_for_staging" : true
+  }, {
+    "key" : "extension",
+    "name" : "Extension",
+    "default" : "999",
+    "table" : "extension_bbq",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes",
+    "name" : "Lymph Nodes",
+    "default" : "999",
+    "table" : "nodes_dbh",
+    "used_for_staging" : true
+  }, {
+    "key" : "mets",
+    "name" : "Mets",
+    "default" : "99",
+    "table" : "mets_hav",
+    "used_for_staging" : true
+  }, {
+    "key" : "ssf1",
+    "name" : "Tumor Size - Second Largest Dimension",
+    "naaccr_item" : 2880,
+    "table" : "ssf1_jbx",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf2",
+    "name" : "Tumor Size - Third Largest Dimension",
+    "naaccr_item" : 2890,
+    "table" : "ssf2_kbl",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf3",
+    "name" : "Percent Necrosis Post Neoadjuvant Chemotherapy",
+    "naaccr_item" : 2900,
+    "table" : "ssf3_lay",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf4",
+    "name" : "Resected Pulmonary Metastasis",
+    "naaccr_item" : 2910,
+    "table" : "ssf4_mbd",
+    "used_for_staging" : false
+  } ],
+  "mappings" : [ {
+    "id" : "tnm7_stage",
+    "name" : "TNM 7 Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpy",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "determine_default_t",
+      "inputs" : [ "clin_t", "path_t" ],
+      "outputs" : [ "source_t", "combined_t_in", "tmp_path_t", "ss2017_t", "tmp_clin_t" ]
+    }, {
+      "id" : "determine_default_n",
+      "inputs" : [ "clin_n", "path_n" ],
+      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+    }, {
+      "id" : "determine_default_m",
+      "inputs" : [ "path_m", "clin_m" ],
+      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_clin_m", "combined_m_in", "source_m" ]
+    }, {
+      "id" : "bone_histologies_stage",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_clin_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_clin_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "clin_stage_group"
+      } ],
+      "inputs" : [ "hist", "tmp_clin_n", "tmp_clin_m", "grade", "tmp_clin_t" ],
+      "outputs" : [ "stage_table", "clin_stage_group" ]
+    }, {
+      "id" : "bone_histologies_stage",
+      "input_mapping" : [ {
+        "from" : "tmp_path_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_path_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_path_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "path_stage_group"
+      } ],
+      "inputs" : [ "tmp_path_m", "hist", "tmp_path_n", "grade", "tmp_path_t" ],
+      "outputs" : [ "stage_table", "path_stage_group" ]
+    }, {
+      "id" : "adjust_path_defaults",
+      "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
+      "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
+    } ]
+  }, {
+    "id" : "combined_stage",
+    "name" : "Combined Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpy",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "combined_t_no_tis",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_t",
+        "to" : "clin_t"
+      }, {
+        "from" : "tmp_path_t",
+        "to" : "path_t"
+      } ],
+      "inputs" : [ "radiation_surg_seq", "combined_t_in", "tmp_path_t", "tmp_clin_t", "systemic_surg_seq" ],
+      "outputs" : [ "source_t", "combined_t" ]
+    }, {
+      "id" : "combined_n",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_n",
+        "to" : "clin_n"
+      } ],
+      "inputs" : [ "nodes_pos", "tmp_clin_n", "radiation_surg_seq", "combined_n_in", "systemic_surg_seq", "path_n" ],
+      "outputs" : [ "combined_n", "source_n" ]
+    }, {
+      "id" : "combined_m",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_m",
+        "to" : "clin_m"
+      }, {
+        "from" : "tmp_path_m",
+        "to" : "path_m"
+      } ],
+      "inputs" : [ "tmp_path_m", "tmp_clin_m", "combined_m_in" ],
+      "outputs" : [ "combined_m", "source_m" ]
+    }, {
+      "id" : "bone_histologies_stage",
+      "input_mapping" : [ {
+        "from" : "combined_m",
+        "to" : "m"
+      }, {
+        "from" : "combined_n",
+        "to" : "n"
+      }, {
+        "from" : "combined_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "combined_stage_group"
+      } ],
+      "inputs" : [ "hist", "combined_m", "combined_n", "grade", "combined_t" ],
+      "outputs" : [ "stage_table", "combined_stage_group" ]
+    }, {
+      "id" : "combined_t_to_summ_stage_t_3_4e_d_76738",
+      "inputs" : [ "combined_t" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "combined_n_to_summ_stage_n_84054",
+      "inputs" : [ "combined_n" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "cpmbined_m_to_summ_stage_m_60564",
+      "inputs" : [ "combined_m" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  }, {
+    "id" : "summary_stage_2017",
+    "name" : "Summary Stage 2017",
+    "exclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpy",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "extension_bbq",
+      "inputs" : [ "extension" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "nodes_dbh",
+      "inputs" : [ "nodes" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "mets_hav",
+      "inputs" : [ "mets" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  } ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "extension_bbq", "input_version_validation", "radiation_surg_seq", "nodes_dbh", "determine_default_m", "nodes_pos_fpa", "clin_m_hav", "ssf3_lay", "determine_default_n", "bone_ajcctnm6and7_stage_ewing", "combined_n_to_summ_stage_n_84054", "histology", "path_m_hav", "combined_t_no_tis", "clin_t_copy_49711", "mets_hav", "bone_n_33333", "combined_t_to_summ_stage_t_3_4e_d_76738", "bone_ajcctnm7_stage_not_ewing", "bone_histologies_stage", "adjust_path_defaults", "systemic_surg_seq", "ssf2_kbl", "ssf1_jbx", "primary_site", "tnm7_inclusions_tpy", "combined_m", "combined_n", "ssf4_mbd", "grade", "year_dx_validation", "summary_stage_rpa", "schema_selection_bone" ],
+  "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
+  "last_modified" : "2015-08-25T18:33:34.683Z"
+}

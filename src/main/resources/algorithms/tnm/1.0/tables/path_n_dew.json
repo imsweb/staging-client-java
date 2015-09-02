@@ -1,0 +1,27 @@
+{
+  "id" : "path_n_dew",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path N",
+  "title" : "Pathological N",
+  "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 3 or more lymph nodes. If the regional lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0.\n\n**Note 2:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in distant metastasis.\n\n**Note 3:** For right-liver intrahepatic cholangiocarcinoma, the regional lymph nodes include the hilar (common bile duct, hepatic arteries, portal vein, and cystic duct), periduodenal and peripancreatic lymph nodes. \n\n**Note 4:** For left-liver intrahepatic cholangiocarcinoma, regional lymph nodes include hilar and gastrohepatic lymph nodes.\n\n**Note 5:**  Caval nodes are classified as distant nodes and coded in distant metastasis.\n\n**Regional lymph nodes:**\n\n    Hilar:\n        Common bile duct\n        Cystic duct\n        Hepatic, NOS:\n            Hepatic artery\n            Hepatic pedicle\n        Hepatoduodenal ligament\n        Portal vein:\n            Porta hepatis\n            Periportal\n    Inferior phrenic nodes\n  \n    Primary tumor in left liver (segments 2-4) or lobe of liver not stated:\n        Gastrohepatic\n\n    Primary tumor in right liver (segments 5-8) or lobe of liver not stated:\n        Periduodenal\n        Peripancreatic\n\n     Primary tumor involving both lobes of liver:\n         Gastrohepatic\n         Periduodenal\n         Peripancreatic",
+  "last_modified" : "2015-08-13T13:25:10.826Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathological N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathological N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "NX", "Regional lymph node(s) cannot be assessed", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_baa",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin T",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  High-grade squamous intraepithelial lesions (HSIL) and anal intraepithelial neoplasia (AIN) grade II III are not normally collected by cancer registries.  AIN II III or AIN III is reportable to standard-setters (except the Commission on Cancer).  If your registry collects any of these, assign Tis.\n\n**Note 2:** For the following descriptions, assign the appropriate T category based on the tumor size.\n\n    Invasive tumor confined to mucosa, NOS (including intramucosal, NOS)\n\n    Invades: \n       Lamina propria\n       Muscularis mucosae\n       Submucosa (superficial invasion)\n       Muscularis propria (internal sphincter)\n\n    Localized, NOS\n\n    Ischiorectal fat/tissue\n    Perianal skin\n    Perirectal skin\n    Rectal mucosa or submucosa\n    Rectal wall\n    Skeletal muscle(s):\n        Anal sphincter (external)\n        Levator ani\n    Subcutaneous perianal tissue\n\n**Note 3:**  Code incidental finding of malignancy in hemorrhoid according to greatest extension of tumor into wall of anus.  Assign T1 for localized, NOS if extension not specified.\n\n**Note 4:**  Assign T4 for contiguous extension from the site of origin. Discontinuous involvement is assigned in distant metastasis.",
+  "last_modified" : "2015-08-13T13:23:32.216Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "T0", "No evidence of primary tumor", "" ], [ "4", "T4", "Tumor of any size invades adjacent organ(s), \ne.g., vagina, urethra, bladder", "Adjacent organs: \n    Bladder\n    Broad ligament(s)\n    Cervix uteri\n    Corpus uteri\n    Pelvic peritoneum\n    Perineum\n    Prostate\n    Urethra\n    Vagina\n    Vulva\n\nFurther contiguous extension\n\nStated as T4" ], [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "IS", "Tis", "Carcinoma in situ\nBowen disease\nHigh grade dysplasia \nSquamous Intraepithelial Lesion (HSIL)\nAnal Intraepithelial Neoplasia II-III (AIN II-III)", "Noninvasive" ], [ "1", "T1", "Tumor 2 cm or less in greatest dimension", "Stated as T1" ], [ "2", "T2", "Tumor more than 2 cm but not more than 5 cm\nin greatest dimension", "Stated as T2" ], [ "3", "T3", "Tumor more than 5 cm in greatest dimension", "Stated as T3" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "path_n_dbe",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path N",
+  "title" : "Pathological N",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field. Distant nodes are coded in the field CS Mets at DX.\n\n**Note 2:**  Regional nodes include bilateral and contralateral involvement of named nodes.\n\n**Note 3:**  Determine the size of the largest metastasis in a lymph node as documented in the pathology report to assign codes 100-300, not the size of the lymph node. If the size of the metastasis is not documented, determine the size of the largest involved lymph node as documented pathologically or clinically with pathology taking priority. Do not code the size of any node(s) coded in CS Mets at DX.\n\n**Note 4:**  The assignment of the N category is based both on number and size of metastasis.  Use codes as described here if the number and/or size of nodes involved is unknown:\n\nCode 110:  Single node involved, size not stated.\nCode 210:  Multiple nodes involved, size not stated.\nCode 200:  Single or multiple nodes not stated, size stated and greater than 2 cm but less than or equal to 5 cm.\nCode 300:  Single or multiple nodes not stated, size stated and greater than 5 cm.\nCode 505:  Single or multiple nodes not stated, size not stated.",
+  "last_modified" : "2015-08-13T13:23:48.707Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathological N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathological N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "N0", "No regional lymph node metastasis", "No regional lymph node involvement" ], [ "1", "N1", "Metastasis in a single lymph node 2 cm or less in \ngreatest dimension", "SINGLE regional lymph node, less than or equal to 2 cm:\n    Renal Pelvis:\n        Aortic, NOS:\n            Lateral (lumbar)\n            Para-aortic\n            Periaortic\n        Paracaval\n        Renal hilar\n        Retroperitoneal, NOS\n        Regional lymph node, NOS\n    Ureter:\n        Iliac, NOS:\n            Common\n            External\n            Internal (hypogastric), NOS\n                Obturator\n        Lateral aortic (lumbar)\n        Paracaval\n        Pelvic, NOS\n        Periureteral\n        Renal hilar\n        Retroperitoneal, NOS\n        Regional lymph node, NOS\n\nStated as N1 with no other information on regional lymph nodes\n- - - - - - - - - -\nSINGLE regional node listed in code 100, size not stated\n- - - - - - - - - -\nRegional lymph node(s), NOS:\nSize and/or number not stated \n(See Note 4 for exceptions)\n- - - - - - - - - -\nLymph nodes, NOS" ], [ "2", "N2", "Metastasis in a single lymph node more than 2 cm but\nnot more than 5 cm in greatest dimension, or multiple \nlymph nodes, none more than 5 cm in greatest dimension", "SINGLE regional lymph node listed in code 100, greater than 2 cm but less than or equal to 5 cm \n   OR \nMULTIPLE regional nodes listed in code 100, none greater than 5 cm\n\nStated as N2 with no other information on regional lymph nodes\n- - - - - - - - - -\nMULTIPLE regional nodes listed in code 100, size not stated" ], [ "3", "N3", "Metastasis in a lymph node more than 5 cm in greatest\ndimension", "Regional lymph node(s) listed in code 100, at least one greater than 5 cm\n\nStated as N3 with no other information on regional lymph nodes" ], [ "X", "NX", "Regional lymph nodes cannot be assessed", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_bbv",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin T",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  Tumors of the head of the pancreas arise to the right of the superior mesenteric-portal vein confluence.\n\n**Note 2:**  Islets of Langerhans are distributed throughout the pancreas; an islet tumor is coded to the subsite of the pancreas in which the tumor arises if the information is available.\n\n**Note 3:**  For the following descriptions, assign the appropriate T category based on the tumor size.\n\n    Confined to pancreas\n    Localized, NOS",
+  "last_modified" : "2015-08-13T13:23:57.314Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "T0", "No evidence of primary tumor", "" ], [ "3", "T3", "Tumor extends beyond pancreas, but without involvement\nceliac axis or superior mesenteric artery", "Extension to peripancreatic tissue, NOS\nFixation to adjacent structures, NOS\n\nAdjacent stomach\nAmpulla of Vater\nBlood vessel(s) (major):\n    Gastroduodenal artery\n    Hepatic artery\n    Pancreaticoduodenal artery\n    Portal vein\n    Superior mesenteric vein\nBody of stomach\nDuodenum\nExtrahepatic bile duct(s)\nGallbladder\nMesenteric fat\nMesentery\nMesocolon\nOmentum\nPeritoneum\nStomach, NOS\nTransverse colon, including hepatic flexure\n\nStated as T3" ], [ "4", "T4", "Tumor involves celiac axis or superior mesenteric artery", "Tumor is inseparable from the celiac axis\nTumor is inseparable from the superior mesenteric artery\nSuperior mesenteric artery\nSuperior mesenteric artery plus omentum\nSuperior mesenteric artery plus body of stomach\n\nAdrenal (suprarenal) gland\nAorta\nCeliac artery\nColon (other than transverse colon including hepatic flexure)\nIleum\nJejunum\nKidney\nLiver (including porta hepatis)\nRetroperitoneum\nSpleen\nUreter\n\nFurther contiguous extension\n\nStated as T4" ], [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "IS", "Tis", "Carcinoma in situ", "In situ, intraepithelial,  noninvasive \nPancreatic Intraepithelial Neoplasia III (PanInIII) " ], [ "1", "T1", "Tumor limited to pancreas, 2 cm or less in greatest dimension", "Stated as T1" ], [ "2", "T2", "Tumor limited to pancreas, more than 2 cm in greatest dimension", "Stated as T2" ] ]
+}

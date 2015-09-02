@@ -1,0 +1,26 @@
+{
+  "id" : "clin_t_bcd",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin T",
+  "title" : "Clinical T",
+  "last_modified" : "2015-08-13T13:24:30.676Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "88", "NA", "", "Benign or borderline tumor of other parts of the central nervous system (CNS)\n- - - - - - - - - -\nTumor confined to tissue or site of origin\n- - - - - - - - - -\nLocalized, NOS\n- - - - - - - - - -\nMeningeal tumor infiltrates nerve\nNerve tumor infiltrates meninges (dura)\n- - - - - - - - - -\nAdjacent connective/soft tissue\nAdjacent muscle\n- - - - - - - - - -\nBrain for cranial nerve tumors\nMajor blood vessel(s)\nSphenoid and frontal sinuses (skull)\n- - - - - - - - - -\nBrain except for cranial nerve tumors\nBone other than skull\nEye\n- - - - - - - - - -\nFurther contiguous extension\n- - - - - - - - - -\nNo evidence of primary tumor\n- - - - - - - - - -\nUnknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record" ] ]
+}

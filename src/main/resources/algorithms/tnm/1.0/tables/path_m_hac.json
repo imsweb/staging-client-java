@@ -1,0 +1,27 @@
+{
+  "id" : "path_m_hac",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path M",
+  "title" : "Pathological M",
+  "notes" : "**Note:** Distant metastasis includes peritoneal seeding, positive peritoneal cytology, and omental tumor not part of continuous extension.",
+  "last_modified" : "2015-08-27T14:53:58.109Z",
+  "definition" : [ {
+    "key" : "path_m",
+    "name" : "Pathological M",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_m_display",
+    "name" : "Pathological M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "M1", "Distant metastasis", "Distant lymph node(s), including:\n    For all subsites:        \n        Mesenteric, NOS:\n            Inferior mesenteric\n            Superior mesenteric\n            Para-aortic\n        Porta hepatis (portal) (hilar) (in hilus of liver)\n        Retropancreatic\n        Retroperitoneal\n    For all subsites EXCEPT lesser curvature :\n        Hepatoduodenal    \n    Distant lymph node(s), NOS\n\nKrukenberg tumor (metastasis to ovary(ies)\nMalignant (positive) peritoneal cytology\n \nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT except distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1" ] ]
+}

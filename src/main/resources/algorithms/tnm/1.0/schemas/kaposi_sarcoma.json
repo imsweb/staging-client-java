@@ -1,0 +1,111 @@
+{
+  "id" : "kaposi_sarcoma",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Kaposi Sarcoma",
+  "title" : "Kaposi Sarcoma of All Sites",
+  "notes" : "M-9140\n\n**Note 1:** TNM is not defined for this histology. (added)\n\n**Note 2:**  This scheme cannot be compared to either the Historic Stage or the 1977 Summary Stage schemes.",
+  "schema_selection_table" : "schema_selection_kaposi_sarcoma",
+  "initial_context" : [ {
+    "key" : "clin_stage_group",
+    "value" : "88"
+  }, {
+    "key" : "path_stage_group",
+    "value" : "88"
+  }, {
+    "key" : "combined_stage_group",
+    "value" : "88"
+  } ],
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "input_version",
+    "name" : "Input Version",
+    "naaccr_item" : 2937,
+    "table" : "input_version_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "extension",
+    "name" : "Extension",
+    "default" : "999",
+    "table" : "extension_bcj",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes",
+    "name" : "Lymph Nodes",
+    "default" : "999",
+    "table" : "nodes_dby",
+    "used_for_staging" : true
+  }, {
+    "key" : "mets",
+    "name" : "Mets",
+    "default" : "99",
+    "table" : "seer_mets_kaposisarcoma_74567",
+    "used_for_staging" : true
+  }, {
+    "key" : "ssf1",
+    "name" : "Associated with HIV/AIDS",
+    "naaccr_item" : 2880,
+    "table" : "ssf1_jpj",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf2",
+    "name" : "Systemic Symptoms at Diagnosis",
+    "naaccr_item" : 2890,
+    "table" : "ssf2_kbv",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf3",
+    "name" : "Ulceration and Edema",
+    "naaccr_item" : 2900,
+    "table" : "ssf3_laz",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf4",
+    "name" : "CD4 Cell Count",
+    "naaccr_item" : 2910,
+    "table" : "ssf4_mbh",
+    "used_for_staging" : false
+  } ],
+  "mappings" : [ {
+    "id" : "summary_stage_2017",
+    "name" : "Summary Stage 2017",
+    "tables" : [ {
+      "id" : "extension_bcj",
+      "inputs" : [ "extension" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "nodes_dby",
+      "inputs" : [ "nodes" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "seer_mets_kaposisarcoma_74567",
+      "inputs" : [ "mets" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  } ],
+  "involved_tables" : [ "input_version_validation", "seer_mets_kaposisarcoma_74567", "ssf2_kbv", "ssf4_mbh", "ssf3_laz", "primary_site", "ssf1_jpj", "histology", "year_dx_validation", "nodes_dby", "summary_stage_rpa", "schema_selection_kaposi_sarcoma", "extension_bcj" ],
+  "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
+  "last_modified" : "2015-08-25T18:33:49.099Z"
+}

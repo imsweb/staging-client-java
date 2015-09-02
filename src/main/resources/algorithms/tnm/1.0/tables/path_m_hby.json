@@ -1,0 +1,27 @@
+{
+  "id" : "path_m_hby",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path M",
+  "title" : "Pathological M",
+  "notes" : "**Note:**  Involvement of peripheral and central lymph nodes, distant nodes for ocular adnexal lymphomas, is coded in lymph nodes (N) not distant metastasis.",
+  "last_modified" : "2015-08-13T13:23:32.682Z",
+  "definition" : [ {
+    "key" : "path_m",
+    "name" : "Pathological M",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_m_display",
+    "name" : "Pathological M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "cM0", "", "No involvement of other extranodal sites\n\nUnknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "1", "M1", "", "Distant metastasis NOS\n\nStated as M1 [NOS]" ], [ "1A", "M1a", "", "Spleen\n\nNon-contiguous involvement of other extranodal sites \nexcluding bone marrow, including but not limited to:\n    Parotid gland\n    Submandibular gland\n    Lung\n    Liver\n    Kidney\n    Breast\n\nStated as M1a" ], [ "1B", "M1b", "", "Bone marrow\n\nStated as M1b" ], [ "1C", "M1c", "", "Bone marrow plus other extranodal site\n\nStated as M1c" ] ]
+}

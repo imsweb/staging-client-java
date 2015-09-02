@@ -1,0 +1,346 @@
+{
+  "id" : "melanoma_larynx_subglottic",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Melanoma Larynx Subglottic",
+  "title" : "Malignant Melanoma of Subglottic Larynx",
+  "notes" : "M-8720-8790\nC32.2  Subglottis",
+  "schema_selection_table" : "schema_selection_melanoma_larynx_subglottic",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "input_version",
+    "name" : "Input Version",
+    "naaccr_item" : 2937,
+    "table" : "input_version_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "systemic_surg_seq",
+    "name" : "RX Summ Systemic/Surgery Sequence",
+    "naaccr_item" : 1639,
+    "table" : "systemic_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "radiation_surg_seq",
+    "name" : "RX Summ Surgery/Radiation Sequence",
+    "naaccr_item" : 1380,
+    "table" : "radiation_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "table" : "nodes_pos_fpa",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "naaccr_item" : 940,
+    "table" : "melanoma_larynx_subglottic_81170",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "naaccr_item" : 950,
+    "table" : "clinical_n_head_neck_melanoma_66648",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "naaccr_item" : 960,
+    "table" : "clin_m_hpd",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "naaccr_item" : 880,
+    "table" : "melanoma_larynx_subglottic_81170",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "naaccr_item" : 890,
+    "table" : "pathologic_n_head_neck_melanoma_copy_75380",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_m",
+    "name" : "Pathologic M",
+    "naaccr_item" : 900,
+    "table" : "path_m_hpd",
+    "used_for_staging" : true
+  }, {
+    "key" : "extension",
+    "name" : "Extension",
+    "default" : "999",
+    "table" : "extension_bdx",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes",
+    "name" : "Lymph Nodes",
+    "default" : "999",
+    "table" : "nodes_dds",
+    "used_for_staging" : true
+  }, {
+    "key" : "mets",
+    "name" : "Mets",
+    "default" : "99",
+    "table" : "seer_mets_melanoma_subglotticlarynx_4751",
+    "used_for_staging" : true
+  }, {
+    "key" : "ssf1",
+    "name" : "Size of Lymph Nodes",
+    "naaccr_item" : 2880,
+    "table" : "ssf1_jpu",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf3",
+    "name" : "Levels I-III, Lymph Nodes for Head and Neck",
+    "naaccr_item" : 2900,
+    "table" : "ssf3_lpa",
+    "used_for_staging" : true,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf4",
+    "name" : "Levels IV-V and Retropharyngeal Lymph Nodes for Head and Neck",
+    "naaccr_item" : 2910,
+    "table" : "ssf4_mpa",
+    "used_for_staging" : true,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf5",
+    "name" : "Levels VI-VII and Facial Lymph Nodes for Head and Neck",
+    "naaccr_item" : 2920,
+    "table" : "ssf5_npa",
+    "used_for_staging" : true,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf6",
+    "name" : "Parapharyngeal, Parotid, and Suboccipital/Retroauricular Lymph Nodes for Head and Neck",
+    "naaccr_item" : 2930,
+    "table" : "ssf6_opa",
+    "used_for_staging" : true,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf7",
+    "name" : "Upper and Lower Cervical Node Levels",
+    "naaccr_item" : 2861,
+    "table" : "ssf7_spa",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf8",
+    "name" : "Extracapsular Extension Clinically, Lymph Nodes for Head and Neck",
+    "naaccr_item" : 2862,
+    "table" : "ssf8_spb",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf9",
+    "name" : "Extracapsular Extension Pathologically, Lymph Nodes for Head and Neck",
+    "naaccr_item" : 2863,
+    "table" : "ssf9_spc",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf10",
+    "name" : "Human Papilloma Virus (HPV) Status",
+    "naaccr_item" : 2864,
+    "table" : "ssf10_spd",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf11",
+    "name" : "Measured Thickness (Depth)",
+    "naaccr_item" : 2865,
+    "table" : "ssf11_spe",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  } ],
+  "mappings" : [ {
+    "id" : "tnm7_stage",
+    "name" : "TNM 7 Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpa",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "determine_default_t",
+      "inputs" : [ "clin_t", "path_t" ],
+      "outputs" : [ "source_t", "combined_t_in", "tmp_path_t", "ss2017_t", "tmp_clin_t" ]
+    }, {
+      "id" : "determine_default_n",
+      "inputs" : [ "clin_n", "path_n" ],
+      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+    }, {
+      "id" : "determine_default_m",
+      "inputs" : [ "path_m", "clin_m" ],
+      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_clin_m", "combined_m_in", "source_m" ]
+    }, {
+      "id" : "tnm7_stage_upu",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_clin_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_clin_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "clin_stage_group"
+      } ],
+      "inputs" : [ "tmp_clin_n", "tmp_clin_m", "tmp_clin_t" ],
+      "outputs" : [ "clin_stage_group" ]
+    }, {
+      "id" : "tnm7_stage_upu",
+      "input_mapping" : [ {
+        "from" : "tmp_path_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_path_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_path_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "path_stage_group"
+      } ],
+      "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t" ],
+      "outputs" : [ "path_stage_group" ]
+    }, {
+      "id" : "adjust_path_defaults",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_n",
+        "to" : "clin_n"
+      }, {
+        "from" : "tmp_clin_m",
+        "to" : "clin_m"
+      }, {
+        "from" : "tmp_clin_t",
+        "to" : "clin_t"
+      } ],
+      "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
+      "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
+    } ]
+  }, {
+    "id" : "combined_stage",
+    "name" : "Combined Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpa",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "combined_t_no_tis",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_t",
+        "to" : "clin_t"
+      }, {
+        "from" : "tmp_path_t",
+        "to" : "path_t"
+      } ],
+      "inputs" : [ "radiation_surg_seq", "combined_t_in", "tmp_path_t", "tmp_clin_t", "systemic_surg_seq" ],
+      "outputs" : [ "source_t", "combined_t" ]
+    }, {
+      "id" : "combined_n",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_n",
+        "to" : "clin_n"
+      }, {
+        "from" : "tmp_path_n",
+        "to" : "path_n"
+      } ],
+      "inputs" : [ "nodes_pos", "tmp_clin_n", "radiation_surg_seq", "tmp_path_n", "combined_n_in", "systemic_surg_seq" ],
+      "outputs" : [ "combined_n", "source_n" ]
+    }, {
+      "id" : "combined_m",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_m",
+        "to" : "clin_m"
+      }, {
+        "from" : "tmp_path_m",
+        "to" : "path_m"
+      } ],
+      "inputs" : [ "tmp_path_m", "tmp_clin_m", "combined_m_in" ],
+      "outputs" : [ "combined_m", "source_m" ]
+    }, {
+      "id" : "tnm7_stage_upu",
+      "input_mapping" : [ {
+        "from" : "combined_m",
+        "to" : "m"
+      }, {
+        "from" : "combined_n",
+        "to" : "n"
+      }, {
+        "from" : "combined_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "combined_stage_group"
+      } ],
+      "inputs" : [ "combined_m", "combined_n", "combined_t" ],
+      "outputs" : [ "combined_stage_group" ]
+    }, {
+      "id" : "combined_t_to_summ_stage_t_4b_4e_d_9381",
+      "inputs" : [ "combined_t" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "combined_n_to_summ_stage_n_headneck_larynxsub_79302",
+      "inputs" : [ "combined_n", "ssf6", "ssf4", "ssf5", "ssf3" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "cpmbined_m_to_summ_stage_m_60564",
+      "inputs" : [ "combined_m" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  }, {
+    "id" : "summary_stage_2017",
+    "name" : "Summary Stage 2017",
+    "exclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpa",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "extension_bdx",
+      "inputs" : [ "extension" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "nodes_dds",
+      "inputs" : [ "nodes" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "seer_mets_subglotticlarynx_42617",
+      "inputs" : [ "mets" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  } ],
+  "involved_tables" : [ "ssf7_spa", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf10_spd", "extension_bdx", "radiation_surg_seq", "melanoma_larynx_subglottic_81170", "determine_default_m", "tnm7_stage_upu", "nodes_pos_fpa", "seer_mets_melanoma_subglotticlarynx_4751", "clin_m_hpd", "combined_n_to_summ_stage_n_headneck_larynxsub_79302", "determine_default_n", "ssf11_spe", "seer_mets_subglotticlarynx_42617", "schema_selection_melanoma_larynx_subglottic", "histology", "ssf6_opa", "ssf3_lpa", "path_m_hpd", "tnm7_inclusions_tpa", "combined_t_no_tis", "ssf1_jpu", "combined_t_to_summ_stage_t_4b_4e_d_9381", "pathologic_n_head_neck_melanoma_copy_75380", "ssf4_mpa", "ssf9_spc", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "nodes_dds", "combined_m", "clinical_n_head_neck_melanoma_66648", "combined_n", "ssf5_npa", "year_dx_validation", "summary_stage_rpa", "ssf8_spb" ],
+  "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
+  "last_modified" : "2015-08-25T18:33:36.013Z"
+}

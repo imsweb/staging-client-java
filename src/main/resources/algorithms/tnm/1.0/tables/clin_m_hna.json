@@ -1,0 +1,26 @@
+{
+  "id" : "clin_m_hna",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin M",
+  "title" : "Clinical M",
+  "last_modified" : "2015-08-13T13:24:19.925Z",
+  "definition" : [ {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_m_display",
+    "name" : "Clinical M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "88", "NA", "", "Not applicable: Information not collected for this schema" ] ]
+}

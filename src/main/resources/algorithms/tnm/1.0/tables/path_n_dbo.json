@@ -1,0 +1,27 @@
+{
+  "id" : "path_n_dbo",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path N Ampulla Vater",
+  "title" : "Pathological N",
+  "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 10 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily is not met, classify as pN0.\n\n**Note 2:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in distant metastasis.\n\n**Note 3:**  Splenic lymph nodes and those located at the tail of the pancreas are not considered regional and should be coded in distant metastasis.\n\n**Regional lymph nodes:**\n\n    Anterior to the ampulla of Vater\n    Inferior to the ampulla of Vater\n    Posterior to the ampulla of Vater\n    Superior to the ampulla of Vater\n    \n    Celiac\n    Hepatic \n    Hepatic artery\n    Infrapyloric (subpyloric)\n    Lateral aortic (lumbar\n    Node of the foramen of Winslow (epiploic) (omental)\n    Pancreaticoduodenal\n    Peripancreatic (EXCEPT nodes at tail of pancreas)\n    Periportal (portal vein)\n    Proximal mesenteric\n    Retroperitoneal\n    Superior mesenteric",
+  "last_modified" : "2015-08-13T13:24:46.682Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathological N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathological N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "NX", "Regional lymph nodes cannot be assessed", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ] ]
+}

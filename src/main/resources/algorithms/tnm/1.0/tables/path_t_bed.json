@@ -1,0 +1,27 @@
+{
+  "id" : "path_t_bed",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path T",
+  "title" : "Pathological T",
+  "notes" : "**Note 1:**  TNM does not include a Tis or TX category for melanoma of mucosa of head and neck sites. Tis and TX are mapped to NA and TNM stage group is derived as NA.\n\n**Note 2:**  TNM does not include a T1 or T2 category for mucosal melanoma of head and neck sites.\n\n**Note 3:**  Assign T3 for extension involving the mucosa only of adjacent sites.  Assign T4a or T4b for extension involving the deeper tissues of the primary or adjacent sites.\n\n**Note 4:**  Assign T3 for localized tumor when no other information is available.hysician's assignment of T category is the only information available about the extent of the tumor.",
+  "last_modified" : "2015-08-13T13:24:41.392Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathological T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathological T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "88", "NA", "Not applicable", "In situ, intraepithelial, noninvasive\n\nUnknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record" ], [ "3", "T3", "Tumor limited to the epithelium and/or submucosa \n(mucosal disease)", "Tumor confined to mucosa of anterior surface of epiglottis with normal vocal cord mobility\nTumor confined to mucosa of adjacent subsite(s) of oropharynx\n\nTumor confined to mucosa of vallecula WITHOUT fixation of larynx\n\nMucosa of adjacent subsite(s) of supraglottis (including posterior surface of epiglottis) \nWITHOUT fixation of larynx\n\nMucosa of larynx, glottis or NOS WITHOUT fixation of larynx\n\nMucosa of pyriform sinus, medial wall or NOS\nWITHOUT fixation of larynx\n\nMucosa of base of tongue \nWITHOUT fixation of larynx\n\nBuccal mucosa\nMucosa of floor of mouth\nMucosa of gum (gingival)\n\nLocalized, NOS\n\nStated as T3" ], [ "4", "T4", "UICC does not define T4", "Stated as T4 [NOS]" ], [ "4A", "T4a", "Tumor invades deep soft tissue, cartilage, bone\nor overlying skin", "Involvement of deep tissue or musculature \nSoft tissue, NOS\n\nAnterior 2/3 of tongue\nBone\nBone excluding base of skull\nCartilage, NOS\nEsophagus\nHard palate\nHypopharynx, NOS\nMinor thyroid cartilage erosion (inner cortex)\nNasopharynx, NOS\nOverlying skin\nParaglottic space\nParotid gland\nPre-epiglottic tissues\nPostcricoid area\nPterygoid muscle\nPyriform sinus except medial wall \nSoft palate, inferior surface including uvula, or soft palate, NOS\nSoft palate, superior (nasopharyngeal) surface\nSoft tissues of neck\nStrap muscles:\n    Omohyoid \n    Sternohyoid\n    Sternothyroid\n    Thyrohyoid\nThyroid\nThyroid cartilage, NOS\nTrachea\n\nExtrinsic muscles of tongue:\n    Genioglossus\n    Geniohyoid\n    Hyoglossus\n    Mylohyoid\n    Palatoglossus\n    Styloglossus\n\nStated as T4a" ], [ "4B", "T4b", "Tumor invades any of the following:\nBrain\nDura\nSkull base\nLower cranial nerves (IX, X, XI, XII)\nMasticator space\nCarotid artery\nPrevertebral space\nMediastinal structures", "Prevertebral fascia or muscle\nPrevertebral space\n\nFurther contiguous extension \n\nStated as T4b" ] ]
+}

@@ -1,0 +1,13 @@
+{
+  "id" : "seer_mets_urinary_other_44060",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Mets Urinary Other",
+  "last_modified" : "2015-08-13T13:23:16.828Z",
+  "definition" : [ {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "new table" ] ]
+}

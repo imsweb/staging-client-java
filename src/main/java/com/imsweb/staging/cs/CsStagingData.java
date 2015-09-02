@@ -33,7 +33,6 @@ public class CsStagingData extends StagingData {
         REGIONAL_NODES_EXAMINED("nodes_exam"),
         METS_AT_DX("mets"),
         METS_EVAL("mets_eval"),
-        SSF_PREFIX("ssf"),
         SSF1("ssf1"),
         SSF2("ssf2"),
         SSF3("ssf3"),

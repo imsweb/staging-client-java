@@ -1,0 +1,27 @@
+{
+  "id" : "path_t_baj",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path T",
+  "title" : "Pathological T",
+  "notes" : "**Note 1:** The uncommon superficial spreading tumor of any size with its invasive component limited to the bronchial wall, which may extend proximal to the main bronchus, is also classified as T1a.\n\n**Note 2:** T2 tumors with these features are classified as T2a is 5 cm or less, or if size cannot be determined and T2b if greater than 5 cm but not larger than 7 cm.\n\n**Note 3:**  Distance from Carina:  Assume tumor is greater than or equal to 2 centimeters (cm) from carina if lobectomy, segmental resection, or wedge resection is done.\n\n**Note 4:** Specific information about visceral pleura invasion is captured in T2 and Site-Specific Factor 2, Visceral Pleural Invasion (VPI)/Elastic Layer.  Elastic layer involvement has prognostic significance for lung cancer.\n\n**Note 5:**  Bronchopneumonia:  Bronchopneumonia is not the same thing as obstructive pneumonitis and should not be coded as such.  Bronchopneumonia is an acute inflammation of the walls of the bronchioles, usually a result of spread of infection from the upper to the lower respiratory tract.  Obstructive pneumonitis is a combination of atelectasis, bronchiectasis with mucous plugging, and parenchymal inflammation that develops distal to an obstructing endobronchial lesion.\n\n**Note 6:**  The absence of presence of separate ipsilateral tumor nodes are assigned either T3 (same lobe) or T4 (different lobe). Separate tumor nodules in the contralateral lung are in distant metastasis. The presence or absence of separate tumor nodules are also coded in Site-Specific Factor 1. \n\n**Note 7:**  Pulmonary Artery/Vein:  An involved pulmonary artery/vein in the mediastinum is assigned T4 (involvement of major blood vessel).  However, if the involvement of the artery/vein appears to be only within lung tissue and not in the mediastinum is not assigned T4.\n\n**Note 8:**  Vocal cord paralysis (resulting from involvement of recurrent branch of the vagus nerve), superior vena cava (SVC) obstruction, or compression of the trachea or the esophagus may be related to direct extension of the primary tumor or to lymph node involvement.  The treatment options and prognosis associated with these manifestations of disease extent fall within the T4-Stage IIIB category. However, if the primary tumor is peripheral and clearly unrelated to vocal cord paralysis, SVC obstruction, or compression of the trachea or the esophagus, code these manifestations as mediastinal lymph node involvement, N2 in regional lymph nodes, unless there is a statement of involvement by direct extension from the primary tumor.\n\n**Note 9:**  Direct extension to or other involvement of structures considered M1 in TNM staging are coded in the data item distant metastasis. These include:  sternum; skeletal muscle; skin of chest; contralateral lung or mainstem bronchus.\n\n**Note 10:**  Opposite Lung:  If no mention is made of the opposite lung on a chest x-ray, assume it is not involved. \n\n**Note 11:**  Pleural effusion and pericardial effusion are coded in distant metastasis (M).",
+  "last_modified" : "2015-08-13T13:25:25.361Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathological T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathological T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "4", "T4", "T4", "Tumor of any size that invades any of the following:\nMediastinum\nHeart\nGreat vessels\nTrachea\nRecurrent laryngeal nerve\nEsophagus\nVertebral body\nCarina\nSeparate tumor nodule(s) in a different ipsilateral lobe\nto that of the primary" ], [ "0", "T0", "T0", "No evidence of primary tumor" ], [ "IS", "Tis", "Tis", "Carcinoma in situ" ], [ "1", "T1", "T1", "Tumor 3 cm or less in greatest dimension, surrounded by lung or visceral pleura, \nwithout bronchoscopic evidence of invasion  more proximal than the lobar bronchus (i.e., not in the main bronchus)." ], [ "1a", "T1a", "T1a", "Tumor 2 cm or less in greatest dimension" ], [ "1b", "T1b", "T1b", "Tumor more than 2 cm but not more than 3 cm in greatest dimension" ], [ "2", "T2", "T2", "Tumor more than 3 cm but not more than 7 cm; OR\nTumor with any of the following features\n*Involves main bronchus, 2 cm or more distal to the carina\n* Invades visceral pleura\n* Associated with atelectasis or obstructive pneumonitis that extends\nto the hilar region but does not involve the entire lung" ], [ "2a", "T2a", "T2a", "Tumor more than 3 cm but not more than 5 cm in greatest dimension" ], [ "2b", "T2b", "T2b", "Tumor more than 5 cm but not more than 7 cm in greatest dimension" ], [ "3", "T3", "T3", "Tumor more than 7 cm OR\nOne that directly invades any of the following: \nChest wall (including superior sulcus tumors)\nDiaphragm\nPhrenic nerve\nMediastinal pleura\nParietal pericardium\nOR\nTumor in the main bronchus less than 2 cm distal to the carina but without  involvement of the carina OR\nAssociated atelectasis or obstructive pneumonitis of the entire lung OR\nSeparate tumor nodule(s) in the same lobe as the primary" ], [ "X", "TX", "TX", "Primary tumor cannot be assessed OR\nTumor proven by the presence of malignant cells in spuutum or bronchial washings but not visualized \nby imaging or bronchoscopy" ] ]
+}

@@ -1,0 +1,28 @@
+{
+  "id" : "penis_t_51275",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Penis T",
+  "title" : "Clinical and Pathologic T",
+  "notes" : "**Note 1:**  Over 90% of penile cancers are squamous cell carcinomas arising in the skin.  Other cancers arising in the skin include adenocarcinomas (5%) arising in sweat glands, melanomas (2%, included in the Melanoma schema), and basal cell carcinoma (2%).  About 1% of penile cancers are sarcomas, arising in subcutaneous connective tissues.\n\n**Note 2:**  Verrucous carcinoma (M-8051) is a locally aggressive, exophytic, low grade carcinoma with minimal metastatic potential. \n\n**Note 3:** If verrucous carcinoma is described as noninvasive or as having a broad pushing border or penetration, assign Ta.  If there is destructive invasion of verrucous carcinoma into structures in T1 or greater, assign the appropriate higher code.\n\n**Note 4:**  Information about involvement of the corpus spongiosum or corpus cavernosum is collected in this field for anatomic staging.  This information is also collected in Site-Specific Factor 10 because involvement of these structures may have an independent effect on prognosis.",
+  "footnotes" : "\\*T1 is not defined in AJCC 7th edition",
+  "last_modified" : "2015-08-24T15:29:51.291Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown extension\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "A", "Ta", "Non-invasive verrucous carcinoma", "Noninvasive verrucous carcinoma OR verrucous carcinoma, NOS\n\nStated as Ta" ], [ "IS", "Tis", "Carcinoma in situ", "In situ, intraepidermal, intraepithelial, noninvasive\nBowen disease\nErythroplasia of Queyrat\n\nStated as Tis" ], [ "1", "T1", "Tumor invades subepithelial connective tissue*", "Note: T1 has subcategories of T1a and T1b. Assign T1 only when there is no information available to assign one of the subcategories\n\nInvasive tumor limited to subepithelial connective tissue, but not involving corpus spongiosum or cavernosum \n\nIf primary is skin: \n    Invasive tumor limited to skin of penis, prepuce (foreskin) and/or glans\n\nSatellite nodules on prepuce or glans\n\nConfined to penis, NOS\nLocalized, NOS\n\nUNKNOWN lymphovascular invasion \n\nStated as T1 [NOS]" ], [ "1a", "T1a", "Tumor invades subepithelial connective tissue without lymphovascular invasion and is not poorly differentiated or undifferentiated", "T1 lesion WITHOUT lymphovascular invasion\n\nStated as T1a" ], [ "1b", "T1b", "Tumor invades subepithelial connective tissue with lymphovascular invasion and is not poorly differentiated or undifferentiated", "T1 lesion WITH lymphovascular invasion\n\nStated as T1b" ], [ "2", "T2", "Tumor invades corpus spongiosum or cavernosum", "Tunica albuginea of corpus spongiosum\n\nTumors in body of penis plus satellite nodules on prepuce or glans\n\nStated as T2" ], [ "3", "T3", "Tumor invades urethra", "Stated as T3" ], [ "4", "T4", "Tumor invades other adjacent structures", "Prostate\n\nAdjacent structures:\nMuscle, NOS:\n    Bulbospongiosus\n    Ischiocavernosus\n    Superficial transverse perineal\nSkin:\n    Abdominal\n    Perineum\n    Pubic\n    Scrotal\n\nFurther contiguous extension\n        Testis\n\nStated as T4" ] ]
+}

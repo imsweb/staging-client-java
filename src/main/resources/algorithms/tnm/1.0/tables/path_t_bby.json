@@ -1,0 +1,27 @@
+{
+  "id" : "path_t_bby",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path T",
+  "title" : "Pathological T",
+  "notes" : "**Note 1:**  TNM does not include an in situ category for thyroid gland tumors. Assign TX and behavior code /2 for in situ cases.\n\n**Note 2:**  TNM considers all anaplastic carcinomas to be T4.\n\n**Note 3:**  For the following descriptions, assign the appropriate T category based on the tumor size.\n\n    Single invasive tumor confined to thyroid\n    Extension into thyroid capsule, but not beyond\n    Multiple foci confined to thyroid\n\n    Minimal extrathyroid extension including:\n    Strap muscle(s):\n        Omohyoid\n        Sternohyoid\n        Sternothyroid\n        Thyrohyoid\n\n     Cricoid cartilage\n     Esophagus\n     Larynx\n     Nerves:\n        Recurrent laryngeal\n        Vagus\n    Parathyroid\n    Pericapsular soft tissue/connective tissue\n    Sternocleidomastoid muscle\n    Trachea\n\n    Localized, NOS\n\n**Note 4:**  Multifocal tumors of all histological types should be designated (m) (the largest determines the classification), e.g, T2(m). Record the information regarding the number of tumors in Site-Specific factor 1.",
+  "last_modified" : "2015-08-13T13:24:27.883Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathological T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathological T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "T0", "No evidence of primary tumor", "" ], [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "1", "T1", "Tumor 2 cm or less in greatest dimension, limited\nto the thyroid", "Stated as T1 [NOS]" ], [ "1a", "T1a", "Tumor 1 cm or less in greatest dimension, limited\nto the thyroid", "Stated as T1a" ], [ "1b", "T1b", "Tumor more than 1 cm but not more than 2 cm in \ngreatest dimension, limited to the thyroid", "Stated as T1b" ], [ "2", "T2", "Tumor more than 2 cm but not more than 4 cm in \ngreatest dimension, limited to the thyroid", "Stated as T2" ], [ "3", "T3", "Tumor more than 4 cm in greatest dimension, limited\nto the thyroid or any tumor with minimal extrathyroid\nextension (e.g., extension to sternothyroid muscle or \nperithyroid soft tissues)", "Stated as T3" ], [ "4", "T4", "(No definition in UICC)", "Stated as T4 [NOS]" ], [ "4a", "T4a", "Tumor extends beyond the thyroid capsule and invades\nany of the following: subcutaneous soft tissues, larynx, \ntrachea, esophagus, recurrent laryngeal nerve\n\n(anaplastic carcinoma only) Tumor (any size) limited to \nthe thyroid", "Stated as T4a" ], [ "4b", "T4b", "Tumor invades prevertebral fascia, mediastinal vessels, \nor encases carotid artery\n\n(anaplastic carcinoma only) Tumor (any size) extends b\nbeyolnd the thyroid capsules", "Bone\nBlood vessel(s) (major):\n    Carotid artery (encased)\n    Jugular vein\n    Thyroid artery or vein\nSkeletal muscle, other than strap or sternocleidomastoid muscle\nThyroid cartilage\nTumor described as \"\"FIXED to adjacent tissues\"\"\n\nFurther contiguous extension including:\n    Mediastinal tissues\n    Prevertebral fascia\n\nStated as T4b" ] ]
+}

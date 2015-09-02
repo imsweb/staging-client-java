@@ -1,0 +1,27 @@
+{
+  "id" : "path_t_bel",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path T",
+  "title" : "Pathological T",
+  "notes" : "**Note 1:**  TNM does not include a Tis or TX category for melanoma of mucosa of head and neck sites. Tis and TX are mapped to NA and TNM stage group is derived as NA.\n\n**Note 2:**  TNM does not include a T1 or T2 category for mucosal melanoma of head and neck sites.\n\n**Note 3:**  Assign T3 for extension involving the mucosa only of adjacent sites.  Assign T4a or T4b for extension involving the deeper tissues of the primary or adjacent sites.\n\n**Note 4:**  Assign T3 for localized tumor when no other information is available.",
+  "last_modified" : "2015-08-13T13:25:01.675Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathological T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathological T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "88", "NA", "Not applicable", "In situ, intraepithelial, noninvasive\n\nUnknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record" ], [ "3", "T3", "Tumor limited to the epithelium and/or submucosa \n(mucosal disease)", "Tumor confined to mucosa of soft palaate or uvula on one side or crossing midline\n\nExtension involving mucosa only:\n    Buccal mucosa (inner cheek)\n    Hard palate\n    Lateral pharyngeal wall\n    Nasopharynx\n    Tonsillar pillars and fossae\n    Tonsils\n\nLocalized, NOS\n\nStated as T3" ], [ "4", "T4", "UICC does not define T4", "Stated as T4 [NOS]" ], [ "4A", "T4a", "Tumor invades deep soft tissue, cartilage, bone\nor overlying skin", "Involvement of deep soft tissue or musculature of soft palate or uvula\nInvolvement of deep soft tissue or musculature of soft palate or uvula plus mucosal involvement of any structure in T3 \nInvolvement of deep soft tissue or musculature of nasopharynx\n\nBone, NOS\nBone excluding pterygoid plates, base of skull\nCartilage, NOS\nHypopharynx\nLarynx\nMandible\nMaxilla\nMaxillary sinus (antrum)\nNasal cavity\nPalatine bone (bone of hard palate)\nPterygoid muscle lateral\nPterygoid muscle, medial or NOS\nPterygoid plates \nTongue, NOS\n\nDeep (extrinsic) muscle of tongue:\n    Genioglossus\n    Geniohyoid\n    Hyoglossus\n    Mylohyoid\n    Palatoglossus\n    Styloglossus\n\nStated as T4a" ], [ "4B", "T4b", "Tumor invades any of the following:\nBrain\nDura\nSkull base\nLower cranial nerves (IX, X, XI, XII)\nMasticator space\nCarotid artery\nPrevertebral space\nMediastinal structures", "Carotid artery (encased)\n\nStated as T4b" ] ]
+}

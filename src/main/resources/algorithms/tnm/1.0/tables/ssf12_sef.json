@@ -1,0 +1,19 @@
+{
+  "id" : "ssf12_sef",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SSF12",
+  "title" : "Site-Specific Factor 12",
+  "subtitle" : "Bacterial Infection",
+  "last_modified" : "2015-08-13T13:23:15.579Z",
+  "definition" : [ {
+    "key" : "ssf12",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "988", "Not applicable:  Information not collected for this schema" ], [ "998", "Not applicable:  Not currently implemented for this schema" ] ]
+}

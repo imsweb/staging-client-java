@@ -1,0 +1,306 @@
+{
+  "id" : "esophagus",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Esophagus",
+  "title" : "Esophagus",
+  "description" : "CG: see comments in notes",
+  "notes" : "DISCONTINUED SITE-SPECIFIC FACTORS:  SSF2, SSF3, SSF4, SSF5\n\nC15.0  Cervical esophagus\nC15.1  Thoracic esophagus\nC15.2  Abdominal esophagus\nC15.3  Upper third of esophagus\nC15.4  Middle third of esophagus\nC15.5  Lower third of esophagus\nC15.8  Overlapping lesion of esophagus\nC15.9  Esophagus, NOS\nCG: add C16.0 Esophageal junction (see note 1)\n\n**Note 1:**  The cardia/gastroesophageal junction (EGJ), and the proximal 5 centimeters (cm) of the fundus and body of the stomach (C16.0-C16.2) have been removed from the Stomach chapter and added to the Esophagus chapter effective with AJCC 7th Edition. A new schema EsophagusGEJunction was created in CSv2 to accommodate this change. Tumors arising at the EGJ, or arising in the stomach within 5 cm of the EGJ and crossing the EGJ are staged using the EsophagusGEJunction schema. All other cancers with a midpoint in the stomach lying more than 5 cm distal to the EGJ, or those within 5 cm of the EGJ but not extending into the EGJ or esophagus, are staged using the stomach schema. (CG: needs revision: deletion reference to AJCC; should we add C16.0 to the above list since included now; UICC includes it )\n\n**Note 2:**  There are two widely used but incompatible systems of dividing the esophagus into subsites, one using anatomic landmarks and the other using using thirds of the total length.  Each of these two systems has been assigned topography codes in ICD-O-3; codes C15.0-C15.2 for the former, and C15.3-C15.5 for the latter.  As explained on page 23 of ICD-O-3, \"The terms cervical, thoracic, and abdominal are radiographic and intraoperative descriptors; upper, middle, and lower third are endoscopic and clinical descriptors.\"  In actual practice by physicians, and in publications of UICC and AJCC (CG:  want to drop this reference?; is used in different manner), the terms and codes for the upper, middle, and lower thirds are often applied to sub-sections of the thoracic (CG: called Intrathoracic in UICC and in Summary Stage) esophagus, and the abdominal portion can be considered part of the lower thoracic esophagus. \n(CG: question-is there guidance on when to use which system?)\n\n**Note 3:**  Anatomic Limits of Esophagus: \n\nCervical Esophagus (C15.0):  From the lower border of the cricoid cartilage to the thoracic inlet (suprasternal notch), about 18 cm from the incisors.\nThoracic  Esophagus (C15.1) and Abdominal Esophagus (C15.2): \nUpper thoracic portion (C15.3): From the thoracic inlet to the level of the tracheal bifurcation (18-24 cm). (CG: could add per UICC: approximately 24 cm from upper incisor teeth)\nMid-thoracic portion (C15.4): From the tracheal bifurcation midway to the GEJ (24-32 cm). (CG: could add: approximately 32 cm from upper incisor teeth; GEJ--acronym not defined-is this a typo? should be consistent and call it EGJ)\nLower thoracic portion (C15.5): From midway between the tracheal bifurcation and the EGJ to the EGJ including the abdominal esophagus (32-40 cm). (CG: could add: approximately 40 cm from upper incisor teeth)\n\n**Note 4:**  Effective with TNM 7th Edition, there are separate stage groupings for squamous cell carcinoma and adenocarcinoma. Since squamous cell carcinoma typically has a poorer prognosis than adenocarcinoma, a tumor of mixed histopathologic type or a type that is not otherwise specified should be classified as squamous cell carcinoma. \n(CG:  this is not quite the case with UICC; there are separate stage groupings for Prognostic Grouping (TNM) but not Stage Grouping)\n\n**Note 5:**  Effective with TNM 7th Edition, histologic grade is required for stage grouping.  (CG: this also is not required for UICC-consider dropping)",
+  "schema_selection_table" : "schema_selection_esophagus",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "input_version",
+    "name" : "Input Version",
+    "naaccr_item" : 2937,
+    "table" : "input_version_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "naaccr_item" : 523,
+    "table" : "behavior",
+    "used_for_staging" : true
+  }, {
+    "key" : "grade",
+    "name" : "Grade",
+    "naaccr_item" : 440,
+    "table" : "grade",
+    "used_for_staging" : true
+  }, {
+    "key" : "systemic_surg_seq",
+    "name" : "RX Summ Systemic/Surgery Sequence",
+    "naaccr_item" : 1639,
+    "table" : "systemic_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "radiation_surg_seq",
+    "name" : "RX Summ Surgery/Radiation Sequence",
+    "naaccr_item" : 1380,
+    "table" : "radiation_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "table" : "nodes_pos_fpc",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "naaccr_item" : 940,
+    "table" : "esophagus_t_28679",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "naaccr_item" : 950,
+    "table" : "clin_n_dat",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "naaccr_item" : 960,
+    "table" : "clin_m_hbg",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "naaccr_item" : 880,
+    "table" : "esophagus_t_28679",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "naaccr_item" : 890,
+    "table" : "path_n_dat",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_m",
+    "name" : "Pathologic M",
+    "naaccr_item" : 900,
+    "table" : "path_m_hbg",
+    "used_for_staging" : true
+  }, {
+    "key" : "extension",
+    "name" : "Extension",
+    "default" : "999",
+    "table" : "extension_bbb",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes",
+    "name" : "Lymph Nodes",
+    "default" : "999",
+    "table" : "nodes_dat",
+    "used_for_staging" : true
+  }, {
+    "key" : "mets",
+    "name" : "Mets",
+    "default" : "99",
+    "table" : "mets_hbg",
+    "used_for_staging" : true
+  }, {
+    "key" : "ssf2",
+    "name" : "Specific Location of Tumor",
+    "naaccr_item" : 2890,
+    "table" : "ssf2_kas",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf3",
+    "name" : "Number of Regional Lymph Nodes with Extracapsular Tumor",
+    "naaccr_item" : 2900,
+    "table" : "ssf3_lpl",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf4",
+    "name" : "Distance to Proximal Edge of Tumor from Incisors",
+    "naaccr_item" : 2910,
+    "table" : "ssf4_mpg",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf5",
+    "name" : "Distance to Distal Edge of Tumor from Incisors",
+    "naaccr_item" : 2920,
+    "table" : "ssf5_npg",
+    "used_for_staging" : false
+  } ],
+  "mappings" : [ {
+    "id" : "tnm7_stage",
+    "name" : "TNM 7 Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpb",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "determine_default_t",
+      "inputs" : [ "clin_t", "path_t" ],
+      "outputs" : [ "source_t", "combined_t_in", "tmp_path_t", "ss2017_t", "tmp_clin_t" ]
+    }, {
+      "id" : "determine_default_n",
+      "inputs" : [ "clin_n", "path_n" ],
+      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+    }, {
+      "id" : "determine_default_m",
+      "inputs" : [ "path_m", "clin_m" ],
+      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_clin_m", "combined_m_in", "source_m" ]
+    }, {
+      "id" : "esophagus_histologies_stage",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_clin_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_clin_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "clin_stage_group"
+      } ],
+      "inputs" : [ "hist", "site", "tmp_clin_n", "tmp_clin_m", "grade", "tmp_clin_t" ],
+      "outputs" : [ "stage_table", "clin_stage_group" ]
+    }, {
+      "id" : "esophagus_histologies_stage",
+      "input_mapping" : [ {
+        "from" : "tmp_path_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_path_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_path_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "path_stage_group"
+      } ],
+      "inputs" : [ "tmp_path_m", "hist", "site", "tmp_path_n", "grade", "tmp_path_t" ],
+      "outputs" : [ "stage_table", "path_stage_group" ]
+    }, {
+      "id" : "adjust_path_defaults",
+      "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
+      "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
+    } ]
+  }, {
+    "id" : "combined_stage",
+    "name" : "Combined Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpb",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "combined_t",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_t",
+        "to" : "clin_t"
+      }, {
+        "from" : "tmp_path_t",
+        "to" : "path_t"
+      } ],
+      "inputs" : [ "radiation_surg_seq", "combined_t_in", "tmp_path_t", "tmp_clin_t", "behavior", "systemic_surg_seq" ],
+      "outputs" : [ "source_t", "combined_t" ]
+    }, {
+      "id" : "combined_n",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_n",
+        "to" : "clin_n"
+      }, {
+        "from" : "tmp_path_n",
+        "to" : "path_n"
+      } ],
+      "inputs" : [ "nodes_pos", "tmp_clin_n", "radiation_surg_seq", "tmp_path_n", "combined_n_in", "systemic_surg_seq" ],
+      "outputs" : [ "combined_n", "source_n" ]
+    }, {
+      "id" : "combined_m",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_m",
+        "to" : "clin_m"
+      }, {
+        "from" : "tmp_path_m",
+        "to" : "path_m"
+      } ],
+      "inputs" : [ "tmp_path_m", "tmp_clin_m", "combined_m_in" ],
+      "outputs" : [ "combined_m", "source_m" ]
+    }, {
+      "id" : "esophagus_histologies_stage",
+      "input_mapping" : [ {
+        "from" : "combined_m",
+        "to" : "m"
+      }, {
+        "from" : "combined_n",
+        "to" : "n"
+      }, {
+        "from" : "combined_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "combined_stage_group"
+      } ],
+      "inputs" : [ "hist", "site", "combined_m", "combined_n", "grade", "combined_t" ],
+      "outputs" : [ "stage_table", "combined_stage_group" ]
+    }, {
+      "id" : "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890",
+      "inputs" : [ "combined_t" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "combined_n_to_summ_stage_n_84054",
+      "inputs" : [ "combined_n" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "cpmbined_m_to_summ_stage_m_60564",
+      "inputs" : [ "combined_m" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  }, {
+    "id" : "summary_stage_2017",
+    "name" : "Summary Stage 2017",
+    "exclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpb",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "extension_bbb",
+      "inputs" : [ "extension" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "nodes_dat",
+      "inputs" : [ "nodes" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "mets_hbg",
+      "inputs" : [ "mets" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  } ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "schema_selection_esophagus", "radiation_surg_seq", "ssf2_kas", "determine_default_m", "ssf3_lpl", "esophagus_histologies_stage", "determine_default_n", "extension_bbb", "combined_n_to_summ_stage_n_84054", "histology", "tnm7_inclusions_tpb", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "path_n_dat", "behavior", "nodes_dat", "esophagus_t_28679", "path_m_hbg", "esophagus_ajcctnm7_stage_squamous", "ssf5_npg", "adjust_path_defaults", "mets_hbg", "systemic_surg_seq", "clin_n_dat", "primary_site", "combined_m", "combined_n", "nodes_pos_fpc", "esophagus_ajcctnm7_stage_adenocarcinoma", "grade", "year_dx_validation", "ssf4_mpg", "summary_stage_rpa", "combined_t", "clin_m_hbg" ],
+  "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
+  "last_modified" : "2015-08-25T18:33:43.742Z"
+}

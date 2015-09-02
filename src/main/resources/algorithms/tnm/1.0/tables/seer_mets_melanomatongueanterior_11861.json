@@ -1,0 +1,27 @@
+{
+  "id" : "seer_mets_melanomatongueanterior_11861",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Mets MelanomaTongueAnterior",
+  "title" : "SEER Mets",
+  "notes" : "**Note**: Supraclavicular and transverse cervical lymph nodes are coded in CS Lymph Nodes because they are categorized as N rather than M in AJCC TNM.",
+  "last_modified" : "2015-08-13T13:23:50.742Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2000_m",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/lymph node(s) involved\nDistant lymph node(s):\nMediastinal\nSupraclavicular (transverse cervical)\nOther distant lymph node(s)\nExtension to:\nMandible##**\nMaxilla##\nMusculature, extrinsic:\nGenioglossus\nGeniohyoid\nHyoglossus\nMylohyoid\nPalatoglossus\nStyloglossus\nFurther contiguous extension\nMetastasis", "Cartilage of mandible\nCortical bone of mandible\nMandible, NOS\nCartilage, NOS\nCortical bone, NOS\nBone, NOS excluding maxilla and base of skull base\n\n700 + (560 or 570)\n\nInvolvement of any structure in code 700 plus any structure in code 560 or 570\n\nDeep (extrinsic) muscle of tongue:    \n    Genioglossus\n    Geniohyoid\n    Hyoglossus\n    Mylohyoid\n    Palatoglossus\n    Styloglossus\n\nSkin of face\n\nCartilage of maxilla\nCortical bone of maxilla\nMaxilla, NOS\nMaxillary sinus (antrum)\n\nStated as 4a with no other information on extension\n\nContiguous extension\nBase of skull\nCarotid artery (encased)\nMasticator space\nPterygoid plates\n\nFurther contiguous extension including:    \n    Brain\n    Dura\n    Lower cranial nerves (IX, X, XI, XII)\n    Mediastinal structures\n    Prevertebral space    Skull base\n   \n\nStated as T4b with no other information on extension\n\nMets present\n\nDistant lymph node(s):\n    Mediastinal (excluding superior mediastinal nodes)\n    Distant lymph node(s), NOS\nSingle positive ipsilateral regional node:\n    Level V - Posterior triangle group:\n        Posterior cervical\n        Level VA - Spinal accessory\n        Level VB - Transverse cervical, supraclavicular (see note 4)\n    Level VI - Anterior compartment group:\n        Laterotracheal\n        Paralaryngeal\n        Paratracheal - above suprasternal notch\n        Perithyroidal\n        Precricoid (Delphian)\n        Pretracheal - above suprasternal notch\n        Recurrent laryngeal\n    Level VII - Superior mediastinal group (for other mediastinal nodes see CS Mets at DX):\n        Esophageal groove\n        Paratracheal - below suprasternal notch\n        Pretracheal - below suprasternal notch\n    Other groups:\n        Facial:\n            Buccinator (buccal)\n            Nasolabial\n        Parotid:\n            Infraauricular\n            Intraparotid\n            Periparotid\n            Preauricular\n        Parapharyngeal\n        Retroauricular\n        Retropharyngeal\n        Suboccipital\n\nMultiple positive ipsilateral nodes, any listed in code 120 \nWITH OR WITHOUT nodes listed in code 100\n\nPositive ipsilateral node(s) listed in code 120, not stated if single or multiple\n\nPositive bilateral or contralateral nodes, any listed in code 120\nWITH or WITHOUT nodes listed in code 100\n\nPositive node(s) listed in code 120, not stated if ipsilateral, or bilateral, or contralateral,\nAND not stated if single or multiple\"\n\n\nDistant metastases except distant lymph node(s)\nCarcinomatosis\n\n40+10\n\nDistant metastasis plus distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1 with no other information on distant metastasis", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed  \nNot documented in patient record", "", "VALUE:U" ] ]
+}

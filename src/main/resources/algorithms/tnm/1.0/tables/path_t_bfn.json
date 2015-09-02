@@ -1,0 +1,27 @@
+{
+  "id" : "path_t_bfn",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path T",
+  "title" : "Pathological T",
+  "notes" : "**Note 1:**  TNM does not include an in situ category for carcinoid tumors of appendix. Assign TX and behavior code /2 for in situ cases.\n\n**Note 2:**  Ignore intraluminal extension to adjacent segment(s) of colon; code depth of invasion or extra-appendiceal spread as indicated.\n\n**Note 3:**  For the following descriptions, assign the appropriate T category based on the tumor size.\n\nTumor confined to muscular wall\nTumor invades through submucosa and muscularis mucosae to involvew mucosa\n\n    Localized, NOS\n\n    Adventitia and/or soft tissue invaded\n    Esophagus described as fixed\n    Invasion into adventitia with invasion of/through mucosa\n    Invasion of adjacent structures:\n    Cervical esophagus \n    Blood vessel(s), major:\n    Carina\n    Carotid artery\n    Cervical vertebraâ¬\n    Hypopharynx\n    Jugular vein\n          Larynx\n          Thyroid gland \n    Subclavian artery\n    Trachea\n\n    \n**Thoracic/middle esophagus:**\n\n      Pericardium\n\n**Abdominal/lower esophagus:**\n\n    Diaphragm fixed\n\n**Intrathoracic, upper or mid-portion, esophagus:**\n\n    Blood vessel(s), major:\n        Aorta \n        Azygos vein\n        Pulmonary artery/vein \n        Vena cava \n    Carina\n    Diaphragm \n    Main stem bronchus \n    Trachea \n\n**Intrathoracic, lower portion (abdominal), esophagus:**\n\n    Blood vessel(s), major: \n        Aorta \n       Gastric artery/vein\n        Vena cava",
+  "last_modified" : "2015-08-13T13:24:28.410Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathological T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathological T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "T0", "No evidence of primary tumor", "" ], [ "X", "TX", "Primary tumor cannot be assessed", "In situ, intraepithelial, noninvasive\n\nUnknown; extension not stated\nNot documented in patient record" ], [ "1", "T1", "Tumor 2 cm or less", "Stated as T1" ], [ "2", "T2", "Tumor more than 2 cm but not more than \n5 cm in greatest dimension", "Stated as T2" ], [ "3", "T3", "Tumor more than 5 cm but not more than\n10 cm in greatest dimension", "Stated as T3" ], [ "4", "T4", "Tumor more than 10 cm in greatest dimension", "Stated as T4" ] ]
+}

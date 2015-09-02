@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_bbe",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin T",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  High grade dysplasia and severe dysplasia are generally not reportable in cancer registries, but if a registry does collect these, assign Tis.\n\n**Note 2:**  The nonperitonealized perimuscular tissue is, for jejunum and ileum, part of the mesentery and, for duodenum in areas where serosa is lacking, part of the interface with the pancreas.\n\n**Note 3:**  Code depth of invasion in preference to intraluminal spread or lateral extension to adjacent segment(s) of small intestine or cecum.",
+  "last_modified" : "2015-08-13T13:24:19.032Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "T0", "No evidence of primary tumor", "" ], [ "1", "T1", "Tumor invades lamina propria, muscularis mucosae\nor submucosa", "Intraluminal spread to other segments of small intestine or cecum\n\nLocalized, NOS\n\nStated as T1 [NOS]" ], [ "1A", "T1a", "Tumor invades lamina propria or muscularis mucosae", "Invasive tumor confined:\nHead of polyp\nStalk of polyp\nMucosa, NOS\nIntramucosal, NOS\n\nInvasion of: \nLamina propria\nMuscularis mucosae\nPolyp, NOS\n\nStated as T1a" ], [ "1B", "T1b", "Tumor invades submucosa", "Superficial invasion of submucosa\n\nStated as T1b" ], [ "2", "T2", "Tumor invades muscularis propria", "Stated as T2" ], [ "3", "T3", "Tumor invades subserosa or non-peritonealized\nperimuscular tissue (mesentery or retroperitoneum) \nwith extension 2 cm or less", "Invasion through muscularis propria or muscularis, NOS\nExtension through wall, NOS\nSubserosal tissue/(sub)serosal  fat invaded\nTransmural, NOS \nWall, NOS\n\nAdjacent connective tissue\nAdjacent tissue(s), NOS\nMesentery, including mesenteric fat, invaded 2 centimeters (cm) or less in depth, or invaded, NOS (depth of invasion not specified)\nNonperitonealized perimuscular tissue invaded 2 cm or less in depth, or invaded, NOS (depth of invasion not specified)\nRetroperitoneum invaded 2 cm or less in depth, or invaded, NOS (depth of invasion not specified\n\nFat, NOS\n\nStated as T3" ], [ "4", "T4", "Tumor perforates visceral peritoneum or directly  invades\nother organs or structures (includes other loops of small\nintestine, mesentery, or retroperitoneum more than 2 cm\nand abdominal wall by way of serosa\n\nFor duodenum only, invasion of pancreas", "Invasion of/through serosa (mesothelium) (tunica serosa) (visceral peritoneum)\n    \nAll small intestine sites:\n    Abdominal wall via serosa\n    Mesentery invaded greater than 2 cm in depth\n    Nonperitonealized  perimuscular tissue invaded \n    greater  than 2 cm in depth\n    Other segments of the small intestine via serosa\n    Retroperitoneum invaded greater than 2 cm in depth\n   \nDuodenum primary only:\n     Ampulla of Vater    \n     Blood vessel(s), major:\n        Aorta\n        Gastroduodenal artery\n        Portal vein\n        Renal vein\n        Superior mesenteric artery or vein\n        Vena cava\n    Diaphragm\n    Extrahepatic bile duct(s)\n    Gallbladder\n    Greater omentum\n    Hepatic flexure\n    Kidney, NOS\n    Kidney, right\n    Liver, NOS\n    Liver, quadrate lobe\n    Liver, right lobe\n    Omentum, NOS\n    Pancreas\n    Pancreatic duct\n    Stomach\n    Transverse colon\n    Ureter, right\n\nJejunum or ileum primary only:\n    Bladder\n    Colon, including appendix\n    Fallopian tube(s)\n    Ovary(ies)\n    Uterus\n\nFurther contiguous extension\n\nStated as T4" ], [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "IS", "Tis", "Carcinoma in situ", "Noninvasive\n\n(Adeno)carcinoma, noninvasive, in a polyp" ] ]
+}

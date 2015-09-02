@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_ban",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin T",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  If there is a discrepancy between the Clark level and the pathologic description of extent (invasion into the layers of the dermis), assign the higher T.\n\n**Note 2:**  Code the greatest extent of invasion from any procedure performed on the lesion, whether it is described as a biopsy or an excision.  For example, if a punch biopsy with involvement of Clark level IV (T1b) is followed by a re-excision with residual tumor involving Clark level II (T1a), assign the Clark level IV (T1b).\n\n**Note 3:**  Satellite lesions/nodules or in-transit metastases are coded in regional lymph nodes.\n\n**Note 4:**  Ulceration of the melanoma is coded in Site-Specific Factor 2.",
+  "last_modified" : "2015-08-13T13:23:40.915Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "IS", "Tis", "Melanoma in situ (Clark Level I) (atypical \nmelanocytic hyperplasia, several melanocytic\ndysplasia, not an invasive malignant lesion", "Intraepidermal, intraepithelial, noninvasive \n(Basement membrane of the epidermis is intact)\nClark level I\n\nStated as Tis" ], [ "1", "T1", "Tumor 1 mm or less thickness", "Note: T1 has subcategories of T1a and T1b. Assign T1 only when there is no information \navailable to assign one of the subcategories.\n\nSkin/dermis, NOS\nLocalized, NOS\n\nStated as T1 [NOS]" ], [ "1A", "T1a", "Clark level II or III, without ulceration", "Papillary dermis invaded (Clark level II) WITHOUT ulceration\n\nPapillary-reticular dermal interface invaded (Clark level III) \nWITHOUT ulceration\n\nStated as T1a" ], [ "1B", "T1b", "Clark level IV or V or with ulceration", "Papillary dermis invaded (Clark level II) WITH ulceration\nPapillary-reticular dermal interface invaded (Clark level III) \nWITH ulceration\n\nReticular dermis invaded (Clark level IV) WITH or WITHOUT \nulceration\n\nSubcutaneous tissue invaded (through entire dermis) (Clark's level V) \nWITH or WITHOUT ulceration\n\nStated as T1b" ], [ "2", "T2", "Tumor more than 1 mm but not more than \n2 mm in thickness", "Note: T2 has subcategories of T2a and T2b. Assign T2 only when there is no information \navailable to assign one of the subcategories.\n\nStated as T2 [NOS]" ], [ "2A", "T2a", "without ulceration", "Stated as T2a" ], [ "2B", "T2b", "with ulceration", "Stated as T2b" ], [ "3", "T3", "Tumor more than 2 mm but not more than \n4 mm in thickness", "Note: T3 has subcategories of T3a and T3b. Assign T3 only when there is no information \navailable to assign one of the subcategories.\n\nStated as T3 [NOS]" ], [ "3A", "T3a", "without ulceration", "Stated as T3a" ], [ "3B", "T3b", "with ulceration", "Stated as T3b" ], [ "4", "T4", "Tumor more than 4 mm in thickness", "Note: T4 has subcategories of T4a and T4b. Assign T4 only when there is no information \navailable to assign one of the subcategories.\n\nStated as T4 [NOS]" ], [ "4A", "T4a", "without ulceration", "Further contiguous extension:\nUnderlying cartilage, bone, skeletal muscle WITHOUT ulceration\n\nStated as T4a" ], [ "4B", "T4b", "with ulceration", "Further contiguous extension:\nUnderlying cartilage, bone, skeletal muscle WITH ulceration\n\nStated as T4b" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "path_t_bam",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path T",
+  "title" : "Pathological T",
+  "notes" : "**Note 1:**  The intrinsic muscles of tongue are four paired muscles within the tongue which control its shape.  The extrinsic muscles originate from structures outside the tongue and control its positioning.\n\n**Note 2:**  For the following descriptions, assign the appropriate T category based on the tumor size.\n\n    Invasive tumor on one side confined to posterior one-third of tongue:\n       Lamina propria\n       Submucosa\n    Anterior two-thirds of tongue for base of tongue\n    Base of tongue for lingual tonsil\n    Base of tongue tumor crosses midline\n    Floor of mouth\n    Glossoepiglottic fold\n    Glossopharyngeal fold\n    Lateral pharyngeal wall\n    Lingual tonsil for base of tongue\n    Lower gingiva\n    Midline tumor\n    Musculature, intrinsic or NOS \n    Pharyngoepiglottic fold\n    Soft palate, inferior surface or NOS including uvula\n    Sublingual gland\n    Tonsillar pillars and fossae\n    Tumor of lingual tonsil on both sides\n    Tonsils\n    Vallecula\n\n    Localized, NOS",
+  "last_modified" : "2015-08-13T13:25:32.447Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathological T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathological T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "T0", "No evidence of primary tumor", "" ], [ "3", "T3", "Tumor more than 4 cm in greatest dimension or extension to \nlingual surface of epiglottis", "Epiglottis, lingual surface plus soft palate\n\nStated as T3" ], [ "4", "T4", "UICC does not define T4", "Stated as T4 [NOS]" ], [ "4A", "T4a", "Tumor invades any of the following:\nLarynx\nDeep/extrinsic muscle of tongue, which are: genioglossus, \nhypoglossus, palatoglossus, and styloglossus\nMedial pterygoid\nHard palate\nMandible", "Hypopharynx\nMandible for lingual tonsil\nMandible plus soft palate\nMandible for base of tongue\n\nStated as T4a" ], [ "4B", "T4b", "Tumor invades any of the following:\nLateral pterygoid muscle\nPterygoid plates\nLateral nasopharynx\nSkull base\nEncases carotid artery", "Lateral pterygoid muscle\nSkin\n\nFurther contiguous extension including:\n    Skull base\n    \nStated as T4b" ], [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "IS", "Tis", "Carcinoma in situ", "Intraepithelial, noninvasive" ], [ "1", "T1", "Tumor 2 cm or less in greatest dimension", "Stated as T1" ], [ "2", "T2", "Tumor more than 2 cm but not more than 4 cm in greatest\ndimension", "Stated as T2" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "larynx_supraglottic_t_57946",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Larynx Supraglottic T",
+  "title" : "Clinical and Pathological T",
+  "notes" : "**Note 1:**  Impaired vocal cord mobility, also described as vocal cord paresis, may suggest invasion of intrinsic laryngeal muscle. Fixation of the vocal cord may be described as immobility of the arytenoids noted on endoscopy, vocal cord cord paralysis, or deviation of larynx to fixed side.\n\n**Note 2:**  Assign T1 for localized tumor only if no information is available to identify further extension.",
+  "last_modified" : "2015-08-13T13:25:54.335Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "IS", "Tis", "Carcinoma in situ", "Intraepithelial, noninvasive\n\nStated as Tis" ], [ "1", "T1", "Tumor limited to one subsite of supraglottis with normal vocal cord mobility", "Invasive tumor confined to anterior surface of epiglottis with normal vocal cord mobility\n\nLocalized, NOS\n\nStated as T1" ], [ "2", "T2", "Tumor invades mucosa of more than one adjacent subsite of supraglottis or glottis or region outside the supraglottis (e.g., mucosa of base of tongue, vallecula, medial wall of pyriform sinus) without fixation of the larynx", "Mucosa of adjacent subsite(s) of oropharynx\n\nMucosa of vallecula without fixation of larynx\n\nMucosa of adjacent subsite(s) of supraglottis (including posterior surface of epiglottis) \nWITHOUT fixation of larynx\n\nLarynx, glottic or NOS WITHOUT fixation of larynx\n\nMucosa of pyriform sinus, medial wall or NOS WITHOUT fixation of larynx\n\nMucosa of base of tongue WITHOUT fixation of larynx\n\nStated as T2" ], [ "3", "T3", "Tumor limited to larynx with vocal cord fixation and/or \ninvades any of the following:\nPostcricoid area\nPre-epiglottic space\nParaglottic space\nInner cortex of thyroid cartilage", "Any structure coded in T1 or T2 WITH vocal cord fixation\n\nHypopharynx, NOS\nInner cortex of thyroid cartilage (minor erosion)\nParaglottic space\nPre-epiglottic tissues\nPostcricoid area\nPyriform sinus except medial wall \n\nStated as T3" ], [ "4", "T4", "", "Note: T4 has subcategories of T4a and T4b. Assign T4 only when there is no information available to assign one of the subcategories\n\nStated as T4[NOS]" ], [ "4A", "T4a", "Tumor invades through the thyroid cartilage and/or invades tissues beyond the larynx, e.g., trachea, soft tissues of neck including deep/extrinsic muscle of tongue (genioglossus, geniohyoid, hyoglossus, mylohyoid, palatoglossus and styloglossus), strap muscles, thyroid, esophagus", "Soft palate, inferior surface including uvula\nSoft palate, superior (nasopharyngeal) surface\nSoft palate, NOS\n\nNasopharynx, NOS\n\nDeep tissues of base of tongue\nBuccal mucosa (inner cheek)\nFloor of mouth\nGum (gingiva)\nPterygoid muscle\nSoft tissues of neck\nTrachea \nThyroid\n\nInvasion of, through outer cortex of thyroid cartilage\nThyroid cartilage, NOS\n\nStrap muscles:\n    Omohyoid\n    Sternohyoid\n    Thyrohyoid\n\nStated as T4a" ], [ "4B", "T4b", "Tumor invades prevertebral space, encases carotid artery, or mediastinal structures", "Prevertebral fascia or muscle\n\nFurther contiguous extension, including:\n    Anterior 2/3 of tongue\n    Bone\n    Hard palate\n    Mandible\n    Parotid gland\n\nStated as T4b" ] ]
+}

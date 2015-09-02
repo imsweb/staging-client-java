@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_bdh",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin T",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  Except for pT4, where radical orchiectomy is not always necessary for classification purposes, the extent of the primary tumor is classified after radical orchiectomy; see pT. \n\n**Note 2:** Assign TX for clinical T prior to radical orchiectomy or if no radical orchiectomy is performed unless there is a cT4.",
+  "last_modified" : "2015-08-13T13:24:02.515Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown extension\nNot documented in patient record" ], [ "4", "T4", "Tumor invades scrotum with or without vascular lymphatic invasion", "Dartos muscle, ipsilateral\nScrotum, ipsilateral\n\nExtension to scrotum, contralateral\nUlceration of scrotum\n\nPenis\n\nFurther contiguous extension\n\nStated as T4" ] ]
+}

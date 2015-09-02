@@ -1,0 +1,435 @@
+{
+  "id" : "breast",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Breast",
+  "title" : "Breast",
+  "description" : "[SME REVIEW] - at one point Jennifer said to remove the special table related to ext, beh, summary stage.  this table is still present.\nif it should stay, should it also be present (in some variation) in the Summary Stage only flow?  Codes need to be revised.\n\n[SME-REVIEW] Need to develop some good notes for paget's disease for T and SS\n\nTake notes from SS on paget's and make sure they are included with Tis and T1. For T1, which T1 would it be included with? Would it be better to include the second note (for /3 and invasive) with the notes that are used to determine T  based on size?",
+  "notes" : "C50.0  Nipple\nC50.1  Central portion of breast\nC50.2  Upper-inner quadrant of breast\nC50.3  Lower-inner quadrant of breast\nC50.4  Upper-outer quadrant of breast\nC50.5  Lower-outer quadrant of breast\nC50.6  Axillary Tail of breast\nC50.8  Overlapping lesion of breast\nC50.9  Breast, NOS\n\n**Note:**  Laterality must be coded for this site.",
+  "schema_selection_table" : "schema_selection_breast",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "input_version",
+    "name" : "Input Version",
+    "naaccr_item" : 2937,
+    "table" : "input_version_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "naaccr_item" : 523,
+    "table" : "behavior",
+    "used_for_staging" : false
+  }, {
+    "key" : "systemic_surg_seq",
+    "name" : "RX Summ Systemic/Surgery Sequence",
+    "naaccr_item" : 1639,
+    "table" : "systemic_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "radiation_surg_seq",
+    "name" : "RX Summ Surgery/Radiation Sequence",
+    "naaccr_item" : 1380,
+    "table" : "radiation_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "table" : "nodes_pos_fab",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "naaccr_item" : 940,
+    "table" : "breast_t_70656",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "naaccr_item" : 950,
+    "table" : "clin_n_daj",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "naaccr_item" : 960,
+    "table" : "clin_m_hau",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "naaccr_item" : 880,
+    "table" : "breast_t_70656",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "naaccr_item" : 890,
+    "table" : "path_n_daj",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_m",
+    "name" : "Pathologic M",
+    "naaccr_item" : 900,
+    "table" : "path_m_hau",
+    "used_for_staging" : true
+  }, {
+    "key" : "extension",
+    "name" : "Extension",
+    "default" : "999",
+    "table" : "extension_bak",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes",
+    "name" : "Lymph Nodes",
+    "default" : "999",
+    "table" : "nodes_daj",
+    "used_for_staging" : true
+  }, {
+    "key" : "mets",
+    "name" : "Mets",
+    "default" : "99",
+    "table" : "mets_hau",
+    "used_for_staging" : true
+  }, {
+    "key" : "ssf1",
+    "name" : "Estrogen Receptor (ER) Assay",
+    "naaccr_item" : 2880,
+    "table" : "ssf1_jag",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf2",
+    "name" : "Progesterone Receptor (PR) Assay",
+    "naaccr_item" : 2890,
+    "table" : "ssf2_kac",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf3",
+    "name" : "Number of Positive Ipsilateral Level I-II Axillary Lymph Nodes",
+    "naaccr_item" : 2900,
+    "table" : "ssf3_lac",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf4",
+    "name" : "Immunohistochemistry (IHC) of Regional Lymph Nodes",
+    "naaccr_item" : 2910,
+    "table" : "ssf4_mab",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf5",
+    "name" : "Molecular (MOL) Studies of Regional Lymph Nodes",
+    "naaccr_item" : 2920,
+    "table" : "ssf5_naa",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf6",
+    "name" : "Size of Tumor-Invasive Component",
+    "naaccr_item" : 2930,
+    "table" : "ssf6_oaa",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf7",
+    "name" : "Nottingham or Bloom-Richardson (BR) Score/Grade",
+    "naaccr_item" : 2861,
+    "table" : "ssf7_saa",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf8",
+    "name" : "HER2: Immunohistochemistry (IHC) Lab Value",
+    "naaccr_item" : 2862,
+    "table" : "ssf8_sab",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf9",
+    "name" : "HER2: Immunohistochemistry (IHC) Test Interpretation",
+    "naaccr_item" : 2863,
+    "table" : "ssf9_sac",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf10",
+    "name" : "HER2: Fluorescence In Situ Hybridization (FISH) Lab Value",
+    "naaccr_item" : 2864,
+    "table" : "ssf10_sad",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf11",
+    "name" : "HER2: Fluorescence In Situ Hybridization (FISH) Test Interpretation",
+    "naaccr_item" : 2865,
+    "table" : "ssf11_sae",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf12",
+    "name" : "HER2: Chromogenic In Situ Hybridization (CISH) Lab Value",
+    "naaccr_item" : 2866,
+    "table" : "ssf12_saf",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf13",
+    "name" : "HER2: Chromogenic In Situ Hybridization (CISH) Test Interpretation",
+    "naaccr_item" : 2867,
+    "table" : "ssf13_sag",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf14",
+    "name" : "HER2: Result of Other or Unknown Test",
+    "naaccr_item" : 2868,
+    "table" : "ssf14_sbf",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf15",
+    "name" : "HER2: Summary Result of Testing",
+    "naaccr_item" : 2869,
+    "table" : "ssf15_sbg",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf16",
+    "name" : "Combinations of ER, PR, and HER2 Results",
+    "naaccr_item" : 2870,
+    "table" : "ssf16_sah",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf17",
+    "name" : "Circulating Tumor Cells (CTC) and Method of Detection",
+    "naaccr_item" : 2871,
+    "table" : "ssf17_sai",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf18",
+    "name" : "Disseminated Tumor Cells (DTC) and Method of Detection",
+    "naaccr_item" : 2872,
+    "table" : "ssf18_saj",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf19",
+    "name" : "Assessment of Positive Ipsilateral Axillary Lymph Nodes",
+    "naaccr_item" : 2873,
+    "table" : "ssf19_sak",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf20",
+    "name" : "Assessment of Positive Distant Metastases",
+    "naaccr_item" : 2874,
+    "table" : "ssf20_sal",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf21",
+    "name" : "Response to Neoadjuvant Therapy",
+    "naaccr_item" : 2875,
+    "table" : "ssf21_sam",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf22",
+    "name" : "Multigene Signature Method",
+    "naaccr_item" : 2876,
+    "table" : "ssf22_san",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf23",
+    "name" : "Multigene Signature Results",
+    "naaccr_item" : 2877,
+    "table" : "ssf23_sao",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf24",
+    "name" : "Paget Disease",
+    "naaccr_item" : 2878,
+    "table" : "ssf24_sap",
+    "used_for_staging" : false
+  } ],
+  "mappings" : [ {
+    "id" : "tnm7_stage",
+    "name" : "TNM 7 Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpg",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "determine_default_t",
+      "inputs" : [ "clin_t", "path_t" ],
+      "outputs" : [ "source_t", "combined_t_in", "tmp_path_t", "ss2017_t", "tmp_clin_t" ]
+    }, {
+      "id" : "determine_default_n",
+      "inputs" : [ "clin_n", "path_n" ],
+      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+    }, {
+      "id" : "determine_default_m",
+      "inputs" : [ "path_m", "clin_m" ],
+      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_clin_m", "combined_m_in", "source_m" ]
+    }, {
+      "id" : "tnm7_stage_uac",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_clin_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_clin_t",
+        "to" : "t"
+      } ],
+      "inputs" : [ "tmp_clin_n", "tmp_clin_m", "tmp_clin_t" ],
+      "outputs" : [ "stage" ]
+    }, {
+      "id" : "tnm7_stage_uac",
+      "input_mapping" : [ {
+        "from" : "tmp_path_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_path_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_path_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "path_stage_group"
+      } ],
+      "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t" ],
+      "outputs" : [ "path_stage_group" ]
+    }, {
+      "id" : "adjust_path_defaults",
+      "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
+      "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
+    } ]
+  }, {
+    "id" : "combined_stage",
+    "name" : "Combined Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpg",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "combined_t_breast",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_t",
+        "to" : "clin_t"
+      }, {
+        "from" : "tmp_path_t",
+        "to" : "path_t"
+      } ],
+      "inputs" : [ "radiation_surg_seq", "combined_t_in", "tmp_path_t", "tmp_clin_t", "systemic_surg_seq" ],
+      "outputs" : [ "source_t", "combined_t" ]
+    }, {
+      "id" : "combined_n",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_n",
+        "to" : "clin_n"
+      }, {
+        "from" : "tmp_path_n",
+        "to" : "path_n"
+      } ],
+      "inputs" : [ "nodes_pos", "tmp_clin_n", "radiation_surg_seq", "tmp_path_n", "combined_n_in", "systemic_surg_seq" ],
+      "outputs" : [ "combined_n", "source_n" ]
+    }, {
+      "id" : "combined_m",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_m",
+        "to" : "clin_m"
+      }, {
+        "from" : "tmp_path_m",
+        "to" : "path_m"
+      } ],
+      "inputs" : [ "tmp_path_m", "tmp_clin_m", "combined_m_in" ],
+      "outputs" : [ "combined_m", "source_m" ]
+    }, {
+      "id" : "tnm7_stage_uac",
+      "input_mapping" : [ {
+        "from" : "combined_m",
+        "to" : "m"
+      }, {
+        "from" : "combined_n",
+        "to" : "n"
+      }, {
+        "from" : "combined_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "combined_stage_group"
+      } ],
+      "inputs" : [ "combined_m", "combined_n", "combined_t" ],
+      "outputs" : [ "combined_stage_group" ]
+    }, {
+      "id" : "combined_to_summ_stage_t_80394",
+      "inputs" : [ "combined_t" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "combined_n_to_summ_stage_n_n3c_d_43145",
+      "inputs" : [ "combined_n" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "cpmbined_m_to_summ_stage_m_60564",
+      "inputs" : [ "combined_m" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  }, {
+    "id" : "summary_stage_2017",
+    "name" : "Summary Stage 2017",
+    "exclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpg",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "extension_bak",
+      "inputs" : [ "extension" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "nodes_daj",
+      "inputs" : [ "nodes" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "mets_hau",
+      "inputs" : [ "mets" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  } ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "ssf22_san", "ssf23_sao", "ssf5_naa", "schema_selection_breast", "histology", "ssf24_sap", "nodes_pos_fab", "tnm7_inclusions_tpg", "ssf3_lac", "ssf11_sae", "ssf16_sah", "ssf14_sbf", "ssf20_sal", "nodes_daj", "systemic_surg_seq", "tnm7_stage_uac", "ssf10_sad", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "ssf15_sbg", "ssf21_sam", "summary_stage_rpa", "ssf17_sai", "ssf1_jag", "combined_t_breast", "extension_bak", "combined_n_to_summ_stage_n_n3c_d_43145", "determine_default_t", "input_version_validation", "ssf19_sak", "radiation_surg_seq", "ssf6_oaa", "determine_default_m", "ssf18_saj", "clin_m_hau", "determine_default_n", "ssf7_saa", "path_n_daj", "ssf4_mab", "path_m_hau", "behavior", "mets_hau", "ssf8_sab", "ssf12_saf", "adjust_path_defaults", "clin_n_daj", "primary_site", "ssf2_kac", "year_dx_validation", "ssf9_sac", "breast_t_70656", "ssf13_sag" ],
+  "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
+  "last_modified" : "2015-08-25T18:33:46.107Z"
+}

@@ -30,7 +30,6 @@ import com.imsweb.staging.Staging;
 import com.imsweb.staging.StagingData;
 import com.imsweb.staging.StagingData.Result;
 import com.imsweb.staging.cs.CsDataProvider.CsVersion;
-import com.imsweb.staging.cs.CsStagingData.CsInput;
 import com.imsweb.staging.cs.CsStagingData.CsOutput;
 import com.imsweb.staging.cs.CsStagingData.CsStagingInputBuilder;
 import com.imsweb.staging.entities.StagingSchema;
@@ -277,43 +276,43 @@ public class CsStagingTest {
     @Test
     public void testInputBuilder() {
         CsStagingData data1 = new CsStagingData();
-        data1.setInput(CsInput.PRIMARY_SITE, "C680");
-        data1.setInput(CsInput.HISTOLOGY, "8000");
-        data1.setInput(CsInput.BEHAVIOR, "3");
-        data1.setInput(CsInput.GRADE, "9");
-        data1.setInput(CsInput.DX_YEAR, "2013");
-        data1.setInput(CsInput.CS_VERSION_ORIGINAL, "020550");
-        data1.setInput(CsInput.TUMOR_SIZE, "075");
-        data1.setInput(CsInput.EXTENSION, "100");
-        data1.setInput(CsInput.EXTENSION_EVAL, "9");
-        data1.setInput(CsInput.LYMPH_NODES, "100");
-        data1.setInput(CsInput.LYMPH_NODES_EVAL, "9");
-        data1.setInput(CsInput.REGIONAL_NODES_POSITIVE, "99");
-        data1.setInput(CsInput.REGIONAL_NODES_EXAMINED, "99");
-        data1.setInput(CsInput.METS_AT_DX, "10");
-        data1.setInput(CsInput.METS_EVAL, "9");
-        data1.setInput(CsInput.LVI, "9");
-        data1.setInput(CsInput.AGE_AT_DX, "060");
+        data1.setInput(CsStagingData.CsInput.PRIMARY_SITE, "C680");
+        data1.setInput(CsStagingData.CsInput.HISTOLOGY, "8000");
+        data1.setInput(CsStagingData.CsInput.BEHAVIOR, "3");
+        data1.setInput(CsStagingData.CsInput.GRADE, "9");
+        data1.setInput(CsStagingData.CsInput.DX_YEAR, "2013");
+        data1.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "020550");
+        data1.setInput(CsStagingData.CsInput.TUMOR_SIZE, "075");
+        data1.setInput(CsStagingData.CsInput.EXTENSION, "100");
+        data1.setInput(CsStagingData.CsInput.EXTENSION_EVAL, "9");
+        data1.setInput(CsStagingData.CsInput.LYMPH_NODES, "100");
+        data1.setInput(CsStagingData.CsInput.LYMPH_NODES_EVAL, "9");
+        data1.setInput(CsStagingData.CsInput.REGIONAL_NODES_POSITIVE, "99");
+        data1.setInput(CsStagingData.CsInput.REGIONAL_NODES_EXAMINED, "99");
+        data1.setInput(CsStagingData.CsInput.METS_AT_DX, "10");
+        data1.setInput(CsStagingData.CsInput.METS_EVAL, "9");
+        data1.setInput(CsStagingData.CsInput.LVI, "9");
+        data1.setInput(CsStagingData.CsInput.AGE_AT_DX, "060");
         data1.setSsf(1, "020");
 
         CsStagingData data2 = new CsStagingInputBuilder()
-                .withInput(CsInput.PRIMARY_SITE, "C680")
-                .withInput(CsInput.HISTOLOGY, "8000")
-                .withInput(CsInput.BEHAVIOR, "3")
-                .withInput(CsInput.GRADE, "9")
-                .withInput(CsInput.DX_YEAR, "2013")
-                .withInput(CsInput.CS_VERSION_ORIGINAL, "020550")
-                .withInput(CsInput.TUMOR_SIZE, "075")
-                .withInput(CsInput.EXTENSION, "100")
-                .withInput(CsInput.EXTENSION_EVAL, "9")
-                .withInput(CsInput.LYMPH_NODES, "100")
-                .withInput(CsInput.LYMPH_NODES_EVAL, "9")
-                .withInput(CsInput.REGIONAL_NODES_POSITIVE, "99")
-                .withInput(CsInput.REGIONAL_NODES_EXAMINED, "99")
-                .withInput(CsInput.METS_AT_DX, "10")
-                .withInput(CsInput.METS_EVAL, "9")
-                .withInput(CsInput.LVI, "9")
-                .withInput(CsInput.AGE_AT_DX, "060")
+                .withInput(CsStagingData.CsInput.PRIMARY_SITE, "C680")
+                .withInput(CsStagingData.CsInput.HISTOLOGY, "8000")
+                .withInput(CsStagingData.CsInput.BEHAVIOR, "3")
+                .withInput(CsStagingData.CsInput.GRADE, "9")
+                .withInput(CsStagingData.CsInput.DX_YEAR, "2013")
+                .withInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "020550")
+                .withInput(CsStagingData.CsInput.TUMOR_SIZE, "075")
+                .withInput(CsStagingData.CsInput.EXTENSION, "100")
+                .withInput(CsStagingData.CsInput.EXTENSION_EVAL, "9")
+                .withInput(CsStagingData.CsInput.LYMPH_NODES, "100")
+                .withInput(CsStagingData.CsInput.LYMPH_NODES_EVAL, "9")
+                .withInput(CsStagingData.CsInput.REGIONAL_NODES_POSITIVE, "99")
+                .withInput(CsStagingData.CsInput.REGIONAL_NODES_EXAMINED, "99")
+                .withInput(CsStagingData.CsInput.METS_AT_DX, "10")
+                .withInput(CsStagingData.CsInput.METS_EVAL, "9")
+                .withInput(CsStagingData.CsInput.LVI, "9")
+                .withInput(CsStagingData.CsInput.AGE_AT_DX, "060")
                 .withSsf(1, "020").build();
 
         Assert.assertEquals(data1.getInput(), data2.getInput());
@@ -322,23 +321,23 @@ public class CsStagingTest {
     @Test
     public void testBlankValues() {
         CsStagingData data = new CsStagingData();
-        data.setInput(CsInput.PRIMARY_SITE, "C700");
-        data.setInput(CsInput.HISTOLOGY, "9530");
-        data.setInput(CsInput.BEHAVIOR, "0");
-        data.setInput(CsInput.GRADE, "9");
-        data.setInput(CsInput.DX_YEAR, "2010");
-        data.setInput(CsInput.CS_VERSION_ORIGINAL, "020520");
-        data.setInput(CsInput.TUMOR_SIZE, "999");
-        data.setInput(CsInput.EXTENSION, "050");
-        data.setInput(CsInput.EXTENSION_EVAL, "9");
-        data.setInput(CsInput.LYMPH_NODES, "988");
-        data.setInput(CsInput.LYMPH_NODES_EVAL, "9");
-        data.setInput(CsInput.REGIONAL_NODES_POSITIVE, "99");
-        data.setInput(CsInput.REGIONAL_NODES_EXAMINED, "99");
-        data.setInput(CsInput.METS_AT_DX, "00");
-        data.setInput(CsInput.METS_EVAL, "9");
-        data.setInput(CsInput.LVI, "8");
-        data.setInput(CsInput.AGE_AT_DX, "060");
+        data.setInput(CsStagingData.CsInput.PRIMARY_SITE, "C700");
+        data.setInput(CsStagingData.CsInput.HISTOLOGY, "9530");
+        data.setInput(CsStagingData.CsInput.BEHAVIOR, "0");
+        data.setInput(CsStagingData.CsInput.GRADE, "9");
+        data.setInput(CsStagingData.CsInput.DX_YEAR, "2010");
+        data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "020520");
+        data.setInput(CsStagingData.CsInput.TUMOR_SIZE, "999");
+        data.setInput(CsStagingData.CsInput.EXTENSION, "050");
+        data.setInput(CsStagingData.CsInput.EXTENSION_EVAL, "9");
+        data.setInput(CsStagingData.CsInput.LYMPH_NODES, "988");
+        data.setInput(CsStagingData.CsInput.LYMPH_NODES_EVAL, "9");
+        data.setInput(CsStagingData.CsInput.REGIONAL_NODES_POSITIVE, "99");
+        data.setInput(CsStagingData.CsInput.REGIONAL_NODES_EXAMINED, "99");
+        data.setInput(CsStagingData.CsInput.METS_AT_DX, "00");
+        data.setInput(CsStagingData.CsInput.METS_EVAL, "9");
+        data.setInput(CsStagingData.CsInput.LVI, "8");
+        data.setInput(CsStagingData.CsInput.AGE_AT_DX, "060");
         data.setSsf(1, "999");
         data.setSsf(2, "999");
         data.setSsf(3, "999");
@@ -366,7 +365,7 @@ public class CsStagingTest {
         Assert.assertEquals(0, data.getErrors().size());
 
         // now change extension to blank; the only errors we get should be of type MATCH_NOT_FOUND
-        data.setInput(CsInput.EXTENSION, "");
+        data.setInput(CsStagingData.CsInput.EXTENSION, "");
 
         // perform the staging
         _STAGING.stage(data);
@@ -381,23 +380,23 @@ public class CsStagingTest {
     public void testStageUrethra() {
         // test this case:  http://seer.cancer.gov/seertools/cstest/?mets=10&lnexam=99&diagnosis_year=2013&grade=9&exteval=9&age=060&site=C680&metseval=9&hist=8000&ext=100&version=020550&nodeseval=9&behav=3&lnpos=99&nodes=100&csver_original=020440&lvi=9&ssf1=020&size=075
         CsStagingData data = new CsStagingData();
-        data.setInput(CsInput.PRIMARY_SITE, "C680");
-        data.setInput(CsInput.HISTOLOGY, "8000");
-        data.setInput(CsInput.BEHAVIOR, "3");
-        data.setInput(CsInput.GRADE, "9");
-        data.setInput(CsInput.DX_YEAR, "2013");
-        data.setInput(CsInput.CS_VERSION_ORIGINAL, "020550");
-        data.setInput(CsInput.TUMOR_SIZE, "075");
-        data.setInput(CsInput.EXTENSION, "100");
-        data.setInput(CsInput.EXTENSION_EVAL, "9");
-        data.setInput(CsInput.LYMPH_NODES, "100");
-        data.setInput(CsInput.LYMPH_NODES_EVAL, "9");
-        data.setInput(CsInput.REGIONAL_NODES_POSITIVE, "99");
-        data.setInput(CsInput.REGIONAL_NODES_EXAMINED, "99");
-        data.setInput(CsInput.METS_AT_DX, "10");
-        data.setInput(CsInput.METS_EVAL, "9");
-        data.setInput(CsInput.LVI, "9");
-        data.setInput(CsInput.AGE_AT_DX, "060");
+        data.setInput(CsStagingData.CsInput.PRIMARY_SITE, "C680");
+        data.setInput(CsStagingData.CsInput.HISTOLOGY, "8000");
+        data.setInput(CsStagingData.CsInput.BEHAVIOR, "3");
+        data.setInput(CsStagingData.CsInput.GRADE, "9");
+        data.setInput(CsStagingData.CsInput.DX_YEAR, "2013");
+        data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "020550");
+        data.setInput(CsStagingData.CsInput.TUMOR_SIZE, "075");
+        data.setInput(CsStagingData.CsInput.EXTENSION, "100");
+        data.setInput(CsStagingData.CsInput.EXTENSION_EVAL, "9");
+        data.setInput(CsStagingData.CsInput.LYMPH_NODES, "100");
+        data.setInput(CsStagingData.CsInput.LYMPH_NODES_EVAL, "9");
+        data.setInput(CsStagingData.CsInput.REGIONAL_NODES_POSITIVE, "99");
+        data.setInput(CsStagingData.CsInput.REGIONAL_NODES_EXAMINED, "99");
+        data.setInput(CsStagingData.CsInput.METS_AT_DX, "10");
+        data.setInput(CsStagingData.CsInput.METS_EVAL, "9");
+        data.setInput(CsStagingData.CsInput.LVI, "9");
+        data.setInput(CsStagingData.CsInput.AGE_AT_DX, "060");
         data.setSsf(1, "020");
 
         // perform the staging
@@ -463,8 +462,8 @@ public class CsStagingTest {
         Assert.assertTrue("The keys " + outputKeys + " were in the output but are not CS output fields.", outputKeys.isEmpty());
 
         // test case with valid year_dx and invalid version original
-        data.setInput(CsInput.DX_YEAR, "2013");
-        data.setInput(CsInput.CS_VERSION_ORIGINAL, "1111");
+        data.setInput(CsStagingData.CsInput.DX_YEAR, "2013");
+        data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "1111");
         _STAGING.stage(data);
         Assert.assertEquals(Result.STAGED, data.getResult());
         Assert.assertEquals("urethra", data.getSchemaId());
@@ -472,55 +471,55 @@ public class CsStagingTest {
         Assert.assertEquals(Type.INVALID_REQUIRED_INPUT, data.getErrors().get(0).getType());
 
         // test case with missing year_dx and valid version original
-        data.setInput(CsInput.DX_YEAR, "");
-        data.setInput(CsInput.CS_VERSION_ORIGINAL, "020550");
+        data.setInput(CsStagingData.CsInput.DX_YEAR, "");
+        data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "020550");
         _STAGING.stage(data);
         Assert.assertEquals(Result.STAGED, data.getResult());
         Assert.assertEquals("urethra", data.getSchemaId());
         Assert.assertEquals(0, data.getErrors().size());
 
         // test case with missing year_dx and valid version original
-        data.setInput(CsInput.DX_YEAR, "");
-        data.setInput(CsInput.CS_VERSION_ORIGINAL, "020001");
+        data.setInput(CsStagingData.CsInput.DX_YEAR, "");
+        data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "020001");
         _STAGING.stage(data);
         Assert.assertEquals(Result.STAGED, data.getResult());
         Assert.assertEquals("urethra", data.getSchemaId());
         Assert.assertEquals(0, data.getErrors().size());
 
         // test case with space-filled year_dx and valid version original
-        data.setInput(CsInput.DX_YEAR, "    ");
-        data.setInput(CsInput.CS_VERSION_ORIGINAL, "020001");
+        data.setInput(CsStagingData.CsInput.DX_YEAR, "    ");
+        data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "020001");
         _STAGING.stage(data);
         Assert.assertEquals(Result.STAGED, data.getResult());
         Assert.assertEquals("urethra", data.getSchemaId());
         Assert.assertEquals(0, data.getErrors().size());
 
         // test case with missing year_dx and invalid version original
-        data.setInput(CsInput.DX_YEAR, "");
-        data.setInput(CsInput.CS_VERSION_ORIGINAL, "012345");
+        data.setInput(CsStagingData.CsInput.DX_YEAR, "");
+        data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "012345");
         _STAGING.stage(data);
         Assert.assertEquals(Result.FAILED_INVALID_YEAR_DX, data.getResult());
         Assert.assertEquals("urethra", data.getSchemaId());
         Assert.assertEquals(0, data.getErrors().size());
 
         // test case with missing year_dx and invalid version original
-        data.setInput(CsInput.DX_YEAR, "");
-        data.setInput(CsInput.CS_VERSION_ORIGINAL, "1");
+        data.setInput(CsStagingData.CsInput.DX_YEAR, "");
+        data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "1");
         _STAGING.stage(data);
         Assert.assertEquals(Result.FAILED_INVALID_YEAR_DX, data.getResult());
         Assert.assertEquals("urethra", data.getSchemaId());
         Assert.assertEquals(0, data.getErrors().size());
 
         // test case with space-filled year_dx and invalid version original
-        data.setInput(CsInput.DX_YEAR, "    ");
-        data.setInput(CsInput.CS_VERSION_ORIGINAL, "012345");
+        data.setInput(CsStagingData.CsInput.DX_YEAR, "    ");
+        data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "012345");
         _STAGING.stage(data);
         Assert.assertEquals(Result.FAILED_INVALID_YEAR_DX, data.getResult());
         Assert.assertEquals("urethra", data.getSchemaId());
         Assert.assertEquals(0, data.getErrors().size());
 
-        data.setInput(CsInput.DX_YEAR, "2003");
-        data.setInput(CsInput.CS_VERSION_ORIGINAL, "020550");
+        data.setInput(CsStagingData.CsInput.DX_YEAR, "2003");
+        data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "020550");
         _STAGING.stage(data);
         Assert.assertEquals(Result.FAILED_INVALID_YEAR_DX, data.getResult());
         Assert.assertEquals("urethra", data.getSchemaId());
@@ -528,8 +527,8 @@ public class CsStagingTest {
         Assert.assertEquals(0, data.getErrors().size());
         Assert.assertEquals(0, data.getPath().size());
 
-        data.setInput(CsInput.DX_YEAR, "2050");
-        data.setInput(CsInput.CS_VERSION_ORIGINAL, "020550");
+        data.setInput(CsStagingData.CsInput.DX_YEAR, "2050");
+        data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "020550");
         _STAGING.stage(data);
         Assert.assertEquals(Result.FAILED_INVALID_YEAR_DX, data.getResult());
         Assert.assertEquals("urethra", data.getSchemaId());
@@ -547,18 +546,18 @@ public class CsStagingTest {
         Assert.assertEquals(Result.FAILED_MISSING_SITE_OR_HISTOLOGY, data.getResult());
 
         // add hist only and it should fail with same result
-        data.setInput(CsInput.PRIMARY_SITE, "C489");
+        data.setInput(CsStagingData.CsInput.PRIMARY_SITE, "C489");
         _STAGING.stage(data);
         Assert.assertEquals(Result.FAILED_MISSING_SITE_OR_HISTOLOGY, data.getResult());
 
         // put a site/hist combo that doesn't match a schema
-        data.setInput(CsInput.HISTOLOGY, "9898");
+        data.setInput(CsStagingData.CsInput.HISTOLOGY, "9898");
         _STAGING.stage(data);
         Assert.assertEquals(Result.FAILED_NO_MATCHING_SCHEMA, data.getResult());
 
         // now a site/hist that returns multiple results
-        data.setInput(CsInput.PRIMARY_SITE, "C111");
-        data.setInput(CsInput.HISTOLOGY, "8200");
+        data.setInput(CsStagingData.CsInput.PRIMARY_SITE, "C111");
+        data.setInput(CsStagingData.CsInput.HISTOLOGY, "8200");
         _STAGING.stage(data);
         Assert.assertEquals(Result.FAILED_MULITPLE_MATCHING_SCHEMAS, data.getResult());
     }
@@ -642,42 +641,42 @@ public class CsStagingTest {
         data.setInput(Staging.CTX_YEAR_CURRENT, "2015");
 
         // test valid year
-        data.setInput(CsInput.DX_YEAR, "2004");
-        data.setInput(CsInput.CS_VERSION_ORIGINAL, "020001");
+        data.setInput(CsStagingData.CsInput.DX_YEAR, "2004");
+        data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "020001");
         Assert.assertTrue(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
 
         // test invalid year
-        data.setInput(CsInput.DX_YEAR, "2003");
+        data.setInput(CsStagingData.CsInput.DX_YEAR, "2003");
         Assert.assertFalse(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
 
         // test blank year with valid version
-        data.setInput(CsInput.DX_YEAR, "");
-        data.setInput(CsInput.CS_VERSION_ORIGINAL, "020001");
+        data.setInput(CsStagingData.CsInput.DX_YEAR, "");
+        data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "020001");
         Assert.assertTrue(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
 
         // test space-filled year with valid version
-        data.setInput(CsInput.DX_YEAR, "    ");
-        data.setInput(CsInput.CS_VERSION_ORIGINAL, "020001");
+        data.setInput(CsStagingData.CsInput.DX_YEAR, "    ");
+        data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "020001");
         Assert.assertTrue(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
 
         // test blank year with invalid version
-        data.setInput(CsInput.DX_YEAR, "");
-        data.setInput(CsInput.CS_VERSION_ORIGINAL, "000000");
+        data.setInput(CsStagingData.CsInput.DX_YEAR, "");
+        data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "000000");
         Assert.assertFalse(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
 
         // test blank year with invalid version of wrong length
-        data.setInput(CsInput.DX_YEAR, "");
-        data.setInput(CsInput.CS_VERSION_ORIGINAL, "1");
+        data.setInput(CsStagingData.CsInput.DX_YEAR, "");
+        data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "1");
         Assert.assertFalse(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
 
         // test space-filled year with invalid version
-        data.setInput(CsInput.DX_YEAR, "    ");
-        data.setInput(CsInput.CS_VERSION_ORIGINAL, "000000");
+        data.setInput(CsStagingData.CsInput.DX_YEAR, "    ");
+        data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "000000");
         Assert.assertFalse(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
 
         // test space-filled year with invalid version of wrong length
-        data.setInput(CsInput.DX_YEAR, "    ");
-        data.setInput(CsInput.CS_VERSION_ORIGINAL, "1");
+        data.setInput(CsStagingData.CsInput.DX_YEAR, "    ");
+        data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "1");
         Assert.assertFalse(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
     }
 

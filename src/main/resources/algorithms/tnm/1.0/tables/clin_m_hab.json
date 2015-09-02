@@ -1,0 +1,27 @@
+{
+  "id" : "clin_m_hab",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin M",
+  "title" : "Clinical M",
+  "notes" : "**Note:**  Most pleural and pericardial effusions with lung cancer are due to tumor. In a few patients, however, multiple cytopathologic examinations of pleural and/or pericardial fluid are negative for tumor, and the fluid is nonbloody and is not an exudate. Where these elements and clinical judgment dictate that the effusion is not related to the tumor, the effusion should be excluded as a staging element and the tumor should be classified as M0.",
+  "last_modified" : "2015-08-13T13:23:43.684Z",
+  "definition" : [ {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_m_display",
+    "name" : "Clinical M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "M0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "1", "M1", "Distant metastasis", "Note: M1 has subcategories of M1a and M1b. Assign M1 only when there is no information available to assign one of the subcategories.\n\nStated as M1 [NOS]" ], [ "1A", "M1a", "Separate tumor nodule(s) in a contralateral lobe; tumor with pleural nodules OR malignant pleural or pericardial effusion", "Extension to:     \n    Contralateral lung     \n    Contralateral main stem bronchus    \n\nMalignant pericardial or pleural effusion (Ipsilateral, contralateral or bilateral lung)\nPleural tumor foci or nodules on contralateral lung\nPleural tumor foci or nodules on the ipsilateral lung separate from direct invasion\nSeparate tumor nodule(s) in contralateral lung\n\nStated as M1a" ], [ "1B", "M1b", "Distant metastasis", "Distant lymph node(s) \n    Cervical nodes\n\nDistant metastasis:\n\nExtension to:\n    Skeletal muscle\n    Sternum\n    Skin of chest\n    Separate lesion in chest wall or diaphragm\n\nOther distant metastasis plus any distant metastasis specified in M1a\n       \nCarcinomatosis \n\nDistant metastases WITH or WITHOUT distant lymph nodes \n\nDistant metastasis, NOS\n\nStated as M1b" ] ]
+}

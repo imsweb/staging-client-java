@@ -1,0 +1,28 @@
+{
+  "id" : "mets_hcm",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Mets",
+  "title" : "SEER Mets",
+  "notes" : "**Note 1:**  Metastasis to adnexa, parametria, pelvic serosa, or vagina is coded in SEER primary tumor.\n\n**Note 2:**  When both Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and metastatic detail are available, record the code with metastatic detail in preference to a statement of FIGO stage.\n\n**Note 3:**  FIGO Stage IV, NOS is assigned based on tumor extension and/or metastasis.  Code SEER Mets based on a physician's statement of FIGO Stage IV, NOS only if it is known that the stage value is assigned because of metastasis.",
+  "footnotes" : "\\## Considered regional in Historic Stage\n** Considered regional in 1977 Summary Staging Guide",
+  "last_modified" : "2015-08-13T13:24:14.257Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/node(s) involved\n\nDistant lymph node(s):\n     Inguinal, NOS:\n         Deep, NOS;\n              Node of Cloquet or Rosenmuller (highest deep inguinal)\n         Superficial inguinal (femoral) ***\n     Other distant lymph node(s)\n\nExtension to:\n     Bladder mucosa (excluding bullous edema)##\n     Bowel mucosa##\n     FIGO Stage IVA\n\nFurther contiguous extension:##\n     Abdominal serosa (peritoneum)\n     Cul de sac (rectouterine pouch)\n     Sigmoid colon\n     Small intestine\n\nMetastasis\nFIGO Stage IVB", "Distant lymph node(s), NOS\n\nDistant metastasis:     \nAbdominal serosa (visceral or parietal peritoneum of abdomen)\nOther abdominal structures or abdomina tissue involvement, NOS\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis NOS\n\nFIGO Stage IIIA, IIIB, III [NOS], IV [NOS]\n\nStated as M1", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

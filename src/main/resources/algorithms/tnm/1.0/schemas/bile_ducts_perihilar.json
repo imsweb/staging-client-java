@@ -1,0 +1,314 @@
+{
+  "id" : "bile_ducts_perihilar",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Bile Ducts Perihilar",
+  "title" : "Perihilar Bile Ducts",
+  "description" : "[SME-REVIEW] AJCC has a N2, there is no N2 in UICC. Need to determine what to do with N2\n\nPer the TNM Supplement, A Commentary on Uniform Use, Fourth edition, 2012:\nA difference between the UICC and AJCC classification at these sites concerns the N2 category, which is in the AJCC but not in the UICC classification. The N2 category contains coeliac, periduodenal, peripancreatic and superior mesenteric artery node involvement. These are considered both by the UICC and AJCC to be non-regional lymph nodes, and therefore their involvement clearly distant metastatic disease. Although they are labelled N2 by the AJCC, the stage grouping for these sites places N2 into Stage IVB along with m1. Therefore, the apparent difference is not an actual difference.",
+  "notes" : "C24.0 Extrahepatic bile duct\n\nPerihilar cholangiocarcinomas are tumors located in the extrahepatic biliary tree proximal to the origin of the cystic duct.",
+  "schema_selection_table" : "schema_selection_bile_ducts_perihilar",
+  "schema_discriminators" : [ "ssf25" ],
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "input_version",
+    "name" : "Input Version",
+    "naaccr_item" : 2937,
+    "table" : "input_version_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "naaccr_item" : 523,
+    "table" : "behavior",
+    "used_for_staging" : true
+  }, {
+    "key" : "systemic_surg_seq",
+    "name" : "RX Summ Systemic/Surgery Sequence",
+    "naaccr_item" : 1639,
+    "table" : "systemic_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "radiation_surg_seq",
+    "name" : "RX Summ Surgery/Radiation Sequence",
+    "naaccr_item" : 1380,
+    "table" : "radiation_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "table" : "nodes_pos_fpa",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "naaccr_item" : 940,
+    "table" : "perihilar_bile_ducts_t_87697",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "naaccr_item" : 950,
+    "table" : "clin_n_dfo",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "naaccr_item" : 960,
+    "table" : "clin_m_hcr",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "naaccr_item" : 880,
+    "table" : "perihilar_bile_ducts_t_87697",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "naaccr_item" : 890,
+    "table" : "path_n_dfo",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_m",
+    "name" : "Pathologic M",
+    "naaccr_item" : 900,
+    "table" : "path_m_hcr",
+    "used_for_staging" : true
+  }, {
+    "key" : "extension",
+    "name" : "Extension",
+    "default" : "999",
+    "table" : "extension_bft",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes",
+    "name" : "Lymph Nodes",
+    "default" : "999",
+    "table" : "nodes_dfo",
+    "used_for_staging" : true
+  }, {
+    "key" : "mets",
+    "name" : "Mets",
+    "default" : "99",
+    "table" : "mets_hcr",
+    "used_for_staging" : true
+  }, {
+    "key" : "ssf10",
+    "name" : "Tumor Growth Pattern",
+    "naaccr_item" : 2864,
+    "table" : "ssf10_sfi",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf11",
+    "name" : "Primary Sclerosing Cholangitis (PSC)",
+    "naaccr_item" : 2865,
+    "table" : "ssf11_sqe",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf12",
+    "name" : "Carbohydrate Antigen 19-9 (CA 19-9) Lab Value",
+    "naaccr_item" : 2866,
+    "table" : "ssf12_sqf",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf13",
+    "name" : "Carcinoembryonic Antigen (CEA)",
+    "naaccr_item" : 2867,
+    "table" : "ssf13_sqg",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf14",
+    "name" : "Carcinoembryonic Antigen (CEA) Lab Value",
+    "naaccr_item" : 2868,
+    "table" : "ssf14_sqh",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf25",
+    "name" : "Schema Discriminator: BileDuctsDistal/BileDuctsPerihilar/CysticDuct",
+    "naaccr_item" : 2879,
+    "table" : "discriminator_bile_ducts",
+    "used_for_staging" : true
+  } ],
+  "mappings" : [ {
+    "id" : "tnm7_stage",
+    "name" : "TNM 7 Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpe",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "determine_default_t",
+      "inputs" : [ "clin_t", "path_t" ],
+      "outputs" : [ "source_t", "combined_t_in", "tmp_path_t", "ss2017_t", "tmp_clin_t" ]
+    }, {
+      "id" : "determine_default_n",
+      "inputs" : [ "clin_n", "path_n" ],
+      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+    }, {
+      "id" : "determine_default_m",
+      "inputs" : [ "path_m", "clin_m" ],
+      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_clin_m", "combined_m_in", "source_m" ]
+    }, {
+      "id" : "tnm7_stage_ubn",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_clin_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_clin_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "clin_stage_group"
+      } ],
+      "inputs" : [ "tmp_clin_n", "tmp_clin_m", "tmp_clin_t" ],
+      "outputs" : [ "clin_stage_group" ]
+    }, {
+      "id" : "tnm7_stage_ubn",
+      "input_mapping" : [ {
+        "from" : "tmp_path_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_path_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_path_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "path_stage_group"
+      } ],
+      "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t" ],
+      "outputs" : [ "path_stage_group" ]
+    }, {
+      "id" : "adjust_path_defaults",
+      "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
+      "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
+    } ]
+  }, {
+    "id" : "combined_stage",
+    "name" : "Combined Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpe",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "combined_t",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_t",
+        "to" : "clin_t"
+      }, {
+        "from" : "tmp_path_t",
+        "to" : "path_t"
+      } ],
+      "inputs" : [ "radiation_surg_seq", "combined_t_in", "tmp_path_t", "tmp_clin_t", "behavior", "systemic_surg_seq" ],
+      "outputs" : [ "source_t", "combined_t" ]
+    }, {
+      "id" : "combined_n",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_n",
+        "to" : "clin_n"
+      }, {
+        "from" : "tmp_path_n",
+        "to" : "path_n"
+      } ],
+      "inputs" : [ "nodes_pos", "tmp_clin_n", "radiation_surg_seq", "tmp_path_n", "combined_n_in", "systemic_surg_seq" ],
+      "outputs" : [ "combined_n", "source_n" ]
+    }, {
+      "id" : "combined_m",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_m",
+        "to" : "clin_m"
+      }, {
+        "from" : "tmp_path_m",
+        "to" : "path_m"
+      } ],
+      "inputs" : [ "tmp_path_m", "tmp_clin_m", "combined_m_in" ],
+      "outputs" : [ "combined_m", "source_m" ]
+    }, {
+      "id" : "tnm7_stage_ubn",
+      "input_mapping" : [ {
+        "from" : "combined_m",
+        "to" : "m"
+      }, {
+        "from" : "combined_n",
+        "to" : "n"
+      }, {
+        "from" : "combined_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "combined_stage_group"
+      } ],
+      "inputs" : [ "combined_m", "combined_n", "combined_t" ],
+      "outputs" : [ "combined_stage_group" ]
+    }, {
+      "id" : "combined_t_to_summ_stage_t_2_4e_re_93413",
+      "inputs" : [ "combined_t" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "combined_n_to_summ_stage_n_n2_d_23338",
+      "inputs" : [ "combined_n" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "cpmbined_m_to_summ_stage_m_60564",
+      "inputs" : [ "combined_m" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  }, {
+    "id" : "summary_stage_2017",
+    "name" : "Summary Stage 2017",
+    "exclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpe",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "extension_bft",
+      "inputs" : [ "extension" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "nodes_dfo",
+      "inputs" : [ "nodes" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "mets_hcr",
+      "inputs" : [ "mets" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  } ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "path_m_hcr", "input_version_validation", "extension_bft", "clin_m_hcr", "radiation_surg_seq", "mets_hcr", "determine_default_m", "ssf13_sqg", "nodes_pos_fpa", "nodes_dfo", "combined_n_to_summ_stage_n_n2_d_23338", "clin_n_dfo", "determine_default_n", "ssf10_sfi", "schema_selection_bile_ducts_perihilar", "histology", "ssf12_sqf", "combined_t_to_summ_stage_t_2_4e_re_93413", "behavior", "tnm7_inclusions_tpe", "adjust_path_defaults", "systemic_surg_seq", "discriminator_bile_ducts", "primary_site", "tnm7_stage_ubn", "ssf14_sqh", "ssf11_sqe", "combined_m", "combined_n", "path_n_dfo", "perihilar_bile_ducts_t_87697", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
+  "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
+  "last_modified" : "2015-08-27T16:48:21.692Z"
+}

@@ -1,0 +1,30 @@
+{
+  "id" : "gist_esophagus_ajcctnm7_stage_gist_small_intestine",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "TNM 7 Stage GIST Small Intestine",
+  "title" : "AJCC TNM 7 Stage - GIST Small Intestine",
+  "last_modified" : "2015-08-13T13:25:30.086Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "mitotic_rate",
+    "name" : "Mitotic Rate",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0", "0", "0", "Low", "ERROR:" ], [ "0", "0", "0", "High", "ERROR:" ], [ "0", "0", "0", "Unknown", "ERROR:" ], [ "0", "1", "0", "Low", "VALUE:4" ], [ "0", "1", "0", "High", "VALUE:4" ], [ "0", "1", "0", "Unknown", "VALUE:4" ], [ "1", "0", "0", "Low", "VALUE:1" ], [ "1", "0", "0", "High", "VALUE:3A" ], [ "1", "0", "0", "Unknown", "VALUE:99" ], [ "1", "1", "0", "Low", "VALUE:4" ], [ "1", "1", "0", "High", "VALUE:4" ], [ "1", "1", "0", "Unknown", "VALUE:4" ], [ "2", "0", "0", "Low", "VALUE:1" ], [ "2", "0", "0", "High", "VALUE:3B" ], [ "2", "0", "0", "Unknown", "VALUE:99" ], [ "2", "1", "0", "Low", "VALUE:4" ], [ "2", "1", "0", "High", "VALUE:4" ], [ "2", "1", "0", "Unknown", "VALUE:4" ], [ "3", "0", "0", "Low", "VALUE:2" ], [ "3", "0", "0", "High", "VALUE:3B" ], [ "3", "0", "0", "Unknown", "VALUE:99" ], [ "3", "1", "0", "Low", "VALUE:4" ], [ "3", "1", "0", "High", "VALUE:4" ], [ "3", "1", "0", "Unknown", "VALUE:4" ], [ "4", "0", "0", "Low", "VALUE:3A" ], [ "4", "0", "0", "High", "VALUE:3B" ], [ "4", "0", "0", "Unknown", "VALUE:3NOS" ], [ "4", "1", "0", "Low", "VALUE:4" ], [ "4", "1", "0", "High", "VALUE:4" ], [ "4", "1", "0", "Unknown", "VALUE:4" ], [ "X", "0", "0", "Low", "VALUE:99" ], [ "X", "0", "0", "High", "VALUE:99" ], [ "X", "0", "0", "Unknown", "VALUE:99" ], [ "X", "1", "0", "Low", "VALUE:4" ], [ "X", "1", "0", "High", "VALUE:4" ], [ "X", "1", "0", "Unknown", "VALUE:4" ], [ "0", "0", "1", "Low", "VALUE:4" ], [ "0", "0", "1", "High", "VALUE:4" ], [ "0", "0", "1", "Unknown", "VALUE:4" ], [ "0", "1", "1", "Low", "VALUE:4" ], [ "0", "1", "1", "High", "VALUE:4" ], [ "0", "1", "1", "Unknown", "VALUE:4" ], [ "1", "0", "1", "Low", "VALUE:4" ], [ "1", "0", "1", "High", "VALUE:4" ], [ "1", "0", "1", "Unknown", "VALUE:4" ], [ "1", "1", "1", "Low", "VALUE:4" ], [ "1", "1", "1", "High", "VALUE:4" ], [ "1", "1", "1", "Unknown", "VALUE:4" ], [ "2", "0", "1", "Low", "VALUE:4" ], [ "2", "0", "1", "High", "VALUE:4" ], [ "2", "0", "1", "Unknown", "VALUE:4" ], [ "2", "1", "1", "Low", "VALUE:4" ], [ "2", "1", "1", "High", "VALUE:4" ], [ "2", "1", "1", "Unknown", "VALUE:4" ], [ "3", "0", "1", "Low", "VALUE:4" ], [ "3", "0", "1", "High", "VALUE:4" ], [ "3", "0", "1", "Unknown", "VALUE:4" ], [ "3", "1", "1", "Low", "VALUE:4" ], [ "3", "1", "1", "High", "VALUE:4" ], [ "3", "1", "1", "Unknown", "VALUE:4" ], [ "4", "0", "1", "Low", "VALUE:4" ], [ "4", "0", "1", "High", "VALUE:4" ], [ "4", "0", "1", "Unknown", "VALUE:4" ], [ "4", "1", "1", "Low", "VALUE:4" ], [ "4", "1", "1", "High", "VALUE:4" ], [ "4", "1", "1", "Unknown", "VALUE:4" ], [ "X", "0", "1", "Low", "VALUE:4" ], [ "X", "0", "1", "High", "VALUE:4" ], [ "X", "0", "1", "Unknown", "VALUE:4" ], [ "X", "1", "1", "Low", "VALUE:4" ], [ "X", "1", "1", "High", "VALUE:4" ], [ "X", "1", "1", "Unknown", "VALUE:4" ] ]
+}

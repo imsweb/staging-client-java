@@ -1,0 +1,27 @@
+{
+  "id" : "clin_m_hak",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin M",
+  "title" : "Clinical M",
+  "notes" : "**Note 1:**  Genital metastasis (vagina, ovary, broad ligament, fallopian tube) is classified T2. Any involvement of non-genital structures, whether by direct invasion or metastasis is described using the M classification.\n\n**Note 2:**  All lymph node involvement for GTT is considered M1b.  Lymph node involvement, whether of regional or distant nodes, is coded in distant metastasis. \n\n**Note 3:**  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and metastatic detail are available, record the code with metastatic detail in preference to a statement of FIGO stage.",
+  "last_modified" : "2015-08-13T13:24:08.580Z",
+  "definition" : [ {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_m_display",
+    "name" : "Clinical M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "M0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "1", "M1", "Distant metastasis", "Note: M1 has subcategories of M1a and M1b. Assign M1 only when there is no information \navailable to assign one of the subcategories.\n\nDistant metastasis, NOS\n\nStated as M1 [NOS]" ], [ "1A", "M1a", "Metastasis to lung(s)", "FIGO Stage III (IIIA, IIIB, III [NOS])\n\nStated as M1a" ], [ "1B", "M1b", "Other disant metastasis", "Regional lymph node(s): \n    Aortic, NOS:\n        Lateral\n        Para-aortic\n        Periaortic\n     Iliac, NOS:\n        Common\n        External\n        Internal (hypogastric):\n            Obturator\n    Parametrial\n    Pelvic, NOS\n    Sacral, NOS:\n        Lateral\n        Presacral\n        Middle (promontorial) (Gerota's node)\n        Uterosacral\n     Superficial inguinal (femoral)\n\nRegional lymph node(s), NOS\nLymph nodes, NOS\nDistant lymph nodes, NOS\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT lymph node(s)\n\nFIGO Stage IV(IVA, IVB, IV [NOS])\n\nStated as M1b" ] ]
+}

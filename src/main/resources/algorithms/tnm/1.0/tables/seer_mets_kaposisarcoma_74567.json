@@ -1,0 +1,26 @@
+{
+  "id" : "seer_mets_kaposisarcoma_74567",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Mets KaposiSarcoma",
+  "title" : "SEER Mets",
+  "last_modified" : "2015-08-13T13:24:03.793Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s) involved\n\nLesions in ALL THREE of the following:\n     Mucosa (e.g., oral cavity, anus, rectum, vagina, vulva)\n     Skin and/or connective tissue\n      Viscera (e.g., pulmonary, gastrointestinal tract, spleen, other)\n\nFurther contiguous extension\n\nMetastasis", "Distant metastasis, NOS", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

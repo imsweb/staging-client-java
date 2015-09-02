@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_bds",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin T",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  In the case of multiple simultaneous tumors, code the tumor with the greatest extension.\n\n**Note 2:**  Skin ulceration does not alter the T category.\n\n**Note 3:**  In-transit metastasis is coded in regional lymph nodes.\n\n**Note 4:**  For the following descriptions, assign the appropriate T category based on the tumor size.\n\n    Lesion(s) confirmed to dermis\n    Localized, NOS\n    Subcutaneous tissue (through entire dermis)\n\n**Note 5:**  Lesion(s) confined to the dermis or extension into the subcutaneous tissue (through entire dermis) are assigned the T category based on tumor size.",
+  "last_modified" : "2015-08-13T13:24:41.737Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "T0", "No evidence of primary tumor", "" ], [ "4", "T4", "Tumor invades deep extradermal structures, \ni.e., cartilage, skeletal muscle, fascia, or bone", "Fascia\n\nUnderlying cartilage, bone, skeletal muscle\n\nFurther contiguous extension\n\nStated as T4 with no other information on extension" ], [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "IS", "Tis", "Carcinoma in situ", "In situ, intraepidermal, intraepithelial, noninvasive" ], [ "1", "T1", "Tumor 2 cm or less in greatest dimension", "Stated as T1 with no other information on extension" ], [ "2", "T2", "Tumor more than 2 cm but not more than 5 cm in greatest\ndimension", "Stated as T2 with no other information on extension" ], [ "3", "T3", "Tumor more than 5 cm in greatest dimension", "Stated as T3 with no other information on extension" ] ]
+}

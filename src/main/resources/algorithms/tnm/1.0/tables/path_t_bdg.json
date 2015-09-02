@@ -1,0 +1,27 @@
+{
+  "id" : "path_t_bdg",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path T",
+  "title" : "Pathological T",
+  "notes" : "**Note 1:**  In the case of multiple simultaneous tumors, code the tumor with greatest extension.\n\n**Note 2:** For the following descriptions, assign the appropriate T category (T1 or T2) based on the tumor size.\n\n    Lesion(s) confined to dermis\n    Minimal infiltration of dermis (Not invading tarsal plate, not at eyelid margin)\n    Subcutaneous tissue (Through entire dermis, not invading tarsal plate, not at eyelid margin)\n    Tumor invades tarsal plate, not at eyelid margin\n    Tumor at eyelid margin\n    Tumor involves full eyelid thickness\n\n    Localized, NOS\n\n**Note 3:**  Skin ulceration does not alter the T category.\n\n**Note 4:**  Presence of tumor at eyelid margin takes priority over depth of invasion in dermis/tarsal plate; i.e., code 250 takes priority over codes 100-200.\n\n**Note 5:**  Metastatic skin lesions are coded in distant metastasis.",
+  "last_modified" : "2015-08-13T13:23:41.073Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathological T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathological T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "T0", "", "No evidence of primary tumor" ], [ "3", "T3", "", "Stated as T3 [NOS] with no other information on extension" ], [ "3A", "T3a", "", "Adjacent structures, including:\n    Bulbar conjunctiva\n    Globe\n    Sclera\n    Soft tissues of orbit\n- - - - - - - - - -\nBone/periosteum of orbit\nSkeletal muscle\nUnderlying cartilage\n- - - - - - - - - -\nStated as T3a with no other information on extension" ], [ "3B", "T3b", "", "Complete resection requires enucleation, exenteration, or bone resection\n\nStated as T3b with no other information on extension" ], [ "4", "T4", "", "Tumor unresectable, extensive invasion:\n    Ocular structures\n    Orbital structures\n- - - - - - - - - -\nNasal cavity\nParanasal sinuses\nOther craniofacial structures\n- - - - - - - - - -\nCentral nervous system\n- - - - - - - - - -\nFurther contiguous extension\n- - - - - - - - - -\nStated as T4 with no other information on extension" ], [ "X", "TX", "", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record" ], [ "IS", "Tis", "", "In situ, intraepidermal, intraepithelial, noninvasive\nBowen disease" ], [ "[SME REVIEW]", "[SME REVIEW]", "", "Lesion(s) confined to dermis\nMinimal infiltration of dermis\n(Not invading tarsal plate, not at eyelid margin)\n- - - - - - - - - -\nSubcutaneous tissue \n(Through entire dermis, not invading tarsal plate, not at eyelid margin)\n- - - - - - - - - -\nStated as T1 with no other information on extension\n- - - - - - - - - -\nTumor invades tarsal plate, not at eyelid margin\n- - - - - - - - - -\nTumor at eyelid margin\n- - - - - - - - - -\nStated as T2a with no other information on extension\n- - - - - - - - - -\nTumor involves full eyelid thickness\n- - - - - - - - - -\nStated as T2b with no other information on extension\n- - - - - - - - - -\nStated as T2 [NOS] with no other information on extension\n- - - - - - - - - -\nLocalized, NOS" ] ]
+}

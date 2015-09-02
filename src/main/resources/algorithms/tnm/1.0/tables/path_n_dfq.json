@@ -1,0 +1,27 @@
+{
+  "id" : "path_n_dfq",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path N",
+  "title" : "Pathological N",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this fields.  Distant nodes are coded in distant metastasis.\n\n**Note 2:**  Regional lymph nodes are defined as those in the vicinity of the primary tumor.\n\n**Note 3:**  Regional lymph node involvement is rare.  For this schema, if there is no mention of lymph node involvement clinically, assume that lymph nodes are negative.  Assign NX (Unknown) only when there is no available information on the extent of the patient's disease, for example when a lab-only case is abstracted from a biopsy report and no clinical history is available.\n\n**Regional lymph nodes for retroperitoneum:**\n\n    Intra-abdominal:\n        Paracaval\n        Pelvic\n        Subdiaphragmatic",
+  "last_modified" : "2015-08-13T13:24:42.044Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathological N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathological N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "X", "NX", "Regional lymph nodes cannot be assessed", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ] ]
+}

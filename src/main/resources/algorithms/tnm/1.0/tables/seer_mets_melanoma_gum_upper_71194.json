@@ -1,0 +1,27 @@
+{
+  "id" : "seer_mets_melanoma_gum_upper_71194",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Mets Melanoma Gum Upper",
+  "title" : "SEER Mets",
+  "footnotes" : "\\**CONSIDERED REGIONAL IN HISTORIC STAGE",
+  "last_modified" : "2015-08-13T13:26:05.009Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2000_m",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/lymph node(s) involved\nDistant lymph node(s):\nMediastinal\nSupraclavicular (transverse cervical)\nOther distant lymph node(s)\n Extension to:\nSkin##\nSkull##\nUpper gum only:\nMaxillary antrum (sinus)##\nNasal cavity##\nFurther contiguous extension\nMetastasis", "Skin of face  **NOTE - SHOULD ALL THESE SITES THROUGH PREVERTEBRAL SPACE BE MOVED TO SEER PRIMARY TUMOR?**\n\nCartilage of mandible\nCortical bone of mandible\nMandible, NOS\n\nContiguous extension:\n    Base of skull\n    Carotid artery (encased)\n    Masticator space\n    Pterygoid plates\n\nFurther contiguous extension including:\n    Brain\n    Dura\n    Lower cranial nerves (IX, X, XI, XII)\n    Mediastinal structures\n    Prevertebral space  **END**\n\nStated as T4b with no other information on extension  **KEEP**\n\nStated as T4 [NOS] with no other information on extension  **KEEP**\n\nDistant lymph nodes  **DELETE**\n\"Distant  **DELETE**\n\nSingle positive ipsilateral regional node:  **DELETE**\n    Level V  - Posterior triangle group  **NOTE:  SHOULD ALL THESE NODES THROUGH SUBOCCIPITAL BE MOVED TO SEER REGIONAL NODES?**\n        Posterior cervical\n        Level VA - Spinal accessory\n        Level VB - Transverse cervical, supraclavicular (see Note 4)\n    Level VI  - Anterior compartment group:\n        Laterotracheal \n        Paralaryngeal \n        Paratracheal - above suprasternal notch\n        Perithyroidal \n        Precricoid  (Delphian)\n        Prelaryngeal \n        Pretracheal  - above suprasternal notch\n        Recurrent  laryngeal\n    Level VII node - Superior  mediastinal group (for other mediastinal nodes see CS Mets at DX):\n        Esophageal  groove\n        Paratracheal  - below suprasternal notch\n        Pretracheal  - below suprasternal notch \n    Other groups:\n        Parotid:  **NOTE:  SHOULD THESE NODES THROUGH SUBOCCIPITAL BE MOVED TO SEER REGIONAL NODES?\n            Infraauricular \n            Intraparotid \n            Periparotid \n            Preauricular \n        Parapharyngeal\n        Retroauricular (mastoid)         \n        Retropharyngeal\n        Suboccipital  **END**\n\nMultiple positive ipsilateral nodes, any listed in code 120 **DELETE**\nWITH or WITHOUT nodes listed in code 100 or 110  **DELETE**\n\nPositive ipsilateral nodes listed in code 110, not stated if single or multiple  **DELETE**\n\nPositive ipsilateral nodes listed in code 120, not stated if single or multiple  **DELETE**\n\nPositive bilateral or contralateral nodes, any listed in code 120  **DELETE**\nWITH or WITHOUT nodes listed in code 100 or 110  **DELETE**\n\nPositive nodes listed in code 120, not stated if ipsilateral, or bilateral, or contralateral  **DELETE**\nAND not stated if single or multiple\"  **DELETE**\n\n\nMets present  **DELETE**\n\nCarcinomatosis  **KEEP**\n\nDistant metastasis plus distant lymph node(s) WITH or WITHOUT\ndistant lymph node(s)  **DELETE**\n\nDistant metastasis, NOS  **DELETE**\n\nStated as M1 with no other information on distant metastasis  **KEEP**", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed  \nNot documented in patient record", "", "VALUE:U" ] ]
+}

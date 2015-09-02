@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_bag",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin T",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  The orbital tissues are the support systems of the globe, confined to the space within the surrounding bony structure.  The tissues include fat, striated and smooth muscle, and fibroconnective, vascular, lymphoid, peripheral nerve, and optic nerve tissue.\n\n**Note 2:**  TNM stages only sarcomas of the orbit. TNM values are derived as NA for all non-sarcoma histologies coded to this site.\n\n**Note 3:**  Tis may be used only for non-sarcoma histologies coded to this site. Sarcomas do not present as in situ or noninvasive tumors.\n\n**Note 4:**  For the following descriptions, assign the appropriate T category based on the tumor size.\n\n    Tumor confined to orbit\n    Localized, NOS",
+  "last_modified" : "2015-08-13T13:23:36.706Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "T0", "No evidence of primary tumor", "" ], [ "3", "T3", "Tumor of any site with invasion of orbit tissues \nand/or bony walls", "Stated as T3" ], [ "4", "T4", "Tumor invades globe or periorbital structure, \nsuch as eyelids, temporal fossa, nasal cavity and\nparanasal sinuses, and/or CNS", "Invasion of globe\n\nExtension to:\n    Adjacent paranasal sinuses\n    Central nervous system\n    Cranium\n    Eyelids\n    Temporal fossa\n    Nasal cavity\n\nFurther contiguous extension\n\nStated as T4" ], [ "X", "TX", "Primary tumor cannot be assessed", "In situ, intraepithelial, noninvasive\n\nUnknown; extension not stated\nNot documented in patient record" ], [ "1", "T1", "Tumor 15 mm or less in greatest dimension", "Stated as T1" ], [ "2", "T2", "Tumor more than 15 mm in greatest dimension \nwithout invasion of globe or bony wall", "Stated as T2" ] ]
+}

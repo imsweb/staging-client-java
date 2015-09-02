@@ -1,0 +1,27 @@
+{
+  "id" : "path_n_dai",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path N",
+  "title" : "Pathological N",
+  "notes" : "**Note 1:** Histological examination of hilar and mediastinal lymphadenectomy specimen(s) will ordinarily include 6 or more lymph nodes/stations. Three of these nodes/stations should be mediastinal, including the subcarinal nodes and 3 from N1 nodes/stations. Labeling according to the IASLC chart and table of definitions given in the TNM supplement is desirable. If all the lymph nodes examined are negative, but the number ordinarily examined is not met, classify as pN0.\n\n**Note 2:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in distant metastasis.\n\n**Note 3:**  If at mediastinoscopy/x-ray, the description is \"mass\", \"adenopathy\", or \"enlargement\" of any of the lymph nodes named as regional lymph nodes in N1 or N2, assume that at least regional lymph nodes are involved. If there is any mention of bilateral or contralateral mass, adenopathy or lymph node involvement , assign N3.\n\n**Note 4:**  The words \"no evidence of spread\" or \"remaining examination negative\" are sufficient information to consider regional lymph nodes negative in the absence of any statement about nodes.\n\n**Note 5:**  Vocal cord paralysis (resulting from involvement of the recurrent branch of the vagus nerve), superior vena cava (SVC) obstruction, or compression of the trachea or the esophagus, may be related to direct extension of the primary tumor or to lymph node involvement.  The treatment options and prognosis associated with these manifestations of disease extent fall within the T4-Stage IIIB category; therefore, generally assign T4 for these manifestations and not regional lymph nodes. However, if the primary tumor is peripheral and clearly unrelated to vocal cord paralysis, SVC obstruction, or compression of the trachea or the esophagus, assign N2 for mediastinal lymph node involvement, unless there is a statement of involvement by direct extension from the primary tumor.",
+  "last_modified" : "2015-08-13T13:25:31.955Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathological N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathological N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "NX", "Regional lymph node(s) cannot be assessed", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Metastasis in ipsilateral peribronchial and/or ipsilateral hilar lymph nodes and intrapulmonary nodes, including involvement by direct extension", "Regional lymph nodes, ipsilateral:\n    Bronchial\n    Hilar (bronchopulmonary) (proximal lobar) (pulmonary root)\n    Intrapulmonary nodes, including involvement by direct extension:\n        Interlobar\n        Lobar\n        Segmental\n        Subsegmental\nPeri/parabronchial \n\nRegional lymph node(s), NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "2", "N2", "Metastasis in ipsilateral mediastinal and/or subcarinal lymph node(s)", "Regional lymph nodes, ipsilateral:\n    Aortic (above diaphragm), NOS:\n        Peri/para-aortic, NOS:\n            Ascending aorta (phrenic)\n        Subaortic (aortico-pulmonary window)\n    Carinal (tracheobronchial) (tracheal bifurcation)\n    Mediastinal, NOS:\n        Anterior\n        Posterior (tracheoesophageal)\n    Pericardial\n    Peri/paraesophageal\n    Peri/paratracheal, NOS:\n        Azygos (lower peritracheal)\n    Pre- and retrotracheal, NOS:\n        Precarinal\n    Pulmonary ligament\n    Subcarinal \n\nStated as N2" ], [ "3", "N3", "Metastasis in contralateral mediastinal, contralateral hilar, ipsilateral or contralateral scalene, or supraclavicular lymph node(s)", "Contralateral/bilateral hilar (bronchopulmonary)  (proximal lobar) (pulmonary root)\nContralateral/bilateral mediastinal \nScalene (inferior deep cervical), ipsilateral or contralateral\nSupraclavicular (transverse cervical), ipsilateral or contralateral\n\nStated as N3" ] ]
+}

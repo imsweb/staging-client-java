@@ -1,0 +1,27 @@
+{
+  "id" : "clin_n_dff",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin N",
+  "title" : "Clinical N",
+  "notes" : "**Note:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in distant metastasis.\n\n**Regional lymph nodes for rectosigmoid junction and rectum**\n    \n**All sites:** \n\n    Haemorrhoidal (hemorrhoidal)(middle, superior) \n    Inferior mesenteric \n    Mesenteric [NOS] \n    Perirectal \n    Rectal (middle) \n    Rectal [NOS] \n    Rectal (superior) \n    Rectosigmoid (paracolic/pericolic)\n    Sigmoidal (sigmoid mesenteric)\n\n    Regional lymph nodes, NOS\n    Lymph nodes, NOS\n\n**Rectosigmoid (C19.9)** \n\n    Colic, (NOS) \n    Left colic\n  \n**Rectum (C20.9)** \n\n    Haemorrhoidal (hemorrhoidal) (inferior) \n    Internal iliac (hypogastric)  \n    Lateral (laterosacral) \n    Middle (promontorial) (Gerota's node) \n    Obturator\n    Presacral\n    Rectal (inferior) \n    Sacral (NOS)\n    Sacral promontory",
+  "last_modified" : "2015-08-17T15:44:25.064Z",
+  "definition" : [ {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n_display",
+    "name" : "Clinical N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "NX", "Regional lymph node(s) cannot be assessed", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Regional lymph node metastasis", "Nodule(s) or foci in perirectal fat\n\nRegional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ] ]
+}

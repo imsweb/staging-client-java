@@ -1,0 +1,316 @@
+{
+  "id" : "thyroid",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Thyroid",
+  "title" : "Thyroid Gland",
+  "description" : "[SME REVIEW] - \nCombined Stage/summary stage:  not sure if Histology Grade Extension Summary Stage is needed anymore.\n   Please contact Nicki and let her know what the path and table are supposed to look like and she'll fix it.\n   Extra table not needed, additional instructions will be needed for summary stage.\n(NS: if the S and M concepts are staying, need to make a combined T thyroid table; shouldn't need the special table in the combined path at that point.)\n\nKeep note until instructions developed\n\nThere are other ways to get a T4a than 'stated as, no other info'.  NCS is not sure you can tell WHEN to apply the table accurately, so is there some other way to tell this should be done.\n [END SME REVIEW]",
+  "notes" : "C73.9  Thyroid gland\n\n**Note:** The determination of TNM stage group from T, N, and M for thyroid depends on histologic type, grade, and age. The Histologies, Grade, Stage table shows the selection of the TNM Stage table based on histology and grade. For papillary and follicular carcinomas, age is also needed for the selection; if age at diagnosis is unknown, TNM stage will be derived as unknown for these histologies.",
+  "schema_selection_table" : "schema_selection_thyroid",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "input_version",
+    "name" : "Input Version",
+    "naaccr_item" : 2937,
+    "table" : "input_version_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "grade",
+    "name" : "Grade",
+    "naaccr_item" : 440,
+    "table" : "grade",
+    "used_for_staging" : true
+  }, {
+    "key" : "systemic_surg_seq",
+    "name" : "RX Summ Systemic/Surgery Sequence",
+    "naaccr_item" : 1639,
+    "table" : "systemic_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "radiation_surg_seq",
+    "name" : "RX Summ Surgery/Radiation Sequence",
+    "naaccr_item" : 1380,
+    "table" : "radiation_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "table" : "nodes_pos_fpa",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "naaccr_item" : 940,
+    "table" : "thyroid_t_6166",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "naaccr_item" : 950,
+    "table" : "clin_n_dbr",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "naaccr_item" : 960,
+    "table" : "clin_m_hbf",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "naaccr_item" : 880,
+    "table" : "thyroid_t_6166",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "naaccr_item" : 890,
+    "table" : "path_n_dbr",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_m",
+    "name" : "Pathologic M",
+    "naaccr_item" : 900,
+    "table" : "path_m_hbf",
+    "used_for_staging" : true
+  }, {
+    "key" : "extension",
+    "name" : "Extension",
+    "default" : "999",
+    "table" : "extension_bby",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes",
+    "name" : "Lymph Nodes",
+    "default" : "999",
+    "table" : "nodes_dbr",
+    "used_for_staging" : true
+  }, {
+    "key" : "mets",
+    "name" : "Mets",
+    "default" : "99",
+    "table" : "mets_hbf",
+    "used_for_staging" : true
+  }, {
+    "key" : "ssf1",
+    "name" : "Solitary vs Multifocal Tumor",
+    "naaccr_item" : 2880,
+    "table" : "ssf1_jap",
+    "used_for_staging" : true
+  }, {
+    "key" : "age_dx",
+    "name" : "Age at Diagnosis",
+    "naaccr_item" : 230,
+    "default" : "999",
+    "used_for_staging" : true
+  } ],
+  "mappings" : [ {
+    "id" : "tnm7_stage",
+    "name" : "TNM 7 Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpb",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "determine_default_t",
+      "inputs" : [ "clin_t", "path_t" ],
+      "outputs" : [ "source_t", "combined_t_in", "tmp_path_t", "ss2017_t", "tmp_clin_t" ]
+    }, {
+      "id" : "determine_default_n",
+      "inputs" : [ "clin_n", "path_n" ],
+      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+    }, {
+      "id" : "determine_default_m",
+      "inputs" : [ "path_m", "clin_m" ],
+      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_clin_m", "combined_m_in", "source_m" ]
+    }, {
+      "id" : "thyroid_baset_ssf1_ajcc7",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_t",
+        "to" : "base_t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "t",
+        "to" : "tmp_clin_t"
+      } ],
+      "inputs" : [ "tmp_clin_t", "ssf1" ],
+      "outputs" : [ "tmp_clin_t" ]
+    }, {
+      "id" : "histologies_grade_stage_tnm_7_20594",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_clin_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_clin_t",
+        "to" : "t"
+      } ],
+      "inputs" : [ "hist", "age_dx", "tmp_clin_n", "tmp_clin_m", "grade", "tmp_clin_t" ],
+      "outputs" : [ "stage_table", "stage" ]
+    }, {
+      "id" : "thyroid_baset_ssf1_ajcc7",
+      "input_mapping" : [ {
+        "from" : "tmp_path_t",
+        "to" : "base_t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "t",
+        "to" : "tmp_path_t"
+      } ],
+      "inputs" : [ "tmp_path_t", "ssf1" ],
+      "outputs" : [ "tmp_path_t" ]
+    }, {
+      "id" : "histologies_grade_stage_tnm_7_20594",
+      "input_mapping" : [ {
+        "from" : "tmp_path_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_path_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_path_t",
+        "to" : "t"
+      } ],
+      "inputs" : [ "tmp_path_m", "hist", "age_dx", "tmp_path_n", "grade", "tmp_path_t" ],
+      "outputs" : [ "stage_table", "stage" ]
+    }, {
+      "id" : "adjust_path_defaults",
+      "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
+      "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
+    } ]
+  }, {
+    "id" : "combined_stage",
+    "name" : "Combined Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpb",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "combined_t_no_tis",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_t",
+        "to" : "clin_t"
+      }, {
+        "from" : "tmp_path_t",
+        "to" : "path_t"
+      } ],
+      "inputs" : [ "radiation_surg_seq", "combined_t_in", "tmp_path_t", "tmp_clin_t", "systemic_surg_seq" ],
+      "outputs" : [ "source_t", "combined_t" ]
+    }, {
+      "id" : "thyroid_baset_ssf1_ajcc7",
+      "input_mapping" : [ {
+        "from" : "combined_t",
+        "to" : "base_t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "t",
+        "to" : "combined_t"
+      } ],
+      "inputs" : [ "combined_t", "ssf1" ],
+      "outputs" : [ "combined_t" ]
+    }, {
+      "id" : "combined_n",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_n",
+        "to" : "clin_n"
+      }, {
+        "from" : "tmp_path_n",
+        "to" : "path_n"
+      } ],
+      "inputs" : [ "nodes_pos", "tmp_clin_n", "radiation_surg_seq", "tmp_path_n", "combined_n_in", "systemic_surg_seq" ],
+      "outputs" : [ "combined_n", "source_n" ]
+    }, {
+      "id" : "combined_m",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_m",
+        "to" : "clin_m"
+      }, {
+        "from" : "tmp_path_m",
+        "to" : "path_m"
+      } ],
+      "inputs" : [ "tmp_path_m", "tmp_clin_m", "combined_m_in" ],
+      "outputs" : [ "combined_m", "source_m" ]
+    }, {
+      "id" : "histologies_grade_stage_tnm_7_20594",
+      "input_mapping" : [ {
+        "from" : "combined_m",
+        "to" : "m"
+      }, {
+        "from" : "combined_n",
+        "to" : "n"
+      }, {
+        "from" : "combined_t",
+        "to" : "t"
+      } ],
+      "inputs" : [ "hist", "combined_m", "age_dx", "combined_n", "grade", "combined_t" ],
+      "outputs" : [ "stage_table", "stage" ]
+    }, {
+      "id" : "thyroid_histology_grade_extension_summary_stage",
+      "inputs" : [ "extension", "hist", "grade" ],
+      "outputs" : [ "ss2017" ]
+    }, {
+      "id" : "combined_t_to_summ_stage_t_thyroid_68736",
+      "inputs" : [ "combined_t" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "combined_n_to_summ_stage_n_84054",
+      "inputs" : [ "combined_n" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "cpmbined_m_to_summ_stage_m_60564",
+      "inputs" : [ "combined_m" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  }, {
+    "id" : "summary_stage_2017",
+    "name" : "Summary Stage 2017",
+    "exclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpb",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "extension_bby",
+      "inputs" : [ "extension" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "nodes_dbr",
+      "inputs" : [ "nodes" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "mets_hbf",
+      "inputs" : [ "mets" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  } ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "combined_t_to_summ_stage_t_thyroid_68736", "ssf1_jap", "radiation_surg_seq", "determine_default_m", "schema_selection_thyroid", "extension_bby", "nodes_pos_fpa", "thyroid_baset_ssf1_ajcc7", "determine_default_n", "combined_n_to_summ_stage_n_84054", "thyroid_ajcctnm7_stage_thyroid_medullary", "histology", "thyroid_t_6166", "histologies_grade_stage_tnm_7_20594", "clin_n_dbr", "tnm7_inclusions_tpb", "combined_t_no_tis", "thyroid_ajcctnm7_stage_thyroid_papillaryand_follicular_lessthan_45", "thyroid_histology_grade_extension_summary_stage", "path_m_hbf", "thyroid_ajcctnm7_stage_thyroid_papillaryand_follicular_age45and_older", "mets_hbf", "thyroid_ajcctnm7_stage_thyroid_anaplastic", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "nodes_dbr", "combined_m", "combined_n", "grade", "year_dx_validation", "summary_stage_rpa", "clin_m_hbf", "path_n_dbr" ],
+  "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
+  "last_modified" : "2015-08-25T18:33:55.385Z"
+}

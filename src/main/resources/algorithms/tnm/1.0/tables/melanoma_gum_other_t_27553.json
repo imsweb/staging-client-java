@@ -1,0 +1,27 @@
+{
+  "id" : "melanoma_gum_other_t_27553",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Melanoma Gum Other T",
+  "title" : "Clinical and Pathological T",
+  "notes" : "**Note 1:**  TNM does not include a Tis category for melanomas of the upper aerodigestive sites (head and neck sites). Tis is mapped to NA and TNM stage group is derived as NA.\n\n**Note 2:**  Mucosal melanomas are aggressive tumors, therefore, T1 and T2 are omitted as are Stages I and II. \n\n**Note 3:**  Assign T3 for localized tumor when no other information is available or for extension involving the mucosa only of adjacent sites.\n\n**Note 4:**  Assign T4a or T4b for extension involving the deeper tissues of the primary or adjacent sites.",
+  "last_modified" : "2015-08-24T18:50:30.439Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "88", "NA", "Not applicable", "In situ, intraepithelial, noninvasive" ], [ "X", "TX", "Primary tumor cannot be assessed*", "Unknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor**", "" ], [ "3", "T3", "Tumor limited to the epithelium and/or submucosa (mucosal disease)", "Tumor confined to mucosa of gum\n\nExtension involving mucosa only:\n    Buccal mucosa (inner cheek)\n    Labial mucosa (inner lip), lip\n    Lateral pharyngeal wall\n    Soft palate including uvula\n    Tonsillar pillars\n    Tonsillar fossae\n    Tonsils\n\nLocalized, NOS\n\nStated as T3" ], [ "4", "T4", "", "Note: T4 has subcategories of T4a and T4b. Assign T4 only when there is no information available to assign one of the subcategories\n\nStated as T4 [NOS]" ], [ "4A", "T4a", "Tumor invades deep soft tissue, cartilage, bone or overlying skin", "Involvement of deep tissue or periosteum of gum\nInvolvement of deep tissue of gum plus mucosal involvement \nInvolvement of deep soft tissue or musculature \n\nBone, NOS except base of skull\nCartilage of mandible or maxilla\nCartilage, NOS\nCortical bone of mandible or maxilla\nCortical bone, NOS\nFacial muscle, NOS\nMandible, NOS\nMaxillary sinus (antrum)\nMaxilla, NOS\nSkin of face\nSubcutaneous soft tissue of face\n\nExtrinsic muscle of tongue:\n    Genioglossus\n    Hyoglossus\n    Palatoglossus\n    Styloglossus\n\nStated as T4a" ], [ "4B", "T4b", "Tumor invades any of the following:\nBrain\nDura\nSkull base\nLower cranial nerves (IX, X, XI, XII)\nMasticator space\nCarotid artery\nPrevertebral space\nMediastinal structures", "Contiguous extension:\n    Base of skull\n    Pterygoid plates  \n\nFurther contiguous extension\n\nStated as T4b" ] ]
+}

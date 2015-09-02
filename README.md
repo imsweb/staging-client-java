@@ -15,9 +15,15 @@ assessments, and compatibility across all of the systems for all cancer sites.
 
 Versions supported:
 
-- 02.05.50 (originally released October 2013)
+- 02.05.50 (released October 2013)
 
-### More algorithms coming soon
+### TNM
+
+TODO
+
+Versions supported:
+
+- 1.0 (released January 2016)
 
 ## Download
 

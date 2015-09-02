@@ -1,0 +1,28 @@
+{
+  "id" : "melanoma_larynx_other_t_71686",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Melanoma Larynx Other T",
+  "title" : "Clinical and Pathological T",
+  "notes" : "**Note 1:**  TNM does not include a Tis category for melanomas of the upper aerodigestive sites (head and neck sites). Tis is mapped to NA and TNM stage group is derived as NA.\n\n**Note 2:**  Mucosal melanomas are aggressive tumors, therefore, T1 and T2 are omitted as are Stages I and II. \n\n**Note 3:**  Assign T3 for localized tumor when no other information is available or for extension involving the mucosa only of adjacent sites.\n\n**Note 4:**  Assign T4a or T4b for extension involving the deeper tissues of the primary or adjacent sites.",
+  "footnotes" : "\\*TX is not defined in AJCC 7th edition\n\\**T0 is not defined in AJCC 7th edition",
+  "last_modified" : "2015-08-25T12:21:04.609Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "88", "NA", "Not applicable", "In situ, intraepithelial, noninvasive" ], [ "X", "TX", "Primary tumor cannot be assessed*", "Unknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor**", "" ], [ "3", "T3", "Tumor limited to the epithelium and/or submucosa (mucosal disease)", "Tumor confined to mucosa of site of origin\n\nExtension involving mucosa only of more than one subsite of supraglottis, glottis, or subglottis WITHOUT impairment of vocal cord mobility or fixation of larynx or NOS\n\nExtension involving mucosa only of adjacent region(s) of larynx WITHOUT impairment of vocal cord mobility or fixation of larynx or NOS\n\nExtension involving mucosa only of adjacent regions:\n    Base of tongue\n    Hypopharynx, NOS\n    Pre-epiglottic tissues\n    Postcricoid area\n    Pyriform sinus\n    Vallecula\n\nLocalized, NOS\n\nStated as T3" ], [ "4", "T4", "", "Note: T4 has subcategories of T4a and T4b. Assign T4 only when there is no information available to assign one of the subcategories\n\nStated as T4 [NOS]" ], [ "4A", "T4a", "Tumor invades deep soft tissue, cartilage, bone or overlying skin", "" ], [ "4B", "T4b", "Tumor invades any of the following:\nBrain\nDura\nSkull base\nLower cranial nerves (IX, X, XI, XII)\nMasticator space\nCarotid artery\nPrevertebral space\nMediastinal structures", "Stated as T4 [NOS]" ] ]
+}

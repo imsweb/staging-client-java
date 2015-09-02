@@ -1,0 +1,28 @@
+{
+  "id" : "melanoma_tongue_base_60314",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Melanoma Tongue Base T",
+  "title" : "Clinical and Pathological T",
+  "notes" : "**Note 1:**  TNM does not include a Tis category for melanomas of the upper aerodigestive sites (head and neck). Tis is mapped to NA and TNM stage group is derived as NA.\n\n**Note 2:**  Mucosal melanomas are aggressive tumors, therefore T1 and T2 are omitted as are Stages I and II.\n\n**Note 3:**  The intrinsic muscles of tongue are four paired muscles within the tongue which control its shape.  The extrinsic muscles originate from structures outside the tongue and control its positioning.\n\n**Note 4:**  Assign T3 for localized tumor when no other information is available or for extension involving the mucosa only of adjacent sites.\n\n**Note 5:**  Assign T4a or T4b for extension involving the deeper tissues of the primary or adjacent sites.",
+  "footnotes" : "\\*TX is not defined in AJCC 7th edition\n\\**T0 is not defined in AJCC 7th edition",
+  "last_modified" : "2015-08-25T12:34:42.985Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "88", "NA", "Not applicable", "In situ, intraepithelial, noninvasive" ], [ "X", "TX", "Primary tumor cannot be assessed*", "Unknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor**", "" ], [ "3", "T3", "Tumor limited to the epithelium and/or submucosa (mucosal disease)", "Tumor involving mucosa:\n    Base of tongue (posterior one-third of tongue):\n        Confined to one side\n        Midline tumor\n    Lingual tonsil\n\nExtension involving mucosa only across midline of tongue\nExtension involving mucosa only of lingual tonsil on both sides of tongue\n    \nExtension involving mucosa only:\n    Anterior two-thirds of tongue for base of tongue\n    Base of tongue for lingual tonsil\n    Epiglottis, lingual (pharyngeal) surface\n    Floor of mouth\n    Glossoepiglottic fold\n    Glossopharyngeal fold\n    Hard palate\n    Hypopharynx\n    Larynx\n    Lateral pharyngeal wall\n    Lower gingiva\n    Pharyngoepiglottic fold\n    Soft palate including uvula\n    Tonsillar pillars and fossae\n    Tonsils\n    Vallecula\n\nLocalized, NOS\n    \nStated as T3" ], [ "4", "T4", "", "Note: T4 has subcategories of T4a and T4b. Assign T4 only when there is no information available to assign one of the subcategories\n\nStated as T4[NOS]" ], [ "4A", "T4a", "Tumor invades deep soft tissue, cartilage, bone or overlying skin", "Deep soft tissue or musculature of base of tongue or lingual tonsil\nSoft tissue, NOS\nInvolvement of deep  soft tissue or musculature of base of tongue or lingual tonsil plus mucosal involvement of any structure in T3\nSublingual gland\n\nDeep soft tissue or  musculature of soft palate, inferior surface or NOS, including uvula\nMandible for lingual tonsil\nMandible plus any  involvement of soft palate\nMandible for base of tongue\nMusculature, extrinsic of tongue:\n    Genioglossus\n    Geniohyoid\n    Hyoglossus\n    Mylohyoid\n    Palatoglossus\n    Styloglossus\nDeep soft tissue or  musculature of:\n    Larynx\n    Hypopharynx\n\nBone, NOS\nBone excluding base of skull and mandible\nCartilage, NOS\nLateral nasopharynx\nOverlying skin\nPterygoid muscle\nPterygoid plates\nPalatine bone\n\nStated as T4a" ], [ "4B", "T4b", "Tumor invades any of the following:\nBrain\nDura\nSkull base\nLower cranial nerves (IX, X, XI, XII)\nMasticator space\nCarotid artery\nPrevertebral space\nMediastinal structures", "Contiguous extension to:\n    Carotid artery (encased)\n   \nStated as T4b" ] ]
+}

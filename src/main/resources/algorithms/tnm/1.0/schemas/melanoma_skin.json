@@ -1,0 +1,347 @@
+{
+  "id" : "melanoma_skin",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Melanoma Skin",
+  "title" : "Malignant Melanoma of Skin, Vulva, Penis, Scrotum",
+  "description" : "[SME REVIEW] per UICC, pg. 172, \"the extent of the tumor is classified after excision, see pT, page 174.\" How should clinical T be set up? Just the main categories of T1, T2, T3 or T4? Also, should N1a/1b, N2a/2b be included in clinical? Similar situation in Merkel Cell\n[END SME REVIEW]\nSME Reviewer #1 response:  Clinical T-category should be set up with all T1, 2, 3, or 4 subcategories:  T1a, T1b, T2a, T2b, T3a, T3b, T4a, T4b, because clinical staging includes microstaging of the primary melanoma.  Clinical regional lymph node involvement could be documented at > or = to N1 for Stage III and any N for Stage IV.  See AJCC 7th Edition page 328.",
+  "notes" : "M-8720-8790\nC44.0  Skin of lip, NOS\nC44.1  Eyelid\nC44.2  External ear\nC44.3  Skin of other and unspecified parts of face\nC44.4  Skin of scalp and neck\nC44.5  Skin of trunk\nC44.6  Skin of upper limb and shoulder\nC44.7  Skin of lower limb and hip\nC44.8  Overlapping lesion of skin\nC44.9  Skin, NOS\nC51.0  Labium majus\nC51.1  Labium minus\nC51.2  Clitoris\nC51.8  Overlapping lesion of vulva\nC51.9  Vulva, NOS\nC60.0  Prepuce\nC60.1  Glans penis\nC60.2  Body of penis\nC60.8  Overlapping lesion of penis\nC60.9  Penis\nC63.2  Scrotum, NOS\n\n**Note 1:** Laterality must be coded for C44.1-C44.3, and C44.5-C44.7. For codes C44.3 and C44.5, if the tumor is midline (e.g., chin), use code  5 (midline) in the laterality field. \n\n**Note 2:** For melanoma of sites other than those above, use the appropriate site-specific schema.",
+  "schema_selection_table" : "schema_selection_melanoma_skin",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "input_version",
+    "name" : "Input Version",
+    "naaccr_item" : 2937,
+    "table" : "input_version_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "naaccr_item" : 523,
+    "table" : "behavior",
+    "used_for_staging" : true
+  }, {
+    "key" : "systemic_surg_seq",
+    "name" : "RX Summ Systemic/Surgery Sequence",
+    "naaccr_item" : 1639,
+    "table" : "systemic_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "radiation_surg_seq",
+    "name" : "RX Summ Surgery/Radiation Sequence",
+    "naaccr_item" : 1380,
+    "table" : "radiation_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "table" : "nodes_pos_fah",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "naaccr_item" : 940,
+    "table" : "clin_t_ban",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "naaccr_item" : 950,
+    "table" : "clin_n_dam",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "naaccr_item" : 960,
+    "table" : "clin_m_had",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "naaccr_item" : 880,
+    "table" : "path_t_ban",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "naaccr_item" : 890,
+    "table" : "path_n_dam",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_m",
+    "name" : "Pathologic M",
+    "naaccr_item" : 900,
+    "table" : "path_m_had",
+    "used_for_staging" : true
+  }, {
+    "key" : "extension",
+    "name" : "Extension",
+    "default" : "999",
+    "table" : "extension_ban",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes",
+    "name" : "Lymph Nodes",
+    "default" : "999",
+    "table" : "nodes_dam",
+    "used_for_staging" : true
+  }, {
+    "key" : "mets",
+    "name" : "Mets",
+    "default" : "99",
+    "table" : "mets_had",
+    "used_for_staging" : true
+  }, {
+    "key" : "ssf1",
+    "name" : "Measured Thickness (Depth), Breslow Measurement",
+    "naaccr_item" : 2880,
+    "table" : "ssf1_jpl",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf2",
+    "name" : "Ulceration",
+    "naaccr_item" : 2890,
+    "table" : "ssf2_kaa",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf4",
+    "name" : "Serum Lactate Dehydrogenase (LDH)",
+    "naaccr_item" : 2910,
+    "table" : "ssf4_maa",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf5",
+    "name" : "Serum Lactate Dehydrogenase (LDH) Lab Value",
+    "naaccr_item" : 2920,
+    "table" : "ssf5_nba",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf6",
+    "name" : "LDH Upper Limits of Normal",
+    "naaccr_item" : 2930,
+    "table" : "ssf6_oax",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf7",
+    "name" : "Primary Tumor Mitotic Count/Rate",
+    "naaccr_item" : 2861,
+    "table" : "ssf7_seb",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf8",
+    "name" : "Primary Tumor Regression",
+    "naaccr_item" : 2862,
+    "table" : "ssf8_sec",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf9",
+    "name" : "Vertical Growth Phase (VGP)",
+    "naaccr_item" : 2863,
+    "table" : "ssf9_sed",
+    "used_for_staging" : false
+  } ],
+  "mappings" : [ {
+    "id" : "tnm7_stage",
+    "name" : "TNM 7 Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpa",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "determine_default_t",
+      "inputs" : [ "clin_t", "path_t" ],
+      "outputs" : [ "source_t", "combined_t_in", "tmp_path_t", "ss2017_t", "tmp_clin_t" ]
+    }, {
+      "id" : "determine_default_n",
+      "inputs" : [ "clin_n", "path_n" ],
+      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+    }, {
+      "id" : "determine_default_m",
+      "inputs" : [ "path_m", "clin_m" ],
+      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_clin_m", "combined_m_in", "source_m" ]
+    }, {
+      "id" : "lymph_nodes_eval_temp_65876",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_n",
+        "to" : "clin_n"
+      }, {
+        "from" : "tmp_path_n",
+        "to" : "path_n"
+      } ],
+      "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
+      "outputs" : [ "tmp_clin_n_source", "tmp_path_n_source" ]
+    }, {
+      "id" : "tnm7_stage_ubv",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_n_source",
+        "to" : "source_n"
+      }, {
+        "from" : "tmp_clin_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_clin_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_clin_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "clin_stage_group"
+      } ],
+      "inputs" : [ "tmp_clin_n", "tmp_clin_m", "tmp_clin_n_source", "tmp_clin_t" ],
+      "outputs" : [ "clin_stage_group" ]
+    }, {
+      "id" : "tnm7_stage_ubv",
+      "input_mapping" : [ {
+        "from" : "tmp_path_n_source",
+        "to" : "source_n"
+      }, {
+        "from" : "tmp_path_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_path_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_path_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "path_stage_group"
+      } ],
+      "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t", "tmp_path_n_source" ],
+      "outputs" : [ "path_stage_group" ]
+    }, {
+      "id" : "adjust_path_defaults",
+      "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
+      "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
+    } ]
+  }, {
+    "id" : "combined_stage",
+    "name" : "Combined Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpa",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "combined_t",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_t",
+        "to" : "clin_t"
+      }, {
+        "from" : "tmp_path_t",
+        "to" : "path_t"
+      } ],
+      "inputs" : [ "radiation_surg_seq", "combined_t_in", "tmp_path_t", "tmp_clin_t", "behavior", "systemic_surg_seq" ],
+      "outputs" : [ "source_t", "combined_t" ]
+    }, {
+      "id" : "combined_n",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_n",
+        "to" : "clin_n"
+      }, {
+        "from" : "tmp_path_n",
+        "to" : "path_n"
+      } ],
+      "inputs" : [ "nodes_pos", "tmp_clin_n", "radiation_surg_seq", "tmp_path_n", "combined_n_in", "systemic_surg_seq" ],
+      "outputs" : [ "combined_n", "source_n" ]
+    }, {
+      "id" : "combined_m",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_m",
+        "to" : "clin_m"
+      }, {
+        "from" : "tmp_path_m",
+        "to" : "path_m"
+      } ],
+      "inputs" : [ "tmp_path_m", "tmp_clin_m", "combined_m_in" ],
+      "outputs" : [ "combined_m", "source_m" ]
+    }, {
+      "id" : "tnm7_stage_ubv",
+      "input_mapping" : [ {
+        "from" : "combined_m",
+        "to" : "m"
+      }, {
+        "from" : "combined_n",
+        "to" : "n"
+      }, {
+        "from" : "combined_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "combined_stage_group"
+      } ],
+      "inputs" : [ "combined_m", "combined_n", "combined_t", "source_n" ],
+      "outputs" : [ "combined_stage_group" ]
+    }, {
+      "id" : "combined_to_summ_stage_t_80394",
+      "inputs" : [ "combined_t" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "combined_n_to_summ_stage_n_84054",
+      "inputs" : [ "combined_n" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "cpmbined_m_to_summ_stage_m_60564",
+      "inputs" : [ "combined_m" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rac",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  }, {
+    "id" : "summary_stage_2017",
+    "name" : "Summary Stage 2017",
+    "exclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpa",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "extension_ban",
+      "inputs" : [ "extension" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "nodes_dam",
+      "inputs" : [ "nodes" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "mets_had",
+      "inputs" : [ "mets" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rac",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  } ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "nodes_pos_fah", "determine_default_t", "schema_selection_melanoma_skin", "input_version_validation", "radiation_surg_seq", "determine_default_m", "lymph_nodes_eval_temp_65876", "summary_stage_rac", "mets_had", "determine_default_n", "ssf6_oax", "path_n_dam", "combined_n_to_summ_stage_n_84054", "ssf1_jpl", "ssf7_seb", "histology", "nodes_dam", "ssf4_maa", "tnm7_inclusions_tpa", "behavior", "clin_m_had", "ssf8_sec", "path_t_ban", "ssf5_nba", "clin_t_ban", "clin_n_dam", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "ssf9_sed", "combined_n", "path_m_had", "ssf2_kaa", "year_dx_validation", "tnm7_stage_ubv", "combined_t", "extension_ban" ],
+  "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
+  "last_modified" : "2015-08-26T13:41:03.235Z"
+}

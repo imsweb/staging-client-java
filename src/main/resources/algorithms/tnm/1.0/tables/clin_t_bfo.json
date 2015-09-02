@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_bfo",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin T",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:** TNM does not include an in situ category for Neuroendocrine Tumors (NET) of the ampulla of Vater. Assign TX and behavior code /2 for in situ cases.\n\n**Note 2:** For the following descriptions, assign the appropriate T category (T1 or T2) based on the tumor size.\n\n    Invasive tumor confined/limited to ampulla of Vater or extending to sphincter of Oddi\n    Duodenal wall\n\n    Localized, NOS",
+  "last_modified" : "2015-08-13T13:25:06.161Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "T0", "No evidence of primary tumor", "" ], [ "3", "T3", "Jejunal or ileal tumor invades subserosa\nAmpullary or duodenal tumor invades pancreas or retro-\nperitoneum", "Pancreas\nPeripancreatic soft tissues\nRetroperitoneum\n\nStated as T3" ], [ "4", "T4", "Tumor perforates visceral peritoneum (serosa) or invades\nother organs or adjacent structures", "Common bile duct\nExtrahepatic bile ducts other than common bile duct or sphincter of Oddi\n\nExtension to other adjacent organs or tissues:\n    Blood vessels (major):\n        Hepatic artery\n        Portal vein\n    Gallbladder\n    Hepatic flexure\n    Lesser omentum\n    Liver including porta hepatis\n    Stomach, NOS:\n        Distal\n    Transverse colon\n\nStomach, proximal\n\nFurther contiguous extension:\n    Other adjacent organs\n\nStated as T4" ], [ "X", "TX", "Primary tumor cannot be assessed", "In situ, intraepithelial, noninvasive\n\nUnknown extension\nPrimary tumor cannot be assessed\nNot documented in patient record" ], [ "1", "T1", "Tumor invades lamina propria or submucosa and is no \ngreater than 1 cm in size", "Stated as T1" ], [ "2", "T2", "Tumor invades muscularis propria or is greater than 1 cm\nin size", "Stated as T2" ] ]
+}

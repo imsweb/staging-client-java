@@ -1,0 +1,28 @@
+{
+  "id" : "extension_bad",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "notes" : "**Note 1:**  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage. FIGO Stage III is assigned based on tumor extension and/or regional lymph node involvement. Code the following based on a physician's statement.\n\n    200 - FIGO stage III based on tumor extension\n    500 - Unknown what FIGO Stage III is based on\n    See SEER Regional nodes when FIGO Stage III based on lymph nodes \n\n**Note 2:**  FIGO no longer includes in situ tumors.\n\n**Note 3:**  Pelvic wall is defined as muscle, fascia, neurovascular structures, or skeletal portions of the bony pelvis.",
+  "footnotes" : "\\## Considered regional in Historic Stage\n\\### Considered distant in Historic Stage\n\\*** Considered distant in 1977 Summary Staging Guide",
+  "last_modified" : "2015-08-13T13:24:21.256Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ:  Noninvasive; intraepithelial", "", "VALUE:IS" ], [ "100", "Localized only\n\n    Invasive cancer confined to submucosa (stroma##)\n    FIGO Stage I\n\n    Musculature involved##\n\n    Localized, NOS", "", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nExtension to:\n    Bladder, NOS excluding mucosa###***\n    Bladder wall###***\n    Cervix\n    Cul de sac (rectouterine pouch)###\n    Paravaginal soft tissue\n    Rectal wall, NOS###***\n    Rectum, NOS excluding mucosa ###***\n    Rectovaginal septum\n    Vesicovaginal septum\n    Vulva\nFIGO Stage II\n\nExtension to pelvic wall###***\nFIGO Stage III", "Described clinically as \"frozen pelvis\", NOS \n\nFIGO Stage III based on tumor extension", "VALUE:RE" ], [ "500", "Regional, NOS\n\nFIGO Stage III, NOS", "FIGO Stage III, unknown whether based on extension or lymph nodes", "VALUE:RNOS" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in patient record", "", "VALUE:U" ] ]
+}

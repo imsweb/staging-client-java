@@ -1,0 +1,27 @@
+{
+  "id" : "seer_mets_epiglottis_anterior_79277",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Mets Epiglottis Anterior",
+  "title" : "SEER Mets",
+  "notes" : "**Note**: Supraclavicular and transverse cervical lymph nodes are coded in CS Lymph Nodes because they are categorized as N rather than M in AJCC TNM.",
+  "last_modified" : "2015-08-13T13:23:55.272Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "", "None\n\nNo distant metastasis", "VALUE:NONE" ], [ "70", "Distant site(s)/lymph node(s) involved\nDistant lymph node(s):\nMediastinal\nSupraclavicular (transverse cervical)\nOther distant lymph node(s)\n Extension to:\nAnterior 2/3 of tongue\nBone\nExtrinsic muscles of tongue:\nGenioglossus\nGeniohyoid\nHyoglossus\nMylohyoid\nPalatoglossus\nStyloglossus\nHard Palate\nMandible\nParotid gland\nFurther contiguous extension\nMetastasis", "Distant\n\nMinor thyroid cartilage erosion (inner cortex)\n\n390 + 280 \n\nAny structure in 390 + Minor thyroid cartilage erosion\n\n450- to 650 +380 or 430  \n\nAny structure in 450 to 650 plus minor thyroid cartilage erosion coded in 380 or 430\n\nInvasion through thyroid cartilage (see also code 380)\nThyroid cartilage, NOS\nCartilage, NOS\n\nTrachea\n\nEsophagus\nStrap muscles:\n    Omohyoid \n    Sternohyoid\n    Sternothyroid\n    Thyrohyoid\nThyroid\n\nExtrinsic muscles of tongue:\n    Genioglossus\n    Geniohyoid\n    Hyoglossus\n    Mylohyoid\n    Palatoglossus\n    Styloglossus\n\nBone excluding base of skull\nBone, NOS\nOverlying skin\nHard palate\nAnterior two-thirds of tongue\nParotid gland\n\nPrevertebral fascia or muscle\nPrevertebral space\n\n750 + 660 to 700 \n\nAny structure in 750 plus any structure coded in 660 through 700\n\nContiguous extension:\n    Carotid artery (encased)\n    Mediastinal structures\n\nFurther contiguous extension including:\n    Base of skull\n    Brain\n    Dura\n    Lower cranial nerves (IX, X, XI, XII)\n    Masticator space\n\nStated as T4b with no other information on extension\n\nDistant\n\nInner cortex of thyroid cartilage (minor erosion)\n\n390 + 280\n\n Any structure in 390 plus minor thyroid cartilage erosion\n\n(450 to 650) + (380 or 430) \n\nAny structure in 450 to 650 plus inner cortex of thyroid cartilage \n\nInvasion of, through outer cortex of thyroid cartilage\nThyroid cartilage, NOS\n(See also code 380)\n\nTrachea\n\nEsophagus\nStrap muscles:\n    Omohyoid\n    Sternohyoid\n    Thyrohyoid\nThyroid\n\nExtrinsic muscles of tongue:\n    Genioglossus\n    Geniohyoid\n    Hyoglossus\n    Mylohyoid\n    Palatoglossus\n    Styloglossus\n\n750 + (660 - 700) \n\nAny structure in 750 plus any structure coded in 660 through 700\n\nFurther contiguous extension, including:\n    Anterior 2/3 of tongue\n    Bone\n    Carotid artery (encased)\n    Hard palate\n    Mandible\n    Mediastinal structures\n    Parotid gland\n\nStated as T4b with no other information on extension\n\nDistant lymph nodes\n\nSingle positive ipsilateral regional node:\n    Level IV - Lower jugular:\n        Jugulo-omohyoid (supraomohyoid)\n        Lower deep cervical\n        Virchow node\n    Level V - Posterior triangle group:\n        Posterior cervical\n        Level VA - Spinal accessory\n        Level VB - Transverse cervical, supraclavicular\n    Level VI - Anterior compartment group:\n        Laterotracheal\n        Paralaryngeal\n        Paratracheal - above suprasternal notch\n        Perithyroidal\n        Precricoid (Delphian)\n        Prelaryngeal\n        Pretracheal - above suprasternal notch\n        Recurrent laryngeal\n    Level VII - Superior mediastinal group (for other mediastinal nodes see CS Mets at DX):\n        Esophageal groove\n        Paratracheal - below suprasternal notch\n        Pretracheal - below suprasternal notch\n    Other groups:\n        Facial:\n            Buccinator (buccal)\n            Mandibular\n            Nasolabial\n        Parotid:\n            Infraauricular\n            Intraparotid\n            Periparotid\n            Preauricular\n        Parapharyngeal\n        Retroauricular (mastoid)\n        Suboccipital\n\nMultiple positive ipsilateral nodes, any listed in code 120 WITH or WITHOUT nodes listed in code 100 or 110\n\nPositive ipsilateral node(s) listed in code 120, not stated if single or multiple\n\nPositive bilateral or contralateral nodes, any listed in code 120 \nWITH or WITHOUT nodes listed in code 100 or 110\n\nPositive node(s) listed in code 120, not stated if ipsilateral, or bilateral, or contralateral,\nAND not stated if single or multiple\"\n\n\nMets present\n\nDistant lymph node(s):\n    Mediastinal (excluding superior mediastinal nodes)\n    Distant lymph node(s), NOS\n\nDistant metastases except distant lymph node(s)\nCarcinomatosis\n\n40+10\n\nDistant metastasis plus distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1 with no other information on distant metastasis", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed  \nNot documented in patient record", "", "VALUE:U" ] ]
+}

@@ -1,0 +1,26 @@
+{
+  "id" : "seer_primary_tumor_eyeother_64077",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Primary Tumor EyeOther",
+  "title" : "SEER Primary Tumor",
+  "last_modified" : "2015-08-13T13:23:36.492Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ: Noninvasive; intraepithelial", "", "VALUE:IS" ], [ "100", "Localized only\n\n    Tumor confined to site of origin\n\n    Intraocular extension\n\n    Localized, NOS", "", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nAdjacent extraocular extension:\n    Eyelid\n    Orbit", "", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

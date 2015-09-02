@@ -1,0 +1,27 @@
+{
+  "id" : "path_n_dbq",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path N",
+  "title" : "Pathological N",
+  "notes" : "**Note 1:** Regional nodes are the intrathoracic, internal mammary, peridiaphragmatic, scalene, and supraclavicular nodes. \n\n**Note 2:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in distant metastasis.",
+  "last_modified" : "2015-08-13T13:24:46.608Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathological N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathological N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "N0", "No regional lymph node metastasis", "No regional lymph node involvement" ], [ "1", "N1", "Metastasis in ipsilateral bronchopulmonary and/or hilar lymph node(s)", "Regional lymph nodes, ipsilateral, intrapulmonary:\n    Hilar:\n        Bronchopulmonary\n        Proximal lobar\n        Pulmonary root\n    Intrapulmonary:\n        Interlobar\n        Lobar\n        Segmental\n        Subsegmental\n    Peri/parabronchial\n\nRegional lymph nodes, NOS\n\nLymph nodes, NOS\n\nStated as N1" ], [ "2", "N2", "Metastasis in subcarinal lymph node(s) and/or ipsilateral internal\nmammary or mediastinal lymph node(s)", "Regional lymph nodes, ipsilateral, mediastinal:\n    Aortic (above diaphragm), NOS:\n        Aorto-pulmonary window\n        Ascending aorta\n        Peri/para-aortic\n        Phrenic\n        Subaortic\n    Carinal:\n        Tracheobronchial\n        Tracheal bifurcation\n    Internal mammary (parasternal)\n    Mediastinal, NOS:\n        Anterior\n        Posterior (tracheoesophageal)\n    Pericardial\n    Peri/paraesophageal (below carina)\n    Peri/paratracheal, NOS:\n        Lower peritracheal (azygos)\n        Upper paratracheal\n    Pretracheal and retrotracheal, NOS:\n        Precarinal\n    Prevascular\n    Pulmonary ligament\n    Subcardial\n    Subcarinal\n\nRegional lymph nodes, ipsilateral, mediastinal:\n    Peridiaphragmatic\n\nStated as N2" ], [ "3", "N3", "Metastasis in contralateral mediastinal, internal mammary, or hilar\nnode(s) and/or ipsilateral or contralateral supraclavicular or scalene\nlymph node(s)", "Stated as N3" ], [ "X", "NX", "Regional lymph nodes cannot be assessed", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ] ]
+}

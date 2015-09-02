@@ -1,0 +1,28 @@
+{
+  "id" : "seer_mets_melanomaeye_exclconj_86372",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Mets MelanomaEye(exclConj)",
+  "title" : "SEER Mets",
+  "notes" : "No changes needed. LS",
+  "footnotes" : "- For CS Mets at DX codes 10-60, the M category for AJCC 7 staging is assigned based on the size of largest metastasis, recorded in CS Site-Specific Factor 4, as shown in the Size Metastasis AJCC 7 Table.",
+  "last_modified" : "2015-08-13T13:24:00.249Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/lymph node(s) involved\nDistant lymph node(s)\nFurther contiguous extension\nMetastasis", "Distant: \nDistant metastasis WITH or WITHOUT distant lymph nodes\nCarcinomatosis\nDistant metastasis, NOS\nStated as M1 [NOS]", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis  cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

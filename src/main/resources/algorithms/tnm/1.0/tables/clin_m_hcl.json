@@ -1,0 +1,27 @@
+{
+  "id" : "clin_m_hcl",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin M",
+  "title" : "Clinical M",
+  "notes" : "**Note 1:** Metastasis to adnexa, parametria, pelvic serosa, or vagina is coded in primary tumor.\n\n**Note 2:** When both Federation Internationale de Gynecologie at d-Obstetrique (FIGO) stage and metastatic detail are available, record the code with metastatic detail in preference to a statement of FIGO stage.\n\n**Note 2:** FIGO Stage IV, NOS is assigned based on tumor extension and/or distant metastasis.  Code distant metastasis based on a physician's statement of FIGO Stage IV [NOS] if it is known that the stage value is assigned because of metastatic involvement, or if there is no statement that FIGO Stage IV [NOS] is assigned based on extension.",
+  "last_modified" : "2015-08-13T13:24:15.874Z",
+  "definition" : [ {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_m_display",
+    "name" : "Clinical M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "M0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "1", "M1", "Distant metastasis (excluding adnexa, pelvic and abdominal tissues)", "Distant lymph node(s):\n    Deep inguinal, NOS:\n        Node of Cloquet or Rosenmuller (highest deep inguinal)\n     Superficial inguinal\n\nDistant lymph node(s), NOS\n(Excluding metastasis to pelvic or para-aortic lymph nodes)\n\nCarcinomatosis\n(Excluding adnexa and continuous extension to abdominal tissues)\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis NOS\n\nFIGO Stage IVB\nFIGO Stage IV [NOS] based on metastasis\n\nStated as M1" ] ]
+}

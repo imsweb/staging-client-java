@@ -1,0 +1,34 @@
+{
+  "id" : "prostate_ajcctnm7_stage",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "TNM 7 Stage",
+  "title" : "AJCC TNM 7 Stage",
+  "last_modified" : "2015-08-13T13:23:19.897Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "psa",
+    "name" : "PSA",
+    "type" : "INPUT"
+  }, {
+    "key" : "gleason",
+    "name" : "Gleason",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "1A,1B,1C", "0", "0", "001-010", "000-006", "VALUE:1" ], [ "2A", "0", "0", "001-010", "000-006", "VALUE:1" ], [ "1A,1B,1C,1NOS,2A", "0", "0", "999", "999", "VALUE:1" ], [ "1A,1B,1C", "0", "0", "001-019", "007", "VALUE:2A" ], [ "1A,1B,1C", "0", "0", "010-019", "000-006", "VALUE:2A" ], [ "2A", "0", "0", "010-019", "000-006", "VALUE:2A" ], [ "2A", "0", "0", "001-019", "007", "VALUE:2A" ], [ "2B", "0", "0", "001-019", "000-007", "VALUE:2A" ], [ "2B", "0", "0", "999", "999", "VALUE:2A" ], [ "2C", "0", "0", "*", "*", "VALUE:2B" ], [ "1A,1B,1C,1NOS,2A,2B,2C,2NOS", "0", "0", "020-980", "*", "VALUE:2B" ], [ "1A,1B,1C,1NOS,2A,2B,2C,2NOS", "0", "0", "*", "008-010", "VALUE:2B" ], [ "3A,3B", "0", "0", "*", "*", "VALUE:3" ], [ "4", "0", "0", "*", "*", "VALUE:4" ], [ "*", "1", "0", "*", "*", "VALUE:4" ], [ "*", "*", "1", "*", "*", "VALUE:4" ], [ "*", "*", "*", "*", "*", "ERROR:" ] ]
+}

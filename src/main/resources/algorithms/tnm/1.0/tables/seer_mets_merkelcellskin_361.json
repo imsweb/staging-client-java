@@ -1,0 +1,27 @@
+{
+  "id" : "seer_mets_merkelcellskin_361",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Mets MerkelCellSkin",
+  "title" : "SEER Mets",
+  "notes" : "**Note 1**:  In-transit metastasis is coded in CS Lymph Nodes.\n\n**Note 2**:  Nodes in contiguous (secondary) and bidirectional (cephalad/caudal) primary nodal basins are coded in CS Lymph Nodes. (Clarification V0204)",
+  "last_modified" : "2015-08-13T13:23:52.460Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/lymph node(s) involved\nDistant lymph node(s):\nMetastatic skin lesion(s)\nFurther contiguous extension\nMetastasis", "Distant\n\nFurther contiguous extension\n\nStated as T4 with no other information on extension\n\nDistant lymph nodes\n\nBidirectional nodal involvement (includes bilateral or contralateral nodes) \n(See Note 2):\n    Upper Trunk:\n        Femoral (or cephalad/caudal drainage from primary tumor)\n    Lower Trunk:\n        Axillary (or cephalad/caudal drainage from primary tumor) \n\nSecondary nodal basin involvement (includes bilateral or contralateral nodes for head and trunk)\n(See Note 3):\n    Head:\n        All subsites:\n            Supraclavicular\n    Arm/Shoulder:\n        Supraclavicular\n    Leg/Hip:\n        Iliac\n    All sites:\n        Regional lymph node(s) in secondary nodal basins , NOS \n\n250 + (100 and/or 200)\n\nRegional lymph nodes coded in 250 plus regional lymph nodes coded in 100 and/or 200\n\n400 + (250 or 305)  \n\nSatellite nodule(s) or in transit metastasis  \nWITH regional lymph nodes listed in code 250 or code 305  \n(See Note 4)\n\nMets present\n\nDistant lymph node(s)\n\nMetastasis to skin or subcutaneous tissue\n\nStated as M1a with no other information on distant metastases\n\nLung\n\n30 + (10 or 15) \n\nMetastasis to lung plus distant lymph node(s) or skin or subcutaneous tissue\n\nStated as M1b with no other information on distant metastasis\n\nDistant metastasis to all other visceral sites except distant lymph node(s), skin or subcutaneous tissue, or lung \nCarcinomatosis\n\n45 + (any of 10, 15, or 30)\n\nMetastasis to other visceral sites plus distant lymph node(s), skin, subcutaneous tissue, or lung\n\nStated as M1c with no other information on distant metastases\n\nDistant metastasis, NOS \n\nStated as M1 [NOS] with no other information on distant metastasis", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

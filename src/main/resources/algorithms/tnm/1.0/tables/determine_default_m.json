@@ -1,0 +1,39 @@
+{
+  "id" : "determine_default_m",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Determine Default M",
+  "title" : "Determine the default value for M to be used in calculations",
+  "last_modified" : "2015-08-13T13:25:48.399Z",
+  "definition" : [ {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_m",
+    "name" : "Pathologic M",
+    "type" : "INPUT"
+  }, {
+    "key" : "tmp_clin_m",
+    "name" : "Temporary Clinical M (calculations)",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "tmp_path_m",
+    "name" : "Temporary Pathologic M (calculations)",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "combined_m_in",
+    "name" : "Combined M set in defaults",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "source_m",
+    "name" : "Source of Combined M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "SS2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "extra_input" : [ "clin_m", "path_m" ],
+  "rows" : [ [ ",88", ",88", "VALUE:0", "VALUE:0", "VALUE:", "VALUE:", "VALUE:" ], [ ",88", "1,1A,1B,1C,1D,1E", "VALUE:{{path_m}}", "VALUE:{{path_m}}", "VALUE:{{path_m}}", "VALUE:P", "VALUE:D" ], [ ",88", "0,0I+", "VALUE:0", "VALUE:{{path_m}}", "VALUE:", "VALUE:", "VALUE:" ], [ "0,0I+,1,1A,1B,1C,1D,1E", ",88", "VALUE:{{clin_m}}", "VALUE:{{clin_m}}", "VALUE:", "VALUE:", "VALUE:" ], [ "0,0I+,1,1A,1B,1C,1D,1E", "0,0I+,1,1A,1B,1C,1D,1E", "VALUE:{{clin_m}}", "VALUE:{{path_m}}", "VALUE:", "VALUE:", "VALUE:" ], [ "*", "*", "ERROR:Both Clin M and Path M values need to be valid for the schema.", "ERROR:Both Clin M and Path M values need to be valid for the schema.", "ERROR:", "ERROR:", "VALUE:" ] ]
+}

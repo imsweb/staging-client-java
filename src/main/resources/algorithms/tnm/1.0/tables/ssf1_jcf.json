@@ -1,0 +1,52 @@
+{
+  "id": "ssf1_jcf",
+  "algorithm": "tnm",
+  "version": "1.0",
+  "name": "SSF1",
+  "title": "Site-Specific Factor 1",
+  "subtitle": "Clinical Assessment of Regional Lymph Nodes",
+  "notes": "**Note 1:**  Clinically evident regional lymph nodes are based on information from the diagnostic workup.  This might include:  physical examination, imaging, diagnostic lymph node biopsy and exploratory surgery (without a resection).\n\n**Note 2:**  In the rare instance that the number of clinically positive nodes is stated but a clinical N category is not stated, code 1-2 nodes as 100 (Clinically N1), 3-6 nodes as 200 (Clinically N2), and 7 or more nodes as 300 (Clinically N3).\n\n**Note 3:**  If there is no diagnostic workup to assess regional lymph nodes, use code 999.  Do not apply the inaccessible nodes rule that presumes unmentioned nodes to be negative.",
+  "last_modified": "2015-08-13T13:25:30.165Z",
+  "definition": [
+    {
+      "key": "ssf1",
+      "name": "Code",
+      "type": "INPUT"
+    },
+    {
+      "key": "description",
+      "name": "Description",
+      "type": "DESCRIPTION"
+    }
+  ],
+  "rows": [
+    [
+      "000",
+      "Nodes not clinically evident; imaging of regional nodes performed and nodes not mentioned"
+    ],
+    [
+      "100",
+      "Metastasis in 1-2 regional nodes, determined clinically\n\nStated as clinical N1"
+    ],
+    [
+      "200",
+      "Metastasis in 3-6 regional nodes, determined clinically\n\nStated as clinical N2"
+    ],
+    [
+      "300",
+      "Metastasis in 7 or more regional nodes, determined clinically\n\nStated as clinical N3"
+    ],
+    [
+      "400",
+      "Clinically positive regional nodes, NOS"
+    ],
+    [
+      "988",
+      "Not applicable: Information not collected for this case. "
+    ],
+    [
+      "999",
+      "Regional lymph nodes involved pathologically, clinical assessment not stated\nUnknown if regional lymph nodes clinically evident\nNot documented in patient record"
+    ]
+  ]
+}

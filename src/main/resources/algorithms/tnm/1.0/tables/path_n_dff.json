@@ -1,0 +1,27 @@
+{
+  "id" : "path_n_dff",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path N",
+  "title" : "Pathological N",
+  "notes" : "**Note 1**: Histological examination of a regional lymphadenectomy specimen will ordinarily include 12 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily examined is not met. classify as pN0. \n\n**Note 2:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in distant metastasis.\n\n**Regional lymph nodes for rectosigmoid junction and rectum**\n    \n**All sites:** \n\n    Hemorrhoidal (middle, superior) \n    Inferior mesenteric \n    Mesenteric [NOS] \n    Perirectal \n    Rectal (middle) \n    Rectal [NOS] \n    Rectal (superior) \n    Rectosigmoid (paracolic/pericolic)\n    Sigmoidal (sigmoid mesenteric)\n\n**Rectosigmoid (C199)** \n\n    Colic, (NOS) \n    Left colic\n  \n**Rectum (C209)** \n\n    Hemorrhoidal (inferior) \n    Internal iliac (hypogastric)  \n    Lateral (laterosacral) \n    Middle (promontorial) (Gerota's node) \n    Obturator\n    Presacral\n    Rectal (inferior) \n    Sacral (NOS)\n    Sacral promontory",
+  "last_modified" : "2015-08-13T13:25:14.892Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathological N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathological N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "NX", "Regional lymph node(s) cannot be assessed", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Regional lymph node metastasis", "Nodule(s) or foci in perirectal fat\n\nRegional lymph node(s), NOS\nLymph nodes, NOS\n\nStated as N1" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "path_n_dco",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path N",
+  "title" : "Pathological N",
+  "notes" : "**Note 1:** Histological examination of a selective neck dissection specimen will ordinarily include 6 or more lymph nodes. Histological examination of a radical or modified radical neck dissection specimen will ordinarily include 10 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0. When size is a criterion for pN classification, measurement of made of the metastasis, not of the entire lymph node. \n\n**Note 2:**  The description of lymph nodes has been standardized across the head and neck schemas.  All lymph node levels and groups listed here are considered regional nodes for TNM staging.\n\n**Note 3:**  If laterality of lymph nodes is not specified, assume nodes are ipsilateral.  Midline nodes are considered ipsilateral.\n\n**Note 4:**  For head and neck schemas, this field includes all lymph nodes defined as Levels I-VII and Other by TNM.  \n\n    Level I: \n    Level IA - Submental\n    Level IB - Submandibular (submaxillary), sublingual\n    Level II - Upper jugular:\n        Jugulodigastric (subdigastric)\n        Upper deep cervical        \n        Level IIA - Anterior\n        Level IIB - Posterior    \n    Level III - Middle jugular:\n        Middle deep cervical\n    Level IV - Lower jugular:\n        Jugulo-omohyoid (supraomohyoid)\n        Lower deep cervical        \n        Virchow node\n    Level V - Posterior triangle group:\n        Posterior cervical\n        Level VA - Spinal accessory        \n        Level VB - Transverse cervical, supraclavicular \n    Level VI - Anterior compartment group:\n        Laterotracheal\n        Paralaryngeal\n        Paratracheal - above suprasternal notch\n        Perithyroidal\n        Precricoid (Delphian)\n        Prelaryngeal\n        Pretracheal - above suprasternal notch\n        Recurrent laryngeal\n    Level VII - Superior mediastinal group (for other mediastinal nodes see distant metastasis):\n        Esophageal groove\n        Paratracheal - below suprasternal notch\n        Pretracheal - below suprasternal notch    \n    Parapharyngeal \n    Retropharyngeal\n    Retroauricular (mastoid)\n    Suboccipital\n    Other groups:\n        Facial:\n            Buccinator (buccal)\n            Mandibular\n            Nasolabial\n        Parotid:\n            Infraauricular\n            Intraparotid\n            Periparotid\n            Preauricular\n    Cervical, NOS\n    Deep cervical, NOS\n    Internal jugular, NOS\n\n**Note 5:**  For head and neck schemas, additional information about lymph nodes (size of involved nodes, extracapsular extension, levels involved, and location of involved nodes above or below the lower border of the cricoid cartilage) is coded in Site-Specific Factors 1, 3-9.\n\n**Note 6:**  For head and neck cancers, if lymph nodes are described only as \"supraclavicular\", try to determine if they are in Level IV (deep to the sternocleidomastoid muscle, in the lower jugular chain) or Level V (in the posterior triangle, inferior to the transverse cervical artery) and code appropriately.  If the specific level cannot be determined, consider them as Level V nodes.",
+  "last_modified" : "2015-08-13T13:24:36.708Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathological N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathological N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "N0", "", "No regional lymph node involvement" ], [ "1", "N1", "", "Lymph nodes, NOS" ], [ "X", "NX", "", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record" ], [ "2", "N2", "Metastasis as described below", "Stated as N2 [NOS]" ], [ "2a", "N2a", "Metastasis in a single ipsilateral lymph node, more\nthan 3 cm but not more than 6 cm in greatest dimension", "Stated as N2a" ], [ "2b", "N2b", "Metastasis in multiple ipsilateral lymph nodes, none more\nthan 6 cm in greatest dimension", "Multiple lymph nodes, not stated if ipsilateral, bilateral or contralateral\n\nStated as N2b" ], [ "2c", "N2c", "Metastasis in bilateral or contralateral lymph nodes, none\nmore than 6 c m in greatest dimension", "Stated as N2c" ], [ "3", "N3", "Metastasis in a lymph node more than 6 cm in greatest\ndimension", "Stated as N3" ] ]
+}

@@ -1,0 +1,147 @@
+{
+  "id" : "pharynx_other",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Pharynx Other",
+  "title" : "Pharynx, NOS, and Overlapping Lesion of Lip, Oral Cavity, and Pharynx (excluding Malignant Melanoma)",
+  "notes" : "C14.0  Pharynx, NOS\nC14.2  Waldeyer ring\nC14.8  Overlapping lesion of lip, oral cavity\n\n**Note:** TNM is not defined for these sites.",
+  "schema_selection_table" : "schema_selection_pharynx_other",
+  "initial_context" : [ {
+    "key" : "clin_stage_group",
+    "value" : "88"
+  }, {
+    "key" : "path_stage_group",
+    "value" : "88"
+  }, {
+    "key" : "combined_stage_group",
+    "value" : "88"
+  } ],
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "input_version",
+    "name" : "Input Version",
+    "naaccr_item" : 2937,
+    "table" : "input_version_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "extension",
+    "name" : "Extension",
+    "default" : "999",
+    "table" : "extension_bdd",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes",
+    "name" : "Lymph Nodes",
+    "default" : "999",
+    "table" : "nodes_dcy",
+    "used_for_staging" : true
+  }, {
+    "key" : "mets",
+    "name" : "Mets",
+    "default" : "99",
+    "table" : "seer_mets_pharynxothervs2_3402",
+    "used_for_staging" : true
+  }, {
+    "key" : "ssf1",
+    "name" : "Size of Lymph Nodes",
+    "naaccr_item" : 2880,
+    "table" : "ssf1_jpu",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf3",
+    "name" : "Levels I-III, Lymph Nodes for Head and Neck",
+    "naaccr_item" : 2900,
+    "table" : "ssf3_lpa",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf4",
+    "name" : "Levels IV-V and Retropharyngeal Lymph Nodes for Head and Neck",
+    "naaccr_item" : 2910,
+    "table" : "ssf4_mpa",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf5",
+    "name" : "Levels VI-VII and Facial Lymph Nodes for Head and Neck",
+    "naaccr_item" : 2920,
+    "table" : "ssf5_npa",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf6",
+    "name" : "Parapharyngeal, Parotid, and Suboccipital/Retroauricular Lymph Nodes for Head and Neck",
+    "naaccr_item" : 2930,
+    "table" : "ssf6_opa",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf7",
+    "name" : "Upper and Lower Cervical Node Levels",
+    "naaccr_item" : 2861,
+    "table" : "ssf7_spa",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf8",
+    "name" : "Extracapsular Extension Clinically, Lymph Nodes for Head and Neck",
+    "naaccr_item" : 2862,
+    "table" : "ssf8_spb",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf9",
+    "name" : "Extracapsular Extension Pathologically, Lymph Nodes for Head and Neck",
+    "naaccr_item" : 2863,
+    "table" : "ssf9_spc",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf10",
+    "name" : "Human Papilloma Virus (HPV) Status",
+    "naaccr_item" : 2864,
+    "table" : "ssf10_spd",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  } ],
+  "mappings" : [ {
+    "id" : "summary_stage_2017",
+    "name" : "Summary Stage 2017",
+    "tables" : [ {
+      "id" : "extension_bdd",
+      "inputs" : [ "extension" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "nodes_dcy",
+      "inputs" : [ "nodes" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "seer_mets_pharynxother_35960",
+      "inputs" : [ "mets" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  } ],
+  "involved_tables" : [ "ssf7_spa", "ssf10_spd", "input_version_validation", "schema_selection_pharynx_other", "ssf4_mpa", "ssf9_spc", "extension_bdd", "primary_site", "histology", "ssf6_opa", "ssf5_npa", "ssf3_lpa", "year_dx_validation", "nodes_dcy", "seer_mets_pharynxother_35960", "seer_mets_pharynxothervs2_3402", "summary_stage_rpa", "ssf1_jpu", "ssf8_spb" ],
+  "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
+  "last_modified" : "2015-08-25T18:33:51.741Z"
+}

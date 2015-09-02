@@ -1,0 +1,27 @@
+{
+  "id" : "clin_n_dfe",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin N",
+  "title" : "Clinical N",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in distant metastasis.\n\n**Note 2:**  Inferior mesenteric nodes are coded in distant metastasis for cecum, ascending colon, transverse colon, and hepatic flexure. Superior mesenteric nodes are coded in distant metastasis for all colon sites.\n\n** Note 3:** Regional lymph nodes for colon\n \n**All colon sites** \n\n    Colic [NOS] \n    Epicolic (adjacent to bowel wall) \n    Mesocolic [NOS] \n    Mesenteric [NOS]\n    Paracolic/pericolic\n\n**Cecum (C18.0)** \n\n    Anterior (prececal), \n    Cecal [NOS]\n    Ileocolic\n    Periappendiceal\n    Posterior (retrocecal)\n    Right colic \n\n**Ascending colon (C18.2)** \n\n    Ileocolic\n    Middle colic\n    Right colic\n\n**Hepatic flexure (C18.3)** \n\n    Middle colic \n    Right colic\n\n**Transverse colon (C18.4)** \n\n    Inferior mesenteric \n    Left colic \n    Middle colic \n    Right colic\n\n**Splenic flexure (C18.5)** \n\n    Inferior mesenteric \n    Left colic \n    Middle colic\n\n**Descending colon (C18.6)** \n\n    Inferior mesenteric \n    Left colic \n    Sigmoid \n\n**Sigmoid colon (C18.7)** \n\n    Inferior mesenteric \n    Left colic \n    Rectosigmoid \n    Sigmoid \n    Sigmoidal (sigmoid mesenteric) \n    Superior hemorrhoidal \n    Superior rectal",
+  "last_modified" : "2015-08-13T13:25:18.531Z",
+  "definition" : [ {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n_display",
+    "name" : "Clinical N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "NX", "Regional lymph nodes cannot be assessed", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ] ]
+}

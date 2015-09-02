@@ -1,0 +1,366 @@
+{
+  "id" : "prostate",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Prostate",
+  "title" : "Prostate",
+  "notes" : "C61.9  Prostate gland\n\n**Note 1:** Transitional cell (urothelial) carcinoma of the prostatic urethra is to be coded to primary site C68.0, Urethra, and assigned Collaborative Stage codes according to the Urethra schema.\n\n**Note 2:** The 7th Edition TNM stage groups are derived from T, N, M, PSA and Gleason Score. The following SSF's are used for PSA and Gleason Score. \n\n    SSF 1: Prostatic Specific Antigen (PSA) Lab Value\n    SSF 8: Gleason's Score on Needle Core Biopsy/Transurethral Resection of Prostate (TURP) (Clinical Stage Group)\n    SSF 10: Gleason's Score on Prostatectomy/Autopsy (Pathological Stage Group)",
+  "schema_selection_table" : "schema_selection_prostate",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "input_version",
+    "name" : "Input Version",
+    "naaccr_item" : 2937,
+    "table" : "input_version_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "systemic_surg_seq",
+    "name" : "RX Summ Systemic/Surgery Sequence",
+    "naaccr_item" : 1639,
+    "table" : "systemic_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "radiation_surg_seq",
+    "name" : "RX Summ Surgery/Radiation Sequence",
+    "naaccr_item" : 1380,
+    "table" : "radiation_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "table" : "nodes_pos_fpa",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "naaccr_item" : 940,
+    "table" : "clin_t_bbo",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "naaccr_item" : 950,
+    "table" : "prostate_n_76551",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "naaccr_item" : 960,
+    "table" : "clin_m_hal",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "naaccr_item" : 880,
+    "table" : "path_t_bbo",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "naaccr_item" : 890,
+    "table" : "path_n_dbf",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_m",
+    "name" : "Pathologic M",
+    "naaccr_item" : 900,
+    "table" : "path_m_hal",
+    "used_for_staging" : true
+  }, {
+    "key" : "extension",
+    "name" : "Extension",
+    "default" : "999",
+    "table" : "extension_bbo",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes",
+    "name" : "Lymph Nodes",
+    "default" : "999",
+    "table" : "nodes_dbf",
+    "used_for_staging" : true
+  }, {
+    "key" : "mets",
+    "name" : "Mets",
+    "default" : "99",
+    "table" : "mets_hal",
+    "used_for_staging" : true
+  }, {
+    "key" : "ssf1",
+    "name" : "Prostatic Specific Antigen (PSA) Lab Value",
+    "naaccr_item" : 2880,
+    "table" : "ssf1_jav",
+    "used_for_staging" : true,
+    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf2",
+    "name" : "Prostatic Specific Antigen (PSA) Interpretation",
+    "naaccr_item" : 2890,
+    "table" : "ssf2_kab",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf7",
+    "name" : "Gleason's Primary Pattern and Secondary Pattern Values on Needle Core Biopsy/Transurethral Resection of Prostate (TURP)",
+    "naaccr_item" : 2861,
+    "table" : "ssf7_saw",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf8",
+    "name" : "Gleason's Score on Needle Core Biopsy/Transurethral Resection of Prostate (TURP)",
+    "naaccr_item" : 2862,
+    "table" : "ssf8_sax",
+    "used_for_staging" : true,
+    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf9",
+    "name" : "Gleason's Primary Pattern and Secondary Pattern Values on Prostatectomy/Autopsy",
+    "naaccr_item" : 2863,
+    "table" : "ssf9_say",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf10",
+    "name" : "Gleason's Score on Prostatectomy/Autopsy",
+    "naaccr_item" : 2864,
+    "table" : "ssf10_saz",
+    "used_for_staging" : true,
+    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf11",
+    "name" : "Gleason's Tertiary Pattern Value on Prostatectomy/Autopsy",
+    "naaccr_item" : 2865,
+    "table" : "ssf11_sba",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf12",
+    "name" : "Number of Cores Positive",
+    "naaccr_item" : 2866,
+    "table" : "ssf12_sbb",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf13",
+    "name" : "Number of Cores Examined",
+    "naaccr_item" : 2867,
+    "table" : "ssf13_sbc",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf14",
+    "name" : "Needle Core Biopsy Findings",
+    "naaccr_item" : 2868,
+    "table" : "ssf14_sbd",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf15",
+    "name" : "Clinical Staging Procedures Performed",
+    "naaccr_item" : 2869,
+    "table" : "ssf15_sbe",
+    "used_for_staging" : false
+  } ],
+  "mappings" : [ {
+    "id" : "tnm7_stage",
+    "name" : "TNM 7 Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpv",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "determine_default_t",
+      "inputs" : [ "clin_t", "path_t" ],
+      "outputs" : [ "source_t", "combined_t_in", "tmp_path_t", "ss2017_t", "tmp_clin_t" ]
+    }, {
+      "id" : "determine_default_n",
+      "inputs" : [ "clin_n", "path_n" ],
+      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+    }, {
+      "id" : "determine_default_m",
+      "inputs" : [ "path_m", "clin_m" ],
+      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_clin_m", "combined_m_in", "source_m" ]
+    }, {
+      "id" : "tnm7_stage_ubp",
+      "input_mapping" : [ {
+        "from" : "ssf8",
+        "to" : "gleason"
+      }, {
+        "from" : "ssf1",
+        "to" : "psa"
+      }, {
+        "from" : "tmp_clin_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_clin_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_clin_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "clin_stage_group"
+      } ],
+      "inputs" : [ "tmp_clin_n", "ssf8", "tmp_clin_m", "tmp_clin_t", "ssf1" ],
+      "outputs" : [ "clin_stage_group" ]
+    }, {
+      "id" : "tnm7_stage_ubp",
+      "input_mapping" : [ {
+        "from" : "ssf10",
+        "to" : "gleason"
+      }, {
+        "from" : "ssf1",
+        "to" : "psa"
+      }, {
+        "from" : "tmp_path_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_path_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_path_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "path_stage_group"
+      } ],
+      "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t", "ssf1", "ssf10" ],
+      "outputs" : [ "path_stage_group" ]
+    }, {
+      "id" : "adjust_path_defaults",
+      "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
+      "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
+    } ]
+  }, {
+    "id" : "combined_stage",
+    "name" : "Combined Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpv",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "combined_t_no_tis",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_t",
+        "to" : "clin_t"
+      }, {
+        "from" : "tmp_path_t",
+        "to" : "path_t"
+      } ],
+      "inputs" : [ "radiation_surg_seq", "combined_t_in", "tmp_path_t", "tmp_clin_t", "systemic_surg_seq" ],
+      "outputs" : [ "source_t", "combined_t" ]
+    }, {
+      "id" : "combined_n",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_n",
+        "to" : "clin_n"
+      }, {
+        "from" : "tmp_path_n",
+        "to" : "path_n"
+      } ],
+      "inputs" : [ "nodes_pos", "tmp_clin_n", "radiation_surg_seq", "tmp_path_n", "combined_n_in", "systemic_surg_seq" ],
+      "outputs" : [ "combined_n", "source_n" ]
+    }, {
+      "id" : "combined_m",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_m",
+        "to" : "clin_m"
+      }, {
+        "from" : "tmp_path_m",
+        "to" : "path_m"
+      } ],
+      "inputs" : [ "tmp_path_m", "tmp_clin_m", "combined_m_in" ],
+      "outputs" : [ "combined_m", "source_m" ]
+    }, {
+      "id" : "combined_gleason_93464",
+      "inputs" : [ "ssf8", "source_t", "ssf10" ],
+      "outputs" : [ "combined_gleason" ]
+    }, {
+      "id" : "tnm7_stage_ubp",
+      "input_mapping" : [ {
+        "from" : "ssf1",
+        "to" : "psa"
+      }, {
+        "from" : "combined_m",
+        "to" : "m"
+      }, {
+        "from" : "combined_n",
+        "to" : "n"
+      }, {
+        "from" : "combined_t",
+        "to" : "t"
+      }, {
+        "from" : "combined_gleason",
+        "to" : "gleason"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "combined_stage_group"
+      } ],
+      "inputs" : [ "combined_m", "combined_n", "combined_gleason", "combined_t", "ssf1" ],
+      "outputs" : [ "combined_stage_group" ]
+    }, {
+      "id" : "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890",
+      "inputs" : [ "combined_t" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "combined_n_to_summ_stage_n_84054",
+      "inputs" : [ "combined_n" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "cpmbined_m_to_summ_stage_m_60564",
+      "inputs" : [ "combined_m" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  }, {
+    "id" : "summary_stage_2017",
+    "name" : "Summary Stage 2017",
+    "exclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpv",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "extension_bbo",
+      "inputs" : [ "extension" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "nodes_dbf",
+      "inputs" : [ "nodes" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "mets_hal",
+      "inputs" : [ "mets" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  } ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "path_t_bbo", "determine_default_t", "input_version_validation", "mets_hal", "ssf11_sba", "radiation_surg_seq", "clin_m_hal", "determine_default_m", "clin_t_bbo", "ssf1_jav", "path_n_dbf", "nodes_pos_fpa", "ssf7_saw", "nodes_dbf", "path_m_hal", "determine_default_n", "combined_n_to_summ_stage_n_84054", "schema_selection_prostate", "histology", "ssf14_sbd", "combined_t_no_tis", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "extension_bbo", "ssf10_saz", "ssf13_sbc", "tnm7_inclusions_tpv", "adjust_path_defaults", "ssf9_say", "systemic_surg_seq", "ssf12_sbb", "primary_site", "prostate_n_76551", "tnm7_stage_ubp", "combined_m", "ssf15_sbe", "combined_n", "ssf2_kab", "year_dx_validation", "ssf8_sax", "summary_stage_rpa", "combined_gleason_93464" ],
+  "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
+  "last_modified" : "2015-08-25T18:33:26.728Z"
+}

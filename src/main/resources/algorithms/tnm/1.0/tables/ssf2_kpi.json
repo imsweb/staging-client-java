@@ -1,0 +1,20 @@
+{
+  "id" : "ssf2_kpi",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SSF2",
+  "title" : "Site-Specific Factor 2",
+  "subtitle" : "Clinical Assessment of Regional Lymph Nodes",
+  "notes" : "**Note 1:**  Only include information from imaging and physical examination in this item.  Do not include information on regional lymph nodes that is based on surgical observation or diagnostic lymph node biopsy.\n\n**Note 2:**  Use code 400 if nodes are involved clinically but there is no indication of number of nodes involved.\n\n**Note 3:**  If there is no diagnostic work-up to assess regional lymph nodes, use code 999.  Do not apply the inaccessible nodes rules that presumes unmentioned nodes to be negative.",
+  "last_modified" : "2015-08-13T13:25:25.217Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Nodes not clinically evident" ], [ "100", "Metastasis in 1 to 3 regional lymph nodes determined clinically" ], [ "200", "Metastasis in 4 or more regional lymph nodes determined clinically" ], [ "400", "Clinically positive regional nodes, NOS" ], [ "988", "Not applicable: Information not collected for this case. " ], [ "999", "Unknown if nodes are clinically evident\nNot documented in patient record" ] ]
+}

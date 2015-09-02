@@ -1,0 +1,27 @@
+{
+  "id" : "path_m_haw",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path M",
+  "title" : "Pathological M",
+  "notes" : "**Note:**  According to AJCC, p. 594: \"Tumors affecting the central nervous system rarely develop extraneural metastases, probably because of inherent biologic characteristics of these tumors, and also because the brain does not have a well-developed drainage system. . . . Certain tumors do spread through cerebrospinal fluid (CSF) pathways, and such spread has a major impact on survival.\"",
+  "last_modified" : "2015-08-13T13:24:35.898Z",
+  "definition" : [ {
+    "key" : "path_m",
+    "name" : "Pathological M",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_m_display",
+    "name" : "Pathological M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "88", "NA", "", "No distant metastasis\n- - - - - - - - - -\nMetastasis within CNS and CSF pathways\n\"Drop\" metastasis\n- - - - - - - - - -\nMetastasis outside the CNS\nExtra-neural metastasis\n- - - - - - - - - -\n30 + 20\n\nMetastasis within and outside CNS\n- - - - - - - - - -\nUnknown; distant metastasis not stated \nDistant metastasis cannot be assessed\nNot documented in patient record" ] ]
+}

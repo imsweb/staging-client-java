@@ -1,0 +1,26 @@
+{
+  "id" : "mets_hbu",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Mets",
+  "title" : "SEER Mets",
+  "last_modified" : "2015-08-13T13:25:33.190Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/lymph node(s) involved\n\nDistant lymph node(s):\n     Inferior mesenteric\n     Para-aortic\n     Porta hepatis (portal) (hilar) [in hilus of liver]\n     Retroperitoneal\n     Superior mesenteric\n     Other distant lymph node(s)\n\nExtension to:\n     Abdominal wall\n     Adrenal (suprarenal) gland\n     Kidney\n     Retroperitoneum\n\nFurther contiguous extension\n\nMetastasis", "Distant lymph nodes:\nHepatoduodenal\nMesenteric, NOS\nParaesophageal,\nPeriesophageal, NOS, including:\n     Anterior mediastinal (6)\n     Aortopulmonary (5)\n     Diaphragmatic (15)\n     Paraesophageal, lower (8l)\n     Paraesophageal, middle (8m)\n     Paratracheal, lower (4L, 4R)\n     Paratracheal, upper (2L, 2R)\n     Posterior mediastinal (3p)\n     Pulmonary ligament (9)\n     Subcarinal (tracheal carina) (7)\n     Supraclavicular (1)\n     Tracheobronchial (hilar) (10L, 10R)\nRetropancreatic\n\nFurther contiguous extension including but not limited to:\n   Aorta\n   Vertebral body\n   Trachea\nStated as unresectable, NOS\n\nStated as T4b \n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis(es), NOS\n\nStated as M1", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

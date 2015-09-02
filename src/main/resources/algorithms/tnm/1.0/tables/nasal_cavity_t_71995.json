@@ -1,0 +1,27 @@
+{
+  "id" : "nasal_cavity_t_71995",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Nasal Cavity T",
+  "title" : "Clinical and Pathological T",
+  "notes" : "**Note 1:**  The bones of the lateral wall of the nasal cavity include the maxilla, the perpendicular plate of the palatine bone, the medial pterygoid plate, the labyrinth and inferior concha of the ethmoid. The roof of the nasal cavity is formed by the nasal bone. The floor of the nasal cavity, which forms the roof of the mouth, is composed of the bones of the hard palate: the horizontal plate of the palatine bone posteriorly and the palatine process of the maxilla anteriorly.\n\n**Note 2:**  \"Bony invasion\" does not include extension to palate, cribriform plate, or pterygoid plates.  Extension to these structures is coded separately.\n\n**Note 3:**  Assign T3 for Base of Skull, NOS when there is no information available for more specific bony structures in the skull.\n\n**Note 4:**  Minimal extension to anterior cranial fossa implies tumor pushing through the cribriform plate, but without invasion of the dura or brain.",
+  "last_modified" : "2015-08-13T13:25:54.738Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "IS", "Tis", "Carcinoma in situ", "Intraepithelial, noninvasive\n\nStated as Tis" ], [ "1", "T1", "Tumor restricted to one subsite of nasal cavity or ethmoid sinus, with or without bony invasion", "Invasive tumor confined to one of the following subsites:\n    Septum\n    Floor\n    Lateral wall, including: \n        Meatus (superior, middle, inferior) \n        Nasal conchae (superior, middle, inferior)\n    Vestibule (edge of naris to mucocutaneous junction)\nWITH or WITHOUT bony invasion\n\nConfined to nasal cavity, NOS\nLocalized, NOS\n\nStated as T1" ], [ "2", "T2", "Tumor involves two subsites in a single site or extends to involve an adjacent site within the nasoethmoidal complex, with or without bony invasion", "Invasive tumor confined to two or more subsites listed in T1 WITH or WITHOUT bony invasion\n\nExtending to adjacent region within the nasoethmoidal complex:\n    Nasolacrimal duct\n    Ethmoid sinus\n    Choana\nWITH or WITHOUT bony invasion\n\nStated as T2" ], [ "3", "T3", "Tumor extends to invade the medial wall or floor of the orbit, maxillary sinus, palate, or cribriform plate", "Adjacent organs/structures including:\n    Base of skull, NOS\n    Hard palate\n\nCribiform plate\nMaxillary sinus\nMedial wall or floor of the orbit\n\nStated as T3" ], [ "4", "T4", "", "Note: T4 has subcategories of T4a and T4b. Assign T4 only when there is no information available to assign one of the subcategories\n\nStated as T4[NOS]" ], [ "4A", "T4a", "Tumor invades any of the following:\nAnterior orbital contents\nSkin of nose or cheek\nMinimal extension to anterior cranial fossa\nPterygoid plates\nSphenoid or frontal sinuses", "Frontal sinus\nPterygoid plates\n\nAnterior orbital contents\nFrontal sinus\nPterygoid plates\nSkin of nose\nSkin of cheek\nAnterior cranial fossa (minimal extension)\nSphenoid sinus\n\nStated as T4a" ], [ "4B", "T4b", "Tumor invades any of the following:\nOrbital apex\nDura\nBrain\nMiddle cranial fossa\nCranial nerves other than maxillary division of trigeminal nerve (V2)\nNasopharynx\nClivus", "Further contiguous extension including:\n    Orbital apex \n\nStated as T4b" ] ]
+}

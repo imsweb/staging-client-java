@@ -1,0 +1,337 @@
+{
+  "id" : "lymphoma_ocular_adnexa",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Lymphoma Ocular Adnexa",
+  "title" : "Lymphoma of the Ocular Adnexa and Skin of Eyelid",
+  "description" : "[SME REVIEW]\n1) TNM 7 Stage flow includes SSF2 table (step 4). but the stage is always 88.  Think this step can be removed.\n2) Since stage is always 88, should the Adj Path step (which sets path stage group = 99 if Path T, Path N, Path M are all missing) be deleted?\nif so, need to check other schemas for this issue.\n\nwait until Lymphoma is fixed, then mimic - discuss with Lynne P.\n\nCan SSF11, 12, 13 be removed? they don't appear to have useful defined values.\n[END SME REVIEW]",
+  "notes" : "M-9590-9699,9702-9738, 9811-9818,9820-9837\nC44.1  Skin of Eyelid\nC69.0  Conjunctiva\nC69.5  Lacrimal Gland\nC69.6  Orbit\n\n**Note 1:** Laterality must be coded for this site.\n\n**Note 2:**   Ocular lymphomas are assigned TNM values but no stage grouping in TNM 7th Edition staging.",
+  "schema_selection_table" : "schema_selection_lymphoma_ocular_adnexa",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "input_version",
+    "name" : "Input Version",
+    "naaccr_item" : 2937,
+    "table" : "input_version_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "systemic_surg_seq",
+    "name" : "RX Summ Systemic/Surgery Sequence",
+    "naaccr_item" : 1639,
+    "table" : "systemic_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "radiation_surg_seq",
+    "name" : "RX Summ Surgery/Radiation Sequence",
+    "naaccr_item" : 1380,
+    "table" : "radiation_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "table" : "nodes_pos_fpa",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "naaccr_item" : 940,
+    "table" : "lymphomaocularadnexa_t_55786",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "naaccr_item" : 950,
+    "table" : "lymphmaocularadnexa_n_57005",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "naaccr_item" : 960,
+    "table" : "clin_m_hby",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "naaccr_item" : 880,
+    "table" : "lymphomaocularadnexa_t_55786",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "naaccr_item" : 890,
+    "table" : "lymphmaocularadnexa_n_57005",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_m",
+    "name" : "Pathologic M",
+    "naaccr_item" : 900,
+    "table" : "path_m_hby",
+    "used_for_staging" : true
+  }, {
+    "key" : "extension",
+    "name" : "Extension",
+    "default" : "999",
+    "table" : "extension_bez",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes",
+    "name" : "Lymph Nodes",
+    "default" : "999",
+    "table" : "nodes_dna",
+    "used_for_staging" : true
+  }, {
+    "key" : "mets",
+    "name" : "Mets",
+    "default" : "99",
+    "table" : "mets_hna",
+    "used_for_staging" : true
+  }, {
+    "key" : "ssf1",
+    "name" : "Associated with HIV/AIDS",
+    "naaccr_item" : 2880,
+    "table" : "ssf1_jpj",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf2",
+    "name" : "Systemic Symptoms at Diagnosis",
+    "naaccr_item" : 2890,
+    "table" : "ssf2_kpg",
+    "used_for_staging" : true
+  }, {
+    "key" : "ssf3",
+    "name" : "International Prognostic Index (IPI)",
+    "naaccr_item" : 2900,
+    "table" : "ssf3_lbc",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf4",
+    "name" : "Follicular Lymphoma Prognostic Index (FLIPI)",
+    "naaccr_item" : 2910,
+    "table" : "ssf4_mbj",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf5",
+    "name" : "Ki-67/MIB-1 Labeling Index (LI): Ophthalmic",
+    "naaccr_item" : 2920,
+    "table" : "ssf5_nac",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf6",
+    "name" : "Lactate Dehydrogenase (LDH)",
+    "naaccr_item" : 2930,
+    "table" : "ssf6_oat",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf7",
+    "name" : "Rheumatoid Arthritis",
+    "naaccr_item" : 2861,
+    "table" : "ssf7_saq",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf8",
+    "name" : "Sjogren Syndrome",
+    "naaccr_item" : 2862,
+    "table" : "ssf8_sar",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf9",
+    "name" : "Other Connective Tissue Disease",
+    "naaccr_item" : 2863,
+    "table" : "ssf9_sas",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf10",
+    "name" : "Sicca Syndrome",
+    "naaccr_item" : 2864,
+    "table" : "ssf10_sat",
+    "used_for_staging" : false
+  } ],
+  "mappings" : [ {
+    "id" : "tnm7_stage",
+    "name" : "TNM 7 Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpl",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "determine_default_t",
+      "inputs" : [ "clin_t", "path_t" ],
+      "outputs" : [ "source_t", "combined_t_in", "tmp_path_t", "ss2017_t", "tmp_clin_t" ]
+    }, {
+      "id" : "determine_default_n",
+      "inputs" : [ "clin_n", "path_n" ],
+      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+    }, {
+      "id" : "determine_default_m",
+      "inputs" : [ "path_m", "clin_m" ],
+      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_clin_m", "combined_m_in", "source_m" ]
+    }, {
+      "id" : "ssf2_kpg",
+      "inputs" : [ "ssf2" ],
+      "outputs" : [ "stage_classification" ]
+    }, {
+      "id" : "tnm7_stage_for_sites_with_no_stage_groupings_unb",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_clin_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_clin_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "clin_stage_group"
+      } ],
+      "inputs" : [ "tmp_clin_n", "tmp_clin_m", "tmp_clin_t" ],
+      "outputs" : [ "clin_stage_group" ]
+    }, {
+      "id" : "tnm7_stage_for_sites_with_no_stage_groupings_unb",
+      "input_mapping" : [ {
+        "from" : "tmp_path_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_path_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_path_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "path_stage_group"
+      } ],
+      "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t" ],
+      "outputs" : [ "path_stage_group" ]
+    }, {
+      "id" : "adjust_path_defaults",
+      "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
+      "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
+    } ]
+  }, {
+    "id" : "combined_stage",
+    "name" : "Combined Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpl",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "combined_t_no_tis",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_t",
+        "to" : "clin_t"
+      }, {
+        "from" : "tmp_path_t",
+        "to" : "path_t"
+      } ],
+      "inputs" : [ "radiation_surg_seq", "combined_t_in", "tmp_path_t", "tmp_clin_t", "systemic_surg_seq" ],
+      "outputs" : [ "source_t", "combined_t" ]
+    }, {
+      "id" : "combined_n",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_n",
+        "to" : "clin_n"
+      }, {
+        "from" : "tmp_path_n",
+        "to" : "path_n"
+      } ],
+      "inputs" : [ "nodes_pos", "tmp_clin_n", "radiation_surg_seq", "tmp_path_n", "combined_n_in", "systemic_surg_seq" ],
+      "outputs" : [ "combined_n", "source_n" ]
+    }, {
+      "id" : "combined_m_lymphocularadnexa",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_m",
+        "to" : "clin_m"
+      }, {
+        "from" : "tmp_path_m",
+        "to" : "path_m"
+      } ],
+      "inputs" : [ "tmp_path_m", "tmp_clin_m", "combined_m_in" ],
+      "outputs" : [ "combined_m", "source_m" ]
+    }, {
+      "id" : "tnm7_stage_for_sites_with_no_stage_groupings_unb",
+      "input_mapping" : [ {
+        "from" : "combined_m",
+        "to" : "m"
+      }, {
+        "from" : "combined_n",
+        "to" : "n"
+      }, {
+        "from" : "combined_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "combined_stage_group"
+      } ],
+      "inputs" : [ "combined_m", "combined_n", "combined_t" ],
+      "outputs" : [ "combined_stage_group" ]
+    }, {
+      "id" : "combined_t_to_summ_stage_t_4_4e_d_99503",
+      "inputs" : [ "combined_t" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "combined_n_to_summ_stage_n_nos_n3_d_42104",
+      "inputs" : [ "combined_n" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "cpmbined_m_to_summ_stage_m_60564",
+      "inputs" : [ "combined_m" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_raa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  }, {
+    "id" : "summary_stage_2017",
+    "name" : "Summary Stage 2017",
+    "exclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpl",
+      "inputs" : [ "hist" ]
+    } ],
+    "tables" : [ {
+      "id" : "extension_bez",
+      "inputs" : [ "extension" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "nodes_dev",
+      "inputs" : [ "nodes" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "mets_hby",
+      "inputs" : [ "mets" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_raa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  } ],
+  "involved_tables" : [ "ssf2_kpg", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "schema_selection_lymphoma_ocular_adnexa", "ssf7_saq", "ssf10_sat", "tnm7_stage_for_sites_with_no_stage_groupings_unb", "radiation_surg_seq", "ssf3_lbc", "determine_default_m", "summary_stage_raa", "nodes_pos_fpa", "lymphomaocularadnexa_t_55786", "ssf4_mbj", "determine_default_n", "ssf1_jpj", "combined_t_to_summ_stage_t_4_4e_d_99503", "nodes_dev", "ssf6_oat", "histology", "combined_t_no_tis", "combined_n_to_summ_stage_n_nos_n3_d_42104", "mets_hna", "nodes_dna", "tnm7_inclusions_tpl", "extension_bez", "ssf9_sas", "clin_m_hby", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m_lymphocularadnexa", "ssf8_sar", "combined_n", "year_dx_validation", "ssf5_nac", "lymphmaocularadnexa_n_57005", "path_m_hby", "mets_hby" ],
+  "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
+  "last_modified" : "2015-08-25T18:33:54.742Z"
+}

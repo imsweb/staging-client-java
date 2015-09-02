@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_bdt",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin T",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  TNM does not include a Tis or TX category for melanoma of mucosa of head and neck sites. Tis and TX are mapped to NA and TNM stage group is derived as NA.\n\n**Note 2:**  TNM does not include a T1 or T2 category for mucosal melanoma of head and neck sites.\n\n**Note 3:**  Assign T3 for extension involving the mucosa only of adjacent sites.  Assign T4a or T4b for extension involving the deeper tissues of the primary or adjacent sites.\n\n**Note 4:**  Assign T3 for localized tumor when no other information is available.",
+  "last_modified" : "2015-08-13T13:25:41.870Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "88", "NA", "Not applicable", "In situ, intraepithelial, noninvasive\n\nUnknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record" ], [ "3", "T3", "Tumor limited to the epithelium and/or submucosa \n(mucosal disease)", "Tumor confined to mucosa of upper lip:\n    Labial mucosa (inner lip)\n    Vermilion surface\n\nExtension involving mucosa only:\n   Commissure\n   Floor of mouth\n   Gingiva (lower, upper and NOS)\n   Inner cheek (buccal mucosa)\n   Opposite lip (both lips)\n   Tongue\n\nLocalized, NOS\n\nStated as T3" ], [ "4", "T4", "UICC does not define T4", "Stated as T4 [NOS]" ], [ "4A", "T4a", "Tumor invades deep soft tissue, cartilage, bone\nor overlying skin", "Involvement of deep soft tissue or musculature of upper lip\nSoft tissue NOS\nInvolvement of deep soft tissue or musculature of upper lip plus mucosal involvement of any structure in T3\nInvolvement of deep soft tissue or musculature of any structure in T3\nInvolvement of deep tissue or periosteum of upper gingiva\nInvolvement of deep tissue or musculature of floor of mouth or tongue\n\nBone, NOS except base of skull\nCartilage, NOS\nCartilage of mandible\nCartilage of maxilla\nCortical bone, NOS\nCortical bone of mandible\nCortical bone of maxilla\nDeep tissue or periosteum of lower gingiva\nInferior alveolar nerve\nMandible, NOS\nMaxilla, NOS\nSkin of face/neck\nSkin of nose\nSkin of nose plus mucosa or deep tissue lower gingiva\n\nExtrinsic muscle of tongue:\n    Genioglossus\n    Hyoglossus\n    Palatoglossus\n    Styloglossus\n\nStated as T4a" ], [ "4B", "T4b", "Tumor invades any of the following:\nBrain\nDura\nSkull base\nLower cranial nerves (IX, X, XI, XII)\nMasticator space\nCarotid artery\nPrevertebral space\nMediastinal structures", "Contiguous extension:\n    Base of skull\n    Carotid artery (encased)\n    Pterygoid plates\n\nStated as T4b" ] ]
+}

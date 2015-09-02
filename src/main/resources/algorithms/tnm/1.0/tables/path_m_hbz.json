@@ -1,0 +1,27 @@
+{
+  "id" : "path_m_hbz",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path M",
+  "title" : "Pathological M",
+  "notes" : "**Note 1:**  Periduodenal and peripancreatic nodes are distant for tumors in the left liver, and gastrohepatic nodes are distant for tumors in the right liver. If both lobes of liver are involved, code involvement of periduodenal/peripancreatic and gastrohepatic nodes in regional lymph nodes.\n\n**Note 3:**  Caval nodes are classified as distant for TNM 7 staging.",
+  "last_modified" : "2015-08-13T13:25:10.680Z",
+  "definition" : [ {
+    "key" : "path_m",
+    "name" : "Pathological M",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_m_display",
+    "name" : "Pathological M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "M1", "Distant metastasis", "Distant lymph nodes:\n    Aortic:\n        Para-aortic\n        Periaortic\n    Cardiac\n    Caval\n    Coronary artery\n    Diaphragmatic, NOS\n    Lateral (aortic) (lumbar)\n    Left liver (segments 2-4):\n        Periduodenal\n        Peripancreatic\n    Pericardial (pericardiac)\n    Posterior mediastinal (tracheoesophageal) including juxtaphrenic nodes\n    Renal artery\n    Retroperitoneal, NOS\n    Right liver (segments 5-8):\n        Gastrohepatic\n\nDistant lymph nodes, NOS\n\nDistant metastasis WITH or WITHOUT  distant lymph node(s)\n\nCarcinomatosis\n\nDistant metastasis, NOS\n\nStated as M1" ] ]
+}

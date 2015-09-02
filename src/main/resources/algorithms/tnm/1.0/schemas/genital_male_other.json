@@ -1,0 +1,86 @@
+{
+  "id" : "genital_male_other",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Genital Male Other",
+  "title" : "Other and Unspecified Male Genital Organs (excluding Scrotum, Kaposi Sarcoma and Lymphoma)",
+  "notes" : "C63.0  Epididymis\nC63.1  Spermatic cord\nC63.7  Other specified parts of male genital organs\nC63.8  Overlapping lesion of male genital organs\nC63.9  Male genital organs, NOS\n\n**Note1:** TNM is not defined for these sites.\n\n**Note 2:**  Laterality must be coded for C63.0-C63.1.\n\n**Note 3:**  Melanoma, mycosis fungoides, or Sezary disease of all sites listed is coded using this schema. Kaposi sarcoma of all sites is included in the Kaposi sarcoma schema, and lymphomas of all sites are included in the lymphoma schema.",
+  "schema_selection_table" : "schema_selection_genital_male_other",
+  "initial_context" : [ {
+    "key" : "clin_stage_group",
+    "value" : "88"
+  }, {
+    "key" : "path_stage_group",
+    "value" : "88"
+  }, {
+    "key" : "combined_stage_group",
+    "value" : "88"
+  } ],
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "input_version",
+    "name" : "Input Version",
+    "naaccr_item" : 2937,
+    "table" : "input_version_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "extension",
+    "name" : "Extension",
+    "default" : "999",
+    "table" : "extension_bcl",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes",
+    "name" : "Lymph Nodes",
+    "default" : "999",
+    "table" : "nodes_dca",
+    "used_for_staging" : true
+  }, {
+    "key" : "mets",
+    "name" : "Mets",
+    "default" : "99",
+    "table" : "seer_mets_genital_male_other_25163",
+    "used_for_staging" : true
+  } ],
+  "mappings" : [ {
+    "id" : "summary_stage_2017",
+    "name" : "Summary Stage 2017",
+    "tables" : [ {
+      "id" : "extension_bcl",
+      "inputs" : [ "extension" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "nodes_dca",
+      "inputs" : [ "nodes" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "seer_mets_genitalmaleother_scrotum_92956",
+      "inputs" : [ "mets" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  } ],
+  "involved_tables" : [ "nodes_dca", "primary_site", "seer_mets_genital_male_other_25163", "input_version_validation", "histology", "year_dx_validation", "extension_bcl", "seer_mets_genitalmaleother_scrotum_92956", "summary_stage_rpa", "schema_selection_genital_male_other" ],
+  "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
+  "last_modified" : "2015-08-25T18:33:50.139Z"
+}

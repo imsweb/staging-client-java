@@ -1,0 +1,27 @@
+{
+  "id" : "path_t_bbi",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path T",
+  "title" : "Pathological T",
+  "notes" : "**Note 1:**  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage. FIGO Stage IVA is assigned based on tumor extension and/or regional lymph node involvement.  Code CS Extension based on a physician's statement of FIGO Stage IVA if it is based on tumor extension or the basis is unknown.\n\n**Note 2:**  FIGO no longer includes Stage 0 (Tis) for this site.\n\n**Note 3:**  FIGO Stage I, IA and IB are defined by size of tumor, involvement of vulva OR vulva and perineum, and depth of stromal invasion.\n\n**Note 4:**  The depth of invasion is defined as the measurement of the tumor from the epithelial-stromal junction of the adjacent most superficial dermal papilla to the deepest point of invasion.\n\n**Note 5:** T3 is not used by FIGO. They label it T4. If you have a record which states T4, assign T3.",
+  "last_modified" : "2015-08-13T13:23:38.200Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathological T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathological T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "T0", "No evidence of primary tumor", "" ], [ "1B", "T1b", "Tumor greater than 2 cm or with stromal invasion greater than 1mm", "Vulva and perineum:   Stromal invasion greater than 1 mm\n\nFIGO Stage IB\n\nStated as T1b" ], [ "2", "T2", "Tumor of any size with extension to adjacent perineal structures: lower\nthird urethra, lower third vagina, anus", "Anus\nPerianal skin\nUrethra:\n     Lower/distal one-third \n    Urethra, NOS \nVagina (lower/distal 1/3 vagina)\nVagina NOS\n\nFIGO Stage II\n\nStated as T2" ], [ "3", "T3", "Tumor of any size with extension to the following structures:\nUpper 2/3 urethra\nUpper 2/3 vagina\nBladder mucosa\nRectal mucosa\nFixed to pelvic bone", "Bladder wall or bladder, NOS (including mucosa)\nPerineal body\nRectal wall or rectum, NOS (including mucosa)\nUrethra: upper/proximal two-thirds\nVagina: upper/proximal two-thirds\n\nFurther contiguous extension\n\nFIGO Stage IVA based on extension \n     Or unknown whether based on extension or nodes\n\nStated as T3" ], [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\n\nNot documented in patient record" ], [ "IS", "Tis", "Carcinoma in situ (preinvasive carcinoma)\nIntraepithelial neoplasia Grade III (VIN III)", "Noninvasive\nBowen disease" ], [ "1a", "T1a", "Tumor 2 cm or less in greatest dimension and with stromal invasion\nno greater than 1.0 mm", "Vulva and perineum:  Stromal invasion less than or equal to 1 mm\n\nFIGO Stage IA\n\nStated as T1a" ], [ "1", "T1", "Tumor confined to vulva or vula and perinuem", "Vulva and perineum:  Stromal invasion but depth of invasion in millimeters not stated\n\nInvasive carcinoma confined to:\n    Musculature\n    Submucosa\n    Vulva including skin\n\nLocalized, NOS\n\nFIGO Stage I [NOS]\n\nStated as T1 [NOS]" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "ssf3_lap",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SSF3",
+  "title" : "Site-Specific Factor 3",
+  "subtitle" : "Clinical Status of Lymph Nodes",
+  "last_modified" : "2015-08-13T13:24:54.443Z",
+  "definition" : [ {
+    "key" : "ssf3",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Negative clinical or radiographic examination of lymph nodes " ], [ "010", "Positive clinical or radiographic examination of lymph nodes" ], [ "988", "Not applicable: Information not collected for this case. " ], [ "997", "Nodes examined clinically and/or radiographically, unknown results" ], [ "998", "No clinical or radiographic examination of lymph nodes" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

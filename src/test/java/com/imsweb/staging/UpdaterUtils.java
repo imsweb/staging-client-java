@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+import java.util.regex.Pattern;
 
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -38,6 +39,8 @@ import com.imsweb.staging.entities.StagingTable;
 public final class UpdaterUtils {
 
     private static final String _BASE_DIRECTORY = "C:/Prj/staging-client-java/src/main/resources/algorithms";
+
+    private static Pattern _ID_CHARACTERS = Pattern.compile("[a-z0-9_]+");
 
     public static void update(String algorithm, String version) throws IOException, JSONException {
         Stopwatch stopwatch = Stopwatch.createStarted();
@@ -79,21 +82,35 @@ public final class UpdaterUtils {
         r.withHeader("X-SEERAPI-Key", apiKey);
         r.withHeader("Accept", "application/json");
 
-        System.out.print("Getting list of table identifiers...");
+        System.out.println("Getting list of table identifiers");
         List<String> tableIds = new ArrayList<String>();
         JSONResource tables = r.json(url + "/staging/" + algorithm + "/" + version + "/tables");
         JSONArray tableArray = tables.array();
-        for (int i = 0; i < tableArray.length(); i++)
-            tableIds.add(tableArray.getJSONObject(i).get("id").toString());
-        System.out.println(tableIds.size() + " found.");
+        for (int i = 0; i < tableArray.length(); i++) {
+            String id = tableArray.getJSONObject(i).get("id").toString();
 
-        System.out.print("Getting list of schema identifiers...");
+            // if there are invalid table identifiers, just skip them
+            if (!_ID_CHARACTERS.matcher(id).matches())
+                System.out.println(" **** skipping bad table identifier: '" + id + "' ****");
+            else
+                tableIds.add(id);
+        }
+        System.out.println(tableIds.size() + " valid table identifiers found.");
+
+        System.out.println("Getting list of schema identifiers...");
         List<String> schemaIds = new ArrayList<String>();
         JSONResource schemas = r.json(url + "/staging/" + algorithm + "/" + version + "/schemas");
         JSONArray schemaArray = schemas.array();
-        for (int i = 0; i < schemaArray.length(); i++)
-            schemaIds.add(schemaArray.getJSONObject(i).get("id").toString());
-        System.out.println(schemaIds.size() + " found.");
+        for (int i = 0; i < schemaArray.length(); i++) {
+            String id = schemaArray.getJSONObject(i).get("id").toString();
+
+            // if there are invalid schema identifiers, just skip them
+            if (!_ID_CHARACTERS.matcher(id).matches())
+                System.out.println(" **** skipping bad schema identifier: '" + id + "' ****");
+            else
+                schemaIds.add(id);
+        }
+        System.out.println(schemaIds.size() + " valid schema idenfiers found.");
 
         String schemaDir = _BASE_DIRECTORY + "/" + algorithm + "/" + version + "/schemas";
         System.out.print("Deleting all files from " + schemaDir + "...");

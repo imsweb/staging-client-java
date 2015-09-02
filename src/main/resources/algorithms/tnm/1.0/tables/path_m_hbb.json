@@ -1,0 +1,27 @@
+{
+  "id" : "path_m_hbb",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path M",
+  "title" : "Pathological M",
+  "notes" : "**Note:** Involvement of inguinal, pelvic, or external iliac lymph nodes with previous scrotal or inguinal surgery prior to presentation of the testis tumor is coded in regional lymph nodes and not in distant metastasis.",
+  "last_modified" : "2015-08-13T13:24:00.713Z",
+  "definition" : [ {
+    "key" : "path_m",
+    "name" : "Pathological M",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_m_display",
+    "name" : "Pathological M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "M1", "Distant metastasis", "Note: M1 has subcategories of M1a and M1b. Assign M1 only when there is no information available to assign one of the subcategories\n\nDistant metastasis, NOS\n\nStated as M1 [NOS]" ], [ "1A", "M1a", "Non-regional lymph node(s) or lung metastasis", "Distant lymph node(s):  \n    External iliac \n    Inguinal nodes, NOS:\n        Deep, NOS\n        Node of Cloquet or Rosenmuller (highest deep inguinal)\n        Superficial (femoral)    \n     Pelvic, NOS\nWITHOUT previous scrotal or inguinal surgery OR UNKNOWN if previous\nscrotal or inguinal surgery\n\nDistant lymph node(s), NOS\n\nDistant metastasis to lung\n\nStated as M1a" ], [ "1B", "M1b", "Distant metastasis other than non-regional lymph nodes and lung", "Carcinomatosis\n\nDistant metastasis to other distant sites WITH or WITHOUT metastasis to lung\n and/or distant lymph node(s)\n\nStated as M1b" ] ]
+}

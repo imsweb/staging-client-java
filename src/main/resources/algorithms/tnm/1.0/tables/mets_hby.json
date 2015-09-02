@@ -1,0 +1,28 @@
+{
+  "id" : "mets_hby",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Mets",
+  "title" : "SEER Mets",
+  "notes" : "NOTE:  Involvement of peripheral and central lymph nodes, distant nodes for ocular adnexal lymphomas, is coded in CS Lymph Nodes and not in CS Mets at DX.",
+  "footnotes" : "- Stage grouping for AJCC 6 staging of ocular adnexal lymphoma for cases collected in CSv2 is derived from a combination of CS Extension, CS Lymph Nodes, and CS Mets at DX codes as shown in the AJCC TNM 6 Stage table .  A or B categories  is appended to Stage I-IV based on coding of CS Site-Specific Factor 2, Systemic Symptoms at Diagnosis.",
+  "last_modified" : "2015-08-13T13:23:32.533Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo involvement of other extranodal sites", "", "VALUE:NONE" ], [ "70", "Stage III\nInvolvement of lymph node regions on BOTH sides of the diaphragm\nStage IIIE\nInvolvement of an extralymphatic organ or site PLUS involvement of  lymph node(s) on the\nOPPOSITE side of the diaphragm\nStage IIIS\n Involvement of the spleen PLUS involvement of lymph node(s) ABOVE the diaphragm\nStage IIIES\nInvolvement of the spleen PLUS involvement of lymph node region(s) ABOVE the\ndiaphragm PLUS involvement of a single extralymphatic organ/site on either side of\nthe diaphragm\nInvolvement of the spleen PLUS a single extralymphatic organ/site\nABOVE the diaphragm WITH OR WITHOUT  involvement of lymph node(s)\nStage IV\nDisseminated  involvement of ONE OR MORE extralymphatic organ(s)/site(s)\n(Multifocal) involvement of MORE THAN ONE extralymphatic organ/site\nMetastases\nBone marrow\nLiver", "Distant\n\nNasopharynx\n            \nStated as T4a with no other information on extension\n\nOsseous involvement including periosteum\n            \nStated as T4b with no other information on extension\n\nMaxillofacial, ethmoidal, and/or frontal sinuses\n            \nStated as T4c with no other information on extension\n\nIntracranial spread\n            \nStated as T4d with no other information on extension\n\nExtension beyond orbit to adjacent structures, NOS\n            \nStated as T4 [NOS] with no other information on extension\n\nFurther contiguous extension beyond any structure in codes 700 - 730\n\nDistant lymph nodes\n\nPeripheral lymph nodes not draining ocular adnexal region\n\nStated as N3 with no other information on regional lymph nodes\n\nCentral lymph nodes \n\n Stated as N4 with no other information on regional lymph nodes\n\n\nMets present\n\nSpleen\n\nNon-contiguous involvement of other extranodal sites \nexcluding bone marrow, including but not limited to:\n    Parotid gland\n    Submandibular gland\n    Lung\n    Liver\n    Kidney\n    Breast\n\nStated as M1a with no other information on metastasis\n\nBone marrow\n\nStated as M1b with no other information on metastasis\n\n40 + (20, 30, or 35) \n\nBone marrow plus other extranodal site\n\nStated as M1c with no other information on metastasis\n\nDistant metastasis NOS\n\nStated as M1 [NOS] with no other information on metastasis", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

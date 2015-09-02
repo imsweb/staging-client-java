@@ -1,0 +1,27 @@
+{
+  "id" : "nodes_dcc",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Regional Nodes",
+  "title" : "SEER Regional Nodes",
+  "notes" : "**Note:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in SEER mets.",
+  "last_modified" : "2015-08-13T13:23:37.528Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summary Stage 2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:NONE" ], [ "300", "Regional lymph node(s) involved only\n\nRegional lymph node(s):\n    Aortic, NOS:\n       Lateral (lumbar)\n       Para-aortic\n       Periaortic\n    Iliac, NOS:\n        Common\n        External\n        Internal (hypogastric):\n           Obturator\n    Inguinal\n    Lateral sacral (laterosacral)\n    Pelvic, NOS    \n    Retroperitoneal, NOS\n    Regional lymph node(s), NOS\n\nLymph nodes, NOS", "", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

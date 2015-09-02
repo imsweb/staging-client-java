@@ -1,0 +1,23 @@
+{
+  "id" : "tnm_7_stage_group_path_97003",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "TNM 7 Stage Group (Path) [SME REVIEW]",
+  "title" : "TNM 7 Stage Group",
+  "description" : "[SME REVIEW]\nPathologic Stage Group is always set to 99.",
+  "last_modified" : "2015-08-13T13:25:49.478Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf2",
+    "name" : "SSF2",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "*", "*", "VALUE:99" ] ]
+}

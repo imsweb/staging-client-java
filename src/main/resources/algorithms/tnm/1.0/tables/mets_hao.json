@@ -1,0 +1,26 @@
+{
+  "id" : "mets_hao",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Mets",
+  "title" : "SEER Mets",
+  "last_modified" : "2015-08-13T13:25:09.897Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/node(s) involved\n\nDistant lymph node(s)\n\nFurther contiguous extension\n\nMetastasis", "Distant lymph nodes:\n    Pancreaticosplenic (pancreaticolienal)\n    Splenic (lineal),â NOS\n    Splenic hilum\n    Splenic artery\n    Gastroepiploic (gastroâomental),â left\n    Suprapancreatic\n\nDistant metastasis:\n    Aorta\n    Body of stomach WITH or WITHOUT omentum\n    Celiac artery\n    Colon (other than transverse colon including hepatic flexure)\n    Spleen\n    Superior mesenteric artery WITH or WITHOUT omentum or body of stomach\n    Tumor is inseparable from the celiac axis\n\n    Seeding of peritoneum,â even if limited to the lesser sac region; positive peritoneal cytology\n\n    Carcinomatosis\n\n    Distant metastasis WITH or WITHOUT distant lymph node(s)\n\n    Distant metastasis,â NOS\n\n    Stated as M1", "VALUE:D" ], [ "99", "Unknown if distant metastasis\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

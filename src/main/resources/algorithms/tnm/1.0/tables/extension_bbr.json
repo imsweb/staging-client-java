@@ -1,0 +1,28 @@
+{
+  "id" : "extension_bbr",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "description" : "NOTE- SME1 thinks Note1 and Note 2 should be deleted - please review reasoning - Thanks; NOTE 3 added by SME1; All of the footnotes should be removed as they reference CS and SS maps based on direct extension with or without LN involvement. --SME 2 agrees, made changes",
+  "notes" : "**Note 1:** Code 000 (in situ) is not applicable for this schema.",
+  "last_modified" : "2015-08-13T13:25:22.110Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "Localized only\n\n    Tumor confined to site of origin\n\n    Localized, NOS", "Stated as T1b, T1 [NOS], T2b, or T2 [NOS]", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nExtension to:\n    Adjacent tissue(s), NOS\n    Connective tissue\n\n    Adjacent organs/structures including bone/cartilage\n\n     Colon (except ascending and descending colon)\n     Esophagus\n     Gallbladder\n     Liver\n     Small intestine\n     Spleen\n     Stomach", "", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in patient record", "", "VALUE:U" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "seer_mets_ethmoidsinus_11648",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Mets EthmoidSinus",
+  "title" : "SEER Mets",
+  "notes" : "**Note**: Supraclavicular and transverse cervical lymph nodes are coded in CS Lymph Nodes because they are categorized as N rather than M in AJCC TNM.",
+  "last_modified" : "2015-08-13T13:24:09.119Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/lymph node(s) involved\nDistant lymph node(s)\nFurther contiguous extension\nMetastasi", "Distant\n\nHard palate\n\n700 + 660 \n\nAny structure in code 700 plus hard palate\n\n760 + 660 \n\nAny structure in code 760 plus palate\n\nFurther contiguous extension\n\nStated as T4b with no other information on extension\n\nDistant lymph nodes\nSingle positive ipsilateral regional node:\n    Level III - Middle jugular:\n        Middle deep cervical\n    Level IV - Lower jugular:\n        Jugulo-omohyoid (supramohyoid)\n        Lower deep cervical\n        Virchow node\n    Level V - Posterior triangle group:\n        Posterior cervical\n        Level VA - Spinal accessory\n        Level VB - Transverse cervical, supraclavicular (see Note 4)\n    Level VI -  Anterior compartment group:\n        Laterotracheal \n        Paralaryngeal\n        Paratracheal - above suprasternal notch\n        Perithyroidal\n        Precricoid (Delphian)\n        Prelaryngeal\n        Pretracheal - above suprasternal notch\n        Recurrent laryngeal\n    Level VII -  Superior  mediastinal group (for other mediastinal nodes see CS Mets at DX):\n        Esophageal groove\n        Paratracheal - below suprasternal notch\n        Pretracheal - below suprasternal notch\n    Other groups:\n        Facial:\n            Buccinator (buccal)\n            Mandibular\n            Nasolabial\n        Parotid:\n            Infraauricular\n            Intraparotid\n            Periparotid\n            Preparotid\n        Parapharyngeal        \n        Retroauricular (mastoid)\n        Suboccipital\n\nMultiple positive ipsilateral nodes, any listed in code 120 \nWITH or WITHOUT nodes listed in code 100 or 110\n\nPositive ipsilateral nodes listed in code 120, not stated if single or multiple\n\n Positive bilateral or contralateral nodes, any listed in code 120\nWITH or WITHOUT nodes listed in code 100 or 110\n\nPositive nodes listed in code 120, not stated if ipsilateral, or bilateral, or contralateral\nAND not stated if single or multiple\n\nMets present\n\nDistant lymph node(s):\n    Mediastinal (excluding superior mediastinal nodes)\n    Distant lymph node(s), NOS\n\nDistant metastases except distant lymph node(s)\nCarcinomatosis\n\n40+10\n\nDistant metastasis plus distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1 with no other information on distant metastasis", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed  \nNot documented in patient record", "", "VALUE:U" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "ophthalmic_n_36875",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Ophthalmic N",
+  "title" : "Clinical and Pathological N",
+  "notes" : "**Regional lymph nodes:**\n\n    Cervical, NOS:\n        Submandibular (submaxillary)\n    Parotid, NOS:\n        Infra-auricular\n        Preauricular",
+  "last_modified" : "2015-08-13T13:23:58.279Z",
+  "definition" : [ {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n_display",
+    "name" : "Clinical N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "NX", "Regional lymph node metastasis cannot be assessed", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ] ]
+}

@@ -1,0 +1,28 @@
+{
+  "id" : "clin_t_bch",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin T",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  An E lesion is defined as disease that involves extralymphatic site(s), or sites other than lymph nodes and other lymphatic structures.  Other lymphatic structures include spleen (see note 4), thymus gland (C37.9), and Waldeyer's ring (tonsils) (C02.4, C09.0-C09.9, C11.1, C14.2),.  Any lymphatic structure (other than spleen) is coded the same as a lymph node region (codes 100, 200, 300).\n\n**Note 2:**  While spleen is considered a lymphatic structure, it is coded separately (see codes 120, 220, 230, 320, 330). S equals spleen involvement.\n\n**Note 3:**  If there is no mention of lymphatic or extralymphatic involvement but several diagnostic procedures were done, interpret as no involvement.\n\n**Note 4:**  Involvement of adjacent soft tissue does not alter the classification.",
+  "footnotes" : "- AJCC stage group for this schema is derived directly from CS Extension and CS Site-Specific Factor 2, as shown in the AJCC TNM 7 Stage table. The AJCC Stage Groups I-IV are subdivided into A and B based on the presence or absence of symptoms coded in CS Site-Specific Factor 2.\n- AJCC stage group for this schema is derived directly from CS Extension and CS Site-Specific Factor 2, as shown in the AJCC TNM 6 Stage table. The AJCC Stage Groups I-IV are subdivided into A and B based on the presence or absence of symptoms as coded in CS Site-Specific Factor 2.",
+  "last_modified" : "2015-08-13T13:24:20.877Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "[SME REVIEW]", "[SME REVIEW]", "", "Involvement of a single lymph node region\n\nStated as Stage I\n- - - - - - - - - -\nLocalized involvement of a single extralymphatic organ/site in the absence of any lymph node involvement\nMultifocal involvement of one extralymphatic organ/site\n\nStated as Stage IE\n- - - - - - - - - -\nInvolvement of spleen only\n\nStated as Stage IS\n- - - - - - - - - -\nInvolvement of two or more lymph node regions on the SAME side of the diaphragm\n\nStated as Stage II\n- - - - - - - - - -\nLocalized involvement of a single extralymphatic organ/site\nWITH involvement of its regional lymph node(s)\nWITH or WITHOUT involvement of other lymph node(s) on the SAME side of the diaphragm\n\nDirect extension to adjacent organs or tissues\n\nStated as Stage IIE\n- - - - - - - - - -\nInvolvement of spleen\nPLUS lymph node(s) BELOW the diaphragm\n\nStated as Stage IIS\n- - - - - - - - - -\nInvolvement of spleen \nPLUS involvement of a single extralymphatic organ/site BELOW the diaphragm\nWITH/WITHOUT involvement of lymph node(s) BELOW the diaphragm\n\nStated as Stage IIES\n- - - - - - - - - -\nInvolvement of lymph node regions on BOTH sides of the diaphragm\n\nStated as Stage III\n- - - - - - - - - -\nInvolvement of an extralymphatic organ/site \nPLUS involvement of lymph node(s) on the OPPOSITE side of the diaphragm\n\nStated as Stage IIIE\n- - - - - - - - - -\nInvolvement of the spleen \nPLUS lymph node(s) ABOVE the diaphragm\n\nInvolvement of spleen \nPLUS lymph nodes on both sides of the diaphragm.\n\nStated as Stage IIIS\n- - - - - - - - - -\n320 + 310\n\nInvolvement of the spleen \nPLUS a single extralymphatic site ABOVE the diaphragm\nWITH or WITHOUT involvement of lymph node(s)\n\nInvolvement of the spleen \nPLUS involvement of lymph node region(s) ABOVE the diaphragm\nPLUS involvement of a single extralymphatic organ/site on either side of the diaphragm\n\nStated as Stage IIIES\n- - - - - - - - - -\nDiffuse or disseminated (multifocal) involvement of ONE OR MORE extralymphatic organ(s)/site(s)\nWITH OR WITHOUT associated lymph node involvement\n\nMultifocal involvement of MORE THAN ONE extralymphatic organ/site\n\nInvolvement of isolated extralymphatic organ in absence of involvement of\nadjacent lymph nodes, but in conjunction with disease in distant sites\n\nMetastasis/involvement:\n    Bone marrow\n    Liver\n    Nodular involvement of lung(s)\n\nStated as Stage IV\n- - - - - - - - - -\nUnknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record" ] ]
+}

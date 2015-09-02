@@ -1,0 +1,28 @@
+{
+  "id" : "nodes_dem",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Regional Nodes",
+  "title" : "SEER Regional Nodes",
+  "notes" : "**Note 1:**  For head and neck schemas, this field includes all lymph nodes defined as Levels I-VII and Other by AJCC.  The complete definitions are provided in the General Rules Section 2.  **DELETE**\n\n**Note 2:**  For head and neck schemas, additional information about lymph nodes (size of involved nodes, extracapsular extension, levels involved, and location of involved nodes above or below the lower border of the cricoid cartilage) is coded in CS Site-Specific Factors 1, 3-9.  **DELETE**\n\n**Note 3:**  For head and neck cancers, if lymph nodes are described only as \"supraclavicular\", try to determine if they are in Level IV (deep to the sternocleidomastoid muscle, in the lower jugular chain) or Level V (in the posterior triangle, inferior to the transverse cervical artery) and code appropriately.  If the specific level cannot be determined, consider them as Level V nodes. **KEEP**\n\n**Note 4:**  The description of lymph nodes has been standardized across the head and neck schemas.  All lymph node levels and groups listed here are considered regional nodes for AJCC staging.  Summary Stage 1977 and Summary Stage 2000 divide these nodes into regional and distant groups.  **DELETE**",
+  "footnotes" : "\\NONE",
+  "last_modified" : "2015-08-13T13:25:23.641Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summary Stage 2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:NONE" ], [ "300", "Regional lymph node(s) involved only\nREGIONAL Lymph Nodes\nCervical, NOS\nFacial, NOS:\nBuccinator (buccal)\nNasolabial\nInternal jugular, NOS:\nDeep cervical, NOS:\nLower, NOS:\nJugulo-omohyoid (supraomohyoid)\nMiddle\nUpper, NOS:\nJugulodigastric (subdigastric)\nMandibular, NOS:\nSubmandibular (submaxillary)\nSubmental\nRetropharyngeal \nfor upper gum\nRegional lymph node(s), NOS", "Regional node involvement\n\nPositive regional node(s):  **DELETE**\n    Level I:  **KEEP**\n        Level IB - Submandibular (submaxillary), sublingual  **DELETE**\n    Level II - Upper jugular:  **KEEP**\n        Jugulodigastric (subdigastric)  **DELETE**\n        Upper deep cervical  **DELETE**\n        Level IIA - Anterior  **KEEP**\n        Level IIB - Posterior  **KEEP**\n    Level III - Middle jugular:  **KEEP**\n        Middle deep cervical  **DELETE**\n    Level IV - Lower jugular:  **KEEP**\n        Jugulo-omohyoid (supraomohyoid)  **DELETE**\n        Lower deep cervical  **DELETE**\n        Virchow node  **? DELETE**    \n    Retropharyngeal  **DELETE**\n    Cervical, NOS  **DELETE**\n    Deep cervical, NOS  **DELETE**\n    Internal jugular, NOS  **DELETE**\n    Regional lymph node(s), NOS  **DELETE**\n\nPositive regional node(s):  **DELETE**\n    Level IA - Submental  **DELETE**\n    Facial: **DELETE**\n        Buccinator (buccal)  **DELETE**\n        Mandibular  **DELETE**\n        Nasolabial  **DELETE**\n\nStated as N1 with no other information on regional lymph nodes  **KEEP**\n\nLymph nodes, NOS  **KEEP**", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

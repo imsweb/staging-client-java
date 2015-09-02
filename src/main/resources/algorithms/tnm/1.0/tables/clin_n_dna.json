@@ -1,0 +1,26 @@
+{
+  "id" : "clin_n_dna",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Lymph nodes NOT applicable",
+  "title" : "Clinical and Pathological N",
+  "last_modified" : "2015-08-13T13:23:15.333Z",
+  "definition" : [ {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n_display",
+    "name" : "Clinical N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "88", "NA", "", "Not applicable: Information not collected for this schema" ] ]
+}

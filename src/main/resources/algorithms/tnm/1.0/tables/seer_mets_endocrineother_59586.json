@@ -1,0 +1,26 @@
+{
+  "id" : "seer_mets_endocrineother_59586",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Mets EndocrineOther",
+  "title" : "SEER Mets",
+  "last_modified" : "2015-08-13T13:23:59.717Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2000_m",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/lymph node(s) involved\n\nDistant lymph node(s)\n\nExtension to: \nCervix uteri\nCul de sac (rectouterine pouch)\nOmentum\nOvary, contralateral\nRectosigmoid\nSigmoid\nSmall intestine\n\nFurther contiguous extension\n\nMetastasis", "Carcinomatosis\n\nDistant metastasis plus distant lymph node(s)\n\nDistant metastasis, NOS", "VALUE:D" ], [ "99", "Unknown\n\nUnknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

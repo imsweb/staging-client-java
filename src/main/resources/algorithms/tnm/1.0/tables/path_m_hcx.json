@@ -1,0 +1,27 @@
+{
+  "id" : "path_m_hcx",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path M",
+  "title" : "Pathological M",
+  "notes" : "**Note:** Supraclavicular and transverse cervical lymph nodes are coded in CS Lymph Nodes because they are categorized as N rather than M in AJCC TNM.",
+  "last_modified" : "2015-08-13T13:25:07.333Z",
+  "definition" : [ {
+    "key" : "path_m",
+    "name" : "Pathological M",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_m_display",
+    "name" : "Pathological M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "88", "NA", "", "No distant metastasis\n- - - - - - - - - -\nDistant lymph node(s):\n    Mediastinal (excluding superior mediastinal nodes)\n    Distant lymph node(s), NOS\n- - - - - - - - - -\nDistant metastasis except distant lymph node(s\nCarcinomatosis\n- - - - - - - - - -\n40 + 10\n\nDistant metastasis plus distant lymph node(s)\n- - - - - - - - - -\nDistant metastasis, NOS\n\nStated as M1 with no other information on distant metastasis\n- - - - - - - - - -\nUnknown; distant metastasis not stated\nDistant metastasis cannot be assessed \nNot documented in patient record" ] ]
+}

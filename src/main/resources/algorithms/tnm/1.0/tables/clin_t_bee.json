@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_bee",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin T",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  TNM does not include a Tis or TX category for melanoma of mucosa of head and neck sites. Tis and TX are mapped to NA and TNM stage group is derived as NA.\n\n**Note 2:**  TNM does not include a T1 or T2 category for mucosal melanoma of head and neck sites.\n\n**Note 3:**  Assign T3 for extension involving the mucosa only of adjacent sites.  Assign T4a or T4b for extension involving the deeper tissues of the primary or adjacent sites.\n\n**Note 4:**  Assign T3 for localized tumor when no other information is available.",
+  "last_modified" : "2015-08-13T13:25:06.832Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "88", "NA", "Not applicable", "In situ, intraepithelial, noninvasive\n- - - - - - - - - -\nUnknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record" ], [ "3", "T3", "Tumor limited to the epithelium and/or submucosa \n(mucosal disease)", "Tumor confined to mucosa of one of the following subsites:\n   Laryngopharynx\n   Postcricoid area\n   Posterior pharyngeal wall\n   Pyriform sinus\n- - - - - - - - - -\nTumor involves mucosa of more than one subsite of hypopharynx (listed in code 105) \nWITHOUT fixation\n- - - - - - - - - -\nLocalized, NOS\n- - - - - - - - - -\nInvolvement of mucosa only:\n    Larynx\n    Nasopharynx\n    Oropharynx\n- - - - - - - - - -\nStated as T3 with no other information on extension" ], [ "4", "T4", "UICC does not define T4", "Stated as T4 [NOS] with no other information on extension" ], [ "4A", "T4a", "Tumor invades deep soft tissue, cartilage, bone\nor overlying skin", "Involvement of deep soft tissue or musculature of any structure in code 105 or 205\nSoft tissue, NOS\n- - - - - - - - - -\n410 + 310\n\nInvolvement of deep soft tissue or musculature of any structure in code 105 or 205 plus mucosal involvement of any structure in code 310\n- - - - - - - - - -\nInvolvement of any structure in code 105 or 205 \nWITH tumor fixation\n- - - - - - - - - -\nInvolvement of deep soft tissue or musculature of any structure in code 310\n- - - - - - - - - -\nFixation of hemilarynx or larynx\n- - - - - - - - - -\nCentral compartment soft tissues of neck including:\n    Prelaryngeal strap muscles\n    Subcutaneous fat\n- - - - - - - - - -\nEsophagus\n- - - - - - - - - -\nThyroid gland\n- - - - - - - - - -\nCricoid cartilage\nThyroid cartilage\nCartilage, NOS\n- - - - - - - - - -\nHyoid bone\nBone excluding base of skull\nBone, NOS \nOverlying skin\n- - - - - - - - - -\nStated as T4a with no other information on extension" ], [ "4B", "T4b", "Tumor invades any of the following:\nBrain\nDura\nSkull base\nLower cranial nerves (IX, X, XI, XII)\nMasticator space\nCarotid artery\nPrevertebral space\nMediastinal structures", "Prevertebral fascia/muscle(s)\n- - - - - - - - - -\n640 + 635 \n \nPrevertebral fascia/muscles plus any structure in code 635\n- - - - - - - - - -\nCarotid artery (encased)\n- - - - - - - - - -\n650 + 635\n\nCarotid artery plus any structure in code 635\n- - - - - - - - - -\nMediastinal structures\n- - - - - - - - - -\nFurther contiguous extension including:\n    Base of skull\n    Brain\n    Dura\n    Lower cranial nerves (IX, X, XI, XII)\n    Masticator space\n- - - - - - - - - -\nStated as T4b with no other information on extension" ] ]
+}

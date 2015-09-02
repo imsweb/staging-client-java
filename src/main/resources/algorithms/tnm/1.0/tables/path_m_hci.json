@@ -1,0 +1,26 @@
+{
+  "id" : "path_m_hci",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path M",
+  "title" : "Pathological M",
+  "last_modified" : "2015-08-13T13:25:25.670Z",
+  "definition" : [ {
+    "key" : "path_m",
+    "name" : "Pathological M",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_m_display",
+    "name" : "Pathological M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "M1", "Distant metastasis", "Distant lymph node(s):\n    For cecum, ascending, hepatic flexure, and transverse colon:\n        Superior mesentric lymph nodes only\n    For all colon sites:\n        Common iliac\n        Distant lymph node(s), NOS\n        External iliac\n        Para-aortic\n        Retroperitoneal\n    For cecum, ascending colon, transverse colon, and hepatic flexure:\n        Inferior mesenteric\n    For splenic flexure, descending colon, and sigmoid colon:\n        Superior mesenteric\n\nDistant metastasis, NOS\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis, NOS\n\nStated as M1" ] ]
+}

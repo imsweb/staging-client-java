@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_beb",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin T",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  Use code 360 for extension involving the mucosa only of adjacent sites.  Use higher codes for extension involving the deeper tissues of the primary or adjacent sites.\n\n**Note 2:**  Use code 300 for localized tumor only if no information is available to assign code 105 or 360.",
+  "last_modified" : "2015-08-13T13:24:54.887Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "88", "NA", "", "In situ, intraepithelial, noninvasive\n- - - - - - - - - -\nTumor confined to mucosa of one of the following:\n    Frontal sinus\n    Sphenoid sinus\n- - - - - - - - - -\nLocalized, NOS\n- - - - - - - - - -\nTumor confined to mucosa of more than one accessory sinus\n- - - - - - - - - -\nTumor confined to mucosa of adjacent structure:\n    Nasal cavity:\n        Floor\n        Lateral wall\n        Septum\n        Turbinates\n    Nasal cavity, NOS    \n    Nasopharynx\n- - - - - - - - - -\nInvolvement of deep soft tissues of single accessory sinus\n- - - - - - - - - -\n360 +330\n\nInvolvement of deep soft tissues of single accessory sinus plus mucosal involvement of any structure in code 330\n- - - - - - - - - -\nInvolvement of deep soft tissues of more than one accessory sinus\n- - - - - - - - - -\nInvolvement of deep soft tissues of adjacent structures in code 330\n- - - - - - - - - -\nDestruction of bony wall of sinus\n- - - - - - - - - -\nInvolvement of hard palate\n- - - - - - - - - -\nBone, cartilage:\n    Facial bones\n    Maxilla\n    Orbital structures\n    Pterygoid fossa\n    Zygoma\n- - - - - - - - - -\nAnterior orbital contents\nSkin of nose\nSkin of cheek\nMuscles:\n    Masseter\n    Pterygoid\n- - - - - - - - - -\nAnterior cranial fossa\nBase of skull\nClivus\nCribriform plate\nMiddle cranial fossa\n- - - - - - - - - -\nContiguous extension:\n    Brain\n    Lower cranial nerves (IX, X, XI, XII)\n    Dura\n    Middle cranial fossa\n    Orbital apex\n- - - - - - - - - -\nFurther contiguous extension:\n    Carotid artery (encased)\n    Masticator space\n    Mediastinal structures\n    Prevertebral space\n- - - - - - - - - -\nUnknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record" ] ]
+}

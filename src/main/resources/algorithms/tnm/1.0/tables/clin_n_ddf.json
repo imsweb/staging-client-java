@@ -1,0 +1,27 @@
+{
+  "id" : "clin_n_ddf",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin N",
+  "title" : "Clinical N",
+  "notes" : "**Note 1:**  Involvement of inguinal, pelvic, or external iliac lymph nodes  WITHOUT previous scrotal or inguinal surgery prior to presentation of the testis tumor is coded in distant metastasis, as distant lymph node involvement.\n\n**Note 2:** Determine the size of the largest metastasis in a lymph node as documented in the pathology report to assign N, not the size of the lymph node. If the size of the metastasis is not documented, determine the size of the largest involved lymph node as documented pathologically or clinically with pathology taking priority. Do not code the size of any node(s) coded in distant metastasis.\n\n**Regional lymph nodes:**\n     \n    Aortic, NOS:\n       Lateral (lumbar)\n       Para-aortic\n       Periaortic\n       Preaortic \n       Retroaortic\n    Pericaval, NOS:\n       Interaortocaval\n       Paracaval\n       Precaval\n       Retrocaval\n    Retroperitoneal, NOS\n    Spermatic vein\n     \n**Regional lymph nodes WITH previous scrotal or inguinal surgery** \n    \n    External iliac\n    Inguinal nodes, NOS:\n       Deep, NOS\n       Node of Cloquet or Rosenmuller (highest deep inguinal)\n       Superficial (femoral)\n    Pelvic, NOS",
+  "last_modified" : "2015-08-13T13:23:34.820Z",
+  "definition" : [ {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n_display",
+    "name" : "Clinical N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Metastasis with a lymph node mass 2 or less in \ngreatest dimension or 5 or multiple lymph nodes, none\nmore than 2 cm in greatest dimension", "Single or multiple nodes not stated, size not stated\n\nRegional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "2", "N2", "Metastasis with a lymph node mass more than 2 cm\nbut not more than 5 cm in greatest dimension, or multiple\nlymph nodes, any one mass more than 2 cm but not more\nthan 5 cm in greatest dimension", "Single or multiple nodes not stated, size stated and greater than 2 cm but less than or equal to 5 cm\n\nStated as N2" ], [ "3", "N3", "Metastasis with a lymph node mass more than 5 cm in\ngreatest dimension", "Stated as N3" ], [ "X", "NX", "Regional lymph nodes cannot be assessed", "Unknown; not stated\nNot documented in patient record" ] ]
+}

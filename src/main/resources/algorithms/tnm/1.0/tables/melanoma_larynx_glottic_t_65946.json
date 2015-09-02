@@ -1,0 +1,28 @@
+{
+  "id" : "melanoma_larynx_glottic_t_65946",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Melanoma Larynx Glottic T",
+  "title" : "Clinical and Pathological T",
+  "notes" : "**Note 1:**  TNM does not include a Tis category for melanomas of the upper aerodigestive sites (head and neck sites). Tis is mapped to NA and TNM stage group is derived as NA.\n\n**Note 2:**  Mucosal melanomas are aggressive tumors, therefore, T1 and T2 are omitted as are Stages I and II. \n\n**Note 3:**  Assign T3 for localized tumor when no other information is available or for extension involving the mucosa only of adjacent sites.\n\n**Note 4:**  Assign T4a or T4b for extension involving the deeper tissues of the primary or adjacent sites.",
+  "footnotes" : "\\*TX is not defined in AJCC 7th edition\n\\**T0 is not defined in AJCC 7th edition",
+  "last_modified" : "2015-08-25T12:20:10.340Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "88", "NA", "Not applicable", "In situ, intraepithelial, noninvasive" ], [ "X", "TX", "Primary tumor cannot be assessed*", "Unknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor**", "" ], [ "3", "T3", "Tumor limited to the epithelium and/or submucosa (mucosal disease)", "Tumor confined to mucosa only:\n    Glottis, NOS\n    Intrinsic larynx\n    Laryngeal commissure(s), anterior, posterior\n    Vocal cord(s), NOS, true vocal cord(s), true cord(s)\nWITH normal vocal cord mobility\n\nMucosal tumor confined to vocal cords\n\nExtension involving mucosa only of adjacent region(s) of larynx:\n   Subglottis\n   Supraglottis:\n       Aryepiglottic fold\n       Arytenoid cartilage:\n             Corniculate tubercle\n             Cuneiform tubercle\n      Ventricular bands (false vocal cord(s))\n\nExtension involving mucosa only of adjacent regions:\n    Base of tongue\n    Hypopharynx, NOS\n    Pre-epiglottic tissues\n    Postcricoid area\n    Pyriform sinus\n    Vallecula\n\nLocalized, NOS\n\nStated as T3" ], [ "4", "T4", "", "Note: T4 has subcategories of T4a and T4b. Assign T4 only when there is no information available to assign one of the subcategories\n\nStated as T4 [NOS]" ], [ "4A", "T4a", "Tumor invades deep soft tissue, cartilage, bone or overlying skin", "Involvement of deep tissues of any structures in T3\nInvolvement of any structures in T3 WITH impaired vocal cord mobility\nInvolvement of deep tissue or musculature of structures in T3 WITH or WITHOUT vocal impairment or fixation of larynx or NOS\nMinor thyroid cartilage erosion (inner cortex)\nParaglottic space\nSoft tissue, NOS\n\nExtension to/through:\n    Cricoid cartilage\n    Thyroid cartilage except minor erosion\nExtension to/through tissues beyond larynx:\n    Oropharynx\n    Skin\n    Soft tissue of neck\n    Strap muscles:\n        Omohyoid\n        Sternohyoid\n        Sternothyroid\n        Thyrohyoid\n    Thyroid gland\n    Trachea\n\nCervical esophagus\nDeep extrinsic muscle(s) of tongue\n\nStated as T4a" ], [ "4B", "T4b", "Tumor invades any of the following:\nBrain\nDura\nSkull base\nLower cranial nerves (IX, X, XI, XII)\nMasticator space\nCarotid artery\nPrevertebral space\nMediastinal structures", "Contiguous extension, including:\n    Carotid artery (encased)\n    Mediastinal structures\n   \nStated as T4b" ] ]
+}

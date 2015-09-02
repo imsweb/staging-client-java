@@ -1,0 +1,28 @@
+{
+  "id" : "path_t_bfx",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path T",
+  "title" : "Pathological T",
+  "notes" : "**Note 1:** As stated in the AJCC 7th Edition, p. 419, a primary peritoneal carcinoma may not involve the ovaries or only involve the ovaries \"with minimal surface implants. The clinical presentation, surgical therapy, chemotherapy, and prognosis of these peritoneal tumors mirror those of papillary serous carcinoma of the ovary. Patients who undergo prophylactic oophorectomy for a familial history of ovarian cancer appear to retain a 1 to 2% chance of developing peritoneal adenocarcinoma, which is histopathologically and clinically similar to primary ovarian cancer.\"\n\n**Note 2:**  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage. FIGO Stage IIIC is assigned based on tumor extension and/or regional lymph node involvement.  Code CS Extension based on a physician's statement of FIGO Stage IIIC if it is known that the stage value is assigned because of tumor extension or if the basis is unknown.\n\n**Note 3:**  For most histologies the T category for AJCC 6 staging is assigned as NA.",
+  "footnotes" : "- For CS Extension codes 100-700, 710, and 720-795 ONLY, the T category for AJCC 6 staging for certain histologies is assigned based on the value of CS Tumor Size, as shown in the Extension Size Table for this schema.",
+  "last_modified" : "2015-08-13T13:23:38.773Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathological T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathological T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "T0", "No evidence of primary tumor", "No evidence of primary tumor" ], [ "3", "T3", "Tumor involves one or both ovaries with microscopically confirmed\nperitoneal metastasis outside the pelvis and/or regional lymph node\nmetastasis", "Peritoneal implants, NOS\n- - - - - - - - - -\nFIGO Stage III [NOS]" ], [ "3A", "T3a", "Microscopic peritoneal metastasis beyond pelvic", "Microscopic peritoneal implants beyond pelvis including:\n    Liver capsule\n    Mesentery\n    Omentum\n    Pericolic gutter\nMicroscopic peritoneal implants beyond pelvis including peritoneal surface/capsule of:\n    Ascending colon\n    Descending colon\n    Diaphragm\n    Esophagus\n    Gallbladder \n    Transverse colon and flexures \n    Small intestine \n    Spleen \n    Stomach\nWITHOUT invasion of underlying structures\n- - - - - - - - - -\nFIGO Stage IIIA" ], [ "3B", "T3b", "Macroscopic peritoneal, metastatasis beyond pelvic, 2 cm or less in \ngreatest dimension", "Macroscopic peritoneal implants beyond pelvis less than or equal to 2 centimeter (cm) in diameter including:\n    Liver capsule\n    Mesentery\n    Omentum\n    Pericolic gutter\nMacroscopic peritoneal implants beyond pelvis less than or equal to 2 cm in diameter:\n    Ascending colon\n    Descending colon\n    Diaphragm\n    Esophagus\n    Gallbladder \n    Transverse colon and flexures \n    Small intestine \n    Spleen \n    Stomach\nWITHOUT invasion of underlying structures\n- - - - - - - - - -\nMacroscopic peritoneal implants beyond pelvis less than or equal to 2 cm in diameter:\n    Adjacent connective tissue\n    Diaphragm\n    Esophagus\n    Gallbladder\n    Transverse colon and flexures\n    Liver\n    Small intestine\n    Spleen\n    Stomach\nWITH invasion of underlying structures\n- - - - - - - - - -\nMacroscopic peritoneal implants beyond pelvis less than or equal to 2 cm in diameter:\n    Ascending colon\n    Descending colon\nWITH invasion of underlying structures\n- - - - - - - - - -\nFIGO Stage IIIB" ], [ "3C", "T3c", "Peritoneal metastasis beyond pelvis, more than 2 cm in greatest dimension\nand/or regional lymph node metastasis", "Macroscopic peritoneal implants beyond pelvis greater than 2 cm in diameter including:\n    Liver capsule\n    Mesentery\n    Omentum\n    Pericolic gutter\nMacroscopic peritoneal implants beyond pelvis greater than 2cm in diameter:\n    Adjacent connective tissue\n    Diaphragm\n    Esophagus\n    Gallbladder\n    Transverse colon and flexures\n    Small intestine\n    Spleen\n    Stomach\nWITHOUT invasion of underlying structures\n- - - - - - - - - -\n610 + 520\n- - - - - - - - - -\n610 + 530\n- - - - - - - - - -\nMacroscopic peritoneal implants beyond pelvis greater than 2cm in diameter:\n    Diaphragm\n    Esophagus\n    Gallbladder \n    Transverse colon and flexures \n    Liver  \n    Small intestine \n    Spleen \n    Stomach\nWITH invasion of underlying structures \n- - - - - - - - - -\n640 + (530 or 630)\n- - - - - - - - - -\nMacroscopic peritoneal implants beyond pelvis greater than 2cm in diameter: \n    Ascending colon\n    Descending colon\nWITH invasion of underlying structures\n- - - - - - - - - -\nExtension to:\n    Bone\n    Cartilage\n- - - - - - - - - -\n722 + (530, 660)\n- - - - - - - - - -\nFurther contiguous extension\n- - - - - - - - - -\nFIGO Stage IIIC based on tumor extension\n- - - - - - - - - -\nFIGO Stage IIIC unknown if based on tumor extension or nodes" ], [ "X", "TX", "Primary tumor cannot be assessed", "Unknown;  extension not stated\nPrimary tumor cannot be assessed \nNot documented in patient record" ] ]
+}

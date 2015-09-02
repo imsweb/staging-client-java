@@ -1,0 +1,26 @@
+{
+  "id" : "path_m_hcj",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path M",
+  "title" : "Pathological M",
+  "last_modified" : "2015-08-17T15:45:24.612Z",
+  "definition" : [ {
+    "key" : "path_m",
+    "name" : "Pathological M",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_m_display",
+    "name" : "Pathological M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "M1", "Distant metastasis", "Distant lymph node(s):\n    For rectosigmoid:\n        Internal iliac (hypogastric):\n            Obturator\nOther distant lymph node(s), including:\n    External iliac or common iliac\n\nDistant lymph node(s), NOS\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "path_n_det",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path N",
+  "title" : "Pathological N",
+  "notes" : "**Note 1:** Histological examination of a selective neck dissection specimen will ordinarily include 6 or more lymph nodes. Histological examination of a radical or modified radical neck dissection specimen will ordinarily include 10 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0. When size is a criterion for pN classification, measurement of made of the metastasis, not of the entire lymph node. \n\n**Note 2:**  The description of lymph nodes has been standardized across the head and neck schemas.  All lymph node levels and groups listed here are considered regional nodes for TNM staging.\n\n**Note 3:**  If laterality of lymph nodes is not specified, assume nodes are ipsilateral.  Midline nodes are considered ipsilateral.\n\n**Note 4:**  For head and neck schemas, this field includes all lymph nodes defined as Levels I-VII and Other by T",
+  "last_modified" : "2015-08-13T13:24:38.182Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathological N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathological N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "N0", "No regional lymph node metastasis", "No regional lymph node involvement" ], [ "1", "N1", "Metastasis in a single ipsilateral lymph node, 3 cm\nor less in greatest dimension", "Positive ipsilateral lymph node, not stated if single or multiple\nPositive lymph node, not stated if ipsilateral, bilateral, or contralateral \n\nRegional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "X", "NX", "Regional lymph nodes cannot be assessed", "" ], [ "2", "N2", "Metastasis as described below", "Stated as N2 [NOS]" ], [ "2a", "N2a", "Metastasis in a single ipsilateral lymph node, more\nthan 3 cm but not more than 6 cm in greatest dimension", "Stated as N2a" ], [ "2b", "N2b", "Metastasis in multiple ipsilateral lymph nodes, none more\nthan 6 cm in greatest dimension", "Multiple lymph nodes, not stated if ipsilateral, bilateral or contralateral\n\nStated as N2b" ], [ "2c", "N2c", "Metastasis in bilateral or contralateral lymph nodes, none\nmore than 6 cm in greatest dimension", "Stated as N2c" ], [ "3", "N3", "Metastasis in a lymph node more than 6 cm in greatest \ndimension", "Stated as N3" ] ]
+}

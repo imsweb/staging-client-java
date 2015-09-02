@@ -1,0 +1,28 @@
+{
+  "id" : "clin_m_had",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin M",
+  "title" : "Clinical M",
+  "notes" : "**Note:**  Nodes in contiguous (secondary) and bidirectional (cephalad/caudal) primary nodal basins are coded in regional lymph nodes.",
+  "footnotes" : "\\* M1 is not defined in AJCC 7th edition",
+  "last_modified" : "2015-08-26T13:40:27.143Z",
+  "definition" : [ {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_m_display",
+    "name" : "Clinical M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "M0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "1", "M1", "Distant metastasis*", "Note: M1 has subcategories of M1a, M1b and M1c. Assign M1 only when there is no information available to assign one of the subcategories\n\nDistant metastasis, NOS\n\nStated as M1 [NOS]" ], [ "1A", "M1a", "Skin, subcutaneous tissue or lymph node(s) beyond the regional lymph nodes", "Metastasis to skin or subcutaneous tissue beyond nodes plus distant nodes\n\nMetastasis to underlying cartilage, bone, skeletal muscle (excluding direct extension)\n\nDistant lymph nodes, NOS\n\nStated as M1a" ], [ "1B", "M1b", "Lung", "Metastasis to lung plus distant nodes\n\nStated as M1b" ], [ "1C", "M1c", "Other sites, or any site with elevated serum lactic dehydrogenase (LDH)", "Metastasis to all other visceral or distant sites WITH or WITHOUT metastasis to lungs\n\nMetastasis to all other visceral or distant sites plus distant nodes WITH or WITHOUT metastasis to lungs\n\nCarcinomatosis\n\nStated as M1c" ] ]
+}

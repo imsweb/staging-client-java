@@ -1,0 +1,27 @@
+{
+  "id" : "extension_bga",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "notes" : "**Note 1:**  In the case of multiple simultaneous tumors, code the tumor with the greatest extension.\n\n**Note 2:** In-transit metastasis is coded in SEER Regional Nodes.",
+  "last_modified" : "2015-08-13T13:23:34.974Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "", "VALUE:IS" ], [ "100", "Localized\n\nConfined to site of origin\n\nLocalized, NOS", "Skin of scrotum:\n    Lesion(s) confined to dermis \n    Subcutaneous tissue (through entire dermis)\n\nConfined to scrotum\n\nStated as T1, T2, or T3", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nExtension to:\n    Adjacent tissue(s), NOS\n    Connective tissue\n\n    Adjacent organs/structures\n\nMale genital organs:\n     Penis\n     Prostate\n    Testis\n    Sites in this scheme which are not the primary", "Satellite nodule(s) or in transit metastasis, distance from primary tumor less than or equal to 2 cm or distance not stated WITHOUT regional lymph node involvement.  \n    Includes cases with ITCs only and cases with regional lymph node involvement not stated \n\nOR\n\nDescribed as tumor with satellite nodule(s), NOS WITHOUT regional lymph node involvement or regional lymph node involvement not stated\n\nStated as T4", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

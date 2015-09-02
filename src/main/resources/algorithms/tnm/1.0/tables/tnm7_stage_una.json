@@ -1,0 +1,26 @@
+{
+  "id" : "tnm7_stage_una",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "TNM 7 Stage Group",
+  "title" : "TNM 7 Stage Group",
+  "last_modified" : "2015-08-13T13:23:18.359Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "", "", "", "VALUE:88" ] ]
+}

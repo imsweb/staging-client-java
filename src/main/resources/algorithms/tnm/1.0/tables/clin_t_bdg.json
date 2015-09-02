@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_bdg",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin T",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  In the case of multiple simultaneous tumors, code the tumor with greatest extension.\n\n**Note 2:** For the following descriptions, assign the appropriate T category (T1 or T2) based on the tumor size.\n\n    Lesion(s) confined to dermis\n    Minimal infiltration of dermis (Not invading tarsal plate, not at eyelid margin)\n    Subcutaneous tissue (Through entire dermis, not invading tarsal plate, not at eyelid margin)\n    Tumor invades tarsal plate, not at eyelid margin\n    Tumor at eyelid margin\n    Tumor involves full eyelid thickness\n\n    Localized, NOS\n\n**Note 3:**  Skin ulceration does not alter the T category.\n\n**Note 4:**  Presence of tumor at eyelid margin takes priority over depth of invasion in dermis/tarsal plate; i.e., code 250 takes priority over codes 100-200.\n\n**Note 5:**  Metastatic skin lesions are coded in distant metastasis.",
+  "last_modified" : "2015-08-13T13:23:41.803Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "T0", "No evidence of primary tumor", "" ], [ "3", "T3", "UICC does not define T3", "Stated as T3 [NOS]" ], [ "3A", "T3a", "Tumor more than 20 mm in greatest dimension or any\ntumor that invades adjacent ocular or orbital structures\nor any tumor with perineural invasion", "Adjacent structures, including:\n    Bulbar conjunctiva\n    Globe\n    Sclera\n    Soft tissues of orbit\n\nBone/periosteum of orbit\nSkeletal muscle\nUnderlying cartilage\n\nStated as T3a" ], [ "3B", "T3b", "Tumor whose complete resection requires enucleation, \nexenteration, or bone resection", "Stated as T3b" ], [ "4", "T4", "Tumor is not resectable due to extensive invasion of \nocular, orbital, craniofacial structures, or brain", "Tumor unresectable, extensive invasion:\n    Ocular structures\n    Orbital structures\n\nCentral nervous system\nNasal cavity\nOther craniofacial structures\nParanasal sinuses\n\nFurther contiguous extension\n\nStated as T4" ], [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "IS", "Tis", "Carcinoma in situ", "Intraepidermal, intraepithelial, noninvasive\nBowen disease" ], [ "2", "T2", "UICC does not define T2", "Stated as T2 [NOS]" ], [ "2a", "T2a", "Tumor more than 5 mm, but not more than 10 mm in \ngreatest dimension or any tumor that invades the tarsal\nplate or eyelid margin", "Stated as T2a" ], [ "2b", "T2b", "Tumor more than 10 mm, but not more than 20 mm in\ngreatest dimension, or involves full thickness eyelid", "Stated as T2b" ] ]
+}

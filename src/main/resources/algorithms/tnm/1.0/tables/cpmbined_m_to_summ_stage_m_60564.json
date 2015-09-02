@@ -1,0 +1,18 @@
+{
+  "id" : "cpmbined_m_to_summ_stage_m_60564",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Combined M to Summ Stage M",
+  "title" : "Combined M to Summary Stage M",
+  "last_modified" : "2015-08-13T13:25:10.902Z",
+  "definition" : [ {
+    "key" : "combined_m",
+    "name" : "Combined M",
+    "type" : "INPUT"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "SS2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0", "VALUE:NONE" ], [ "0I+", "VALUE:NONE" ], [ "1", "VALUE:D" ], [ "1A", "VALUE:D" ], [ "1B", "VALUE:D" ], [ "1C", "VALUE:D" ], [ "1D", "VALUE:D" ], [ "1E", "VALUE:D" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "path_m_hph",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path M",
+  "title" : "Pathological M",
+  "notes" : "**Note 1:**  In-transit metastasis are coded in regional lymph nodes.\n\n**Note 2:**  Nodes in contiguous (secondary) and bidirectional (cephalad/caudal) primary nodal basins are coded in regional lymph nodes.",
+  "last_modified" : "2015-08-13T13:24:40.595Z",
+  "definition" : [ {
+    "key" : "path_m",
+    "name" : "Pathological M",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_m_display",
+    "name" : "Pathological M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "M1", "Distant metastasis", "Note: M1 has subcategories of M1a, M1b and M1c. Assign M1 only when there is no information available to assign one of the subcategories\n\nDistant metastasis, NOS\n\nStated as M1 [NOS]" ], [ "1A", "M1a", "Skin, subcutaneous tissues or non-regional lymph node(s)", "Distant lymph node(s)\n\nMetastasis to skin or subcutaneous tissue\n\nStated as M1a" ], [ "1B", "M1b", "Lung", "Metastasis to lung plus distant lymph node(s) or skin or subcutaneous tissue\n\nStated as M1b" ], [ "1C", "M1c", "Other site(s)", "Distant metastasis to all other visceral sites WITH or WITHOUT distant lymph node(s), skin or subcutaneous tissue, or lung \n\nCarcinomatosis\n\nStated as M1c" ] ]
+}

@@ -1,0 +1,28 @@
+{
+  "id" : "clin_m_hbn",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin M",
+  "title" : "Clinical M",
+  "description" : "Note: N2 added to M per UICC. Per UICC, only M0 and M1 are clinical. The M subcategories are pathological only.",
+  "notes" : "**Note 1:**  Distant lymph node involvement is considered N2 for TNM staging for retinoblastoma and is collected in distant metastasis (M). \n\n**Note 2:**  Code single and multiple metastatic lesions in this field based on the presentation of metastases in all distant sites excluding distant lymph nodes.\n\n**Note 3:**  Consider metastasis to bone marrow as a single site of involvement.",
+  "last_modified" : "2015-08-13T13:23:34.676Z",
+  "definition" : [ {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_m_display",
+    "name" : "Clinical M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "M0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "1", "M1", "Distant metastasis", "Distant lymph node(s):\n     Stated as N2\n\nDistant metastasis WITH or WITHOUT distant lymph nodes\n\nDistant metastasis, NOS\n\nStated as M1" ] ]
+}

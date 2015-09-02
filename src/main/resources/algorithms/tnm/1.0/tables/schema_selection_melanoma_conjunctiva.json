@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_melanoma_conjunctiva",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Schema Selection MelanomaConjunctiva",
+  "title" : "Schema selection for MelanomaConjunctiva",
+  "last_modified" : "2015-08-13T13:23:25.308Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C690", "8720-8790", "MATCH" ] ]
+}

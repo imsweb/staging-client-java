@@ -1,0 +1,27 @@
+{
+  "id" : "path_t_bbu",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path T",
+  "title" : "Pathological T",
+  "notes" : "**Note 1:**  Islets of Langerhans are distributed throughout the pancreas; an islet tumor is coded to the subsite of the pancreas in which the tumor arises if the information is available.\n\n**Note 2:**  Islets of Langerhans are distributed throughout the pancreas; an islet tumor is coded according to the subsite of the pancreas in which the tumor arises if the information is available.\n\n**Note 3:**  For the following descriptions, assign the appropriate T category based on the tumor size.\n\n    Confined to pancreas\n    Localized, NOSinformation is available.",
+  "last_modified" : "2015-08-13T13:24:59.429Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathological T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathological T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "T0", "No evidence of primary tumor", "" ], [ "3", "T3", "Tumor extends beyond pancreas, but without involvement\nceliac axis or superior mesenteric artery", "Peripancreatic tissue\n\nAmpulla of Vater\nDuodenum\nExtra hepatic bile duct(s)\n\nAdjacent large vessel(s) \nColon\nSpleen\nStomach\n\nStated as T3" ], [ "4", "T4", "", "Tumor is inseparable from the celiac axis or superior mesenteric artery\nAorta\nCeliac artery\nSuperior mesenteric artery\n- - - - - - - - - -\nFurther contiguous extension\n- - - - - - - - - -\nStated as T4 with no other information on extension" ], [ "X", "TX", "", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record" ], [ "IS", "Tis", "", "In situ, intrapethelial, noninvasive \nPancreatic intraepithelial neoplasia III (PanInIII) " ], [ "[SME REVIEW]", "[SME REVIEW]", "", "Confined to pancreas\n- - - - - - - - - -\nStated as T1 with no other information on extension\n- - - - - - - - - -\nStated as T2 with no other information on extension\n- - - - - - - - - -\nLocalized, NOS" ] ]
+}

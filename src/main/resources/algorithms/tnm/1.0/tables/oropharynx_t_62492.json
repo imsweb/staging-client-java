@@ -1,0 +1,27 @@
+{
+  "id" : "oropharynx_t_62492",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Oropharynx T",
+  "title" : "Clinical and Pathological T",
+  "notes" : "**Note 1:** Tumor size must be known to assign a value of T1, T2 or T3. You may use a physicianâs statement of the T category if this is the only information in the medical record. If the tumor appears to be in the T1, T2 or T3 categories, but no size or category is specified, assign TX.\n\n**Note 2:**  For the following descriptions, assign the appropriate T category (T1, T2 or T3) based on the tumor size.\n\n    Invasive tumor confined to one of the following subsites: \n     Anterior wall including vallecula \n         One lateral wall (including tonsillar pillar/fossa, palatine tonsil and tonsil, NOS)\n         Posterior wall \n     Base of tongue (including lingual tonsil)\n     Buccal mucosa\n     Floor of mouth\n     Gum (gingiva)\n     Involvement of both lateral walls through soft palate or base of tongue\n     Soft palate\n        Inferior surface including uvula \n        NOS\n        Superior (nasopharyngeal) surface\n\n    Confined to oropharynx, NOS   \n    Localized, NOS\n\n**Note 2:**  Mucosal extension to lingual surface of epiglottis from primary tumors of the base of the tongue and vallecular does not constitute invasion of the larynx.",
+  "last_modified" : "2015-08-17T14:30:12.573Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown;  extension not stated\nNot documented in patient record\n\nConfined to oropharynx and size not known" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "IS", "Tis", "Carcinoma in situ", "Intraepithelial, noninvasive\n\nStated as Tis" ], [ "1", "T1", "Tumor 2 cm or less in greatest dimension", "Stated as T1" ], [ "2", "T2", "Tumor more than 2 cm but not more than 4 cm in greatest dimension", "Stated as T2" ], [ "3", "T3", "Tumor more than 4 cm in greatest dimension or extension to lingual surface of epiglottis", "Epiglottis, lingual surface, plus both lateral walls through soft palate or base of tongue\n\nEpiglottis WITH fixation\n\nStated as T3" ], [ "4", "T4", "", "Note: T4 has subcategories of T4a and T4b. Assign T4 only when there is no information available to assign one of the subcategories\n\nStated as T4[NOS]" ], [ "4A", "T4a", "Tumor invades any of the following:\nLarynx\nDeep/extrinsic muscle of tongue, which are: genioglossus, \nhypoglossus, palatoglossus, and styloglossus\nMedial pterygoid\nHard palate\nMandible", "Hypopharynx NOS\nPosterior surface of epiglottis\nPterygoid muscle, NOS\nPyriform sinus\nSoft tissue of neck\n\nStated as T4a" ], [ "4B", "T4b", "Tumor invades any of the following:\nLateral pterygoid muscle\nPterygoid plates\nLateral nasopharynx\nSkull base\nEncases carotid artery", "Prevertebral fascia/muscle\n\nBase of skull\nBone of skull\nBone, NOS \n\nFurther contiguous extension:\n    Anterior 2/3 of tongue\n    Parotid gland\n\nStated as T4b" ] ]
+}

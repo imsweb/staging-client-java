@@ -1,0 +1,27 @@
+{
+  "id" : "path_n_dfs",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path N",
+  "title" : "Pathological N",
+  "notes" : "**Note 1:** Histological examination of a pelvic lymphadenectomy specimen will ordinarily include 6 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0. (FIGO considers such cases as pNX). \n\n**Note 2:**  Regional lymph nodes are defined as those in the vicinity of the primary tumor.  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in distant metastasis.\n\n**Note 3:**  Federation Internationale de Gynecologie at d-Obstetrique (FIGO) Stage IIIC is assigned based on tumor extension and/or regional lymph node involvement.  Code regional lymph nodes based on a physician's statement of FIGO Stage IIIC only if it is known that the stage value is assigned because of lymph node involvement. \n\n**Note 4**:  Regional lymph node involvement is rare.  For this schema, if there is no mention of lymph node involvement clinically, assume that lymph nodes are negative (N0).  Assign NX only when there is no available information on the extent of the patient's disease, for example, when a lab-only case is abstracted from a biopsy report and no clinical history is available.\n\n**Regional lymph nodes:**\n\n    Intra-abdominal\n    Para-aortic\n    Pelvic\n    Subdiaphragmatic\n    Iliac:\n        Common iliac\n        External iliac\n        Internal iliac (hypogastric):\n            Obturator     Inguinal\n    Retroperitoneal, NOS",
+  "last_modified" : "2015-08-13T13:24:30.381Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathological N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathological N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "NX", "Regional lymph nodes cannot be assessed", "Unknown; regional lymph nodes not stated \nNot documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nFIGO IIIC based on regional lymph node involvement\n\nStated as N1" ] ]
+}

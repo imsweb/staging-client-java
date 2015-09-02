@@ -1,0 +1,26 @@
+{
+  "id" : "clin_m_hpa",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin M",
+  "title" : "Clinical M",
+  "last_modified" : "2015-08-13T13:23:15.071Z",
+  "definition" : [ {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_m_display",
+    "name" : "Clinical M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "88", "NA", "", "No distant metastasis\n- - - - - - - - - -\nDistant lymph node(s), NOS\n- - - - - - - - - -\nDistant metastasis except distant lymph node(s) \nCarcinomatosis\n- - - - - - - - - -\n40 + 10 \n\nDistant metastasis plus distant lymph node(s)\n- - - - - - - - - -\nDistant metastasis, NOS\n- - - - - - - - - -\nUnknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ] ]
+}

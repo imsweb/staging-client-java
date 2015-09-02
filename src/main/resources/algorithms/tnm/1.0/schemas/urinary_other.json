@@ -1,0 +1,86 @@
+{
+  "id" : "urinary_other",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Urinary Other",
+  "title" : "Paraurethral Gland, Overlapping Lesion of Urinary Organs, and Unspecified Urinary Organs",
+  "notes" : "C68.1  Paraurethral gland\nC68.8  Overlapping lesion of urinary organs\nC68.9  Urinary system, NOS\n\n**Note 1:**  TNM is not defined for this site.\n**Note 2:**  Transitional cell carcinoma (8120-8130) of the prostatic ducts and prostatic urethra are to be coded to urethra (C68.0) and Summary Stage according to that schema.",
+  "schema_selection_table" : "schema_selection_urinary_other",
+  "initial_context" : [ {
+    "key" : "clin_stage_group",
+    "value" : "88"
+  }, {
+    "key" : "path_stage_group",
+    "value" : "88"
+  }, {
+    "key" : "combined_stage_group",
+    "value" : "88"
+  } ],
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "input_version",
+    "name" : "Input Version",
+    "naaccr_item" : 2937,
+    "table" : "input_version_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "extension",
+    "name" : "Extension",
+    "default" : "999",
+    "table" : "extension_bcy",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes",
+    "name" : "Lymph Nodes",
+    "default" : "999",
+    "table" : "nodes_dcz",
+    "used_for_staging" : true
+  }, {
+    "key" : "mets",
+    "name" : "Mets",
+    "default" : "99",
+    "table" : "seer_mets_48348",
+    "used_for_staging" : true
+  } ],
+  "mappings" : [ {
+    "id" : "summary_stage_2017",
+    "name" : "Summary Stage 2017",
+    "tables" : [ {
+      "id" : "extension_bcy",
+      "inputs" : [ "extension" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "nodes_dcz",
+      "inputs" : [ "nodes" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "seer_mets_copy_urinary_other_71557",
+      "inputs" : [ "mets" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  } ],
+  "involved_tables" : [ "primary_site", "seer_mets_48348", "input_version_validation", "histology", "year_dx_validation", "nodes_dcz", "seer_mets_copy_urinary_other_71557", "summary_stage_rpa", "schema_selection_urinary_other", "extension_bcy" ],
+  "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
+  "last_modified" : "2015-08-25T18:33:49.302Z"
+}

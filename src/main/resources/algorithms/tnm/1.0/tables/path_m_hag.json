@@ -1,0 +1,26 @@
+{
+  "id" : "path_m_hag",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path M",
+  "title" : "Pathological M",
+  "last_modified" : "2015-08-20T19:52:00.003Z",
+  "definition" : [ {
+    "key" : "path_m",
+    "name" : "Pathological M",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_m_display",
+    "name" : "Pathological M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "M1", "Distant metastasis", "Note: M1 has subcategories of M1a and M1b. Assign M1 only when there is no information available to assign one of the subcategories\n\nDistant metastasis, NOS\n\nStated as M1 [NOS]" ], [ "1A", "M1a", "Metastasis confined to one organ (liver, lung, ovary, non-regional lymph nodes(s))", "Metastasis limited to a single distant lymph node chain:\n    For rectosigmoid and rectum: \n        Common iliac\n        External iliac\n        Superior mesenteric\n\n    For rectosigmoid (C19.9):\n        Hemorrhoidal, inferior\n        Internal iliac (hypogastric), NOS\n        Obturator\n        Rectal, inferior\n\n    For rectum (C20.9):\n        Left colic\n\nMetastasis limited to: \n    Single distant lymph node chain, NOS\n    Single distant organ except peritoneum\n\nStated as M1a" ], [ "1B", "M1b", "Metastasis in more than one organ or the peritoneum", "Metastasis to multiple distant lymph node chains, NOS\n\nCarcinomatosis\n\nDistant metastasis WITH distant lymph nodes\n\nDistant metastasis to more than one organ WITH or WITHOUT distant lymph nodes\n\nStated as M1b" ] ]
+}

@@ -1,0 +1,39 @@
+{
+  "id" : "determine_default_t",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Determine Default T",
+  "title" : "Determine the default value for T to be used in calculations",
+  "last_modified" : "2015-08-13T13:25:50.298Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "type" : "INPUT"
+  }, {
+    "key" : "tmp_clin_t",
+    "name" : "Temporary Clinical T (calculations)",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "tmp_path_t",
+    "name" : "Temporary Pathologic T (calculations)",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "combined_t_in",
+    "name" : "Combined T set in defaults",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "source_t",
+    "name" : "Source of Combined T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "SS2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "extra_input" : [ "clin_t", "path_t" ],
+  "rows" : [ [ ",88", ",88", "VALUE:X", "VALUE:X", "VALUE:", "VALUE:", "VALUE:" ], [ ",88", "A, IS, ISPU, ISPD", "VALUE:{{path_t}}", "VALUE:{{path_t}}", "VALUE:{{path_t}}", "VALUE:P", "VALUE:IS" ], [ ",88", "X, 0, 1, 1A, 1A1, 1A2, 1B, 1B1, 1B2, 1C, 1D, 2, 2A, 2A1, 2A2, 2B, 2C, 2D, 3, 3A, 3B, 3C, 3D, 4, 4A, 4B, 4C, 4D, 4E", "VALUE:X", "VALUE:{{path_t}}", "VALUE:", "VALUE:", "VALUE:" ], [ "X, 0, A, IS, ISPU, ISPD, 1, 1A, 1A1, 1A2, 1B, 1B1, 1B2, 1C, 1D, 2, 2A, 2A1, 2A2, 2B, 2C, 2D, 3, 3A, 3B, 3C, 3D, 4, 4A, 4B, 4C, 4D, 4E", ",88", "VALUE:{{clin_t}}", "VALUE:X", "VALUE:", "VALUE:", "VALUE:" ], [ "X, 0, A, IS, ISPU, ISPD, 1, 1A, 1A1, 1A2, 1B, 1B1, 1B2, 1C, 1D, 2, 2A, 2A1, 2A2, 2B, 2C, 2D, 3, 3A, 3B, 3C, 3D, 4, 4A, 4B, 4C, 4D, 4E", "X, 0, A, IS, ISPU, ISPD, 1, 1A, 1A1, 1A2, 1B, 1B1, 1B2, 1C, 1D, 2, 2A, 2A1, 2A2, 2B, 2C, 2D, 3, 3A, 3B, 3C, 3D, 4, 4A, 4B, 4C, 4D, 4E", "VALUE:{{clin_t}}", "VALUE:{{path_t}}", "VALUE:", "VALUE:", "VALUE:" ], [ "*", "*", "ERROR:Both Clin T and Path T values need to be valid for the schema.", "ERROR:Both Clin T and Path T values need to be valid for the schema.", "ERROR:", "ERROR:", "VALUE:" ] ]
+}

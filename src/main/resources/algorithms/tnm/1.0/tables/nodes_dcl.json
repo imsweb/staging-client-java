@@ -1,0 +1,28 @@
+{
+  "id" : "nodes_dcl",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Regional Nodes",
+  "title" : "SEER Regional Nodes",
+  "notes" : "**Note:**  Code only regional nodes and nodes, NOS, in this field.   Distant nodes are coded in SEER mets.",
+  "footnotes" : "\\###Considered distant in Historic stage\n\\***Considered distant in 1977 Summary Staging Guide",
+  "last_modified" : "2015-08-13T13:23:37.673Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summary Stage 2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:NONE" ], [ "300", "Regional lymph node(s) involved only\n\nREGIONAL Lymph Nodes\n\nCeliac\nCystic duct (Calotâs node)\nNode of the foramen of Winslow (epiploic) (omental)###\nPancreaticoduodenal\nPericholedochal (common bile duct)###***\nPeriduodenal###***\nPeripancreatic (near head of pancreas only)***\nPeriportal\nPorta hepatis (portal) (hilar) [in hilus of liver]###***\nSuperior mesenteric\n\nRegional lymph node(s), NOS", "Lymph nodes, NOS", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}
