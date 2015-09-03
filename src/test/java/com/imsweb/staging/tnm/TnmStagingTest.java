@@ -124,19 +124,24 @@ public class TnmStagingTest {
         Assert.assertEquals(0, lookup.size());
 
         // test valid combinations that do not require a discriminator
-        lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C629", "9231", ""));
+        TnmSchemaLookup schemaLookup = new TnmSchemaLookup("C629", "9231");
+        schemaLookup.setInput(TnmStagingData.SSF25_KEY, "");
+        lookup = _STAGING.lookupSchema(schemaLookup);
         Assert.assertEquals(1, lookup.size());
         Assert.assertEquals("testis", lookup.get(0).getId());
-        lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C629", "9231", null));
+        schemaLookup.setInput(TnmStagingData.SSF25_KEY, null);
+        lookup = _STAGING.lookupSchema(schemaLookup);
         Assert.assertEquals(1, lookup.size());
         Assert.assertEquals("testis", lookup.get(0).getId());
 
         // now test one that does do AJCC7
-        lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C629", "9100", ""));
+        lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C629", "9231"));
         Assert.assertEquals(1, lookup.size());
 
         // test value combinations that do not require a discriminator and are supplied 988
-        lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C629", "9231", "988"));
+        schemaLookup = new TnmSchemaLookup("C629", "9231");
+        schemaLookup.setInput(TnmStagingData.SSF25_KEY, "988");
+        lookup = _STAGING.lookupSchema(schemaLookup);
         Assert.assertEquals(1, lookup.size());
         Assert.assertEquals("testis", lookup.get(0).getId());
 
@@ -147,46 +152,58 @@ public class TnmStagingTest {
             Assert.assertEquals(Sets.newHashSet("ssf25"), schema.getSchemaDiscriminators());
 
         // test valid combination that requires discriminator and a good discriminator is supplied
-        lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C111", "8200", "010"));
+        schemaLookup = new TnmSchemaLookup("C111", "8200");
+        schemaLookup.setInput(TnmStagingData.SSF25_KEY, "010");
+        lookup = _STAGING.lookupSchema(schemaLookup);
         Assert.assertEquals(1, lookup.size());
         for (StagingSchema schema : lookup)
             Assert.assertEquals(Sets.newHashSet("ssf25"), schema.getSchemaDiscriminators());
         Assert.assertEquals("nasopharynx", lookup.get(0).getId());
 
         // test valid combination that requires a discriminator but is supplied a bad disciminator value
-        lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C111", "8200", "999"));
+        schemaLookup = new TnmSchemaLookup("C111", "8200");
+        schemaLookup.setInput(TnmStagingData.SSF25_KEY, "999");
+        lookup = _STAGING.lookupSchema(schemaLookup);
         Assert.assertEquals(0, lookup.size());
 
         // test specific failure case:  Line #1995826 [C695,9701,100,lacrimal_gland] --> The schema selection should have found a schema, lacrimal_gland, but did not.
-        lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C695", "9701", "100"));
+        schemaLookup = new TnmSchemaLookup("C695", "9701");
+        schemaLookup.setInput(TnmStagingData.SSF25_KEY, "100");
+        lookup = _STAGING.lookupSchema(schemaLookup);
         Assert.assertEquals(1, lookup.size());
         Assert.assertEquals("lacrimal_gland", lookup.get(0).getId());
 
         // test searching on only site
-        lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C401", null, null));
+        lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C401", null));
         Assert.assertEquals(5, lookup.size());
 
         // test searching on only hist
-        lookup = _STAGING.lookupSchema(new TnmSchemaLookup(null, "9702", null));
+        lookup = _STAGING.lookupSchema(new TnmSchemaLookup(null, "9702"));
         Assert.assertEquals(2, lookup.size());
 
         // test that searching on only ssf25 returns no results
-        lookup = _STAGING.lookupSchema(new TnmSchemaLookup(null, null, "001"));
+        schemaLookup = new TnmSchemaLookup(null, null);
+        schemaLookup.setInput(TnmStagingData.SSF25_KEY, "001");
+        lookup = _STAGING.lookupSchema(schemaLookup);
         Assert.assertEquals(0, lookup.size());
-        lookup = _STAGING.lookupSchema(new TnmSchemaLookup("", null, "001"));
+        schemaLookup = new TnmSchemaLookup("", null);
+        schemaLookup.setInput(TnmStagingData.SSF25_KEY, "001");
+        lookup = _STAGING.lookupSchema(schemaLookup);
         Assert.assertEquals(0, lookup.size());
-        lookup = _STAGING.lookupSchema(new TnmSchemaLookup(null, "", "001"));
+        schemaLookup = new TnmSchemaLookup(null, "");
+        schemaLookup.setInput(TnmStagingData.SSF25_KEY, "001");
+        lookup = _STAGING.lookupSchema(schemaLookup);
         Assert.assertEquals(0, lookup.size());
     }
 
     @Test
     public void testLookupCache() {
         // do the same lookup twice
-        List<StagingSchema> lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C629", "9231", ""));
+        List<StagingSchema> lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C629", "9231"));
         Assert.assertEquals(1, lookup.size());
         Assert.assertEquals("testis", lookup.get(0).getId());
 
-        lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C629", "9231", ""));
+        lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C629", "9231"));
         Assert.assertEquals(1, lookup.size());
         Assert.assertEquals("testis", lookup.get(0).getId());
 
@@ -194,7 +211,7 @@ public class TnmStagingTest {
         TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_0).invalidateCache();
 
         // try the lookup again
-        lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C629", "9231", ""));
+        lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C629", "9231"));
         Assert.assertEquals(1, lookup.size());
         Assert.assertEquals("testis", lookup.get(0).getId());
     }
@@ -569,74 +586,43 @@ public class TnmStagingTest {
 
     @Test
     public void testIsCodeValid() {
-        //        // test bad parameters for schema or field
-        //        Assert.assertFalse(_STAGING.isCodeValid("bad_schema_name", "site", "C509"));
-        //        Assert.assertFalse(_STAGING.isCodeValid("testis", "bad_field_name", "C509"));
-        //
-        //        // test null values
-        //        Assert.assertFalse(_STAGING.isCodeValid(null, null, null));
-        //        Assert.assertFalse(_STAGING.isCodeValid("urethra", null, null));
-        //        Assert.assertFalse(_STAGING.isCodeValid("urethra", "site", null));
-        //
-        //        // test fields that have a "value" specified
-        //        Assert.assertFalse(_STAGING.isCodeValid("urethra", "year_dx", null));
-        //        Assert.assertFalse(_STAGING.isCodeValid("urethra", "year_dx", "200"));
-        //        Assert.assertFalse(_STAGING.isCodeValid("urethra", "year_dx", "2003"));
-        //        Assert.assertFalse(_STAGING.isCodeValid("urethra", "year_dx", "2145"));
-        //        Assert.assertTrue(_STAGING.isCodeValid("urethra", "year_dx", "2004"));
-        //        Assert.assertTrue(_STAGING.isCodeValid("urethra", "year_dx", "2015"));
-        //
-        //        // test valid and invalid fields
-        //        Assert.assertTrue(_STAGING.isCodeValid("urethra", "extension", "050"));
-        //        Assert.assertFalse(_STAGING.isCodeValid("urethra", "extension", "025"));
-        //        Assert.assertTrue(_STAGING.isCodeValid("urethra", "ssf1", "020"));
-        //        Assert.assertFalse(_STAGING.isCodeValid("urethra", "ssf1", "030"));
+        // test bad parameters for schema or field
+        Assert.assertFalse(_STAGING.isCodeValid("bad_schema_name", "site", "C509"));
+        Assert.assertFalse(_STAGING.isCodeValid("testis", "bad_field_name", "C509"));
+
+        // test null values
+        Assert.assertFalse(_STAGING.isCodeValid(null, null, null));
+        Assert.assertFalse(_STAGING.isCodeValid("urethra", null, null));
+        Assert.assertFalse(_STAGING.isCodeValid("urethra", "site", null));
+
+        // test fields that have a "value" specified
+        Assert.assertFalse(_STAGING.isCodeValid("urethra", "year_dx", null));
+        Assert.assertFalse(_STAGING.isCodeValid("urethra", "year_dx", "200"));
+        Assert.assertFalse(_STAGING.isCodeValid("urethra", "year_dx", "2003"));
+        Assert.assertFalse(_STAGING.isCodeValid("urethra", "year_dx", "2145"));
+        Assert.assertTrue(_STAGING.isCodeValid("urethra", "year_dx", "2015"));
+
+        // test valid and invalid fields
+        Assert.assertTrue(_STAGING.isCodeValid("urethra", "extension", "100"));
+        Assert.assertFalse(_STAGING.isCodeValid("urethra", "extension", "150"));
+        Assert.assertTrue(_STAGING.isCodeValid("urethra", "ssf1", "020"));
+        Assert.assertFalse(_STAGING.isCodeValid("urethra", "ssf1", "030"));
     }
 
     @Test
     public void testIsContextValid() {
-        //        TnmStagingData data = new TnmStagingData();
-        //
-        //        data.setInput(Staging.CTX_YEAR_CURRENT, "2015");
-        //
-        //        // test valid year
-        //        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "2004");
-        //        data.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "020001");
-        //        Assert.assertTrue(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
-        //
-        //        // test invalid year
-        //        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "2003");
-        //        Assert.assertFalse(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
-        //
-        //        // test blank year with valid version
-        //        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "");
-        //        data.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "020001");
-        //        Assert.assertTrue(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
-        //
-        //        // test space-filled year with valid version
-        //        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "    ");
-        //        data.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "020001");
-        //        Assert.assertTrue(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
-        //
-        //        // test blank year with invalid version
-        //        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "");
-        //        data.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "000000");
-        //        Assert.assertFalse(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
-        //
-        //        // test blank year with invalid version of wrong length
-        //        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "");
-        //        data.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "1");
-        //        Assert.assertFalse(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
-        //
-        //        // test space-filled year with invalid version
-        //        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "    ");
-        //        data.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "000000");
-        //        Assert.assertFalse(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
-        //
-        //        // test space-filled year with invalid version of wrong length
-        //        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "    ");
-        //        data.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "1");
-        //        Assert.assertFalse(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
+        TnmStagingData data = new TnmStagingData();
+
+        data.setInput(Staging.CTX_YEAR_CURRENT, "2015");
+
+        // test valid year
+        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "2015");
+        data.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "1.0");
+        Assert.assertTrue(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
+
+        // test invalid year
+        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "2014");
+        Assert.assertFalse(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
     }
 
     @Test
@@ -803,17 +789,17 @@ public class TnmStagingTest {
 
     @Test
     public void testForUnusedTables() {
-        //        Set<String> usedTables = new HashSet<String>();
-        //        for (String id : _STAGING.getSchemaIds())
-        //            usedTables.addAll(_STAGING.getSchema(id).getInvolvedTables());
-        //
-        //        Set<String> unusedTables = new HashSet<String>();
-        //        for (String id : _STAGING.getTableIds())
-        //            if (!usedTables.contains(id))
-        //                unusedTables.add(id);
-        //
-        //        if (!unusedTables.isEmpty())
-        //            Assert.fail("There are " + unusedTables.size() + " tables that are not used in any schema: " + unusedTables);
+        Set<String> usedTables = new HashSet<String>();
+        for (String id : _STAGING.getSchemaIds())
+            usedTables.addAll(_STAGING.getSchema(id).getInvolvedTables());
+
+        Set<String> unusedTables = new HashSet<String>();
+        for (String id : _STAGING.getTableIds())
+            if (!usedTables.contains(id))
+                unusedTables.add(id);
+
+        if (!unusedTables.isEmpty())
+            Assert.fail("There are " + unusedTables.size() + " tables that are not used in any schema: " + unusedTables);
     }
 
     /**
@@ -823,78 +809,78 @@ public class TnmStagingTest {
      */
     @Test
     public void testInvalidTableInputs() {
-        //        Set<String> errors = new HashSet<String>();
-        //
-        //        for (String schemaId : _STAGING.getSchemaIds()) {
-        //            StagingSchema schema = _STAGING.getSchema(schemaId);
-        //
-        //            // build a list of input tables that should be excluded
-        //            Map<String, Integer> inputTableLengths = new HashMap<String, Integer>();
-        //            for (StagingSchemaInput input : schema.getInputs())
-        //                if (input.getTable() != null)
-        //                    inputTableLengths.put(input.getTable(), getInputLength(input.getTable(), input.getKey()));
-        //
-        //            // loop over involved tables
-        //            for (String tableId : schema.getInvolvedTables()) {
-        //                if (inputTableLengths.containsKey(tableId))
-        //                    continue;
-        //
-        //                StagingTable table = _STAGING.getTable(tableId);
-        //
-        //                // loop over each row
-        //                for (StagingTableRow row : table.getTableRows()) {
-        //                    // loop over all input cells
-        //                    for (Map.Entry<String, List<StagingStringRange>> entry : row.getInputs().entrySet()) {
-        //                        String key = entry.getKey();
-        //
-        //                        // only validate keys that are actually INPUT values
-        //                        if (!schema.getInputMap().containsKey(key))
-        //                            continue;
-        //
-        //                        // only validate inputs that have an associated table
-        //                        String validationTableId = schema.getInputMap().get(key).getTable();
-        //                        if (validationTableId == null)
-        //                            continue;
-        //
-        //                        Integer expectedFieldLength = inputTableLengths.get(validationTableId);
-        //
-        //                        // loop over list of ranges
-        //                        for (StagingStringRange range : entry.getValue()) {
-        //                            String low = range.getLow();
-        //                            String high = range.getHigh();
-        //
-        //                            // if it matches all, continue
-        //                            if (range.matchesAll() || low.isEmpty())
-        //                                continue;
-        //
-        //                            if (low.startsWith("{{") && low.contains(Staging.CTX_YEAR_CURRENT))
-        //                                low = String.valueOf(Calendar.getInstance().get(Calendar.YEAR));
-        //                            if (high.startsWith("{{") && high.contains(Staging.CTX_YEAR_CURRENT))
-        //                                high = String.valueOf(Calendar.getInstance().get(Calendar.YEAR));
-        //
-        //                            // change that ranges are the same length
-        //                            if (low.length() != high.length())
-        //                                errors.add(schemaId + " -> " + tableId + ": " + key + " = '" + low + "-" + high + "' : lengths differ");
-        //
-        //                            // make sure the fields that have input validation match the length in that input validation table
-        //                            if (expectedFieldLength != null && (!expectedFieldLength.equals(low.length()) || !expectedFieldLength.equals(high.length()))) {
-        //                                if (low.equals(high))
-        //                                    errors.add(schemaId + " -> " + tableId + ": " + key + " = '" + low + "' : length does not match lookup table " + validationTableId);
-        //                                else
-        //                                    errors.add(schemaId + " -> " + tableId + ": " + key + " = '" + low + "-" + high + "' : lengths do not match lookup table " + validationTableId);
-        //                            }
-        //                        }
-        //                    }
-        //                }
-        //            }
-        //        }
-        //
-        //        if (!errors.isEmpty()) {
-        //            System.out.println("There were " + errors.size() + " instances of inputs values in tables which are not valid.");
-        //            for (String error : errors)
-        //                System.out.println(error);
-        //            Assert.fail();
-        //        }
+        Set<String> errors = new HashSet<String>();
+
+        for (String schemaId : _STAGING.getSchemaIds()) {
+            StagingSchema schema = _STAGING.getSchema(schemaId);
+
+            // build a list of input tables that should be excluded
+            Map<String, Integer> inputTableLengths = new HashMap<String, Integer>();
+            for (StagingSchemaInput input : schema.getInputs())
+                if (input.getTable() != null)
+                    inputTableLengths.put(input.getTable(), getInputLength(input.getTable(), input.getKey()));
+
+            // loop over involved tables
+            for (String tableId : schema.getInvolvedTables()) {
+                if (inputTableLengths.containsKey(tableId))
+                    continue;
+
+                StagingTable table = _STAGING.getTable(tableId);
+
+                // loop over each row
+                for (StagingTableRow row : table.getTableRows()) {
+                    // loop over all input cells
+                    for (Map.Entry<String, List<StagingStringRange>> entry : row.getInputs().entrySet()) {
+                        String key = entry.getKey();
+
+                        // only validate keys that are actually INPUT values
+                        if (!schema.getInputMap().containsKey(key))
+                            continue;
+
+                        // only validate inputs that have an associated table
+                        String validationTableId = schema.getInputMap().get(key).getTable();
+                        if (validationTableId == null)
+                            continue;
+
+                        Integer expectedFieldLength = inputTableLengths.get(validationTableId);
+
+                        // loop over list of ranges
+                        for (StagingStringRange range : entry.getValue()) {
+                            String low = range.getLow();
+                            String high = range.getHigh();
+
+                            // if it matches all, continue
+                            if (range.matchesAll() || low.isEmpty())
+                                continue;
+
+                            if (low.startsWith("{{") && low.contains(Staging.CTX_YEAR_CURRENT))
+                                low = String.valueOf(Calendar.getInstance().get(Calendar.YEAR));
+                            if (high.startsWith("{{") && high.contains(Staging.CTX_YEAR_CURRENT))
+                                high = String.valueOf(Calendar.getInstance().get(Calendar.YEAR));
+
+                            // change that ranges are the same length
+                            if (low.length() != high.length())
+                                errors.add(schemaId + " -> " + tableId + ": " + key + " = '" + low + "-" + high + "' : lengths differ");
+
+                            // make sure the fields that have input validation match the length in that input validation table
+                            if (expectedFieldLength != null && (!expectedFieldLength.equals(low.length()) || !expectedFieldLength.equals(high.length()))) {
+                                if (low.equals(high))
+                                    errors.add(schemaId + " -> " + tableId + ": " + key + " = '" + low + "' : length does not match lookup table " + validationTableId);
+                                else
+                                    errors.add(schemaId + " -> " + tableId + ": " + key + " = '" + low + "-" + high + "' : lengths do not match lookup table " + validationTableId);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        if (!errors.isEmpty()) {
+            System.out.println("There were " + errors.size() + " instances of inputs values in tables which are not valid.");
+            for (String error : errors)
+                System.out.println(error);
+            Assert.fail();
+        }
     }
 
     /**

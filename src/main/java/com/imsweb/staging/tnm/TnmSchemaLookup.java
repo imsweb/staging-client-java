@@ -28,18 +28,6 @@ public class TnmSchemaLookup extends SchemaLookup {
         super(site, histology);
     }
 
-    /**
-     * Constructor
-     * @param site primary site
-     * @param histology histology
-     * @param discriminator ssf25
-     */
-    public TnmSchemaLookup(String site, String histology, String discriminator) {
-        super(site, histology);
-
-        setInput(TnmStagingData.SSF25_KEY, discriminator);
-    }
-
     @Override
     public Set<String> getAllowedKeys() {
         return _ALLOWED_KEYS;
