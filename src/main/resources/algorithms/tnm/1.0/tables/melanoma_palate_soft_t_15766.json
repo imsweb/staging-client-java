@@ -1,76 +1,28 @@
 {
-  "id": "melanoma_palate_soft_t_15766",
-  "algorithm": "tnm",
-  "version": "1.0",
-  "name": "Melanoma Palate Soft T",
-  "title": "Clinical and Pathological T",
-  "notes": "**Note 1:**  TNM does not include a Tis category for melanomas of the upper aerodigestive sites (head and neck). Tis is mapped to NA and TNM stage group is derived as NA.\n\n**Note 2:**  Mucosal melanomas are aggressive tumors, therefore T1 and T2 are omitted as are Stages I and II.\n\n**Note 3:**  Assign T3 for localized tumor when no other information is available or for extension involving the mucosa only of adjacent sites.\n\n**Note 4:**  Assign T4a or T4b for extension involving the deeper tissues of the primary or adjacent sites.",
-  "footnotes": "\\*TX is not defined in AJCC 7th edition\n\\**T0 is not defined in AJCC 7th edition",
-  "last_modified": "2015-08-25T12:30:31.212Z",
-  "definition": [
-    {
-      "key": "clin_t",
-      "name": "Clinical T",
-      "type": "INPUT"
-    },
-    {
-      "key": "clin_t_display",
-      "name": "Clinical T Display",
-      "type": "DESCRIPTION"
-    },
-    {
-      "key": "description",
-      "name": "Description",
-      "type": "DESCRIPTION"
-    },
-    {
-      "key": "notes",
-      "name": "Registrar Notes",
-      "type": "DESCRIPTION"
-    }
-  ],
-  "rows": [
-    [
-      "88",
-      "NA",
-      "Not applicable",
-      "In situ, intraepithelial, noninvasive"
-    ],
-    [
-      "X",
-      "TX",
-      "Primary tumor cannot be assessed*",
-      "Unknown; extension not stated\nNot documented in patient record"
-    ],
-    [
-      "0",
-      "T0",
-      "No evidence of primary tumor**",
-      ""
-    ],
-    [
-      "3",
-      "T3",
-      "Tumor limited to the epithelium and/or submucosa (mucosal disease)",
-      "Tumor confined to mucosa of soft palate or uvula on one side or crossing midline\n\nExtension involving mucosa only:\n    Buccal mucosa (inner cheek)\n    Hard palate\n    Lateral pharyngeal wall\n    Nasopharynx\n    Tonsillar pillars and fossae\n    Tonsils\n\nLocalized, NOS\n\nStated as T3"
-    ],
-    [
-      "4",
-      "T4",
-      "",
-      "Note: T4 has subcategories of T4a and T4b. Assign T4 only when there is no information available to assign one of the subcategories\n\nStated as T4[NOS]"
-    ],
-    [
-      "4A",
-      "T4a",
-      "Tumor invades deep soft tissue, cartilage, bone or overlying skin",
-      "Involvement of deep soft tissue or musculature of soft palate or uvula\nInvolvement of deep soft tissue or musculature of soft palate or uvula plus mucosal involvement of any structure in T3 \nInvolvement of deep soft tissue or musculature of nasopharynx\n\nBone, NOS\nBone excluding pterygoid plates, base of skull\nCartilage, NOS\nHypopharynx\nLarynx\nMandible\nMaxilla\nMaxillary sinus (antrum)\nNasal cavity\nPalatine bone (bone of hard palate)\nPterygoid muscle lateral\nPterygoid muscle, medial or NOS\nPterygoid plates \nTongue, NOS\n\nDeep (extrinsic) muscle of tongue:\n    Genioglossus\n    Geniohyoid\n    Hyoglossus\n    Mylohyoid\n    Palatoglossus\n    Styloglossus\n\nStated as T4a"
-    ],
-    [
-      "4B",
-      "T4b",
-      "Tumor invades any of the following:\nBrain\nDura\nSkull base\nLower cranial nerves (IX, X, XI, XII)\nMasticator space\nCarotid artery\nPrevertebral space\nMediastinal structures",
-      "Carotid artery (encased)\n\nStated as T4b"
-    ]
-  ]
+  "id" : "melanoma_palate_soft_t_15766",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Melanoma Palate Soft T",
+  "title" : "Clinical and Pathological T",
+  "notes" : "**Note 1:**  TNM does not include a Tis category for melanomas of the upper aerodigestive sites (head and neck). Tis is mapped to NA and TNM stage group is derived as NA.\n\n**Note 2:**  Mucosal melanomas are aggressive tumors, therefore T1 and T2 are omitted as are Stages I and II.\n\n**Note 3:**  Assign T3 for localized tumor when no other information is available or for extension involving the mucosa only of adjacent sites.\n\n**Note 4:**  Assign T4a or T4b for extension involving the deeper tissues of the primary or adjacent sites.",
+  "footnotes" : "\\*TX is not defined in AJCC 7th edition\n\\**T0 is not defined in AJCC 7th edition",
+  "last_modified" : "2015-08-25T12:30:31.212Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "88", "NA", "Not applicable", "In situ, intraepithelial, noninvasive" ], [ "X", "TX", "Primary tumor cannot be assessed*", "Unknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor**", "" ], [ "3", "T3", "Tumor limited to the epithelium and/or submucosa (mucosal disease)", "Tumor confined to mucosa of soft palate or uvula on one side or crossing midline\n\nExtension involving mucosa only:\n    Buccal mucosa (inner cheek)\n    Hard palate\n    Lateral pharyngeal wall\n    Nasopharynx\n    Tonsillar pillars and fossae\n    Tonsils\n\nLocalized, NOS\n\nStated as T3" ], [ "4", "T4", "", "Note: T4 has subcategories of T4a and T4b. Assign T4 only when there is no information available to assign one of the subcategories\n\nStated as T4[NOS]" ], [ "4A", "T4a", "Tumor invades deep soft tissue, cartilage, bone or overlying skin", "Involvement of deep soft tissue or musculature of soft palate or uvula\nInvolvement of deep soft tissue or musculature of soft palate or uvula plus mucosal involvement of any structure in T3 \nInvolvement of deep soft tissue or musculature of nasopharynx\n\nBone, NOS\nBone excluding pterygoid plates, base of skull\nCartilage, NOS\nHypopharynx\nLarynx\nMandible\nMaxilla\nMaxillary sinus (antrum)\nNasal cavity\nPalatine bone (bone of hard palate)\nPterygoid muscle lateral\nPterygoid muscle, medial or NOS\nPterygoid plates \nTongue, NOS\n\nDeep (extrinsic) muscle of tongue:\n    Genioglossus\n    Geniohyoid\n    Hyoglossus\n    Mylohyoid\n    Palatoglossus\n    Styloglossus\n\nStated as T4a" ], [ "4B", "T4b", "Tumor invades any of the following:\nBrain\nDura\nSkull base\nLower cranial nerves (IX, X, XI, XII)\nMasticator space\nCarotid artery\nPrevertebral space\nMediastinal structures", "Carotid artery (encased)\n\nStated as T4b" ] ]
 }

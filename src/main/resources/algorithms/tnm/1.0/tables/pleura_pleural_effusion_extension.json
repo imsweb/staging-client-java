@@ -1,189 +1,24 @@
 {
-  "id": "pleura_pleural_effusion_extension",
-  "algorithm": "tnm",
-  "version": "1.0",
-  "name": "Pleural Effusion Extension",
-  "title": "Pleural Effusion Extension Table",
-  "description": "[SME REVIEW] - are there other combinations or can the standard SS2000 table just be removed from this flow?",
-  "notes": "Note: For CS Extension codes 120-999, the assignment of Summary Stage 1977 and Summary Stage 2000 depends on the value of CS Site-Specific Factor 1, Pleural Effusion, as shown in this table.",
-  "last_modified": "2015-08-13T13:25:24.766Z",
-  "definition": [
-    {
-      "key": "extension",
-      "name": "Extension Code",
-      "type": "INPUT"
-    },
-    {
-      "key": "ssf1",
-      "name": "SSF1",
-      "type": "INPUT"
-    },
-    {
-      "key": "ss2000",
-      "name": "SS2000",
-      "type": "ENDPOINT"
-    }
-  ],
-  "rows": [
-    [
-      "100",
-      "*",
-      "VALUE:ERROR"
-    ],
-    [
-      "120-305",
-      "000",
-      "VALUE:L"
-    ],
-    [
-      "120-305",
-      "010",
-      "VALUE:L"
-    ],
-    [
-      "120-305",
-      "020",
-      "VALUE:D"
-    ],
-    [
-      "120-305",
-      "030",
-      "VALUE:D"
-    ],
-    [
-      "120-305",
-      "988",
-      "VALUE:ERROR"
-    ],
-    [
-      "120-305",
-      "999",
-      "VALUE:L"
-    ],
-    [
-      "420-650",
-      "000",
-      "VALUE:RE"
-    ],
-    [
-      "420-650",
-      "010",
-      "VALUE:RE"
-    ],
-    [
-      "420-650",
-      "020",
-      "VALUE:D"
-    ],
-    [
-      "420-650",
-      "030",
-      "VALUE:D"
-    ],
-    [
-      "420-650",
-      "988",
-      "VALUE:ERROR"
-    ],
-    [
-      "420-650",
-      "999",
-      "VALUE:RE"
-    ],
-    [
-      "690-850",
-      "000",
-      "VALUE:D"
-    ],
-    [
-      "690-850",
-      "010",
-      "VALUE:D"
-    ],
-    [
-      "690-850",
-      "020",
-      "VALUE:D"
-    ],
-    [
-      "690-850",
-      "030",
-      "VALUE:D"
-    ],
-    [
-      "690-850",
-      "988",
-      "VALUE:ERROR"
-    ],
-    [
-      "690-850",
-      "999",
-      "VALUE:D"
-    ],
-    [
-      "950",
-      "000",
-      "VALUE:U"
-    ],
-    [
-      "950",
-      "010",
-      "VALUE:U"
-    ],
-    [
-      "950",
-      "020",
-      "VALUE:D"
-    ],
-    [
-      "950",
-      "030",
-      "VALUE:D"
-    ],
-    [
-      "950",
-      "988",
-      "VALUE:ERROR"
-    ],
-    [
-      "950",
-      "999",
-      "VALUE:U"
-    ],
-    [
-      "999",
-      "000",
-      "VALUE:U"
-    ],
-    [
-      "999",
-      "010",
-      "VALUE:U"
-    ],
-    [
-      "999",
-      "020",
-      "VALUE:D"
-    ],
-    [
-      "999",
-      "030",
-      "VALUE:D"
-    ],
-    [
-      "999",
-      "988",
-      "VALUE:ERROR"
-    ],
-    [
-      "999",
-      "999",
-      "VALUE:U"
-    ],
-    [
-      "*",
-      "*",
-      "JUMP:summary_stage_rpa"
-    ]
-  ]
+  "id" : "pleura_pleural_effusion_extension",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Pleural Effusion Extension",
+  "title" : "Pleural Effusion Extension Table",
+  "description" : "[SME REVIEW] - are there other combinations or can the standard SS2000 table just be removed from this flow?",
+  "notes" : "Note: For CS Extension codes 120-999, the assignment of Summary Stage 1977 and Summary Stage 2000 depends on the value of CS Site-Specific Factor 1, Pleural Effusion, as shown in this table.",
+  "last_modified" : "2015-08-13T13:25:24.766Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Extension Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf1",
+    "name" : "SSF1",
+    "type" : "INPUT"
+  }, {
+    "key" : "ss2000",
+    "name" : "SS2000",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "*", "VALUE:ERROR" ], [ "120-305", "000", "VALUE:L" ], [ "120-305", "010", "VALUE:L" ], [ "120-305", "020", "VALUE:D" ], [ "120-305", "030", "VALUE:D" ], [ "120-305", "988", "VALUE:ERROR" ], [ "120-305", "999", "VALUE:L" ], [ "420-650", "000", "VALUE:RE" ], [ "420-650", "010", "VALUE:RE" ], [ "420-650", "020", "VALUE:D" ], [ "420-650", "030", "VALUE:D" ], [ "420-650", "988", "VALUE:ERROR" ], [ "420-650", "999", "VALUE:RE" ], [ "690-850", "000", "VALUE:D" ], [ "690-850", "010", "VALUE:D" ], [ "690-850", "020", "VALUE:D" ], [ "690-850", "030", "VALUE:D" ], [ "690-850", "988", "VALUE:ERROR" ], [ "690-850", "999", "VALUE:D" ], [ "950", "000", "VALUE:U" ], [ "950", "010", "VALUE:U" ], [ "950", "020", "VALUE:D" ], [ "950", "030", "VALUE:D" ], [ "950", "988", "VALUE:ERROR" ], [ "950", "999", "VALUE:U" ], [ "999", "000", "VALUE:U" ], [ "999", "010", "VALUE:U" ], [ "999", "020", "VALUE:D" ], [ "999", "030", "VALUE:D" ], [ "999", "988", "VALUE:ERROR" ], [ "999", "999", "VALUE:U" ], [ "*", "*", "JUMP:summary_stage_rpa" ] ]
 }

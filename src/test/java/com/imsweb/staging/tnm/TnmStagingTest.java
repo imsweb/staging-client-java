@@ -529,16 +529,10 @@ public class TnmStagingTest {
 
     @Test
     public void testInvolvedTables() {
-        //        Set<String> tables = _STAGING.getInvolvedTables("prostate");
-        //
-        //        Assert.assertEquals(Sets.newHashSet("cs_year_validation", "schema_selection_brain", "ajcc6_m_codes", "ajcc7_m_codes", "ssf22_snq", "nodes_exam_gna", "ssf13_snh",
-        //                "ssf7_sqk", "lvi", "ajcc6_n_codes", "ssf18_snm", "ssf15_snj", "ssf20_sno", "ssf10_sne", "ssf17_snl", "ssf6_opf", "summary_stage_rpa", "histology",
-        //                "ss_codes", "mets_haw", "nodes_pos_fna", "ajcc7_stage_una", "ajcc7_year_validation", "ssf4_mpn", "mets_eval_ina", "ssf3_lpm", "primary_site",
-        //                "nodes_dna", "ajcc6_stage_qna", "ssf8_sql", "ssf19_snn", "ssf2_kpl", "ajcc7_t_codes", "behavior", "nodes_eval_ena", "ajcc_tdescriptor_cleanup",
-        //                "ssf21_snp", "ajcc_descriptor_codes", "ssf16_snk", "ajcc6_t_codes", "ssf5_nph", "ajcc7_n_codes", "ajcc6_stage_codes", "extension_bcc",
-        //                "grade", "size_apa", "ajcc_ndescriptor_cleanup", "ssf12_sng", "ssf23_snr", "ajcc7_inclusions_tqf", "ajcc7_stage_codes",
-        //                "extension_eval_cna", "ajcc_mdescriptor_cleanup", "cs_input_version_original", "ajcc6_year_validation", "ssf1_jpo", "ssf25_snt",
-        //                "ssf11_snf", "ssf9_snd", "ssf14_sni", "ssf24_sns"), tables);
+        Set<String> tables = _STAGING.getInvolvedTables("adnexa_uterine_other");
+
+        Assert.assertEquals(Sets.newHashSet("extension_bcn", "histology", "input_version_validation", "nodes_dcc", "primary_site", "schema_selection_adnexa_uterine_other",
+                "seer_mets_48348", "seer_mets_copy_adnexauterineother_56278", "summary_stage_rpa", "year_dx_validation"), tables);
     }
 
     @Test
@@ -735,14 +729,13 @@ public class TnmStagingTest {
 
     @Test
     public void verifyInputs() {
-        //        for (String id : _STAGING.getSchemaIds()) {
-        //            StagingSchema schema = _STAGING.getSchema(id);
-        //
-        //            // loop over all the inputs returned by processing the schema and make sure they are all part of the main list of inputs on the schema
-        //            for (String input : _STAGING.getInputs(schema))
-        //                Assert.assertTrue("Error processing schema " + schema.getId() + ": Table input '" + input + "' not contained in master list of inputs",
-        //                        schema.getInputMap().containsKey(input));
-        //        }
+        for (String id : _STAGING.getSchemaIds()) {
+            StagingSchema schema = _STAGING.getSchema(id);
+
+            // loop over all the inputs returned by processing the schema and make sure they are all part of the main list of inputs on the schema
+            for (String input : _STAGING.getInputs(schema))
+                Assert.assertTrue("Error processing schema " + schema.getId() + ": Table input '" + input + "' not in master list of inputs", schema.getInputMap().containsKey(input));
+        }
     }
 
     @Test

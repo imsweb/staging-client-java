@@ -241,7 +241,7 @@
     }, {
       "id" : "tnm7_stage_gist_small_intestine_upy",
       "input_mapping" : [ {
-        "from" : "ss2000_t",
+        "from" : "combined_t",
         "to" : "t"
       }, {
         "from" : "combined_m",
@@ -254,7 +254,7 @@
         "from" : "stage",
         "to" : "combined_stage_group"
       } ],
-      "inputs" : [ "ss2000_t", "mitotic_rate", "combined_m", "combined_n" ],
+      "inputs" : [ "mitotic_rate", "combined_m", "combined_n", "combined_t" ],
       "outputs" : [ "combined_stage_group" ]
     }, {
       "id" : "combined_to_summ_stage_t_80394",
@@ -300,5 +300,5 @@
   } ],
   "involved_tables" : [ "nodes_dfd", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "ssf15_spo", "ssf11_spk", "path_m_hch", "determine_default_m", "gist_appendix_t_67124", "nodes_pos_fpa", "mets_hch", "determine_default_n", "tnm7_stage_gist_small_intestine_upy", "combined_n_to_summ_stage_n_84054", "histology", "extension_bfh", "combined_t_no_tis", "ssf14_spn", "clin_m_hch", "ssf13_spm", "gist_appendix_mitotic_rate_calculation", "tnm7_inclusions_tpo", "adjust_path_defaults", "systemic_surg_seq", "schema_selection_gist_appendix", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "year_dx_validation", "summary_stage_rpa", "gist_appendix_n_87661", "ssf12_spl" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-08-25T18:33:41.373Z"
+  "last_modified" : "2015-09-03T13:22:59.159Z"
 }
