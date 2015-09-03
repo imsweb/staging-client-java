@@ -4,8 +4,8 @@
 package com.imsweb.staging.tnm;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Calendar;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -18,14 +18,14 @@ import org.junit.Test;
 
 import com.google.common.collect.Sets;
 
+import com.imsweb.decisionengine.ColumnDefinition;
 import com.imsweb.staging.SchemaLookup;
 import com.imsweb.staging.Staging;
 import com.imsweb.staging.StagingData;
+import com.imsweb.staging.entities.StagingColumnDefinition;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingSchemaInput;
-import com.imsweb.staging.entities.StagingStringRange;
 import com.imsweb.staging.entities.StagingTable;
-import com.imsweb.staging.entities.StagingTableRow;
 
 public class TnmStagingTest {
 
@@ -264,7 +264,6 @@ public class TnmStagingTest {
         data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.LYMPH_NODES, "100");
         data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.REGIONAL_NODES_POSITIVE, "99");
         data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.METS_AT_DX, "10");
-        data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.LVI, "9");
         data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.AGE_AT_DX, "060");
         data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.SEX, "1");
         data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.RX_SUMM_SURGERY, "8");
@@ -289,7 +288,6 @@ public class TnmStagingTest {
                 .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.LYMPH_NODES, "100")
                 .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.REGIONAL_NODES_POSITIVE, "99")
                 .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.METS_AT_DX, "10")
-                .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.LVI, "9")
                 .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.AGE_AT_DX, "060")
                 .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.SEX, "1")
                 .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.RX_SUMM_SURGERY, "8")
@@ -802,121 +800,39 @@ public class TnmStagingTest {
             Assert.fail("There are " + unusedTables.size() + " tables that are not used in any schema: " + unusedTables);
     }
 
-    /**
-     * This tests that INPUT fields in tables that have a validation table associated with them are the correct length.  In other words,
-     * if a table has an INPUT column for "ssf4" but has a value for that column of "00" this would catch that that field should be
-     * 3 characters long based on the ssf4_lookup_table.
-     */
     @Test
-    public void testInvalidTableInputs() {
+    public void testInputTables() {
         Set<String> errors = new HashSet<String>();
 
         for (String schemaId : _STAGING.getSchemaIds()) {
             StagingSchema schema = _STAGING.getSchema(schemaId);
 
             // build a list of input tables that should be excluded
-            Map<String, Integer> inputTableLengths = new HashMap<String, Integer>();
-            for (StagingSchemaInput input : schema.getInputs())
-                if (input.getTable() != null)
-                    inputTableLengths.put(input.getTable(), getInputLength(input.getTable(), input.getKey()));
+            for (StagingSchemaInput input : schema.getInputs()) {
+                if (input.getTable() != null) {
+                    List<String> inputKeys = new ArrayList<String>();
+                    StagingTable table = _STAGING.getTable(input.getTable());
+                    for (StagingColumnDefinition def : table.getColumnDefinitions())
+                        if (ColumnDefinition.ColumnType.INPUT.equals(def.getType()))
+                            inputKeys.add(def.getKey());
 
-            // loop over involved tables
-            for (String tableId : schema.getInvolvedTables()) {
-                if (inputTableLengths.containsKey(tableId))
-                    continue;
+                    // make sure all input validation tables have exactly 1 INPUT column
+                    if (inputKeys.size() != 1)
+                        errors.add("Input validation table " + schemaId + ":" + table.getId() + " does not have exactly 1 INPUT column");
 
-                StagingTable table = _STAGING.getTable(tableId);
-
-                // loop over each row
-                for (StagingTableRow row : table.getTableRows()) {
-                    // loop over all input cells
-                    for (Map.Entry<String, List<StagingStringRange>> entry : row.getInputs().entrySet()) {
-                        String key = entry.getKey();
-
-                        // only validate keys that are actually INPUT values
-                        if (!schema.getInputMap().containsKey(key))
-                            continue;
-
-                        // only validate inputs that have an associated table
-                        String validationTableId = schema.getInputMap().get(key).getTable();
-                        if (validationTableId == null)
-                            continue;
-
-                        Integer expectedFieldLength = inputTableLengths.get(validationTableId);
-
-                        // loop over list of ranges
-                        for (StagingStringRange range : entry.getValue()) {
-                            String low = range.getLow();
-                            String high = range.getHigh();
-
-                            // if it matches all, continue
-                            if (range.matchesAll() || low.isEmpty())
-                                continue;
-
-                            if (low.startsWith("{{") && low.contains(Staging.CTX_YEAR_CURRENT))
-                                low = String.valueOf(Calendar.getInstance().get(Calendar.YEAR));
-                            if (high.startsWith("{{") && high.contains(Staging.CTX_YEAR_CURRENT))
-                                high = String.valueOf(Calendar.getInstance().get(Calendar.YEAR));
-
-                            // change that ranges are the same length
-                            if (low.length() != high.length())
-                                errors.add(schemaId + " -> " + tableId + ": " + key + " = '" + low + "-" + high + "' : lengths differ");
-
-                            // make sure the fields that have input validation match the length in that input validation table
-                            if (expectedFieldLength != null && (!expectedFieldLength.equals(low.length()) || !expectedFieldLength.equals(high.length()))) {
-                                if (low.equals(high))
-                                    errors.add(schemaId + " -> " + tableId + ": " + key + " = '" + low + "' : length does not match lookup table " + validationTableId);
-                                else
-                                    errors.add(schemaId + " -> " + tableId + ": " + key + " = '" + low + "-" + high + "' : lengths do not match lookup table " + validationTableId);
-                            }
-                        }
-                    }
+                    // make sure the input key matches the input column
+                    //                    if (!input.getKey().equals(inputKeys.get(0)))
+                    //                        errors.add("Input key " + schemaId + ":" + input.getKey() + " does not match validation table " + table.getId() + ":" + inputKeys.get(0));
                 }
             }
         }
 
         if (!errors.isEmpty()) {
-            System.out.println("There were " + errors.size() + " instances of inputs values in tables which are not valid.");
+            System.out.println("There were " + errors.size() + " issues with input values and their assocated validation tables.");
             for (String error : errors)
                 System.out.println(error);
             Assert.fail();
         }
-    }
-
-    /**
-     * Return the input length from a specified table
-     * @param tableId table indentifier
-     * @param key input key
-     * @return null if no length couild be determined, or the length
-     */
-    private Integer getInputLength(String tableId, String key) {
-        StagingTable table = _STAGING.getTable(tableId);
-        Integer length = null;
-
-        // loop over each row
-        for (StagingTableRow row : table.getTableRows()) {
-            List<StagingStringRange> ranges = row.getInputs().get(key);
-
-            for (StagingStringRange range : ranges) {
-                String low = range.getLow();
-                String high = range.getHigh();
-
-                if (range.matchesAll() || low.isEmpty())
-                    continue;
-
-                if (low.startsWith("{{") && low.contains(Staging.CTX_YEAR_CURRENT))
-                    low = String.valueOf(Calendar.getInstance().get(Calendar.YEAR));
-                if (high.startsWith("{{") && high.contains(Staging.CTX_YEAR_CURRENT))
-                    high = String.valueOf(Calendar.getInstance().get(Calendar.YEAR));
-
-                if (length != null && (low.length() != length || high.length() != length))
-                    throw new IllegalStateException("Inconsistent lengths in table " + tableId + " for key " + key);
-
-                length = low.length();
-            }
-        }
-
-        return length;
     }
 
 }

@@ -858,6 +858,37 @@ public class CsStagingTest {
             Assert.fail("There are " + unusedTables.size() + " tables that are not used in any schema: " + unusedTables);
     }
 
+    //    @Test
+    //    public void testInputTables() {
+    //        Set<String> errors = new HashSet<String>();
+    //
+    //        for (String schemaId : _STAGING.getSchemaIds()) {
+    //            StagingSchema schema = _STAGING.getSchema(schemaId);
+    //
+    //            // build a list of input tables that should be excluded
+    //            for (StagingSchemaInput input : schema.getInputs()) {
+    //                if (input.getTable() != null) {
+    //                    List<String> inputKeys = new ArrayList<String>();
+    //                    StagingTable table = _STAGING.getTable(input.getTable());
+    //                    for (StagingColumnDefinition def : table.getColumnDefinitions())
+    //                        if (ColumnDefinition.ColumnType.INPUT.equals(def.getType()))
+    //                            inputKeys.add(def.getKey());
+    //
+    //                    // make sure all input validation tables have exactly 1 INPUT column
+    //                    if (inputKeys.size() != 1)
+    //                        errors.add("Input validation table " + schemaId + ":" + table.getId() + " does not have exactly 1 INPUT column");
+    //                }
+    //            }
+    //        }
+    //
+    //        if (!errors.isEmpty()) {
+    //            System.out.println("There were " + errors.size() + " issues with input values and their assocated validation tables.");
+    //            for (String error : errors)
+    //                System.out.println(error);
+    //            Assert.fail();
+    //        }
+    //    }
+
     /**
      * This tests that INPUT fields in tables that have a validation table associated with them are the correct length.  In other words,
      * if a table has an INPUT column for "ssf4" but has a value for that column of "00" this would catch that that field should be

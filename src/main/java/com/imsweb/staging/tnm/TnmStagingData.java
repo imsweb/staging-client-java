@@ -21,7 +21,6 @@ public class TnmStagingData extends StagingData {
         GRADE("grade"),
         DX_YEAR("year_dx"),
         INPUT_VERSION("input_version"),
-        LVI("lvi"),
         AGE_AT_DX("age_dx"),
         SEX("sex"),
         EXTENSION("extension"),
