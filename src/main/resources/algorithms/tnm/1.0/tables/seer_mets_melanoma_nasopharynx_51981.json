@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "SEER Mets Melanoma Nasopharynx",
   "title" : "SEER Mets",
-  "last_modified" : "2015-08-13T13:23:39.074Z",
+  "last_modified" : "2015-09-04T21:13:43.275Z",
   "definition" : [ {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "Code",
     "type" : "INPUT"
   }, {

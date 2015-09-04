@@ -91,21 +91,21 @@
     "table" : "path_m_haw",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bcc",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_dna",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -166,7 +166,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -361,15 +362,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_bcc",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_dna",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "seer_mets_brain_49813",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -377,7 +378,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "determine_default_m", "ssf3_lpm", "clin_m_haw", "seer_mets_brain_49813", "determine_default_n", "ssf6_opf", "combined_n_to_summ_stage_n_84054", "histology", "ssf1_jpo", "path_t_bcc", "tnm7_stage_una", "ssf2_kpl", "path_m_haw", "path_n_dna", "behavior", "nodes_dna", "mets_haw", "ssf8_sql", "ssf7_sqk", "adjust_path_defaults", "systemic_surg_seq", "schema_selection_brain", "ssf5_nph", "clin_n_dna", "extension_bcc", "ssf4_mpn", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "nodes_pos_fna", "year_dx_validation", "summary_stage_rpa", "combined_t", "clin_t_bcc", "tnm7_inclusions_tqf" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "determine_default_m", "ssf3_lpm", "clin_m_haw", "seer_mets_brain_49813", "determine_default_n", "ssf6_opf", "combined_n_to_summ_stage_n_84054", "histology", "ssf1_jpo", "path_t_bcc", "tnm7_stage_una", "ssf2_kpl", "path_m_haw", "path_n_dna", "behavior", "nodes_dna", "mets_haw", "ssf8_sql", "ssf7_sqk", "adjust_path_defaults", "systemic_surg_seq", "schema_selection_brain", "ssf5_nph", "clin_n_dna", "ssf4_mpn", "extension_bcc", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "nodes_pos_fna", "year_dx_validation", "summary_stage_rpa", "combined_t", "clin_t_bcc", "tnm7_inclusions_tqf" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:59.504Z"
+  "last_modified" : "2015-09-04T21:15:00.002Z"
 }

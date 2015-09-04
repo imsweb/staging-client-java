@@ -91,21 +91,21 @@
     "table" : "path_m_hpb",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bar",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_dco",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -175,7 +175,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -367,15 +368,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_bar",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_dco",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "seer_mets_hypopharynx_89798",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -383,7 +384,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "clinical_n_head_neck_except_nasopharynx_25237", "ssf10_spd", "radiation_surg_seq", "ssf1_jpa", "path_m_hpb", "determine_default_m", "tnm7_stage_upt", "path_n_head_neck_except_nasopharynx_40357", "nodes_pos_fpa", "determine_default_n", "schema_selection_hypopharynx", "histology", "ssf6_opa", "ssf3_lpa", "nodes_dco", "tnm7_inclusions_tpb", "hypopharynx_t_21848", "behavior", "combined_t_to_summ_stage_t_4b_4e_d_9381", "seer_mets_hypopharynx_89798", "seer_mets_hypopharynxvs2_15179", "extension_bar", "ssf4_mpa", "ssf9_spc", "combined_n_to_summ_stage_n_headneck_hypopharynx_36968", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_n", "ssf5_npa", "year_dx_validation", "summary_stage_rpa", "combined_t", "ssf8_spb" ],
+  "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "clinical_n_head_neck_except_nasopharynx_25237", "ssf10_spd", "radiation_surg_seq", "ssf1_jpa", "path_m_hpb", "determine_default_m", "tnm7_stage_upt", "path_n_head_neck_except_nasopharynx_40357", "nodes_pos_fpa", "determine_default_n", "schema_selection_hypopharynx", "histology", "ssf6_opa", "nodes_dco", "ssf3_lpa", "tnm7_inclusions_tpb", "hypopharynx_t_21848", "behavior", "combined_t_to_summ_stage_t_4b_4e_d_9381", "seer_mets_hypopharynx_89798", "seer_mets_hypopharynxvs2_15179", "extension_bar", "ssf4_mpa", "ssf9_spc", "combined_n_to_summ_stage_n_headneck_hypopharynx_36968", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_n", "ssf5_npa", "year_dx_validation", "summary_stage_rpa", "combined_t", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:51.062Z"
+  "last_modified" : "2015-09-04T21:13:44.070Z"
 }

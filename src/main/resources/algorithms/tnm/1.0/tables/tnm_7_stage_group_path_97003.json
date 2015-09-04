@@ -5,9 +5,9 @@
   "name" : "TNM 7 Stage Group (Path) [SME REVIEW]",
   "title" : "TNM 7 Stage Group",
   "description" : "[SME REVIEW]\nPathologic Stage Group is always set to 99.",
-  "last_modified" : "2015-08-13T13:25:49.478Z",
+  "last_modified" : "2015-09-04T21:15:02.491Z",
   "definition" : [ {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "Extension",
     "type" : "INPUT"
   }, {

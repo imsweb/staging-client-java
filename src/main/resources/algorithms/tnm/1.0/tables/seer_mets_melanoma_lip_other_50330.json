@@ -6,9 +6,9 @@
   "title" : "SEER Mets",
   "notes" : "**Note:** Levels V-VII lymph nodes are distant nodes for this schema.",
   "footnotes" : "\\** Considered regional in 1977 Summary Staging Guide",
-  "last_modified" : "2015-08-13T13:23:46.048Z",
+  "last_modified" : "2015-09-04T21:13:38.057Z",
   "definition" : [ {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "Code",
     "type" : "INPUT"
   }, {

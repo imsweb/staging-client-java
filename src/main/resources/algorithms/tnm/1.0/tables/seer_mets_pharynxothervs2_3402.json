@@ -5,9 +5,9 @@
   "name" : "SEER Mets PharynxOthervs2",
   "title" : "SEER Mets",
   "notes" : "**Note:**  Supraclavicular and transverse cervical lymph nodes are now coded in CS Lymph Nodes because they are categorized as N rather than M in AJCC TNM.",
-  "last_modified" : "2015-08-13T13:23:37.977Z",
+  "last_modified" : "2015-09-04T21:14:32.426Z",
   "definition" : [ {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "Code",
     "type" : "INPUT"
   }, {

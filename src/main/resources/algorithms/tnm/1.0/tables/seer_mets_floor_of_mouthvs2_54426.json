@@ -5,9 +5,9 @@
   "name" : "SEER Mets Floor of Mouth",
   "title" : "SEER Mets",
   "notes" : "Note: Supraclavicular and transverse cervical lymph nodes are coded in SEER Mets because they are considered distant in Summary Stage.",
-  "last_modified" : "2015-08-13T13:23:49.559Z",
+  "last_modified" : "2015-09-04T21:13:40.290Z",
   "definition" : [ {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "Code",
     "type" : "INPUT"
   }, {

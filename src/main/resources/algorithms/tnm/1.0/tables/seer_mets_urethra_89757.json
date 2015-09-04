@@ -6,9 +6,9 @@
   "title" : "SEER Mets",
   "notes" : "**Note:**  Nodes in contiguous (secondary) and bidirectional (cephalad/caudal) primary nodal basins are coded in SEER regional nodes.",
   "footnotes" : "\\## Considered regional in Historic Stage",
-  "last_modified" : "2015-08-13T13:25:14.666Z",
+  "last_modified" : "2015-09-04T20:52:24.142Z",
   "definition" : [ {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "Code",
     "type" : "INPUT"
   }, {

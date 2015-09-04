@@ -6,9 +6,9 @@
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in SEER mets.\n\n**Note 2:**  Inferior mesenteric nodes are coded as Mets at DX for cecum, ascending colon, transverse colon, and hepatic flexure. Superior mesenteric nodes are coded in SEER mets.",
   "footnotes" : "Â¥  Considered distant for splenic flexure in Historic stage\n\\###  Considered distant in Historic stage",
-  "last_modified" : "2015-08-13T13:25:18.237Z",
+  "last_modified" : "2015-09-04T20:51:55.724Z",
   "definition" : [ {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "Code",
     "type" : "INPUT"
   }, {

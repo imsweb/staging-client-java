@@ -6,9 +6,9 @@
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in SEER Mets.\n\n**Note 2:**  Hepatoduodenal nodes are regional for primaries of the lesser curvature of the stomach (C16.5).  They are coded in SEER Mets for all other subsites in this schema.\n\n**Note 3:**  Metastatic nodules in the fat adjacent to a gastric carcinoma, without evidence of residual lymph node tissue, are considered regional node metastases, but nodules implanted on peritoneal surfaces are considered distant metastases.",
   "footnotes" : "\\***Considered distant in Historic Stage\n\\###Considered distant in 1977 Summary Staging Guide",
-  "last_modified" : "2015-08-17T17:32:56.289Z",
+  "last_modified" : "2015-09-04T20:52:02.725Z",
   "definition" : [ {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "Code",
     "type" : "INPUT"
   }, {

@@ -41,21 +41,21 @@
     "table" : "histology",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bcg",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_dbx",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -64,7 +64,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -120,15 +121,15 @@
     "name" : "Summary Stage 2017",
     "tables" : [ {
       "id" : "extension_bcg",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_dbx",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "seer_mets_digestiveother_85653",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -138,5 +139,5 @@
   } ],
   "involved_tables" : [ "primary_site", "seer_mets_48348", "input_version_validation", "schema_selection_digestive_other", "histology", "extension_bcg", "year_dx_validation", "nodes_dbx", "summary_stage_rpa", "seer_mets_digestiveother_85653" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:05:00.226Z"
+  "last_modified" : "2015-09-04T21:14:22.253Z"
 }

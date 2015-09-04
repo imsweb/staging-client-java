@@ -91,21 +91,21 @@
     "table" : "path_m_hpc",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_baa",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_dab",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -120,7 +120,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -315,15 +316,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_baa",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_dab",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "seer_mets_anus_24893",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -333,5 +334,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "path_m_hpc", "determine_default_m", "nodes_pos_fpa", "clin_m_hpc", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "behavior", "tnm7_inclusions_tpe", "nodes_dab", "clin_n_dab", "adjust_path_defaults", "systemic_surg_seq", "path_n_dab", "tnm7_stage_uab", "anus_t_35615", "schema_selection_anus", "extension_baa", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "year_dx_validation", "ssf1_jce", "summary_stage_rpa", "seer_mets_anus_24893", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:52.850Z"
+  "last_modified" : "2015-09-04T20:51:52.749Z"
 }

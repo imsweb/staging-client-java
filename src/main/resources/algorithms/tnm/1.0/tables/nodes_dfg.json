@@ -6,9 +6,9 @@
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in SEER mets.\n\n**Note 2:**  Hepatoduodenal nodes are regional for primaries of the lesser curvature of the stomach (C16.5).  They are coded in SEER Mets for all other subsites in this schema.",
   "footnotes" : "\\### Considered distant in Historic Stage\n\\*** Considered distant in 1977 Summary Staging Guide",
-  "last_modified" : "2015-08-17T17:32:17.087Z",
+  "last_modified" : "2015-09-04T20:52:01.799Z",
   "definition" : [ {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "Code",
     "type" : "INPUT"
   }, {

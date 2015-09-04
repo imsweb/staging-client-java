@@ -5,9 +5,9 @@
   "name" : "Sinus Other SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:**  For head and neck schemes, this field includes all lymph nodes defined as Levels I-VII and Other by TNM. \n\n**Note 2:**  For head and neck schemes, additional information about lymph nodes (size of involved nodes, extracapsular extension, levels involved, and location of involved nodes above or below the lower border of the cricoid cartilage) is coded in Site-Specific Factors 1, 3-9.\n\n**Note 3:**  If laterality of lymph nodes is not specified, assume nodes are ipsilateral.  Midline nodes are considered ipsilateral.\n\n **Note 4:**  For head and neck cancers, if lymph nodes are described only as \"supraclavicular\", try to determine if they are in Level IV (deep to the sternocleidomastoid muscle, in the lower jugular chain) or Level V (in the posterior triangle, inferior to the transverse cervical artery) and code appropriately.  If the specific level cannot be determined, consider them as Level V nodes.\n\n**Note 5:**  The description of lymph nodes has been standardized across the head and neck schemas.  All lymph node levels and groups listed here are considered regional nodes for TNM staging.  Summary Stage 1977 and Summary Stage 2000 divide these nodes into regional and distant groups.",
-  "last_modified" : "2015-08-13T13:23:50.897Z",
+  "last_modified" : "2015-09-04T20:52:10.846Z",
   "definition" : [ {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "Code",
     "type" : "INPUT"
   }, {

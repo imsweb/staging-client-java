@@ -42,21 +42,21 @@
     "table" : "histology",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_btb",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "seer_regional_nodes_lacrimal_sac_33881",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -71,7 +71,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -127,15 +128,15 @@
     "name" : "Summary Stage 2017",
     "tables" : [ {
       "id" : "extension_btb",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "seer_regional_nodes_lacrimal_gland_sac_72938",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "seer_mets_lacrimal_gland_sac_18504",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -145,5 +146,5 @@
   } ],
   "involved_tables" : [ "primary_site", "discriminator_lacrimal", "seer_mets_lacrimal_sac_97972", "input_version_validation", "extension_btb", "histology", "year_dx_validation", "seer_regional_nodes_lacrimal_sac_33881", "seer_mets_lacrimal_gland_sac_18504", "summary_stage_rpa", "schema_selection_lacrimal_sac", "seer_regional_nodes_lacrimal_gland_sac_72938" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:59.068Z"
+  "last_modified" : "2015-09-04T21:14:35.440Z"
 }

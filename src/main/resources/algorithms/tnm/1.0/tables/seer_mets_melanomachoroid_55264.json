@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "SEER Mets Melanoma Uvea",
   "title" : "SEER Mets",
-  "last_modified" : "2015-08-13T13:23:58.504Z",
+  "last_modified" : "2015-09-04T21:13:50.464Z",
   "definition" : [ {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "Code",
     "type" : "INPUT"
   }, {

@@ -6,9 +6,9 @@
   "title" : "SEER Primary Tumor",
   "notes" : "**Note 1:**  Ignore intraluminal or lateral extension to adjacent segment(s) of small intestine and code depth of invasion or spread outside the small intestine as indicated.  \n\n**Note 2:**  The nonperitonealized perimuscular tissue is, for jejunum and ileum, part of the mesentery and, for duodenum in areas where serosa is lacking, part of the retroperitoneum.",
   "footnotes" : "/# Considered localized in Historic Stage\n/### Considered distant in Historic Stage\n/* Considered localized in 1977 Summary Staging Guide",
-  "last_modified" : "2015-08-17T16:36:56.523Z",
+  "last_modified" : "2015-09-04T20:52:00.066Z",
   "definition" : [ {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "Code",
     "type" : "INPUT"
   }, {

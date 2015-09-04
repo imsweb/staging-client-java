@@ -92,21 +92,21 @@
     "table" : "path_m_hbb",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bdh",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_ddf",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -194,7 +194,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -407,15 +408,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_bdh",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_ddf",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "mets_hbb",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -423,7 +424,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf16_sfh", "testis_path_t_76829", "radiation_surg_seq", "ssf5_nab", "determine_default_m", "testis_serum_tumor_marker_svalue_table_basedon_ssf123", "ssf15_sfg", "nodes_ddf", "determine_default_n", "clin_t_bdh", "combined_n_to_summ_stage_n_84054", "histology", "extension_bdh", "ssf4_mac", "path_m_hbb", "schema_selection_testis", "ssf14_sff", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "behavior", "ssf7_seh", "testis_n_51427", "ssf6_oay", "tnm7_inclusions_tpj", "ssf13_sfe", "mets_hbb", "testis_postorchiectomy_serum_tumor_marker_svalue_table_basedon_ssf131516", "adjust_path_defaults", "systemic_surg_seq", "ssf8_sei", "ssf10_sek", "primary_site", "ssf12_sfd", "clin_m_hbb", "combined_m", "combined_n", "nodes_pos_fpc", "year_dx_validation", "tnm7_stage_uqd", "summary_stage_rpa", "combined_t", "ssf9_sej" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf16_sfh", "testis_path_t_76829", "radiation_surg_seq", "ssf5_nab", "determine_default_m", "testis_serum_tumor_marker_svalue_table_basedon_ssf123", "ssf15_sfg", "nodes_ddf", "determine_default_n", "clin_t_bdh", "combined_n_to_summ_stage_n_84054", "histology", "ssf4_mac", "extension_bdh", "path_m_hbb", "schema_selection_testis", "ssf14_sff", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "behavior", "ssf7_seh", "testis_n_51427", "ssf6_oay", "tnm7_inclusions_tpj", "ssf13_sfe", "mets_hbb", "testis_postorchiectomy_serum_tumor_marker_svalue_table_basedon_ssf131516", "adjust_path_defaults", "systemic_surg_seq", "ssf8_sei", "ssf10_sek", "primary_site", "ssf12_sfd", "clin_m_hbb", "combined_m", "combined_n", "nodes_pos_fpc", "year_dx_validation", "tnm7_stage_uqd", "summary_stage_rpa", "combined_t", "ssf9_sej" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:05:01.657Z"
+  "last_modified" : "2015-09-04T20:51:31.386Z"
 }

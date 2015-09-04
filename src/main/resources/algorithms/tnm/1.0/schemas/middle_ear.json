@@ -41,21 +41,21 @@
     "table" : "histology",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bcr",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_dcf",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -124,7 +124,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -180,15 +181,15 @@
     "name" : "Summary Stage 2017",
     "tables" : [ {
       "id" : "extension_bcr",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_dcf",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "seer_mets_middle_ear_nasal_cavity_19085",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -198,5 +199,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "extension_bcr", "ssf10_spd", "input_version_validation", "ssf4_mpa", "ssf9_spc", "nodes_dcf", "schema_selection_middle_ear", "primary_site", "histology", "ssf6_opa", "ssf5_npa", "ssf3_lpa", "year_dx_validation", "seer_mets_middle_ear_nasal_cavity_19085", "summary_stage_rpa", "ssf1_jpu", "seer_mets_middle_ear_9431", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:51.252Z"
+  "last_modified" : "2015-09-04T21:14:36.828Z"
 }

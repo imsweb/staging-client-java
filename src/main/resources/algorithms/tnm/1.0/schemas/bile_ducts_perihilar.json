@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Bile Ducts Perihilar",
   "title" : "Perihilar Bile Ducts",
-  "description" : "[SME-REVIEW] AJCC has a N2, there is no N2 in UICC. Need to determine what to do with N2",
+  "description" : "[SME-REVIEW] AJCC has a N2, there is no N2 in UICC. Need to determine what to do with N2\n\nPer the TNM Supplement, A Commentary on Uniform Use, Fourth edition, 2012:\nA difference between the UICC and AJCC classification at these sites concerns the N2 category, which is in the AJCC but not in the UICC classification. The N2 category contains coeliac, periduodenal, peripancreatic and superior mesenteric artery node involvement. These are considered both by the UICC and AJCC to be non-regional lymph nodes, and therefore their involvement clearly distant metastatic disease. Although they are labelled N2 by the AJCC, the stage grouping for these sites places N2 into Stage IVB along with m1. Therefore, the apparent difference is not an actual difference.",
   "notes" : "C24.0 Extrahepatic bile duct\n\nPerihilar cholangiocarcinomas are tumors located in the extrahepatic biliary tree proximal to the origin of the cystic duct.",
   "schema_selection_table" : "schema_selection_bile_ducts_perihilar",
   "schema_discriminators" : [ "ssf25" ],
@@ -93,21 +93,21 @@
     "table" : "path_m_hcr",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bft",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_dfo",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -153,7 +153,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -348,15 +349,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_bft",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_dfo",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "mets_hcr",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -364,7 +365,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "path_m_hcr", "input_version_validation", "extension_bft", "clin_m_hcr", "radiation_surg_seq", "mets_hcr", "determine_default_m", "ssf13_sqg", "nodes_pos_fpa", "nodes_dfo", "combined_n_to_summ_stage_n_n2_d_23338", "clin_n_dfo", "determine_default_n", "ssf10_sfi", "schema_selection_bile_ducts_perihilar", "histology", "ssf12_sqf", "combined_t_to_summ_stage_t_2_4e_re_93413", "behavior", "tnm7_inclusions_tpe", "adjust_path_defaults", "systemic_surg_seq", "discriminator_bile_ducts", "primary_site", "tnm7_stage_ubn", "ssf14_sqh", "ssf11_sqe", "combined_m", "combined_n", "path_n_dfo", "perihilar_bile_ducts_t_87697", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "path_m_hcr", "input_version_validation", "extension_bft", "clin_m_hcr", "radiation_surg_seq", "mets_hcr", "determine_default_m", "ssf13_sqg", "nodes_dfo", "nodes_pos_fpa", "combined_n_to_summ_stage_n_n2_d_23338", "clin_n_dfo", "determine_default_n", "ssf10_sfi", "schema_selection_bile_ducts_perihilar", "histology", "ssf12_sqf", "combined_t_to_summ_stage_t_2_4e_re_93413", "behavior", "tnm7_inclusions_tpe", "adjust_path_defaults", "systemic_surg_seq", "discriminator_bile_ducts", "primary_site", "tnm7_stage_ubn", "ssf14_sqh", "ssf11_sqe", "combined_m", "combined_n", "path_n_dfo", "perihilar_bile_ducts_t_87697", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:53.252Z"
+  "last_modified" : "2015-09-04T20:51:51.086Z"
 }

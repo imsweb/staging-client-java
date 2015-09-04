@@ -91,21 +91,21 @@
     "table" : "path_m_haj",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bad",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_dba",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -163,7 +163,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -358,15 +359,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_bad",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_dba",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "mets_haj",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -374,7 +375,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "mets_haj", "nodes_dba", "determine_default_t", "input_version_validation", "ssf3_lpu", "clin_n_dba", "radiation_surg_seq", "vagina_t_91502", "determine_default_m", "nodes_pos_fpa", "path_m_haj", "tnm7_stage_ubc", "path_n_dba", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "ssf2_kpr", "ssf6_oaq", "schema_selection_vagina", "clin_m_haj", "behavior", "tnm7_inclusions_tph", "ssf5_npm", "ssf1_jbq", "adjust_path_defaults", "systemic_surg_seq", "combined_t_to_summ_stage_t_2_3_re_4_d_26385", "ssf7_sdf", "primary_site", "combined_m", "ssf4_mps", "combined_n", "extension_bad", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "nodes_dba", "mets_haj", "determine_default_t", "input_version_validation", "ssf3_lpu", "clin_n_dba", "radiation_surg_seq", "vagina_t_91502", "determine_default_m", "nodes_pos_fpa", "path_m_haj", "tnm7_stage_ubc", "path_n_dba", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "ssf2_kpr", "ssf6_oaq", "schema_selection_vagina", "clin_m_haj", "behavior", "tnm7_inclusions_tph", "ssf5_npm", "ssf1_jbq", "adjust_path_defaults", "systemic_surg_seq", "combined_t_to_summ_stage_t_2_3_re_4_d_26385", "ssf7_sdf", "primary_site", "combined_m", "ssf4_mps", "combined_n", "extension_bad", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:57.001Z"
+  "last_modified" : "2015-09-04T20:51:34.558Z"
 }

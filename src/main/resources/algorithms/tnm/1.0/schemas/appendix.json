@@ -91,21 +91,21 @@
     "table" : "path_m_hcf",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bfg",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_dfc",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -158,7 +158,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -357,15 +358,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_bfg",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_dfc",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "mets_hcf",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -375,5 +376,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "path_n_dfc", "determine_default_t", "input_version_validation", "radiation_surg_seq", "ssf12_sbu", "nodes_dfc", "determine_default_m", "appendix_grade_category_calculation", "nodes_pos_fpb", "mets_hcf", "ssf7_spf", "ssf1_jpf", "determine_default_n", "extension_bfg", "ssf3_lpe", "combined_n_to_summ_stage_n_84054", "histology", "tnm7_inclusions_tpc", "behavior", "ssf10_spi", "tnm7_stage_uar", "clin_m_hcf", "ssf4_mpb", "adjust_path_defaults", "systemic_surg_seq", "schema_selection_appendix", "ssf11_sbt", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "path_m_hcf", "appendix_t_59947", "year_dx_validation", "summary_stage_rpa", "clin_n_dfc", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:52.083Z"
+  "last_modified" : "2015-09-04T20:51:59.376Z"
 }

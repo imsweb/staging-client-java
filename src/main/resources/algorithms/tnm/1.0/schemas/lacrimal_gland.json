@@ -86,21 +86,21 @@
     "table" : "path_m_hpc",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bct",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "seer_regional_nodes_melanomachoroid_3244",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -166,7 +166,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -361,15 +362,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_bct",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "seer_regional_nodes_lacrimal_gland_sac_72938",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "seer_mets_lacrimal_gland_sac_18504",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -377,7 +378,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "ssf2_kax", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf6_oae", "tnm7_stage_for_sites_with_no_stage_groupings_unb", "ssf3_lba", "radiation_surg_seq", "path_m_hpc", "determine_default_m", "nodes_pos_fpa", "ssf8_sfk", "clin_m_hpc", "determine_default_n", "discriminator_lacrimal", "combined_n_to_summ_stage_n_84054", "histology", "combined_t_to_summ_stage_t_4c_4e_d_76300", "tnm7_inclusions_tpb", "combined_t_no_tis", "ssf1_jbj", "schema_selection_lacrimal_gland", "extension_bct", "lacrimal_gland_t_1116", "seer_mets_lacrimal_gland_sac_18504", "seer_regional_nodes_melanomachoroid_3244", "adjust_path_defaults", "systemic_surg_seq", "ophthalmic_n_36875", "ssf4_maj", "ssf7_sbv", "seer_regional_nodes_lacrimal_gland_sac_72938", "primary_site", "combined_m", "combined_n", "seer_mets_lacrimal_gland_8237", "year_dx_validation", "summary_stage_rpa", "ssf5_nah" ],
+  "involved_tables" : [ "ssf2_kax", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf6_oae", "tnm7_stage_for_sites_with_no_stage_groupings_unb", "ssf3_lba", "radiation_surg_seq", "path_m_hpc", "determine_default_m", "nodes_pos_fpa", "ssf8_sfk", "clin_m_hpc", "determine_default_n", "discriminator_lacrimal", "combined_n_to_summ_stage_n_84054", "histology", "combined_t_to_summ_stage_t_4c_4e_d_76300", "tnm7_inclusions_tpb", "combined_t_no_tis", "ssf1_jbj", "schema_selection_lacrimal_gland", "lacrimal_gland_t_1116", "extension_bct", "seer_mets_lacrimal_gland_sac_18504", "seer_regional_nodes_melanomachoroid_3244", "adjust_path_defaults", "systemic_surg_seq", "ophthalmic_n_36875", "ssf4_maj", "ssf7_sbv", "seer_regional_nodes_lacrimal_gland_sac_72938", "primary_site", "combined_m", "combined_n", "seer_mets_lacrimal_gland_8237", "year_dx_validation", "summary_stage_rpa", "ssf5_nah" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:59.131Z"
+  "last_modified" : "2015-09-04T21:14:57.894Z"
 }

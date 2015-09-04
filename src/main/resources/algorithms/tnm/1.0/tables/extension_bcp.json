@@ -6,9 +6,9 @@
   "title" : "SEER Primary Tumor",
   "description" : "Modified Notes",
   "notes" : "**Note 1:** For skin, patch indicates any size skin lesion without significant elevation or induration.\n\n**Note 2:** For skin, plaque indicates any size skin lesion that is elevated or indurated.\n\n**Note 3:** For skin, tumor indicates at least one 1 centimeter (cm) diameter solid or nodular lesion with evidence of depth and/or vertical growth. \n\n**Note 4:** Ignore erythroderma if stated to involve less than 50% of the skin.\n\n**Note 5:**  Physicians use more than one method to estimate percentage of skin involvement by mycosis fungoides (MF).  Code percent of skin involvement as stated by the physician.  If no percentage is stated and no word such as localized or generalized is used and no stage is given, code as percent not stated.",
-  "last_modified" : "2015-08-13T13:23:51.348Z",
+  "last_modified" : "2015-09-04T20:51:37.967Z",
   "definition" : [ {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "Code",
     "type" : "INPUT"
   }, {

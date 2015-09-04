@@ -86,21 +86,21 @@
     "table" : "path_m_hcw",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bfx",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_dfs",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -148,7 +148,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -343,15 +344,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_bfx",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_dfs",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "mets_hcw",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -361,5 +362,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf3_lpt", "radiation_surg_seq", "extension_bfx", "determine_default_m", "clin_n_dfs", "nodes_pos_fpa", "clin_m_hcw", "determine_default_n", "peritoneumfemalegen_t_87084", "combined_n_to_summ_stage_n_84054", "histology", "sex_19563", "path_m_hcw", "ssf2_kpn", "ssf1_jpr", "combined_t_no_tis", "mets_hcw", "combined_t_to_summ_stage_t_3b_4e_re_50371", "ssf5_npl", "tnm7_stage_uby", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "path_n_dfs", "schema_selection_peritoneum_female_gen", "combined_m", "combined_n", "ssf4_mpr", "tnm7_inclusions_tqa", "nodes_dfs", "year_dx_validation", "summary_stage_rpa" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:56.563Z"
+  "last_modified" : "2015-09-04T20:51:35.301Z"
 }

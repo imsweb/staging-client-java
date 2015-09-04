@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "SEER Mets EndocrineOther",
   "title" : "SEER Mets",
-  "last_modified" : "2015-08-13T13:23:58.819Z",
+  "last_modified" : "2015-09-04T20:52:08.195Z",
   "definition" : [ {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "Code",
     "type" : "INPUT"
   }, {

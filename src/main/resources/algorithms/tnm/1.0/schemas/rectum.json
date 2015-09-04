@@ -91,21 +91,21 @@
     "table" : "path_m_hag",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bbf",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_dax",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -174,7 +174,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -369,15 +370,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_bbf",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_dax",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "mets_hag",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -385,7 +386,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "path_n_dax", "determine_default_m", "nodes_pos_fpb", "path_m_hag", "ssf7_spf", "ssf1_jpf", "mets_hag", "determine_default_n", "rectum_t_5935", "ssf3_lpe", "combined_n_to_summ_stage_n_84054", "histology", "extension_bbf", "ssf6_opb", "nodes_dax", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "tnm7_inclusions_tpc", "behavior", "clin_m_hag", "ssf10_spi", "schema_selection_rectum", "ssf4_mpb", "ssf5_npb", "adjust_path_defaults", "ssf9_sph", "systemic_surg_seq", "primary_site", "combined_m", "tnm7_stage_upw", "combined_n", "year_dx_validation", "ssf8_spg", "summary_stage_rpa", "combined_t", "clin_n_dax" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "path_n_dax", "determine_default_m", "nodes_pos_fpb", "path_m_hag", "ssf7_spf", "ssf1_jpf", "mets_hag", "determine_default_n", "rectum_t_5935", "ssf3_lpe", "combined_n_to_summ_stage_n_84054", "histology", "ssf6_opb", "extension_bbf", "nodes_dax", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "tnm7_inclusions_tpc", "behavior", "clin_m_hag", "ssf10_spi", "schema_selection_rectum", "ssf4_mpb", "ssf5_npb", "adjust_path_defaults", "ssf9_sph", "systemic_surg_seq", "primary_site", "combined_m", "tnm7_stage_upw", "combined_n", "year_dx_validation", "ssf8_spg", "summary_stage_rpa", "combined_t", "clin_n_dax" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:52.581Z"
+  "last_modified" : "2015-09-04T20:51:54.457Z"
 }

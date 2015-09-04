@@ -5,9 +5,9 @@
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in SEER mets.\n\n**Note 2:**: The specific location of the mesenteric nodes determines whether they are regional or distant. If the specific location is not described, code in SEER Regional nodes.\n\n**Note 3:** Porta hepatic nodes are considered distant for Body and Tail and should be coded in SEER mets.  If the specific location for hepatic nodes is not described, code in SEER Regional Nodes.",
-  "last_modified" : "2015-08-13T13:26:05.321Z",
+  "last_modified" : "2015-09-04T20:51:48.605Z",
   "definition" : [ {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "Code",
     "type" : "INPUT"
   }, {

@@ -5,9 +5,9 @@
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in SEER Mets.\n\n**Note 2:**  Federation Internationale de Gynecologie at d-Obstetrique (FIGO) Stage IIIB is assigned based on tumor extension and/or regional lymph node involvement.  Code SEER Lymph Nodes based on a physician's statement of FIGO Stage IIIB if it is known that the stage value is assigned because of lymph node involvement, or if there is no statement that FIGO Stage IIIB is assigned based on extension or lymph node involvement. \n\n**Note 3:**  If either exploratory or definitive surgery is done with no mention of lymph nodes, assume nodes are negative.\n\n**Note 4:**  If the clinician says \"adnexa palpated\" but does not mention lymph nodes, assume lymph nodes are not involved.",
-  "last_modified" : "2015-08-13T13:24:19.706Z",
+  "last_modified" : "2015-09-04T20:51:33.981Z",
   "definition" : [ {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "Code",
     "type" : "INPUT"
   }, {

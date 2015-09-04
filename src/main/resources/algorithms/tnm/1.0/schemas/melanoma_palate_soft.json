@@ -85,21 +85,21 @@
     "table" : "path_m_hpd",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bel",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_deg",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -175,7 +175,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -370,15 +371,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_bel",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_deg",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "seer_mets_palatesoft_27852",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -388,5 +389,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf10_spd", "radiation_surg_seq", "determine_default_m", "combined_n_to_summ_stage_n_headneck_palatehardsoftepiant_45582", "seer_mets_palatesoft_27852", "tnm7_stage_upu", "nodes_pos_fpa", "clin_m_hpd", "determine_default_n", "ssf11_spe", "histology", "melanoma_palate_soft_t_15766", "ssf6_opa", "ssf3_lpa", "path_m_hpd", "tnm7_inclusions_tpa", "combined_t_no_tis", "ssf1_jpu", "combined_t_to_summ_stage_t_4b_4e_d_9381", "pathologic_n_head_neck_melanoma_copy_75380", "ssf4_mpa", "ssf9_spc", "nodes_deg", "adjust_path_defaults", "schema_selection_melanoma_palate_soft", "systemic_surg_seq", "primary_site", "combined_m", "clinical_n_head_neck_melanoma_66648", "combined_n", "ssf5_npa", "year_dx_validation", "summary_stage_rpa", "extension_bel", "ssf8_spb", "seer_mets_melanoma_palatesoft_56324" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:50.321Z"
+  "last_modified" : "2015-09-04T21:14:42.168Z"
 }

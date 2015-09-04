@@ -92,21 +92,21 @@
     "table" : "path_m_hcl",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bfl",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_dfh",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -168,7 +168,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -363,15 +364,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_bfl",
-      "inputs" : [ "extension", "ssf2" ],
+      "inputs" : [ "ssf2", "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t", "ss2017" ]
     }, {
       "id" : "nodes_dfh",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "mets_hcl",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -381,5 +382,5 @@
   } ],
   "involved_tables" : [ "clinical_n_corpus_48422", "cpmbined_m_to_summ_stage_m_60564", "mets_hcl", "determine_default_t", "input_version_validation", "radiation_surg_seq", "ssf3_lpp", "determine_default_m", "nodes_pos_fpa", "nodes_dfh", "path_m_hcl", "determine_default_n", "ssf6_opg", "combined_n_to_summ_stage_n_84054", "ssf7_sqn", "histology", "ssf2_kpo", "clin_m_hcl", "extension_bfl", "behavior", "ssf8_sqo", "ssf5_npk", "pathological_n_corpus_31147", "schema_selection_corpus_adenosarcoma", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_n", "ssf1_jca", "ssf4_mpq", "year_dx_validation", "summary_stage_rpa", "combined_t", "combined_t_to_summ_stage_t_2_2b_re_2c_4e_d_26557", "corpus_adenosarcoma_extension_cytology_summary_stage", "corpus_adenosarcoma_t_34843", "tnm7_inclusions_tqh", "tnm7_stage_ubt" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:57.301Z"
+  "last_modified" : "2015-09-04T21:13:48.613Z"
 }

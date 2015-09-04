@@ -4,6 +4,7 @@
   "version" : "1.0",
   "name" : "Retinoblastoma",
   "title" : "Retinoblastoma",
+  "description" : "[SME REVIEW] Shouldn't Retinoblastoma, Path N include N2 - see page 294.",
   "notes" : "M-9510-9514\nC690  Conjunctiva\nC691  Cornea, NOS\nC692  Retina\nC693  Choroid\nC694  Ciliary Body\nC695  Lacrimal Gland\nC696  Orbit, NOS\nC698  Overlapping lesion of eye and adnexa\nC699  Eye, NOS\n\n**Note 1:**  Laterality must be coded for this site.\n\n**Note 2:** Code all retinoblastomas using this schema, including retinoblastomas described in other parts of eye. TNM categories will be derived for retinoblastomas with a primary site code of C692 only.",
   "schema_selection_table" : "schema_selection_retinoblastoma",
   "inputs" : [ {
@@ -85,21 +86,21 @@
     "table" : "path_m_hbn",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bcu",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "seer_regional_nodes_melanomachoroid_3244",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -138,7 +139,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -333,15 +335,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_bcu",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_dcj",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "mets_hbn",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -349,7 +351,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "tnm7_stage_for_sites_with_no_stage_groupings_unb", "radiation_surg_seq", "determine_default_m", "ssf6_oao", "nodes_pos_fpa", "combined_n_to_summ_stage_n_n2_d_23338", "determine_default_n", "combined_t_retinoblastoma", "histology", "ssf3_lao", "combined_t_to_summ_stage_t_4c_4e_d_76300", "ssf2_kbb", "path_m_hbn", "clin_t_bcu", "tnm7_inclusions_tpk", "mets_hbn", "path_t_bcu", "ssf4_mat", "clin_m_hbn", "extension_bcu", "nodes_dcj", "seer_regional_nodes_melanomachoroid_3244", "adjust_path_defaults", "systemic_surg_seq", "ophthalmic_n_36875", "primary_site", "combined_m", "combined_n", "ssf5_naq", "year_dx_validation", "summary_stage_rpa", "schema_selection_retinoblastoma" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "tnm7_stage_for_sites_with_no_stage_groupings_unb", "radiation_surg_seq", "determine_default_m", "ssf6_oao", "nodes_pos_fpa", "combined_n_to_summ_stage_n_n2_d_23338", "determine_default_n", "combined_t_retinoblastoma", "histology", "ssf3_lao", "combined_t_to_summ_stage_t_4c_4e_d_76300", "ssf2_kbb", "path_m_hbn", "clin_t_bcu", "tnm7_inclusions_tpk", "path_t_bcu", "mets_hbn", "ssf4_mat", "clin_m_hbn", "extension_bcu", "nodes_dcj", "seer_regional_nodes_melanomachoroid_3244", "adjust_path_defaults", "systemic_surg_seq", "ophthalmic_n_36875", "primary_site", "combined_m", "combined_n", "ssf5_naq", "year_dx_validation", "summary_stage_rpa", "schema_selection_retinoblastoma" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:59.283Z"
+  "last_modified" : "2015-09-04T20:52:26.002Z"
 }

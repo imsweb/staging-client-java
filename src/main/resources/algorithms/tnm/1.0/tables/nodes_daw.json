@@ -6,9 +6,9 @@
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in SEER Mets.\n\n**Note 2:**  Pericholedochal nodes are coded in SEER Mets for jejunum and ileum primaries.",
   "footnotes" : "/### Considered distant in Historic Stage\n/*** Considered distant in 1977 Summary Staging Guide",
-  "last_modified" : "2015-08-17T16:39:12.588Z",
+  "last_modified" : "2015-09-04T20:52:01.282Z",
   "definition" : [ {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "Code",
     "type" : "INPUT"
   }, {

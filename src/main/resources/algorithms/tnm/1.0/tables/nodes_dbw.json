@@ -5,9 +5,9 @@
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
   "notes" : "**Note:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in the SEER mets.",
-  "last_modified" : "2015-08-13T13:25:06.017Z",
+  "last_modified" : "2015-09-04T20:51:54.976Z",
   "definition" : [ {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "Code",
     "type" : "INPUT"
   }, {

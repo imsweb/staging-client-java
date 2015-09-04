@@ -92,21 +92,21 @@
     "table" : "path_m_hcy",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bgb",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_dfx",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -175,7 +175,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -387,15 +388,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_bgb",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_dfx",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "mets_hcy",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -405,5 +406,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "nodes_pos_fah", "determine_default_t", "input_version_validation", "radiation_surg_seq", "ssf19_sqz", "determine_default_m", "lymph_nodes_eval_temp_65876", "ssf18_sqy", "ssf22_src", "clin_m_hcy", "extension_bgb", "determine_default_n", "ssf11_srd", "clin_n_dfx", "combined_n_to_summ_stage_n_84054", "histology", "ssf1_jpt", "path_m_hcy", "behavior", "mets_hcy", "merkel_cell_vulva_t_49226", "schema_selection_merkel_cell_vulva", "ssf20_sra", "ssf16_sqw", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "ssf17_sqx", "year_dx_validation", "tnm7_inclusions_tqb", "tnm7_stage_uqe", "summary_stage_rpa", "combined_t", "ssf21_srb", "nodes_dfx", "path_n_dfx" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:05:01.098Z"
+  "last_modified" : "2015-09-04T20:51:30.753Z"
 }

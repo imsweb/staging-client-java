@@ -86,21 +86,21 @@
     "table" : "path_m_har",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bfo",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_dfk",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -129,7 +129,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -324,15 +325,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_bfo",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_dfk",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "mets_hco",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -342,5 +343,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "clin_m_har", "determine_default_t", "input_version_validation", "mets_hco", "path_m_har", "radiation_surg_seq", "determine_default_m", "ssf6_oam", "nodes_pos_fpa", "nodes_dfk", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "extension_bfo", "combined_t_no_tis", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "schema_selection_net_ampulla", "clin_n_ampulla_vater_45064", "ssf4_mas", "tnm7_inclusions_tpm", "adjust_path_defaults", "systemic_surg_seq", "net_ampulla_t_37461", "primary_site", "path_n_dbo", "combined_m", "ssf5_nap", "combined_n", "year_dx_validation", "summary_stage_rpa", "tnm7_stage_uqa" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:53.552Z"
+  "last_modified" : "2015-09-04T20:51:49.434Z"
 }

@@ -85,21 +85,21 @@
     "table" : "path_m_hcp",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bfp",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_dfl",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -128,7 +128,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -323,15 +324,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_bfp",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_dfl",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "mets_hcp",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -339,7 +340,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "path_m_hcp", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "mets_hcp", "radiation_surg_seq", "clin_m_hcp", "nodes_dfl", "path_n_dfl", "determine_default_m", "schema_selection_net_small_intestine", "nodes_pos_fpa", "ssf11_sri", "clin_n_dfl", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "combined_t_no_tis", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "ssf6_opi", "extension_bfp", "tnm7_inclusions_tpm", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_n", "year_dx_validation", "ssf12_srj", "summary_stage_rpa", "tnm7_stage_uqa", "net_smallintestine_t_60400" ],
+  "involved_tables" : [ "path_m_hcp", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "clin_m_hcp", "mets_hcp", "nodes_dfl", "path_n_dfl", "determine_default_m", "schema_selection_net_small_intestine", "nodes_pos_fpa", "ssf11_sri", "clin_n_dfl", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "combined_t_no_tis", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "ssf6_opi", "extension_bfp", "tnm7_inclusions_tpm", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_n", "year_dx_validation", "ssf12_srj", "summary_stage_rpa", "tnm7_stage_uqa", "net_smallintestine_t_60400" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:51.964Z"
+  "last_modified" : "2015-09-04T20:52:00.431Z"
 }

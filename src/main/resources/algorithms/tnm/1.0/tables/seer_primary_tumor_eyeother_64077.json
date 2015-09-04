@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "SEER Primary Tumor EyeOther",
   "title" : "SEER Primary Tumor",
-  "last_modified" : "2015-08-13T13:23:36.492Z",
+  "last_modified" : "2015-09-04T21:14:26.436Z",
   "definition" : [ {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "Code",
     "type" : "INPUT"
   }, {

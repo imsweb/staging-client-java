@@ -41,21 +41,21 @@
     "table" : "histology",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bdk",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_daq",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -131,7 +131,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -187,15 +188,15 @@
     "name" : "Summary Stage 2017",
     "tables" : [ {
       "id" : "extension_bdk",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_daq",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "seer_mets_copy_sinus_other_3423",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -203,7 +204,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "ssf7_spa", "ssf10_spd", "input_version_validation", "ssf4_mpa", "ssf9_spc", "seer_mets_copy_sinus_other_3423", "seer_mets_sinus_othervs2_15755", "primary_site", "ssf11_spe", "nodes_daq", "histology", "ssf6_opa", "ssf5_npa", "ssf3_lpa", "schema_selection_sinus_other", "year_dx_validation", "summary_stage_rpa", "extension_bdk", "ssf1_jpu", "ssf8_spb" ],
+  "involved_tables" : [ "ssf7_spa", "ssf10_spd", "input_version_validation", "ssf4_mpa", "ssf9_spc", "seer_mets_copy_sinus_other_3423", "seer_mets_sinus_othervs2_15755", "primary_site", "nodes_daq", "ssf11_spe", "histology", "ssf6_opa", "ssf5_npa", "ssf3_lpa", "schema_selection_sinus_other", "year_dx_validation", "summary_stage_rpa", "extension_bdk", "ssf1_jpu", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:51.124Z"
+  "last_modified" : "2015-09-04T21:13:45.790Z"
 }

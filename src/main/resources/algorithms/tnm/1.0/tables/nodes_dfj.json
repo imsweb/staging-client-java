@@ -6,9 +6,9 @@
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in SEER mets.\n\n**Note 2:**  Regional lymph nodes for any part of the esophagus fall in the range from periesophageal/cervical to the celiac region.  Contralateral and bilateral cervical, supraclavicular, and mediastinal lymph nodes are included.\n\n**Note 3:**  Nodal metastasis is very rare in gastrointestinal stromal tumors and surgeons generally agree that nodal dissection is not indicated.  In the absence of information on regional lymph node status, assign no regional lymph node involvement (code 000).",
   "footnotes" : "\\###  Considered distant in Historic Stage\n\\** Considered regional in 1977 Summary Staging Guide \n\\***    Considered distant in 1977 Summary Staging Guide",
-  "last_modified" : "2015-08-13T13:24:27.368Z",
+  "last_modified" : "2015-09-04T20:52:03.679Z",
   "definition" : [ {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "Code",
     "type" : "INPUT"
   }, {

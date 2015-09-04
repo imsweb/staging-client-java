@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "SEER Mets Gum",
   "title" : "SEER Mets",
-  "last_modified" : "2015-08-13T13:24:49.998Z",
+  "last_modified" : "2015-09-04T20:52:14.935Z",
   "definition" : [ {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "Code",
     "type" : "INPUT"
   }, {

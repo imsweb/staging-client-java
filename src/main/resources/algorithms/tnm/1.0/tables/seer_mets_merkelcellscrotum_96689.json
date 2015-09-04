@@ -5,9 +5,9 @@
   "name" : "SEER Mets MerkelCellScrotum",
   "title" : "SEER Mets",
   "notes" : "**Note 1:**  In-transit metastasis is coded in SEER Regional Nodes.\n\n**Note 2:**  Nodes in contiguous (secondary) and bidirectional (cephalad/caudal) primary nodal basins are coded in SEER Regional Nodes.",
-  "last_modified" : "2015-08-13T13:25:10.093Z",
+  "last_modified" : "2015-09-04T20:51:24.674Z",
   "definition" : [ {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "Code",
     "type" : "INPUT"
   }, {

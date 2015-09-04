@@ -5,9 +5,9 @@
   "name" : "SEER Mets",
   "title" : "SEER Mets",
   "notes" : "**Note 1:** Visceral involvement is considered metastatic and should be questioned in the absence of node or blood involvement.",
-  "last_modified" : "2015-08-13T13:24:36.262Z",
+  "last_modified" : "2015-09-04T20:51:38.279Z",
   "definition" : [ {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "Code",
     "type" : "INPUT"
   }, {

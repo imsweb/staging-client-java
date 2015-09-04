@@ -5,9 +5,9 @@
   "name" : "SEER Mets Skin",
   "title" : "SEER Mets",
   "notes" : "**Note 1:**  Nodes in contiguous (secondary) and bidirectional (cephalad/caudal) primary nodal basins are coded in SEER Mets.\n\n**Note 2:**  Bilateral or contralateral nodes are considered regional nodes for head, neck, and truncal tumors with bidirectional drainage to primary nodal basins, as shown on lymphoscintigraphy. Truncal tumors may also drain to both cephalad and caudal primary nodal basins as shown on lymphoscintigraphy. Clinical assessment of bilateral/contralateral or cephalad/caudal regional nodal involvement is required for tumors where lymphoscintigraphy is not performed.\n\n**Note 3:**  Contiguous or secondary nodal basins are the next nodal drainage basins beyond the primary nodal basins.  Secondary basins are considered distant for Summary Stage.",
-  "last_modified" : "2015-08-13T13:26:04.851Z",
+  "last_modified" : "2015-09-04T20:51:40.216Z",
   "definition" : [ {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "Code",
     "type" : "INPUT"
   }, {

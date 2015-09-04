@@ -5,9 +5,9 @@
   "name" : "SEER Mets Scrotum",
   "title" : "SEER Mets",
   "notes" : "**Note:**  Nodes in contiguous (secondary) and bidirectional (cephalad/caudal) primary nodal basins are coded in SEER regional nodes.",
-  "last_modified" : "2015-08-13T13:23:57.093Z",
+  "last_modified" : "2015-09-04T20:51:25.193Z",
   "definition" : [ {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "Code",
     "type" : "INPUT"
   }, {

@@ -85,21 +85,21 @@
     "table" : "path_m_hpd",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bdy",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_ddt",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -175,7 +175,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -380,15 +381,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_bdy",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_ddt",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "seer_mets_supraglotticlarynx_33914",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -398,5 +399,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf10_spd", "extension_bdy", "radiation_surg_seq", "determine_default_m", "tnm7_stage_upu", "combined_n_to_summ_stage_n_headneck_larynxsupra_9088", "nodes_pos_fpa", "schema_selection_melanoma_larynx_supraglottic", "clin_m_hpd", "determine_default_n", "ssf11_spe", "histology", "ssf6_opa", "ssf3_lpa", "path_m_hpd", "tnm7_inclusions_tpa", "combined_t_no_tis", "ssf1_jpu", "melanoma_larynx_supraglottic_63201", "combined_t_to_summ_stage_t_4b_4e_d_9381", "pathologic_n_head_neck_melanoma_copy_75380", "ssf4_mpa", "ssf9_spc", "seer_mets_supraglotticlarynx_33914", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "nodes_ddt", "seer_mets_melanoma_supraglotticlarynx_89253", "combined_m", "clinical_n_head_neck_melanoma_66648", "combined_n", "ssf5_npa", "year_dx_validation", "summary_stage_rpa", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:54.683Z"
+  "last_modified" : "2015-09-04T21:14:09.865Z"
 }

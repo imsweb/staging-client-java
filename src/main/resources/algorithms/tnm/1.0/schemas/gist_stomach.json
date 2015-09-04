@@ -86,21 +86,21 @@
     "table" : "path_m_hcd",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bfc",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_dfa",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -140,7 +140,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -339,15 +340,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_bfc",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_dfa",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "mets_hcd",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -357,5 +358,5 @@
   } ],
   "involved_tables" : [ "ssf10_srh", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "path_n_dfa", "tnm_7_stage_group_gist_stomach_36358", "radiation_surg_seq", "nodes_dfa", "determine_default_m", "mets_hcd", "nodes_pos_fpa", "gist_stomach_mitotic_rate_calculation", "ssf7_sre", "determine_default_n", "clin_m_hcd", "combined_n_to_summ_stage_n_84054", "histology", "combined_t_no_tis", "ssf6_oph", "tnm7_inclusions_tpo", "gist_stomach_n_73991", "extension_bfc", "adjust_path_defaults", "systemic_surg_seq", "ssf9_srg", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "path_m_hcd", "combined_n", "gist_stomach_t_60871", "schema_selection_gist_stomach", "year_dx_validation", "summary_stage_rpa", "ssf8_srf" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:51.660Z"
+  "last_modified" : "2015-09-04T20:52:02.436Z"
 }

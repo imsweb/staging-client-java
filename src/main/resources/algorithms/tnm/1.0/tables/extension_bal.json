@@ -6,9 +6,9 @@
   "title" : "SEER Primary Tumor",
   "notes" : "**Note 1:**   Linitis plastica is defined as diffuse involvement of the entire thickness of the stomach wall. and coded as localized in Summary Stage.\n\n**Note 2:**   Discontinuous involvement is considered metastatic with the exception of implants within the stomach which are considered localized in Summary Stage. Malignant (positive) peritoneal cytology is coded in SEER Mets.",
   "footnotes" : "\\# Considered localized in Historic Stage\n\\## Considered regional in Historic Stage\n\\** Considered regional in 1977 Summary Staging Guide",
-  "last_modified" : "2015-08-17T17:02:25.630Z",
+  "last_modified" : "2015-09-04T20:52:02.525Z",
   "definition" : [ {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "Code",
     "type" : "INPUT"
   }, {

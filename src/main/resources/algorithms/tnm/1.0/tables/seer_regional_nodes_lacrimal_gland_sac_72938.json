@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "SEER Regional Nodes Lacrimal Gland/Sac",
   "title" : "SEER Regional Nodes",
-  "last_modified" : "2015-08-13T13:24:08.261Z",
+  "last_modified" : "2015-09-04T20:52:07.031Z",
   "definition" : [ {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "Code",
     "type" : "INPUT"
   }, {

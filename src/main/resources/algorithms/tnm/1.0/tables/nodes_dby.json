@@ -5,9 +5,9 @@
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:**  For this site, code ALL lymph node involvement in this field.\n\n**Note 2:**  When coding Regional Nodes Positive and Regional Nodes Examined, only include regional nodes. Do not include distant nodes coded in SEER mets.",
-  "last_modified" : "2015-08-13T13:24:21.704Z",
+  "last_modified" : "2015-09-04T20:52:17.789Z",
   "definition" : [ {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "Code",
     "type" : "INPUT"
   }, {

@@ -6,9 +6,9 @@
   "title" : "SEER Primary Tumor",
   "notes" : "**Note:** Code depth of invasion in preference to intraluminal spread or lateral extension to adjacent segment(s) of small intestine or cecum.",
   "footnotes" : "\\#     Considered localized in Historic Stage\n\\### Considered distant in Historic Stage\n\\* Considered localized in 1977 Summary Staging Guide",
-  "last_modified" : "2015-08-17T16:46:35.878Z",
+  "last_modified" : "2015-09-04T20:52:00.516Z",
   "definition" : [ {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "Code",
     "type" : "INPUT"
   }, {

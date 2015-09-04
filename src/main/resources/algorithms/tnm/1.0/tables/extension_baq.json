@@ -5,9 +5,9 @@
   "name" : "SEER Primary Tumor",
   "title" : "SEER Primary Tumor",
   "footnotes" : "\\## Considered regional in Historic Stage",
-  "last_modified" : "2015-08-13T15:19:30.319Z",
+  "last_modified" : "2015-09-04T20:52:12.252Z",
   "definition" : [ {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "Code",
     "type" : "INPUT"
   }, {

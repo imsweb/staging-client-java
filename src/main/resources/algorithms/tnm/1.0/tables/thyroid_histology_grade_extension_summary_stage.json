@@ -5,9 +5,9 @@
   "name" : "Histology Grade Extension Summary Stage",
   "title" : "Histology Grade Extension Summary Stage Table",
   "notes" : "**Note:**  For CS Extension code 560 ONLY, \"Stated as T4a\", the value of Summary Stage 1977 and Summary Stage 2000 is assigned on the basis of histology and grade as shown here.",
-  "last_modified" : "2015-08-13T13:24:26.624Z",
+  "last_modified" : "2015-09-04T21:15:01.265Z",
   "definition" : [ {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "Extension",
     "type" : "INPUT"
   }, {

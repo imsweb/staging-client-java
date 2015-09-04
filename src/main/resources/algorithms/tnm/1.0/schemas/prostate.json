@@ -85,21 +85,21 @@
     "table" : "path_m_hal",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bbo",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_dbf",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -183,7 +183,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -400,15 +401,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_bbo",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_dbf",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "mets_hal",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -418,5 +419,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "path_t_bbo", "determine_default_t", "input_version_validation", "mets_hal", "ssf11_sba", "radiation_surg_seq", "clin_m_hal", "determine_default_m", "clin_t_bbo", "ssf1_jav", "path_n_dbf", "nodes_pos_fpa", "ssf7_saw", "nodes_dbf", "path_m_hal", "determine_default_n", "combined_n_to_summ_stage_n_84054", "schema_selection_prostate", "histology", "ssf14_sbd", "combined_t_no_tis", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "extension_bbo", "ssf10_saz", "ssf13_sbc", "tnm7_inclusions_tpv", "adjust_path_defaults", "ssf9_say", "systemic_surg_seq", "ssf12_sbb", "primary_site", "prostate_n_76551", "tnm7_stage_ubp", "combined_m", "ssf15_sbe", "combined_n", "ssf2_kab", "year_dx_validation", "ssf8_sax", "summary_stage_rpa", "combined_gleason_93464" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:05:01.424Z"
+  "last_modified" : "2015-09-04T20:52:29.270Z"
 }

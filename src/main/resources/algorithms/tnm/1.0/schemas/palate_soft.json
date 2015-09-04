@@ -91,21 +91,21 @@
     "table" : "path_m_hpb",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_baq",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_dao",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -175,7 +175,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -370,15 +371,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_baq",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_dao",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "seer_mets_palatesoft_27852",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -388,5 +389,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "clinical_n_head_neck_except_nasopharynx_25237", "ssf10_spd", "radiation_surg_seq", "ssf1_jpa", "schema_selection_palate_soft", "path_m_hpb", "determine_default_m", "combined_n_to_summ_stage_n_headneck_palatehardsoftepiant_45582", "seer_mets_palatesoft_27852", "tnm7_stage_upt", "path_n_head_neck_except_nasopharynx_40357", "nodes_pos_fpa", "determine_default_n", "nodes_dao", "histology", "ssf6_opa", "ssf3_lpa", "tnm7_inclusions_tpb", "behavior", "combined_t_to_summ_stage_t_4b_4e_d_9381", "extension_baq", "seer_mets_palatesoftvs2_29489", "ssf4_mpa", "path_t_baq", "palate_soft_t_48973", "ssf9_spc", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_n", "ssf5_npa", "year_dx_validation", "summary_stage_rpa", "combined_t", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:50.249Z"
+  "last_modified" : "2015-09-04T21:14:42.835Z"
 }

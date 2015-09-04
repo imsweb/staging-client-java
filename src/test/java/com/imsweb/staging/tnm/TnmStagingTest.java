@@ -4,6 +4,7 @@
 package com.imsweb.staging.tnm;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -601,8 +602,8 @@ public class TnmStagingTest {
         Assert.assertTrue(_STAGING.isCodeValid("urethra", "year_dx", "2015"));
 
         // test valid and invalid fields
-        Assert.assertTrue(_STAGING.isCodeValid("urethra", "extension", "100"));
-        Assert.assertFalse(_STAGING.isCodeValid("urethra", "extension", "150"));
+        Assert.assertTrue(_STAGING.isCodeValid("urethra", "seer_primary_tumor", "100"));
+        Assert.assertFalse(_STAGING.isCodeValid("urethra", "seer_primary_tumor", "150"));
         Assert.assertTrue(_STAGING.isCodeValid("urethra", "ssf1", "020"));
         Assert.assertFalse(_STAGING.isCodeValid("urethra", "ssf1", "030"));
     }
@@ -713,12 +714,22 @@ public class TnmStagingTest {
 
     @Test
     public void verifyInputs() {
+        List<String> errors = new ArrayList<String>();
+
         for (String id : _STAGING.getSchemaIds()) {
             StagingSchema schema = _STAGING.getSchema(id);
 
             // loop over all the inputs returned by processing the schema and make sure they are all part of the main list of inputs on the schema
             for (String input : _STAGING.getInputs(schema))
-                Assert.assertTrue("Error processing schema " + schema.getId() + ": Table input '" + input + "' not in master list of inputs", schema.getInputMap().containsKey(input));
+                if (!schema.getInputMap().containsKey(input))
+                    errors.add("Error processing schema " + schema.getId() + ": Table input '" + input + "' not in master list of inputs");
+        }
+
+        if (!errors.isEmpty()) {
+            System.out.println("There were " + errors.size() + " issues with input values.");
+            for (String error : errors)
+                System.out.println(error);
+            Assert.fail();
         }
     }
 
@@ -843,7 +854,6 @@ public class TnmStagingTest {
             for (StagingMapping mapping : schema.getMappings()) {
                 if (ids.contains(mapping.getId()))
                     errors.add("The mapping id " + schemaId + ":" + mapping.getId() + " is duplicated.  This should never happen");
-                System.out.println(schemaId + ":" + mapping.getId());
                 ids.add(mapping.getId());
             }
         }

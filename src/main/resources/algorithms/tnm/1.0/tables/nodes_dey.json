@@ -6,9 +6,9 @@
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are assigned to SEER Mets.\n\n**Note 2:**  Inferior mesenteric nodes are coded in SEER Mets for cecum, ascending colon, transverse colon, and hepatic flexure .  Superior mesenteric nodes are coded in SEER Mets for all colon sites.  Mesenteric node(s), NOS are assigned to SEER Regional Nodes.\n\n**Note 3:**  Nodal metastasis is very rare in gastrointestinal stromal tumors (GISTs) and surgeons generally agree that nodal dissection is not indicated.  In the absence of information on regional lymph node status, code as Unknown.",
   "footnotes" : "Â¥ Considered distant for splenic flexure in Historic Stage\n\\### Considered distant in Historic Stage",
-  "last_modified" : "2015-08-13T13:25:19.407Z",
+  "last_modified" : "2015-09-04T20:51:56.131Z",
   "definition" : [ {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "Code",
     "type" : "INPUT"
   }, {

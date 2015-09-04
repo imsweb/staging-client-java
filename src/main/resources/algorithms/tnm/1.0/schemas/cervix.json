@@ -91,21 +91,21 @@
     "table" : "path_m_han",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bbk",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_dbc",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -169,7 +169,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -364,15 +365,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_bbk",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_dbc",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "mets_han",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -380,7 +381,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "path_m_han", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf3_lpu", "nodes_dbc", "radiation_surg_seq", "mets_han", "clin_m_han", "clin_n_dbc", "determine_default_m", "nodes_pos_fpa", "tnm7_stage_ubh", "path_n_dbc", "ssf9_sdz", "determine_default_n", "ssf6_oaw", "combined_n_to_summ_stage_n_84054", "histology", "ssf2_kpr", "cervix_uteri_t_38859", "extension_bbk", "tnm7_inclusions_tpb", "behavior", "ssf8_sdy", "ssf5_npm", "ssf1_jbv", "adjust_path_defaults", "systemic_surg_seq", "ssf7_sdx", "combined_t_to_summ_stage_t_2_3_re_4_d_26385", "primary_site", "schema_selection_cervix", "combined_m", "ssf4_mps", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
+  "involved_tables" : [ "path_m_han", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf3_lpu", "nodes_dbc", "radiation_surg_seq", "clin_m_han", "mets_han", "clin_n_dbc", "determine_default_m", "nodes_pos_fpa", "tnm7_stage_ubh", "path_n_dbc", "ssf9_sdz", "determine_default_n", "ssf6_oaw", "combined_n_to_summ_stage_n_84054", "histology", "ssf2_kpr", "cervix_uteri_t_38859", "extension_bbk", "tnm7_inclusions_tpb", "behavior", "ssf8_sdy", "ssf5_npm", "ssf1_jbv", "adjust_path_defaults", "systemic_surg_seq", "ssf7_sdx", "combined_t_to_summ_stage_t_2_3_re_4_d_26385", "primary_site", "schema_selection_cervix", "combined_m", "ssf4_mps", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:57.091Z"
+  "last_modified" : "2015-09-04T20:51:34.190Z"
 }

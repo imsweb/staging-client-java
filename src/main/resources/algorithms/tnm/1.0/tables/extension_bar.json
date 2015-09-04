@@ -5,9 +5,9 @@
   "name" : "SEER Primary Tumor",
   "title" : "SEER Primary Tumor",
   "footnotes" : "\\##Considered regional in Historic Stage\n\\###Considered distant in Historic Stage\n\\***Considered distant in 1977 Summary Staging Guide",
-  "last_modified" : "2015-08-13T13:25:42.413Z",
+  "last_modified" : "2015-09-04T20:52:05.236Z",
   "definition" : [ {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "Code",
     "type" : "INPUT"
   }, {

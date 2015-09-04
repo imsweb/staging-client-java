@@ -6,9 +6,9 @@
   "title" : "SEER Primary Tumor",
   "notes" : "**Note:**  High-grade dysplasia is generally not reportable in cancer registries, but, if a registry does collect this, code in situ.",
   "footnotes" : "\\*** Considered distant in 1977 Summary Staging Guide",
-  "last_modified" : "2015-08-17T15:23:40.173Z",
+  "last_modified" : "2015-09-04T20:51:49.515Z",
   "definition" : [ {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "Code",
     "type" : "INPUT"
   }, {

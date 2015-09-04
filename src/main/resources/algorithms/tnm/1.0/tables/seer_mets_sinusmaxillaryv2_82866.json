@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "SEER Mets SinusMaxillaryv2",
   "title" : "SEER Mets",
-  "last_modified" : "2015-08-13T14:52:03.917Z",
+  "last_modified" : "2015-09-04T21:14:13.386Z",
   "definition" : [ {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "Code",
     "type" : "INPUT"
   }, {

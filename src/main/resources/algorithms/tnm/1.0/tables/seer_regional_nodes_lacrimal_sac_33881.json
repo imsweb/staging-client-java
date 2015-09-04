@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "SEER Regional Nodes Lacrimal Sac",
   "title" : "SEER Regional Nodes",
-  "last_modified" : "2015-08-13T13:25:22.469Z",
+  "last_modified" : "2015-09-04T21:14:35.245Z",
   "definition" : [ {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "Code",
     "type" : "INPUT"
   }, {

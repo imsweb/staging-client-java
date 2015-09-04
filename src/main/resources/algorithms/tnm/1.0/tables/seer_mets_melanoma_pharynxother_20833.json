@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "SEER Mets Melanoma PharynxOther",
   "title" : "SEER Mets",
-  "last_modified" : "2015-08-13T15:13:49.096Z",
+  "last_modified" : "2015-09-04T21:14:31.400Z",
   "definition" : [ {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "Code",
     "type" : "INPUT"
   }, {

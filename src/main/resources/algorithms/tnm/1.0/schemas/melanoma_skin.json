@@ -92,21 +92,21 @@
     "table" : "path_m_had",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_ban",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_dam",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -169,7 +169,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -381,15 +382,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_ban",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_dam",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "mets_had",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rac",
@@ -399,5 +400,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "nodes_pos_fah", "determine_default_t", "schema_selection_melanoma_skin", "input_version_validation", "radiation_surg_seq", "determine_default_m", "lymph_nodes_eval_temp_65876", "summary_stage_rac", "mets_had", "determine_default_n", "ssf6_oax", "path_n_dam", "combined_n_to_summ_stage_n_84054", "ssf1_jpl", "ssf7_seb", "histology", "nodes_dam", "ssf4_maa", "tnm7_inclusions_tpa", "behavior", "clin_m_had", "ssf8_sec", "path_t_ban", "ssf5_nba", "clin_t_ban", "clin_n_dam", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "ssf9_sed", "combined_n", "path_m_had", "ssf2_kaa", "year_dx_validation", "tnm7_stage_ubv", "combined_t", "extension_ban" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:55.997Z"
+  "last_modified" : "2015-09-04T20:51:38.999Z"
 }

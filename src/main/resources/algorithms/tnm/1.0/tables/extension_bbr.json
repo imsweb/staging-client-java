@@ -6,9 +6,9 @@
   "title" : "SEER Primary Tumor",
   "description" : "NOTE- SME1 thinks Note1 and Note 2 should be deleted - please review reasoning - Thanks; NOTE 3 added by SME1; All of the footnotes should be removed as they reference CS and SS maps based on direct extension with or without LN involvement. --SME 2 agrees, made changes",
   "notes" : "**Note 1:** Code 000 (in situ) is not applicable for this schema.",
-  "last_modified" : "2015-08-13T13:25:22.110Z",
+  "last_modified" : "2015-09-04T20:51:36.480Z",
   "definition" : [ {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "Code",
     "type" : "INPUT"
   }, {

@@ -6,9 +6,9 @@
   "title" : "SEER Primary Tumor",
   "description" : "Delete Notes 3-5 as they pertain to TNM and CS.",
   "notes" : "**Note 1:**  Superficial erosion alone of bone/tooth socket by gingival primary is not sufficient to code as bone involvement. \n\n**Note 2:**  Periosteum is a fibrous membrane that wraps the outer surface of bones.  Mucoperiosteum is a compound structure of mucous membrane and periosteum.  Cortical bone is the dense compact outer layer of bone. Trabecular, cancellous, or spongy bone (spongiosa) is a porous network of tissue filling the interior of bone, decreasing weight and allowing room for blood vessels and marrow.",
-  "last_modified" : "2015-08-13T13:25:15.054Z",
+  "last_modified" : "2015-09-04T20:52:15.356Z",
   "definition" : [ {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "Code",
     "type" : "INPUT"
   }, {

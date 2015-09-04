@@ -5,9 +5,9 @@
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
   "notes" : "**Note1:**  Nodal metastasis is very rare in gastrointestinal stromal tumors and surgeons generally agree that nodal dissection is not indicated.",
-  "last_modified" : "2015-08-13T13:26:05.769Z",
+  "last_modified" : "2015-09-04T20:51:53.347Z",
   "definition" : [ {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "Code",
     "type" : "INPUT"
   }, {

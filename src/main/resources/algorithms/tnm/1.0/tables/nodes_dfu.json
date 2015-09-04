@@ -5,9 +5,9 @@
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
   "notes" : "**Note:**  Regional lymph node involvement is not applicable for cases coded with this schema beginning with CS Version 2.  Old data are retained, and new cases are coded 988.",
-  "last_modified" : "2015-08-13T13:23:14.905Z",
+  "last_modified" : "2015-09-04T20:52:08.109Z",
   "definition" : [ {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "Code",
     "type" : "INPUT"
   }, {

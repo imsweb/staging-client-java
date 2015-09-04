@@ -6,9 +6,9 @@
   "title" : "SEER Mets",
   "notes" : "**Note:**  For head and neck cancers, if lymph nodes are described only as \"supraclavicular\", try to determine if they are in Level IV (deep to the sternocleidomastoid muscle, in the lower jugular chain) or Level V (in the posterior triangle, inferior to the transverse cervical artery) and code appropriately.  If the specific level cannot be determined, consider them as Level V nodes. Level IV nodes should be collected in SEER Regional Nodes, while Level V nodes, inclusive of supraclavicular, NOS, should be collected in SEER Mets.",
   "footnotes" : "\\## Considered regional in Historic Stage",
-  "last_modified" : "2015-08-13T13:24:16.080Z",
+  "last_modified" : "2015-09-04T21:14:43.342Z",
   "definition" : [ {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "Code",
     "type" : "INPUT"
   }, {

@@ -91,21 +91,21 @@
     "table" : "path_m_hap",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bdf",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_dbm",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -132,7 +132,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -327,15 +328,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_bdf",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_dbm",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "mets_hap",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -345,5 +346,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "path_m_hap", "input_version_validation", "clin_m_hap", "ssf2_kpd", "radiation_surg_seq", "mets_hap", "clin_n_dbm", "determine_default_m", "tnm7_stage_ups", "ssf1_jpe", "tnm7_inclusions_tae", "nodes_pos_fpa", "determine_default_n", "combined_n_to_summ_stage_n_84054", "ssf3_lpd", "histology", "extension_bdf", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "schema_selection_pancreas_body_tail", "behavior", "adjust_path_defaults", "systemic_surg_seq", "pancreas_bodytail_t_46669", "primary_site", "path_n_dbm", "combined_m", "combined_n", "nodes_dbm", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:53.719Z"
+  "last_modified" : "2015-09-04T20:51:48.766Z"
 }

@@ -92,21 +92,21 @@
     "table" : "path_m_hau",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bak",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_daj",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -278,7 +278,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -469,15 +470,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_bak",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_daj",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "mets_hau",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -487,5 +488,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "ssf22_san", "ssf23_sao", "ssf5_naa", "schema_selection_breast", "histology", "ssf24_sap", "nodes_pos_fab", "tnm7_inclusions_tpg", "ssf3_lac", "ssf11_sae", "ssf16_sah", "ssf14_sbf", "ssf20_sal", "nodes_daj", "systemic_surg_seq", "tnm7_stage_uac", "ssf10_sad", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "ssf15_sbg", "ssf21_sam", "summary_stage_rpa", "ssf17_sai", "ssf1_jag", "combined_t_breast", "extension_bak", "combined_n_to_summ_stage_n_n3c_d_43145", "determine_default_t", "input_version_validation", "ssf19_sak", "radiation_surg_seq", "ssf6_oaa", "determine_default_m", "ssf18_saj", "clin_m_hau", "determine_default_n", "ssf7_saa", "path_n_daj", "ssf4_mab", "path_m_hau", "behavior", "mets_hau", "ssf8_sab", "ssf12_saf", "adjust_path_defaults", "clin_n_daj", "primary_site", "ssf2_kac", "year_dx_validation", "ssf9_sac", "breast_t_70656", "ssf13_sag" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:04:56.683Z"
+  "last_modified" : "2015-09-04T20:52:09.699Z"
 }

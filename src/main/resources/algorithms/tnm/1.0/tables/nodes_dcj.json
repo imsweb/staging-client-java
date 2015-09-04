@@ -5,9 +5,9 @@
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
   "notes" : "**Note:** When coding Regional Nodes Positive and Regional Nodes Examined, only include regional nodes. Do not include distant nodes.  If the only information available is for lymph nodes, NOS, assume these are regional nodes for coding Regional Nodes Positive and Regional Nodes Examined.",
-  "last_modified" : "2015-08-13T13:23:33.136Z",
+  "last_modified" : "2015-09-04T20:52:25.797Z",
   "definition" : [ {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "Code",
     "type" : "INPUT"
   }, {

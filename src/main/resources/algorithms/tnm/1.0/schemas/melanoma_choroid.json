@@ -86,21 +86,21 @@
     "table" : "path_m_hpg",
     "used_for_staging" : true
   }, {
-    "key" : "extension",
+    "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
     "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bda",
     "used_for_staging" : true
   }, {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
     "default" : "999",
     "table" : "seer_regional_nodes_melanomachoroid_3244",
     "used_for_staging" : true
   }, {
-    "key" : "mets",
+    "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
     "default" : "99",
@@ -196,7 +196,8 @@
   } ],
   "outputs" : [ {
     "key" : "derived_version",
-    "name" : "Derived Version"
+    "name" : "Derived Version",
+    "default" : "1.0"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -268,7 +269,7 @@
       "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_clin_m", "combined_m_in", "source_m" ]
     }, {
       "id" : "melanoma_choroid_tumor_size_category_ajcc7",
-      "inputs" : [ "extension", "ssf2", "ssf3" ],
+      "inputs" : [ "ssf2", "seer_primary_tumor", "ssf3" ],
       "outputs" : [ "t_category" ]
     }, {
       "id" : "tnm7_stage_upv",
@@ -395,15 +396,15 @@
     } ],
     "tables" : [ {
       "id" : "extension_bda",
-      "inputs" : [ "extension" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "seer_regional_nodes_melanomachoroid_3244",
-      "inputs" : [ "nodes" ],
+      "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "seer_mets_melanomaeye_exclconj_86372",
-      "inputs" : [ "mets" ],
+      "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
       "id" : "summary_stage_rpa",
@@ -413,5 +414,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "ssf13_sqq", "ssf12_sqb", "determine_default_m", "ssf3_lpj", "ssf8_spx", "nodes_pos_fpa", "clin_m_hpg", "tnm7_stage_upv", "determine_default_n", "melanoma_choroid_tumor_size_category_ajcc7", "combined_n_to_summ_stage_n_84054", "ssf6_opd", "histology", "tnm7_inclusions_tpa", "combined_t_no_tis", "path_m_hpg", "ssf2_kpj", "combined_t_to_summ_stage_t_a_b_l_c_d_e_re_18944", "schema_selection_melanoma_choroid", "melanoma_choroid_t_79116", "seer_regional_nodes_melanomachoroid_3244", "extension_bda", "ssf10_spz", "adjust_path_defaults", "ssf5_npf", "systemic_surg_seq", "ophthalmic_n_36875", "seer_mets_melanomaeye_exclconj_86372", "ssf9_sqm", "primary_site", "combined_m", "combined_n", "ssf11_sqa", "year_dx_validation", "ssf14_sqr", "summary_stage_rpa", "ssf7_spw", "ssf4_mpe", "seer_mets_melanomachoroid_55264" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T16:05:01.986Z"
+  "last_modified" : "2015-09-04T21:13:50.498Z"
 }

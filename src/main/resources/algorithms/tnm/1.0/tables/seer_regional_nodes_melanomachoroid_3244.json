@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "SEER Regional Nodes Eye",
   "title" : "SEER Regional Nodes",
-  "last_modified" : "2015-08-13T13:23:59.267Z",
+  "last_modified" : "2015-09-04T20:51:26.630Z",
   "definition" : [ {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "Code",
     "type" : "INPUT"
   }, {

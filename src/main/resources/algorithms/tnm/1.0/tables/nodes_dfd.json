@@ -5,9 +5,9 @@
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:**  Superior and inferior mesenteric nodes are coded in SEER Mets.  Mesenteric nodes, NOS are coded in SEER Regional Lymph Nodes.  \n\n**Note 3:**  Nodal metastasis is very rare in gastrointestinal stromal tumors and surgeons generally agree that nodal dissection is not indicated.  In the absence of information on regional lymph node status, assign no regional lymph node involvement (code 000).",
-  "last_modified" : "2015-08-13T13:25:21.389Z",
+  "last_modified" : "2015-09-04T20:51:58.038Z",
   "definition" : [ {
-    "key" : "nodes",
+    "key" : "seer_nodes",
     "name" : "Code",
     "type" : "INPUT"
   }, {
