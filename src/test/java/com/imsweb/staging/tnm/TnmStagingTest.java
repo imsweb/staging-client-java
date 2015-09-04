@@ -4,7 +4,6 @@
 package com.imsweb.staging.tnm;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -252,52 +251,52 @@ public class TnmStagingTest {
 
     @Test
     public void testInputBuilder() {
-        com.imsweb.staging.tnm.TnmStagingData data1 = new com.imsweb.staging.tnm.TnmStagingData();
-        data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.INPUT_VERSION, "1.0");
-        data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.PRIMARY_SITE, "C680");
-        data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.HISTOLOGY, "8000");
-        data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.BEHAVIOR, "3");
-        data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.GRADE, "9");
-        data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.DX_YEAR, "2013");
-        data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.INPUT_VERSION, "1.0");
-        data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.EXTENSION, "100");
-        data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.LYMPH_NODES, "100");
-        data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.REGIONAL_NODES_POSITIVE, "99");
-        data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.METS_AT_DX, "10");
-        data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.AGE_AT_DX, "060");
-        data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.SEX, "1");
-        data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.RX_SUMM_SURGERY, "8");
-        data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.RX_SUMM_RADIATION, "9");
-        data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.CLIN_T, "1");
-        data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.CLIN_N, "2");
-        data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.CLIN_M, "3");
-        data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.PATH_T, "4");
-        data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.PATH_N, "5");
-        data1.setInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.PATH_M, "6");
+        TnmStagingData data1 = new TnmStagingData();
+        data1.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "1.0");
+        data1.setInput(TnmStagingData.TnmInput.PRIMARY_SITE, "C680");
+        data1.setInput(TnmStagingData.TnmInput.HISTOLOGY, "8000");
+        data1.setInput(TnmStagingData.TnmInput.BEHAVIOR, "3");
+        data1.setInput(TnmStagingData.TnmInput.GRADE, "9");
+        data1.setInput(TnmStagingData.TnmInput.DX_YEAR, "2013");
+        data1.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "1.0");
+        data1.setInput(TnmStagingData.TnmInput.SEER_PRIMARY_TUMOR, "100");
+        data1.setInput(TnmStagingData.TnmInput.SEER_REGIONAL_NODES, "100");
+        data1.setInput(TnmStagingData.TnmInput.REGIONAL_NODES_POSITIVE, "99");
+        data1.setInput(TnmStagingData.TnmInput.SEER_METS, "10");
+        data1.setInput(TnmStagingData.TnmInput.AGE_AT_DX, "060");
+        data1.setInput(TnmStagingData.TnmInput.SEX, "1");
+        data1.setInput(TnmStagingData.TnmInput.RX_SUMM_SURGERY, "8");
+        data1.setInput(TnmStagingData.TnmInput.RX_SUMM_RADIATION, "9");
+        data1.setInput(TnmStagingData.TnmInput.CLIN_T, "1");
+        data1.setInput(TnmStagingData.TnmInput.CLIN_N, "2");
+        data1.setInput(TnmStagingData.TnmInput.CLIN_M, "3");
+        data1.setInput(TnmStagingData.TnmInput.PATH_T, "4");
+        data1.setInput(TnmStagingData.TnmInput.PATH_N, "5");
+        data1.setInput(TnmStagingData.TnmInput.PATH_M, "6");
         data1.setSsf(1, "020");
 
-        com.imsweb.staging.tnm.TnmStagingData data2 = new com.imsweb.staging.tnm.TnmStagingData.TnmStagingInputBuilder()
-                .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.INPUT_VERSION, "1.0")
-                .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.PRIMARY_SITE, "C680")
-                .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.HISTOLOGY, "8000")
-                .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.BEHAVIOR, "3")
-                .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.GRADE, "9")
-                .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.DX_YEAR, "2013")
-                .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.INPUT_VERSION, "1.0")
-                .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.EXTENSION, "100")
-                .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.LYMPH_NODES, "100")
-                .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.REGIONAL_NODES_POSITIVE, "99")
-                .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.METS_AT_DX, "10")
-                .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.AGE_AT_DX, "060")
-                .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.SEX, "1")
-                .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.RX_SUMM_SURGERY, "8")
-                .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.RX_SUMM_RADIATION, "9")
-                .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.CLIN_T, "1")
-                .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.CLIN_N, "2")
-                .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.CLIN_M, "3")
-                .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.PATH_T, "4")
-                .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.PATH_N, "5")
-                .withInput(com.imsweb.staging.tnm.TnmStagingData.TnmInput.PATH_M, "6")
+        TnmStagingData data2 = new TnmStagingData.TnmStagingInputBuilder()
+                .withInput(TnmStagingData.TnmInput.INPUT_VERSION, "1.0")
+                .withInput(TnmStagingData.TnmInput.PRIMARY_SITE, "C680")
+                .withInput(TnmStagingData.TnmInput.HISTOLOGY, "8000")
+                .withInput(TnmStagingData.TnmInput.BEHAVIOR, "3")
+                .withInput(TnmStagingData.TnmInput.GRADE, "9")
+                .withInput(TnmStagingData.TnmInput.DX_YEAR, "2013")
+                .withInput(TnmStagingData.TnmInput.INPUT_VERSION, "1.0")
+                .withInput(TnmStagingData.TnmInput.SEER_PRIMARY_TUMOR, "100")
+                .withInput(TnmStagingData.TnmInput.SEER_REGIONAL_NODES, "100")
+                .withInput(TnmStagingData.TnmInput.REGIONAL_NODES_POSITIVE, "99")
+                .withInput(TnmStagingData.TnmInput.SEER_METS, "10")
+                .withInput(TnmStagingData.TnmInput.AGE_AT_DX, "060")
+                .withInput(TnmStagingData.TnmInput.SEX, "1")
+                .withInput(TnmStagingData.TnmInput.RX_SUMM_SURGERY, "8")
+                .withInput(TnmStagingData.TnmInput.RX_SUMM_RADIATION, "9")
+                .withInput(TnmStagingData.TnmInput.CLIN_T, "1")
+                .withInput(TnmStagingData.TnmInput.CLIN_N, "2")
+                .withInput(TnmStagingData.TnmInput.CLIN_M, "3")
+                .withInput(TnmStagingData.TnmInput.PATH_T, "4")
+                .withInput(TnmStagingData.TnmInput.PATH_N, "5")
+                .withInput(TnmStagingData.TnmInput.PATH_M, "6")
                 .withSsf(1, "020").build();
 
         Assert.assertEquals(data1.getInput(), data2.getInput());
@@ -352,7 +351,7 @@ public class TnmStagingTest {
         //
         //        Assert.assertEquals(StagingData.Result.STAGED, data.getResult());
         //        Assert.assertEquals("brain", data.getSchemaId());
-        //        for (com.imsweb.decisionengine.Error error : data.getErrors())
+        //        for (Error error : data.getErrors())
         //            Assert.assertEquals(Error.Type.MATCH_NOT_FOUND, error.getType());
     }
 
@@ -810,19 +809,15 @@ public class TnmStagingTest {
             // build a list of input tables that should be excluded
             for (StagingSchemaInput input : schema.getInputs()) {
                 if (input.getTable() != null) {
-                    List<String> inputKeys = new ArrayList<String>();
+                    Set<String> inputKeys = new HashSet<String>();
                     StagingTable table = _STAGING.getTable(input.getTable());
                     for (StagingColumnDefinition def : table.getColumnDefinitions())
                         if (ColumnDefinition.ColumnType.INPUT.equals(def.getType()))
                             inputKeys.add(def.getKey());
 
-                    // make sure all input validation tables have exactly 1 INPUT column
-                    if (inputKeys.size() != 1)
-                        errors.add("Input validation table " + schemaId + ":" + table.getId() + " does not have exactly 1 INPUT column");
-
-                    // make sure the input key matches the input column
-                    //                    if (!input.getKey().equals(inputKeys.get(0)))
-                    //                        errors.add("Input key " + schemaId + ":" + input.getKey() + " does not match validation table " + table.getId() + ":" + inputKeys.get(0));
+                    // make sure the input key matches the an input column
+                    if (!inputKeys.contains(input.getKey()))
+                        errors.add("Input key " + schemaId + ":" + input.getKey() + " does not match validation table " + table.getId() + ": " + inputKeys.toString());
                 }
             }
         }

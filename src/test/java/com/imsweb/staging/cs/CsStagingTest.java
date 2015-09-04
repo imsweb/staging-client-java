@@ -22,6 +22,7 @@ import org.junit.Test;
 
 import com.google.common.collect.Sets;
 
+import com.imsweb.decisionengine.ColumnDefinition;
 import com.imsweb.decisionengine.Error.Type;
 import com.imsweb.staging.IntegrationUtils;
 import com.imsweb.staging.IntegrationUtils.IntegrationResult;
@@ -32,6 +33,7 @@ import com.imsweb.staging.StagingData.Result;
 import com.imsweb.staging.cs.CsDataProvider.CsVersion;
 import com.imsweb.staging.cs.CsStagingData.CsOutput;
 import com.imsweb.staging.cs.CsStagingData.CsStagingInputBuilder;
+import com.imsweb.staging.entities.StagingColumnDefinition;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingSchemaInput;
 import com.imsweb.staging.entities.StagingStringRange;
@@ -858,36 +860,36 @@ public class CsStagingTest {
             Assert.fail("There are " + unusedTables.size() + " tables that are not used in any schema: " + unusedTables);
     }
 
-    //    @Test
-    //    public void testInputTables() {
-    //        Set<String> errors = new HashSet<String>();
-    //
-    //        for (String schemaId : _STAGING.getSchemaIds()) {
-    //            StagingSchema schema = _STAGING.getSchema(schemaId);
-    //
-    //            // build a list of input tables that should be excluded
-    //            for (StagingSchemaInput input : schema.getInputs()) {
-    //                if (input.getTable() != null) {
-    //                    List<String> inputKeys = new ArrayList<String>();
-    //                    StagingTable table = _STAGING.getTable(input.getTable());
-    //                    for (StagingColumnDefinition def : table.getColumnDefinitions())
-    //                        if (ColumnDefinition.ColumnType.INPUT.equals(def.getType()))
-    //                            inputKeys.add(def.getKey());
-    //
-    //                    // make sure all input validation tables have exactly 1 INPUT column
-    //                    if (inputKeys.size() != 1)
-    //                        errors.add("Input validation table " + schemaId + ":" + table.getId() + " does not have exactly 1 INPUT column");
-    //                }
-    //            }
-    //        }
-    //
-    //        if (!errors.isEmpty()) {
-    //            System.out.println("There were " + errors.size() + " issues with input values and their assocated validation tables.");
-    //            for (String error : errors)
-    //                System.out.println(error);
-    //            Assert.fail();
-    //        }
-    //    }
+    @Test
+    public void testInputTables() {
+        Set<String> errors = new HashSet<String>();
+
+        for (String schemaId : _STAGING.getSchemaIds()) {
+            StagingSchema schema = _STAGING.getSchema(schemaId);
+
+            // build a list of input tables that should be excluded
+            for (StagingSchemaInput input : schema.getInputs()) {
+                if (input.getTable() != null) {
+                    Set<String> inputKeys = new HashSet<String>();
+                    StagingTable table = _STAGING.getTable(input.getTable());
+                    for (StagingColumnDefinition def : table.getColumnDefinitions())
+                        if (ColumnDefinition.ColumnType.INPUT.equals(def.getType()))
+                            inputKeys.add(def.getKey());
+
+                    // make sure the input key matches the an input column
+                    if (!inputKeys.contains(input.getKey()))
+                        errors.add("Input key " + schemaId + ":" + input.getKey() + " does not match validation table " + table.getId() + ": " + inputKeys.toString());
+                }
+            }
+        }
+
+        if (!errors.isEmpty()) {
+            System.out.println("There were " + errors.size() + " issues with input values and their assocated validation tables.");
+            for (String error : errors)
+                System.out.println(error);
+            Assert.fail();
+        }
+    }
 
     /**
      * This tests that INPUT fields in tables that have a validation table associated with them are the correct length.  In other words,
