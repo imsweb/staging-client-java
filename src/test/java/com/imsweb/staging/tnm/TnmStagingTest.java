@@ -22,6 +22,7 @@ import com.imsweb.staging.SchemaLookup;
 import com.imsweb.staging.Staging;
 import com.imsweb.staging.StagingData;
 import com.imsweb.staging.entities.StagingColumnDefinition;
+import com.imsweb.staging.entities.StagingMapping;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingSchemaInput;
 import com.imsweb.staging.entities.StagingTable;
@@ -828,6 +829,32 @@ public class TnmStagingTest {
                 System.out.println(error);
             Assert.fail();
         }
+    }
+
+    @Test
+    public void testMappingIdUniqueness() {
+        Set<String> errors = new HashSet<String>();
+
+        for (String schemaId : _STAGING.getSchemaIds()) {
+            StagingSchema schema = _STAGING.getSchema(schemaId);
+
+            // build a list of input tables that should be excluded
+            Set<String> ids = new HashSet<String>();
+            for (StagingMapping mapping : schema.getMappings()) {
+                if (ids.contains(mapping.getId()))
+                    errors.add("The mapping id " + schemaId + ":" + mapping.getId() + " is duplicated.  This should never happen");
+                System.out.println(schemaId + ":" + mapping.getId());
+                ids.add(mapping.getId());
+            }
+        }
+
+        if (!errors.isEmpty()) {
+            System.out.println("There were " + errors.size() + " issues with input values and their assocated validation tables.");
+            for (String error : errors)
+                System.out.println(error);
+            Assert.fail();
+        }
+
     }
 
 }
