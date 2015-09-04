@@ -92,19 +92,22 @@
     "used_for_staging" : true
   }, {
     "key" : "extension",
-    "name" : "Extension",
+    "name" : "SEER Primary Tumor",
+    "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bbk",
     "used_for_staging" : true
   }, {
     "key" : "nodes",
-    "name" : "Lymph Nodes",
+    "name" : "SEER Regional Nodes",
+    "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_dbc",
     "used_for_staging" : true
   }, {
     "key" : "mets",
-    "name" : "Mets",
+    "name" : "SEER Mets",
+    "naaccr_item" : 776,
     "default" : "99",
     "table" : "mets_han",
     "used_for_staging" : true
@@ -163,6 +166,59 @@
     "naaccr_item" : 2863,
     "table" : "ssf9_sdz",
     "used_for_staging" : false
+  } ],
+  "outputs" : [ {
+    "key" : "derived_version",
+    "name" : "Derived Version"
+  }, {
+    "key" : "clin_stage_group",
+    "name" : "Derived SEER Clin Stage Group",
+    "naaccr_item" : 3610
+  }, {
+    "key" : "path_stage_group",
+    "name" : "Derived SEER Path Stage Group",
+    "naaccr_item" : 3605
+  }, {
+    "key" : "combined_stage_group",
+    "name" : "Derived SEER Combined Stage Group",
+    "naaccr_item" : 3614
+  }, {
+    "key" : "combined_t",
+    "name" : "Derived SEER Combined T",
+    "naaccr_item" : 3616
+  }, {
+    "key" : "combined_n",
+    "name" : "Derived SEER Combined N",
+    "naaccr_item" : 3618
+  }, {
+    "key" : "combined_m",
+    "name" : "Derived SEER Combined M",
+    "naaccr_item" : 3620
+  }, {
+    "key" : "source_t",
+    "name" : "Derived SEER Combined T Source",
+    "naaccr_item" : 3622
+  }, {
+    "key" : "source_n",
+    "name" : "Derived SEER Combined N Source",
+    "naaccr_item" : 3624
+  }, {
+    "key" : "source_m",
+    "name" : "Derived SEER Combined M Source",
+    "naaccr_item" : 3626
+  }, {
+    "key" : "ss2017",
+    "name" : "Derived SEER Summary Stage 2017",
+    "naaccr_item" : 762
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Derived SEER Summary Stage 2017 T"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Derived SEER Summary Stage 2017 N"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "tnm7_stage",
@@ -326,5 +382,5 @@
   } ],
   "involved_tables" : [ "path_m_han", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf3_lpu", "nodes_dbc", "radiation_surg_seq", "mets_han", "clin_m_han", "clin_n_dbc", "determine_default_m", "nodes_pos_fpa", "tnm7_stage_ubh", "path_n_dbc", "ssf9_sdz", "determine_default_n", "ssf6_oaw", "combined_n_to_summ_stage_n_84054", "histology", "ssf2_kpr", "cervix_uteri_t_38859", "extension_bbk", "tnm7_inclusions_tpb", "behavior", "ssf8_sdy", "ssf5_npm", "ssf1_jbv", "adjust_path_defaults", "systemic_surg_seq", "ssf7_sdx", "combined_t_to_summ_stage_t_2_3_re_4_d_26385", "primary_site", "schema_selection_cervix", "combined_m", "ssf4_mps", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-08-25T18:33:30.329Z"
+  "last_modified" : "2015-09-04T16:04:57.091Z"
 }

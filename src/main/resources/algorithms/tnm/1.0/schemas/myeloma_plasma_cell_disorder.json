@@ -42,19 +42,22 @@
     "used_for_staging" : true
   }, {
     "key" : "extension",
-    "name" : "Extension",
+    "name" : "SEER Primary Tumor",
+    "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_bgc",
     "used_for_staging" : true
   }, {
     "key" : "nodes",
-    "name" : "Lymph Nodes",
+    "name" : "SEER Regional Nodes",
+    "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_dfy",
     "used_for_staging" : true
   }, {
     "key" : "mets",
-    "name" : "Mets",
+    "name" : "SEER Mets",
+    "naaccr_item" : 776,
     "default" : "99",
     "table" : "mets_hna",
     "used_for_staging" : true
@@ -72,6 +75,59 @@
     "table" : "ssf3_lbb",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  } ],
+  "outputs" : [ {
+    "key" : "derived_version",
+    "name" : "Derived Version"
+  }, {
+    "key" : "clin_stage_group",
+    "name" : "Derived SEER Clin Stage Group",
+    "naaccr_item" : 3610
+  }, {
+    "key" : "path_stage_group",
+    "name" : "Derived SEER Path Stage Group",
+    "naaccr_item" : 3605
+  }, {
+    "key" : "combined_stage_group",
+    "name" : "Derived SEER Combined Stage Group",
+    "naaccr_item" : 3614
+  }, {
+    "key" : "combined_t",
+    "name" : "Derived SEER Combined T",
+    "naaccr_item" : 3616
+  }, {
+    "key" : "combined_n",
+    "name" : "Derived SEER Combined N",
+    "naaccr_item" : 3618
+  }, {
+    "key" : "combined_m",
+    "name" : "Derived SEER Combined M",
+    "naaccr_item" : 3620
+  }, {
+    "key" : "source_t",
+    "name" : "Derived SEER Combined T Source",
+    "naaccr_item" : 3622
+  }, {
+    "key" : "source_n",
+    "name" : "Derived SEER Combined N Source",
+    "naaccr_item" : 3624
+  }, {
+    "key" : "source_m",
+    "name" : "Derived SEER Combined M Source",
+    "naaccr_item" : 3626
+  }, {
+    "key" : "ss2017",
+    "name" : "Derived SEER Summary Stage 2017",
+    "naaccr_item" : 762
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Derived SEER Summary Stage 2017 T"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Derived SEER Summary Stage 2017 N"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "summary_stage_2017",
@@ -96,5 +152,5 @@
   } ],
   "involved_tables" : [ "primary_site", "ssf2_kbx", "input_version_validation", "histology", "schema_selection_myeloma_plasma_cell_disorder", "ssf3_lbb", "year_dx_validation", "summary_stage_rpa", "mets_hna", "extension_bgc", "nodes_dfy" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-08-25T18:33:27.301Z"
+  "last_modified" : "2015-09-04T16:04:58.703Z"
 }

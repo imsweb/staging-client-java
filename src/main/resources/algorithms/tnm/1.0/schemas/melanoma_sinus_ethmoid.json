@@ -86,19 +86,22 @@
     "used_for_staging" : true
   }, {
     "key" : "extension",
-    "name" : "Extension",
+    "name" : "SEER Primary Tumor",
+    "naaccr_item" : 772,
     "default" : "999",
     "table" : "extension_beg",
     "used_for_staging" : true
   }, {
     "key" : "nodes",
-    "name" : "Lymph Nodes",
+    "name" : "SEER Regional Nodes",
+    "naaccr_item" : 774,
     "default" : "999",
     "table" : "nodes_deb",
     "used_for_staging" : true
   }, {
     "key" : "mets",
-    "name" : "Mets",
+    "name" : "SEER Mets",
+    "naaccr_item" : 776,
     "default" : "99",
     "table" : "seer_mets_melanoma_ethmoidsinus_74371",
     "used_for_staging" : true
@@ -169,6 +172,59 @@
     "table" : "ssf11_spe",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  } ],
+  "outputs" : [ {
+    "key" : "derived_version",
+    "name" : "Derived Version"
+  }, {
+    "key" : "clin_stage_group",
+    "name" : "Derived SEER Clin Stage Group",
+    "naaccr_item" : 3610
+  }, {
+    "key" : "path_stage_group",
+    "name" : "Derived SEER Path Stage Group",
+    "naaccr_item" : 3605
+  }, {
+    "key" : "combined_stage_group",
+    "name" : "Derived SEER Combined Stage Group",
+    "naaccr_item" : 3614
+  }, {
+    "key" : "combined_t",
+    "name" : "Derived SEER Combined T",
+    "naaccr_item" : 3616
+  }, {
+    "key" : "combined_n",
+    "name" : "Derived SEER Combined N",
+    "naaccr_item" : 3618
+  }, {
+    "key" : "combined_m",
+    "name" : "Derived SEER Combined M",
+    "naaccr_item" : 3620
+  }, {
+    "key" : "source_t",
+    "name" : "Derived SEER Combined T Source",
+    "naaccr_item" : 3622
+  }, {
+    "key" : "source_n",
+    "name" : "Derived SEER Combined N Source",
+    "naaccr_item" : 3624
+  }, {
+    "key" : "source_m",
+    "name" : "Derived SEER Combined M Source",
+    "naaccr_item" : 3626
+  }, {
+    "key" : "ss2017",
+    "name" : "Derived SEER Summary Stage 2017",
+    "naaccr_item" : 762
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Derived SEER Summary Stage 2017 T"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Derived SEER Summary Stage 2017 N"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "tnm7_stage",
@@ -332,5 +388,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf10_spd", "radiation_surg_seq", "sinus_ethmoid_t_5235", "determine_default_m", "tnm7_stage_upu", "nodes_pos_fpa", "combined_n_to_summ_stage_n_headneck_nasalsinus_48288", "clin_m_hpd", "determine_default_n", "ssf11_spe", "histology", "ssf6_opa", "ssf3_lpa", "path_m_hpd", "tnm7_inclusions_tpa", "combined_t_no_tis", "ssf1_jpu", "combined_t_to_summ_stage_t_4b_4e_d_9381", "pathologic_n_head_neck_melanoma_copy_75380", "ssf4_mpa", "nodes_deb", "ssf9_spc", "adjust_path_defaults", "seer_mets_melanoma_ethmoidsinus_74371", "systemic_surg_seq", "schema_selection_melanoma_sinus_ethmoid", "primary_site", "combined_m", "clinical_n_head_neck_melanoma_66648", "combined_n", "ssf5_npa", "seer_mets_ethmoidsinus_11648", "extension_beg", "year_dx_validation", "summary_stage_rpa", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-08-25T18:33:37.056Z"
+  "last_modified" : "2015-09-04T16:04:54.293Z"
 }
