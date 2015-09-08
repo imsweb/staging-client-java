@@ -356,6 +356,32 @@ public class DecisionEngineTest {
     }
 
     @Test
+    public void testMatchTableWithMissingKeys() throws IOException {
+        BasicDataProvider provider = new BasicDataProvider();
+        BasicTable table = new BasicTable("basic_test_table");
+        table.addColumnDefinition("size", ColumnType.INPUT);
+        table.addColumnDefinition("description", ColumnType.DESCRIPTION);
+        table.addColumnDefinition("result", ColumnType.ENDPOINT);
+        table.addRawRow("", "BLANK", "MATCH");
+        table.addRawRow("1", "ONE", "MATCH");
+        table.addRawRow("2", "TWO", "MATCH");
+        provider.addTable(table);
+
+        Table matchTable = provider.getTable("basic_test_table");
+        Assert.assertNotNull(matchTable);
+
+        // create context of input fields
+        Map<String, String> input = new HashMap<String, String>();
+
+        // first try it with missing input (null does not match blank)
+        Assert.assertNull(DecisionEngine.matchTable(matchTable, input));
+
+        // now add blank input
+        input.put("size", "");
+        Assert.assertNotNull(DecisionEngine.matchTable(matchTable, input));
+    }
+
+    @Test
     public void testMatchOnSpecificKeys() {
         BasicDataProvider provider = new BasicDataProvider();
         BasicTable table = new BasicTable("basic_test_table_keytest");

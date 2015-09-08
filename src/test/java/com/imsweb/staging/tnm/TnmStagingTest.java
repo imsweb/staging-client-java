@@ -359,163 +359,46 @@ public class TnmStagingTest {
 
     @Test
     public void testStageUrethra() {
-        // test this case:  http://seer.cancer.gov/seertools/cstest/?mets=10&lnexam=99&diagnosis_year=2013&grade=9&exteval=9&age=060&site=C680&metseval=9&hist=8000&ext=100&version=020550&nodeseval=9&behav=3&lnpos=99&nodes=100&csver_original=020440&lvi=9&ssf1=020&size=075
-        //        TnmStagingData data = new TnmStagingData();
-        //        data.setInput(TnmStagingData.TnmInput.PRIMARY_SITE, "C680");
-        //        data.setInput(TnmStagingData.TnmInput.HISTOLOGY, "8000");
-        //        data.setInput(TnmStagingData.TnmInput.BEHAVIOR, "3");
-        //        data.setInput(TnmStagingData.TnmInput.GRADE, "9");
-        //        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "2013");
-        //        data.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "020550");
-        //        data.setInput(TnmStagingData.TnmInput.TUMOR_SIZE, "075");
-        //        data.setInput(TnmStagingData.TnmInput.EXTENSION, "100");
-        //        data.setInput(TnmStagingData.TnmInput.EXTENSION_EVAL, "9");
-        //        data.setInput(TnmStagingData.TnmInput.LYMPH_NODES, "100");
-        //        data.setInput(TnmStagingData.TnmInput.LYMPH_NODES_EVAL, "9");
-        //        data.setInput(TnmStagingData.TnmInput.REGIONAL_NODES_POSITIVE, "99");
-        //        data.setInput(TnmStagingData.TnmInput.REGIONAL_NODES_EXAMINED, "99");
-        //        data.setInput(TnmStagingData.TnmInput.METS_AT_DX, "10");
-        //        data.setInput(TnmStagingData.TnmInput.METS_EVAL, "9");
-        //        data.setInput(TnmStagingData.TnmInput.LVI, "9");
-        //        data.setInput(TnmStagingData.TnmInput.AGE_AT_DX, "060");
-        //        data.setSsf(1, "020");
-        //
-        //        // perform the staging
-        //        _STAGING.stage(data);
-        //
-        //        Assert.assertEquals(StagingData.Result.STAGED, data.getResult());
-        //        Assert.assertEquals("urethra", data.getSchemaId());
-        //        Assert.assertEquals(0, data.getErrors().size());
-        //        Assert.assertEquals(37, data.getPath().size());
-        //
-        //        // check output
-        //        Assert.assertEquals("129", data.getOutput(TnmStagingData.TnmOutput.SCHEMA_NUMBER));
-        //        Assert.assertEquals("020550", data.getOutput(TnmStagingData.TnmOutput.CSVER_DERIVED));
-        //
-        //        // AJCC 6
-        //        Assert.assertEquals("T1", data.getOutput(TnmStagingData.TnmOutput.AJCC6_T));
-        //        Assert.assertEquals("c", data.getOutput(TnmStagingData.TnmOutput.AJCC6_TDESCRIPTOR));
-        //        Assert.assertEquals("N1", data.getOutput(TnmStagingData.TnmOutput.AJCC6_N));
-        //        Assert.assertEquals("c", data.getOutput(TnmStagingData.TnmOutput.AJCC6_NDESCRIPTOR));
-        //        Assert.assertEquals("M1", data.getOutput(TnmStagingData.TnmOutput.AJCC6_M));
-        //        Assert.assertEquals("c", data.getOutput(TnmStagingData.TnmOutput.AJCC6_MDESCRIPTOR));
-        //        Assert.assertEquals("IV", data.getOutput(TnmStagingData.TnmOutput.AJCC6_STAGE));
-        //        Assert.assertEquals("10", data.getOutput(TnmStagingData.TnmOutput.STOR_AJCC6_T));
-        //        Assert.assertEquals("c", data.getOutput(TnmStagingData.TnmOutput.STOR_AJCC6_TDESCRIPTOR));
-        //        Assert.assertEquals("10", data.getOutput(TnmStagingData.TnmOutput.STOR_AJCC6_N));
-        //        Assert.assertEquals("c", data.getOutput(TnmStagingData.TnmOutput.STOR_AJCC6_NDESCRIPTOR));
-        //        Assert.assertEquals("10", data.getOutput(TnmStagingData.TnmOutput.STOR_AJCC6_M));
-        //        Assert.assertEquals("c", data.getOutput(TnmStagingData.TnmOutput.STOR_AJCC6_MDESCRIPTOR));
-        //        Assert.assertEquals("70", data.getOutput(TnmStagingData.TnmOutput.STOR_AJCC6_STAGE));
-        //
-        //        // AJCC 7
-        //        Assert.assertEquals("T1", data.getOutput(TnmStagingData.TnmOutput.AJCC7_T));
-        //        Assert.assertEquals("c", data.getOutput(TnmStagingData.TnmOutput.AJCC7_TDESCRIPTOR));
-        //        Assert.assertEquals("N1", data.getOutput(TnmStagingData.TnmOutput.AJCC7_N));
-        //        Assert.assertEquals("c", data.getOutput(TnmStagingData.TnmOutput.AJCC7_NDESCRIPTOR));
-        //        Assert.assertEquals("M1", data.getOutput(TnmStagingData.TnmOutput.AJCC7_M));
-        //        Assert.assertEquals("c", data.getOutput(TnmStagingData.TnmOutput.AJCC7_MDESCRIPTOR));
-        //        Assert.assertEquals("IV", data.getOutput(TnmStagingData.TnmOutput.AJCC7_STAGE));
-        //        Assert.assertEquals("100", data.getOutput(TnmStagingData.TnmOutput.STOR_AJCC7_T));
-        //        Assert.assertEquals("c", data.getOutput(TnmStagingData.TnmOutput.STOR_AJCC6_TDESCRIPTOR));
-        //        Assert.assertEquals("100", data.getOutput(TnmStagingData.TnmOutput.STOR_AJCC7_N));
-        //        Assert.assertEquals("c", data.getOutput(TnmStagingData.TnmOutput.STOR_AJCC7_NDESCRIPTOR));
-        //        Assert.assertEquals("100", data.getOutput(TnmStagingData.TnmOutput.STOR_AJCC7_M));
-        //        Assert.assertEquals("c", data.getOutput(TnmStagingData.TnmOutput.STOR_AJCC7_MDESCRIPTOR));
-        //        Assert.assertEquals("700", data.getOutput(TnmStagingData.TnmOutput.STOR_AJCC7_STAGE));
-        //
-        //        // Summary Stage
-        //        Assert.assertEquals("L", data.getOutput(TnmStagingData.TnmOutput.SS1977_T));
-        //        Assert.assertEquals("RN", data.getOutput(TnmStagingData.TnmOutput.SS1977_N));
-        //        Assert.assertEquals("D", data.getOutput(TnmStagingData.TnmOutput.SS1977_M));
-        //        Assert.assertEquals("D", data.getOutput(TnmStagingData.TnmOutput.SS1977_STAGE));
-        //        Assert.assertEquals("L", data.getOutput(TnmStagingData.TnmOutput.SS2000_T));
-        //        Assert.assertEquals("RN", data.getOutput(TnmStagingData.TnmOutput.SS2000_N));
-        //        Assert.assertEquals("D", data.getOutput(TnmStagingData.TnmOutput.SS2000_M));
-        //        Assert.assertEquals("D", data.getOutput(TnmStagingData.TnmOutput.SS2000_STAGE));
-        //        Assert.assertEquals("7", data.getOutput(TnmStagingData.TnmOutput.STOR_SS1977_STAGE));
-        //        Assert.assertEquals("7", data.getOutput(TnmStagingData.TnmOutput.STOR_SS2000_STAGE));
-        //
-        //        // make sure defaulted inputs are not in the output
-        //        Set<String> outputKeys = data.getOutput().keySet();
-        //        for (TnmStagingData.TnmOutput output : TnmStagingData.TnmOutput.values())
-        //            outputKeys.remove(output.toString());
-        //        Assert.assertTrue("The keys " + outputKeys + " were in the output but are not CS output fields.", outputKeys.isEmpty());
-        //
-        //        // test case with valid year_dx and invalid version original
-        //        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "2013");
-        //        data.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "1111");
-        //        _STAGING.stage(data);
-        //        Assert.assertEquals(StagingData.Result.STAGED, data.getResult());
-        //        Assert.assertEquals("urethra", data.getSchemaId());
-        //        Assert.assertEquals(1, data.getErrors().size());
-        //        Assert.assertEquals(Error.Type.INVALID_REQUIRED_INPUT, data.getErrors().get(0).getType());
-        //
-        //        // test case with missing year_dx and valid version original
-        //        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "");
-        //        data.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "020550");
-        //        _STAGING.stage(data);
-        //        Assert.assertEquals(StagingData.Result.STAGED, data.getResult());
-        //        Assert.assertEquals("urethra", data.getSchemaId());
-        //        Assert.assertEquals(0, data.getErrors().size());
-        //
-        //        // test case with missing year_dx and valid version original
-        //        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "");
-        //        data.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "020001");
-        //        _STAGING.stage(data);
-        //        Assert.assertEquals(StagingData.Result.STAGED, data.getResult());
-        //        Assert.assertEquals("urethra", data.getSchemaId());
-        //        Assert.assertEquals(0, data.getErrors().size());
-        //
-        //        // test case with space-filled year_dx and valid version original
-        //        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "    ");
-        //        data.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "020001");
-        //        _STAGING.stage(data);
-        //        Assert.assertEquals(StagingData.Result.STAGED, data.getResult());
-        //        Assert.assertEquals("urethra", data.getSchemaId());
-        //        Assert.assertEquals(0, data.getErrors().size());
-        //
-        //        // test case with missing year_dx and invalid version original
-        //        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "");
-        //        data.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "012345");
-        //        _STAGING.stage(data);
-        //        Assert.assertEquals(StagingData.Result.FAILED_INVALID_YEAR_DX, data.getResult());
-        //        Assert.assertEquals("urethra", data.getSchemaId());
-        //        Assert.assertEquals(0, data.getErrors().size());
-        //
-        //        // test case with missing year_dx and invalid version original
-        //        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "");
-        //        data.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "1");
-        //        _STAGING.stage(data);
-        //        Assert.assertEquals(StagingData.Result.FAILED_INVALID_YEAR_DX, data.getResult());
-        //        Assert.assertEquals("urethra", data.getSchemaId());
-        //        Assert.assertEquals(0, data.getErrors().size());
-        //
-        //        // test case with space-filled year_dx and invalid version original
-        //        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "    ");
-        //        data.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "012345");
-        //        _STAGING.stage(data);
-        //        Assert.assertEquals(StagingData.Result.FAILED_INVALID_YEAR_DX, data.getResult());
-        //        Assert.assertEquals("urethra", data.getSchemaId());
-        //        Assert.assertEquals(0, data.getErrors().size());
-        //
-        //        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "2003");
-        //        data.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "020550");
-        //        _STAGING.stage(data);
-        //        Assert.assertEquals(StagingData.Result.FAILED_INVALID_YEAR_DX, data.getResult());
-        //        Assert.assertEquals("urethra", data.getSchemaId());
-        //        Assert.assertEquals(0, data.getOutput().size());
-        //        Assert.assertEquals(0, data.getErrors().size());
-        //        Assert.assertEquals(0, data.getPath().size());
-        //
-        //        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "2050");
-        //        data.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "020550");
-        //        _STAGING.stage(data);
-        //        Assert.assertEquals(StagingData.Result.FAILED_INVALID_YEAR_DX, data.getResult());
-        //        Assert.assertEquals("urethra", data.getSchemaId());
-        //        Assert.assertEquals(0, data.getOutput().size());
-        //        Assert.assertEquals(0, data.getErrors().size());
-        //        Assert.assertEquals(0, data.getPath().size());
+        TnmStagingData data = new TnmStagingData();
+        data.setInput(TnmStagingData.TnmInput.PRIMARY_SITE, "C680");
+        data.setInput(TnmStagingData.TnmInput.HISTOLOGY, "8000");
+        data.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "1.0");
+        data.setInput(TnmStagingData.TnmInput.BEHAVIOR, "3");
+        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "2015");
+        data.setInput(TnmStagingData.TnmInput.RX_SUMM_SURGERY, "2");
+        data.setInput(TnmStagingData.TnmInput.RX_SUMM_RADIATION, "4");
+        data.setInput(TnmStagingData.TnmInput.REGIONAL_NODES_POSITIVE, "02");
+        data.setInput(TnmStagingData.TnmInput.CLIN_T, "0");
+        data.setInput(TnmStagingData.TnmInput.CLIN_N, "1");
+        data.setInput(TnmStagingData.TnmInput.CLIN_M, "0");
+        data.setInput(TnmStagingData.TnmInput.PATH_T, "0");
+        data.setInput(TnmStagingData.TnmInput.PATH_N, "1");
+        data.setInput(TnmStagingData.TnmInput.PATH_M, "1");
+
+        // perform the staging
+        _STAGING.stage(data);
+
+        Assert.assertEquals(StagingData.Result.STAGED, data.getResult());
+        Assert.assertEquals("urethra", data.getSchemaId());
+        Assert.assertEquals(0, data.getErrors().size());
+        Assert.assertEquals(16, data.getPath().size());
+        Assert.assertEquals(14, data.getOutput().size());
+
+        // check outputs
+        Assert.assertEquals("1.0", data.getOutput(TnmStagingData.TnmOutput.DERIVED_VERSION));
+        Assert.assertEquals("3", data.getOutput(TnmStagingData.TnmOutput.CLIN_STAGE_GROUP));
+        Assert.assertEquals("4", data.getOutput(TnmStagingData.TnmOutput.PATH_STAGE_GROUP));
+        Assert.assertEquals("4", data.getOutput(TnmStagingData.TnmOutput.COMBINED_STAGE_GROUP));
+        Assert.assertEquals("0", data.getOutput(TnmStagingData.TnmOutput.COMBINED_T));
+        Assert.assertEquals("C", data.getOutput(TnmStagingData.TnmOutput.SOURCE_T));
+        Assert.assertEquals("1", data.getOutput(TnmStagingData.TnmOutput.COMBINED_N));
+        Assert.assertEquals("C", data.getOutput(TnmStagingData.TnmOutput.SOURCE_N));
+        Assert.assertEquals("1", data.getOutput(TnmStagingData.TnmOutput.COMBINED_M));
+        Assert.assertEquals("P", data.getOutput(TnmStagingData.TnmOutput.SOURCE_M));
+        Assert.assertEquals("D", data.getOutput(TnmStagingData.TnmOutput.SS2017));
+        Assert.assertEquals("U", data.getOutput(TnmStagingData.TnmOutput.SS2017_T));
+        Assert.assertEquals("RN", data.getOutput(TnmStagingData.TnmOutput.SS2017_N));
+        Assert.assertEquals("D", data.getOutput(TnmStagingData.TnmOutput.SS2017_M));
     }
 
     @Test
