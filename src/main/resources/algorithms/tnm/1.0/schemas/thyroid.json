@@ -369,5 +369,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "combined_t_to_summ_stage_t_thyroid_68736", "ssf1_jap", "radiation_surg_seq", "determine_default_m", "schema_selection_thyroid", "extension_bby", "nodes_pos_fpa", "thyroid_baset_ssf1_ajcc7", "determine_default_n", "combined_n_to_summ_stage_n_84054", "thyroid_ajcctnm7_stage_thyroid_medullary", "histology", "thyroid_t_6166", "histologies_grade_stage_tnm_7_20594", "clin_n_dbr", "tnm7_inclusions_tpb", "combined_t_no_tis", "thyroid_ajcctnm7_stage_thyroid_papillaryand_follicular_lessthan_45", "thyroid_histology_grade_extension_summary_stage", "path_m_hbf", "thyroid_ajcctnm7_stage_thyroid_papillaryand_follicular_age45and_older", "mets_hbf", "thyroid_ajcctnm7_stage_thyroid_anaplastic", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "nodes_dbr", "combined_m", "combined_n", "grade", "year_dx_validation", "summary_stage_rpa", "clin_m_hbf", "path_n_dbr" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T21:15:01.311Z"
+  "last_modified" : "2015-09-04T21:28:48.779Z"
 }

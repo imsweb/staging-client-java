@@ -284,5 +284,5 @@
   } ],
   "involved_tables" : [ "ssf2_kpg", "input_version_validation", "radiation_surg_seq", "path_m_hna", "clin_m_hna", "ssf3_lph", "ssf1_jpj", "histology", "lymphoma_summary_stage_70837", "mets_hna", "path_n_dna", "nodes_dna", "tnm7_inclusions_tpr", "schema_selection_lymphoma", "path_t_bch", "ssf5_npe", "tnm_7_stage_group_path_97003", "systemic_surg_seq", "clin_n_dna", "clin_t_bch", "primary_site", "extension_bch", "nodes_pos_fna", "year_dx_validation", "summary_stage_rpa", "tnm7_stage_ubw", "ssf4_mpd" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T21:15:02.522Z"
+  "last_modified" : "2015-09-04T21:28:49.634Z"
 }

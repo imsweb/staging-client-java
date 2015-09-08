@@ -4,10 +4,10 @@
   "version" : "1.0",
   "name" : "TNM 7 Stage Group",
   "title" : "TNM 7 Stage Group",
-  "last_modified" : "2015-09-04T21:15:02.383Z",
+  "last_modified" : "2015-09-04T21:28:49.547Z",
   "definition" : [ {
     "key" : "seer_primary_tumor",
-    "name" : "Extension",
+    "name" : "SEER Primary Tumor",
     "type" : "INPUT"
   }, {
     "key" : "ssf2",
