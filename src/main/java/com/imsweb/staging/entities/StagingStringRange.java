@@ -67,12 +67,16 @@ public class StagingStringRange extends StringRange {
         if (matchesAll())
             return true;
 
+        // make null values match the same as if they were blank
+        if (value == null)
+            value = "";
+
         // translate the context values if they are there
         String low = DecisionEngine.translateValue(_low, context);
         String high = DecisionEngine.translateValue(_high, context);
 
         // if the context value(s) failed or the low and high values are different length, return false
-        if (value == null || low.length() != high.length() || low.length() != value.length())
+        if (low.length() != high.length() || low.length() != value.length())
             return false;
 
         // compare value to low and high

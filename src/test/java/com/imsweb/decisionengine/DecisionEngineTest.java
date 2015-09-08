@@ -356,7 +356,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testMatchTableWithMissingKeys() throws IOException {
+    public void testMatchTableWithBlankOrMissingInput() throws IOException {
         BasicDataProvider provider = new BasicDataProvider();
         BasicTable table = new BasicTable("basic_test_table");
         table.addColumnDefinition("size", ColumnType.INPUT);
@@ -373,11 +373,31 @@ public class DecisionEngineTest {
         // create context of input fields
         Map<String, String> input = new HashMap<String, String>();
 
-        // first try it with missing input (null does not match blank)
-        Assert.assertNull(DecisionEngine.matchTable(matchTable, input));
+        // first try it with missing input (null should match just like blank))
+        Assert.assertNotNull(DecisionEngine.matchTable(matchTable, input));
 
         // now add blank input
         input.put("size", "");
+        Assert.assertNotNull(DecisionEngine.matchTable(matchTable, input));
+
+        // test matching on multiple mising values
+        table = new BasicTable("basic_test_table_multi");
+        table.addColumnDefinition("a", ColumnType.INPUT);
+        table.addColumnDefinition("b", ColumnType.INPUT);
+        table.addColumnDefinition("c", ColumnType.INPUT);
+        table.addColumnDefinition("d", ColumnType.INPUT);
+        table.addColumnDefinition("e", ColumnType.INPUT);
+        table.addRawRow("1", "", "", "", "");
+        table.addRawRow("2", "", "", "", "");
+        provider.addTable(table);
+
+        matchTable = provider.getTable("basic_test_table_multi");
+        Assert.assertNotNull(matchTable);
+
+        // first try it with missing input (null should match just like blank))
+        Assert.assertNull(DecisionEngine.matchTable(matchTable, new HashMap<String, String>()));
+
+        input.put("a", "2");
         Assert.assertNotNull(DecisionEngine.matchTable(matchTable, input));
     }
 
