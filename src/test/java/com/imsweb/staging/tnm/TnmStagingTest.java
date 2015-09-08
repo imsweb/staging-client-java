@@ -305,59 +305,6 @@ public class TnmStagingTest {
     }
 
     @Test
-    public void testBlankValues() {
-        //        TnmStagingData data = new TnmStagingData();
-        //        data.setInput(TnmStagingData.TnmInput.PRIMARY_SITE, "C700");
-        //        data.setInput(TnmStagingData.TnmInput.HISTOLOGY, "9530");
-        //        data.setInput(TnmStagingData.TnmInput.BEHAVIOR, "0");
-        //        data.setInput(TnmStagingData.TnmInput.GRADE, "9");
-        //        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "2010");
-        //        data.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "1.0");
-        //        data.setInput(TnmStagingData.TnmInput.EXTENSION, "050");
-        //        data.setInput(TnmStagingData.TnmInput.LYMPH_NODES, "988");
-        //        data.setInput(TnmStagingData.TnmInput.REGIONAL_NODES_POSITIVE, "99");
-        //        data.setInput(TnmStagingData.TnmInput.METS_AT_DX, "00");
-        //        data.setInput(TnmStagingData.TnmInput.LVI, "8");
-        //        data.setInput(TnmStagingData.TnmInput.AGE_AT_DX, "060");
-        //        data.setSsf(1, "999");
-        //        data.setSsf(2, "999");
-        //        data.setSsf(3, "999");
-        //        // do not supply SSF4
-        //        data.setSsf(5, "999");
-        //        data.setSsf(6, "999");
-        //        data.setSsf(7, "000");
-        //        data.setSsf(8, "001");
-        //
-        //        // perform the staging
-        //        _STAGING.stage(data);
-        //
-        //        Assert.assertEquals(StagingData.Result.STAGED, data.getResult());
-        //        Assert.assertEquals("brain", data.getSchemaId());
-        //        Assert.assertEquals(0, data.getErrors().size());
-        //
-        //        // now change SSF4 to blank; blank values are not validated and since this is not used in staging there should be no errors
-        //        data.setSsf(4, "");
-        //
-        //        // perform the staging
-        //        _STAGING.stage(data);
-        //
-        //        Assert.assertEquals(StagingData.Result.STAGED, data.getResult());
-        //        Assert.assertEquals("brain", data.getSchemaId());
-        //        Assert.assertEquals(0, data.getErrors().size());
-        //
-        //        // now change extension to blank; the only errors we get should be of type MATCH_NOT_FOUND
-        //        data.setInput(TnmStagingData.TnmInput.EXTENSION, "");
-        //
-        //        // perform the staging
-        //        _STAGING.stage(data);
-        //
-        //        Assert.assertEquals(StagingData.Result.STAGED, data.getResult());
-        //        Assert.assertEquals("brain", data.getSchemaId());
-        //        for (Error error : data.getErrors())
-        //            Assert.assertEquals(Error.Type.MATCH_NOT_FOUND, error.getType());
-    }
-
-    @Test
     public void testStageUrethra() {
         TnmStagingData data = new TnmStagingData();
         data.setInput(TnmStagingData.TnmInput.PRIMARY_SITE, "C680");
@@ -443,27 +390,25 @@ public class TnmStagingTest {
 
     @Test
     public void testGetInputs() {
-        //        Assert.assertEquals(Sets.newHashSet("extension", "site", "extension_eval", "mets_eval", "nodes_eval", "nodes", "hist", "year_dx", "cs_input_version_original", "mets"),
-        //                _STAGING.getInputs(_STAGING.getSchema("adnexa_uterine_other")));
-        //
-        //        Assert.assertEquals(Sets.newHashSet("site", "nodes_pos", "mets_eval", "nodes_eval", "ssf16", "ssf15", "ssf13", "cs_input_version_original", "lvi",
-        //                        "extension", "extension_eval", "ssf1", "ssf2", "ssf3", "hist", "ssf4", "nodes", "ssf5", "year_dx", "mets"),
-        //                _STAGING.getInputs(_STAGING.getSchema("testis")));
-        //
-        //        // test with and without context
-        //        Assert.assertEquals(Sets.newHashSet("site", "nodes_eval", "mets_eval", "ssf10", "cs_input_version_original", "ssf8", "extension", "extension_eval", "ssf1", "ssf3",
-        //                        "hist", "nodes", "year_dx", "grade", "mets"),
-        //                _STAGING.getInputs(_STAGING.getSchema("prostate")));
-        //
-        //        Map<String, String> context = new HashMap<String, String>();
-        //        context.put(StagingData.PRIMARY_SITE_KEY, "C619");
-        //        context.put(StagingData.HISTOLOGY_KEY, "8120");
-        //        context.put(StagingData.YEAR_DX_KEY, "2004");
-        //
-        //        // for that context, neither AJCC6 or 7 should be calculated so "grade" and "ssf1" should not be list of inputs
-        //        Assert.assertEquals(Sets.newHashSet("site", "nodes_eval", "mets_eval", "ssf10", "cs_input_version_original", "ssf8", "extension", "extension_eval", "ssf3",
-        //                        "hist", "nodes", "year_dx", "mets"),
-        //                _STAGING.getInputs(_STAGING.getSchema("prostate"), context));
+        Assert.assertEquals(Sets.newHashSet("site", "hist", "seer_primary_tumor", "seer_nodes", "seer_mets"),
+                _STAGING.getInputs(_STAGING.getSchema("adnexa_uterine_other")));
+
+        Assert.assertEquals(Sets.newHashSet("site", "hist", "behavior", "systemic_surg_seq", "radiation_surg_seq", "nodes_pos", "clin_t", "clin_n", "clin_m",
+                        "path_t", "path_n", "path_m", "seer_primary_tumor", "seer_nodes", "seer_mets", "ssf7", "ssf9", "ssf10", "ssf13", "ssf15", "ssf16"),
+                _STAGING.getInputs(_STAGING.getSchema("testis")));
+
+        // test with and without context
+        Assert.assertEquals(Sets.newHashSet("site", "hist", "systemic_surg_seq", "radiation_surg_seq", "nodes_pos", "clin_t", "clin_n", "clin_m",
+                        "path_t", "path_n", "path_m", "seer_primary_tumor", "seer_nodes", "seer_mets", "ssf1", "ssf8", "ssf10"),
+                _STAGING.getInputs(_STAGING.getSchema("prostate")));
+
+        Map<String, String> context = new HashMap<String, String>();
+        context.put(StagingData.PRIMARY_SITE_KEY, "C619");
+        context.put(StagingData.HISTOLOGY_KEY, "8120");
+        context.put(StagingData.YEAR_DX_KEY, "2004");
+
+        // for that context, only summary stage is calculated
+        Assert.assertEquals(Sets.newHashSet("site", "hist", "seer_primary_tumor", "seer_nodes", "seer_mets"), _STAGING.getInputs(_STAGING.getSchema("prostate"), context));
     }
 
     @Test
@@ -536,66 +481,6 @@ public class TnmStagingTest {
     }
 
     @Test
-    public void testStagingInputsAndOutputs() {
-        //        StagingSchema schema = _STAGING.getSchema("testis");
-        //
-        //        Assert.assertEquals("Inputs do not match", Sets.newHashSet("cs_input_version_original", "extension", "extension_eval", "site", "hist", "lvi",
-        //                "mets_eval", "mets", "nodes", "nodes_eval", "nodes_pos", "ssf1", "ssf2", "ssf3", "ssf4", "ssf5", "ssf13", "ssf15", "ssf16",
-        //                "year_dx"), _STAGING.getInputs(schema));
-        //
-        //        // note that outputs should NOT include values produced by staging that are not in the defined output list (if an output list exists on the schema)
-        //        Assert.assertEquals("Outputs do not match", Sets.newHashSet("schema_number", "csver_derived", "ss77", "stor_ajcc7_m", "t2000", "stor_ajcc7_n",
-        //                "stor_ajcc6_tdescriptor", "ajcc7_stage", "stor_ajcc6_mdescriptor", "stor_ss2000", "ajcc6_tdescriptor", "stor_ajcc7_t", "ajcc6_stage", "n2000",
-        //                "ajcc7_ndescriptor", "ajcc6_ndescriptor", "ajcc7_mdescriptor", "ajcc6_mdescriptor", "stor_ajcc7_stage", "m77", "ajcc6_m", "ss2000",
-        //                "stor_ajcc7_ndescriptor", "ajcc7_m", "ajcc7_n", "stor_ajcc7_mdescriptor", "t77", "ajcc6_n", "stor_ss77", "ajcc6_t", "stor_ajcc6_ndescriptor",
-        //                "stor_ajcc6_stage", "m2000", "ajcc7_t", "n77", "ajcc7_tdescriptor", "stor_ajcc6_m", "stor_ajcc6_n", "stor_ajcc6_t", "stor_ajcc7_tdescriptor"), _STAGING.getOutputs(schema));
-        //
-        //        // test used for staging
-        //        Assert.assertFalse(schema.getInputMap().get("ssf14").getUsedForStaging());
-        //        Assert.assertTrue(schema.getInputMap().get("ssf15").getUsedForStaging());
-        //
-        //        // test metadata
-        //        Assert.assertNull(schema.getInputMap().get("ssf11").getMetadata());
-        //        Assert.assertTrue(schema.getInputMap().get("ssf17").getMetadata().contains("UNDEFINED_SSF"));
-        //        Assert.assertTrue(schema.getInputMap().get("ssf7").getMetadata().contains("SEER_CLINICALLY_SIGNIFICANT"));
-        //
-        //        Map<String, String> context = new HashMap<String, String>();
-        //        context.put(StagingData.PRIMARY_SITE_KEY, "C629");
-        //        context.put(StagingData.HISTOLOGY_KEY, "9231");
-        //        Set<String> inputs = _STAGING.getInputs(schema, context);
-        //
-        //        // this is a case that summary stages only.  Testing to make sure "hist", which is used in the inclusion/exclusion criteria
-        //        // is included in the list even though the mappings for AJCC6 and 7 are not included
-        //        Assert.assertTrue("Inclusion/exclusion input is not included", inputs.contains("hist"));
-        //
-        //        Assert.assertTrue(inputs.contains("mets"));
-        //
-        //        // these are no used when only doing summary stage
-        //        Assert.assertFalse(inputs.contains("ssf1"));
-        //        Assert.assertFalse(inputs.contains("ssf2"));
-        //        Assert.assertFalse(inputs.contains("ssf3"));
-        //        Assert.assertFalse(inputs.contains("ssf13"));
-        //        Assert.assertFalse(inputs.contains("ssf15"));
-        //        Assert.assertFalse(inputs.contains("ssf16"));
-        //
-        //        // now test one that does do AJCC7 (inputs should include extra SSFs used in AJCC calculations)
-        //        context.put(StagingData.HISTOLOGY_KEY, "9100");
-        //        inputs = _STAGING.getInputs(schema, context);
-        //        Assert.assertTrue(inputs.contains("hist"));
-        //        Assert.assertTrue(inputs.contains("ssf1"));
-        //        Assert.assertTrue(inputs.contains("ssf2"));
-        //        Assert.assertTrue(inputs.contains("ssf3"));
-        //        Assert.assertTrue(inputs.contains("ssf13"));
-        //        Assert.assertTrue(inputs.contains("ssf15"));
-        //        Assert.assertTrue(inputs.contains("ssf16"));
-        //
-        //        // the prostate schema tables use a reference to {{ssf8}} and {{ssf10}}; make sure they are picked up in the list of required inputs
-        //        inputs = _STAGING.getInputs(_STAGING.getSchema("prostate"));
-        //        Assert.assertTrue(inputs.contains("ssf8"));
-        //        Assert.assertTrue(inputs.contains("ssf10"));
-    }
-
-    @Test
     public void verifyInputs() {
         List<String> errors = new ArrayList<String>();
 
@@ -626,34 +511,6 @@ public class TnmStagingTest {
         //        // make sure there were no errors returned
         //        Assert.assertEquals("There were failures in the AJCC6 tests", 0, ajcc6Result.getNumFailures());
         //        Assert.assertEquals("There were failures in the AJCC7 tests", 0, ajcc7Result.getNumFailures());
-    }
-
-    @Test
-    public void testAllValidInputs() throws IOException {
-        //        GZIPInputStream is = new GZIPInputStream(Thread.currentThread().getContextClassLoader().getResourceAsStream("test-data/cs/020550/valid_inputs.020550.txt.gz"));
-        //        LineNumberReader reader = new LineNumberReader(new InputStreamReader(is, "UTF-8"));
-        //
-        //        // cache a list of schemas by name
-        //        Map<String, String> nameMap = new HashMap<String, String>();
-        //        for (String id : _STAGING.getSchemaIds())
-        //            nameMap.put(_STAGING.getSchema(id).getName(), id);
-        //
-        //        String line = reader.readLine();
-        //        while (line != null) {
-        //            // split the CSV record
-        //            String[] values = line.split("\\|");
-        //            Assert.assertEquals(3, values.length);
-        //
-        //            // get schema by schema name
-        //            StagingSchema schema = _STAGING.getSchema(nameMap.get(values[0]));
-        //            Assert.assertTrue("The value '" + values[2] + "' is not valid for table '" + values[1] + "' and schema '" + values[0] + "'", _STAGING.isCodeValid(schema.getId(), values[1], values[2]));
-        //
-        //            line = reader.readLine();
-        //        }
-        //
-        //        System.out.println("Processed " + reader.getLineNumber() + " lines.");
-        //
-        //        reader.close();
     }
 
     @Test
