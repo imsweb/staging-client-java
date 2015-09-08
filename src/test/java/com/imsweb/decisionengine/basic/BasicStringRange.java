@@ -23,8 +23,8 @@ public class BasicStringRange extends StringRange {
 
     /**
      * Construct a BasicStringRange with a low and high bound
-     * @param low
-     * @param high
+     * @param low low value
+     * @param high high value
      */
     public BasicStringRange(String low, String high) {
         if (low == null || high == null)
@@ -50,7 +50,7 @@ public class BasicStringRange extends StringRange {
 
     /**
      * If low and high are both null, then this range matches all strings
-     * @return
+     * @return true if range matches anything
      */
     private boolean matchesAll() {
         return _low == null && _high == null;
@@ -58,9 +58,13 @@ public class BasicStringRange extends StringRange {
 
     @Override
     public boolean contains(String value, Map<String, String> context) {
+        // make null values match the same as if they were blank
+        if (value == null)
+            value = "";
+
         if (_usesContext)
-            return (matchesAll() || (value != null && DecisionEngine.translateValue(_low, context).compareTo(value) <= 0 && DecisionEngine.translateValue(_high, context).compareTo(value) >= 0));
+            return (matchesAll() || (DecisionEngine.translateValue(_low, context).compareTo(value) <= 0 && DecisionEngine.translateValue(_high, context).compareTo(value) >= 0));
         else
-            return (matchesAll() || (value != null && _low.compareTo(value) <= 0 && _high.compareTo(value) >= 0));
+            return (matchesAll() || (_low.compareTo(value) <= 0 && _high.compareTo(value) >= 0));
     }
 }

@@ -26,7 +26,7 @@ dependencies {
     compile 'com.fasterxml.jackson.core:jackson-databind:2.4.4'
 
     // morphia annotations are needed to make it easier to use in SEER*API
-    compile 'org.mongodb.morphia:morphia:0.108'
+    compile 'org.mongodb.morphia:morphia:1.0.1'
 
     compile 'com.google.guava:guava:18.0'
 
