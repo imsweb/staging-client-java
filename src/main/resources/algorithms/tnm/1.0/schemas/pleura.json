@@ -116,7 +116,8 @@
     "name" : "Pleural Effusion",
     "naaccr_item" : 2880,
     "table" : "ssf1_jam",
-    "used_for_staging" : false
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED" ]
   }, {
     "key" : "ssf2",
     "name" : "Histologic Subtype",
@@ -359,5 +360,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf1_jam", "radiation_surg_seq", "path_m_hat", "determine_default_m", "extension_bbx", "nodes_pos_fpa", "clin_m_hat", "determine_default_n", "schema_selection_pleura", "ssf3_lat", "ssf2_kbf", "histology", "mets_hat", "behavior", "tnm7_inclusions_tpf", "tnm7_stage_uaq", "adjust_path_defaults", "systemic_surg_seq", "ssf5_naw", "pleural_n_14342", "nodes_dbq", "primary_site", "combined_n_to_summ_stage_n_n3_d_copy_68044", "pleura_t_20728", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t", "ssf4_maz" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T20:51:41.216Z"
+  "last_modified" : "2015-09-10T00:08:41.978Z"
 }

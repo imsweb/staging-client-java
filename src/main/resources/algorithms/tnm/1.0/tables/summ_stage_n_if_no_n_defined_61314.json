@@ -1,0 +1,22 @@
+{
+  "id" : "summ_stage_n_if_no_n_defined_61314",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Summ Stage N if No N defined",
+  "title" : "Summary Stage N if No N is defined in TNM schema",
+  "last_modified" : "2015-09-08T19:23:46.969Z",
+  "definition" : [ {
+    "key" : "clin_n",
+    "name" : "Clin N",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summ Stage N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "88", "N is not defined in this schema, so Summary Stage N is Not Applicable.", "VALUE:NA" ] ]
+}

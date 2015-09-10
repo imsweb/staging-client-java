@@ -5,7 +5,7 @@
   "name" : "Mitotic Rate Calculation",
   "title" : "Mitotic Rate Calculation Table",
   "notes" : "**Note:**  The mitotic count recorded in CS Site-Specific Factor 6 is used to determine the mitotic rate as shown in this table.  The mitotic rate from the Mitotic Rate Calculation Table, \"low\" or \"high\", is used in the calculation of the AJCC TNM 7 stage group as shown in the AJCC TNM 7 Stage tables.",
-  "last_modified" : "2015-08-13T13:25:30.302Z",
+  "last_modified" : "2015-09-08T22:13:40.520Z",
   "definition" : [ {
     "key" : "ssf6",
     "name" : "SSF6",
@@ -15,5 +15,5 @@
     "name" : "Mitotic Rate",
     "type" : "ENDPOINT"
   } ],
-  "rows" : [ [ "000-050", "VALUE:Low" ], [ "051-100", "VALUE:High" ], [ "110", "VALUE:High" ], [ "888", "VALUE:ERROR" ], [ "988", "VALUE:Low" ], [ "990", "VALUE:Low" ], [ "991", "VALUE:High" ], [ "995", "VALUE:ERROR" ], [ "996", "VALUE:Unknown" ], [ "998", "VALUE:Unknown" ], [ "999", "VALUE:Unknown" ] ]
+  "rows" : [ [ "000-050", "VALUE:Low" ], [ "051-100", "VALUE:High" ], [ "110", "VALUE:High" ], [ "988", "VALUE:Low" ], [ "990", "VALUE:Low" ], [ "991", "VALUE:High" ], [ "996", "VALUE:Unknown" ], [ "998", "VALUE:Unknown" ], [ "999", "VALUE:Unknown" ] ]
 }
