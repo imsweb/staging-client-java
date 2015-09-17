@@ -23,8 +23,8 @@ public class UpdatingDataProvider extends StagingDataProvider {
     private String _algorithm;
     private String _version;
 
-    private Map<String, StagingTable> _tables = new HashMap<String, StagingTable>();
-    private Map<String, StagingSchema> _schemas = new HashMap<String, StagingSchema>();
+    private Map<String, StagingTable> _tables = new HashMap<>();
+    private Map<String, StagingSchema> _schemas = new HashMap<>();
 
     /**
      * Constructor loads all schemas and sets up table cache

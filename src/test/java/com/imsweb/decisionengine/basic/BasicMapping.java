@@ -74,7 +74,7 @@ public class BasicMapping implements Mapping {
 
     public void addInitialContext(String key, String value) {
         if (_initialContext == null)
-            _initialContext = new HashSet<BasicKeyValue>();
+            _initialContext = new HashSet<>();
 
         _initialContext.add(new BasicKeyValue(key, value));
     }
@@ -98,7 +98,7 @@ public class BasicMapping implements Mapping {
      */
     public void addTablePath(BasicTablePath path) {
         if (_tablePaths == null)
-            _tablePaths = new ArrayList<BasicTablePath>();
+            _tablePaths = new ArrayList<>();
 
         _tablePaths.add(path);
     }

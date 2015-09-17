@@ -39,7 +39,7 @@ public class CsStagingAddOutputFields {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
         mapper.setDateFormat(format);
 
-        Map<String, Integer> codes = new HashMap<String, Integer>();
+        Map<String, Integer> codes = new HashMap<>();
         codes.put("csver_derived", 2936);
         codes.put("stor_ajcc6_t", 2940);
         codes.put("stor_ajcc6_tdescriptor", 2950);
@@ -58,7 +58,7 @@ public class CsStagingAddOutputFields {
         codes.put("stor_ss77", 3010);
         codes.put("stor_ss2000", 3020);
 
-        Map<String, String> descriptions = new HashMap<String, String>();
+        Map<String, String> descriptions = new HashMap<>();
         descriptions.put("site", "Code for the primary site of the tumor being reported using either ICD-O-2 or ICD-O-3.");
         descriptions.put("hist", "Codes for the histologic type of the tumor being reported using ICD-O-3.");
         descriptions.put("year_dx", "Date of initial diagnosis by a recognized medical practitioner for the tumor being reported whether clinically or microscopically confirmed.");
@@ -120,7 +120,7 @@ public class CsStagingAddOutputFields {
         Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.v020550));
 
         // hold all schema in a map
-        Map<String, StagingSchema> schemaMap = new HashMap<String, StagingSchema>();
+        Map<String, StagingSchema> schemaMap = new HashMap<>();
         for (String schemaId : staging.getSchemaIds()) {
             StagingSchema schema = staging.getSchema(schemaId);
 

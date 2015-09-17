@@ -74,9 +74,9 @@ public class StagingSchema implements Definition {
 
     // parsed fields
     @Embedded("parsed_input_map")
-    private Map<String, StagingSchemaInput> _parsedInputMap = new HashMap<String, StagingSchemaInput>();
+    private Map<String, StagingSchemaInput> _parsedInputMap = new HashMap<>();
     @Embedded("parsed_output_map")
-    private Map<String, StagingSchemaOutput> _parsedOutputMap = new HashMap<String, StagingSchemaOutput>();
+    private Map<String, StagingSchemaOutput> _parsedOutputMap = new HashMap<>();
 
     /**
      * Morphia requires a default constructor

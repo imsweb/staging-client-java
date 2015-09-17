@@ -10,7 +10,7 @@ import com.imsweb.staging.StagingFileDataProvider;
 
 public final class CsDataProvider extends StagingFileDataProvider {
 
-    private static final Map<CsVersion, CsDataProvider> _PROVIDERS = new ConcurrentHashMap<CsVersion, CsDataProvider>();
+    private static final Map<CsVersion, CsDataProvider> _PROVIDERS = new ConcurrentHashMap<>();
 
     public enum CsVersion {
         LATEST("02.05.50"),

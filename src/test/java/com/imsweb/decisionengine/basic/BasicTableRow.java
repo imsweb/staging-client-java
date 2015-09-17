@@ -12,9 +12,9 @@ import com.imsweb.decisionengine.TableRow;
 
 public class BasicTableRow implements TableRow {
 
-    private Map<String, List<BasicStringRange>> _inputs = new HashMap<String, List<BasicStringRange>>();
+    private Map<String, List<BasicStringRange>> _inputs = new HashMap<>();
     private String _description;
-    private List<BasicEndpoint> _endpoints = new ArrayList<BasicEndpoint>();
+    private List<BasicEndpoint> _endpoints = new ArrayList<>();
 
     @Override
     public List<BasicStringRange> getColumnInput(String key) {

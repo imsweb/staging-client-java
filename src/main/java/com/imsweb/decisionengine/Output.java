@@ -22,7 +22,7 @@ public interface Output {
 
     /**
      * If supplied, a default value to give the field at the beginning of the staging process
-     * @return
+     * @return a default value to be set for the output
      */
     String getDefault();
 

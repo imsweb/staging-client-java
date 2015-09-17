@@ -114,7 +114,7 @@ public class CsStagingTest {
 
     @Test
     public void testValidCode() {
-        Map<String, String> context = new HashMap<String, String>();
+        Map<String, String> context = new HashMap<>();
         context.put("hist", "8000");
         Assert.assertTrue(_STAGING.isContextValid("prostate", "hist", context));
         context.put("hist", "8542");
@@ -263,12 +263,12 @@ public class CsStagingTest {
         Assert.assertEquals(Integer.valueOf(2), _STAGING.findMatchingTableRow("size_apa", "size", "989"));
         Assert.assertEquals(Integer.valueOf(9), _STAGING.findMatchingTableRow("size_apa", "size", "999"));
 
-        Map<String, String> context = new HashMap<String, String>();
+        Map<String, String> context = new HashMap<>();
         context.put("size", "992");
         Assert.assertEquals(Integer.valueOf(5), _STAGING.findMatchingTableRow("size_apa", context));
 
         // test a table that has multiple inputs
-        context = new HashMap<String, String>();
+        context = new HashMap<>();
         context.put("t", "RE");
         context.put("n", "U");
         context.put("m", "U");
@@ -582,7 +582,7 @@ public class CsStagingTest {
     public void testInvolvedSchemas() {
         Set<String> schemas = _STAGING.getInvolvedSchemas("ssf1_jpd");
 
-        Assert.assertEquals(new HashSet<String>(Arrays.asList("kidney_renal_pelvis", "bladder", "urethra")), schemas);
+        Assert.assertEquals(new HashSet<>(Arrays.asList("kidney_renal_pelvis", "bladder", "urethra")), schemas);
     }
 
     @Test
@@ -599,7 +599,7 @@ public class CsStagingTest {
                         "hist", "nodes", "year_dx", "grade", "mets"),
                 _STAGING.getInputs(_STAGING.getSchema("prostate")));
 
-        Map<String, String> context = new HashMap<String, String>();
+        Map<String, String> context = new HashMap<>();
         context.put(StagingData.PRIMARY_SITE_KEY, "C619");
         context.put(StagingData.HISTOLOGY_KEY, "8120");
         context.put(StagingData.YEAR_DX_KEY, "2004");
@@ -734,7 +734,7 @@ public class CsStagingTest {
         Assert.assertTrue(schema.getInputMap().get("ssf17").getMetadata().contains("UNDEFINED_SSF"));
         Assert.assertTrue(schema.getInputMap().get("ssf7").getMetadata().contains("SEER_CLINICALLY_SIGNIFICANT"));
 
-        Map<String, String> context = new HashMap<String, String>();
+        Map<String, String> context = new HashMap<>();
         context.put(StagingData.PRIMARY_SITE_KEY, "C629");
         context.put(StagingData.HISTOLOGY_KEY, "9231");
         Set<String> inputs = _STAGING.getInputs(schema, context);
@@ -800,7 +800,7 @@ public class CsStagingTest {
         LineNumberReader reader = new LineNumberReader(new InputStreamReader(is, "UTF-8"));
 
         // cache a list of schemas by name
-        Map<String, String> nameMap = new HashMap<String, String>();
+        Map<String, String> nameMap = new HashMap<>();
         for (String id : _STAGING.getSchemaIds())
             nameMap.put(_STAGING.getSchema(id).getName(), id);
 
@@ -847,11 +847,11 @@ public class CsStagingTest {
 
     @Test
     public void testForUnusedTables() {
-        Set<String> usedTables = new HashSet<String>();
+        Set<String> usedTables = new HashSet<>();
         for (String id : _STAGING.getSchemaIds())
             usedTables.addAll(_STAGING.getSchema(id).getInvolvedTables());
 
-        Set<String> unusedTables = new HashSet<String>();
+        Set<String> unusedTables = new HashSet<>();
         for (String id : _STAGING.getTableIds())
             if (!usedTables.contains(id))
                 unusedTables.add(id);
@@ -898,13 +898,13 @@ public class CsStagingTest {
      */
     @Test
     public void testInvalidTableInputs() {
-        Set<String> errors = new HashSet<String>();
+        Set<String> errors = new HashSet<>();
 
         for (String schemaId : _STAGING.getSchemaIds()) {
             StagingSchema schema = _STAGING.getSchema(schemaId);
 
             // build a list of input tables that should be excluded
-            Map<String, Integer> inputTableLengths = new HashMap<String, Integer>();
+            Map<String, Integer> inputTableLengths = new HashMap<>();
             for (StagingSchemaInput input : schema.getInputs())
                 if (input.getTable() != null)
                     inputTableLengths.put(input.getTable(), getInputLength(input.getTable(), input.getKey()));

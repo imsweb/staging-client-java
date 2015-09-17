@@ -22,8 +22,8 @@ public class Result {
 
     private Type _type;
     private Map<String, String> _context;
-    private List<Error> _errors = new ArrayList<Error>();
-    private List<String> _path = new ArrayList<String>();
+    private List<Error> _errors = new ArrayList<>();
+    private List<String> _path = new ArrayList<>();
 
     /**
      * Default constructor

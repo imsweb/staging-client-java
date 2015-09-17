@@ -10,7 +10,7 @@ import java.util.Set;
 
 public class SchemaLookup {
 
-    private Map<String, String> _inputs = new HashMap<String, String>();
+    private Map<String, String> _inputs = new HashMap<>();
 
     /**
      * Default constructor

@@ -289,14 +289,14 @@ public class DecisionEngineTest {
 
     @Test
     public void testMatch() {
-        List<StringRange> range = new ArrayList<StringRange>();
+        List<StringRange> range = new ArrayList<>();
         range.add(new BasicStringRange("1", "1"));
         range.add(new BasicStringRange("4", "4"));
         range.add(new BasicStringRange("9", "9"));
         Assert.assertTrue(DecisionEngine.testMatch(range, "9", new HashMap<String, String>()));
         Assert.assertFalse(DecisionEngine.testMatch(range, "7", new HashMap<String, String>()));
 
-        range = new ArrayList<StringRange>();
+        range = new ArrayList<>();
         range.add(new BasicStringRange("11", "54"));
         range.add(new BasicStringRange("99", "99"));
         Assert.assertTrue(DecisionEngine.testMatch(range, "23", new HashMap<String, String>()));
@@ -332,7 +332,7 @@ public class DecisionEngineTest {
         Assert.assertNotNull(matchTable);
 
         // create context of input fields
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
 
         // first try it with missing input
         Assert.assertNull(DecisionEngine.matchTable(matchTable, input));
@@ -371,7 +371,7 @@ public class DecisionEngineTest {
         Assert.assertNotNull(matchTable);
 
         // create context of input fields
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
 
         // first try it with missing input (null should match just like blank))
         Assert.assertNotNull(DecisionEngine.matchTable(matchTable, input));
@@ -417,7 +417,7 @@ public class DecisionEngineTest {
         Assert.assertNotNull(matchTable);
 
         // create context of input fields
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
 
         // first try it with missing input
         Assert.assertNull(DecisionEngine.matchTable(matchTable, input));
@@ -457,7 +457,7 @@ public class DecisionEngineTest {
         Table tableMissing = provider.getTable("testMissingAndAll");
 
         List<? extends Endpoint> endpoints;
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
         input.put("a", "");
         endpoints = DecisionEngine.matchTable(tableMissing, input);
         Assert.assertEquals(1, endpoints.size());
@@ -498,7 +498,7 @@ public class DecisionEngineTest {
         provider.addDefinition(def);
         DecisionEngine engine = new DecisionEngine(provider);
 
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
         input.put("a", "1");
         input.put("b", "B VALUE");
         Assert.assertFalse(engine.process("alg_key_references", input).hasErrors());
@@ -545,7 +545,7 @@ public class DecisionEngineTest {
         Assert.assertNotNull(tableSample);
 
         // first test with no "a"
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
         input.put("b", "55");
         List<? extends Endpoint> endpoints = DecisionEngine.matchTable(tableSample, input);
         Assert.assertEquals(1, endpoints.size());
@@ -574,7 +574,7 @@ public class DecisionEngineTest {
         table.addRawRow("*", "*", "MATCH", "MATCH");
         provider.addTable(table);
 
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
         input.put("a", "X");
         input.put("b", "");
         List<? extends Endpoint> endpoints = DecisionEngine.matchTable(table, input);
@@ -612,7 +612,7 @@ public class DecisionEngineTest {
         Table siteTable = provider.getTable("site_table");
         Assert.assertNotNull(siteTable);
 
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
         input.put("site", "C809");
 
         // a lookup table in this case has no ENDPOINT column.  In those cases, an endpoint type of MATCH should be returned
@@ -642,7 +642,7 @@ public class DecisionEngineTest {
         Table allValuesTable = provider.getTable("all_values_test");
         Assert.assertNotNull(table);
 
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
         input.put("a", "1");
         input.put("b", "3");
         List<? extends Endpoint> endpoints = DecisionEngine.matchTable(allValuesTable, input);
@@ -650,14 +650,14 @@ public class DecisionEngineTest {
         Assert.assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
         Assert.assertEquals("RESULT2", endpoints.get(0).getValue());
 
-        input = new HashMap<String, String>();
+        input = new HashMap<>();
         input.put("a", "3");
         endpoints = DecisionEngine.matchTable(allValuesTable, input);
         Assert.assertEquals(1, endpoints.size());
         Assert.assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
         Assert.assertEquals("3A,ANY B", endpoints.get(0).getValue());
 
-        input = new HashMap<String, String>();
+        input = new HashMap<>();
         input.put("a", "3");
         input.put("b", "9");
         endpoints = DecisionEngine.matchTable(allValuesTable, input);
@@ -665,7 +665,7 @@ public class DecisionEngineTest {
         Assert.assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
         Assert.assertEquals("3A,ANY B", endpoints.get(0).getValue());
 
-        input = new HashMap<String, String>();
+        input = new HashMap<>();
         input.put("a", "6");
         input.put("b", "4");
         endpoints = DecisionEngine.matchTable(allValuesTable, input);
@@ -673,7 +673,7 @@ public class DecisionEngineTest {
         Assert.assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
         Assert.assertEquals("ANY A,4B", endpoints.get(0).getValue());
 
-        input = new HashMap<String, String>();
+        input = new HashMap<>();
         Assert.assertEquals(1, endpoints.size());
         endpoints = DecisionEngine.matchTable(allValuesTable, input);
         Assert.assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
@@ -687,7 +687,7 @@ public class DecisionEngineTest {
         Assert.assertEquals("starting_min", minDefinition.getId());
         Assert.assertNotNull(minDefinition.getInitialContext());
 
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
         Result result = _ENGINE.process(minDefinition, input);
 
         Assert.assertFalse(result.hasErrors());
@@ -704,7 +704,7 @@ public class DecisionEngineTest {
 
     @Test
     public void testMissingParameters() {
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
         Result result = _ENGINE.process("starting_sample", input);
 
         Assert.assertTrue(result.hasErrors());
@@ -717,7 +717,7 @@ public class DecisionEngineTest {
 
     @Test
     public void testParameterLookupValidation() {
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
         input.put("a", "3");
         input.put("b", "31");  // value is not in lookup table
 
@@ -744,7 +744,7 @@ public class DecisionEngineTest {
 
     @Test
     public void testSingleTableProcess() {
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
         input.put("a", "7");
         input.put("b", "03");  // should map to "hemeretic" without using second table
         input.put("e", "X");
@@ -759,7 +759,7 @@ public class DecisionEngineTest {
 
     @Test
     public void testOneJumpProcess() {
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
         input.put("a", "5");
         input.put("b", "20");
         input.put("c", "A");
@@ -772,7 +772,7 @@ public class DecisionEngineTest {
         Assert.assertEquals("A", input.get("result"));
 
         // now test an error line in the jump table
-        input = new HashMap<String, String>();
+        input = new HashMap<>();
         input.put("a", "5");
         input.put("b", "20");
         input.put("c", "C");
@@ -788,7 +788,7 @@ public class DecisionEngineTest {
         Assert.assertEquals("table_jump_sample", result.getErrors().get(0).getTable());
 
         // finally test that no match is found in the jump table
-        input = new HashMap<String, String>();
+        input = new HashMap<>();
         input.put("a", "5");
         input.put("b", "20");
         input.put("c", "D");
@@ -806,7 +806,7 @@ public class DecisionEngineTest {
 
     @Test
     public void testProcessError() {
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
         input.put("a", "9");
         input.put("b", "99");
         input.put("e", "X");
@@ -842,7 +842,7 @@ public class DecisionEngineTest {
         provider.addDefinition(def);
         DecisionEngine engine = new DecisionEngine(provider);
 
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
         Result result = engine.process("starting_null_values", input);
 
         Assert.assertFalse(result.hasErrors());
@@ -870,7 +870,7 @@ public class DecisionEngineTest {
     @Test
     public void testProcessWithStop() {
         // first test that we get a result from the second table
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
         input.put("a", "5");
         input.put("b", "20");
         input.put("c", "A");
@@ -900,7 +900,7 @@ public class DecisionEngineTest {
 
     @Test
     public void testProcessWithBlanks() {
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
         input.put("x", "1");
         input.put("y", "");
         Result result = _ENGINE.process("starting_blank", input);
@@ -925,7 +925,7 @@ public class DecisionEngineTest {
 
     @Test
     public void testProcessWithDoubleInputMapping() {
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
         input.put("x", "1");
         Result result = _ENGINE.process("starting_double_input", input);
 
@@ -937,7 +937,7 @@ public class DecisionEngineTest {
 
     @Test
     public void testProcessWithDoubleOutputMapping() {
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
         input.put("a", "1");
         input.put("b", "00");
         Result result = _ENGINE.process("starting_double_output", input);
@@ -953,7 +953,7 @@ public class DecisionEngineTest {
     @Test
     public void testInvolvedAlgorithms() {
         List<Mapping> mappings;
-        Map<String, String> context = new HashMap<String, String>();
+        Map<String, String> context = new HashMap<>();
 
         Definition definition = _ENGINE.getProvider().getDefinition("starting_min");
         mappings = _ENGINE.getInvolvedMappings(definition, context);
@@ -1009,7 +1009,7 @@ public class DecisionEngineTest {
 
     @Test
     public void testProcessWithRecursion() {
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
         input.put("a", "4");
         Result result = _ENGINE.process("starting_recursion", input);
 
@@ -1023,7 +1023,7 @@ public class DecisionEngineTest {
     @Test
     public void testProcessWithMultipleEndpoints() {
         // first test all 3 results get set
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
         input.put("a", "2");
         input.put("b", "12");
         Result result = _ENGINE.process("starting_multiple_endpoints", input);
@@ -1100,7 +1100,7 @@ public class DecisionEngineTest {
     @Test
     public void testMultipleEndpointWithoutRecursion() {
         // test 2 JUMPs to same table and one value; this is not infinite recursion but since same table called twice it gets confused
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
         input.put("a", "4");
         input.put("b", "44");
         input.put("c", "A");
@@ -1116,7 +1116,7 @@ public class DecisionEngineTest {
 
     @Test
     public void testInclusionsAndExclusions() {
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
         input.put("a", "1");
         input.put("b", "2");
         input.put("c", "3");
@@ -1165,7 +1165,7 @@ public class DecisionEngineTest {
      * @return Set of values
      */
     private Set<String> asSet(String... values) {
-        return new HashSet<String>(Arrays.asList(values));
+        return new HashSet<>(Arrays.asList(values));
     }
 
     @Test
@@ -1208,7 +1208,7 @@ public class DecisionEngineTest {
         table.addRawRow("*", "55", "Line5", "VALUE:LINE5");
         table.addRawRow("9", "99", "Line6", "ERROR:999");
 
-        Map<String, String> context = new HashMap<String, String>();
+        Map<String, String> context = new HashMap<>();
 
         Assert.assertEquals(DecisionEngine._BLANK_OUTPUT + "," + DecisionEngine._BLANK_OUTPUT, DecisionEngine.getTableInputsAsString(table, context));
 
@@ -1223,7 +1223,7 @@ public class DecisionEngineTest {
         Assert.assertEquals("7,25", DecisionEngine.getTableInputsAsString(table, context));
 
         table = new BasicTable("table_empty");
-        context = new HashMap<String, String>();
+        context = new HashMap<>();
         Assert.assertEquals("", DecisionEngine.getTableInputsAsString(table, context));
     }
 
@@ -1264,7 +1264,7 @@ public class DecisionEngineTest {
 
         DecisionEngine engine = new DecisionEngine(provider);
 
-        Map<String, String> input = new HashMap<String, String>();
+        Map<String, String> input = new HashMap<>();
         input.put("input1", "000");
         Result result = engine.process("sample_outputs", input);
 
@@ -1284,7 +1284,7 @@ public class DecisionEngineTest {
         provider.initDefinition(def);
         engine = new DecisionEngine(provider);
 
-        input = new HashMap<String, String>();
+        input = new HashMap<>();
         input.put("input1", "000");
         result = engine.process("sample_outputs", input);
 

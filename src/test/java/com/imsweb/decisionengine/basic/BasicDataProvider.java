@@ -22,8 +22,8 @@ public class BasicDataProvider implements DataProvider {
 
     private static String _MATCH_ALL_STRING = "*";
     private static BasicStringRange _MATCH_ALL_ENDPOINT = new BasicStringRange();
-    private Map<String, BasicTable> _tables = new HashMap<String, BasicTable>();
-    private Map<String, BasicDefinition> _definitions = new HashMap<String, BasicDefinition>();
+    private Map<String, BasicTable> _tables = new HashMap<>();
+    private Map<String, BasicDefinition> _definitions = new HashMap<>();
 
     /**
      * Default constructor
@@ -38,7 +38,7 @@ public class BasicDataProvider implements DataProvider {
     public void initDefinition(BasicDefinition definition) {
         // parse the values into something that can searched more efficiently
         if (definition.getInputs() != null) {
-            Map<String, BasicInput> parsedInputMap = new HashMap<String, BasicInput>();
+            Map<String, BasicInput> parsedInputMap = new HashMap<>();
             for (BasicInput input : definition.getInputs()) {
                 // verify that all inputs contain a key
                 if (input.getKey() == null)
@@ -53,7 +53,7 @@ public class BasicDataProvider implements DataProvider {
 
         // store the outputs in a Map that can searched more efficiently
         if (definition.getOutputs() != null) {
-            Map<String, BasicOutput> parsedOutputMap = new HashMap<String, BasicOutput>();
+            Map<String, BasicOutput> parsedOutputMap = new HashMap<>();
 
             for (BasicOutput output : definition.getOutputs()) {
                 // verify that all inputs contain a key
@@ -72,7 +72,7 @@ public class BasicDataProvider implements DataProvider {
      * @param table a BasicTable
      */
     public void initTable(BasicTable table) {
-        Set<String> extraInputs = new HashSet<String>();
+        Set<String> extraInputs = new HashSet<>();
 
         if (table.getRawRows() != null) {
             for (List<String> row : table.getRawRows()) {
@@ -177,7 +177,7 @@ public class BasicDataProvider implements DataProvider {
      * @return a List of BasicStringRange objects
      */
     protected List<BasicStringRange> splitValues(String values) {
-        List<BasicStringRange> convertedRanges = new ArrayList<BasicStringRange>();
+        List<BasicStringRange> convertedRanges = new ArrayList<>();
 
         if (values != null) {
             // if the value of the string is "*", then consider it as matching anything

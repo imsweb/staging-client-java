@@ -33,7 +33,7 @@ public class StagingFileDataProvider extends StagingDataProvider {
     private String _tableDirectory;
     private Set<String> _tableIds;
     private LoadingCache<String, StagingTable> _tableCache;
-    private Map<String, StagingSchema> _schemas = new HashMap<String, StagingSchema>();
+    private Map<String, StagingSchema> _schemas = new HashMap<>();
 
     /**
      * Constructor loads all schemas and sets up table cache
@@ -50,7 +50,7 @@ public class StagingFileDataProvider extends StagingDataProvider {
 
         // first get a list of all tables ids
         try {
-            _tableIds = new HashSet<String>();
+            _tableIds = new HashSet<>();
             for (String tableId : readLines(_tableDirectory + "/ids.txt"))
                 _tableIds.add(tableId);
         }
@@ -123,10 +123,7 @@ public class StagingFileDataProvider extends StagingDataProvider {
 
             return _tableCache.get(id);
         }
-        catch (ExecutionException e) {
-            throw new IllegalStateException(e.getCause());
-        }
-        catch (UncheckedExecutionException e) {
+        catch (ExecutionException | UncheckedExecutionException e) {
             throw new IllegalStateException(e.getCause());
         }
     }
