@@ -361,8 +361,12 @@
         "from" : "tmp_clin_t",
         "to" : "t"
       } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "clin_stage_group"
+      } ],
       "inputs" : [ "tmp_clin_n", "tmp_clin_m", "tmp_clin_t" ],
-      "outputs" : [ "stage" ]
+      "outputs" : [ "clin_stage_group" ]
     }, {
       "id" : "tnm7_stage_uac",
       "input_mapping" : [ {
@@ -488,5 +492,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "ssf22_san", "ssf23_sao", "ssf5_naa", "schema_selection_breast", "histology", "ssf24_sap", "nodes_pos_fab", "tnm7_inclusions_tpg", "ssf3_lac", "ssf11_sae", "ssf16_sah", "ssf14_sbf", "ssf20_sal", "nodes_daj", "systemic_surg_seq", "tnm7_stage_uac", "ssf10_sad", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "ssf15_sbg", "ssf21_sam", "summary_stage_rpa", "ssf17_sai", "ssf1_jag", "combined_t_breast", "extension_bak", "combined_n_to_summ_stage_n_n3c_d_43145", "determine_default_t", "input_version_validation", "ssf19_sak", "radiation_surg_seq", "ssf6_oaa", "determine_default_m", "ssf18_saj", "clin_m_hau", "determine_default_n", "ssf7_saa", "path_n_daj", "ssf4_mab", "path_m_hau", "behavior", "mets_hau", "ssf8_sab", "ssf12_saf", "adjust_path_defaults", "clin_n_daj", "primary_site", "ssf2_kac", "year_dx_validation", "ssf9_sac", "breast_t_70656", "ssf13_sag" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T20:52:09.699Z"
+  "last_modified" : "2015-09-10T15:36:38.034Z"
 }

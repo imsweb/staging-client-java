@@ -351,5 +351,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "extension_bbq", "input_version_validation", "radiation_surg_seq", "nodes_dbh", "determine_default_m", "nodes_pos_fpa", "clin_m_hav", "ssf3_lay", "determine_default_n", "bone_ajcctnm6and7_stage_ewing", "combined_n_to_summ_stage_n_84054", "histology", "path_m_hav", "combined_t_no_tis", "clin_t_copy_49711", "mets_hav", "bone_n_33333", "combined_t_to_summ_stage_t_3_4e_d_76738", "bone_ajcctnm7_stage_not_ewing", "bone_histologies_stage", "adjust_path_defaults", "systemic_surg_seq", "ssf2_kbl", "ssf1_jbx", "primary_site", "tnm7_inclusions_tpy", "combined_m", "combined_n", "ssf4_mbd", "grade", "year_dx_validation", "summary_stage_rpa", "schema_selection_bone" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T20:51:40.852Z"
+  "last_modified" : "2015-09-14T16:38:08.457Z"
 }

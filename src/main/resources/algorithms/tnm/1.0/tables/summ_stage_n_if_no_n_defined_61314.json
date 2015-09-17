@@ -4,10 +4,10 @@
   "version" : "1.0",
   "name" : "Summ Stage N if No N defined",
   "title" : "Summary Stage N if No N is defined in TNM schema",
-  "last_modified" : "2015-09-08T19:23:46.969Z",
+  "last_modified" : "2015-09-10T13:03:18.841Z",
   "definition" : [ {
-    "key" : "clin_n",
-    "name" : "Clin N",
+    "key" : "combined_n_in",
+    "name" : "Combined N (input)",
     "type" : "INPUT"
   }, {
     "key" : "description",
