@@ -1,0 +1,52 @@
+{
+  "id" : "adjust_path_defaults_for_no_path_placenta_29508",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Adjust Path Defaults for No Path -Placenta",
+  "title" : "Adjust Path T, N, M defaults if No Path Procedure Done",
+  "description" : "Since Placenta does not have N, Combined N is set to 88 as it does not apply",
+  "last_modified" : "2015-09-10T13:00:59.597Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_m",
+    "name" : "Pathologic M",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_stage_group",
+    "name" : "Derived Path Stage Group",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "combined_t_in",
+    "name" : "Combined T set in defaults",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "source_t",
+    "name" : "Source of Combined T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "combined_n_in",
+    "name" : "Combined N set in defaults",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "source_n",
+    "name" : "Source of Combined N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "combined_m_in",
+    "name" : "Combined M set in defaults",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "source_m",
+    "name" : "Source of Combined M",
+    "type" : "ENDPOINT"
+  } ],
+  "extra_input" : [ "tmp_clin_t", "tmp_clin_m" ],
+  "rows" : [ [ "", "", "", "VALUE:99", "VALUE:{{tmp_clin_t}}", "VALUE:C", "VALUE:88", "VALUE:", "VALUE:{{tmp_clin_m}}", "VALUE:C" ], [ "*", "*", "*", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH" ] ]
+}
