@@ -21,20 +21,22 @@ Versions supported:
 
 ## Download
 
+Starting with version 1.5, Java 7 is the minimum version required to use the library.  Prior versions required Java 6 or later.
+
 Download [the latest JAR][1] or grab via Maven:
 
 ```xml
 <dependency>
     <groupId>com.imsweb</groupId>
     <artifactId>staging-client-java</artifactId>
-    <version>1.4.6</version>
+    <version>1.5</version>
 </dependency>
 ```
 
 or via Gradle:
 
 ```groovy
-compile 'com.imsweb.com:staging-client-java:1.4.6'
+compile 'com.imsweb.com:staging-client-java:1.5'
 ```
 
 ## Usage

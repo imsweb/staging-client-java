@@ -162,7 +162,7 @@ public final class IntegrationUtils {
      */
     public static IntegrationResult processSchema(final Staging staging, final String fileName, InputStream is, Integer singleLineNumber) throws IOException, InterruptedException {
         // set up a mapping of output field positions in the CSV file
-        final Map<CsOutput, Integer> mappings = new EnumMap<CsOutput, Integer>(CsOutput.class);
+        final Map<CsOutput, Integer> mappings = new EnumMap<>(CsOutput.class);
         mappings.put(CsOutput.AJCC6_T, 42);
         mappings.put(CsOutput.AJCC6_TDESCRIPTOR, 43);
         mappings.put(CsOutput.AJCC6_N, 44);
@@ -285,7 +285,7 @@ public final class IntegrationUtils {
 
                         try {
                             // save the expected outputs
-                            Map<String, String> output = new HashMap<String, String>();
+                            Map<String, String> output = new HashMap<>();
                             for (CsOutput key : mappings.keySet())
                                 output.put(key.toString(), values[mappings.get(key)]);
 
@@ -297,12 +297,12 @@ public final class IntegrationUtils {
                             if (schemas.size() == 1)
                                 staging.stage(data);
                             else {
-                                Map<String, String> out = new HashMap<String, String>();
+                                Map<String, String> out = new HashMap<>();
                                 out.put("schema_id", "<invalid>");
                                 data.setOutput(out);
                             }
 
-                            List<String> mismatches = new ArrayList<String>();
+                            List<String> mismatches = new ArrayList<>();
 
                             // compare results
                             for (Map.Entry<String, String> entry : output.entrySet()) {
@@ -367,7 +367,7 @@ public final class IntegrationUtils {
     }
 
     private static String convertInputMap(Map<String, String> input) {
-        List<String> inputValues = new ArrayList<String>();
+        List<String> inputValues = new ArrayList<>();
         for (Map.Entry<String, String> entry : input.entrySet())
             inputValues.add("\"" + entry.getKey() + "\": \"" + entry.getValue() + "\"");
         return "{ " + Joiner.on(", ").join(inputValues) + " }";

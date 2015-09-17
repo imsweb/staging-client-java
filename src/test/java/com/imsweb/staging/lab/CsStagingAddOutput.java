@@ -44,11 +44,11 @@ public class CsStagingAddOutput {
         Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.v020550));
 
         // hold all schema in a map
-        Map<String, StagingSchema> schemaMap = new HashMap<String, StagingSchema>();
+        Map<String, StagingSchema> schemaMap = new HashMap<>();
         for (String schemaId : staging.getSchemaIds()) {
             StagingSchema schema = staging.getSchema(schemaId);
 
-            List<StagingSchemaOutput> outputs = new ArrayList<StagingSchemaOutput>();
+            List<StagingSchemaOutput> outputs = new ArrayList<>();
 
             StagingSchemaOutput output = new StagingSchemaOutput("schema_number", "Schema Number");
             for (StagingKeyValue value : schema.getInitialContext())

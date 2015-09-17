@@ -48,7 +48,7 @@ public class BasicTablePath implements TablePath {
 
     public void addInputMapping(String from, String to) {
         if (_input == null)
-            _input = new HashSet<BasicKeyMapping>();
+            _input = new HashSet<>();
 
         _input.add(new BasicKeyMapping(from, to));
     }
@@ -64,7 +64,7 @@ public class BasicTablePath implements TablePath {
 
     public void addOutputMapping(String from, String to) {
         if (_output == null)
-            _output = new HashSet<BasicKeyMapping>();
+            _output = new HashSet<>();
 
         _output.add(new BasicKeyMapping(from, to));
     }

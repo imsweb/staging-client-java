@@ -211,7 +211,7 @@ public class DecisionEngine {
         if (mapping.getInclusionTables() != null) {
             for (TablePath path : mapping.getInclusionTables()) {
                 // make a copy of the context so mapping changes are only included for a single table path
-                Map<String, String> pathContext = new HashMap<String, String>();
+                Map<String, String> pathContext = new HashMap<>();
                 pathContext.putAll(context);
 
                 Table table = getProvider().getTable(path.getId());
@@ -239,7 +239,7 @@ public class DecisionEngine {
         if (matches && mapping.getExclusionTables() != null) {
             for (TablePath path : mapping.getExclusionTables()) {
                 // make a copy of the context so mapping changes are only included for a single table path
-                Map<String, String> pathContext = new HashMap<String, String>();
+                Map<String, String> pathContext = new HashMap<>();
                 pathContext.putAll(context);
 
                 Table table = getProvider().getTable(path.getId());
@@ -273,7 +273,7 @@ public class DecisionEngine {
      * @return a List of involved Mapping entities
      */
     public List<Mapping> getInvolvedMappings(Definition definition, Map<String, String> context) {
-        List<Mapping> mappings = new ArrayList<Mapping>();
+        List<Mapping> mappings = new ArrayList<>();
 
         if (context == null)
             throw new IllegalStateException("Context must not be missing");
@@ -307,7 +307,7 @@ public class DecisionEngine {
      * @return a set of table identifiers
      */
     public Set<String> getInvolvedTables(Definition definition) {
-        Set<String> tables = new LinkedHashSet<String>();
+        Set<String> tables = new LinkedHashSet<>();
 
         // first, evaluate inputs and outputs
         for (String key : definition.getInputMap().keySet()) {
@@ -394,15 +394,15 @@ public class DecisionEngine {
      * @return a Set of unique inputs
      */
     public Set<String> getInputs(TablePath path, Set<String> excludedInputs) {
-        Set<String> inputs = new LinkedHashSet<String>();
+        Set<String> inputs = new LinkedHashSet<>();
 
         if (path != null) {
-            Map<String, String> inputMappings = new HashMap<String, String>();
+            Map<String, String> inputMappings = new HashMap<>();
 
             if (path.getInputMapping() != null)
                 for (KeyMapping keymapping : path.getInputMapping())
                     inputMappings.put(keymapping.getTo(), keymapping.getFrom());
-            Map<String, String> outputMappings = new HashMap<String, String>();
+            Map<String, String> outputMappings = new HashMap<>();
             if (path.getOutputMapping() != null)
                 for (KeyMapping keymapping : path.getOutputMapping())
                     outputMappings.put(keymapping.getFrom(), keymapping.getTo());
@@ -453,7 +453,7 @@ public class DecisionEngine {
      * @return a Set of unique inputs
      */
     public Set<String> getInputs(Mapping mapping, Set<String> excludedInputs) {
-        Set<String> inputs = new LinkedHashSet<String>();
+        Set<String> inputs = new LinkedHashSet<>();
 
         // handle inclusion tables if any
         if (mapping.getInclusionTables() != null)
@@ -479,8 +479,8 @@ public class DecisionEngine {
      * @return a Set of Strings contianing the unique Definition input keys
      */
     public Set<String> getInputs(Definition definition) {
-        Set<String> inputs = new LinkedHashSet<String>();
-        Set<String> excludedInputs = new HashSet<String>();
+        Set<String> inputs = new LinkedHashSet<>();
+        Set<String> excludedInputs = new HashSet<>();
 
         if (definition.getMappings() != null)
             for (Mapping mapping : definition.getMappings())
@@ -495,11 +495,11 @@ public class DecisionEngine {
      * @return a Set of Strings containing the unique Mapping output keys
      */
     public Set<String> getOutputs(TablePath path) {
-        Set<String> outputs = new LinkedHashSet<String>();
+        Set<String> outputs = new LinkedHashSet<>();
 
         if (path != null) {
             // build map of from key -> to key
-            Map<String, String> mappings = new HashMap<String, String>();
+            Map<String, String> mappings = new HashMap<>();
             if (path.getOutputMapping() != null)
                 for (KeyMapping keymapping : path.getOutputMapping())
                     mappings.put(keymapping.getFrom(), keymapping.getTo());
@@ -525,7 +525,7 @@ public class DecisionEngine {
      * @return a Set of Strings containing the unique Mapping output keys
      */
     public Set<String> getOutputs(Mapping mapping) {
-        Set<String> outputs = new LinkedHashSet<String>();
+        Set<String> outputs = new LinkedHashSet<>();
 
         if (mapping.getTablePaths() != null)
             for (TablePath path : mapping.getTablePaths())
@@ -540,7 +540,7 @@ public class DecisionEngine {
      * @return a Set of Strings containing the unique Mapping output keys
      */
     public Set<String> getOutputs(Definition definition) {
-        Set<String> outputs = new LinkedHashSet<String>();
+        Set<String> outputs = new LinkedHashSet<>();
 
         if (definition.getMappings() != null)
             for (Mapping mapping : definition.getMappings())
@@ -673,7 +673,7 @@ public class DecisionEngine {
                             }
 
                             // create a stack to keep track of table calls and ensure there is no infinite recursion
-                            Deque<String> stack = new ArrayDeque<String>();
+                            Deque<String> stack = new ArrayDeque<>();
 
                             // recursively process the mapping; if false is returned, stop all processing
                             boolean continueProcessing = process(mapping.getId(), tableId, path, result, stack);
@@ -782,7 +782,7 @@ public class DecisionEngine {
                 }
                 else if (EndpointType.VALUE.equals(endpoint.getType())) {
                     // if output mapping(s) were provided, check whether the key was mapped
-                    List<String> mappedKeys = new ArrayList<String>();
+                    List<String> mappedKeys = new ArrayList<>();
                     if (path.getOutputMapping() != null) {
                         for (KeyMapping key : path.getOutputMapping()) {
                             if (key.getFrom().equals(endpoint.getResultKey()))
@@ -818,7 +818,7 @@ public class DecisionEngine {
      * @return a String representing the input for the table
      */
     protected static String getTableInputsAsString(Table table, Map<String, String> context) {
-        List<String> inputs = new ArrayList<String>();
+        List<String> inputs = new ArrayList<>();
 
         if (table.getColumnDefinitions() != null)
             for (ColumnDefinition def : table.getColumnDefinitions())

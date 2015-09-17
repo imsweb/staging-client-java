@@ -122,7 +122,7 @@ public abstract class StagingDataProvider implements DataProvider {
 
         // store the inputs in a Map that can searched more efficiently
         if (schema.getInputs() != null) {
-            Map<String, StagingSchemaInput> parsedInputMap = new HashMap<String, StagingSchemaInput>();
+            Map<String, StagingSchemaInput> parsedInputMap = new HashMap<>();
 
             for (StagingSchemaInput input : schema.getInputs()) {
                 // verify that all inputs contain a key
@@ -137,7 +137,7 @@ public abstract class StagingDataProvider implements DataProvider {
 
         // store the outputs in a Map that can searched more efficiently
         if (schema.getOutputs() != null) {
-            Map<String, StagingSchemaOutput> parsedOutputMap = new HashMap<String, StagingSchemaOutput>();
+            Map<String, StagingSchemaOutput> parsedOutputMap = new HashMap<>();
 
             for (StagingSchemaOutput output : schema.getOutputs()) {
                 // verify that all inputs contain a key
@@ -159,7 +159,7 @@ public abstract class StagingDataProvider implements DataProvider {
      * @return initialized table entity
      */
     public static StagingTable initTable(StagingTable table) {
-        Set<String> extraInputs = new HashSet<String>();
+        Set<String> extraInputs = new HashSet<>();
 
         // empty out the parsed rows
         table.setTableRows(new ArrayList<StagingTableRow>());
@@ -296,7 +296,7 @@ public abstract class StagingDataProvider implements DataProvider {
      * @return a parsed list of string Range objects
      */
     public static List<StagingStringRange> splitValues(String values) {
-        List<StagingStringRange> convertedRanges = new ArrayList<StagingStringRange>();
+        List<StagingStringRange> convertedRanges = new ArrayList<>();
 
         if (values != null) {
             // if the value of the string is "*", then consider it as matching anything
@@ -376,10 +376,7 @@ public abstract class StagingDataProvider implements DataProvider {
         try {
             return _validValuesCache.get(PRIMARY_SITE_TABLE);
         }
-        catch (ExecutionException e) {
-            throw new IllegalStateException(e.getCause());
-        }
-        catch (UncheckedExecutionException e) {
+        catch (ExecutionException | UncheckedExecutionException e) {
             throw new IllegalStateException(e.getCause());
         }
     }
@@ -392,10 +389,7 @@ public abstract class StagingDataProvider implements DataProvider {
         try {
             return _validValuesCache.get(HISTOLOGY_TABLE);
         }
-        catch (ExecutionException e) {
-            throw new IllegalStateException(e.getCause());
-        }
-        catch (UncheckedExecutionException e) {
+        catch (ExecutionException | UncheckedExecutionException e) {
             throw new IllegalStateException(e.getCause());
         }
     }
@@ -414,10 +408,7 @@ public abstract class StagingDataProvider implements DataProvider {
         try {
             return _lookupCache.get(lookup);
         }
-        catch (ExecutionException e) {
-            throw new IllegalStateException(e.getCause());
-        }
-        catch (UncheckedExecutionException e) {
+        catch (ExecutionException | UncheckedExecutionException e) {
             throw new IllegalStateException(e.getCause());
         }
     }
@@ -428,7 +419,7 @@ public abstract class StagingDataProvider implements DataProvider {
      * @return a list of StagingSchemaInfo objects
      */
     private List<StagingSchema> getSchemas(SchemaLookup lookup) {
-        List<StagingSchema> matchedSchemas = new ArrayList<StagingSchema>();
+        List<StagingSchema> matchedSchemas = new ArrayList<>();
 
         String site = lookup.getInput(StagingData.PRIMARY_SITE_KEY);
         String histology = lookup.getInput(StagingData.HISTOLOGY_KEY);
@@ -446,7 +437,7 @@ public abstract class StagingDataProvider implements DataProvider {
 
         // site or histology must be supplied
         if (site != null || histology != null) {
-            Set<String> keysToMatch = new HashSet<String>();
+            Set<String> keysToMatch = new HashSet<>();
 
             if (site != null)
                 keysToMatch.add(StagingData.PRIMARY_SITE_KEY);
@@ -466,7 +457,7 @@ public abstract class StagingDataProvider implements DataProvider {
 
             // if multiple matches were found on site/hist and a discriminator was supplied, trim down the list
             if (hasDiscriminator && matchedSchemas.size() > 1) {
-                List<StagingSchema> trimmedMatches = new ArrayList<StagingSchema>();
+                List<StagingSchema> trimmedMatches = new ArrayList<>();
 
                 for (StagingSchema schema : matchedSchemas) {
                     if (schema.getSchemaSelectionTable() != null) {
@@ -489,7 +480,7 @@ public abstract class StagingDataProvider implements DataProvider {
      * @return A set of unique inputs
      */
     private Set<String> getAllInputValues(String tableId) {
-        Set<String> values = new HashSet<String>();
+        Set<String> values = new HashSet<>();
 
         // if the table is not found, return right away with an empty list
         StagingTable table = getTable(tableId);
@@ -497,7 +488,7 @@ public abstract class StagingDataProvider implements DataProvider {
             return values;
 
         // find the input key
-        Set<String> inputKeys = new HashSet<String>();
+        Set<String> inputKeys = new HashSet<>();
         for (StagingColumnDefinition def : table.getColumnDefinitions())
             if (ColumnType.INPUT.equals(def.getType()))
                 inputKeys.add(def.getKey());

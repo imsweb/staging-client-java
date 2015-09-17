@@ -19,9 +19,9 @@ import com.imsweb.decisionengine.TableRow;
 public class StagingTableRow implements TableRow {
 
     @Embedded("inputs")
-    private Map<String, List<StagingStringRange>> _inputs = new HashMap<String, List<StagingStringRange>>();
+    private Map<String, List<StagingStringRange>> _inputs = new HashMap<>();
     @Embedded("endpoints")
-    private List<StagingEndpoint> _endpoints = new ArrayList<StagingEndpoint>();
+    private List<StagingEndpoint> _endpoints = new ArrayList<>();
 
     @Override
     @JsonIgnore

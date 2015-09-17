@@ -24,7 +24,7 @@ public class StagingStringRangeTest {
 
     @Test
     public void testContext() {
-        Map<String, String> context = new HashMap<String, String>();
+        Map<String, String> context = new HashMap<>();
         StagingStringRange range = new StagingStringRange("2000", "{{current_year}}");
 
         Assert.assertFalse(range.contains("2004", context));

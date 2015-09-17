@@ -29,10 +29,10 @@ public class StagingData {
 
     private Result _result;
     private String _schemaId;
-    private Map<String, String> _input = new HashMap<String, String>();
-    private Map<String, String> _output = new HashMap<String, String>();
-    private List<Error> _errors = new ArrayList<Error>();
-    private List<String> _path = new ArrayList<String>();
+    private Map<String, String> _input = new HashMap<>();
+    private Map<String, String> _output = new HashMap<>();
+    private List<Error> _errors = new ArrayList<>();
+    private List<String> _path = new ArrayList<>();
 
     public enum Result {
         // staging was performed

@@ -22,8 +22,8 @@ public class BasicDefinition implements Definition {
     private StagingInputErrorHandler _onInvalidInput;
 
     // parsed fields
-    private Map<String, BasicInput> _parsedInputMap = new HashMap<String, BasicInput>();
-    private Map<String, BasicOutput> _parsedOutputMap = new HashMap<String, BasicOutput>();
+    private Map<String, BasicInput> _parsedInputMap = new HashMap<>();
+    private Map<String, BasicOutput> _parsedOutputMap = new HashMap<>();
 
     /**
      * Default constructor
@@ -58,21 +58,21 @@ public class BasicDefinition implements Definition {
 
     public void addInput(String key) {
         if (_inputs == null)
-            _inputs = new ArrayList<BasicInput>();
+            _inputs = new ArrayList<>();
 
         _inputs.add(new BasicInput(key));
     }
 
     public void addInput(BasicInput input) {
         if (_inputs == null)
-            _inputs = new ArrayList<BasicInput>();
+            _inputs = new ArrayList<>();
 
         _inputs.add(input);
     }
 
     public void addInput(String key, String table) {
         if (_inputs == null)
-            _inputs = new ArrayList<BasicInput>();
+            _inputs = new ArrayList<>();
 
         _inputs.add(new BasicInput(key, table));
     }
@@ -87,14 +87,14 @@ public class BasicDefinition implements Definition {
 
     public void addOutput(String key) {
         if (_outputs == null)
-            _outputs = new ArrayList<BasicOutput>();
+            _outputs = new ArrayList<>();
 
         _outputs.add(new BasicOutput(key));
     }
 
     public void addOutput(BasicOutput output) {
         if (_outputs == null)
-            _outputs = new ArrayList<BasicOutput>();
+            _outputs = new ArrayList<>();
 
         _outputs.add(output);
     }
@@ -110,7 +110,7 @@ public class BasicDefinition implements Definition {
 
     public void addInitialContext(String key, String value) {
         if (_initialContext == null)
-            _initialContext = new HashSet<BasicKeyValue>();
+            _initialContext = new HashSet<>();
 
         _initialContext.add(new BasicKeyValue(key, value));
     }
@@ -135,7 +135,7 @@ public class BasicDefinition implements Definition {
 
     public void addMapping(BasicMapping mapping) {
         if (_mappings == null)
-            _mappings = new ArrayList<BasicMapping>();
+            _mappings = new ArrayList<>();
 
         _mappings.add(mapping);
     }

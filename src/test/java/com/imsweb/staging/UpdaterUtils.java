@@ -80,7 +80,7 @@ public final class UpdaterUtils {
         r.withHeader("Accept", "application/json");
 
         System.out.print("Getting list of table identifiers...");
-        List<String> tableIds = new ArrayList<String>();
+        List<String> tableIds = new ArrayList<>();
         JSONResource tables = r.json(url + "/staging/" + algorithm + "/" + version + "/tables");
         JSONArray tableArray = tables.array();
         for (int i = 0; i < tableArray.length(); i++)
@@ -88,7 +88,7 @@ public final class UpdaterUtils {
         System.out.println(tableIds.size() + " found.");
 
         System.out.print("Getting list of schema identifiers...");
-        List<String> schemaIds = new ArrayList<String>();
+        List<String> schemaIds = new ArrayList<>();
         JSONResource schemas = r.json(url + "/staging/" + algorithm + "/" + version + "/schemas");
         JSONArray schemaArray = schemas.array();
         for (int i = 0; i < schemaArray.length(); i++)

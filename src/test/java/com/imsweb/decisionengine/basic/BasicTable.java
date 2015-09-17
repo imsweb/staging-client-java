@@ -16,10 +16,10 @@ public class BasicTable implements Table {
     private String _id;
     private List<BasicColumnDefinition> _definitions;
     private Set<String> _extraInput;
-    private List<List<String>> _rows = new ArrayList<List<String>>();
+    private List<List<String>> _rows = new ArrayList<>();
 
     // parsed fields
-    private List<BasicTableRow> _parsedTableRows = new ArrayList<BasicTableRow>();
+    private List<BasicTableRow> _parsedTableRows = new ArrayList<>();
 
     /**
      * Default constructor
@@ -64,7 +64,7 @@ public class BasicTable implements Table {
 
     public void addColumnDefinition(String key, ColumnType type) {
         if (_definitions == null)
-            _definitions = new ArrayList<BasicColumnDefinition>();
+            _definitions = new ArrayList<>();
 
         _definitions.add(new BasicColumnDefinition(key, type));
     }
@@ -79,7 +79,7 @@ public class BasicTable implements Table {
 
     public void addRawRow(String... row) {
         if (_rows == null)
-            _rows = new ArrayList<List<String>>();
+            _rows = new ArrayList<>();
 
         _rows.add(Arrays.asList(row));
     }

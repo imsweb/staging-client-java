@@ -71,7 +71,7 @@ public class StagingSchemaInput implements Input {
         setDefault(other.getDefault());
         setTable(other.getTable());
         if (other.getMetadata() != null)
-            setMetadata(new HashSet<String>(other.getMetadata()));
+            setMetadata(new HashSet<>(other.getMetadata()));
         setUsedForStaging(other.getUsedForStaging());
         setUnit(other.getUnit());
         setDecimalPlaces(other.getDecimalPlaces());
