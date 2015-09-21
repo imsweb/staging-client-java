@@ -50,8 +50,8 @@ jar {
 
 test {
     maxHeapSize = "1g"
-    forkEvery = 50
-    maxParallelForks = Runtime.runtime.availableProcessors()
+//    forkEvery = 50
+//    maxParallelForks = Runtime.runtime.availableProcessors()
 }
 
 checkstyle {
