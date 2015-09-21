@@ -286,8 +286,8 @@ public final class IntegrationUtils {
                         try {
                             // save the expected outputs
                             Map<String, String> output = new HashMap<>();
-                            for (CsOutput key : mappings.keySet())
-                                output.put(key.toString(), values[mappings.get(key)]);
+                            for (Map.Entry<CsOutput, Integer> entry : mappings.entrySet())
+                                output.put(entry.getKey().toString(), values[entry.getValue()]);
 
                             // run collaborative stage; if no schema found, set the output to empty
                             SchemaLookup lookup = new SchemaLookup(data.getInput(CsInput.PRIMARY_SITE), data.getInput(CsInput.HISTOLOGY));

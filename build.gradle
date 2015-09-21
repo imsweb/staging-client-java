@@ -50,6 +50,7 @@ jar {
 
 test {
     maxHeapSize = "1g"
+    maxParallelForks = Runtime.runtime.availableProcessors()
 }
 
 checkstyle {
