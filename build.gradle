@@ -64,7 +64,7 @@ findbugs {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.3'
+    gradleVersion = '2.7'
 }
 
 // run the full CS integration test suite
