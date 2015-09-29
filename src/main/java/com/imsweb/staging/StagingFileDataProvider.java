@@ -161,7 +161,7 @@ public class StagingFileDataProvider extends StagingDataProvider {
         InputStream input = Thread.currentThread().getContextClassLoader().getResourceAsStream(location);
 
         if (input == null)
-            throw new IllegalStateException("File does not exist: " + location);
+            throw new IllegalStateException("Internal error reading file; File could not be found: " + location);
 
         return new InputStreamReader(input, StandardCharsets.UTF_8);
     }
