@@ -123,7 +123,10 @@ public class StagingFileDataProvider extends StagingDataProvider {
 
             return _tableCache.get(id);
         }
-        catch (ExecutionException | UncheckedExecutionException e) {
+        catch (ExecutionException e) {
+            throw new IllegalStateException(e.getCause());
+        }
+        catch (UncheckedExecutionException e) {
             throw new IllegalStateException(e.getCause());
         }
     }
