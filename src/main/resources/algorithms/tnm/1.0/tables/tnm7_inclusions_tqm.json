@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "TNM7 Inclusions",
   "title" : "Histology Inclusion Table AJCC 7th ed.",
-  "last_modified" : "2015-08-13T13:23:17.840Z",
+  "last_modified" : "2015-09-19T20:23:30.018Z",
   "definition" : [ {
     "key" : "site",
     "name" : "Primary Site",
@@ -14,5 +14,5 @@
     "name" : "Histology",
     "type" : "INPUT"
   } ],
-  "rows" : [ [ "C328, C329", "8000-8576" ], [ "C328, C329", "8940-8950" ], [ "C328, C329", "8980-8981" ] ]
+  "rows" : [ [ "C328, C329", "8000-8576,8940-8950,8980-8981" ] ]
 }

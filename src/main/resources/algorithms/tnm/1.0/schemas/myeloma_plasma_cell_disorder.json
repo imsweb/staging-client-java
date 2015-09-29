@@ -6,16 +6,6 @@
   "title" : "Plasma Cell Disorders including Myeloma",
   "notes" : "9731 Plasmacytoma, NOS (except C441, C690, C695-C696)\n9732 Multiple myeloma (except C441, C690, C695-C696)\n9734 Plasmacytoma, extramedullary (except C441, C690, C695-C696)\n\n**Note:** TNM is not defined for this schema.",
   "schema_selection_table" : "schema_selection_myeloma_plasma_cell_disorder",
-  "initial_context" : [ {
-    "key" : "clin_stage_group",
-    "value" : "88"
-  }, {
-    "key" : "path_stage_group",
-    "value" : "88"
-  }, {
-    "key" : "combined_stage_group",
-    "value" : "88"
-  } ],
   "inputs" : [ {
     "key" : "year_dx",
     "name" : "Year of Diagnosis",
@@ -83,27 +73,33 @@
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
-    "naaccr_item" : 3610
+    "naaccr_item" : 3610,
+    "default" : "88"
   }, {
     "key" : "path_stage_group",
     "name" : "Derived SEER Path Stage Group",
-    "naaccr_item" : 3605
+    "naaccr_item" : 3605,
+    "default" : "88"
   }, {
     "key" : "combined_stage_group",
     "name" : "Derived SEER Combined Stage Group",
-    "naaccr_item" : 3614
+    "naaccr_item" : 3614,
+    "default" : "88"
   }, {
     "key" : "combined_t",
     "name" : "Derived SEER Combined T",
-    "naaccr_item" : 3616
+    "naaccr_item" : 3616,
+    "default" : "88"
   }, {
     "key" : "combined_n",
     "name" : "Derived SEER Combined N",
-    "naaccr_item" : 3618
+    "naaccr_item" : 3618,
+    "default" : "88"
   }, {
     "key" : "combined_m",
     "name" : "Derived SEER Combined M",
-    "naaccr_item" : 3620
+    "naaccr_item" : 3620,
+    "default" : "88"
   }, {
     "key" : "source_t",
     "name" : "Derived SEER Combined T Source",
@@ -119,7 +115,8 @@
   }, {
     "key" : "ss2017",
     "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762
+    "naaccr_item" : 762,
+    "default" : "90"
   }, {
     "key" : "ss2017_t",
     "name" : "Derived SEER Summary Stage 2017 T"
@@ -153,5 +150,5 @@
   } ],
   "involved_tables" : [ "primary_site", "ssf2_kbx", "input_version_validation", "histology", "schema_selection_myeloma_plasma_cell_disorder", "ssf3_lbb", "year_dx_validation", "summary_stage_rpa", "mets_hna", "nodes_dfy", "extension_bgc" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T20:52:16.808Z"
+  "last_modified" : "2015-09-25T13:51:08.783Z"
 }

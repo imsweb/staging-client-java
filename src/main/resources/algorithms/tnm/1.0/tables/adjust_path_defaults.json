@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Adjust Path Defaults for No Path",
   "title" : "Adjust Path T, N, M defaults if No Path Procedure Done",
-  "last_modified" : "2015-09-10T12:50:30.391Z",
+  "last_modified" : "2015-09-18T20:41:22.094Z",
   "definition" : [ {
     "key" : "path_t",
     "name" : "Pathologic T",
@@ -46,6 +46,6 @@
     "name" : "Source of Combined M",
     "type" : "ENDPOINT"
   } ],
-  "extra_input" : [ "tmp_clin_t", "tmp_clin_n", "tmp_clin_m" ],
-  "rows" : [ [ "", "", "", "VALUE:99", "VALUE:{{tmp_clin_t}}", "VALUE:C", "VALUE:{{tmp_clin_n}}", "VALUE:C", "VALUE:{{tmp_clin_m}}", "VALUE:C" ], [ "*", "*", "*", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH" ] ]
+  "extra_input" : [ "tmp_clin_n", "tmp_clin_m", "tmp_clin_t" ],
+  "rows" : [ [ "", "", "", "VALUE:99", "VALUE:{{tmp_clin_t}}", "VALUE:1", "VALUE:{{tmp_clin_n}}", "VALUE:1", "VALUE:{{tmp_clin_m}}", "VALUE:1" ], [ "*", "*", "*", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH" ] ]
 }

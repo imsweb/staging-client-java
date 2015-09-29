@@ -47,6 +47,6 @@
     "name" : "Source of Combined M",
     "type" : "ENDPOINT"
   } ],
-  "extra_input" : [ "tmp_clin_t", "tmp_clin_m" ],
+  "extra_input" : [ "tmp_clin_m", "tmp_clin_t" ],
   "rows" : [ [ "", "", "", "VALUE:99", "VALUE:{{tmp_clin_t}}", "VALUE:C", "VALUE:88", "VALUE:", "VALUE:{{tmp_clin_m}}", "VALUE:C" ], [ "*", "*", "*", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH" ] ]
 }

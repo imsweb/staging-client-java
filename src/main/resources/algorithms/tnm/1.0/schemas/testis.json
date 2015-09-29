@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Testis",
   "title" : "Testis",
-  "description" : "[SME REVIEW] Lynne P has confirmed with her urologist experts that there is not a clinical S. For clinical, per UICC, you can only have a cTX or cT4. Clinical T has been set up this way. Most of the time clinical stage will be 99 for unknown. Notes for Testis (see CS) are not valid for TNM and have been deleted.",
+  "description" : "[SME REVIEW] Lynne P has confirmed with her urologist experts that there is not a clinical S. For clinical, per UICC, you can only have a cTX or cT4. Clinical T has been set up this way. Most of the time clinical stage will be 99 for unknown. Notes for Testis (see CS) are not valid for TNM and have been deleted.\n\nNCS: removed pre-orch step, but what value should we used for Clin Stage S?  SX?  or the same S for everything (which is what happens now)",
   "notes" : "C62.0  Undescended testis\nC62.1  Descended testis\nC62.9  Testis, NOS\n\n**Note 1:** Laterality must be coded for this site.\n\n**Note 2:** The 7th Edition TNM pathological stage group is derived from T, N, M and S stage. S stage is calculated from the following site-specific factors\n\n     SSF 13: Post-Orchiectomy Alpha Fetoprotein (AFP) Range\n     SSF 15: Post-Orchiectomy Human Chorionic Gonadotropin (hCG) Range\n     SSF 16: Post-Orchiectomy Lactate Dehydrogenase (LDH) Range",
   "schema_selection_table" : "schema_selection_testis",
   "inputs" : [ {
@@ -118,14 +118,14 @@
     "naaccr_item" : 2910,
     "table" : "ssf4_mac",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED" ]
+    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf5",
     "name" : "Size of Metastasis in Lymph Nodes",
     "naaccr_item" : 2920,
     "table" : "ssf5_nab",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED" ]
+    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf6",
     "name" : "Pre-Orchiectomy Alpha Fetoprotein (AFP) Lab Value",
@@ -138,7 +138,7 @@
     "name" : "Pre-Orchiectomy Alpha Fetoprotein (AFP) Range",
     "naaccr_item" : 2861,
     "table" : "ssf7_seh",
-    "used_for_staging" : true,
+    "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf8",
@@ -152,14 +152,14 @@
     "name" : "Pre-Orchiectomy Human Chorionic Gonadotropin (hCG) Range",
     "naaccr_item" : 2863,
     "table" : "ssf9_sej",
-    "used_for_staging" : true,
+    "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf10",
     "name" : "Pre-Orchiectomy Lactate Dehydrogenase (LDH) Range",
     "naaccr_item" : 2864,
     "table" : "ssf10_sek",
-    "used_for_staging" : true,
+    "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf12",
@@ -199,27 +199,33 @@
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
-    "naaccr_item" : 3610
+    "naaccr_item" : 3610,
+    "default" : "88"
   }, {
     "key" : "path_stage_group",
     "name" : "Derived SEER Path Stage Group",
-    "naaccr_item" : 3605
+    "naaccr_item" : 3605,
+    "default" : "88"
   }, {
     "key" : "combined_stage_group",
     "name" : "Derived SEER Combined Stage Group",
-    "naaccr_item" : 3614
+    "naaccr_item" : 3614,
+    "default" : "88"
   }, {
     "key" : "combined_t",
     "name" : "Derived SEER Combined T",
-    "naaccr_item" : 3616
+    "naaccr_item" : 3616,
+    "default" : "88"
   }, {
     "key" : "combined_n",
     "name" : "Derived SEER Combined N",
-    "naaccr_item" : 3618
+    "naaccr_item" : 3618,
+    "default" : "88"
   }, {
     "key" : "combined_m",
     "name" : "Derived SEER Combined M",
-    "naaccr_item" : 3620
+    "naaccr_item" : 3620,
+    "default" : "88"
   }, {
     "key" : "source_t",
     "name" : "Derived SEER Combined T Source",
@@ -235,7 +241,8 @@
   }, {
     "key" : "ss2017",
     "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762
+    "naaccr_item" : 762,
+    "default" : "90"
   }, {
     "key" : "ss2017_t",
     "name" : "Derived SEER Summary Stage 2017 T"
@@ -253,6 +260,13 @@
       "id" : "tnm7_inclusions_tpj",
       "inputs" : [ "hist" ]
     } ],
+    "initial_context" : [ {
+      "key" : "clin_stage_group",
+      "value" : "90"
+    }, {
+      "key" : "path_stage_group",
+      "value" : "90"
+    } ],
     "tables" : [ {
       "id" : "determine_default_t",
       "inputs" : [ "clin_t", "path_t" ],
@@ -265,20 +279,6 @@
       "id" : "determine_default_m",
       "inputs" : [ "path_m", "clin_m" ],
       "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_clin_m", "combined_m_in", "source_m" ]
-    }, {
-      "id" : "testis_serum_tumor_marker_svalue_table_basedon_ssf123",
-      "input_mapping" : [ {
-        "from" : "ssf9",
-        "to" : "ssf2"
-      }, {
-        "from" : "ssf7",
-        "to" : "ssf1"
-      }, {
-        "from" : "ssf10",
-        "to" : "ssf3"
-      } ],
-      "inputs" : [ "ssf9", "ssf7", "ssf10" ],
-      "outputs" : [ "s_old" ]
     }, {
       "id" : "testis_postorchiectomy_serum_tumor_marker_svalue_table_basedon_ssf131516",
       "inputs" : [ "ssf15", "ssf16", "ssf13" ],
@@ -330,6 +330,19 @@
     "inclusion_tables" : [ {
       "id" : "tnm7_inclusions_tpj",
       "inputs" : [ "hist" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "combined_m",
+      "value" : "90"
+    }, {
+      "key" : "combined_n",
+      "value" : "90"
+    }, {
+      "key" : "combined_stage_group",
+      "value" : "90"
+    }, {
+      "key" : "combined_t",
+      "value" : "90"
     } ],
     "tables" : [ {
       "id" : "combined_t",
@@ -424,7 +437,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf16_sfh", "testis_path_t_76829", "radiation_surg_seq", "ssf5_nab", "determine_default_m", "testis_serum_tumor_marker_svalue_table_basedon_ssf123", "ssf15_sfg", "nodes_ddf", "determine_default_n", "clin_t_bdh", "combined_n_to_summ_stage_n_84054", "histology", "ssf4_mac", "extension_bdh", "path_m_hbb", "schema_selection_testis", "ssf14_sff", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "behavior", "ssf7_seh", "testis_n_51427", "ssf6_oay", "tnm7_inclusions_tpj", "ssf13_sfe", "mets_hbb", "testis_postorchiectomy_serum_tumor_marker_svalue_table_basedon_ssf131516", "adjust_path_defaults", "systemic_surg_seq", "ssf8_sei", "ssf10_sek", "primary_site", "ssf12_sfd", "clin_m_hbb", "combined_m", "combined_n", "nodes_pos_fpc", "year_dx_validation", "tnm7_stage_uqd", "summary_stage_rpa", "combined_t", "ssf9_sej" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf16_sfh", "testis_path_t_76829", "radiation_surg_seq", "ssf5_nab", "determine_default_m", "ssf15_sfg", "nodes_ddf", "determine_default_n", "clin_t_bdh", "combined_n_to_summ_stage_n_84054", "histology", "ssf4_mac", "extension_bdh", "path_m_hbb", "schema_selection_testis", "ssf14_sff", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "behavior", "ssf7_seh", "testis_n_51427", "ssf6_oay", "tnm7_inclusions_tpj", "ssf13_sfe", "mets_hbb", "testis_postorchiectomy_serum_tumor_marker_svalue_table_basedon_ssf131516", "adjust_path_defaults", "systemic_surg_seq", "ssf8_sei", "ssf10_sek", "primary_site", "ssf12_sfd", "clin_m_hbb", "combined_m", "combined_n", "nodes_pos_fpc", "year_dx_validation", "tnm7_stage_uqd", "summary_stage_rpa", "combined_t", "ssf9_sej" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T20:51:31.386Z"
+  "last_modified" : "2015-09-28T21:07:08.886Z"
 }

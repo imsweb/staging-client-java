@@ -188,27 +188,33 @@
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
-    "naaccr_item" : 3610
+    "naaccr_item" : 3610,
+    "default" : "88"
   }, {
     "key" : "path_stage_group",
     "name" : "Derived SEER Path Stage Group",
-    "naaccr_item" : 3605
+    "naaccr_item" : 3605,
+    "default" : "88"
   }, {
     "key" : "combined_stage_group",
     "name" : "Derived SEER Combined Stage Group",
-    "naaccr_item" : 3614
+    "naaccr_item" : 3614,
+    "default" : "88"
   }, {
     "key" : "combined_t",
     "name" : "Derived SEER Combined T",
-    "naaccr_item" : 3616
+    "naaccr_item" : 3616,
+    "default" : "88"
   }, {
     "key" : "combined_n",
     "name" : "Derived SEER Combined N",
-    "naaccr_item" : 3618
+    "naaccr_item" : 3618,
+    "default" : "88"
   }, {
     "key" : "combined_m",
     "name" : "Derived SEER Combined M",
-    "naaccr_item" : 3620
+    "naaccr_item" : 3620,
+    "default" : "88"
   }, {
     "key" : "source_t",
     "name" : "Derived SEER Combined T Source",
@@ -224,7 +230,8 @@
   }, {
     "key" : "ss2017",
     "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762
+    "naaccr_item" : 762,
+    "default" : "90"
   }, {
     "key" : "ss2017_t",
     "name" : "Derived SEER Summary Stage 2017 T"
@@ -241,6 +248,13 @@
     "inclusion_tables" : [ {
       "id" : "tnm7_inclusions_tpv",
       "inputs" : [ "hist" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "clin_stage_group",
+      "value" : "90"
+    }, {
+      "key" : "path_stage_group",
+      "value" : "90"
     } ],
     "tables" : [ {
       "id" : "determine_default_t",
@@ -313,6 +327,19 @@
     "inclusion_tables" : [ {
       "id" : "tnm7_inclusions_tpv",
       "inputs" : [ "hist" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "combined_m",
+      "value" : "90"
+    }, {
+      "key" : "combined_n",
+      "value" : "90"
+    }, {
+      "key" : "combined_stage_group",
+      "value" : "90"
+    }, {
+      "key" : "combined_t",
+      "value" : "90"
     } ],
     "tables" : [ {
       "id" : "combined_t_no_tis",
@@ -419,5 +446,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "path_t_bbo", "determine_default_t", "input_version_validation", "mets_hal", "ssf11_sba", "radiation_surg_seq", "clin_m_hal", "determine_default_m", "clin_t_bbo", "ssf1_jav", "path_n_dbf", "nodes_pos_fpa", "ssf7_saw", "nodes_dbf", "path_m_hal", "determine_default_n", "combined_n_to_summ_stage_n_84054", "schema_selection_prostate", "histology", "ssf14_sbd", "combined_t_no_tis", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "extension_bbo", "ssf10_saz", "ssf13_sbc", "tnm7_inclusions_tpv", "adjust_path_defaults", "ssf9_say", "systemic_surg_seq", "ssf12_sbb", "primary_site", "prostate_n_76551", "tnm7_stage_ubp", "combined_m", "ssf15_sbe", "combined_n", "ssf2_kab", "year_dx_validation", "ssf8_sax", "summary_stage_rpa", "combined_gleason_93464" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-08T21:15:05.873Z"
+  "last_modified" : "2015-09-25T13:51:12.216Z"
 }

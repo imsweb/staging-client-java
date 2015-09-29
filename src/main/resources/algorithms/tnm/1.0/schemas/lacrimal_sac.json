@@ -7,16 +7,6 @@
   "notes" : "C69.5  Lacrimal sac, lacrimal duct  \n\n**Note 1:**  Site-Specific Factor 25 is used to discriminate between lacrimal gland, staged by TNM, and lacrimal sac, not staged by TNM. Both sites are coded to ICD-O-3 code C69.5.\n\n**Note 2:**  Laterality must be coded for this site.",
   "schema_selection_table" : "schema_selection_lacrimal_sac",
   "schema_discriminators" : [ "ssf25" ],
-  "initial_context" : [ {
-    "key" : "clin_stage_group",
-    "value" : "88"
-  }, {
-    "key" : "path_stage_group",
-    "value" : "88"
-  }, {
-    "key" : "combined_stage_group",
-    "value" : "88"
-  } ],
   "inputs" : [ {
     "key" : "year_dx",
     "name" : "Year of Diagnosis",
@@ -76,27 +66,33 @@
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
-    "naaccr_item" : 3610
+    "naaccr_item" : 3610,
+    "default" : "88"
   }, {
     "key" : "path_stage_group",
     "name" : "Derived SEER Path Stage Group",
-    "naaccr_item" : 3605
+    "naaccr_item" : 3605,
+    "default" : "88"
   }, {
     "key" : "combined_stage_group",
     "name" : "Derived SEER Combined Stage Group",
-    "naaccr_item" : 3614
+    "naaccr_item" : 3614,
+    "default" : "88"
   }, {
     "key" : "combined_t",
     "name" : "Derived SEER Combined T",
-    "naaccr_item" : 3616
+    "naaccr_item" : 3616,
+    "default" : "88"
   }, {
     "key" : "combined_n",
     "name" : "Derived SEER Combined N",
-    "naaccr_item" : 3618
+    "naaccr_item" : 3618,
+    "default" : "88"
   }, {
     "key" : "combined_m",
     "name" : "Derived SEER Combined M",
-    "naaccr_item" : 3620
+    "naaccr_item" : 3620,
+    "default" : "88"
   }, {
     "key" : "source_t",
     "name" : "Derived SEER Combined T Source",
@@ -112,7 +108,8 @@
   }, {
     "key" : "ss2017",
     "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762
+    "naaccr_item" : 762,
+    "default" : "90"
   }, {
     "key" : "ss2017_t",
     "name" : "Derived SEER Summary Stage 2017 T"
@@ -146,5 +143,5 @@
   } ],
   "involved_tables" : [ "primary_site", "discriminator_lacrimal", "seer_mets_lacrimal_sac_97972", "input_version_validation", "extension_btb", "histology", "year_dx_validation", "seer_regional_nodes_lacrimal_sac_33881", "seer_mets_lacrimal_gland_sac_18504", "summary_stage_rpa", "schema_selection_lacrimal_sac", "seer_regional_nodes_lacrimal_gland_sac_72938" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T21:14:35.440Z"
+  "last_modified" : "2015-09-25T13:51:06.887Z"
 }

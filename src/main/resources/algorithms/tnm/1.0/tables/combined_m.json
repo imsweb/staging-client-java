@@ -5,7 +5,7 @@
   "name" : "Combined M",
   "title" : "Combined M",
   "notes" : "Using clinical and pathologic M, calculate Combined M and Summary Stage M. \nM0i+ is Clinical Only, so does not appear in the Pathologic M possible values.",
-  "last_modified" : "2015-08-13T13:25:49.186Z",
+  "last_modified" : "2015-09-18T20:40:12.260Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",
@@ -27,6 +27,6 @@
     "name" : "Combined M Source",
     "type" : "ENDPOINT"
   } ],
-  "extra_input" : [ "combined_m_in", "clin_m", "path_m" ],
-  "rows" : [ [ "*", "*", "0,0I+,1,1A,1B,1C,1D,1E", "VALUE:{{combined_m_in}}", "MATCH" ], [ "*", "0", "", "VALUE:{{clin_m}}", "VALUE:C" ], [ "0,0I+,1", "1", "", "VALUE:{{path_m}}", "VALUE:P" ], [ "1A,1B,1C,1D,1E", "1", "", "VALUE:{{clin_m}}", "VALUE:P" ], [ "0,0I+,1,1A", "1A", "", "VALUE:{{path_m}}", "VALUE:P" ], [ "1B,1C,1D,1E", "1A", "", "VALUE:{{clin_m}}", "VALUE:P" ], [ "0,0I+,1,1A,1B", "1B", "", "VALUE:{{path_m}}", "VALUE:P" ], [ "1C,1D,1E", "1B", "", "VALUE:{{clin_m}}", "VALUE:P" ], [ "0,0I+,1,1A,1B,1C", "1C", "", "VALUE:{{path_m}}", "VALUE:P" ], [ "1D,1E", "1C", "", "VALUE:{{clin_m}}", "VALUE:P" ], [ "0,0I+,1,1A,1B,1C,1D", "1D", "", "VALUE:{{path_m}}", "VALUE:P" ], [ "1E", "1D", "", "VALUE:{{clin_m}}", "VALUE:P" ], [ "*", "1E", "", "VALUE:{{path_m}}", "VALUE:P" ] ]
+  "extra_input" : [ "path_m", "combined_m_in", "clin_m" ],
+  "rows" : [ [ "*", "*", "0,0I+,1,1A,1B,1C,1D,1E", "VALUE:{{combined_m_in}}", "MATCH" ], [ "*", "0", "", "VALUE:{{clin_m}}", "VALUE:1" ], [ "0,0I+,1", "1", "", "VALUE:{{path_m}}", "VALUE:2" ], [ "1A,1B,1C,1D,1E", "1", "", "VALUE:{{clin_m}}", "VALUE:2" ], [ "0,0I+,1,1A", "1A", "", "VALUE:{{path_m}}", "VALUE:2" ], [ "1B,1C,1D,1E", "1A", "", "VALUE:{{clin_m}}", "VALUE:2" ], [ "0,0I+,1,1A,1B", "1B", "", "VALUE:{{path_m}}", "VALUE:2" ], [ "1C,1D,1E", "1B", "", "VALUE:{{clin_m}}", "VALUE:2" ], [ "0,0I+,1,1A,1B,1C", "1C", "", "VALUE:{{path_m}}", "VALUE:2" ], [ "1D,1E", "1C", "", "VALUE:{{clin_m}}", "VALUE:2" ], [ "0,0I+,1,1A,1B,1C,1D", "1D", "", "VALUE:{{path_m}}", "VALUE:2" ], [ "1E", "1D", "", "VALUE:{{clin_m}}", "VALUE:2" ], [ "*", "1E", "", "VALUE:{{path_m}}", "VALUE:2" ] ]
 }

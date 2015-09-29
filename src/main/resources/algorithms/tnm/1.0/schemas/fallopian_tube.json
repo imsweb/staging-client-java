@@ -167,27 +167,33 @@
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
-    "naaccr_item" : 3610
+    "naaccr_item" : 3610,
+    "default" : "88"
   }, {
     "key" : "path_stage_group",
     "name" : "Derived SEER Path Stage Group",
-    "naaccr_item" : 3605
+    "naaccr_item" : 3605,
+    "default" : "88"
   }, {
     "key" : "combined_stage_group",
     "name" : "Derived SEER Combined Stage Group",
-    "naaccr_item" : 3614
+    "naaccr_item" : 3614,
+    "default" : "88"
   }, {
     "key" : "combined_t",
     "name" : "Derived SEER Combined T",
-    "naaccr_item" : 3616
+    "naaccr_item" : 3616,
+    "default" : "88"
   }, {
     "key" : "combined_n",
     "name" : "Derived SEER Combined N",
-    "naaccr_item" : 3618
+    "naaccr_item" : 3618,
+    "default" : "88"
   }, {
     "key" : "combined_m",
     "name" : "Derived SEER Combined M",
-    "naaccr_item" : 3620
+    "naaccr_item" : 3620,
+    "default" : "88"
   }, {
     "key" : "source_t",
     "name" : "Derived SEER Combined T Source",
@@ -203,7 +209,8 @@
   }, {
     "key" : "ss2017",
     "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762
+    "naaccr_item" : 762,
+    "default" : "90"
   }, {
     "key" : "ss2017_t",
     "name" : "Derived SEER Summary Stage 2017 T"
@@ -220,6 +227,13 @@
     "inclusion_tables" : [ {
       "id" : "tnm7_inclusions_tpb",
       "inputs" : [ "hist" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "clin_stage_group",
+      "value" : "90"
+    }, {
+      "key" : "path_stage_group",
+      "value" : "90"
     } ],
     "tables" : [ {
       "id" : "determine_default_t",
@@ -280,6 +294,19 @@
     "inclusion_tables" : [ {
       "id" : "tnm7_inclusions_tpb",
       "inputs" : [ "hist" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "combined_m",
+      "value" : "90"
+    }, {
+      "key" : "combined_n",
+      "value" : "90"
+    }, {
+      "key" : "combined_stage_group",
+      "value" : "90"
+    }, {
+      "key" : "combined_t",
+      "value" : "90"
     } ],
     "tables" : [ {
       "id" : "combined_t",
@@ -376,5 +403,5 @@
   } ],
   "involved_tables" : [ "mets_hai", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "path_n_daz", "ssf6_oap", "determine_default_m", "nodes_pos_fpa", "path_m_hai", "tnm7_stage_ubb", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "ssf2_kbc", "ssf3_laq", "tnm7_inclusions_tpb", "clin_m_hai", "nodes_daz", "extension_bbh", "behavior", "fallopian_tube_t_96584", "ssf1_jbp", "ssf5_nas", "adjust_path_defaults", "systemic_surg_seq", "ssf7_sde", "primary_site", "combined_m", "combined_n", "schema_selection_fallopian_tube", "year_dx_validation", "summary_stage_rpa", "ssf4_mav", "combined_t", "combined_t_to_summ_stage_t_2_2b_re_2c_4e_d_26557", "clin_n_daz" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T20:51:31.845Z"
+  "last_modified" : "2015-09-25T13:50:58.512Z"
 }

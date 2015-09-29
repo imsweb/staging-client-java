@@ -5,7 +5,7 @@
   "name" : "Path N",
   "title" : "Pathological N",
   "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 3 or more regional lymph nodes. If the regional lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0.\n\n**Note 2:** Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in distant metastasis.\n\n**Note 3:** Celiac and superior mesenteric nodes are classified as regional nodes for TNM staging and are coded in regional lymph nodes.\n\n**Note 4:** Para-aortic and pericaval lymph nodes are classified as regional nodes for TNM 7 staging and are now coded in regional lymph nodes",
-  "last_modified" : "2015-08-13T13:25:09.545Z",
+  "last_modified" : "2015-09-23T18:37:08.399Z",
   "definition" : [ {
     "key" : "path_n",
     "name" : "Pathological N",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "NX", "Regional lymph node(s) cannot be assessed", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Regional lymph node metastasis (including nodes along the cystic duct, common bile duct, common hepatic artery, and portal vein", "Regional lymph nodes:\n    Cystic duct (Calot's node)\n    Node of foramen of Winslow (omental) (epiploic)\n    Pancreaticoduodenal\n    Pericholedochal (common bile duct)\n    Periduodenal\n    Peripancreatic (near head of pancreas only)\n    Porta hepatis (portal)(periportal) (hilar) (in hilus of liver)\n\nRegional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "2", "N2", "Not defined in UICC", "Celiac lymph node(s)\nPara-aortic\nPericaval\nSuperior mesenteric lymph node(s)\n\nStated as N2" ] ]
+  "rows" : [ [ "X", "NX", "Regional lymph node(s) cannot be assessed", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Regional lymph node metastasis (including nodes along the cystic duct, common bile duct, common hepatic artery, and portal vein", "Regional lymph nodes:\n    Cystic duct (Calot's node)\n    Node of foramen of Winslow (omental) (epiploic)\n    Pancreaticoduodenal\n    Pericholedochal (common bile duct)\n    Periduodenal\n    Peripancreatic (near head of pancreas only)\n    Porta hepatis (portal)(periportal) (hilar) (in hilus of liver)\n\nRegional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "2", "N2", "Metastasis to periaortic, pericaval, superior mesenteric artery, and/or celiac artery lymph nodes", "Stated as N2" ] ]
 }

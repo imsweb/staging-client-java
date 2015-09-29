@@ -15,6 +15,6 @@
     "name" : "Combined Gleason",
     "type" : "ENDPOINT"
   } ],
-  "extra_input" : [ "ssf10", "ssf8" ],
+  "extra_input" : [ "ssf8", "ssf10" ],
   "rows" : [ [ "P", "VALUE:{{ssf10}}" ], [ "C", "VALUE:{{ssf8}}" ] ]
 }

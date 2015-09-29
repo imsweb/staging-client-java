@@ -117,7 +117,7 @@
     "naaccr_item" : 2880,
     "table" : "ssf1_jpa",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED" ]
+    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf3",
     "name" : "Levels I-III, Lymph Nodes for Head and Neck",
@@ -186,27 +186,33 @@
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
-    "naaccr_item" : 3610
+    "naaccr_item" : 3610,
+    "default" : "88"
   }, {
     "key" : "path_stage_group",
     "name" : "Derived SEER Path Stage Group",
-    "naaccr_item" : 3605
+    "naaccr_item" : 3605,
+    "default" : "88"
   }, {
     "key" : "combined_stage_group",
     "name" : "Derived SEER Combined Stage Group",
-    "naaccr_item" : 3614
+    "naaccr_item" : 3614,
+    "default" : "88"
   }, {
     "key" : "combined_t",
     "name" : "Derived SEER Combined T",
-    "naaccr_item" : 3616
+    "naaccr_item" : 3616,
+    "default" : "88"
   }, {
     "key" : "combined_n",
     "name" : "Derived SEER Combined N",
-    "naaccr_item" : 3618
+    "naaccr_item" : 3618,
+    "default" : "88"
   }, {
     "key" : "combined_m",
     "name" : "Derived SEER Combined M",
-    "naaccr_item" : 3620
+    "naaccr_item" : 3620,
+    "default" : "88"
   }, {
     "key" : "source_t",
     "name" : "Derived SEER Combined T Source",
@@ -222,7 +228,8 @@
   }, {
     "key" : "ss2017",
     "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762
+    "naaccr_item" : 762,
+    "default" : "90"
   }, {
     "key" : "ss2017_t",
     "name" : "Derived SEER Summary Stage 2017 T"
@@ -239,6 +246,13 @@
     "inclusion_tables" : [ {
       "id" : "tnm7_inclusions_tpb",
       "inputs" : [ "hist" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "clin_stage_group",
+      "value" : "90"
+    }, {
+      "key" : "path_stage_group",
+      "value" : "90"
     } ],
     "tables" : [ {
       "id" : "determine_default_t",
@@ -299,6 +313,19 @@
     "inclusion_tables" : [ {
       "id" : "tnm7_inclusions_tpb",
       "inputs" : [ "hist" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "combined_m",
+      "value" : "90"
+    }, {
+      "key" : "combined_n",
+      "value" : "90"
+    }, {
+      "key" : "combined_stage_group",
+      "value" : "90"
+    }, {
+      "key" : "combined_t",
+      "value" : "90"
     } ],
     "tables" : [ {
       "id" : "combined_t",
@@ -395,5 +422,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "clinical_n_head_neck_except_nasopharynx_25237", "ssf10_spd", "radiation_surg_seq", "ssf1_jpa", "path_m_hpb", "schema_selection_nasal_cavity", "determine_default_m", "tnm7_stage_upt", "path_n_head_neck_except_nasopharynx_40357", "nodes_pos_fpa", "combined_n_to_summ_stage_n_headneck_nasalsinus_48288", "determine_default_n", "ssf11_spe", "histology", "ssf6_opa", "ssf3_lpa", "combined_t_to_summ_stage_t_3_4a_re_4b_4e_d_32587", "tnm7_inclusions_tpb", "behavior", "nodes_dcx", "extension_bcq", "seer_mets_nasal_cavity_70644", "ssf4_mpa", "ssf9_spc", "adjust_path_defaults", "systemic_surg_seq", "nasal_cavity_t_71995", "primary_site", "combined_m", "combined_n", "ssf5_npa", "year_dx_validation", "seer_mets_middle_ear_nasal_cavity_19085", "summary_stage_rpa", "combined_t", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T21:14:14.094Z"
+  "last_modified" : "2015-09-28T20:26:55.864Z"
 }

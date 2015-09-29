@@ -6,16 +6,6 @@
   "title" : "Accessory (Paranasal) Sinuses (excluding Malignant Melanoma)",
   "notes" : "C31.2  Frontal sinus\nC31.3  Sphenoid sinus\nC31.8  Overlapping lesion of accessory sinuses\nC31.9  Accessory sinus, NOS\n\n**Note 1:**  TNM is not defined for these sites\n**Note 2:**  Laterality must be coded for frontal sinus, C31.2",
   "schema_selection_table" : "schema_selection_sinus_other",
-  "initial_context" : [ {
-    "key" : "clin_stage_group",
-    "value" : "88"
-  }, {
-    "key" : "path_stage_group",
-    "value" : "88"
-  }, {
-    "key" : "combined_stage_group",
-    "value" : "88"
-  } ],
   "inputs" : [ {
     "key" : "year_dx",
     "name" : "Year of Diagnosis",
@@ -136,27 +126,33 @@
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
-    "naaccr_item" : 3610
+    "naaccr_item" : 3610,
+    "default" : "88"
   }, {
     "key" : "path_stage_group",
     "name" : "Derived SEER Path Stage Group",
-    "naaccr_item" : 3605
+    "naaccr_item" : 3605,
+    "default" : "88"
   }, {
     "key" : "combined_stage_group",
     "name" : "Derived SEER Combined Stage Group",
-    "naaccr_item" : 3614
+    "naaccr_item" : 3614,
+    "default" : "88"
   }, {
     "key" : "combined_t",
     "name" : "Derived SEER Combined T",
-    "naaccr_item" : 3616
+    "naaccr_item" : 3616,
+    "default" : "88"
   }, {
     "key" : "combined_n",
     "name" : "Derived SEER Combined N",
-    "naaccr_item" : 3618
+    "naaccr_item" : 3618,
+    "default" : "88"
   }, {
     "key" : "combined_m",
     "name" : "Derived SEER Combined M",
-    "naaccr_item" : 3620
+    "naaccr_item" : 3620,
+    "default" : "88"
   }, {
     "key" : "source_t",
     "name" : "Derived SEER Combined T Source",
@@ -172,7 +168,8 @@
   }, {
     "key" : "ss2017",
     "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762
+    "naaccr_item" : 762,
+    "default" : "90"
   }, {
     "key" : "ss2017_t",
     "name" : "Derived SEER Summary Stage 2017 T"
@@ -206,5 +203,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "ssf10_spd", "input_version_validation", "ssf4_mpa", "ssf9_spc", "seer_mets_copy_sinus_other_3423", "seer_mets_sinus_othervs2_15755", "primary_site", "nodes_daq", "ssf11_spe", "histology", "ssf6_opa", "ssf5_npa", "ssf3_lpa", "schema_selection_sinus_other", "year_dx_validation", "summary_stage_rpa", "extension_bdk", "ssf1_jpu", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T21:13:45.790Z"
+  "last_modified" : "2015-09-25T13:51:07.731Z"
 }

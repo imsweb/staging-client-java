@@ -148,7 +148,7 @@
     "naaccr_item" : 2930,
     "table" : "ssf6_oak",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED" ]
+    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf7",
     "name" : "Tumor Necrosis",
@@ -219,27 +219,33 @@
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
-    "naaccr_item" : 3610
+    "naaccr_item" : 3610,
+    "default" : "88"
   }, {
     "key" : "path_stage_group",
     "name" : "Derived SEER Path Stage Group",
-    "naaccr_item" : 3605
+    "naaccr_item" : 3605,
+    "default" : "88"
   }, {
     "key" : "combined_stage_group",
     "name" : "Derived SEER Combined Stage Group",
-    "naaccr_item" : 3614
+    "naaccr_item" : 3614,
+    "default" : "88"
   }, {
     "key" : "combined_t",
     "name" : "Derived SEER Combined T",
-    "naaccr_item" : 3616
+    "naaccr_item" : 3616,
+    "default" : "88"
   }, {
     "key" : "combined_n",
     "name" : "Derived SEER Combined N",
-    "naaccr_item" : 3618
+    "naaccr_item" : 3618,
+    "default" : "88"
   }, {
     "key" : "combined_m",
     "name" : "Derived SEER Combined M",
-    "naaccr_item" : 3620
+    "naaccr_item" : 3620,
+    "default" : "88"
   }, {
     "key" : "source_t",
     "name" : "Derived SEER Combined T Source",
@@ -255,7 +261,8 @@
   }, {
     "key" : "ss2017",
     "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762
+    "naaccr_item" : 762,
+    "default" : "90"
   }, {
     "key" : "ss2017_t",
     "name" : "Derived SEER Summary Stage 2017 T"
@@ -272,6 +279,13 @@
     "inclusion_tables" : [ {
       "id" : "tnm7_inclusions_tpb",
       "inputs" : [ "hist" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "clin_stage_group",
+      "value" : "90"
+    }, {
+      "key" : "path_stage_group",
+      "value" : "90"
     } ],
     "tables" : [ {
       "id" : "determine_default_t",
@@ -332,6 +346,19 @@
     "inclusion_tables" : [ {
       "id" : "tnm7_inclusions_tpb",
       "inputs" : [ "hist" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "combined_m",
+      "value" : "90"
+    }, {
+      "key" : "combined_n",
+      "value" : "90"
+    }, {
+      "key" : "combined_stage_group",
+      "value" : "90"
+    }, {
+      "key" : "combined_t",
+      "value" : "90"
     } ],
     "tables" : [ {
       "id" : "combined_t",
@@ -428,5 +455,5 @@
   } ],
   "involved_tables" : [ "clin_m_hcu", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "ssf8_sdd", "input_version_validation", "nodes_dde", "radiation_surg_seq", "ssf7_scq", "path_m_hcu", "determine_default_m", "ssf4_mbg", "nodes_pos_fpa", "ssf10_scm", "ssf6_oak", "ssf14_scn", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "ssf3_lap", "skin_eyelid_n_65771", "extension_bdg", "tnm7_inclusions_tpb", "mets_hcu", "behavior", "ssf11_scj", "schema_selection_skin_eyelid", "ssf9_sdi", "ssf2_kaz", "ssf15_sco", "ssf1_jbl", "skin_eyelid_t_57348", "ssf12_sck", "tnm7_stage_uaf", "adjust_path_defaults", "systemic_surg_seq", "ssf16_scp", "primary_site", "combined_m", "combined_n", "ssf5_nar", "year_dx_validation", "summary_stage_rpa", "combined_t", "ssf13_scl", "combined_t_to_summ_stage_t_3b_3d_re_4_4e_d_48469" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T20:51:39.913Z"
+  "last_modified" : "2015-09-28T21:06:43.663Z"
 }

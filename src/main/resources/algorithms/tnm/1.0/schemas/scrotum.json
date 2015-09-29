@@ -136,14 +136,14 @@
     "naaccr_item" : 2866,
     "table" : "ssf12_sev",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED" ]
+    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf16",
     "name" : "Size of Lymph Nodes",
     "naaccr_item" : 2870,
     "table" : "ssf16_squ",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED" ]
+    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -152,27 +152,33 @@
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
-    "naaccr_item" : 3610
+    "naaccr_item" : 3610,
+    "default" : "88"
   }, {
     "key" : "path_stage_group",
     "name" : "Derived SEER Path Stage Group",
-    "naaccr_item" : 3605
+    "naaccr_item" : 3605,
+    "default" : "88"
   }, {
     "key" : "combined_stage_group",
     "name" : "Derived SEER Combined Stage Group",
-    "naaccr_item" : 3614
+    "naaccr_item" : 3614,
+    "default" : "88"
   }, {
     "key" : "combined_t",
     "name" : "Derived SEER Combined T",
-    "naaccr_item" : 3616
+    "naaccr_item" : 3616,
+    "default" : "88"
   }, {
     "key" : "combined_n",
     "name" : "Derived SEER Combined N",
-    "naaccr_item" : 3618
+    "naaccr_item" : 3618,
+    "default" : "88"
   }, {
     "key" : "combined_m",
     "name" : "Derived SEER Combined M",
-    "naaccr_item" : 3620
+    "naaccr_item" : 3620,
+    "default" : "88"
   }, {
     "key" : "source_t",
     "name" : "Derived SEER Combined T Source",
@@ -188,7 +194,8 @@
   }, {
     "key" : "ss2017",
     "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762
+    "naaccr_item" : 762,
+    "default" : "90"
   }, {
     "key" : "ss2017_t",
     "name" : "Derived SEER Summary Stage 2017 T"
@@ -205,6 +212,13 @@
     "inclusion_tables" : [ {
       "id" : "tnm7_inclusions_tpq",
       "inputs" : [ "hist" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "clin_stage_group",
+      "value" : "90"
+    }, {
+      "key" : "path_stage_group",
+      "value" : "90"
     } ],
     "tables" : [ {
       "id" : "determine_default_t",
@@ -265,6 +279,19 @@
     "inclusion_tables" : [ {
       "id" : "tnm7_inclusions_tpq",
       "inputs" : [ "hist" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "combined_m",
+      "value" : "90"
+    }, {
+      "key" : "combined_n",
+      "value" : "90"
+    }, {
+      "key" : "combined_stage_group",
+      "value" : "90"
+    }, {
+      "key" : "combined_t",
+      "value" : "90"
     } ],
     "tables" : [ {
       "id" : "combined_t",
@@ -361,5 +388,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "tnm7_stage_uay", "nodes_ddj", "path_n_ddj", "determine_default_m", "nodes_pos_fpa", "clin_n_ddj", "clin_m_hpe", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "ssf1_jpp", "path_m_hpe", "scrotum_t_52966", "behavior", "extension_bdo", "ssf16_squ", "ssf11_sqt", "ssf12_sev", "tnm7_inclusions_tpq", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "ssf10_sqs", "combined_n", "seer_mets_scrotum_84569", "year_dx_validation", "summary_stage_rpa", "combined_t", "schema_selection_scrotum" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-04T20:51:25.298Z"
+  "last_modified" : "2015-09-28T21:06:03.522Z"
 }
