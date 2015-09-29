@@ -4,8 +4,10 @@
 package com.imsweb.staging;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -13,7 +15,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ExecutionException;
 
-import com.google.common.base.Charsets;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
@@ -157,7 +158,12 @@ public class StagingFileDataProvider extends StagingDataProvider {
      * @return The {@link java.io.Reader} resource
      */
     private static Reader createReader(String location) {
-        return new InputStreamReader(Thread.currentThread().getContextClassLoader().getResourceAsStream(location), Charsets.UTF_8);
+        InputStream input = Thread.currentThread().getContextClassLoader().getResourceAsStream(location);
+
+        if (input == null)
+            throw new IllegalStateException("File does not exist: " + location);
+
+        return new InputStreamReader(input, StandardCharsets.UTF_8);
     }
 
 }
