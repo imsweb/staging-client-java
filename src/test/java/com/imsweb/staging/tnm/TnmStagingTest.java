@@ -337,11 +337,11 @@ public class TnmStagingTest {
         Assert.assertEquals("4", data.getOutput(TnmStagingData.TnmOutput.PATH_STAGE_GROUP));
         Assert.assertEquals("4", data.getOutput(TnmStagingData.TnmOutput.COMBINED_STAGE_GROUP));
         Assert.assertEquals("0", data.getOutput(TnmStagingData.TnmOutput.COMBINED_T));
-        Assert.assertEquals("C", data.getOutput(TnmStagingData.TnmOutput.SOURCE_T));
+        Assert.assertEquals("1", data.getOutput(TnmStagingData.TnmOutput.SOURCE_T));
         Assert.assertEquals("1", data.getOutput(TnmStagingData.TnmOutput.COMBINED_N));
-        Assert.assertEquals("C", data.getOutput(TnmStagingData.TnmOutput.SOURCE_N));
+        Assert.assertEquals("1", data.getOutput(TnmStagingData.TnmOutput.SOURCE_N));
         Assert.assertEquals("1", data.getOutput(TnmStagingData.TnmOutput.COMBINED_M));
-        Assert.assertEquals("P", data.getOutput(TnmStagingData.TnmOutput.SOURCE_M));
+        Assert.assertEquals("2", data.getOutput(TnmStagingData.TnmOutput.SOURCE_M));
         Assert.assertEquals("D", data.getOutput(TnmStagingData.TnmOutput.SS2017));
         Assert.assertEquals("U", data.getOutput(TnmStagingData.TnmOutput.SS2017_T));
         Assert.assertEquals("RN", data.getOutput(TnmStagingData.TnmOutput.SS2017_N));
@@ -394,7 +394,7 @@ public class TnmStagingTest {
                 _STAGING.getInputs(_STAGING.getSchema("adnexa_uterine_other")));
 
         Assert.assertEquals(Sets.newHashSet("site", "hist", "behavior", "systemic_surg_seq", "radiation_surg_seq", "nodes_pos", "clin_t", "clin_n", "clin_m",
-                        "path_t", "path_n", "path_m", "seer_primary_tumor", "seer_nodes", "seer_mets", "ssf7", "ssf9", "ssf10", "ssf13", "ssf15", "ssf16"),
+                        "path_t", "path_n", "path_m", "seer_primary_tumor", "seer_nodes", "seer_mets", "ssf13", "ssf15", "ssf16"),
                 _STAGING.getInputs(_STAGING.getSchema("testis")));
 
         // test with and without context
