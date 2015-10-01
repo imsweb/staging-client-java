@@ -8,6 +8,7 @@ import com.imsweb.staging.StagingData;
 public class TnmStagingData extends StagingData {
 
     // key definitions
+    public static final String SEX_KEY = "sex";
     public static final String SSF25_KEY = "ssf25";
 
     // SSF prefix

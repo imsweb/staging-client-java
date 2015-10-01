@@ -11,13 +11,7 @@ import com.imsweb.staging.SchemaLookup;
 
 public class TnmSchemaLookup extends SchemaLookup {
 
-    private static final Set<String> _ALLOWED_KEYS = Sets.newHashSet(TnmStagingData.PRIMARY_SITE_KEY, TnmStagingData.HISTOLOGY_KEY, TnmStagingData.SSF25_KEY);
-
-    /**
-     * Default constructor
-     */
-    public TnmSchemaLookup() {
-    }
+    private static final Set<String> _ALLOWED_KEYS = Sets.newHashSet(TnmStagingData.PRIMARY_SITE_KEY, TnmStagingData.HISTOLOGY_KEY, TnmStagingData.SSF25_KEY, TnmStagingData.SEX_KEY);
 
     /**
      * Constructor
