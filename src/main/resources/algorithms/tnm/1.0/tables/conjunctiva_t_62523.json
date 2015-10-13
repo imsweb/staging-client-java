@@ -3,9 +3,9 @@
   "algorithm" : "tnm",
   "version" : "1.0",
   "name" : "Conjunctiva T",
-  "title" : "Clinical and Pathological T",
+  "title" : "Clinical and Pathologic T",
   "notes" : "**Note 1:**  Palpebral and tarsal conjunctiva line the eyelid, bulbar conjunctiva covers the eyeball, forniceal conjunctiva covers the space between the eyelid and the globe.  According to TNM, tumors are most likely to arise at the exposed site where the conjunctival epithelium merges with the corneal epithelium, particularly at the temporal limbus.\n\n**Note 2:** For the following descriptions, assign the appropriate T category based on the tumor size recorded in Site-Specific Factor 1.\n\n    Tumor confined to one subsite of conjunctiva:\n    Bulbar conjunctiva\n    Forniceal conjunctiva\n    Palpebral conjunctiva\n    Tarsal conjunctiva\n\n    Tumor confined to one subsite of conjunctiva, NOS\n\n    Localized, NOS",
-  "last_modified" : "2015-08-13T13:24:50.070Z",
+  "last_modified" : "2015-10-10T19:53:25.520Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

@@ -3,9 +3,9 @@
   "algorithm" : "tnm",
   "version" : "1.0",
   "name" : "Adrenal Gland N",
-  "title" : "Clinical and Pathological N",
+  "title" : "Clinical and Pathologic N",
   "notes" : "**Note:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in distant metastasis.\n\n**Regional lymph nodes:**\n\n    Aortic, NOS:\n        Para-aortic\n        Periaortic\n    Pericaval, NOS:\n       Paracaval\n       Precaval     \n       Retocaval\n    Retroperitoneal, NOS",
-  "last_modified" : "2015-08-13T13:24:47.045Z",
+  "last_modified" : "2015-10-09T17:23:09.597Z",
   "definition" : [ {
     "key" : "clin_n",
     "name" : "Clinical N",

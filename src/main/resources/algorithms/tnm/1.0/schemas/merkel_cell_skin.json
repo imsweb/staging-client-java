@@ -164,6 +164,18 @@
     "table" : "ssf22_src",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -425,5 +437,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "nodes_pos_fah", "determine_default_t", "input_version_validation", "extension_bds", "radiation_surg_seq", "ssf19_sqz", "determine_default_m", "lymph_nodes_eval_temp_65876", "ssf18_sqy", "clin_n_ddn", "clin_m_hph", "ssf22_src", "schema_selection_merkel_cell_skin", "determine_default_n", "mets_hph", "combined_n_to_summ_stage_n_84054", "histology", "seer_mets_merkelcellskin_361", "ssf1_jpt", "behavior", "path_m_hph", "ssf20_sra", "ssf16_sqw", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "nodes_ddn", "merkel_cell_skin_t_48418", "path_n_ddn", "combined_n", "ssf17_sqx", "year_dx_validation", "tnm7_inclusions_tqb", "tnm7_stage_uqe", "summary_stage_rpa", "combined_t", "ssf21_srb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:00.537Z"
+  "last_modified" : "2015-10-08T17:08:06.557Z"
 }

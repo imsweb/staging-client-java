@@ -148,7 +148,7 @@
     "naaccr_item" : 2930,
     "table" : "ssf6_oak",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+    "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf7",
     "name" : "Tumor Necrosis",
@@ -210,6 +210,18 @@
     "name" : "Xeroderma Pigmentosa",
     "naaccr_item" : 2870,
     "table" : "ssf16_scp",
+    "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
     "used_for_staging" : false
   } ],
   "outputs" : [ {
@@ -455,5 +467,5 @@
   } ],
   "involved_tables" : [ "clin_m_hcu", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "ssf8_sdd", "input_version_validation", "nodes_dde", "radiation_surg_seq", "ssf7_scq", "path_m_hcu", "determine_default_m", "ssf4_mbg", "nodes_pos_fpa", "ssf10_scm", "ssf6_oak", "ssf14_scn", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "ssf3_lap", "skin_eyelid_n_65771", "extension_bdg", "tnm7_inclusions_tpb", "mets_hcu", "behavior", "ssf11_scj", "schema_selection_skin_eyelid", "ssf9_sdi", "ssf2_kaz", "ssf15_sco", "ssf1_jbl", "skin_eyelid_t_57348", "ssf12_sck", "tnm7_stage_uaf", "adjust_path_defaults", "systemic_surg_seq", "ssf16_scp", "primary_site", "combined_m", "combined_n", "ssf5_nar", "year_dx_validation", "summary_stage_rpa", "combined_t", "ssf13_scl", "combined_t_to_summ_stage_t_3b_3d_re_4_4e_d_48469" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-28T21:06:43.663Z"
+  "last_modified" : "2015-10-08T17:08:06.466Z"
 }

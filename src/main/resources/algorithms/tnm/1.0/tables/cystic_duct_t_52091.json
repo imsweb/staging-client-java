@@ -3,9 +3,9 @@
   "algorithm" : "tnm",
   "version" : "1.0",
   "name" : "Cystic Duct T",
-  "title" : "Clinical and Pathological T",
+  "title" : "Clinical and Pathologic T",
   "notes" : "**Note 1:**  The cystic duct extends from the neck of the gallbladder to its junction with the common hepatic duct, to form the common bile duct.\n\n**Note 2:** Involvement of one of the stated extrahepatic organs or structures is classified as T3, and involvement of more than one extrahepatic structure is classified as T4.\n\n**Note 3:**  Involvement within the porta hepatis is coded according to the structures involved: portal vein, common hepatic artery, and common hepatic duct.",
-  "last_modified" : "2015-08-13T13:25:56.584Z",
+  "last_modified" : "2015-10-10T19:55:51.868Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

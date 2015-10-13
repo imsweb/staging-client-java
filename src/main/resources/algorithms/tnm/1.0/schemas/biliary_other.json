@@ -136,5 +136,5 @@
   } ],
   "involved_tables" : [ "mets_hbj", "primary_site", "input_version_validation", "schema_selection_biliary_other", "histology", "extension_bcx", "year_dx_validation", "summary_stage_rpa", "nodes_dcl" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:03.992Z"
+  "last_modified" : "2015-10-08T17:08:13.414Z"
 }

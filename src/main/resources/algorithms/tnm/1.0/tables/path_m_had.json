@@ -3,10 +3,10 @@
   "algorithm" : "tnm",
   "version" : "1.0",
   "name" : "Path M",
-  "title" : "Pathological M",
+  "title" : "Pathologic M",
   "notes" : "**Note:**  Nodes in contiguous (secondary) and bidirectional (cephalad/caudal) primary nodal basins are coded in regional lymph nodes.",
   "footnotes" : "\\* M1 is not defined in AJCC 7th edition",
-  "last_modified" : "2015-08-26T13:39:49.489Z",
+  "last_modified" : "2015-10-10T20:25:13.379Z",
   "definition" : [ {
     "key" : "path_m",
     "name" : "Pathological M",

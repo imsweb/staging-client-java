@@ -4,8 +4,7 @@
   "version" : "1.0",
   "name" : "Lymphoma Ocular Adnexa",
   "title" : "Lymphoma of the Ocular Adnexa and Skin of Eyelid",
-  "description" : "[SME REVIEW]\n1) TNM 7 Stage flow includes SSF2 table (step 4). but the stage is always 88.  Think this step can be removed.\n2) Since stage is always 88, should the Adj Path step (which sets path stage group = 99 if Path T, Path N, Path M are all missing) be deleted?\nif so, need to check other schemas for this issue.\n\nwait until Lymphoma is fixed, then mimic - discuss with Lynne P.\n\nCan SSF11, 12, 13 be removed? they don't appear to have useful defined values.\n[END SME REVIEW]",
-  "notes" : "M-9590-9699,9702-9738, 9811-9818,9820-9837\nC44.1  Skin of Eyelid\nC69.0  Conjunctiva\nC69.5  Lacrimal Gland\nC69.6  Orbit\n\n**Note 1:** Laterality must be coded for this site.\n\n**Note 2:**   Ocular lymphomas are assigned TNM values but no stage grouping in TNM 7th Edition staging.",
+  "notes" : "M-9590-9699,9702-9738, 9811-9818,9820-9837\nC44.1  Skin of Eyelid\nC69.0  Conjunctiva\nC69.5  Lacrimal Gland\nC69.6  Orbit\n\n**Note 1:** Laterality must be coded for this site.\n\n**Note 2:**   Ocular lymphomas are assigned TNM values but no stage grouping in TNM 7th Edition staging.\n\n**Note 3:** UICC does not define Lymphoma Ocular Adnexa. A list of all possible values are provided for T, N and M.  Please manually assign SEER Summary Stage 2000.",
   "schema_selection_table" : "schema_selection_lymphoma_ocular_adnexa",
   "inputs" : [ {
     "key" : "year_dx",
@@ -53,37 +52,37 @@
     "key" : "clin_t",
     "name" : "Clinical T",
     "naaccr_item" : 940,
-    "table" : "lymphomaocularadnexa_t_55786",
+    "table" : "lymphomaocularadnexa_t_no_uicc_definition_89433",
     "used_for_staging" : true
   }, {
     "key" : "clin_n",
     "name" : "Clinical N",
     "naaccr_item" : 950,
-    "table" : "lymphmaocularadnexa_n_57005",
+    "table" : "lymphomaocularadnexa_clin_n_no_uicc_definition_66872",
     "used_for_staging" : true
   }, {
     "key" : "clin_m",
     "name" : "Clinical M",
     "naaccr_item" : 960,
-    "table" : "clin_m_hby",
+    "table" : "lymphomaocularadnexa_clin_m_no_uicc_definition_96511",
     "used_for_staging" : true
   }, {
     "key" : "path_t",
     "name" : "Pathologic T",
     "naaccr_item" : 880,
-    "table" : "lymphomaocularadnexa_t_55786",
+    "table" : "lymphomaocularadnexa_path_t_no_uicc_definition_copy_11297",
     "used_for_staging" : true
   }, {
     "key" : "path_n",
     "name" : "Pathologic N",
     "naaccr_item" : 890,
-    "table" : "lymphmaocularadnexa_n_57005",
+    "table" : "lymphomaocularadnexa_path_n_no_uicc_definition_17284",
     "used_for_staging" : true
   }, {
     "key" : "path_m",
     "name" : "Pathologic M",
     "naaccr_item" : 900,
-    "table" : "path_m_hby",
+    "table" : "lymphomaocularadnexa_path_m_no_uicc_definition_copy_6387",
     "used_for_staging" : true
   }, {
     "key" : "seer_primary_tumor",
@@ -118,7 +117,7 @@
     "name" : "Systemic Symptoms at Diagnosis",
     "naaccr_item" : 2890,
     "table" : "ssf2_kpg",
-    "used_for_staging" : true
+    "used_for_staging" : false
   }, {
     "key" : "ssf3",
     "name" : "International Prognostic Index (IPI)",
@@ -168,6 +167,18 @@
     "name" : "Sicca Syndrome",
     "naaccr_item" : 2864,
     "table" : "ssf10_sat",
+    "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
     "used_for_staging" : false
   } ],
   "outputs" : [ {
@@ -258,10 +269,6 @@
       "inputs" : [ "path_m", "clin_m" ],
       "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_clin_m", "combined_m_in", "source_m" ]
     }, {
-      "id" : "ssf2_kpg",
-      "inputs" : [ "ssf2" ],
-      "outputs" : [ "stage_classification" ]
-    }, {
       "id" : "tnm7_stage_for_sites_with_no_stage_groupings_unb",
       "input_mapping" : [ {
         "from" : "tmp_clin_n",
@@ -298,7 +305,7 @@
       "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t" ],
       "outputs" : [ "path_stage_group" ]
     }, {
-      "id" : "adjust_path_defaults",
+      "id" : "adjust_path_defaults_for_no_path_stage_group_not_defined_12205",
       "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
       "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
     } ]
@@ -415,7 +422,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "ssf2_kpg", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "schema_selection_lymphoma_ocular_adnexa", "ssf7_saq", "ssf10_sat", "tnm7_stage_for_sites_with_no_stage_groupings_unb", "radiation_surg_seq", "ssf3_lbc", "determine_default_m", "summary_stage_raa", "nodes_pos_fpa", "lymphomaocularadnexa_t_55786", "ssf4_mbj", "determine_default_n", "ssf1_jpj", "combined_t_to_summ_stage_t_4_4e_d_99503", "nodes_dev", "ssf6_oat", "histology", "combined_t_no_tis", "combined_n_to_summ_stage_n_nos_n3_d_42104", "mets_hna", "nodes_dna", "tnm7_inclusions_tpl", "extension_bez", "ssf9_sas", "clin_m_hby", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m_lymphocularadnexa", "ssf8_sar", "combined_n", "year_dx_validation", "ssf5_nac", "lymphmaocularadnexa_n_57005", "path_m_hby", "mets_hby" ],
+  "involved_tables" : [ "ssf2_kpg", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "schema_selection_lymphoma_ocular_adnexa", "ssf7_saq", "ssf10_sat", "tnm7_stage_for_sites_with_no_stage_groupings_unb", "radiation_surg_seq", "ssf3_lbc", "lymphomaocularadnexa_path_n_no_uicc_definition_17284", "determine_default_m", "summary_stage_raa", "nodes_pos_fpa", "ssf4_mbj", "lymphomaocularadnexa_clin_n_no_uicc_definition_66872", "determine_default_n", "ssf1_jpj", "combined_t_to_summ_stage_t_4_4e_d_99503", "nodes_dev", "ssf6_oat", "histology", "combined_t_no_tis", "combined_n_to_summ_stage_n_nos_n3_d_42104", "mets_hna", "lymphomaocularadnexa_path_t_no_uicc_definition_copy_11297", "nodes_dna", "tnm7_inclusions_tpl", "extension_bez", "ssf9_sas", "systemic_surg_seq", "adjust_path_defaults_for_no_path_stage_group_not_defined_12205", "lymphomaocularadnexa_t_no_uicc_definition_89433", "primary_site", "combined_m_lymphocularadnexa", "ssf8_sar", "combined_n", "year_dx_validation", "lymphomaocularadnexa_clin_m_no_uicc_definition_96511", "ssf5_nac", "lymphomaocularadnexa_path_m_no_uicc_definition_copy_6387", "mets_hby" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:10.864Z"
+  "last_modified" : "2015-10-09T17:54:34.614Z"
 }

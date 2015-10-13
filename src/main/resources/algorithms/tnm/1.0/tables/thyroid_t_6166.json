@@ -3,9 +3,9 @@
   "algorithm" : "tnm",
   "version" : "1.0",
   "name" : "Thyroid T",
-  "title" : "Clinical and Pathological T",
+  "title" : "Clinical and Pathologic T",
   "notes" : "**Note 1:** TNM does not include an in situ category for thyroid gland tumors. Assign TX and behavior code /2 for in situ cases.\n\n**Note 2:**  TNM considers all anaplastic carcinomas to be T4.\n\n**Note 3:** Tumor size must be known to assign a value of T1, T2 or T3 or their (sub)categories. You may use a physicianâs statement of the T category if this is the only information in the medical record. If the tumor appears to be in the T1, T2 or T3 (sub)categories, but no size or category is specified, assign TX.\n\n**Note 4:** For the following descriptions, assign the appropriate T category based on the tumor size.\n\n    Single invasive tumor confined to thyroid\n    Extension into thyroid capsule, but not beyond\n    Multiple foci confined to thyroid\n\n    Confined to thyroid, NOS   \n    Localized, NOS\n\n**Note 5:** Multifocal tumors of all histological types should be designated (m) (the largest determines the classification), e.g, T2. Record the information regarding solitary vs. multifocal tumors in Site-Specific Factor 1.",
-  "last_modified" : "2015-09-21T18:44:06.138Z",
+  "last_modified" : "2015-10-10T21:14:29.251Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

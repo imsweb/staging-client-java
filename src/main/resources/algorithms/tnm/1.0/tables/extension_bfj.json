@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "SEER Primary Tumor",
   "title" : "SEER Primary Tumor",
-  "notes" : "**Note 1:**  For rectosigmoid, ignore intraluminal extension to adjacent segment(s) of colon and rectum; code depth of invasion or rectosigmoidal spread as indicated.\n\n**Note 5:**  Assign regional (code 200) for tumor with macroscopic adhesions to other organs or structures and for pathologically confirmed tumor in adhesions.  However, if no tumor is present in adhesions upon microscopic examination, assign SEER primary tumor based on  the microscopically confirmed depth of tumor invasion.",
+  "notes" : "**Note 1:**  For rectosigmoid, ignore intraluminal extension to adjacent segment(s) of colon and rectum; code depth of invasion or rectosigmoidal spread as indicated.\n\n**Note 2:**  Assign regional (code 200) for tumor with macroscopic adhesions to other organs or structures and for pathologically confirmed tumor in adhesions.  However, if no tumor is present in adhesions upon microscopic examination, assign SEER primary tumor based on  the microscopically confirmed depth of tumor invasion.",
   "footnotes" : "\\#Considered localized in Historic Stage",
-  "last_modified" : "2015-09-04T20:51:52.831Z",
+  "last_modified" : "2015-10-10T23:25:54.006Z",
   "definition" : [ {
     "key" : "seer_primary_tumor",
     "name" : "Code",

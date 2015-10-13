@@ -2,10 +2,10 @@
   "id" : "path_m_hpb",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Head & Neck Pathological M",
-  "title" : "Pathological M",
+  "name" : "Head & Neck Pathologic M",
+  "title" : "Pathologic M",
   "notes" : "**Note:** Supraclavicular and transverse cervical lymph nodes are coded in regional lymph nodes because they are categorized as N rather than M in TNM.",
-  "last_modified" : "2015-08-13T13:25:42.710Z",
+  "last_modified" : "2015-10-09T17:09:38.585Z",
   "definition" : [ {
     "key" : "path_m",
     "name" : "Pathological M",

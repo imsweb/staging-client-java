@@ -4,7 +4,6 @@
   "version" : "1.0",
   "name" : "Thyroid",
   "title" : "Thyroid Gland",
-  "description" : "[SME REVIEW] - \nCombined Stage/summary stage:  not sure if Histology Grade Extension Summary Stage is needed anymore.\n   Please contact Nicki and let her know what the path and table are supposed to look like and she'll fix it.\n   Extra table not needed, additional instructions will be needed for summary stage.\n(NS: if the S and M concepts are staying, need to make a combined T thyroid table; shouldn't need the special table in the combined path at that point.)\n\nKeep note until instructions developed\n\nThere are other ways to get a T4a than 'stated as, no other info'.  NCS is not sure you can tell WHEN to apply the table accurately, so is there some other way to tell this should be done.\n [END SME REVIEW]",
   "notes" : "C73.9  Thyroid gland\n\n**Note:** The determination of TNM stage group from T, N, and M for thyroid depends on histologic type, grade, and age. The Histologies, Grade, Stage table shows the selection of the TNM Stage table based on histology and grade. For papillary and follicular carcinomas, age is also needed for the selection; if age at diagnosis is unknown, TNM stage will be derived as unknown for these histologies.",
   "schema_selection_table" : "schema_selection_thyroid",
   "inputs" : [ {
@@ -124,6 +123,18 @@
     "naaccr_item" : 230,
     "default" : "999",
     "used_for_staging" : true
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -396,5 +407,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "combined_t_to_summ_stage_t_thyroid_68736", "ssf1_jap", "radiation_surg_seq", "determine_default_m", "schema_selection_thyroid", "extension_bby", "nodes_pos_fpa", "thyroid_baset_ssf1_ajcc7", "determine_default_n", "combined_n_to_summ_stage_n_84054", "thyroid_ajcctnm7_stage_thyroid_medullary", "histology", "thyroid_t_6166", "histologies_grade_stage_tnm_7_20594", "clin_n_dbr", "tnm7_inclusions_tpb", "combined_t_no_tis", "thyroid_ajcctnm7_stage_thyroid_papillaryand_follicular_lessthan_45", "thyroid_histology_grade_extension_summary_stage", "path_m_hbf", "thyroid_ajcctnm7_stage_thyroid_papillaryand_follicular_age45and_older", "mets_hbf", "thyroid_ajcctnm7_stage_thyroid_anaplastic", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "nodes_dbr", "combined_m", "combined_n", "grade", "year_dx_validation", "summary_stage_rpa", "clin_m_hbf", "path_n_dbr" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:11.224Z"
+  "last_modified" : "2015-10-09T17:23:38.587Z"
 }

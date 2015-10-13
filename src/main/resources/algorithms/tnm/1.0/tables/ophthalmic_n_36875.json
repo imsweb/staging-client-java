@@ -3,9 +3,9 @@
   "algorithm" : "tnm",
   "version" : "1.0",
   "name" : "Ophthalmic N",
-  "title" : "Clinical and Pathological N",
+  "title" : "Clinical and Pathologic N",
   "notes" : "**Regional lymph nodes:**\n\n    Cervical, NOS:\n        Submandibular (submaxillary)\n    Parotid, NOS:\n        Infra-auricular\n        Preauricular",
-  "last_modified" : "2015-08-13T13:23:58.279Z",
+  "last_modified" : "2015-10-09T17:07:45.354Z",
   "definition" : [ {
     "key" : "clin_n",
     "name" : "Clinical N",

@@ -3,9 +3,9 @@
   "algorithm" : "tnm",
   "version" : "1.0",
   "name" : "Adrenal Gland T",
-  "title" : "Clinical and Pathological T",
+  "title" : "Clinical and Pathologic T",
   "notes" : "**Note 1:**  TNM does not include an in situ category for adrenal gland tumors. Assign TX and behavior code /2 for in situ cases.\n\n**Note 2:** Tumor size must be known to assign a value of T1 or T2. You may use a physicianâs statement of the T category if this is the only information in the medical record. If the tumor appears to be in the T1 or T2 categories, but no size or category is specified, assign TX.\n\n**Note 3:** For the following descriptions, assign the appropriate T category based on the tumor size.\n\n    Invasive carcinoma confined to adrenal gland\n    Localized, NOS",
-  "last_modified" : "2015-08-17T14:17:46.792Z",
+  "last_modified" : "2015-10-09T17:23:02.286Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

@@ -144,7 +144,20 @@
     "name" : "Sex",
     "naaccr_item" : 220,
     "table" : "sex_19563",
-    "used_for_staging" : true
+    "used_for_staging" : true,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -389,5 +402,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf3_lpt", "radiation_surg_seq", "extension_bfx", "determine_default_m", "clin_n_dfs", "nodes_pos_fpa", "clin_m_hcw", "determine_default_n", "peritoneumfemalegen_t_87084", "combined_n_to_summ_stage_n_84054", "histology", "sex_19563", "path_m_hcw", "ssf2_kpn", "ssf1_jpr", "combined_t_no_tis", "mets_hcw", "combined_t_to_summ_stage_t_3b_4e_re_50371", "ssf5_npl", "tnm7_stage_uby", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "path_n_dfs", "schema_selection_peritoneum_female_gen", "combined_m", "combined_n", "ssf4_mpr", "tnm7_inclusions_tqa", "nodes_dfs", "year_dx_validation", "summary_stage_rpa" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:50:59.840Z"
+  "last_modified" : "2015-10-09T17:34:21.720Z"
 }

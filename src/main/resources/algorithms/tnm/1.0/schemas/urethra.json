@@ -118,6 +118,18 @@
     "table" : "ssf1_jpd",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -362,5 +374,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "tnm7_stage_uaz", "determine_default_m", "combined_t_to_summ_stage_t_3_3d_re_4_4e_d_45184", "nodes_pos_fpa", "ssf1_jpd", "clin_m_hpe", "determine_default_n", "combined_n_to_summ_stage_n_84054", "extension_bdi", "histology", "path_m_hpe", "tnm7_inclusions_tpb", "schema_selection_urethra", "behavior", "adjust_path_defaults", "systemic_surg_seq", "urethra_n_54953", "primary_site", "urethra_t_77785", "combined_m", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t", "nodes_dbu", "seer_mets_urethra_89757" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:10.231Z"
+  "last_modified" : "2015-10-08T17:08:17.400Z"
 }

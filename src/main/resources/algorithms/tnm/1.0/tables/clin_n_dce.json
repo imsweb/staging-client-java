@@ -3,9 +3,9 @@
   "algorithm" : "tnm",
   "version" : "1.0",
   "name" : "Mycosis Fungoides N",
-  "title" : "Clinical N and Pathological N",
+  "title" : "Clinical N and Pathologic N",
   "notes" : "**Note 1:**  Only peripheral lymph nodes are assessed; these include the cervical, supraclavicular, epitrochlear, axillary, and inguinal nodal groups. Clinically abnormal peripheral lymph node(s) is defined as any palpable peripheral node that on physical examination is firm, irregular, clustered, fixed, or 1.5 centimeter (cm) or larger in diameter. Central nodes, which are not generally amenable to pathologic assessment, are not currently considered in the nodal classification unless used to establish N3 histopathologically.\n\n**Note 2:**  Dutch grade system includes: \n\n    Grade 1 - Dermatopathic lymphadenopathy (DL)\n    Grade 2 - Early involvement by mycosis fungoides (MF), (presence of cerebriform nuclei larger than 7.5 micrometers (um)\n    Grade 3 - Partial effacement of lymph node architecture; many atypical cerebriform mononuclear cells (CMCs)\n    Grade 4 - Complete effacement of lymph node architecture\n\n**Note 3:**  National Cancer Institute - Lymph Nodes (NCI-LN) grade system includes:\n\n    LN0 - No atypical lymphocytes\n    LN1 - Occasional and isolated atypical lymphocytes not arranged in clusters\n    LN2 - Many atypical lymphocytes or in 3-6 cell clusters\n    LN3 - Aggregates of atypical lymphocytes; nodal architecture preserved\n    LN4 - Partial/complete effacement of nodal architecture by atypical lymphocytes or frankly neoplastic cells\n\n**Note 4:**  A T-cell clone (clone negative or clone positive) is defined by polymerase chain reaction (PCR) or Southern blot analysis of the T-cell receptor gene. \n\n**Note 5:**  For this site, code all lymph node (regional and distant) involvement in this field.",
-  "last_modified" : "2015-08-26T13:32:06.126Z",
+  "last_modified" : "2015-10-09T17:38:14.058Z",
   "definition" : [ {
     "key" : "clin_n",
     "name" : "Clinical N",

@@ -4,9 +4,8 @@
   "version" : "1.0",
   "name" : "SEER Primary Tumor",
   "title" : "SEER Primary Tumor",
-  "description" : "[SME REVIEW] Formatting: Extension to optic nerve: can't seem to line it up right",
   "notes" : "**Note 1:**  If both eyes are involved, code the information for the most extensively involved eye in this field. \n\n**Note 2:** Pathologic staging information from an enucleation always takes precedence over clinical staging, except in cases with neoadjuvant treatment where clinical disease is as extensive as or more extensive than disease at surgery.",
-  "last_modified" : "2015-09-04T20:52:25.664Z",
+  "last_modified" : "2015-10-09T17:29:14.992Z",
   "definition" : [ {
     "key" : "seer_primary_tumor",
     "name" : "Code",

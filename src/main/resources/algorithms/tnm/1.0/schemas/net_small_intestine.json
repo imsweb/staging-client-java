@@ -125,6 +125,18 @@
     "table" : "ssf12_srj",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -369,5 +381,5 @@
   } ],
   "involved_tables" : [ "path_m_hcp", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "clin_m_hcp", "mets_hcp", "nodes_dfl", "path_n_dfl", "determine_default_m", "schema_selection_net_small_intestine", "nodes_pos_fpa", "ssf11_sri", "clin_n_dfl", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "combined_t_no_tis", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "ssf6_opi", "extension_bfp", "tnm7_inclusions_tpm", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_n", "year_dx_validation", "ssf12_srj", "summary_stage_rpa", "tnm7_stage_uqa", "net_smallintestine_t_60400" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:05.131Z"
+  "last_modified" : "2015-10-08T17:08:14.910Z"
 }

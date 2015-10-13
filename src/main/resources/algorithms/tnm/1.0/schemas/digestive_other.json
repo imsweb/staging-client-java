@@ -136,5 +136,5 @@
   } ],
   "involved_tables" : [ "primary_site", "seer_mets_48348", "input_version_validation", "schema_selection_digestive_other", "histology", "extension_bcg", "year_dx_validation", "nodes_dbx", "summary_stage_rpa", "seer_mets_digestiveother_85653" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:04.217Z"
+  "last_modified" : "2015-10-08T17:08:13.691Z"
 }

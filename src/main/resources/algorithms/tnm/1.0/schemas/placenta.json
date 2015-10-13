@@ -118,6 +118,18 @@
     "table" : "ssf2_kaw",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -342,5 +354,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "ssf2_kaw", "determine_default_t", "mets_hak", "input_version_validation", "tnm7_stage_uax", "radiation_surg_seq", "summ_stage_n_if_no_n_defined_61314", "ssf1_jaq", "determine_default_m", "nodes_dfm", "adjust_path_defaults_for_no_path_placenta_29508", "path_m_hak", "schema_selection_placenta", "histology", "placenta_t_12749", "clin_m_hak", "combined_t_no_tis", "combined_t_to_summ_stage_t_2_4e_re_93413", "extension_bbm", "tnm7_inclusions_tpi", "systemic_surg_seq", "clin_n_dna", "primary_site", "combined_m", "nodes_pos_fna", "year_dx_validation", "summary_stage_rpa" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:50:54.698Z"
+  "last_modified" : "2015-10-08T17:08:02.687Z"
 }

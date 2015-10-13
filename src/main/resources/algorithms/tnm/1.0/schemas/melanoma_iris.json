@@ -4,7 +4,6 @@
   "version" : "1.0",
   "name" : "Melanoma Iris",
   "title" : "Malignant Melanoma of Iris (excluding Ciliary Body)",
-  "description" : "[SME COMMENT] Added note 4 based on note from UICC manual, pg. 285, found under T definitions for Iris",
   "notes" : "M-8720-8790\nC694  Iris\n\n**Note 1:**  Site-Specific Factor 25 is used to discriminate between tumors arising in the ciliary body and the iris, both coded to C694.\n\n**Note 2:**  Laterality must be coded for this site.",
   "schema_selection_table" : "schema_selection_melanoma_iris",
   "schema_discriminators" : [ "ssf25" ],
@@ -126,7 +125,7 @@
     "naaccr_item" : 2910,
     "table" : "ssf4_mpe",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+    "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf5",
     "name" : "Chromosome 3 Status",
@@ -200,7 +199,20 @@
     "name" : "Schema Discriminator: Melanoma Ciliary Body/Melanoma Iris",
     "naaccr_item" : 2879,
     "table" : "discriminator_melanoma",
-    "used_for_staging" : true
+    "used_for_staging" : true,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -445,5 +457,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "ssf3_lpr", "determine_default_t", "input_version_validation", "radiation_surg_seq", "ssf13_sqq", "ssf12_sqb", "determine_default_m", "ssf8_spx", "nodes_pos_fpa", "clin_m_hpg", "melanoma_iris_t_65686", "determine_default_n", "combined_n_to_summ_stage_n_84054", "seer_regional_nodes_melanomaeye_exclconj_28493", "ssf6_opd", "histology", "tnm7_inclusions_tpa", "combined_t_no_tis", "path_m_hpg", "schema_selection_melanoma_iris", "extension_bfr", "discriminator_melanoma", "tnm7_stage_uad", "seer_regional_nodes_melanomachoroid_3244", "ssf2_kbm", "ssf10_spz", "adjust_path_defaults", "ssf5_npf", "systemic_surg_seq", "ophthalmic_n_36875", "seer_mets_melanomaeye_exclconj_86372", "ssf9_sqm", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "ssf11_sqa", "year_dx_validation", "ssf14_sqr", "summary_stage_rpa", "ssf7_spw", "ssf4_mpe", "seer_mets_melanomachoroid_55264" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-28T21:01:06.073Z"
+  "last_modified" : "2015-10-08T17:53:30.635Z"
 }

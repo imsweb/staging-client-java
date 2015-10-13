@@ -173,6 +173,18 @@
     "table" : "ssf11_spe",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -427,5 +439,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf10_spd", "radiation_surg_seq", "determine_default_m", "tnm7_stage_upu", "nodes_pos_fpa", "seer_mets_melanoma_lip_lower_34785", "clin_m_hpd", "determine_default_n", "ssf11_spe", "histology", "ssf6_opa", "ssf3_lpa", "path_m_hpd", "tnm7_inclusions_tpa", "combined_t_no_tis", "ssf1_jpu", "combined_t_to_summ_stage_t_4b_4e_d_9381", "pathologic_n_head_neck_melanoma_copy_75380", "extension_bes", "ssf4_mpa", "ssf9_spc", "combined_n_to_summ_stage_n_headneck_liplower_19374", "nodes_den", "adjust_path_defaults", "systemic_surg_seq", "seer_mets_lip_33300", "primary_site", "combined_m", "clinical_n_head_neck_melanoma_66648", "combined_n", "ssf5_npa", "year_dx_validation", "summary_stage_rpa", "melanoma_lower_lip_t_39461", "ssf8_spb", "schema_selection_melanoma_lip_lower" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:09.633Z"
+  "last_modified" : "2015-10-08T17:08:03.711Z"
 }

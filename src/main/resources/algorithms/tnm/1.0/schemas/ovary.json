@@ -4,7 +4,6 @@
   "version" : "1.0",
   "name" : "Ovary",
   "title" : "Ovary",
-  "description" : "[SME REVIEW]\nSSF3, Note 3  and SSF4 Note 3 contain a direct quote (attributed) to AJCC.  Should this be removed?\n<< To be determined. Direct quote out of AJCC 7th edition. Need to determine if we have permission to use it. >>\n[END SME REVIEW]",
   "notes" : "C56.9  Ovary\n\n**Note 1:**  Laterality must be coded for this site.\n\n**Note 2:**  TNM values correspond to the stages accepted by the Federation Internationale de Gynecologic et d'Obstetrique (FIGO).  Note that FIGO uses a single stage value which corresponds to different groupings of T, N, and M values.",
   "schema_selection_table" : "schema_selection_ovary",
   "inputs" : [ {
@@ -138,6 +137,18 @@
     "name" : "Malignant Ascites",
     "naaccr_item" : 2920,
     "table" : "ssf5_npl",
+    "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
     "used_for_staging" : false
   } ],
   "outputs" : [ {
@@ -383,5 +394,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf3_lpt", "radiation_surg_seq", "path_n_day", "determine_default_m", "tnm7_stage_ubf", "path_m_hah", "nodes_pos_fpa", "ovary_t_58652", "mets_hah", "determine_default_n", "combined_n_to_summ_stage_n_84054", "extension_bbg", "histology", "schema_selection_ovary", "combined_t_no_tis", "nodes_day", "clin_m_hah", "combined_t_to_summ_stage_t_1c_2d_re_3_4e_d_90725", "ssf5_npl", "ssf2_kbu", "adjust_path_defaults", "systemic_surg_seq", "tnm7_inclusions_tpx", "primary_site", "combined_m", "combined_n", "ssf4_mpr", "year_dx_validation", "summary_stage_rpa", "ssf1_jae", "clin_n_day" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:50:58.696Z"
+  "last_modified" : "2015-10-09T17:35:48.312Z"
 }

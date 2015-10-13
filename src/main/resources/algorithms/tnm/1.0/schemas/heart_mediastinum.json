@@ -130,6 +130,18 @@
     "naaccr_item" : 2910,
     "table" : "ssf4_mpf",
     "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -387,5 +399,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "seer_mets_heartmediastinum_78566", "input_version_validation", "tnm7_stage_upm", "radiation_surg_seq", "path_m_hpc", "extension_bbt", "heart_mediastinum_t_30394", "ssf3_lpk", "determine_default_m", "nodes_dbk", "nodes_pos_fpa", "clin_m_hpc", "determine_default_n", "ssf1_jpm", "combined_n_to_summ_stage_n_84054", "histology", "schema_selection_heart_mediastinum", "combined_t_no_tis", "ssf2_kpk", "seer_mets_peritoneum_retroperitoneum_44461", "tnm7_inclusions_tps", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "year_dx_validation", "ssf4_mpf", "summary_stage_rpa", "heart_mediastinum_n_50568" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:01.116Z"
+  "last_modified" : "2015-10-08T17:08:11.077Z"
 }

@@ -3,9 +3,9 @@
   "algorithm" : "tnm",
   "version" : "1.0",
   "name" : "Path N",
-  "title" : "Pathological N",
+  "title" : "Pathologic N",
   "notes" : "**Note 1:** Histological examination of a pelvic lymphadenectomy specimen will ordinarily include 6 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0.\n\n**Note 2:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in distant metastasis.\n\n**Note 3:** FIGO Stage IIIB is assigned based on primary tumor extension and/or regional lymph node involvement. If it is unknown whether it is based extension or regional lymph node involvement, assign to regional lymph nodes (N).  \n\n**Note 4:**  If either exploratory or definitive surgery is done with no mention of lymph nodes, assume nodes are negative.\n\n**Note 5:**  If the clinician says \"adnexa palpated\" but does not mention lymph nodes, assume lymph nodes are not involved.\n\n**Regional lymph nodes:**\n\n    Iliac, NOS:\n       Common\n       External\n       Internal (hypogastric)\n           Obturator\n    Paracervical\n    Parametrial\n    Pelvic, NOS\n    Sacral, NOS:\n       Lateral (laterosacral)\n       Middle (promontorial) (Gerota's node)\n       Presacral\n       Uterosacral",
-  "last_modified" : "2015-08-20T14:28:32.665Z",
+  "last_modified" : "2015-10-10T19:51:58.229Z",
   "definition" : [ {
     "key" : "path_n",
     "name" : "Pathological N",

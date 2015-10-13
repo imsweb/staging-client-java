@@ -162,6 +162,18 @@
     "table" : "ssf8_scc",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -404,7 +416,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "ssf3_lps", "cpmbined_m_to_summ_stage_m_60564", "ssf6_oag", "determine_default_t", "input_version_validation", "radiation_surg_seq", "path_m_haf", "determine_default_m", "nodes_pos_fpa", "mets_haf", "determine_default_n", "extension_bbc", "ssf7_scb", "combined_n_to_summ_stage_n_84054", "histology", "ssf2_kpq", "combined_t_no_tis", "path_n_dau", "ssf1_jpw", "clin_m_haf", "nodes_dau", "combined_t_to_summ_stage_t_3b_4e_re_50371", "schema_selection_liver", "ssf8_scc", "tnm7_inclusions_tpn", "liver_t_55652", "ssf4_mal", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "ssf5_nak", "clin_n_dau", "combined_m", "combined_n", "tnm7_stage_ubl", "year_dx_validation", "summary_stage_rpa" ],
+  "involved_tables" : [ "ssf3_lps", "cpmbined_m_to_summ_stage_m_60564", "ssf6_oag", "determine_default_t", "input_version_validation", "radiation_surg_seq", "path_m_haf", "determine_default_m", "nodes_pos_fpa", "mets_haf", "determine_default_n", "extension_bbc", "ssf7_scb", "combined_n_to_summ_stage_n_84054", "histology", "ssf2_kpq", "combined_t_no_tis", "path_n_dau", "ssf1_jpw", "clin_m_haf", "nodes_dau", "combined_t_to_summ_stage_t_3b_4e_re_50371", "schema_selection_liver", "ssf8_scc", "tnm7_inclusions_tpn", "liver_t_55652", "ssf4_mal", "adjust_path_defaults", "systemic_surg_seq", "ssf5_nak", "primary_site", "clin_n_dau", "combined_m", "combined_n", "tnm7_stage_ubl", "year_dx_validation", "summary_stage_rpa" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:03.658Z"
+  "last_modified" : "2015-10-08T17:08:12.656Z"
 }

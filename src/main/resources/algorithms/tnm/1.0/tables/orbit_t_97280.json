@@ -3,9 +3,9 @@
   "algorithm" : "tnm",
   "version" : "1.0",
   "name" : "Orbit T",
-  "title" : "Clinical and Pathological T",
+  "title" : "Clinical and Pathologic T",
   "notes" : "**Note 1:**  The orbital tissues are the support systems of the globe, confined to the space within the surrounding bony structure.  The tissues include fat, striated and smooth muscle, and fibroconnective, vascular, lymphoid, peripheral nerve, and optic nerve tissue.\n\n**Note 2:**  TNM stages only sarcomas of the orbit. TNM values are derived as NA for all non-sarcoma histologies coded to this site.\n\n**Note 3:**  Tis may be used only for non-sarcoma histologies coded to this site. Sarcomas do not present as in situ or noninvasive tumors.",
-  "last_modified" : "2015-08-13T13:24:50.665Z",
+  "last_modified" : "2015-10-10T20:52:14.347Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

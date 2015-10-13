@@ -3,10 +3,10 @@
   "algorithm" : "tnm",
   "version" : "1.0",
   "name" : "Corpus Carcinoma T",
-  "title" : "Clinical and Pathological T",
+  "title" : "Clinical and Pathologic T",
   "notes" : "**Note 1:** When both FIGO stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage.\n\n**Note 2:** To assign a T2 category, stromal connective tissue of the cervix must be involved; endocervical glandular involvement only is not considered a T2 tumor in TNM. \n\n**Note 3:** FIGO IIIA and IIIB are extension, whereas FIGO IIIC is nodal involvement.  FIGO IVA is extension, whereas FIGO IVB is distant metastasis. FIGO Stage III, NOS and FIGO Stage IV, NOS are assigned based on tumor extension and/or metastasis.  Code primary tumor based on a physician's statement of FIGO Stage III, NOS or FIGO Stage IV, NOS only if it is known that the stage value is assigned because of tumor extension.\n\n**Note 4:**  Extension to the bowel or bladder mucosa must be proven by biopsy in order to rule out bullous edema.",
   "footnotes" : "*T3 is not defined in AJCC 7th edition",
-  "last_modified" : "2015-08-24T14:46:13.239Z",
+  "last_modified" : "2015-10-10T19:54:47.344Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

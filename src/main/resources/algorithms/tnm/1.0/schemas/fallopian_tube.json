@@ -159,6 +159,18 @@
     "table" : "ssf7_sde",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -403,5 +415,5 @@
   } ],
   "involved_tables" : [ "mets_hai", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "path_n_daz", "ssf6_oap", "determine_default_m", "nodes_pos_fpa", "path_m_hai", "tnm7_stage_ubb", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "ssf2_kbc", "ssf3_laq", "tnm7_inclusions_tpb", "clin_m_hai", "nodes_daz", "extension_bbh", "behavior", "fallopian_tube_t_96584", "ssf1_jbp", "ssf5_nas", "adjust_path_defaults", "systemic_surg_seq", "ssf7_sde", "primary_site", "combined_m", "combined_n", "schema_selection_fallopian_tube", "year_dx_validation", "summary_stage_rpa", "ssf4_mav", "combined_t", "combined_t_to_summ_stage_t_2_2b_re_2c_4e_d_26557", "clin_n_daz" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:50:58.512Z"
+  "last_modified" : "2015-10-08T17:08:09.365Z"
 }

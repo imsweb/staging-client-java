@@ -166,6 +166,18 @@
     "naaccr_item" : 2863,
     "table" : "ssf9_sdz",
     "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -410,5 +422,5 @@
   } ],
   "involved_tables" : [ "path_m_han", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf3_lpu", "nodes_dbc", "radiation_surg_seq", "clin_m_han", "mets_han", "clin_n_dbc", "determine_default_m", "nodes_pos_fpa", "tnm7_stage_ubh", "path_n_dbc", "ssf9_sdz", "determine_default_n", "ssf6_oaw", "combined_n_to_summ_stage_n_84054", "histology", "ssf2_kpr", "cervix_uteri_t_38859", "extension_bbk", "tnm7_inclusions_tpb", "behavior", "ssf8_sdy", "ssf5_npm", "ssf1_jbv", "adjust_path_defaults", "systemic_surg_seq", "ssf7_sdx", "combined_t_to_summ_stage_t_2_3_re_4_d_26385", "primary_site", "schema_selection_cervix", "combined_m", "ssf4_mps", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:50:59.541Z"
+  "last_modified" : "2015-10-08T17:08:09.663Z"
 }

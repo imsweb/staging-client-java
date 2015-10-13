@@ -4,7 +4,6 @@
   "version" : "1.0",
   "name" : "Melanoma Skin",
   "title" : "Malignant Melanoma of Skin, Vulva, Penis, Scrotum",
-  "description" : "[SME REVIEW] per UICC, pg. 172, \"the extent of the tumor is classified after excision, see pT, page 174.\" How should clinical T be set up? Just the main categories of T1, T2, T3 or T4? Also, should N1a/1b, N2a/2b be included in clinical? Similar situation in Merkel Cell\n[END SME REVIEW]\nSME Reviewer #1 response:  Clinical T-category should be set up with all T1, 2, 3, or 4 subcategories:  T1a, T1b, T2a, T2b, T3a, T3b, T4a, T4b, because clinical staging includes microstaging of the primary melanoma.  Clinical regional lymph node involvement could be documented at > or = to N1 for Stage III and any N for Stage IV.  See AJCC 7th Edition page 328.\n\n[SME REVIEW] - Should Clin N include N2a, N2b? (has these, AJCC doesn't) How about N1a, N1b? (does not have these, AJCC doesn't, UICC doesn't distinguish between Clin and Path N values)\nStage Table: are you going to treat Clin and Path differently?  if not, we can get rid of the C rows and the Source column.  If not, if T = 4B, N=2A or 2B, M = 0 and Source = C - shouldn't this be Stage Group III?  Currently it goes to IIIB and IIIC - this is Path Stage Grouping, not Clin.",
   "notes" : "M-8720-8790\nC44.0  Skin of lip, NOS\nC44.1  Eyelid\nC44.2  External ear\nC44.3  Skin of other and unspecified parts of face\nC44.4  Skin of scalp and neck\nC44.5  Skin of trunk\nC44.6  Skin of upper limb and shoulder\nC44.7  Skin of lower limb and hip\nC44.8  Overlapping lesion of skin\nC44.9  Skin, NOS\nC51.0  Labium majus\nC51.1  Labium minus\nC51.2  Clitoris\nC51.8  Overlapping lesion of vulva\nC51.9  Vulva, NOS\nC60.0  Prepuce\nC60.1  Glans penis\nC60.2  Body of penis\nC60.8  Overlapping lesion of penis\nC60.9  Penis\nC63.2  Scrotum, NOS\n\n**Note 1:** Laterality must be coded for C44.1-C44.3, and C44.5-C44.7. For codes C44.3 and C44.5, if the tumor is midline (e.g., chin), use code  5 (midline) in the laterality field. \n\n**Note 2:** For melanoma of sites other than those above, use the appropriate site-specific schema.",
   "schema_selection_table" : "schema_selection_melanoma_skin",
   "inputs" : [ {
@@ -118,21 +117,21 @@
     "naaccr_item" : 2880,
     "table" : "ssf1_jpl",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+    "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf2",
     "name" : "Ulceration",
     "naaccr_item" : 2890,
     "table" : "ssf2_kaa",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+    "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf4",
     "name" : "Serum Lactate Dehydrogenase (LDH)",
     "naaccr_item" : 2910,
     "table" : "ssf4_maa",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+    "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf5",
     "name" : "Serum Lactate Dehydrogenase (LDH) Lab Value",
@@ -153,7 +152,7 @@
     "naaccr_item" : 2861,
     "table" : "ssf7_seb",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+    "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf8",
     "name" : "Primary Tumor Regression",
@@ -165,6 +164,18 @@
     "name" : "Vertical Growth Phase (VGP)",
     "naaccr_item" : 2863,
     "table" : "ssf9_sed",
+    "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
     "used_for_staging" : false
   } ],
   "outputs" : [ {
@@ -427,5 +438,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "nodes_pos_fah", "determine_default_t", "schema_selection_melanoma_skin", "input_version_validation", "radiation_surg_seq", "determine_default_m", "lymph_nodes_eval_temp_65876", "summary_stage_rac", "mets_had", "determine_default_n", "ssf6_oax", "path_n_dam", "combined_n_to_summ_stage_n_84054", "ssf1_jpl", "ssf7_seb", "histology", "nodes_dam", "ssf4_maa", "tnm7_inclusions_tpa", "behavior", "clin_m_had", "ssf8_sec", "path_t_ban", "ssf5_nba", "clin_t_ban", "clin_n_dam", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "ssf9_sed", "combined_n", "path_m_had", "ssf2_kaa", "year_dx_validation", "tnm7_stage_ubv", "combined_t", "extension_ban" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-28T21:02:21.934Z"
+  "last_modified" : "2015-10-09T17:44:58.203Z"
 }

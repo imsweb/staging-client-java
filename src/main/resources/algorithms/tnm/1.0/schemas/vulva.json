@@ -124,7 +124,7 @@
     "naaccr_item" : 2865,
     "table" : "ssf11_srd",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+    "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf12",
     "name" : "Pelvic Nodal Status",
@@ -148,6 +148,18 @@
     "name" : "Assessment Method of Femoral Inguinal Nodal Status",
     "naaccr_item" : 2869,
     "table" : "ssf15_sfc",
+    "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
     "used_for_staging" : false
   } ],
   "outputs" : [ {
@@ -393,5 +405,5 @@
   } ],
   "involved_tables" : [ "vulva_t_1223", "cpmbined_m_to_summ_stage_m_60564", "schema_selection_vulva", "determine_default_t", "nodes_dbb", "input_version_validation", "ssf10_sex", "radiation_surg_seq", "clin_n_dbb", "determine_default_m", "nodes_pos_fpa", "ssf15_sfc", "path_n_dbb", "determine_default_n", "tnm7_stage_ubd", "ssf11_srd", "path_m_hba", "combined_n_to_summ_stage_n_84054", "histology", "mets_hba", "extension_bbi", "combined_t_to_summ_stage_t_2_4e_re_93413", "behavior", "ssf14_sfb", "tnm7_inclusions_tpq", "adjust_path_defaults", "systemic_surg_seq", "ssf13_sfa", "primary_site", "clin_m_hba", "combined_m", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t", "ssf12_sez" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-28T21:07:29.603Z"
+  "last_modified" : "2015-10-08T17:08:09.850Z"
 }

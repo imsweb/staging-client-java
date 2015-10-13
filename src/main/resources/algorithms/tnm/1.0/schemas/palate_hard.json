@@ -117,7 +117,7 @@
     "naaccr_item" : 2880,
     "table" : "ssf1_jpa",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+    "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf3",
     "name" : "Levels I-III, Lymph Nodes for Head and Neck",
@@ -178,6 +178,18 @@
     "table" : "ssf11_spe",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -422,5 +434,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "schema_selection_palate_hard", "determine_default_t", "input_version_validation", "clinical_n_head_neck_except_nasopharynx_25237", "ssf10_spd", "radiation_surg_seq", "ssf1_jpa", "path_m_hpb", "determine_default_m", "combined_n_to_summ_stage_n_headneck_palatehardsoftepiant_45582", "tnm7_stage_upt", "path_n_head_neck_except_nasopharynx_40357", "nodes_pos_fpa", "determine_default_n", "ssf11_spe", "histology", "ssf6_opa", "ssf3_lpa", "tnm7_inclusions_tpb", "behavior", "combined_t_to_summ_stage_t_4b_4e_d_9381", "nodes_dpc", "ssf4_mpa", "ssf9_spc", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_n", "palate_hard_t_41050", "ssf5_npa", "year_dx_validation", "seer_mets_palatehard_97400", "seer_mets_palatehardvs2_26234", "summary_stage_rpa", "extension_bah", "combined_t", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-28T20:27:13.956Z"
+  "last_modified" : "2015-10-08T23:38:42.227Z"
 }

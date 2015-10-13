@@ -4,7 +4,6 @@
   "version" : "1.0",
   "name" : "Lymphoma",
   "title" : "Hodgkin and Non-Hodgkin Lymphomas of All Sites (excluding Mycosis Fungoides and Sezary Disease)",
-  "description" : "[SME REVIEW]\nSince stage group is based on Extension and SSF2\n* should there be a Clin stage group (currently set)\n* should there be a Path stage group (currently set to 99)\n* or should there ONLY be a combined stage group (currently set)\n\n* Someone should review the Summ Stage 2000 table.  Based on Combined stage group, but could be wrong.  Should it be based on something else?\n\nClin T and Path T lookups need to be cleaned up.\n[END SME REVIEW]",
   "notes" : "M-9590, 9591, 9596, 9597, 9651-9653, 9655, 9659, 9663, 9664, 9671, 9673, 9678-9680, 9687-9691, 9695, 9698-9702, 9705, 9708-9709, 9712, 9714, 9716-9719, 9724-9727, 9731, 9734, 9735, 9737-9738 (EXCEPT C44.1, C69.0, C69.5-C69.6)\n\nM-9811-9818,9823,9827,9837 (EXCEPT C42.1, C44.1, C69.0, C69.5-C69.6)",
   "schema_selection_table" : "schema_selection_lymphoma",
   "inputs" : [ {
@@ -138,6 +137,18 @@
     "naaccr_item" : 2920,
     "table" : "ssf5_npe",
     "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -215,13 +226,9 @@
       "value" : "90"
     } ],
     "tables" : [ {
-      "id" : "tnm7_stage_ubw",
-      "output_mapping" : [ {
-        "from" : "stage",
-        "to" : "clin_state_group"
-      } ],
+      "id" : "tnm_7_stage_group_69243",
       "inputs" : [ "ssf2", "seer_primary_tumor" ],
-      "outputs" : [ "clin_state_group" ]
+      "outputs" : [ "stage" ]
     }, {
       "id" : "tnm_7_stage_group_path_97003",
       "output_mapping" : [ {
@@ -256,7 +263,7 @@
       "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
-      "id" : "tnm7_stage_ubw",
+      "id" : "tnm_7_stage_group_69243",
       "output_mapping" : [ {
         "from" : "stage",
         "to" : "combined_stage_group"
@@ -293,7 +300,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "ssf2_kpg", "input_version_validation", "radiation_surg_seq", "path_m_hna", "clin_m_hna", "ssf3_lph", "ssf1_jpj", "histology", "lymphoma_summary_stage_70837", "mets_hna", "path_n_dna", "nodes_dna", "tnm7_inclusions_tpr", "schema_selection_lymphoma", "path_t_bch", "ssf5_npe", "tnm_7_stage_group_path_97003", "systemic_surg_seq", "clin_n_dna", "clin_t_bch", "primary_site", "extension_bch", "nodes_pos_fna", "year_dx_validation", "summary_stage_rpa", "tnm7_stage_ubw", "ssf4_mpd" ],
+  "involved_tables" : [ "ssf2_kpg", "tnm_7_stage_group_69243", "input_version_validation", "radiation_surg_seq", "path_m_hna", "clin_m_hna", "ssf3_lph", "ssf1_jpj", "histology", "lymphoma_summary_stage_70837", "mets_hna", "path_n_dna", "nodes_dna", "tnm7_inclusions_tpr", "schema_selection_lymphoma", "path_t_bch", "ssf5_npe", "tnm_7_stage_group_path_97003", "systemic_surg_seq", "clin_n_dna", "clin_t_bch", "primary_site", "extension_bch", "nodes_pos_fna", "year_dx_validation", "summary_stage_rpa", "ssf4_mpd" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:11.430Z"
+  "last_modified" : "2015-10-09T17:53:36.339Z"
 }

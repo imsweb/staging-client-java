@@ -160,6 +160,18 @@
     "table" : "ssf7_sdf",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -404,5 +416,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "nodes_dba", "mets_haj", "determine_default_t", "input_version_validation", "ssf3_lpu", "clin_n_dba", "radiation_surg_seq", "vagina_t_91502", "determine_default_m", "nodes_pos_fpa", "path_m_haj", "tnm7_stage_ubc", "path_n_dba", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "ssf2_kpr", "ssf6_oaq", "schema_selection_vagina", "clin_m_haj", "behavior", "tnm7_inclusions_tph", "ssf5_npm", "ssf1_jbq", "adjust_path_defaults", "systemic_surg_seq", "combined_t_to_summ_stage_t_2_3_re_4_d_26385", "ssf7_sdf", "primary_site", "combined_m", "ssf4_mps", "combined_n", "extension_bad", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:50:59.658Z"
+  "last_modified" : "2015-10-08T17:08:09.746Z"
 }

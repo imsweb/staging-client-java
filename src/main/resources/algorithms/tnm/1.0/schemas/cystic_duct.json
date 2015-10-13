@@ -117,7 +117,20 @@
     "name" : "Schema Discriminator: BileDuctsDistal/BileDuctsPerihilar/CysticDuct",
     "naaccr_item" : 2879,
     "table" : "discriminator_bile_ducts",
-    "used_for_staging" : true
+    "used_for_staging" : true,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -362,5 +375,5 @@
   } ],
   "involved_tables" : [ "extension_bfw", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "path_m_hcv", "determine_default_m", "clin_n_dfr", "nodes_pos_fpa", "combined_n_to_summ_stage_n_n2_d_23338", "clin_m_hcv", "determine_default_n", "histology", "mets_hcv", "combined_t_to_summ_stage_t_2_4e_re_93413", "behavior", "tnm7_inclusions_tpe", "cystic_duct_t_52091", "adjust_path_defaults", "systemic_surg_seq", "discriminator_bile_ducts", "primary_site", "path_n_dfr", "schema_selection_cystic_duct", "combined_m", "combined_n", "nodes_dfr", "year_dx_validation", "summary_stage_rpa", "combined_t", "tnm7_stage_uqb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:03.327Z"
+  "last_modified" : "2015-10-08T17:08:12.174Z"
 }

@@ -3,10 +3,10 @@
   "algorithm" : "tnm",
   "version" : "1.0",
   "name" : "Melanoma Gum Upper T",
-  "title" : "Clinical and Pathological T",
+  "title" : "Clinical and Pathologic T",
   "notes" : "**Note 1:**  TNM does not include a Tis category for melanomas of the upper aerodigestive sites (head and neck sites). Tis is mapped to NA and TNM stage group is derived as NA.\n\n**Note 2:**  Mucosal melanomas are aggressive tumors, therefore, T1 and T2 are omitted as are Stages I and II. \n\n**Note 3:**  Assign T3 for localized tumor when no other information is available or for extension involving the mucosa only of adjacent sites.\n\n**Note 4:**  Assign T4a or T4b for extension involving the deeper tissues of the primary or adjacent sites.",
   "footnotes" : "\\*TX is not defined in AJCC 7th edition\n\\**T0 is not defined in AJCC 7th edition",
-  "last_modified" : "2015-08-24T18:49:27.016Z",
+  "last_modified" : "2015-10-10T20:20:44.674Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

@@ -155,6 +155,18 @@
     "naaccr_item" : 2866,
     "table" : "ssf12_sbu",
     "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -403,5 +415,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "path_n_dfc", "determine_default_t", "input_version_validation", "radiation_surg_seq", "ssf12_sbu", "nodes_dfc", "determine_default_m", "appendix_grade_category_calculation", "nodes_pos_fpb", "mets_hcf", "ssf7_spf", "ssf1_jpf", "determine_default_n", "extension_bfg", "ssf3_lpe", "combined_n_to_summ_stage_n_84054", "histology", "tnm7_inclusions_tpc", "behavior", "ssf10_spi", "tnm7_stage_uar", "clin_m_hcf", "ssf4_mpb", "adjust_path_defaults", "systemic_surg_seq", "schema_selection_appendix", "ssf11_sbt", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "path_m_hcf", "appendix_t_59947", "year_dx_validation", "summary_stage_rpa", "clin_n_dfc", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:04.967Z"
+  "last_modified" : "2015-10-08T17:08:14.736Z"
 }

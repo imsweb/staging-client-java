@@ -117,6 +117,18 @@
     "naaccr_item" : 2900,
     "table" : "ssf3_laf",
     "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -361,5 +373,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "adrenal_m_7434", "input_version_validation", "radiation_surg_seq", "determine_default_m", "nodes_ddk", "nodes_pos_fpa", "tnm7_stage_uba", "ssf2_kak", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "adrenal_gland_t_18187", "combined_t_no_tis", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "extension_bdp", "ssf3_laf", "schema_selection_adrenal_gland", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_n", "year_dx_validation", "tnm7_inclusions_tqc", "path_m_hbv", "summary_stage_rpa", "mets_hbv", "adrenal_gland_n_44698" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:11.317Z"
+  "last_modified" : "2015-10-08T17:08:18.247Z"
 }

@@ -3,9 +3,9 @@
   "algorithm" : "tnm",
   "version" : "1.0",
   "name" : "Pleura T",
-  "title" : "Clinical and Pathological T",
+  "title" : "Clinical and Pathologic T",
   "notes" : "**Note 1:**  The TNM staging system applies only to pleural mesotheliomas. Peritoneal and pericardial mesotheliomas are not TNM staged.\n\n**Note 2:**  Pleural effusion does not affect the coding Clinical and Pathologic T, but is coded in Site-Specific Factor 1.\n\n**Note 3:**  T3 describes locally advanced, but potentially resectable tumor.\n\n**Note 4:**  T4 describes locally advanced, technically unresectable tumor.",
-  "last_modified" : "2015-08-13T13:26:01.722Z",
+  "last_modified" : "2015-10-10T21:01:17.670Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

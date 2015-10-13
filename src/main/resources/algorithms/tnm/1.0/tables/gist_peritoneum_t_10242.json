@@ -3,9 +3,9 @@
   "algorithm" : "tnm",
   "version" : "1.0",
   "name" : "GIST Peritoneum T",
-  "title" : "Clinical and Pathological T",
+  "title" : "Clinical and Pathologic T",
   "notes" : "**Note 1**: TNM does not include an in situ category for GIST tumors. Assign TX and behavior code /2 for in situ cases.\n\n**Note 2:** Tumor size must be known to assign a T value. You may use a physicianâs statement of the T category if this is the only information in the medical record. If no tumor size is available, assign TX.\n\n**Note 3:** For the following descriptions, assign the appropriate T  based on the tumor size.\n\n    Tumor confined to site of origin\n    Adjacent connective tissue\n    Adjacent organs/structures including bone/cartilage:\n        For retroperitoneum (C48.0): \n           Adrenal(s) (suprarenal gland(s))\n           Aorta\n           Ascending colon\n           Descending colon\n           Kidney(s)\n           Pancreas\n           Inferior vena cava (IVC)\n           Vertebra\n       For peritoneum (C48.1, C48.2): \n           Colon (except ascending and descending colon)\n           Esophagus\n           Gallbladder\n           Liver\n           Small intestine\n           Spleen\n           Stomach\n\n    Further contiguous extension, including:\n        For retroperitoneum (C48.0):\n           Colon other than ascending or descending\n        For peritoneum (C48.1, C48.2): \n            Ascending colon",
-  "last_modified" : "2015-08-17T14:46:19.297Z",
+  "last_modified" : "2015-10-09T17:30:05.938Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

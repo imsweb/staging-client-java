@@ -2,10 +2,9 @@
   "id" : "lymphoma_summary_stage_70837",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Lymphoma Summary Stage [SME REVIEW]",
+  "name" : "Lymphoma Summary Stage",
   "title" : "Lymphoma Summary Stage",
-  "description" : "[SME REVIEW]\nSummary Stage for Lymphoma is set based on Combined Stage Group",
-  "last_modified" : "2015-08-13T13:25:50.072Z",
+  "last_modified" : "2015-10-12T15:20:02.878Z",
   "definition" : [ {
     "key" : "combined_stage_group",
     "name" : "Combined Stage Group",
@@ -15,5 +14,5 @@
     "name" : "Summary Stage",
     "type" : "ENDPOINT"
   } ],
-  "rows" : [ [ "1, 1A, 1B, IEA, IEB, IE, ISA, ISB, 1S ", "VALUE:L" ], [ "2, 2A, 2B, IIEA, IIEB, IIE, IISA, IISB, IIS, IIESA, IIESB, IIES", "VALUE:RNOS" ], [ "3, 3A, 3B, IIIEA, IIIEB, IIIE, IIISA, IIISB, IIIS, IIIESA, IIIESB, IIIES", "VALUE:D" ], [ "4, 4A, 4B ", "VALUE:D" ], [ "99", "VALUE:U" ], [ "*", "ERROR:Invalid Combined Stage Group" ] ]
+  "rows" : [ [ "1,1A,1B", "VALUE:L" ], [ "2,2A,2B", "VALUE:RNOS" ], [ "3,3A,3B", "VALUE:D" ], [ "4, 4A, 4B ", "VALUE:D" ], [ "99", "VALUE:U" ], [ "*", "ERROR:Invalid Combined Stage Group" ] ]
 }

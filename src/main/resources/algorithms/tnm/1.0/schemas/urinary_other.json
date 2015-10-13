@@ -136,5 +136,5 @@
   } ],
   "involved_tables" : [ "primary_site", "seer_mets_48348", "input_version_validation", "histology", "year_dx_validation", "nodes_dcz", "seer_mets_copy_urinary_other_71557", "summary_stage_rpa", "schema_selection_urinary_other", "extension_bcy" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:09.065Z"
+  "last_modified" : "2015-10-08T17:08:17.000Z"
 }

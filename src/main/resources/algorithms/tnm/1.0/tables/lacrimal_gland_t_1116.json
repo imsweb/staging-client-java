@@ -3,9 +3,9 @@
   "algorithm" : "tnm",
   "version" : "1.0",
   "name" : "Lacrimal Gland T",
-  "title" : "Clinical and Pathological T",
+  "title" : "Clinical and Pathologic T",
   "notes" : "**Note 1:** TNM does not include an in situ category for tumors of the lacrimal gland. Assign TX and behavior code /2 for in situ cases.\n\n**Note 2:**  As noted by the TNM, \"As the maximum size of the lacrimal gland is 2 cm, T2 and greater tumors will usually extend into the orbital soft tissue.\"\n\n**Note 3:**:  Periosteum is a fibrous membrane that wraps the outer surface of bones.\n\n**Note 4:** Tumor size must be known to assign a value of T1 or T2. You may use a physicianâs statement of the T category if this is the only information in the medical record. If the tumor appears to be in the T1 or T2 categories, but no size or category is specified, assign TX.\n\n**Note 5:** For the following descriptions, assign the appropriate T category based on the tumor size.\n\n    Extension to any of the following WITHOUT bone invasion:\n        Globe (eyeball)\n        Optic nerve\n        Orbital soft tissues\n\n    Confined to lacrimal gland\n    Localized, NOS",
-  "last_modified" : "2015-08-13T13:24:23.342Z",
+  "last_modified" : "2015-10-10T20:09:03.613Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

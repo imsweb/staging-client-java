@@ -1,57 +1,27 @@
 {
-  "id": "retinoblastoma_pathologic_n_93880",
-  "algorithm": "tnm",
-  "version": "1.0",
-  "name": "Retinoblastoma Pathologic N",
-  "title": "Clinical and Pathological N",
-  "notes": "**Regional lymph nodes:**\n\n    Cervical, NOS:\n        Submandibular (submaxillary)\n    Parotid, NOS:\n        Infra-auricular\n        Preauricular",
-  "last_modified": "2015-09-23T19:36:19.957Z",
-  "definition": [
-    {
-      "key": "clin_n",
-      "name": "Clinical N",
-      "type": "INPUT"
-    },
-    {
-      "key": "clin_n_display",
-      "name": "Clinical N Display",
-      "type": "DESCRIPTION"
-    },
-    {
-      "key": "description",
-      "name": "Description",
-      "type": "DESCRIPTION"
-    },
-    {
-      "key": "notes",
-      "name": "Registrar Notes",
-      "type": "DESCRIPTION"
-    }
-  ],
-  "rows": [
-    [
-      "X",
-      "NX",
-      "Regional lymph node metastasis cannot be assessed",
-      "Unknown; regional lymph nodes not stated\nNot documented in patient record"
-    ],
-    [
-      "0",
-      "N0",
-      "No regional lymph node metastasis",
-      ""
-    ],
-    [
-      "1",
-      "N1",
-      "Regional lymph node metastasis",
-      "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1"
-    ],
-    [
-      "2",
-      "N2",
-      "Distant lymph node involvement",
-      "Stated as N2"
-    ]
-  ]
+  "id" : "retinoblastoma_pathologic_n_93880",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Retinoblastoma Pathologic N",
+  "title" : "Pathologic N",
+  "notes" : "**Regional lymph nodes:**\n\n    Cervical, NOS:\n        Submandibular (submaxillary)\n    Parotid, NOS:\n        Infra-auricular\n        Preauricular",
+  "last_modified" : "2015-10-10T21:04:30.533Z",
+  "definition" : [ {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n_display",
+    "name" : "Clinical N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "NX", "Regional lymph node metastasis cannot be assessed", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "2", "N2", "Distant lymph node involvement", "Stated as N2" ] ]
 }

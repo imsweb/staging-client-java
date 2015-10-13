@@ -3,9 +3,9 @@
   "algorithm" : "tnm",
   "version" : "1.0",
   "name" : "Path T",
-  "title" : "Pathological T",
+  "title" : "Pathologic T",
   "notes" : "**Note 1:**  The tentorium cerebelli is an extension of the dura mater that separates the cerebellum from the inferior portion of the occipital lobes.  The location of the tumor above or below the tentorium can help in determining the type of tumor; also most adult brain tumors are supratentorial, and most pediatric brain tumors are infratentorial.  In the following list, note that ICD-O-3 codes C71.0 and C71.9 include both supratentorial and infratentorial subsites.\n\nSupratentorial sites by ICD-O-3 codes:\nC71.0, except hypothalamus, pallium, thalamus\nC71.1-C71.5\nC71.8:  Corpus callosum, tapetum\nC71.9:  Anterior cranial fossa, middle cranial fossa, suprasellar\nInfratentorial sites by ICD-O-3 codes:\nC71.0:  Hypothalamus, pallium, thalamus\nC71.6-C71.7\nC71.9:  Posterior cranial fossa\n\n**Note 2:**  If discontiguous spread is limited to circulating cells in cerebrospinal fluid (CSF), use code 710 in CS Extension.  Code all other discontiguous spread in CS Mets at DX.",
-  "last_modified" : "2015-08-13T13:24:35.829Z",
+  "last_modified" : "2015-10-10T19:48:16.624Z",
   "definition" : [ {
     "key" : "path_t",
     "name" : "Pathological T",

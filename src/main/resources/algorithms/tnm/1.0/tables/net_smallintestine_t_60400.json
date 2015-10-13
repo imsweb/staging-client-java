@@ -2,10 +2,10 @@
   "id" : "net_smallintestine_t_60400",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "NET SmallIntestine T",
-  "title" : "Clinical and Pathological T",
+  "name" : "NET Small Intestine T",
+  "title" : "Clinical and Pathologic T",
   "notes" : "**Note 1:** TNM does not include an in situ category for Neuroendocrine Tumors (NET) of the small intestine. Assign TX and behavior code /2 for in situ cases.\n\n**Note 2:**  Ignore intraluminal or lateral extension to adjacent segment(s) of small intestine and code depth of invasion or spread outside the small intestine as indicated.\n\n**Note 3:**  The nonperitonealized perimuscular tissue is, for jejunum and ileum, part of the mesentery and, for duodenum in areas where serosa is lacking, part of the retroperitoneum.",
-  "last_modified" : "2015-08-17T15:56:40.893Z",
+  "last_modified" : "2015-10-10T20:48:25.834Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

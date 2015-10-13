@@ -2,10 +2,10 @@
   "id" : "sinus_maxillary_t_7871",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Sinus maxillary T",
-  "title" : "Clinical and Pathological T",
+  "name" : "Sinus Maxillary T",
+  "title" : "Clinical and Pathologic T",
   "notes" : "**Note 1:**  Involvement of or extension to bone includes any type of tumor extension to the bone, such as erosion, invasion, extension, penetration, or destruction.\n\n**Note 2:**  Assign T3 for Base of Skull, NOS when there is no information available for more specific bony structures in the skull.",
-  "last_modified" : "2015-09-21T18:39:38.982Z",
+  "last_modified" : "2015-10-10T21:08:09.407Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

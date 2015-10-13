@@ -171,6 +171,18 @@
     "naaccr_item" : 2864,
     "table" : "ssf10_spi",
     "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -415,5 +427,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "path_n_dax", "determine_default_m", "nodes_pos_fpb", "path_m_hag", "ssf7_spf", "ssf1_jpf", "mets_hag", "determine_default_n", "rectum_t_5935", "ssf3_lpe", "combined_n_to_summ_stage_n_84054", "histology", "ssf6_opb", "extension_bbf", "nodes_dax", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "tnm7_inclusions_tpc", "behavior", "clin_m_hag", "ssf10_spi", "schema_selection_rectum", "ssf4_mpb", "ssf5_npb", "adjust_path_defaults", "ssf9_sph", "systemic_surg_seq", "primary_site", "combined_m", "tnm7_stage_upw", "combined_n", "year_dx_validation", "ssf8_spg", "summary_stage_rpa", "combined_t", "clin_n_dax" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:04.128Z"
+  "last_modified" : "2015-10-08T17:08:13.570Z"
 }

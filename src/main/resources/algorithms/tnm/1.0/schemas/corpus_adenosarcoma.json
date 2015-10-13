@@ -4,7 +4,6 @@
   "version" : "1.0",
   "name" : "Corpus Adenosarcoma",
   "title" : "Adenosarcoma of the Corpus Uteri; Uterus, NOS",
-  "description" : "[SME REVIEW] - in combined stage, should the combined T to ss2000_t have a special case to handle what USED to be the Extension Cytology Summary Stage Table?\n(if SEER Primary Tumor = 100 {if SSF2 = 010, ss2000_t = RE.  otherwise ss2000_t = L})  We wouldn't have SEER Primary Tumor, we'd have a combined T.  would it be if T = 1 (NOS), check SSF2?\nSME 2: I am unable to understand the question,  But I think we will not be looking at CS code of 100 of SSF 2.  If the tumor is confined to Endometrium and there is cancer cells in Ascites,  it will automatically become regional in ss2000.  Without a malignant ascites it will be localized disease.  Did I answer your question?",
   "notes" : "M-8933\nC54.0  Isthmus uteri\nC54.1  Endometrium\nC54.2  Myometrium\nC54.3  Fundus uteri\nC54.8  Overlapping lesion of corpus uteri\nC54.9  Corpus uteri\nC55.9  Uterus, NOS\n\n**Note 1:** TNM 7th Edition staging reflects the new staging adopted by the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) and utilizes three new staging schemas for cancer of the Corpus Uteri based on histology. \n\n1.   Carcinoma and carcinosarcoma \n2.   Leiomyosarcoma and endometrial stromal sarcoma (ESS) \n3.   Adenosarcoma \n\n**Note 2:** This schema is for adenosarcoma ONLY.  When coding pay attention to the FIGO Editions and descriptions about cell and tumor types, disease extension, lymph node status and metastasis.  \n\n**Note 3:**  TNM values correspond to the stages accepted by FIGO.  Note that FIGO uses a single stage value which corresponds to different groupings of T, N, and M values.",
   "schema_selection_table" : "schema_selection_corpus_adenosarcoma",
   "inputs" : [ {
@@ -164,6 +163,18 @@
     "name" : "Omentectomy",
     "naaccr_item" : 2862,
     "table" : "ssf8_sqo",
+    "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
     "used_for_staging" : false
   } ],
   "outputs" : [ {
@@ -409,5 +420,5 @@
   } ],
   "involved_tables" : [ "clinical_n_corpus_48422", "cpmbined_m_to_summ_stage_m_60564", "mets_hcl", "determine_default_t", "input_version_validation", "radiation_surg_seq", "ssf3_lpp", "determine_default_m", "nodes_pos_fpa", "nodes_dfh", "path_m_hcl", "determine_default_n", "ssf6_opg", "combined_n_to_summ_stage_n_84054", "ssf7_sqn", "histology", "ssf2_kpo", "clin_m_hcl", "extension_bfl", "behavior", "ssf8_sqo", "ssf5_npk", "pathological_n_corpus_31147", "schema_selection_corpus_adenosarcoma", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_n", "ssf1_jca", "ssf4_mpq", "year_dx_validation", "summary_stage_rpa", "combined_t", "combined_t_to_summ_stage_t_2_2b_re_2c_4e_d_26557", "corpus_adenosarcoma_extension_cytology_summary_stage", "corpus_adenosarcoma_t_34843", "tnm7_inclusions_tqh", "tnm7_stage_ubt" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:50:56.965Z"
+  "last_modified" : "2015-10-09T18:05:37.304Z"
 }

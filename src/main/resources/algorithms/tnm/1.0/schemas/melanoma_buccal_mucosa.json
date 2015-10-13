@@ -4,7 +4,6 @@
   "version" : "1.0",
   "name" : "Melanoma Buccal Mucosa",
   "title" : "Malignant Melanoma of Buccal Mucosa",
-  "description" : "[SME REVIEW] T4 not defined",
   "notes" : "M-8720-8790\nC06.0 Cheek mucosa\nC06.1 Vestibule of mouth",
   "schema_selection_table" : "schema_selection_melanoma_buccal_mucosa",
   "inputs" : [ {
@@ -173,6 +172,18 @@
     "table" : "ssf11_spe",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -417,5 +428,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf10_spd", "radiation_surg_seq", "path_m_hpb", "determine_default_m", "tnm7_stage_upu", "nodes_pos_fpa", "seer_regional_nodes_melanoma_buccal_mucosa_293", "determine_default_n", "ssf11_spe", "histology", "ssf6_opa", "ssf3_lpa", "tnm7_inclusions_tpa", "combined_t_no_tis", "ssf1_jpu", "seer_mets_buccal_mucosa_1311", "schema_selection_melanoma_buccal_mucosa", "combined_t_to_summ_stage_t_4b_4e_d_9381", "pathologic_n_head_neck_melanoma_copy_75380", "melanoma_buccal_mucosa_t_76459", "seer_mets_buccal_mucosavs2_57393", "ssf4_mpa", "ssf9_spc", "combined_n_to_summ_stage_n_headneck_buccallipother_45770", "adjust_path_defaults", "systemic_surg_seq", "nodes_dei", "primary_site", "combined_m", "clinical_n_head_neck_melanoma_66648", "combined_n", "ssf5_npa", "year_dx_validation", "extension_ben", "summary_stage_rpa", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:07.655Z"
+  "last_modified" : "2015-10-09T17:52:25.039Z"
 }

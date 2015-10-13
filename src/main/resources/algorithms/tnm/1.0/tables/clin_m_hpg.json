@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Clin M",
   "title" : "Clinical M",
-  "notes" : "**Note:** UICC only defines M1; whereas, AJCC defines M1a, M1b and M1c",
-  "last_modified" : "2015-09-28T16:56:47.169Z",
+  "footnotes" : "*This subcategory of M1 is not defined by UICC in the 7th edition. Approval has been provided by UICC to use the definition found in the registrar note.",
+  "last_modified" : "2015-10-08T17:49:36.646Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "0", "M0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis  cannot be assessed\nNot documented in patient record" ], [ "1", "M1", "Distant metastasis", "Note: M1 has subcategories of M1a and M1b. Assign M1 only when there is no information available to assign one of the subcategories\n\nDistant lymph node(s)\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nSize of metastasis not known or stated\n\nStated as M1 [NOS]" ], [ "1A", "M1a", "Largest diameter of the largest metastasis 3 cm or less", "Stated as M1a" ], [ "1B", "M1b", "Largest diameter of the largest metastasis 3.1-8.0 cm", "Stated as M1b" ], [ "1C", "M1c", "Largest diameter of the largest metastasis 8 cm or more", "Stated as M1c" ] ]
+  "rows" : [ [ "0", "M0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis  cannot be assessed\nNot documented in patient record" ], [ "1", "M1", "Distant metastasis", "Note: M1 has subcategories of M1a and M1b. Assign M1 only when there is no information available to assign one of the subcategories\n\nDistant lymph node(s)\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nSize of metastasis not known or stated\n\nStated as M1 [NOS]" ], [ "1A", "M1a", "Not defined by UICC*", "Largest diameter of the largest metastasis 3 cm or less\n\nStated as M1a" ], [ "1B", "M1b", "Not defined by UICC*", "Largest diameter of the largest metastasis 3.1-8.0 cm\n\nStated as M1b" ], [ "1C", "M1c", "Not defined by UICC*", "Largest diameter of the largest metastasis 8 cm or more\n\nStated as M1c" ] ]
 }

@@ -3,9 +3,9 @@
   "algorithm" : "tnm",
   "version" : "1.0",
   "name" : "Gallbladder T",
-  "title" : "Clinical and Pathological T",
+  "title" : "Clinical and Pathologic T",
   "notes" : "**Note:** Ignore extension from gallbladder to cystic duct.  Ignore extension to extrahepatic bile ducts or ampulla of Vater (T3) when other structures in T4 are involved.",
-  "last_modified" : "2015-08-13T13:26:01.247Z",
+  "last_modified" : "2015-10-10T20:03:47.001Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

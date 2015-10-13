@@ -163,6 +163,18 @@
     "naaccr_item" : 2862,
     "table" : "ssf8_sql",
     "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -288,7 +300,7 @@
       "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t" ],
       "outputs" : [ "path_stage_group" ]
     }, {
-      "id" : "adjust_path_defaults",
+      "id" : "adjust_path_defaults_for_no_path_stage_group_not_defined_12205",
       "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
       "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
     } ]
@@ -324,15 +336,8 @@
       "inputs" : [ "radiation_surg_seq", "combined_t_in", "tmp_path_t", "tmp_clin_t", "behavior", "systemic_surg_seq" ],
       "outputs" : [ "source_t", "combined_t" ]
     }, {
-      "id" : "combined_n",
-      "input_mapping" : [ {
-        "from" : "tmp_clin_n",
-        "to" : "clin_n"
-      }, {
-        "from" : "tmp_path_n",
-        "to" : "path_n"
-      } ],
-      "inputs" : [ "nodes_pos", "tmp_clin_n", "radiation_surg_seq", "tmp_path_n", "combined_n_in", "systemic_surg_seq" ],
+      "id" : "combined_n_99_3534",
+      "inputs" : [ "nodes_pos", "radiation_surg_seq", "combined_n_in", "systemic_surg_seq", "clin_n", "path_n" ],
       "outputs" : [ "combined_n", "source_n" ]
     }, {
       "id" : "combined_m",
@@ -405,7 +410,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "clin_m_hpa", "determine_default_t", "input_version_validation", "path_m_hpa", "radiation_surg_seq", "determine_default_m", "ssf3_lpm", "determine_default_n", "ssf6_opf", "seer_mets_cns_other_75706", "combined_n_to_summ_stage_n_84054", "schema_selection_cns_other", "histology", "ssf1_jpo", "path_t_bcd", "tnm7_stage_una", "ssf2_kpl", "path_n_dna", "behavior", "nodes_dna", "ssf8_sql", "adjust_path_defaults", "systemic_surg_seq", "ssf5_nph", "extension_bcd", "clin_n_dna", "ssf4_mpn", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "nodes_pos_fna", "year_dx_validation", "summary_stage_rpa", "combined_t", "ssf7_sfl", "clin_t_bcd", "tnm7_inclusions_tqf" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "clin_m_hpa", "determine_default_t", "input_version_validation", "path_m_hpa", "radiation_surg_seq", "determine_default_m", "ssf3_lpm", "determine_default_n", "ssf6_opf", "seer_mets_cns_other_75706", "combined_n_to_summ_stage_n_84054", "schema_selection_cns_other", "histology", "ssf1_jpo", "path_t_bcd", "tnm7_stage_una", "combined_n_99_3534", "ssf2_kpl", "path_n_dna", "behavior", "nodes_dna", "ssf8_sql", "systemic_surg_seq", "adjust_path_defaults_for_no_path_stage_group_not_defined_12205", "ssf5_nph", "extension_bcd", "clin_n_dna", "ssf4_mpn", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "nodes_pos_fna", "year_dx_validation", "summary_stage_rpa", "combined_t", "ssf7_sfl", "clin_t_bcd", "tnm7_inclusions_tqf" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:11.085Z"
+  "last_modified" : "2015-10-08T17:08:18.016Z"
 }

@@ -56,6 +56,7 @@ tnm7_stage_uaz
 tnm7_stage_uqd
 combined_t_lung
 tnm7_stage_upz
+testis_serum_tumor_marker_svalue_table_basedon_ssf123
 thyroid_ajcctnm7_stage_thyroid_papillaryand_follicular_lessthan_45
 melanoma_ciliary_body_tumor_size_category_ajcc7
 schema_selection_genital_female_other
@@ -186,6 +187,7 @@ path_m_hbn
 ssf6_opd
 ssf5_npf
 extension_bbh
+clin_m_hbn
 extension_bga
 extension_bfl
 extension_bag
@@ -526,7 +528,7 @@ clin_m_hah
 clin_n_day
 ssf1_jbh
 esophagus_gejunction_ajcctnm7_stage_adenocarcinoma
-testis_path_t_76829
+lymphomaocularadnexa_clin_m_no_uicc_definition_96511
 nodes_dca
 ssf15_sbe
 ssf14_sbd
@@ -969,6 +971,7 @@ clin_n_dbm
 ssf3_lpd
 nodes_der
 nodes_dpc
+combined_n_99_3534
 schema_selection_tongue_anterior
 ssf2_kpd
 ssf2_kbf
@@ -1212,6 +1215,7 @@ ssf14_spn
 summ_stage_n_if_no_n_defined_61314
 nodes_dal
 seer_mets_genital_male_other_25163
+tnm_7_stage_group_69243
 ssf10_srh
 ssf8_srf
 ssf7_sre
@@ -1292,7 +1296,7 @@ ssf9_srg
 nodes_pos_fpc
 schema_selection_melanoma_nasopharynx
 schema_selection_melanoma_oropharynx
-tonguebase_t_15526
+testis_path_t_76829
 extension_bew
 seer_regional_nodes_melanoma_gum_other_34256
 nodes_dat
@@ -1323,7 +1327,6 @@ extension_bdc
 schema_selection_melanoma_gum_lower
 schema_selection_lymphoma
 nasopharynx_t_29067
-oropharynx_t_62492
 schema_selection_adrenal_gland
 schema_selection_lacrimal_gland
 schema_selection_melanoma_gum_upper
@@ -1372,6 +1375,7 @@ tnm_7_stage_group_path_97003
 grade
 ssf3_lpa
 ssf1_jpa
+melanoma_conjunctiva_pathologic_n_83143
 combined_gleason_93464
 lymphoma_summary_stage_70837
 adjust_path_defaults
@@ -1416,6 +1420,7 @@ melanoma_epiglottis_anterior_t_92827
 melanoma_floor_of_mouth_t_86503
 melanoma_gum_lower_t_30606
 melanoma_gum_other_t_27553
+lymphomaocularadnexa_path_n_no_uicc_definition_17284
 melanoma_hypopharynx_t_81125
 melanoma_larynx_other_t_71686
 melanoma_larynx_subglottic_81170
@@ -1429,6 +1434,7 @@ melanoma_nasopharynx_t_72770
 melanoma_palate_hard_t_49262
 melanoma_palate_soft_t_15766
 melanoma_pharynx_other_t_82152
+lymphomaocularadnexa_clin_n_no_uicc_definition_66872
 melanoma_sinus_maxillary_t_28715
 melanoma_tongue_anterior_t_170
 clinical_n_corpus_carcinoma_62458
@@ -1454,6 +1460,9 @@ gist_small_intestine_t_83343
 gist_stomach_n_73991
 gist_stomach_t_60871
 small_intestine_t_70831
+adjust_path_defaults_for_no_path_stage_group_not_defined_12205
+melanoma_conjunctiva_n_15261
+lymphomaocularadnexa_path_m_no_uicc_definition_copy_6387
 clinical_m_64416
 retinoblastoma_pathologic_n_93880
 retinoblastoma_clinical_n_19393
@@ -1462,6 +1471,7 @@ merkel_cell_scrotum_t_30089
 liver_t_55652
 distal_blie_duct_t_30646
 intrahepatic_bile_ducts_t_31771
+oropharynx_t_62492
 combined_t_to_summ_stage_t_2_3_re_4_d_26385
 combined_t_to_summ_stage_t_a_b_l_c_d_e_re_18944
 gallbladder_t_77234
@@ -1485,6 +1495,7 @@ combined_t_to_summ_stage_t_3_4e_d_76738
 combined_t_to_summ_stage_t_3_4a_re_4b_4e_d_32587
 combined_t_to_summ_stage_t_3b_3d_re_4_4e_d_48469
 combined_t_to_summ_stage_t_3_3d_re_4_4e_d_45184
+lymphomaocularadnexa_path_t_no_uicc_definition_copy_11297
 combined_t_to_summ_stage_t_3b_4e_re_50371
 combined_t_to_summ_stage_t_4_4e_d_99503
 combined_t_to_summ_stage_t_4b_4e_d_9381
@@ -1504,6 +1515,7 @@ net_colon_t_5107
 net_ampulla_t_37461
 seer_mets_skin_54942
 buccal_mucosa_t_35895
+lymphomaocularadnexa_t_no_uicc_definition_89433
 nodes_dfh
 extension_bdp
 seer_mets_glottislarynxvs2_27392
@@ -1514,6 +1526,7 @@ extension_bbu
 extension_beq
 seer_mets_melanoma_nasal_cavity_22678
 nodes_dez
+tonguebase_t_15526
 nodes_dfa
 extension_bao
 extension_beh

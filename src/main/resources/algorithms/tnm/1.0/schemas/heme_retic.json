@@ -144,5 +144,5 @@
   } ],
   "involved_tables" : [ "primary_site", "input_version_validation", "histology", "year_dx_validation", "ssf1_jbt", "summary_stage_rpa", "schema_selection_heme_retic", "mets_hna", "extension_bci", "nodes_dna" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:11.677Z"
+  "last_modified" : "2015-10-08T17:08:18.477Z"
 }

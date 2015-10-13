@@ -124,7 +124,7 @@
     "naaccr_item" : 2890,
     "table" : "ssf2_kao",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+    "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf3",
     "name" : "Extranodal Extension of Regional Lymph Nodes",
@@ -132,6 +132,18 @@
     "table" : "ssf3_lai",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -376,5 +388,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "bladder_n_67324", "determine_default_m", "ssf2_kao", "nodes_pos_fpa", "ssf1_jpd", "determine_default_n", "bladder_t_4738", "histology", "path_m_hbc", "combined_t_to_summ_stage_t_3_4a_re_4b_4e_d_32587", "tnm7_inclusions_tpb", "tnm7_stage_uau", "behavior", "ssf3_lai", "schema_selection_bladder", "mets_hbc", "nodes_dck", "adjust_path_defaults", "systemic_surg_seq", "clin_m_hbc", "primary_site", "extension_bcb", "combined_n_to_summ_stage_n_n3_d_copy_68044", "combined_m", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-28T20:16:57.165Z"
+  "last_modified" : "2015-10-08T17:08:17.326Z"
 }

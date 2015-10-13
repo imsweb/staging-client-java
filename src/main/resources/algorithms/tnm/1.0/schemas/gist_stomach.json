@@ -4,7 +4,6 @@
   "version" : "1.0",
   "name" : "GIST Stomach",
   "title" : "Gastrointestinal Stromal Tumor of Stomach",
-  "description" : "[SME REVIEW] Notes for SEER mets need to reviewed/revised",
   "notes" : "M-8935-8936\nC16.0 Cardia of stomach\nC16.1  Fundus of stomach\nC16.2  Body of stomach\nC16.3  Gastric antrum\nC16.4  Pylorus\nC16.5  Lesser curvature of stomach, NOS\nC16.6  Greater curvature of stomach, NOS\nC16.8  Overlapping lesion of stomach\nC16.9  Stomach, NOS",
   "schema_selection_table" : "schema_selection_gist_stomach",
   "inputs" : [ {
@@ -136,6 +135,18 @@
     "name" : "Tumor Multiplicity",
     "naaccr_item" : 2864,
     "table" : "ssf10_srh",
+    "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
     "used_for_staging" : false
   } ],
   "outputs" : [ {
@@ -385,5 +396,5 @@
   } ],
   "involved_tables" : [ "ssf10_srh", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "path_n_dfa", "tnm_7_stage_group_gist_stomach_36358", "radiation_surg_seq", "nodes_dfa", "determine_default_m", "mets_hcd", "nodes_pos_fpa", "gist_stomach_mitotic_rate_calculation", "ssf7_sre", "determine_default_n", "clin_m_hcd", "combined_n_to_summ_stage_n_84054", "histology", "combined_t_no_tis", "ssf6_oph", "tnm7_inclusions_tpo", "gist_stomach_n_73991", "extension_bfc", "adjust_path_defaults", "systemic_surg_seq", "ssf9_srg", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "path_m_hcd", "combined_n", "gist_stomach_t_60871", "schema_selection_gist_stomach", "year_dx_validation", "summary_stage_rpa", "ssf8_srf" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:06.124Z"
+  "last_modified" : "2015-10-09T17:58:13.046Z"
 }

@@ -3,9 +3,9 @@
   "algorithm" : "tnm",
   "version" : "1.0",
   "name" : "Path T",
-  "title" : "Pathological T",
+  "title" : "Pathologic T",
   "notes" : "**Note:**  For the following descriptions, assign the appropriate T category based on the tumor size.\n\n    Invasive tumor on one side confined to:\n       Lamina propria\n       Submucosa\n    Buccal mucosa (inner cheek)\n    Gum (gingiva), upper\n    Lateral pharyngeal wall\n    Musculature invaded\n    Tonsillar pillars and fossae\n    Tonsils\n    Tumor crosses midline\n\n    Confined to soft palate\n    Localized, NOS",
-  "last_modified" : "2015-09-21T17:47:12.765Z",
+  "last_modified" : "2015-10-10T20:54:08.413Z",
   "definition" : [ {
     "key" : "path_t",
     "name" : "Pathological T",

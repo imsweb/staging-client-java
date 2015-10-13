@@ -3,9 +3,9 @@
   "algorithm" : "tnm",
   "version" : "1.0",
   "name" : "Path M",
-  "title" : "Pathological M",
+  "title" : "Pathologic M",
   "notes" : "**Note 1:**  When both Federation Internationale de Gynecologie at d-Obstetrique (FIGO) stage and metastatic detail are available, record the code with metastatic detail in preference to a statement of FIGO stage.  \n\n**Note 2:**  FIGO Stage IV, NOS is assigned based on tumor extension (T4) and/or distant metastasis (M1). If it is unknown whether it is based on T4 or M1, assign to M1.",
-  "last_modified" : "2015-08-20T14:29:02.535Z",
+  "last_modified" : "2015-10-10T19:52:10.243Z",
   "definition" : [ {
     "key" : "path_m",
     "name" : "Pathological M",

@@ -118,7 +118,7 @@
     "naaccr_item" : 2880,
     "table" : "ssf1_jpa",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+    "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf3",
     "name" : "Levels I-III, Lymph Nodes for Head and Neck",
@@ -178,7 +178,20 @@
     "name" : "Schema Discriminator: Nasopharynx/PharyngealTonsil",
     "naaccr_item" : 2879,
     "table" : "discriminator_nasopharynx",
-    "used_for_staging" : true
+    "used_for_staging" : true,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -423,5 +436,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf10_spd", "radiation_surg_seq", "ssf1_jpa", "path_m_hpb", "determine_default_m", "nodes_pos_fpa", "determine_default_n", "path_n_dcn", "histology", "seer_mets_nasopharynx_46629", "nodes_dcn", "ssf6_opa", "ssf3_lpa", "tnm7_inclusions_tpb", "behavior", "discriminator_nasopharynx", "ssf4_mpa", "extension_bas", "ssf9_spc", "clin_n_dcn", "tnm7_stage_uae", "combined_n_to_summ_stage_n_headneck_nasotonsil_77031", "adjust_path_defaults", "systemic_surg_seq", "combined_t_to_summ_stage_t_2_3_re_4_d_26385", "primary_site", "nasopharynx_t_29067", "combined_m", "combined_n", "schema_selection_nasopharynx", "ssf5_npa", "year_dx_validation", "seer_mets_nasopharynx_pharyngeal_tonsil_70534", "summary_stage_rpa", "combined_t", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-28T20:27:05.115Z"
+  "last_modified" : "2015-10-08T17:08:08.681Z"
 }

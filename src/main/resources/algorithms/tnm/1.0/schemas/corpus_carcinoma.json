@@ -4,7 +4,6 @@
   "version" : "1.0",
   "name" : "Corpus Carcinoma",
   "title" : "Carcinoma and Carcinosarcoma of Corpus Uteri; Uterus, NOS (excluding Placenta and Adenosarcoma, Leiomyosarcoma, and Endometrial Stromal Sarcoma (ESS))",
-  "description" : "[SME REVIEW] - in combined stage, should the combined T to ss2000_t have a special case to handle what USED to be the Extension Cytology Summary Stage Table?\n(if SEER Primary Tumor = 100 {if SSF2 = 010, ss2000_t = RE.  otherwise ss2000_t = L})  We wouldn't have SEER Primary Tumor, we'd have a combined T.  would it be if T = 1 (NOS), check SSF2?",
   "notes" : "M-8000-8790, 8950, 8951, 8980-8981,9700-9701\nC54.0  Isthmus uteri\nC54.1  Endometrium\nC54.2  Myometrium\nC54.3  Fundus uteri\nC54.8  Overlapping lesion of corpus uteri\nC54.9  Corpus uteri\nC55.9  Uterus, NOS\n\n**Note 1:** The TNM 7th Edition staging reflects the new staging adopted by the International Federation of Gynecology and Obstetrics (FIGO) and utilizes three new staging schemas for cancer of the Corpus Uteri based on histology.  This is a change from the AJCC 6th Edition TNM staging.  The three new schemas are: \n\n1.     Carcinoma and carcinosarcoma \n2.     Leiomyosarcoma and endometrial stromal sarcoma (ESS) \n3.     Adenosarcoma\n\n**Note 2:** Carcinosarcoma should be staged as carcinoma.\n\n**Note 3:** This schema is for carcinoma and carcinosarcoma.  When coding pay attention to the FIGO Editions and descriptions about cell and tumor types, disease extension, lymph node status and metastasis.\n\n**Note 4:**  TNM values correspond to the stages accepted by the Federation Internationale de Gynecologic et d'Obstetrique (FIGO).  Note that FIGO uses a single stage value which corresponds to different groupings of T, N, and M values.",
   "schema_selection_table" : "schema_selection_corpus_carcinoma",
   "inputs" : [ {
@@ -164,6 +163,18 @@
     "name" : "Omentectomy",
     "naaccr_item" : 2862,
     "table" : "ssf8_sqo",
+    "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
     "used_for_staging" : false
   } ],
   "outputs" : [ {
@@ -409,5 +420,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "path_m_ham", "determine_default_t", "input_version_validation", "mets_ham", "radiation_surg_seq", "clin_m_ham", "ssf3_lpp", "determine_default_m", "nodes_pos_fpa", "nodes_dbd", "schema_selection_corpus_carcinoma", "corpus_carcinoma_t_42324", "determine_default_n", "ssf6_opg", "combined_n_to_summ_stage_n_84054", "ssf7_sqn", "histology", "ssf2_kpo", "behavior", "extension_bbl", "ssf8_sqo", "ssf5_npk", "clinical_n_corpus_carcinoma_62458", "adjust_path_defaults", "systemic_surg_seq", "ssf1_jbz", "combined_t_to_summ_stage_t_2_3_re_4_d_26385", "primary_site", "combined_m", "combined_n", "ssf4_mpq", "pathological_n_corpus_carcinoma_11126", "year_dx_validation", "summary_stage_rpa", "combined_t", "corpus_adenosarcoma_extension_cytology_summary_stage", "tnm7_inclusions_tqg", "tnm7_stage_ubs" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:50:56.859Z"
+  "last_modified" : "2015-10-09T18:02:48.403Z"
 }

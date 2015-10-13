@@ -4,7 +4,6 @@
   "version" : "1.0",
   "name" : "Melanoma Choroid",
   "title" : "Malignant Melanoma of Choroid",
-  "description" : "[SME REVIEW]  TNM 7 Stage flow, step 4: Tumor Size Category AJCC 7:\nJR and NS: after Clin and Path T tables have been completed, we can remove Step 4 of TNM flow (the special table).  Use Step 4 table information about diameter and depth (used for tumor size category) in the Clin and Path T table definitions.\n\nSimilar concept for Melanoma Ciliary Body\n[END SME REVIEW]\n\n[SME COMMENTS] Notes 4 & 5 for T are directly from the UICC. Two notes mentioned AJCC, these have been fixed. See page 288 of the UICC book. Notes are found after the T codes for Ciliary Body and Choroid.",
   "notes" : "M-8720-8790\nC693  Choroid\n\n**Note:**  Laterality must be coded for this site.",
   "schema_selection_table" : "schema_selection_melanoma_choroid",
   "inputs" : [ {
@@ -124,7 +123,7 @@
     "naaccr_item" : 2910,
     "table" : "ssf4_mpe",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+    "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf5",
     "name" : "Chromosome 3 Status",
@@ -192,6 +191,18 @@
     "name" : "PET Standardized Uptake Values (SUV)",
     "naaccr_item" : 2868,
     "table" : "ssf14_sqr",
+    "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
     "used_for_staging" : false
   } ],
   "outputs" : [ {
@@ -441,5 +452,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "ssf13_sqq", "ssf12_sqb", "determine_default_m", "ssf3_lpj", "ssf8_spx", "nodes_pos_fpa", "clin_m_hpg", "tnm7_stage_upv", "determine_default_n", "melanoma_choroid_tumor_size_category_ajcc7", "combined_n_to_summ_stage_n_84054", "ssf6_opd", "histology", "tnm7_inclusions_tpa", "combined_t_no_tis", "path_m_hpg", "ssf2_kpj", "combined_t_to_summ_stage_t_a_b_l_c_d_e_re_18944", "schema_selection_melanoma_choroid", "melanoma_choroid_t_79116", "seer_regional_nodes_melanomachoroid_3244", "extension_bda", "ssf10_spz", "adjust_path_defaults", "ssf5_npf", "systemic_surg_seq", "ophthalmic_n_36875", "seer_mets_melanomaeye_exclconj_86372", "ssf9_sqm", "primary_site", "combined_m", "combined_n", "ssf11_sqa", "year_dx_validation", "ssf14_sqr", "summary_stage_rpa", "ssf7_spw", "ssf4_mpe", "seer_mets_melanomachoroid_55264" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-28T21:00:47.766Z"
+  "last_modified" : "2015-10-09T17:52:04.185Z"
 }

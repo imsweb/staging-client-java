@@ -111,7 +111,7 @@
     "naaccr_item" : 2880,
     "table" : "ssf1_sbh",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "SEER_REQUIRED" ]
+    "metadata" : [ "SEER_REQUIRED" ]
   }, {
     "key" : "ssf2",
     "name" : "Pleural/Elastic Layer Invasion (PL) by H and E or Elastic Stain",
@@ -124,6 +124,18 @@
     "name" : "Behavior",
     "naaccr_item" : 523,
     "used_for_staging" : true
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -368,5 +380,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "determine_default_m", "mets_hab", "combined_t_to_summ_stage_t_3_3d_re_4_4e_d_45184", "nodes_pos_fpa", "determine_default_n", "clin_m_hab", "histology", "path_n_dai", "combined_t_lung", "tnm7_inclusions_tpb", "combined_n_lung", "schema_selection_lung", "ssf1_sbh", "ssf2_sbi", "nodes_dai", "adjust_path_defaults", "systemic_surg_seq", "clin_n_dai", "lung_t_86537", "primary_site", "combined_n_to_summ_stage_n_n3_d_copy_68044", "combined_m", "path_m_hab", "year_dx_validation", "extension_baj", "summary_stage_rpa", "tnm7_stage_ubq" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-28T20:57:56.821Z"
+  "last_modified" : "2015-10-08T17:08:11.173Z"
 }

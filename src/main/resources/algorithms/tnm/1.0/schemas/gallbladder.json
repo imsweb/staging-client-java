@@ -123,6 +123,18 @@
     "naaccr_item" : 2870,
     "table" : "ssf16_sdn",
     "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -367,5 +379,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "path_m_hcv", "determine_default_m", "ssf16_sdn", "nodes_pos_fpa", "clin_m_hcv", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "extension_bbd", "schema_selection_gallbladder", "path_n_dav", "gallbladder_t_77234", "behavior", "tnm7_inclusions_tpe", "nodes_dav", "mets_hbe", "adjust_path_defaults", "systemic_surg_seq", "combined_t_to_summ_stage_t_2_3_re_4_d_26385", "primary_site", "ssf15_sdm", "clin_n_dav", "combined_m", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t", "tnm7_stage_uqb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:03.483Z"
+  "last_modified" : "2015-10-08T17:08:12.407Z"
 }

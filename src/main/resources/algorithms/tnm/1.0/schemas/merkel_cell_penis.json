@@ -4,7 +4,6 @@
   "version" : "1.0",
   "name" : "Merkel Cell Penis",
   "title" : "Merkel Cell Carcinoma of the Penis",
-  "description" : "[SME REVIEW] JRuhl - should combined N to ss2000 n have N2 -> RE, RE+RN, or RNOS?  Would this be used by other merkel cell schemas (merkel cell vulva seems most problematic)?  \nSME 2 comments:  Satellite nodules or in-transit mets with regional lymph nodes will be RE+RN.  Must include in SEER regional lymph nodes, correct?",
   "notes" : "M-8247\nC60.0  Prepuce\nC60.1  Glans penis\nC60.2  Body of penis\nC60.8  Overlapping lesion of penis\nC60.9  Penis, NOS\n\n**Note:**  This schema is used for Merkel cell carcinoma only.",
   "schema_selection_table" : "schema_selection_merkel_cell_penis",
   "inputs" : [ {
@@ -165,6 +164,18 @@
     "table" : "ssf22_src",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -426,5 +437,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "nodes_pos_fah", "determine_default_t", "input_version_validation", "radiation_surg_seq", "ssf19_sqz", "extension_bfz", "determine_default_m", "lymph_nodes_eval_temp_65876", "ssf18_sqy", "schema_selection_merkel_cell_penis", "clin_m_hph", "ssf22_src", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "clin_n_dfv", "ssf1_jpt", "behavior", "path_m_hph", "seer_mets_penis_36591", "ssf20_sra", "ssf16_sqw", "merkel_cell_penis_t_93032", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "nodes_dfv", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "ssf17_sqx", "year_dx_validation", "tnm7_inclusions_tqb", "tnm7_stage_uqe", "summary_stage_rpa", "seer_mets_merkel_cell_penis_41622", "combined_t", "ssf21_srb", "path_n_dfv" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:50:54.450Z"
+  "last_modified" : "2015-10-09T17:43:25.827Z"
 }

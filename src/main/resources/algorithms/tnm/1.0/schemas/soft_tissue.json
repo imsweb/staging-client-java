@@ -130,6 +130,18 @@
     "naaccr_item" : 2910,
     "table" : "ssf4_mpf",
     "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -387,5 +399,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "path_m_hpc", "ssf3_lpk", "determine_default_m", "extension_bbz", "nodes_pos_fpa", "soft_tissue_n_4758", "clin_m_hpc", "determine_default_n", "schema_selection_soft_tissue", "ssf1_jpm", "combined_n_to_summ_stage_n_84054", "histology", "combined_t_no_tis", "seer_mets_softtissue_3852", "ssf2_kpk", "tnm7_inclusions_tps", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "nodes_dbs", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "tnm7_stage_ubj", "year_dx_validation", "ssf4_mpf", "summary_stage_rpa", "soft_tissue_t_79319" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:00.252Z"
+  "last_modified" : "2015-10-08T17:08:10.356Z"
 }

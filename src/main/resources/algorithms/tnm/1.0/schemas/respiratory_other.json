@@ -136,5 +136,5 @@
   } ],
   "involved_tables" : [ "primary_site", "seer_mets_48348", "input_version_validation", "histology", "extension_bce", "year_dx_validation", "summary_stage_rpa", "seer_mets_respiratoryother_30794", "nodes_dbv", "schema_selection_respiratory_other" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:09.787Z"
+  "last_modified" : "2015-10-08T17:08:17.151Z"
 }

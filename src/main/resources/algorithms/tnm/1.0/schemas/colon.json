@@ -4,7 +4,6 @@
   "version" : "1.0",
   "name" : "Colon",
   "title" : "Colon (excluding Appendix, Gastrointestinal Stromal Tumor, and Neuroendocrine Tumor)",
-  "description" : "[SME REVIEW]\nSSF6, Note 3 has a quote from AJCC 7th.  can we use it? (need to find additional information on CRM)\n\n[SME REVIEW]\nFor Summary stage and invasion of lamina propria, if it's a /2, code in situ, if it's a /3, code localized. Have Lynn R check note",
   "notes" : "M-8000-8152,8154-8231,8243-8245,8247,8248,8250-8934,8940-9136,9141-9582,9700-9701\nC180 Cecum\nC182 Ascending colon\nC183 Hepatic flexure of colon\nC184 Transverse colon\nC185 Splenic flexure of colon\nC186 Descending colon\nC187 Sigmoid colon\nC188 Overlapping lesion of colon\nC189 Colon, NOS",
   "schema_selection_table" : "schema_selection_colon",
   "inputs" : [ {
@@ -165,6 +164,18 @@
     "name" : "18q Loss of Heterozygosity (LOH)",
     "naaccr_item" : 2864,
     "table" : "ssf10_spi",
+    "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
     "used_for_staging" : false
   } ],
   "outputs" : [ {
@@ -410,5 +421,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "combined_t_colon", "determine_default_m", "path_m_hae", "colon_65083", "nodes_pos_fpb", "mets_hae", "ssf7_spf", "ssf1_jpf", "determine_default_n", "path_n_dan", "ssf3_lpe", "combined_n_to_summ_stage_n_84054", "histology", "ssf6_opb", "schema_selection_colon", "nodes_dan", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "tnm7_inclusions_tpc", "ssf10_spi", "clin_m_hae", "extension_bao", "ssf4_mpb", "ssf5_npb", "clin_n_dan", "adjust_path_defaults", "ssf9_sph", "systemic_surg_seq", "primary_site", "combined_m", "tnm7_stage_upw", "combined_n", "year_dx_validation", "ssf8_spg", "summary_stage_rpa" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:04.678Z"
+  "last_modified" : "2015-10-09T18:07:00.802Z"
 }

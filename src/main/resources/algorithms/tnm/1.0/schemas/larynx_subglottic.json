@@ -117,7 +117,7 @@
     "naaccr_item" : 2880,
     "table" : "ssf1_jpa",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+    "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf3",
     "name" : "Levels I-III, Lymph Nodes for Head and Neck",
@@ -170,6 +170,18 @@
     "name" : "Human Papilloma Virus (HPV) Status",
     "naaccr_item" : 2864,
     "table" : "ssf10_spd",
+    "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
     "used_for_staging" : false
   } ],
   "outputs" : [ {
@@ -411,5 +423,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "clinical_n_head_neck_except_nasopharynx_25237", "ssf10_spd", "schema_selection_larynx_subglottic", "radiation_surg_seq", "ssf1_jpa", "path_m_hpb", "determine_default_m", "tnm7_stage_upt", "path_n_head_neck_except_nasopharynx_40357", "nodes_pos_fpa", "combined_n_to_summ_stage_n_headneck_larynxsub_79302", "determine_default_n", "nodes_dap", "seer_mets_subglotticlarynx_42617", "histology", "ssf6_opa", "ssf3_lpa", "tnm7_inclusions_tpb", "behavior", "combined_t_to_summ_stage_t_4b_4e_d_9381", "extension_bav", "ssf4_mpa", "ssf9_spc", "seer_mets_subglotticlarynxvs2_44976", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_n", "ssf5_npa", "year_dx_validation", "summary_stage_rpa", "combined_t", "ssf8_spb", "larynx_subglottic_t_32495" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-28T20:22:15.092Z"
+  "last_modified" : "2015-10-08T23:15:49.124Z"
 }

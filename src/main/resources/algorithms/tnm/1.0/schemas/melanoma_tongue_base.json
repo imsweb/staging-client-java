@@ -172,6 +172,18 @@
     "table" : "ssf11_spe",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -399,11 +411,11 @@
     "tables" : [ {
       "id" : "extension_bef",
       "inputs" : [ "seer_primary_tumor" ],
-      "outputs" : [ "ss2000_t" ]
+      "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "nodes_dea",
       "inputs" : [ "seer_nodes" ],
-      "outputs" : [ "ss2000_n" ]
+      "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "seer_mets_tongue_base_32751",
       "inputs" : [ "seer_mets" ],
@@ -416,5 +428,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf10_spd", "radiation_surg_seq", "combined_n_to_summ_stage_n_headneck_mouthtongue_99624", "determine_default_m", "tnm7_stage_upu", "nodes_pos_fpa", "clin_m_hpd", "determine_default_n", "schema_selection_melanoma_tongue_base", "ssf11_spe", "histology", "ssf6_opa", "ssf3_lpa", "path_m_hpd", "tnm7_inclusions_tpa", "combined_t_no_tis", "ssf1_jpu", "seer_mets_melanoma_tongue_base_40789", "combined_t_to_summ_stage_t_4b_4e_d_9381", "pathologic_n_head_neck_melanoma_copy_75380", "melanoma_tongue_base_60314", "seer_mets_tongue_base_32751", "nodes_dea", "ssf4_mpa", "ssf9_spc", "adjust_path_defaults", "systemic_surg_seq", "extension_bef", "primary_site", "combined_m", "clinical_n_head_neck_melanoma_66648", "combined_n", "ssf5_npa", "year_dx_validation", "summary_stage_rpa", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:09.291Z"
+  "last_modified" : "2015-10-10T20:38:47.849Z"
 }

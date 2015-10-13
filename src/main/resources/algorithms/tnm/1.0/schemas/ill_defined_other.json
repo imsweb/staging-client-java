@@ -136,5 +136,5 @@
   } ],
   "involved_tables" : [ "primary_site", "schema_selection_ill_defined_other", "input_version_validation", "histology", "extension_bna", "year_dx_validation", "summary_stage_rpa", "mets_hna", "nodes_dna" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:08.926Z"
+  "last_modified" : "2015-10-08T17:08:16.869Z"
 }

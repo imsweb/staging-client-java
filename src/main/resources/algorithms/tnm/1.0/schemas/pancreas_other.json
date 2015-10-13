@@ -129,6 +129,18 @@
     "naaccr_item" : 2900,
     "table" : "ssf3_lpd",
     "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -373,5 +385,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "schema_selection_pancreas_other", "input_version_validation", "path_m_hao", "ssf2_kpd", "clin_m_hao", "radiation_surg_seq", "extension_bbu", "mets_hao", "determine_default_m", "tnm7_stage_ups", "clin_n_dbl", "ssf1_jpe", "tnm7_inclusions_tae", "nodes_pos_fpa", "determine_default_n", "combined_n_to_summ_stage_n_84054", "ssf3_lpd", "histology", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "behavior", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "pancreas_other_70468", "combined_m", "nodes_dbl", "path_n_dbl", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:02.725Z"
+  "last_modified" : "2015-10-08T17:08:11.269Z"
 }

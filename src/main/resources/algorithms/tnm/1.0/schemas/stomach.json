@@ -141,7 +141,20 @@
     "name" : "Schema Discriminator: EsophagusGEJunction (EGJ)/Stomach",
     "naaccr_item" : 2879,
     "table" : "discriminator_esophogus_ge_junction",
-    "used_for_staging" : true
+    "used_for_staging" : true,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -386,5 +399,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "tnm7_inclusions_tqj", "determine_default_t", "input_version_validation", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpb", "mets_hac", "ssf2_kal", "determine_default_n", "clin_m_hac", "tnm7_stage_uam", "combined_n_to_summ_stage_n_84054", "ssf13_sdr", "stomach_t_57787", "nodes_dak", "histology", "path_n_dak", "behavior", "schema_selection_stomach", "clin_n_dak", "ssf14_sds", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "path_m_hac", "year_dx_validation", "summary_stage_rpa", "combined_t", "ssf15_sdt", "discriminator_esophogus_ge_junction", "extension_bal" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:06.215Z"
+  "last_modified" : "2015-10-08T17:08:15.494Z"
 }

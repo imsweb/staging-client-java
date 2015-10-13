@@ -4,7 +4,6 @@
   "version" : "1.0",
   "name" : "Skin",
   "title" : "Skin (excluding Skin of Eyelid and Malignant Melanoma, Merkel Cell Carcinoma, Kaposi Sarcoma, Mycosis Fungoides, Sezary Disease, and Other Lymphomas)",
-  "description" : "CG: Summary stage 2000 say 'Laterality must be coded for this site' whereas CS says for C44.2....etc. (is specific-which is correct?) and has a note we may want to add: Skin of eyelid has a separate schema",
   "notes" : "C44.0  Skin of lip, NOS\nC44.2  External ear\nC44.3  Skin of other and unspecified parts of face\nC44.4  Skin of scalp and neck\nC44.5  Skin of trunk\nC44.6  Skin of upper limb and shoulder\nC44.7  Skin of lower limb and hip\nC44.8  Overlapping lesion of skin\nC44.9  Skin, NOS\n\n**Note:**  Laterality must be coded for C44.2-C44.3 and C44.5-C44.7.  For codes C44.3 and C44.5, code 5 (midline) in the laterality field if the tumor is midline (e.g., chin).",
   "schema_selection_table" : "schema_selection_skin",
   "inputs" : [ {
@@ -138,14 +137,26 @@
     "naaccr_item" : 2866,
     "table" : "ssf12_sew",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+    "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf16",
     "name" : "Size of Lymph Nodes",
     "naaccr_item" : 2870,
     "table" : "ssf16_squ",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+    "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -390,5 +401,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "determine_default_m", "tnm7_stage_ubg", "nodes_pos_fpa", "clin_m_hpe", "determine_default_n", "clin_n_dbt", "combined_n_to_summ_stage_n_84054", "histology", "ssf1_jpp", "path_m_hpe", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "behavior", "ssf16_squ", "ssf11_sqt", "ssf12_sew", "seer_mets_skin_54942", "tnm7_inclusions_tpq", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "extension_bca", "combined_m", "ssf10_sqs", "combined_n", "skin_t_38821", "year_dx_validation", "summary_stage_rpa", "combined_t", "schema_selection_skin", "nodes_dbt", "path_n_dbt" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-28T21:06:25.710Z"
+  "last_modified" : "2015-10-08T17:08:10.710Z"
 }

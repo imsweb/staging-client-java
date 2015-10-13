@@ -5,7 +5,7 @@
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
   "notes" : "**Note:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in the SEER mets.",
-  "last_modified" : "2015-09-04T20:51:54.976Z",
+  "last_modified" : "2015-09-29T17:03:53.604Z",
   "definition" : [ {
     "key" : "seer_nodes",
     "name" : "Code",
@@ -23,5 +23,5 @@
     "name" : "Summary Stage 2017 N",
     "type" : "ENDPOINT"
   } ],
-  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:NONE" ], [ "300", "REGIONAL Lymph Nodes\n\nMediastinal, NOS:\n    Posterior (tracheoesophageal)\nParatracheal\nPretracheal\nTracheal, NOS\n\nRegional lymph node(s), NOS", "Lymph nodes, NOS", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record\"", "", "VALUE:U" ] ]
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:NONE" ], [ "300", "REGIONAL Lymph Nodes\n\nMediastinal, NOS:\n    Posterior (tracheoesophageal)\nParatracheal\nPretracheal\nTracheal, NOS\n\nRegional lymph node(s), NOS", "Lymph nodes, NOS", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
 }

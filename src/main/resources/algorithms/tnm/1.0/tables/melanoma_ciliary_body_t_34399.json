@@ -3,9 +3,9 @@
   "algorithm" : "tnm",
   "version" : "1.0",
   "name" : "Melanoma Ciliary Body T",
-  "title" : "Clinical and Pathological T",
+  "title" : "Clinical and Pathologic T",
   "notes" : "**Note 1:**  Ciliary body and Iris are both included in the ICD-O-3 site code of C694, but they are staged with different criteria by TNM.  The Schema Discriminator is used to select the CS schema appropriate for coding extension for melanoma of the ciliary body.  \n\n**Note 2:**  Uveal melanomas arise most commonly in the choroid, less frequently in the ciliary body, and least often in the iris.  Melanomas of the iris tend to be small, and those arising from or extending to the ciliary body typically are large.\n\n**Note 3:** TNM does not include an in situ category for tumors of the lacrimal gland. Assign TX and behavior code /2 for in situ cases.\n\n**Note 4:**  UICC 7th Edition assigns a T value to combinations of measurements for basal diameter and thickness of tumor divided into four Tumor Size Categories in a charted format.  \n\n**Note 5:**  According to UICC , \"In clinical practice the largest tumor basal diameter may be estimated in optic disc diameters (dd, average: 1 dd = 1.5mm). Tumor thickness may be estimated in diopters (average: 2.5 diopters = 1 mm).  However ,techniques such as ultrasonography and fundus photography are used to provide more accurate measurements. Ciliary body involvement can be evaluated by the slit-lamp, opthalmoscopy, gonioscopy and transillumination. HOwver, high frequency ultrasonography (ultrasound biomicroscopy) is used for more accurate assessment. Extension through the sclera is evaluated visually before and during surgery, and with ultrasonography, computed tomography or magnetic resonance imaging.\" \n\n**Note 6:** When histopathological measurements are recorded after fixation, tumor diameter and thickness may be underestimated because of tissue shrinkage.\n\n**Note 7:** Iris melanomas originate from, and are predominantly located in, this region of the uvea. If less than one-half of the tumor volume is located within the iris, the tumor may have originated in the ciliary body and consideration should be given to classifying it accordingly.",
-  "last_modified" : "2015-08-13T13:26:08.622Z",
+  "last_modified" : "2015-10-09T17:34:42.829Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

@@ -196,5 +196,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "extension_bcr", "ssf10_spd", "input_version_validation", "ssf4_mpa", "ssf9_spc", "nodes_dcf", "schema_selection_middle_ear", "primary_site", "histology", "ssf6_opa", "ssf5_npa", "ssf3_lpa", "year_dx_validation", "seer_mets_middle_ear_nasal_cavity_19085", "summary_stage_rpa", "ssf1_jpu", "seer_mets_middle_ear_9431", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:07.057Z"
+  "last_modified" : "2015-10-08T17:08:16.062Z"
 }

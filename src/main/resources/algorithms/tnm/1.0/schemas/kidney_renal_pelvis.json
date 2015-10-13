@@ -125,6 +125,18 @@
     "table" : "ssf2_kaj",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -369,5 +381,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpa", "ssf1_jpd", "nodes_dbe", "clin_m_hpe", "ssf2_kaj", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "path_m_hpe", "tnm7_inclusions_tpb", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "behavior", "extension_bbn", "seer_mets_renal_pelvis_and_ureter_14972", "schema_selection_kidney_renal_pelvis", "renal_pevis_and_ureter_n_58133", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_n", "tnm7_stage_upz", "year_dx_validation", "renal_pelvis_and_ureter_t_91246", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:10.043Z"
+  "last_modified" : "2015-10-08T17:08:17.237Z"
 }

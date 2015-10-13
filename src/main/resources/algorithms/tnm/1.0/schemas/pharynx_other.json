@@ -197,5 +197,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "ssf10_spd", "input_version_validation", "schema_selection_pharynx_other", "ssf4_mpa", "ssf9_spc", "extension_bdd", "primary_site", "histology", "ssf6_opa", "ssf5_npa", "ssf3_lpa", "year_dx_validation", "nodes_dcy", "seer_mets_pharynxother_35960", "seer_mets_pharynxothervs2_3402", "summary_stage_rpa", "ssf1_jpu", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:06.792Z"
+  "last_modified" : "2015-10-08T17:08:15.911Z"
 }

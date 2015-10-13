@@ -179,6 +179,18 @@
     "table" : "ssf11_spe",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -304,7 +316,7 @@
       "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t" ],
       "outputs" : [ "path_stage_group" ]
     }, {
-      "id" : "adjust_path_defaults",
+      "id" : "adjust_path_defaults_for_no_path_stage_group_not_defined_12205",
       "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
       "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
     } ]
@@ -421,7 +433,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "ssf7_spa", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf10_spd", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpa", "extension_beb", "combined_n_to_summ_stage_n_headneck_nasalsinus_48288", "clin_m_hcx", "determine_default_n", "clin_n_ddw", "seer_mets_sinus_othervs2_15755", "path_t_beb", "nodes_daq", "ssf11_spe", "histology", "ssf6_opa", "ssf3_lpa", "path_m_hcx", "tnm7_stage_una", "tnm7_inclusions_tpa", "ssf1_jpu", "behavior", "ssf4_mpa", "ssf9_spc", "seer_mets_copy_sinus_other_3423", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "ssf5_npa", "year_dx_validation", "clin_t_beb", "summary_stage_rpa", "schema_selection_melanoma_sinus_other", "combined_t", "path_n_ddw", "ssf8_spb", "nodes_ddw" ],
+  "involved_tables" : [ "ssf7_spa", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf10_spd", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpa", "extension_beb", "combined_n_to_summ_stage_n_headneck_nasalsinus_48288", "clin_m_hcx", "determine_default_n", "clin_n_ddw", "seer_mets_sinus_othervs2_15755", "path_t_beb", "nodes_daq", "ssf11_spe", "histology", "ssf6_opa", "ssf3_lpa", "path_m_hcx", "tnm7_stage_una", "tnm7_inclusions_tpa", "ssf1_jpu", "behavior", "ssf4_mpa", "ssf9_spc", "seer_mets_copy_sinus_other_3423", "systemic_surg_seq", "adjust_path_defaults_for_no_path_stage_group_not_defined_12205", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "ssf5_npa", "year_dx_validation", "clin_t_beb", "summary_stage_rpa", "schema_selection_melanoma_sinus_other", "combined_t", "path_n_ddw", "ssf8_spb", "nodes_ddw" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:50:56.359Z"
+  "last_modified" : "2015-10-08T17:08:07.532Z"
 }

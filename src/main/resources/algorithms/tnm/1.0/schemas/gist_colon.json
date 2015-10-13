@@ -136,6 +136,18 @@
     "naaccr_item" : 2869,
     "table" : "ssf15_spo",
     "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -384,5 +396,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "ssf15_spo", "ssf11_spk", "determine_default_m", "nodes_pos_fpa", "determine_default_n", "tnm7_stage_gist_small_intestine_upy", "extension_bfe", "combined_n_to_summ_stage_n_84054", "clin_m_hcb", "histology", "combined_t_no_tis", "ssf14_spn", "nodes_dey", "ssf13_spm", "gist_colon_mitotic_rate_calculation", "tnm7_inclusions_tpo", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "path_m_hcb", "schema_selection_gist_colon", "gistcolon_t_85374", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "mets_hcb", "year_dx_validation", "summary_stage_rpa", "gist_colon_n_46351", "ssf12_spl" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:04.523Z"
+  "last_modified" : "2015-10-08T17:08:14.197Z"
 }

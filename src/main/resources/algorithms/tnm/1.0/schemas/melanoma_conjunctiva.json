@@ -64,7 +64,7 @@
     "key" : "clin_n",
     "name" : "Clinical N",
     "naaccr_item" : 950,
-    "table" : "ophthalmic_n_36875",
+    "table" : "melanoma_conjunctiva_n_15261",
     "used_for_staging" : true
   }, {
     "key" : "clin_m",
@@ -82,7 +82,7 @@
     "key" : "path_n",
     "name" : "Pathologic N",
     "naaccr_item" : 890,
-    "table" : "ophthalmic_n_36875",
+    "table" : "melanoma_conjunctiva_pathologic_n_83143",
     "used_for_staging" : true
   }, {
     "key" : "path_m",
@@ -117,19 +117,31 @@
     "naaccr_item" : 2880,
     "table" : "ssf1_jby",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+    "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf2",
     "name" : "Quadrants",
     "naaccr_item" : 2890,
     "table" : "ssf2_kbi",
     "used_for_staging" : false,
-    "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+    "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf3",
     "name" : "Grade - Melanoma Origin",
     "naaccr_item" : 2900,
     "table" : "ssf3_law",
+    "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
     "used_for_staging" : false
   } ],
   "outputs" : [ {
@@ -256,7 +268,7 @@
       "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t" ],
       "outputs" : [ "path_stage_group" ]
     }, {
-      "id" : "adjust_path_defaults",
+      "id" : "adjust_path_defaults_for_no_path_stage_group_not_defined_12205",
       "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
       "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
     } ]
@@ -373,7 +385,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "tnm7_stage_for_sites_with_no_stage_groupings_unb", "radiation_surg_seq", "path_m_hpc", "determine_default_m", "nodes_pos_fpa", "ssf3_law", "clin_m_hpc", "determine_default_n", "ssf2_kbi", "combined_n_to_summ_stage_n_84054", "histology", "tnm7_inclusions_tpa", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "behavior", "extension_bcs", "seer_mets_melanomaconjunctiva_13773", "path_t_bcs", "schema_selection_melanoma_conjunctiva", "seer_regional_nodes_melanomaconjunctiva_54583", "seer_regional_nodes_melanomachoroid_3244", "clin_t_bcs", "ssf1_jby", "adjust_path_defaults", "systemic_surg_seq", "ophthalmic_n_36875", "primary_site", "combined_m", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "tnm7_stage_for_sites_with_no_stage_groupings_unb", "radiation_surg_seq", "path_m_hpc", "determine_default_m", "nodes_pos_fpa", "ssf3_law", "clin_m_hpc", "determine_default_n", "ssf2_kbi", "combined_n_to_summ_stage_n_84054", "histology", "tnm7_inclusions_tpa", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "behavior", "extension_bcs", "melanoma_conjunctiva_pathologic_n_83143", "seer_mets_melanomaconjunctiva_13773", "path_t_bcs", "melanoma_conjunctiva_n_15261", "schema_selection_melanoma_conjunctiva", "seer_regional_nodes_melanomaconjunctiva_54583", "seer_regional_nodes_melanomachoroid_3244", "clin_t_bcs", "ssf1_jby", "systemic_surg_seq", "adjust_path_defaults_for_no_path_stage_group_not_defined_12205", "primary_site", "combined_m", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-28T21:00:15.440Z"
+  "last_modified" : "2015-10-08T18:06:10.428Z"
 }

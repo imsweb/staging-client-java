@@ -5,8 +5,7 @@
   "name" : "SEER Mets",
   "title" : "SEER Mets",
   "notes" : "**Note:**  Nodes in contiguous (secondary) and bidirectional (cephalad/caudal) primary nodal basins are coded in CS Lymph Nodes. (Clarification V0204)      (delete)",
-  "footnotes" : "- For CS Mets at DX codes 05, 10, 42, 43, 52, 53, 55, 56, and 60 ONLY, the M category is assigned based on the status of serum LDH as coded in CS Site-Specific Factor 4 and shown in the Mets at DX and LDH Table.\n- For CS Mets at DX codes 05, 10, 42, 43, 52, 53, 55, 56, and 60 ONLY, the M category is assigned based on the status of serum LDH as coded in CS Site-Specific Factor 4 and shown in the Mets at DX and LDH Table.\n\n(Suggest deleting all of the above)",
-  "last_modified" : "2015-09-04T20:51:38.903Z",
+  "last_modified" : "2015-10-13T12:07:57.515Z",
   "definition" : [ {
     "key" : "seer_mets",
     "name" : "Code",

@@ -131,6 +131,18 @@
     "table" : "ssf12_srj",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
+    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -375,5 +387,5 @@
   } ],
   "involved_tables" : [ "mets_hck", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "nodes_dfg", "radiation_surg_seq", "clin_n_dfg", "determine_default_m", "ssf11_sri", "path_m_hck", "path_n_dfg", "determine_default_n", "combined_n_to_summ_stage_n_84054", "tnm7_stage_uao", "extension_bfk", "histology", "clin_m_hck", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "behavior", "ssf6_opi", "giststomach_t_55582", "schema_selection_net_stomach", "tnm7_inclusions_tpm", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_n", "nodes_pos_fpc", "year_dx_validation", "ssf12_srj", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:06.047Z"
+  "last_modified" : "2015-10-08T17:08:15.267Z"
 }

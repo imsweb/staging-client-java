@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Prostate",
   "title" : "Prostate",
-  "notes" : "C61.9  Prostate gland\n\n**Note 1:** Transitional cell (urothelial) carcinoma of the prostatic urethra is to be coded to primary site C68.0, Urethra, and assigned Collaborative Stage codes according to the Urethra schema.\n\n**Note 2:** The 7th Edition TNM stage groups are derived from T, N, M, PSA and Gleason Score. The following SSF's are used for PSA and Gleason Score. \n\n    SSF 1: Prostatic Specific Antigen (PSA) Lab Value\n    SSF 8: Gleason's Score on Needle Core Biopsy/Transurethral Resection of Prostate (TURP) (Clinical Stage Group)\n    SSF 10: Gleason's Score on Prostatectomy/Autopsy (Pathological Stage Group)",
+  "notes" : "C61.9  Prostate gland\n\n**Note 1:** Transitional cell (urothelial) carcinoma of the prostatic urethra is to be coded to primary site C68.0, Urethra, and assigned Collaborative Stage codes according to the Urethra schema.\n\n**Note 2:** The 7th Edition TNM stage groups are derived from T, N, M, PSA and Gleason Score. The following SSF's are used for PSA and Gleason Score. \n\n    SSF 1: Prostatic Specific Antigen (PSA) Lab Value\n    SSF 8: Gleason's Score on Needle Core Biopsy/Transurethral Resection of Prostate (TURP) (Clinical Stage Group)\n    SSF 10: Gleason's Score on Prostatectomy/Autopsy (Pathologic Stage Group)",
   "schema_selection_table" : "schema_selection_prostate",
   "inputs" : [ {
     "key" : "year_dx",
@@ -179,6 +179,18 @@
     "name" : "Clinical Staging Procedures Performed",
     "naaccr_item" : 2869,
     "table" : "ssf15_sbe",
+    "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "88",
+    "used_for_staging" : false
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "88",
     "used_for_staging" : false
   } ],
   "outputs" : [ {
@@ -446,5 +458,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "path_t_bbo", "determine_default_t", "input_version_validation", "mets_hal", "ssf11_sba", "radiation_surg_seq", "clin_m_hal", "determine_default_m", "clin_t_bbo", "ssf1_jav", "path_n_dbf", "nodes_pos_fpa", "ssf7_saw", "nodes_dbf", "path_m_hal", "determine_default_n", "combined_n_to_summ_stage_n_84054", "schema_selection_prostate", "histology", "ssf14_sbd", "combined_t_no_tis", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "extension_bbo", "ssf10_saz", "ssf13_sbc", "tnm7_inclusions_tpv", "adjust_path_defaults", "ssf9_say", "systemic_surg_seq", "ssf12_sbb", "primary_site", "prostate_n_76551", "tnm7_stage_ubp", "combined_m", "ssf15_sbe", "combined_n", "ssf2_kab", "year_dx_validation", "ssf8_sax", "summary_stage_rpa", "combined_gleason_93464" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-09-25T13:51:12.216Z"
+  "last_modified" : "2015-10-09T17:07:08.045Z"
 }
