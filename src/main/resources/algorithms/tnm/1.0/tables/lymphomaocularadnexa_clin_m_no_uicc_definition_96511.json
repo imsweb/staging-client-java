@@ -1,0 +1,19 @@
+{
+  "id" : "lymphomaocularadnexa_clin_m_no_uicc_definition_96511",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clinical M",
+  "title" : "LymphomaOcularAdnexa Clin M (no UICC definition)",
+  "notes" : "**Note 1:**   Involvement of peripheral and central lymph nodes, distant nodes for ocular adnexal lymphomas, is coded in lymph nodes (N) not distant metastasis.\n\n**Note 4:** UICC does not define Lymphoma Ocular Adnexa. A list of all possible Clinical M values is provided.",
+  "last_modified" : "2015-10-02T04:37:56.079Z",
+  "definition" : [ {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_m_display",
+    "name" : "Clinical M Display",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "M0" ], [ "0I+", "M0(i+)" ], [ "1", "M1" ], [ "1A", "M1a" ], [ "1B", "M1b" ], [ "1C", "M1c" ], [ "1D", "M1d" ], [ "1E", "M1e" ] ]
+}
