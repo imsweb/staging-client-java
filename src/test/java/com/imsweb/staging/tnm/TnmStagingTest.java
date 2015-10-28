@@ -277,29 +277,13 @@ public class TnmStagingTest {
         data1.setInput(TnmStagingData.TnmInput.PATH_M, "6");
         data1.setSsf(1, "020");
 
-        TnmStagingData data2 = new TnmStagingData.TnmStagingInputBuilder()
-                .withInput(TnmStagingData.TnmInput.INPUT_VERSION, "1.0")
-                .withInput(TnmStagingData.TnmInput.PRIMARY_SITE, "C680")
-                .withInput(TnmStagingData.TnmInput.HISTOLOGY, "8000")
-                .withInput(TnmStagingData.TnmInput.BEHAVIOR, "3")
-                .withInput(TnmStagingData.TnmInput.GRADE, "9")
-                .withInput(TnmStagingData.TnmInput.DX_YEAR, "2013")
-                .withInput(TnmStagingData.TnmInput.INPUT_VERSION, "1.0")
-                .withInput(TnmStagingData.TnmInput.SEER_PRIMARY_TUMOR, "100")
-                .withInput(TnmStagingData.TnmInput.SEER_REGIONAL_NODES, "100")
-                .withInput(TnmStagingData.TnmInput.REGIONAL_NODES_POSITIVE, "99")
-                .withInput(TnmStagingData.TnmInput.SEER_METS, "10")
-                .withInput(TnmStagingData.TnmInput.AGE_AT_DX, "060")
-                .withInput(TnmStagingData.TnmInput.SEX, "1")
-                .withInput(TnmStagingData.TnmInput.RX_SUMM_SURGERY, "8")
-                .withInput(TnmStagingData.TnmInput.RX_SUMM_RADIATION, "9")
-                .withInput(TnmStagingData.TnmInput.CLIN_T, "1")
-                .withInput(TnmStagingData.TnmInput.CLIN_N, "2")
-                .withInput(TnmStagingData.TnmInput.CLIN_M, "3")
-                .withInput(TnmStagingData.TnmInput.PATH_T, "4")
-                .withInput(TnmStagingData.TnmInput.PATH_N, "5")
-                .withInput(TnmStagingData.TnmInput.PATH_M, "6")
-                .withSsf(1, "020").build();
+        TnmStagingData data2 = new TnmStagingData.TnmStagingInputBuilder().withInput(TnmStagingData.TnmInput.INPUT_VERSION, "1.0").withInput(TnmStagingData.TnmInput.PRIMARY_SITE, "C680").withInput(
+                TnmStagingData.TnmInput.HISTOLOGY, "8000").withInput(TnmStagingData.TnmInput.BEHAVIOR, "3").withInput(TnmStagingData.TnmInput.GRADE, "9").withInput(TnmStagingData.TnmInput.DX_YEAR,
+                "2013").withInput(TnmStagingData.TnmInput.INPUT_VERSION, "1.0").withInput(TnmStagingData.TnmInput.SEER_PRIMARY_TUMOR, "100").withInput(TnmStagingData.TnmInput.SEER_REGIONAL_NODES,
+                "100").withInput(TnmStagingData.TnmInput.REGIONAL_NODES_POSITIVE, "99").withInput(TnmStagingData.TnmInput.SEER_METS, "10").withInput(TnmStagingData.TnmInput.AGE_AT_DX, "060")
+                .withInput(TnmStagingData.TnmInput.SEX, "1").withInput(TnmStagingData.TnmInput.RX_SUMM_SURGERY, "8").withInput(TnmStagingData.TnmInput.RX_SUMM_RADIATION, "9").withInput(
+                        TnmStagingData.TnmInput.CLIN_T, "1").withInput(TnmStagingData.TnmInput.CLIN_N, "2").withInput(TnmStagingData.TnmInput.CLIN_M, "3").withInput(TnmStagingData.TnmInput.PATH_T,
+                        "4").withInput(TnmStagingData.TnmInput.PATH_N, "5").withInput(TnmStagingData.TnmInput.PATH_M, "6").withSsf(1, "020").build();
 
         Assert.assertEquals(data1.getInput(), data2.getInput());
     }
@@ -377,8 +361,8 @@ public class TnmStagingTest {
     public void testInvolvedTables() {
         Set<String> tables = _STAGING.getInvolvedTables("adnexa_uterine_other");
 
-        Assert.assertEquals(Sets.newHashSet("extension_bcn", "histology", "input_version_validation", "nodes_dcc", "primary_site", "schema_selection_adnexa_uterine_other",
-                "seer_mets_48348", "seer_mets_copy_adnexauterineother_56278", "summary_stage_rpa", "year_dx_validation"), tables);
+        Assert.assertEquals(Sets.newHashSet("extension_bcn", "histology", "input_version_validation", "nodes_dcc", "primary_site", "schema_selection_adnexa_uterine_other", "seer_mets_48348",
+                "seer_mets_copy_adnexauterineother_56278", "summary_stage_rpa", "year_dx_validation"), tables);
     }
 
     @Test
@@ -390,17 +374,14 @@ public class TnmStagingTest {
 
     @Test
     public void testGetInputs() {
-        Assert.assertEquals(Sets.newHashSet("site", "hist", "seer_primary_tumor", "seer_nodes", "seer_mets"),
-                _STAGING.getInputs(_STAGING.getSchema("adnexa_uterine_other")));
+        Assert.assertEquals(Sets.newHashSet("site", "hist", "seer_primary_tumor", "seer_nodes", "seer_mets"), _STAGING.getInputs(_STAGING.getSchema("adnexa_uterine_other")));
 
-        Assert.assertEquals(Sets.newHashSet("site", "hist", "behavior", "systemic_surg_seq", "radiation_surg_seq", "nodes_pos", "clin_t", "clin_n", "clin_m",
-                        "path_t", "path_n", "path_m", "seer_primary_tumor", "seer_nodes", "seer_mets", "ssf13", "ssf15", "ssf16"),
-                _STAGING.getInputs(_STAGING.getSchema("testis")));
+        Assert.assertEquals(Sets.newHashSet("site", "hist", "behavior", "systemic_surg_seq", "radiation_surg_seq", "nodes_pos", "clin_t", "clin_n", "clin_m", "path_t", "path_n", "path_m",
+                "seer_primary_tumor", "seer_nodes", "seer_mets", "ssf13", "ssf15", "ssf16"), _STAGING.getInputs(_STAGING.getSchema("testis")));
 
         // test with and without context
-        Assert.assertEquals(Sets.newHashSet("site", "hist", "systemic_surg_seq", "radiation_surg_seq", "nodes_pos", "clin_t", "clin_n", "clin_m",
-                        "path_t", "path_n", "path_m", "seer_primary_tumor", "seer_nodes", "seer_mets", "ssf1", "ssf8", "ssf10"),
-                _STAGING.getInputs(_STAGING.getSchema("prostate")));
+        Assert.assertEquals(Sets.newHashSet("site", "hist", "systemic_surg_seq", "radiation_surg_seq", "nodes_pos", "clin_t", "clin_n", "clin_m", "path_t", "path_n", "path_m", "seer_primary_tumor",
+                "seer_nodes", "seer_mets", "ssf1", "ssf8", "ssf10"), _STAGING.getInputs(_STAGING.getSchema("prostate")));
 
         Map<String, String> context = new HashMap<String, String>();
         context.put(StagingData.PRIMARY_SITE_KEY, "C619");
@@ -605,6 +586,17 @@ public class TnmStagingTest {
             Assert.fail();
         }
 
+    }
+
+    @Test
+    public void testLookupInputs() {
+        // test valid combinations that do not require a discriminator
+        StagingSchema schema = _STAGING.getSchema("prostate");
+        TnmSchemaLookup lookup = new TnmSchemaLookup("C619", "8000");
+        Assert.assertTrue(_STAGING.getInputs(schema, lookup.getInputs()).contains("clin_t"));
+
+        lookup = new TnmSchemaLookup("C619", "8120");
+        Assert.assertFalse(_STAGING.getInputs(schema, lookup.getInputs()).contains("clin_t"));
     }
 
 }
