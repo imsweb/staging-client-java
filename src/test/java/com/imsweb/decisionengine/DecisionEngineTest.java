@@ -1000,6 +1000,37 @@ public class DecisionEngineTest {
     }
 
     @Test
+    public void testInvolvedTablesWhenEmpty() {
+        BasicDataProvider provider = new BasicDataProvider();
+
+        // add empty table
+        BasicTable table = new BasicTable("table1");
+        table.addColumnDefinition("a", ColumnType.INPUT);
+        provider.addTable(table);
+
+        // add another empty table
+        table = new BasicTable("table2");
+        table.addColumnDefinition("b", ColumnType.INPUT);
+        provider.addTable(table);
+
+        BasicDefinition def = new BasicDefinition("def1");
+        def.setOnInvalidInput(Definition.StagingInputErrorHandler.FAIL);
+        def.addInput("a");
+        def.addInput("b");
+        BasicMapping mapping = new BasicMapping("m1");
+        mapping.setTablePaths(Arrays.asList(new BasicTablePath("table1"), new BasicTablePath("table2")));
+        def.addMapping(mapping);
+        provider.addDefinition(def);
+
+        DecisionEngine engine = new DecisionEngine(provider);
+
+        Set<String> tables = engine.getInvolvedTables("def1");
+        Assert.assertEquals(2, tables.size());
+        Assert.assertTrue(tables.contains("table1"));
+        Assert.assertTrue(tables.contains("table2"));
+    }
+
+    @Test
     public void testInvolvedTableRecursion() {
         Set<String> tables = _ENGINE.getInvolvedTables("starting_recursion");
 

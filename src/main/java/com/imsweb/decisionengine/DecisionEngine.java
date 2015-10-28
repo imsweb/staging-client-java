@@ -354,20 +354,18 @@ public class DecisionEngine {
         if (table == null)
             return tables;
 
-        if (table.getTableRows() == null || table.getTableRows().isEmpty())
-            throw new IllegalStateException("Table not initialized");
-
         tables.add(table.getId());
 
-        for (TableRow tableRow : table.getTableRows()) {
-            for (Endpoint endpoint : tableRow.getEndpoints()) {
-                if (endpoint != null && EndpointType.JUMP.equals(endpoint.getType())) {
-                    // if table has already been visited, don't call getInvolvedTables again; otherwise we could have infinite recursion
-                    if (!tables.contains(endpoint.getValue()))
-                        getInvolvedTables(getProvider().getTable(endpoint.getValue()), tables);
+        if (table.getTableRows() != null)
+            for (TableRow tableRow : table.getTableRows()) {
+                for (Endpoint endpoint : tableRow.getEndpoints()) {
+                    if (endpoint != null && EndpointType.JUMP.equals(endpoint.getType())) {
+                        // if table has already been visited, don't call getInvolvedTables again; otherwise we could have infinite recursion
+                        if (!tables.contains(endpoint.getValue()))
+                            getInvolvedTables(getProvider().getTable(endpoint.getValue()), tables);
+                    }
                 }
             }
-        }
 
         return tables;
     }
@@ -602,15 +600,13 @@ public class DecisionEngine {
 
                 List<? extends Endpoint> endpoints = matchTable(lookup, context);
                 if (endpoints == null) {
-                    result.addError(new ErrorBuilder(Boolean.TRUE.equals(input.getUsedForStaging()) ? Type.INVALID_REQUIRED_INPUT : Type.INVALID_NON_REQUIRED_INPUT)
-                            .message("Invalid '" + input.getKey() + "' value (" + (value.isEmpty() ? _BLANK_OUTPUT : value) + ")")
-                            .key(input.getKey()).table(input.getTable())
-                            .build());
+                    result.addError(new ErrorBuilder(Boolean.TRUE.equals(input.getUsedForStaging()) ? Type.INVALID_REQUIRED_INPUT : Type.INVALID_NON_REQUIRED_INPUT).message(
+                            "Invalid '" + input.getKey() + "' value (" + (value.isEmpty() ? _BLANK_OUTPUT : value) + ")").key(input.getKey()).table(input.getTable()).build());
 
                     // if the schema error handling is set to FAIL or if the input is required for staging and the error handling is set to FAIL_WHEN_REQUIRED_FOR_STAGING,
                     // then stop processing and return a failure result
-                    if (Definition.StagingInputErrorHandler.FAIL.equals(definition.getOnInvalidInput()) ||
-                            (Boolean.TRUE.equals(input.getUsedForStaging()) && Definition.StagingInputErrorHandler.FAIL_WHEN_USED_FOR_STAGING.equals(definition.getOnInvalidInput())))
+                    if (Definition.StagingInputErrorHandler.FAIL.equals(definition.getOnInvalidInput()) || (Boolean.TRUE.equals(input.getUsedForStaging())
+                            && Definition.StagingInputErrorHandler.FAIL_WHEN_USED_FOR_STAGING.equals(definition.getOnInvalidInput())))
                         stopForBadInput = true;
                 }
             }
@@ -661,10 +657,8 @@ public class DecisionEngine {
                                     String mapFromKey = key.getFrom();
 
                                     if (!context.containsKey(mapFromKey)) {
-                                        result.addError(new ErrorBuilder(Type.UNKNOWN_INPUT_MAPPING)
-                                                .message("Input mapping '" + mapFromKey + "' does not exist for table '" + tableId + "'")
-                                                .key(mapFromKey)
-                                                .table(tableId).build());
+                                        result.addError(new ErrorBuilder(Type.UNKNOWN_INPUT_MAPPING).message("Input mapping '" + mapFromKey + "' does not exist for table '" + tableId + "'").key(
+                                                mapFromKey).table(tableId).build());
                                         continue;
                                     }
 
@@ -715,10 +709,8 @@ public class DecisionEngine {
                     List<? extends Endpoint> endpoints = matchTable(lookup, context);
                     if (endpoints == null) {
                         String value = context.get(output.getKey());
-                        result.addError(new ErrorBuilder(Type.INVALID_OUTPUT)
-                                .message("Invalid '" + output.getKey() + "' value (" + (value.isEmpty() ? _BLANK_OUTPUT : value) + ")")
-                                .key(output.getKey()).table(output.getTable())
-                                .build());
+                        result.addError(new ErrorBuilder(Type.INVALID_OUTPUT).message("Invalid '" + output.getKey() + "' value (" + (value.isEmpty() ? _BLANK_OUTPUT : value) + ")").key(
+                                output.getKey()).table(output.getTable()).build());
                     }
                 }
             }
@@ -742,17 +734,15 @@ public class DecisionEngine {
 
         Table table = getProvider().getTable(tableId);
         if (table == null) {
-            result.addError(new ErrorBuilder(Type.UNKNOWN_TABLE)
-                    .message("The processing of '" + path.getId() + "' contains a reference to an unknown table: '" + tableId + "'")
-                    .table(tableId).build());
+            result.addError(new ErrorBuilder(Type.UNKNOWN_TABLE).message("The processing of '" + path.getId() + "' contains a reference to an unknown table: '" + tableId + "'").table(tableId)
+                    .build());
             return true;
         }
 
         // track the path history to make sure no table is reached twice
         if (stack.contains(tableId)) {
-            result.addError(new ErrorBuilder(Type.INFINITE_LOOP)
-                    .message("The processing of '" + path.getId() + "' has entered an infinite recursive state.  Table '" + tableId + "' was accessed multiple times.")
-                    .table(tableId).build());
+            result.addError(new ErrorBuilder(Type.INFINITE_LOOP).message(
+                    "The processing of '" + path.getId() + "' has entered an infinite recursive state.  Table '" + tableId + "' was accessed multiple times.").table(tableId).build());
             return true;
         }
 
@@ -765,8 +755,8 @@ public class DecisionEngine {
         // look for the match in the mapping table; if no match is found, used the table-specific no_match value
         List<? extends Endpoint> endpoints = matchTable(table, result.getContext());
         if (endpoints == null)
-            result.addError(new ErrorBuilder(Type.MATCH_NOT_FOUND).message("Match not found in table '" + tableId + "' (" + getTableInputsAsString(table, result.getContext()) + ")")
-                    .table(tableId).build());
+            result.addError(new ErrorBuilder(Type.MATCH_NOT_FOUND).message("Match not found in table '" + tableId + "' (" + getTableInputsAsString(table, result.getContext()) + ")").table(tableId)
+                    .build());
         else {
             for (Endpoint endpoint : endpoints) {
                 if (EndpointType.STOP.equals(endpoint.getType()))
