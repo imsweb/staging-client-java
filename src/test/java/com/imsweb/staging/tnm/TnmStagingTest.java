@@ -4,7 +4,6 @@
 package com.imsweb.staging.tnm;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -18,19 +17,30 @@ import org.junit.Test;
 
 import com.google.common.collect.Sets;
 
-import com.imsweb.decisionengine.ColumnDefinition;
 import com.imsweb.staging.SchemaLookup;
 import com.imsweb.staging.Staging;
 import com.imsweb.staging.StagingData;
-import com.imsweb.staging.entities.StagingColumnDefinition;
-import com.imsweb.staging.entities.StagingMapping;
+import com.imsweb.staging.StagingFileDataProvider;
+import com.imsweb.staging.StagingTest;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingSchemaInput;
-import com.imsweb.staging.entities.StagingTable;
 
-public class TnmStagingTest {
+public class TnmStagingTest extends StagingTest {
 
-    private static Staging _STAGING;
+    @Override
+    public String getAlgorithm() {
+        return "tnm";
+    }
+
+    @Override
+    public String getVersion() {
+        return "1.0";
+    }
+
+    @Override
+    public StagingFileDataProvider getProvider() {
+        return TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_0);
+    }
 
     @BeforeClass
     public static void init() throws IOException {
@@ -39,8 +49,8 @@ public class TnmStagingTest {
 
     @Test
     public void testBasicInitialization() {
-        Assert.assertEquals("tnm", _STAGING.getAlgorithm());
-        Assert.assertEquals("1.0", _STAGING.getVersion());
+        Assert.assertEquals(getAlgorithm(), _STAGING.getAlgorithm());
+        Assert.assertEquals(getVersion(), _STAGING.getVersion());
 
         Assert.assertEquals(153, _STAGING.getSchemaIds().size());
         Assert.assertTrue(_STAGING.getTableIds().size() > 0);
@@ -65,39 +75,6 @@ public class TnmStagingTest {
 
         Staging stagingLatest = Staging.getInstance(TnmDataProvider.getInstance());
         Assert.assertEquals("1.0", stagingLatest.getVersion());
-    }
-
-    @Test
-    public void testInitAllTables() {
-        for (String id : _STAGING.getTableIds()) {
-            StagingTable table = _STAGING.getTable(id);
-
-            Assert.assertNotNull(table);
-            Assert.assertNotNull(table.getAlgorithm());
-            Assert.assertNotNull(table.getVersion());
-            Assert.assertNotNull(table.getName());
-        }
-    }
-
-    @Test
-    public void testValidSite() {
-        Assert.assertFalse(_STAGING.isValidSite(null));
-        Assert.assertFalse(_STAGING.isValidSite(""));
-        Assert.assertFalse(_STAGING.isValidSite("C21"));
-        Assert.assertFalse(_STAGING.isValidSite("C115"));
-
-        Assert.assertTrue(_STAGING.isValidSite("C509"));
-    }
-
-    @Test
-    public void testValidHistology() {
-        Assert.assertFalse(_STAGING.isValidHistology(null));
-        Assert.assertFalse(_STAGING.isValidHistology(""));
-        Assert.assertFalse(_STAGING.isValidHistology("810"));
-        Assert.assertFalse(_STAGING.isValidHistology("8176"));
-
-        Assert.assertTrue(_STAGING.isValidHistology("8000"));
-        Assert.assertTrue(_STAGING.isValidHistology("8201"));
     }
 
     @Test
@@ -457,32 +434,6 @@ public class TnmStagingTest {
         Assert.assertEquals("Brain", _STAGING.getSchema("brain").getName());
     }
 
-    @Test(expected = IllegalStateException.class)
-    public void testGetTable() {
-        _STAGING.getTable("bad_table_name");
-    }
-
-    @Test
-    public void verifyInputs() {
-        List<String> errors = new ArrayList<>();
-
-        for (String id : _STAGING.getSchemaIds()) {
-            StagingSchema schema = _STAGING.getSchema(id);
-
-            // loop over all the inputs returned by processing the schema and make sure they are all part of the main list of inputs on the schema
-            for (String input : _STAGING.getInputs(schema))
-                if (!schema.getInputMap().containsKey(input))
-                    errors.add("Error processing schema " + schema.getId() + ": Table input '" + input + "' not in master list of inputs");
-        }
-
-        if (!errors.isEmpty()) {
-            System.out.println("There were " + errors.size() + " issues with input values.");
-            for (String error : errors)
-                System.out.println(error);
-            Assert.fail();
-        }
-    }
-
     @Test
     public void testExpectedOutput() throws Exception {
         //        IntegrationUtils.IntegrationResult ajcc6Result = IntegrationUtils.processSchema(_STAGING, "AJCC_6.V020550.txt.gz",
@@ -495,99 +446,6 @@ public class TnmStagingTest {
         //        Assert.assertEquals("There were failures in the AJCC7 tests", 0, ajcc7Result.getNumFailures());
     }
 
-    @Test
-    public void testCachedSiteAndHistology() {
-        TnmDataProvider provider = TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_0);
-        Assert.assertTrue(provider.getValidSites().size() > 0);
-        Assert.assertTrue(provider.getValidHistologies().size() > 0);
-
-        // site tests
-        List<String> validSites = Arrays.asList("C000", "C809");
-        List<String> invalidSites = Arrays.asList("C727", "C810");
-        for (String site : validSites)
-            Assert.assertTrue(provider.getValidSites().contains(site));
-        for (String site : invalidSites)
-            Assert.assertFalse(provider.getValidSites().contains(site));
-
-        // hist tests
-        List<String> validHist = Arrays.asList("8000", "8002", "8005", "8290", "9992");
-        List<String> invalidHist = Arrays.asList("8006", "9993");
-        for (String hist : validHist)
-            Assert.assertTrue(provider.getValidHistologies().contains(hist));
-        for (String hist : invalidHist)
-            Assert.assertFalse(provider.getValidHistologies().contains(hist));
-    }
-
-    @Test
-    public void testForUnusedTables() {
-        Set<String> usedTables = new HashSet<>();
-        for (String id : _STAGING.getSchemaIds())
-            usedTables.addAll(_STAGING.getSchema(id).getInvolvedTables());
-
-        Set<String> unusedTables = new HashSet<>();
-        for (String id : _STAGING.getTableIds())
-            if (!usedTables.contains(id))
-                unusedTables.add(id);
-
-        if (!unusedTables.isEmpty())
-            Assert.fail("There are " + unusedTables.size() + " tables that are not used in any schema: " + unusedTables);
-    }
-
-    @Test
-    public void testInputTables() {
-        Set<String> errors = new HashSet<>();
-
-        for (String schemaId : _STAGING.getSchemaIds()) {
-            StagingSchema schema = _STAGING.getSchema(schemaId);
-
-            // build a list of input tables that should be excluded
-            for (StagingSchemaInput input : schema.getInputs()) {
-                if (input.getTable() != null) {
-                    Set<String> inputKeys = new HashSet<>();
-                    StagingTable table = _STAGING.getTable(input.getTable());
-                    for (StagingColumnDefinition def : table.getColumnDefinitions())
-                        if (ColumnDefinition.ColumnType.INPUT.equals(def.getType()))
-                            inputKeys.add(def.getKey());
-
-                    // make sure the input key matches the an input column
-                    if (!inputKeys.contains(input.getKey()))
-                        errors.add("Input key " + schemaId + ":" + input.getKey() + " does not match validation table " + table.getId() + ": " + inputKeys.toString());
-                }
-            }
-        }
-
-        if (!errors.isEmpty()) {
-            System.out.println("There were " + errors.size() + " issues with input values and their assocated validation tables.");
-            for (String error : errors)
-                System.out.println(error);
-            Assert.fail();
-        }
-    }
-
-    @Test
-    public void testMappingIdUniqueness() {
-        Set<String> errors = new HashSet<>();
-
-        for (String schemaId : _STAGING.getSchemaIds()) {
-            StagingSchema schema = _STAGING.getSchema(schemaId);
-
-            // build a list of input tables that should be excluded
-            Set<String> ids = new HashSet<>();
-            for (StagingMapping mapping : schema.getMappings()) {
-                if (ids.contains(mapping.getId()))
-                    errors.add("The mapping id " + schemaId + ":" + mapping.getId() + " is duplicated.  This should never happen");
-                ids.add(mapping.getId());
-            }
-        }
-
-        if (!errors.isEmpty()) {
-            System.out.println("There were " + errors.size() + " issues with input values and their assocated validation tables.");
-            for (String error : errors)
-                System.out.println(error);
-            Assert.fail();
-        }
-
-    }
 
     @Test
     public void testLookupInputs() {
