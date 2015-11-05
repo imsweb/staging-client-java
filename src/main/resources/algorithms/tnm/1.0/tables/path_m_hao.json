@@ -2,16 +2,16 @@
   "id" : "path_m_hao",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path M",
+  "name" : "Path M Pancreas Other",
   "title" : "Pathologic M",
-  "last_modified" : "2015-10-10T20:56:37.725Z",
+  "last_modified" : "2015-10-15T18:47:16.285Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

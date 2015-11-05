@@ -2,10 +2,10 @@
   "id" : "clin_m_hcq",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Clin M",
+  "name" : "Clin M Distal Bile Duct",
   "title" : "Clinical M",
   "notes" : "**Note:**  Celiac lymph nodes are classified as distant nodes for TNM staging. They are coded in distant metastasis.",
-  "last_modified" : "2015-08-13T13:25:15.199Z",
+  "last_modified" : "2015-10-14T12:28:57.246Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",

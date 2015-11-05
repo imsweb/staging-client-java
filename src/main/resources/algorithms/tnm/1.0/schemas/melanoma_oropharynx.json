@@ -4,19 +4,13 @@
   "version" : "1.0",
   "name" : "Melanoma Oropharynx",
   "title" : "Malignant Melanoma of Tonsil and Oropharynx",
-  "notes" : "M-8720-8790\nC09.0 Tonsillar fossa\nC09.1 Tonsillar pillar\nC09.8 Overlapping lesion of tonsil\nC09.9 Tonsil, NOS (excluding lingual tonsil C02.4)\nC10.0 Vallecula\nC10.2 Lateral wall of oropharynx\nC10.3 Posterior wall of oropharynx\nC10.4 Branchial cleft (site of neoplasm)\nC10.8 Overlapping lesion of oropharynx\nC10.9 Oropharynx, NOS\n\n**Note:** Laterality must be coded for C09.0, C09.1, C09.8, and C09.9",
+  "notes" : "M-8720-8790\nC090 Tonsillar fossa\nC091 Tonsillar pillar\nC098 Overlapping lesion of tonsil\nC099 Tonsil, NOS (excluding lingual tonsil C02.4)\nC100 Vallecula\nC102 Lateral wall of oropharynx\nC103 Posterior wall of oropharynx\nC104 Branchial cleft (site of neoplasm)\nC108 Overlapping lesion of oropharynx\nC109 Oropharynx, NOS\n\n**Note:** Laterality must be coded for C090, C091, C098, and C099",
   "schema_selection_table" : "schema_selection_melanoma_oropharynx",
   "inputs" : [ {
     "key" : "year_dx",
     "name" : "Year of Diagnosis",
     "naaccr_item" : 390,
     "table" : "year_dx_validation",
-    "used_for_staging" : false
-  }, {
-    "key" : "input_version",
-    "name" : "Input Version",
-    "naaccr_item" : 2937,
-    "table" : "input_version_validation",
     "used_for_staging" : false
   }, {
     "key" : "site",
@@ -52,7 +46,7 @@
     "key" : "clin_t",
     "name" : "Clinical T",
     "naaccr_item" : 940,
-    "table" : "melanoma_oropharynx_t_73396",
+    "table" : "clin_t_melanoma_oropharynx_83498",
     "used_for_staging" : true
   }, {
     "key" : "clin_n",
@@ -177,13 +171,17 @@
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
     "default" : "88",
-    "used_for_staging" : false
+    "table" : "stage_group_c_63552",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   }, {
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
     "default" : "88",
-    "used_for_staging" : false
+    "table" : "stage_group_p_21201",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -262,16 +260,16 @@
     } ],
     "tables" : [ {
       "id" : "determine_default_t",
-      "inputs" : [ "clin_t", "path_t" ],
-      "outputs" : [ "source_t", "combined_t_in", "tmp_path_t", "ss2017_t", "tmp_clin_t" ]
+      "inputs" : [ "path_t_in", "clin_t_in" ],
+      "outputs" : [ "path_t_out", "combined_t_out", "clin_t_out", "source_t_out", "ss2017_t_out" ]
     }, {
       "id" : "determine_default_n",
-      "inputs" : [ "clin_n", "path_n" ],
-      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+      "inputs" : [ "clin_n_in", "path_n_in" ],
+      "outputs" : [ "path_n_out", "clin_n_out" ]
     }, {
       "id" : "determine_default_m",
-      "inputs" : [ "path_m", "clin_m" ],
-      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_clin_m", "combined_m_in", "source_m" ]
+      "inputs" : [ "path_m_in", "clin_m_in" ],
+      "outputs" : [ "ss2017_m_out", "combined_m_out", "path_m_out", "source_m_out", "clin_m_out" ]
     }, {
       "id" : "tnm7_stage_upu",
       "input_mapping" : [ {
@@ -309,19 +307,9 @@
       "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t" ],
       "outputs" : [ "path_stage_group" ]
     }, {
-      "id" : "adjust_path_defaults",
-      "input_mapping" : [ {
-        "from" : "tmp_clin_n",
-        "to" : "clin_n"
-      }, {
-        "from" : "tmp_clin_m",
-        "to" : "clin_m"
-      }, {
-        "from" : "tmp_clin_t",
-        "to" : "clin_t"
-      } ],
-      "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
-      "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
+      "id" : "adjustments_for_no_clin_or_no_path_26261",
+      "inputs" : [ "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "tmp_path_n", "path_m", "tmp_path_t", "tmp_clin_t", "clin_n", "clin_m", "path_n" ],
+      "outputs" : [ "combined_t_out", "combined_m_out", "source_t_out", "clin_stage_group", "combined_n_out", "source_n_out", "source_m_out", "path_stage_group" ]
     } ]
   }, {
     "id" : "combined_stage",
@@ -352,8 +340,8 @@
         "from" : "tmp_path_t",
         "to" : "path_t"
       } ],
-      "inputs" : [ "radiation_surg_seq", "combined_t_in", "tmp_path_t", "tmp_clin_t", "systemic_surg_seq" ],
-      "outputs" : [ "source_t", "combined_t" ]
+      "inputs" : [ "path_t_in", "radiation_surg_seq", "combined_t_in", "clin_t_in", "systemic_surg_seq" ],
+      "outputs" : [ "combined_t_out", "source_t_out" ]
     }, {
       "id" : "combined_n",
       "input_mapping" : [ {
@@ -363,8 +351,8 @@
         "from" : "tmp_path_n",
         "to" : "path_n"
       } ],
-      "inputs" : [ "nodes_pos", "tmp_clin_n", "radiation_surg_seq", "tmp_path_n", "combined_n_in", "systemic_surg_seq" ],
-      "outputs" : [ "combined_n", "source_n" ]
+      "inputs" : [ "clin_n_in", "nodes_pos", "radiation_surg_seq", "combined_n_in", "path_n_in", "systemic_surg_seq" ],
+      "outputs" : [ "combined_n_out", "source_n_out" ]
     }, {
       "id" : "combined_m",
       "input_mapping" : [ {
@@ -374,8 +362,8 @@
         "from" : "tmp_path_m",
         "to" : "path_m"
       } ],
-      "inputs" : [ "tmp_path_m", "tmp_clin_m", "combined_m_in" ],
-      "outputs" : [ "combined_m", "source_m" ]
+      "inputs" : [ "path_m_in", "combined_m_in", "clin_m_in" ],
+      "outputs" : [ "combined_m_out", "source_m_out" ]
     }, {
       "id" : "tnm7_stage_upu",
       "input_mapping" : [ {
@@ -396,16 +384,16 @@
       "outputs" : [ "combined_stage_group" ]
     }, {
       "id" : "combined_t_to_summ_stage_t_4b_4e_d_9381",
-      "inputs" : [ "combined_t" ],
-      "outputs" : [ "ss2017_t" ]
+      "inputs" : [ "combined_t_in" ],
+      "outputs" : [ "ss2017_t_out" ]
     }, {
       "id" : "combined_n_to_summ_stage_n_headneck_meloropharynx_2197",
-      "inputs" : [ "combined_n", "ssf6", "ssf4", "ssf5", "ssf3" ],
-      "outputs" : [ "ss2017_n" ]
+      "inputs" : [ "ssf6", "ssf4", "ssf5", "combined_n_in", "ssf3" ],
+      "outputs" : [ "ss2017_n_out" ]
     }, {
       "id" : "cpmbined_m_to_summ_stage_m_60564",
-      "inputs" : [ "combined_m" ],
-      "outputs" : [ "ss2017_m" ]
+      "inputs" : [ "combined_m_in" ],
+      "outputs" : [ "ss2017_m_out" ]
     }, {
       "id" : "summary_stage_rpa",
       "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
@@ -427,7 +415,7 @@
       "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
-      "id" : "seer_mets_oropharynx_98655",
+      "id" : "seer_mets_melanomaoropharynx_57382",
       "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
@@ -436,7 +424,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "ssf7_spa", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "ssf10_spd", "radiation_surg_seq", "schema_selection_melanoma_oropharynx", "determine_default_m", "tnm7_stage_upu", "nodes_pos_fpa", "clin_m_hpd", "determine_default_n", "ssf11_spe", "histology", "seer_mets_oropharynx_98655", "ssf6_opa", "ssf3_lpa", "path_m_hpd", "tnm7_inclusions_tpa", "combined_t_no_tis", "ssf1_jpu", "combined_t_to_summ_stage_t_4b_4e_d_9381", "pathologic_n_head_neck_melanoma_copy_75380", "nodes_def", "ssf4_mpa", "ssf9_spc", "seer_mets_melanomaoropharynx_57382", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "clinical_n_head_neck_melanoma_66648", "combined_n", "ssf5_npa", "year_dx_validation", "summary_stage_rpa", "extension_bek", "ssf8_spb", "melanoma_oropharynx_t_73396", "combined_n_to_summ_stage_n_headneck_meloropharynx_2197" ],
+  "involved_tables" : [ "ssf7_spa", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "ssf10_spd", "radiation_surg_seq", "schema_selection_melanoma_oropharynx", "stage_group_p_21201", "determine_default_m", "tnm7_stage_upu", "nodes_pos_fpa", "stage_group_c_63552", "clin_t_melanoma_oropharynx_83498", "clin_m_hpd", "determine_default_n", "ssf11_spe", "histology", "ssf6_opa", "ssf3_lpa", "path_m_hpd", "tnm7_inclusions_tpa", "combined_t_no_tis", "ssf1_jpu", "combined_t_to_summ_stage_t_4b_4e_d_9381", "pathologic_n_head_neck_melanoma_copy_75380", "adjustments_for_no_clin_or_no_path_26261", "nodes_def", "ssf4_mpa", "ssf9_spc", "seer_mets_melanomaoropharynx_57382", "systemic_surg_seq", "primary_site", "combined_m", "clinical_n_head_neck_melanoma_66648", "combined_n", "ssf5_npa", "year_dx_validation", "summary_stage_rpa", "extension_bek", "ssf8_spb", "melanoma_oropharynx_t_73396", "combined_n_to_summ_stage_n_headneck_meloropharynx_2197" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-08T17:08:08.593Z"
+  "last_modified" : "2015-10-31T15:07:55.910Z"
 }

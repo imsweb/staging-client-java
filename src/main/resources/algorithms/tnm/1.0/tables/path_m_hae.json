@@ -2,16 +2,16 @@
   "id" : "path_m_hae",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path M",
+  "name" : "Path M Colon",
   "title" : "Pathologic M",
-  "last_modified" : "2015-10-10T19:53:02.700Z",
+  "last_modified" : "2015-10-26T14:57:25.513Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",
@@ -22,5 +22,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "1", "M1", "Distant metastasis", "Note: M1 has subcategories of M1a and M1b. Assign M1 only when there is no information available to assign one of the subcategories\n\nDistant metastasis, NOS\n\nStated as M1 [NOS]" ], [ "1A", "M1a", "Metastasis confined to one organ (liver, lung, ovary, non-regional lymph nodes(s))", "Metastasis limited to a single distant lymph node chain: \n        Common iliac\n        Distant lymph node(s), NOS\n        External iliac\n        Inferior mesenteric (ascending colon, cecum, transverse colon, and\n        hepatic flexure only)\n        Para-aortic\n        Retroperitoneal\n        Superior mesenteric\n\nMetastasis limited to: \nSingle distant lymph node chain, NOS\nSingle distant organ except peritoneum\n\nStated as M1a" ], [ "1B", "M1b", "Metastasis in more than one organ or the peritoneum", "Metastasis to multiple distant lymph node chains, NOS\n\nCarcinomatosis\n\nDistant metastasis WITH distant lymph nodes\n\nDistant metastasis to more than one organ WITH or WITHOUT distant lymph nodes\n\nStated as M1b" ] ]
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Clinical assessment only:\n\n    Unknown; distant metastasis not stated\n    Distant metastasis cannot be assessed\n    Not documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "Clinical assessment only:\n\n    Note: M1 has subcategories of M1a and M1b. Assign M1 only when there is no information available to assign one of the subcategories\n\n    Distant metastasis, NOS\n\n    Stated as M1 [NOS]" ], [ "c1A", "cM1a", "Metastasis confined to one organ (liver, lung, ovary, non-regional lymph nodes(s))", "Clinical assessment only:\n\n    Metastasis limited to a single distant lymph node chain: \n         Common iliac\n         Distant lymph node(s), NOS\n         External iliac\n         Inferior mesenteric (ascending colon, cecum, transverse colon, and hepatic flexure only)\n         Para-aortic\n         Retroperitoneal\n         Superior mesenteric\n\n    Metastasis limited to: \n    Single distant lymph node chain, NOS\n    Single distant organ except peritoneum\n\n    Stated as M1a" ], [ "c1B", "cM1b", "Metastasis in more than one organ or the peritoneum", "Clinical assessment only: \n\n    Metastasis to multiple distant lymph node chains, NOS\n\n    Carcinomatosis\n\n    Distant metastasis WITH distant lymph nodes\n\n    Distant metastasis to more than one organ WITH or WITHOUT distant lymph nodes\n\n    Stated as M1b" ], [ "p1", "pM1", "Distant metastasis", "Pathologically confirmed:\n\n    Note: M1 has subcategories of M1a and M1b. Assign M1 only when there is no information available to assign one of the subcategories\n\n    Distant metastasis, NOS\n\n    Stated as M1 [NOS]" ], [ "p1A", "pM1a", "Metastasis confined to one organ (liver, lung, ovary, non-regional lymph nodes(s))", "Pathologically confirmed:\n\n    Metastasis limited to a single distant lymph node chain: \n         Common iliac\n         Distant lymph node(s), NOS\n         External iliac\n         Inferior mesenteric (ascending colon, cecum, transverse colon, and hepatic flexure only)\n         Para-aortic\n         Retroperitoneal\n         Superior mesenteric\n\n    Metastasis limited to: \n    Single distant lymph node chain, NOS\n    Single distant organ except peritoneum\n\n    Stated as M1a" ], [ "p1B", "pM1b", "Metastasis in more than one organ or the peritoneum", "Pathologically confirmed:\n\n    Metastasis to multiple distant lymph node chains, NOS\n\n    Carcinomatosis\n\n    Distant metastasis WITH distant lymph nodes\n\n    Distant metastasis to more than one organ WITH or WITHOUT distant lymph nodes\n\n    Stated as M1b" ] ]
 }

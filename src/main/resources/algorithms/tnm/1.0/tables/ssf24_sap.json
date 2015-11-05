@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 24",
   "subtitle" : "Paget Disease",
   "notes" : "**Note 1:** Record any mention of Paget disease, whether clinical or pathologic, giving priority to the pathologic assessment.  Information may be taken from the gross or microscopic section of the pathology report.  Interpret a negative exam of the nipple as Paget disease not present.\n\n**Note 2:**  Use code 020 when pathology report states pagetoid involvement of the nipple.  Do not use code 020 if report states pagetoid involvement of ducts or lobules.\n\n**Note 3:**  Use code 999 (Unknown) when no examination of the nipple, clinical or pathologic, is available in the medical record.",
-  "last_modified" : "2015-08-13T13:24:33.612Z",
+  "last_modified" : "2015-10-30T18:48:42.048Z",
   "definition" : [ {
     "key" : "ssf24",
     "name" : "Code",
@@ -16,5 +16,5 @@
     "name" : "Description",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "000", "Paget disease absent" ], [ "010", "Paget disease present" ], [ "020", "Stated as pagetoid involvement of nipple" ], [ "988", "Not applicable: Information not collected for this case. " ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+  "rows" : [ [ "000", "Paget disease absent" ], [ "010", "Paget disease present" ], [ "020", "Stated as pagetoid involvement of nipple" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
 }

@@ -1,0 +1,20 @@
+{
+  "id" : "determine_combined_prefix_91402",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Determine Combined Prefix",
+  "title" : "Determine Combined Prefix",
+  "notes" : "**Note:** Combined Source of 1 and 2 indicate the Combined fields is based on the Clin field and Path field respectively.   \nCombined Source of 3 indicates a combination of data was used to set the Combined value. For example, 4a and 4b combined to make 4c.  The prefix will be set to 'p'.  \nCombined Source of 9 indicates the source is Unknown.  It should only occur if the value is 88.  No prefix will be set.",
+  "last_modified" : "2015-11-02T17:39:53.285Z",
+  "definition" : [ {
+    "key" : "cmb_source",
+    "name" : "Combined Source",
+    "type" : "INPUT"
+  }, {
+    "key" : "cmb_prefix",
+    "name" : "Combined Prefix",
+    "type" : "ENDPOINT"
+  } ],
+  "extra_input" : [ "clin_prefix", "path_prefix" ],
+  "rows" : [ [ "1", "VALUE:{{clin_prefix}}" ], [ "2", "VALUE:{{path_prefix}}" ], [ "3", "VALUE:p" ], [ "9", "VALUE:" ] ]
+}

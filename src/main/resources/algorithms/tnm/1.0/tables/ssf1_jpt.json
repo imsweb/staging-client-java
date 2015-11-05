@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 1",
   "subtitle" : "Measured Thickness (Depth)",
   "notes" : "**Note 1:**  Code measured thickness (depth) of tumor, not size.  Depth for Merkel cell carcinoma of skin is similar to Breslow tumor depth in melanoma of the skin.  Record the actual measurement in tenths of millimeters (mm) from the pathology report.\n\n**Note 2:**  If tumor depth is noted on multiple specimens (two or more), record the greatest vertical or depth measurement noted on a single specimen; do not add measurements together.  Record in Site-Specific Factor 19 that the tumor was transected. \n\n**Note 3:**  If tumor is in situ (pTis), code measured thickness as 999.",
-  "last_modified" : "2015-08-13T13:24:40.371Z",
+  "last_modified" : "2015-10-30T18:48:31.783Z",
   "definition" : [ {
     "key" : "ssf1",
     "name" : "Code",
@@ -16,5 +16,5 @@
     "name" : "Description",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "000", "No mass/tumor found" ], [ "001-979", "00.1 - 97.9 millimeters (mm ) \n(Exact measurement to nearest TENTH of mm) \n\nExamples:     \n    001    0.1 mm     \n    002    0.2 mm    \n    010    1 mm  \n    074    7.4 mm   \n    100    10 mm, 1 centimeter (cm)  \n    105    10.5 mm \n    979    97.9 mm" ], [ "980", "98.0 mm or larger" ], [ "988", "Not applicable: Information not collected for this case. " ], [ "990", "Microinvasion  Microscopic focus or foci only and no size given" ], [ "998", "No histologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+  "rows" : [ [ "000", "No mass/tumor found" ], [ "001-979", "00.1 - 97.9 millimeters (mm ) \n(Exact measurement to nearest TENTH of mm) \n\nExamples:     \n    001    0.1 mm     \n    002    0.2 mm    \n    010    1 mm  \n    074    7.4 mm   \n    100    10 mm, 1 centimeter (cm)  \n    105    10.5 mm \n    979    97.9 mm" ], [ "980", "98.0 mm or larger" ], [ "988", "Not applicable: Information not collected for this case" ], [ "990", "Microinvasion  Microscopic focus or foci only and no size given" ], [ "998", "No histologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
 }

@@ -5,14 +5,14 @@
   "name" : "Path N Ampulla Vater",
   "title" : "Pathologic N",
   "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 10 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily is not met, classify as pN0.\n\n**Note 2:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in distant metastasis.\n\n**Note 3:**  Splenic lymph nodes and those located at the tail of the pancreas are not considered regional and should be coded in distant metastasis.\n\n**Regional lymph nodes:**\n\n    Anterior to the ampulla of Vater\n    Inferior to the ampulla of Vater\n    Posterior to the ampulla of Vater\n    Superior to the ampulla of Vater\n    \n    Celiac\n    Hepatic \n    Hepatic artery\n    Infrapyloric (subpyloric)\n    Lateral aortic (lumbar\n    Node of the foramen of Winslow (epiploic) (omental)\n    Pancreaticoduodenal\n    Peripancreatic (EXCEPT nodes at tail of pancreas)\n    Periportal (portal vein)\n    Proximal mesenteric\n    Retroperitoneal\n    Superior mesenteric",
-  "last_modified" : "2015-10-09T17:13:39.966Z",
+  "last_modified" : "2015-10-15T18:47:17.750Z",
   "definition" : [ {
     "key" : "path_n",
-    "name" : "Pathological N",
+    "name" : "Pathologic N",
     "type" : "INPUT"
   }, {
     "key" : "path_n_display",
-    "name" : "Pathological N Display",
+    "name" : "Pathologic N Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

@@ -1,0 +1,27 @@
+{
+  "id" : "path_t_distal_bile_duct_50879",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path T Distal Bile Duct",
+  "title" : "Pathologic T",
+  "notes" : "**Note 1:**  Distal bile duct tumors arise between the junction of the cystic duct-bile duct and the ampulla of Vater.  The classification includes tumors developing in congenital choledochal cysts and tumors arising in the intrapancreatic portion of the common bile duct.\n\n**Note 2:**  Involvement within the  porta hepatis is coded according to the structures involved:  portal vein, common hepatic artery, and common hepatic duct.",
+  "last_modified" : "2015-10-26T18:17:45.656Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "IS", "Tis", "Carcinoma in situ", "Intraepithelial, noninvasive\n\nStated as Tis" ], [ "1", "T1", "Tumor confined to the bile duct", "Tumor confined to: \n    Lamina propria\n    Mucosa, NOS\n    Submucosa (superficial invasion)\n\nMuscularis propria\n\nLocalized, NOS\n\nStated as T1" ], [ "2", "T2", "Tumor invades beyond the wall of the bile duct", "Periductal/fibromuscular connective tissue\n\nStated as T2" ], [ "3", "T3", "Tumor invades:\n    Gallbladder\n    Liver\n    Pancreas\n    Duodenum\n    Other adjacent organs", "Common hepatic duct\n\nUnilateral branches of portal vein (right or left)\nUnilateral branches of hepatic artery (right or left)\n\nStated as T3" ], [ "4", "T4", "Tumor involves the celiac axis or the superior mesenteric artery", "Abdominal wall\nCeliac axis\nColon, NOS\n    Transverse including flexure\nGreater omentum\nOmentum, NOS\n    Lesser\nStomach, distal\nStomach, proximal\nSuperior mesenteric artery\n\nMain portal vein or its branches bilaterally\nCommon hepatic artery\nHepatic artery, NOS\nPortal vein, NOS\n\nFurther contiguous extension\n\nStated as T4" ] ]
+}

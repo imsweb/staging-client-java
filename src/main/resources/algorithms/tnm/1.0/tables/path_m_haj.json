@@ -2,17 +2,17 @@
   "id" : "path_m_haj",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path M",
+  "name" : "Path M Vagina",
   "title" : "Pathologic M",
   "notes" : "**Note:**  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and metastatic detail are available, record the code with metastatic detail in preference to a statement of FIGO stage.",
-  "last_modified" : "2015-10-10T21:16:43.281Z",
+  "last_modified" : "2015-10-15T18:47:12.224Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

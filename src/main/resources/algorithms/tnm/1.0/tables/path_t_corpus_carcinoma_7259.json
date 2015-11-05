@@ -1,0 +1,27 @@
+{
+  "id" : "path_t_corpus_carcinoma_7259",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path T Corpus Carcinoma",
+  "title" : "Pathologic T",
+  "notes" : "**Note 1:** When both FIGO stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage.\n\n**Note 2:** To assign a T2 category, stromal connective tissue of the cervix must be involved; endocervical glandular involvement only is not considered a T2 tumor in TNM. \n\n**Note 3:** FIGO IIIA and IIIB are extension, whereas FIGO IIIC is nodal involvement.  FIGO IVA is extension, whereas FIGO IVB is distant metastasis. FIGO Stage III, NOS and FIGO Stage IV, NOS are assigned based on tumor extension and/or metastasis.  Code primary tumor based on a physician's statement of FIGO Stage III, NOS or FIGO Stage IV, NOS only if it is known that the stage value is assigned because of tumor extension.\n\n**Note 4:**  Extension to the bowel or bladder mucosa must be proven by biopsy in order to rule out bullous edema.",
+  "last_modified" : "2015-10-29T18:40:02.676Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "IS", "Tis", "Carcinoma in situ (preinvasive carcinoma)", "Intraepithelial, noninvasive, preinvasive\n\nStated as Tis" ], [ "1", "T1", "Tumor confined to the corpus uteri", "Note: T1 has subcategories of T1a and T1b. Assign T1 only when there is no information available to assign one of the subcategories\n\nInvasive cancer confined to corpus uteri \nInvasion of myometrium, NOS\n\nEndocervical glandular involvement WITH tumor invading myometrium, NOS or involvement of myometrium not known\n\nLocalized, NOS\n\nFIGO Stage I [NOS]\n\nStated as T1 [NOS]" ], [ "1A", "T1a", "Tumor limited to endometrium or invading less than half of myometrium", "Confined to endometrium (stroma)\n\nTumor invades less than one-half of myometrium invasion of inner half of myometrium\n\nEndocervical glandular involvement WITH tumor limited to endometrium or invading less than one-half of myometrium\n\nFIGO Stage IA\n\nStated as T1a" ], [ "1B", "T1b", "Tumor invades one half or more of myometrium", "Tumor invades one-half or more of myometrium Invasion of outer half of myometrium\n\nEndocervical glandular involvement WITH tumor invading one-half or more of myometrium\n\nFIGO Stage IB\n\nStated as T1b" ], [ "2", "T2", "Tumor invades cervical stroma, but does not extend beyond the uterus", "Cervix uteri, NOS, but not beyond uterus\nCervical stromal invasion\n\nFIGO Stage II\n\nStated as T2" ], [ "3", "T3", "Local and/or regional spread as specified below", "Note: T3 has subcategories of T3a and T3b. Assign T3 only when there is no information available to assign one of the subcategories\n\nFIGO Stage III [NOS]\n\nStated as T3 [NOS]" ], [ "3A", "T3a", "Tumor invades the serosa of the corpus uteri or adnexae \n    (direct extension or metastasis)", "Extension or metastasis to  \n    Tunica serosa (visceral peritoneum of corpus, serosa covering the corpus) \n    Tunica serosa of corpus\n    WITHOUT involvement of cervix\n\nExtension or metastasis to:\n    Adnexa:\n    Fallopian tube(s)\n    Ovary(ies)\n\nFIGO Stage IIIA\n\nStated as T3a" ], [ "3B", "T3b", "Vaginal or parametrial involvement \n    (direct extension or metastasis)", "Extension or metastasis to:\n    Bladder wall\n    Bladder, NOS excluding mucosa\n    Ligaments:\n        Broad\n        Round\n    Parametrium, NOS\n    Parietal serosa of pelvic wall\n    Pelvic wall(s)\n    Rectal wall\n    Rectum, NOS excluding mucosa\n    Vagina\n    Visceral peritoneum of pelvic organs excluding serosa of corpus\n\nExtension to:\n   Ureter \n   Vulva\n    \nDescribed clinically as \"frozen pelvis\", NOS\n\nFIGO Stage IIIB\n\nStated as T3b" ], [ "4", "T4", "Tumor invades bladder/bowel mucosa", "Extension to bowel mucosa or bladder mucosa (excluding bullous edema)\n\nFurther contiguous extension\n    Abdominal serosa (visceral or parietal peritoneum of abdomen)\n    Cul de sac (rectouterine pouch or Pouch of Douglas)\n    Sigmoid colon\n    Small intestine\n\nFIGO Stage IVA \nFIGO Stage IV [NOS] based on extension\n\nStated as T4" ] ]
+}

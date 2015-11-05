@@ -4,19 +4,13 @@
   "version" : "1.0",
   "name" : "Trachea",
   "title" : "Trachea",
-  "notes" : "C33.9  Trachea\n\n**Note:**  TNM is not defined for this schema.",
+  "notes" : "C339  Trachea\n\n**Note:**  TNM is not defined for this schema.",
   "schema_selection_table" : "schema_selection_trachea",
   "inputs" : [ {
     "key" : "year_dx",
     "name" : "Year of Diagnosis",
     "naaccr_item" : 390,
     "table" : "year_dx_validation",
-    "used_for_staging" : false
-  }, {
-    "key" : "input_version",
-    "name" : "Input Version",
-    "naaccr_item" : 2937,
-    "table" : "input_version_validation",
     "used_for_staging" : false
   }, {
     "key" : "site",
@@ -125,7 +119,7 @@
       "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
-      "id" : "seer_mets_copy_trachea_18356",
+      "id" : "seer_mets_48348",
       "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
@@ -134,7 +128,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "primary_site", "seer_mets_48348", "input_version_validation", "histology", "extension_bcf", "year_dx_validation", "summary_stage_rpa", "seer_mets_copy_trachea_18356", "nodes_dbw", "schema_selection_trachea" ],
+  "involved_tables" : [ "primary_site", "seer_mets_48348", "histology", "extension_bcf", "year_dx_validation", "summary_stage_rpa", "nodes_dbw", "schema_selection_trachea" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-08T17:08:13.801Z"
+  "last_modified" : "2015-10-30T17:50:23.073Z"
 }

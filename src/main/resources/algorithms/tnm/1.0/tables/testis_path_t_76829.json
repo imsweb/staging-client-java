@@ -2,16 +2,16 @@
   "id" : "testis_path_t_76829",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Testis Path T",
+  "name" : "Path T Testis",
   "title" : "Pathologic T",
-  "last_modified" : "2015-10-09T17:38:34.683Z",
+  "last_modified" : "2015-10-29T18:19:48.607Z",
   "definition" : [ {
     "key" : "path_t",
-    "name" : "Pathological T",
+    "name" : "Pathologic T",
     "type" : "INPUT"
   }, {
     "key" : "path_t_display",
-    "name" : "Pathological T Display",
+    "name" : "Pathologic T Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",
@@ -22,5 +22,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown extension\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor (e.g., histological scar in testis)", "" ], [ "IS", "Tis", "Intratubular germ cell neoplasia (carcinoma in situ)", "In situ, intraepithelial, noninvasive" ], [ "1", "T1", "Tumor limited to testis and epididymis without vascular/lymphatic invasion; \ntumor may invade tunica albuginea but not tunica vaginalis", "Body of testis\nRete testis\nTunica albuginea\n\nNo lymphatic vascular invasion or unknown if \nlymphatic vascular invasion\n\nConfined to testis, NOS\n\nLocalized, NOS" ], [ "2", "T2", "Tumor limited to testis and epididymis with vascular/lymphatic invasion, or\ntumor extending through tunica albuginea with involvement of tunica vaginalis", "Structures in T1 WITH lymphatic vascular invasion\n\nSurface implants (surface of tunica vaginalis)\nTunica, NOS" ], [ "3", "T3", "Tumor invades spermatic cord with or without vascular/lymphatic invasion", "Spermatic cord, ipsilateral\nVas deferens" ], [ "4", "T4", "Tumor invades scrotum with or without vascular lymphatic invasion", "Dartos muscle, ipsilateral\nScrotum, ipsilateral\n\nExtension to scrotum, contralateral\nUlceration of scrotum\n\nPenis\n\nFurther contiguous extension\n\nStated as T4" ] ]
+  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown extension\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor (e.g., histological scar in testis)", "" ], [ "IS", "Tis", "Intratubular germ cell neoplasia (carcinoma in situ)", "In situ, intraepithelial, noninvasive" ], [ "1", "T1", "Tumor limited to testis and epididymis \nWITHOUT vascular/lymphatic invasion; \n     Tumor may invade tunica albuginea but not tunica vaginalis", "Body of testis\nRete testis\nTunica albuginea\n\nNo lymphatic vascular invasion or unknown if \nlymphatic vascular invasion\n\nConfined to testis, NOS\n\nLocalized, NOS" ], [ "2", "T2", "Tumor limited to testis and epididymis \nWITH vascular/lymphatic invasion, OR\n\nTumor extending through tunica albuginea \nWITH involvement of tunica vaginalis", "Structures in T1 WITH lymphatic vascular invasion\n\nSurface implants (surface of tunica vaginalis)\nTunica, NOS" ], [ "3", "T3", "Tumor invades spermatic cord \nWITH or WITHOUT vascular/lymphatic invasion", "Spermatic cord, ipsilateral\nVas deferens" ], [ "4", "T4", "Tumor invades scrotum \nWITH or WITHOUT vascular lymphatic invasion", "Dartos muscle, ipsilateral\nScrotum, ipsilateral\n\nExtension to scrotum, contralateral\nUlceration of scrotum\n\nPenis\n\nFurther contiguous extension\n\nStated as T4" ] ]
 }

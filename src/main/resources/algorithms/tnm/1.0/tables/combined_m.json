@@ -4,14 +4,14 @@
   "version" : "1.0",
   "name" : "Combined M",
   "title" : "Combined M",
-  "notes" : "Using clinical and pathologic M, calculate Combined M and Summary Stage M. \nM0i+ is Clinical Only, so does not appear in the Pathologic M possible values.",
-  "last_modified" : "2015-09-18T20:40:12.260Z",
+  "notes" : "Using clinical and pathologic M, calculate Combined M and Summary Stage M.",
+  "last_modified" : "2015-11-04T20:07:34.980Z",
   "definition" : [ {
-    "key" : "clin_m",
+    "key" : "clin_m_in",
     "name" : "Clinical M",
     "type" : "INPUT"
   }, {
-    "key" : "path_m",
+    "key" : "path_m_in",
     "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
@@ -19,14 +19,14 @@
     "name" : "Combined M (Input)",
     "type" : "INPUT"
   }, {
-    "key" : "combined_m",
+    "key" : "combined_m_out",
     "name" : "Combined M",
     "type" : "ENDPOINT"
   }, {
-    "key" : "source_m",
+    "key" : "source_m_out",
     "name" : "Combined M Source",
     "type" : "ENDPOINT"
   } ],
-  "extra_input" : [ "path_m", "combined_m_in", "clin_m" ],
-  "rows" : [ [ "*", "*", "0,0I+,1,1A,1B,1C,1D,1E", "VALUE:{{combined_m_in}}", "MATCH" ], [ "*", "0", "", "VALUE:{{clin_m}}", "VALUE:1" ], [ "0,0I+,1", "1", "", "VALUE:{{path_m}}", "VALUE:2" ], [ "1A,1B,1C,1D,1E", "1", "", "VALUE:{{clin_m}}", "VALUE:2" ], [ "0,0I+,1,1A", "1A", "", "VALUE:{{path_m}}", "VALUE:2" ], [ "1B,1C,1D,1E", "1A", "", "VALUE:{{clin_m}}", "VALUE:2" ], [ "0,0I+,1,1A,1B", "1B", "", "VALUE:{{path_m}}", "VALUE:2" ], [ "1C,1D,1E", "1B", "", "VALUE:{{clin_m}}", "VALUE:2" ], [ "0,0I+,1,1A,1B,1C", "1C", "", "VALUE:{{path_m}}", "VALUE:2" ], [ "1D,1E", "1C", "", "VALUE:{{clin_m}}", "VALUE:2" ], [ "0,0I+,1,1A,1B,1C,1D", "1D", "", "VALUE:{{path_m}}", "VALUE:2" ], [ "1E", "1D", "", "VALUE:{{clin_m}}", "VALUE:2" ], [ "*", "1E", "", "VALUE:{{path_m}}", "VALUE:2" ] ]
+  "extra_input" : [ "path_m_in", "combined_m_in", "clin_m_in" ],
+  "rows" : [ [ "*", "*", "0,0I+,1,1A,1B,1C,1D,1E,88", "VALUE:{{combined_m_in}}", "MATCH" ], [ "88", "88", "", "VALUE:88", "VALUE:9" ], [ "88", "*", "", "VALUE:{{path_m_in}}", "VALUE:2" ], [ "*", "88", "", "VALUE:{{clin_m_in}}", "VALUE:1" ], [ "*", "0", "", "VALUE:{{clin_m_in}}", "VALUE:1" ], [ "0", "0I+", "", "VALUE:{{path_m_in}}", "VALUE:1" ], [ "0I+,1,1A,1B,1C,1D,1E", "0I+", "", "VALUE:{{clin_m_in}}", "VALUE:1" ], [ "0,0I+,1", "1", "", "VALUE:{{path_m_in}}", "VALUE:2" ], [ "1A,1B,1C,1D,1E", "1", "", "VALUE:{{clin_m_in}}", "VALUE:2" ], [ "0,0I+,1,1A", "1A", "", "VALUE:{{path_m_in}}", "VALUE:2" ], [ "1B,1C,1D,1E", "1A", "", "VALUE:{{clin_m_in}}", "VALUE:2" ], [ "0,0I+,1,1A,1B", "1B", "", "VALUE:{{path_m_in}}", "VALUE:2" ], [ "1C,1D,1E", "1B", "", "VALUE:{{clin_m_in}}", "VALUE:2" ], [ "0,0I+,1,1A,1B,1C", "1C", "", "VALUE:{{path_m_in}}", "VALUE:2" ], [ "1D,1E", "1C", "", "VALUE:{{clin_m_in}}", "VALUE:2" ], [ "0,0I+,1,1A,1B,1C,1D", "1D", "", "VALUE:{{path_m_in}}", "VALUE:2" ], [ "1E", "1D", "", "VALUE:{{clin_m_in}}", "VALUE:2" ], [ "*", "1E", "", "VALUE:{{path_m_in}}", "VALUE:2" ] ]
 }

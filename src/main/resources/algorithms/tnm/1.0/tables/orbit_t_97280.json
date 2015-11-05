@@ -2,17 +2,17 @@
   "id" : "orbit_t_97280",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Orbit T",
-  "title" : "Clinical and Pathologic T",
-  "notes" : "**Note 1:**  The orbital tissues are the support systems of the globe, confined to the space within the surrounding bony structure.  The tissues include fat, striated and smooth muscle, and fibroconnective, vascular, lymphoid, peripheral nerve, and optic nerve tissue.\n\n**Note 2:**  TNM stages only sarcomas of the orbit. TNM values are derived as NA for all non-sarcoma histologies coded to this site.\n\n**Note 3:**  Tis may be used only for non-sarcoma histologies coded to this site. Sarcomas do not present as in situ or noninvasive tumors.",
-  "last_modified" : "2015-10-10T20:52:14.347Z",
+  "name" : "Path T Orbit",
+  "title" : "Pathologic T",
+  "notes" : "**Note 1:**  The orbital tissues are the support systems of the globe, confined to the space within the surrounding bony structure.  The tissues include fat, striated and smooth muscle, and fibroconnective, vascular, lymphoid, peripheral nerve, and optic nerve tissue.\n\n**Note 2:** TNM does not include an in situ category for orbit tumors. Assign 88 and behavior code /2 for in situ cases.\n\n**Note 3:**  Tis may be used only for non-sarcoma histologies coded to this site. Sarcomas do not present as in situ or noninvasive tumors.",
+  "last_modified" : "2015-10-29T15:53:47.994Z",
   "definition" : [ {
-    "key" : "clin_t",
-    "name" : "Clinical T",
+    "key" : "path_t",
+    "name" : "Pathologic T",
     "type" : "INPUT"
   }, {
-    "key" : "clin_t_display",
-    "name" : "Clinical T Display",
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "In situ, intraepithelial, noninvasive\nUnknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "1", "T1", "Tumor 15 mm or less in greatest dimension", "Confined to orbit\nLocalized, NOS\n\nStated as T1" ], [ "2", "T2", "Tumor more than 15 mm in greatest dimension \nwithout invasion of globe or bony wall", "Stated as T2" ], [ "3", "T3", "Tumor of any site with invasion of orbit tissues \nand/or bony walls", "Stated as T3" ], [ "4", "T4", "Tumor invades globe or periorbital structure, \nsuch as eyelids, temporal fossa, nasal cavity and\nparanasal sinuses, and/or CNS", "Invasion of globe\n\nExtension to:\n    Adjacent paranasal sinuses\n    Central nervous system\n    Cranium\n    Eyelids\n    Temporal fossa\n    Nasal cavity\n\nFurther contiguous extension\n\nStated as T4" ] ]
+  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "In situ, intraepithelial, noninvasive\nUnknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "1", "T1", "Tumor 15 mm or less in greatest dimension", "Confined to orbit\nLocalized, NOS\n\nStated as T1" ], [ "2", "T2", "Tumor more than 15 mm in greatest dimension \nWITHOUT invasion of globe or bony wall", "Stated as T2" ], [ "3", "T3", "Tumor of any size \nWITH invasion of orbital tissues and/or bony walls", "Stated as T3" ], [ "4", "T4", "Tumor invades: \n    Globe or periorbital structure, such as \n        Eyelids \n        Temporal fossa\n        Nasal cavity \n        Paranasal sinuses \n        CNS", "Invasion of globe\n\nExtension to:\n    Adjacent paranasal sinuses\n    Central nervous system\n    Cranium\n    Eyelids\n    Temporal fossa\n    Nasal cavity\n\nFurther contiguous extension\n\nStated as T4" ] ]
 }

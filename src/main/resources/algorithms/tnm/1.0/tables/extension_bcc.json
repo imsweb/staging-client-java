@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "SEER Primary Tumor",
   "title" : "SEER Primary Tumor",
-  "notes" : "**Note 1:**  The tentorium cerebelli is an extension of the dura mater that separates the cerebellum from the inferior portion of the occipital lobes.  The location of the tumor above or below the tentorium can help in determining the type of tumor; also most adult brain tumors are supratentorial, and most pediatric brain tumors are infratentorial.  In the following list, note that ICD-O-3 codes C71.0 and C71.9 include both supratentorial and infratentorial subsites.\n\nSupratentorial sites by ICD-O-3 codes:\nC71.0, except hypothalamus, pallium, thalamus\nC71.1-C71.5\nC71.8:  Corpus callosum, tapetum\nC71.9:  Anterior cranial fossa, middle cranial fossa, suprasellar\nInfratentorial sites by ICD-O-3 codes:\nC71.0:  Hypothalamus, pallium, thalamus\nC71.6-C71.7\nC71.9:  Posterior cranial fossa\n\n**Note 2:**  Discontiguous spread,  including circulating cells in cerebrospinal fluid (CSF), is coded in SEER mets.",
-  "last_modified" : "2015-09-04T20:52:26.531Z",
+  "notes" : "**Note 1:**  The tentorium cerebelli is an extension of the dura mater that separates the cerebellum from the inferior portion of the occipital lobes.  The location of the tumor above or below the tentorium can help in determining the type of tumor; also most adult brain tumors are supratentorial, and most pediatric brain tumors are infratentorial.  In the following list, note that ICD-O-3 codes C71.0 and C71.9 include both supratentorial and infratentorial subsites.\n\nSupratentorial sites by ICD-O-3 codes:\nC71.0, except hypothalamus, pallium, thalamus\nC71.1-C71.5\nC71.8:  Corpus callosum, tapetum\nC71.9:  Anterior cranial fossa, middle cranial fossa, suprasellar\nInfratentorial sites by ICD-O-3 codes:\nC71.0:  Hypothalamus, pallium, thalamus\nC71.6-C71.7\nC71.9:  Posterior cranial fossa\n\n**Note 2:**  Discontiguous spread,  including circulating cells in cerebrospinal fluid (CSF), is coded in SEER Mets.",
+  "last_modified" : "2015-10-26T18:09:06.217Z",
   "definition" : [ {
     "key" : "seer_primary_tumor",
     "name" : "Code",

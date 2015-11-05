@@ -4,14 +4,14 @@
   "version" : "1.0",
   "name" : "Source N for Staging",
   "title" : "Source N for Staging",
-  "description" : "Staging for Path and Clin are different.  Because both sets of information are in the same table, an indication of the source of N is necessary.",
-  "last_modified" : "2015-08-13T13:24:15.440Z",
+  "description" : "Staging for Path and Clin are different.  Because both sets of information are in the same table, an indication of the source of N is necessary.\n\n[SME REVIEW] - should this be based on the source (came from clinical N) or the prefix (the clinical N prefix is a ~).  then need to standardize on 1, 2 or C, P",
+  "last_modified" : "2015-11-03T04:28:53.674Z",
   "definition" : [ {
-    "key" : "clin_n",
+    "key" : "clin_n_in",
     "name" : "Clinical N",
     "type" : "INPUT"
   }, {
-    "key" : "path_n",
+    "key" : "path_n_in",
     "name" : "Path N",
     "type" : "INPUT"
   }, {
@@ -23,5 +23,5 @@
     "name" : "Temp Path Lymph Node Source",
     "type" : "ENDPOINT"
   } ],
-  "rows" : [ [ "*", "*", "VALUE:C", "VALUE:P" ] ]
+  "rows" : [ [ "*", "*", "VALUE:1", "VALUE:2" ] ]
 }

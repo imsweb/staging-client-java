@@ -2,17 +2,17 @@
   "id" : "path_n_dfn",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path N",
+  "name" : "Path N Distal Bile Duct",
   "title" : "Pathologic N",
   "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 12 or more lymph nodes. If the regional lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0. \n\n**Note 2:**  Code only regional nodes and nodes, NOS, in this field. Distant nodes are coded in distant metastasis. \n\n**Note 3:**  Celiac nodes are classified as distant nodes for TNM 7 staging.  These nodes are coded in distant metastasis.\n\n**Regional lymph nodes:**\n\n    Cystic duct (node of the neck of the gallbladder) (Calot's node)\n    Hepatic artery\n    Hilar (in the hepatoduodenal ligament)\n    Node of the foramen of Winslow (omental) (epiploic)\n    Pancreaticoduodenal:\n        Anterior\n        Posterior\n    Pericholedochal (node along common bile duct)\n    Periduodenal\n    Peripancreatic (near head of pancreas only)\n    Periportal\n    Porta hepatis (portal) (hilar) (in hilus of liver)\n    Superior mesenteric artery\n    Superior mesenteric vein",
-  "last_modified" : "2015-10-10T19:43:14.415Z",
+  "last_modified" : "2015-10-15T18:47:18.125Z",
   "definition" : [ {
     "key" : "path_n",
-    "name" : "Pathological N",
+    "name" : "Pathologic N",
     "type" : "INPUT"
   }, {
     "key" : "path_n_display",
-    "name" : "Pathological N Display",
+    "name" : "Pathologic N Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

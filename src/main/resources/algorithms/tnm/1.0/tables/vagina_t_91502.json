@@ -2,17 +2,17 @@
   "id" : "vagina_t_91502",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Vagina T",
-  "title" : "Clinical and Pathologic T",
-  "notes" : "**Note 1:**  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage. FIGO Stage III is assigned based on tumor extension and/or regional lymph node involvement.  Code CS Extension based on a physician's statement of FIGO Stage III only if it is known that the stage value is assigned because of tumor extension.\n\n**Note 2:**  FIGO no longer includes Stage 0 (Tis) for this site.\n\n**Note 3:** The presence of bullous edema is not sufficient evidence to classify a tumor as T4.\n\n**Note 3:**  The pelvic wall is defined as muscle, fascia, neurovascular structures, or skeletal portions of the bony pelvis.",
-  "last_modified" : "2015-08-13T13:24:57.440Z",
+  "name" : "Path T Vagina",
+  "title" : "Pathologic T",
+  "notes" : "**Note 1:**  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage. FIGO Stage III is assigned based on tumor extension and/or regional lymph node involvement.  Code Pathologic N based on a physician's statement of FIGO Stage III only if it is known that the stage value is assigned because of tumor extension.\n\n**Note 2:**  FIGO no longer includes Stage 0 (Tis) for this site.\n\n**Note 3:** The presence of bullous edema is not sufficient evidence to classify a tumor as T4.\n\n**Note 3:**  The pelvic wall is defined as muscle, fascia, neurovascular structures, or skeletal portions of the bony pelvis.",
+  "last_modified" : "2015-10-26T19:28:09.008Z",
   "definition" : [ {
-    "key" : "clin_t",
-    "name" : "Clinical T",
+    "key" : "path_t",
+    "name" : "Pathologic T",
     "type" : "INPUT"
   }, {
-    "key" : "clin_t_display",
-    "name" : "Clinical T Display",
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "IS", "Tis", "Carcinoma in situ (preinvasive carcinoma)", "Intraepithelial,  noninvasive" ], [ "1", "T1", "Tumor confined to vagina", "Invasive cancer confined to: \n    Submucosa (stroma) (vagina)\n\nMusculature involved\n\nLocalized, NOS\n\nFIGO Stage I\n\nStated as T1" ], [ "2", "T2", "Tumor invades paravaginal tissues (pracolpium)", "Cervix\nCul de sac (rectouterine pouch)\nParavaginal soft tissue\nRectovaginal septum\nVesicovaginal septum\nVulva\n\nFIGO Stage II\n\nStated as T2" ], [ "3", "T3", "Tumor extends to pelvic wall", "Extension to: \n   Bladder wall or bladder, NOS excluding mucosa\n   Pelvic wall (described clinically as frozen pelvis)\n   Rectal wall or rectum, NOS excluding mucosa\n\nFIGO Stage III based on tumor extension\n\nStated as T3" ], [ "4", "T4", "Tumor invades mucosa of bladder or rectum, or extends beyond the true pelvis", "Extension to:  \n    Bladder mucosa (excluding bullous edema)\n    Rectal mucosa\n    Urethra\n\nFIGO Stage IVA\n\nStated as T4" ] ]
+  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "IS", "Tis", "Carcinoma in situ (preinvasive carcinoma)", "Intraepithelial,  noninvasive" ], [ "1", "T1", "Tumor confined to vagina", "Invasive cancer confined to: \n    Submucosa (stroma) (vagina)\n\nMusculature involved\n\nLocalized, NOS\n\nFIGO Stage I\n\nStated as T1" ], [ "2", "T2", "Tumor invades paravaginal tissues (pracolpium)", "Cervix\nCul de sac (rectouterine pouch)\nParavaginal soft tissue\nRectovaginal septum\nVesicovaginal septum\nVulva\n\nFIGO Stage II\n\nStated as T2" ], [ "3", "T3", "Tumor extends to pelvic wall", "Extension to: \n   Bladder wall or bladder, NOS excluding mucosa\n   Pelvic wall (described clinically as frozen pelvis)\n   Rectal wall or rectum, NOS excluding mucosa\n\nFIGO Stage III based on tumor extension\n\nStated as T3" ], [ "4", "T4", "Tumor invades mucosa of bladder or rectum, OR \n\nExtends beyond the true pelvis", "Extension to:  \n    Bladder mucosa (excluding bullous edema)\n    Rectal mucosa\n    Urethra\n\nFIGO Stage IVA\n\nStated as T4" ] ]
 }

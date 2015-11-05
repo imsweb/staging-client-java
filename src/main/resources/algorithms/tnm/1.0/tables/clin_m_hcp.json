@@ -2,9 +2,9 @@
   "id" : "clin_m_hcp",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Clin M",
+  "name" : "Clin M NET Small Intestine",
   "title" : "Clinical M",
-  "last_modified" : "2015-08-17T15:58:00.643Z",
+  "last_modified" : "2015-10-19T15:10:15.025Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",
@@ -22,5 +22,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "0", "M0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "1", "M1", "Distant metastasis", "Distant lymph node(s) \n    Celiac lymph nodes     \n    Distant lymph node(s), NOS\n\nFor jejunum (C17.1) and ileum (C17.2) primaries only:\n    Pericholedochal lymph node(s)\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis, NOS \n\nStated as M1" ] ]
+  "rows" : [ [ "0", "M0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "1", "M1", "Distant metastasis", "Distant lymph node(s) \n    Celiac lymph nodes     \n    Distant lymph node(s), NOS\n\nFor jejunum (C171) and ileum (C172) primaries only:\n    Pericholedochal lymph node(s)\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis, NOS \n\nStated as M1" ], [ "88", "88", "Not applicable", "Clinical M is not defined for this site/histology\nIn situ (no Tis defined)" ], [ "", "BLANK", "", "Pathologic M1 (sub) category or higher" ] ]
 }

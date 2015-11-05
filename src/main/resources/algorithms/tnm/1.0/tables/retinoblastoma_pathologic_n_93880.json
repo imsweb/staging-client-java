@@ -2,17 +2,17 @@
   "id" : "retinoblastoma_pathologic_n_93880",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Retinoblastoma Pathologic N",
+  "name" : "Path N Retinoblastoma",
   "title" : "Pathologic N",
   "notes" : "**Regional lymph nodes:**\n\n    Cervical, NOS:\n        Submandibular (submaxillary)\n    Parotid, NOS:\n        Infra-auricular\n        Preauricular",
-  "last_modified" : "2015-10-10T21:04:30.533Z",
+  "last_modified" : "2015-10-26T18:17:59.880Z",
   "definition" : [ {
-    "key" : "clin_n",
-    "name" : "Clinical N",
+    "key" : "path_n",
+    "name" : "Pathologic N",
     "type" : "INPUT"
   }, {
-    "key" : "clin_n_display",
-    "name" : "Clinical N Display",
+    "key" : "path_n_display",
+    "name" : "Pathologic N Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

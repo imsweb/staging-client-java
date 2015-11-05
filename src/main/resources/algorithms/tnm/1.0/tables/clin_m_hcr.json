@@ -2,10 +2,10 @@
   "id" : "clin_m_hcr",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Clin M",
+  "name" : "Clin M Perihilar Bile Ducts",
   "title" : "Clinical M",
   "notes" : "**Note:**  Para-aortic and pericaval lymph nodesare classified as regional nodes for TNM 7 staging and are coded in regional lymph nodes.",
-  "last_modified" : "2015-08-13T13:25:16.845Z",
+  "last_modified" : "2015-10-14T12:37:10.537Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",

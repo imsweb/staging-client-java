@@ -2,10 +2,10 @@
   "id" : "clin_m_hpd",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Clin M",
+  "name" : "Clin M Head & Neck Melanoma",
   "title" : "Clinical M",
   "notes" : "**Note:** Supraclavicular and transverse cervical lymph nodes are coded in regional lymph nodes because they are categorized as N rather than M in TNM.",
-  "last_modified" : "2015-08-13T13:25:42.564Z",
+  "last_modified" : "2015-10-14T18:22:45.437Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",

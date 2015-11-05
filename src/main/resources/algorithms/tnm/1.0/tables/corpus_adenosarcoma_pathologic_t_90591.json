@@ -1,0 +1,28 @@
+{
+  "id" : "corpus_adenosarcoma_pathologic_t_90591",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path T Corpus Adenosarcoma",
+  "title" : "Pathologic T",
+  "notes" : "**Note 1:** When both FIGO stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage.\n\n**Note 2:**TNM and FIGO do not include an in situ category for corpus adenosarcoma tumors. Assign 88 and behavior code /2 for in situ cases.\n\n**Note 3:** FIGO Stage IV, NOS is assigned based on tumor extension and/or metastasis.  Code primary tumor based on a physician's statement of FIGO Stage IV, NOS only if it is known that the stage value is assigned because of tumor extension.\n\n**Note 4:** Extension to the bowel or bladder mucosa must be proven by biopsy in order to rule out bullous edema.",
+  "footnotes" : "\\*TX is not defined by UICC in the 7th edition. Approval has been provided by UICC to use the standard definition \"Primary tumor cannot be assessed,\" as TX.\n**T0 is not defined by UICC in the 7th edition. Approval has been provided by UICC to use the standard definition \"No evidence of primary tumor,\" as T0.",
+  "last_modified" : "2015-10-26T18:17:29.746Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "TX", "Not defined by UICC*", "Primary tumor cannot be assessed \nSurgical resection of primary tumor done and extension not stated or unknown\nSurgical resection of primary tumor done and extension not documented in patient record" ], [ "0", "T0", "Not defined by UICC**", "No evidence of primary tumor" ], [ "1", "T1", "Tumor limited to the uterus", "Note: T1 has subcategories of T1a, T1b and T1c. Assign T1 only when there is no information available to assign one of the subcategories\n\nInvasive cancer confined to corpus uteri \n\nInvasion of myometrium, NOS WITH or WITHOUT involvement of endocervix\n\nTunica serosa of the visceral peritoneum (serosa covering the corpus)\n\nCervix uteri, NOS, but not beyond uterus\n\nLocalized, NOS\n\nFIGO Stage I [NOS]\n\nStated as T1 [NOS]" ], [ "1A", "T1a", "Tumor limited to the endometrium/endocervix", "Confined to endometrium OR endocervix (Glandular, stromal or both)\n\nFIGO Stage IA\n\nStated as T1" ], [ "1B", "T1b", "Tumor invades less than half of the myometrium", "Tumor invades less than one-half of myometrium WITH involvement of endocervix\n\nFIGO Stage IB\n\nStated as T1b" ], [ "1C", "T1c", "Tumor invades one half or more of the myometrium", "Invasion of outer half of myometrium WITH involvement of endocervix\n\nFIGO Stage IC\n\nStated as T1c" ], [ "2", "T2", "Tumor extends beyond the uterus, within the pelvis", "Note: T2 has subcategories of T2a and T2b. Assign T2 only when there is no information available to assign one of the subcategories\n\nFIGO Stage II [NOS]\n\nStated as T2 [NOS]" ], [ "2A", "T2a", "Tumor involves adnexa", "Adnexal involvement, NOS\nExtension or metastasis within true pelvis:\n    Adnexa\n    Fallopian tube(s)\n    Ligaments:\n        Broad\n        Round\n        Uterosacral\n    Ovary(ies)\n    Parametrium\n    Visceral peritoneum of pelvic organs excluding serosa of corpus uteri\n\nFIGO Stage IIA\n\nStated as T2a" ], [ "2B", "T2b", "Tumor involves other pelvic tissues", "Extension or metastasis to:\n    Cul de sac (rectouterine pouch)\n    Pelvic wall(s)\n    Parietal serosa of pelvic cavity\n    Ureter\n    Vagina\n    Vulva\n\nDescribed clinically as \"frozen pelvis\", NOS\n\nFIGO Stage IIB\n\nStated as T2b" ], [ "3", "T3", "Tumor involves abdominal tissues", "Note: T3 has subcategories of T3a and T3b. Assign T3 only when there is no information available to assign one of the subcategories\n\nAbdominal tissues involvement, NOS\n\nFurther contiguous extension\n\nFIGO Stage III [NOS] based on extension\n\nStated as T3 [NOS]" ], [ "3A", "T3a", "One site", "Infiltration of abdominal tissues, one of the following sites:\n    Abdominal serosa (visceral or parietal peritoneum of abdomen)\n    Sigmoid colon\n    Small intestine\n    Other abdominal structures\n\nFIGO Stage IIIA\n\nStated as T3a" ], [ "3B", "T3b", "More than one site", "FIGO Stage IIIB\n\nStated as T3b" ], [ "4", "T4", "Tumor invades bladder or rectal mucosa", "Invasion of:\n    Bladder wall\n    Bladder, NOS excluding mucosa\n    Rectal wall\n    Rectum, NOS excluding mucosa\n\nExtension to bowel mucosa or bladder (excluding bullous edema)\n\nFIGO Stage IVA\nFIGO Stage IV [NOS] based on extension\n\nStated as T4" ], [ "88", "88", "Not applicable", "Pathologic T is not defined for this site/histology\nIn situ (no Tis not defined)" ], [ "", "BLANK", "", "No pathologic evaluation\nNo surgical resection of primary\nOnly positive biopsy of primary which is not the highest T\nUnknown if any pathologic assessment performed" ] ]
+}

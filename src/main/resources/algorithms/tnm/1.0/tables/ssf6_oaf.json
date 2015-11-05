@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 6",
   "subtitle" : "Fuhrman Nuclear Grade",
   "notes" : "**Note 1:**  Fuhrman nuclear grade is a four-grade system based on nuclear diameter and shape, the prominence of nucleoli, and the presence of chromatin clumping in the highest grade. \n\n**Note 2:**  Record the Fuhrman nuclear grade as documented in the pathology report prior to neoadjuvant treatment.",
-  "last_modified" : "2015-08-13T13:24:09.340Z",
+  "last_modified" : "2015-10-30T18:48:28.019Z",
   "definition" : [ {
     "key" : "ssf6",
     "name" : "Code",
@@ -16,5 +16,5 @@
     "name" : "Description",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "010", "Grade 1" ], [ "020", "Grade 2" ], [ "030", "Grade 3" ], [ "040", "Grade 4" ], [ "987", "Not applicable: Not a renal cell carcinoma morphology" ], [ "988", "Not applicable: Information not collected for this case. " ], [ "998", "No histologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+  "rows" : [ [ "010", "Grade 1" ], [ "020", "Grade 2" ], [ "030", "Grade 3" ], [ "040", "Grade 4" ], [ "987", "Not applicable: Not a renal cell carcinoma morphology" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "No histologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
 }

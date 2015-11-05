@@ -2,17 +2,17 @@
   "id" : "path_m_hbn",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path M",
+  "name" : "Path M Retinoblastoma",
   "title" : "Pathologic M",
   "notes" : "**Note 1:**  Distant lymph node involvement is considered N2 for TNM staging for retinoblastoma and is collected in distant metastasis (M). \n\n**Note 2:**  Code single and multiple metastatic lesions in this field based on the presentation of metastases in all distant sites excluding distant lymph nodes.\n\n**Note 3:**  Consider metastasis to bone marrow as a single site of involvement.",
-  "last_modified" : "2015-10-10T21:04:42.480Z",
+  "last_modified" : "2015-10-15T18:47:31.078Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

@@ -2,17 +2,17 @@
   "id" : "path_m_hcc",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path M",
+  "name" : "Path M GIST Rectum",
   "title" : "Pathologic M",
   "notes" : "**Note 1:**  Liver metastasis implies the presence of tumor inside the liver parenchyma as one or more nodules.  Adherence to the liver capsule, even if extensive, should not be considered liver metastasis. For liver adherence, see primary tumor (T). \n\n**Note 2:** When a patient has more than one area of gastrointestinal stromal tumor (GIST), it is important to try to distinguish between intra-abdominal metastasis and tumor multiplicity. Distant metastases are relatively rare in GISTs, but they are increasingly detected with sophisticated radiological studies. Intra-abdominal metastasis will present as tumor involvement in the abdominal cavity outside the main tumor mass, in the peritoneum, omentum, serosae of organs, and the cul-de-sac, among other areas. Assign this form of metastasis as M1.\n\nTumor multiplicity, in contrast, will present with anatomically separate, multiple tumors of different sizes arising independently in the GI tract. This form of tumor multiplicity usually will be seen in patients with neurofibromatosis type 1 or familial GIST syndrome, but in rare instances may be seen in patients without these conditions. This form of multiplicity should not be coded as metastasis, but the presence of multiple tumors should be coded in Site-Specific Factor 15, Tumor Multiplicity.\nWhen a solitary omental or mesenteric tumor mass is found with a primary GIST elsewhere, do not code this as a metastasis. Code it as multiple tumors in Site-Specific Factor 15, Tumor Multiplicity.\nWhen multiple tumor areas are present and it is not stated whether these are metastases or independent tumors, consult with a physician if possible to determine how to code them. If a decision cannot be made, assign M0.",
-  "last_modified" : "2015-10-09T17:30:53.765Z",
+  "last_modified" : "2015-10-16T13:46:35.774Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "1", "M1", "Distant metastasis", "Distant lymph nodes: \n    Common iliac\n    External iliac\n    Superior mesenteric\n    For rectosigmoid (C19.9):\n         Hemorrhoidal, inferior\n         Rectal, inferior\n\nMetastasis to one or more distant lymph node chains\n\nDistant lymph nodes, NOS\n\nDistant metastasis:\nFor all sites:\n    Ovary(ies)\n\nFor rectosigmoid (C19.9):\n    Skeletal muscles of pelvic floor\n    Vagina\n\nFor rectum (C20.9):\n    Cervix\n    Perineum, perianal skin\n    Sacrum\n    Sacral plexus\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1" ] ]
+  "rows" : [ [ "1", "M1", "Distant metastasis", "Distant lymph nodes: \n    Common iliac\n    External iliac\n    Superior mesenteric\n    For rectosigmoid (C199):\n         Hemorrhoidal, inferior\n         Rectal, inferior\n\nMetastasis to one or more distant lymph node chains\n\nDistant lymph nodes, NOS\n\nDistant metastasis:\nFor all sites:\n    Ovary(ies)\n\nFor rectosigmoid (C199):\n    Skeletal muscles of pelvic floor\n    Vagina\n\nFor rectum (C209):\n    Cervix\n    Perineum, perianal skin\n    Sacrum\n    Sacral plexus\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1" ] ]
 }

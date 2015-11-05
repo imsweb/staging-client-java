@@ -2,16 +2,16 @@
   "id" : "path_m_hbu",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path M",
+  "name" : "Path M Esophagus GE Junction",
   "title" : "Pathologic M",
-  "last_modified" : "2015-10-10T19:59:00.288Z",
+  "last_modified" : "2015-10-15T18:46:55.292Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

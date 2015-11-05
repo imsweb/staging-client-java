@@ -5,7 +5,7 @@
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
   "notes" : "**Note:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in SEER mets.",
-  "last_modified" : "2015-09-04T20:52:13.156Z",
+  "last_modified" : "2015-10-16T13:29:30.451Z",
   "definition" : [ {
     "key" : "seer_nodes",
     "name" : "Code",
@@ -23,5 +23,5 @@
     "name" : "Summary Stage 2017 N",
     "type" : "ENDPOINT"
   } ],
-  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:NONE" ], [ "300", "Regional lymph node(s) involved only\n\nREGIONAL Lymph Nodes\n\n    Thymus (C37.9)\n        Mediastinal\n\n    Parathyroid (C75.0)\n       Cervical\n\n    Carotid body (C75.4)\n       Cervical\n\n    Aortic body (C75.5)\n        Mediastinal\n\nRegional lymph node(s), NOS", "Lymph nodes, NOS", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:NONE" ], [ "300", "Regional lymph node(s) involved only\n\nREGIONAL Lymph Nodes\n\n    Thymus (C379)\n        Mediastinal\n\n    Parathyroid (C750)\n       Cervical\n\n    Carotid body (C754)\n       Cervical\n\n    Aortic body (C755)\n        Mediastinal\n\nRegional lymph node(s), NOS", "Lymph nodes, NOS", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
 }

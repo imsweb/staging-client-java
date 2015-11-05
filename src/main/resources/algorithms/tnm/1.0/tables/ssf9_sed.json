@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 9",
   "subtitle" : "Vertical Growth Phase (VGP)",
   "notes" : "**Note 1:**  According to the College of American Pathologists (CAP) protocol for melanoma of skin, the growth patterns and depth of infiltration of melanomas are prognostically significant.  Vertical growth phase (VGP) is an adverse factor.  Nodular melanomas by definition are VGP tumors.  VGP pattern in superficial spreading melanoma is defined as the presence of one or more dermal clusters of melanocytic cells larger than the largest epidermal cluster, and/or the presence of any mitotic activity in the dermis.  Superficial spreading melanomas in radial growth phase (RGP) in contrast are generally wider than deep; one criterion for RGP is that melanoma in situ is present 3 or more rete ridges beyond the invasive component.\n\n**Note 2:**  Record the VGP as recorded in the pathology report.  When the VGP is not identified, code as absent.",
-  "last_modified" : "2015-08-13T13:24:48.962Z",
+  "last_modified" : "2015-10-30T18:48:34.551Z",
   "definition" : [ {
     "key" : "ssf9",
     "name" : "Code",
@@ -16,5 +16,5 @@
     "name" : "Description",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "000", "No vertical growth phase (VGP) present\nVGP not identified\nVGP absent" ], [ "010", "VGP present" ], [ "988", "Not applicable: Information not collected for this case. " ], [ "998", "No histologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+  "rows" : [ [ "000", "No vertical growth phase (VGP) present\nVGP not identified\nVGP absent" ], [ "010", "VGP present" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "No histologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
 }

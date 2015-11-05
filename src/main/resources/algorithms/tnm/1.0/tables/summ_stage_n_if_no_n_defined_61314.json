@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Summ Stage N if No N defined",
   "title" : "Summary Stage N if No N is defined in TNM schema",
-  "last_modified" : "2015-09-10T13:03:18.841Z",
+  "last_modified" : "2015-10-31T14:40:52.530Z",
   "definition" : [ {
     "key" : "combined_n_in",
     "name" : "Combined N (input)",
@@ -14,7 +14,7 @@
     "name" : "Description",
     "type" : "DESCRIPTION"
   }, {
-    "key" : "ss2017_n",
+    "key" : "ss2017_n_out",
     "name" : "Summ Stage N",
     "type" : "ENDPOINT"
   } ],

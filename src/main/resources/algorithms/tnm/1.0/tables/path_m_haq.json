@@ -2,17 +2,17 @@
   "id" : "path_m_haq",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path M",
+  "name" : "Path M Pancreas Head",
   "title" : "Pathologic M",
   "notes" : "**Note 1:**  The lesser sac of the peritoneum, or omental bursa, is the cavity in the abdomen formed by the lesser and greater omentum; the pancreas forms part of the posterior wall of the lesser sac.\n\n**Note 2:**  Celiac axis and splenic nodes are classified as distant for TNM 7th staging.  These nodes are now coded in distant metastasis.",
-  "last_modified" : "2015-10-10T20:55:47.698Z",
+  "last_modified" : "2015-10-15T18:47:17.020Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

@@ -2,17 +2,17 @@
   "id" : "path_m_hac",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path M",
+  "name" : "Path M Stomach",
   "title" : "Pathologic M",
   "notes" : "**Note:** Distant metastasis includes peritoneal seeding, positive peritoneal cytology, and omental tumor not part of continuous extension.",
-  "last_modified" : "2015-10-10T21:12:06.941Z",
+  "last_modified" : "2015-10-15T18:47:26.175Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

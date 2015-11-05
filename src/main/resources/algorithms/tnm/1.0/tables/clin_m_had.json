@@ -2,11 +2,10 @@
   "id" : "clin_m_had",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Clin M",
+  "name" : "Clin M Melanoma Skin",
   "title" : "Clinical M",
   "notes" : "**Note:**  Nodes in contiguous (secondary) and bidirectional (cephalad/caudal) primary nodal basins are coded in regional lymph nodes.",
-  "footnotes" : "\\* M1 is not defined in AJCC 7th edition",
-  "last_modified" : "2015-08-26T13:40:27.143Z",
+  "last_modified" : "2015-10-14T19:04:58.433Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",

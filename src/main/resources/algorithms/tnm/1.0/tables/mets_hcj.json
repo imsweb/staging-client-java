@@ -5,7 +5,7 @@
   "name" : "SEER Mets",
   "title" : "SEER Mets",
   "footnotes" : "\\##Considered regional in Historic Stage\n\\### Considered distant in Historic Stage\n\\**Considered regional in 1977 Summary Staging Guide",
-  "last_modified" : "2015-09-04T20:51:53.031Z",
+  "last_modified" : "2015-10-16T15:16:52.325Z",
   "definition" : [ {
     "key" : "seer_mets",
     "name" : "Code",
@@ -23,5 +23,5 @@
     "name" : "Summary Stage 2017 M",
     "type" : "ENDPOINT"
   } ],
-  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/node(s) involved\n\nDistant lymph node(s):\n    Internal iliac (hypogastric), NOS: for rectosigmoid:**\n    Obturator for rectosigmoid\n    Left colic for rectum##\n    Other distant lymph node(s)\n\nExtension to:\nRectosigmoid (C19.9):\n    Bladder##\n    Colon via serosa##\n    Fallopian tube(s)##\n    Ovary(ies)##\n    Prostate##\n    Ureter(s)\n    Uterus##\n\nRectum (C20.9):\n    Bladder for females only##\n    Bone(s) of pelvis##\n    Urethra##\n    Uterus###\n\nFurther contiguous extension\n\nMetastasis", "Distant lymph nodes: \n    Common iliac\n    External iliac\n    Superior mesenteric\n    For rectosigmoid (C19.9):\n         Hemorrhoidal, inferior\n         Rectal, inferior\n\nDistant lymph nodes, NOS\n\nDistant metastasis:\nFor all sites:\n    Ovary(ies)\n\nFor rectosigmoid (C19.9):\n    Skeletal muscles of pelvic floor\n    Vagina\n\nFor rectum (C20.9):\n    Cervix\n    Perineum, perianal skin\n    Sacrum\n    Sacral plexus\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/node(s) involved\n\nDistant lymph node(s):\n    Internal iliac (hypogastric), NOS: for rectosigmoid:**\n    Obturator for rectosigmoid\n    Left colic for rectum##\n    Other distant lymph node(s)\n\nExtension to:\nRectosigmoid (C199):\n    Bladder##\n    Colon via serosa##\n    Fallopian tube(s)##\n    Ovary(ies)##\n    Prostate##\n    Ureter(s)\n    Uterus##\n\nRectum (C209):\n    Bladder for females only##\n    Bone(s) of pelvis##\n    Urethra##\n    Uterus###\n\nFurther contiguous extension\n\nMetastasis", "Distant lymph nodes: \n    Common iliac\n    External iliac\n    Superior mesenteric\n    For rectosigmoid (C199):\n         Hemorrhoidal, inferior\n         Rectal, inferior\n\nDistant lymph nodes, NOS\n\nDistant metastasis:\nFor all sites:\n    Ovary(ies)\n\nFor rectosigmoid (C199):\n    Skeletal muscles of pelvic floor\n    Vagina\n\nFor rectum (C209):\n    Cervix\n    Perineum, perianal skin\n    Sacrum\n    Sacral plexus\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
 }

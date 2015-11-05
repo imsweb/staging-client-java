@@ -1,0 +1,60 @@
+{
+  "id" : "adjust_path_defaults_for_no_path_placenta_37763",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Adjust Path Defaults for No Path -Placenta",
+  "title" : "Adjust Path T, N, M defaults if No Clin exam done or No Path procedure done",
+  "notes" : "**Note 1:** A cancer may only have clinical information if no pathologic procedure (like a resection) is done.   In these cases, the Pathologic T, N and M will be left blank.  The algorithm will set the Derived Pathologic Stage Group to 99.  The Clinical T, N and M  will be used for the Combined fields.\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n**Note 2:** Similarly, a cancer may not have had a clinical workup was not done, but there is pathologic information.  In these cases, the Clinical T and N will be left blank.  The algorithm will set the Derived Cinical Stage Group based on the defaults of TX and NX.  Generally, for M0, stage group = 99; for M1, stage group = IV.  The Pathologic T, N and M  will be used for the Combined fields.\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n**Note 3:** We do not currently plan to accept Clin T, N, Path T, N and M all being blank.\n\n**Note 4:** Since Placenta does not have N, Combined N is set to 88 as it does not apply",
+  "last_modified" : "2015-10-31T05:25:46.639Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_m",
+    "name" : "Pathologic M",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_stage_group",
+    "name" : "Derived Clin Stage Group",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "path_stage_group",
+    "name" : "Derived Path Stage Group",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "combined_t_out",
+    "name" : "Combined T set in defaults",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "source_t_out",
+    "name" : "Source of Combined T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "combined_n_out",
+    "name" : "Combined N set in defaults",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "source_n_out",
+    "name" : "Source of Combined N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "combined_m_out",
+    "name" : "Combined M set in defaults",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "source_m_out",
+    "name" : "Source of Combined M",
+    "type" : "ENDPOINT"
+  } ],
+  "extra_input" : [ "tmp_path_m", "tmp_clin_m", "tmp_path_t", "tmp_clin_t" ],
+  "rows" : [ [ "", "*", "", "", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:" ], [ "", "*", "88", "88", "MATCH", "MATCH", "VALUE:88", "VALUE:9", "VALUE:88", "VALUE:9", "VALUE:88", "VALUE:9" ], [ "88", "88", "", "", "MATCH", "VALUE:99", "VALUE:88", "VALUE:9", "VALUE:88", "VALUE:9", "VALUE:88", "VALUE:9" ], [ "*", "*", "", "", "MATCH", "VALUE:99", "VALUE:{{tmp_clin_t}}", "VALUE:1", "VALUE:88", "VALUE:9", "VALUE:{{tmp_clin_m}}", "VALUE:1" ], [ "", "*", "*", "*", "MATCH", "MATCH", "VALUE:{{tmp_path_t}}", "VALUE:2", "VALUE:88", "VALUE:9", "VALUE:{{tmp_path_m}}", "VALUE:2" ], [ "*", "*", "*", "*", "MATCH", "MATCH", "MATCH", "MATCH", "VALUE:88", "VALUE:9", "MATCH", "MATCH" ] ]
+}

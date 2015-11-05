@@ -4,19 +4,13 @@
   "version" : "1.0",
   "name" : "Vulva",
   "title" : "Vulva (including Skin of Vulva) (excluding Malignant Melanoma, Merkel Cell Carcinoma, Kaposi Sarcoma, Mycosis Fungoides, Sezary Disease, and Other Lymphomas)",
-  "notes" : "C51.0  Labium majus\nC51.1  Labium minus\nC51.2  Clitoris\nC51.8  Overlapping lesion of vulva\nC51.9  Vulva, NOS\n\n**Note 1:**  This classification applies to primary carcinomas of the vulva. A carcinoma of the vulva that has extended to the vagina is classified as carcinoma of the vulva. \n\n**Note 2:**  Involvement of the vulva and perineum should be assigned to vulva as the primary site in the absence of a statement that the tumor extended from the perineum to the vulva.  This schema only includes C51.0-C51.9 (vulva) and does not include primaries of the perineum.  Basal and squamous cell carcinomas of the skin of the vulva are coded to C51.9 and are reportable; basal and squamous carcinomas of the skin of the perineum would be coded to C44.5 and would not be reportable.\n\n**Note 3:**  TNM values correspond to the stages accepted by the Federation Internationale de Gynecologic et d'Obstetrique (FIGO).  Note that FIGO uses a single stage value which corresponds to different groupings of T, N, and M values.",
+  "notes" : "C510  Labium majus\nC511  Labium minus\nC512  Clitoris\nC518  Overlapping lesion of vulva\nC519  Vulva, NOS\n\n**Note 1:**  This classification applies to primary carcinomas of the vulva. A carcinoma of the vulva that has extended to the vagina is classified as carcinoma of the vulva. \n\n**Note 2:**  Involvement of the vulva and perineum should be assigned to vulva as the primary site in the absence of a statement that the tumor extended from the perineum to the vulva. This schema only includes C510-C519 (vulva) and does not include primaries of the perineum.  Basal and squamous cell carcinomas of the skin of the vulva are coded to C519 and are reportable; basal and squamous carcinomas of the skin of the perineum would be coded to C445 and would not be reportable.\n\n**Note 3:**  TNM values correspond to the stages accepted by the Federation Internationale de Gynecologic et d'Obstetrique (FIGO).  Note that FIGO uses a single stage value which corresponds to different groupings of T, N, and M values.",
   "schema_selection_table" : "schema_selection_vulva",
   "inputs" : [ {
     "key" : "year_dx",
     "name" : "Year of Diagnosis",
     "naaccr_item" : 390,
     "table" : "year_dx_validation",
-    "used_for_staging" : false
-  }, {
-    "key" : "input_version",
-    "name" : "Input Version",
-    "naaccr_item" : 2937,
-    "table" : "input_version_validation",
     "used_for_staging" : false
   }, {
     "key" : "site",
@@ -58,7 +52,7 @@
     "key" : "clin_t",
     "name" : "Clinical T",
     "naaccr_item" : 940,
-    "table" : "vulva_t_1223",
+    "table" : "clin_t_vulva_52779",
     "used_for_staging" : true
   }, {
     "key" : "clin_n",
@@ -154,13 +148,17 @@
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
     "default" : "88",
-    "used_for_staging" : false
+    "table" : "stage_group_c_65478",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   }, {
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
     "default" : "88",
-    "used_for_staging" : false
+    "table" : "stage_group_p_12670",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -239,16 +237,16 @@
     } ],
     "tables" : [ {
       "id" : "determine_default_t",
-      "inputs" : [ "clin_t", "path_t" ],
-      "outputs" : [ "source_t", "combined_t_in", "tmp_path_t", "ss2017_t", "tmp_clin_t" ]
+      "inputs" : [ "path_t_in", "clin_t_in" ],
+      "outputs" : [ "path_t_out", "combined_t_out", "clin_t_out", "source_t_out", "ss2017_t_out" ]
     }, {
       "id" : "determine_default_n",
-      "inputs" : [ "clin_n", "path_n" ],
-      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+      "inputs" : [ "clin_n_in", "path_n_in" ],
+      "outputs" : [ "path_n_out", "clin_n_out" ]
     }, {
       "id" : "determine_default_m",
-      "inputs" : [ "path_m", "clin_m" ],
-      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_clin_m", "combined_m_in", "source_m" ]
+      "inputs" : [ "path_m_in", "clin_m_in" ],
+      "outputs" : [ "ss2017_m_out", "combined_m_out", "path_m_out", "source_m_out", "clin_m_out" ]
     }, {
       "id" : "tnm7_stage_ubd",
       "input_mapping" : [ {
@@ -286,9 +284,9 @@
       "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t" ],
       "outputs" : [ "path_stage_group" ]
     }, {
-      "id" : "adjust_path_defaults",
-      "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
-      "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
+      "id" : "adjustments_for_no_clin_or_no_path_26261",
+      "inputs" : [ "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "tmp_path_n", "path_m", "tmp_path_t", "tmp_clin_t", "clin_n", "clin_m", "path_n" ],
+      "outputs" : [ "combined_t_out", "combined_m_out", "source_t_out", "clin_stage_group", "combined_n_out", "source_n_out", "source_m_out", "path_stage_group" ]
     } ]
   }, {
     "id" : "combined_stage",
@@ -319,8 +317,8 @@
         "from" : "tmp_path_t",
         "to" : "path_t"
       } ],
-      "inputs" : [ "radiation_surg_seq", "combined_t_in", "tmp_path_t", "tmp_clin_t", "behavior", "systemic_surg_seq" ],
-      "outputs" : [ "source_t", "combined_t" ]
+      "inputs" : [ "path_t_in", "radiation_surg_seq", "combined_t_in", "clin_t_in", "behavior", "systemic_surg_seq" ],
+      "outputs" : [ "combined_t_out", "source_t_out" ]
     }, {
       "id" : "combined_n",
       "input_mapping" : [ {
@@ -330,8 +328,8 @@
         "from" : "tmp_path_n",
         "to" : "path_n"
       } ],
-      "inputs" : [ "nodes_pos", "tmp_clin_n", "radiation_surg_seq", "tmp_path_n", "combined_n_in", "systemic_surg_seq" ],
-      "outputs" : [ "combined_n", "source_n" ]
+      "inputs" : [ "clin_n_in", "nodes_pos", "radiation_surg_seq", "combined_n_in", "path_n_in", "systemic_surg_seq" ],
+      "outputs" : [ "combined_n_out", "source_n_out" ]
     }, {
       "id" : "combined_m",
       "input_mapping" : [ {
@@ -341,8 +339,8 @@
         "from" : "tmp_path_m",
         "to" : "path_m"
       } ],
-      "inputs" : [ "tmp_path_m", "tmp_clin_m", "combined_m_in" ],
-      "outputs" : [ "combined_m", "source_m" ]
+      "inputs" : [ "path_m_in", "combined_m_in", "clin_m_in" ],
+      "outputs" : [ "combined_m_out", "source_m_out" ]
     }, {
       "id" : "tnm7_stage_ubd",
       "input_mapping" : [ {
@@ -363,16 +361,16 @@
       "outputs" : [ "combined_stage_group" ]
     }, {
       "id" : "combined_t_to_summ_stage_t_2_4e_re_93413",
-      "inputs" : [ "combined_t" ],
-      "outputs" : [ "ss2017_t" ]
+      "inputs" : [ "combined_t_in" ],
+      "outputs" : [ "ss2017_t_out" ]
     }, {
       "id" : "combined_n_to_summ_stage_n_84054",
-      "inputs" : [ "combined_n" ],
-      "outputs" : [ "ss2017_n" ]
+      "inputs" : [ "combined_n_in" ],
+      "outputs" : [ "ss2017_n_out" ]
     }, {
       "id" : "cpmbined_m_to_summ_stage_m_60564",
-      "inputs" : [ "combined_m" ],
-      "outputs" : [ "ss2017_m" ]
+      "inputs" : [ "combined_m_in" ],
+      "outputs" : [ "ss2017_m_out" ]
     }, {
       "id" : "summary_stage_rpa",
       "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
@@ -403,7 +401,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "vulva_t_1223", "cpmbined_m_to_summ_stage_m_60564", "schema_selection_vulva", "determine_default_t", "nodes_dbb", "input_version_validation", "ssf10_sex", "radiation_surg_seq", "clin_n_dbb", "determine_default_m", "nodes_pos_fpa", "ssf15_sfc", "path_n_dbb", "determine_default_n", "tnm7_stage_ubd", "ssf11_srd", "path_m_hba", "combined_n_to_summ_stage_n_84054", "histology", "mets_hba", "extension_bbi", "combined_t_to_summ_stage_t_2_4e_re_93413", "behavior", "ssf14_sfb", "tnm7_inclusions_tpq", "adjust_path_defaults", "systemic_surg_seq", "ssf13_sfa", "primary_site", "clin_m_hba", "combined_m", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t", "ssf12_sez" ],
+  "involved_tables" : [ "vulva_t_1223", "stage_group_p_12670", "cpmbined_m_to_summ_stage_m_60564", "schema_selection_vulva", "determine_default_t", "nodes_dbb", "ssf10_sex", "radiation_surg_seq", "clin_n_dbb", "determine_default_m", "nodes_pos_fpa", "stage_group_c_65478", "ssf15_sfc", "path_n_dbb", "determine_default_n", "tnm7_stage_ubd", "ssf11_srd", "clin_t_vulva_52779", "path_m_hba", "combined_n_to_summ_stage_n_84054", "histology", "mets_hba", "extension_bbi", "combined_t_to_summ_stage_t_2_4e_re_93413", "behavior", "ssf14_sfb", "adjustments_for_no_clin_or_no_path_26261", "tnm7_inclusions_tpq", "systemic_surg_seq", "ssf13_sfa", "primary_site", "clin_m_hba", "combined_m", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t", "ssf12_sez" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-08T17:08:09.850Z"
+  "last_modified" : "2015-10-31T14:41:48.071Z"
 }

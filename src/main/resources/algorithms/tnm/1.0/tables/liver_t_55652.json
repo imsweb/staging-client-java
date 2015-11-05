@@ -2,18 +2,18 @@
   "id" : "liver_t_55652",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Liver T",
-  "title" : "Clinical and Pathologic T",
+  "name" : "Path T Liver",
+  "title" : "Pathologic T",
   "notes" : "**Note 1:** For the following descriptions, assign T2 or T3 category based on the tumor size.\n\n    Multiple (satellite) nodules/tumors (one lobe) WITHOUT intrahepatic vascular invasion, including vascular invasion not stated\n\n    Multiple (satellite) nodules/tumors (one lobe) WITH intrahepatic vascular invasion\n\n    Multiple (satellite) nodules/tumors (one lobe) WITH extension to gallbladder WITH or WITHOUT intrahepatic vascular invasion\n\n    Multiple (satellite) nodules/tumors in more than one lobe of liver or on surface of parenchyma \n\n    Satellite nodules, NOS\n\n**Note 2:**  Major vascular invasion (T3b) is defined as invasion of the branches of the main portal vein (right or left portal vein, not including sectoral or segmental branches) or as invasion of one or more of the three hepatic veins (right, middle, or left).  Invasion of hepatic artery or vena cava is coded to T4.",
   "footnotes" : "*T3 is not defined in AJCC 7th edition",
-  "last_modified" : "2015-10-10T20:14:31.281Z",
+  "last_modified" : "2015-10-26T18:17:06.487Z",
   "definition" : [ {
-    "key" : "clin_t",
-    "name" : "Clinical T",
+    "key" : "path_t",
+    "name" : "Pathologic T",
     "type" : "INPUT"
   }, {
-    "key" : "clin_t_display",
-    "name" : "Clinical T Display",
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

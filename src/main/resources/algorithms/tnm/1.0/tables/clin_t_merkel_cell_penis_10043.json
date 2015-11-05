@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_merkel_cell_penis_10043",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin T Merkel Cell Penis",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  In the case of multiple simultaneous tumors, code the tumor with the greatest extension.\n\n**Note 2:**  Skin ulceration does not alter the T category.\n\n**Note 3:**  Satellite nodules/In-transit metastasis are coded in regional lymph nodes.\n\n**Note 4:** Tumor size must be known to assign a value of T1, T2 or T3. You may use a physicianâs statement of the T category if this is the only information in the medical record. If the tumor appears to be in the T1, T2 or T3 categories, but no size or category is specified, assign TX.\n\n**Note 5:**   For the following descriptions, assign the appropriate T category (T1, T2, or T3) based on the tumor size.\n\n    Lesion(s) confined to dermis\n    Invasive tumor limited to skin of penis, prepuce (foreskin), and/or glans\n    Invasive tumor limited to subepithelial connective tissue but not involving corpus spongiosum or corpus cavernosum\n    Subcutaneous tissue (through entire dermis)\n\n    Corpus cavernosum\n    Corpus spongiosum\n    Tunica albuginea\n\n    Localized, NOS",
+  "last_modified" : "2015-10-14T19:13:41.625Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "IS", "Tis", "Carcinoma in situ", "Intraepidermal, intraepithelial, noninvasive\n\nStated as Tis" ], [ "1", "T1", "Tumor 2 cm or less in greatest dimension", "Stated as T1" ], [ "2", "T2", "Tumor more than 2 cm but not more than 5 cm in greatest\ndimension", "Stated as T2" ], [ "3", "T3", "Tumor more than 5 cm in greatest dimension", "Stated as T3" ], [ "4", "T4", "Tumor invades deep extradermal structures, \ni.e., cartilage, skeletal muscle, fascia, or bone", "Prostate\nUrethra\n\nAdjacent structures:\n    Fascia\n    Muscle, NOS:\n        Bulbospongiosus\n        Ischiocavernosus\n        Superficial transverse perineal\n    Skin:\n        Abdomen\n        Perineum\n        Pubic region\n        Scrotum\n\nUnderlying bone and cartilage\n\nFurther contiguous extension:\n    Testis\n\nStated as T4" ] ]
+}

@@ -6,14 +6,14 @@
   "title" : "Pathologic T",
   "notes" : "**Note 1:**  An E lesion is defined as disease that involves extralymphatic site(s), or sites other than lymph nodes and other lymphatic structures.  Other lymphatic structures include spleen (see note 4), thymus gland (C37.9), and Waldeyer's ring (tonsils) (C02.4, C09.0-C09.9, C11.1, C14.2),.  Any lymphatic structure (other than spleen) is coded the same as a lymph node region (codes 100, 200, 300).\n\n**Note 2:**  While spleen is considered a lymphatic structure, it is coded separately (see codes 120, 220, 230, 320, 330). S equals spleen involvement.\n\n**Note 3:**  If there is no mention of lymphatic or extralymphatic involvement but several diagnostic procedures were done, interpret as no involvement.\n\n**Note 4:**  Involvement of adjacent soft tissue does not alter the classification.",
   "footnotes" : "- AJCC stage group for this schema is derived directly from CS Extension and CS Site-Specific Factor 2, as shown in the AJCC TNM 7 Stage table. The AJCC Stage Groups I-IV are subdivided into A and B based on the presence or absence of symptoms coded in CS Site-Specific Factor 2.\n- AJCC stage group for this schema is derived directly from CS Extension and CS Site-Specific Factor 2, as shown in the AJCC TNM 6 Stage table. The AJCC Stage Groups I-IV are subdivided into A and B based on the presence or absence of symptoms as coded in CS Site-Specific Factor 2.",
-  "last_modified" : "2015-10-10T20:16:20.526Z",
+  "last_modified" : "2015-10-15T18:47:33.046Z",
   "definition" : [ {
     "key" : "path_t",
-    "name" : "Pathological T",
+    "name" : "Pathologic T",
     "type" : "INPUT"
   }, {
     "key" : "path_t_display",
-    "name" : "Pathological T Display",
+    "name" : "Pathologic T Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 14",
   "subtitle" : "PDGFRA Gene Mutation",
   "notes" : "**Note 1:**  Some gastrointestinal stromal tumors (GIST) have oncogenic mutations of the platelet-derived growth factor receptor alpha (PDGFRA)gene, located on chromosome 4q.  This test is a special molecular diagnostic test performed on tumor tissue to identify PDGFRA mutations.  Some GISTs that are negative for KIT mutations are positive for PDGFRA mutation.\n\n**Note 2:**  Code the result of the PDGFRA gene test.  Another name for PDGFRA is CD140A.\n\n**Note 3:**  See Site-Specific Factors 12 and 13 for coding information about KIT gene expression and mutations.",
-  "last_modified" : "2015-08-13T13:25:30.646Z",
+  "last_modified" : "2015-10-30T18:48:39.626Z",
   "definition" : [ {
     "key" : "ssf14",
     "name" : "Code",
@@ -16,5 +16,5 @@
     "name" : "Description",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "010", "PDGFRA gene test positive for mutations" ], [ "020", "PDGFRA gene test negative for mutations; no mutations; normal or wild-type gene" ], [ "988", "Not applicable: Information not collected for this case. " ], [ "997", "Test ordered, results not in chart; results pending" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+  "rows" : [ [ "010", "PDGFRA gene test positive for mutations" ], [ "020", "PDGFRA gene test negative for mutations; no mutations; normal or wild-type gene" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Test ordered, results not in chart; results pending" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
 }

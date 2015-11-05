@@ -2,16 +2,16 @@
   "id" : "path_m_hbv",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path M",
+  "name" : "Path M Adrenal Gland",
   "title" : "Pathologic M",
-  "last_modified" : "2015-10-10T19:38:55.921Z",
+  "last_modified" : "2015-11-03T14:15:05.337Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",
@@ -22,5 +22,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "1", "M1", "Distant metastasis", "Distant lymph node(s), NOS \n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n \nCarcinomatosis\n\nDistant metastasis, NOS\n\nStated as M1" ] ]
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "Clinical assessment only:\n    Distant lymph node(s), NOS \n    Distant metastasis WITH or WITHOUT distant lymph node(s)\n    Carcinomatosis\n    Distant metastasis, NOS\n\n    Stated as M1" ], [ "p1", "pM1", "Distant metastasis", "Pathologically confirmed:\n    Distant lymph node(s), NOS \n    Distant metastasis WITH or WITHOUT distant lymph node(s)\n    Carcinomatosis\n    Distant metastasis, NOS\n\n    Stated as M1" ], [ "88", "88", "Not applicable", "Clinical M is not defined for this site/histology\nIn situ (no Tis defined)" ], [ "", "BLANK", "See registrar notes", "No clinical evaluation\nCancer first detected on surgical resection\nUnknown if any clinical assessment performed" ] ]
 }

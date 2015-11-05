@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 2",
   "subtitle" : "Neurovascular Invasion",
   "notes" : "**Note 1:**  Nerves, veins, and arteries tend to travel together in neurovascular bundles. Neurovascular invasion may be defined as involving the nerve structures and/or vascular structures within these bundles.\n\n**Note 2:**  Neurovascular invasion is based on histologic examination of the primary tumor and should be reported where possible.  Code as stated in the pathology report.",
-  "last_modified" : "2015-08-13T13:25:05.791Z",
+  "last_modified" : "2015-10-30T18:48:37.661Z",
   "definition" : [ {
     "key" : "ssf2",
     "name" : "Code",
@@ -16,5 +16,5 @@
     "name" : "Description",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "000", "Neurovascular invasion not present/not identified" ], [ "010", "Neurovascular invasion present/identified" ], [ "988", "Not applicable: Information not collected for this case. " ], [ "998", "No histologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+  "rows" : [ [ "000", "Neurovascular invasion not present/not identified" ], [ "010", "Neurovascular invasion present/identified" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "No histologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
 }

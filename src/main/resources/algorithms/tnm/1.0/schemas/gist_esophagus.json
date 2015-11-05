@@ -4,19 +4,13 @@
   "version" : "1.0",
   "name" : "GIST Esophagus",
   "title" : "Gastrointestinal Stromal Tumor of Esophagus",
-  "notes" : "M- 8935-8936\nC15.0  Cervical esophagus\nC15.1  Thoracic esophagus\nC15.2  Abdominal esophagus\nC15.3  Upper third of esophagus\nC15.4  Middle third of esophagus\nC15.5  Lower third of esophagus\nC15.8  Overlapping lesion of esophagus\nC15.9  Esophagus, NOS",
+  "notes" : "M- 8935-8936\nC150  Cervical esophagus\nC151  Thoracic esophagus\nC152  Abdominal esophagus\nC153  Upper third of esophagus\nC154  Middle third of esophagus\nC155  Lower third of esophagus\nC158  Overlapping lesion of esophagus\nC159  Esophagus, NOS",
   "schema_selection_table" : "schema_selection_gist_esophagus",
   "inputs" : [ {
     "key" : "year_dx",
     "name" : "Year of Diagnosis",
     "naaccr_item" : 390,
     "table" : "year_dx_validation",
-    "used_for_staging" : false
-  }, {
-    "key" : "input_version",
-    "name" : "Input Version",
-    "naaccr_item" : 2937,
-    "table" : "input_version_validation",
     "used_for_staging" : false
   }, {
     "key" : "site",
@@ -52,13 +46,13 @@
     "key" : "clin_t",
     "name" : "Clinical T",
     "naaccr_item" : 940,
-    "table" : "gist_esophagus_t_61710",
+    "table" : "clin_t_gist_esophagus_47140",
     "used_for_staging" : true
   }, {
     "key" : "clin_n",
     "name" : "Clinical N",
     "naaccr_item" : 950,
-    "table" : "gistesophagus_n_17925",
+    "table" : "clin_n_gist_esophagus_87582",
     "used_for_staging" : true
   }, {
     "key" : "clin_m",
@@ -141,13 +135,17 @@
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
     "default" : "88",
-    "used_for_staging" : false
+    "table" : "stage_group_c_86666",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   }, {
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
     "default" : "88",
-    "used_for_staging" : false
+    "table" : "stage_group_p_82525",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -226,16 +224,16 @@
     } ],
     "tables" : [ {
       "id" : "determine_default_t",
-      "inputs" : [ "clin_t", "path_t" ],
-      "outputs" : [ "source_t", "combined_t_in", "tmp_path_t", "ss2017_t", "tmp_clin_t" ]
+      "inputs" : [ "path_t_in", "clin_t_in" ],
+      "outputs" : [ "path_t_out", "combined_t_out", "clin_t_out", "source_t_out", "ss2017_t_out" ]
     }, {
       "id" : "determine_default_n",
-      "inputs" : [ "clin_n", "path_n" ],
-      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+      "inputs" : [ "clin_n_in", "path_n_in" ],
+      "outputs" : [ "path_n_out", "clin_n_out" ]
     }, {
       "id" : "determine_default_m",
-      "inputs" : [ "path_m", "clin_m" ],
-      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_clin_m", "combined_m_in", "source_m" ]
+      "inputs" : [ "path_m_in", "clin_m_in" ],
+      "outputs" : [ "ss2017_m_out", "combined_m_out", "path_m_out", "source_m_out", "clin_m_out" ]
     }, {
       "id" : "gist_esophagus_mitotic_rate_calculation",
       "inputs" : [ "ssf6" ],
@@ -277,9 +275,9 @@
       "inputs" : [ "tmp_path_m", "mitotic_rate", "tmp_path_n", "tmp_path_t" ],
       "outputs" : [ "path_stage_group" ]
     }, {
-      "id" : "adjust_path_defaults",
-      "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
-      "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
+      "id" : "adjustments_for_no_clin_or_no_path_26261",
+      "inputs" : [ "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "tmp_path_n", "path_m", "tmp_path_t", "tmp_clin_t", "clin_n", "clin_m", "path_n" ],
+      "outputs" : [ "combined_t_out", "combined_m_out", "source_t_out", "clin_stage_group", "combined_n_out", "source_n_out", "source_m_out", "path_stage_group" ]
     } ]
   }, {
     "id" : "combined_stage",
@@ -310,8 +308,8 @@
         "from" : "tmp_path_t",
         "to" : "path_t"
       } ],
-      "inputs" : [ "radiation_surg_seq", "combined_t_in", "tmp_path_t", "tmp_clin_t", "systemic_surg_seq" ],
-      "outputs" : [ "source_t", "combined_t" ]
+      "inputs" : [ "path_t_in", "radiation_surg_seq", "combined_t_in", "clin_t_in", "systemic_surg_seq" ],
+      "outputs" : [ "combined_t_out", "source_t_out" ]
     }, {
       "id" : "combined_n",
       "input_mapping" : [ {
@@ -321,8 +319,8 @@
         "from" : "tmp_path_n",
         "to" : "path_n"
       } ],
-      "inputs" : [ "nodes_pos", "tmp_clin_n", "radiation_surg_seq", "tmp_path_n", "combined_n_in", "systemic_surg_seq" ],
-      "outputs" : [ "combined_n", "source_n" ]
+      "inputs" : [ "clin_n_in", "nodes_pos", "radiation_surg_seq", "combined_n_in", "path_n_in", "systemic_surg_seq" ],
+      "outputs" : [ "combined_n_out", "source_n_out" ]
     }, {
       "id" : "combined_m",
       "input_mapping" : [ {
@@ -332,8 +330,8 @@
         "from" : "tmp_path_m",
         "to" : "path_m"
       } ],
-      "inputs" : [ "tmp_path_m", "tmp_clin_m", "combined_m_in" ],
-      "outputs" : [ "combined_m", "source_m" ]
+      "inputs" : [ "path_m_in", "combined_m_in", "clin_m_in" ],
+      "outputs" : [ "combined_m_out", "source_m_out" ]
     }, {
       "id" : "tnm7_stage_gist_small_intestine_upy",
       "input_mapping" : [ {
@@ -354,16 +352,16 @@
       "outputs" : [ "combined_stage_group" ]
     }, {
       "id" : "combined_to_summ_stage_t_80394",
-      "inputs" : [ "combined_t" ],
-      "outputs" : [ "ss2017_t" ]
+      "inputs" : [ "combined_t_in" ],
+      "outputs" : [ "ss2017_t_out" ]
     }, {
       "id" : "combined_n_to_summ_stage_n_84054",
-      "inputs" : [ "combined_n" ],
-      "outputs" : [ "ss2017_n" ]
+      "inputs" : [ "combined_n_in" ],
+      "outputs" : [ "ss2017_n_out" ]
     }, {
       "id" : "cpmbined_m_to_summ_stage_m_60564",
-      "inputs" : [ "combined_m" ],
-      "outputs" : [ "ss2017_m" ]
+      "inputs" : [ "combined_m_in" ],
+      "outputs" : [ "ss2017_m_out" ]
     }, {
       "id" : "summary_stage_rpa",
       "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
@@ -394,7 +392,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "ssf10_srh", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "mets_hcn", "radiation_surg_seq", "gist_esophagus_t_61710", "clin_m_hcn", "determine_default_m", "nodes_pos_fpa", "ssf7_sre", "nodes_dfj", "path_m_hcn", "determine_default_n", "tnm7_stage_gist_small_intestine_upy", "combined_n_to_summ_stage_n_84054", "schema_selection_gist_esophagus", "histology", "extension_bfn", "combined_t_no_tis", "ssf6_oph", "tnm7_inclusions_tpo", "gistesophagus_n_17925", "adjust_path_defaults", "systemic_surg_seq", "ssf9_srg", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "year_dx_validation", "gist_esophagus_mitotic_rate_calculation", "summary_stage_rpa", "ssf8_srf" ],
+  "involved_tables" : [ "ssf10_srh", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "mets_hcn", "radiation_surg_seq", "gist_esophagus_t_61710", "clin_m_hcn", "determine_default_m", "nodes_pos_fpa", "ssf7_sre", "nodes_dfj", "path_m_hcn", "stage_group_p_82525", "determine_default_n", "tnm7_stage_gist_small_intestine_upy", "combined_n_to_summ_stage_n_84054", "schema_selection_gist_esophagus", "histology", "extension_bfn", "clin_t_gist_esophagus_47140", "combined_t_no_tis", "ssf6_oph", "adjustments_for_no_clin_or_no_path_26261", "tnm7_inclusions_tpo", "gistesophagus_n_17925", "stage_group_c_86666", "systemic_surg_seq", "ssf9_srg", "primary_site", "clin_n_gist_esophagus_87582", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "year_dx_validation", "gist_esophagus_mitotic_rate_calculation", "summary_stage_rpa", "ssf8_srf" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-09T18:00:25.586Z"
+  "last_modified" : "2015-10-31T12:59:49.090Z"
 }

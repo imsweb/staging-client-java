@@ -102,7 +102,7 @@ public class TnmStagingTest {
 
     @Test
     public void testValidCode() {
-        Map<String, String> context = new HashMap<String, String>();
+        Map<String, String> context = new HashMap<>();
         context.put("hist", "8000");
         Assert.assertTrue(_STAGING.isContextValid("prostate", "hist", context));
         context.put("hist", "8542");
@@ -228,23 +228,25 @@ public class TnmStagingTest {
 
     @Test
     public void testFindTableRow() {
-        Assert.assertNull(_STAGING.findMatchingTableRow("adrenal_gland_t_18187", "size", null));
-        Assert.assertNull(_STAGING.findMatchingTableRow("adrenal_gland_t_18187", "size", "Z"));
-        Assert.assertNull(_STAGING.findMatchingTableRow("adrenal_gland_t_18187", "size", "9"));
+        Assert.assertNull(_STAGING.findMatchingTableRow("adrenal_gland_t_18187", "clin_t", "cZ"));
+        Assert.assertNull(_STAGING.findMatchingTableRow("adrenal_gland_t_18187", "clin_t", "c9"));
 
-        Assert.assertEquals(Integer.valueOf(0), _STAGING.findMatchingTableRow("adrenal_gland_t_18187", "clin_t", "X"));
-        Assert.assertEquals(Integer.valueOf(1), _STAGING.findMatchingTableRow("adrenal_gland_t_18187", "clin_t", "0"));
-        Assert.assertEquals(Integer.valueOf(2), _STAGING.findMatchingTableRow("adrenal_gland_t_18187", "clin_t", "1"));
-        Assert.assertEquals(Integer.valueOf(3), _STAGING.findMatchingTableRow("adrenal_gland_t_18187", "clin_t", "2"));
-        Assert.assertEquals(Integer.valueOf(4), _STAGING.findMatchingTableRow("adrenal_gland_t_18187", "clin_t", "3"));
-        Assert.assertEquals(Integer.valueOf(5), _STAGING.findMatchingTableRow("adrenal_gland_t_18187", "clin_t", "4"));
+        // null maps to blank
+        Assert.assertEquals(Integer.valueOf(7), _STAGING.findMatchingTableRow("adrenal_gland_t_18187", "clin_t", null));
 
-        Map<String, String> context = new HashMap<String, String>();
-        context.put("clin_t", "4");
+        Assert.assertEquals(Integer.valueOf(0), _STAGING.findMatchingTableRow("adrenal_gland_t_18187", "clin_t", "cX"));
+        Assert.assertEquals(Integer.valueOf(1), _STAGING.findMatchingTableRow("adrenal_gland_t_18187", "clin_t", "c0"));
+        Assert.assertEquals(Integer.valueOf(2), _STAGING.findMatchingTableRow("adrenal_gland_t_18187", "clin_t", "c1"));
+        Assert.assertEquals(Integer.valueOf(3), _STAGING.findMatchingTableRow("adrenal_gland_t_18187", "clin_t", "c2"));
+        Assert.assertEquals(Integer.valueOf(4), _STAGING.findMatchingTableRow("adrenal_gland_t_18187", "clin_t", "c3"));
+        Assert.assertEquals(Integer.valueOf(5), _STAGING.findMatchingTableRow("adrenal_gland_t_18187", "clin_t", "c4"));
+
+        Map<String, String> context = new HashMap<>();
+        context.put("clin_t", "c4");
         Assert.assertEquals(Integer.valueOf(5), _STAGING.findMatchingTableRow("adrenal_gland_t_18187", context));
 
         // test a table that has multiple inputs
-        context = new HashMap<String, String>();
+        context = new HashMap<>();
         context.put("ss2017_t", "L");
         context.put("ss2017_n", "RE");
         context.put("ss2017_m", "D");
@@ -254,13 +256,11 @@ public class TnmStagingTest {
     @Test
     public void testInputBuilder() {
         TnmStagingData data1 = new TnmStagingData();
-        data1.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "1.0");
         data1.setInput(TnmStagingData.TnmInput.PRIMARY_SITE, "C680");
         data1.setInput(TnmStagingData.TnmInput.HISTOLOGY, "8000");
         data1.setInput(TnmStagingData.TnmInput.BEHAVIOR, "3");
         data1.setInput(TnmStagingData.TnmInput.GRADE, "9");
         data1.setInput(TnmStagingData.TnmInput.DX_YEAR, "2013");
-        data1.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "1.0");
         data1.setInput(TnmStagingData.TnmInput.SEER_PRIMARY_TUMOR, "100");
         data1.setInput(TnmStagingData.TnmInput.SEER_REGIONAL_NODES, "100");
         data1.setInput(TnmStagingData.TnmInput.REGIONAL_NODES_POSITIVE, "99");
@@ -277,13 +277,13 @@ public class TnmStagingTest {
         data1.setInput(TnmStagingData.TnmInput.PATH_M, "6");
         data1.setSsf(1, "020");
 
-        TnmStagingData data2 = new TnmStagingData.TnmStagingInputBuilder().withInput(TnmStagingData.TnmInput.INPUT_VERSION, "1.0").withInput(TnmStagingData.TnmInput.PRIMARY_SITE, "C680").withInput(
-                TnmStagingData.TnmInput.HISTOLOGY, "8000").withInput(TnmStagingData.TnmInput.BEHAVIOR, "3").withInput(TnmStagingData.TnmInput.GRADE, "9").withInput(TnmStagingData.TnmInput.DX_YEAR,
-                "2013").withInput(TnmStagingData.TnmInput.INPUT_VERSION, "1.0").withInput(TnmStagingData.TnmInput.SEER_PRIMARY_TUMOR, "100").withInput(TnmStagingData.TnmInput.SEER_REGIONAL_NODES,
-                "100").withInput(TnmStagingData.TnmInput.REGIONAL_NODES_POSITIVE, "99").withInput(TnmStagingData.TnmInput.SEER_METS, "10").withInput(TnmStagingData.TnmInput.AGE_AT_DX, "060")
-                .withInput(TnmStagingData.TnmInput.SEX, "1").withInput(TnmStagingData.TnmInput.RX_SUMM_SURGERY, "8").withInput(TnmStagingData.TnmInput.RX_SUMM_RADIATION, "9").withInput(
-                        TnmStagingData.TnmInput.CLIN_T, "1").withInput(TnmStagingData.TnmInput.CLIN_N, "2").withInput(TnmStagingData.TnmInput.CLIN_M, "3").withInput(TnmStagingData.TnmInput.PATH_T,
-                        "4").withInput(TnmStagingData.TnmInput.PATH_N, "5").withInput(TnmStagingData.TnmInput.PATH_M, "6").withSsf(1, "020").build();
+        TnmStagingData data2 = new TnmStagingData.TnmStagingInputBuilder().withInput(TnmStagingData.TnmInput.PRIMARY_SITE, "C680").withInput(TnmStagingData.TnmInput.HISTOLOGY, "8000").withInput(
+                TnmStagingData.TnmInput.BEHAVIOR, "3").withInput(TnmStagingData.TnmInput.GRADE, "9").withInput(TnmStagingData.TnmInput.DX_YEAR, "2013").withInput(
+                TnmStagingData.TnmInput.SEER_PRIMARY_TUMOR, "100").withInput(TnmStagingData.TnmInput.SEER_REGIONAL_NODES, "100").withInput(TnmStagingData.TnmInput.REGIONAL_NODES_POSITIVE, "99")
+                .withInput(TnmStagingData.TnmInput.SEER_METS, "10").withInput(TnmStagingData.TnmInput.AGE_AT_DX, "060").withInput(TnmStagingData.TnmInput.SEX, "1").withInput(
+                        TnmStagingData.TnmInput.RX_SUMM_SURGERY, "8").withInput(TnmStagingData.TnmInput.RX_SUMM_RADIATION, "9").withInput(TnmStagingData.TnmInput.CLIN_T, "1").withInput(
+                        TnmStagingData.TnmInput.CLIN_N, "2").withInput(TnmStagingData.TnmInput.CLIN_M, "3").withInput(TnmStagingData.TnmInput.PATH_T, "4").withInput(TnmStagingData.TnmInput.PATH_N,
+                        "5").withInput(TnmStagingData.TnmInput.PATH_M, "6").withSsf(1, "020").build();
 
         Assert.assertEquals(data1.getInput(), data2.getInput());
     }
@@ -293,18 +293,17 @@ public class TnmStagingTest {
         TnmStagingData data = new TnmStagingData();
         data.setInput(TnmStagingData.TnmInput.PRIMARY_SITE, "C680");
         data.setInput(TnmStagingData.TnmInput.HISTOLOGY, "8000");
-        data.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "1.0");
         data.setInput(TnmStagingData.TnmInput.BEHAVIOR, "3");
         data.setInput(TnmStagingData.TnmInput.DX_YEAR, "2015");
         data.setInput(TnmStagingData.TnmInput.RX_SUMM_SURGERY, "2");
         data.setInput(TnmStagingData.TnmInput.RX_SUMM_RADIATION, "4");
         data.setInput(TnmStagingData.TnmInput.REGIONAL_NODES_POSITIVE, "02");
-        data.setInput(TnmStagingData.TnmInput.CLIN_T, "0");
-        data.setInput(TnmStagingData.TnmInput.CLIN_N, "1");
-        data.setInput(TnmStagingData.TnmInput.CLIN_M, "0");
+        data.setInput(TnmStagingData.TnmInput.CLIN_T, "c0");
+        data.setInput(TnmStagingData.TnmInput.CLIN_N, "c1");
+        data.setInput(TnmStagingData.TnmInput.CLIN_M, "c0");
         data.setInput(TnmStagingData.TnmInput.PATH_T, "0");
         data.setInput(TnmStagingData.TnmInput.PATH_N, "1");
-        data.setInput(TnmStagingData.TnmInput.PATH_M, "1");
+        data.setInput(TnmStagingData.TnmInput.PATH_M, "c1");
 
         // perform the staging
         _STAGING.stage(data);
@@ -361,29 +360,32 @@ public class TnmStagingTest {
     public void testInvolvedTables() {
         Set<String> tables = _STAGING.getInvolvedTables("adnexa_uterine_other");
 
-        Assert.assertEquals(Sets.newHashSet("extension_bcn", "histology", "input_version_validation", "nodes_dcc", "primary_site", "schema_selection_adnexa_uterine_other", "seer_mets_48348",
-                "seer_mets_copy_adnexauterineother_56278", "summary_stage_rpa", "year_dx_validation"), tables);
+        Assert.assertEquals(
+                Sets.newHashSet("extension_bcn", "histology", "nodes_dcc", "primary_site", "schema_selection_adnexa_uterine_other", "seer_mets_48348", "summary_stage_rpa", "year_dx_validation"),
+                tables);
     }
 
     @Test
     public void testInvolvedSchemas() {
         Set<String> schemas = _STAGING.getInvolvedSchemas("ssf1_jpd");
 
-        Assert.assertEquals(new HashSet<String>(Arrays.asList("kidney_renal_pelvis", "bladder", "urethra")), schemas);
+        Assert.assertEquals(new HashSet<>(Arrays.asList("kidney_renal_pelvis", "bladder", "urethra")), schemas);
     }
 
     @Test
     public void testGetInputs() {
         Assert.assertEquals(Sets.newHashSet("site", "hist", "seer_primary_tumor", "seer_nodes", "seer_mets"), _STAGING.getInputs(_STAGING.getSchema("adnexa_uterine_other")));
 
-        Assert.assertEquals(Sets.newHashSet("site", "hist", "behavior", "systemic_surg_seq", "radiation_surg_seq", "nodes_pos", "clin_t", "clin_n", "clin_m", "path_t", "path_n", "path_m",
-                "seer_primary_tumor", "seer_nodes", "seer_mets", "ssf13", "ssf15", "ssf16"), _STAGING.getInputs(_STAGING.getSchema("testis")));
+        Assert.assertEquals(
+                Sets.newHashSet("site", "hist", "behavior", "systemic_surg_seq", "radiation_surg_seq", "nodes_pos", "clin_t", "clin_n", "clin_m", "path_t", "path_n", "path_m", "seer_primary_tumor",
+                        "seer_nodes", "seer_mets", "ssf13", "ssf15", "ssf16"), _STAGING.getInputs(_STAGING.getSchema("testis")));
 
         // test with and without context
-        Assert.assertEquals(Sets.newHashSet("site", "hist", "systemic_surg_seq", "radiation_surg_seq", "nodes_pos", "clin_t", "clin_n", "clin_m", "path_t", "path_n", "path_m", "seer_primary_tumor",
-                "seer_nodes", "seer_mets", "ssf1", "ssf8", "ssf10"), _STAGING.getInputs(_STAGING.getSchema("prostate")));
+        Assert.assertEquals(
+                Sets.newHashSet("site", "hist", "systemic_surg_seq", "radiation_surg_seq", "nodes_pos", "clin_t", "clin_n", "clin_m", "path_t", "path_n", "path_m", "seer_primary_tumor", "seer_nodes",
+                        "seer_mets", "ssf1", "ssf8", "ssf10"), _STAGING.getInputs(_STAGING.getSchema("prostate")));
 
-        Map<String, String> context = new HashMap<String, String>();
+        Map<String, String> context = new HashMap<>();
         context.put(StagingData.PRIMARY_SITE_KEY, "C619");
         context.put(StagingData.HISTOLOGY_KEY, "8120");
         context.put(StagingData.YEAR_DX_KEY, "2004");
@@ -425,7 +427,6 @@ public class TnmStagingTest {
 
         // test valid year
         data.setInput(TnmStagingData.TnmInput.DX_YEAR, "2015");
-        data.setInput(TnmStagingData.TnmInput.INPUT_VERSION, "1.0");
         Assert.assertTrue(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
 
         // test invalid year
@@ -463,7 +464,7 @@ public class TnmStagingTest {
 
     @Test
     public void verifyInputs() {
-        List<String> errors = new ArrayList<String>();
+        List<String> errors = new ArrayList<>();
 
         for (String id : _STAGING.getSchemaIds()) {
             StagingSchema schema = _STAGING.getSchema(id);
@@ -519,11 +520,11 @@ public class TnmStagingTest {
 
     @Test
     public void testForUnusedTables() {
-        Set<String> usedTables = new HashSet<String>();
+        Set<String> usedTables = new HashSet<>();
         for (String id : _STAGING.getSchemaIds())
             usedTables.addAll(_STAGING.getSchema(id).getInvolvedTables());
 
-        Set<String> unusedTables = new HashSet<String>();
+        Set<String> unusedTables = new HashSet<>();
         for (String id : _STAGING.getTableIds())
             if (!usedTables.contains(id))
                 unusedTables.add(id);
@@ -534,7 +535,7 @@ public class TnmStagingTest {
 
     @Test
     public void testInputTables() {
-        Set<String> errors = new HashSet<String>();
+        Set<String> errors = new HashSet<>();
 
         for (String schemaId : _STAGING.getSchemaIds()) {
             StagingSchema schema = _STAGING.getSchema(schemaId);
@@ -542,7 +543,7 @@ public class TnmStagingTest {
             // build a list of input tables that should be excluded
             for (StagingSchemaInput input : schema.getInputs()) {
                 if (input.getTable() != null) {
-                    Set<String> inputKeys = new HashSet<String>();
+                    Set<String> inputKeys = new HashSet<>();
                     StagingTable table = _STAGING.getTable(input.getTable());
                     for (StagingColumnDefinition def : table.getColumnDefinitions())
                         if (ColumnDefinition.ColumnType.INPUT.equals(def.getType()))
@@ -565,13 +566,13 @@ public class TnmStagingTest {
 
     @Test
     public void testMappingIdUniqueness() {
-        Set<String> errors = new HashSet<String>();
+        Set<String> errors = new HashSet<>();
 
         for (String schemaId : _STAGING.getSchemaIds()) {
             StagingSchema schema = _STAGING.getSchema(schemaId);
 
             // build a list of input tables that should be excluded
-            Set<String> ids = new HashSet<String>();
+            Set<String> ids = new HashSet<>();
             for (StagingMapping mapping : schema.getMappings()) {
                 if (ids.contains(mapping.getId()))
                     errors.add("The mapping id " + schemaId + ":" + mapping.getId() + " is duplicated.  This should never happen");

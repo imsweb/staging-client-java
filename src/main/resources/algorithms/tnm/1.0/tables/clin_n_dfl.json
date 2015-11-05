@@ -2,10 +2,10 @@
   "id" : "clin_n_dfl",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Clin N",
+  "name" : "Clin N NET Small Intestine",
   "title" : "Clinical N",
-  "notes" : "**Note:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in distant metastasis.\n\n**Regional lymph nodes for small intestine**\n\n**Duodenum primaries only (C17.0):**\n\n    Duodenal\n    Gastroduodenal\n    Hepatic\n    Pancreaticoduodenal\n    Pericholodochal (common bile duct)\n    Pyloric: infrapyloric, subpyloric\n    Superior mesenteric\n       \n**Jejunum primaries only (C17.1):**\n\n     Mesenteric, NOS:\n     Superior mesenteric\n\n**Ileum primaries only (C17.2):**\n\n     Cecal (anterior, posterior, retrocecal) \n     Ileocecal       \n     Mesenteric, NOS\n     Superior mesenteric",
-  "last_modified" : "2015-08-13T13:25:34.831Z",
+  "notes" : "**Note:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in distant metastasis.\n\n**Regional lymph nodes for small intestine**\n\n**Duodenum primaries only (C170):**\n\n    Duodenal\n    Gastroduodenal\n    Hepatic\n    Pancreaticoduodenal\n    Pericholodochal (common bile duct)\n    Pyloric: infrapyloric, subpyloric\n    Superior mesenteric\n       \n**Jejunum primaries only (C171):**\n\n     Mesenteric, NOS:\n     Superior mesenteric\n\n**Ileum primaries only (C172):**\n\n     Cecal (anterior, posterior, retrocecal) \n     Ileocecal       \n     Mesenteric, NOS\n     Superior mesenteric",
+  "last_modified" : "2015-10-19T15:10:05.735Z",
   "definition" : [ {
     "key" : "clin_n",
     "name" : "Clinical N",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "NX", "Regional lymph nodes cannot be assessed", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "No regional lymph node involvement" ], [ "1", "N1", "Regional lymph node metastasis", "Regional lymph node(s), NOS\nLymph nodes, NOS\n\nStated as N1" ] ]
+  "rows" : [ [ "X", "NX", "Regional lymph nodes cannot be assessed", "No clinical evaluation\nCancer first detected on surgical resection\nUnknown if any clinical assessment performed" ], [ "0", "N0", "No regional lymph node metastasis", "No regional lymph node involvement" ], [ "1", "N1", "Regional lymph node metastasis", "Regional lymph node(s), NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "88", "88", "Not applicable", "Clinical N is not defined for this site/histology\nIn situ (no Tis defined)" ], [ "", "BLANK", "", "Clinical evaluation but unknown results or regional lymph node involvement not stated\nClinical evaluation done but results not documented in patient record" ] ]
 }

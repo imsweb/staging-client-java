@@ -14,12 +14,6 @@
     "table" : "year_dx_validation",
     "used_for_staging" : false
   }, {
-    "key" : "input_version",
-    "name" : "Input Version",
-    "naaccr_item" : 2937,
-    "table" : "input_version_validation",
-    "used_for_staging" : false
-  }, {
     "key" : "site",
     "name" : "Primary Site",
     "naaccr_item" : 400,
@@ -53,13 +47,13 @@
     "key" : "clin_t",
     "name" : "Clinical T",
     "naaccr_item" : 940,
-    "table" : "melanoma_iris_t_65686",
+    "table" : "clin_t_melanoma_iris_54551",
     "used_for_staging" : true
   }, {
     "key" : "clin_n",
     "name" : "Clinical N",
     "naaccr_item" : 950,
-    "table" : "ophthalmic_n_36875",
+    "table" : "clin_n_ophthalmic_n_94312",
     "used_for_staging" : true
   }, {
     "key" : "clin_m",
@@ -206,13 +200,17 @@
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
     "default" : "88",
-    "used_for_staging" : false
+    "table" : "stage_group_c_89731",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   }, {
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
     "default" : "88",
-    "used_for_staging" : false
+    "table" : "stage_group_p_60572",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -291,16 +289,16 @@
     } ],
     "tables" : [ {
       "id" : "determine_default_t",
-      "inputs" : [ "clin_t", "path_t" ],
-      "outputs" : [ "source_t", "combined_t_in", "tmp_path_t", "ss2017_t", "tmp_clin_t" ]
+      "inputs" : [ "path_t_in", "clin_t_in" ],
+      "outputs" : [ "path_t_out", "combined_t_out", "clin_t_out", "source_t_out", "ss2017_t_out" ]
     }, {
       "id" : "determine_default_n",
-      "inputs" : [ "clin_n", "path_n" ],
-      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+      "inputs" : [ "clin_n_in", "path_n_in" ],
+      "outputs" : [ "path_n_out", "clin_n_out" ]
     }, {
       "id" : "determine_default_m",
-      "inputs" : [ "path_m", "clin_m" ],
-      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_clin_m", "combined_m_in", "source_m" ]
+      "inputs" : [ "path_m_in", "clin_m_in" ],
+      "outputs" : [ "ss2017_m_out", "combined_m_out", "path_m_out", "source_m_out", "clin_m_out" ]
     }, {
       "id" : "tnm7_stage_uad",
       "input_mapping" : [ {
@@ -338,9 +336,9 @@
       "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t" ],
       "outputs" : [ "path_stage_group" ]
     }, {
-      "id" : "adjust_path_defaults",
-      "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
-      "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
+      "id" : "adjustments_for_no_clin_or_no_path_26261",
+      "inputs" : [ "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "tmp_path_n", "path_m", "tmp_path_t", "tmp_clin_t", "clin_n", "clin_m", "path_n" ],
+      "outputs" : [ "combined_t_out", "combined_m_out", "source_t_out", "clin_stage_group", "combined_n_out", "source_n_out", "source_m_out", "path_stage_group" ]
     } ]
   }, {
     "id" : "combined_stage",
@@ -371,8 +369,8 @@
         "from" : "tmp_path_t",
         "to" : "path_t"
       } ],
-      "inputs" : [ "radiation_surg_seq", "combined_t_in", "tmp_path_t", "tmp_clin_t", "systemic_surg_seq" ],
-      "outputs" : [ "source_t", "combined_t" ]
+      "inputs" : [ "path_t_in", "radiation_surg_seq", "combined_t_in", "clin_t_in", "systemic_surg_seq" ],
+      "outputs" : [ "combined_t_out", "source_t_out" ]
     }, {
       "id" : "combined_n",
       "input_mapping" : [ {
@@ -382,8 +380,8 @@
         "from" : "tmp_path_n",
         "to" : "path_n"
       } ],
-      "inputs" : [ "nodes_pos", "tmp_clin_n", "radiation_surg_seq", "tmp_path_n", "combined_n_in", "systemic_surg_seq" ],
-      "outputs" : [ "combined_n", "source_n" ]
+      "inputs" : [ "clin_n_in", "nodes_pos", "radiation_surg_seq", "combined_n_in", "path_n_in", "systemic_surg_seq" ],
+      "outputs" : [ "combined_n_out", "source_n_out" ]
     }, {
       "id" : "combined_m",
       "input_mapping" : [ {
@@ -393,8 +391,8 @@
         "from" : "tmp_path_m",
         "to" : "path_m"
       } ],
-      "inputs" : [ "tmp_path_m", "tmp_clin_m", "combined_m_in" ],
-      "outputs" : [ "combined_m", "source_m" ]
+      "inputs" : [ "path_m_in", "combined_m_in", "clin_m_in" ],
+      "outputs" : [ "combined_m_out", "source_m_out" ]
     }, {
       "id" : "tnm7_stage_uad",
       "input_mapping" : [ {
@@ -415,16 +413,16 @@
       "outputs" : [ "combined_stage_group" ]
     }, {
       "id" : "combined_to_summ_stage_t_80394",
-      "inputs" : [ "combined_t" ],
-      "outputs" : [ "ss2017_t" ]
+      "inputs" : [ "combined_t_in" ],
+      "outputs" : [ "ss2017_t_out" ]
     }, {
       "id" : "combined_n_to_summ_stage_n_84054",
-      "inputs" : [ "combined_n" ],
-      "outputs" : [ "ss2017_n" ]
+      "inputs" : [ "combined_n_in" ],
+      "outputs" : [ "ss2017_n_out" ]
     }, {
       "id" : "cpmbined_m_to_summ_stage_m_60564",
-      "inputs" : [ "combined_m" ],
-      "outputs" : [ "ss2017_m" ]
+      "inputs" : [ "combined_m_in" ],
+      "outputs" : [ "ss2017_m_out" ]
     }, {
       "id" : "summary_stage_rpa",
       "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
@@ -442,11 +440,11 @@
       "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t" ]
     }, {
-      "id" : "seer_regional_nodes_melanomaeye_exclconj_28493",
+      "id" : "seer_regional_nodes_melanomachoroid_3244",
       "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
-      "id" : "seer_mets_melanomaeye_exclconj_86372",
+      "id" : "seer_mets_melanomachoroid_55264",
       "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
@@ -455,7 +453,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "ssf3_lpr", "determine_default_t", "input_version_validation", "radiation_surg_seq", "ssf13_sqq", "ssf12_sqb", "determine_default_m", "ssf8_spx", "nodes_pos_fpa", "clin_m_hpg", "melanoma_iris_t_65686", "determine_default_n", "combined_n_to_summ_stage_n_84054", "seer_regional_nodes_melanomaeye_exclconj_28493", "ssf6_opd", "histology", "tnm7_inclusions_tpa", "combined_t_no_tis", "path_m_hpg", "schema_selection_melanoma_iris", "extension_bfr", "discriminator_melanoma", "tnm7_stage_uad", "seer_regional_nodes_melanomachoroid_3244", "ssf2_kbm", "ssf10_spz", "adjust_path_defaults", "ssf5_npf", "systemic_surg_seq", "ophthalmic_n_36875", "seer_mets_melanomaeye_exclconj_86372", "ssf9_sqm", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "ssf11_sqa", "year_dx_validation", "ssf14_sqr", "summary_stage_rpa", "ssf7_spw", "ssf4_mpe", "seer_mets_melanomachoroid_55264" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "ssf3_lpr", "determine_default_t", "stage_group_p_60572", "radiation_surg_seq", "ssf13_sqq", "ssf12_sqb", "determine_default_m", "ssf8_spx", "nodes_pos_fpa", "clin_m_hpg", "melanoma_iris_t_65686", "determine_default_n", "combined_n_to_summ_stage_n_84054", "ssf6_opd", "histology", "tnm7_inclusions_tpa", "combined_t_no_tis", "path_m_hpg", "schema_selection_melanoma_iris", "extension_bfr", "adjustments_for_no_clin_or_no_path_26261", "stage_group_c_89731", "clin_n_ophthalmic_n_94312", "discriminator_melanoma", "tnm7_stage_uad", "seer_regional_nodes_melanomachoroid_3244", "ssf2_kbm", "ssf10_spz", "ssf5_npf", "systemic_surg_seq", "ophthalmic_n_36875", "ssf9_sqm", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "clin_t_melanoma_iris_54551", "ssf11_sqa", "year_dx_validation", "ssf14_sqr", "summary_stage_rpa", "ssf7_spw", "ssf4_mpe", "seer_mets_melanomachoroid_55264" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-08T17:53:30.635Z"
+  "last_modified" : "2015-10-31T12:59:47.692Z"
 }

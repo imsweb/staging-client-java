@@ -2,16 +2,16 @@
   "id" : "clin_n_dna",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Lymph nodes NOT applicable",
-  "title" : "Clinical and Pathologic N",
-  "last_modified" : "2015-10-09T17:04:54.219Z",
+  "name" : "Path N Placenta",
+  "title" : "Pathologic N",
+  "last_modified" : "2015-10-15T20:06:42.604Z",
   "definition" : [ {
-    "key" : "clin_n",
-    "name" : "Clinical N",
+    "key" : "path_n",
+    "name" : "Pathologic N",
     "type" : "INPUT"
   }, {
-    "key" : "clin_n_display",
-    "name" : "Clinical N Display",
+    "key" : "path_n_display",
+    "name" : "Pathologic N Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

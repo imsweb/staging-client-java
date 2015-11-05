@@ -2,17 +2,17 @@
   "id" : "path_m_hcf",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path M",
+  "name" : "Path M Appendix",
   "title" : "Pathologic M",
   "notes" : "**Note:**  Mucinous tumors (morphology codes 8480, 8481, and 8490) with peritoneal involvement confined to the right lower quadrant (RLQ) are classified as T4a and are assigned in primary tumor (T).",
-  "last_modified" : "2015-10-10T19:40:27.034Z",
+  "last_modified" : "2015-10-15T18:47:23.738Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

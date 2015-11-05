@@ -3,12 +3,12 @@
   "algorithm" : "tnm",
   "version" : "1.0",
   "name" : "TNM7 Inclusions",
-  "title" : "Histology Inclusion Table AJCC 7th ed.",
-  "last_modified" : "2015-08-13T13:23:15.423Z",
+  "title" : "Histology Inclusion Table TNM 7th ed.",
+  "last_modified" : "2015-10-27T17:29:36.010Z",
   "definition" : [ {
     "key" : "hist",
     "name" : "Histology",
     "type" : "INPUT"
   } ],
-  "rows" : [ [ "8000" ], [ "8680-9136" ], [ "9141-9582" ] ]
+  "rows" : [ [ "" ] ]
 }

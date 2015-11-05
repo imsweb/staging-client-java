@@ -1,0 +1,55 @@
+{
+  "id" : "stop_if_no_clin_and_no_path_24035",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Stop if No Clin and No Path",
+  "title" : "Stop if neither Clin nor Path were Captured",
+  "notes" : "**Note:** We do not currently plan to accept records where Clin T, N, Path T, N and M are all blank.   All Derived fields will be left blank.",
+  "last_modified" : "2015-11-02T17:34:43.607Z",
+  "definition" : [ {
+    "key" : "clin_stage_group",
+    "name" : "Derived Clin Stage Group",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_stage_group",
+    "name" : "Derived Path Stage Group",
+    "type" : "INPUT"
+  }, {
+    "key" : "combined_t",
+    "name" : "Combined T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "source_t",
+    "name" : "Source of Combined T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "combined_n",
+    "name" : "Combined N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "source_n",
+    "name" : "Source of Combined N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "combined_m",
+    "name" : "Combined M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "source_m",
+    "name" : "Source of Combined M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "combined_stage_group",
+    "name" : "Combined Stage Group",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2017",
+    "name" : "Summ Stage 2017",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "tmp_continue",
+    "name" : "Continue?",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "", "", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "STOP" ], [ "*", "*", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH" ] ]
+}

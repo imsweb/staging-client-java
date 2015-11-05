@@ -5,8 +5,8 @@
   "name" : "SSF10",
   "title" : "Site-Specific Factor 10",
   "subtitle" : "Location of Primary Tumor",
-  "notes" : "**Note:**  Since both omental and peritoneal gastrointestinal stromal tumors (GIST) are coded with the same ICD-O-3 topography code (C48.1), this Site-Specific Factor must be used to identify the appropriate AJCC stage table.",
-  "last_modified" : "2015-08-13T13:24:31.146Z",
+  "notes" : "**Note:**  Since both omental and peritoneal gastrointestinal stromal tumors (GIST) are coded with the same ICD-O-3 topography code (C48.1), this Site-Specific Factor must be used to identify the appropriate TNM stage table.",
+  "last_modified" : "2015-10-30T18:48:37.557Z",
   "definition" : [ {
     "key" : "ssf10",
     "name" : "Code",
@@ -20,5 +20,5 @@
     "name" : "Stage Table",
     "type" : "ENDPOINT"
   } ],
-  "rows" : [ [ "010", "Mesentery\nMesoappendix\nMesocolon", "JUMP:tnm7_stage_gist_small_intestine_upy" ], [ "020", "Omentum", "JUMP:tnm_7_stage_group_gist_stomach_36358" ], [ "030", "Pelvic Peritoneum", "JUMP:tnm7_stage_gist_small_intestine_upy" ], [ "040", "Rectouterine pouch\n     Cul de sac\n     Pouch of Douglas", "JUMP:tnm7_stage_gist_small_intestine_upy" ], [ "988", "Not applicable: Information not collected for this case. ", "ERROR:" ], [ "998", "Other specified peritoneal site", "JUMP:tnm7_stage_gist_small_intestine_upy" ], [ "999", "Unknown or no information\nNot documented in patient record", "JUMP:tnm7_stage_gist_small_intestine_upy" ] ]
+  "rows" : [ [ "010", "Mesentery\nMesoappendix\nMesocolon", "JUMP:tnm7_stage_gist_small_intestine_upy" ], [ "020", "Omentum", "JUMP:tnm_7_stage_group_gist_stomach_36358" ], [ "030", "Pelvic Peritoneum", "JUMP:tnm7_stage_gist_small_intestine_upy" ], [ "040", "Rectouterine pouch\n     Cul de sac\n     Pouch of Douglas", "JUMP:tnm7_stage_gist_small_intestine_upy" ], [ "988", "Not applicable: Information not collected for this case", "ERROR:" ], [ "998", "Other specified peritoneal site", "JUMP:tnm7_stage_gist_small_intestine_upy" ], [ "999", "Unknown or no information\nNot documented in patient record", "JUMP:tnm7_stage_gist_small_intestine_upy" ] ]
 }

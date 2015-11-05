@@ -13,12 +13,6 @@
     "table" : "year_dx_validation",
     "used_for_staging" : false
   }, {
-    "key" : "input_version",
-    "name" : "Input Version",
-    "naaccr_item" : 2937,
-    "table" : "input_version_validation",
-    "used_for_staging" : false
-  }, {
     "key" : "site",
     "name" : "Primary Site",
     "naaccr_item" : 400,
@@ -148,7 +142,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "primary_site", "ssf2_kbx", "input_version_validation", "histology", "schema_selection_myeloma_plasma_cell_disorder", "ssf3_lbb", "year_dx_validation", "summary_stage_rpa", "mets_hna", "nodes_dfy", "extension_bgc" ],
+  "involved_tables" : [ "primary_site", "ssf2_kbx", "histology", "schema_selection_myeloma_plasma_cell_disorder", "ssf3_lbb", "year_dx_validation", "summary_stage_rpa", "mets_hna", "nodes_dfy", "extension_bgc" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-08T17:08:16.814Z"
+  "last_modified" : "2015-10-19T12:29:25.932Z"
 }

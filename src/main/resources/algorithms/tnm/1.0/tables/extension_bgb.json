@@ -4,10 +4,9 @@
   "version" : "1.0",
   "name" : "SEER Primary Tumor",
   "title" : "SEER Primary Tumor",
-  "description" : "SME2 - Notes 5 and 6 deleted as referencing AJCC and CS;; added a Footnote to reflect significance of depth of stromal invasion.\nSME1 - Moved Note 3 in SSM p194 added by SME2 from Footnotes to SEER Primary Tumor Notes and changed to Note 5.",
   "notes" : "**Note 1:**  In the case of multiple simultaneous tumors, code the tumor with the greatest extension.\n\n**Note 3:**  In-transit metastasis is coded in SEER Regional Nodes.\n\n**Note 4:**  The depth of stromal invasion is defined as the measurement of the tumor from the epithelial-stromal junction of the adjacent most superficial dermal papilla to the deepest point of invasion.\n\n**Note 5**: FIGO Stage I, IA, IB and II are defined by size of tumor, involvement of vulva or vulva and perineum, and depth of stromal invasion and are included as localized disease if only the vulva is involved and as regional if both the vulva and perineum are involved.",
   "footnotes" : "\\### Considered distant in Historic Stage\n\\*** Considered distant in 1977 Summary Staging Guide",
-  "last_modified" : "2015-09-04T20:51:30.426Z",
+  "last_modified" : "2015-10-13T21:56:59.993Z",
   "definition" : [ {
     "key" : "seer_primary_tumor",
     "name" : "Code",

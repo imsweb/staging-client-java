@@ -2,17 +2,17 @@
   "id" : "urethra_t_77785",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Urethra T",
-  "title" : "Clinical and Pathologic T",
+  "name" : "Path T Urethra",
+  "title" : "Pathologic T",
   "notes" : "**Note 1:**  In case of multifocal noninvasive Ta and Tis tumors, assign Tis. \n\n**Note 2:**  If assigned Tis, then Behavior code ICD-O-3 must be /2.\n\n**Note 3:**  The presence of muscle around the urethra varies between males and females and, in males, varies among the segments of the urethra. The outer muscular coat (muscularis) is absent in most of the male urethra except for the membranous portion. In females, the muscle coat is continuous from the bladder wall. In addition, in both males and females, there is sphincteric muscle, which may be smooth or skeletal muscle. Invasion of periurethral muscle is assigned T1, unless it is specified as invasion of sphincter muscle, which is assigned T2. Invasion of muscle at the neck of the bladder is assigned T3. If the only information is \"invasion of muscle\", NOS, or \"invasion of periurethral muscle\", NOS, assign T1.",
-  "last_modified" : "2015-09-29T17:01:28.401Z",
+  "last_modified" : "2015-11-03T14:45:05.492Z",
   "definition" : [ {
-    "key" : "clin_t",
-    "name" : "Clinical T",
+    "key" : "path_t",
+    "name" : "Pathologic T",
     "type" : "INPUT"
   }, {
-    "key" : "clin_t_display",
-    "name" : "Clinical T Display",
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "A", "Ta", "Non-invasive papillary, polypoid, or verrucous carcinoma", "" ], [ "IS", "Tis", "Carcinoma in situ", "Intraepithelial, noninvasive (flat, sessile), NOS" ], [ "ISPD", "Tispd", "Carcinoma in situ, involvement of prostatic ducts", "Intraepithelial, noninvasive: involvement of prostatic ducts" ], [ "ISPU", "Tispu", "Carcinoma in situ, involvement of prostatic urethra", "Intraepithelial, noninvasive: involvement of prostatic urethra" ], [ "1", "T1", "Tumor invades subepithelial connective tissue", "Subepithelial connective tissue (lamina propria, submucosa) invaded\n\nLocalized, NOS\n\nStated as T1" ], [ "2", "T2", "Tumor invades any of the following: \n    Corpus spongiosum\n    Periurethral muscle\n    Prostate", "Muscularis invaded\n\nSphincter muscle; periurethral muscle specified as sphincter\n\nStated as T2" ], [ "3", "T3", "Tumor invades any of the following: \n    Beyond prostatic capsule \n    Bladder neck (extraprostatic extension)\n    Corpus cavernosum", "Vagina, anterior or NOS\n\nStated as T3" ], [ "4", "T4", "Tumor invades other adjacent organs (invasion of the bladder)", "Other adjacent organs, including\n    Bladder (excluding bladder neck)\n    Seminal vesicle(s)\n\nFurther contiguous extension\n\nStated as T4" ] ]
+  "rows" : [ [ "X", "pTX", "Primary tumor cannot be assessed", "Surgical resection of primary tumor done and extension not stated or unknown\nSurgical resection of primary tumor done and extension not documented in patient record" ], [ "0", "pT0", "No evidence of primary tumor", "" ], [ "A", "pTa", "Non-invasive papillary, polypoid, or verrucous carcinoma", "" ], [ "IS", "pTis", "Carcinoma in situ", "Intraepithelial, noninvasive (flat, sessile), NOS" ], [ "ISPD", "pispd", "Carcinoma in situ, involvement of prostatic ducts", "Intraepithelial, noninvasive: involvement of prostatic ducts" ], [ "ISPU", "pispu", "Carcinoma in situ, involvement of prostatic urethra", "Intraepithelial, noninvasive: involvement of prostatic urethra" ], [ "1", "pT1", "Tumor invades subepithelial connective tissue", "Subepithelial connective tissue (lamina propria, submucosa) invaded\n\nLocalized, NOS\n\nStated as T1" ], [ "2", "pT2", "Tumor invades any of the following: \n    Corpus spongiosum\n    Periurethral muscle\n    Prostate", "Muscularis invaded\n\nSphincter muscle; periurethral muscle specified as sphincter\n\nStated as T2" ], [ "3", "pT3", "Tumor invades any of the following: \n    Beyond prostatic capsule \n    Bladder neck (extraprostatic extension)\n    Corpus cavernosum", "Vagina, anterior or NOS\n\nStated as T3" ], [ "4", "pT4", "Tumor invades other adjacent organs (invasion of the bladder)", "Other adjacent organs, including\n    Bladder (excluding bladder neck)\n    Seminal vesicle(s)\n\nFurther contiguous extension\n\nStated as T4" ], [ "88", "88", "Not applicable", "Pathologic T is not defined for the specific site/histology" ], [ "", "BLANK", "See registrar notes", "No pathologic evaluation of primary tumor\nNo surgical resection of primary tumor\nOnly positive biopsy of primary tumor which is not the highest T\nUnknown if any pathologic assessment performed" ] ]
 }

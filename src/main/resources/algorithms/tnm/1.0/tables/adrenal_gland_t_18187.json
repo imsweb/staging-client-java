@@ -2,10 +2,10 @@
   "id" : "adrenal_gland_t_18187",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Adrenal Gland T",
-  "title" : "Clinical and Pathologic T",
-  "notes" : "**Note 1:**  TNM does not include an in situ category for adrenal gland tumors. Assign TX and behavior code /2 for in situ cases.\n\n**Note 2:** Tumor size must be known to assign a value of T1 or T2. You may use a physicianâs statement of the T category if this is the only information in the medical record. If the tumor appears to be in the T1 or T2 categories, but no size or category is specified, assign TX.\n\n**Note 3:** For the following descriptions, assign the appropriate T category based on the tumor size.\n\n    Invasive carcinoma confined to adrenal gland\n    Localized, NOS",
-  "last_modified" : "2015-10-09T17:23:02.286Z",
+  "name" : "Clin T Adrenal Gland",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  TNM does not include an in situ category for adrenal gland tumors. Assign 88 and behavior code /2 for in situ cases.\n\n**Note 2:** Tumor size must be known to assign a value of T1 or T2. You may use a physicianâs statement of the T category if this is the only information in the medical record. If the tumor appears to be in the T1 or T2 categories, but no size or category is specified, assign TX.\n\n**Note 3:** For the following descriptions, assign the appropriate T category based on the tumor size.\n\n    Invasive carcinoma confined to adrenal gland\n    Localized, NOS",
+  "last_modified" : "2015-11-02T19:02:12.738Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "In situ, Intraepithelial, noninvasive\nUnknown; extension not stated\nNot documented in patient record\n\nConfined to adrenal gland and size not known" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "1", "T1", "Tumor 5 cm or less in greatest dimension, \nno extra-adrenal invasion", "Stated as T1" ], [ "2", "T2", "Tumor greater than 5 cm, no extra-adrenal invasion", "Stated as T2" ], [ "3", "T3", "Tumor of any size with local invasion, \nbut not invading adjacent organs", "Adjacent connective tissue \n   Gerota  fascia\n\nStated as T3" ], [ "4", "T4", "Tumor of any size with invasion of\nadjacent organs", "Adjacent organs/structures:\n    Kidney, ipsilateral or NOS\n    Pancreas\n    Retroperitoneal structures including:\n        Great vessels:\n            Aorta\n            Inferior vena cava\n\nFurther contiguous extension including:\n    Diaphragm\n    Liver\n    Spleen\n\nStated as T4" ] ]
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical evaluation performed but unknown results or extension not stated \nClinical evaluation performed but results not documented in patient record\nSize is part of the T definition and the size is not available but information states that the tumor is confined to the primary" ], [ "c0", "cT0", "No evidence of primary tumor", "" ], [ "c1", "cT1", "Tumor 5 cm or less in greatest dimension \nNo extra-adrenal invasion", "Stated as T1" ], [ "c2", "cT2", "Tumor greater than 5 cm\nNO extra-adrenal invasion", "Stated as T2" ], [ "c3", "cT3", "Tumor of any size with local invasion, \nNOT invading adjacent organs", "Adjacent connective tissue \n   Gerota  fascia\n\nStated as T3" ], [ "c4", "cT4", "Tumor of any size with invasion of adjacent organs", "Adjacent organs/structures:\n    Kidney, ipsilateral or NOS\n    Pancreas\n    Retroperitoneal structures including:\n        Great vessels:\n            Aorta\n            Inferior vena cava\n\nFurther contiguous extension including:\n    Diaphragm\n    Liver\n    Spleen\n\nStated as T4" ], [ "88", "88", "Not applicable", "Clinical T is not defined for this site/histology\nIn situ (no pTis defined)" ], [ "", "BLANK", "See registrar notes", "No clinical evaluation\nCancer first detected on surgical resection\nUnknown if any clinical assessment performed" ] ]
 }

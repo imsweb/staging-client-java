@@ -2,9 +2,9 @@
   "id" : "adrenal_m_7434",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Adrenal M",
+  "name" : "Clin M Adrenal Gland",
   "title" : "Clinical M",
-  "last_modified" : "2015-08-13T13:23:16.358Z",
+  "last_modified" : "2015-11-03T14:06:35.284Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",
@@ -22,5 +22,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "0", "M0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "1", "M1", "Distant metastasis", "Distant lymph node(s), NOS \n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n \nCarcinomatosis\n\nDistant metastasis, NOS\n\nStated as M1" ] ]
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "Clinical assessment only:\n    Distant lymph node(s), NOS \n    Distant metastasis WITH or WITHOUT distant lymph node(s)\n    Carcinomatosis\n    Distant metastasis, NOS\n\n    Stated as M1" ], [ "p1", "pM1", "Distant metastasis", "Pathologically confirmed:\n    Distant lymph node(s), NOS \n    Distant metastasis WITH or WITHOUT distant lymph node(s)\n    Carcinomatosis\n    Distant metastasis, NOS\n\n    Stated as M1" ], [ "88", "88", "Not applicable", "Clinical M is not defined for this site/histology\nIn situ (no pTis defined)" ], [ "", "BLANK", "See registrar notes", "No clinical evaluation\nCancer first detected on surgical resection\nUnknown if any clinical assessment performed" ] ]
 }

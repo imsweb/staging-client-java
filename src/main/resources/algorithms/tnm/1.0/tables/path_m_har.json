@@ -4,14 +4,14 @@
   "version" : "1.0",
   "name" : "Path M Ampulla Vater",
   "title" : "Pathologic M",
-  "last_modified" : "2015-10-09T17:08:13.385Z",
+  "last_modified" : "2015-10-15T18:47:17.538Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

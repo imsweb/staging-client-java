@@ -2,10 +2,10 @@
   "id" : "clin_n_dbj",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Clin N",
+  "name" : "Clin N Penis",
   "title" : "Clinical N",
   "notes" : "**Note:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in the field distant metastasis.\n\n**Regional lymph nodes:**\n\n    Deep inguinal, NOS\n       Node of Cloquet or Rosenmuller (highest deep inguinal)\n    Superficial inguinal (femoral) regional lymph node\n    Inguinal node, NOS (unknown if superficial or deep)",
-  "last_modified" : "2015-08-13T13:24:07.466Z",
+  "last_modified" : "2015-10-23T13:33:10.426Z",
   "definition" : [ {
     "key" : "clin_n",
     "name" : "Clinical N",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "NX", "Regional lymph nodes cannot be assessed", "Unknown; not stated\nNot documented in patient record" ], [ "0", "N0", "No palpable or visibly enlarged inguinal lymph nodes", "No regional lymph node involvement" ], [ "1", "N1", "Palpable mobile unilateral inguinal lymph node", "Regional lymph nodes, not stated if single, multiple or bilateral:\n \nSINGLE regional lymph node, NOS\nNot stated if single or multiple lymph nodes \n\nRegional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "2", "N2", "Palpable mobile multiple or bilateral inguinal lymph nodes", "MULTIPLE or BILATERAL regional lymph nodes:\n    \nStated as N2" ], [ "3", "N3", "Fixed inguinal nodal mass or pelvic lymphadenopathy\nunilateral or bilateral", "Stated as N3" ] ]
+  "rows" : [ [ "X", "NX", "Regional lymph nodes cannot be assessed", "Unknown; not stated\nNot documented in patient record" ], [ "0", "N0", "No palpable or visibly enlarged inguinal lymph nodes", "No regional lymph node involvement" ], [ "1", "N1", "Palpable mobile unilateral inguinal lymph node", "Regional lymph nodes, not stated if single, multiple or bilateral:\n \nSINGLE regional lymph node, NOS\nNot stated if single or multiple lymph nodes \n\nRegional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "2", "N2", "Palpable mobile multiple OR  \n\nBilateral inguinal lymph nodes", "MULTIPLE or BILATERAL regional lymph nodes:\n    \nStated as N2" ], [ "3", "N3", "Fixed inguinal nodal mass OR \n\nPelvic lymphadenopathy unilateral or bilateral", "Stated as N3" ] ]
 }

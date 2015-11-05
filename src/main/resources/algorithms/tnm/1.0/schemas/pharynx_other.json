@@ -4,19 +4,13 @@
   "version" : "1.0",
   "name" : "Pharynx Other",
   "title" : "Pharynx, NOS, and Overlapping Lesion of Lip, Oral Cavity, and Pharynx (excluding Malignant Melanoma)",
-  "notes" : "C14.0  Pharynx, NOS\nC14.2  Waldeyer ring\nC14.8  Overlapping lesion of lip, oral cavity\n\n**Note:** TNM is not defined for these sites.",
+  "notes" : "C140  Pharynx, NOS\nC142  Waldeyer ring\nC148  Overlapping lesion of lip, oral cavity\n\n**Note:** TNM is not defined for these sites.",
   "schema_selection_table" : "schema_selection_pharynx_other",
   "inputs" : [ {
     "key" : "year_dx",
     "name" : "Year of Diagnosis",
     "naaccr_item" : 390,
     "table" : "year_dx_validation",
-    "used_for_staging" : false
-  }, {
-    "key" : "input_version",
-    "name" : "Input Version",
-    "naaccr_item" : 2937,
-    "table" : "input_version_validation",
     "used_for_staging" : false
   }, {
     "key" : "site",
@@ -186,7 +180,7 @@
       "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
-      "id" : "seer_mets_pharynxother_35960",
+      "id" : "seer_mets_pharynxothervs2_3402",
       "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
@@ -195,7 +189,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "ssf7_spa", "ssf10_spd", "input_version_validation", "schema_selection_pharynx_other", "ssf4_mpa", "ssf9_spc", "extension_bdd", "primary_site", "histology", "ssf6_opa", "ssf5_npa", "ssf3_lpa", "year_dx_validation", "nodes_dcy", "seer_mets_pharynxother_35960", "seer_mets_pharynxothervs2_3402", "summary_stage_rpa", "ssf1_jpu", "ssf8_spb" ],
+  "involved_tables" : [ "ssf7_spa", "ssf10_spd", "schema_selection_pharynx_other", "ssf4_mpa", "ssf9_spc", "extension_bdd", "primary_site", "histology", "ssf6_opa", "ssf5_npa", "ssf3_lpa", "year_dx_validation", "nodes_dcy", "seer_mets_pharynxothervs2_3402", "summary_stage_rpa", "ssf1_jpu", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-08T17:08:15.911Z"
+  "last_modified" : "2015-10-30T17:50:23.474Z"
 }

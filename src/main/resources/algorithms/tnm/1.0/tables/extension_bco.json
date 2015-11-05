@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "SEER Primary Tumor",
   "title" : "SEER Primary Tumor",
-  "last_modified" : "2015-09-04T20:52:13.064Z",
+  "last_modified" : "2015-10-16T13:29:11.467Z",
   "definition" : [ {
     "key" : "seer_primary_tumor",
     "name" : "Code",
@@ -22,5 +22,5 @@
     "name" : "Summary Stage 2017 T",
     "type" : "ENDPOINT"
   } ],
-  "rows" : [ [ "000", "In situ: Noninvasive; intraepithelial", "", "VALUE:IS" ], [ "100", "Localized only\n\nInvasive carcinoma confined to gland of origin\n\nLocalized, NOS", "", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nExtension to:\n    Adjacent tissue(s), NOS\n    Connective tissue\n    Adjacent organs/structures\n\nThymus (C37.9) and Aortic body (C75.5)\n    Organs/structures in mediastinum\n\nParathyroid (C75.0)\n    Thyroid\n    Thyroid cartilage\n\nCarotid body (C75.4)\n    Upper neck", "", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in patient record", "", "VALUE:U" ] ]
+  "rows" : [ [ "000", "In situ: Noninvasive; intraepithelial", "", "VALUE:IS" ], [ "100", "Localized only\n\nInvasive carcinoma confined to gland of origin\n\nLocalized, NOS", "", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nExtension to:\n    Adjacent tissue(s), NOS\n    Connective tissue\n    Adjacent organs/structures\n\nThymus (C379) and Aortic body (C755)\n    Organs/structures in mediastinum\n\nParathyroid (C750)\n    Thyroid\n    Thyroid cartilage\n\nCarotid body (C754)\n    Upper neck", "", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in patient record", "", "VALUE:U" ] ]
 }

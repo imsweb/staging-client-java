@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Extension Size SSF1 TNM 7",
   "title" : "SSF 1 TNM 7 Table",
-  "last_modified" : "2015-08-13T13:24:26.551Z",
+  "last_modified" : "2015-10-19T14:45:14.502Z",
   "definition" : [ {
     "key" : "base_t",
     "name" : "Base T",
@@ -19,5 +19,5 @@
     "type" : "ENDPOINT"
   } ],
   "extra_input" : [ "base_t" ],
-  "rows" : [ [ "X", "*", "VALUE:X" ], [ "*", "000, 988, 999", "VALUE:{{base_t}}" ], [ "1A", "010", "VALUE:1AS" ], [ "1B", "010", "VALUE:1BS" ], [ "2", "010", "VALUE:2S" ], [ "3", "010", "VALUE:3S" ], [ "4", "010", "VALUE:4S" ], [ "4A", "010", "VALUE:4AS" ], [ "4B", "010", "VALUE:4BS" ], [ "1A", "020", "VALUE:1AM" ], [ "1B", "020", "VALUE:1BM" ], [ "2", "020", "VALUE:2M" ], [ "3", "020", "VALUE:3M" ], [ "4", "020", "VALUE:4M" ], [ "4A", "020", "VALUE:4AM" ], [ "4B", "020", "VALUE:4BM" ] ]
+  "rows" : [ [ "X", "*", "VALUE:X" ], [ "*", "000, 988, 999", "VALUE:{{base_t}}" ], [ "1", "010", "VALUE:1S" ], [ "1A", "010", "VALUE:1AS" ], [ "1B", "010", "VALUE:1BS" ], [ "2", "010", "VALUE:2S" ], [ "3", "010", "VALUE:3S" ], [ "4", "010", "VALUE:4S" ], [ "4A", "010", "VALUE:4AS" ], [ "4B", "010", "VALUE:4BS" ], [ "1", "020", "VALUE:1M" ], [ "1A", "020", "VALUE:1AM" ], [ "1B", "020", "VALUE:1BM" ], [ "2", "020", "VALUE:2M" ], [ "3", "020", "VALUE:3M" ], [ "4", "020", "VALUE:4M" ], [ "4A", "020", "VALUE:4AM" ], [ "4B", "020", "VALUE:4BM" ] ]
 }

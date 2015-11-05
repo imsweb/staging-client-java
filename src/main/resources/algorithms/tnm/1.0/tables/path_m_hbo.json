@@ -2,16 +2,16 @@
   "id" : "path_m_hbo",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path M",
+  "name" : "Path M Small Intestine",
   "title" : "Pathologic M",
-  "last_modified" : "2015-10-10T21:11:00.930Z",
+  "last_modified" : "2015-10-15T18:47:24.820Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

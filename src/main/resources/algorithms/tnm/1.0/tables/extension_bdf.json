@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "SEER Primary Tumor",
   "title" : "SEER Primary Tumor",
-  "notes" : "**Note 1:**  Tumors of the body of the pancreas arise between the left edge of the superior mesenteric-portal vein confluence and the left edge of the aorta.  Tumors of the tail of the pancreas arise to the left of the left edge of the aorta.\n\n**Note 2:**  Islets of Langerhans are distributed throughout the pancreas; an islet tumor is coded according to the subsite of the pancreas in which the tumor arises if the information is available.\n\n**Note 3:**  The assignment of T1 and T2 categories for tumors of the pancreas is based on tumor size.  A physician's statement of the T category may be used to code CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields.  However the two fields are coded independently: for example the record may document size but not extension, other than the physician's statement of the T category.  Use codes 150 and 200 as appropriate to code CS Extension based on a statement of T when no other extension information is available. (DELETE)",
-  "last_modified" : "2015-09-04T20:51:48.512Z",
+  "notes" : "**Note 1:**  Tumors of the body of the pancreas arise between the left edge of the superior mesenteric-portal vein confluence and the left edge of the aorta.  Tumors of the tail of the pancreas arise to the left of the left edge of the aorta.\n\n**Note 2:**  Islets of Langerhans are distributed throughout the pancreas; an islet tumor is coded according to the subsite of the pancreas in which the tumor arises if the information is available.",
+  "last_modified" : "2015-10-26T19:18:24.770Z",
   "definition" : [ {
     "key" : "seer_primary_tumor",
     "name" : "Code",

@@ -2,18 +2,17 @@
   "id" : "gist_peritoneum_n_18654",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "GIST Peritoneum N",
-  "title" : "Clinical and Pathologic N",
+  "name" : "Path N GIST Peritoneum",
+  "title" : "Pathologic N",
   "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS  in this field.  Distant nodes are coded in distant metastasis.\n\n**Note 2:**  Regional lymph node involvement is rare for GISTs, so that cases in which the nodal status is not associated clinically or pathologically could be considered N0 instead of cNX or pNX.\n \n**Regional lymph nodes for peritoneum:**\n\n     Intra-abdominal:\n        Paracaval\n        Pelvic\n        Subdiaphragmatic",
-  "footnotes" : "*NX is not defined in AJCC 7th edition",
-  "last_modified" : "2015-10-09T17:30:13.678Z",
+  "last_modified" : "2015-10-27T22:53:34.752Z",
   "definition" : [ {
-    "key" : "clin_n",
-    "name" : "Clinical N",
+    "key" : "path_n",
+    "name" : "Pathologic N",
     "type" : "INPUT"
   }, {
-    "key" : "clin_n_display",
-    "name" : "Clinical N Display",
+    "key" : "path_n_display",
+    "name" : "Pathologic N Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",
@@ -24,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "NX", "Regional lymph nodes cannot be assessed*", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node involvement", "" ], [ "1", "N1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ] ]
+  "rows" : [ [ "X", "NX", "Regional lymph nodes cannot be assessed", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ] ]
 }

@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 10",
   "subtitle" : "Sicca Syndrome",
   "notes" : "**Note:**   Code any history of Sicca syndrome as documented by the physician or coded in the medical record. Sicca syndrome is an eye condition in which there is decreased tear production and inflammation of the cornea and conjunctiva that may be associated with connective tissue diseases.",
-  "last_modified" : "2015-08-13T13:24:35.610Z",
+  "last_modified" : "2015-10-30T18:48:32.666Z",
   "definition" : [ {
     "key" : "ssf10",
     "name" : "Code",
@@ -16,5 +16,5 @@
     "name" : "Description",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "000", "No history of Sicca syndrome" ], [ "010", "History of Sicca syndrome" ], [ "988", "Not applicable: Information not collected for this case. " ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+  "rows" : [ [ "000", "No history of Sicca syndrome" ], [ "010", "History of Sicca syndrome" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
 }

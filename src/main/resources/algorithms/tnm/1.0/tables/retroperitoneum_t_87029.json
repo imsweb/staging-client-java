@@ -2,17 +2,17 @@
   "id" : "retroperitoneum_t_87029",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Retroperitoneum T",
-  "title" : "Clinical and Pathologic T",
+  "name" : "Path T Retroperitoneum",
+  "title" : "Pathologic T",
   "notes" : "**Note 1:**  For TNM staging, retroperitoneal sarcomas are classified as deep tumors.\n\n**Note 2:** Tumor size must be known to assign a value of T1 or T2. You may use a physicianâs statement of the T category if this is the only information in the medical record. If the tumor appears to be in the T1 or T2 categories, but no size or category is specified, assign TX.\n\n**Note 3:** For the following descriptions, assign the appropriate T category based on the tumor size.\n\n    Tumor confined to site of origin\n\n    Adjacent connective tissue \n    Adjacent organs/structures: \n        Adrenal(s) (suprarenal gland(s))\n        Aorta\n        Ascending colon\n        Bone/cartilage\n        Descending colon\n        Kidney(s)\n        Pancreas\n        Vena cava\n        Vertebra\n    Further contiguous extension, including:\n        Extension to colon other than ascending or descending\n\n    Localized, NOS",
-  "last_modified" : "2015-10-10T21:05:02.577Z",
+  "last_modified" : "2015-10-26T18:17:36.404Z",
   "definition" : [ {
-    "key" : "clin_t",
-    "name" : "Clinical T",
+    "key" : "path_t",
+    "name" : "Pathologic T",
     "type" : "INPUT"
   }, {
-    "key" : "clin_t_display",
-    "name" : "Clinical T Display",
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Mitotic Rate Calculation",
   "title" : "Mitotic Rate Calculation Table",
-  "notes" : "**Note:**  The mitotic count recorded in CS Site-Specific Factor 11 is used to determine the mitotic rate as shown in this table.  The mitotic rate from the Mitotic Rate Calculation Table, \"low\" or \"high\", is used in the calculation of the AJCC TNM 7 stage group as shown in the AJCC TNM 7 Stage tables.",
-  "last_modified" : "2015-09-08T22:11:34.267Z",
+  "notes" : "**Note:**  The mitotic count recorded in Site-Specific Factor 11 is used to determine the mitotic rate as shown in this table.  The mitotic rate from the Mitotic Rate Calculation Table, \"low\" or \"high\", is used in the calculation of the TNM 7 stage group as shown in the TNM 7 Stage tables.",
+  "last_modified" : "2015-10-26T03:43:54.097Z",
   "definition" : [ {
     "key" : "ssf11",
     "name" : "SSF11",

@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 17",
   "subtitle" : "Extracapsular Extension of Regional Lymph Nodes",
   "notes" : "**Note 1:**  Code the status of extracapsular extension clinically and pathologically of any involved regional lymph node(s).  Do not code extracapsular extension for any distant lymph node(s).\n\n\n**Note 2:**  Clinical extracapsular extension is coded when involved regional lymph node(s) are described as \"fixed\" or \"matted\".",
-  "last_modified" : "2015-08-13T13:24:39.930Z",
+  "last_modified" : "2015-10-30T18:48:31.868Z",
   "definition" : [ {
     "key" : "ssf17",
     "name" : "Code",
@@ -16,5 +16,5 @@
     "name" : "Description",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "000", "No lymph nodes involved" ], [ "010", "No extracapsular extension clinically AND extracapsular extension present on pathology" ], [ "020", "No extracapsular extension clinically AND extracapsular extension not present or not stated on pathology" ], [ "030", "No extracapsular extension clinically AND nodes not assessed pathologically" ], [ "040", "Extracapsular extension clinically  AND extracapsular extension present on pathology" ], [ "050", "Extracapsular extension clinically AND extracapsular extension not present or not stated on pathology" ], [ "060", "Extracapsular extension clinically AND nodes not assessed pathologically" ], [ "070", "Extracapsular extension clinically unknown AND extracapsular extension present on pathology" ], [ "080", "Extracapsular extension clinically unknown AND extracapsular extension not present or not stated on pathology" ], [ "090", "Extracapsular extension clinically unknown AND nodes not assessed pathologically" ], [ "988", "Not applicable: Information not collected for this case. " ], [ "999", "Unknown if regional lymph node(s) involved, not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record" ] ]
+  "rows" : [ [ "000", "No lymph nodes involved" ], [ "010", "No extracapsular extension clinically AND extracapsular extension present on pathology" ], [ "020", "No extracapsular extension clinically AND extracapsular extension not present or not stated on pathology" ], [ "030", "No extracapsular extension clinically AND nodes not assessed pathologically" ], [ "040", "Extracapsular extension clinically  AND extracapsular extension present on pathology" ], [ "050", "Extracapsular extension clinically AND extracapsular extension not present or not stated on pathology" ], [ "060", "Extracapsular extension clinically AND nodes not assessed pathologically" ], [ "070", "Extracapsular extension clinically unknown AND extracapsular extension present on pathology" ], [ "080", "Extracapsular extension clinically unknown AND extracapsular extension not present or not stated on pathology" ], [ "090", "Extracapsular extension clinically unknown AND nodes not assessed pathologically" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown if regional lymph node(s) involved, not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record" ] ]
 }

@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 4",
   "subtitle" : "Para-Aortic Nodal Status",
   "notes" : "**Note:**  The para-aortic nodal status corresponds to the assessment method recorded in Site-Specific Factor 5.",
-  "last_modified" : "2015-08-13T13:24:29.672Z",
+  "last_modified" : "2015-10-30T18:48:29.065Z",
   "definition" : [ {
     "key" : "ssf4",
     "name" : "Code",
@@ -16,5 +16,5 @@
     "name" : "Description",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "000", "Negative para-aortic lymph nodes" ], [ "010", "Positive para-aortic lymph nodes" ], [ "988", "Not applicable: Information not collected for this case. " ], [ "998", "Para-aortic lymph nodes not assessed" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+  "rows" : [ [ "000", "Negative para-aortic lymph nodes" ], [ "010", "Positive para-aortic lymph nodes" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "Para-aortic lymph nodes not assessed" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
 }

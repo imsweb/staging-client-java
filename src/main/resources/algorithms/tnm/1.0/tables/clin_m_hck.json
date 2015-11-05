@@ -2,9 +2,9 @@
   "id" : "clin_m_hck",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Clin M",
+  "name" : "Clin M NET Stomach",
   "title" : "Clinical M",
-  "last_modified" : "2015-08-13T13:25:36.853Z",
+  "last_modified" : "2015-10-19T15:11:45.580Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",
@@ -22,5 +22,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "0", "M0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "1", "M1", "Distant metastasis", "Distant lymph node(s):\n    For all subsites:\n        Mesenteric, NOS:\n            Inferior mesenteric\n            Superior mesenteric\n        Para-aortic\n        Porta hepatis (portal) (hilar) (in hilus of liver)\n        Retropancreatic\n        Retroperitoneal\n    For all subsites EXCEPT lesser curvature:\n        Hepatoduodenal\n    \nDistant lymph nodes, NOS\n\nCarcinomatosis\nMalignant peritoneal cytology\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis, NOS \n\nStated as M1" ] ]
+  "rows" : [ [ "0", "M0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "1", "M1", "Distant metastasis", "Distant lymph node(s):\n    For all subsites:\n        Mesenteric, NOS:\n            Inferior mesenteric\n            Superior mesenteric\n        Para-aortic\n        Porta hepatis (portal) (hilar) (in hilus of liver)\n        Retropancreatic\n        Retroperitoneal\n    For all subsites EXCEPT lesser curvature:\n        Hepatoduodenal\n    \nDistant lymph nodes, NOS\n\nCarcinomatosis\nMalignant peritoneal cytology\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis, NOS \n\nStated as M1" ], [ "", "BLANK", "", "Pathologic M1 (sub) category or higher" ] ]
 }

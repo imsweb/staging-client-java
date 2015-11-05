@@ -5,15 +5,15 @@
   "name" : "Path T",
   "title" : "LymphomaOcularAdnexa Path T (no UICC definition)",
   "notes" : "**Note 1:**  Ocular adnexal lymphomas (OAL) originate in conjunctiva, eyelids, lacrimal gland, lacrimal drainage apparatus, and other orbital tissues surrounding the eye.  This schema should not be used for secondary lymphomatous involvement of ocular adnexa or for intraocular lymphomas.\n\n**Note 2:**  Preseptal eyelid involvement includes infiltration of the outer three layers of the eyelid:skin, subcutaneous connective tissue, and orbicularis oculi muscle.\n\n**Note 3:**  The orbit is the bony cavity containing the eye, lacrimal gland, lacrimal sac, nasolacrimal duct, extraocular muscles, fat. arteries, veins, and nerves, but no lymphatics.\n\n**Note 4:** UICC does not define Lymphoma Ocular Adnexa.  A list of all possible Pathologic T values is provided.",
-  "last_modified" : "2015-10-02T16:53:55.706Z",
+  "last_modified" : "2015-10-15T18:46:57.560Z",
   "definition" : [ {
     "key" : "path_t",
-    "name" : "Pathological T",
+    "name" : "Pathologic T",
     "type" : "INPUT"
   }, {
     "key" : "path_t_display",
-    "name" : "Pathological T Display",
+    "name" : "Pathologic T Display",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "TX" ], [ "0", "T0" ], [ "A", "Ta" ], [ "IS", "Tis" ], [ "ISPU", "Tispu" ], [ "ISPD", "Tispd" ], [ "1MI", "T1mi" ], [ "1", "T1" ], [ "1A", "T1a" ], [ "1A1", "T1a1" ], [ "1A2", "T1a2" ], [ "1B", "T1b" ], [ "1B1", "T1b1" ], [ "1B2", "T1b2" ], [ "1C", "T1c" ], [ "1D", "T1d" ], [ "2", "T2" ], [ "2A", "T2a" ], [ "2A1", "T2a1" ], [ "2A2", "T2a2" ], [ "2B", "T2b" ], [ "2C", "T2c" ], [ "2D", "T2d" ], [ "3", "T3" ], [ "3A", "T3a" ], [ "3B", "T3b" ], [ "3C", "T3c" ], [ "3D", "T3d" ], [ "4", "T4" ], [ "4A", "T4a" ], [ "4B", "T4b" ], [ "4C", "T4c" ], [ "4D", "T4d" ], [ "4E", "T4e" ] ]
+  "rows" : [ [ "X", "TX" ], [ "0", "T0" ], [ "A", "Ta" ], [ "IS", "Tis" ], [ "ISPU", "Tispu" ], [ "ISPD", "Tispd" ], [ "1MI", "T1mi" ], [ "1", "T1" ], [ "1A", "T1a" ], [ "1A1", "T1a1" ], [ "1A2", "T1a2" ], [ "1B", "T1b" ], [ "1B1", "T1b1" ], [ "1B2", "T1b2" ], [ "1C", "T1c" ], [ "1D", "T1d" ], [ "2", "T2" ], [ "2A", "T2a" ], [ "2A1", "T2a1" ], [ "2A2", "T2a2" ], [ "2B", "T2b" ], [ "2C", "T2c" ], [ "2D", "T2d" ], [ "3", "T3" ], [ "3A", "T3a" ], [ "3B", "T3b" ], [ "3C", "T3c" ], [ "3D", "T3d" ], [ "4", "T4" ], [ "4A", "T4a" ], [ "4B", "T4b" ], [ "4C", "T4c" ], [ "4D", "T4d" ], [ "4E", "T4e" ], [ "88", "Not Applicable" ] ]
 }

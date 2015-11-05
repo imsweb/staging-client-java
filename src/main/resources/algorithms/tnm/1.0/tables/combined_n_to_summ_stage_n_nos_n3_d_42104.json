@@ -4,15 +4,15 @@
   "version" : "1.0",
   "name" : "Combined N to Summ Stage N (NOS, N3-D)",
   "title" : "Combined N to Summary Stage N",
-  "last_modified" : "2015-10-12T15:18:22.640Z",
+  "last_modified" : "2015-10-31T15:01:36.455Z",
   "definition" : [ {
-    "key" : "combined_n",
+    "key" : "combined_n_in",
     "name" : "Combined N",
     "type" : "INPUT"
   }, {
-    "key" : "ss2017_n",
+    "key" : "ss2017_n_out",
     "name" : "SS2017 N",
     "type" : "ENDPOINT"
   } ],
-  "rows" : [ [ "X", "VALUE:U" ], [ "0", "VALUE:NONE" ], [ "1", "VALUE:RNOS" ], [ "2", "VALUE:RNOS" ], [ "3", "VALUE:D" ], [ "4", "VALUE:D" ] ]
+  "rows" : [ [ "X", "VALUE:U" ], [ "0", "VALUE:NONE" ], [ "1", "VALUE:RNOS" ], [ "2", "VALUE:RNOS" ], [ "3", "VALUE:D" ], [ "4", "VALUE:D" ], [ "88", "VALUE:NA" ] ]
 }

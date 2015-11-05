@@ -4,19 +4,13 @@
   "version" : "1.0",
   "name" : "Middle Ear",
   "title" : "Middle Ear",
-  "notes" : "C30.1  Middle ear\n\n**Note 1:**  Laterality must be coded for this site.\n\n**Note 2:** TNM is not defined for this site.",
+  "notes" : "C301  Middle ear\n\n**Note 1:**  Laterality must be coded for this site.\n\n**Note 2:** TNM is not defined for this site.",
   "schema_selection_table" : "schema_selection_middle_ear",
   "inputs" : [ {
     "key" : "year_dx",
     "name" : "Year of Diagnosis",
     "naaccr_item" : 390,
     "table" : "year_dx_validation",
-    "used_for_staging" : false
-  }, {
-    "key" : "input_version",
-    "name" : "Input Version",
-    "naaccr_item" : 2937,
-    "table" : "input_version_validation",
     "used_for_staging" : false
   }, {
     "key" : "site",
@@ -185,7 +179,7 @@
       "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
-      "id" : "seer_mets_middle_ear_nasal_cavity_19085",
+      "id" : "seer_mets_middle_ear_9431",
       "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
@@ -194,7 +188,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "ssf7_spa", "extension_bcr", "ssf10_spd", "input_version_validation", "ssf4_mpa", "ssf9_spc", "nodes_dcf", "schema_selection_middle_ear", "primary_site", "histology", "ssf6_opa", "ssf5_npa", "ssf3_lpa", "year_dx_validation", "seer_mets_middle_ear_nasal_cavity_19085", "summary_stage_rpa", "ssf1_jpu", "seer_mets_middle_ear_9431", "ssf8_spb" ],
+  "involved_tables" : [ "ssf7_spa", "extension_bcr", "ssf10_spd", "ssf4_mpa", "ssf9_spc", "nodes_dcf", "schema_selection_middle_ear", "primary_site", "histology", "ssf6_opa", "ssf5_npa", "ssf3_lpa", "year_dx_validation", "summary_stage_rpa", "ssf1_jpu", "seer_mets_middle_ear_9431", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-08T17:08:16.062Z"
+  "last_modified" : "2015-10-30T17:50:23.602Z"
 }

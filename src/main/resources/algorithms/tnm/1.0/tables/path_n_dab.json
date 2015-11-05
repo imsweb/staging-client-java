@@ -2,17 +2,17 @@
   "id" : "path_n_dab",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path N",
+  "name" : "Path N Anus",
   "title" : "Pathologic N",
   "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 12 or more lymph nodes; histological examination of an inguinal lymphadenectomy specimen will ordinarily include 6 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0.\n\n**Note 2:**  Code only regional nodes, and nodes, NOS, in this field.  Distant nodes are coded in distant metastasis .",
-  "last_modified" : "2015-10-10T19:39:24.664Z",
+  "last_modified" : "2015-10-15T18:47:20.271Z",
   "definition" : [ {
     "key" : "path_n",
-    "name" : "Pathological N",
+    "name" : "Pathologic N",
     "type" : "INPUT"
   }, {
     "key" : "path_n_display",
-    "name" : "Pathological N Display",
+    "name" : "Pathologic N Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

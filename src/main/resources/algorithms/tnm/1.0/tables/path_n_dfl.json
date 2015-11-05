@@ -2,17 +2,17 @@
   "id" : "path_n_dfl",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path N",
+  "name" : "Path N NET Small Intestine",
   "title" : "Pathologic N",
-  "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 6 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily is not met, classify as pN0.\n\n**Note 2:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in distant metastasis.\n\n**Regional lymph nodes for small intestine**\n\n**Duodenum primaries only (C17.0):**\n\n    Duodenal\n    Gastroduodenal\n    Hepatic\n    Pancreaticoduodenal\n    Pericholodochal (common bile duct)\n    Pyloric: infrapyloric, subpyloric\n    Superior mesenteric\n       \n**Jejunum primaries only (C17.1):**\n\n     Mesenteric, NOS:\n     Superior mesenteric\n\n**Ileum primaries only (C17.2):**\n\n     Cecal (anterior, posterior, retrocecal) \n     Ileocecal       \n     Mesenteric, NOS\n     Superior mesenteric",
-  "last_modified" : "2015-10-10T20:48:43.478Z",
+  "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 6 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily is not met, classify as pN0.\n\n**Note 2:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in distant metastasis.\n\n**Regional lymph nodes for small intestine**\n\n**Duodenum primaries only (C170):**\n\n    Duodenal\n    Gastroduodenal\n    Hepatic\n    Pancreaticoduodenal\n    Pericholodochal (common bile duct)\n    Pyloric: infrapyloric, subpyloric\n    Superior mesenteric\n       \n**Jejunum primaries only (C171):**\n\n     Mesenteric, NOS:\n     Superior mesenteric\n\n**Ileum primaries only (C172):**\n\n     Cecal (anterior, posterior, retrocecal) \n     Ileocecal       \n     Mesenteric, NOS\n     Superior mesenteric",
+  "last_modified" : "2015-10-19T15:11:04.096Z",
   "definition" : [ {
     "key" : "path_n",
-    "name" : "Pathological N",
+    "name" : "Pathologic N",
     "type" : "INPUT"
   }, {
     "key" : "path_n_display",
-    "name" : "Pathological N Display",
+    "name" : "Pathologic N Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "NX", "Regional lymph nodes cannot be assessed", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "No regional lymph node involvement" ], [ "1", "N1", "Regional lymph node metastasis", "Regional lymph node(s), NOS\nLymph nodes, NOS\n\nStated as N1" ] ]
+  "rows" : [ [ "X", "NX", "Regional lymph nodes cannot be assessed", "Surgical resection of primary and pathologic assessment of regional nodes is done but involvement of regional nodes not stated\nSurgical resection of primary and pathologic assessment of regional nodes is done but involvement of regional nodes not documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "No regional lymph node involvement" ], [ "1", "N1", "Regional lymph node metastasis", "Regional lymph node(s), NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "88", "88", "Not applicable", "Pathologic N is not defined for this site/histology\nIn situ (no Tis defined)" ], [ "", "BLANK", "", "No pathologic evaluation of regional lymph nodes\nRegional lymph node(s) cannot be assessed pathologically\nNo resection of the primary\nUnknown if any pathologic assessment performed" ] ]
 }

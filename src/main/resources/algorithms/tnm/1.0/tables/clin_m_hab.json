@@ -2,10 +2,10 @@
   "id" : "clin_m_hab",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Clin M",
+  "name" : "Clin M Lung",
   "title" : "Clinical M",
   "notes" : "**Note:**  Most pleural and pericardial effusions with lung cancer are due to tumor. In a few patients, however, multiple cytopathologic examinations of pleural and/or pericardial fluid are negative for tumor, and the fluid is nonbloody and is not an exudate. Where these elements and clinical judgment dictate that the effusion is not related to the tumor, the effusion should be excluded as a staging element and the tumor should be classified as M0.",
-  "last_modified" : "2015-08-13T13:23:43.684Z",
+  "last_modified" : "2015-10-14T20:34:33.589Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",

@@ -2,17 +2,17 @@
   "id" : "path_m_hbb",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path M",
+  "name" : "Path M Testis",
   "title" : "Pathologic M",
   "notes" : "**Note:** Involvement of inguinal, pelvic, or external iliac lymph nodes with previous scrotal or inguinal surgery prior to presentation of the testis tumor is coded in regional lymph nodes and not in distant metastasis.",
-  "last_modified" : "2015-10-09T17:38:52.768Z",
+  "last_modified" : "2015-10-15T18:47:11.146Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

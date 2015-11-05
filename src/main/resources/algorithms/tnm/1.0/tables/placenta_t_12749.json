@@ -2,17 +2,17 @@
   "id" : "placenta_t_12749",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Placenta T",
-  "title" : "Clinical and Pathologic T",
+  "name" : "Path T Placenta",
+  "title" : "Pathologic T",
   "notes" : "**Note 1:**  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage.\n\n**Note 2:** Genital metastasis (vagina, ovary, broad ligament, fallopian tube) is classified T2. Any involvement of non-genital structures, whether by direct invasion or metastasis is described using the M classification.\n\n**Note 3:** For T, substaging is determined by the values in Site-Specific Factor 1,  Prognostic Scoring Index.",
-  "last_modified" : "2015-10-10T21:00:09.156Z",
+  "last_modified" : "2015-10-29T18:26:13.368Z",
   "definition" : [ {
-    "key" : "clin_t",
-    "name" : "Clinical T",
+    "key" : "path_t",
+    "name" : "Pathologic T",
     "type" : "INPUT"
   }, {
-    "key" : "clin_t_display",
-    "name" : "Clinical T Display",
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "1", "T1", "Tumor confined to uterus", "Confined to:\n    Cervix\n    Corpus\n    Placenta\n\nLocalized, NOS\n\nFIGO Stage I (IA, IB, I [NOS])\n\nStated as T1" ], [ "2", "T2", "Tumor extends to other genital structures: vagina, \novary, broad ligament, fallopian tube by metastasis\nor direction extension", "Adjacent connective tissue, NOS\n\nGenital structures, NOS by direct extension or \nmetastasis\n   \nFurther contiguous extension\n\nFIGO Stage II (IIA, IIB, II [NOS])\n\nStated as T2" ] ]
+  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "1", "T1", "Tumor confined to uterus", "Confined to:\n    Cervix\n    Corpus\n    Placenta\n\nLocalized, NOS\n\nFIGO Stage I (IA, IB, I [NOS])\n\nStated as T1" ], [ "2", "T2", "Tumor extends to other genital structures: \n    Vagina\n    Ovary\n    Broad ligament \n    Fallopian tube \nby metastasis or direct extension", "Adjacent connective tissue, NOS\n\nGenital structures, NOS by direct extension or \nmetastasis\n   \nFurther contiguous extension\n\nFIGO Stage II (IIA, IIB, II [NOS])\n\nStated as T2" ] ]
 }

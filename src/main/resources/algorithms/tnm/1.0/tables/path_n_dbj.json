@@ -2,17 +2,17 @@
   "id" : "path_n_dbj",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path N",
+  "name" : "Path N Penis",
   "title" : "Pathologic N",
   "notes" : "**Note:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in the field distant metastasis.\n\n**Regional lymph nodes:**\n\n    Inguignal\n        Deep inguinal, NOS\n           Node of Cloquet or Rosenmuller (highest deep inguinal)\n        Superficial inguinal (femoral) regional lymph node\n        Inguinal node, NOS (unknown if superficial or deep)\n\n    Pelvic lymph  nodes, NOS:\n        External iliac\n        Internal iliac (hypogastric)\n            Obturator",
-  "last_modified" : "2015-10-10T20:58:25.958Z",
+  "last_modified" : "2015-10-23T13:34:02.078Z",
   "definition" : [ {
     "key" : "path_n",
-    "name" : "Pathological N",
+    "name" : "Pathologic N",
     "type" : "INPUT"
   }, {
     "key" : "path_n_display",
-    "name" : "Pathological N Display",
+    "name" : "Pathologic N Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "NX", "Regional lymph node(s) cannot be assessed", "Unknown; not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "No regional lymph node involvement" ], [ "1", "N1", "Metastasis in a single inguinal lymph node", "SINGLE regional lymph nodes, NOS\n\nNot stated if single or multiple AND not stated if inguinal or pelvic\n\nRegional lymph node(s), NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "2", "N2", "Metastasis in multiple or bilateral inguinal lymph nodes", "Inguinal lymph nodes, NOS\n\nStated as N2" ], [ "3", "N3", "Metastasis in pelvic lymph node(s), unilateral or bilateral\nor extranodal extension of regional lymph node metastasis", "Pelvic lymph node(s), NOS\n\nStated as N3" ] ]
+  "rows" : [ [ "X", "NX", "Regional lymph node(s) cannot be assessed", "Unknown; not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "No regional lymph node involvement" ], [ "1", "N1", "Metastasis in a single inguinal lymph node", "SINGLE regional lymph nodes, NOS\n\nNot stated if single or multiple AND not stated if inguinal or pelvic\n\nRegional lymph node(s), NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "2", "N2", "Metastasis in multiple OR \n\nBilateral inguinal lymph nodes", "Inguinal lymph nodes, NOS\n\nStated as N2" ], [ "3", "N3", "Metastasis in pelvic lymph node(s), unilateral or bilateral\nOR \n\nExtranodal extension of regional lymph node metastasis", "Pelvic lymph node(s), NOS\n\nStated as N3" ] ]
 }

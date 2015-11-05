@@ -4,19 +4,13 @@
   "version" : "1.0",
   "name" : "Kaposi Sarcoma",
   "title" : "Kaposi Sarcoma of All Sites",
-  "notes" : "M-9140\n\n**Note 1:** TNM is not defined for this histology. (added)\n\n**Note 2:**  This scheme cannot be compared to either the Historic Stage or the 1977 Summary Stage schemes.",
+  "notes" : "M-9140\n\n**Note 1:** TNM is not defined for this histology. \n\n**Note 2:**  This scheme cannot be compared to either the Historic Stage or the 1977 Summary Stage schemes.",
   "schema_selection_table" : "schema_selection_kaposi_sarcoma",
   "inputs" : [ {
     "key" : "year_dx",
     "name" : "Year of Diagnosis",
     "naaccr_item" : 390,
     "table" : "year_dx_validation",
-    "used_for_staging" : false
-  }, {
-    "key" : "input_version",
-    "name" : "Input Version",
-    "naaccr_item" : 2937,
-    "table" : "input_version_validation",
     "used_for_staging" : false
   }, {
     "key" : "site",
@@ -159,7 +153,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "input_version_validation", "seer_mets_kaposisarcoma_74567", "ssf2_kbv", "ssf4_mbh", "ssf3_laz", "primary_site", "ssf1_jpj", "histology", "year_dx_validation", "nodes_dby", "summary_stage_rpa", "schema_selection_kaposi_sarcoma", "extension_bcj" ],
+  "involved_tables" : [ "primary_site", "ssf1_jpj", "seer_mets_kaposisarcoma_74567", "ssf2_kbv", "histology", "year_dx_validation", "nodes_dby", "ssf4_mbh", "summary_stage_rpa", "schema_selection_kaposi_sarcoma", "extension_bcj", "ssf3_laz" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-08T17:08:16.931Z"
+  "last_modified" : "2015-10-19T12:29:26.045Z"
 }

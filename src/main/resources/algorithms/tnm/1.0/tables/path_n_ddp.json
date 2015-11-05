@@ -2,17 +2,17 @@
   "id" : "path_n_ddp",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path N",
+  "name" : "Path N Carinoid Appendix",
   "title" : "Pathologic N",
   "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 12 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0.\n\n**Note 2:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in metastasis.\n\n**Note 3:**  Superior and inferior mesenteric nodes are coded in distant metastasis.  Mesenteric nodes, NOS are coded in regional lymph nodes.\n\n**Note 4:**  Assign N1 if regional lymph nodes are involved but there is no indication of the number of nodes involved.\n\n**Regional lymph nodes for appendix:**\n\n    Celiac\n        Anterior (prececal)\n        Ileocolic\n        Posterior (retrocecal)\n        Right colic\n    Colic, NOS\n    Epicolic (adjacent to bowel wall)\n    Mesenteric, NOS\n    Mesocolic, NOS\n    Paracolic/pericolic\n\n    Regional lymph nodes, NOS\n    Lymph nodes, NOS",
-  "last_modified" : "2015-10-10T19:51:20.943Z",
+  "last_modified" : "2015-10-23T10:28:48.682Z",
   "definition" : [ {
     "key" : "path_n",
-    "name" : "Pathological N",
+    "name" : "Pathologic N",
     "type" : "INPUT"
   }, {
     "key" : "path_n_display",
-    "name" : "Pathological N Display",
+    "name" : "Pathologic N Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "NX", "Regional lymph nodes cannot be assessed", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Regional lymph node metastasis", "Stated as N1" ] ]
+  "rows" : [ [ "X", "NX", "Regional lymph nodes cannot be assessed", "Surgical resection of primary and pathologic assessment of regional nodes is done but involvement of regional nodes not stated\nSurgical resection of primary and pathologic assessment of regional nodes is done but involvement of regional nodes not documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Regional lymph node metastasis", "Stated as N1" ], [ "88", "88", "Not applicable", "Pathologic N is not defined for this site/histology\nIn situ (no Tis defined)" ], [ "", "", "", "No pathologic evaluation of regional lymph nodes\nRegional lymph node(s) cannot be assessed pathologically\nNo resection of the primary\nUnknown if any pathologic assessment performed" ] ]
 }

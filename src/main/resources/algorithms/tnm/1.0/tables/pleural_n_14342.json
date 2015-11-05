@@ -2,17 +2,17 @@
   "id" : "pleural_n_14342",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Pleural N",
-  "title" : "Clinical and Pathologic N",
+  "name" : "Path N Pleura",
+  "title" : "Pathologic N",
   "notes" : "**Note 1:** Regional nodes are the intrathoracic, internal mammary, peridiaphragmatic, scalene, and supraclavicular nodes. \n\n**Note 2:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in distant metastasis.",
-  "last_modified" : "2015-10-10T21:01:29.815Z",
+  "last_modified" : "2015-10-26T18:17:41.634Z",
   "definition" : [ {
-    "key" : "clin_n",
-    "name" : "Clinical N",
+    "key" : "path_n",
+    "name" : "Pathologic N",
     "type" : "INPUT"
   }, {
-    "key" : "clin_n_display",
-    "name" : "Clinical N Display",
+    "key" : "path_n_display",
+    "name" : "Pathologic N Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

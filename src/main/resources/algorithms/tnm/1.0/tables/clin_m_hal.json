@@ -2,9 +2,9 @@
   "id" : "clin_m_hal",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Clin M",
+  "name" : "Clin M Prostate",
   "title" : "Clinical M",
-  "last_modified" : "2015-08-30T13:56:51.337Z",
+  "last_modified" : "2015-10-23T10:42:04.486Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",
@@ -22,5 +22,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "0", "M0", "No distant metastasis", "Unknown; distant metastasis not stated \nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "1", "M1", "Distant metastasis", "Note: M1 has subcategories of M1a, M1b and M1c. Assign M1 only when there is no information available to assign one of the subcategories.\n\nDistant metastasis, NOS \n\nStated as M1 [NOS]" ], [ "1A", "M1a", "Non-regional lymph node(s)", "Distant lymph node(s):\n    Aortic, NOS:\n        Lateral (lumbar)\n        Para-aortic\n        Periaortic\n    Cervical\n    Common iliac\n    Inguinal, NOS:\n        Deep, NOS:\n            Node of Cloquet or Rosenmuller  (highest deep inguinal)\n        Superficial (femoral)\n    Retroperitoneal, NOS\n    Scalene (inferior deep cervical)\n    Supraclavicular (transverse cervical)\n\nDistant lymph node(s), NOS\n\nStated as M1a" ], [ "1B", "M1b", "Bone(s)", "Metastasis in bone(s) WITH or WITHOUT distant lymph node(s)\n\nStated as M1b" ], [ "1C", "M1c", "Other site(s)", "Distant metastasis, other than distant lymph nodes or bone(s)\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph nodes and/or bone(s)\n\nStated as M1c" ] ]
+  "rows" : [ [ "0", "M0", "No distant metastasis", "Unknown; distant metastasis not stated \nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "1", "M1", "Distant metastasis", "Note: M1 has subcategories of M1a, M1b and M1c. Assign M1 only when there is no information available to assign one of the subcategories\n\nDistant metastasis, NOS \n\nStated as M1 [NOS]" ], [ "1A", "M1a", "Non-regional lymph node(s)", "Distant lymph node(s):\n    Aortic, NOS:\n        Lateral (lumbar)\n        Para-aortic\n        Periaortic\n    Cervical\n    Common iliac\n    Inguinal, NOS:\n        Deep, NOS:\n            Node of Cloquet or Rosenmuller  (highest deep inguinal)\n        Superficial (femoral)\n    Retroperitoneal, NOS\n    Scalene (inferior deep cervical)\n    Supraclavicular (transverse cervical)\n\nDistant lymph node(s), NOS\n\nStated as M1a" ], [ "1B", "M1b", "Bone(s)", "Metastasis in bone(s) WITH or WITHOUT distant lymph node(s)\n\nStated as M1b" ], [ "1C", "M1c", "Other site(s)", "Distant metastasis, other than distant lymph nodes or bone(s)\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph nodes and/or bone(s)\n\nStated as M1c" ], [ "88", "88", "Not applicable", "Clinical M is not defined for this site/histology\nIn situ (no Tis defined)" ], [ "", "BLANK", "", "Pathologic M1 (sub) category or higher" ] ]
 }

@@ -2,17 +2,17 @@
   "id" : "path_n_dfv",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path N",
+  "name" : "Path N Merkel Cell Penis",
   "title" : "Pathologic N",
   "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 6 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0.\n\n**Note 2:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in distant metastasis.\n\n**Note 3:**  Bilateral nodes are considered regional nodes for tumors with bidirectional drainage to primary nodal basins, as shown on lymphoscintigraphy.  Clinical assessment of bilateral regional nodal involvement is required for tumors where lymphoscintigraphy is not performed.\n\n**Note 4:**  Contiguous or secondary nodal basins are the next nodal drainage basins beyond the primary nodal basins.  Secondary basins are considered regional for TNM staging. \n\n**Note 5:**  In transit metastasis is defined as a tumor distinct from the primary lesion and located either between the primary lesion and the draining regional lymph nodes or distal to the primary lesion. In transit metastasis is coded in regional lymph nodes.\n\n**Note 6:**  Isolated tumor cells (ITCs) should be considered positive nodes.  If only ITCs are present, defined as any tumor deposits in lymph nodes less than or equal to 0.2 mm, use code 010.\n\n**Regional lymph nodes:**\n\n    Isolated tumor cells (ITCs) only\n    SINGLE superficial inguinal (femoral) regional lymph node\n    SINGLE inguinal node, NOS (unknown if superficial or deep)\n    MULTIPLE or BILATERAL superficial inguinal (femoral) regional lymph nodes\n    MULTIPLE or BILATERAL inguinal nodes, NOS (unknown if superficial or deep)\n\n    Deep inguinal, NOS:\n        Node of Cloquet or Rosenmuller (highest deep inguinal)\n    Pelvic lymph nodes (unilateral or bilateral):\n       External iliac\n       Internal iliac (hypogastric):\n        Obturator\n    Pelvic nodes in contiguous or secondary nodal basin \n    Pelvic nodes, NOS",
-  "last_modified" : "2015-10-10T20:38:14.302Z",
+  "last_modified" : "2015-10-15T18:46:56.933Z",
   "definition" : [ {
     "key" : "path_n",
-    "name" : "Pathological N",
+    "name" : "Pathologic N",
     "type" : "INPUT"
   }, {
     "key" : "path_n_display",
-    "name" : "Pathological N Display",
+    "name" : "Pathologic N Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

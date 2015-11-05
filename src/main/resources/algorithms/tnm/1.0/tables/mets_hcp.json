@@ -5,7 +5,7 @@
   "name" : "SEER Mets",
   "title" : "SEER Mets",
   "footnotes" : "/## Considered regional in Historic Stage",
-  "last_modified" : "2015-09-04T20:52:00.323Z",
+  "last_modified" : "2015-10-16T15:47:28.336Z",
   "definition" : [ {
     "key" : "seer_mets",
     "name" : "Code",
@@ -23,5 +23,5 @@
     "name" : "Summary Stage 2017 M",
     "type" : "ENDPOINT"
   } ],
-  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/node(s) involved\n\n    Distant lymph node(s)\n\n    Jejunum (C17.1) and Ileum (C17.2):\n        Bladder##\n        Fallopian tube(s)##\n        Ovary(ies)##\n        Uterus##\n\n    Further contiguous extension\n\n    Metastasis", "Distant lymph node(s):  \n    Celiac lymph node(s)\n    Pericholedochal (jejunum [C17.1] and ileum [C17.2] primaries only)\n    \nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS \n\nStated as M1", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/node(s) involved\n\n    Distant lymph node(s)\n\n    Jejunum (C171) and Ileum (C172):\n        Bladder##\n        Fallopian tube(s)##\n        Ovary(ies)##\n        Uterus##\n\n    Further contiguous extension\n\n    Metastasis", "Distant lymph node(s):  \n    Celiac lymph node(s)\n    Pericholedochal (jejunum [C171] and ileum [C172] primaries only)\n    \nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS \n\nStated as M1", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
 }

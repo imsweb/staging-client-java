@@ -1,0 +1,27 @@
+{
+  "id" : "path_t_net_rectum_13791",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path T NET Rectum",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:** TNM does not include an in situ category for Neuroendocrine Tumors (NET) of the rectosigmoid/rectum. Assign 88 and behavior code /2 for in situ cases.\n\n**Note 2:**  For rectosigmoid, ignore intraluminal extension to adjacent segment(s) of colon and rectum; code depth of invasion or rectosigmoidal spread as indicated.\n\n**Note 3:** Tumor size must be known to assign a value of T1 (T1a or T1b) and T2. You may use a physicianâs statement of the T (sub)category if this is the only information in the medical record. If the tumor appears to be in the T1 or T2 categories, but no size or (sub)category is specified, assign TX.\n\n**Note 4:**  For the following descriptions, assign the appropriate T (sub)category (T1, T1a, T1b or T2) based on the tumor size.\n\n    Invasive tumor confined to mucosa, NOS (including intramucosal, NOS)\n    Invades lamina propria, including lamina propria in the stalk of a polyp\n    Confined to and not through the muscularis mucosae, including muscularis mucosae in the stalk of a polyp\n    Submucosa (superficial invasion), including submucosa in the stalk of a polyp\n    For rectum:\n        Intraluminal extension to rectosigmoid\n        Intraluminal extension to anal canal/anus\n\n    Confined to rectosigmoid junction, NOS\n    Confined to rectum, NOS\n    Localized, NOS \n\n**Note 5:**  Assign T4 for tumor with macroscopic adhesions to other organs or structures and for pathologically confirmed tumor in adhesions.  However, if no tumor is present in adhesions upon microscopic examination, use lower codes to describe the microscopically confirmed depth of tumor invasion for these cases.",
+  "last_modified" : "2015-10-26T18:17:48.489Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Surgical resection of primary tumor done and extension not stated or unknown\nSurgical resection of primary tumor done and extension not documented in patient record\nSurgical resection of primary tumor done, size is part of the T definition and the size is not available but information states that the tumor is confined to the primary" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "1", "T1", "Tumor invades lamina propria or submucosa and is no greater than 2 cm in size", "Note: T1 has subcategories of T1a and T1b. Assign T1 only when there is no information available to assign one of the subcategories\n\nStated as T1 [NOS]" ], [ "1A", "T1a", "Tumor less than 1 cm in size", "Stated as T1a" ], [ "1B", "T1b", "Tumor 1-2 cm in size", "Stated as T1b" ], [ "2", "T2", "Tumor invades muscularis propria OR \n\nIs greater than 2 cm in size", "Muscularis propria invaded\n\nStated as T2" ], [ "3", "T3", "Tumor invades subserosa, or non-peritonealized pericolic or perirectal tissues", "Extension through wall,â NOS\nInvasion through muscularis propria or muscularis,â NOS\nPerimuscular tissue invaded\nSubserosal tissue/(sub)serosal fat invaded\nTransmural,â NOS\n\nFor rectum (C209):\n    Tumor invading through muscularis propria with intraluminal extension to colon and/or anal canal/anus\n\nAdjacent (connective) tissue:\n    For all sites:\n        Perirectal fat\n    For rectosigmoid (C199):\n        Mesentery (including mesenteric fat,â mesocolon)\n        Pericolic fat\n    For rectum (C209):\n        Rectovaginal septum\n\nFat,â NOS\n\nStated as T3" ], [ "4", "T4", "Tumor perforates peritoneum OR \n\nInvades other organs", "Invasion of/through serosa (mesothelium) (visceral peritoneum)\n\nAdherent to other organs or structures, NOS\n\nFor both rectum and rectosigmoid sites:\n    Bladder\n    Cul de sac (rectouterine pouch)\n    Ovary(ies)\n    Pelvic wall/pelvic plexuses\n    Prostate\n    Skeletal muscle of pelvic floor\n    Uterus\n    Vagina\n\nFor rectosigmoid (C199):\n    Small intestine\n    Colon via serosa\n    Fallopian tube(s)\n    Ureter(s)\n\nFor rectum (C209):\n    Anal canal/anus extraluminally\n    Bone(s) of pelvis\n    Cervix\n    Ductus deferens\n    Perineum,â perianal skin\n    Rectovesical fascia for males only\n    Sacrum\n    Sacral plexus\n    Seminal vesicle(s)\n    Urethra\n\nFurther contiguous extension\n\nStated as T4" ], [ "88", "88", "Not applicable", "Pathologic T is not defined for this site/histology\nIn situ (no Tis not defined)" ], [ "", "BLANK", "", "No pathologic evaluation\nNo surgical resection of primary\nOnly positive biopsy of primary which is not the highest T\nUnknown if any pathologic assessment performed" ] ]
+}

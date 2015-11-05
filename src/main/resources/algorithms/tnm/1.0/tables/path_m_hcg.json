@@ -2,16 +2,16 @@
   "id" : "path_m_hcg",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path M",
+  "name" : "Path M Kidney Parenchyma",
   "title" : "Pathologic M",
-  "last_modified" : "2015-10-10T20:08:31.451Z",
+  "last_modified" : "2015-10-15T18:46:51.063Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

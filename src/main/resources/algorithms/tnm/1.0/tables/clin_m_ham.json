@@ -2,10 +2,10 @@
   "id" : "clin_m_ham",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Clin M",
+  "name" : "Clin M Corpus Carcinoma",
   "title" : "Clinical M",
   "notes" : "**Note 1:**  Metastasis to adnexa, parametria, pelvic serosa, or vagina is coded in primary tumor.\n\n**Note 2:**  When both Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and metastatic detail are available, record the code with metastatic detail in preference to a statement of FIGO stage.\n\n**Note 3:**  FIGO Stage IV, NOS is assigned based on tumor extension and/or metastasis.  Code distant metastasis based on a physician's statement of FIGO Stage IV, NOS only if it is known that the stage value is assigned because of metastasis.",
-  "last_modified" : "2015-08-13T13:24:18.667Z",
+  "last_modified" : "2015-10-14T13:35:23.912Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",

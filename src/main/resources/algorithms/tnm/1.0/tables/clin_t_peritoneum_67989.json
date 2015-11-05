@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_peritoneum_67989",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin T Peritoneum",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  For TNM staging, peritoneal sarcomas are classified as deep tumors.\n\n**Note 2:** For the following descriptions, assign the appropriate T category based on the tumor size.\n\n    Tumor confined to site of origin\n\n    Adjacent connective tissue \n    Adjacent organs/structures: \n        Bone/cartilage    \n        Colon (except ascending and descending colon)\n        Esophagus\n        Gallbladder\n        Liver\n        Small intestine\n        Spleen\n        Stomach\n\n    Further contiguous extension, including:   \n        Extension to ascending or descending colon\n\n    Localized, NOS",
+  "last_modified" : "2015-10-14T16:02:37.041Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "1", "T1", "Tumor 5 cm or less in greatest dimension", "Stated as T1 [NOS]" ], [ "1B", "T1b", "Deep tumor", "Stated as T1b" ], [ "2", "T2", "Tumor more than 5 cm in greatest dimension", "Stated as T2 [NOS]" ], [ "2B", "T2b", "Deep tumor", "Stated as T2b" ] ]
+}

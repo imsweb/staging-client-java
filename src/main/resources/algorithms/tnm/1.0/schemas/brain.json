@@ -4,19 +4,13 @@
   "version" : "1.0",
   "name" : "Brain",
   "title" : "Brain and Cerebral Meninges",
-  "notes" : "C70.0  Cerebral meninges\nC71.0  Cerebrum\nC71.1  Frontal lobe\nC71.2  Temporal lobe\nC71.3  Parietal lobe\nC71.4  Occipital lobe\nC71.5  Ventricle, NOS\nC71.6  Cerebellum, NOS\nC71.7  Brain stem\nC71.8  Overlapping lesion of brain\nC71.9  Brain, NOS\n\n**Note 1:** This schema is compatible with the 4th edition TNM scheme for brain, updated to include metastatic and site-specific information from the AJCC 7th edition. TNM opted not to recommend a TNM scheme in the 6th or 7th editions.\n\n**Note 2:**  TNM not defined for this schema.",
+  "notes" : "C700  Cerebral meninges\nC710  Cerebrum\nC711  Frontal lobe\nC712  Temporal lobe\nC713  Parietal lobe\nC714  Occipital lobe\nC715  Ventricle, NOS\nC716  Cerebellum, NOS\nC717  Brain stem\nC718  Overlapping lesion of brain\nC719  Brain, NOS\n\n**Note 1:** This schema is compatible with the 4th edition TNM scheme for brain, updated to include metastatic and site-specific information from the TNM 7th edition. TNM opted not to recommend a TNM scheme in the 6th or 7th editions.\n\n**Note 2:**  TNM not defined for this schema.",
   "schema_selection_table" : "schema_selection_brain",
   "inputs" : [ {
     "key" : "year_dx",
     "name" : "Year of Diagnosis",
     "naaccr_item" : 390,
     "table" : "year_dx_validation",
-    "used_for_staging" : false
-  }, {
-    "key" : "input_version",
-    "name" : "Input Version",
-    "naaccr_item" : 2937,
-    "table" : "input_version_validation",
     "used_for_staging" : false
   }, {
     "key" : "site",
@@ -29,66 +23,6 @@
     "name" : "Histology",
     "naaccr_item" : 522,
     "table" : "histology",
-    "used_for_staging" : true
-  }, {
-    "key" : "behavior",
-    "name" : "Behavior",
-    "naaccr_item" : 523,
-    "table" : "behavior",
-    "used_for_staging" : true
-  }, {
-    "key" : "systemic_surg_seq",
-    "name" : "RX Summ Systemic/Surgery Sequence",
-    "naaccr_item" : 1639,
-    "table" : "systemic_surg_seq",
-    "used_for_staging" : true
-  }, {
-    "key" : "radiation_surg_seq",
-    "name" : "RX Summ Surgery/Radiation Sequence",
-    "naaccr_item" : 1380,
-    "table" : "radiation_surg_seq",
-    "used_for_staging" : true
-  }, {
-    "key" : "nodes_pos",
-    "name" : "Regional Nodes Positive",
-    "naaccr_item" : 820,
-    "table" : "nodes_pos_fna",
-    "used_for_staging" : true
-  }, {
-    "key" : "clin_t",
-    "name" : "Clinical T",
-    "naaccr_item" : 940,
-    "table" : "clin_t_bcc",
-    "used_for_staging" : true
-  }, {
-    "key" : "clin_n",
-    "name" : "Clinical N",
-    "naaccr_item" : 950,
-    "table" : "clin_n_dna",
-    "used_for_staging" : true
-  }, {
-    "key" : "clin_m",
-    "name" : "Clinical M",
-    "naaccr_item" : 960,
-    "table" : "clin_m_haw",
-    "used_for_staging" : true
-  }, {
-    "key" : "path_t",
-    "name" : "Pathologic T",
-    "naaccr_item" : 880,
-    "table" : "path_t_bcc",
-    "used_for_staging" : true
-  }, {
-    "key" : "path_n",
-    "name" : "Pathologic N",
-    "naaccr_item" : 890,
-    "table" : "path_n_dna",
-    "used_for_staging" : true
-  }, {
-    "key" : "path_m",
-    "name" : "Pathologic M",
-    "naaccr_item" : 900,
-    "table" : "path_m_haw",
     "used_for_staging" : true
   }, {
     "key" : "seer_primary_tumor",
@@ -163,18 +97,6 @@
     "naaccr_item" : 2862,
     "table" : "ssf8_sql",
     "used_for_staging" : false
-  }, {
-    "key" : "clin_stage_group_direct",
-    "name" : "TNM Clin Stage Group",
-    "naaccr_item" : 970,
-    "default" : "88",
-    "used_for_staging" : false
-  }, {
-    "key" : "path_stage_group_direct",
-    "name" : "TNM Path Stage Group",
-    "naaccr_item" : 910,
-    "default" : "88",
-    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -238,160 +160,8 @@
     "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
-    "id" : "tnm7_stage",
-    "name" : "TNM 7 Stage",
-    "inclusion_tables" : [ {
-      "id" : "tnm7_inclusions_tqf",
-      "inputs" : [ "hist" ]
-    } ],
-    "initial_context" : [ {
-      "key" : "clin_stage_group",
-      "value" : "90"
-    }, {
-      "key" : "path_stage_group",
-      "value" : "90"
-    } ],
-    "tables" : [ {
-      "id" : "determine_default_t",
-      "inputs" : [ "clin_t", "path_t" ],
-      "outputs" : [ "source_t", "combined_t_in", "tmp_path_t", "ss2017_t", "tmp_clin_t" ]
-    }, {
-      "id" : "determine_default_n",
-      "inputs" : [ "clin_n", "path_n" ],
-      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
-    }, {
-      "id" : "determine_default_m",
-      "inputs" : [ "path_m", "clin_m" ],
-      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_clin_m", "combined_m_in", "source_m" ]
-    }, {
-      "id" : "tnm7_stage_una",
-      "input_mapping" : [ {
-        "from" : "tmp_clin_n",
-        "to" : "n"
-      }, {
-        "from" : "tmp_clin_m",
-        "to" : "m"
-      }, {
-        "from" : "tmp_clin_t",
-        "to" : "t"
-      } ],
-      "output_mapping" : [ {
-        "from" : "stage",
-        "to" : "clin_stage_group"
-      } ],
-      "inputs" : [ "tmp_clin_n", "tmp_clin_m", "tmp_clin_t" ],
-      "outputs" : [ "clin_stage_group" ]
-    }, {
-      "id" : "tnm7_stage_una",
-      "input_mapping" : [ {
-        "from" : "tmp_path_m",
-        "to" : "m"
-      }, {
-        "from" : "tmp_path_n",
-        "to" : "n"
-      }, {
-        "from" : "tmp_path_t",
-        "to" : "t"
-      } ],
-      "output_mapping" : [ {
-        "from" : "stage",
-        "to" : "path_stage_group"
-      } ],
-      "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t" ],
-      "outputs" : [ "path_stage_group" ]
-    }, {
-      "id" : "adjust_path_defaults_for_no_path_stage_group_not_defined_12205",
-      "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
-      "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
-    } ]
-  }, {
-    "id" : "combined_stage",
-    "name" : "Combined Stage",
-    "inclusion_tables" : [ {
-      "id" : "tnm7_inclusions_tqf",
-      "inputs" : [ "hist" ]
-    } ],
-    "initial_context" : [ {
-      "key" : "combined_m",
-      "value" : "90"
-    }, {
-      "key" : "combined_n",
-      "value" : "90"
-    }, {
-      "key" : "combined_stage_group",
-      "value" : "90"
-    }, {
-      "key" : "combined_t",
-      "value" : "90"
-    } ],
-    "tables" : [ {
-      "id" : "combined_t",
-      "input_mapping" : [ {
-        "from" : "tmp_clin_t",
-        "to" : "clin_t"
-      }, {
-        "from" : "tmp_path_t",
-        "to" : "path_t"
-      } ],
-      "inputs" : [ "radiation_surg_seq", "combined_t_in", "tmp_path_t", "tmp_clin_t", "behavior", "systemic_surg_seq" ],
-      "outputs" : [ "source_t", "combined_t" ]
-    }, {
-      "id" : "combined_n_99_3534",
-      "inputs" : [ "nodes_pos", "radiation_surg_seq", "combined_n_in", "systemic_surg_seq", "clin_n", "path_n" ],
-      "outputs" : [ "combined_n", "source_n" ]
-    }, {
-      "id" : "combined_m",
-      "input_mapping" : [ {
-        "from" : "tmp_clin_m",
-        "to" : "clin_m"
-      }, {
-        "from" : "tmp_path_m",
-        "to" : "path_m"
-      } ],
-      "inputs" : [ "tmp_path_m", "tmp_clin_m", "combined_m_in" ],
-      "outputs" : [ "combined_m", "source_m" ]
-    }, {
-      "id" : "tnm7_stage_una",
-      "input_mapping" : [ {
-        "from" : "combined_m",
-        "to" : "m"
-      }, {
-        "from" : "combined_n",
-        "to" : "n"
-      }, {
-        "from" : "combined_t",
-        "to" : "t"
-      } ],
-      "output_mapping" : [ {
-        "from" : "stage",
-        "to" : "combined_stage_group"
-      } ],
-      "inputs" : [ "combined_m", "combined_n", "combined_t" ],
-      "outputs" : [ "combined_stage_group" ]
-    }, {
-      "id" : "combined_to_summ_stage_t_80394",
-      "inputs" : [ "combined_t" ],
-      "outputs" : [ "ss2017_t" ]
-    }, {
-      "id" : "combined_n_to_summ_stage_n_84054",
-      "inputs" : [ "combined_n" ],
-      "outputs" : [ "ss2017_n" ]
-    }, {
-      "id" : "cpmbined_m_to_summ_stage_m_60564",
-      "inputs" : [ "combined_m" ],
-      "outputs" : [ "ss2017_m" ]
-    }, {
-      "id" : "summary_stage_rpa",
-      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
-      "outputs" : [ "ss2017" ]
-    } ]
-  }, {
     "id" : "summary_stage_2017",
     "name" : "Summary Stage 2017",
-    "exclusion_tables" : [ {
-      "id" : "tnm7_inclusions_tqf",
-      "inputs" : [ "hist" ]
-    } ],
     "tables" : [ {
       "id" : "extension_bcc",
       "inputs" : [ "seer_primary_tumor" ],
@@ -401,7 +171,7 @@
       "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
-      "id" : "seer_mets_brain_49813",
+      "id" : "mets_haw",
       "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
@@ -410,7 +180,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "determine_default_m", "ssf3_lpm", "clin_m_haw", "seer_mets_brain_49813", "determine_default_n", "ssf6_opf", "combined_n_to_summ_stage_n_84054", "histology", "ssf1_jpo", "path_t_bcc", "tnm7_stage_una", "combined_n_99_3534", "ssf2_kpl", "path_m_haw", "path_n_dna", "behavior", "nodes_dna", "mets_haw", "ssf8_sql", "ssf7_sqk", "systemic_surg_seq", "adjust_path_defaults_for_no_path_stage_group_not_defined_12205", "schema_selection_brain", "ssf5_nph", "clin_n_dna", "ssf4_mpn", "extension_bcc", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "nodes_pos_fna", "year_dx_validation", "summary_stage_rpa", "combined_t", "clin_t_bcc", "tnm7_inclusions_tqf" ],
+  "involved_tables" : [ "ssf8_sql", "ssf7_sqk", "ssf3_lpm", "schema_selection_brain", "ssf5_nph", "ssf6_opf", "extension_bcc", "primary_site", "ssf4_mpn", "histology", "ssf1_jpo", "year_dx_validation", "summary_stage_rpa", "ssf2_kpl", "nodes_dna", "mets_haw" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-08T17:08:17.932Z"
+  "last_modified" : "2015-10-30T17:50:24.353Z"
 }

@@ -5,14 +5,10 @@
   "name" : "Adjust Path Defaults for No Path -Placenta",
   "title" : "Adjust Path T, N, M defaults if No Path Procedure Done",
   "description" : "Since Placenta does not have N, Combined N is set to 88 as it does not apply",
-  "last_modified" : "2015-09-10T13:00:59.597Z",
+  "last_modified" : "2015-10-20T14:53:39.150Z",
   "definition" : [ {
     "key" : "path_t",
     "name" : "Pathologic T",
-    "type" : "INPUT"
-  }, {
-    "key" : "path_n",
-    "name" : "Pathologic N",
     "type" : "INPUT"
   }, {
     "key" : "path_m",
@@ -48,5 +44,5 @@
     "type" : "ENDPOINT"
   } ],
   "extra_input" : [ "tmp_clin_m", "tmp_clin_t" ],
-  "rows" : [ [ "", "", "", "VALUE:99", "VALUE:{{tmp_clin_t}}", "VALUE:C", "VALUE:88", "VALUE:", "VALUE:{{tmp_clin_m}}", "VALUE:C" ], [ "*", "*", "*", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH" ] ]
+  "rows" : [ [ "", "", "VALUE:99", "VALUE:{{tmp_clin_t}}", "VALUE:C", "VALUE:88", "VALUE:9", "VALUE:{{tmp_clin_m}}", "VALUE:C" ], [ "*", "*", "MATCH", "MATCH", "MATCH", "VALUE:88", "VALUE:9", "MATCH", "MATCH" ] ]
 }

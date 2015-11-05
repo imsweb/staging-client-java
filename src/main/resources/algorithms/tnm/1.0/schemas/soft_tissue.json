@@ -4,19 +4,13 @@
   "version" : "1.0",
   "name" : "Soft Tissue",
   "title" : "Peripheral Nerves and Autonomic Nervous System; Connective, Subcutaneous, and Other Soft Tissues",
-  "notes" : "M-8000-9136,9141-9582,9700-9701\nC47.0  Peripheral nerves and autonomic nervous system of head, face and neck\nC47.1  Peripheral nerves and autonomic nervous system of upper limb and shoulder\nC47.2  Peripheral nerves and autonomic nervous system of lower limb and hip\nC47.3  Peripheral nerves and autonomic nervous system of thorax\nC47.4  Peripheral nerves and autonomic nervous system of abdomen\nC47.5  Peripheral nerves and autonomic nervous system of pelvis\nC47.6  Peripheral nerves and autonomic nervous system of trunk, NOS\nC47.8  Overlapping lesion of peripheral nerves and autonomic nervous system\nC47.9  Autonomic nervous system, NOS\nC49.0  Connective, subcutaneous and other soft tissues of head, face, and neck\nC49.1  Connective, subcutaneous and other soft tissues of upper limb and shoulder\nC49.2  Connective, subcutaneous and other soft tissues of lower limb and hip\nC49.3  Connective, subcutaneous and other soft tissues of thorax\nC49.4  Connective, subcutaneous and other soft tissues of abdomen\nC49.5  Connective, subcutaneous and other soft tissues of pelvis\nC49.6  Connective, subcutaneous and other soft tissues of trunk\nC49.9  Connective, subcutaneous and other soft tissues, NOS\nC49.8  Overlapping lesion of connective, subcutaneous and other soft tissues\n\n**Note 1:**  Laterality must be coded for C47.1-C47.2 and C49.1-C49.2.\n\n**Note 2:**  Soft tissue sarcomas of the heart and mediastinum (C38.0-C38.3 and C38.9) use the Heart, Mediastinum schema.",
+  "notes" : "M-8000-9136,9141-9582,9700-9701\nC470  Peripheral nerves and autonomic nervous system of head, face and neck\nC471  Peripheral nerves and autonomic nervous system of upper limb and shoulder\nC472  Peripheral nerves and autonomic nervous system of lower limb and hip\nC473  Peripheral nerves and autonomic nervous system of thorax\nC474  Peripheral nerves and autonomic nervous system of abdomen\nC475  Peripheral nerves and autonomic nervous system of pelvis\nC476  Peripheral nerves and autonomic nervous system of trunk, NOS\nC478  Overlapping lesion of peripheral nerves and autonomic nervous system\nC479  Autonomic nervous system, NOS\nC490  Connective, subcutaneous and other soft tissues of head, face, and neck\nC491  Connective, subcutaneous and other soft tissues of upper limb and shoulder\nC492  Connective, subcutaneous and other soft tissues of lower limb and hip\nC493  Connective, subcutaneous and other soft tissues of thorax\nC494  Connective, subcutaneous and other soft tissues of abdomen\nC495  Connective, subcutaneous and other soft tissues of pelvis\nC496  Connective, subcutaneous and other soft tissues of trunk\nC499  Connective, subcutaneous and other soft tissues, NOS\nC498  Overlapping lesion of connective, subcutaneous and other soft tissues\n\n**Note 1:**  Laterality must be coded for C471-C472 and C491-C492.\n\n**Note 2:**  Soft tissue sarcomas of the heart and mediastinum (C380-C383 and C389) use the Heart, Mediastinum schema.",
   "schema_selection_table" : "schema_selection_soft_tissue",
   "inputs" : [ {
     "key" : "year_dx",
     "name" : "Year of Diagnosis",
     "naaccr_item" : 390,
     "table" : "year_dx_validation",
-    "used_for_staging" : false
-  }, {
-    "key" : "input_version",
-    "name" : "Input Version",
-    "naaccr_item" : 2937,
-    "table" : "input_version_validation",
     "used_for_staging" : false
   }, {
     "key" : "site",
@@ -52,19 +46,19 @@
     "key" : "clin_t",
     "name" : "Clinical T",
     "naaccr_item" : 940,
-    "table" : "soft_tissue_t_79319",
+    "table" : "clin_t_soft_tissue_43767",
     "used_for_staging" : true
   }, {
     "key" : "clin_n",
     "name" : "Clinical N",
     "naaccr_item" : 950,
-    "table" : "soft_tissue_n_4758",
+    "table" : "clin_n_soft_tissues_78998",
     "used_for_staging" : true
   }, {
     "key" : "clin_m",
     "name" : "Clinical M",
     "naaccr_item" : 960,
-    "table" : "clin_m_hpc",
+    "table" : "clin_m_soft_tissues_97765",
     "used_for_staging" : true
   }, {
     "key" : "path_t",
@@ -82,7 +76,7 @@
     "key" : "path_m",
     "name" : "Pathologic M",
     "naaccr_item" : 900,
-    "table" : "path_m_hpc",
+    "table" : "path_m_soft_tissues_96225",
     "used_for_staging" : true
   }, {
     "key" : "seer_primary_tumor",
@@ -135,13 +129,17 @@
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
     "default" : "88",
-    "used_for_staging" : false
+    "table" : "stage_group_c_47728",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   }, {
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
     "default" : "88",
-    "used_for_staging" : false
+    "table" : "stage_group_p_79956",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -220,16 +218,16 @@
     } ],
     "tables" : [ {
       "id" : "determine_default_t",
-      "inputs" : [ "clin_t", "path_t" ],
-      "outputs" : [ "source_t", "combined_t_in", "tmp_path_t", "ss2017_t", "tmp_clin_t" ]
+      "inputs" : [ "path_t_in", "clin_t_in" ],
+      "outputs" : [ "path_t_out", "combined_t_out", "clin_t_out", "source_t_out", "ss2017_t_out" ]
     }, {
       "id" : "determine_default_n",
-      "inputs" : [ "clin_n", "path_n" ],
-      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+      "inputs" : [ "clin_n_in", "path_n_in" ],
+      "outputs" : [ "path_n_out", "clin_n_out" ]
     }, {
       "id" : "determine_default_m",
-      "inputs" : [ "path_m", "clin_m" ],
-      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_clin_m", "combined_m_in", "source_m" ]
+      "inputs" : [ "path_m_in", "clin_m_in" ],
+      "outputs" : [ "ss2017_m_out", "combined_m_out", "path_m_out", "source_m_out", "clin_m_out" ]
     }, {
       "id" : "ssf1_jpm",
       "inputs" : [ "ssf1" ],
@@ -277,9 +275,9 @@
       "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t", "mapping_of_grade" ],
       "outputs" : [ "path_stage_group" ]
     }, {
-      "id" : "adjust_path_defaults",
-      "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
-      "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
+      "id" : "adjustments_for_no_clin_or_no_path_26261",
+      "inputs" : [ "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "tmp_path_n", "path_m", "tmp_path_t", "tmp_clin_t", "clin_n", "clin_m", "path_n" ],
+      "outputs" : [ "combined_t_out", "combined_m_out", "source_t_out", "clin_stage_group", "combined_n_out", "source_n_out", "source_m_out", "path_stage_group" ]
     } ]
   }, {
     "id" : "combined_stage",
@@ -310,8 +308,8 @@
         "from" : "tmp_path_t",
         "to" : "path_t"
       } ],
-      "inputs" : [ "radiation_surg_seq", "combined_t_in", "tmp_path_t", "tmp_clin_t", "systemic_surg_seq" ],
-      "outputs" : [ "source_t", "combined_t" ]
+      "inputs" : [ "path_t_in", "radiation_surg_seq", "combined_t_in", "clin_t_in", "systemic_surg_seq" ],
+      "outputs" : [ "combined_t_out", "source_t_out" ]
     }, {
       "id" : "combined_n",
       "input_mapping" : [ {
@@ -321,8 +319,8 @@
         "from" : "tmp_path_n",
         "to" : "path_n"
       } ],
-      "inputs" : [ "nodes_pos", "tmp_clin_n", "radiation_surg_seq", "tmp_path_n", "combined_n_in", "systemic_surg_seq" ],
-      "outputs" : [ "combined_n", "source_n" ]
+      "inputs" : [ "clin_n_in", "nodes_pos", "radiation_surg_seq", "combined_n_in", "path_n_in", "systemic_surg_seq" ],
+      "outputs" : [ "combined_n_out", "source_n_out" ]
     }, {
       "id" : "combined_m",
       "input_mapping" : [ {
@@ -332,8 +330,8 @@
         "from" : "tmp_path_m",
         "to" : "path_m"
       } ],
-      "inputs" : [ "tmp_path_m", "tmp_clin_m", "combined_m_in" ],
-      "outputs" : [ "combined_m", "source_m" ]
+      "inputs" : [ "path_m_in", "combined_m_in", "clin_m_in" ],
+      "outputs" : [ "combined_m_out", "source_m_out" ]
     }, {
       "id" : "tnm7_stage_ubj",
       "input_mapping" : [ {
@@ -357,16 +355,16 @@
       "outputs" : [ "combined_stage_group" ]
     }, {
       "id" : "combined_to_summ_stage_t_80394",
-      "inputs" : [ "combined_t" ],
-      "outputs" : [ "ss2017_t" ]
+      "inputs" : [ "combined_t_in" ],
+      "outputs" : [ "ss2017_t_out" ]
     }, {
       "id" : "combined_n_to_summ_stage_n_84054",
-      "inputs" : [ "combined_n" ],
-      "outputs" : [ "ss2017_n" ]
+      "inputs" : [ "combined_n_in" ],
+      "outputs" : [ "ss2017_n_out" ]
     }, {
       "id" : "cpmbined_m_to_summ_stage_m_60564",
-      "inputs" : [ "combined_m" ],
-      "outputs" : [ "ss2017_m" ]
+      "inputs" : [ "combined_m_in" ],
+      "outputs" : [ "ss2017_m_out" ]
     }, {
       "id" : "summary_stage_rpa",
       "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
@@ -397,7 +395,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "path_m_hpc", "ssf3_lpk", "determine_default_m", "extension_bbz", "nodes_pos_fpa", "soft_tissue_n_4758", "clin_m_hpc", "determine_default_n", "schema_selection_soft_tissue", "ssf1_jpm", "combined_n_to_summ_stage_n_84054", "histology", "combined_t_no_tis", "seer_mets_softtissue_3852", "ssf2_kpk", "tnm7_inclusions_tps", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "nodes_dbs", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "tnm7_stage_ubj", "year_dx_validation", "ssf4_mpf", "summary_stage_rpa", "soft_tissue_t_79319" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "clin_n_soft_tissues_78998", "radiation_surg_seq", "stage_group_c_47728", "clin_t_soft_tissue_43767", "ssf3_lpk", "determine_default_m", "extension_bbz", "nodes_pos_fpa", "soft_tissue_n_4758", "determine_default_n", "schema_selection_soft_tissue", "ssf1_jpm", "combined_n_to_summ_stage_n_84054", "histology", "combined_t_no_tis", "seer_mets_softtissue_3852", "ssf2_kpk", "adjustments_for_no_clin_or_no_path_26261", "tnm7_inclusions_tps", "systemic_surg_seq", "primary_site", "path_m_soft_tissues_96225", "nodes_dbs", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "tnm7_stage_ubj", "year_dx_validation", "ssf4_mpf", "summary_stage_rpa", "clin_m_soft_tissues_97765", "stage_group_p_79956", "soft_tissue_t_79319" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-08T17:08:10.356Z"
+  "last_modified" : "2015-10-31T12:59:48.080Z"
 }

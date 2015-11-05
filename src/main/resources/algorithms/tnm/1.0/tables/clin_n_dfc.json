@@ -2,10 +2,10 @@
   "id" : "clin_n_dfc",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Clin N",
+  "name" : "Clin N Appendix",
   "title" : "Clinical N",
   "notes" : "**Note 1:**  Only include information from imaging and physical examination in this item.  Do not include information on regional lymph nodes that is based on surgical observation or diagnostic lymph node biopsy.\n\n**Note 2:**  Assign N1 if regional lymph nodes are involved clinically but there is no indication of the number of nodes involved.\n\n**Regional lymph nodes for appendix:**\n\n    Celiac\n        Anterior (prececal)\n        Ileocolic\n        Posterior (retrocecal)\n        Right colic\n    Colic, NOS\n    Epicolic (adjacent to bowel wall)\n    Mesenteric, NOS\n    Mesocolic, NOS\n    Paracolic/pericolic\n\n    Regional lymph nodes, NOS\n    Lymph nodes, NOS",
-  "last_modified" : "2015-08-13T13:24:16.374Z",
+  "last_modified" : "2015-10-14T12:26:30.147Z",
   "definition" : [ {
     "key" : "clin_n",
     "name" : "Clinical N",

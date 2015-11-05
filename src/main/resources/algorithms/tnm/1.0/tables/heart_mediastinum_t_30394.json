@@ -2,17 +2,17 @@
   "id" : "heart_mediastinum_t_30394",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Heart Mediastinum T",
-  "title" : "Clinical and Pathologic T",
+  "name" : "Path T Heart Mediastinum",
+  "title" : "Pathologic T",
   "notes" : "**Note 1:**  For TNM staging, sarcomas of the heart and mediastinum are classified as deep tumors.\n\n**Note 2:** For T, assign the appropriate category based on the tumor size.\n\n    Invasive tumor confined to site of origin\n    Adjacent connective tissue:\n        For heart: \n            Visceral pericardium (epicardium)\n    Adjacent organs/structures:\n        For Heart: \n            Ascending aorta\n            Parietal pericardium\n            Vena cava\n        For mediastinum: \n            Descending aorta\n            Esophagus\n            Large (named) artery(ies)\n            Large (named) vein(s)\n            Pericardium, NOS\n               Parietal\n               Visceral (epicardium)\n            Phrenic nerve(s)\n            Pleura, NOS\n            Parietal pleura\n            Visceral pleura of lung\n        Sternum\n        Sympathetic nerve trunk(s)\n        Thoracic duct\n        Thymus\n        Trachea, parietal pleura\n        Vertebra(e)\n\nFurther contiguous extension\n\nLocalized, NOS",
-  "last_modified" : "2015-10-10T20:06:53.188Z",
+  "last_modified" : "2015-10-26T18:17:41.983Z",
   "definition" : [ {
-    "key" : "clin_t",
-    "name" : "Clinical T",
+    "key" : "path_t",
+    "name" : "Pathologic T",
     "type" : "INPUT"
   }, {
-    "key" : "clin_t_display",
-    "name" : "Clinical T Display",
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

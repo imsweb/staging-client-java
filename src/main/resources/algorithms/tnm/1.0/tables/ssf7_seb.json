@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 7",
   "subtitle" : "Primary Tumor Mitotic Count/Rate",
   "notes" : "**Note 1:**  Mitotic rate/count is assessed on primary melanomas, based on the number of mitotic figures in one square millimeter (mm) surrounding either a \"hot spot\" with the most mitotic figures or a field with a representative mitosis.\n\n**Note 2:**  Record the mitotic rate/count as documented in the pathology report. If there is more than one pathology report for the same melanoma at initial diagnosis and different mitotic counts are documented, code the highest mitotic count from any of the pathology reports.  Use code 999 if there is no documentation or no mention of mitotic rate in any pathology report for the same melanoma.",
-  "last_modified" : "2015-08-13T13:24:37.097Z",
+  "last_modified" : "2015-10-30T18:48:34.438Z",
   "definition" : [ {
     "key" : "ssf7",
     "name" : "Code",
@@ -16,5 +16,5 @@
     "name" : "Description",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "000", "0 mitoses per square millimeter (mm)\nMitoses absent\nNo mitoses present" ], [ "001-010", "1 - 10 mitoses/square mm\n(Exact measurement in mitoses/square mm) \n\nExamples:\n    001    1 mitosis per square mm\n    002    2 mitoses per square mm\n    010    10 mitoses per square mm" ], [ "011", "11 or more mitoses per square mm" ], [ "988", "Not applicable: Information not collected for this case. " ], [ "990", "Stated as \"less than 1 mitosis/square mm\"\nStated as \"nonmitogenic\" " ], [ "991", "Stated as \"at least 1 mitosis/square mm\"\nStated as \"mitogenic\"" ], [ "996", "Mitotic rate described with denominator other than square millimeter (mm)" ], [ "997", "Test performed, results not in chart\nTest performed, quantitative results not stated" ], [ "998", "No histologic examination of primary site." ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+  "rows" : [ [ "000", "0 mitoses per square millimeter (mm)\nMitoses absent\nNo mitoses present" ], [ "001-010", "1 - 10 mitoses/square mm\n(Exact measurement in mitoses/square mm) \n\nExamples:\n    001    1 mitosis per square mm\n    002    2 mitoses per square mm\n    010    10 mitoses per square mm" ], [ "011", "11 or more mitoses per square mm" ], [ "988", "Not applicable: Information not collected for this case" ], [ "990", "Stated as \"less than 1 mitosis/square mm\"\nStated as \"nonmitogenic\" " ], [ "991", "Stated as \"at least 1 mitosis/square mm\"\nStated as \"mitogenic\"" ], [ "996", "Mitotic rate described with denominator other than square millimeter (mm)" ], [ "997", "Test performed, results not in chart\nTest performed, quantitative results not stated" ], [ "998", "No histologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
 }

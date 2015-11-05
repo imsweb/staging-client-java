@@ -2,17 +2,17 @@
   "id" : "path_m_hcy",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path M",
+  "name" : "Path M Merkel Cell Vulva",
   "title" : "Pathologic M",
   "notes" : "**Note:**  External and internal iliac nodes are coded in regional lymph nodes.",
-  "last_modified" : "2015-10-10T20:44:22.097Z",
+  "last_modified" : "2015-10-15T18:47:10.653Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

@@ -2,17 +2,17 @@
   "id" : "path_m_haz",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path M",
+  "name" : "Path M Mycosis Fungoides",
   "title" : "Pathologic M",
   "notes" : "**Note 1:**  For this site, code all lymph node (regional and distant) involvement in regional lymph nodes (N). Only visceral and bone marrow involvement are coded in distant metastasis (M). Peripheral blood involvement is coded in Site-Specific Factor 1.\n\n**Note 2:**  Visceral involvement is considered metastatic and should be questioned in the absence of node or blood involvement.\n\n**Note 3:**  For visceral disease (Stage IVB), documentation of involvement by only one organ outside the skin, nodes, or blood is needed.\n\n**Note 4:**  Visceral involvement must be pathologically confirmed, except for the liver and spleen, which may be documented with only imaging.",
-  "last_modified" : "2015-10-09T17:38:23.110Z",
+  "last_modified" : "2015-10-15T18:47:14.443Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

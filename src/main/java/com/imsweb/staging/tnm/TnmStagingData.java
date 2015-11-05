@@ -21,7 +21,6 @@ public class TnmStagingData extends StagingData {
         BEHAVIOR("behavior"),
         GRADE("grade"),
         DX_YEAR("year_dx"),
-        INPUT_VERSION("input_version"),
         AGE_AT_DX("age_dx"),
         SEX("sex"),
         SEER_PRIMARY_TUMOR("seer_extension"),

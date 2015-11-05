@@ -2,17 +2,18 @@
   "id" : "sinus_maxillary_t_7871",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Sinus Maxillary T",
-  "title" : "Clinical and Pathologic T",
+  "name" : "Path T Sinus Maxillary",
+  "title" : "Pathologic T",
   "notes" : "**Note 1:**  Involvement of or extension to bone includes any type of tumor extension to the bone, such as erosion, invasion, extension, penetration, or destruction.\n\n**Note 2:**  Assign T3 for Base of Skull, NOS when there is no information available for more specific bony structures in the skull.",
-  "last_modified" : "2015-10-10T21:08:09.407Z",
+  "footnotes" : "*T4 is not defined by UICC in the 7th edition. Approval has been provided by UICC to use \"Tumor invades bone, nerve or extrinsic deep muscles\" as T4.",
+  "last_modified" : "2015-10-29T15:09:57.973Z",
   "definition" : [ {
-    "key" : "clin_t",
-    "name" : "Clinical T",
+    "key" : "path_t",
+    "name" : "Pathologic T",
     "type" : "INPUT"
   }, {
-    "key" : "clin_t_display",
-    "name" : "Clinical T Display",
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",
@@ -23,5 +24,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor", "No evidence of primary tumor" ], [ "IS", "Tis", "Carcinoma in situ", "Intraepithelial, noninvasive\n\nStated as Tis" ], [ "1", "T1", "Tumor limited to the mucosa with no erosion or destruction of bone", "Invasive tumor confined to mucosa of maxillary sinus (antrum) WITHOUT erosion or destruction of bone\n\nLocalized, NOS\n\nStated as T1" ], [ "2", "T2", "Tumor causing bone erosion or destruction, including extension into the hard palate and/or middle nasal meatus, except extension to posterior wall of maxillary sinus and pterygoid plates", "Tumor causing bone erosion or destruction \nEXCLUDING extension to:\n    Posterior wall of maxillary sinus (see code 600)\n    Pterygoid plates (see code 680)\nINCLUDING:\n    Palatine bone, hard palate         \n    Middle nasal meatus         \n    Nasal cavity (floor, lateral wall, septum, turbinates)\n\nStated as T2" ], [ "3", "T3", "Tumor invades any of the following:\nBone of posterior wall of maxillary sinus\nSubcutaneous tissues\nFloor or medial wall of orbit\nPterygoid fossa\nFrontal sinuses", "Ethmoid sinus, anterior\nFloor or posterior wall of maxillary sinus\nMaxilla, NOS\n\nEthmoid sinus, posterior\nEthmoid sinus, NOS\n\nStated as T3" ], [ "4", "T4", "Tumor invades bone, nerve or extrinsic deep muscle", "Note: T4 has subcategories of T4a and T4b. Assign T4 only when there is no information available to assign one of the subcategories\n\nStated as T4[NOS]" ], [ "4A", "T4a", "Tumor invades any of the following:\nAnterior orbital contents\nSkin of cheek\nPterygoid plates\nInfratemporal fossa\nCribriform plate\nSphenoid or frontal sinuses", "Anterior orbital contents\nBase of skull, NOS\nCribriform plate\nInfratemporal fossa\nFrontal sinus\nPterygoid plates\nSkin of cheek\nSphenoid sinus\n\nStated as T4a" ], [ "4B", "T4b", "Tumor invades any of the following:\nOrbital apex\nDura\nBrain\nMiddle cranial fossa\nCranial nerves other than maxillary division of trigeminal nerve (V2)\nNasopharynx\nClivus", "Pterygomaxillary fossa\nSoft palate\nTemporal fossa\n\nFurther contiguous extension\n\nStated as T4b" ] ]
+  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor", "No evidence of primary tumor" ], [ "IS", "Tis", "Carcinoma in situ", "Intraepithelial, noninvasive\n\nStated as Tis" ], [ "1", "T1", "Tumor limited to the mucosa with no erosion or destruction of bone", "Invasive tumor confined to mucosa of maxillary sinus (antrum) WITHOUT erosion or destruction of bone\n\nLocalized, NOS\n\nStated as T1" ], [ "2", "T2", "Tumor causing bone erosion or destruction, including extension into: \n     Hard palate \n     Middle nasal meatus\n\nEXCEPT extension to posterior wall of maxillary sinus and pterygoid plates", "Tumor causing bone erosion or destruction \nEXCLUDING extension to:\n    Posterior wall of maxillary sinus (see code 600)\n    Pterygoid plates (see code 680)\nINCLUDING:\n    Palatine bone, hard palate         \n    Middle nasal meatus         \n    Nasal cavity (floor, lateral wall, septum, turbinates)\n\nStated as T2" ], [ "3", "T3", "Tumor invades any of the following:\n    Bone of posterior wall of maxillary sinus\n    Subcutaneous tissues\n    Floor or medial wall of orbit\n    Pterygoid fossa\n    Ethmoid sinuses", "Ethmoid sinus, anterior\nFloor or posterior wall of maxillary sinus\nMaxilla, NOS\n\nEthmoid sinus, posterior\nEthmoid sinus, NOS\n\nStated as T3" ], [ "4", "T4", "Not defined by UICC*", "Note: T4 has subcategories of T4a and T4b. Assign T4 only when there is no information available to assign one of the subcategories\n\nTumor invades bone,â nerve or extrinsic deep muscles\n\nStated as T4[NOS]" ], [ "4A", "T4a", "Tumor invades any of the following:\n    Anterior orbital contents\n    Skin of cheek\n    Pterygoid plates\n    Infratemporal fossa\n    Cribriform plate\n    Sphenoid or frontal sinuses", "Anterior orbital contents\nBase of skull, NOS\nCribriform plate\nInfratemporal fossa\nFrontal sinus\nPterygoid plates\nSkin of cheek\nSphenoid sinus\n\nStated as T4a" ], [ "4B", "T4b", "Tumor invades any of the following:\n    Orbital apex\n    Dura\n    Brain\n    Middle cranial fossa\n    Cranial nerves other than maxillary division of trigeminal nerve (V2)\n    Nasopharynx\n    Clivus", "Pterygomaxillary fossa\nSoft palate\nTemporal fossa\n\nFurther contiguous extension\n\nStated as T4b" ] ]
 }

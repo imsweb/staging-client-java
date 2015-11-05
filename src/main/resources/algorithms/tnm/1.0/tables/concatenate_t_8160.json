@@ -1,0 +1,23 @@
+{
+  "id" : "concatenate_t_8160",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Concatenate T",
+  "title" : "Concatenate T",
+  "description" : "With the addition of the p and c prefixes to the existing codes, the prefix were parsed from the main value during calculations. It now has to be recombined to form the completed combined value.",
+  "last_modified" : "2015-10-30T01:52:32.637Z",
+  "definition" : [ {
+    "key" : "t_prefix",
+    "name" : "T Prefix",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "tmp_t",
+    "name" : "Temporary T value",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  } ],
+  "rows" : [ [ "VALUE:c", "VALUE:X", "cX" ], [ "VALUE:c", "VALUE:0", "c0" ], [ "VALUE:c", "VALUE:1MI", "c1MI" ], [ "VALUE:c", "VALUE:1", "c1" ], [ "VALUE:c", "VALUE:1A", "c1A" ], [ "VALUE:c", "VALUE:1A1", "c1A1" ], [ "VALUE:c", "VALUE:1A2", "c1A2" ], [ "VALUE:c", "VALUE:1B", "c1B" ], [ "VALUE:c", "VALUE:1B1", "c1B1" ], [ "VALUE:c", "VALUE:1B2", "c1B2" ], [ "VALUE:c", "VALUE:1C", "c1C" ], [ "VALUE:c", "VALUE:1D", "c1D" ], [ "VALUE:c", "VALUE:2", "c2" ], [ "VALUE:c", "VALUE:2A", "c2A" ], [ "VALUE:c", "VALUE:2A1", "c2A1" ], [ "VALUE:c", "VALUE:2A2", "c2A2" ], [ "VALUE:c", "VALUE:2B", "c2B" ], [ "VALUE:c", "VALUE:2C", "c2C" ], [ "VALUE:c", "VALUE:2D", "c2D" ], [ "VALUE:c", "VALUE:3", "c3" ], [ "VALUE:c", "VALUE:3A", "c3A" ], [ "VALUE:c", "VALUE:3B", "c3B" ], [ "VALUE:c", "VALUE:3C", "c3C" ], [ "VALUE:c", "VALUE:3D", "c3D" ], [ "VALUE:c", "VALUE:4", "c4" ], [ "VALUE:c", "VALUE:4A", "c4A" ], [ "VALUE:c", "VALUE:4B", "c4B" ], [ "VALUE:c", "VALUE:4C", "c4C" ], [ "VALUE:c", "VALUE:4D", "c4D" ], [ "VALUE:c", "VALUE:4E", "c4E" ], [ "VALUE:p", "VALUE:X", "pX" ], [ "VALUE:p", "VALUE:0", "p0" ], [ "VALUE:p", "VALUE:A", "pA" ], [ "VALUE:p", "VALUE:IS", "pIS" ], [ "VALUE:p", "VALUE:ISPU", "pISU" ], [ "VALUE:p", "VALUE:ISPD", "pISD" ], [ "VALUE:p", "VALUE:1MI", "p1MI" ], [ "VALUE:p", "VALUE:1", "p1" ], [ "VALUE:p", "VALUE:1A", "p1A" ], [ "VALUE:p", "VALUE:1A1", "p1A1" ], [ "VALUE:p", "VALUE:1A2", "p1A2" ], [ "VALUE:p", "VALUE:1B", "p1B" ], [ "VALUE:p", "VALUE:1B1", "p1B1" ], [ "VALUE:p", "VALUE:1B2", "p1B2" ], [ "VALUE:p", "VALUE:1C", "p1C" ], [ "VALUE:p", "VALUE:1D", "p1D" ], [ "VALUE:p", "VALUE:2", "p2" ], [ "VALUE:p", "VALUE:2A", "p2A" ], [ "VALUE:p", "VALUE:2A1", "p2A1" ], [ "VALUE:p", "VALUE:2A2", "p2A2" ], [ "VALUE:p", "VALUE:2B", "p2B" ], [ "VALUE:p", "VALUE:2C", "p2C" ], [ "VALUE:p", "VALUE:2D", "p2D" ], [ "VALUE:p", "VALUE:3", "p3" ], [ "VALUE:p", "VALUE:3A", "p3A" ], [ "VALUE:p", "VALUE:3B", "p3B" ], [ "VALUE:p", "VALUE:3C", "p3C" ], [ "VALUE:p", "VALUE:3D", "p3D" ], [ "VALUE:p", "VALUE:4", "p4" ], [ "VALUE:p", "VALUE:4A", "p4A" ], [ "VALUE:p", "VALUE:4B", "p4B" ], [ "VALUE:p", "VALUE:4C", "p4C" ], [ "VALUE:p", "VALUE:4D", "p4D" ], [ "VALUE:p", "VALUE:4E", "p4E" ], [ "VALUE:", "VALUE:X", "X" ], [ "VALUE:", "VALUE:0", "0" ], [ "VALUE:", "VALUE:A", "A" ], [ "VALUE:", "VALUE:IS", "IS" ], [ "VALUE:", "VALUE:ISPU", "ISPU" ], [ "VALUE:", "VALUE:ISPD", "ISPD" ], [ "VALUE:", "VALUE:1MI", "1MI" ], [ "VALUE:", "VALUE:1", "1" ], [ "VALUE:", "VALUE:1A", "1A" ], [ "VALUE:", "VALUE:1A1", "1A1" ], [ "VALUE:", "VALUE:1A2", "1A2" ], [ "VALUE:", "VALUE:1B", "1B" ], [ "VALUE:", "VALUE:1B1", "1B1" ], [ "VALUE:", "VALUE:1B2", "1B2" ], [ "VALUE:", "VALUE:1C", "1C" ], [ "VALUE:", "VALUE:1D", "1D" ], [ "VALUE:", "VALUE:2", "2" ], [ "VALUE:", "VALUE:2A", "2A" ], [ "VALUE:", "VALUE:2A1", "2A1" ], [ "VALUE:", "VALUE:2A2", "2A2" ], [ "VALUE:", "VALUE:2B", "2B" ], [ "VALUE:", "VALUE:2C", "2C" ], [ "VALUE:", "VALUE:2D", "2D" ], [ "VALUE:", "VALUE:3", "3" ], [ "VALUE:", "VALUE:3A", "3A" ], [ "VALUE:", "VALUE:3B", "3B" ], [ "VALUE:", "VALUE:3C", "3C" ], [ "VALUE:", "VALUE:3D", "3D" ], [ "VALUE:", "VALUE:4", "4" ], [ "VALUE:", "VALUE:4A", "4A" ], [ "VALUE:", "VALUE:4B", "4B" ], [ "VALUE:", "VALUE:4C", "4C" ], [ "VALUE:", "VALUE:4D", "4D" ], [ "VALUE:", "VALUE:4E", "4E" ], [ "VALUE:", "VALUE:88", "88" ], [ "VALUE:", "VALUE:", "" ] ]
+}

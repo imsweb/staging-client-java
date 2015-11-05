@@ -4,19 +4,13 @@
   "version" : "1.0",
   "name" : "Urinary Other",
   "title" : "Paraurethral Gland, Overlapping Lesion of Urinary Organs, and Unspecified Urinary Organs",
-  "notes" : "C68.1  Paraurethral gland\nC68.8  Overlapping lesion of urinary organs\nC68.9  Urinary system, NOS\n\n**Note 1:**  TNM is not defined for this site.\n**Note 2:**  Transitional cell carcinoma (8120-8130) of the prostatic ducts and prostatic urethra are to be coded to urethra (C68.0) and Summary Stage according to that schema.",
+  "notes" : "C681  Paraurethral gland\nC688  Overlapping lesion of urinary organs\nC689  Urinary system, NOS\n\n**Note 1:**  TNM is not defined for this site.\n**Note 2:**  Transitional cell carcinoma (8120-8130) of the prostatic ducts and prostatic urethra are to be coded to urethra (C680) and Summary Stage according to that schema.",
   "schema_selection_table" : "schema_selection_urinary_other",
   "inputs" : [ {
     "key" : "year_dx",
     "name" : "Year of Diagnosis",
     "naaccr_item" : 390,
     "table" : "year_dx_validation",
-    "used_for_staging" : false
-  }, {
-    "key" : "input_version",
-    "name" : "Input Version",
-    "naaccr_item" : 2937,
-    "table" : "input_version_validation",
     "used_for_staging" : false
   }, {
     "key" : "site",
@@ -125,7 +119,7 @@
       "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
-      "id" : "seer_mets_copy_urinary_other_71557",
+      "id" : "seer_mets_48348",
       "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
@@ -134,7 +128,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "primary_site", "seer_mets_48348", "input_version_validation", "histology", "year_dx_validation", "nodes_dcz", "seer_mets_copy_urinary_other_71557", "summary_stage_rpa", "schema_selection_urinary_other", "extension_bcy" ],
+  "involved_tables" : [ "primary_site", "seer_mets_48348", "histology", "year_dx_validation", "nodes_dcz", "summary_stage_rpa", "schema_selection_urinary_other", "extension_bcy" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-08T17:08:17.000Z"
+  "last_modified" : "2015-10-30T17:50:23.882Z"
 }

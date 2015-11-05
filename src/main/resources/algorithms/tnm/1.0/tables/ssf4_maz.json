@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 4",
   "subtitle" : "Presence of Chest Pain",
   "notes" : "**Note 1:** The presence of chest pain which results in work up or diagnosis is considered to be a prognostic factor for pleura mesothelioma (code 010). \n\n**Note 2:** Record any stated chest pain based on documentation from medical record.  If chest pain is present but is not documented as the presenting symptom which led the patient to seek medical care, use code 020.",
-  "last_modified" : "2015-08-13T13:24:59.663Z",
+  "last_modified" : "2015-10-30T18:48:38.217Z",
   "definition" : [ {
     "key" : "ssf4",
     "name" : "Code",
@@ -16,5 +16,5 @@
     "name" : "Description",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "000", "No history of chest pain" ], [ "010", "History of chest pain which resulted in work up or diagnosis " ], [ "020", "History of chest pain positive, NOS " ], [ "988", "Not applicable: Information not collected for this case. " ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+  "rows" : [ [ "000", "No history of chest pain" ], [ "010", "History of chest pain which resulted in work up or diagnosis " ], [ "020", "History of chest pain positive, NOS " ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
 }

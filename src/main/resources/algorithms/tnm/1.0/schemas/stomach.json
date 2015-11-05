@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Stomach",
   "title" : "Stomach (excluding Gastrointestinal Stromal Tumor and Neuroendocrine Tumor)",
-  "notes" : "C16.1  Fundus of stomach\nC16.2  Body of stomach\nC16.3  Gastric antrum\nC16.4  Pylorus\nC16.5  Lesser curvature of stomach, NOS\nC16.6  Greater curvature of stomach, NOS\nC16.8  Overlapping lesion of stomach\nC16.9  Stomach, NOS",
+  "notes" : "C161  Fundus of stomach\nC162  Body of stomach\nC163  Gastric antrum\nC164  Pylorus\nC165  Lesser curvature of stomach, NOS\nC166  Greater curvature of stomach, NOS\nC168  Overlapping lesion of stomach\nC169  Stomach, NOS",
   "schema_selection_table" : "schema_selection_stomach",
   "schema_discriminators" : [ "ssf25" ],
   "inputs" : [ {
@@ -12,12 +12,6 @@
     "name" : "Year of Diagnosis",
     "naaccr_item" : 390,
     "table" : "year_dx_validation",
-    "used_for_staging" : false
-  }, {
-    "key" : "input_version",
-    "name" : "Input Version",
-    "naaccr_item" : 2937,
-    "table" : "input_version_validation",
     "used_for_staging" : false
   }, {
     "key" : "site",
@@ -59,7 +53,7 @@
     "key" : "clin_t",
     "name" : "Clinical T",
     "naaccr_item" : 940,
-    "table" : "stomach_t_57787",
+    "table" : "clin_t_stomach_55386",
     "used_for_staging" : true
   }, {
     "key" : "clin_n",
@@ -148,13 +142,17 @@
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
     "default" : "88",
-    "used_for_staging" : false
+    "table" : "stage_group_c_62342",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   }, {
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
     "default" : "88",
-    "used_for_staging" : false
+    "table" : "stage_group_p_27096",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -233,16 +231,16 @@
     } ],
     "tables" : [ {
       "id" : "determine_default_t",
-      "inputs" : [ "clin_t", "path_t" ],
-      "outputs" : [ "source_t", "combined_t_in", "tmp_path_t", "ss2017_t", "tmp_clin_t" ]
+      "inputs" : [ "path_t_in", "clin_t_in" ],
+      "outputs" : [ "path_t_out", "combined_t_out", "clin_t_out", "source_t_out", "ss2017_t_out" ]
     }, {
       "id" : "determine_default_n",
-      "inputs" : [ "clin_n", "path_n" ],
-      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+      "inputs" : [ "clin_n_in", "path_n_in" ],
+      "outputs" : [ "path_n_out", "clin_n_out" ]
     }, {
       "id" : "determine_default_m",
-      "inputs" : [ "path_m", "clin_m" ],
-      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_clin_m", "combined_m_in", "source_m" ]
+      "inputs" : [ "path_m_in", "clin_m_in" ],
+      "outputs" : [ "ss2017_m_out", "combined_m_out", "path_m_out", "source_m_out", "clin_m_out" ]
     }, {
       "id" : "tnm7_stage_uam",
       "input_mapping" : [ {
@@ -280,9 +278,9 @@
       "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t" ],
       "outputs" : [ "path_stage_group" ]
     }, {
-      "id" : "adjust_path_defaults",
-      "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
-      "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
+      "id" : "adjustments_for_no_clin_or_no_path_26261",
+      "inputs" : [ "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "tmp_path_n", "path_m", "tmp_path_t", "tmp_clin_t", "clin_n", "clin_m", "path_n" ],
+      "outputs" : [ "combined_t_out", "combined_m_out", "source_t_out", "clin_stage_group", "combined_n_out", "source_n_out", "source_m_out", "path_stage_group" ]
     } ]
   }, {
     "id" : "combined_stage",
@@ -313,8 +311,8 @@
         "from" : "tmp_path_t",
         "to" : "path_t"
       } ],
-      "inputs" : [ "radiation_surg_seq", "combined_t_in", "tmp_path_t", "tmp_clin_t", "behavior", "systemic_surg_seq" ],
-      "outputs" : [ "source_t", "combined_t" ]
+      "inputs" : [ "path_t_in", "radiation_surg_seq", "combined_t_in", "clin_t_in", "behavior", "systemic_surg_seq" ],
+      "outputs" : [ "combined_t_out", "source_t_out" ]
     }, {
       "id" : "combined_n",
       "input_mapping" : [ {
@@ -324,8 +322,8 @@
         "from" : "tmp_path_n",
         "to" : "path_n"
       } ],
-      "inputs" : [ "nodes_pos", "tmp_clin_n", "radiation_surg_seq", "tmp_path_n", "combined_n_in", "systemic_surg_seq" ],
-      "outputs" : [ "combined_n", "source_n" ]
+      "inputs" : [ "clin_n_in", "nodes_pos", "radiation_surg_seq", "combined_n_in", "path_n_in", "systemic_surg_seq" ],
+      "outputs" : [ "combined_n_out", "source_n_out" ]
     }, {
       "id" : "combined_m",
       "input_mapping" : [ {
@@ -335,8 +333,8 @@
         "from" : "tmp_path_m",
         "to" : "path_m"
       } ],
-      "inputs" : [ "tmp_path_m", "tmp_clin_m", "combined_m_in" ],
-      "outputs" : [ "combined_m", "source_m" ]
+      "inputs" : [ "path_m_in", "combined_m_in", "clin_m_in" ],
+      "outputs" : [ "combined_m_out", "source_m_out" ]
     }, {
       "id" : "tnm7_stage_uam",
       "input_mapping" : [ {
@@ -357,20 +355,20 @@
       "outputs" : [ "combined_stage_group" ]
     }, {
       "id" : "combined_to_summ_stage_t_80394",
-      "inputs" : [ "combined_t" ],
-      "outputs" : [ "ss2017_t" ]
+      "inputs" : [ "combined_t_in" ],
+      "outputs" : [ "ss2017_t_out" ]
     }, {
       "id" : "combined_n_to_summ_stage_n_84054",
-      "inputs" : [ "combined_n" ],
-      "outputs" : [ "ss2017_n" ]
+      "inputs" : [ "combined_n_in" ],
+      "outputs" : [ "ss2017_n_out" ]
     }, {
       "id" : "summary_stage_rpa",
       "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
       "outputs" : [ "ss2017" ]
     }, {
       "id" : "cpmbined_m_to_summ_stage_m_60564",
-      "inputs" : [ "combined_m" ],
-      "outputs" : [ "ss2017_m" ]
+      "inputs" : [ "combined_m_in" ],
+      "outputs" : [ "ss2017_m_out" ]
     } ]
   }, {
     "id" : "summary_stage_2017",
@@ -397,7 +395,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "tnm7_inclusions_tqj", "determine_default_t", "input_version_validation", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpb", "mets_hac", "ssf2_kal", "determine_default_n", "clin_m_hac", "tnm7_stage_uam", "combined_n_to_summ_stage_n_84054", "ssf13_sdr", "stomach_t_57787", "nodes_dak", "histology", "path_n_dak", "behavior", "schema_selection_stomach", "clin_n_dak", "ssf14_sds", "adjust_path_defaults", "systemic_surg_seq", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "path_m_hac", "year_dx_validation", "summary_stage_rpa", "combined_t", "ssf15_sdt", "discriminator_esophogus_ge_junction", "extension_bal" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "tnm7_inclusions_tqj", "determine_default_t", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpb", "mets_hac", "stage_group_c_62342", "ssf2_kal", "determine_default_n", "clin_m_hac", "tnm7_stage_uam", "combined_n_to_summ_stage_n_84054", "ssf13_sdr", "stomach_t_57787", "nodes_dak", "histology", "path_n_dak", "stage_group_p_27096", "behavior", "schema_selection_stomach", "adjustments_for_no_clin_or_no_path_26261", "clin_t_stomach_55386", "clin_n_dak", "ssf14_sds", "systemic_surg_seq", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "path_m_hac", "year_dx_validation", "summary_stage_rpa", "combined_t", "ssf15_sdt", "discriminator_esophogus_ge_junction", "extension_bal" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-08T17:08:15.494Z"
+  "last_modified" : "2015-10-31T12:59:49.033Z"
 }

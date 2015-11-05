@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 11",
   "subtitle" : "Human Immunodeficiency Virus (HIV) Status",
   "notes" : "**Note 1:**  Human Immunodeficiency Virus (HIV) includes types I and II.  Older terminology includes Human T-Lymphotropic Virus (HTLV-3) and Lymphadenopathy Associated Virus (LAV).\n\n**Note 2:**  Code HIV status as identified in the medical record.",
-  "last_modified" : "2015-08-13T13:24:52.450Z",
+  "last_modified" : "2015-10-30T18:48:33.737Z",
   "definition" : [ {
     "key" : "ssf11",
     "name" : "Code",
@@ -16,5 +16,5 @@
     "name" : "Description",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "000", "Negative Human Immunodeficiency Virus (HIV) status" ], [ "010", "Positive HIV status" ], [ "988", "Not applicable: Information not collected for this case. " ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+  "rows" : [ [ "000", "Negative Human Immunodeficiency Virus (HIV) status" ], [ "010", "Positive HIV status" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
 }

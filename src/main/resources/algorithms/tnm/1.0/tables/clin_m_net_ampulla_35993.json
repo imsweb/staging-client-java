@@ -1,0 +1,26 @@
+{
+  "id" : "clin_m_net_ampulla_35993",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin M NET Ampulla",
+  "title" : "Clinical M",
+  "last_modified" : "2015-10-19T15:05:44.050Z",
+  "definition" : [ {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_m_display",
+    "name" : "Clinical M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "M0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "1", "M1", "Distant metastasis", "Distant lymph node(s):\n    At tail of pancreas\n    Para-aortic\n    Splenic\n\nDistant lymph nodes, NOS\n\nCarcinomatosis\n(Includes seeding of peritoneum, even if limited to the lesser sac region; positive peritoneal cytology)\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated  as M1" ], [ "88", "88", "Not applicable", "Clinical M is not defined for this site/histology\nIn situ (no Tis defined)" ], [ "", "BLANK", "", "Pathologic M1 (sub) category or higher" ] ]
+}

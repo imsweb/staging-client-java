@@ -5,8 +5,8 @@
   "name" : "SSF21",
   "title" : "Site-Specific Factor 21",
   "subtitle" : "Response to Neoadjuvant Therapy",
-  "notes" : "**Note:**  Review the medical record for a specific statement by a physician about the response to neoadjuvant therapy.  Do not try to interpret or infer a response based on other documentation in the medical record such as a description of residual tumor on the pathology report.  Use code 999 if it is unknown if neoadjuvant therapy was given.",
-  "last_modified" : "2015-08-13T13:24:34.148Z",
+  "notes" : "**Note:**  Review the medical record for a specific statement by a physician about the response to neoadjuvant therapy.  Do not try to interpret or infer a response based on other documentation in the medical record such as a description of residual tumor on the pathology report.  \n\n    Use code 999 if it is unknown if neoadjuvant therapy was given.",
+  "last_modified" : "2015-10-30T18:48:41.911Z",
   "definition" : [ {
     "key" : "ssf21",
     "name" : "Code",
@@ -16,5 +16,5 @@
     "name" : "Description",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "010", "Complete response (CR)" ], [ "020", "Partial response (PR)" ], [ "025", "Response noted but no mention if it was complete or partial" ], [ "030", "No response (NR)" ], [ "987", "Not applicable:  Neoadjuvant therapy not given" ], [ "988", "Not applicable: Information not collected for this case. " ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+  "rows" : [ [ "010", "Complete response (CR)" ], [ "020", "Partial response (PR)" ], [ "025", "Response noted but no mention if it was complete or partial" ], [ "030", "No response (NR)" ], [ "987", "Not applicable:  Neoadjuvant therapy not given" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
 }

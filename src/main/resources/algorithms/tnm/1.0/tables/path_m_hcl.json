@@ -2,17 +2,17 @@
   "id" : "path_m_hcl",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path M",
+  "name" : "Path M Corpus Adenosarcoma",
   "title" : "Pathologic M",
   "notes" : "**Note 1:** When both Federation Internationale de Gynecologie at d-Obstetrique (FIGO) stage and metastatic detail are available, record the code with metastatic detail in preference to a statement of FIGO stage.\n\n**Note 2:** FIGO Stage IV, NOS is assigned based on tumor extension and/or distant metastasis.  Code distant metastasis based on a physician's statement of FIGO Stage IV [NOS] if it is known that the stage value is assigned because of metastatic involvement, or if there is no statement that FIGO Stage IV [NOS] is assigned based on extension.",
-  "last_modified" : "2015-10-10T19:54:11.565Z",
+  "last_modified" : "2015-10-19T14:55:19.510Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "1", "M1", "Distant metastasis (excluding adnexa, pelvic and abdominal tissues)", "Distant lymph node(s) other than code 11:\n    Deep inguinal, NOS:\n        Node of Cloquet or Rosenmuller (highest deep inguinal)\n    Superficial inguinal\n\nDistant lymph node(s), NOS\n(Excluding metastasis to pelvic or para-aortic lymph nodes)\n\nCarcinomatosis\n(Excluding adnexa and continuous extension to abdominal tissues)\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis NOS\n\nFIGO Stage IVB\nFIGO Stage IV [NOS] based on metastasis\n\nStated as M1" ] ]
+  "rows" : [ [ "1", "M1", "Distant metastasis (excluding adnexa, pelvic and abdominal tissues)", "Distant lymph node(s) other than code 11:\n    Deep inguinal, NOS:\n        Node of Cloquet or Rosenmuller (highest deep inguinal)\n    Superficial inguinal\n\nDistant lymph node(s), NOS\n(Excluding metastasis to pelvic or para-aortic lymph nodes)\n\nCarcinomatosis\n(Excluding adnexa and continuous extension to abdominal tissues)\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis NOS\n\nFIGO Stage IVB\nFIGO Stage IV [NOS] based on metastasis\n\nStated as M1" ], [ "88", "88", "Not applicable", "Pathologic M is not defined for this site/histology\nIn situ (no Tis defined)" ], [ "", "BLANK", "", "There is no evidence of metastatic disease (cM0)\nThere is no pathologic workup for metastatic disease\nNegative biopsy of a distant site\nClinical evidence of metastatic disease (clinical M1) but not histologically proven" ] ]
 }

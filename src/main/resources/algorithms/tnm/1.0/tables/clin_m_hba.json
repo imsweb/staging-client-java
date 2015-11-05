@@ -2,10 +2,10 @@
   "id" : "clin_m_hba",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Clin M",
+  "name" : "Clin M Vulva",
   "title" : "Clinical M",
   "notes" : "**Note:**  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and metastatic detail are available, record the code with metastatic detail in preference to a statement of FIGO stage.",
-  "last_modified" : "2015-08-13T13:24:32.851Z",
+  "last_modified" : "2015-10-14T14:20:05.482Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",

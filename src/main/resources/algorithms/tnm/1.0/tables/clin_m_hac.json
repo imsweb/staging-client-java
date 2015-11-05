@@ -2,10 +2,10 @@
   "id" : "clin_m_hac",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Clin M",
+  "name" : "Clin M Stomach",
   "title" : "Clinical M",
   "notes" : "**Note:** Distant metastasis includes peritoneal seeding, positive peritoneal cytology, and omental tumor not part of continuous extension.",
-  "last_modified" : "2015-08-27T14:53:45.269Z",
+  "last_modified" : "2015-10-14T15:45:11.570Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",

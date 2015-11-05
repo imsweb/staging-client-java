@@ -2,17 +2,17 @@
   "id" : "path_m_hpg",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path M",
+  "name" : "Path M Malignant Melanoma Uvea",
   "title" : "Pathologic M",
   "footnotes" : "*This subcategory of M1 is not defined by UICC in the 7th edition. Approval has been provided by UICC to use the definition found in the registrar note.",
-  "last_modified" : "2015-10-09T17:12:40.324Z",
+  "last_modified" : "2015-10-15T18:47:08.941Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

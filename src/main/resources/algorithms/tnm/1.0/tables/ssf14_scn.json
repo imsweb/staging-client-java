@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 14",
   "subtitle" : "Multiple Carcinomas",
   "notes" : "**Note:**  Code a history of two or more carcinomas as documented by the physician or as found in the medical record or registry database.  Include in the identification of \"carcinoma\" any tumor with a histology code between 8010 and 8589, excluding all carcinomas of skin coded to site C440-C449.",
-  "last_modified" : "2015-08-13T13:24:51.749Z",
+  "last_modified" : "2015-10-30T18:48:33.880Z",
   "definition" : [ {
     "key" : "ssf14",
     "name" : "Code",
@@ -16,5 +16,5 @@
     "name" : "Description",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "000", "No history of two or more carcinomas excluding skin carcinoma" ], [ "010", "History of two or more carcinomas excluding skin carcinoma" ], [ "988", "Not applicable: Information not collected for this case. " ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+  "rows" : [ [ "000", "No history of two or more carcinomas excluding skin carcinoma" ], [ "010", "History of two or more carcinomas excluding skin carcinoma" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
 }

@@ -2,16 +2,16 @@
   "id" : "path_m_hbx",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path M",
+  "name" : "Path M Carcinoid Appendix",
   "title" : "Pathologic M",
-  "last_modified" : "2015-10-10T19:51:33.914Z",
+  "last_modified" : "2015-10-23T10:33:11.428Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",
@@ -22,5 +22,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "1", "M1", "Distant metastasis", "Superior mesenteric lymph node(s)\n\nDistant lymph node(s), NOS\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis, NOS\n\nStated as M1" ] ]
+  "rows" : [ [ "1", "M1", "Distant metastasis", "Superior mesenteric lymph node(s)\n\nDistant lymph node(s), NOS\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis, NOS\n\nStated as M1" ], [ "88", "88", "Not applicable", "Path M is not defined for this site/histology\n In situ (no pTis defined)" ], [ "", "", "", "There is no evidence of metastatic disease (cM0)\nThere is no pathologic workup for metastatic disease\nNegative biopsy of a distant site\nClinical evidence of metastatic disease (clinical M1) but not histologically proven" ] ]
 }

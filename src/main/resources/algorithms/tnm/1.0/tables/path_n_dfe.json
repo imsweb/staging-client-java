@@ -2,17 +2,17 @@
   "id" : "path_n_dfe",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path N",
+  "name" : "Path N NET Colon",
   "title" : "Pathologic N",
-  "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 12 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0. \n\n**Note 2:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in the distant metastasis.\n\n**Note 3:**  Inferior mesenteric nodes are coded in distant metastasis for cecum, ascending colon, transverse colon, and hepatic flexure. Superior mesenteric nodes are coded in distant metastasis for all colon sites.\n\n** Note 4:** Regional lymph nodes for colon\n \n**All colon sites** \n\n    Colic [NOS] \n    Epicolic (adjacent to bowel wall) \n    Mesocolic [NOS] \n    Mesenteric [NOS]\n    Paracolic/pericolic\n\n**Cecum (C18.0)** \n\n    Anterior (prececal), \n    Cecal [NOS]\n    Ileocolic\n    Periappendiceal\n    Posterior (retrocecal)\n    Right colic \n\n**Ascending colon (C18.2)** \n\n    Ileocolic\n    Middle colic\n    Right colic\n\n**Hepatic flexure (C18.3)** \n\n    Middle colic \n    Right colic\n\n**Transverse colon (C18.4)** \n\n    Inferior mesenteric \n    Left colic \n    Middle colic \n    Right colic\n\n**Splenic flexure (C18.5)** \n\n    Inferior mesenteric \n    Left colic \n    Middle colic\n\n**Descending colon (C18.6)** \n\n    Inferior mesenteric \n    Left colic \n    Sigmoid \n\n**Sigmoid colon (C18.7)** \n\n    Inferior mesenteric \n    Left colic \n    Rectosigmoid \n    Sigmoid \n    Sigmoidal (sigmoid mesenteric) \n    Superior hemorrhoidal \n    Superior rectal",
-  "last_modified" : "2015-10-09T17:35:10.429Z",
+  "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 12 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0. \n\n**Note 2:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in the distant metastasis.\n\n**Note 3:**  Inferior mesenteric nodes are coded in distant metastasis for cecum, ascending colon, transverse colon, and hepatic flexure. Superior mesenteric nodes are coded in distant metastasis for all colon sites.\n\n** Note 4:** Regional lymph nodes for colon\n \n**All colon sites** \n\n    Colic [NOS] \n    Epicolic (adjacent to bowel wall) \n    Mesocolic [NOS] \n    Mesenteric [NOS]\n    Paracolic/pericolic\n\n**Cecum (C180)** \n\n    Anterior (prececal), \n    Cecal [NOS]\n    Ileocolic\n    Periappendiceal\n    Posterior (retrocecal)\n    Right colic \n\n**Ascending colon (C182)** \n\n    Ileocolic\n    Middle colic\n    Right colic\n\n**Hepatic flexure (C183)** \n\n    Middle colic \n    Right colic\n\n**Transverse colon (C184)** \n\n    Inferior mesenteric \n    Left colic \n    Middle colic \n    Right colic\n\n**Splenic flexure (C185)** \n\n    Inferior mesenteric \n    Left colic \n    Middle colic\n\n**Descending colon (C186)** \n\n    Inferior mesenteric \n    Left colic \n    Sigmoid \n\n**Sigmoid colon (C187)** \n\n    Inferior mesenteric \n    Left colic \n    Rectosigmoid \n    Sigmoid \n    Sigmoidal (sigmoid mesenteric) \n    Superior hemorrhoidal \n    Superior rectal",
+  "last_modified" : "2015-10-19T15:07:36.792Z",
   "definition" : [ {
     "key" : "path_n",
-    "name" : "Pathological N",
+    "name" : "Pathologic N",
     "type" : "INPUT"
   }, {
     "key" : "path_n_display",
-    "name" : "Pathological N Display",
+    "name" : "Pathologic N Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "NX", "Regional lymph nodes cannot be assessed", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ] ]
+  "rows" : [ [ "X", "NX", "Regional lymph nodes cannot be assessed", "Surgical resection of primary and pathologic assessment of regional nodes is done but involvement of regional nodes not stated\nSurgical resection of primary and pathologic assessment of regional nodes is done but involvement of regional nodes not documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "88", "88", "Not applicable", "Pathologic N is not defined for this site/histology\nIn situ (no Tis defined)" ], [ "", "BLANK", "", "No pathologic evaluation of regional lymph nodes\nRegional lymph node(s) cannot be assessed pathologically\nNo resection of the primary\nUnknown if any pathologic assessment performed" ] ]
 }

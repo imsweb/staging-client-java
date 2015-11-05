@@ -2,17 +2,17 @@
   "id" : "skin_eyelid_n_65771",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Skin Eyelid N",
-  "title" : "Clinical and Pathologic N",
+  "name" : "Path N Skin Eyelid",
+  "title" : "Pathologic N",
   "notes" : "**Note:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in distant metastasis.\n\n**Regional lymph nodes:**\n\n    Cervical, NOS\n    Facial, NOS :\n        Buccinator (buccal)\n        Nasolabial \n    Submental    \n    Submandibular (submaxillary)  \n    Parotid, NOS:\n        Infra-auricular\n        Preauricular\n    Supraclavicular, NOS",
-  "last_modified" : "2015-10-10T21:09:54.723Z",
+  "last_modified" : "2015-10-26T18:17:24.174Z",
   "definition" : [ {
-    "key" : "clin_n",
-    "name" : "Clinical N",
+    "key" : "path_n",
+    "name" : "Pathologic N",
     "type" : "INPUT"
   }, {
-    "key" : "clin_n_display",
-    "name" : "Clinical N Display",
+    "key" : "path_n_display",
+    "name" : "Pathologic N Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

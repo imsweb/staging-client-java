@@ -1,0 +1,27 @@
+{
+  "id" : "prostate_pathologic_n_4662",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Path N Prostate",
+  "title" : "Pathologic N",
+  "notes" : "**Note:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in distant metastasis.\n\n**Regional lymph nodes (includes contralateral or bilateral lymph nodes:**\n\n    Iliac, NOS:\n        External\n        Internal (hypogastric), NOS:\n            Obturator\n    Pelvic, NOS\n    Periprostatic\n    Sacral, NOS:\n        Lateral (laterosacral)\n        Middle (promontorial)(Gerota's node)\n        Presacral",
+  "last_modified" : "2015-10-26T18:18:01.780Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathologic N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "NX", "Regional lymph nodes cannot be assessed", "Surgical resection of primary and pathologic assessment of regional nodes is done but involvement of regional nodes not stated\nSurgical resection of primary and pathologic assessment of regional nodes is done but involvement of regional nodes not documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "88", "88", "Not applicable", "Pathologic N is not defined for this site/histology\nIn situ (no Tis defined)" ], [ "", "BLANK", "", "No pathologic evaluation of regional lymph nodes\nRegional lymph node(s) cannot be assessed pathologically\nNo resection of the primary\nUnknown if any pathologic assessment performed" ] ]
+}

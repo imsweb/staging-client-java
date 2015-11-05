@@ -2,16 +2,16 @@
   "id" : "path_m_hck",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path M",
+  "name" : "Path M NET Stomach",
   "title" : "Pathologic M",
-  "last_modified" : "2015-10-10T20:49:41.135Z",
+  "last_modified" : "2015-10-19T15:12:22.413Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",
@@ -22,5 +22,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "1", "M1", "Distant metastasis", "Distant lymph node(s):\n    For all subsites:\n        Mesenteric, NOS:\n            Inferior mesenteric\n            Superior mesenteric\n        Para-aortic\n        Porta hepatis (portal) (hilar) (in hilus of liver)\n        Retropancreatic\n        Retroperitoneal\n    For all subsites EXCEPT lesser curvature:\n        Hepatoduodenal\n    \nDistant lymph nodes, NOS\n\nCarcinomatosis\nMalignant peritoneal cytology\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis, NOS \n\nStated as M1" ] ]
+  "rows" : [ [ "1", "M1", "Distant metastasis", "Distant lymph node(s):\n    For all subsites:\n        Mesenteric, NOS:\n            Inferior mesenteric\n            Superior mesenteric\n        Para-aortic\n        Porta hepatis (portal) (hilar) (in hilus of liver)\n        Retropancreatic\n        Retroperitoneal\n    For all subsites EXCEPT lesser curvature:\n        Hepatoduodenal\n    \nDistant lymph nodes, NOS\n\nCarcinomatosis\nMalignant peritoneal cytology\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis, NOS \n\nStated as M1" ], [ "", "BLANK", "", "There is no evidence of metastatic disease (cM0)\nThere is no pathologic workup for metastatic disease\nNegative biopsy of a distant site\nClinical evidence of metastatic disease (clinical M1) but not histologically proven" ] ]
 }

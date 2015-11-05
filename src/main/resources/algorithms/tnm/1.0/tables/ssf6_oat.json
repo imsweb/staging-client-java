@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 6",
   "subtitle" : "Lactate Dehydrogenase (LDH)",
   "notes" : "**Note 1:**  Lactate dehydrogenase (LDH) is an enzyme that is released into the bloodstream when cells are damaged or destroyed.  Cancer cells have a high rate of turnover, leading to an elevated LDH.  An elevated LDH is a generic marker of injury to cells and not specific to cancer.\n\n**Note 2:**  Record the range of LDH value as documented in the patient record at the time of diagnosis.",
-  "last_modified" : "2015-08-13T13:23:19.742Z",
+  "last_modified" : "2015-10-30T18:48:32.478Z",
   "definition" : [ {
     "key" : "ssf6",
     "name" : "Code",
@@ -16,5 +16,5 @@
     "name" : "Description",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "000", "Within normal limits " ], [ "010", "Less than 1.5 x N\n(Less than 1.5 times the upper limit of normal for lactate dehydrogenase (LDH))" ], [ "020", "1.5 to 5 x N\n(Between 1.5 and 5 times the upper limit of normal for LDH)" ], [ "025", "5.1-10 x N\n(Between 5.1 and 10 times the upper limit of normal for LDH)" ], [ "030", "Greater than 10 x N\n(Greater than 10 times the upper limit of normal for LDH)" ], [ "988", "Not applicable: Information not collected for this case. " ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+  "rows" : [ [ "000", "Within normal limits " ], [ "010", "Less than 1.5 x N\n(Less than 1.5 times the upper limit of normal for lactate dehydrogenase (LDH))" ], [ "020", "1.5 to 5 x N\n(Between 1.5 and 5 times the upper limit of normal for LDH)" ], [ "025", "5.1-10 x N\n(Between 5.1 and 10 times the upper limit of normal for LDH)" ], [ "030", "Greater than 10 x N\n(Greater than 10 times the upper limit of normal for LDH)" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
 }

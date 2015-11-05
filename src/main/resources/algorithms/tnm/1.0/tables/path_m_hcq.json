@@ -2,17 +2,17 @@
   "id" : "path_m_hcq",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path M",
+  "name" : "Path M Distal Bile Duct",
   "title" : "Pathologic M",
   "notes" : "**Note:**  Celiac lymph nodes are classified as distant nodes for TNM 7 staging.  They are coded in distant metastasis.",
-  "last_modified" : "2015-10-10T19:43:27.863Z",
+  "last_modified" : "2015-10-15T18:47:17.861Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

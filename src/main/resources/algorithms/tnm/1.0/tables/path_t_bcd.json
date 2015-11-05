@@ -4,14 +4,14 @@
   "version" : "1.0",
   "name" : "Path T",
   "title" : "Pathologic T",
-  "last_modified" : "2015-10-10T19:50:33.987Z",
+  "last_modified" : "2015-10-15T18:47:32.031Z",
   "definition" : [ {
     "key" : "path_t",
-    "name" : "Pathological T",
+    "name" : "Pathologic T",
     "type" : "INPUT"
   }, {
     "key" : "path_t_display",
-    "name" : "Pathological T Display",
+    "name" : "Pathologic T Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

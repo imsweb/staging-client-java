@@ -2,17 +2,17 @@
   "id" : "path_m_hbz",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path M",
+  "name" : "Path M Intrahepatic Bile Ducts",
   "title" : "Pathologic M",
   "notes" : "**Note 1:**  Periduodenal and peripancreatic nodes are distant for tumors in the left liver, and gastrohepatic nodes are distant for tumors in the right liver. If both lobes of liver are involved, code involvement of periduodenal/peripancreatic and gastrohepatic nodes in regional lymph nodes.\n\n**Note 3:**  Caval nodes are classified as distant for TNM 7 staging.",
-  "last_modified" : "2015-10-10T19:45:30.162Z",
+  "last_modified" : "2015-10-15T18:47:19.407Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

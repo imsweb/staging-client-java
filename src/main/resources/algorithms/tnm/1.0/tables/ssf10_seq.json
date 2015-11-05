@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 10",
   "subtitle" : "Involvement of Corpus Spongiosum/Corpus Cavernosum",
   "notes" : "**Note 1:**  Information about involvement of the corpus spongiosum and corpus cavernosum is collected in Clinical T and Path T as an element in anatomic staging. This information is also collected in this field as it may have an independent effect on prognosis.\n\n**Note 2:**  Record the involvement of the corpus spongiosum and corpus cavernosum as documented in the pathology report. Assign code 000 if surgical resection of the primary site is performed and includes corpus spongiosum and/or corpus cavernosum, the pathology report is available for review, and corpus spongiosum and/or corpus cavernosum involvement is not mentioned. If surgical resection of the primary site is performed without corpus spongiosum and/or corpus cavernosum included in the specimen, assign code 998.",
-  "last_modified" : "2015-08-13T13:24:06.866Z",
+  "last_modified" : "2015-10-30T18:48:28.449Z",
   "definition" : [ {
     "key" : "ssf10",
     "name" : "Code",
@@ -16,5 +16,5 @@
     "name" : "Description",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "000", "Involvement of corpus spongiosum and/or corpus cavernosum not present/not identified" ], [ "010", "Involvement of corpus spongiosum only" ], [ "020", "Involvement of corpus cavernosum only" ], [ "030", "020 + 010\n\nInvolvement of corpus cavernosum and corpus spongiosum" ], [ "988", "Not applicable: Information not collected for this case. " ], [ "998", "No surgical resection of primary site\nSurgical resection of primary site but corpus spongiosum/corpus cavernosum not part of specimen" ], [ "999", "Unknown \nNot documented in patient record" ] ]
+  "rows" : [ [ "000", "Involvement of corpus spongiosum and/or corpus cavernosum not present/not identified" ], [ "010", "Involvement of corpus spongiosum only" ], [ "020", "Involvement of corpus cavernosum only" ], [ "030", "020 + 010\n\nInvolvement of corpus cavernosum and corpus spongiosum" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "No surgical resection of primary site\nSurgical resection of primary site but corpus spongiosum/corpus cavernosum not part of specimen" ], [ "999", "Unknown \nNot documented in patient record" ] ]
 }

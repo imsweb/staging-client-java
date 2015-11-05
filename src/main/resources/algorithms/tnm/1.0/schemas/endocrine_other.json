@@ -4,19 +4,13 @@
   "version" : "1.0",
   "name" : "Endocrine Other",
   "title" : "Thymus and Other Endocrine Glands (excluding Adrenal Gland, Pituitary Gland, Craniopharyngeal Duct, and Pineal Gland",
-  "notes" : "C37.9  Thymus\nC75.0  Parathyroid gland\nC75.4  Carotid body\nC75.5  Aortic body and other paraganglia\nC75.8  Overlapping lesion of endocrine glands and related structures\nC75.9  Endocrine gland, NOS\n\n**Note 1:**  TNM is not defined for these sites.\n\n**Note 2:**  Laterality must be coded for C75.4.",
+  "notes" : "C379  Thymus\nC750  Parathyroid gland\nC754  Carotid body\nC755  Aortic body and other paraganglia\nC758  Overlapping lesion of endocrine glands and related structures\nC759  Endocrine gland, NOS\n\n**Note 1:**  TNM is not defined for these sites.\n\n**Note 2:**  Laterality must be coded for C754.",
   "schema_selection_table" : "schema_selection_endocrine_other",
   "inputs" : [ {
     "key" : "year_dx",
     "name" : "Year of Diagnosis",
     "naaccr_item" : 390,
     "table" : "year_dx_validation",
-    "used_for_staging" : false
-  }, {
-    "key" : "input_version",
-    "name" : "Input Version",
-    "naaccr_item" : 2937,
-    "table" : "input_version_validation",
     "used_for_staging" : false
   }, {
     "key" : "site",
@@ -125,7 +119,7 @@
       "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
-      "id" : "seer_mets_endocrineother_30901",
+      "id" : "seer_mets_48348",
       "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
@@ -134,7 +128,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "primary_site", "seer_mets_48348", "input_version_validation", "nodes_dcd", "histology", "year_dx_validation", "summary_stage_rpa", "seer_mets_endocrineother_30901", "schema_selection_endocrine_other", "extension_bco" ],
+  "involved_tables" : [ "primary_site", "seer_mets_48348", "nodes_dcd", "histology", "year_dx_validation", "summary_stage_rpa", "schema_selection_endocrine_other", "extension_bco" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-08T17:08:16.751Z"
+  "last_modified" : "2015-10-30T17:50:23.798Z"
 }

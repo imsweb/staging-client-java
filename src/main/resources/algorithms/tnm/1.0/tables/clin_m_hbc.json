@@ -2,10 +2,10 @@
   "id" : "clin_m_hbc",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Clin M",
+  "name" : "Clin M Bladder",
   "title" : "Clinical M",
   "notes" : "**Note:**  Positive common iliac lymph nodes are coded as regional lymph nodes (N3) and not M1.",
-  "last_modified" : "2015-08-17T18:35:56.274Z",
+  "last_modified" : "2015-10-14T12:58:08.012Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",

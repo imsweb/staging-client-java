@@ -4,14 +4,14 @@
   "version" : "1.0",
   "name" : "Path N",
   "title" : "Pathologic N",
-  "last_modified" : "2015-10-09T17:14:25.420Z",
+  "last_modified" : "2015-10-15T18:47:31.629Z",
   "definition" : [ {
     "key" : "path_n",
-    "name" : "Pathological N",
+    "name" : "Pathologic N",
     "type" : "INPUT"
   }, {
     "key" : "path_n_display",
-    "name" : "Pathological N Display",
+    "name" : "Pathologic N Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

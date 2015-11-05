@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Pharyngeal Tonsil",
   "title" : "PharyngealTonsil (excluding Malignant Melanoma)",
-  "notes" : "C11.1 Pharyngeal tonsil \n\n**Note 1:**  Site-Specific Factor 25 is used to discriminate between posterior wall of nasopharynx, staged with nasopharynx, and pharyngeal tonsil, staged with oropharynx.  Both sites are coded to ICD-O-3 code C11.1.\n\nThe nasopharynx consists of the following:\n1. Postero-superior wall: extends from the level of the junction of the hard and soft palates to the base of the skull (C11.0, C11.1)\n2. Lateral wall: including the fossa of Rosenmuller (C11.2)\n3. Inferior wall: consists of the superior surface of the soft palate (C11.3)\n\nNote: The margin of the choanal orifices, including the posterior margin of the nasal septum, is included with the nasal fossa.",
+  "notes" : "C111 Pharyngeal tonsil \n\n**Note 1:**  Site-Specific Factor 25 is used to discriminate between posterior wall of nasopharynx, staged with nasopharynx, and pharyngeal tonsil, staged with oropharynx.  Both sites are coded to ICD-O-3 code C111.\n\nThe nasopharynx consists of the following:\n1. Postero-superior wall: extends from the level of the junction of the hard and soft palates to the base of the skull (C110, C111)\n2. Lateral wall: including the fossa of Rosenmuller (C112)\n3. Inferior wall: consists of the superior surface of the soft palate (C113)\n\nNote: The margin of the choanal orifices, including the posterior margin of the nasal septum, is included with the nasal fossa.",
   "schema_selection_table" : "schema_selection_pharyngeal_tonsil",
   "schema_discriminators" : [ "ssf25" ],
   "inputs" : [ {
@@ -12,12 +12,6 @@
     "name" : "Year of Diagnosis",
     "naaccr_item" : 390,
     "table" : "year_dx_validation",
-    "used_for_staging" : false
-  }, {
-    "key" : "input_version",
-    "name" : "Input Version",
-    "naaccr_item" : 2937,
-    "table" : "input_version_validation",
     "used_for_staging" : false
   }, {
     "key" : "site",
@@ -59,7 +53,7 @@
     "key" : "clin_t",
     "name" : "Clinical T",
     "naaccr_item" : 940,
-    "table" : "pharyngeal_tonsil_t_36969",
+    "table" : "clin_t_pharyngeal_tonsil_99141",
     "used_for_staging" : true
   }, {
     "key" : "clin_n",
@@ -185,13 +179,17 @@
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
     "default" : "88",
-    "used_for_staging" : false
+    "table" : "stage_group_c_51542",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED" ]
   }, {
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
     "default" : "88",
-    "used_for_staging" : false
+    "table" : "stage_group_p_35702",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -270,16 +268,16 @@
     } ],
     "tables" : [ {
       "id" : "determine_default_t",
-      "inputs" : [ "clin_t", "path_t" ],
-      "outputs" : [ "source_t", "combined_t_in", "tmp_path_t", "ss2017_t", "tmp_clin_t" ]
+      "inputs" : [ "path_t_in", "clin_t_in" ],
+      "outputs" : [ "path_t_out", "combined_t_out", "clin_t_out", "source_t_out", "ss2017_t_out" ]
     }, {
       "id" : "determine_default_n",
-      "inputs" : [ "clin_n", "path_n" ],
-      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+      "inputs" : [ "clin_n_in", "path_n_in" ],
+      "outputs" : [ "path_n_out", "clin_n_out" ]
     }, {
       "id" : "determine_default_m",
-      "inputs" : [ "path_m", "clin_m" ],
-      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_clin_m", "combined_m_in", "source_m" ]
+      "inputs" : [ "path_m_in", "clin_m_in" ],
+      "outputs" : [ "ss2017_m_out", "combined_m_out", "path_m_out", "source_m_out", "clin_m_out" ]
     }, {
       "id" : "tnm7_stage_upt",
       "input_mapping" : [ {
@@ -317,9 +315,9 @@
       "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t" ],
       "outputs" : [ "path_stage_group" ]
     }, {
-      "id" : "adjust_path_defaults",
-      "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
-      "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
+      "id" : "adjustments_for_no_clin_or_no_path_26261",
+      "inputs" : [ "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "tmp_path_n", "path_m", "tmp_path_t", "tmp_clin_t", "clin_n", "clin_m", "path_n" ],
+      "outputs" : [ "combined_t_out", "combined_m_out", "source_t_out", "clin_stage_group", "combined_n_out", "source_n_out", "source_m_out", "path_stage_group" ]
     } ]
   }, {
     "id" : "combined_stage",
@@ -350,8 +348,8 @@
         "from" : "tmp_path_t",
         "to" : "path_t"
       } ],
-      "inputs" : [ "radiation_surg_seq", "combined_t_in", "tmp_path_t", "tmp_clin_t", "behavior", "systemic_surg_seq" ],
-      "outputs" : [ "source_t", "combined_t" ]
+      "inputs" : [ "path_t_in", "radiation_surg_seq", "combined_t_in", "clin_t_in", "behavior", "systemic_surg_seq" ],
+      "outputs" : [ "combined_t_out", "source_t_out" ]
     }, {
       "id" : "combined_n",
       "input_mapping" : [ {
@@ -361,8 +359,8 @@
         "from" : "tmp_path_n",
         "to" : "path_n"
       } ],
-      "inputs" : [ "nodes_pos", "tmp_clin_n", "radiation_surg_seq", "tmp_path_n", "combined_n_in", "systemic_surg_seq" ],
-      "outputs" : [ "combined_n", "source_n" ]
+      "inputs" : [ "clin_n_in", "nodes_pos", "radiation_surg_seq", "combined_n_in", "path_n_in", "systemic_surg_seq" ],
+      "outputs" : [ "combined_n_out", "source_n_out" ]
     }, {
       "id" : "combined_m",
       "input_mapping" : [ {
@@ -372,8 +370,8 @@
         "from" : "tmp_path_m",
         "to" : "path_m"
       } ],
-      "inputs" : [ "tmp_path_m", "tmp_clin_m", "combined_m_in" ],
-      "outputs" : [ "combined_m", "source_m" ]
+      "inputs" : [ "path_m_in", "combined_m_in", "clin_m_in" ],
+      "outputs" : [ "combined_m_out", "source_m_out" ]
     }, {
       "id" : "tnm7_stage_upt",
       "input_mapping" : [ {
@@ -394,16 +392,16 @@
       "outputs" : [ "combined_stage_group" ]
     }, {
       "id" : "combined_to_summ_stage_t_80394",
-      "inputs" : [ "combined_t" ],
-      "outputs" : [ "ss2017_t" ]
+      "inputs" : [ "combined_t_in" ],
+      "outputs" : [ "ss2017_t_out" ]
     }, {
       "id" : "combined_n_to_summ_stage_n_headneck_nasotonsil_77031",
-      "inputs" : [ "combined_n", "ssf6", "ssf4", "ssf5", "ssf3" ],
-      "outputs" : [ "ss2017_n" ]
+      "inputs" : [ "ssf6", "ssf4", "ssf5", "combined_n_in", "ssf3" ],
+      "outputs" : [ "ss2017_n_out" ]
     }, {
       "id" : "cpmbined_m_to_summ_stage_m_60564",
-      "inputs" : [ "combined_m" ],
-      "outputs" : [ "ss2017_m" ]
+      "inputs" : [ "combined_m_in" ],
+      "outputs" : [ "ss2017_m_out" ]
     }, {
       "id" : "summary_stage_rpa",
       "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
@@ -425,16 +423,16 @@
       "inputs" : [ "seer_nodes" ],
       "outputs" : [ "ss2017_n" ]
     }, {
-      "id" : "mets_hpb",
+      "id" : "seer_mets_pharyngeal_tonsil_78917",
       "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     }, {
-      "id" : "seer_mets_nasopharynx_pharyngeal_tonsil_70534",
+      "id" : "seer_mets_pharyngeal_tonsil_78917",
       "inputs" : [ "seer_mets" ],
       "outputs" : [ "ss2017_m" ]
     } ]
   } ],
-  "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "clinical_n_head_neck_except_nasopharynx_25237", "ssf10_spd", "schema_selection_pharyngeal_tonsil", "radiation_surg_seq", "ssf1_jpa", "path_m_hpb", "determine_default_m", "tnm7_stage_upt", "path_n_head_neck_except_nasopharynx_40357", "nodes_pos_fpa", "determine_default_n", "nodes_det", "histology", "ssf6_opa", "ssf3_lpa", "tnm7_inclusions_tpb", "mets_hpb", "behavior", "discriminator_nasopharynx", "extension_bey", "ssf4_mpa", "ssf9_spc", "combined_n_to_summ_stage_n_headneck_nasotonsil_77031", "pharyngeal_tonsil_t_36969", "adjust_path_defaults", "systemic_surg_seq", "seer_mets_pharyngeal_tonsil_78917", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "ssf5_npa", "year_dx_validation", "seer_mets_nasopharynx_pharyngeal_tonsil_70534", "summary_stage_rpa", "combined_t", "ssf8_spb" ],
+  "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "clinical_n_head_neck_except_nasopharynx_25237", "ssf10_spd", "schema_selection_pharyngeal_tonsil", "radiation_surg_seq", "ssf1_jpa", "path_m_hpb", "determine_default_m", "tnm7_stage_upt", "path_n_head_neck_except_nasopharynx_40357", "nodes_pos_fpa", "determine_default_n", "nodes_det", "histology", "ssf6_opa", "ssf3_lpa", "tnm7_inclusions_tpb", "stage_group_p_35702", "behavior", "discriminator_nasopharynx", "clin_t_pharyngeal_tonsil_99141", "adjustments_for_no_clin_or_no_path_26261", "extension_bey", "ssf4_mpa", "ssf9_spc", "combined_n_to_summ_stage_n_headneck_nasotonsil_77031", "pharyngeal_tonsil_t_36969", "systemic_surg_seq", "seer_mets_pharyngeal_tonsil_78917", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "ssf5_npa", "year_dx_validation", "summary_stage_rpa", "combined_t", "ssf8_spb", "stage_group_c_51542" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-09T12:14:42.995Z"
+  "last_modified" : "2015-10-31T15:07:11.540Z"
 }

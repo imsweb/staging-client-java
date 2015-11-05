@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 14",
   "subtitle" : "Needle Core Biopsy Findings",
   "notes" : "**Note 1:**  Record the findings of needle core biopsy as documented in the medical record.\n\n**Note 2:**  If multiple needle core biopsy procedures are performed during the initial diagnostic workup, record the most extensive findings from all biopsy procedures.  Code 050 takes precedence over codes 010, 020, and 030.",
-  "last_modified" : "2015-08-13T13:24:14.108Z",
+  "last_modified" : "2015-10-30T18:48:44.846Z",
   "definition" : [ {
     "key" : "ssf14",
     "name" : "Code",
@@ -16,5 +16,5 @@
     "name" : "Description",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "000", "Negative needle core biopsy findings" ], [ "010", "Positive needle core biopsy findings in one lobe/side" ], [ "020", "Positive needle core biopsy findings in both lobes/sides" ], [ "030", "Positive needle core biopsy findings, location (lobes/sides) not stated" ], [ "050", "Positive needle core biopsy findings beyond prostate" ], [ "988", "Not applicable: Information not collected for this case. " ], [ "998", "No needle core biopsy performed" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+  "rows" : [ [ "000", "Negative needle core biopsy findings" ], [ "010", "Positive needle core biopsy findings in one lobe/side" ], [ "020", "Positive needle core biopsy findings in both lobes/sides" ], [ "030", "Positive needle core biopsy findings, location (lobes/sides) not stated" ], [ "050", "Positive needle core biopsy findings beyond prostate" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "No needle core biopsy performed" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
 }

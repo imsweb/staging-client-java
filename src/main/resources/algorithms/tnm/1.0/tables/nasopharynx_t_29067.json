@@ -2,17 +2,17 @@
   "id" : "nasopharynx_t_29067",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Nasopharynx T",
-  "title" : "Clinical and Pathologic T",
+  "name" : "Path T Nasopharynx",
+  "title" : "Pathologic T",
   "notes" : "**Note 1:**  Parapharyngeal involvement denotes postero-lateral infiltration of tumor beyond the pharyngobasilar fascia.  The pharyngobasilar fascia is the fibrous layer of the pharyngeal wall between the mucosa and the muscular layer, attached superiorly to the basilar part of the occipital bone and diminishing in thickness as it descends.\n\n**Note 2:**  The masticator space primarily consists of the muscles of mastication, the medial and lateral pterygoid, masseter, and temporalis muscles.  The space also includes the ramus of the mandible and the third division of cranial nerve V as it passes through the foramen ovale into the suprahyoid neck.",
-  "last_modified" : "2015-10-10T20:50:36.180Z",
+  "last_modified" : "2015-10-29T14:44:59.732Z",
   "definition" : [ {
-    "key" : "clin_t",
-    "name" : "Clinical T",
+    "key" : "path_t",
+    "name" : "Pathologic T",
     "type" : "INPUT"
   }, {
-    "key" : "clin_t_display",
-    "name" : "Clinical T Display",
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown;  extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "IS", "Tis", "Carcinoma in situ", "Intraepithelial, noninvasive\n\nStated as Tis" ], [ "1", "T1", "Tumor confined to nasopharynx, or extends to oropharynx and/or nasal cavity", "Invasive tumor confined to one of the following subsites:\n    Inferior wall (superior surface of soft palate)\n    One lateral wall\n    Posterior superior wall (vault)\n\nInvolvement of two or more subsites:\n    Lateral wall extending into eustachian \n    tube/middle ear\n    Posterior, inferior, or lateral wall(s)\n\nOropharynx\nSoft palate, inferior surface including uvula\nWITHOUT parapharyngeal extension\n\nNasal cavity WITHOUT parapharyngeal extension\n\nExtension to soft tissue, NOS (excluding soft tissue of neck)\n\nConfined to nasopharynx\nLocalized, NOS\n\nStated as T1" ], [ "2", "T2", "Tumor with parapharyngeal extension", "Involvement of any T1 tumor: \nWITH fixation or tumor described only as FIXED\nWITH parapharyngeal extension\n\nPterygopalatine fossa WITHOUT bone invasion\n\nStated as T2" ], [ "3", "T3", "Tumor invades bony structures of skull base and/or paranasal sinuses", "Bone, NOS\nBony structures of skull base\nCartilage, NOS\nFloor of orbit\nHard palate\nParanasal sinus\n\nStated as T3" ], [ "4", "T4", "Tumor with intracranial extension and/or involvement of cranial nerves, hypopharynx, orbit, or with extension to the infratemporal fossa/masticator space", "Brain\nCranial nerve involvement\nHypopharynx\nInfratemporal fossa/masticator space\nIntracranial extension, NOS\nOrbit except bone of floor of orbit \n\nFurther contiguous extension including:\n    Soft tissues of neck\n\nStated as T4" ] ]
+  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown; extension not stated\nNot documented in patient record" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "IS", "Tis", "Carcinoma in situ", "Intraepithelial, noninvasive\n\nStated as Tis" ], [ "1", "T1", "Tumor confined to nasopharynx, OR \nextends to oropharynx and/or nasal cavity", "Invasive tumor confined to one of the following subsites:\n    Inferior wall (superior surface of soft palate)\n    One lateral wall\n    Posterior superior wall (vault)\n\nInvolvement of two or more subsites:\n    Lateral wall extending into eustachian \n    tube/middle ear\n    Posterior, inferior, or lateral wall(s)\n\nOropharynx\nSoft palate, inferior surface including uvula WITHOUT parapharyngeal extension\n\nNasal cavity WITHOUT parapharyngeal extension\n\nExtension to soft tissue, NOS (excluding soft tissue of neck)\n\nConfined to nasopharynx\nLocalized, NOS\n\nStated as T1" ], [ "2", "T2", "Tumor with parapharyngeal extension", "Involvement of any T1 tumor: \nWITH fixation or tumor described only as FIXED WITH parapharyngeal extension\n\nPterygopalatine fossa WITHOUT bone invasion\n\nStated as T2" ], [ "3", "T3", "Tumor invades bony structures of skull base and/or paranasal sinuses", "Bone, NOS\nBony structures of skull base\nCartilage, NOS\nFloor of orbit\nHard palate\nParanasal sinus\n\nStated as T3" ], [ "4", "T4", "Tumor with intracranial extension and/or involvement of: \n    Cranial nerves\n    Hypopharynx\n    Orbit \n\nOR with extension to the infratemporal fossa/masticator space", "Brain\nCranial nerve involvement\nHypopharynx\nInfratemporal fossa/masticator space\nIntracranial extension, NOS\nOrbit except bone of floor of orbit \n\nFurther contiguous extension including:\n    Soft tissues of neck\n\nStated as T4" ] ]
 }

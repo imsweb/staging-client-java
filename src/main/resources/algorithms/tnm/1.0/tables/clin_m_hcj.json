@@ -2,9 +2,9 @@
   "id" : "clin_m_hcj",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Clin M",
+  "name" : "Clin M NET Rectum",
   "title" : "Clinical M",
-  "last_modified" : "2015-08-17T15:46:46.908Z",
+  "last_modified" : "2015-10-19T15:08:49.880Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",
@@ -22,5 +22,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "0", "M0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "1", "M1", "Distant metastasis", "Distant lymph node(s):\n    For rectosigmoid:\n        Internal iliac (hypogastric):\n            Obturator\nOther distant lymph node(s), including:\n    External iliac or common iliac\n\nDistant lymph node(s), NOS\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1" ] ]
+  "rows" : [ [ "0", "M0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "1", "M1", "Distant metastasis", "Distant lymph node(s):\n    For rectosigmoid:\n        Internal iliac (hypogastric):\n            Obturator\nOther distant lymph node(s), including:\n    External iliac or common iliac\n\nDistant lymph node(s), NOS\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1" ], [ "88", "88", "Not applicable", "Clinical M is not defined for this site/histology\nIn situ (no Tis defined)" ], [ "", "BLANK", "", "Pathologic M1 (sub) category or higher" ] ]
 }

@@ -2,18 +2,17 @@
   "id" : "gist_small_intestine_n_18642",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "GIST Small Intestine N",
-  "title" : "Clinical and Pathologic N",
-  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in distant metastasis.\n\n**Note 2:**  Pericholedochal (common bile duct) lymph nodes are coded here for primaries of the duodenum.  They are coded in distant metastasis for primaries of other small intestine subsites.\n\n**Note 3:** Regional lymph node involvement is rare for GISTs, so that cases in which the nodal status is not associated clinically or pathologically could be considered N0 instead of cNX or pNX.\n\n**Regional lymph nodes for small intestine**\n\n**Duodenum primaries only (C17.0):**\n\n    Duodenal\n    Gastroduodenal\n    Hepatic\n    Pancreaticoduodenal\n    Pericholodochal (common bile duct)\n    Pyloric: infrapyloric, subpyloric\n    Superior mesenteric\n       \n**Jejunum primaries only (C17.1):**\n\n     Mesenteric, NOS:\n     Superior mesenteric\n\n**Ileum primaries only (C17.2):**\n\n     Cecal (anterior, posterior, retrocecal) \n     Ileocecal       \n     Mesenteric, NOS\n     Superior mesenteric",
-  "footnotes" : "*NX is not defined in AJCC 7th edition",
-  "last_modified" : "2015-10-09T17:31:16.541Z",
+  "name" : "Path N GIST Small Intestine",
+  "title" : "Pathologic N",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in distant metastasis.\n\n**Note 2:**  Pericholedochal (common bile duct) lymph nodes are coded here for primaries of the duodenum.  They are coded in distant metastasis for primaries of other small intestine subsites.\n\n**Note 3:** Regional lymph node involvement is rare for GISTs, so that cases in which the nodal status is not associated clinically or pathologically could be considered N0 instead of cNX or pNX.\n\n**Regional lymph nodes for small intestine**\n\n**Duodenum primaries only (C170):**\n\n    Duodenal\n    Gastroduodenal\n    Hepatic\n    Pancreaticoduodenal\n    Pericholodochal (common bile duct)\n    Pyloric: infrapyloric, subpyloric\n    Superior mesenteric\n       \n**Jejunum primaries only (C171):**\n\n     Mesenteric, NOS:\n     Superior mesenteric\n\n**Ileum primaries only (C172):**\n\n     Cecal (anterior, posterior, retrocecal) \n     Ileocecal       \n     Mesenteric, NOS\n     Superior mesenteric",
+  "last_modified" : "2015-10-27T22:51:27.271Z",
   "definition" : [ {
-    "key" : "clin_n",
-    "name" : "Clinical N",
+    "key" : "path_n",
+    "name" : "Pathologic N",
     "type" : "INPUT"
   }, {
-    "key" : "clin_n_display",
-    "name" : "Clinical N Display",
+    "key" : "path_n_display",
+    "name" : "Pathologic N Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",
@@ -24,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "NX", "Regional lymph nodes cannot be assessed*", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node involvement", "" ], [ "1", "N1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ] ]
+  "rows" : [ [ "X", "NX", "Regional lymph nodes cannot be assessed", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ] ]
 }

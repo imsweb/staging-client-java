@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_gist_stomach_46079",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clin T GIST Stomach",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:** TNM does not include an in situ category for GIST tumors. Assign 88 and behavior code /2 for in situ cases.\n\n**Note 2:**  Ignore intraluminal extension to adjacent segment(s) of colon; code depth of invasion or extra-appendiceal spread as indicated.\n\n**Note 3:** Tumor size must be known to assign a T value. You may use a physicianâs statement of the T category if this is the only information in the medical record. If no tumor size is available, assign TX.\n\n**Note 4:** For the following descriptions, assign the appropriate T category based on the tumor size.\n\n    Invasive tumor in polyp, NOS\n    Tumor confined to muscular wall\n    Tumor invades through submucosa and muscularis mucosae to involve mucosa\n    Implants inside stomach\n    Invasion through muscularis propria or muscularis, NOS\n    Extension through wall, NOS\n    Perimuscular tissue invaded\n    Subserosal tissue/(sub)serosal fat invaded\n    Intraluminal extension to esophagus or duodenum\n\n    Extension to adjacent (connective) tissue WITHOUT perforation of visceral peritoneum:\n    Gastric artery\n    Ligaments:     \n        Gastrocolic\n        Gastrohepatic\n        Gastrosplenic\n    Omentum, NOS:\n        Greater\n        Lesser\n    Perigastric fat\n\n    Fat, NOS\n    Invasion of/through serosa (mesothelium) \n    (tunica serosa) (visceral peritoneum), including perforation of visceral  peritoneum covering the gastric ligaments or the omentum  WITHOUT invasion of adjacent structures\n\n    Invasion of/through serosa with invasion of/through mucosa\n    Diaphragm\n    Duodenum via serosa Duodenum, NOS\n    Esophagus via serosa\n    Ileum\n    Jejunum\n    Liver\n    Pancreas\n    Small intestine, NOS\n    Spleen\n    Transverse colon/mesocolon  (including flexures)\n    Aorta\n    Celiac axis\n    Abdominal wall\n    Adrenal gland\n    Kidney\n    Retroperitoneum\n    Further contiguous extension\n\n    Confined to stomach\n    Localized, NOS",
+  "last_modified" : "2015-10-27T22:47:33.707Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "In situ, intraepithelial, noninvasive\nUnknown; extension not stated\nNot documented in patient record\n\nConfined to stomach and size not known" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "1", "T1", "Tumor 2 cm or less in greatest dimension", "Stated as T1" ], [ "2", "T2", "Tumor more than 2 cm but not more than 5 cm in greatest dimension", "Stated as T2" ], [ "3", "T3", "Tumor more than 5 cm but not more than 10 cm in greatest dimension", "Stated as T3" ], [ "4", "T4", "Tumor more than 10 cm in greatest dimension", "Stated as T4" ] ]
+}

@@ -2,17 +2,17 @@
   "id" : "path_m_hav",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Path M",
+  "name" : "Path M Bone",
   "title" : "Pathologic M",
   "notes" : "**Note:** The term \"skip metastasis\" is not used with a consistent meaning in the literature.  In some cases, it refers to discontinuous metastasis in the same bone as the primary tumor, while in other cases it refers to discontinuous metastasis in an adjacent bone, usually in the same limb.  For TNM staging, discontinuous metastasis in the same bone is classified as T3 (coded in primary tumor), and discontinuous metastasis in an adjacent bone is classified as M1b (coded in distant metastasis).  If a primary bone tumor is stated as having \"skip metastasis\" or \"skip lesions\" with no other information regarding the bone involved, assign T3 in primary tumor.",
-  "last_modified" : "2015-10-10T19:47:47.667Z",
+  "last_modified" : "2015-10-15T18:47:15.170Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

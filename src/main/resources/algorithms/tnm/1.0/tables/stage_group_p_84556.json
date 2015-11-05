@@ -1,0 +1,39 @@
+{
+  "id" : "stage_group_p_84556",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Stage Group (p)",
+  "title" : "TNM 7 Stage Group",
+  "notes" : "**Note 1:** The Stage Groups displayed are the enhanced UICC groups.  If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC manual to ensure you are using the appropriate logic.\n\n**Note 2:** Ewing sarcoma (ICD-O-3 Histology 9260, 9364) is always considered High Grade (3 or 4).  Ewing sarcoma should NOT be assigned Stage group IA or IB.",
+  "last_modified" : "2015-10-23T04:01:58.688Z",
+  "definition" : [ {
+    "key" : "path_stage_group_direct",
+    "name" : "Assigned Stage Group",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_stage_group_direct_display",
+    "name" : "Assigned Stage Group Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "t",
+    "name" : "T",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "grade",
+    "name" : "Grade",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "histology",
+    "name" : "Histology",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1A", "IA ", "T1   ", "N0,X", "M0 ", "1,2,9    ", "NOT 9260, 9364  (Not Ewing)" ], [ "1B", "IB ", "T2,3 ", "N0,X", "M0 ", "1,2,9    ", "NOT 9260, 9364  (Not Ewing)" ], [ "2A", "IIA", "T1   ", "N0,X", "M0 ", "3,4      ", "Any Histology              " ], [ "2B", "IIB", "T2   ", "N0,X", "M0 ", "3,4      ", "Any Histology              " ], [ "3 ", "III", "T3   ", "N0,X", "M0 ", "3,4      ", "Any Histology              " ], [ "4 ", "IV ", "Any T", "N0,X", "M1 ", "Any Grade", "Any Histology              " ], [ "4A", "IVA", "Any T", "N0,X", "M1a", "Any Grade", "Any Histology              " ], [ "4B", "IVB", "Any T\nAny T", "N1   \nAny N", "M0,1,1a \nM1b", "Any Grade\nAny Grade", "Any Histology\nAny Histology" ], [ "99", "Unknown", "TX", "N0,X", "M0", "Any Grade", "Any Histology              " ], [ "88", "Not Applicable", "88", "88", "88", "Any Grade", "Any Histology              " ] ]
+}

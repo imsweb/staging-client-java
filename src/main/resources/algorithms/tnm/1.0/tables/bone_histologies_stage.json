@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Histologies Stage",
   "title" : "Histologies Stage Table",
-  "notes" : "**Note:**  The determination of AJCC stage group from T, N, M, and grade for bone depends further on histologic type.  This table shows the selection of the appropriate version of the AJCC Stage table based on histology.  \"Ewing\" maps to the table AJCC TNM 6 and 7 Stage Ewing, which is used to derive stage group for both AJCC 6 and AJCC 7 staging.  \"Not Ewing\" maps to the tables AJCC TNM 6 Stage Not Ewing and AJCC TNM 7 Stage Not Ewing for deriving AJCC 6and AJCC 7 stage group, respectively.",
-  "last_modified" : "2015-08-13T13:24:56.342Z",
+  "notes" : "**Note:**  The determination of TNM stage group from T, N, M, and grade for bone depends further on histologic type.  This table shows the selection of the appropriate version of the TNM Stage table based on histology.",
+  "last_modified" : "2015-10-26T21:21:15.141Z",
   "definition" : [ {
     "key" : "hist",
     "name" : "ICD-O-3 Histology Code",
@@ -19,5 +19,5 @@
     "name" : "Stage Table",
     "type" : "ENDPOINT"
   } ],
-  "rows" : [ [ "9260", "Ewing sarcoma", "JUMP:bone_ajcctnm6and7_stage_ewing" ], [ "9364", "Peripheral neuroectodermal tumor", "JUMP:bone_ajcctnm6and7_stage_ewing" ], [ "8800-9136,9142-9252,9261-9363,9365-9582", "ALL OTHER HISTOLOGIES IN INCLUSION TABLE", "JUMP:bone_ajcctnm7_stage_not_ewing" ] ]
+  "rows" : [ [ "9260", "Ewing sarcoma", "JUMP:tnm_7_stage_ewing_17708" ], [ "9364", "Peripheral neuroectodermal tumor", "JUMP:tnm_7_stage_ewing_17708" ], [ "8800-9136,9142-9252,9261-9363,9365-9582", "ALL OTHER HISTOLOGIES IN INCLUSION TABLE", "JUMP:tnm_7_stage_not_ewing_14573" ] ]
 }

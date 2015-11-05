@@ -4,19 +4,13 @@
   "version" : "1.0",
   "name" : "Bladder",
   "title" : "Bladder",
-  "notes" : "C67.0  Trigone of bladder\nC67.1  Dome of bladder\nC67.2  Lateral wall of bladder\nC67.3  Anterior wall of bladder\nC67.4  Posterior wall of bladder\nC67.5  Bladder neck\nC67.6  Ureteric orifice\nC67.7  Urachus\nC67.8  Overlapping lesion of bladder\nC67.9  Bladder, NOS",
+  "notes" : "C670  Trigone of bladder\nC671  Dome of bladder\nC672  Lateral wall of bladder\nC673  Anterior wall of bladder\nC674  Posterior wall of bladder\nC675  Bladder neck\nC676  Ureteric orifice\nC677  Urachus\nC678  Overlapping lesion of bladder\nC679  Bladder, NOS",
   "schema_selection_table" : "schema_selection_bladder",
   "inputs" : [ {
     "key" : "year_dx",
     "name" : "Year of Diagnosis",
     "naaccr_item" : 390,
     "table" : "year_dx_validation",
-    "used_for_staging" : false
-  }, {
-    "key" : "input_version",
-    "name" : "Input Version",
-    "naaccr_item" : 2937,
-    "table" : "input_version_validation",
     "used_for_staging" : false
   }, {
     "key" : "site",
@@ -58,13 +52,13 @@
     "key" : "clin_t",
     "name" : "Clinical T",
     "naaccr_item" : 940,
-    "table" : "bladder_t_4738",
+    "table" : "clin_t_bladder_38564",
     "used_for_staging" : true
   }, {
     "key" : "clin_n",
     "name" : "Clinical N",
     "naaccr_item" : 950,
-    "table" : "bladder_n_67324",
+    "table" : "clin_n_bladder_88949",
     "used_for_staging" : true
   }, {
     "key" : "clin_m",
@@ -76,13 +70,13 @@
     "key" : "path_t",
     "name" : "Pathologic T",
     "naaccr_item" : 880,
-    "table" : "bladder_t_4738",
+    "table" : "path_t_bladder_68862",
     "used_for_staging" : true
   }, {
     "key" : "path_n",
     "name" : "Pathologic N",
     "naaccr_item" : 890,
-    "table" : "bladder_n_67324",
+    "table" : "path_n_bladder_46197",
     "used_for_staging" : true
   }, {
     "key" : "path_m",
@@ -137,13 +131,17 @@
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
     "default" : "88",
-    "used_for_staging" : false
+    "table" : "stage_group_c_76410",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   }, {
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
     "default" : "88",
-    "used_for_staging" : false
+    "table" : "stage_group_p_83975",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   } ],
   "outputs" : [ {
     "key" : "derived_version",
@@ -222,16 +220,16 @@
     } ],
     "tables" : [ {
       "id" : "determine_default_t",
-      "inputs" : [ "clin_t", "path_t" ],
-      "outputs" : [ "source_t", "combined_t_in", "tmp_path_t", "ss2017_t", "tmp_clin_t" ]
+      "inputs" : [ "path_t_in", "clin_t_in" ],
+      "outputs" : [ "path_t_out", "combined_t_out", "clin_t_out", "source_t_out", "ss2017_t_out" ]
     }, {
       "id" : "determine_default_n",
-      "inputs" : [ "clin_n", "path_n" ],
-      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+      "inputs" : [ "clin_n_in", "path_n_in" ],
+      "outputs" : [ "path_n_out", "clin_n_out" ]
     }, {
       "id" : "determine_default_m",
-      "inputs" : [ "path_m", "clin_m" ],
-      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_clin_m", "combined_m_in", "source_m" ]
+      "inputs" : [ "path_m_in", "clin_m_in" ],
+      "outputs" : [ "ss2017_m_out", "combined_m_out", "path_m_out", "source_m_out", "clin_m_out" ]
     }, {
       "id" : "tnm7_stage_uau",
       "input_mapping" : [ {
@@ -269,9 +267,9 @@
       "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t" ],
       "outputs" : [ "path_stage_group" ]
     }, {
-      "id" : "adjust_path_defaults",
-      "inputs" : [ "path_t", "tmp_clin_n", "tmp_clin_m", "path_m", "tmp_clin_t", "path_n" ],
-      "outputs" : [ "source_t", "combined_t_in", "combined_n_in", "combined_m_in", "path_stage_group", "source_n", "source_m" ]
+      "id" : "adjustments_for_no_clin_or_no_path_26261",
+      "inputs" : [ "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "tmp_path_n", "path_m", "tmp_path_t", "tmp_clin_t", "clin_n", "clin_m", "path_n" ],
+      "outputs" : [ "combined_t_out", "combined_m_out", "source_t_out", "clin_stage_group", "combined_n_out", "source_n_out", "source_m_out", "path_stage_group" ]
     } ]
   }, {
     "id" : "combined_stage",
@@ -302,8 +300,8 @@
         "from" : "tmp_path_t",
         "to" : "path_t"
       } ],
-      "inputs" : [ "radiation_surg_seq", "combined_t_in", "tmp_path_t", "tmp_clin_t", "behavior", "systemic_surg_seq" ],
-      "outputs" : [ "source_t", "combined_t" ]
+      "inputs" : [ "path_t_in", "radiation_surg_seq", "combined_t_in", "clin_t_in", "behavior", "systemic_surg_seq" ],
+      "outputs" : [ "combined_t_out", "source_t_out" ]
     }, {
       "id" : "combined_n",
       "input_mapping" : [ {
@@ -313,8 +311,8 @@
         "from" : "tmp_path_n",
         "to" : "path_n"
       } ],
-      "inputs" : [ "nodes_pos", "tmp_clin_n", "radiation_surg_seq", "tmp_path_n", "combined_n_in", "systemic_surg_seq" ],
-      "outputs" : [ "combined_n", "source_n" ]
+      "inputs" : [ "clin_n_in", "nodes_pos", "radiation_surg_seq", "combined_n_in", "path_n_in", "systemic_surg_seq" ],
+      "outputs" : [ "combined_n_out", "source_n_out" ]
     }, {
       "id" : "combined_m",
       "input_mapping" : [ {
@@ -324,8 +322,8 @@
         "from" : "tmp_path_m",
         "to" : "path_m"
       } ],
-      "inputs" : [ "tmp_path_m", "tmp_clin_m", "combined_m_in" ],
-      "outputs" : [ "combined_m", "source_m" ]
+      "inputs" : [ "path_m_in", "combined_m_in", "clin_m_in" ],
+      "outputs" : [ "combined_m_out", "source_m_out" ]
     }, {
       "id" : "tnm7_stage_uau",
       "input_mapping" : [ {
@@ -346,16 +344,16 @@
       "outputs" : [ "combined_stage_group" ]
     }, {
       "id" : "combined_t_to_summ_stage_t_3_4a_re_4b_4e_d_32587",
-      "inputs" : [ "combined_t" ],
-      "outputs" : [ "ss2017_t" ]
+      "inputs" : [ "combined_t_in" ],
+      "outputs" : [ "ss2017_t_out" ]
     }, {
       "id" : "combined_n_to_summ_stage_n_n3_d_copy_68044",
-      "inputs" : [ "combined_n" ],
-      "outputs" : [ "ss2017_n" ]
+      "inputs" : [ "combined_n_in" ],
+      "outputs" : [ "ss2017_n_out" ]
     }, {
       "id" : "cpmbined_m_to_summ_stage_m_60564",
-      "inputs" : [ "combined_m" ],
-      "outputs" : [ "ss2017_m" ]
+      "inputs" : [ "combined_m_in" ],
+      "outputs" : [ "ss2017_m_out" ]
     }, {
       "id" : "summary_stage_rpa",
       "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
@@ -386,7 +384,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "input_version_validation", "radiation_surg_seq", "bladder_n_67324", "determine_default_m", "ssf2_kao", "nodes_pos_fpa", "ssf1_jpd", "determine_default_n", "bladder_t_4738", "histology", "path_m_hbc", "combined_t_to_summ_stage_t_3_4a_re_4b_4e_d_32587", "tnm7_inclusions_tpb", "tnm7_stage_uau", "behavior", "ssf3_lai", "schema_selection_bladder", "mets_hbc", "nodes_dck", "adjust_path_defaults", "systemic_surg_seq", "clin_m_hbc", "primary_site", "extension_bcb", "combined_n_to_summ_stage_n_n3_d_copy_68044", "combined_m", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "clin_t_bladder_38564", "radiation_surg_seq", "determine_default_m", "ssf2_kao", "nodes_pos_fpa", "ssf1_jpd", "stage_group_p_83975", "determine_default_n", "histology", "stage_group_c_76410", "path_m_hbc", "clin_n_bladder_88949", "combined_t_to_summ_stage_t_3_4a_re_4b_4e_d_32587", "tnm7_inclusions_tpb", "tnm7_stage_uau", "behavior", "path_t_bladder_68862", "ssf3_lai", "adjustments_for_no_clin_or_no_path_26261", "schema_selection_bladder", "mets_hbc", "nodes_dck", "path_n_bladder_46197", "systemic_surg_seq", "clin_m_hbc", "primary_site", "extension_bcb", "combined_n_to_summ_stage_n_n3_d_copy_68044", "combined_m", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-08T17:08:17.326Z"
+  "last_modified" : "2015-10-31T14:44:19.209Z"
 }

@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 14",
   "subtitle" : "Femoral Inguinal Nodal Status",
   "notes" : "**Note:** The femoral-inguinal nodal status corresponds to the assessment method recorded in Site-Specific Factor 15.",
-  "last_modified" : "2015-08-13T13:24:31.225Z",
+  "last_modified" : "2015-10-30T18:48:37.094Z",
   "definition" : [ {
     "key" : "ssf14",
     "name" : "Code",
@@ -16,5 +16,5 @@
     "name" : "Description",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "000", "Negative femoral-inguinal lymph nodes" ], [ "010", "Positive femoral-inguinal lymph nodes" ], [ "988", "Not applicable: Information not collected for this case. " ], [ "998", "Femoral-inguinal lymph nodes not assessed" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+  "rows" : [ [ "000", "Negative femoral-inguinal lymph nodes" ], [ "010", "Positive femoral-inguinal lymph nodes" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "Femoral-inguinal lymph nodes not assessed" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
 }

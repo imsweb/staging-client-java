@@ -5,14 +5,14 @@
   "name" : "Path M",
   "title" : "Pathologic M",
   "notes" : "**Note:** Supraclavicular and transverse cervical lymph nodes are coded in CS Lymph Nodes because they are categorized as N rather than M in AJCC TNM.",
-  "last_modified" : "2015-10-10T20:30:11.999Z",
+  "last_modified" : "2015-10-15T18:47:07.240Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

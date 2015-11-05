@@ -5,7 +5,7 @@
   "name" : "Combined Gleason",
   "title" : "Combined Gleason",
   "description" : "Selects the correct Gleason Score (SSF 8 or SSF 10) for Combined Stage Group calculation.",
-  "last_modified" : "2015-08-13T13:25:50.000Z",
+  "last_modified" : "2015-11-03T02:48:43.275Z",
   "definition" : [ {
     "key" : "source_t",
     "name" : "Source T",
@@ -16,5 +16,5 @@
     "type" : "ENDPOINT"
   } ],
   "extra_input" : [ "ssf8", "ssf10" ],
-  "rows" : [ [ "P", "VALUE:{{ssf10}}" ], [ "C", "VALUE:{{ssf8}}" ] ]
+  "rows" : [ [ "1", "VALUE:{{ssf8}}" ], [ "2", "VALUE:{{ssf10}}" ] ]
 }

@@ -4,14 +4,14 @@
   "version" : "1.0",
   "name" : "Path M",
   "title" : "Pathologic M",
-  "last_modified" : "2015-10-09T17:10:47.044Z",
+  "last_modified" : "2015-10-15T18:46:53.747Z",
   "definition" : [ {
     "key" : "path_m",
-    "name" : "Pathological M",
+    "name" : "Pathologic M",
     "type" : "INPUT"
   }, {
     "key" : "path_m_display",
-    "name" : "Pathological M Display",
+    "name" : "Pathologic M Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

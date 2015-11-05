@@ -2,17 +2,17 @@
   "id" : "gist_esophagus_t_61710",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "GIST Esophagus T",
-  "title" : "Clinical and Pathologic T",
-  "notes" : "**Note 1:** TNM does not include an in situ category for carcinoid tumors of appendix. Assign TX and behavior code /2 for in situ cases.\n\n**Note 2:**  Ignore intraluminal extension to adjacent segment(s) of colon; code depth of invasion or extra-appendiceal spread as indicated.\n\n**Note 3:** Tumor size must be known to assign a T value. You may use a physicianâs statement of the T category if this is the only information in the medical record. If no tumor size is available, assign TX.\n\n**Note 4:** For the following descriptions, assign the appropriate T category based on the tumor size.\n\n    Tumor confined to muscular wall\n    Tumor invades through submucosa and muscularis mucosae to   involve with mucosa\n\n    Localized, NOS\n   \n    Adventitia and/or soft tissue invaded\n    Esophagus described as fixed\n    Invasion into adventitia with invasion of/through mucosa\n    Invasion of adjacent structures:\n    Cervical esophagus \n    Blood vessel(s), major:\n    Carina\n    Carotid artery\n    Cervical vertebraâ¬\n    Hypopharynx\n    Jugular vein\n          Larynx\n          Thyroid gland \n    Subclavian artery\n    Trachea\n    \n**Thoracic/middle esophagus:**\n\n      Pericardium\n\n**Abdominal/lower esophagus:**\n\n    Diaphragm fixed\n\n**Intrathoracic, upper or mid-portion, esophagus:**\n\n    Blood vessel(s), major:\n        Aorta \n        Azygos vein\n        Pulmonary artery/vein \n        Vena cava \n    Carina\n    Diaphragm \n    Main stem bronchus \n    Trachea \n\n**Intrathoracic, lower portion (abdominal), esophagus:**\n\n    Blood vessel(s), major: \n        Aorta \n       Gastric artery/vein\n        Vena cava",
-  "last_modified" : "2015-10-09T17:29:40.249Z",
+  "name" : "Path T GIST Esophagus",
+  "title" : "Pathologic T",
+  "notes" : "**Note 1:** TNM does not include an in situ category for carcinoid tumors of appendix. Assign 88 and behavior code /2 for in situ cases.\n\n**Note 2:**  Ignore intraluminal extension to adjacent segment(s) of colon; code depth of invasion or extra-appendiceal spread as indicated.\n\n**Note 3:** Tumor size must be known to assign a T value. You may use a physicianâs statement of the T category if this is the only information in the medical record. If no tumor size is available, assign TX.\n\n**Note 4:** For the following descriptions, assign the appropriate T category based on the tumor size.\n\n    Tumor confined to muscular wall\n    Tumor invades through submucosa and muscularis mucosae to   involve with mucosa\n\n    Localized, NOS\n   \n    Adventitia and/or soft tissue invaded\n    Esophagus described as fixed\n    Invasion into adventitia with invasion of/through mucosa\n    Invasion of adjacent structures:\n    Cervical esophagus \n    Blood vessel(s), major:\n    Carina\n    Carotid artery\n    Cervical vertebraâ¬\n    Hypopharynx\n    Jugular vein\n          Larynx\n          Thyroid gland \n    Subclavian artery\n    Trachea\n    \n**Thoracic/middle esophagus:**\n\n      Pericardium\n\n**Abdominal/lower esophagus:**\n\n    Diaphragm fixed\n\n**Intrathoracic, upper or mid-portion, esophagus:**\n\n    Blood vessel(s), major:\n        Aorta \n        Azygos vein\n        Pulmonary artery/vein \n        Vena cava \n    Carina\n    Diaphragm \n    Main stem bronchus \n    Trachea \n\n**Intrathoracic, lower portion (abdominal), esophagus:**\n\n    Blood vessel(s), major: \n        Aorta \n       Gastric artery/vein\n        Vena cava",
+  "last_modified" : "2015-10-27T22:45:18.113Z",
   "definition" : [ {
-    "key" : "clin_t",
-    "name" : "Clinical T",
+    "key" : "path_t",
+    "name" : "Pathologic T",
     "type" : "INPUT"
   }, {
-    "key" : "clin_t_display",
-    "name" : "Clinical T Display",
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "In situ, intraepithelial, noninvasive\nUnknown; extension not stated\nNot documented in patient record\n\nConfined to esophagus and size not known" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "1", "T1", "Tumor 2 cm or less", "Stated as T1" ], [ "2", "T2", "Tumor more than 2 cm but not more than 5 cm in greatest dimension", "Stated as T2" ], [ "3", "T3", "Tumor more than 5 cm but not more than 10 cm in greatest dimension", "Stated as T3" ], [ "4", "T4", "Tumor more than 10 cm in greatest dimension", "Stated as T4" ] ]
+  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "In situ, intraepithelial, noninvasive\nUnknown; extension not stated\nNot documented in patient record\n\nConfined to esophagus and size not known" ], [ "0", "T0", "No evidence of primary tumor", "" ], [ "1", "T1", "Tumor 2 cm or less in greatest dimension", "Stated as T1" ], [ "2", "T2", "Tumor more than 2 cm but not more than 5 cm in greatest dimension", "Stated as T2" ], [ "3", "T3", "Tumor more than 5 cm but not more than 10 cm in greatest dimension", "Stated as T3" ], [ "4", "T4", "Tumor more than 10 cm in greatest dimension", "Stated as T4" ] ]
 }
