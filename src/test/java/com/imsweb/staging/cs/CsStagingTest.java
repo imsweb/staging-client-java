@@ -63,23 +63,11 @@ public class CsStagingTest extends StagingTest {
 
     @Test
     public void testBasicInitialization() {
-        Assert.assertEquals(getAlgorithm(), _STAGING.getAlgorithm());
-        Assert.assertEquals(getVersion(), _STAGING.getVersion());
-
         Assert.assertEquals(153, _STAGING.getSchemaIds().size());
         Assert.assertTrue(_STAGING.getTableIds().size() > 0);
 
         Assert.assertNotNull(_STAGING.getSchema("urethra"));
         Assert.assertNotNull(_STAGING.getTable("extension_bdi"));
-
-        // all inputs for all schemas will have null unit and decimal places
-        for (String id : _STAGING.getSchemaIds()) {
-            StagingSchema schema = _STAGING.getSchema(id);
-            for (StagingSchemaInput input : schema.getInputs()) {
-                Assert.assertNull("No CS schemas should have units", input.getUnit());
-                Assert.assertNull("No CS schemas should have decimal places", input.getDecimalPlaces());
-            }
-        }
     }
 
     @Test
@@ -89,15 +77,6 @@ public class CsStagingTest extends StagingTest {
 
         Staging stagingLatest = Staging.getInstance(CsDataProvider.getInstance());
         Assert.assertEquals("02.05.50", stagingLatest.getVersion());
-    }
-
-    @Test
-    public void testValidCode() {
-        Map<String, String> context = new HashMap<>();
-        context.put("hist", "8000");
-        Assert.assertTrue(_STAGING.isContextValid("prostate", "hist", context));
-        context.put("hist", "8542");
-        Assert.assertTrue(_STAGING.isContextValid("prostate", "hist", context));
     }
 
     @Test

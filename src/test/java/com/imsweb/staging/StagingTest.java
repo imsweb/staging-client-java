@@ -7,8 +7,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.junit.Assert;
@@ -50,6 +52,12 @@ public abstract class StagingTest {
     public abstract StagingFileDataProvider getProvider();
 
     @Test
+    public void testInitialization() {
+        Assert.assertEquals(getAlgorithm(), _STAGING.getAlgorithm());
+        Assert.assertEquals(getVersion(), _STAGING.getVersion());
+    }
+
+    @Test
     public void testInitAllTables() {
         for (String id : _STAGING.getTableIds()) {
             StagingTable table = _STAGING.getTable(id);
@@ -58,6 +66,27 @@ public abstract class StagingTest {
             Assert.assertNotNull(table.getAlgorithm());
             Assert.assertNotNull(table.getVersion());
             Assert.assertNotNull(table.getName());
+        }
+    }
+
+    @Test
+    public void testValidCode() {
+        Map<String, String> context = new HashMap<>();
+        context.put("hist", "8000");
+        Assert.assertTrue(_STAGING.isContextValid("prostate", "hist", context));
+        context.put("hist", "8542");
+        Assert.assertTrue(_STAGING.isContextValid("prostate", "hist", context));
+    }
+
+    @Test
+    public void testBasicInputs() {
+        // all inputs for all schemas will have null unit and decimal places
+        for (String id : _STAGING.getSchemaIds()) {
+            StagingSchema schema = _STAGING.getSchema(id);
+            for (StagingSchemaInput input : schema.getInputs()) {
+                Assert.assertNull("No schemas should have units", input.getUnit());
+                Assert.assertNull("No schemas should have decimal places", input.getDecimalPlaces());
+            }
         }
     }
 
