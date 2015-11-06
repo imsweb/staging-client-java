@@ -536,11 +536,7 @@ public class CsStagingTest extends StagingTest {
                 Sets.newHashSet("site", "nodes_pos", "mets_eval", "nodes_eval", "ssf16", "ssf15", "ssf13", "cs_input_version_original", "lvi", "extension", "extension_eval", "ssf1", "ssf2", "ssf3",
                         "hist", "ssf4", "nodes", "ssf5", "year_dx", "mets"), _STAGING.getInputs(_STAGING.getSchema("testis")));
 
-        // test with and without context
-        Assert.assertEquals(
-                Sets.newHashSet("site", "nodes_eval", "mets_eval", "ssf10", "cs_input_version_original", "ssf8", "extension", "extension_eval", "ssf1", "ssf3", "hist", "nodes", "year_dx", "grade",
-                        "mets"), _STAGING.getInputs(_STAGING.getSchema("prostate")));
-
+        // test with context
         Map<String, String> context = new HashMap<>();
         context.put(StagingData.PRIMARY_SITE_KEY, "C619");
         context.put(StagingData.HISTOLOGY_KEY, "8120");
@@ -549,6 +545,11 @@ public class CsStagingTest extends StagingTest {
         // for that context, neither AJCC6 or 7 should be calculated so "grade" and "ssf1" should not be list of inputs
         Assert.assertEquals(Sets.newHashSet("site", "nodes_eval", "mets_eval", "ssf10", "cs_input_version_original", "ssf8", "extension", "extension_eval", "ssf3", "hist", "nodes", "year_dx", "mets"),
                 _STAGING.getInputs(_STAGING.getSchema("prostate"), context));
+
+        // test without context
+        Assert.assertEquals(
+                Sets.newHashSet("site", "nodes_eval", "mets_eval", "ssf10", "cs_input_version_original", "ssf8", "extension", "extension_eval", "ssf1", "ssf3", "hist", "nodes", "year_dx", "grade",
+                        "mets"), _STAGING.getInputs(_STAGING.getSchema("prostate")));
     }
 
     @Test
