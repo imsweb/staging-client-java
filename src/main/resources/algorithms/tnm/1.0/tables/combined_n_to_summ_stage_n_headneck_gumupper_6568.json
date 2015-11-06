@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "Combined N to Summ Stage N HeadNeck (GumUpper)",
   "title" : "Combined N to Summ Stage N HeadNeck (GumUpper)",
-  "last_modified" : "2015-10-27T03:59:27.192Z",
+  "last_modified" : "2015-11-06T05:12:01.415Z",
   "definition" : [ {
-    "key" : "combined_n",
+    "key" : "combined_n_in",
     "name" : "Combined N",
     "type" : "INPUT"
   }, {
@@ -26,7 +26,7 @@
     "name" : "SSF 6",
     "type" : "INPUT"
   }, {
-    "key" : "ss2017_n",
+    "key" : "ss2017_n_out",
     "name" : "SS2017 N",
     "type" : "ENDPOINT"
   } ],

@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Path T NET Colon",
   "title" : "Pathologic T",
-  "notes" : "**Note 1:** TNM does not include an in situ category for Neuroendocrine Tumors (NET) of the colon. Assign 88 and behavior code /2 for in situ cases. For SS2000 this would be coded to 0.\n\n**Note 2:**  Ignore intraluminal extension to adjacent segment(s) of colon/rectum or to the ileum from the cecum; code depth of invasion or extracolonic spread as indicated.",
-  "last_modified" : "2015-10-19T15:07:27.234Z",
+  "notes" : "**Note 1:** TNM does not include an in situ category for colon Neuroendocrine (NET) Tumors. Assign 88 and behavior code /2 for in situ tumors.\n\n**Note 2:**  Ignore intraluminal extension to adjacent segment(s) of colon/rectum or to the ileum from the cecum; code depth of invasion or extracolonic spread as indicated.",
+  "last_modified" : "2015-11-06T18:59:36.976Z",
   "definition" : [ {
     "key" : "path_t",
     "name" : "Pathologic T",

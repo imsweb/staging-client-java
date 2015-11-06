@@ -4,13 +4,13 @@
   "version" : "1.0",
   "name" : "Combined T to Summ Stage T (2-2b-RE, 2c-4e-D)",
   "title" : "Combined T to Summary Stage T (2-2b-RE, 2c-4e-D)",
-  "last_modified" : "2015-10-31T14:49:24.953Z",
+  "last_modified" : "2015-11-06T05:04:43.093Z",
   "definition" : [ {
     "key" : "combined_t_in",
     "name" : "Combined T",
     "type" : "INPUT"
   }, {
-    "key" : "ss2017_t_in",
+    "key" : "ss2017_t_out",
     "name" : "SS2017 T",
     "type" : "ENDPOINT"
   } ],

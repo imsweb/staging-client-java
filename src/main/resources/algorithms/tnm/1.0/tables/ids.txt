@@ -573,7 +573,6 @@ clin_n_day
 stage_group_p_61212
 ssf1_jbh
 esophagus_gejunction_ajcctnm7_stage_adenocarcinoma
-lymphomaocularadnexa_clin_m_no_uicc_definition_96511
 nodes_dca
 ssf15_sbe
 ssf14_sbd
@@ -917,6 +916,8 @@ schema_selection_gum_other
 extension_bce
 extension_baz
 ssf1_jam
+vulva_t_1223
+clin_t_vulva_52779
 extension_bcb
 nodes_dbq
 stage_group_c_76779
@@ -975,6 +976,7 @@ path_n_dfw
 nodes_dfw
 concatenate_n_43246
 orbit_t_97280
+lymphomaocularadnexa_clin_m_no_uicc_definition_96511
 tnm7_inclusions_tqb
 urethra_n_54953
 nodes_pos_fah
@@ -1053,7 +1055,6 @@ stop_if_no_clin_and_no_path_24035
 ssf8_sei
 ssf12_sfd
 clin_t_lacrimal_gland_71633
-vulva_t_1223
 vagina_t_91502
 ssf3_lay
 extension_bcr
@@ -1587,6 +1588,7 @@ gistcolon_t_85374
 path_n_dat
 path_n_conjunctiva_84900
 discriminator_nasopharynx
+lymphomaocularadnexa_path_m_no_uicc_definition_copy_6387
 mets_hpd
 nodes_ddo
 schema_selection_melanoma_palate_soft
@@ -1595,7 +1597,6 @@ clin_n_urethra_47275
 clin_t_vagina_84852
 clin_t_gist_appendix_41981
 stage_group_p_12670
-clin_t_vulva_52779
 gist_appendix_t_67124
 clin_t_conjunctiva_42760
 clin_t_bone_70163
@@ -1780,7 +1781,6 @@ gist_stomach_t_60871
 small_intestine_t_70831
 adjust_path_defaults_for_no_path_stage_group_not_defined_12205
 melanoma_conjunctiva_n_15261
-lymphomaocularadnexa_path_m_no_uicc_definition_copy_6387
 clinical_m_64416
 retinoblastoma_pathologic_n_93880
 retinoblastoma_clinical_n_19393
