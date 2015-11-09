@@ -266,7 +266,7 @@ public class TnmStagingTest extends StagingTest {
         Assert.assertEquals(StagingData.Result.STAGED, data.getResult());
         Assert.assertEquals("urethra", data.getSchemaId());
         Assert.assertEquals(0, data.getErrors().size());
-        Assert.assertEquals(16, data.getPath().size());
+        Assert.assertEquals(29, data.getPath().size());
         Assert.assertEquals(14, data.getOutput().size());
 
         // check outputs
@@ -274,11 +274,11 @@ public class TnmStagingTest extends StagingTest {
         Assert.assertEquals("3", data.getOutput(TnmStagingData.TnmOutput.CLIN_STAGE_GROUP));
         Assert.assertEquals("4", data.getOutput(TnmStagingData.TnmOutput.PATH_STAGE_GROUP));
         Assert.assertEquals("4", data.getOutput(TnmStagingData.TnmOutput.COMBINED_STAGE_GROUP));
-        Assert.assertEquals("0", data.getOutput(TnmStagingData.TnmOutput.COMBINED_T));
+        Assert.assertEquals("c0", data.getOutput(TnmStagingData.TnmOutput.COMBINED_T));
         Assert.assertEquals("1", data.getOutput(TnmStagingData.TnmOutput.SOURCE_T));
-        Assert.assertEquals("1", data.getOutput(TnmStagingData.TnmOutput.COMBINED_N));
+        Assert.assertEquals("c1", data.getOutput(TnmStagingData.TnmOutput.COMBINED_N));
         Assert.assertEquals("1", data.getOutput(TnmStagingData.TnmOutput.SOURCE_N));
-        Assert.assertEquals("1", data.getOutput(TnmStagingData.TnmOutput.COMBINED_M));
+        Assert.assertEquals("c1", data.getOutput(TnmStagingData.TnmOutput.COMBINED_M));
         Assert.assertEquals("2", data.getOutput(TnmStagingData.TnmOutput.SOURCE_M));
         Assert.assertEquals("D", data.getOutput(TnmStagingData.TnmOutput.SS2017));
         Assert.assertEquals("U", data.getOutput(TnmStagingData.TnmOutput.SS2017_T));

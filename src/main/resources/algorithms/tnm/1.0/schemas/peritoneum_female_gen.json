@@ -642,12 +642,13 @@
     }, {
       "id" : "tnm7_stage_uby",
       "input_mapping" : [ {
-        "from" : "tmp_combined_m",
-        "to" : "m"
-      }, {
         "from" : "tmp_combined_n",
         "to" : "n"
       }, {
+        "from": "tmp_combined_m",
+        "to": "m"
+      },
+        {
         "from" : "tmp_combined_t",
         "to" : "t"
       } ],
@@ -725,5 +726,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "ssf3_lpt", "radiation_surg_seq", "extension_bfx", "determine_default_m", "clin_n_dfs", "clin_t_peritoneum_female_gen_47507", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "clin_m_hcw", "parse_n_67182", "determine_default_n", "stage_group_p_8706", "peritoneumfemalegen_t_87084", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "sex_19563", "path_m_hcw", "ssf2_kpn", "ssf1_jpr", "combined_t_no_tis", "mets_hcw", "concatenate_t_51262", "combined_t_to_summ_stage_t_3b_4e_re_50371", "adjustments_for_no_clin_or_no_path_26261", "ssf5_npl", "tnm7_stage_uby", "determine_combined_prefix_91402", "stage_group_c_42843", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "path_n_dfs", "schema_selection_peritoneum_female_gen", "combined_m", "combined_n", "ssf4_mpr", "tnm7_inclusions_tqa", "nodes_dfs", "year_dx_validation", "summary_stage_rpa" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-06T20:05:32.092Z"
+  "last_modified": "2015-11-06T21:07:04.412Z"
 }
