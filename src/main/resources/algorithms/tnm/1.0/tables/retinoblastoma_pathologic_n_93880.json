@@ -5,7 +5,7 @@
   "name" : "Path N Retinoblastoma",
   "title" : "Pathologic N",
   "notes" : "**Regional lymph nodes:**\n\n    Cervical, NOS:\n        Submandibular (submaxillary)\n    Parotid, NOS:\n        Infra-auricular\n        Preauricular",
-  "last_modified": "2015-11-09T14:20:04.156Z",
+  "last_modified" : "2015-11-09T14:20:04.156Z",
   "definition" : [ {
     "key" : "path_n",
     "name" : "Pathologic N",
@@ -23,30 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows": [
-    [
-      "X",
-      "NX",
-      "Regional lymph nodes cannot be assessed",
-      "Unknown; regional lymph nodes not stated\nNot documented in patient record"
-    ],
-    [
-      "0",
-      "N0",
-      "No regional lymph node involvement",
-      ""
-    ],
-    [
-      "1",
-      "N1",
-      "Regional lymph node involvement (preauricular, cervical)",
-      "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1"
-    ],
-    [
-      "2",
-      "N2",
-      "Distant lymph node involvement",
-      "Stated as N2"
-    ]
-  ]
+  "rows" : [ [ "X", "NX", "Regional lymph nodes cannot be assessed", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node involvement", "" ], [ "1", "N1", "Regional lymph node involvement (preauricular, cervical)", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "2", "N2", "Distant lymph node involvement", "Stated as N2" ] ]
 }

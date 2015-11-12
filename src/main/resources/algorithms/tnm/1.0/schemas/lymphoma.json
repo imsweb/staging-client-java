@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Lymphoma",
   "title" : "Hodgkin and Non-Hodgkin Lymphomas of All Sites (excluding Mycosis Fungoides and Sezary Disease)",
-  "notes" : "M-9590, 9591, 9596, 9597, 9651-9653, 9655, 9659, 9663, 9671, 9673, 9678-9680, 9687-9691, 9695, 9698-9702, 9705, 9708-9709, 9712, 9714, 9716-9719, 9724-9727, 9735, 9737-9738 (EXCEPT C441, C690, C695-C696)\n\nM-9811-9818,9823,9827,9837 (EXCEPT C421, C441, C690, C695-C696)",
+  "notes" : "M-9590, 9591, 9596, 9597, 9650-9653, 9655, 9659, 9663, 9671, 9673, 9678-9680, 9687-9691, 9695, 9698-9699, 9702, 9705, 9708-9709, 9712, 9714, 9716-9719, 9724-9727, 9735, 9737-9738 (EXCEPT C441, C690, C695-C696)\n\nM-9811-9818,9823,9827,9837 (EXCEPT C421, C441, C690, C695-C696)",
   "schema_selection_table" : "schema_selection_lymphoma",
   "inputs" : [ {
     "key" : "year_dx",
@@ -252,5 +252,5 @@
   } ],
   "involved_tables" : [ "ssf2_kpg", "combined_stage_group_for_lymphoma_19552", "tnm7_inclusions_tpr", "schema_selection_lymphoma", "ssf5_npe", "lymphoma_stage_group_detailed_35045", "stage_group_lymphoma_c_60180", "ssf3_lph", "primary_site", "ssf1_jpj", "extension_bch", "histology", "stage_group_lymphoma_p_48657", "year_dx_validation", "summary_stage_rpa", "mets_hna", "ssf4_mpd", "nodes_dna" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-04T15:43:21.280Z"
+  "last_modified" : "2015-11-10T18:50:47.155Z"
 }

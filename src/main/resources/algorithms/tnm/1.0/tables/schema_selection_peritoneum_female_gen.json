@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Schema Selection PeritoneumFemaleGen",
   "title" : "Schema selection for PeritoneumFemaleGen",
-  "last_modified": "2015-11-06T21:07:03.892Z",
+  "last_modified" : "2015-11-06T21:07:03.892Z",
   "definition" : [ {
     "key" : "site",
     "name" : "Primary Site",
@@ -22,12 +22,5 @@
     "name" : "Result",
     "type" : "ENDPOINT"
   } ],
-  "rows": [
-    [
-      "C481-C482,C488",
-      "8000-8576,8590-8671,8930-8934,8940-9110",
-      "2,6",
-      "MATCH"
-    ]
-  ]
+  "rows" : [ [ "C481-C482,C488", "8000-8576,8590-8671,8930-8934,8940-9110", "2,6", "MATCH" ] ]
 }
