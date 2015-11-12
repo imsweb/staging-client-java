@@ -2,6 +2,7 @@ package com.imsweb.staging;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import org.junit.Assert;
@@ -11,6 +12,7 @@ import com.google.common.collect.Sets;
 
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.staging.entities.StagingColumnDefinition;
+import com.imsweb.staging.entities.StagingStringRange;
 import com.imsweb.staging.entities.StagingTable;
 
 public class StagingDataProviderTest {
@@ -48,5 +50,57 @@ public class StagingDataProviderTest {
         StagingDataProvider.initTable(table);
 
         Assert.assertNull(table.getExtraInput());
+    }
+
+    @Test
+    public void testSplitValues() {
+        Assert.assertEquals(0, StagingDataProvider.splitValues(null).size());
+
+        Assert.assertEquals(1, StagingDataProvider.splitValues("").size());
+        Assert.assertEquals(1, StagingDataProvider.splitValues("*").size());
+        Assert.assertEquals(1, StagingDataProvider.splitValues("1 2 3").size());
+        Assert.assertEquals(1, StagingDataProvider.splitValues("23589258625086").size());
+
+        Assert.assertEquals(2, StagingDataProvider.splitValues("A,B").size());
+        Assert.assertEquals(2, StagingDataProvider.splitValues(" A , B ").size());
+        Assert.assertEquals(2, StagingDataProvider.splitValues("A , B").size());
+
+        Assert.assertEquals(10, StagingDataProvider.splitValues("A,B,C,D,E,F,G,H,I,J").size());
+
+        List<StagingStringRange> ranges = StagingDataProvider.splitValues(",1,2,3,4");
+        Assert.assertEquals(5, ranges.size());
+        Assert.assertEquals("", ranges.get(0).getLow());
+        Assert.assertEquals("", ranges.get(0).getHigh());
+
+        ranges = StagingDataProvider.splitValues("     ,1,2,3,4");
+        Assert.assertEquals(5, ranges.size());
+        Assert.assertEquals("", ranges.get(0).getLow());
+        Assert.assertEquals("", ranges.get(0).getHigh());
+
+        ranges = StagingDataProvider.splitValues("1,2,3,4,");
+        Assert.assertEquals(5, ranges.size());
+        Assert.assertEquals("", ranges.get(4).getLow());
+        Assert.assertEquals("", ranges.get(4).getHigh());
+
+        ranges = StagingDataProvider.splitValues("1,2,3,4,    ");
+        Assert.assertEquals(5, ranges.size());
+        Assert.assertEquals("", ranges.get(4).getLow());
+        Assert.assertEquals("", ranges.get(4).getHigh());
+    }
+
+    @Test
+    public void testTableRowParsing() {
+        StagingTable table = new StagingTable();
+        table.setId("test_table");
+        table.setColumnDefinitions(Collections.singletonList(new StagingColumnDefinition("key1", "Input 1", ColumnType.INPUT)));
+        table.setRawRows(new ArrayList<List<String>>());
+        table.getRawRows().add(Collections.singletonList(",1,2,3"));
+        table.getRawRows().add(Collections.singletonList("1,2,3,"));
+
+        StagingDataProvider.initTable(table);
+
+        Assert.assertEquals(2, table.getTableRows().size());
+        Assert.assertEquals(4, table.getTableRows().get(0).getInputs().get("key1").size());
+        Assert.assertEquals(4, table.getTableRows().get(1).getInputs().get("key1").size());
     }
 }
