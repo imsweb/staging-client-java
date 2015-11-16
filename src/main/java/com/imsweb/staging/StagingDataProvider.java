@@ -81,24 +81,20 @@ public abstract class StagingDataProvider implements DataProvider {
      */
     protected StagingDataProvider() {
         // cache schema lookups
-        _lookupCache = CacheBuilder.newBuilder()
-                .maximumSize(500)
-                .expireAfterWrite(10, TimeUnit.MINUTES)
-                .build(new CacheLoader<SchemaLookup, List<StagingSchema>>() {
-                    @Override
-                    public List<StagingSchema> load(SchemaLookup lookup) throws Exception {
-                        return getSchemas(lookup);
-                    }
-                });
+        _lookupCache = CacheBuilder.newBuilder().maximumSize(500).expireAfterWrite(10, TimeUnit.MINUTES).build(new CacheLoader<SchemaLookup, List<StagingSchema>>() {
+            @Override
+            public List<StagingSchema> load(SchemaLookup lookup) throws Exception {
+                return getSchemas(lookup);
+            }
+        });
 
         // cache the valid values for certain tables including site and histology
-        _validValuesCache = CacheBuilder.newBuilder()
-                .build(new CacheLoader<String, Set<String>>() {
-                    @Override
-                    public Set<String> load(String tableId) throws Exception {
-                        return getAllInputValues(tableId);
-                    }
-                });
+        _validValuesCache = CacheBuilder.newBuilder().build(new CacheLoader<String, Set<String>>() {
+            @Override
+            public Set<String> load(String tableId) throws Exception {
+                return getAllInputValues(tableId);
+            }
+        });
 
     }
 
@@ -303,7 +299,8 @@ public abstract class StagingDataProvider implements DataProvider {
             if (values.equals("*"))
                 convertedRanges.add(_MATCH_ALL_ENDPOINT);
             else {
-                String[] ranges = values.split(",");
+                // split the string; the "-1" makes sure to not discard empty strings
+                String[] ranges = values.split(",", -1);
 
                 for (String range : ranges) {
                     // Not sure if this is the best way to handle this, but I ran into a problem when I converted the CS data.  One of the tables had
