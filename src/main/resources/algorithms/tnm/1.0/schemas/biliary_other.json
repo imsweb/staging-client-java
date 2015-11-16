@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Biliary Other",
   "title" : "Other Biliary and Biliary, NOS",
-  "notes" : "C248  Overlapping lesion of biliary tract (neoplasms involving both intrahepatic and extrahepatic bile ducts)\nC249  Biliary tract, NOS\n\n**Note:** TNM is not defined for this site.",
+  "notes" : "C248  Overlapping lesion of biliary tract (neoplasms involving both intrahepatic and extrahepatic bile ducts)\nC249  Biliary tract, NOS\n\n**Note:** TNM is not defined for this schema. If directly assigning Summary Stage 2000 (SS2000), use the *Gallbladder, Other Biliary, and Biliary, NOS* chapter on page 110 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_biliary_other",
   "inputs" : [ {
     "key" : "year_dx",
@@ -130,5 +130,5 @@
   } ],
   "involved_tables" : [ "mets_hbj", "primary_site", "schema_selection_biliary_other", "histology", "extension_bcx", "year_dx_validation", "summary_stage_rpa", "nodes_dcl" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-19T12:29:23.220Z"
+  "last_modified" : "2015-11-16T16:53:44.707Z"
 }

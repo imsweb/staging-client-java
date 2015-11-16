@@ -40,7 +40,7 @@
     "key" : "nodes_pos",
     "name" : "Regional Nodes Positive",
     "naaccr_item" : 820,
-    "table" : "nodes_pos_fpb",
+    "table" : "nodes_pos_fpa",
     "used_for_staging" : true
   }, {
     "key" : "clin_t",
@@ -254,7 +254,7 @@
     "tables" : [ {
       "id" : "parse_t_2177",
       "input_mapping" : [ {
-        "from" : "clin_n",
+        "from" : "clin_t",
         "to" : "t"
       } ],
       "output_mapping" : [ {
@@ -264,7 +264,7 @@
         "from" : "t_prefix",
         "to" : "clin_t_prefix"
       } ],
-      "inputs" : [ "clin_n" ],
+      "inputs" : [ "clin_t" ],
       "outputs" : [ "clin_t_prefix", "tmp_clin_t" ]
     }, {
       "id" : "parse_n_67182",
@@ -743,7 +743,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "radiation_surg_seq", "combined_t_colon", "determine_default_m", "path_m_hae", "colon_65083", "nodes_pos_fpb", "parse_t_2177", "concatenate_n_43246", "mets_hae", "ssf7_spf", "ssf1_jpf", "parse_n_67182", "determine_default_n", "path_n_dan", "ssf3_lpe", "combined_n_to_summ_stage_n_84054", "histology", "ssf6_opb", "concatenate_m_40642", "schema_selection_colon", "nodes_dan", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "tnm7_inclusions_tpc", "ssf10_spi", "clin_m_hae", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "extension_bao", "ssf4_mpb", "determine_combined_prefix_91402", "ssf5_npb", "stage_group_c_26613", "clin_n_dan", "stop_if_no_clin_and_no_path_24035", "ssf9_sph", "systemic_surg_seq", "path_t_colon_98925", "parse_m_47057", "primary_site", "stage_group_p_78368", "combined_m", "tnm7_stage_upw", "combined_n", "year_dx_validation", "ssf8_spg", "summary_stage_rpa" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "radiation_surg_seq", "combined_t_colon", "determine_default_m", "path_m_hae", "colon_65083", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "mets_hae", "ssf7_spf", "ssf1_jpf", "parse_n_67182", "determine_default_n", "path_n_dan", "ssf3_lpe", "combined_n_to_summ_stage_n_84054", "histology", "ssf6_opb", "concatenate_m_40642", "schema_selection_colon", "nodes_dan", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "tnm7_inclusions_tpc", "ssf10_spi", "clin_m_hae", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "extension_bao", "ssf4_mpb", "determine_combined_prefix_91402", "ssf5_npb", "stage_group_c_26613", "clin_n_dan", "stop_if_no_clin_and_no_path_24035", "ssf9_sph", "systemic_surg_seq", "path_t_colon_98925", "parse_m_47057", "primary_site", "stage_group_p_78368", "combined_m", "tnm7_stage_upw", "combined_n", "year_dx_validation", "ssf8_spg", "summary_stage_rpa" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-02T02:29:07.152Z"
+  "last_modified" : "2015-11-16T17:37:01.862Z"
 }

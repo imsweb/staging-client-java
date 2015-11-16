@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Myeloma Plasma Cell Disorder",
   "title" : "Plasma Cell Disorders including Myeloma",
-  "notes" : "9731 Plasmacytoma, NOS (except C441, C690, C695-C696)\n9732 Multiple myeloma (except C441, C690, C695-C696)\n9734 Plasmacytoma, extramedullary (except C441, C690, C695-C696)\n\n**Note:** TNM is not defined for this schema.",
+  "notes" : "9731 Plasmacytoma, NOS (except C441, C690, C695-C696)\n9732 Multiple myeloma (except C441, C690, C695-C696)\n9734 Plasmacytoma, extramedullary (except C441, C690, C695-C696)\n\n**Note:** TNM is not defined for this schema. If directly assigning Summary Stage 2000 (SS2000), use the *Hematopoietic, Reticuloendothelial, Immunoproliferative, and Myeloproliferative Neoplasms* chapter on page 286 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_myeloma_plasma_cell_disorder",
   "inputs" : [ {
     "key" : "year_dx",
@@ -144,5 +144,5 @@
   } ],
   "involved_tables" : [ "primary_site", "ssf2_kbx", "histology", "schema_selection_myeloma_plasma_cell_disorder", "ssf3_lbb", "year_dx_validation", "summary_stage_rpa", "mets_hna", "nodes_dfy", "extension_bgc" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-19T12:29:25.932Z"
+  "last_modified" : "2015-11-16T16:05:41.450Z"
 }

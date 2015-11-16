@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Urinary Other",
   "title" : "Paraurethral Gland, Overlapping Lesion of Urinary Organs, and Unspecified Urinary Organs",
-  "notes" : "C681  Paraurethral gland\nC688  Overlapping lesion of urinary organs\nC689  Urinary system, NOS\n\n**Note 1:**  TNM is not defined for this site.\n**Note 2:**  Transitional cell carcinoma (8120-8130) of the prostatic ducts and prostatic urethra are to be coded to urethra (C680) and Summary Stage according to that schema.",
+  "notes" : "C681  Paraurethral gland\nC688  Overlapping lesion of urinary organs\nC689  Urinary system, NOS\n\n**Note 1:**  Transitional cell carcinoma (8120-8130) of the prostatic ducts and prostatic urethra are to be coded to urethra (C680) and Summary Stage according to that schema.\n\n**Note 2:** TNM is not defined for this schema. If directly assigning Summary Stage 2000 (SS2000), use the *Urethra, Paraurethral Gland, and Unspecified Urinary Organs* chapter on page 254 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_urinary_other",
   "inputs" : [ {
     "key" : "year_dx",
@@ -130,5 +130,5 @@
   } ],
   "involved_tables" : [ "primary_site", "seer_mets_48348", "histology", "year_dx_validation", "nodes_dcz", "summary_stage_rpa", "schema_selection_urinary_other", "extension_bcy" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-30T17:50:23.882Z"
+  "last_modified" : "2015-11-16T17:43:57.679Z"
 }

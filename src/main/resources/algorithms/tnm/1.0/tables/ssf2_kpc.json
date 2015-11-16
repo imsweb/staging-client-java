@@ -5,8 +5,8 @@
   "name" : "SSF2",
   "title" : "Site-Specific Factor 2",
   "subtitle" : "Carcinoembryonic Antigen (CEA)",
-  "notes" : "**Note 1:**  Record the interpretation of the highest CEA test results documented in the medical record based on information prior to treatment. The interpretation should be for the same laboratory test recorded in Site-Specific Factor 3.",
-  "last_modified" : "2015-10-30T18:48:38.836Z",
+  "notes" : "**Note:**  Record the interpretation of the highest CEA test results documented in the medical record based on information prior to treatment. The interpretation should be for the same laboratory test recorded in Site-Specific Factor 3.",
+  "last_modified" : "2015-11-15T15:23:01.849Z",
   "definition" : [ {
     "key" : "ssf2",
     "name" : "Code",
@@ -16,5 +16,5 @@
     "name" : "Description",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "010", "Positive/elevated" ], [ "020", "Negative/normal; within normal limits" ], [ "030", "Borderline; undetermined if positive or negative" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information Not documented in patient record" ] ]
+  "rows" : [ [ "010", "Positive/elevated" ], [ "020", "Negative/normal; within normal limits" ], [ "030", "Borderline; undetermined if positive or negative" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information; Not documented in patient record" ] ]
 }

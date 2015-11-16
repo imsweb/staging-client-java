@@ -293,10 +293,10 @@
         "to" : "tmp_path_n"
       }, {
         "from" : "n_prefix",
-        "to" : "patn_n_prefix"
+        "to" : "path_n_prefix"
       } ],
       "inputs" : [ "path_n" ],
-      "outputs" : [ "tmp_path_n", "patn_n_prefix" ]
+      "outputs" : [ "tmp_path_n", "path_n_prefix" ]
     }, {
       "id" : "parse_m_47057",
       "input_mapping" : [ {
@@ -552,20 +552,20 @@
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
+        "from" : "path_n_prefix",
+        "to" : "path_prefix"
+      }, {
         "from" : "source_n",
         "to" : "cmb_source"
       }, {
         "from" : "clin_n_prefix",
         "to" : "clin_prefix"
-      }, {
-        "from" : "tmp_path_n",
-        "to" : "path_prefix"
       } ],
       "output_mapping" : [ {
         "from" : "cmb_prefix",
         "to" : "cmb_n_prefix"
       } ],
-      "inputs" : [ "clin_n_prefix", "tmp_path_n", "source_n" ],
+      "inputs" : [ "clin_n_prefix", "path_n_prefix", "source_n" ],
       "outputs" : [ "cmb_n_prefix" ]
     }, {
       "id" : "determine_combined_prefix_91402",
@@ -716,5 +716,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "extension_bbq", "radiation_surg_seq", "path_t_bone_59009", "nodes_dbh", "determine_default_m", "tnm_7_stage_ewing_17708", "tnm_7_stage_not_ewing_14573", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "clin_m_hav", "parse_n_67182", "ssf3_lay", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "path_m_hav", "combined_t_no_tis", "mets_hav", "stage_group_c_76779", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "combined_t_to_summ_stage_t_3_4e_d_76738", "clin_n_bone_13753", "bone_histologies_stage", "stage_group_p_84556", "determine_combined_prefix_91402", "clin_t_bone_70163", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "ssf2_kbl", "ssf1_jbx", "parse_m_47057", "primary_site", "tnm7_inclusions_tpy", "path_n_bone_31243", "combined_m", "combined_n", "ssf4_mbd", "grade", "year_dx_validation", "summary_stage_rpa", "schema_selection_bone" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-01T02:03:48.012Z"
+  "last_modified" : "2015-11-16T01:13:31.660Z"
 }

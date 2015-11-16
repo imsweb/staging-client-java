@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
-  "notes" : "**Note 1:** Code only regional nodes and nodes, NOS , in this field.  Distant nodes are coded in SEER Mets (distant metastasis).\n\n**Note 2:** Superior and inferior mesenteric nodes are coded in SEER Mets (distant metastasis).  Mesenteric nodes, NOS are coded in SEER Regional nodes.",
-  "last_modified" : "2015-09-04T20:51:58.626Z",
+  "notes" : "**Note 1:** Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in SEER Mets.\n\n**Note 2:** Superior and inferior mesenteric nodes are coded in SEER Mets.  Mesenteric nodes, NOS are coded in SEER Regional Nodes.",
+  "last_modified" : "2015-11-16T16:53:00.941Z",
   "definition" : [ {
     "key" : "seer_nodes",
     "name" : "Code",

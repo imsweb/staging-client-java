@@ -5,7 +5,7 @@
   "name" : "Path M Distal Bile Duct",
   "title" : "Pathologic M",
   "notes" : "**Note:**  Celiac lymph nodes are classified as distant nodes for TNM 7 staging.  They are coded in distant metastasis.",
-  "last_modified" : "2015-10-15T18:47:17.861Z",
+  "last_modified" : "2015-11-16T20:19:30.797Z",
   "definition" : [ {
     "key" : "path_m",
     "name" : "Pathologic M",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "1", "M1", "Distant metastasis", "Distant lymph nodes:\n    Celiac\n    Para-aortic \n    Peripancreatic (along body and tail of pancreas only)\n    Pericaval\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph nodes \n\nDistant metastasis, NOS\n\nStated as M1" ] ]
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "Clinical assessment only:\nDistant lymph nodes:\n    Celiac\n    Para-aortic \n    Peripancreatic (along body and tail of pancreas only)\n    Pericaval\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph nodes \n\nDistant metastasis, NOS\n\nStated as M1" ], [ "p1", "pM1", "Distant metastasis", "Histologically confirmed:\nDistant lymph nodes:\n    Celiac\n    Para-aortic \n    Peripancreatic (along body and tail of pancreas only)\n    Pericaval\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph nodes \n\nDistant metastasis, NOS\n\nStated as M1" ], [ "88", "88", "Not applicable", "Pathologic M is not defined for the specific site/histology" ], [ "", "BLANK", "See Registrar Notes", "No pathologic workup for T and N AND no clinical or pathologic evidence of metastasis" ] ]
 }

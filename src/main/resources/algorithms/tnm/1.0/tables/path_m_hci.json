@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Path M NET Colon",
   "title" : "Pathologic M",
-  "last_modified" : "2015-10-19T15:07:53.188Z",
+  "last_modified" : "2015-11-16T20:19:25.847Z",
   "definition" : [ {
     "key" : "path_m",
     "name" : "Pathologic M",
@@ -22,5 +22,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "1", "M1", "Distant metastasis", "Distant lymph node(s):\nFor all colon sites:\n        Common iliac\n        Distant lymph node(s), NOS\n        External iliac\n        Para-aortic\n        Retroperitoneal\n For cecum, ascending colon, hepatic flexure, and transverse colon (C180, C182-C184):\n        Inferior mesenteric\n        Superior mesentric lymph nodes only\nFor splenic flexure, descending colon, and sigmoid colon (C185-C187):\n        Superior mesenteric\n\nDistant metastasis, NOS\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis, NOS\n\nStated as M1" ], [ "88", "88", "Not applicable", "Pathologic M is not defined for this site/histology\nIn situ (no Tis defined)" ], [ "", "BLANK", "", "There is no evidence of metastatic disease (cM0)\nThere is no pathologic workup for metastatic disease\nNegative biopsy of a distant site\nClinical evidence of metastatic disease (clinical M1) but not histologically proven" ] ]
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "Clinical assessment only:\nDistant lymph node(s):\nFor all colon sites:\n        Common iliac\n        Distant lymph node(s), NOS\n        External iliac\n        Para-aortic\n        Retroperitoneal\n For cecum, ascending colon, hepatic flexure, and transverse colon (C180, C182-C184):\n        Inferior mesenteric\n        Superior mesentric lymph nodes only\nFor splenic flexure, descending colon, and sigmoid colon (C185-C187):\n        Superior mesenteric\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis, NOS\n\nStated as M1" ], [ "p1", "pM1", "Distant metastasis", "Histologically confirmed:\nDistant lymph node(s):\nFor all colon sites:\n        Common iliac\n        Distant lymph node(s), NOS\n        External iliac\n        Para-aortic\n        Retroperitoneal\n For cecum, ascending colon, hepatic flexure, and transverse colon (C180, C182-C184):\n        Inferior mesenteric\n        Superior mesentric lymph nodes only\nFor splenic flexure, descending colon, and sigmoid colon (C185-C187):\n        Superior mesenteric\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis, NOS\n\nStated as M1" ], [ "88", "88", "Not applicable", "In situ case but no pTis is defined by TNM" ], [ "", "BLANK", "See Registrar Notes", "No pathologic workup for T and N AND no clinical or pathologic evidence of metastasis" ] ]
 }

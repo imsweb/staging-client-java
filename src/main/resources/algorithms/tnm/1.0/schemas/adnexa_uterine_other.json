@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Adnexa Uterine Other",
   "title" : "Broad and Round Ligaments, Parametrium, Uterine Adnexa",
-  "notes" : "C571  Broad ligament\nC572  Round ligament\nC573  Parametrium\nC574  Uterine adnexa\n\n**Note:**  TNM is not defined for this site.",
+  "notes" : "C571  Broad ligament\nC572  Round ligament\nC573  Parametrium\nC574  Uterine adnexa\n\n**Note:** TNM is not defined for this schema. If directly assigning Summary Stage 2000 (SS2000), use the *Other and Unspecified Female Genital Organs* chapter on page 220 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_adnexa_uterine_other",
   "inputs" : [ {
     "key" : "year_dx",
@@ -130,5 +130,5 @@
   } ],
   "involved_tables" : [ "primary_site", "seer_mets_48348", "nodes_dcc", "histology", "schema_selection_adnexa_uterine_other", "year_dx_validation", "summary_stage_rpa", "extension_bcn" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-30T17:50:23.932Z"
+  "last_modified" : "2015-11-16T16:31:19.239Z"
 }

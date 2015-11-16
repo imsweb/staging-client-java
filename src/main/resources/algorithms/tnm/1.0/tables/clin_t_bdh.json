@@ -5,7 +5,7 @@
   "name" : "Clin T Testis",
   "title" : "Clinical T",
   "notes" : "**Note 1:**  Except for pT4, where radical orchiectomy is not always necessary for classification purposes, the extent of the primary tumor is classified after radical orchiectomy; see pT. \n\n**Note 2:** Assign TX for clinical T prior to radical orchiectomy or if no radical orchiectomy is performed unless there is a cT4.",
-  "last_modified" : "2015-10-29T18:18:15.861Z",
+  "last_modified" : "2015-11-16T20:19:49.047Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "TX", "Primary tumor cannot be assessed", "Unknown extension\nNot documented in patient record" ], [ "4", "T4", "Tumor invades scrotum \nWITH or WITHOUT vascular lymphatic invasion", "Dartos muscle, ipsilateral\nScrotum, ipsilateral\n\nExtension to scrotum, contralateral\nUlceration of scrotum\n\nPenis\n\nFurther contiguous extension\n\nStated as T4" ] ]
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical evaluation performed but unknown results or extension not stated\nClinical evaluation performed but results not documented in patient record" ], [ "c4", "cT4", "Tumor invades scrotum \nWITH or WITHOUT vascular lymphatic invasion", "Dartos muscle, ipsilateral\nScrotum, ipsilateral\n\nExtension to scrotum, contralateral\nUlceration of scrotum\n\nPenis\n\nFurther contiguous extension\n\nStated as T4" ], [ "88", "88", "Not applicable", "Clinical T is not defined for the specific site/histology" ], [ "", "BLANK", "See Registrar Notes", "No clinical evaluation of primary tumor\nCancer first detected on surgical resection\nUnknown if any clinical assessment performed" ] ]
 }

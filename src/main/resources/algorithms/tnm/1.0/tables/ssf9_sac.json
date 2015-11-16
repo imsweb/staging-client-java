@@ -5,8 +5,8 @@
   "name" : "SSF9",
   "title" : "Site-Specific Factor 9",
   "subtitle" : "HER2: Immunohistochemistry (IHC) Test Interpretation",
-  "notes" : "**Note 1:**  Record the results of only the immunohistochemical (IHC) test for Human Epidermal Growth Factor Receptor 2 (HER2) in this field.\n\n**Note 2:** The same laboratory test should be used to record information in Site-Specific Factors 8 and 9. \n\n**Note 3:**  If the test is not mentioned in the medical record, code to 999 unless there are circumstances under which the test isn't performed, for example no histologic specimen.",
-  "last_modified" : "2015-10-30T18:48:41.362Z",
+  "notes" : "**Note 1:**  Record the results of only the immunohistochemical (IHC) test for Human Epidermal Growth Factor Receptor 2 (HER2) in this field.\n\n**Note 2:** The same laboratory test should be used to record information in Site-Specific Factors 8 and 9. \n\n**Note 3:**  If the test is not mentioned in the medical record, code to 999 unless there are circumstances under which the test isn't performed, for example, no histologic specimen.",
+  "last_modified" : "2015-11-16T03:21:30.922Z",
   "definition" : [ {
     "key" : "ssf9",
     "name" : "Code",

@@ -5,7 +5,7 @@
   "name" : "Clin N Appendix",
   "title" : "Clinical N",
   "notes" : "**Note 1:**  Only include information from imaging and physical examination in this item.  Do not include information on regional lymph nodes that is based on surgical observation or diagnostic lymph node biopsy.\n\n**Note 2:**  Assign N1 if regional lymph nodes are involved clinically but there is no indication of the number of nodes involved.\n\n**Regional lymph nodes for appendix:**\n\n    Celiac\n        Anterior (prececal)\n        Ileocolic\n        Posterior (retrocecal)\n        Right colic\n    Colic, NOS\n    Epicolic (adjacent to bowel wall)\n    Mesenteric, NOS\n    Mesocolic, NOS\n    Paracolic/pericolic\n\n    Regional lymph nodes, NOS\n    Lymph nodes, NOS",
-  "last_modified" : "2015-10-14T12:26:30.147Z",
+  "last_modified" : "2015-11-16T20:19:31.088Z",
   "definition" : [ {
     "key" : "clin_n",
     "name" : "Clinical N",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "NX", "Regional lymph nodes cannot be assessed", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Metastasis in 1-3 regional lymph nodes", "Stated as N1" ], [ "2", "N2", "Metastasis in 4 or more regional lymph nodes", "Stated as N2" ] ]
+  "rows" : [ [ "cX", "cNX", "Regional lymph nodes cannot be assessed", "Clinical evaluation but unknown results or regional lymph node involvement not stated\nClinical evaluation done but results not documented in patient record" ], [ "c0", "cN0", "No regional lymph node metastasis", "" ], [ "c1", "cN1", "Metastasis in 1-3 regional lymph nodes", "Stated as N1" ], [ "c2", "cN2", "Metastasis in 4 or more regional lymph nodes", "Stated as N2" ], [ "88", "88", "Not applicable", "Clinical N is not defined for the specific site/histology" ], [ "", "BLANK", "See Registrar Notes", "No clinical evaluation of regional lymph nodes\nCancer first detected on surgical resection\nUnknown if any clinical assessment performed" ] ]
 }

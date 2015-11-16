@@ -5,7 +5,7 @@
   "name" : "Path M",
   "title" : "Pathologic M",
   "notes" : "**Note:**  Nodes in contiguous (secondary) and bidirectional (cephalad/caudal) primary nodal basins are coded in distant metastasis.",
-  "last_modified" : "2015-11-03T14:46:00.694Z",
+  "last_modified" : "2015-11-16T20:19:22.128Z",
   "definition" : [ {
     "key" : "path_m",
     "name" : "Pathologic M",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "c0", "cM0", "No  distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "Clinical assessment only: \n    Distant lymph node(s)\n    Carcinomatosis\n    Distant metastasis WITH or WITHOUT distant lymph node(s)\n    Distant metastasis, NOS\n\n    Stated as M1" ], [ "p1", "pM1", "Distant metastasis", "Pathologically confirmed:\n    Distant lymph node(s)\n    Carcinomatosis\n    Distant metastasis WITH or WITHOUT distant lymph node(s)\n    Distant metastasis, NOS\n\n    Stated as M1" ], [ "88", "88", "Not applicable", "Pathologic M is not defined for the specific site/histology" ], [ "", "BLANK", "See registrar notes", "No pathologic workup (pT and pN blank)" ] ]
+  "rows" : [ [ "c0", "cM0", "No  distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "Clinical assessment only: \n    Distant lymph node(s)\n    Carcinomatosis\n    Distant metastasis WITH or WITHOUT distant lymph node(s)\n    Distant metastasis, NOS\n\n    Stated as M1" ], [ "p1", "pM1", "Distant metastasis", "Histologically confirmed:\n    Distant lymph node(s)\n    Carcinomatosis\n    Distant metastasis WITH or WITHOUT distant lymph node(s)\n    Distant metastasis, NOS\n\n    Stated as M1" ], [ "88", "88", "Not applicable", "Pathologic M is not defined for the specific site/histology" ], [ "", "BLANK", "See Registrar Notes", "No pathologic workup for T and N AND no clinical or pathologic evidence of metastasis" ] ]
 }

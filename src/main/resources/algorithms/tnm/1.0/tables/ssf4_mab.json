@@ -5,8 +5,8 @@
   "name" : "SSF4",
   "title" : "Site-Specific Factor 4",
   "subtitle" : "Immunohistochemistry (IHC) of Regional Lymph Nodes",
-  "notes" : "**Note 1:**  Isolated tumor cells (ITCs) are defined as single tumor cells or small clusters not greater than 0.2 millimeter (mm), usually detected by immunohistochemistry (IHC), hematoxylin and eosin stains (H and E) (see pN0 (i+)), or molecular (MOL) methods (Reverse Transcription Polymerase Chain Reaction, RT-PCR) (see Site-Specific Factor 5, Molecular (MOL) Studies of Regional Lymph nodes). \n\n    ITCs do not usually show evidence of malignant activity (e.g., proliferation or stromal reaction).\n\n**Note 2:** Â When N is coded N0, use codes 000-009 only to report results of IHC. Otherwise code 987 in this field.\n\n**Note 3:**  If it is unstated whether or not tests are done for IHC, assume they are not done.\n\n**Note 4:**  If the record states N0(i+) and no other information, code to 009.",
-  "last_modified" : "2015-10-30T18:48:41.130Z",
+  "notes" : "**Note 1:**  Isolated tumor cells (ITCs) are defined as single tumor cells or small clusters not greater than 0.2 millimeter (mm), usually detected by immunohistochemistry (IHC), hematoxylin and eosin stains (H and E) (see pN0 (i+)), or molecular (MOL) methods (Reverse Transcription Polymerase Chain Reaction, RT-PCR) (see Site-Specific Factor 5, Molecular (MOL) Studies of Regional Lymph nodes). \n\nITCs do not usually show evidence of malignant activity (e.g., proliferation or stromal reaction).\n\n**Note 2:** Â When N is coded N0, use codes 000-009 only to report results of IHC. Otherwise code 987 in this field.\n\n**Note 3:**  If it is unstated whether or not tests are done for IHC, assume they are not done.\n\n**Note 4:**  If the record states N0(i+) and no other information, code to 009.",
+  "last_modified" : "2015-11-16T03:05:44.787Z",
   "definition" : [ {
     "key" : "ssf4",
     "name" : "Code",

@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
-  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in SEER Mets\n\n**Note 2:**  Use codes for anal canal unless tumor is stated to occur at the anus, arising just proximal to the squamous mucocutaneous junction or the anal verge.",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in SEER Mets.\n\n**Note 2:**  Use codes for anal canal unless tumor is stated to occur at the anus, arising just proximal to the squamous mucocutaneous junction or the anal verge.",
   "footnotes" : "\\### Considered Distant in Historic Stage\n\\*** Considered Distant in 1977 Summary Staging Guide",
-  "last_modified" : "2015-09-04T20:51:52.576Z",
+  "last_modified" : "2015-11-15T15:04:47.499Z",
   "definition" : [ {
     "key" : "seer_nodes",
     "name" : "Code",

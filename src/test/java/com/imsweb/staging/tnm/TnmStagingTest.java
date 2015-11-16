@@ -256,9 +256,9 @@ public class TnmStagingTest extends StagingTest {
         data.setInput(TnmStagingData.TnmInput.CLIN_T, "c0");
         data.setInput(TnmStagingData.TnmInput.CLIN_N, "c1");
         data.setInput(TnmStagingData.TnmInput.CLIN_M, "c0");
-        data.setInput(TnmStagingData.TnmInput.PATH_T, "0");
-        data.setInput(TnmStagingData.TnmInput.PATH_N, "1");
-        data.setInput(TnmStagingData.TnmInput.PATH_M, "c1");
+        data.setInput(TnmStagingData.TnmInput.PATH_T, "p0");
+        data.setInput(TnmStagingData.TnmInput.PATH_N, "p1");
+        data.setInput(TnmStagingData.TnmInput.PATH_M, "p1");
 
         // perform the staging
         _STAGING.stage(data);
@@ -278,7 +278,7 @@ public class TnmStagingTest extends StagingTest {
         Assert.assertEquals("1", data.getOutput(TnmStagingData.TnmOutput.SOURCE_T));
         Assert.assertEquals("c1", data.getOutput(TnmStagingData.TnmOutput.COMBINED_N));
         Assert.assertEquals("1", data.getOutput(TnmStagingData.TnmOutput.SOURCE_N));
-        Assert.assertEquals("c1", data.getOutput(TnmStagingData.TnmOutput.COMBINED_M));
+        Assert.assertEquals("p1", data.getOutput(TnmStagingData.TnmOutput.COMBINED_M));
         Assert.assertEquals("2", data.getOutput(TnmStagingData.TnmOutput.SOURCE_M));
         Assert.assertEquals("D", data.getOutput(TnmStagingData.TnmOutput.SS2017));
         Assert.assertEquals("U", data.getOutput(TnmStagingData.TnmOutput.SS2017_T));

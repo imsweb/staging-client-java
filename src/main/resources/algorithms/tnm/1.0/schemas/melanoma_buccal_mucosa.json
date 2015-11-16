@@ -58,7 +58,7 @@
     "key" : "clin_m",
     "name" : "Clinical M",
     "naaccr_item" : 960,
-    "table" : "clin_m_hpb",
+    "table" : "clin_m_head_neck_melanoma_25497",
     "used_for_staging" : true
   }, {
     "key" : "path_t",
@@ -76,7 +76,7 @@
     "key" : "path_m",
     "name" : "Pathologic M",
     "naaccr_item" : 900,
-    "table" : "path_m_hpb",
+    "table" : "path_m_head_neck_melanoma_32288",
     "used_for_staging" : true
   }, {
     "key" : "seer_primary_tumor",
@@ -669,11 +669,11 @@
     }, {
       "id" : "tnm7_stage_upu",
       "input_mapping" : [ {
-        "from" : "tmp_combined_m",
-        "to" : "m"
-      }, {
         "from" : "tmp_combined_n",
         "to" : "n"
+      }, {
+        "from" : "tmp_combined_m",
+        "to" : "m"
       }, {
         "from" : "tmp_combined_t",
         "to" : "t"
@@ -750,7 +750,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "ssf10_spd", "path_m_hpb", "stage_group_p_21201", "tnm7_stage_upu", "parse_t_2177", "concatenate_n_43246", "ssf11_spe", "histology", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "tnm7_inclusions_tpa", "ssf1_jpu", "combined_t_to_summ_stage_t_4b_4e_d_9381", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "ssf9_spc", "combined_n_to_summ_stage_n_headneck_buccallipother_45770", "systemic_surg_seq", "parse_m_47057", "combined_m", "clinical_n_head_neck_melanoma_66648", "combined_n", "ssf5_npa", "extension_ben", "summary_stage_rpa", "ssf8_spb", "determine_default_t", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpa", "stage_group_c_63552", "seer_regional_nodes_melanoma_buccal_mucosa_293", "parse_n_67182", "determine_default_n", "combined_t_no_tis", "schema_selection_melanoma_buccal_mucosa", "pathologic_n_head_neck_melanoma_copy_75380", "melanoma_buccal_mucosa_t_76459", "seer_mets_buccal_mucosavs2_57393", "ssf4_mpa", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "primary_site", "year_dx_validation", "clin_t_melanoma_buccal_mucosa_55204" ],
+  "involved_tables" : [ "ssf7_spa", "cpmbined_m_to_summ_stage_m_60564", "ssf10_spd", "stage_group_p_21201", "tnm7_stage_upu", "path_m_head_neck_melanoma_32288", "parse_t_2177", "concatenate_n_43246", "ssf11_spe", "histology", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "tnm7_inclusions_tpa", "ssf1_jpu", "combined_t_to_summ_stage_t_4b_4e_d_9381", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "ssf9_spc", "combined_n_to_summ_stage_n_headneck_buccallipother_45770", "systemic_surg_seq", "parse_m_47057", "combined_m", "clinical_n_head_neck_melanoma_66648", "combined_n", "ssf5_npa", "extension_ben", "summary_stage_rpa", "ssf8_spb", "determine_default_t", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpa", "stage_group_c_63552", "seer_regional_nodes_melanoma_buccal_mucosa_293", "parse_n_67182", "determine_default_n", "combined_t_no_tis", "schema_selection_melanoma_buccal_mucosa", "pathologic_n_head_neck_melanoma_copy_75380", "melanoma_buccal_mucosa_t_76459", "seer_mets_buccal_mucosavs2_57393", "ssf4_mpa", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "primary_site", "year_dx_validation", "clin_t_melanoma_buccal_mucosa_55204", "clin_m_head_neck_melanoma_25497" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-06T20:05:28.107Z"
+  "last_modified" : "2015-11-13T22:46:47.472Z"
 }

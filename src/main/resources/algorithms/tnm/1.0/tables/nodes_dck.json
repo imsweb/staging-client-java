@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
-  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in SEER mets.\n\n**Note 2:** Regional lymph nodes for the bladder are the nodes of the true pelvis, which essentially are the pelvic nodes below the bifurcation of the common iliac arteries, but include the lymph nodes along the common iliac artery too. Laterality does not affect the classification.",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in SEER Mets.\n\n**Note 2:** Regional lymph nodes for the bladder are the nodes of the true pelvis, which essentially are the pelvic nodes below the bifurcation of the common iliac arteries, but include the lymph nodes along the common iliac artery too. Laterality does not affect the classification.",
   "footnotes" : "\\### Considered distant in Historic Stage",
-  "last_modified" : "2015-09-04T20:52:23.555Z",
+  "last_modified" : "2015-11-16T01:00:05.251Z",
   "definition" : [ {
     "key" : "seer_nodes",
     "name" : "Code",

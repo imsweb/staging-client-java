@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Clin M Adrenal Gland",
   "title" : "Clinical M",
-  "last_modified" : "2015-11-03T14:06:35.284Z",
+  "last_modified" : "2015-11-16T20:19:35.060Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",
@@ -22,5 +22,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "Clinical assessment only:\n    Distant lymph node(s), NOS \n    Distant metastasis WITH or WITHOUT distant lymph node(s)\n    Carcinomatosis\n    Distant metastasis, NOS\n\n    Stated as M1" ], [ "p1", "pM1", "Distant metastasis", "Pathologically confirmed:\n    Distant lymph node(s), NOS \n    Distant metastasis WITH or WITHOUT distant lymph node(s)\n    Carcinomatosis\n    Distant metastasis, NOS\n\n    Stated as M1" ], [ "88", "88", "Not applicable", "Clinical M is not defined for this site/histology\nIn situ (no pTis defined)" ], [ "", "BLANK", "See registrar notes", "No clinical evaluation\nCancer first detected on surgical resection\nUnknown if any clinical assessment performed" ] ]
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "Clinical assessment only:\n    Distant lymph node(s), NOS \n    Distant metastasis WITH or WITHOUT distant lymph node(s)\n    Carcinomatosis\n    Distant metastasis, NOS\n\n    Stated as M1" ], [ "p1", "pM1", "Distant metastasis", "Histologically confirmed:\nDistant lymph node(s), NOS \n    Distant metastasis WITH or WITHOUT distant lymph node(s)\n    Carcinomatosis\n    Distant metastasis, NOS\n\n    Stated as M1" ], [ "88", "88", "Not applicable", "Clinical M is not defined for the specific site/histology\nIn situ case but no pTis is defined by TNM" ], [ "", "BLANK", "See Registrar Notes", "No clinical workup for T and N AND no clinical or pathologic evidence of distant metastasis" ] ]
 }

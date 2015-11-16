@@ -47,7 +47,7 @@
     "key" : "nodes_pos",
     "name" : "Regional Nodes Positive",
     "naaccr_item" : 820,
-    "table" : "nodes_pos_fpb",
+    "table" : "nodes_pos_fpa",
     "used_for_staging" : true
   }, {
     "key" : "clin_t",
@@ -721,7 +721,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "tnm7_inclusions_tqj", "determine_default_t", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpb", "mets_hac", "stage_group_c_62342", "parse_t_2177", "concatenate_n_43246", "ssf2_kal", "parse_n_67182", "determine_default_n", "clin_m_hac", "tnm7_stage_uam", "combined_n_to_summ_stage_n_84054", "ssf13_sdr", "stomach_t_57787", "nodes_dak", "histology", "path_n_dak", "concatenate_m_40642", "stage_group_p_27096", "behavior", "schema_selection_stomach", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "clin_t_stomach_55386", "determine_combined_prefix_91402", "clin_n_dak", "ssf14_sds", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "path_m_hac", "year_dx_validation", "summary_stage_rpa", "combined_t", "ssf15_sdt", "discriminator_esophogus_ge_junction", "extension_bal" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "tnm7_inclusions_tqj", "determine_default_t", "radiation_surg_seq", "determine_default_m", "mets_hac", "nodes_pos_fpa", "stage_group_c_62342", "parse_t_2177", "concatenate_n_43246", "ssf2_kal", "parse_n_67182", "determine_default_n", "clin_m_hac", "tnm7_stage_uam", "combined_n_to_summ_stage_n_84054", "ssf13_sdr", "stomach_t_57787", "nodes_dak", "histology", "path_n_dak", "concatenate_m_40642", "stage_group_p_27096", "behavior", "schema_selection_stomach", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "clin_t_stomach_55386", "determine_combined_prefix_91402", "clin_n_dak", "ssf14_sds", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "path_m_hac", "year_dx_validation", "summary_stage_rpa", "combined_t", "ssf15_sdt", "discriminator_esophogus_ge_junction", "extension_bal" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-06T20:11:03.938Z"
+  "last_modified" : "2015-11-14T20:25:41.454Z"
 }

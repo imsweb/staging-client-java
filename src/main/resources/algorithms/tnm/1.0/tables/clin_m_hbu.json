@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Clin M Esophagus GE Junction",
   "title" : "Clinical M",
-  "last_modified" : "2015-10-14T14:10:40.297Z",
+  "last_modified" : "2015-11-16T20:19:36.910Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",
@@ -22,5 +22,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "0", "M0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "1", "M1", "Distant metastasis", "Distant lymph node(s), including:\n    Hepatoduodenal\n    Mesenteric, NOS:\n        Inferior mesenteric\n        Superior mesenteric\n    Para-aortic\n    Porta hepatis (portal) (hilar) (in hilus of liver)\n    Retropancreatic\n    Retroperitoneal\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis(es), NOS\n\nStated as M1 with no other information on distant metastasis" ] ]
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "Clinical assessment only:\nDistant lymph node(s), including:\n    Hepatoduodenal\n    Mesenteric, NOS:\n        Inferior mesenteric\n        Superior mesenteric\n    Para-aortic\n    Porta hepatis (portal) (hilar) (in hilus of liver)\n    Retropancreatic\n    Retroperitoneal\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis(es), NOS\n\nStated as M1 with no other information on distant metastasis" ], [ "p1", "pM1", "Distant metastasis", "Histologically confirmed:\nDistant lymph node(s), including:\n    Hepatoduodenal\n    Mesenteric, NOS:\n        Inferior mesenteric\n        Superior mesenteric\n    Para-aortic\n    Porta hepatis (portal) (hilar) (in hilus of liver)\n    Retropancreatic\n    Retroperitoneal\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis(es), NOS\n\nStated as M1" ], [ "88", "88", "Not applicable", "Clinical M is not defined for the specific site/histology" ], [ "", "BLANK", "See Registrar Notes", "No clinical workup for T and N AND no clinical or pathologic evidence of distant metastasis" ] ]
 }

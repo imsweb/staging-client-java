@@ -414,21 +414,10 @@
       "inputs" : [ "tmp_path_m", "tmp_clin_m" ],
       "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_combined_m", "tmp_clin_m", "source_m" ]
     }, {
-      "id" : "lymph_nodes_eval_temp_65876",
-      "input_mapping" : [ {
-        "from" : "tmp_path_n",
-        "to" : "path_n_in"
-      }, {
-        "from" : "tmp_clin_n",
-        "to" : "clin_n_in"
-      } ],
-      "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
-      "outputs" : [ "tmp_clin_n_source", "tmp_path_n_source" ]
-    }, {
       "id" : "tnm7_stage_ubv",
       "input_mapping" : [ {
-        "from" : "tmp_clin_n_source",
-        "to" : "source_n_stage"
+        "from" : "clin_n_prefix",
+        "to" : "prefix_n_in"
       }, {
         "from" : "tmp_clin_n",
         "to" : "n"
@@ -443,14 +432,11 @@
         "from" : "stage",
         "to" : "clin_stage_group"
       } ],
-      "inputs" : [ "tmp_clin_n", "tmp_clin_m", "tmp_clin_n_source", "tmp_clin_t" ],
+      "inputs" : [ "clin_n_prefix", "tmp_clin_n", "tmp_clin_m", "tmp_clin_t" ],
       "outputs" : [ "clin_stage_group" ]
     }, {
       "id" : "tnm7_stage_ubv",
       "input_mapping" : [ {
-        "from" : "tmp_path_n_source",
-        "to" : "source_n_stage"
-      }, {
         "from" : "tmp_path_m",
         "to" : "m"
       }, {
@@ -459,12 +445,15 @@
       }, {
         "from" : "tmp_path_t",
         "to" : "t"
+      }, {
+        "from" : "path_n_prefix",
+        "to" : "prefix_n_in"
       } ],
       "output_mapping" : [ {
         "from" : "stage",
         "to" : "path_stage_group"
       } ],
-      "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t", "tmp_path_n_source" ],
+      "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t", "path_n_prefix" ],
       "outputs" : [ "path_stage_group" ]
     }, {
       "id" : "adjustments_for_no_clin_or_no_path_26261",
@@ -685,17 +674,17 @@
         "from" : "tmp_combined_m",
         "to" : "m"
       }, {
-        "from" : "source_n",
-        "to" : "source_n_stage"
-      }, {
         "from" : "tmp_combined_t",
         "to" : "t"
+      }, {
+        "from" : "cmb_n_prefix",
+        "to" : "prefix_n_in"
       } ],
       "output_mapping" : [ {
         "from" : "stage",
         "to" : "combined_stage_group"
       } ],
-      "inputs" : [ "tmp_combined_n", "tmp_combined_m", "source_n", "tmp_combined_t" ],
+      "inputs" : [ "cmb_n_prefix", "tmp_combined_n", "tmp_combined_m", "tmp_combined_t" ],
       "outputs" : [ "combined_stage_group" ]
     }, {
       "id" : "combined_to_summ_stage_t_80394",
@@ -763,7 +752,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "nodes_pos_fah", "schema_selection_melanoma_skin", "lymph_nodes_eval_temp_65876", "summary_stage_rac", "parse_t_2177", "concatenate_n_43246", "combined_n_to_summ_stage_n_84054", "ssf1_jpl", "histology", "concatenate_m_40642", "tnm7_inclusions_tpa", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "clin_t_ban", "systemic_surg_seq", "stage_group_p_4750", "parse_m_47057", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "combined_t", "extension_ban", "determine_default_t", "radiation_surg_seq", "determine_default_m", "mets_had", "parse_n_67182", "determine_default_n", "ssf6_oax", "path_n_dam", "ssf7_seb", "nodes_dam", "ssf4_maa", "behavior", "clin_m_had", "ssf8_sec", "path_t_ban", "ssf5_nba", "stage_group_c_66879", "determine_combined_prefix_91402", "clin_n_dam", "stop_if_no_clin_and_no_path_24035", "primary_site", "ssf9_sed", "path_m_had", "ssf2_kaa", "year_dx_validation", "tnm7_stage_ubv" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "nodes_pos_fah", "determine_default_t", "schema_selection_melanoma_skin", "radiation_surg_seq", "determine_default_m", "summary_stage_rac", "mets_had", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "determine_default_n", "ssf6_oax", "path_n_dam", "combined_n_to_summ_stage_n_84054", "ssf1_jpl", "ssf7_seb", "histology", "concatenate_m_40642", "nodes_dam", "ssf4_maa", "tnm7_inclusions_tpa", "behavior", "concatenate_t_51262", "clin_m_had", "ssf8_sec", "path_t_ban", "adjustments_for_no_clin_or_no_path_26261", "ssf5_nba", "stage_group_c_66879", "determine_combined_prefix_91402", "clin_t_ban", "clin_n_dam", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "stage_group_p_4750", "parse_m_47057", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "ssf9_sed", "combined_n", "path_m_had", "ssf2_kaa", "year_dx_validation", "tnm7_stage_ubv", "combined_t", "extension_ban" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-03T03:21:41.244Z"
+  "last_modified" : "2015-11-13T16:06:17.556Z"
 }

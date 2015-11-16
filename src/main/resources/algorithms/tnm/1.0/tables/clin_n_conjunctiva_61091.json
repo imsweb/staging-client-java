@@ -5,7 +5,7 @@
   "name" : "Clin N Conjunctiva",
   "title" : "Clinical N",
   "notes" : "**Regional lymph nodes:**\n\n    Cervical, NOS:\n        Submandibular (submaxillary)\n    Parotid, NOS:\n        Infra-auricular\n        Preauricular",
-  "last_modified" : "2015-10-14T13:30:37.818Z",
+  "last_modified" : "2015-11-16T20:19:34.207Z",
   "definition" : [ {
     "key" : "clin_n",
     "name" : "Clinical N",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "NX", "Regional lymph node metastasis cannot be assessed", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ] ]
+  "rows" : [ [ "cX", "cNX", "Regional lymph node metastasis cannot be assessed", "Clinical evaluation but unknown results or regional lymph node involvement not stated\nClinical evaluation done but results not documented in patient record" ], [ "c0", "cN0", "No regional lymph node metastasis", "" ], [ "c1", "cN1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "88", "88", "Not applicable", "Clinical N is not defined for the specific site/histology" ], [ "", "BLANK", "See Registrar Notes", "No clinical evaluation of regional lymph nodes\nCancer first detected on surgical resection\nUnknown if any clinical assessment performed" ] ]
 }

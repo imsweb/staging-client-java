@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Concatenate M",
   "title" : "Concatenate M",
-  "description" : "With the addition of the c and p prefixes to the existing codes, the prefix are parsed from the main value during calculations.  It must be reattached for the final Combined M value.",
-  "last_modified" : "2015-11-02T17:41:12.258Z",
+  "description" : "With the addition of the c and p prefixes to the existing codes, the prefix is parsed from the main value during calculations.  It must be reattached for the final Combined M value.",
+  "last_modified" : "2015-11-14T20:40:16.105Z",
   "definition" : [ {
     "key" : "m_prefix",
     "name" : "M Prefix",

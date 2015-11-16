@@ -1,0 +1,27 @@
+{
+  "id" : "clinical_n_corpus_sarcoma_87508",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Clinical N Corpus Sarcoma",
+  "title" : "Clinical N",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in distant metastasis.\n\n**Note 2:**  Regional nodes include bilateral and contralateral involvement of named nodes.\n\n**Note 3:**  The Federation Internationale de Gynecologie et d'Obstetrique (FIGO), stages are included for coding where no more specific information is available in the record.  When both FIGO stage and regional lymph node detail are available, record the code with regional lymph node detail in preference to a statement of FIGO stage.\n\n**Note 4:** Assign lymph nodes based on a physician's statement of FIGO Stage IIIB if it is known that the stage value is assigned because of lymph node involvement, or if there is no statement that FIGO Stage IIIB is assigned based on extension or lymph node involvement.\n\n**Note 5:**  If the clinician says \"adnexa palpated\" but does not mention lymph nodes, assume lymph nodes are not involved.\n\nRegional lymph node(s) for Corpus:\n\n    Aortic, NOS:\n        Lateral (lumbar)\n        Para-aortic\n        Periaortic\n    Iliac, NOS:\n        Common\n        External\n        Internal (hypogastric)\n            Obturator\n    Paracervical\n    Parametrial\n    Pelvic, NOS\n    Sacral, NOS:\n        Lateral (laterosacral)\n        Middle (promontorial) (Gerota's node)\n        Presacral\n        Uterosacral\n\n    Pelvic lymph nodes, NOS\n\n    FIGO Stage IIIC (pelvic or para-aortic lymph nodes)\n    FIGO Stage IIIC1 (pelvic lymph nodes)\n    FIGO Stage IIIC2 (para-aortic lymph nodes WITH or WITHOUT pelvic lymph nodes)",
+  "last_modified" : "2015-11-16T20:19:37.172Z",
+  "definition" : [ {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n_display",
+    "name" : "Clinical N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cNX", "Regional lymph nodes cannot be assessed", "Clinical evaluation but unknown results or regional lymph node involvement not stated\nClinical evaluation done but results not documented in patient record" ], [ "c0", "cN0", "No regional lymph node metastasis", "" ], [ "c1", "cN1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "88", "88", "Not applicable", "Clinical N is not defined for the specific site/histology\nIn situ case but no pTis is defined by TNM" ], [ "", "BLANK", "See Registrar Notes", "No clinical evaluation of regional lymph nodes\nCancer first detected on surgical resection\nUnknown if any clinical assessment performed" ] ]
+}

@@ -5,7 +5,7 @@
   "name" : "Path N Skin Eyelid",
   "title" : "Pathologic N",
   "notes" : "**Note:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in distant metastasis.\n\n**Regional lymph nodes:**\n\n    Cervical, NOS\n    Facial, NOS :\n        Buccinator (buccal)\n        Nasolabial \n    Submental    \n    Submandibular (submaxillary)  \n    Parotid, NOS:\n        Infra-auricular\n        Preauricular\n    Supraclavicular, NOS",
-  "last_modified" : "2015-10-26T18:17:24.174Z",
+  "last_modified" : "2015-11-16T20:19:44.115Z",
   "definition" : [ {
     "key" : "path_n",
     "name" : "Pathologic N",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "X", "NX", "Regional lymph nodes cannot be assessed", "Unknown; regional lymph nodes not stated\nNot documented in patient record" ], [ "0", "N0", "No regional lymph node metastasis", "" ], [ "1", "N1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ] ]
+  "rows" : [ [ "pX", "pNX", "Regional lymph nodes cannot be assessed", "Surgical resection of primary and pathologic assessment of regional nodes are done but involvement of regional nodes not stated\nSurgical resection of primary and pathologic assessment of regional nodes are done but involvement of regional nodes not documented in patient record" ], [ "p0", "pN0", "No regional lymph node metastasis", "" ], [ "p1", "pN1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "c0", "cN0", "Clinically no nodes positive and no pathologic evaluation of nodes", "In situ case as defined by TNM and there is a resection of the primary but the nodes are not evaluated pathologically" ], [ "88", "88", "Not applicable", "Pathologic N is not defined for the specific site/histology" ], [ "", "BLANK", "See Registrar Notes", "No pathologic evaluation of regional lymph nodes and case is not in situ\nRegional lymph node(s) cannot be assessed pathologically\nNo resection of a known primary (not T0)\nNo surgical resection of primary tumor and no positive biopsy of the highest N \nUnknown if any pathologic assessment performed" ] ]
 }

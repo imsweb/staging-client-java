@@ -5,7 +5,7 @@
   "name" : "SEER Mets Anus",
   "title" : "SEER Mets",
   "footnotes" : "\\## Considered Regional in Historic Stage",
-  "last_modified" : "2015-09-04T20:51:52.652Z",
+  "last_modified" : "2015-11-15T15:03:25.554Z",
   "definition" : [ {
     "key" : "seer_mets",
     "name" : "Code",
@@ -23,5 +23,5 @@
     "name" : "Summary Stage 2017 M",
     "type" : "ENDPOINT"
   } ],
-  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/node(s) involved\n\nDistant lymph node(s)\n\nExtension to:\n    Bladder##\n    Broad ligament(s)##\n    Cervix uteri##\n    Corpus uteri##\n    Pelvic peritoneum\n    Prostate##\n    Urethra##\n    Vagina##\n\nFurther contiguous extension\n\nMetastasis", "Distant lymph node(s) \nFor all subsites: \n    Bilateral:\n        Internal iliac (hypogastric):\n            Obturator\n        AND\n        Superficial inguinal (femoral)\"\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS \n\nStated as M1", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/node(s) involved\n\nDistant lymph node(s)\n\nExtension to:\n    Bladder##\n    Broad ligament(s)##\n    Cervix uteri##\n    Corpus uteri##\n    Pelvic peritoneum\n    Prostate##\n    Urethra##\n    Vagina##\n\nFurther contiguous extension\n\nMetastasis", "Distant lymph node(s) \nFor all subsites: \n    Bilateral:\n        Internal iliac (hypogastric):\n            Obturator\n        AND\n        Superficial inguinal (femoral)\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS \n\nStated as M1", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
 }

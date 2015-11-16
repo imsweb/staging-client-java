@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Path M Carcinoid Appendix",
   "title" : "Pathologic M",
-  "last_modified" : "2015-10-23T10:33:11.428Z",
+  "last_modified" : "2015-11-16T20:19:29.776Z",
   "definition" : [ {
     "key" : "path_m",
     "name" : "Pathologic M",
@@ -22,5 +22,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "1", "M1", "Distant metastasis", "Superior mesenteric lymph node(s)\n\nDistant lymph node(s), NOS\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis, NOS\n\nStated as M1" ], [ "88", "88", "Not applicable", "Path M is not defined for this site/histology\n In situ (no pTis defined)" ], [ "", "", "", "There is no evidence of metastatic disease (cM0)\nThere is no pathologic workup for metastatic disease\nNegative biopsy of a distant site\nClinical evidence of metastatic disease (clinical M1) but not histologically proven" ] ]
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "Clinical assessment only:\nSuperior mesenteric lymph node(s)\n\nDistant lymph node(s), NOS\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis, NOS\n\nStated as M1" ], [ "p1", "pM1", "Distant metastasis", "Histologically confirmed:\nSuperior mesenteric lymph node(s)\n\nDistant lymph node(s), NOS\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis, NOS\n\nStated as M1" ], [ "88", "88", "Not applicable", "In situ case but no pTis is defined by TNM" ], [ "", "BLANK", "See Registrar Notes", "No pathologic workup for T and N AND no clinical or pathologic evidence of metastasis" ] ]
 }

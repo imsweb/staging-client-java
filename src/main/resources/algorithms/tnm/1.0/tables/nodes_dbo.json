@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
-  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in SEER mets.\n\n**Note 2:**  Splenic lymph nodes and those located at the tail of the pancreas are not considered regional and should be coded in SEER mets.",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in SEER Mets.\n\n**Note 2:**  Splenic lymph nodes and those located at the tail of the pancreas are not considered regional and should be coded in SEER Mets.",
   "footnotes" : "\\### Considered distant in Historic Stage\n\\***   Considered distant in 1977 Summary Stage Guide",
-  "last_modified" : "2015-09-04T20:51:49.603Z",
+  "last_modified" : "2015-11-14T20:57:33.490Z",
   "definition" : [ {
     "key" : "seer_nodes",
     "name" : "Code",

@@ -5,7 +5,7 @@
   "name" : "Clin M Head & Neck Melanoma",
   "title" : "Clinical M",
   "notes" : "**Note:** Supraclavicular and transverse cervical lymph nodes are coded in regional lymph nodes because they are categorized as N rather than M in TNM.",
-  "last_modified" : "2015-10-14T18:22:45.437Z",
+  "last_modified" : "2015-11-16T20:19:38.716Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "0", "M0", "No distant metastasis", "Unknown, metastasis not stated\nDistant metastasis cannot be assessed \nNot documented in patient record" ], [ "1", "M1", "Distant metastasis", "Distant lymph node(s):\n    Mediastinal (excluding superior mediastinal nodes)\n\nDistant lymph node(s), NOS\n\nCarcinomatosis\nDistant metastasis WITH or WITHOUT distant lymph nodes\n\nDistant metastasis, NOS\n\nStated as M1" ] ]
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown, metastasis not stated\nDistant metastasis cannot be assessed \nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "Clinical assessment only:\nDistant lymph node(s):\n    Mediastinal (excluding superior mediastinal nodes)\n\nDistant lymph node(s), NOS\n\nCarcinomatosis\nDistant metastasis WITH or WITHOUT distant lymph nodes\n\nDistant metastasis, NOS\n\nStated as M1" ], [ "p1", "pM1", "Distant metastasis", "Histologically confirmed:\nDistant lymph node(s):\n    Mediastinal (excluding superior mediastinal nodes)\n\nDistant lymph node(s), NOS\n\nCarcinomatosis\nDistant metastasis WITH or WITHOUT distant lymph nodes\n\nDistant metastasis, NOS\n\nStated as M1" ], [ "88", "88", "Not applicable", "In situ case but no pTis is defined by TNM" ], [ "", "BLANK", "See Registrar Notes", "No clinical workup for T and N AND no clinical or pathologic evidence of distant metastasis" ] ]
 }

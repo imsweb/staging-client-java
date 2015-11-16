@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Kaposi Sarcoma",
   "title" : "Kaposi Sarcoma of All Sites",
-  "notes" : "M-9140\n\n**Note 1:** TNM is not defined for this histology. \n\n**Note 2:**  This scheme cannot be compared to either the Historic Stage or the 1977 Summary Stage schemes.",
+  "notes" : "M-9140\n\n**Note 1:** TNM is not defined for this schema. If directly assigning Summary Stage 2000 (SS2000), use the *Kaposi Sarcoma of All Sites* chapter on page 280 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]\n\n**Note 2:**  This scheme cannot be compared to either the Historic Stage or the 1977 Summary Stage schemes.",
   "schema_selection_table" : "schema_selection_kaposi_sarcoma",
   "inputs" : [ {
     "key" : "year_dx",
@@ -155,5 +155,5 @@
   } ],
   "involved_tables" : [ "primary_site", "ssf1_jpj", "seer_mets_kaposisarcoma_74567", "ssf2_kbv", "histology", "year_dx_validation", "nodes_dby", "ssf4_mbh", "summary_stage_rpa", "schema_selection_kaposi_sarcoma", "extension_bcj", "ssf3_laz" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-19T12:29:26.045Z"
+  "last_modified" : "2015-11-16T17:31:14.940Z"
 }

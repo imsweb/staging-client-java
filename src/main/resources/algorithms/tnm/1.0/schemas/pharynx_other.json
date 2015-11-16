@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Pharynx Other",
   "title" : "Pharynx, NOS, and Overlapping Lesion of Lip, Oral Cavity, and Pharynx (excluding Malignant Melanoma)",
-  "notes" : "C140  Pharynx, NOS\nC142  Waldeyer ring\nC148  Overlapping lesion of lip, oral cavity\n\n**Note:** TNM is not defined for these sites.",
+  "notes" : "C140  Pharynx, NOS\nC142  Waldeyer ring\nC148  Overlapping lesion of lip, oral cavity\n\n**Note:** TNM is not defined for this schema. If directly assigning Summary Stage 2000 (SS2000), use the *Pharynx, NOS and Other Ill-Defined Oral Cavity Sites* chapter on page 220 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_pharynx_other",
   "inputs" : [ {
     "key" : "year_dx",
@@ -191,5 +191,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "ssf10_spd", "schema_selection_pharynx_other", "ssf4_mpa", "ssf9_spc", "extension_bdd", "primary_site", "histology", "ssf6_opa", "ssf5_npa", "ssf3_lpa", "year_dx_validation", "nodes_dcy", "seer_mets_pharynxothervs2_3402", "summary_stage_rpa", "ssf1_jpu", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-30T17:50:23.474Z"
+  "last_modified" : "2015-11-16T17:38:44.230Z"
 }
