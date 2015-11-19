@@ -47,6 +47,12 @@ public class Error {
     }
 
     /**
+     * Default constructor
+     */
+    public Error() {
+    }
+
+    /**
      * Constructor
      * @param type type of error
      */
