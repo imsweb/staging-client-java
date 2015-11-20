@@ -42,7 +42,7 @@
     "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
-    "default" : "99",
+    "default" : "98",
     "table" : "mets_hna",
     "used_for_staging" : true
   }, {
@@ -144,5 +144,5 @@
   } ],
   "involved_tables" : [ "primary_site", "ssf2_kbx", "histology", "schema_selection_myeloma_plasma_cell_disorder", "ssf3_lbb", "year_dx_validation", "summary_stage_rpa", "mets_hna", "nodes_dfy", "extension_bgc" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-16T16:05:41.450Z"
+  "last_modified" : "2015-11-17T23:49:20.747Z"
 }

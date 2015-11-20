@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
-  "notes" : "**Note 1:**: Code only regional nodes and nodes, NOS, in this field. Distant nodes are coded in SEER Mets. \n\n**Note 2:**  Regional nodes include bilateral and contralateral involvement of named nodes.",
+  "notes" : "**Note 1:** Code only regional nodes and nodes, NOS, in this field. Distant nodes are coded in SEER Mets. \n\n**Note 2:**  Regional nodes include bilateral and contralateral involvement of named nodes.",
   "footnotes" : "\\### Considered distant in Historic Stage",
-  "last_modified" : "2015-10-16T14:08:24.863Z",
+  "last_modified" : "2015-11-18T04:05:03.611Z",
   "definition" : [ {
     "key" : "seer_nodes",
     "name" : "Code",

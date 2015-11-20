@@ -5,8 +5,8 @@
   "name" : "SSF4",
   "title" : "Site-Specific Factor 4",
   "subtitle" : "Perineural Invasion",
-  "notes" : "**Note:**  Code the presence or absence of perineural invasion as documented in the pathology report.  Assign code 999 if histologic examination of the primary site is performed and perineural invasion is not mentioned.",
-  "last_modified" : "2015-10-30T18:48:30.301Z",
+  "notes" : "**Note:**  Code the presence or absence of perineural invasion as documented in the pathology report.  \n* Assign code 999 if histologic examination of the primary site is performed and perineural invasion is not mentioned.",
+  "last_modified" : "2015-11-19T16:52:14.145Z",
   "definition" : [ {
     "key" : "ssf4",
     "name" : "Code",

@@ -5,8 +5,8 @@
   "name" : "SSF6",
   "title" : "Site-Specific Factor 6",
   "subtitle" : "LDH Upper Limits of Normal",
-  "notes" : "**Note 1:**  Upper limits of normal for Lactate dehydrogenase (LDH) vary widely depending on the lab.Â  Common upper limits can be 200, 250, 618, or other values.Â  The upper limit of normal is needed to evaluate the LDH value record in Site-Specific Factor 5.\n\n**Note 2:**  Record upper limit of normal used for the LDH test as listed on the laboratory report or in the medical record. The information should be taken from the same test used to  Site-Specific Factor 4 and Site-Specific Factor 5.",
-  "last_modified" : "2015-10-15T13:05:11.078Z",
+  "notes" : "**Note 1:**  Upper limits of normal for Lactate dehydrogenase (LDH) vary widely depending on the lab.Â  Common upper limits can be 200, 250, 618, or other values.Â  \n* The upper limit of normal is needed to evaluate the LDH value record in Site-Specific Factor 5.\n\n**Note 2:**  Record upper limit of normal used for the LDH test as listed on the laboratory report or in the medical record. \n* The information should be taken from the same test used to  Site-Specific Factor 4 and Site-Specific Factor 5.",
+  "last_modified" : "2015-11-19T15:12:27.641Z",
   "definition" : [ {
     "key" : "ssf6",
     "name" : "Code",

@@ -5,8 +5,8 @@
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field. Distant lymph nodes are coded in SEER METS.\n\n**Note 2:**  Periaortic and pericaval lymph nodes are classified as regional nodes. They are now coded in SEER Regional Lymph Nodes.",
-  "footnotes" : "\\###Considered distant in Historic stage\n\\***Considered distant in 1977 Summary Staging Guide",
-  "last_modified" : "2015-09-04T20:51:50.526Z",
+  "footnotes" : "\\### Considered distant in Historic stage\n\\*** Considered distant in 1977 Summary Staging Guide",
+  "last_modified" : "2015-11-17T21:04:18.272Z",
   "definition" : [ {
     "key" : "seer_nodes",
     "name" : "Code",

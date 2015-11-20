@@ -35,7 +35,7 @@
     "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
-    "default" : "999",
+    "default" : "888",
     "table" : "nodes_dna",
     "used_for_staging" : true
   }, {
@@ -143,5 +143,5 @@
   } ],
   "involved_tables" : [ "schema_selection_intracranial_gland", "primary_site", "seer_mets_48348", "histology", "ssf1_jpo", "extension_bfy", "year_dx_validation", "summary_stage_rpa", "ssf2_kpl", "nodes_dna" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-16T17:03:40.466Z"
+  "last_modified" : "2015-11-17T23:51:18.292Z"
 }

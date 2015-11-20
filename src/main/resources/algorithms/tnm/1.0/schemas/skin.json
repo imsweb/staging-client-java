@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Skin",
   "title" : "Skin (excluding Skin of Eyelid and Malignant Melanoma, Merkel Cell Carcinoma, Kaposi Sarcoma, Mycosis Fungoides, Sezary Disease, and Other Lymphomas)",
-  "notes" : "C440  Skin of lip, NOS\nC442  External ear\nC443  Skin of other and unspecified parts of face\nC444  Skin of scalp and neck\nC445  Skin of trunk\nC446  Skin of upper limb and shoulder\nC447  Skin of lower limb and hip\nC448  Overlapping lesion of skin\nC449  Skin, NOS\n\n**Note:**  Laterality must be coded for C442-C443 and C445-C447.  For codes C443 and C445, code 5 (midline) in the laterality field if the tumor is midline (e.g., chin).",
+  "notes" : "C440  Skin of lip, NOS\nC442  External ear\nC443  Skin of other and unspecified parts of face\nC444  Skin of scalp and neck\nC445  Skin of trunk\nC446  Skin of upper limb and shoulder\nC447  Skin of lower limb and hip\nC448  Overlapping lesion of skin\nC449  Skin, NOS\n\n**Note 1:**  Laterality must be coded for C442-C443 and C445-C447.  For codes C443 and C445, code 5 (midline) in the laterality field if the tumor is midline (e.g., chin).\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Skin Except Eyelid* chapter on page 172 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_skin",
   "inputs" : [ {
     "key" : "year_dx",
@@ -642,11 +642,11 @@
     }, {
       "id" : "tnm7_stage_ubg",
       "input_mapping" : [ {
-        "from" : "tmp_combined_m",
-        "to" : "m"
-      }, {
         "from" : "tmp_combined_n",
         "to" : "n"
+      }, {
+        "from" : "tmp_combined_m",
+        "to" : "m"
       }, {
         "from" : "tmp_combined_t",
         "to" : "t"
@@ -725,5 +725,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "radiation_surg_seq", "determine_default_m", "tnm7_stage_ubg", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "clin_m_hpe", "parse_n_67182", "determine_default_n", "clin_n_dbt", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "ssf1_jpp", "path_m_hpe", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "behavior", "concatenate_t_51262", "ssf16_squ", "ssf11_sqt", "adjustments_for_no_clin_or_no_path_26261", "stage_group_c_1171", "ssf12_sew", "seer_mets_skin_54942", "determine_combined_prefix_91402", "tnm7_inclusions_tpq", "clin_t_skin_92153", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "extension_bca", "combined_m", "ssf10_sqs", "combined_n", "skin_t_38821", "year_dx_validation", "summary_stage_rpa", "combined_t", "schema_selection_skin", "stage_group_p_11962", "nodes_dbt", "path_n_dbt" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-06T20:05:32.910Z"
+  "last_modified" : "2015-11-17T18:34:04.054Z"
 }

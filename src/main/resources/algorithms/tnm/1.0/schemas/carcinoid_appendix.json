@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Carcinoid Appendix",
   "title" : "Carcinoid Tumor and Neuroendocrine Carcinoma of Appendix",
-  "notes" : "M-8153, 8240-8242, 8246, 8249\n\n**Note 1:** Carcinoid tumor of the appendix is typically not reportable.  Use this schema if your institution collects this tumor as reportable by agreement.\n\n**Note 2:** This schema is also used for neuroendocrine carcinoma and malignant gastrinomas.",
+  "notes" : "M-8153, 8240-8242, 8246, 8249\n\n**Note 1:** Carcinoid tumor of the appendix is typically not reportable.  Use this schema if your institution collects this tumor as reportable by agreement.\n\n**Note 2:** This schema is also used for neuroendocrine carcinoma and malignant gastrinomas.\n\n**Note 3:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Colon* chapter on page 94 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_carcinoid_appendix",
   "inputs" : [ {
     "key" : "year_dx",
@@ -691,5 +691,5 @@
   } ],
   "involved_tables" : [ "extension_bdu", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "ssf13_sca", "radiation_surg_seq", "determine_default_m", "clin_n_ddp", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "tnm7_stage_uak", "combined_t_no_tis", "schema_selection_carcinoid_appendix", "carcinoidappendix_t_41163", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "tnm7_inclusions_tpm", "determine_combined_prefix_91402", "clin_m_hbx", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "stage_group_c_47235", "parse_m_47057", "primary_site", "path_n_ddp", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "nodes_ddp", "path_t_carcinoid_appendix_77608", "year_dx_validation", "stage_group_p_15208", "summary_stage_rpa", "path_m_hbx", "mets_hbx" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-14T20:21:13.663Z"
+  "last_modified" : "2015-11-17T17:52:51.955Z"
 }

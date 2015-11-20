@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "SEER Primary Tumor",
   "title" : "SEER Primary Tumor",
-  "notes" : "**Note 1:**  Code 000 (in situ) is not applicable for this schema.",
-  "last_modified" : "2015-09-04T20:51:41.297Z",
+  "notes" : "**Note:**  Code 000 (in situ) is not applicable for this schema.",
+  "last_modified" : "2015-11-17T23:09:45.299Z",
   "definition" : [ {
     "key" : "seer_primary_tumor",
     "name" : "Code",

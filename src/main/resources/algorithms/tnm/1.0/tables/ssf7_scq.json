@@ -5,8 +5,8 @@
   "name" : "SSF7",
   "title" : "Site-Specific Factor 7",
   "subtitle" : "Tumor Necrosis",
-  "notes" : "**Note:**  Code the presence or absence of tumor necrosis as documented in the pathology report.  Assign code 000 if histologic examination of primary site was performed, the pathology report is available for review, and tumor necrosis is not mentioned.",
-  "last_modified" : "2015-10-30T18:48:33.563Z",
+  "notes" : "**Note:**  Code the presence or absence of tumor necrosis as documented in the pathology report.  \n* Assign code 000 if histologic examination of primary site was performed, the pathology report is available for review, and tumor necrosis is not mentioned.",
+  "last_modified" : "2015-11-19T16:38:06.955Z",
   "definition" : [ {
     "key" : "ssf7",
     "name" : "Code",

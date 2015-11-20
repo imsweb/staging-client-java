@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Peritoneum",
   "title" : "Peritoneum (excluding Gastrointestinal Stromal Tumors and Peritoneum Female Genital M-8000-8576, 8590-8671, 8930-8934, 8940-9110 for females)",
-  "notes" : "M-8000-8934,8940-9136,9141-9582,9700-9701 for males\nM-8580-8589,8680-8921,9120-9136,9141-9582,9700-9701 for females\nC481 Specified parts of peritoneum (including omentum and mesentery)\nC482 Peritoneum, NOS\nC488 Overlapping lesion of retroperitoneum and peritoneum\n\n**Note:**  TNM includes these sites with soft tissue sarcomas (C470-C489)",
+  "notes" : "M-8000-8934,8940-9136,9141-9582,9700-9701 for males\nM-8580-8589,8680-8921,9120-9136,9141-9582,9700-9701 for females\nC481 Specified parts of peritoneum (including omentum and mesentery)\nC482 Peritoneum, NOS\nC488 Overlapping lesion of retroperitoneum and peritoneum\n\n**Note 1:**  TNM includes these sites with soft tissue sarcomas (C470-C489)\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Retroperitoneum & Peritoneum* chapter on page 188 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_peritoneum",
   "schema_discriminators" : [ "sex" ],
   "inputs" : [ {
@@ -393,7 +393,7 @@
       "id" : "tnm7_stage_upm",
       "input_mapping" : [ {
         "from" : "mapping_of_grade",
-        "to" : "grade_based_on_ssf#1"
+        "to" : "grade_based_on_ssf1"
       }, {
         "from" : "tmp_clin_n",
         "to" : "n"
@@ -414,7 +414,7 @@
       "id" : "tnm7_stage_upm",
       "input_mapping" : [ {
         "from" : "mapping_of_grade",
-        "to" : "grade_based_on_ssf#1"
+        "to" : "grade_based_on_ssf1"
       }, {
         "from" : "tmp_path_m",
         "to" : "m"
@@ -645,7 +645,7 @@
       "id" : "tnm7_stage_upm",
       "input_mapping" : [ {
         "from" : "mapping_of_grade",
-        "to" : "grade_based_on_ssf#1"
+        "to" : "grade_based_on_ssf1"
       }, {
         "from" : "tmp_combined_n",
         "to" : "n"
@@ -730,5 +730,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "extension_bbr", "determine_default_t", "tnm7_stage_upm", "radiation_surg_seq", "schema_selection_peritoneum", "ssf3_lpk", "determine_default_m", "nodes_dbi", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "retroperitoneum_n_12750", "parse_n_67182", "determine_default_n", "peritoneum_t_18850", "ssf1_jpm", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "sex_19563", "combined_t_no_tis", "ssf2_kpk", "concatenate_t_51262", "seer_mets_peritoneum_retroperitoneum_44461", "adjustments_for_no_clin_or_no_path_26261", "path_n_peritoneum_retroperitoneum_88959", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "tnm7_inclusions_tpz", "parse_m_47057", "primary_site", "path_m_soft_tissues_96225", "combined_m", "combined_to_summ_stage_t_80394", "clin_t_peritoneum_67989", "combined_n", "stage_group_p_79654", "stage_group_c_49395", "year_dx_validation", "ssf4_mpf", "summary_stage_rpa", "clin_m_soft_tissues_97765" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-06T21:07:40.241Z"
+  "last_modified" : "2015-11-17T22:59:22.652Z"
 }

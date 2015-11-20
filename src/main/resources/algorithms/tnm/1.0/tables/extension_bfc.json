@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "SEER Primary Tumor",
   "title" : "SEER Primary Tumor",
-  "notes" : "**Note 1:**  Intraluminal or intramural extension to esophagus and duodenum is classified by the depth of greatest invasion in any of these sites, including stomach.",
-  "footnotes" : "\\#     -Considered localized in Historic Stage\n\\##    -Considered regional in Historic Stage\n \\**    -Considered regional in 1977 Summary Staging Guide",
-  "last_modified" : "2015-09-04T20:52:02.089Z",
+  "notes" : "**Note:**  Intraluminal or intramural extension to esophagus and duodenum is classified by the depth of greatest invasion in any of these sites, including stomach.",
+  "footnotes" : "\\# Considered localized in Historic Stage\n\\## Considered regional in Historic Stage\n\\** Considered regional in 1977 Summary Staging Guide",
+  "last_modified" : "2015-11-17T20:39:54.928Z",
   "definition" : [ {
     "key" : "seer_primary_tumor",
     "name" : "Code",

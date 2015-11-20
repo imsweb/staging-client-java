@@ -5,8 +5,8 @@
   "name" : "SSF4",
   "title" : "Site-Specific Factor 4",
   "subtitle" : "Size of Lymph Nodes",
-  "notes" : "**Note 1:**  Code the largest diameter, whether measured clinically or pathologically, of any involved regional lymph node(s). Do not code the size of any distant lymph node(s).\n\n**Note 2:**  Record only for squamous cell carcinoma of skin of eyelid.  For other histologies, code 987, not applicable.",
-  "last_modified" : "2015-10-30T18:48:33.430Z",
+  "notes" : "**Note 1:**  Code the largest diameter, whether measured clinically or pathologically, of any involved regional lymph node(s). \n* Do not code the size of any distant lymph node(s).\n\n**Note 2:**  Record only for squamous cell carcinoma of skin of eyelid.  \n* For other histologies, code 987, not applicable.",
+  "last_modified" : "2015-11-19T16:36:55.299Z",
   "definition" : [ {
     "key" : "ssf4",
     "name" : "Code",

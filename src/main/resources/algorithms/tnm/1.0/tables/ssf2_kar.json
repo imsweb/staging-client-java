@@ -5,8 +5,8 @@
   "name" : "SSF2",
   "title" : "Site-Specific Factor 2",
   "subtitle" : "Vein Involvement",
-  "notes" : "**Note 1:** Information about vein involvement is collected in T as an element in anatomic staging.Â  It is also collected in this field as it may have an independent effect on prognosis.\n\n**Note 2:**  Record the involvement of specific named veins as documented in the pathology report. Do not code invasion of small unnamed vein(s) of the type collected as lymph-vascular invasion. Lymph-vascular invasion is usually only seen microscopically. Assign code 000 if surgical resection of the primary site is performed, the pathology report is available for review, and involvement of these specified veins is not mentioned.",
-  "last_modified" : "2015-10-30T18:48:27.801Z",
+  "notes" : "**Note 1:** Information about vein involvement is collected in T as an element in anatomic staging.Â  It is also collected in this field as it may have an independent effect on prognosis.\n\n**Note 2:**  Record the involvement of specific named veins as documented in the pathology report. Do not code invasion of small unnamed vein(s) of the type collected as lymph-vascular invasion. Lymph-vascular invasion is usually only seen microscopically. \n* Assign code 000 if surgical resection of the primary site is performed, the pathology report is available for review, and involvement of these specified veins is not mentioned.",
+  "last_modified" : "2015-11-19T16:27:20.254Z",
   "definition" : [ {
     "key" : "ssf2",
     "name" : "Code",

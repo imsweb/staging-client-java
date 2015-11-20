@@ -35,14 +35,14 @@
     "key" : "seer_nodes",
     "name" : "SEER Regional Nodes",
     "naaccr_item" : 774,
-    "default" : "999",
+    "default" : "888",
     "table" : "nodes_dna",
     "used_for_staging" : true
   }, {
     "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
-    "default" : "99",
+    "default" : "98",
     "table" : "mets_hna",
     "used_for_staging" : true
   }, {
@@ -137,5 +137,5 @@
   } ],
   "involved_tables" : [ "primary_site", "histology", "year_dx_validation", "ssf1_jbt", "summary_stage_rpa", "schema_selection_heme_retic", "mets_hna", "extension_bci", "nodes_dna" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-16T17:02:47.456Z"
+  "last_modified" : "2015-11-17T23:50:49.802Z"
 }

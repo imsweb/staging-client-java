@@ -5,8 +5,8 @@
   "name" : "SSF8",
   "title" : "Site-Specific Factor 8",
   "subtitle" : "Omentectomy",
-  "notes" : "**Note:** Record if an omentectomy was performed during the first course of treatment.  Use code 998 if patient had no surgical procedure as part of first course of treatment.",
-  "last_modified" : "2015-10-30T18:48:31.383Z",
+  "notes" : "**Note:** Record if an omentectomy was performed during the first course of treatment.  \n* Use code 998 if patient had no surgical procedure as part of first course of treatment.",
+  "last_modified" : "2015-11-19T15:54:25.001Z",
   "definition" : [ {
     "key" : "ssf8",
     "name" : "Code",

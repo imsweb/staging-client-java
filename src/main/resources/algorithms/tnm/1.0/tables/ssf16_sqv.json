@@ -5,8 +5,8 @@
   "name" : "SSF16",
   "title" : "Site-Specific Factor 16",
   "subtitle" : "Size of Metastasis in Lymph Nodes",
-  "notes" : "**Note:**  Code the size of the largest metastasis in a lymph node as documented in the pathology report, not the size of the lymph node. If the size of the metastasis is not documented, code the size of the largest involved lymph node as documented pathologically or clinically with pathology taking priority. Do not code the size of any distant lymph node(s).",
-  "last_modified" : "2015-10-30T18:48:28.594Z",
+  "notes" : "**Note:**  Code the size of the largest metastasis in a lymph node as documented in the pathology report, not the size of the lymph node. If the size of the metastasis is not documented, code the size of the largest involved lymph node as documented pathologically or clinically with pathology taking priority. \n* Do not code the size of any distant lymph node(s).",
+  "last_modified" : "2015-11-19T16:11:25.394Z",
   "definition" : [ {
     "key" : "ssf16",
     "name" : "Code",

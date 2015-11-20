@@ -84,7 +84,7 @@ public final class UpdaterUtils {
 
         System.out.println("Getting list of table identifiers");
         List<String> tableIds = new ArrayList<>();
-        JSONResource tables = r.json(url + "/staging/" + algorithm + "/" + version + "/tables");
+        JSONResource tables = r.json(url + "staging/" + algorithm + "/" + version + "/tables");
         JSONArray tableArray = tables.array();
         for (int i = 0; i < tableArray.length(); i++) {
             String id = tableArray.getJSONObject(i).get("id").toString();
@@ -99,7 +99,7 @@ public final class UpdaterUtils {
 
         System.out.println("Getting list of schema identifiers...");
         List<String> schemaIds = new ArrayList<>();
-        JSONResource schemas = r.json(url + "/staging/" + algorithm + "/" + version + "/schemas");
+        JSONResource schemas = r.json(url + "staging/" + algorithm + "/" + version + "/schemas");
         JSONArray schemaArray = schemas.array();
         for (int i = 0; i < schemaArray.length(); i++) {
             String id = schemaArray.getJSONObject(i).get("id").toString();
@@ -124,7 +124,7 @@ public final class UpdaterUtils {
 
         // import the tables
         for (String tableId : tableIds) {
-            String tableText = r.text(url + "/staging/" + algorithm + "/" + version + "/table/" + tableId).toString();
+            String tableText = r.text(url + "staging/" + algorithm + "/" + version + "/table/" + tableId).toString();
             StagingTable table = mapper.readValue(tableText, StagingTable.class);
 
             tableText = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(table);
@@ -138,7 +138,7 @@ public final class UpdaterUtils {
 
         // import the schemas
         for (String schemaId : schemaIds) {
-            String schemaText = r.text(url + "/staging/" + algorithm + "/" + version + "/schema/" + schemaId).toString();
+            String schemaText = r.text(url + "staging/" + algorithm + "/" + version + "/schema/" + schemaId).toString();
             StagingSchema schema = mapper.readValue(schemaText, StagingSchema.class);
 
             schemaText = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(schema);

@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
-  "notes" : "**Note 1:**  For this site, code ALL lymph node involvement in this field.\n\n**Note 2:**  When coding Regional Nodes Positive and Regional Nodes Examined, only include regional nodes. Do not include distant nodes coded in SEER mets.",
-  "last_modified" : "2015-10-13T11:58:51.623Z",
+  "notes" : "**Note 1:**  For this site, code ALL lymph node involvement in this field.\n\n**Note 2:**  When coding Regional Nodes Positive and Regional Nodes Examined, only include regional nodes. Do not include distant nodes coded in SEER Mets.",
+  "last_modified" : "2015-11-17T23:54:25.744Z",
   "definition" : [ {
     "key" : "seer_nodes",
     "name" : "Code",

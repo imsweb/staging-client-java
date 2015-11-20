@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Vulva",
   "title" : "Vulva (including Skin of Vulva) (excluding Malignant Melanoma, Merkel Cell Carcinoma, Kaposi Sarcoma, Mycosis Fungoides, Sezary Disease, and Other Lymphomas)",
-  "notes" : "C510  Labium majus\nC511  Labium minus\nC512  Clitoris\nC518  Overlapping lesion of vulva\nC519  Vulva, NOS\n\n**Note 1:**  This classification applies to primary carcinomas of the vulva. A carcinoma of the vulva that has extended to the vagina is classified as carcinoma of the vulva. \n\n**Note 2:**  Involvement of the vulva and perineum should be assigned to vulva as the primary site in the absence of a statement that the tumor extended from the perineum to the vulva. This schema only includes C510-C519 (vulva) and does not include primaries of the perineum.  Basal and squamous cell carcinomas of the skin of the vulva are coded to C519 and are reportable; basal and squamous carcinomas of the skin of the perineum would be coded to C445 and would not be reportable.\n\n**Note 3:**  TNM values correspond to the stages accepted by the Federation Internationale de Gynecologic et d'Obstetrique (FIGO).  Note that FIGO uses a single stage value which corresponds to different groupings of T, N, and M values.",
+  "notes" : "C510  Labium majus\nC511  Labium minus\nC512  Clitoris\nC518  Overlapping lesion of vulva\nC519  Vulva, NOS\n\n**Note 1:**  This classification applies to primary carcinomas of the vulva. A carcinoma of the vulva that has extended to the vagina is classified as carcinoma of the vulva. \n\n**Note 2:**  Involvement of the vulva and perineum should be assigned to vulva as the primary site in the absence of a statement that the tumor extended from the perineum to the vulva. This schema only includes C510-C519 (vulva) and does not include primaries of the perineum.  Basal and squamous cell carcinomas of the skin of the vulva are coded to C519 and are reportable; basal and squamous carcinomas of the skin of the perineum would be coded to C445 and would not be reportable.\n\n**Note 3:**  TNM values correspond to the stages accepted by the Federation Internationale de Gynecologic et d'Obstetrique (FIGO).  Note that FIGO uses a single stage value which corresponds to different groupings of T, N, and M values.\n\n**Note 4:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Vulva* chapter on page 198 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_vulva",
   "inputs" : [ {
     "key" : "year_dx",
@@ -646,11 +646,11 @@
     }, {
       "id" : "tnm7_stage_ubd",
       "input_mapping" : [ {
-        "from" : "tmp_combined_m",
-        "to" : "m"
-      }, {
         "from" : "tmp_combined_n",
         "to" : "n"
+      }, {
+        "from" : "tmp_combined_m",
+        "to" : "m"
       }, {
         "from" : "tmp_combined_t",
         "to" : "t"
@@ -729,5 +729,5 @@
   } ],
   "involved_tables" : [ "vulva_t_1223", "stage_group_p_12670", "cpmbined_m_to_summ_stage_m_60564", "schema_selection_vulva", "determine_default_t", "nodes_dbb", "ssf10_sex", "radiation_surg_seq", "clin_n_dbb", "determine_default_m", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "stage_group_c_65478", "ssf15_sfc", "path_n_dbb", "parse_n_67182", "determine_default_n", "tnm7_stage_ubd", "ssf11_srd", "clin_t_vulva_52779", "path_m_hba", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "mets_hba", "extension_bbi", "combined_t_to_summ_stage_t_2_4e_re_93413", "behavior", "ssf14_sfb", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "determine_combined_prefix_91402", "tnm7_inclusions_tpq", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "ssf13_sfa", "parse_m_47057", "primary_site", "clin_m_hba", "combined_m", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t", "ssf12_sez" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-06T20:05:34.045Z"
+  "last_modified" : "2015-11-17T18:41:35.283Z"
 }

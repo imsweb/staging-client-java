@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Epiglottis Anterior",
   "title" : "Anterior Surface of Epiglottis (excluding Malignant Melanoma)",
-  "notes" : "C101  Anterior surface of epiglottis\n\n**Note 1:**  TNM includes lingual (anterior) surface of epiglottis (C101) with larynx.  \n\n**Note 2:**  Detailed descriptions of the anatomic limits of the structures of the epiglottis can be found in the Summary Stage Manual \"Definition of Anatomic Sites Within the Head and Neck.\"",
+  "notes" : "C101  Anterior surface of epiglottis\n\n**Note 1:**  TNM includes lingual (anterior) surface of epiglottis (C101) with larynx.  \n\n**Note 2:**  Detailed descriptions of the anatomic limits of the structures of the epiglottis can be found in the Summary Stage Manual \"Definition of Anatomic Sites Within the Head and Neck.\"\n\n**Note 3:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Tonsil, Pharynx* chapter on page 60 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_epiglottis_anterior",
   "inputs" : [ {
     "key" : "year_dx",
@@ -668,11 +668,11 @@
     }, {
       "id" : "tnm7_stage_upt",
       "input_mapping" : [ {
-        "from" : "tmp_combined_m",
-        "to" : "m"
-      }, {
         "from" : "tmp_combined_n",
         "to" : "n"
+      }, {
+        "from" : "tmp_combined_m",
+        "to" : "m"
       }, {
         "from" : "tmp_combined_t",
         "to" : "t"
@@ -751,5 +751,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "ssf10_spd", "ssf1_jpa", "path_m_hpb", "combined_n_to_summ_stage_n_headneck_palatehardsoftepiant_45582", "tnm7_stage_upt", "parse_t_2177", "concatenate_n_43246", "nodes_dcs", "schema_selection_epiglottis_anterior", "histology", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "combined_t_to_summ_stage_t_3_4a_re_4b_4e_d_32587", "tnm7_inclusions_tpb", "clin_t_copy_81159", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "ssf9_spc", "systemic_surg_seq", "parse_m_47057", "combined_m", "combined_n", "ssf5_npa", "path_t_epiglottis_anterior_t_4558", "summary_stage_rpa", "combined_t", "ssf8_spb", "determine_default_t", "clinical_n_head_neck_except_nasopharynx_25237", "radiation_surg_seq", "determine_default_m", "path_n_head_neck_except_nasopharynx_40357", "nodes_pos_fpa", "parse_n_67182", "determine_default_n", "seer_mets_epiglottis_anteriorvs2_47087", "stage_group_p_35702", "behavior", "extension_bcw", "ssf4_mpa", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "primary_site", "year_dx_validation", "stage_group_c_51542" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-06T20:05:25.757Z"
+  "last_modified" : "2015-11-17T14:16:23.906Z"
 }

@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Pancreas Other",
   "title" : "Other and Unspecified Pancreas",
-  "notes" : "C253  Pancreatic duct\nC254  Islets of Langerhans\nC257  Other specified parts of pancreas\nC258  Overlapping lesion of pancreas\nC259  Pancreas, NOS\n\n**Note:**  For tumors of the islet cells, determine which subsite of the pancreas is involved and use that primary site code and the corresponding schema.  If the subsite cannot be determined, use the general code for Islets of Langerhans, C254, and use the schema for Pancreas, Other and Unspecified.",
+  "notes" : "C253  Pancreatic duct\nC254  Islets of Langerhans\nC257  Other specified parts of pancreas\nC258  Overlapping lesion of pancreas\nC259  Pancreas, NOS\n\n**Note 1:**  For tumors of the islet cells, determine which subsite of the pancreas is involved and use that primary site code and the corresponding schema.  If the subsite cannot be determined, use the general code for Islets of Langerhans, C254, and use the schema for Pancreas, Other and Unspecified.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Pancreas: Other and Unspecified* chapter on page 120 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_pancreas_other",
   "inputs" : [ {
     "key" : "year_dx",
@@ -626,11 +626,11 @@
     }, {
       "id" : "tnm7_stage_ups",
       "input_mapping" : [ {
-        "from" : "tmp_combined_m",
-        "to" : "m"
-      }, {
         "from" : "tmp_combined_n",
         "to" : "n"
+      }, {
+        "from" : "tmp_combined_m",
+        "to" : "m"
       }, {
         "from" : "tmp_combined_t",
         "to" : "t"
@@ -709,5 +709,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "schema_selection_pancreas_other", "path_m_hao", "ssf2_kpd", "clin_m_hao", "radiation_surg_seq", "extension_bbu", "mets_hao", "determine_default_m", "tnm7_stage_ups", "clin_n_dbl", "ssf1_jpe", "tnm7_inclusions_tae", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "determine_default_n", "combined_n_to_summ_stage_n_84054", "ssf3_lpd", "histology", "concatenate_m_40642", "stage_group_c_2328", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "behavior", "concatenate_t_51262", "clin_t_pancreas_other_28719", "adjustments_for_no_clin_or_no_path_26261", "determine_combined_prefix_91402", "stage_group_p_66747", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "pancreas_other_70468", "combined_m", "nodes_dbl", "path_n_dbl", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-06T20:05:31.756Z"
+  "last_modified" : "2015-11-17T18:09:14.157Z"
 }

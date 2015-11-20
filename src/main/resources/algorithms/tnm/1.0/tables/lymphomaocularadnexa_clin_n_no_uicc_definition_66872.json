@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Clinical N",
   "title" : "LymphomaOcularAdnexa Clin N (no UICC definition)",
-  "notes" : "**Note 1:**  Peripheral nodes are located in the upper and lower limbs, including axillary and inguinal nodes.  Central lymph nodes are located in the trunk, including mediastinal, para-aortic, and mesenteric nodes.\n\n**Note 2:**  Involvement of peripheral and central lymph nodes, distant nodes for ocular adnexal lymphomas, is coded in Clinical N and not in Clinical M.\n\n**Note 3:**  When coding Regional Nodes Positive and Regional Nodes Examined, only include regional nodes. Do not include distant nodes coded in Clinical N. If the only information available is for Lymph Nodes, NOS, coded as NX in Clinical N, assume these are regional nodes for coding Regional Nodes Positive and Regional Nodes Examined.\n\nNote 4: UICC does not define Lymphoma Ocular Adnexa. A list of all possible Clinical N values is provided.",
-  "last_modified" : "2015-11-05T16:41:59.366Z",
+  "notes" : "**Note 1:**  Peripheral nodes are located in the upper and lower limbs, including axillary and inguinal nodes.  Central lymph nodes are located in the trunk, including mediastinal, para-aortic, and mesenteric nodes.\n\n**Note 2:**  Involvement of peripheral and central lymph nodes, distant nodes for ocular adnexal lymphomas, is coded in Clinical N and not in Clinical M.\n\n**Note 3:**  When coding Regional Nodes Positive and Regional Nodes Examined, only include regional nodes. Do not include distant nodes coded in Clinical N. If the only information available is for Lymph Nodes, NOS, coded as NX in Clinical N, assume these are regional nodes for coding Regional Nodes Positive and Regional Nodes Examined.\n\n**Note 4:** UICC does not define Lymphoma Ocular Adnexa. A list of all possible Clinical N values is provided.",
+  "last_modified" : "2015-11-19T01:12:32.050Z",
   "definition" : [ {
     "key" : "clin_n",
     "name" : "Clinical N",

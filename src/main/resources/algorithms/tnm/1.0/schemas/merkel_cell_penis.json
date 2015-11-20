@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Merkel Cell Penis",
   "title" : "Merkel Cell Carcinoma of the Penis",
-  "notes" : "M-8247\nC600  Prepuce\nC601  Glans penis\nC602  Body of penis\nC608  Overlapping lesion of penis\nC609  Penis, NOS\n\n**Note:**  This schema is used for Merkel cell carcinoma only.",
+  "notes" : "M-8247\nC600  Prepuce\nC601  Glans penis\nC602  Body of penis\nC608  Overlapping lesion of penis\nC609  Penis, NOS\n\n**Note 1:**  This schema is used for Merkel cell carcinoma only.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Skin Except Eyelid* chapter on page 172 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_merkel_cell_penis",
   "inputs" : [ {
     "key" : "year_dx",
@@ -753,5 +753,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "nodes_pos_fah", "determine_default_t", "stage_group_c_19537", "radiation_surg_seq", "ssf19_sqz", "extension_bfz", "determine_default_m", "ssf18_sqy", "schema_selection_merkel_cell_penis", "clin_m_hph", "ssf22_src", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "clin_n_dfv", "ssf1_jpt", "behavior", "path_m_hph", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "ssf20_sra", "ssf16_sqw", "merkel_cell_penis_t_93032", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "clin_t_merkel_cell_penis_10043", "primary_site", "nodes_dfv", "combined_m", "combined_to_summ_stage_t_80394", "stage_group_p_54695", "combined_n", "ssf17_sqx", "year_dx_validation", "tnm7_inclusions_tqb", "tnm7_stage_uqe", "summary_stage_rpa", "seer_mets_merkel_cell_penis_41622", "combined_t", "ssf21_srb", "path_n_dfv" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-13T15:22:04.558Z"
+  "last_modified" : "2015-11-17T18:31:34.285Z"
 }

@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "NET Stomach",
   "title" : "Neuroendocrine Tumors of Stomach",
-  "notes" : "M-8153, 8240-8242, 8246, 8249\nC160 Cardia of stomach\nC161 Fundus of stomach\nC162 Body of stomach\nC163 Gastric antrum\nC164 Pylorus\nC165 Lesser curvature of stomach, NOS\nC166 Greater curvature of stomach, NOS\nC168 Overlapping lesion of stomach\nC169 Stomach, NOS\n\n**Note 1:** For this schema, TNM only stages well-differentiated neuroendocrine tumors. Note that the \"concept\" of well-differentiated is reflected in the histology code. The grade code is not needed in order to select the correct schema, but does need to be coded.\n\n**Note 2:** This schema is also used for carcinoid tumors and malignant gastrinomas.",
+  "notes" : "M-8153, 8240-8242, 8246, 8249\nC160 Cardia of stomach\nC161 Fundus of stomach\nC162 Body of stomach\nC163 Gastric antrum\nC164 Pylorus\nC165 Lesser curvature of stomach, NOS\nC166 Greater curvature of stomach, NOS\nC168 Overlapping lesion of stomach\nC169 Stomach, NOS\n\n**Note 1:** For this schema, TNM only stages well-differentiated neuroendocrine tumors. Note that the \"concept\" of well-differentiated is reflected in the histology code. The grade code is not needed in order to select the correct schema, but does need to be coded.\n\n**Note 2:** This schema is also used for carcinoid tumors and malignant gastrinomas.\n\n**Note 3:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Stomach* chapter on page 80 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_net_stomach",
   "inputs" : [ {
     "key" : "year_dx",
@@ -711,5 +711,5 @@
   } ],
   "involved_tables" : [ "mets_hck", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "nodes_dfg", "radiation_surg_seq", "clin_n_dfg", "determine_default_m", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "ssf11_sri", "path_m_hck", "path_n_dfg", "parse_n_67182", "determine_default_n", "combined_n_to_summ_stage_n_84054", "tnm7_stage_uao", "extension_bfk", "histology", "concatenate_m_40642", "path_t_net_stomach_63587", "clin_m_hck", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "stage_group_c_32452", "behavior", "ssf6_opi", "concatenate_t_51262", "giststomach_t_55582", "adjustments_for_no_clin_or_no_path_26261", "schema_selection_net_stomach", "tnm7_inclusions_tpm", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "combined_m", "combined_n", "year_dx_validation", "ssf12_srj", "summary_stage_rpa", "combined_t", "stage_group_p_4518" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-14T20:24:01.700Z"
+  "last_modified" : "2015-11-17T17:50:00.339Z"
 }

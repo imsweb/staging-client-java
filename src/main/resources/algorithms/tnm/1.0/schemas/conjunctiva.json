@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Conjunctiva",
   "title" : "Conjunctiva (excluding Retinoblastoma, Malignant Melanoma, Kaposi Sarcoma, and Lymphoma)",
-  "notes" : "C690  Conjunctiva\n\n**Note:**  Laterality must be coded for this site.",
+  "notes" : "C690  Conjunctiva\n\n**Note 1:**  Laterality must be coded for this site.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Conjunctiva* chapter on page 257 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_conjunctiva",
   "inputs" : [ {
     "key" : "year_dx",
@@ -704,5 +704,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "tnm7_stage_for_sites_with_no_stage_groupings_unb", "radiation_surg_seq", "no_tnm_group_99227", "determine_default_m", "path_n_conjunctiva_84900", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "path_m_conjunctiva_73224", "clin_n_conjunctiva_61091", "schema_selection_conjunctiva", "parse_n_67182", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "tnm7_inclusions_tpb", "extension_bbj", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "behavior", "ssf1_jbk", "concatenate_t_51262", "ssf2_kay", "clin_m_conjunctiva_59480", "determine_combined_prefix_91402", "seer_regional_nodes_melanomachoroid_3244", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "no_tnm_group_p_41281", "parse_m_47057", "primary_site", "combined_m", "seer_mets_conjunctiva_9338", "combined_n", "year_dx_validation", "conjunctiva_t_62523", "summary_stage_rpa", "combined_t", "adjust_path_defaults_for_no_clin_no_path_stage_group_not_defined_61358", "clin_t_conjunctiva_42760" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-31T15:44:37.076Z"
+  "last_modified" : "2015-11-17T20:51:51.529Z"
 }

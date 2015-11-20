@@ -5,8 +5,8 @@
   "name" : "SSF12",
   "title" : "Site-Specific Factor 12",
   "subtitle" : "High Risk Features",
-  "notes" : "**Note 1:**  For TNM 7th staging, the T category is not only dependent on tumor size but also on several high-risk features that can upgrade the T category.\n\n**Note 2:**  Based on the information in the medical record, the registrar is required to count and code the number of high risk features (each feature equals 1 risk factor). If specific information is available about some but not all of the high risk features, count the number of features documented in the record.\n\n    Poorly differentiated/Undifferentiated (grade 3 or 4)\n    Depth greater than 2 millimeters (mm)  thickness\n    Clark level IV or V\n    Perineural invasion\n\n**Note 3:**  Use codes 991, 992, and 993 only if no specific information is available about the high risk features, but the record contains a general statement about the presence of high risk features.",
-  "last_modified" : "2015-10-30T18:48:28.324Z",
+  "notes" : "**Note 1:**  For TNM 7th staging, the T category is not only dependent on tumor size but also on several high-risk features that can upgrade the T category.\n\n**Note 2:**  Based on the information in the medical record, the registrar is required to count and code the number of high risk features (each feature equals 1 risk factor). If specific information is available about some but not all of the high risk features, count the number of features documented in the record.\n\n* Poorly differentiated/Undifferentiated (grade 3 or 4)\n* Depth greater than 2 millimeters (mm)  thickness\n* Clark level IV or V\n* Perineural invasion\n\n**Note 3:**  Use codes 991, 992, and 993 only if no specific information is available about the high risk features, but the record contains a general statement about the presence of high risk features.",
+  "last_modified" : "2015-11-18T18:48:23.648Z",
   "definition" : [ {
     "key" : "ssf12",
     "name" : "Code",

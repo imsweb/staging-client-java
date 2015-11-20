@@ -5,8 +5,8 @@
   "name" : "SSF14",
   "title" : "Site-Specific Factor 14",
   "subtitle" : "Needle Core Biopsy Findings",
-  "notes" : "**Note 1:**  Record the findings of needle core biopsy as documented in the medical record.\n\n**Note 2:**  If multiple needle core biopsy procedures are performed during the initial diagnostic workup, record the most extensive findings from all biopsy procedures.  Code 050 takes precedence over codes 010, 020, and 030.",
-  "last_modified" : "2015-10-30T18:48:44.846Z",
+  "notes" : "**Note 1:**  Record the findings of needle core biopsy as documented in the medical record.\n\n**Note 2:**  If multiple needle core biopsy procedures are performed during the initial diagnostic workup, record the most extensive findings from all biopsy procedures.  \n* Code 050 takes precedence over codes 010, 020, and 030.",
+  "last_modified" : "2015-11-19T16:20:08.565Z",
   "definition" : [ {
     "key" : "ssf14",
     "name" : "Code",

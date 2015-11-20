@@ -5,7 +5,7 @@
   "name" : "Orbit",
   "title" : "Orbit (excluding Lymphoma)",
   "description" : "TNM is defined for this site; however, there is no stage group.",
-  "notes" : "C696  Orbit, NOS\n\n**Note 1:**  Laterality must be coded for this site.\n\n**Note 2:**  TNM uses this schema for sarcomas of the orbit only.",
+  "notes" : "C696  Orbit, NOS\n\n**Note 1:**  Laterality must be coded for this site.\n\n**Note 2:**  TNM uses this schema for sarcomas of the orbit only.\n\n**Note 3:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Orbit, NOS* chapter on page 267 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_orbit",
   "inputs" : [ {
     "key" : "year_dx",
@@ -686,5 +686,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "tnm7_stage_for_sites_with_no_stage_groupings_unb", "radiation_surg_seq", "no_tnm_group_99227", "path_m_hpc", "determine_default_m", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "path_n_ophthalmic_no_tis_80282", "parse_n_67182", "clin_m_hpc", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "seer_mets_orbit_15325", "orbit_t_97280", "combined_t_no_tis", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "concatenate_t_51262", "tnm7_inclusions_tpp", "determine_combined_prefix_91402", "clin_t_orbit_59896", "seer_regional_nodes_melanomachoroid_3244", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "no_tnm_group_p_41281", "parse_m_47057", "primary_site", "combined_m", "combined_n", "clin_n_ophthalmic_n_notis_75953", "year_dx_validation", "summary_stage_rpa", "schema_selection_orbit", "extension_bag", "adjust_path_defaults_for_no_clin_no_path_stage_group_not_defined_61358" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-13T04:28:45.833Z"
+  "last_modified" : "2015-11-17T21:05:44.268Z"
 }

@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "TNM 7 Stage Group",
   "title" : "TNM 7 Stage Group",
-  "last_modified" : "2015-10-27T04:01:12.455Z",
+  "last_modified" : "2015-11-17T22:57:55.054Z",
   "definition" : [ {
     "key" : "t",
     "name" : "T",
@@ -18,8 +18,8 @@
     "name" : "M",
     "type" : "INPUT"
   }, {
-    "key" : "grade_based_on_ssf#1",
-    "name" : "Grade based on SSF#1",
+    "key" : "grade_based_on_ssf1",
+    "name" : "Grade based on SSF1",
     "type" : "INPUT"
   }, {
     "key" : "stage",

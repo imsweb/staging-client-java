@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Placenta",
   "title" : "Placenta",
-  "notes" : "C589  Placenta\n\n**Note 1:** This schema is based on the Gestational Trophoblastic Tumors chapter in the TNM 7th edition. \n\n**Note 2:** If a trophoblastic tumor is not associated with a pregnancy and arises in another site, such as ovary, use the primary site code and the appropriate TNM chapter.",
+  "notes" : "C589  Placenta\n\n**Note 1:** This schema is based on the Gestational Trophoblastic Tumors chapter in the TNM 7th edition. \n\n**Note 2:** If a trophoblastic tumor is not associated with a pregnancy and arises in another site, such as ovary, use the primary site code and the appropriate TNM chapter.\n\n**Note 3:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Placenta* chapter on page 222 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_placenta",
   "inputs" : [ {
     "key" : "year_dx",
@@ -569,5 +569,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "ssf2_kaw", "determine_default_t", "mets_hak", "tnm7_stage_uax", "radiation_surg_seq", "stage_group_c_20505", "summ_stage_n_if_no_n_defined_61314", "ssf1_jaq", "determine_default_m", "nodes_dfm", "clin_t_placenta_62001", "parse_t_2177", "stage_group_p_5079", "path_m_hak", "schema_selection_placenta", "histology", "placenta_t_12749", "concatenate_m_40642", "clin_m_hak", "combined_t_no_tis", "combined_t_to_summ_stage_t_2_4e_re_93413", "extension_bbm", "concatenate_t_51262", "tnm7_inclusions_tpi", "adjust_path_defaults_for_no_path_placenta_37763", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "combined_m", "year_dx_validation", "summary_stage_rpa" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-31T22:35:48.261Z"
+  "last_modified" : "2015-11-17T20:42:36.915Z"
 }

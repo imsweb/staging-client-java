@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Schema Selection MelanomaCiliaryBody",
   "title" : "Schema selection for MelanomaCiliaryBody",
-  "last_modified" : "2015-10-31T23:43:58.517Z",
+  "last_modified" : "2015-11-20T17:02:29.611Z",
   "definition" : [ {
     "key" : "site",
     "name" : "Primary Site",
@@ -22,5 +22,5 @@
     "name" : "Result",
     "type" : "ENDPOINT"
   } ],
-  "rows" : [ [ "C694", "8720-8790", "010,100", "MATCH" ] ]
+  "rows" : [ [ "C694", "8720-8790", "010", "MATCH" ] ]
 }

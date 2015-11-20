@@ -42,7 +42,7 @@
     "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
-    "default" : "88",
+    "default" : "98",
     "table" : "mets_hna",
     "used_for_staging" : true
   } ],
@@ -130,5 +130,5 @@
   } ],
   "involved_tables" : [ "primary_site", "schema_selection_ill_defined_other", "histology", "extension_bna", "year_dx_validation", "summary_stage_rpa", "mets_hna", "nodes_dna" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-10-19T12:29:25.986Z"
+  "last_modified" : "2015-11-20T19:42:56.803Z"
 }

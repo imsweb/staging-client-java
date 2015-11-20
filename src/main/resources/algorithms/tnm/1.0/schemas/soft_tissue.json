@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Soft Tissue",
   "title" : "Peripheral Nerves and Autonomic Nervous System; Connective, Subcutaneous, and Other Soft Tissues",
-  "notes" : "M-8000-9136,9141-9582,9700-9701\nC470  Peripheral nerves and autonomic nervous system of head, face and neck\nC471  Peripheral nerves and autonomic nervous system of upper limb and shoulder\nC472  Peripheral nerves and autonomic nervous system of lower limb and hip\nC473  Peripheral nerves and autonomic nervous system of thorax\nC474  Peripheral nerves and autonomic nervous system of abdomen\nC475  Peripheral nerves and autonomic nervous system of pelvis\nC476  Peripheral nerves and autonomic nervous system of trunk, NOS\nC478  Overlapping lesion of peripheral nerves and autonomic nervous system\nC479  Autonomic nervous system, NOS\nC490  Connective, subcutaneous and other soft tissues of head, face, and neck\nC491  Connective, subcutaneous and other soft tissues of upper limb and shoulder\nC492  Connective, subcutaneous and other soft tissues of lower limb and hip\nC493  Connective, subcutaneous and other soft tissues of thorax\nC494  Connective, subcutaneous and other soft tissues of abdomen\nC495  Connective, subcutaneous and other soft tissues of pelvis\nC496  Connective, subcutaneous and other soft tissues of trunk\nC499  Connective, subcutaneous and other soft tissues, NOS\nC498  Overlapping lesion of connective, subcutaneous and other soft tissues\n\n**Note 1:**  Laterality must be coded for C471-C472 and C491-C492.\n\n**Note 2:**  Soft tissue sarcomas of the heart and mediastinum (C380-C383 and C389) use the Heart, Mediastinum schema.",
+  "notes" : "M-8000-9136,9141-9582,9700-9701\nC470  Peripheral nerves and autonomic nervous system of head, face and neck\nC471  Peripheral nerves and autonomic nervous system of upper limb and shoulder\nC472  Peripheral nerves and autonomic nervous system of lower limb and hip\nC473  Peripheral nerves and autonomic nervous system of thorax\nC474  Peripheral nerves and autonomic nervous system of abdomen\nC475  Peripheral nerves and autonomic nervous system of pelvis\nC476  Peripheral nerves and autonomic nervous system of trunk, NOS\nC478  Overlapping lesion of peripheral nerves and autonomic nervous system\nC479  Autonomic nervous system, NOS\nC490  Connective, subcutaneous and other soft tissues of head, face, and neck\nC491  Connective, subcutaneous and other soft tissues of upper limb and shoulder\nC492  Connective, subcutaneous and other soft tissues of lower limb and hip\nC493  Connective, subcutaneous and other soft tissues of thorax\nC494  Connective, subcutaneous and other soft tissues of abdomen\nC495  Connective, subcutaneous and other soft tissues of pelvis\nC496  Connective, subcutaneous and other soft tissues of trunk\nC499  Connective, subcutaneous and other soft tissues, NOS\nC498  Overlapping lesion of connective, subcutaneous and other soft tissues\n\n**Note 1:**  Laterality must be coded for C471-C472 and C491-C492.\n\n**Note 2:**  Soft tissue sarcomas of the heart and mediastinum (C380-C383 and C389) use the Heart, Mediastinum schema.\n\n**Note 3:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Peripheral Nerves & Autonomic Nervous System: Connective, Subcutaneous & Other Tissues* chapter on page 184 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_soft_tissue",
   "inputs" : [ {
     "key" : "year_dx",
@@ -640,11 +640,11 @@
         "from" : "mapping_of_grade",
         "to" : "grade_based_on_ssf#1"
       }, {
-        "from" : "tmp_combined_m",
-        "to" : "m"
-      }, {
         "from" : "tmp_combined_n",
         "to" : "n"
+      }, {
+        "from" : "tmp_combined_m",
+        "to" : "m"
       }, {
         "from" : "tmp_combined_t",
         "to" : "t"
@@ -723,5 +723,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "clin_n_soft_tissues_78998", "radiation_surg_seq", "stage_group_c_47728", "clin_t_soft_tissue_43767", "ssf3_lpk", "determine_default_m", "extension_bbz", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "soft_tissue_n_4758", "determine_default_n", "schema_selection_soft_tissue", "ssf1_jpm", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "combined_t_no_tis", "seer_mets_softtissue_3852", "ssf2_kpk", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "determine_combined_prefix_91402", "tnm7_inclusions_tps", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "path_m_soft_tissues_96225", "nodes_dbs", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "tnm7_stage_ubj", "year_dx_validation", "ssf4_mpf", "summary_stage_rpa", "clin_m_soft_tissues_97765", "stage_group_p_79956", "soft_tissue_t_79319" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-06T20:05:33.210Z"
+  "last_modified" : "2015-11-17T18:37:57.994Z"
 }

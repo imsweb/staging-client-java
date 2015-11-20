@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Sinus Maxillary",
   "title" : "Maxillary Sinus (excluding Malignant Melanoma)",
-  "notes" : "C310  Maxillary sinus\n\n**Note:**  Laterality must be coded for this site.",
+  "notes" : "C310  Maxillary sinus\n\n**Note 1:**  Laterality must be coded for this site.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Maxillary Sinus* chapter on page 130 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_sinus_maxillary",
   "inputs" : [ {
     "key" : "year_dx",
@@ -675,11 +675,11 @@
     }, {
       "id" : "tnm7_stage_upt",
       "input_mapping" : [ {
-        "from" : "tmp_combined_m",
-        "to" : "m"
-      }, {
         "from" : "tmp_combined_n",
         "to" : "n"
+      }, {
+        "from" : "tmp_combined_m",
+        "to" : "m"
       }, {
         "from" : "tmp_combined_t",
         "to" : "t"
@@ -758,5 +758,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "ssf10_spd", "schema_selection_sinus_maxillary", "ssf1_jpa", "path_m_hpb", "tnm7_stage_upt", "parse_t_2177", "concatenate_n_43246", "combined_n_to_summ_stage_n_headneck_nasalsinus_48288", "ssf11_spe", "histology", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "tnm7_inclusions_tpb", "nodes_dcw", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "ssf9_spc", "extension_bax", "systemic_surg_seq", "parse_m_47057", "combined_m", "combined_n", "ssf5_npa", "summary_stage_rpa", "combined_t", "ssf8_spb", "determine_default_t", "clinical_n_head_neck_except_nasopharynx_25237", "radiation_surg_seq", "determine_default_m", "path_n_head_neck_except_nasopharynx_40357", "nodes_pos_fpa", "parse_n_67182", "determine_default_n", "clin_t_sinus_maxillary_12245", "sinus_maxillary_t_7871", "stage_group_p_35702", "combined_t_to_summ_stage_t_2_4e_re_93413", "behavior", "seer_mets_sinusmaxillaryv2_82866", "ssf4_mpa", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "primary_site", "year_dx_validation", "stage_group_c_51542" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-06T20:05:32.831Z"
+  "last_modified" : "2015-11-17T18:12:37.163Z"
 }

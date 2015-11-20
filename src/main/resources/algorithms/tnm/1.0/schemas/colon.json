@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Colon",
   "title" : "Colon (excluding Appendix, Gastrointestinal Stromal Tumor, and Neuroendocrine Tumor)",
-  "notes" : "M-8000-8152,8154-8231,8243-8245,8247,8248,8250-8934,8940-9136,9141-9582,9700-9701\nC180 Cecum\nC182 Ascending colon\nC183 Hepatic flexure of colon\nC184 Transverse colon\nC185 Splenic flexure of colon\nC186 Descending colon\nC187 Sigmoid colon\nC188 Overlapping lesion of colon\nC189 Colon, NOS",
+  "notes" : "M-8000-8152,8154-8231,8243-8245,8247,8248,8250-8934,8940-9136,9141-9582,9700-9701\nC180 Cecum\nC182 Ascending colon\nC183 Hepatic flexure of colon\nC184 Transverse colon\nC185 Splenic flexure of colon\nC186 Descending colon\nC187 Sigmoid colon\nC188 Overlapping lesion of colon\nC189 Colon, NOS\n\n**Note:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Colon* chapter on page 94 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_colon",
   "inputs" : [ {
     "key" : "year_dx",
@@ -745,5 +745,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "radiation_surg_seq", "combined_t_colon", "determine_default_m", "path_m_hae", "colon_65083", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "mets_hae", "ssf7_spf", "ssf1_jpf", "parse_n_67182", "determine_default_n", "path_n_dan", "ssf3_lpe", "combined_n_to_summ_stage_n_84054", "histology", "ssf6_opb", "concatenate_m_40642", "schema_selection_colon", "nodes_dan", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "tnm7_inclusions_tpc", "ssf10_spi", "clin_m_hae", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "extension_bao", "ssf4_mpb", "determine_combined_prefix_91402", "ssf5_npb", "stage_group_c_26613", "clin_n_dan", "stop_if_no_clin_and_no_path_24035", "ssf9_sph", "systemic_surg_seq", "path_t_colon_98925", "parse_m_47057", "primary_site", "stage_group_p_78368", "combined_m", "tnm7_stage_upw", "combined_n", "year_dx_validation", "ssf8_spg", "summary_stage_rpa" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-16T17:37:01.862Z"
+  "last_modified" : "2015-11-17T17:51:58.425Z"
 }

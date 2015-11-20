@@ -5,8 +5,8 @@
   "name" : "SSF10",
   "title" : "Site-Specific Factor 10",
   "subtitle" : "FIGO Stage",
-  "notes" : "**Note 1:**  The Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage definitions do not include Stage 0 (Tis) for vulvar cancer. Use code 987 for in situ cases.\n\n**Note 2:**  Code the FIGO stage as stated in the medical record. When lymph node(s) is/are clinically or pathologically positive or metastasis is present, make sure that the FIGO stage reflects the combination of T, N, and M and NOT just the T. If a stage group is stated but it does not specify that it is a FIGO stage, assume that it is a FIGO stage and code it. Do not attempt to code FIGO stage based only on T, N, and M. If you cannot make a determination of stage based on the previous information, use code 999, stage unknown.",
-  "last_modified" : "2015-10-30T18:48:36.961Z",
+  "notes" : "**Note 1:**  The Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage definitions do not include Stage 0 (Tis) for vulvar cancer. \n* Use code 987 for in situ cases.\n\n**Note 2:**  Code the FIGO stage as stated in the medical record. When lymph node(s) is/are clinically or pathologically positive or metastasis is present, make sure that the FIGO stage reflects the combination of T, N, and M and NOT just the T. \n* If a stage group is stated but it does not specify that it is a FIGO stage, assume that it is a FIGO stage and code it. \n* Do not attempt to code FIGO stage based only on T, N, and M. \n* If you cannot make a determination of stage based on the previous information, use code 999, stage unknown.",
+  "last_modified" : "2015-11-19T15:52:31.474Z",
   "definition" : [ {
     "key" : "ssf10",
     "name" : "Code",

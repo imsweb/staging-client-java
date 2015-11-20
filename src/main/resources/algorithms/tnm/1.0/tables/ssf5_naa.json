@@ -5,8 +5,8 @@
   "name" : "SSF5",
   "title" : "Site-Specific Factor 5",
   "subtitle" : "Molecular (MOL) Studies of Regional Lymph Nodes",
-  "notes" : "**Note 1:**  Isolated tumor cells (ITCs) are defined as single tumor cells or small clusters not greater than 0.2 mm, usually detected by immunohistochemistry (IHC) (see Site-Specific Factor 4), Hematoxylin and Eosin (H and E) (see pN0(i+)), or molecular (MOL) methods (Reverse Transcription Polymerase Chain Reaction, RT-PCR). \n\nITCs do not usually show evidence of malignant activity (e.g., proliferation or stromal reaction).\n\n**Note 2:**  Use codes 000-002 only to report results of MOL studies (RT-PCR) when Regional Lymph nodes are negative (N0). \n\nIf there are positive nodes, code 987 in this field.\n\n**Note 3:**  If it is not stated whether molecular tests are done, assume they are not done.",
-  "last_modified" : "2015-11-16T03:10:17.383Z",
+  "notes" : "**Note 1:**  Isolated tumor cells (ITCs) are defined as single tumor cells or small clusters not greater than 0.2 mm, usually detected by immunohistochemistry (IHC) (see Site-Specific Factor 4), Hematoxylin and Eosin (H and E) (see pN0(i+)), or molecular (MOL) methods (Reverse Transcription Polymerase Chain Reaction, RT-PCR). \n\n* ITCs do not usually show evidence of malignant activity (e.g., proliferation or stromal reaction).\n\n**Note 2:**  Use codes 000-002 only to report results of MOL studies (RT-PCR) when Regional Lymph nodes are negative (N0). \n\n* If there are positive nodes, code 987 in this field.\n\n**Note 3:**  If it is not stated whether molecular tests are done, assume they are not done.",
+  "last_modified" : "2015-11-19T15:26:43.696Z",
   "definition" : [ {
     "key" : "ssf5",
     "name" : "Code",

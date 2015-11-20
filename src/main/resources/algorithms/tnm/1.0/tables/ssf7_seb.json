@@ -5,8 +5,8 @@
   "name" : "SSF7",
   "title" : "Site-Specific Factor 7",
   "subtitle" : "Primary Tumor Mitotic Count/Rate",
-  "notes" : "**Note 1:**  Mitotic rate/count is assessed on primary melanomas, based on the number of mitotic figures in one square millimeter (mm) surrounding either a \"hot spot\" with the most mitotic figures or a field with a representative mitosis.\n\n**Note 2:**  Record the mitotic rate/count as documented in the pathology report. If there is more than one pathology report for the same melanoma at initial diagnosis and different mitotic counts are documented, code the highest mitotic count from any of the pathology reports.  Use code 999 if there is no documentation or no mention of mitotic rate in any pathology report for the same melanoma.",
-  "last_modified" : "2015-10-30T18:48:34.438Z",
+  "notes" : "**Note 1:**  Mitotic rate/count is assessed on primary melanomas, based on the number of mitotic figures in one square millimeter (mm) surrounding either a \"hot spot\" with the most mitotic figures or a field with a representative mitosis.\n\n**Note 2:**  Record the mitotic rate/count as documented in the pathology report. \n* If there is more than one pathology report for the same melanoma at initial diagnosis and different mitotic counts are documented, code the highest mitotic count from any of the pathology reports.  \n* Use code 999 if there is no documentation or no mention of mitotic rate in any pathology report for the same melanoma.",
+  "last_modified" : "2015-11-19T15:12:54.111Z",
   "definition" : [ {
     "key" : "ssf7",
     "name" : "Code",

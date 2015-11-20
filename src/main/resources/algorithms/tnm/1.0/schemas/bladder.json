@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Bladder",
   "title" : "Bladder",
-  "notes" : "C670  Trigone of bladder\nC671  Dome of bladder\nC672  Lateral wall of bladder\nC673  Anterior wall of bladder\nC674  Posterior wall of bladder\nC675  Bladder neck\nC676  Ureteric orifice\nC677  Urachus\nC678  Overlapping lesion of bladder\nC679  Bladder, NOS",
+  "notes" : "C670  Trigone of bladder\nC671  Dome of bladder\nC672  Lateral wall of bladder\nC673  Anterior wall of bladder\nC674  Posterior wall of bladder\nC675  Bladder neck\nC676  Ureteric orifice\nC677  Urachus\nC678  Overlapping lesion of bladder\nC679  Bladder, NOS\n\n**Note: ** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Bladder* chapter on page 250 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_bladder",
   "inputs" : [ {
     "key" : "year_dx",
@@ -629,11 +629,11 @@
     }, {
       "id" : "tnm7_stage_uau",
       "input_mapping" : [ {
-        "from" : "tmp_combined_m",
-        "to" : "m"
-      }, {
         "from" : "tmp_combined_n",
         "to" : "n"
+      }, {
+        "from" : "tmp_combined_m",
+        "to" : "m"
       }, {
         "from" : "tmp_combined_t",
         "to" : "t"
@@ -712,5 +712,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "clin_t_bladder_38564", "radiation_surg_seq", "determine_default_m", "ssf2_kao", "nodes_pos_fpa", "ssf1_jpd", "parse_t_2177", "concatenate_n_43246", "stage_group_p_83975", "parse_n_67182", "determine_default_n", "histology", "stage_group_c_76410", "path_m_hbc", "concatenate_m_40642", "clin_n_bladder_88949", "combined_t_to_summ_stage_t_3_4a_re_4b_4e_d_32587", "tnm7_inclusions_tpb", "tnm7_stage_uau", "behavior", "path_t_bladder_68862", "concatenate_t_51262", "ssf3_lai", "adjustments_for_no_clin_or_no_path_26261", "schema_selection_bladder", "determine_combined_prefix_91402", "mets_hbc", "nodes_dck", "path_n_bladder_46197", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "clin_m_hbc", "primary_site", "extension_bcb", "combined_n_to_summ_stage_n_n3_d_copy_68044", "combined_m", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-06T20:49:33.673Z"
+  "last_modified" : "2015-11-17T20:48:50.727Z"
 }

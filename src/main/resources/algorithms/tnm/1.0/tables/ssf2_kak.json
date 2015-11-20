@@ -6,7 +6,8 @@
   "title" : "Site-Specific Factor 2",
   "subtitle" : "Tumor Weight",
   "notes" : "**Note 1:**  As stated in the College of American Pathologists (CAP) protocol for adrenal gland, \"Accurate weights of adrenal cortical neoplasms are important. Although tumor mass cannot be used as the sole criterion for malignancy, adrenal cortical neoplasms weighing less than 50 grams are almost always benign, whereas the weight of malignant tumors is usually greater than 100 grams. Weight is a reflection of gland weight rather than tumor weight because, in actuality, following surgical excision, the tumor is not dissected from the gland proper and weighed separately.\"\n\n**Note 2:**  Record the tumor weight (gland weight) to the nearest gram as documented in the pathology report.",
-  "last_modified" : "2015-10-30T18:48:28.705Z",
+  "footnotes" : "(1) College of American Pathologists (2012). Protocol for the Examination of Specimens From Patients With Carcinoma of the Adrenal Gland,  http://www.cap.org/ShowProperty?nodePath=/UCMCon/Contribution%20Folders/WebContent/pdf/cp-adrenal-12protocol-3101.pdf",
+  "last_modified" : "2015-11-19T16:34:09.567Z",
   "definition" : [ {
     "key" : "ssf2",
     "name" : "Code",

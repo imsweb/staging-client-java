@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Cervix",
   "title" : "Cervix Uteri",
-  "notes" : "C530  Endocervix\nC531  Exocervix\nC538  Overlapping lesion of cervix\nC539  Cervix uteri\n\n**Note:**  TNM values are based on the stages accepted by the Federation Internationale de Gynecologic et d'Obstetrique (FIGO).",
+  "notes" : "C530  Endocervix\nC531  Exocervix\nC538  Overlapping lesion of cervix\nC539  Cervix uteri\n\n**Note 1:**  TNM values are based on the stages accepted by the Federation Internationale de Gynecologic et d'Obstetrique (FIGO).\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Cervix* chapter on page 204 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_cervix",
   "inputs" : [ {
     "key" : "year_dx",
@@ -746,5 +746,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "ssf3_lpu", "parse_t_2177", "concatenate_n_43246", "ssf9_sdz", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "extension_bbk", "tnm7_inclusions_tpb", "concatenate_t_51262", "ssf8_sdy", "ssf5_npm", "adjustments_for_no_clin_or_no_path_26261", "clin_t_cervix_78153", "systemic_surg_seq", "ssf7_sdx", "combined_t_to_summ_stage_t_2_3_re_4_d_26385", "parse_m_47057", "combined_m", "combined_n", "summary_stage_rpa", "combined_t", "path_m_han", "determine_default_t", "nodes_dbc", "radiation_surg_seq", "clin_m_han", "mets_han", "clin_n_dbc", "determine_default_m", "nodes_pos_fpa", "tnm7_stage_ubh", "path_n_dbc", "parse_n_67182", "determine_default_n", "ssf6_oaw", "ssf2_kpr", "cervix_uteri_t_38859", "behavior", "determine_combined_prefix_91402", "ssf1_jbv", "stop_if_no_clin_and_no_path_24035", "primary_site", "schema_selection_cervix", "ssf4_mps", "stage_group_p_95243", "year_dx_validation", "stage_group_c_13226" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-03T01:42:09.215Z"
+  "last_modified" : "2015-11-17T18:43:36.602Z"
 }

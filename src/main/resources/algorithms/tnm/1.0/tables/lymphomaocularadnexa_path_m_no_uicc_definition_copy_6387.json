@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Path M",
   "title" : "LymphomaOcularAdnexa Path M (no UICC definition)",
-  "notes" : "**Note 1:**   Involvement of peripheral and central lymph nodes, distant nodes for ocular adnexal lymphomas, is coded in lymph nodes (N) not distant metastasis.\n\n**Note 4:** UICC does not define Lymphoma Ocular Adnexa. A list of all possible Pathologic M values is provided.",
-  "last_modified" : "2015-11-05T16:45:08.654Z",
+  "notes" : "**Note 1:** Involvement of peripheral and central lymph nodes, distant nodes for ocular adnexal lymphomas, is coded in lymph nodes (N) not distant metastasis (M).\n\n**Note 2:** UICC does not define Lymphoma Ocular Adnexa. A list of all possible Pathologic M values is provided.",
+  "last_modified" : "2015-11-19T01:14:58.967Z",
   "definition" : [ {
     "key" : "path_m",
     "name" : "Pathologic M",

@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Ampulla Vater",
   "title" : "Ampulla of Vater (excluding Neuroendocrine Tumor)",
-  "notes" : "C241  Ampulla of Vater",
+  "notes" : "C241  Ampulla of Vater\n\n**Note:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Ampulla of Vater* chapter on page 114 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_ampulla_vater",
   "inputs" : [ {
     "key" : "year_dx",
@@ -626,11 +626,11 @@
     }, {
       "id" : "tnm7_stage_uaa",
       "input_mapping" : [ {
-        "from" : "tmp_combined_m",
-        "to" : "m"
-      }, {
         "from" : "tmp_combined_n",
         "to" : "n"
+      }, {
+        "from" : "tmp_combined_m",
+        "to" : "m"
       }, {
         "from" : "tmp_combined_t",
         "to" : "t"
@@ -709,5 +709,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "clin_m_har", "determine_default_t", "path_m_har", "ssf2_kpc", "radiation_surg_seq", "determine_default_m", "ssf1_jpe", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "ampulla_of_vater_t_63892", "determine_default_n", "extension_bde", "ssf3_lpc", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "mets_har", "combined_t_to_summ_stage_t_2_4e_re_93413", "behavior", "tnm7_inclusions_tpe", "concatenate_t_51262", "clin_n_ampulla_vater_45064", "adjustments_for_no_clin_or_no_path_26261", "stage_group_p_45729", "determine_combined_prefix_91402", "stage_group_c_22295", "schema_selection_ampulla_vater", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "tnm7_stage_uaa", "parse_m_47057", "path_t_ampulla_vater_23469", "primary_site", "path_n_dbo", "combined_m", "combined_n", "nodes_dbo", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-06T20:05:22.617Z"
+  "last_modified" : "2015-11-17T18:06:24.912Z"
 }

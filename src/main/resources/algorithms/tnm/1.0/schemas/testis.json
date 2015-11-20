@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Testis",
   "title" : "Testis",
-  "notes" : "C620  Undescended testis\nC621  Descended testis\nC629  Testis, NOS\n\n**Note 1:** Laterality must be coded for this site.\n\n**Note 2:** The 7th Edition TNM pathologic stage group is derived from T, N, M and S stage. S stage is calculated from the following site-specific factors\n\n     SSF 13: Post-Orchiectomy Alpha Fetoprotein (AFP) Range\n     SSF 15: Post-Orchiectomy Human Chorionic Gonadotropin (hCG) Range\n     SSF 16: Post-Orchiectomy Lactate Dehydrogenase (LDH) Range",
+  "notes" : "C620  Undescended testis\nC621  Descended testis\nC629  Testis, NOS\n\n**Note 1:** Laterality must be coded for this site.\n\n**Note 2:** The 7th Edition TNM pathologic stage group is derived from T, N, M and S stage. S stage is calculated from the following site-specific factors\n\n     SSF 13: Post-Orchiectomy Alpha Fetoprotein (AFP) Range\n     SSF 15: Post-Orchiectomy Human Chorionic Gonadotropin (hCG) Range\n     SSF 16: Post-Orchiectomy Lactate Dehydrogenase (LDH) Range\n\n**Note 3:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Testis* chapter on page 234 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_testis",
   "inputs" : [ {
     "key" : "year_dx",
@@ -774,5 +774,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "ssf16_sfh", "ssf5_nab", "stage_group_c_83264", "ssf15_sfg", "parse_t_2177", "concatenate_n_43246", "nodes_ddf", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "schema_selection_testis", "ssf14_sff", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "clin_n_testis_17993", "mets_hbb", "testis_postorchiectomy_serum_tumor_marker_svalue_table_basedon_ssf131516", "systemic_surg_seq", "ssf10_sek", "parse_m_47057", "combined_m", "combined_n", "tnm7_stage_uqd", "summary_stage_rpa", "combined_t", "determine_default_t", "testis_path_t_76829", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpa", "parse_n_67182", "determine_default_n", "clin_t_bdh", "ssf4_mac", "extension_bdh", "path_m_hbb", "behavior", "ssf7_seh", "testis_n_51427", "ssf6_oay", "tnm7_inclusions_tpj", "ssf13_sfe", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "ssf8_sei", "primary_site", "ssf12_sfd", "clin_m_hbb", "year_dx_validation", "stage_group_p_53847", "ssf9_sej" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-14T20:20:46.685Z"
+  "last_modified" : "2015-11-17T20:55:38.266Z"
 }

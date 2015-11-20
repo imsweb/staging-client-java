@@ -5,8 +5,9 @@
   "name" : "SSF2",
   "title" : "Site-Specific Factor 2",
   "subtitle" : "Tumor Size - Third Largest Dimension",
-  "notes" : "**Note 1:**  According to TNM, tumor size is an important prognostic factor.  The three dimensions of tumor size (length, width and height) are also important to collect if documented in the patient record.  Record the largest dimension of tumor size in the field Tumor Size.  Record the second largest dimension of tumor size in Site-Specific Factor 1 and the smallest dimension of tumor size in Site-Specific Factor 2.\n\n**Note 2:**  Tumor size expressed as 4.0 centimeter (cm) x 3.0 cm x 2.0 cm is recorded as follows:\n\n    Tumor Size: 040\n    Site-Specific Factor 1: 030 \n    Site-Specific Factor 2: 020 \n\nTumor size expressed as \"greater than 8 cm\" is recorded as follows: \n\n    Tumor Size: 997\n    Site-Specific Factor 1: 999\n    Site-Specific Factor 2: 999",
-  "last_modified" : "2015-11-16T01:27:23.928Z",
+  "notes" : "**Note 1:**  According to AJCC tumor size is an important prognostic factor.  The three dimensions of tumor size (length, width and height) are also important to collect if documented in the patient record.  Record the largest dimension of tumor size in the field Tumor Size.  Record the second largest dimension of tumor size in Site-Specific Factor 1 and the smallest dimension of tumor size in Site-Specific Factor 2.\n\n**Note 2:**  Tumor size expressed as 4.0 centimeter (cm) x 3.0 cm x 2.0 cm is recorded as follows:\n\n* Tumor Size: 040\n* Site-Specific Factor 1: 030 \n* Site-Specific Factor 2: 020 \n\nTumor size expressed as \"greater than 8 cm\" is recorded as follows: \n\n* Tumor Size: 997\n* Site-Specific Factor 1: 999\n* Site-Specific Factor 2: 999",
+  "footnotes" : "(1) American Joint Committee on Cancer., & Edge, S.B. (2010) *AJCC Cancer Staging Manual (7th ed.)*. New York; London: Springer, pg. 289",
+  "last_modified" : "2015-11-19T14:48:22.976Z",
   "definition" : [ {
     "key" : "ssf2",
     "name" : "Code",
