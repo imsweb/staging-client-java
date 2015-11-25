@@ -23,6 +23,7 @@ import com.imsweb.staging.StagingData;
 import com.imsweb.staging.StagingFileDataProvider;
 import com.imsweb.staging.StagingTest;
 import com.imsweb.staging.entities.StagingSchema;
+import com.imsweb.staging.entities.StagingTable;
 
 public class TnmStagingTest extends StagingTest {
 
@@ -433,6 +434,16 @@ public class TnmStagingTest extends StagingTest {
 
         lookup = new TnmSchemaLookup("C619", "8120");
         Assert.assertFalse(_STAGING.getInputs(schema, lookup.getInputs()).contains("clin_t"));
+    }
+
+    @Test
+    public void testRangeParsing() {
+        StagingTable table = _STAGING.getTable("path_n_daj");
+
+        Assert.assertNotNull(table);
+        Assert.assertEquals("p0I-", table.getRawRows().get(2).get(0));
+        Assert.assertEquals("p0I-", table.getTableRows().get(2).getInputs().get("path_n").get(0).getLow());
+        Assert.assertEquals("p0I-", table.getTableRows().get(2).getInputs().get("path_n").get(0).getHigh());
     }
 
 }
