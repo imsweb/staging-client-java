@@ -87,6 +87,24 @@ public class StagingDataProviderTest {
         Assert.assertEquals("", ranges.get(4).getLow());
         Assert.assertEquals("", ranges.get(4).getHigh());
 
+        ranges = StagingDataProvider.splitValues("1,11,111-222");
+        Assert.assertEquals(3, ranges.size());
+        Assert.assertEquals("1", ranges.get(0).getLow());
+        Assert.assertEquals("1", ranges.get(0).getHigh());
+        Assert.assertEquals("11", ranges.get(1).getLow());
+        Assert.assertEquals("11", ranges.get(1).getHigh());
+        Assert.assertEquals("111", ranges.get(2).getLow());
+        Assert.assertEquals("222", ranges.get(2).getHigh());
+
+        ranges = StagingDataProvider.splitValues("88,90-95,99");
+        Assert.assertEquals(3, ranges.size());
+        Assert.assertEquals("88", ranges.get(0).getLow());
+        Assert.assertEquals("88", ranges.get(0).getHigh());
+        Assert.assertEquals("90", ranges.get(1).getLow());
+        Assert.assertEquals("95", ranges.get(1).getHigh());
+        Assert.assertEquals("99", ranges.get(2).getLow());
+        Assert.assertEquals("99", ranges.get(2).getHigh());
+
         ranges = StagingDataProvider.splitValues("p0I-");
         Assert.assertEquals(1, ranges.size());
         Assert.assertEquals("p0I-", ranges.get(0).getLow());
