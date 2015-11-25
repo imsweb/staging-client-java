@@ -356,14 +356,14 @@
         "to" : "clin_n_in"
       } ],
       "output_mapping" : [ {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_ n"
-      }, {
         "from" : "path_n_out",
         "to" : "tmp_path_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
-      "outputs" : [ "tmp_clin_ n", "tmp_path_n" ]
+      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
     }, {
       "id" : "determine_default_m",
       "input_mapping" : [ {
@@ -723,5 +723,5 @@
   } ],
   "involved_tables" : [ "extension_bbs", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "radiation_surg_seq", "determine_default_m", "nodes_dbj", "ssf10_seq", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "clin_m_hpe", "parse_n_67182", "clin_n_dbj", "determine_default_n", "combined_n_to_summ_stage_n_84054", "clin_t_penis_88876", "histology", "concatenate_m_40642", "seer_mets_penisvs2_9427", "path_m_hpe", "ssf11_ser", "tnm7_stage_uav", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "behavior", "concatenate_t_51262", "ssf17_seu", "ssf12_ses", "adjustments_for_no_clin_or_no_path_26261", "penis_t_51275", "ssf16_sqv", "determine_combined_prefix_91402", "tnm7_inclusions_tpq", "stage_group_p_42277", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "stage_group_c_49193", "combined_m", "combined_n", "path_n_dbj", "year_dx_validation", "summary_stage_rpa", "schema_selection_penis", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-17T20:53:56.184Z"
+  "last_modified" : "2015-11-23T01:23:32.920Z"
 }

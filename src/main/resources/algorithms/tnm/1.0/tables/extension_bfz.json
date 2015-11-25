@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "SEER Primary Tumor",
   "title" : "SEER Primary Tumor",
-  "notes" : "**Note 1:**  In the case of multiple simultaneous tumors, code the tumor with the greatest extension.\n\n**Note 2.**  In transit metastasis is defined as a tumor distinct from the primary lesion and located either between the primary lesion and the draining regional lymph nodes or distal to the primary lesion. In transit metastasis with positive lymph nodes are coded under regional lymph nodes.",
+  "notes" : "**Note 1:**  In the case of multiple simultaneous tumors, code the tumor with the greatest extension.\n\n**Note 2:**  In transit metastasis is defined as a tumor distinct from the primary lesion and located either between the primary lesion and the draining regional lymph nodes or distal to the primary lesion. In transit metastasis with positive lymph nodes are coded under regional lymph nodes.",
   "footnotes" : "\\### Considered distant in Historic Stage",
-  "last_modified" : "2015-09-04T20:51:25.391Z",
+  "last_modified" : "2015-11-21T16:55:12.145Z",
   "definition" : [ {
     "key" : "seer_primary_tumor",
     "name" : "Code",

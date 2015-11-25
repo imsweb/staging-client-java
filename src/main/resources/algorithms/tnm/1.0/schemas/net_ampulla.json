@@ -338,14 +338,14 @@
         "to" : "clin_n_in"
       } ],
       "output_mapping" : [ {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_ n"
-      }, {
         "from" : "path_n_out",
         "to" : "tmp_path_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
-      "outputs" : [ "tmp_clin_ n", "tmp_path_n" ]
+      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
     }, {
       "id" : "determine_default_m",
       "input_mapping" : [ {
@@ -705,5 +705,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "mets_hco", "radiation_surg_seq", "determine_default_m", "ssf6_oam", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "nodes_dfk", "net_ampulla_pathologic_t_58166", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "extension_bfo", "combined_t_no_tis", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "schema_selection_net_ampulla", "stage_group_c_79525", "concatenate_t_51262", "stage_group_p_42930", "adjustments_for_no_clin_or_no_path_26261", "ssf4_mas", "tnm7_inclusions_tpm", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "net_ampulla_t_37461", "parse_m_47057", "primary_site", "combined_m", "ssf5_nap", "combined_n", "path_n_net_ampulla_11118", "clin_n_net_ampulla_36773", "year_dx_validation", "summary_stage_rpa", "path_m_net_ampulla_22136", "clin_m_net_ampulla_35993", "tnm7_stage_uqa" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-17T18:06:57.798Z"
+  "last_modified" : "2015-11-22T05:18:19.153Z"
 }

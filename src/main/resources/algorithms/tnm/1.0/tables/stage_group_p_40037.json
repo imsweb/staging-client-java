@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Stage Group (p)",
   "title" : "TNM 7 Stage Group",
-  "notes" : "**Note:** The Stage Groups displayed are the enhanced UICC groups.  If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC manual to ensure you are using the appropriate logic.",
-  "last_modified" : "2015-10-25T03:09:49.613Z",
+  "notes" : "**Note:** The Stage Groups displayed are the Mycosis Fungoides and Sezary Syndrome staging system proposed by the *International Society for Cutaneous lymphomas and EORTC.",
+  "last_modified" : "2015-11-21T18:50:31.260Z",
   "definition" : [ {
     "key" : "path_stage_group_direct",
     "name" : "Assigned Stage Group",

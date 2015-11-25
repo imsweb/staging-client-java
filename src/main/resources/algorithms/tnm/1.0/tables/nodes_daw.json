@@ -5,8 +5,8 @@
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in SEER Mets.\n\n**Note 2:**  Pericholedochal nodes are coded in SEER Mets for jejunum and ileum primaries.",
-  "footnotes" : "/### Considered distant in Historic Stage\n/*** Considered distant in 1977 Summary Staging Guide",
-  "last_modified" : "2015-10-16T16:48:48.731Z",
+  "footnotes" : "\\### Considered distant in Historic Stage\n\\*** Considered distant in 1977 Summary Staging Guide",
+  "last_modified" : "2015-11-24T17:32:16.536Z",
   "definition" : [ {
     "key" : "seer_nodes",
     "name" : "Code",
@@ -24,5 +24,5 @@
     "name" : "Summary Stage 2017 N",
     "type" : "ENDPOINT"
   } ],
-  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:NONE" ], [ "300", "Regional lymph node(s) involved only\n\n    REGIONAL Lymph Nodes\n\n    Duodenum (C170):\n        Duodenal\n        Gastroduodenal###\n        Hepatic###\n        Infrapyloric (subpyloric)###\n        Pericholedochal (common bile duct)###***\n        Pancreaticoduodenal\n        Pyloric###\n        Superior mesenteric###***\n\n    Jejunum (C171) and Ileum (C172) :\n         Ileocolic for terminal ileum only\n         Mesenteric, NOS\n         Posterior cecal (retrocecal) for terminal ileum only\n         Superior mesenteric###***\n\n    Regional lymph node(s), NOS", "Ileum primary only (C172): \n     Cecal (anterior, posterior or retrocecal) \n        \nStated as N1 or N2", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:NONE" ], [ "300", "Regional lymph node(s) involved only\n\n    REGIONAL Lymph Nodes\n\n    Duodenum (C170):\n        Duodenal\n        Gastroduodenal###\n        Hepatic###\n        Infrapyloric (subpyloric)###\n        Pericholedochal (common bile duct)###***\n        Pancreaticoduodenal\n        Pyloric###\n        Superior mesenteric###***\n\n    Jejunum (C171) and Ileum (C172):\n         Ileocolic for terminal ileum only\n         Mesenteric, NOS\n         Posterior cecal (retrocecal) for terminal ileum only\n         Superior mesenteric###***\n\n    Regional lymph node(s), NOS", "Ileum primary only (C172): \n     Cecal (anterior, posterior or retrocecal) \n        \nStated as N1 or N2", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
 }

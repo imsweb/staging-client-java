@@ -5,7 +5,8 @@
   "name" : "SEER Primary Tumor",
   "title" : "SEER Primary Tumor",
   "notes" : "**Note 1:**  Tumors of the head of the pancreas arise to the right of the superior mesenteric-portal vein confluence.\n\n**Note 2:**  Islets of Langerhans are distributed throughout the pancreas; an islet tumor is coded to the subsite of the pancreas in which the tumor arises if the information is available.",
-  "last_modified" : "2015-09-04T20:51:48.837Z",
+  "footnotes" : "\\*** Considered distant in 1977 Summary Staging Guide",
+  "last_modified" : "2015-11-23T02:09:03.702Z",
   "definition" : [ {
     "key" : "seer_primary_tumor",
     "name" : "Code",

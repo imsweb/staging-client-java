@@ -385,14 +385,14 @@
         "to" : "clin_n_in"
       } ],
       "output_mapping" : [ {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_ n"
-      }, {
         "from" : "path_n_out",
         "to" : "tmp_path_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
-      "outputs" : [ "tmp_clin_ n", "tmp_path_n" ]
+      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
     }, {
       "id" : "determine_default_m",
       "input_mapping" : [ {
@@ -752,5 +752,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "cpmbined_m_to_summ_stage_m_60564", "ssf10_spd", "combined_n_to_summ_stage_n_headneck_mouthtongue_99624", "stage_group_p_21201", "tnm7_stage_upu", "path_m_head_neck_melanoma_32288", "parse_t_2177", "concatenate_n_43246", "ssf11_spe", "histology", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "tnm7_inclusions_tpa", "ssf1_jpu", "combined_t_to_summ_stage_t_4b_4e_d_9381", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "ssf9_spc", "systemic_surg_seq", "parse_m_47057", "combined_m", "clinical_n_head_neck_melanoma_66648", "combined_n", "seer_regional_nodes_melanoma_fom_66280", "ssf5_npa", "summary_stage_rpa", "ssf8_spb", "extension_beo", "determine_default_t", "radiation_surg_seq", "determine_default_m", "clin_t_melanoma_floor_of_mouth_29889", "nodes_pos_fpa", "stage_group_c_63552", "parse_n_67182", "determine_default_n", "seer_mets_floor_of_mouthvs2_54426", "combined_t_no_tis", "pathologic_n_head_neck_melanoma_copy_75380", "ssf4_mpa", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "melanoma_floor_of_mouth_t_86503", "primary_site", "schema_selection_melanoma_floor_mouth", "year_dx_validation", "clin_m_head_neck_melanoma_25497" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-17T14:52:54.587Z"
+  "last_modified" : "2015-11-23T01:00:50.119Z"
 }

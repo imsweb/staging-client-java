@@ -362,14 +362,14 @@
         "to" : "clin_n_in"
       } ],
       "output_mapping" : [ {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_ n"
-      }, {
         "from" : "path_n_out",
         "to" : "tmp_path_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
-      "outputs" : [ "tmp_clin_ n", "tmp_path_n" ]
+      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
     }, {
       "id" : "determine_default_m",
       "input_mapping" : [ {
@@ -729,5 +729,5 @@
   } ],
   "involved_tables" : [ "vulva_t_1223", "stage_group_p_12670", "cpmbined_m_to_summ_stage_m_60564", "schema_selection_vulva", "determine_default_t", "nodes_dbb", "ssf10_sex", "radiation_surg_seq", "clin_n_dbb", "determine_default_m", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "stage_group_c_65478", "ssf15_sfc", "path_n_dbb", "parse_n_67182", "determine_default_n", "tnm7_stage_ubd", "ssf11_srd", "clin_t_vulva_52779", "path_m_hba", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "mets_hba", "extension_bbi", "combined_t_to_summ_stage_t_2_4e_re_93413", "behavior", "ssf14_sfb", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "determine_combined_prefix_91402", "tnm7_inclusions_tpq", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "ssf13_sfa", "parse_m_47057", "primary_site", "clin_m_hba", "combined_m", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t", "ssf12_sez" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-17T18:41:35.283Z"
+  "last_modified" : "2015-11-23T01:32:20.965Z"
 }

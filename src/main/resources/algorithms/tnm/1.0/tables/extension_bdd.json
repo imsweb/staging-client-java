@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "SEER Primary Tumor",
   "title" : "SEER Primary Tumor",
-  "notes" : "**Note 1:**  Connective tissues large enough to be given a specific name are considered adjacent structures.  For example, prevertebral fascia and jugular vein have names.  Continuous tumor growth from one organ into an adjacent named structure is coded to regional.",
-  "last_modified" : "2015-09-04T20:52:06.046Z",
+  "notes" : "**Note:**  Connective tissues large enough to be given a specific name are considered adjacent structures.  For example, prevertebral fascia and jugular vein have names.  Continuous tumor growth from one organ into an adjacent named structure is coded to regional.",
+  "last_modified" : "2015-11-23T06:43:16.819Z",
   "definition" : [ {
     "key" : "seer_primary_tumor",
     "name" : "Code",

@@ -349,14 +349,14 @@
         "to" : "clin_n_in"
       } ],
       "output_mapping" : [ {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_ n"
-      }, {
         "from" : "path_n_out",
         "to" : "tmp_path_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
-      "outputs" : [ "tmp_clin_ n", "tmp_path_n" ]
+      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
     }, {
       "id" : "determine_default_m",
       "input_mapping" : [ {
@@ -720,5 +720,5 @@
   } ],
   "involved_tables" : [ "ssf10_srh", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "tnm7_inclusions_tql", "radiation_surg_seq", "nodes_dfb", "determine_default_m", "mets_hce", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "ssf7_sre", "parse_n_67182", "stage_group_p_82525", "determine_default_n", "clin_m_hce", "tnm7_stage_gist_small_intestine_upy", "combined_n_to_summ_stage_n_84054", "extension_bfd", "histology", "concatenate_m_40642", "combined_t_no_tis", "concatenate_t_51262", "ssf6_oph", "adjustments_for_no_clin_or_no_path_26261", "clin_t_gist_small_intestine_3299", "determine_combined_prefix_91402", "stage_group_c_86666", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "ssf9_srg", "parse_m_47057", "primary_site", "gist_small_intestine_t_83343", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "clin_n_gist_small_intestine_23294", "path_m_hce", "year_dx_validation", "gist_small_intestine_n_18642", "gist_esophagus_mitotic_rate_calculation", "summary_stage_rpa", "schema_selection_gist_small_intestine", "ssf8_srf" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-17T19:59:42.847Z"
+  "last_modified" : "2015-11-23T00:47:25.780Z"
 }

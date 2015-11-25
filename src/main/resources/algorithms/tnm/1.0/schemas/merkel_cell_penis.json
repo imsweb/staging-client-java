@@ -505,14 +505,14 @@
     }, {
       "id" : "combined_t",
       "input_mapping" : [ {
-        "from" : "tmp_clin_m",
-        "to" : "clin_t_in"
-      }, {
         "from" : "tmp_path_t",
         "to" : "path_t_in"
       }, {
         "from" : "tmp_combined_t",
         "to" : "combined_t_in"
+      }, {
+        "from" : "tmp_clin_t",
+        "to" : "clin_t_in"
       } ],
       "output_mapping" : [ {
         "from" : "source_t_out",
@@ -521,7 +521,7 @@
         "from" : "combined_t_out",
         "to" : "tmp_combined_t"
       } ],
-      "inputs" : [ "radiation_surg_seq", "tmp_clin_m", "tmp_path_t", "behavior", "systemic_surg_seq", "tmp_combined_t" ],
+      "inputs" : [ "radiation_surg_seq", "tmp_path_t", "tmp_clin_t", "behavior", "systemic_surg_seq", "tmp_combined_t" ],
       "outputs" : [ "source_t", "tmp_combined_t" ]
     }, {
       "id" : "combined_n",
@@ -571,7 +571,7 @@
         "from" : "clin_t_prefix",
         "to" : "clin_prefix"
       }, {
-        "from" : "tmp_combined_t",
+        "from" : "source_t",
         "to" : "cmb_source"
       }, {
         "from" : "path_t_prefix",
@@ -581,7 +581,7 @@
         "from" : "cmb_prefix",
         "to" : "cmb_t_prefix"
       } ],
-      "inputs" : [ "clin_t_prefix", "path_t_prefix", "tmp_combined_t" ],
+      "inputs" : [ "clin_t_prefix", "source_t", "path_t_prefix" ],
       "outputs" : [ "cmb_t_prefix" ]
     }, {
       "id" : "determine_combined_prefix_91402",
@@ -589,35 +589,35 @@
         "from" : "path_n_prefix",
         "to" : "path_prefix"
       }, {
+        "from" : "source_n",
+        "to" : "cmb_source"
+      }, {
         "from" : "clin_n_prefix",
         "to" : "clin_prefix"
-      }, {
-        "from" : "tmp_combined_n",
-        "to" : "cmb_source"
       } ],
       "output_mapping" : [ {
         "from" : "cmb_prefix",
         "to" : "cmb_n_prefix"
       } ],
-      "inputs" : [ "clin_n_prefix", "tmp_combined_n", "path_n_prefix" ],
+      "inputs" : [ "clin_n_prefix", "path_n_prefix", "source_n" ],
       "outputs" : [ "cmb_n_prefix" ]
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
-        "from" : "tmp_combined_m",
-        "to" : "cmb_source"
-      }, {
         "from" : "path_m_prefix",
         "to" : "path_prefix"
       }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
+      }, {
+        "from" : "source_m",
+        "to" : "cmb_source"
       } ],
       "output_mapping" : [ {
         "from" : "cmb_prefix",
         "to" : "cmb_m_prefix"
       } ],
-      "inputs" : [ "tmp_combined_m", "clin_m_prefix", "path_m_prefix" ],
+      "inputs" : [ "clin_m_prefix", "path_m_prefix", "source_m" ],
       "outputs" : [ "cmb_m_prefix" ]
     }, {
       "id" : "concatenate_t_51262",
@@ -753,5 +753,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "nodes_pos_fah", "determine_default_t", "stage_group_c_19537", "radiation_surg_seq", "ssf19_sqz", "extension_bfz", "determine_default_m", "ssf18_sqy", "schema_selection_merkel_cell_penis", "clin_m_hph", "ssf22_src", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "clin_n_dfv", "ssf1_jpt", "behavior", "path_m_hph", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "ssf20_sra", "ssf16_sqw", "merkel_cell_penis_t_93032", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "clin_t_merkel_cell_penis_10043", "primary_site", "nodes_dfv", "combined_m", "combined_to_summ_stage_t_80394", "stage_group_p_54695", "combined_n", "ssf17_sqx", "year_dx_validation", "tnm7_inclusions_tqb", "tnm7_stage_uqe", "summary_stage_rpa", "seer_mets_merkel_cell_penis_41622", "combined_t", "ssf21_srb", "path_n_dfv" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-17T18:31:34.285Z"
+  "last_modified" : "2015-11-21T16:44:42.610Z"
 }

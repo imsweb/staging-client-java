@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
-  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in SEER mets.\n\n**Note 2:**  Celiac axis and splenic nodes are classified as distant nodes and are coded in SEER Mets.",
-  "last_modified" : "2015-09-04T20:51:48.921Z",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in SEER Mets.\n\n**Note 2:**  Celiac axis and splenic nodes are classified as distant nodes and are coded in SEER Mets.",
+  "last_modified" : "2015-11-23T02:10:16.241Z",
   "definition" : [ {
     "key" : "seer_nodes",
     "name" : "Code",

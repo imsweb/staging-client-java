@@ -384,14 +384,14 @@
         "to" : "clin_n_in"
       } ],
       "output_mapping" : [ {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_ n"
-      }, {
         "from" : "path_n_out",
         "to" : "tmp_path_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
-      "outputs" : [ "tmp_clin_ n", "tmp_path_n" ]
+      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
     }, {
       "id" : "determine_default_m",
       "input_mapping" : [ {
@@ -751,5 +751,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "parse_t_2177", "concatenate_n_43246", "ssf7_spf", "ssf1_jpf", "rectum_t_5935", "ssf3_lpe", "combined_n_to_summ_stage_n_84054", "histology", "ssf6_opb", "extension_bbf", "concatenate_m_40642", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "tnm7_inclusions_tpc", "ssf10_spi", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "schema_selection_rectum", "ssf5_npb", "ssf9_sph", "systemic_surg_seq", "parse_m_47057", "combined_m", "tnm7_stage_upw", "combined_n", "ssf8_spg", "summary_stage_rpa", "combined_t", "determine_default_t", "radiation_surg_seq", "path_n_dax", "determine_default_m", "nodes_pos_fpa", "path_m_hag", "mets_hag", "parse_n_67182", "determine_default_n", "nodes_dax", "behavior", "clin_m_hag", "clin_t_rectum_29212", "ssf4_mpb", "determine_combined_prefix_91402", "stage_group_c_26613", "stop_if_no_clin_and_no_path_24035", "primary_site", "stage_group_p_78368", "year_dx_validation", "clin_n_dax" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-17T17:55:55.806Z"
+  "last_modified" : "2015-11-23T01:26:14.328Z"
 }

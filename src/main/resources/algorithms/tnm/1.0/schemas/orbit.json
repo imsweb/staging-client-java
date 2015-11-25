@@ -312,7 +312,7 @@
     }, {
       "id" : "determine_default_n",
       "input_mapping" : [ {
-        "from" : "hist",
+        "from" : "tmp_path_n",
         "to" : "path_n_in"
       }, {
         "from" : "tmp_clin_n",
@@ -325,7 +325,7 @@
         "from" : "clin_n_out",
         "to" : "tmp_clin_n"
       } ],
-      "inputs" : [ "hist", "tmp_clin_n" ],
+      "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
       "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
     }, {
       "id" : "determine_default_m",
@@ -621,14 +621,14 @@
     }, {
       "id" : "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890",
       "input_mapping" : [ {
-        "from" : "tmp_combined_n",
+        "from" : "tmp_combined_t",
         "to" : "combined_t_in"
       } ],
       "output_mapping" : [ {
         "from" : "ss2017_t_out",
         "to" : "ss2017_t"
       } ],
-      "inputs" : [ "tmp_combined_n" ],
+      "inputs" : [ "tmp_combined_t" ],
       "outputs" : [ "ss2017_t" ]
     }, {
       "id" : "combined_n_to_summ_stage_n_84054",
@@ -686,5 +686,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "tnm7_stage_for_sites_with_no_stage_groupings_unb", "radiation_surg_seq", "no_tnm_group_99227", "path_m_hpc", "determine_default_m", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "path_n_ophthalmic_no_tis_80282", "parse_n_67182", "clin_m_hpc", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "seer_mets_orbit_15325", "orbit_t_97280", "combined_t_no_tis", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "concatenate_t_51262", "tnm7_inclusions_tpp", "determine_combined_prefix_91402", "clin_t_orbit_59896", "seer_regional_nodes_melanomachoroid_3244", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "no_tnm_group_p_41281", "parse_m_47057", "primary_site", "combined_m", "combined_n", "clin_n_ophthalmic_n_notis_75953", "year_dx_validation", "summary_stage_rpa", "schema_selection_orbit", "extension_bag", "adjust_path_defaults_for_no_clin_no_path_stage_group_not_defined_61358" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-17T21:05:44.268Z"
+  "last_modified" : "2015-11-22T21:34:50.798Z"
 }

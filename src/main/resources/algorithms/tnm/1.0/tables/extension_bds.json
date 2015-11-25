@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "SEER Primary Tumor",
   "title" : "SEER Primary Tumor",
-  "notes" : "**Note 1:**  In the case of multiple simultaneous tumors, code the tumor with the greatest extension.\n**Note 2:**  In-transit metastasis is coded in SEER regional nodes.\n\n**Note 3:**  Skin of genital sites is not included in this schema.  These sites are skin of vulva (C51.0-C51.2, C51.8-C51.9). skin of penis (C60.0-C60.1, C60.8-C60.9) and skin of scrotum (C63.2).",
+  "notes" : "**Note 1:**  In the case of multiple simultaneous tumors, code the tumor with the greatest extension.  \n\n**Note 2:**  In-transit metastasis is coded in SEER Regional Nodes.\n\n**Note 3:**  Skin of genital sites is not included in this schema.  These sites are skin of vulva (C510-C512, C518-C519). skin of penis (C600-C601, C608-C609) and skin of scrotum (C632).",
   "footnotes" : "\\##  Considered regional in Historic Stage\n\\***  Considered distant in 1977 Summary Staging Guide",
-  "last_modified" : "2015-09-04T20:51:39.073Z",
+  "last_modified" : "2015-11-21T17:37:53.537Z",
   "definition" : [ {
     "key" : "seer_primary_tumor",
     "name" : "Code",

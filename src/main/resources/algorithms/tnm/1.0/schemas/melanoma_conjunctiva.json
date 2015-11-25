@@ -4,6 +4,7 @@
   "version" : "1.0",
   "name" : "Melanoma Conjunctiva",
   "title" : "Malignant Melanoma of Conjunctiva",
+  "description" : "TNM is defined for this site; however, there is no stage group.",
   "notes" : "M-8720-8790\nC690  Conjunctiva\n\n**Note 1:**  Laterality must be coded for this site.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Melanoma of Conjunctiva* chapter on page 258 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_melanoma_conjunctiva",
   "inputs" : [ {
@@ -711,5 +712,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "tnm7_stage_for_sites_with_no_stage_groupings_unb", "radiation_surg_seq", "no_tnm_group_99227", "determine_default_m", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "ssf3_law", "parse_n_67182", "determine_default_n", "ssf2_kbi", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "tnm7_inclusions_tpa", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "clin_m_9010", "behavior", "concatenate_t_51262", "path_m_74330", "extension_bcs", "melanoma_conjunctiva_pathologic_n_83143", "seer_mets_melanomaconjunctiva_13773", "path_t_bcs", "melanoma_conjunctiva_n_15261", "determine_combined_prefix_91402", "schema_selection_melanoma_conjunctiva", "seer_regional_nodes_melanomachoroid_3244", "clin_t_bcs", "ssf1_jby", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "no_tnm_group_p_41281", "parse_m_47057", "primary_site", "combined_m", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t", "adjust_path_defaults_for_no_clin_no_path_stage_group_not_defined_61358" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-19T05:06:36.734Z"
+  "last_modified" : "2015-11-22T21:03:51.718Z"
 }

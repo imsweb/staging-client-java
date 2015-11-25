@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Oropharynx",
   "title" : "Tonsil and Oropharynx (excluding Malignant Melanoma)",
-  "notes" : "C090  Tonsillar fossa\nC091  Tonsillar pillar\nC098  Overlapping lesion of tonsil\nC099  Tonsil, NOS (excluding lingual tonsil C024)\nC100  Vallecula\nC102  Lateral wall of oropharynx\nC103  Posterior wall of oropharynx\nC104  Branchial cleft (site of neoplasm)\nC108  Overlapping lesion of oropharynx\nC109  Oropharynx, NOS\n\n**Note 1:**  Laterality must be coded for C090, C091, C098, and C099.\n\n**Note 2:** TNM includes base of tongue (C019) and lingual tonsil (C024) with oropharynx (C09_, C10_)\n\n**Note 3:** TNM includes lingual (anterior) surface of epiglottis (C101) with larynx (C32_)\n\n**Note 4:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Tonsil, Pharynx* chapter on page 60 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C090  Tonsillar fossa\nC091  Tonsillar pillar\nC098  Overlapping lesion of tonsil\nC099  Tonsil, NOS (excluding lingual tonsil C024)\nC100  Vallecula\nC102  Lateral wall of oropharynx\nC103  Posterior wall of oropharynx\nC104  Branchial cleft (site of neoplasm)\nC108  Overlapping lesion of oropharynx\nC109  Oropharynx, NOS\n\n**Note 1:**  Laterality must be coded for C090, C091, C098, and C099.\n\n**Note 2:** TNM includes base of tongue (C019) and lingual tonsil (C024) with oropharynx (C09\\_, C10\\_)\n\n**Note 3:** TNM includes lingual (anterior) surface of epiglottis (C101) with larynx (C32\\_)\n\n**Note 4:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Tonsil, Pharynx* chapter on page 60 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_oropharynx",
   "inputs" : [ {
     "key" : "year_dx",
@@ -385,14 +385,14 @@
         "to" : "clin_n_in"
       } ],
       "output_mapping" : [ {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_ n"
-      }, {
         "from" : "path_n_out",
         "to" : "tmp_path_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
-      "outputs" : [ "tmp_clin_ n", "tmp_path_n" ]
+      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
     }, {
       "id" : "determine_default_m",
       "input_mapping" : [ {
@@ -752,5 +752,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "ssf10_spd", "schema_selection_oropharynx", "clin_t_oropharynx_53342", "ssf1_jpa", "path_m_hpb", "tnm7_stage_upt", "parse_t_2177", "concatenate_n_43246", "histology", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "tnm7_inclusions_tpb", "nodes_dcu", "concatenate_t_51262", "extension_bap", "adjustments_for_no_clin_or_no_path_26261", "ssf9_spc", "systemic_surg_seq", "combined_n_to_summ_stage_n_headneck_oromelepiant_49294", "parse_m_47057", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "ssf5_npa", "summary_stage_rpa", "combined_t", "ssf8_spb", "determine_default_t", "clinical_n_head_neck_except_nasopharynx_25237", "radiation_surg_seq", "determine_default_m", "path_n_head_neck_except_nasopharynx_40357", "nodes_pos_fpa", "parse_n_67182", "determine_default_n", "seer_mets_oropharynx_vs2_4399", "stage_group_p_35702", "behavior", "oropharynx_t_62492", "ssf4_mpa", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "primary_site", "year_dx_validation", "stage_group_c_51542" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-17T14:17:55.430Z"
+  "last_modified" : "2015-11-23T01:20:38.540Z"
 }

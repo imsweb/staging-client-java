@@ -2,10 +2,10 @@
   "id" : "adjust_path_defaults_for_no_path_placenta_37763",
   "algorithm" : "tnm",
   "version" : "1.0",
-  "name" : "Adjust Path Defaults for No Path -Placenta",
+  "name" : "Adjust Path Defaults for No Path - Placenta",
   "title" : "Adjust Path T, N, M defaults if No Clin exam done or No Path procedure done",
   "notes" : "**Note 1:** A cancer may only have clinical information if no pathologic procedure (like a resection) is done.   In these cases, the Pathologic T, N and M will be left blank.  The algorithm will set the Derived Pathologic Stage Group to 99.  The Clinical T, N and M  will be used for the Combined fields.\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n**Note 2:** Similarly, a cancer may not have had a clinical workup was not done, but there is pathologic information.  In these cases, the Clinical T and N will be left blank.  The algorithm will set the Derived Cinical Stage Group based on the defaults of TX and NX.  Generally, for M0, stage group = 99; for M1, stage group = IV.  The Pathologic T, N and M  will be used for the Combined fields.\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n**Note 3:** We do not currently plan to accept Clin T, N, Path T, N and M all being blank.\n\n**Note 4:** Since Placenta does not have N, Combined N is set to 88 as it does not apply",
-  "last_modified" : "2015-10-31T05:25:46.639Z",
+  "last_modified" : "2015-11-23T22:29:37.063Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

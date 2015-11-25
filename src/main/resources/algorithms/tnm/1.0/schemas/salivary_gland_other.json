@@ -372,14 +372,14 @@
         "to" : "clin_n_in"
       } ],
       "output_mapping" : [ {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_ n"
-      }, {
         "from" : "path_n_out",
         "to" : "tmp_path_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
-      "outputs" : [ "tmp_clin_ n", "tmp_path_n" ]
+      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
     }, {
       "id" : "determine_default_m",
       "input_mapping" : [ {
@@ -739,5 +739,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "radiation_surg_seq", "tnm7_inclusions_tqn", "ssf1_jpa", "determine_default_m", "path_n_major_salivary_glands_7162", "stage_group_c_85588", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "determine_default_n", "clin_t_salivaryglandother_54081", "extension_bba", "histology", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "schema_selection_salivary_gland_other", "combined_t_no_tis", "nodes_das", "combined_t_to_summ_stage_t_4b_4e_d_9381", "concatenate_t_51262", "seer_mets_majorsalivaryglands_56861", "adjustments_for_no_clin_or_no_path_26261", "combined_n_to_summ_stage_n_headneck_salivary_46094", "salivaryglandother_t_67266", "ssf4_mpa", "ssf9_spc", "determine_combined_prefix_91402", "path_m_major_salivary_glands_13003", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "clinical_n_major_salivary_glands_19191", "combined_m", "combined_n", "ssf5_npa", "stage_group_p_54450", "year_dx_validation", "summary_stage_rpa", "ssf8_spb", "clin_m_major_salivary_glands_94644", "tnm7_stage_uqc" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-17T15:44:02.416Z"
+  "last_modified" : "2015-11-23T01:26:44.119Z"
 }

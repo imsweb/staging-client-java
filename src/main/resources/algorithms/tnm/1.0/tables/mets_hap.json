@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "SEER Mets",
   "title" : "SEER Mets",
-  "notes" : "**Note 1:**  The lesser sac of the peritoneum, or omental bursa, is the cavity in the abdomen formed by the lesser and greater omentum; the pancreas forms part of the posterior wall of the lesser sac.\n\n**Note 2::** The specific location of the mesenteric nodes determines whether they are regional or distant. If the specific location is not described, code in SEER Regional nodes.\n\n**Note 3:** Porta hepatic nodes are considered distant for Body and Tail and should be coded in SEER mets. If the specific location for hepatic nodes is not described, code in SEER Regional Nodes.",
+  "notes" : "**Note 1:**  The lesser sac of the peritoneum, or omental bursa, is the cavity in the abdomen formed by the lesser and greater omentum; the pancreas forms part of the posterior wall of the lesser sac.\n\n**Note 2:** The specific location of the mesenteric nodes determines whether they are regional or distant. If the specific location is not described, code in SEER Regional Nodes.\n\n**Note 3:** Porta hepatic nodes are considered distant for Body and Tail and should be coded in SEER Mets. If the specific location for hepatic nodes is not described, code in SEER Regional Nodes.",
   "footnotes" : "\\## Considered regional in Historic Stage\n\\**  Considered regional in 1977 Summary  Staging Guide",
-  "last_modified" : "2015-09-04T20:51:48.686Z",
+  "last_modified" : "2015-11-23T01:49:30.745Z",
   "definition" : [ {
     "key" : "seer_mets",
     "name" : "Code",

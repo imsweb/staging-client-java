@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Postorchiectomy Serum Tumor Marker S Value Table Based on SSF 13 15 16",
   "title" : "Post-orchiectomy Serum Tumor Marker S Value Table Based on SSF 13, 15, 16",
-  "notes" : "**Note**: This table calculates an intermediary value for S based on  the serum tumor markers coded in Site-Specific Factors 13, 15, and 16, as shown in the following table.   As of Version 2, the S value can be calculated even if SSF10 (LDH) is unknown forTNM 7th Edition.  The S value from this table is used in conjunction with the S value from Serum Marker S Value Table Based on SSF 1, 2, 3.  The information is combined based on year of diagnosis:  1) if year of diagnosis is less than 2010, see Combined Serum Marker S Value Table for Year of Diagnosis Less Than 2010; 2) if year of diagnosis is greater then 2009, see Combined Serum Marker S Value Table for Year of Diagnosis Greater Than 2009.",
-  "last_modified" : "2015-10-26T21:55:47.328Z",
+  "notes" : "**Note**: This table calculates an intermediary value for S based on  the serum tumor markers coded in Site-Specific Factors 13, 15, and 16, as shown in the following table.   The S value can be calculated even if SSF10 (LDH) is unknown for TNM 7th Edition.",
+  "last_modified" : "2015-11-24T19:24:15.421Z",
   "definition" : [ {
     "key" : "ssf13",
     "name" : "SSF13",

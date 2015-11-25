@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "SEER Primary Tumor",
   "title" : "SEER Primary Tumor",
-  "notes" : "**Note 1:**  In the case of multiple simultaneous tumors, code the tumor with greatest extension.",
+  "notes" : "**Note:**  In the case of multiple simultaneous tumors, code the tumor with greatest extension.",
   "footnotes" : "\\## Considered regional in Historic Stage\n\\*** Considered distant in 1977 Summary Staging Guide",
-  "last_modified" : "2015-09-04T20:51:39.583Z",
+  "last_modified" : "2015-11-24T17:10:36.093Z",
   "definition" : [ {
     "key" : "seer_primary_tumor",
     "name" : "Code",

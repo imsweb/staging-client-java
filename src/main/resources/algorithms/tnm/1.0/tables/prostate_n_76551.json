@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Clin N Prostate",
   "title" : "Clinical N",
-  "notes" : "**Note:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in distant metastasis.\n\n**Regional lymph nodes (includes contralateral or bilateral lymph nodes):**\n\n    Iliac, NOS:\n        External\n        Internal (hypogastric), NOS:\n            Obturator\n    Pelvic, NOS\n    Periprostatic\n    Sacral, NOS:\n        Lateral (laterosacral)\n        Middle (promontorial)(Gerota's node)\n        Presacral",
-  "last_modified" : "2015-11-16T20:19:49.711Z",
+  "notes" : "**Note:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in distant metastasis.\n\n**Regional lymph nodes (includes contralateral or bilateral lymph nodes):**\n\n    Iliac, NOS:\n        External\n        Internal (hypogastric), NOS:\n            Obturator\n    Pelvic, NOS\n    Periprostatic\n    Sacral, NOS:\n        Lateral (laterosacral)\n        Middle (promontorial) (Gerota's node)\n        Presacral",
+  "last_modified" : "2015-11-24T03:41:50.574Z",
   "definition" : [ {
     "key" : "clin_n",
     "name" : "Clinical N",

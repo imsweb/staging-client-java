@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
-  "notes" : "**Note 1:** Extraosseous plasmacytomas (9734), especially those in the respiratory tract, may metastasize to regional lymph nodes. Use code 100 to document SEER regional lymph node metastasis. \n\n**Note 2:** Use code 987, not applicable, for the following histologies: Plasmacytoma, NOS (9731) and multiple myeloma (9732).",
-  "last_modified" : "2015-09-04T20:52:16.379Z",
+  "notes" : "**Note 1:** Extraosseous plasmacytomas (9734), especially those in the respiratory tract, may metastasize to regional lymph nodes. Use code 100 for SEER Regional Nodes to document regional lymph node metastasis. \n\n**Note 2:** Use code 987, not applicable, for the following histologies: Plasmacytoma, NOS (9731) and multiple myeloma (9732).",
+  "last_modified" : "2015-11-22T05:12:16.132Z",
   "definition" : [ {
     "key" : "seer_nodes",
     "name" : "Code",
