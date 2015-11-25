@@ -86,6 +86,26 @@ public class StagingDataProviderTest {
         Assert.assertEquals(5, ranges.size());
         Assert.assertEquals("", ranges.get(4).getLow());
         Assert.assertEquals("", ranges.get(4).getHigh());
+
+        ranges = StagingDataProvider.splitValues("p0I-");
+        Assert.assertEquals(1, ranges.size());
+        Assert.assertEquals("p0I-", ranges.get(0).getLow());
+        Assert.assertEquals("p0I-", ranges.get(0).getHigh());
+
+        ranges = StagingDataProvider.splitValues("N0(mol-)");
+        Assert.assertEquals(1, ranges.size());
+        Assert.assertEquals("N0(mol-)", ranges.get(0).getLow());
+        Assert.assertEquals("N0(mol-)", ranges.get(0).getHigh());
+
+        ranges = StagingDataProvider.splitValues("1-21");
+        Assert.assertEquals(1, ranges.size());
+        Assert.assertEquals("1-21", ranges.get(0).getLow());
+        Assert.assertEquals("1-21", ranges.get(0).getHigh());
+
+        ranges = StagingDataProvider.splitValues("21-111");
+        Assert.assertEquals(1, ranges.size());
+        Assert.assertEquals("21-111", ranges.get(0).getLow());
+        Assert.assertEquals("21-111", ranges.get(0).getHigh());
     }
 
     @Test

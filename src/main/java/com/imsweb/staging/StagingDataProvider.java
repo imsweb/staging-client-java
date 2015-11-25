@@ -309,9 +309,7 @@ public abstract class StagingDataProvider implements DataProvider {
                     // The problem is that if something is entered incorrectly and was supposed to be a range, we will not process it correctly.  We
                     // may need to revisit this issue later.
                     String[] parts = range.split("-");
-                    if (parts.length == 1)
-                        convertedRanges.add(new StagingStringRange(parts[0].trim(), parts[0].trim()));
-                    else if (parts.length == 2) {
+                    if (parts.length == 2) {
                         // don't worry about length differences if one of the parts is a context variable
                         if (parts[0].trim().length() != parts[1].trim().length() && !DecisionEngine.isReferenceVariable(parts[0].trim()) && !DecisionEngine.isReferenceVariable(parts[1].trim()))
                             convertedRanges.add(new StagingStringRange(range.trim(), range.trim()));
