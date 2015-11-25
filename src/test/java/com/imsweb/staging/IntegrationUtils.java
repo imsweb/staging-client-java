@@ -63,8 +63,8 @@ public final class IntegrationUtils {
     }
 
     public static IntegrationResult processSchemaSelection(final Staging staging, String fileName, InputStream is) throws IOException, InterruptedException {
-        // initialize the threads pool
-        int n = Runtime.getRuntime().availableProcessors() + 1;
+        // initialize the threads pool (don't use more than 9 threads)
+        int n = Math.min(9, Runtime.getRuntime().availableProcessors() + 1);
         ExecutorService pool = new ThreadPoolExecutor(n, n, 5, TimeUnit.SECONDS, new LinkedBlockingDeque<Runnable>(1000), new CallerRunsPolicy());
 
         Stopwatch stopwatch = Stopwatch.createStarted();
