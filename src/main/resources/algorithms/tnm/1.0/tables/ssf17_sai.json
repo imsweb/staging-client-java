@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 17",
   "subtitle" : "Circulating Tumor Cells (CTC) and Method of Detection",
   "notes" : "**Note 1:**  Circulating tumor cells (CTCs) are isolated tumor cells (ITCs) found in the blood distant from the breast.\n\n**Note 2:**  Immunomagnetic separation (IMS) and reverse transcription polymerase chain reaction (RT-PCR) are two components of a laboratory process for identifying very small amounts of tumor cells in tissue.  In the IMS process, paramagnetic beads coated with antibodies bind to antigens on tumor cells, which are removed and concentrated by being passed through a magnetic field.  RT-PCR is then used to amplify the genetic material to a detectable level.\n\n**Note 3:**  Code the results to the test type as expressed in the medical record.  Give priority to \"IMS\" if the report uses both expressions for test type.",
-  "last_modified" : "2015-10-30T18:48:41.726Z",
+  "last_modified" : "2015-11-25T20:26:08.810Z",
   "definition" : [ {
     "key" : "ssf17",
     "name" : "Code",

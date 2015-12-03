@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "SEER Mets",
   "title" : "SEER Mets",
-  "last_modified" : "2015-09-04T20:52:16.461Z",
+  "last_modified" : "2015-11-26T17:30:46.002Z",
   "definition" : [ {
     "key" : "seer_mets",
     "name" : "Code",
@@ -22,5 +22,5 @@
     "name" : "Summary Stage 2017 M",
     "type" : "ENDPOINT"
   } ],
-  "rows" : [ [ "98", "Not applicable: Information not collected for this schema", "", "VALUE:NA" ] ]
+  "rows" : [ [ "88", "Not applicable: Information not collected for this schema", "", "VALUE:NA" ] ]
 }

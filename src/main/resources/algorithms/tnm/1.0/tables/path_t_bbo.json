@@ -5,7 +5,7 @@
   "name" : "Path T Prostate",
   "title" : "Pathologic T",
   "notes" : "**Note 1:** TNM does not include an in situ category for prostate tumors. Assign 88 and behavior code /2 for in situ tumors.\n\n**Note 2:** T1 (T1a, T1b, T1c and T1 [NOS]) are only used for clinical evaluation of prostate tumors.  \n\n**Note 3:** When prostate cancer is an incidental finding during a prostatectomy for other reasons (for example, a cystoprostatectomy for bladder cancer), use the appropriate code for the extent of disease found (for example, involvement in one lobe, both lobes, or more)\n\n**Note 4:** When the apical margin, distal urethral margin, bladder base margin, or bladder neck margin is involved and there is no extracapsular extension, assign a pT2.\n\n**Note 5:** Invasion into the prostatic apex or into (but not beyond) the prostatic capsule is not classified as T3, but as T2",
-  "last_modified" : "2015-11-24T03:49:02.757Z",
+  "last_modified" : "2015-11-25T20:26:27.529Z",
   "definition" : [ {
     "key" : "path_t",
     "name" : "Pathologic T",

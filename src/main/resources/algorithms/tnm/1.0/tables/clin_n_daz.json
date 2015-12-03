@@ -5,7 +5,7 @@
   "name" : "Clin N Fallopian Tube",
   "title" : "Clinical N",
   "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field.  Regional nodes include bilateral and contralateral involvement of named nodes.  Distant nodes, including presacral and lateral sacral (laterosacral) nodes, are coded in distant metastasis. \n\n**Note 2:**  The Federation Internationale de Gynecologie et d'Obstetrique (FIGO) Stage IIIC is assigned based on tumor extension and/or regional lymph node involvement.  Code Regional Lymph Nodes based on a physician's statement of FIGO Stage IIIC  if  the stage value is assigned because of regional lymph node involvement or there is no indication of the basis.\n\n**Note 3:**  If either exploratory or definitive surgery is done with no mention of lymph nodes, assume nodes are negative.\n\n**Note 4:**  If the clinician says \"adnexa palpated\" but does not mention lymph nodes, assume lymph nodes are not involved.\n\n**Regional lymph nodes:**\n\n    Aortic, NOS:\n        Lateral (lumbar)\n        Para-aortic\n        Periaortic   \n    Iliac, NOS:\n        Common\n        External\n        Internal (hypogastric)\n            Obturator\n    Inguinal\n    Pelvic, NOS\n    Retroperitoneal",
-  "last_modified" : "2015-11-16T20:19:37.467Z",
+  "last_modified" : "2015-11-25T20:26:02.194Z",
   "definition" : [ {
     "key" : "clin_n",
     "name" : "Clinical N",

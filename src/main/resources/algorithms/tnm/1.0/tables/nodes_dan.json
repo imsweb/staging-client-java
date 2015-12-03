@@ -6,7 +6,7 @@
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in SEER Mets. \n\n**Note 2:**  One or more malignant satellite peritumoral nodules in the pericolorectal adipose tissue of a primary carcinoma without histologic evidence of residual lymph node in the nodule(s) may represent discontinuous spread, venous invasion with extravascular spread, or a totally replaced lymph node. These are tumor deposits. Code 300 for lymph node involvement WITH or WITHOUT tumor deposits.\n\n**Note 3:**  Inferior mesenteric nodes are coded in SEER Mets for cecum, ascending colon, transverse colon, and hepatic flexure. Superior mesenteric nodes are coded in SEER Mets for all colon sites.",
   "footnotes" : "Â¥ Considered distant for splenic flexure in Historic Stage\n\\### Considered distant in Historic Stage",
-  "last_modified" : "2015-11-17T01:57:49.798Z",
+  "last_modified" : "2015-11-25T20:26:01.483Z",
   "definition" : [ {
     "key" : "seer_nodes",
     "name" : "Code",

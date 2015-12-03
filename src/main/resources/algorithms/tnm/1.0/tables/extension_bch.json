@@ -5,7 +5,7 @@
   "name" : "SEER Primary Tumor",
   "title" : "SEER Primary Tumor",
   "notes" : "**Note 1:**  An \"E\" lesion is defined as disease that involves extralymphatic site(s), or sites other than lymph nodes and other lymphatic structures.  Other lymphatic structures include spleen (see Note 4), thymus gland (C379), and Waldeyer's ring (tonsils) (C024, C090-C099, C111, C142).  Any lymphatic structure (other than spleen) is coded the same as a lymph node region. \n \n**Note 2:**  While spleen is considered a lymphatic structure, it is coded differently. \"S\" equals spleen involvement.\n\n**Note 3:**  If there is no mention of lymphatic or extralymphatic involvement but several diagnostic procedures were done, interpret as no involvement.\n\n**Note 4:**  Involvement of adjacent soft tissue does not alter the classification.",
-  "last_modified" : "2015-11-18T23:57:41.816Z",
+  "last_modified" : "2015-11-25T20:26:05.618Z",
   "definition" : [ {
     "key" : "seer_primary_tumor",
     "name" : "Code",

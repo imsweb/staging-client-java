@@ -5,7 +5,7 @@
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:** Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in SEER Mets. \n\n**Note 2:**  Regional lymph nodes are defined as those in the vicinity of the primary tumor.\n\n**Note 3:**  Regional lymph node involvement is rare.  For this schema, if there is no mention of lymph node involvement clinically, assume that lymph nodes are negative.  Code unknown (999) only when there is no available information on the extent of the patient's disease, for example when a lab-only case is abstracted from a biopsy report and no clinical history is available.",
-  "last_modified" : "2015-09-04T20:51:36.022Z",
+  "last_modified" : "2015-11-25T20:26:13.132Z",
   "definition" : [ {
     "key" : "seer_nodes",
     "name" : "Code",

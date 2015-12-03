@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 11",
   "subtitle" : "Poorly Differentiated Tumor Percentage",
   "notes" : "**Note 1:**  Record the exact percentage of the primary tumor that is poorly differentiated as documented in the pathology report.\n\n**Note 2:**  For values greater than zero and less than 1%, round to 001. \n* For codes 001 to 100, round values to the nearest percent.",
-  "last_modified" : "2015-11-19T16:10:02.536Z",
+  "last_modified" : "2015-11-25T20:26:04.729Z",
   "definition" : [ {
     "key" : "ssf11",
     "name" : "Code",

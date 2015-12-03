@@ -6,7 +6,7 @@
   "title" : "Clinical T",
   "notes" : "**Note 1:**  Ciliary body and Iris are both included in the ICD-O-3 site code of C694, but they are staged with different criteria by TNM.  The Schema Discriminator is used to select the schema appropriate for coding extension for melanoma of the iris.  \n\n**Note 2:**  Uveal melanomas arise most commonly in the choroid, less frequently in the ciliary body, and least often in the iris.  Melanomas of the iris tend to be small, and those arising from or extending to the ciliary body typically are large.\n\n**Note 3:** TNM does not include an in situ category for iris tumors. Assign 88 and behavior code /2 for in situ tumors.\n\n**Note 4:** Iris melanomas originate from, and are predominantly located in, this region of the uvea. If less than one-half of the tumor volume is located within the iris, the tumor may have originated in the ciliary body and consideration should be given to classifying it accordingly. (1)",
   "footnotes" : "(1) International Union Against Cancer (UICC) *TNM Classification of Malignant Tumors,* 7th ed., Sobin, LH, Gospodarowicz, M, Wittekind, CH, eds. New York: Wiley, 2009, pg., 285",
-  "last_modified" : "2015-11-20T03:38:41.324Z",
+  "last_modified" : "2015-11-25T20:26:45.824Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

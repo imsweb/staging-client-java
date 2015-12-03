@@ -5,7 +5,7 @@
   "name" : "Stop if No Clin and No Path",
   "title" : "Stop if neither Clin nor Path were Captured",
   "notes" : "**Note:** We do not currently plan to accept records where Clin T, N, Path T, N and M are all blank.   All Derived fields will be left blank.",
-  "last_modified" : "2015-11-02T17:34:43.607Z",
+  "last_modified" : "2015-11-25T20:26:26.411Z",
   "definition" : [ {
     "key" : "clin_stage_group",
     "name" : "Derived Clin Stage Group",

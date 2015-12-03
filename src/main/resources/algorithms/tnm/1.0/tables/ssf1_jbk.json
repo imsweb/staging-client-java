@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 1",
   "subtitle" : "Tumor Size",
   "notes" : "**Note 1:**  Code the largest dimension of the tumor.  Record the actual measurement in tenths of millimeters.  \n\n**Note 2:**  Code the specific tumor size as stated in the medical record.  Use code 991 or 992 if the physician's statement about T value is the only information available about the size of the tumor.",
-  "last_modified" : "2015-10-30T18:48:42.756Z",
+  "last_modified" : "2015-11-25T20:25:49.690Z",
   "definition" : [ {
     "key" : "ssf1",
     "name" : "Code",

@@ -7,7 +7,7 @@
   "subtitle" : "Serum Lactate Dehydrogenase (LDH)",
   "notes" : "**Note 1:**  Per AJCC, \"To confirm the elevated serum [lactate dehydrogenase] LDH for staging purposes, it is recommended to obtain two or more determinations obtained more than 24 [hours] h apart, since an elevated serum LDH on a single determination can be falsely positive as a result of hemolysis or other factors unrelated to melanoma metastases.\" (1)\n\n**Note 2:**  Positive results from two laboratory tests are required to code a positive value in this field. If the first test is positive and the second test is negative, code the results as negative or within normal limits, unless an additional test with positive results is performed.  \n* If the first test is positive and there is no second test, record 998 if it is known that a second test was not performed; code 999 if there is no information about a second test. \n* If the only test is negative or within normal limits, code the results from the single test.\n\n**Note 3:**  Record the range for the positive LDH value prior to treatment or within six weeks of diagnosis.Â  Give priority to the first positive test performed.Â  \n* The information should be taken from the same test used to code Site-Specific Factor 5 and Site-Specific Factor 6.",
   "footnotes" : "(1) American Joint Committee on Cancer., & Edge, S.B. (2010) *AJCC Cancer Staging Manual (7th ed.)*. New York; London: Springer, pg. 334",
-  "last_modified" : "2015-11-19T15:11:53.744Z",
+  "last_modified" : "2015-11-25T20:26:14.989Z",
   "definition" : [ {
     "key" : "ssf4",
     "name" : "Code",

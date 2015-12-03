@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 3",
   "subtitle" : "International Prognostic Index (IPI)",
   "notes" : "**Note 1:** The International Prognostic Index (IPI) has been developed for lymphomas and predicts outcome based on the following adverse factors:\n\n* Age greater than or equal to 60 years \n* Ann Arbor Stage III or IV\n* More than 1 extranodal site involved \n* Patient's performance status (Eastern Cooperative Oncology Group, ECOG) 2, 3, or 4\n* Elevated serum lactate dehydrogenase (LDH) level\n\n**Note 2:** Record the IPI as stated in the medical record. Do not calculate points or assign risk. Only record points or risk if a physician has documented them. Use points over risk if both are available.\n\n**Note 3:**  There are now three indices/scores associated with lymphoma: The International Prognostic Index (IPI, Site-Specific Factor 3), the Follicular Lymphoma International Prognostic Index (FLIPI, Site-Specific Factor 4), and the International Prognostic Score (IPS) (for Hodgkin lymphomas, Site-Specific Factor 5). Physicians may use these indices/scores interchangeably. For coding:\n\n* Score identified: Value in appropriate SSF, 999 in other two SSFs;\n* Score not identified, point value 5 or less: 999 in all three SSFs;\n* Score not identified, point value 6 or 7: Value in SSF 5 (IPS), 999 in other two SSFs.",
-  "last_modified" : "2015-11-19T00:17:04.158Z",
+  "last_modified" : "2015-11-25T20:26:06.152Z",
   "definition" : [ {
     "key" : "ssf3",
     "name" : "Code",

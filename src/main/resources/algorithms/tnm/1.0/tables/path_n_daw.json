@@ -6,7 +6,7 @@
   "title" : "Pathologic N",
   "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 6 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0. (1)\n\n**Note 2:**  Code only regional lymph nodes and lymph nodes, NOS in this field.  Distant lymph nodes are coded in distant metastasis.\n\n**Note 3:** Assign N1 if regional lymph nodes are involved but there is no indication of the number of nodes involved.\n\n**Regional lymph nodes for small intestine**\n\n**All small intestine sites**\n\n    Regional lymph nodes, NOS\n    Lymph nodes, NOS\n\n**Duodenum primaries only (C170):**\n\n    Duodenal\n    Gastroduodenal\n    Hepatic\n    Pancreaticoduodenal\n    Pericholodochal (common bile duct)\n    Pyloric: infrapyloric, subpyloric\n    Superior mesenteric\n       \n**Jejunum primaries only (C171):**\n\n     Mesenteric, NOS:\n     Superior mesenteric\n\n**Ileum primaries only (C172):**\n\n     Cecal (anterior, posterior, retrocecal) \n     Ileocecal       \n     Mesenteric, NOS\n     Superior mesenteric",
   "footnotes" : "(1) International Union Against Cancer (UICC) *TNM Classification of Malignant Tumors,* 7th ed., Sobin, LH, Gospodarowicz, M, Wittekind, CH, eds. New York: Wiley, 2009, pg., 84",
-  "last_modified" : "2015-11-16T20:19:21.959Z",
+  "last_modified" : "2015-11-25T20:26:44.627Z",
   "definition" : [ {
     "key" : "path_n",
     "name" : "Pathologic N",

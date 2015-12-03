@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 20",
   "subtitle" : "Assessment of Positive Distant Metastases",
   "notes" : "**Note 1:**  Code the assessment method used for determining the presence of metastasis as coded in the Clinical M and Path M fields (this could be updated to include specific mets at dx fields that we may add).Â  \n\nIf there are no mets (cM0), this field must be coded 000.\n\n**Note 2:**  If multiple methods of assessments determined positive metastases, use the highest code that applies.",
-  "last_modified" : "2015-11-16T03:35:38.187Z",
+  "last_modified" : "2015-11-25T20:26:08.589Z",
   "definition" : [ {
     "key" : "ssf20",
     "name" : "Code",

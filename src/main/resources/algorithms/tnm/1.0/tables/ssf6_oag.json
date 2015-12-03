@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 6",
   "subtitle" : "Total Bilirubin Value",
   "notes" : "**Note 1:**  The Model for End-Stage Liver Disease (MELD) is a numerical scale used to determine how urgently a patient with liver disease needs a liver transplant within the next three months.  Results from three routine lab tests are used to calculate the MELD score.  Bilirubin, one of the tests, measures how effectively the liver excretes bile.\n\n**Note 2:**  Assay of total bilirubin includes conjugated (direct) and unconjugated (indirect) bilirubin.  Record the total bilirubin value for this data item.\n\n**Note 3:**  Normal values may vary from lab to lab. The typical human reference ranges are 0.5 to 1.0 milligrams/deciliter (mg/dl) (about 45-90 micromoles/liter (umol/l) for women and 0.7 to 1.2 mg/dl (60-110 umol/l) for men.\n\n**Note 4:**  Record to the nearest tenth of mg/dl or umol/l the highest total bilirubin value prior to treatment. \n* Record a total bilirubin value of 0.53 mg/dl as 005\n* Record a value of 5.3 umol/l as 053\n\n**Note 5:**  Record the total bilirubin unit of measure for the same laboratory test in Site-Specific Factor 7.\n\n**Note 6:**  Use code 997 if the test was done but the actual value is not stated.  Use code 997 if the test was done but the unit is not in mg/dl or umol/l.",
-  "last_modified" : "2015-11-18T22:36:22.341Z",
+  "last_modified" : "2015-11-25T20:26:34.640Z",
   "definition" : [ {
     "key" : "ssf6",
     "name" : "Code",

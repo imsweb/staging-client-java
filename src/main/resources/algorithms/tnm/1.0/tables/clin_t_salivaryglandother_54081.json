@@ -5,8 +5,8 @@
   "name" : "Clin T SalivaryGlandOther",
   "title" : "Clinical T",
   "notes" : "**Note 1:** TNM does not include an in situ category for salivary gland other tumors. Assign 88 and behavior code /2 for in situ tumors.\n\n**Note 2:** Tumor size must be known to assign a value of T1, T2 or T3 without extraparenchymal extension. You may use a physicianâs statement of the T category if this is the only information in the medical record. If the tumor appears to be in the T1, T2 or T3 categories, but no size or category is specified, assign TX.\n\n**Note 3:**  For the following descriptions, assign the appropriate T category (T1, T2 or T3) based on the tumor size. \n\n    Invasive tumor confined to gland/duct of origin\n    Microscopic extraparenchymal extension ONLY to periglandular soft/connective tissue\n\n    Confined to salivary gland, NOS\n    Localized, NOS\n   \n**Note 4:** Extraparenchymal extension is clinical or macroscopic evidence of invasion of soft tissues or nerve, except those listed under T4a and T4b. Microscopic evidence alone does not constitute extraparenchymal extension for classification purposes.\n\n**Note 5:**  Periosteum is a fibrous membrane that wraps the outer surface of bones.  Mucoperiosteum is a compound structure of mucous membrane and periosteum.  Cortical bone is the dense compact outer layer of bone.",
-  "footnotes" : "*T4 is not defined by UICC in the 7th edition. Approval has been provided by UICC to use \"Tumor invades bone, nerve or extrinsic deep muscles\" as T4.",
-  "last_modified" : "2015-11-24T06:13:14.015Z",
+  "footnotes" : "\\* T4 is not defined by UICC in the 7th edition. Approval has been provided by UICC to use \"Tumor invades bone, nerve or extrinsic deep muscles\" as T4.",
+  "last_modified" : "2015-11-25T21:40:31.534Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

@@ -6,7 +6,7 @@
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in SEER Mets.\n\n**Note 2:**  Bilateral or contralateral nodes are considered regional nodes for head, neck, and truncal tumors with bidirectional drainage to primary nodal basins, as shown on lymphoscintigraphy.  Truncal tumors may also drain to both cephalad and caudal primary nodal basins as shown on lymphoscintigraphy.  Clinical assessment of bilateral/contralateral or cephalad/caudal regional nodal involvement is required for tumors where lymphoscintigraphy is not performed.\n\n**Note 3:** Contiguous or secondary nodal basins are the next nodal drainage basins beyond the primary nodal basins.  Secondary basins are considered distant for Summary Stage (see SEER Mets).",
   "footnotes" : "\\###  Considered distant in Historic Stage\n\\***   Considered distant in 1977 Summary Staging Guide",
-  "last_modified" : "2015-11-24T16:11:54.468Z",
+  "last_modified" : "2015-11-25T20:25:48.730Z",
   "definition" : [ {
     "key" : "seer_nodes",
     "name" : "Code",

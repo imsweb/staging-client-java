@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 25",
   "subtitle" : "Schema Discriminator: Melanoma Ciliary Body/Melanoma Iris",
   "notes" : "**Note:**  For cases coded to melanoma with primary site code C694 Ciliary Body/Iris, code the site in which the tumor arose. This information will be used to determine which of two schemas will be used to assign staging values to the case.",
-  "last_modified" : "2015-10-20T19:51:35.666Z",
+  "last_modified" : "2015-11-25T20:25:43.285Z",
   "definition" : [ {
     "key" : "ssf25",
     "name" : "Code",

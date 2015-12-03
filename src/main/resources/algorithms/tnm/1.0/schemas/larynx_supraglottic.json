@@ -373,7 +373,7 @@
         "to" : "tmp_combined_t"
       } ],
       "inputs" : [ "tmp_path_t", "tmp_clin_t" ],
-      "outputs" : [ "source_t", "tmp_path_t", "ss2017_t", "tmp_clin_t", "tmp_combined_t" ]
+      "outputs" : [ "source_t", "tmp_path_t", "tmp_clin_t", "tmp_combined_t" ]
     }, {
       "id" : "determine_default_n",
       "input_mapping" : [ {
@@ -387,11 +387,17 @@
         "from" : "path_n_out",
         "to" : "tmp_path_n"
       }, {
+        "from" : "source_n_out",
+        "to" : "source_n"
+      }, {
         "from" : "clin_n_out",
         "to" : "tmp_clin_n"
+      }, {
+        "from" : "combined_n_out",
+        "to" : "tmp_combined_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
-      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+      "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
     }, {
       "id" : "determine_default_m",
       "input_mapping" : [ {
@@ -418,7 +424,7 @@
         "to" : "tmp_path_m"
       } ],
       "inputs" : [ "tmp_path_m", "tmp_clin_m" ],
-      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_combined_m", "tmp_clin_m", "source_m" ]
+      "outputs" : [ "tmp_path_m", "tmp_combined_m", "tmp_clin_m", "source_m" ]
     }, {
       "id" : "tnm7_stage_upt",
       "input_mapping" : [ {
@@ -751,5 +757,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "ssf10_spd", "ssf1_jpa", "path_m_hpb", "tnm7_stage_upt", "parse_t_2177", "concatenate_n_43246", "nodes_dcq", "histology", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "tnm7_inclusions_tpb", "combined_t_to_summ_stage_t_4b_4e_d_9381", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "extension_bau", "ssf9_spc", "systemic_surg_seq", "clin_t_larynx_supraglottic_69988", "parse_m_47057", "combined_m", "combined_n", "ssf5_npa", "summary_stage_rpa", "combined_t", "ssf8_spb", "determine_default_t", "clinical_n_head_neck_except_nasopharynx_25237", "radiation_surg_seq", "determine_default_m", "path_n_head_neck_except_nasopharynx_40357", "combined_n_to_summ_stage_n_headneck_larynxsupra_9088", "nodes_pos_fpa", "parse_n_67182", "determine_default_n", "schema_selection_larynx_supraglottic", "stage_group_p_35702", "behavior", "ssf4_mpa", "seer_mets_supraglotticlarynx_33914", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "larynx_supraglottic_t_57946", "primary_site", "year_dx_validation", "stage_group_c_51542" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-23T00:54:58.989Z"
+  "last_modified" : "2015-12-02T19:10:56.268Z"
 }

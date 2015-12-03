@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Bone",
   "title" : "Bone",
-  "notes" : "C400  Long bones of upper limb, scapula and associated joints\nC401  Short bones of upper limb and associated joints\nC402  Long bones of lower limb and associated joints\nC403  Short bones of lower limb and associated joints\nC408  Overlapping lesion of bones, joints and articular cartilage of limbs\nC409  Bone of limb, NOS\nC410  Bones of skull and face and associated joints (excludes mandible C411)\nC411  Mandible\nC412  Vertebral column (excludes sacrum and coccyx C414)\nC413  Rib, sternum, clavicle and associated joints\nC414  Pelvic bones, sacrum, coccyx and associated joints\nC418  Overlapping lesion of bones, joints and articular cartilage\nC419  Bone, NOS\n\n**Note:**  Laterality must be coded for C400-C403, and C413-C414.  For sternum, sacrum, coccyx, and symphysis pubis, laterality is coded 0.",
+  "notes" : "C400  Long bones of upper limb, scapula and associated joints\nC401  Short bones of upper limb and associated joints\nC402  Long bones of lower limb and associated joints\nC403  Short bones of lower limb and associated joints\nC408  Overlapping lesion of bones, joints and articular cartilage of limbs\nC409  Bone of limb, NOS\nC410  Bones of skull and face and associated joints (excludes mandible C411)\nC411  Mandible\nC412  Vertebral column (excludes sacrum and coccyx C414)\nC413  Rib, sternum, clavicle and associated joints\nC414  Pelvic bones, sacrum, coccyx and associated joints\nC418  Overlapping lesion of bones, joints and articular cartilage\nC419  Bone, NOS\n\n**Note 1:**  Laterality must be coded for C400-C403, and C413-C414.  For sternum, sacrum, coccyx, and symphysis pubis, laterality is coded 0.\n\n**Note 2: ** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Bones, Joints, and Articular Cartilage* chapter on page 168 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_bone",
   "inputs" : [ {
     "key" : "year_dx",
@@ -338,7 +338,7 @@
         "to" : "tmp_combined_t"
       } ],
       "inputs" : [ "tmp_path_t", "tmp_clin_t" ],
-      "outputs" : [ "source_t", "tmp_path_t", "ss2017_t", "tmp_clin_t", "tmp_combined_t" ]
+      "outputs" : [ "source_t", "tmp_path_t", "tmp_clin_t", "tmp_combined_t" ]
     }, {
       "id" : "determine_default_n",
       "input_mapping" : [ {
@@ -352,11 +352,17 @@
         "from" : "path_n_out",
         "to" : "tmp_path_n"
       }, {
+        "from" : "source_n_out",
+        "to" : "source_n"
+      }, {
         "from" : "clin_n_out",
         "to" : "tmp_clin_n"
+      }, {
+        "from" : "combined_n_out",
+        "to" : "tmp_combined_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
-      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+      "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
     }, {
       "id" : "determine_default_m",
       "input_mapping" : [ {
@@ -383,7 +389,7 @@
         "to" : "tmp_path_m"
       } ],
       "inputs" : [ "tmp_path_m", "tmp_clin_m" ],
-      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_combined_m", "tmp_clin_m", "source_m" ]
+      "outputs" : [ "tmp_path_m", "tmp_combined_m", "tmp_clin_m", "source_m" ]
     }, {
       "id" : "bone_histologies_stage",
       "input_mapping" : [ {
@@ -716,5 +722,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "extension_bbq", "radiation_surg_seq", "path_t_bone_59009", "nodes_dbh", "determine_default_m", "tnm_7_stage_ewing_17708", "tnm_7_stage_not_ewing_14573", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "clin_m_hav", "parse_n_67182", "ssf3_lay", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "path_m_hav", "combined_t_no_tis", "mets_hav", "stage_group_c_76779", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "combined_t_to_summ_stage_t_3_4e_d_76738", "clin_n_bone_13753", "bone_histologies_stage", "stage_group_p_84556", "determine_combined_prefix_91402", "clin_t_bone_70163", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "ssf2_kbl", "ssf1_jbx", "parse_m_47057", "primary_site", "tnm7_inclusions_tpy", "path_n_bone_31243", "combined_m", "combined_n", "ssf4_mbd", "grade", "year_dx_validation", "summary_stage_rpa", "schema_selection_bone" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-16T01:13:31.660Z"
+  "last_modified" : "2015-12-02T19:10:50.375Z"
 }

@@ -357,7 +357,7 @@
         "to" : "tmp_combined_t"
       } ],
       "inputs" : [ "tmp_path_t", "tmp_clin_t" ],
-      "outputs" : [ "source_t", "tmp_path_t", "ss2017_t", "tmp_clin_t", "tmp_combined_t" ]
+      "outputs" : [ "source_t", "tmp_path_t", "tmp_clin_t", "tmp_combined_t" ]
     }, {
       "id" : "determine_default_n",
       "input_mapping" : [ {
@@ -371,11 +371,17 @@
         "from" : "path_n_out",
         "to" : "tmp_path_n"
       }, {
+        "from" : "source_n_out",
+        "to" : "source_n"
+      }, {
         "from" : "clin_n_out",
         "to" : "tmp_clin_n"
+      }, {
+        "from" : "combined_n_out",
+        "to" : "tmp_combined_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
-      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+      "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
     }, {
       "id" : "determine_default_m",
       "input_mapping" : [ {
@@ -402,7 +408,7 @@
         "to" : "tmp_path_m"
       } ],
       "inputs" : [ "tmp_path_m", "tmp_clin_m" ],
-      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_combined_m", "tmp_clin_m", "source_m" ]
+      "outputs" : [ "tmp_path_m", "tmp_combined_m", "tmp_clin_m", "source_m" ]
     }, {
       "id" : "appendix_grade_category_calculation",
       "inputs" : [ "ssf11" ],
@@ -739,5 +745,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "path_n_dfc", "determine_default_t", "radiation_surg_seq", "ssf12_sbu", "nodes_dfc", "determine_default_m", "appendix_grade_category_calculation", "nodes_pos_fpa", "mets_hcf", "parse_t_2177", "concatenate_n_43246", "ssf7_spf", "ssf1_jpf", "parse_n_67182", "determine_default_n", "extension_bfg", "stage_group_p_96481", "ssf3_lpe", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "tnm7_inclusions_tpc", "behavior", "clin_t_appendix_24847", "ssf10_spi", "tnm7_stage_uar", "concatenate_t_51262", "clin_m_hcf", "adjustments_for_no_clin_or_no_path_26261", "ssf4_mpb", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "schema_selection_appendix", "parse_m_47057", "ssf11_sbt", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "path_m_hcf", "year_dx_validation", "path_t_appendix_94760", "summary_stage_rpa", "clin_n_dfc", "combined_t", "stage_group_c_37137" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-23T00:36:38.982Z"
+  "last_modified" : "2015-12-02T19:10:49.687Z"
 }

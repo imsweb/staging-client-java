@@ -5,8 +5,8 @@
   "name" : "Clin T Melanoma Larynx Glottic",
   "title" : "Clinical T",
   "notes" : "**Note 1:**  TNM does not include an in situ category for mucosal melanoma tumors. Assign 88 and behavior code /2 for in situ tumors.\n\n**Note 2:**  Mucosal melanomas are aggressive tumors, therefore, T1 and T2 are omitted, as are Stages I and II. \n\n**Note 3:**  Assign T3 for localized tumor when no other information is available or for extension involving the mucosa only of adjacent sites.\n\n**Note 4:**  Assign T4a or T4b for extension involving the deeper tissues of the primary or adjacent sites.",
-  "footnotes" : "*T4 is not defined by UICC in the 7th edition. Approval has been provided by UICC to use \"Tumor invades bone, nerve or extrinsic deep muscles\" as T4.",
-  "last_modified" : "2015-11-20T04:17:24.319Z",
+  "footnotes" : "\\* T4 is not defined by UICC in the 7th edition. Approval has been provided by UICC to use \"Tumor invades bone, nerve or extrinsic deep muscles\" as T4.",
+  "last_modified" : "2015-11-25T20:54:23.166Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

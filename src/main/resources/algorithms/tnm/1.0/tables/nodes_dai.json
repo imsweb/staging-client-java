@@ -5,7 +5,7 @@
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in SEER Mets.  \n\n**Note 2:**  If at mediastinoscopy/x-ray, the description is \"mass\", \"adenopathy\", or \"enlargement\" of any of the lymph nodes named as regional, assume that at least regional lymph nodes are involved. If there is any mention of bilateral or contralateral mass, adenopathy or lymph node involvement, code under SEER Mets.\n\n**Note 3:**  The words \"no evidence of spread\" or \"remaining examination negative\" are sufficient information to consider regional lymph nodes negative in the absence of any statement about nodes.\n\n**Note 4:**  Vocal cord paralysis (resulting from involvement of recurrent branch of the vagus nerve), superior vena cava (SVC) obstruction, or compression of the trachea or the esophagus may be related to direct extension of the primary tumor or to lymph node involvement.  Generally, SEER Primary Tumor code 200 is used for these manifestations.  However, if the primary tumor is peripheral and clearly unrelated to vocal cord paralysis, SVC obstruction, or compression of the trachea or the esophagus, code these manifestations as mediastinal lymph node involvement (code 300) in SEER Regional Nodes, unless there is a statement of involvement by direct extension from the primary tumor.",
-  "last_modified" : "2015-11-18T23:42:34.647Z",
+  "last_modified" : "2015-11-25T20:25:49.402Z",
   "definition" : [ {
     "key" : "seer_nodes",
     "name" : "Code",

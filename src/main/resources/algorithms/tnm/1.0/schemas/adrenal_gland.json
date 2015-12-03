@@ -309,9 +309,6 @@
         "from" : "path_t_out",
         "to" : "tmp_path_t"
       }, {
-        "from" : "ss2017_t_out",
-        "to" : "ss2017_t"
-      }, {
         "from" : "clin_t_out",
         "to" : "tmp_clin_t"
       }, {
@@ -319,7 +316,7 @@
         "to" : "tmp_combined_t"
       } ],
       "inputs" : [ "tmp_path_t", "tmp_clin_t" ],
-      "outputs" : [ "source_t", "tmp_path_t", "ss2017_t", "tmp_clin_t", "tmp_combined_t" ]
+      "outputs" : [ "source_t", "tmp_path_t", "tmp_clin_t", "tmp_combined_t" ]
     }, {
       "id" : "determine_default_n",
       "input_mapping" : [ {
@@ -333,11 +330,17 @@
         "from" : "path_n_out",
         "to" : "tmp_path_n"
       }, {
+        "from" : "source_n_out",
+        "to" : "source_n"
+      }, {
         "from" : "clin_n_out",
         "to" : "tmp_clin_n"
+      }, {
+        "from" : "combined_n_out",
+        "to" : "tmp_combined_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
-      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+      "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
     }, {
       "id" : "determine_default_m",
       "input_mapping" : [ {
@@ -354,9 +357,6 @@
         "from" : "combined_m_out",
         "to" : "tmp_combined_m"
       }, {
-        "from" : "ss2017_m_out",
-        "to" : "ss2017_m"
-      }, {
         "from" : "clin_m_out",
         "to" : "tmp_clin_m"
       }, {
@@ -364,7 +364,7 @@
         "to" : "tmp_path_m"
       } ],
       "inputs" : [ "tmp_path_m", "tmp_clin_m" ],
-      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_combined_m", "tmp_clin_m", "source_m" ]
+      "outputs" : [ "tmp_path_m", "tmp_combined_m", "tmp_clin_m", "source_m" ]
     }, {
       "id" : "tnm7_stage_uba",
       "input_mapping" : [ {
@@ -697,5 +697,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "adrenal_m_7434", "radiation_surg_seq", "determine_default_m", "nodes_ddk", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "tnm7_stage_uba", "ssf2_kak", "stage_group_p_44348", "parse_n_67182", "determine_default_n", "stage_group_94596", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "adrenal_gland_t_18187", "combined_t_no_tis", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "extension_bdp", "concatenate_t_51262", "ssf3_laf", "path_n_adrenal_gland_53740", "adjustments_for_no_clin_or_no_path_26261", "schema_selection_adrenal_gland", "determine_combined_prefix_91402", "path_t_adrenal_gland_28077", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "combined_m", "combined_n", "year_dx_validation", "tnm7_inclusions_tqc", "path_m_hbv", "summary_stage_rpa", "mets_hbv", "adrenal_gland_n_44698" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-24T15:48:41.160Z"
+  "last_modified" : "2015-12-02T05:57:52.432Z"
 }

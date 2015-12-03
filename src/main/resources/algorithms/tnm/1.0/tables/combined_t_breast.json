@@ -5,7 +5,7 @@
   "name" : "Combined T Breast",
   "title" : "Combined T for Breast",
   "notes" : "For Breast, which has a special case, using clinical and pathologic T, calculate Combined T and Summary Stage T.  The Tis rules do not apply to Breast",
-  "last_modified" : "2015-10-31T13:07:50.062Z",
+  "last_modified" : "2015-11-25T20:26:57.646Z",
   "definition" : [ {
     "key" : "radiation_surg_seq",
     "name" : "RX Summ Surgery/Radiation Sequence",

@@ -6,7 +6,7 @@
   "title" : "Pathologic N",
   "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 12 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0. (1)\n\n**Note 2:**  Code only regional nodes, and nodes, NOS, in this field.  Distant nodes are coded in distant metastasis.\n\n**Note 3:**  One or more malignant satellite peritumoral nodules or tumor deposits (TD) in the periappendiceal adipose tissue of a primary carcinoma without histologic evidence of residual lymph node in the nodule may represent discontinuous spread, venous invasion with extravascular spread, or a totally replaced lymph node.    Replaced nodes are counted as positive nodes and coded in Regional Lymph Nodes.  TD representing discontinuous spread or venous invasion are coded in T, and the number of TD representing discontinuous spread or venous invasion is coded in Site-Specific Factor 4.\n\n**Regional lymph nodes for appendix:**\n\n    Celiac\n        Anterior (prececal)\n        Ileocolic\n        Posterior (retrocecal)\n        Right colic\n    Colic, NOS\n    Epicolic (adjacent to bowel wall)\n    Mesenteric, NOS\n    Mesocolic, NOS\n    Paracolic/pericolic\n\n    Regional lymph nodes, NOS\n    Lymph nodes, NOS",
   "footnotes" : "(1) International Union Against Cancer (UICC) *TNM Classification of Malignant Tumors,* 7th ed., Sobin, LH, Gospodarowicz, M, Wittekind, CH, eds. New York: Wiley, 2009, pg., 88",
-  "last_modified" : "2015-11-16T20:19:31.146Z",
+  "last_modified" : "2015-11-25T20:26:03.855Z",
   "definition" : [ {
     "key" : "path_n",
     "name" : "Pathologic N",

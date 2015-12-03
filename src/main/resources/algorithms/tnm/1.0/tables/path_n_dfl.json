@@ -4,8 +4,9 @@
   "version" : "1.0",
   "name" : "Path N NET Small Intestine",
   "title" : "Pathologic N",
-  "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 6 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily is not met, classify as pN0.\n\n**Note 2:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in distant metastasis.\n\n**Regional lymph nodes for small intestine**\n\n**Duodenum primaries only (C170):**\n\n    Duodenal\n    Gastroduodenal\n    Hepatic\n    Pancreaticoduodenal\n    Pericholodochal (common bile duct)\n    Pyloric: infrapyloric, subpyloric\n    Superior mesenteric\n       \n**Jejunum primaries only (C171):**\n\n     Mesenteric, NOS:\n     Superior mesenteric\n\n**Ileum primaries only (C172):**\n\n     Cecal (anterior, posterior, retrocecal) \n     Ileocecal       \n     Mesenteric, NOS\n     Superior mesenteric",
-  "last_modified" : "2015-11-16T20:19:25.455Z",
+  "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 6 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily is not met, classify as pN0. (1)\n\n**Note 2:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in distant metastasis.\n\n**Regional lymph nodes for small intestine**\n\n**Duodenum primaries only (C170):**\n\n    Duodenal\n    Gastroduodenal\n    Hepatic\n    Pancreaticoduodenal\n    Pericholodochal (common bile duct)\n    Pyloric: infrapyloric, subpyloric\n    Superior mesenteric\n       \n**Jejunum primaries only (C171):**\n\n     Mesenteric, NOS:\n     Superior mesenteric\n\n**Ileum primaries only (C172):**\n\n     Cecal (anterior, posterior, retrocecal) \n     Ileocecal       \n     Mesenteric, NOS\n     Superior mesenteric",
+  "footnotes" : "(1) International Union Against Cancer (UICC) *TNM Classification of Malignant Tumors,* 7th ed., Sobin, LH, Gospodarowicz, M, Wittekind, CH, eds. New York: Wiley, 2009, pg., 84",
+  "last_modified" : "2015-11-26T19:19:11.119Z",
   "definition" : [ {
     "key" : "path_n",
     "name" : "Pathologic N",

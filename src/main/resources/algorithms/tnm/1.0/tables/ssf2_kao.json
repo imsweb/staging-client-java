@@ -5,8 +5,8 @@
   "name" : "SSF2",
   "title" : "Site-Specific Factor 2",
   "subtitle" : "Size of Metastasis in Lymph Nodes",
-  "notes" : "**Note:**  Code the size of the largest metastasis in a lymph node as documented in the pathology report, not the size of the lymph node. If the size of the metastasis is not documented, code the size of the largest involved node as documented pathologically or clinically, with pathology taking priority. \n* Do not code the size of any node(s) coded in distant metastasis.",
-  "last_modified" : "2015-11-19T16:30:36.864Z",
+  "notes" : "**Note:**  Code the size of the largest metastasis in a lymph node as documented in the pathology report, not the size of the lymph node. If the size of the metastasis is not documented, code the size of the largest involved node as documented pathologically or clinically, with pathology taking priority. \n\n* Do not code the size of any node(s) coded in distant metastasis.",
+  "last_modified" : "2015-11-25T22:10:35.792Z",
   "definition" : [ {
     "key" : "ssf2",
     "name" : "Code",

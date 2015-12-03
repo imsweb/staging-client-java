@@ -320,7 +320,7 @@
         "to" : "tmp_combined_t"
       } ],
       "inputs" : [ "tmp_path_t", "tmp_clin_t" ],
-      "outputs" : [ "source_t", "tmp_path_t", "ss2017_t", "tmp_clin_t", "tmp_combined_t" ]
+      "outputs" : [ "source_t", "tmp_path_t", "tmp_clin_t", "tmp_combined_t" ]
     }, {
       "id" : "determine_default_n",
       "input_mapping" : [ {
@@ -334,11 +334,17 @@
         "from" : "path_n_out",
         "to" : "tmp_path_n"
       }, {
+        "from" : "source_n_out",
+        "to" : "source_n"
+      }, {
         "from" : "clin_n_out",
         "to" : "tmp_clin_n"
+      }, {
+        "from" : "combined_n_out",
+        "to" : "tmp_combined_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
-      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+      "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
     }, {
       "id" : "determine_default_m",
       "input_mapping" : [ {
@@ -365,7 +371,7 @@
         "to" : "tmp_path_m"
       } ],
       "inputs" : [ "tmp_path_m", "tmp_clin_m" ],
-      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_combined_m", "tmp_clin_m", "source_m" ]
+      "outputs" : [ "tmp_path_m", "tmp_combined_m", "tmp_clin_m", "source_m" ]
     }, {
       "id" : "tnm7_stage_uaz",
       "input_mapping" : [ {
@@ -698,5 +704,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "radiation_surg_seq", "tnm7_stage_uaz", "clin_t_urethra_39553", "determine_default_m", "combined_t_to_summ_stage_t_3_3d_re_4_4e_d_45184", "nodes_pos_fpa", "ssf1_jpd", "parse_t_2177", "concatenate_n_43246", "clin_m_hpe", "parse_n_67182", "determine_default_n", "combined_n_to_summ_stage_n_84054", "extension_bdi", "histology", "stage_group_c_40902", "clin_n_urethra_47275", "concatenate_m_40642", "path_m_hpe", "tnm7_inclusions_tpb", "schema_selection_urethra", "stage_group_p_75705", "behavior", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "urethra_n_54953", "parse_m_47057", "primary_site", "urethra_t_77785", "combined_m", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t", "nodes_dbu", "seer_mets_urethra_89757" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-17T20:57:24.845Z"
+  "last_modified" : "2015-12-02T19:10:51.101Z"
 }

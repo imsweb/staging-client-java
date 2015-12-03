@@ -361,7 +361,7 @@
         "to" : "tmp_combined_t"
       } ],
       "inputs" : [ "tmp_path_t", "tmp_clin_t" ],
-      "outputs" : [ "source_t", "tmp_path_t", "ss2017_t", "tmp_clin_t", "tmp_combined_t" ]
+      "outputs" : [ "source_t", "tmp_path_t", "tmp_clin_t", "tmp_combined_t" ]
     }, {
       "id" : "determine_default_n",
       "input_mapping" : [ {
@@ -375,11 +375,17 @@
         "from" : "path_n_out",
         "to" : "tmp_path_n"
       }, {
+        "from" : "source_n_out",
+        "to" : "source_n"
+      }, {
         "from" : "clin_n_out",
         "to" : "tmp_clin_n"
+      }, {
+        "from" : "combined_n_out",
+        "to" : "tmp_combined_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
-      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+      "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
     }, {
       "id" : "determine_default_m",
       "input_mapping" : [ {
@@ -406,7 +412,7 @@
         "to" : "tmp_path_m"
       } ],
       "inputs" : [ "tmp_path_m", "tmp_clin_m" ],
-      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_combined_m", "tmp_clin_m", "source_m" ]
+      "outputs" : [ "tmp_path_m", "tmp_combined_m", "tmp_clin_m", "source_m" ]
     }, {
       "id" : "tnm7_stage_uqc",
       "input_mapping" : [ {
@@ -739,5 +745,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "radiation_surg_seq", "tnm7_inclusions_tqn", "ssf1_jpa", "determine_default_m", "path_n_major_salivary_glands_7162", "combined_n_to_summ_stage_n_headneck_parotid_66016", "stage_group_c_85588", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "determine_default_n", "histology", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "combined_t_no_tis", "combined_t_to_summ_stage_t_4b_4e_d_9381", "nodes_dcv", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "ssf4_mpa", "extension_bcv", "ssf9_spc", "determine_combined_prefix_91402", "schema_selection_parotid_gland", "path_m_major_salivary_glands_13003", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "clinical_n_major_salivary_glands_19191", "combined_m", "combined_n", "ssf5_npa", "stage_group_p_54450", "year_dx_validation", "clin_t_parotid_gland_13635", "summary_stage_rpa", "seer_mets_parotid_gland_69489", "ssf8_spb", "clin_m_major_salivary_glands_94644", "parotid_gland_t_68628", "tnm7_stage_uqc" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-23T01:23:20.090Z"
+  "last_modified" : "2015-12-02T19:10:51.909Z"
 }

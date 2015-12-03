@@ -6,7 +6,7 @@
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in SEER Mets.   \n\n**Note 2:**   Any finding of melanoma in lymph nodes, regardless of size should be coded as positive lymph nodes in this field. Isolated tumor cells only should be coded as negative lymph nodes for Summary Stage 2000 (they are positive for TNM 7th edition).\n\n**Note 3:**  Bilateral or contralateral nodes are considered regional nodes for head, neck, and truncal tumors with bidirectional drainage to primary nodal basins, as shown on lymphoscintigraphy.  Truncal tumors may also drain to both cephalad and caudal primary nodal basins as shown on lymphoscintigraphy.  Clinical assessment of bilateral/contralateral or cephalad/caudal regional nodal involvement is required for tumors where lymphoscintigraphy is not performed. \n\n**Note 4:**  Contiguous or secondary nodal basins are the next nodal drainage basins beyond the primary nodal basins.  Secondary basins are considered regional for TNM staging but may be distant for Summary Stage.  \n\n**Note 5:**  Satellite lesions/nodules or in-transit metastases are coded in this field when there is no regional lymph node involvement, or it is unknown if this is regional lymph node involvement. If both satellite nodules/in transit metastases and regional lymph nodes are present, code in SEER Mets.",
   "footnotes" : "\\### Considered distant in Historic Stage\n\\*** Considered distant in 1977 Summary Staging Guide",
-  "last_modified" : "2015-11-21T16:19:26.080Z",
+  "last_modified" : "2015-11-25T20:26:39.667Z",
   "definition" : [ {
     "key" : "seer_nodes",
     "name" : "Code",

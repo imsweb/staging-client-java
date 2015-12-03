@@ -5,7 +5,8 @@
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in SEER Mets.\n\n**Note 2:**  Bilateral nodes are considered regional nodes for tumors with bidirectional drainage to primary nodal basins, as shown on lymphoscintigraphy.  Clinical assessment of bilateral regional nodal involvement is required for tumors where lymphoscintigraphy is not performed.\n\n**Note 3:**  Contiguous or secondary nodal basins are the next nodal drainage basins beyond the primary nodal basins.  Secondary basins are considered regional for TNM staging but may be distant for Summary Stage.  \n\n**Note 4:**  Isolated tumor cells (ITCs) should be considered negative nodes for Summary Stage 2000.",
-  "last_modified" : "2015-09-04T20:51:25.554Z",
+  "footnotes" : "\\### Considered distant in Historic Stage",
+  "last_modified" : "2015-11-26T18:17:33.415Z",
   "definition" : [ {
     "key" : "seer_nodes",
     "name" : "Code",

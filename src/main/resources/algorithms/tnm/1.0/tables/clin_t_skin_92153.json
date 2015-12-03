@@ -5,7 +5,7 @@
   "name" : "Clin T Skin",
   "title" : "Clinical T",
   "notes" : "**Note 1:**  TNM 7th Edition T1 and T2 categories are based on size and high risk features and not depth of invasion or extension. The T3 category is for head and neck skin primaries only.\n\n**Note 2:**  In the case of multiple simultaneous tumors, code the tumor with the greatest extension.\n\n**Note 3:**  Skin ulceration does not alter the T category. \n\n**Note 4:** Tumor size must be known to assign a value of T1 or T2. You may use a physicianâs statement of the T category if this is the only information in the medical record. If the tumor appears to be in the T1 or T2 categories, but no size or category is specified, assign TX.\n\n**Note 5:** For the following descriptions, assign the appropriate T category (T1 or T2) based on the tumor size.\n\n    Lesion(s) confined to dermis\n    Subcutaneous tissue (through entire dermis)\n    Underlying cartilage and/or skeletal muscle\n\n    Confined to skin\n    Localized, NOS",
-  "last_modified" : "2015-11-16T20:19:22.059Z",
+  "last_modified" : "2015-11-25T20:26:52.228Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

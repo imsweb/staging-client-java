@@ -5,7 +5,7 @@
   "name" : "Concatenate T",
   "title" : "Concatenate T",
   "description" : "With the addition of the c and p prefixes to the existing codes, the prefix is parsed from the main value during calculations.  It must be reattached for the final Combined T value.",
-  "last_modified" : "2015-11-14T20:39:44.087Z",
+  "last_modified" : "2015-11-25T20:26:39.922Z",
   "definition" : [ {
     "key" : "t_prefix",
     "name" : "T Prefix",

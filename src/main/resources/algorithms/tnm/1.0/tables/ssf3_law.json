@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 3",
   "subtitle" : "Grade - Melanoma Origin",
   "notes" : "**Note 1:**  Grade coded in this field describes whether the melanoma arises from a pre-existing lesion (primary acquired melanosis, PAM) or appears \"de novo\", without any pre-existing lesion.  This is not the same as the histologic grade defined in the ICD-O, designating degrees of differentiation from normal tissue such as \"well differentiated\" or \"poorly differentiated\", which is coded in the traditional grade field.\n\n**Note 2:**  Tumors of Grade 0, Primary acquired melanosis without cellular atypia, and Grade 1, Conjunctival nevus, are not reportable to the cancer registry.  Tumors of Grade 2, Primary acquired melanosis with cellular atypia (epithelial disease only) are reportable and  may be coded as 8741/2.\n\n**Note 3:**  Code this field only from a statement of grade describing PAM with atypia or de novo melanoma, documented by the managing physician or the pathologist in the record.  \n* Do not interpret or attempt to assign grade based on the histologic diagnosis of the tumor.",
-  "last_modified" : "2015-11-19T16:42:46.084Z",
+  "last_modified" : "2015-11-25T20:25:49.265Z",
   "definition" : [ {
     "key" : "ssf3",
     "name" : "Code",

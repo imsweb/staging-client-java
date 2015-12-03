@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 5",
   "subtitle" : "Serum Lactate Dehydrogenase (LDH) Lab Value",
   "notes" : "**Note 1:**  Code the serum lactate dehydrogenase (LDH) value prior to treatment or within 6 weeks of diagnosis.  Give priority to the first test performed.  LDH values are expressed in Units/liter (U/l).\n\n**Note 2:**  Record the value of the LDH test for values 001 through 800.\n\n**Note 3:**  Record the range of the LDH test for values 801 and greater.    \n\nA.  Codes 801 - 825 are ranges of 20.     \nB.  Codes 826 - 863 are ranges of 50.     \nC.  Codes 864 - 931 are ranges of 100.     \nD.  Code 932 is for a value of 10001 or greater.\n\n**Note 4:**  The information should be taken from the same test used to code Site-Specific Factors 4 and 6.",
-  "last_modified" : "2015-10-30T18:48:34.372Z",
+  "last_modified" : "2015-11-25T20:26:23.708Z",
   "definition" : [ {
     "key" : "ssf5",
     "name" : "Code",

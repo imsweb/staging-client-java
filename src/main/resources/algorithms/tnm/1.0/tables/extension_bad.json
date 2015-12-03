@@ -6,7 +6,7 @@
   "title" : "SEER Primary Tumor",
   "notes" : "**Note 1:**  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage. FIGO Stage III is assigned based on tumor extension and/or regional lymph node involvement. Code the following based on a physician's statement.\n\n    200 - FIGO stage III based on tumor extension\n    500 - Unknown what FIGO Stage III is based on\n    See SEER Regional Nodes when FIGO Stage III based on lymph nodes \n\n**Note 2:**  FIGO no longer includes in situ tumors.\n\n**Note 3:**  Pelvic wall is defined as muscle, fascia, neurovascular structures, or skeletal portions of the bony pelvis.",
   "footnotes" : "\\## Considered regional in Historic Stage\n\\### Considered distant in Historic Stage\n\\*** Considered distant in 1977 Summary Staging Guide",
-  "last_modified" : "2015-11-24T22:00:34.025Z",
+  "last_modified" : "2015-11-25T20:26:06.633Z",
   "definition" : [ {
     "key" : "seer_primary_tumor",
     "name" : "Code",

@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 8",
   "subtitle" : "HER2: Immunohistochemistry (IHC) Lab Value",
   "notes" : "**Note 1:**  Record the results of only the immunohistochemistry (IHC) lab value for Human Epidermal Growth Factor Receptor 2 (HER2) in this field. The test determines if there is HER2 overexpression, or an excess amount of HER2 protein on the cell surface.  The score is assigned by the pathologist based on the percentage and intensity of cell membrane staining.\n\n**Note 2:** The same laboratory test should be used to record information in Site-Specific Factors 8 and 9. \n\n**Note 3:**  If the test is done but the actual score is not stated, code 997.\n\n**Note 4:**  If the test is not mentioned in the medical record, code to 999 unless there are circumstances under which the test isn't performed, for example, no histologic specimen.",
-  "last_modified" : "2015-11-16T03:21:11.078Z",
+  "last_modified" : "2015-11-25T20:26:09.235Z",
   "definition" : [ {
     "key" : "ssf8",
     "name" : "Code",

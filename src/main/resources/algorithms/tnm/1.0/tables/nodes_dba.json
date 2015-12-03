@@ -6,7 +6,7 @@
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:** Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in SEER Mets.  For the lower third of vagina, iliac (common, external, internal (hypogastric), and NOS), and pelvic, NOS lymph nodes are coded in SEER Mets.  For the upper two thirds of vagina, inguinal and femoral lymph nodes are coded in SEER Mets.\n\n**Note 2:** FIGO Stage III is assigned based on tumor extension and/or regional lymph node involvement. Code 300 if FIGO Stage III is based on lymph node involvement. See SEER Primary Tumor if FIGO stage III is based on extension or unknown.",
   "footnotes" : "\\### Considered distant in Historic Stage\n\\*** Considered distant in 1977 Summary Staging Guide",
-  "last_modified" : "2015-11-24T21:42:16.549Z",
+  "last_modified" : "2015-11-25T20:26:01.397Z",
   "definition" : [ {
     "key" : "seer_nodes",
     "name" : "Code",

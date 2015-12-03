@@ -5,7 +5,7 @@
   "name" : "Stage Group (p)",
   "title" : "TNM 7 Stage Group",
   "notes" : "**Note 1:** The Stage Groups displayed are the enhanced UICC groups.  If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC manual to ensure you are using the appropriate logic.\n\n**Note 2:** Ewing sarcoma (ICD-O-3 Histology 9260, 9364) is always considered High Grade (3 or 4).  Ewing sarcoma should NOT be assigned Stage group IA or IB.",
-  "last_modified" : "2015-10-23T04:01:58.688Z",
+  "last_modified" : "2015-11-25T20:26:19.815Z",
   "definition" : [ {
     "key" : "path_stage_group_direct",
     "name" : "Assigned Stage Group",

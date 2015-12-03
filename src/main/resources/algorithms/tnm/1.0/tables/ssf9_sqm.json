@@ -7,7 +7,7 @@
   "subtitle" : "Mitotic Count",
   "notes" : "**Note 1:**  The mitotic count, the number of mitoses per 40 high-power fields (HPF), reflects the potential aggressiveness or prognosis of uveal melanomas.  This site-specific factor presumes the denominator of 40 HPF, so just the numerator (the mitotic count) is coded here.  \n* For other schemas in which mitotic count is collected, the denominator may vary.\n\n**Note 2:**  An HPF usually has a magnification objective of 40 (a 40x field).  As described in the AJCC chapter on uveal melanomas, the typical field area is 0.15 - 0.19 square millimeters (mm). (1)\n\n**Note 3:**  Record mitotic count to the nearest tenth as documented in the pathology report.  \n* For example, a mitotic count of 6/40 HPF would be coded 060.\n\n**Note 4:**  Code the specific mitotic count only per 40 HPF; assume the denominator is 40 HPF if not specified.  \n* Use code 996 only if the mitotic count is expressed with a specific denominator other than 40 HPF.",
   "footnotes" : "(1) American Joint Committee on Cancer., & Edge, S.B. (2010) AJCC Cancer Staging Manual (7th ed.). New York; London: Springer, pg. 550",
-  "last_modified" : "2015-11-19T16:48:42.198Z",
+  "last_modified" : "2015-11-25T20:25:48.646Z",
   "definition" : [ {
     "key" : "ssf9",
     "name" : "Code",

@@ -5,7 +5,7 @@
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:**  For head and neck cancers, if lymph nodes are described only as \"supraclavicular\", try to determine if they are in Level IV (deep to the sternocleidomastoid muscle, in the lower jugular chain) or Level V (in the posterior triangle, inferior to the transverse cervical artery) and code appropriately.  If the specific level cannot be determined, consider them as Level V nodes. Level IV nodes are regional for Summary Stage. Level V nodes are distant for Summary Stage and should be collected in SEER Mets.\n\n**Note 2:** The description of lymph nodes has been standardized across the head and neck schemas.  Summary Stage 1977 and Summary Stage 2000 divide these nodes into regional and distant groups.",
-  "last_modified" : "2015-10-10T20:37:38.290Z",
+  "last_modified" : "2015-11-25T20:26:47.210Z",
   "definition" : [ {
     "key" : "seer_nodes",
     "name" : "Code",

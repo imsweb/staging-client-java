@@ -6,7 +6,7 @@
   "title" : "Pathologic N",
   "notes" : "**Note 1:** Histological examination of an inguinofemoral lymphadenectomy specimen will ordinarily include 6 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0. (FIGO considers such cases as pNX). (1)\n\n**Note 2:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in distant metastasis. \n\n**Note 3:** For regional lymph nodes, assign the appropriate N category based on the number of positive nodes.\n\n    Deep inguinal, NOS\n    Femoral\n    Inguinal NOS\n    Inguinofemoral (groin)  \n    Node of Cloquet or Rosenmuller (highest deep inguinal)\n    Superficial inguinal (femoral) \n\n    Regional lymph node(s), NOS\n    Lymph nodes, NOS \n\n**Note 4:**  Assign N1 [NOS] if regional lymph nodes are involved but the number of nodes involved is unknown.\n\n**Note 5:** When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and regional lymph node detail are available, use the regional lymph node detail in preference to a statement of FIGO stage. See the Registrar Notes when FIGO stage is the only information available. If the only available information is FIGO IVA, assign N3 if based on positive nodes and NX if based on extension or unknown basis.",
   "footnotes" : "(1) International Union Against Cancer (UICC) *TNM Classification of Malignant Tumors,* 7th ed., Sobin, LH, Gospodarowicz, M, Wittekind, CH, eds. New York: Wiley, 2009, pg., 199",
-  "last_modified" : "2015-11-24T22:15:58.863Z",
+  "last_modified" : "2015-11-25T20:26:21.339Z",
   "definition" : [ {
     "key" : "path_n",
     "name" : "Pathologic N",

@@ -5,7 +5,7 @@
   "name" : "Clin N Thyroid",
   "title" : "Clinical N",
   "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in distant metastasis.\n\n**Note 2:**  This field includes all lymph nodes defined as Levels I-VI, retropharyngeal or superior mediastinal lymph nodes (Level VII). \n\n**Note 3:**  Assignment of N value for thyroid does not depend on laterality.  All codes for nodal involvement include ipsilateral, bilateral, contralateral, and midline lymph nodes.\n\n**Note 4:**  The description of lymph nodes has been standardized across the head and neck schemas.  All lymph node levels and groups listed here are considered regional nodes for TNM staging.",
-  "last_modified" : "2015-11-24T20:26:39.243Z",
+  "last_modified" : "2015-11-25T20:26:48.588Z",
   "definition" : [ {
     "key" : "clin_n",
     "name" : "Clinical N",

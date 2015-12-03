@@ -5,7 +5,7 @@
   "name" : "Clinical T",
   "title" : "LymphomaOcularAdnexa Clinical T (no UICC definition)",
   "notes" : "**Note 1:** Ocular adnexal lymphomas (OAL) originate in conjunctiva, eyelids, lacrimal gland, lacrimal drainage apparatus, and other orbital tissues surrounding the eye. This schema should not be used for secondary lymphomatous involvement of ocular adnexa or for intraocular lymphomas.\n\n**Note 2:** Preseptal eyelid involvement includes infiltration of the outer three layers of the eyelid: skin, subcutaneous connective tissue, and orbicularis oculi muscle.\n\n**Note 3:** The orbit is the bony cavity containing the eye, lacrimal gland, lacrimal sac, nasolacrimal duct, extraocular muscles, fat, arteries, veins, and nerves, but no lymphatics.\n\n**Note 4:** UICC does not define Lymphoma Ocular Adnexa.  A list of all possible Clinical T values is provided.",
-  "last_modified" : "2015-11-19T01:11:21.287Z",
+  "last_modified" : "2015-11-25T20:27:07.684Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

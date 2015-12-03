@@ -5,7 +5,7 @@
   "name" : "Histologies Stage",
   "title" : "Histologies Stage Table",
   "notes" : "**Note 1:**  The determination of the TNM 7 stage group from T, N, M, and grade for esophagus depends further on histologic type.   Since squamous cell carcinoma typically has a poorer prognosis than adenocarcinoma, a tumor of mixed histopathologic type (including a squamous component or NOS histology) or a type that is not otherwise specified should be staged as squamous cell carcinoma. \n\n**Note 2:**  This table shows the selection of the appropriate version of the Stage table based on histology.",
-  "last_modified" : "2015-10-26T21:19:13.220Z",
+  "last_modified" : "2015-11-25T20:26:11.279Z",
   "definition" : [ {
     "key" : "hist",
     "name" : "ICD-O-3 Histology Code",

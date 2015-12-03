@@ -5,7 +5,7 @@
   "name" : "Clin N Pancreas Head",
   "title" : "Clinical N",
   "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in distant metastasis. \n\n**Note 2:**  Celiac axis and splenic nodes are classified as distant nodes for TNM 7th staging and are coded in distant metastasis.\n\n**Regional lymph nodes:**\n\n    Hepatic\n    Lateral aortic (lumbar)\n    Peripancreatic, NOS:\n        Anterior, NOS:\n            Anterior pancreaticoduodenal\n            Anterior proximal mesenteric\n            Pyloric\n        Inferior to the head and body of pancreas\n        Posterior, NOS:\n            Pericholedochal (common bile duct)\n            Posterior pancreaticoduodenal\n            Posterior proximal mesentery\n        Superior to the head and body of pancreas\n    Pyloric:\n        Infrapyloric\n        Retropyloric\n        Suprapyloric\n        Subpyloric\n    Retroperitoneal\n    Superior mesenteric",
-  "last_modified" : "2015-11-16T20:19:24.238Z",
+  "last_modified" : "2015-11-25T20:26:31.241Z",
   "definition" : [ {
     "key" : "clin_n",
     "name" : "Clinical N",

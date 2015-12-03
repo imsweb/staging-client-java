@@ -5,8 +5,8 @@
   "name" : "SEER Primary Tumor",
   "title" : "SEER Primary Tumor",
   "notes" : "**Note 1:** Do not use information from a needle core biopsy to assign primary tumor.\n\n**Note 2:** Involvement of the prostatic urethra does not alter the extension code.\n\n**Note 3:** \"Frozen pelvis\" is a clinical term which means tumor extends to pelvic sidewall(s).  In the absence of a more detailed statement of involvement, code in SEER Mets.",
-  "footnotes" : "\\## Considered regional in Historic Stage",
-  "last_modified" : "2015-11-24T04:03:04.325Z",
+  "footnotes" : "\\# Considered localized in Historic Stage\n\\## Considered regional in Historic Stage\n\\### Considered distant in Historic Stage\n\\*** Considered distant in 1977 Summary Staging Guide",
+  "last_modified" : "2015-11-26T19:46:40.817Z",
   "definition" : [ {
     "key" : "seer_primary_tumor",
     "name" : "Code",

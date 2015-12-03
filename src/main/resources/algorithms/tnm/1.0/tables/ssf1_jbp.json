@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 1",
   "subtitle" : "FIGO Stage",
   "notes" : "**Note 1:**  The Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage definitions do not include Stage 0 (Tis) forÂ the fallopian tube. \n* Use code 987 for any in situ case.\n\n**Note 2:**  Code the FIGO stage as stated in the medical record.  When lymph node(s) is/are clinically or pathologically positive or metastasis is present, make sure that the FIGO stage reflects the combination of T, N, and M and NOT just the T. \n* If a stage group is stated but it does not specify that it is a FIGO stage, assume that it is a FIGO stage and code it. \n* Do not attempt to code FIGO stage based only on T, N, and M. \n* If you cannot make a determination of stage based on the previous information, use code 999, stage unknown.",
-  "last_modified" : "2015-11-19T16:00:56.533Z",
+  "last_modified" : "2015-11-25T20:26:01.569Z",
   "definition" : [ {
     "key" : "ssf1",
     "name" : "Code",

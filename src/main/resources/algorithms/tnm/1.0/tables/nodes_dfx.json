@@ -5,7 +5,7 @@
   "name" : "SEER Regional Nodes",
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field Distant nodes coded in Mets at DX.\n\n**Note 2:**  Bilateral nodes are considered regional nodes for tumors with bidirectional drainage to primary nodal basins, as shown on lymphoscintigraphy.  Clinical assessment of bilateral regional nodal involvement is required for tumors where lymphoscintigraphy is not performed.\n\n**Note 3:**  In transit metastasis is defined as a tumor distinct from the primary lesion and located either between the primary lesion and the draining regional lymph nodes or distal to the primary lesion. In transit metastasis is coded in the SEER Regional Nodes field. \n\n**Note 4:**  Isolated tumor cells (ITCs) should be considered positive nodes. If only ITCs are present, defined as any tumor deposits in lymph nodes less than or equal to 0.2 mm, use code  300.",
-  "last_modified" : "2015-09-04T20:51:30.539Z",
+  "last_modified" : "2015-11-25T20:25:45.997Z",
   "definition" : [ {
     "key" : "seer_nodes",
     "name" : "Code",

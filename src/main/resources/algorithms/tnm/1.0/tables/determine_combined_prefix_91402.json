@@ -5,7 +5,7 @@
   "name" : "Determine Combined Prefix",
   "title" : "Determine Combined Prefix",
   "notes" : "**Note:** Combined Source of 1 or 2 indicate the Combined fields is based on the Clin field or Path field respectively.   \nCombined Source of 3 indicates a combination of data was used to set the Combined value. For example, 4a and 4b were combined to derive 4c.  The prefix will be set to 'p'.  \nCombined Source of 9 indicates the source is Unknown.  It should only occur if the value is 88.  No prefix will be set.",
-  "last_modified" : "2015-11-15T14:14:47.043Z",
+  "last_modified" : "2015-11-25T20:26:09.924Z",
   "definition" : [ {
     "key" : "cmb_source",
     "name" : "Combined Source",

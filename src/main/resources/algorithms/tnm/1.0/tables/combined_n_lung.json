@@ -5,7 +5,7 @@
   "name" : "Combined N Lung",
   "title" : "Combined N Lung",
   "notes" : "For Lung schema, which has a special case, using clinical and pathologic N, calculate Combined N and Summary Stage N.",
-  "last_modified" : "2015-10-31T14:27:34.557Z",
+  "last_modified" : "2015-11-25T20:27:10.273Z",
   "definition" : [ {
     "key" : "radiation_surg_seq",
     "name" : "RX Summ Surgery/Radiation Sequence",

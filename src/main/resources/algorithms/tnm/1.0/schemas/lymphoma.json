@@ -42,7 +42,7 @@
     "key" : "seer_mets",
     "name" : "SEER Mets",
     "naaccr_item" : 776,
-    "default" : "98",
+    "default" : "88",
     "table" : "mets_hna",
     "used_for_staging" : true
   }, {
@@ -242,5 +242,5 @@
   } ],
   "involved_tables" : [ "ssf2_kpg", "combined_stage_group_for_lymphoma_19552", "tnm7_inclusions_tpr", "schema_selection_lymphoma", "ssf5_npe", "lymphoma_stage_group_detailed_35045", "stage_group_lymphoma_c_60180", "ssf3_lph", "primary_site", "ssf1_jpj", "extension_bch", "histology", "stage_group_lymphoma_p_48657", "year_dx_validation", "summary_stage_rpa", "mets_hna", "ssf4_mpd", "nodes_dna" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-20T23:18:45.574Z"
+  "last_modified" : "2015-11-30T20:51:44.277Z"
 }

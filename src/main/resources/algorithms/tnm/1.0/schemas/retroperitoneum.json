@@ -331,7 +331,7 @@
         "to" : "tmp_combined_t"
       } ],
       "inputs" : [ "tmp_path_t", "tmp_clin_t" ],
-      "outputs" : [ "source_t", "tmp_path_t", "ss2017_t", "tmp_clin_t", "tmp_combined_t" ]
+      "outputs" : [ "source_t", "tmp_path_t", "tmp_clin_t", "tmp_combined_t" ]
     }, {
       "id" : "determine_default_n",
       "input_mapping" : [ {
@@ -345,11 +345,17 @@
         "from" : "path_n_out",
         "to" : "tmp_path_n"
       }, {
+        "from" : "source_n_out",
+        "to" : "source_n"
+      }, {
         "from" : "clin_n_out",
         "to" : "tmp_clin_n"
+      }, {
+        "from" : "combined_n_out",
+        "to" : "tmp_combined_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
-      "outputs" : [ "tmp_clin_n", "tmp_path_n" ]
+      "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
     }, {
       "id" : "determine_default_m",
       "input_mapping" : [ {
@@ -376,7 +382,7 @@
         "to" : "tmp_path_m"
       } ],
       "inputs" : [ "tmp_path_m", "tmp_clin_m" ],
-      "outputs" : [ "tmp_path_m", "ss2017_m", "tmp_combined_m", "tmp_clin_m", "source_m" ]
+      "outputs" : [ "tmp_path_m", "tmp_combined_m", "tmp_clin_m", "source_m" ]
     }, {
       "id" : "ssf1_jpm",
       "inputs" : [ "ssf1" ],
@@ -722,5 +728,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "extension_bfv", "determine_default_t", "tnm7_stage_upm", "radiation_surg_seq", "retroperitoneum_t_87029", "ssf3_lpk", "determine_default_m", "tnm7_inclusions_tab", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "retroperitoneum_n_12750", "parse_n_67182", "determine_default_n", "ssf1_jpm", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "combined_t_no_tis", "ssf2_kpk", "concatenate_t_51262", "seer_mets_peritoneum_retroperitoneum_44461", "adjustments_for_no_clin_or_no_path_26261", "determine_combined_prefix_91402", "schema_selection_retroperitoneum", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "path_m_soft_tissues_96225", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "nodes_dfq", "stage_group_p_79654", "stage_group_c_49395", "year_dx_validation", "ssf4_mpf", "summary_stage_rpa", "path_n_peritoneum_retroperitoneum_86254", "clin_t_retroperitoneum_91920", "clin_m_soft_tissues_97765" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-23T01:26:31.387Z"
+  "last_modified" : "2015-12-02T19:10:46.056Z"
 }

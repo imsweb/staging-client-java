@@ -6,7 +6,7 @@
   "title" : "SEER Regional Nodes",
   "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes such as cervical (excluding supraclavicular) or contralateral axillary are coded in SEER Mets.\n\n**Note 2:**  Micrometastases are defined as tumor deposits greater than 0.2 millimeter (mm) but not greater than 2.0 mm in largest dimension.  Macrometastases are tumor deposits greater than 2.0 mm.  All nodes with at least micrometastases are included in the count of positive lymph nodes (code 300).\n\n**Note 3:**  Isolated tumor cells (ITC) are defined as single tumor cells or small clusters not greater than 0.2 mm, usually detected only by immunohistochemical (IHC) or molecular methods but which may be verified on hematoxylin and eosin (H and E) stains.  ITCs do not usually show evidence of malignant activity (e.g., proliferation or stromal reaction). Lymph nodes with ITCs only are not considered positive lymph nodes.  If the record only states N0(i+), code to 000 for no regional lymph node involvement.",
   "footnotes" : "\\### Considered distant in Historic Stage\n\\*** Considered distant in 1977 Summary Stage Guide",
-  "last_modified" : "2015-11-16T02:53:58.736Z",
+  "last_modified" : "2015-11-25T20:26:33.076Z",
   "definition" : [ {
     "key" : "seer_nodes",
     "name" : "Code",

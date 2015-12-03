@@ -6,7 +6,7 @@
   "title" : "Site-Specific Factor 10",
   "subtitle" : "HER2: Fluorescence In Situ Hybridization (FISH) Lab Value",
   "notes" : "**Note 1:**  Record the results of only the Fluorescence In Situ Hybridization (FISH) test for Human Epidermal Growth Factor Receptor 2 (HER2) in this field.  The test determines if there are additional copies of the HER2/neu gene in the tumor cells compared to the normal number.  The results are reported as a ratio between the number of copies of the HER2/neu gene and the number of copies of chromosome 17, on which the gene resides.\n\n**Note 2:**  Record the actual ratio if given.  Enter the stated ratio to two decimal places.  Use a trailing zero if needed.\n\n**Note 3:**  The same laboratory test should be used to record information in Site-Specific Factors 10 and 11.\n\n**Note 4:**  If the test is done but the actual ratio is not stated, use code 997.\n\n**Note 5:**  If the test is not mentioned in the medical record, code to 999 unless there are circumstances under which the test isn't performed, for example, no histologic specimen.",
-  "last_modified" : "2015-11-16T03:21:47.236Z",
+  "last_modified" : "2015-11-25T20:26:09.187Z",
   "definition" : [ {
     "key" : "ssf10",
     "name" : "Code",

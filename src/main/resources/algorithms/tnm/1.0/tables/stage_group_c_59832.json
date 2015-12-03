@@ -5,7 +5,7 @@
   "name" : "Stage Group (c)",
   "title" : "TNM 7 Stage Group",
   "notes" : "**Note 1:** The Stage Groups displayed are the enhanced UICC groups.  If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC manual to ensure you are using the appropriate logic.\n\n**Note 2:** For Gleason, use SSF8 for Clinical and SSF10 for Pathologic.",
-  "last_modified" : "2015-10-25T04:29:38.463Z",
+  "last_modified" : "2015-11-25T20:27:05.587Z",
   "definition" : [ {
     "key" : "clin_stage_group_direct",
     "name" : "Assigned Stage Group",

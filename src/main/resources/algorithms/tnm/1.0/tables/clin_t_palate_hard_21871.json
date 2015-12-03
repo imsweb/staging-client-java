@@ -5,8 +5,8 @@
   "name" : "Clin T Palate Hard",
   "title" : "Clinical T",
   "notes" : "**Note 1:** Periosteum is a fibrous membrane that wraps the outer surface of bones. Cortical bone is the dense compact outer layer of the bone. Trabecular, cancellous, or spongy bone (spongiosa) is a porous network of tissue filling the interior of bone, decreasing weight and allowing room for blood vessels and marrow.\n\n**Note 2:** Tumor size must be known to assign a value of T1, T2 or T3. You may use a physicianâs statement of the T category if this is the only information in the medical record. If the tumor appears to be in the T1, T2 or T3 categories, but no size or category is specified, assign TX.\n\n**Note 3:** For the following descriptions, assign the appropriate T category (T1, T2 or T3) based on the tumor size when involvement is limited to the cortical bone. Involvement through cortical bone is required for assignment of T4a. \n\n    Invasive tumor on one side confined to mucoperiosteum (stroma)\n    Tumor crosses midline\n\n     Bone, NOS\n     Buccal mucosa (inner check)\n     Cortical bone, NOS\n     Cortical bone of maxilla\n     Cortical palatine bone\n     Gingiva, upper\n     Glossopalatine arch\n     Maxilla, NOS\n     Palatine bone, NOS\n     Pharyngopalatine arch\n     Soft palate including uvula\n\n    Confined to hard palate, NOS\n    Localized, NOS",
-  "footnotes" : "*T4 is not defined by UICC in the 7th edition. Approval has been provided by UICC to use \"Tumor invades bone, nerve or extrinsic deep muscles\" as T4.",
-  "last_modified" : "2015-11-23T00:19:10.739Z",
+  "footnotes" : "\\* T4 is not defined by UICC in the 7th edition. Approval has been provided by UICC to use \"Tumor invades bone, nerve or extrinsic deep muscles\" as T4.",
+  "last_modified" : "2015-11-25T21:34:34.465Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

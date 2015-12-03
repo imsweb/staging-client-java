@@ -5,7 +5,7 @@
   "name" : "SEER Primary Tumor",
   "title" : "SEER Primary Tumor",
   "notes" : "**Note:**  If SEER Primary Tumor is 000, Behavior ICD-O-3 must be coded as 2.  If SEER Primary Tumor is 100 or greater, Behavior ICD-O-3 must be coded as 3.",
-  "last_modified" : "2015-11-24T21:36:51.578Z",
+  "last_modified" : "2015-11-25T20:25:49.735Z",
   "definition" : [ {
     "key" : "seer_primary_tumor",
     "name" : "Code",
