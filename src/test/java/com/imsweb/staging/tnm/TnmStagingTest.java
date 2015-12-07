@@ -281,10 +281,10 @@ public class TnmStagingTest extends StagingTest {
         Assert.assertEquals("1", data.getOutput(TnmStagingData.TnmOutput.SOURCE_N));
         Assert.assertEquals("p1", data.getOutput(TnmStagingData.TnmOutput.COMBINED_M));
         Assert.assertEquals("2", data.getOutput(TnmStagingData.TnmOutput.SOURCE_M));
-        Assert.assertEquals("D", data.getOutput(TnmStagingData.TnmOutput.SS2017));
-        Assert.assertEquals("U", data.getOutput(TnmStagingData.TnmOutput.SS2017_T));
-        Assert.assertEquals("RN", data.getOutput(TnmStagingData.TnmOutput.SS2017_N));
-        Assert.assertEquals("D", data.getOutput(TnmStagingData.TnmOutput.SS2017_M));
+//        Assert.assertEquals("D", data.getOutput(TnmStagingData.TnmOutput.SS2017));
+//        Assert.assertEquals("U", data.getOutput(TnmStagingData.TnmOutput.SS2017_T));
+//        Assert.assertEquals("RN", data.getOutput(TnmStagingData.TnmOutput.SS2017_N));
+//        Assert.assertEquals("D", data.getOutput(TnmStagingData.TnmOutput.SS2017_M));
     }
 
     @Test

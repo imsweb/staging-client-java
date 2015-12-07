@@ -86,11 +86,7 @@ public class TnmStagingData extends StagingData {
         SOURCE_N("source_n"),
         COMBINED_N("combined_n"),
         SOURCE_M("source_m"),
-        COMBINED_M("combined_m"),
-        SS2017("ss2017"),
-        SS2017_T("ss2017_t"),
-        SS2017_N("ss2017_n"),
-        SS2017_M("ss2017_m");
+        COMBINED_M("combined_m");
 
         private String _name;
 
