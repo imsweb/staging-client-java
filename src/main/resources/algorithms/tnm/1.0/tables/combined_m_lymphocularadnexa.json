@@ -5,7 +5,7 @@
   "name" : "Combined M LymphOcularAdnexa",
   "title" : "Combined M for LymphOcularAdnexa",
   "notes" : "For LymphOcularAdnexa, which has a special case, using clinical and pathologic M, calculate Combined M and Summary Stage M.",
-  "last_modified" : "2015-11-25T20:26:58.842Z",
+  "last_modified" : "2015-12-04T18:10:34.280Z",
   "definition" : [ {
     "key" : "clin_m_in",
     "name" : "Clinical M",
@@ -26,7 +26,11 @@
     "key" : "source_m_out",
     "name" : "Combined M Source",
     "type" : "ENDPOINT"
+  }, {
+    "key" : "tmp_source_m",
+    "name" : "True Source M",
+    "type" : "ENDPOINT"
   } ],
-  "extra_input" : [ "path_m_in", "combined_m_in", "clin_m_in" ],
-  "rows" : [ [ "*", "*", "0,1,1A,1B,1C,88", "VALUE:{{combined_m_in}}", "MATCH" ], [ "88", "88", "", "VALUE:88", "VALUE:9" ], [ "88", "*", "", "VALUE:{{path_m_in}}", "VALUE:2" ], [ "*", "88", "", "VALUE:{{clin_m_in}}", "VALUE:1" ], [ "*", "0", "", "VALUE:{{clin_m_in}}", "VALUE:1" ], [ "0,1", "1", "", "VALUE:{{path_m_in}}", "VALUE:2" ], [ "1A,1B,1C", "1", "", "VALUE:{{clin_m_in}}", "VALUE:2" ], [ "0,1,1A", "1A", "", "VALUE:{{path_m_in}}", "VALUE:2" ], [ "1B,1C", "1A", "", "VALUE:M1c", "VALUE:3" ], [ "0,1,1B", "1B", "", "VALUE:{{path_m_in}}", "VALUE:2" ], [ "1A,1C", "1B", "", "VALUE:M1c", "VALUE:3" ], [ "*", "1C", "", "VALUE:{{path_m_in}}", "VALUE:2" ] ]
+  "extra_input" : [ "path_m_in", "combined_m_in", "clin_m_in", "source_m" ],
+  "rows" : [ [ "*", "*", "0,1,1A,1B,1C,88", "VALUE:{{combined_m_in}}", "MATCH", "VALUE:{{source_m}}" ], [ "88", "88", "", "VALUE:88", "VALUE:9", "VALUE:9" ], [ "88", "*", "", "VALUE:{{path_m_in}}", "VALUE:2", "VALUE:2" ], [ "*", "88", "", "VALUE:{{clin_m_in}}", "VALUE:1", "VALUE:1" ], [ "*", "0", "", "VALUE:{{clin_m_in}}", "VALUE:1", "VALUE:1" ], [ "0,1", "1", "", "VALUE:{{path_m_in}}", "VALUE:2", "VALUE:2" ], [ "1A,1B,1C", "1", "", "VALUE:{{clin_m_in}}", "VALUE:2", "VALUE:1" ], [ "0,1,1A", "1A", "", "VALUE:{{path_m_in}}", "VALUE:2", "VALUE:2" ], [ "1B,1C", "1A", "", "VALUE:M1c", "VALUE:3", "VALUE:3" ], [ "0,1,1B", "1B", "", "VALUE:{{path_m_in}}", "VALUE:2", "VALUE:2" ], [ "1A,1C", "1B", "", "VALUE:M1c", "VALUE:3", "VALUE:3" ], [ "*", "1C", "", "VALUE:{{path_m_in}}", "VALUE:2", "VALUE:2" ] ]
 }

@@ -5,14 +5,14 @@
   "name" : "Stage Group (p)",
   "title" : "TNM 7 Stage Group",
   "notes" : "**Note:** The Stage Groups displayed are the enhanced UICC groups.  If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC manual to ensure you are using the appropriate logic.",
-  "last_modified" : "2015-11-25T20:26:15.904Z",
+  "last_modified" : "2015-12-04T19:22:00.707Z",
   "definition" : [ {
     "key" : "path_stage_group_direct",
-    "name" : "Assigned Stage Group",
+    "name" : "Stage",
     "type" : "INPUT"
   }, {
     "key" : "path_stage_group_direct_display",
-    "name" : "Assigned Stage Group Display",
+    "name" : "Stage Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "t",

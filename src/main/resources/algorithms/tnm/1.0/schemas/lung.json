@@ -125,7 +125,7 @@
     "naaccr_item" : 970,
     "default" : "88",
     "table" : "stage_group_c_92535",
-    "used_for_staging" : false,
+    "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   }, {
     "key" : "path_stage_group_direct",
@@ -133,7 +133,7 @@
     "naaccr_item" : 910,
     "default" : "88",
     "table" : "stage_group_p_18837",
-    "used_for_staging" : false,
+    "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   } ],
   "outputs" : [ {
@@ -317,9 +317,6 @@
         "from" : "path_t_out",
         "to" : "tmp_path_t"
       }, {
-        "from" : "ss2017_t_out",
-        "to" : "ss2017_t"
-      }, {
         "from" : "clin_t_out",
         "to" : "tmp_clin_t"
       }, {
@@ -344,11 +341,11 @@
         "from" : "source_n_out",
         "to" : "source_n"
       }, {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_n"
-      }, {
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
@@ -368,9 +365,6 @@
         "from" : "combined_m_out",
         "to" : "tmp_combined_m"
       }, {
-        "from" : "ss2017_m_out",
-        "to" : "ss2017_m"
-      }, {
         "from" : "clin_m_out",
         "to" : "tmp_clin_m"
       }, {
@@ -382,6 +376,9 @@
     }, {
       "id" : "tnm7_stage_ubq",
       "input_mapping" : [ {
+        "from" : "clin_stage_group_direct",
+        "to" : "stage_group_in"
+      }, {
         "from" : "tmp_clin_n",
         "to" : "n"
       }, {
@@ -395,11 +392,14 @@
         "from" : "stage",
         "to" : "clin_stage_group"
       } ],
-      "inputs" : [ "tmp_clin_n", "tmp_clin_m", "tmp_clin_t" ],
+      "inputs" : [ "tmp_clin_n", "tmp_clin_m", "clin_stage_group_direct", "tmp_clin_t" ],
       "outputs" : [ "clin_stage_group" ]
     }, {
       "id" : "tnm7_stage_ubq",
       "input_mapping" : [ {
+        "from" : "path_stage_group_direct",
+        "to" : "stage_group_in"
+      }, {
         "from" : "tmp_path_m",
         "to" : "m"
       }, {
@@ -413,7 +413,7 @@
         "from" : "stage",
         "to" : "path_stage_group"
       } ],
-      "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t" ],
+      "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t", "path_stage_group_direct" ],
       "outputs" : [ "path_stage_group" ]
     }, {
       "id" : "adjustments_for_no_clin_or_no_path_26261",
@@ -525,7 +525,7 @@
         "to" : "tmp_combined_m"
       } ],
       "inputs" : [ "tmp_path_m", "tmp_combined_m", "tmp_clin_m" ],
-      "outputs" : [ "tmp_combined_m", "source_m" ]
+      "outputs" : [ "tmp_combined_m", "tmp_source_m", "source_m" ]
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
@@ -568,17 +568,17 @@
         "from" : "path_m_prefix",
         "to" : "path_prefix"
       }, {
+        "from" : "tmp_source_m",
+        "to" : "cmb_source"
+      }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
-      }, {
-        "from" : "source_m",
-        "to" : "cmb_source"
       } ],
       "output_mapping" : [ {
         "from" : "cmb_prefix",
         "to" : "cmb_m_prefix"
       } ],
-      "inputs" : [ "clin_m_prefix", "path_m_prefix", "source_m" ],
+      "inputs" : [ "clin_m_prefix", "tmp_source_m", "path_m_prefix" ],
       "outputs" : [ "cmb_m_prefix" ]
     }, {
       "id" : "concatenate_t_51262",
@@ -626,6 +626,17 @@
       "inputs" : [ "cmb_m_prefix", "tmp_combined_m" ],
       "outputs" : [ "combined_m" ]
     }, {
+      "id" : "select_stage_group_19580",
+      "input_mapping" : [ {
+        "from" : "clin_stage_group",
+        "to" : "clin_stage_group_in"
+      }, {
+        "from" : "path_stage_group_direct",
+        "to" : "path_stage_group_in"
+      } ],
+      "inputs" : [ "clin_stage_group", "path_stage_group_direct" ],
+      "outputs" : [ "tmp_stage_group" ]
+    }, {
       "id" : "tnm7_stage_ubq",
       "input_mapping" : [ {
         "from" : "tmp_combined_n",
@@ -636,12 +647,15 @@
       }, {
         "from" : "tmp_combined_t",
         "to" : "t"
+      }, {
+        "from" : "tmp_stage_group",
+        "to" : "stage_group_in"
       } ],
       "output_mapping" : [ {
         "from" : "stage",
         "to" : "combined_stage_group"
       } ],
-      "inputs" : [ "tmp_combined_n", "tmp_combined_m", "tmp_combined_t" ],
+      "inputs" : [ "tmp_stage_group", "tmp_combined_n", "tmp_combined_m", "tmp_combined_t" ],
       "outputs" : [ "combined_stage_group" ]
     }, {
       "id" : "combined_t_to_summ_stage_t_3_3d_re_4_4e_d_45184",
@@ -709,7 +723,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "stage_group_p_18837", "radiation_surg_seq", "determine_default_m", "mets_hab", "combined_t_to_summ_stage_t_3_3d_re_4_4e_d_45184", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "determine_default_n", "clin_m_hab", "histology", "concatenate_m_40642", "path_n_dai", "combined_t_lung", "tnm7_inclusions_tpb", "behavior", "combined_n_lung", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "schema_selection_lung", "ssf1_sbh", "ssf2_sbi", "determine_combined_prefix_91402", "nodes_dai", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "clin_n_dai", "lung_t_86537", "parse_m_47057", "primary_site", "combined_n_to_summ_stage_n_n3_d_copy_68044", "combined_m", "clin_t_lung_28486", "path_m_hab", "year_dx_validation", "extension_baj", "summary_stage_rpa", "tnm7_stage_ubq", "stage_group_c_92535" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "stage_group_p_18837", "radiation_surg_seq", "determine_default_m", "mets_hab", "combined_t_to_summ_stage_t_3_3d_re_4_4e_d_45184", "select_stage_group_19580", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "determine_default_n", "clin_m_hab", "histology", "concatenate_m_40642", "path_n_dai", "combined_t_lung", "tnm7_inclusions_tpb", "behavior", "combined_n_lung", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "schema_selection_lung", "ssf1_sbh", "ssf2_sbi", "determine_combined_prefix_91402", "nodes_dai", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "clin_n_dai", "lung_t_86537", "parse_m_47057", "primary_site", "combined_n_to_summ_stage_n_n3_d_copy_68044", "combined_m", "clin_t_lung_28486", "path_m_hab", "year_dx_validation", "extension_baj", "summary_stage_rpa", "lung_occult_stage_11131", "tnm7_stage_ubq", "stage_group_c_92535" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-02T19:10:50.224Z"
+  "last_modified" : "2015-12-04T19:22:08.318Z"
 }

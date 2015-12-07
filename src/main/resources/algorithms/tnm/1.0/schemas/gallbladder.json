@@ -523,7 +523,7 @@
         "to" : "tmp_combined_m"
       } ],
       "inputs" : [ "tmp_path_m", "tmp_combined_m", "tmp_clin_m" ],
-      "outputs" : [ "tmp_combined_m", "source_m" ]
+      "outputs" : [ "tmp_combined_m", "tmp_source_m", "source_m" ]
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
@@ -566,17 +566,17 @@
         "from" : "path_m_prefix",
         "to" : "path_prefix"
       }, {
+        "from" : "tmp_source_m",
+        "to" : "cmb_source"
+      }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
-      }, {
-        "from" : "source_m",
-        "to" : "cmb_source"
       } ],
       "output_mapping" : [ {
         "from" : "cmb_prefix",
         "to" : "cmb_m_prefix"
       } ],
-      "inputs" : [ "clin_m_prefix", "path_m_prefix", "source_m" ],
+      "inputs" : [ "clin_m_prefix", "tmp_source_m", "path_m_prefix" ],
       "outputs" : [ "cmb_m_prefix" ]
     }, {
       "id" : "concatenate_t_51262",
@@ -709,5 +709,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "stage_group_p_24418", "radiation_surg_seq", "path_m_hcv", "determine_default_m", "ssf16_sdn", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "clin_m_hcv", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "extension_bbd", "schema_selection_gallbladder", "path_n_dav", "gallbladder_t_77234", "behavior", "tnm7_inclusions_tpe", "concatenate_t_51262", "nodes_dav", "adjustments_for_no_clin_or_no_path_26261", "determine_combined_prefix_91402", "clin_t_gallbladder_13172", "mets_hbe", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "combined_t_to_summ_stage_t_2_3_re_4_d_26385", "parse_m_47057", "primary_site", "ssf15_sdm", "clin_n_dav", "combined_m", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t", "stage_group_c_59520", "tnm7_stage_uqb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-02T19:10:48.964Z"
+  "last_modified" : "2015-12-04T19:22:06.124Z"
 }

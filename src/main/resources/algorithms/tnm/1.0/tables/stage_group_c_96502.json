@@ -4,15 +4,15 @@
   "version" : "1.0",
   "name" : "Stage Group (c)",
   "title" : "TNM 7 Stage Group",
-  "notes" : "**Note:** The Stage Groups displayed are the enhanced UICC groups.  If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC manual to ensure you are using the appropriate logic.",
-  "last_modified" : "2015-11-25T20:26:04.180Z",
+  "notes" : "**Note 1:** The Stage Groups displayed are the enhanced UICC groups.  If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC manual to ensure you are using the appropriate logic.\n\n**Note 2:** TNM does not include an in situ category for this schema. Assign 88 to stage group for in situ cases.",
+  "last_modified" : "2015-12-04T19:22:05.594Z",
   "definition" : [ {
     "key" : "clin_stage_group_direct",
-    "name" : "Assigned Stage Group",
+    "name" : "Stage",
     "type" : "INPUT"
   }, {
     "key" : "clin_stage_group_direct_display",
-    "name" : "Assigned Stage Group Display",
+    "name" : "Stage Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "t",

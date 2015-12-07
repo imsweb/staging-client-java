@@ -438,7 +438,9 @@ stage_group_p_48023
 path_n_dax
 ssf1_jav
 mets_hal
+stage_group_c_52010
 nodes_dcz
+stage_group_p_42930
 mets_hbc
 tnm7_stage_ubb
 stage_group_c_32628
@@ -658,7 +660,6 @@ ssf4_mab
 path_m_hbf
 extension_bby
 stage_group_p_27096
-determine_combined_prefix_91402
 nodes_dfj
 ssf3_lac
 extension_bfn
@@ -909,6 +910,7 @@ melanoma_tongue_anterior_t_170
 ssf2_sbi
 ssf1_sbh
 stage_group_c_42843
+lung_occult_stage_11131
 seer_regional_nodes_melanoma_hypopharynx_7175
 combined_n_to_summ_stage_n_headneck_oromelepiant_49294
 combined_n_to_summ_stage_n_headneck_larynxsupra_9088
@@ -951,7 +953,6 @@ ssf13_scl
 ssf5_nba
 schema_selection_gum_upper
 stage_group_p_8706
-stage_group_p_4759
 nodes_dah
 ssf12_sck
 path_m_net_ampulla_22136
@@ -989,9 +990,7 @@ clin_n_gist_rectum_58109
 nodes_dde
 stage_group_c_62342
 path_m_hcu
-stage_group_c_52010
 clin_m_hcu
-stage_group_c_79525
 ssf11_sqt
 ssf10_sqs
 ssf1_jpp
@@ -1013,7 +1012,6 @@ vagina_t_91502
 ssf3_lay
 extension_bcr
 path_n_peritoneum_retroperitoneum_88959
-stage_group_p_42930
 stage_group_p_21201
 tnm7_stage_uaq
 tnm7_stage_ubq
@@ -1357,6 +1355,7 @@ ssf2_kal
 melanoma_epiglottis_anterior_t_92827
 clin_t_skin_eyelid_93914
 tnm_7_stage_ewing_17708
+select_stage_group_19580
 clin_t_small_intestine_22563
 gist_esophagus_mitotic_rate_calculation
 nodes_dea
@@ -1638,7 +1637,9 @@ melanoma_hypopharynx_t_81125
 stage_group_c_57716
 melanoma_larynx_other_t_71686
 melanoma_larynx_supraglottic_63201
+stage_group_c_79525
 ophthalmic_n_36875
+determine_combined_prefix_91402
 stage_group_p_48545
 melanoma_pharynx_other_t_82152
 lymphomaocularadnexa_clin_n_no_uicc_definition_66872
@@ -1706,6 +1707,7 @@ combined_t_to_summ_stage_t_thyroid_68736
 melanoma_tongue_base_60314
 melanoma_choroid_t_79116
 melanoma_iris_t_65686
+stage_group_p_4759
 merkel_cell_vulva_t_49226
 merkel_cell_penis_t_93032
 scrotum_t_52966

@@ -580,7 +580,7 @@
         "to" : "tmp_combined_m"
       } ],
       "inputs" : [ "tmp_path_m", "tmp_combined_m", "tmp_clin_m" ],
-      "outputs" : [ "tmp_combined_m", "source_m" ]
+      "outputs" : [ "tmp_combined_m", "tmp_source_m", "source_m" ]
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
@@ -623,17 +623,17 @@
         "from" : "path_m_prefix",
         "to" : "path_prefix"
       }, {
+        "from" : "tmp_source_m",
+        "to" : "cmb_source"
+      }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
-      }, {
-        "from" : "source_m",
-        "to" : "cmb_source"
       } ],
       "output_mapping" : [ {
         "from" : "cmb_prefix",
         "to" : "cmb_m_prefix"
       } ],
-      "inputs" : [ "clin_m_prefix", "path_m_prefix", "source_m" ],
+      "inputs" : [ "clin_m_prefix", "tmp_source_m", "path_m_prefix" ],
       "outputs" : [ "cmb_m_prefix" ]
     }, {
       "id" : "concatenate_t_51262",
@@ -766,5 +766,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "ssf10_spd", "ssf1_jpa", "path_m_hpb", "parse_t_2177", "concatenate_n_43246", "path_n_dcn", "histology", "seer_mets_nasopharynx_46629", "nodes_dcn", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "tnm7_inclusions_tpb", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "extension_bas", "ssf9_spc", "clin_n_dcn", "tnm7_stage_uae", "systemic_surg_seq", "combined_t_to_summ_stage_t_2_3_re_4_d_26385", "parse_m_47057", "combined_m", "combined_n", "schema_selection_nasopharynx", "ssf5_npa", "stage_group_c_41802", "summary_stage_rpa", "combined_t", "ssf8_spb", "determine_default_t", "clin_t_nasopharynx_40813", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpa", "stage_group_p_67704", "parse_n_67182", "determine_default_n", "behavior", "discriminator_nasopharynx", "ssf4_mpa", "determine_combined_prefix_91402", "combined_n_to_summ_stage_n_headneck_nasotonsil_77031", "stop_if_no_clin_and_no_path_24035", "primary_site", "nasopharynx_t_29067", "year_dx_validation" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-02T19:10:59.187Z"
+  "last_modified" : "2015-12-04T19:22:22.762Z"
 }

@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Clin M Small Intestine",
   "title" : "Clinical M",
-  "last_modified" : "2015-11-25T20:26:51.417Z",
+  "last_modified" : "2015-12-04T19:08:12.959Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",
@@ -22,5 +22,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "Clinical assessment only:\nDistant lymph node(s) \n    Celiac lymph nodes     \n    Distant lymph node(s), NOS\n\nFor jejunum (C171) and ileum (C172) primaries only:\n    Pericholedochal lymph node(s)\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis , NOS \n\nStated as M1" ], [ "p1", "pM1", "Distant metastasis", "Histologically confirmed:\nDistant lymph node(s) \n    Celiac lymph nodes     \n    Distant lymph node(s), NOS\n\nFor jejunum (C171) and ileum (C172) primaries only:\n    Pericholedochal lymph node(s)\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis , NOS \n\nStated as M1" ], [ "88", "88", "Not applicable", "Clinical M is not defined for the specific site/histology" ], [ "", "BLANK", "See Registrar Notes", "No clinical workup for T and N AND no clinical or pathologic evidence of distant metastasis" ] ]
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "CLINICAL assessment only:\nDistant lymph node(s) \n    Celiac lymph nodes     \n    Distant lymph node(s), NOS\n\nFor jejunum (C171) and ileum (C172) primaries only:\n    Pericholedochal lymph node(s)\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis , NOS \n\nStated as M1" ], [ "p1", "pM1", "Distant metastasis", "HISTOLOGICALLY confirmed:\nDistant lymph node(s) \n    Celiac lymph nodes     \n    Distant lymph node(s), NOS\n\nFor jejunum (C171) and ileum (C172) primaries only:\n    Pericholedochal lymph node(s)\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis , NOS" ], [ "88", "88", "Not applicable", "Clinical M is not defined for the specific site/histology" ], [ "", "BLANK", "See Registrar Notes", "No clinical workup for T and N AND no clinical or pathologic evidence of distant metastasis" ] ]
 }

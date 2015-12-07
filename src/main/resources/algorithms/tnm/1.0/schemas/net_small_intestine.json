@@ -525,7 +525,7 @@
         "to" : "tmp_combined_m"
       } ],
       "inputs" : [ "tmp_path_m", "tmp_combined_m", "tmp_clin_m" ],
-      "outputs" : [ "tmp_combined_m", "source_m" ]
+      "outputs" : [ "tmp_combined_m", "tmp_source_m", "source_m" ]
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
@@ -568,17 +568,17 @@
         "from" : "path_m_prefix",
         "to" : "path_prefix"
       }, {
+        "from" : "tmp_source_m",
+        "to" : "cmb_source"
+      }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
-      }, {
-        "from" : "source_m",
-        "to" : "cmb_source"
       } ],
       "output_mapping" : [ {
         "from" : "cmb_prefix",
         "to" : "cmb_m_prefix"
       } ],
-      "inputs" : [ "clin_m_prefix", "path_m_prefix", "source_m" ],
+      "inputs" : [ "clin_m_prefix", "tmp_source_m", "path_m_prefix" ],
       "outputs" : [ "cmb_m_prefix" ]
     }, {
       "id" : "concatenate_t_51262",
@@ -711,5 +711,5 @@
   } ],
   "involved_tables" : [ "path_m_hcp", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "radiation_surg_seq", "clin_m_hcp", "mets_hcp", "nodes_dfl", "path_n_dfl", "determine_default_m", "schema_selection_net_small_intestine", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "ssf11_sri", "clin_n_dfl", "parse_n_67182", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "combined_t_no_tis", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "stage_group_c_79525", "ssf6_opi", "concatenate_t_51262", "extension_bfp", "stage_group_p_42930", "adjustments_for_no_clin_or_no_path_26261", "tnm7_inclusions_tpm", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "path_t_net_small_intestine_71548", "combined_m", "combined_n", "year_dx_validation", "ssf12_srj", "summary_stage_rpa", "tnm7_stage_uqa", "net_smallintestine_t_60400" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-02T19:10:47.188Z"
+  "last_modified" : "2015-12-04T19:22:03.200Z"
 }

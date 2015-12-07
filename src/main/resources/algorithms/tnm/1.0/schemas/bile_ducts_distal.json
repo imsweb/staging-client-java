@@ -537,7 +537,7 @@
         "to" : "tmp_combined_m"
       } ],
       "inputs" : [ "tmp_path_m", "tmp_combined_m", "tmp_clin_m" ],
-      "outputs" : [ "tmp_combined_m", "source_m" ]
+      "outputs" : [ "tmp_combined_m", "tmp_source_m", "source_m" ]
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
@@ -580,17 +580,17 @@
         "from" : "path_m_prefix",
         "to" : "path_prefix"
       }, {
+        "from" : "tmp_source_m",
+        "to" : "cmb_source"
+      }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
-      }, {
-        "from" : "source_m",
-        "to" : "cmb_source"
       } ],
       "output_mapping" : [ {
         "from" : "cmb_prefix",
         "to" : "cmb_m_prefix"
       } ],
-      "inputs" : [ "clin_m_prefix", "path_m_prefix", "source_m" ],
+      "inputs" : [ "clin_m_prefix", "tmp_source_m", "path_m_prefix" ],
       "outputs" : [ "cmb_m_prefix" ]
     }, {
       "id" : "concatenate_t_51262",
@@ -723,5 +723,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "path_m_hcq", "clin_m_hcq", "radiation_surg_seq", "mets_hcq", "determine_default_m", "nodes_dfn", "ssf13_sqg", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "path_t_distal_bile_duct_50879", "parse_n_67182", "clin_n_dfn", "stage_group_c_82556", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "ssf12_sqf", "stage_group_p_89660", "combined_t_to_summ_stage_t_2_4e_re_93413", "extension_bfs", "behavior", "tnm7_inclusions_tpe", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "determine_combined_prefix_91402", "schema_selection_bile_ducts_distal", "distal_blie_duct_t_30646", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "discriminator_bile_ducts", "parse_m_47057", "tnm7_stage_ubm", "primary_site", "ssf14_sqh", "combined_m", "combined_n", "path_n_dfn", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-02T19:10:49.512Z"
+  "last_modified" : "2015-12-04T19:22:07.184Z"
 }

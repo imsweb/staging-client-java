@@ -5,14 +5,14 @@
   "name" : "Stage Group Lymphoma Ocular Adnexa (c)",
   "title" : "Stage Group Lymphoma (c)",
   "notes" : "**Note 1:** Clinical stage describes the anatomic extent of Hodgkin and non-Hodgkin lymphoma and forms the basis for treatment decision. It is determined by history, clinical examination, imaging, and blood analysis. Bone marrow biopsy is indicated in selected cases and must be taken from a clinically or radiologically or non-involved area of bone.\n\n**Note 2:** The lymphatic structures are as follows:\n\n    Lymph nodes (C770-C779)\n    Waldeyer's ring (tonsils) (C024, C090-C099, C111, C142)\n    Spleen (C422)\n    Thymus (C379)\n    \n**Note 3:** Spleen involvement only (C422) is a lymphatic site (structure); however, it is noted differently. If only the spleen is involved, assign 2: S (Spleen, lymphomas, only) in the Clinical Stage (Prefix/Suffix) Descriptor. \n\n**Note 4:** Spleen involvement with a lymphatic or extralymphatic primary site is accepted if there is palpable enlargement of the spleen confirmed by imaging.\n\n**Note 5:** Extralymphatic sites include all other sites (e.g., stomach, colon, breast, nasopharynx). If an extralymphatic site is involved, assign 1: E (Extranodal, lymphomas, only) in the Clinical Stage (Prefix/Suffix) Descriptor. \n\n**Note 6:** If there is an extralymphatic site that also has Spleen involvement,  assign 5: E (Extranodal and spleen, lymphomas, only) in the Clinical Stage (Prefix/Suffix) Descriptor. \n\n**Note 7:** Lung involvement limited to one lobe, or perihilar extension associated with ipsilateral lymphadenopathy, or unilateral pleural effusion with or without lung involvement but with hilar lymphadenopathy is considered as localized extralymphatic disease.\n\n**Note 8:** Clinical evidence of liver involvement must include either enlargement of the liver and at least an abnormal serum alkaline phosphatase level and two different liver function test abnormalities, or an abnormal liver demonstrated by imaging and one abnormal liver function test.\n\n**Note 9:** Each stage should be divided into A and B according to the absence or presence of defined general symptoms. These are:\n\n   1. Unexplained weight loss of more than 10% of the usual body weight in the 6 months prior to first attendance.\n   2. Unexplained fever with temperature above 38 degree C\n   3. Night sweats\n\n    Note: Pruritus alone does not qualify for B classification nor does a short, febrile illness associated with a known infection.\n\n    See Site Specific Factor #2 to code the presence or absence of B symptoms.",
-  "last_modified" : "2015-11-30T18:01:58.650Z",
+  "last_modified" : "2015-12-04T19:22:14.213Z",
   "definition" : [ {
     "key" : "clin_stage_group_direct",
-    "name" : "Assigned Stage Group",
+    "name" : "Stage",
     "type" : "INPUT"
   }, {
     "key" : "clin_stage_group_direct_display",
-    "name" : "Assigned Stage Group Display",
+    "name" : "Stage Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "description",

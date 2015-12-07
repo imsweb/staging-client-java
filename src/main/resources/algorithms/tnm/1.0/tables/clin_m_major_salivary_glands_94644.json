@@ -5,7 +5,7 @@
   "name" : "Clin M Major Salivary Glands",
   "title" : "Clinical M",
   "notes" : "**Note:** Supraclavicular and transverse cervical lymph nodes are coded in regional lymph nodes because they are categorized as N rather than M in TNM.",
-  "last_modified" : "2015-11-25T20:26:06.764Z",
+  "last_modified" : "2015-12-04T19:08:18.649Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed  \nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "Clinical assessment only:\nDistant lymph node(s):\n    Mediastinal (excluding superior mediastinal nodes)\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1" ], [ "p1", "pM1", "Distant metastasis", "Histologically confirmed:\nDistant lymph node(s):\n    Mediastinal (excluding superior mediastinal nodes)\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1" ], [ "88", "88", "Not applicable", "Clinical M is not defined for the specific site/histology\nIn situ case but no pTis is defined by TNM" ], [ "", "BLANK", "See Registrar Notes", "No clinical workup for T and N AND no clinical or pathologic evidence of distant metastasis" ] ]
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed  \nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "CLINICAL assessment only:\nDistant lymph node(s):\n    Mediastinal (excluding superior mediastinal nodes)\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1" ], [ "p1", "pM1", "Distant metastasis", "HISTOLOGICALLY confirmed:\nDistant lymph node(s):\n    Mediastinal (excluding superior mediastinal nodes)\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS" ], [ "88", "88", "Not applicable", "Clinical M is not defined for the specific site/histology\nIn situ case but no pTis is defined by TNM" ], [ "", "BLANK", "See Registrar Notes", "No clinical workup for T and N AND no clinical or pathologic evidence of distant metastasis" ] ]
 }

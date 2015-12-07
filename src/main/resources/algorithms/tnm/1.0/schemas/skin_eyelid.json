@@ -604,7 +604,7 @@
         "to" : "tmp_combined_m"
       } ],
       "inputs" : [ "tmp_path_m", "tmp_combined_m", "tmp_clin_m" ],
-      "outputs" : [ "tmp_combined_m", "source_m" ]
+      "outputs" : [ "tmp_combined_m", "tmp_source_m", "source_m" ]
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
@@ -647,17 +647,17 @@
         "from" : "path_m_prefix",
         "to" : "path_prefix"
       }, {
+        "from" : "tmp_source_m",
+        "to" : "cmb_source"
+      }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
-      }, {
-        "from" : "source_m",
-        "to" : "cmb_source"
       } ],
       "output_mapping" : [ {
         "from" : "cmb_prefix",
         "to" : "cmb_m_prefix"
       } ],
-      "inputs" : [ "clin_m_prefix", "path_m_prefix", "source_m" ],
+      "inputs" : [ "clin_m_prefix", "tmp_source_m", "path_m_prefix" ],
       "outputs" : [ "cmb_m_prefix" ]
     }, {
       "id" : "concatenate_t_51262",
@@ -790,5 +790,5 @@
   } ],
   "involved_tables" : [ "clin_m_hcu", "cpmbined_m_to_summ_stage_m_60564", "ssf8_sdd", "nodes_dde", "ssf7_scq", "path_m_hcu", "ssf4_mbg", "stage_group_p_66915", "parse_t_2177", "concatenate_n_43246", "ssf10_scm", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "tnm7_inclusions_tpb", "mets_hcu", "ssf11_scj", "ssf9_sdi", "ssf2_kaz", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "skin_eyelid_t_57348", "clin_t_skin_eyelid_93914", "ssf12_sck", "tnm7_stage_uaf", "systemic_surg_seq", "parse_m_47057", "combined_m", "combined_n", "summary_stage_rpa", "combined_t", "ssf13_scl", "determine_default_t", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpa", "ssf6_oak", "parse_n_67182", "ssf14_scn", "determine_default_n", "stage_group_c_57716", "skin_eyelid_n_65771", "extension_bdg", "behavior", "schema_selection_skin_eyelid", "ssf15_sco", "ssf1_jbl", "clin_n_skin_eyelid_10770", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "ssf16_scp", "primary_site", "ssf5_nar", "year_dx_validation", "combined_t_to_summ_stage_t_3b_3d_re_4_4e_d_48469" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-02T19:10:56.810Z"
+  "last_modified" : "2015-12-04T19:22:20.531Z"
 }

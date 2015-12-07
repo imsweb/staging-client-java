@@ -564,7 +564,7 @@
         "to" : "tmp_combined_m"
       } ],
       "inputs" : [ "tmp_path_m", "tmp_combined_m", "tmp_clin_m" ],
-      "outputs" : [ "tmp_combined_m", "source_m" ]
+      "outputs" : [ "tmp_combined_m", "tmp_source_m", "source_m" ]
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
@@ -607,17 +607,17 @@
         "from" : "path_m_prefix",
         "to" : "path_prefix"
       }, {
+        "from" : "tmp_source_m",
+        "to" : "cmb_source"
+      }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
-      }, {
-        "from" : "source_m",
-        "to" : "cmb_source"
       } ],
       "output_mapping" : [ {
         "from" : "cmb_prefix",
         "to" : "cmb_m_prefix"
       } ],
-      "inputs" : [ "clin_m_prefix", "path_m_prefix", "source_m" ],
+      "inputs" : [ "clin_m_prefix", "tmp_source_m", "path_m_prefix" ],
       "outputs" : [ "cmb_m_prefix" ]
     }, {
       "id" : "concatenate_t_51262",
@@ -754,5 +754,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "ssf3_lpp", "parse_t_2177", "concatenate_n_43246", "stage_group_p_82326", "ssf6_opg", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "concatenate_t_51262", "stage_group_c_478", "extension_bbl", "ssf5_npk", "adjustments_for_no_clin_or_no_path_26261", "clinical_n_corpus_carcinoma_62458", "systemic_surg_seq", "combined_t_to_summ_stage_t_2_3_re_4_d_26385", "parse_m_47057", "combined_m", "combined_n", "summary_stage_rpa", "combined_t", "corpus_adenosarcoma_extension_cytology_summary_stage", "path_m_ham", "determine_default_t", "mets_ham", "radiation_surg_seq", "clin_m_ham", "determine_default_m", "nodes_pos_fpa", "nodes_dbd", "schema_selection_corpus_carcinoma", "parse_n_67182", "corpus_carcinoma_t_42324", "determine_default_n", "ssf7_sqn", "ssf2_kpo", "behavior", "ssf8_sqo", "summary_stage_corpus_9973", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "ssf1_jbz", "path_t_corpus_carcinoma_7259", "primary_site", "ssf4_mpq", "pathological_n_corpus_carcinoma_11126", "year_dx_validation", "tnm7_inclusions_tqg", "tnm7_stage_ubs" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-02T19:10:58.423Z"
+  "last_modified" : "2015-12-04T19:22:21.583Z"
 }

@@ -416,7 +416,7 @@
         "to" : "tmp_combined_m"
       } ],
       "inputs" : [ "tmp_path_m", "tmp_combined_m", "tmp_clin_m" ],
-      "outputs" : [ "tmp_combined_m", "source_m" ]
+      "outputs" : [ "tmp_combined_m", "tmp_source_m", "source_m" ]
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
@@ -441,17 +441,17 @@
         "from" : "path_m_prefix",
         "to" : "path_prefix"
       }, {
+        "from" : "tmp_source_m",
+        "to" : "cmb_source"
+      }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
-      }, {
-        "from" : "source_m",
-        "to" : "cmb_source"
       } ],
       "output_mapping" : [ {
         "from" : "cmb_prefix",
         "to" : "cmb_m_prefix"
       } ],
-      "inputs" : [ "clin_m_prefix", "path_m_prefix", "source_m" ],
+      "inputs" : [ "clin_m_prefix", "tmp_source_m", "path_m_prefix" ],
       "outputs" : [ "cmb_m_prefix" ]
     }, {
       "id" : "concatenate_t_51262",
@@ -566,5 +566,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "ssf2_kaw", "determine_default_t", "mets_hak", "tnm7_stage_uax", "radiation_surg_seq", "stage_group_c_20505", "summ_stage_n_if_no_n_defined_61314", "ssf1_jaq", "determine_default_m", "nodes_dfm", "clin_t_placenta_62001", "parse_t_2177", "stage_group_p_5079", "path_m_hak", "schema_selection_placenta", "histology", "placenta_t_12749", "concatenate_m_40642", "clin_m_hak", "combined_t_no_tis", "combined_t_to_summ_stage_t_2_4e_re_93413", "extension_bbm", "concatenate_t_51262", "tnm7_inclusions_tpi", "adjust_path_defaults_for_no_path_placenta_37763", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "combined_m", "year_dx_validation", "summary_stage_rpa" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-02T05:36:32.479Z"
+  "last_modified" : "2015-12-04T19:22:10.258Z"
 }

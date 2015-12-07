@@ -560,7 +560,7 @@
         "to" : "tmp_combined_m"
       } ],
       "inputs" : [ "tmp_path_m", "tmp_combined_m", "tmp_clin_m" ],
-      "outputs" : [ "tmp_combined_m", "source_m" ]
+      "outputs" : [ "tmp_combined_m", "tmp_source_m", "source_m" ]
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
@@ -603,17 +603,17 @@
         "from" : "path_m_prefix",
         "to" : "path_prefix"
       }, {
+        "from" : "tmp_source_m",
+        "to" : "cmb_source"
+      }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
-      }, {
-        "from" : "source_m",
-        "to" : "cmb_source"
       } ],
       "output_mapping" : [ {
         "from" : "cmb_prefix",
         "to" : "cmb_m_prefix"
       } ],
-      "inputs" : [ "clin_m_prefix", "path_m_prefix", "source_m" ],
+      "inputs" : [ "clin_m_prefix", "tmp_source_m", "path_m_prefix" ],
       "outputs" : [ "cmb_m_prefix" ]
     }, {
       "id" : "concatenate_t_51262",
@@ -746,5 +746,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "nodes_dba", "mets_haj", "determine_default_t", "ssf3_lpu", "clin_n_dba", "radiation_surg_seq", "stage_group_c_90191", "vagina_t_91502", "determine_default_m", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "path_m_haj", "parse_n_67182", "tnm7_stage_ubc", "path_n_dba", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "clin_t_vagina_84852", "ssf2_kpr", "concatenate_m_40642", "ssf6_oaq", "schema_selection_vagina", "clin_m_haj", "behavior", "stage_group_p_72316", "tnm7_inclusions_tph", "concatenate_t_51262", "ssf5_npm", "adjustments_for_no_clin_or_no_path_26261", "ssf1_jbq", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "combined_t_to_summ_stage_t_2_3_re_4_d_26385", "parse_m_47057", "ssf7_sdf", "primary_site", "combined_m", "ssf4_mps", "combined_n", "extension_bad", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-02T19:10:51.325Z"
+  "last_modified" : "2015-12-04T19:22:11.832Z"
 }

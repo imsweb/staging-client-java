@@ -4,15 +4,15 @@
   "version" : "1.0",
   "name" : "Stage Group (c)",
   "title" : "TNM 7 Stage Group",
-  "notes" : "**Note 1:** The Stage Groups displayed are the enhanced UICC groups.  If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC manual to ensure you are using the appropriate logic.\n\n**Note 2:** The Histopathologic Types are set as follows:  \n\n     ANA: Anaplastic - 8020,8021,8030-8032 OR Grade = 4 with any Histology  \n     MED: Medullary - 8345-8347,8430,8510, 8512,8513; grade is not 4  \n     PAP < 45: Papillary/Follicular, Age < 45 - Any other histology, grade is not 4, Age at diagnosis 0-44  \n     PAP >=45: Papillary/Follicular, Age >=45 - Any other histology, grade is not 4, Age at diagnosis 45 or older  \n     PAP =999: Papillary/Follicular, Age Unknown - Any other histology, grade is not 4, Age at diagnosis is unknown",
-  "last_modified" : "2015-11-25T20:26:27.775Z",
+  "notes" : "**Note 1:** The Stage Groups displayed are the enhanced UICC groups.  If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC manual to ensure you are using the appropriate logic.\n\n**Note 2:** The Histopathologic Types are set as follows:  \n\n     ANA: Anaplastic - 8020,8021,8030-8032 OR Grade = 4 with any Histology  \n     MED: Medullary - 8345-8347,8430,8510, 8512,8513; grade is not 4  \n     PAP < 45: Papillary/Follicular, Age < 45 - Any other histology, grade is not 4, Age at diagnosis 0-44  \n     PAP >=45: Papillary/Follicular, Age >=45 - Any other histology, grade is not 4, Age at diagnosis 45 or older  \n     PAP =999: Papillary/Follicular, Age Unknown - Any other histology, grade is not 4, Age at diagnosis is unknown\n\n**Note 3:** TNM does not include an in situ category for this schema. Assign 88 to stage group for in situ cases.",
+  "last_modified" : "2015-12-04T19:22:09.817Z",
   "definition" : [ {
     "key" : "clin_stage_group_direct",
-    "name" : "Assigned Stage Group",
+    "name" : "Stage",
     "type" : "INPUT"
   }, {
     "key" : "clin_stage_group_direct_display",
-    "name" : "Assigned Stage Group Display",
+    "name" : "Stage Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "t",

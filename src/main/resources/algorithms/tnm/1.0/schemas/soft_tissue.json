@@ -540,7 +540,7 @@
         "to" : "tmp_combined_m"
       } ],
       "inputs" : [ "tmp_path_m", "tmp_combined_m", "tmp_clin_m" ],
-      "outputs" : [ "tmp_combined_m", "source_m" ]
+      "outputs" : [ "tmp_combined_m", "tmp_source_m", "source_m" ]
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
@@ -583,17 +583,17 @@
         "from" : "path_m_prefix",
         "to" : "path_prefix"
       }, {
+        "from" : "tmp_source_m",
+        "to" : "cmb_source"
+      }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
-      }, {
-        "from" : "source_m",
-        "to" : "cmb_source"
       } ],
       "output_mapping" : [ {
         "from" : "cmb_prefix",
         "to" : "cmb_m_prefix"
       } ],
-      "inputs" : [ "clin_m_prefix", "path_m_prefix", "source_m" ],
+      "inputs" : [ "clin_m_prefix", "tmp_source_m", "path_m_prefix" ],
       "outputs" : [ "cmb_m_prefix" ]
     }, {
       "id" : "concatenate_t_51262",
@@ -729,5 +729,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "clin_n_soft_tissues_78998", "radiation_surg_seq", "stage_group_c_47728", "clin_t_soft_tissue_43767", "ssf3_lpk", "determine_default_m", "extension_bbz", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "soft_tissue_n_4758", "determine_default_n", "schema_selection_soft_tissue", "ssf1_jpm", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "combined_t_no_tis", "seer_mets_softtissue_3852", "ssf2_kpk", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "determine_combined_prefix_91402", "tnm7_inclusions_tps", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "path_m_soft_tissues_96225", "nodes_dbs", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "tnm7_stage_ubj", "year_dx_validation", "ssf4_mpf", "summary_stage_rpa", "clin_m_soft_tissues_97765", "stage_group_p_79956", "soft_tissue_t_79319" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-02T19:10:44.969Z"
+  "last_modified" : "2015-12-04T19:22:00.280Z"
 }

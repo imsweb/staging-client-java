@@ -5,14 +5,14 @@
   "name" : "No TNM Group (c)",
   "title" : "No TNM Stage Group defined",
   "notes" : "**Note:** Stage Group has not been defined for this schema.",
-  "last_modified" : "2015-11-25T20:25:36.096Z",
+  "last_modified" : "2015-12-04T19:22:10.325Z",
   "definition" : [ {
     "key" : "clin_stage_group_direct",
-    "name" : "Assigned Stage Group",
+    "name" : "Stage",
     "type" : "INPUT"
   }, {
     "key" : "clin_stage_group_direct_display",
-    "name" : "Assigned Stage Group Display",
+    "name" : "Stage Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "t",

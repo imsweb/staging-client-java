@@ -523,7 +523,7 @@
         "to" : "tmp_combined_m"
       } ],
       "inputs" : [ "tmp_path_m", "tmp_combined_m", "tmp_clin_m" ],
-      "outputs" : [ "tmp_combined_m", "source_m" ]
+      "outputs" : [ "tmp_combined_m", "tmp_source_m", "source_m" ]
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
@@ -566,17 +566,17 @@
         "from" : "path_m_prefix",
         "to" : "path_prefix"
       }, {
+        "from" : "tmp_source_m",
+        "to" : "cmb_source"
+      }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
-      }, {
-        "from" : "source_m",
-        "to" : "cmb_source"
       } ],
       "output_mapping" : [ {
         "from" : "cmb_prefix",
         "to" : "cmb_m_prefix"
       } ],
-      "inputs" : [ "clin_m_prefix", "path_m_prefix", "source_m" ],
+      "inputs" : [ "clin_m_prefix", "tmp_source_m", "path_m_prefix" ],
       "outputs" : [ "cmb_m_prefix" ]
     }, {
       "id" : "concatenate_t_51262",
@@ -709,5 +709,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "combined_t_to_summ_stage_t_thyroid_68736", "ssf1_jap", "radiation_surg_seq", "determine_default_m", "schema_selection_thyroid", "extension_bby", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "determine_default_n", "combined_n_to_summ_stage_n_84054", "thyroid_ajcctnm7_stage_thyroid_medullary", "histology", "concatenate_m_40642", "thyroid_t_6166", "histologies_grade_stage_tnm_7_20594", "clin_n_dbr", "tnm7_inclusions_tpb", "combined_t_no_tis", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "thyroid_ajcctnm7_stage_thyroid_papillaryand_follicular_lessthan_45", "stage_group_p_39380", "determine_combined_prefix_91402", "path_m_hbf", "thyroid_ajcctnm7_stage_thyroid_papillaryand_follicular_age45and_older", "mets_hbf", "thyroid_ajcctnm7_stage_thyroid_anaplastic", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "nodes_dbr", "clin_t_thyroid_93682", "combined_m", "combined_n", "grade", "year_dx_validation", "summary_stage_rpa", "clin_m_hbf", "path_n_dbr", "stage_group_c_30166" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-02T19:10:50.501Z"
+  "last_modified" : "2015-12-04T19:22:10.037Z"
 }

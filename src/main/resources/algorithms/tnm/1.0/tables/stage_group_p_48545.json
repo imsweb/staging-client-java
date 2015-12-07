@@ -4,15 +4,15 @@
   "version" : "1.0",
   "name" : "Stage Group (p)",
   "title" : "TNM 7 Stage Group",
-  "notes" : "**Note 1:** The Stage Groups displayed are the enhanced UICC groups.  If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC manual to ensure you are using the appropriate logic.\n\n**Note 2:** For Gleason, use SSF8 for Clinical and SSF10 for Pathologic.",
-  "last_modified" : "2015-11-25T20:27:03.180Z",
+  "notes" : "**Note 1:** The Stage Groups displayed are the enhanced UICC groups.  If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC manual to ensure you are using the appropriate logic.\n\n**Note 2:** For Gleason, use SSF10 for Pathologic.\n\n**Note 3:** TNM does not include an in situ category for this schema. Assign 88 to stage group for in situ cases.",
+  "last_modified" : "2015-12-04T19:13:34.814Z",
   "definition" : [ {
     "key" : "path_stage_group_direct",
-    "name" : "Assigned Stage Group",
+    "name" : "Stage",
     "type" : "INPUT"
   }, {
     "key" : "path_stage_group_direct_display",
-    "name" : "Assigned Stage Group Display",
+    "name" : "Stage Display",
     "type" : "DESCRIPTION"
   }, {
     "key" : "t",
@@ -32,7 +32,7 @@
     "type" : "DESCRIPTION"
   }, {
     "key" : "gleason",
-    "name" : "Gleason (cSSF8, pSSF10)",
+    "name" : "Gleason (SSF10)",
     "type" : "DESCRIPTION"
   } ],
   "rows" : [ [ "1", "I", "T1,1a-1c,2,2a", "N0", "M0", "001-099,988,997-999", "002-006,988,998,999" ], [ "2A", "IIA", "T1,1a-1c,2,2a\nT1,1a-1c,2,2a\nT2b", "N0\nN0\nN0", "M0\nM0\nM0", "001-199,988,997-999\n100-199            \n001-199,988,997-999", "007\n002-006,988,998,999\n002-006,007,988,998,999" ], [ "2B", "IIB", "T2c             \nT1,1a-1c,2,2a,2b\nT1,1a-1c,2,2a,2b", "N0\nN0\nN0", "M0\nM0\nM0", "Any PSA\n200-980\nAny PSA", "Any Gleason\nAny Gleason\n008-010" ], [ "3", "III", "T3,3a,3b", "N1\nN0", "M0\nM0", "Any PSA \nAny PSA", "Any Gleason\nAny Gleason" ], [ "4", "IV", "T4   \nAny T\nAny T", "Any N\nN1   \nAny N", "M0       \nM0       \nM1,1a-1c", "Any PSA\nAny PSA\nAny PSA", "Any Gleason\nAny Gleason\nAny Gleason" ], [ "99", "Unknown", "T0,1,1a-1c,2,2a-2c,3,3a,3b\nTX", "NX  \nN0,X", "M0\nM0", "Any PSA \nAny PSA", "Any Gleason\nAny Gleason" ], [ "88", "Not Applicable", "88", "88", "88", "Any PSA", "Any Gleason" ] ]

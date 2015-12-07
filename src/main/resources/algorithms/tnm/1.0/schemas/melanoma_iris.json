@@ -601,7 +601,7 @@
         "to" : "tmp_combined_m"
       } ],
       "inputs" : [ "tmp_path_m", "tmp_combined_m", "tmp_clin_m" ],
-      "outputs" : [ "tmp_combined_m", "source_m" ]
+      "outputs" : [ "tmp_combined_m", "tmp_source_m", "source_m" ]
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
@@ -644,17 +644,17 @@
         "from" : "path_m_prefix",
         "to" : "path_prefix"
       }, {
+        "from" : "tmp_source_m",
+        "to" : "cmb_source"
+      }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
-      }, {
-        "from" : "source_m",
-        "to" : "cmb_source"
       } ],
       "output_mapping" : [ {
         "from" : "cmb_prefix",
         "to" : "cmb_m_prefix"
       } ],
-      "inputs" : [ "clin_m_prefix", "path_m_prefix", "source_m" ],
+      "inputs" : [ "clin_m_prefix", "tmp_source_m", "path_m_prefix" ],
       "outputs" : [ "cmb_m_prefix" ]
     }, {
       "id" : "concatenate_t_51262",
@@ -787,5 +787,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "ssf3_lpr", "stage_group_p_60572", "ssf13_sqq", "ssf12_sqb", "ssf8_spx", "clin_m_hpg", "parse_t_2177", "concatenate_n_43246", "combined_n_to_summ_stage_n_84054", "ssf6_opd", "histology", "concatenate_m_40642", "tnm7_inclusions_tpa", "path_m_hpg", "schema_selection_melanoma_iris", "extension_bfr", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "clin_n_ophthalmic_n_94312", "tnm7_stage_uad", "ssf2_kbm", "ssf10_spz", "ssf5_npf", "systemic_surg_seq", "ophthalmic_n_36875", "parse_m_47057", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "ssf11_sqa", "summary_stage_rpa", "ssf7_spw", "determine_default_t", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpa", "melanoma_iris_t_65686", "parse_n_67182", "determine_default_n", "combined_t_no_tis", "stage_group_c_89731", "discriminator_melanoma", "determine_combined_prefix_91402", "seer_regional_nodes_melanomachoroid_3244", "stop_if_no_clin_and_no_path_24035", "ssf9_sqm", "primary_site", "clin_t_melanoma_iris_54551", "year_dx_validation", "ssf14_sqr", "ssf4_mpe", "seer_mets_melanomachoroid_55264" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-02T19:10:58.853Z"
+  "last_modified" : "2015-12-04T19:22:22.492Z"
 }
