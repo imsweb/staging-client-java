@@ -109,6 +109,7 @@
     "key" : "ssf1",
     "name" : "Estrogen Receptor (ER) Assay",
     "naaccr_item" : 2880,
+    "default" : "999",
     "table" : "ssf1_jag",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -116,6 +117,7 @@
     "key" : "ssf2",
     "name" : "Progesterone Receptor (PR) Assay",
     "naaccr_item" : 2890,
+    "default" : "999",
     "table" : "ssf2_kac",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -123,6 +125,7 @@
     "key" : "ssf3",
     "name" : "Number of Positive Ipsilateral Level I-II Axillary Lymph Nodes",
     "naaccr_item" : 2900,
+    "default" : "099",
     "table" : "ssf3_lac",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -151,6 +154,7 @@
     "key" : "ssf7",
     "name" : "Nottingham or Bloom-Richardson (BR) Score/Grade",
     "naaccr_item" : 2861,
+    "default" : "999",
     "table" : "ssf7_saa",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -158,6 +162,7 @@
     "key" : "ssf8",
     "name" : "HER2: Immunohistochemistry (IHC) Lab Value",
     "naaccr_item" : 2862,
+    "default" : "999",
     "table" : "ssf8_sab",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -165,6 +170,7 @@
     "key" : "ssf9",
     "name" : "HER2: Immunohistochemistry (IHC) Test Interpretation",
     "naaccr_item" : 2863,
+    "default" : "999",
     "table" : "ssf9_sac",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -172,6 +178,7 @@
     "key" : "ssf10",
     "name" : "HER2: Fluorescence In Situ Hybridization (FISH) Lab Value",
     "naaccr_item" : 2864,
+    "default" : "988",
     "table" : "ssf10_sad",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -179,6 +186,7 @@
     "key" : "ssf11",
     "name" : "HER2: Fluorescence In Situ Hybridization (FISH) Test Interpretation",
     "naaccr_item" : 2865,
+    "default" : "999",
     "table" : "ssf11_sae",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -186,6 +194,7 @@
     "key" : "ssf12",
     "name" : "HER2: Chromogenic In Situ Hybridization (CISH) Lab Value",
     "naaccr_item" : 2866,
+    "default" : "988",
     "table" : "ssf12_saf",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -193,6 +202,7 @@
     "key" : "ssf13",
     "name" : "HER2: Chromogenic In Situ Hybridization (CISH) Test Interpretation",
     "naaccr_item" : 2867,
+    "default" : "999",
     "table" : "ssf13_sag",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -200,6 +210,7 @@
     "key" : "ssf14",
     "name" : "HER2: Result of Other or Unknown Test",
     "naaccr_item" : 2868,
+    "default" : "999",
     "table" : "ssf14_sbf",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -207,6 +218,7 @@
     "key" : "ssf15",
     "name" : "HER2: Summary Result of Testing",
     "naaccr_item" : 2869,
+    "default" : "999",
     "table" : "ssf15_sbg",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -214,6 +226,7 @@
     "key" : "ssf16",
     "name" : "Combinations of ER, PR, and HER2 Results",
     "naaccr_item" : 2870,
+    "default" : "988",
     "table" : "ssf16_sah",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED" ]
@@ -221,30 +234,35 @@
     "key" : "ssf17",
     "name" : "Circulating Tumor Cells (CTC) and Method of Detection",
     "naaccr_item" : 2871,
+    "default" : "988",
     "table" : "ssf17_sai",
     "used_for_staging" : false
   }, {
     "key" : "ssf18",
     "name" : "Disseminated Tumor Cells (DTC) and Method of Detection",
     "naaccr_item" : 2872,
+    "default" : "988",
     "table" : "ssf18_saj",
     "used_for_staging" : false
   }, {
     "key" : "ssf19",
     "name" : "Assessment of Positive Ipsilateral Axillary Lymph Nodes",
     "naaccr_item" : 2873,
+    "default" : "988",
     "table" : "ssf19_sak",
     "used_for_staging" : false
   }, {
     "key" : "ssf20",
     "name" : "Assessment of Positive Distant Metastases",
     "naaccr_item" : 2874,
+    "default" : "988",
     "table" : "ssf20_sal",
     "used_for_staging" : false
   }, {
     "key" : "ssf21",
     "name" : "Response to Neoadjuvant Therapy",
     "naaccr_item" : 2875,
+    "default" : "988",
     "table" : "ssf21_sam",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -252,6 +270,7 @@
     "key" : "ssf22",
     "name" : "Multigene Signature Method",
     "naaccr_item" : 2876,
+    "default" : "999",
     "table" : "ssf22_san",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -259,6 +278,7 @@
     "key" : "ssf23",
     "name" : "Multigene Signature Results",
     "naaccr_item" : 2877,
+    "default" : "999",
     "table" : "ssf23_sao",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -266,13 +286,14 @@
     "key" : "ssf24",
     "name" : "Paget Disease",
     "naaccr_item" : 2878,
+    "default" : "988",
     "table" : "ssf24_sap",
     "used_for_staging" : false
   }, {
     "key" : "clin_stage_group_direct",
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_c_34977",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -280,7 +301,7 @@
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_p_31599",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED" ]
@@ -331,20 +352,6 @@
     "key" : "source_m",
     "name" : "Derived SEER Combined M Source",
     "naaccr_item" : 3626
-  }, {
-    "key" : "ss2017",
-    "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762,
-    "default" : "90"
-  }, {
-    "key" : "ss2017_t",
-    "name" : "Derived SEER Summary Stage 2017 T"
-  }, {
-    "key" : "ss2017_n",
-    "name" : "Derived SEER Summary Stage 2017 N"
-  }, {
-    "key" : "ss2017_m",
-    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "tnm7_stage",
@@ -466,9 +473,6 @@
         "from" : "path_t_out",
         "to" : "tmp_path_t"
       }, {
-        "from" : "ss2017_t_out",
-        "to" : "ss2017_t"
-      }, {
         "from" : "clin_t_out",
         "to" : "tmp_clin_t"
       }, {
@@ -493,11 +497,11 @@
         "from" : "source_n_out",
         "to" : "source_n"
       }, {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_n"
-      }, {
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
@@ -516,9 +520,6 @@
       }, {
         "from" : "combined_m_out",
         "to" : "tmp_combined_m"
-      }, {
-        "from" : "ss2017_m_out",
-        "to" : "ss2017_m"
       }, {
         "from" : "clin_m_out",
         "to" : "tmp_clin_m"
@@ -714,11 +715,11 @@
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
-        "from" : "path_m_prefix",
-        "to" : "path_prefix"
-      }, {
         "from" : "tmp_source_m",
         "to" : "cmb_source"
+      }, {
+        "from" : "path_m_prefix",
+        "to" : "path_prefix"
       }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
@@ -860,5 +861,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "ssf22_san", "ssf23_sao", "ssf5_naa", "parse_t_2177", "concatenate_n_43246", "schema_selection_breast", "stage_group_c_34977", "histology", "concatenate_m_40642", "ssf24_sap", "nodes_pos_fab", "concatenate_t_51262", "tnm7_inclusions_tpg", "ssf3_lac", "adjustments_for_no_clin_or_no_path_26261", "ssf11_sae", "ssf16_sah", "ssf14_sbf", "ssf20_sal", "nodes_daj", "systemic_surg_seq", "tnm7_stage_uac", "parse_m_47057", "ssf10_sad", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "ssf15_sbg", "ssf21_sam", "summary_stage_rpa", "ssf17_sai", "ssf1_jag", "combined_t_breast", "extension_bak", "combined_n_to_summ_stage_n_n3c_d_43145", "determine_default_t", "ssf19_sak", "radiation_surg_seq", "ssf6_oaa", "determine_default_m", "ssf18_saj", "breast_pathologic_t_84149", "clin_m_hau", "parse_n_67182", "determine_default_n", "ssf7_saa", "path_n_daj", "ssf4_mab", "path_m_hau", "behavior", "mets_hau", "ssf8_sab", "determine_combined_prefix_91402", "ssf12_saf", "stop_if_no_clin_and_no_path_24035", "clin_n_daj", "primary_site", "ssf2_kac", "year_dx_validation", "ssf9_sac", "breast_t_70656", "ssf13_sag", "stage_group_p_31599" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-04T19:22:23.949Z"
+  "last_modified" : "2015-12-10T18:54:40.429Z"
 }

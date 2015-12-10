@@ -109,6 +109,7 @@
     "key" : "ssf1",
     "name" : "Carcinoembryonic Antigen (CEA)",
     "naaccr_item" : 2880,
+    "default" : "999",
     "table" : "ssf1_jpf",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -116,6 +117,7 @@
     "key" : "ssf3",
     "name" : "Carcinoembryonic Antigen (CEA) Lab Value",
     "naaccr_item" : 2900,
+    "default" : "988",
     "table" : "ssf3_lpe",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -123,6 +125,7 @@
     "key" : "ssf4",
     "name" : "Tumor Deposits",
     "naaccr_item" : 2910,
+    "default" : "999",
     "table" : "ssf4_mpb",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -130,12 +133,14 @@
     "key" : "ssf5",
     "name" : "Tumor Regression Grade",
     "naaccr_item" : 2920,
+    "default" : "988",
     "table" : "ssf5_npb",
     "used_for_staging" : false
   }, {
     "key" : "ssf6",
     "name" : "Circumferential Resection Margin (CRM)",
     "naaccr_item" : 2930,
+    "default" : "999",
     "table" : "ssf6_opb",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -143,12 +148,14 @@
     "key" : "ssf7",
     "name" : "Microsatellite Instability (MSI)",
     "naaccr_item" : 2861,
+    "default" : "988",
     "table" : "ssf7_spf",
     "used_for_staging" : false
   }, {
     "key" : "ssf8",
     "name" : "Perineural Invasion",
     "naaccr_item" : 2862,
+    "default" : "999",
     "table" : "ssf8_spg",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -156,6 +163,7 @@
     "key" : "ssf9",
     "name" : "KRAS",
     "naaccr_item" : 2863,
+    "default" : "999",
     "table" : "ssf9_sph",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -163,13 +171,14 @@
     "key" : "ssf10",
     "name" : "18q Loss of Heterozygosity (LOH)",
     "naaccr_item" : 2864,
+    "default" : "988",
     "table" : "ssf10_spi",
     "used_for_staging" : false
   }, {
     "key" : "clin_stage_group_direct",
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_c_26613",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -177,7 +186,7 @@
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_p_78368",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED" ]
@@ -228,20 +237,6 @@
     "key" : "source_m",
     "name" : "Derived SEER Combined M Source",
     "naaccr_item" : 3626
-  }, {
-    "key" : "ss2017",
-    "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762,
-    "default" : "90"
-  }, {
-    "key" : "ss2017_t",
-    "name" : "Derived SEER Summary Stage 2017 T"
-  }, {
-    "key" : "ss2017_n",
-    "name" : "Derived SEER Summary Stage 2017 N"
-  }, {
-    "key" : "ss2017_m",
-    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "tnm7_stage",
@@ -363,9 +358,6 @@
         "from" : "path_t_out",
         "to" : "tmp_path_t"
       }, {
-        "from" : "ss2017_t_out",
-        "to" : "ss2017_t"
-      }, {
         "from" : "clin_t_out",
         "to" : "tmp_clin_t"
       }, {
@@ -390,11 +382,11 @@
         "from" : "source_n_out",
         "to" : "source_n"
       }, {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_n"
-      }, {
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
@@ -413,9 +405,6 @@
       }, {
         "from" : "combined_m_out",
         "to" : "tmp_combined_m"
-      }, {
-        "from" : "ss2017_m_out",
-        "to" : "ss2017_m"
       }, {
         "from" : "clin_m_out",
         "to" : "tmp_clin_m"
@@ -611,11 +600,11 @@
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
-        "from" : "path_m_prefix",
-        "to" : "path_prefix"
-      }, {
         "from" : "tmp_source_m",
         "to" : "cmb_source"
+      }, {
+        "from" : "path_m_prefix",
+        "to" : "path_prefix"
       }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
@@ -757,5 +746,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "parse_t_2177", "concatenate_n_43246", "ssf7_spf", "ssf1_jpf", "rectum_t_5935", "ssf3_lpe", "combined_n_to_summ_stage_n_84054", "histology", "ssf6_opb", "extension_bbf", "concatenate_m_40642", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "tnm7_inclusions_tpc", "ssf10_spi", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "schema_selection_rectum", "ssf5_npb", "ssf9_sph", "systemic_surg_seq", "parse_m_47057", "combined_m", "tnm7_stage_upw", "combined_n", "ssf8_spg", "summary_stage_rpa", "combined_t", "determine_default_t", "radiation_surg_seq", "path_n_dax", "determine_default_m", "nodes_pos_fpa", "path_m_hag", "mets_hag", "parse_n_67182", "determine_default_n", "nodes_dax", "behavior", "clin_m_hag", "clin_t_rectum_29212", "ssf4_mpb", "determine_combined_prefix_91402", "stage_group_c_26613", "stop_if_no_clin_and_no_path_24035", "primary_site", "stage_group_p_78368", "year_dx_validation", "clin_n_dax" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-04T19:22:11.423Z"
+  "last_modified" : "2015-12-10T18:54:30.876Z"
 }

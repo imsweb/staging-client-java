@@ -49,6 +49,7 @@
     "key" : "ssf1",
     "name" : "World Health Organization (WHO) Grade Classification",
     "naaccr_item" : 2880,
+    "default" : "999",
     "table" : "ssf1_jpo",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -56,18 +57,21 @@
     "key" : "ssf2",
     "name" : "Ki-67/MIB-1 Labeling Index (LI): Brain",
     "naaccr_item" : 2890,
+    "default" : "988",
     "table" : "ssf2_kpl",
     "used_for_staging" : false
   }, {
     "key" : "ssf3",
     "name" : "Functional Neurologic Status - Karnofsky Performance Scale (KPS)",
     "naaccr_item" : 2900,
+    "default" : "988",
     "table" : "ssf3_lpm",
     "used_for_staging" : false
   }, {
     "key" : "ssf4",
     "name" : "Methylation of O6-Methylguanine-Methyltransferase (MGMT)",
     "naaccr_item" : 2910,
+    "default" : "988",
     "table" : "ssf4_mpn",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -75,6 +79,7 @@
     "key" : "ssf5",
     "name" : "Chromosome 1p: Loss of Heterozygosity (LOH)",
     "naaccr_item" : 2920,
+    "default" : "988",
     "table" : "ssf5_nph",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -82,6 +87,7 @@
     "key" : "ssf6",
     "name" : "Chromosome 19q: Loss of Heterozygosity (LOH)",
     "naaccr_item" : 2930,
+    "default" : "988",
     "table" : "ssf6_opf",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -89,12 +95,14 @@
     "key" : "ssf7",
     "name" : "Surgical Resection",
     "naaccr_item" : 2861,
+    "default" : "988",
     "table" : "ssf7_sqk",
     "used_for_staging" : false
   }, {
     "key" : "ssf8",
     "name" : "Unifocal vs Multifocal Tumor",
     "naaccr_item" : 2862,
+    "default" : "988",
     "table" : "ssf8_sql",
     "used_for_staging" : false
   } ],
@@ -144,20 +152,6 @@
     "key" : "source_m",
     "name" : "Derived SEER Combined M Source",
     "naaccr_item" : 3626
-  }, {
-    "key" : "ss2017",
-    "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762,
-    "default" : "90"
-  }, {
-    "key" : "ss2017_t",
-    "name" : "Derived SEER Summary Stage 2017 T"
-  }, {
-    "key" : "ss2017_n",
-    "name" : "Derived SEER Summary Stage 2017 N"
-  }, {
-    "key" : "ss2017_m",
-    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "summary_stage_2017",
@@ -182,5 +176,5 @@
   } ],
   "involved_tables" : [ "ssf8_sql", "ssf7_sqk", "ssf3_lpm", "schema_selection_brain", "ssf5_nph", "ssf6_opf", "extension_bcc", "primary_site", "ssf4_mpn", "histology", "ssf1_jpo", "year_dx_validation", "summary_stage_rpa", "ssf2_kpl", "nodes_dna", "mets_haw" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-17T23:50:17.778Z"
+  "last_modified" : "2015-12-10T18:54:41.059Z"
 }

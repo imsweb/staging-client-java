@@ -109,25 +109,28 @@
     "key" : "ssf1",
     "name" : "Carbohydrate Antigen 19-9 (CA 19-9) Lab Value",
     "naaccr_item" : 2880,
+    "default" : "988",
     "table" : "ssf1_jpe",
     "used_for_staging" : false
   }, {
     "key" : "ssf2",
     "name" : "Serum Chromogranin A (CgA) Lab Value",
     "naaccr_item" : 2890,
+    "default" : "988",
     "table" : "ssf2_kpd",
     "used_for_staging" : false
   }, {
     "key" : "ssf3",
     "name" : "Mitotic Count",
     "naaccr_item" : 2900,
+    "default" : "988",
     "table" : "ssf3_lpd",
     "used_for_staging" : false
   }, {
     "key" : "clin_stage_group_direct",
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_c_2328",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -135,7 +138,7 @@
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_p_66747",
     "used_for_staging" : false
   } ],
@@ -185,20 +188,6 @@
     "key" : "source_m",
     "name" : "Derived SEER Combined M Source",
     "naaccr_item" : 3626
-  }, {
-    "key" : "ss2017",
-    "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762,
-    "default" : "90"
-  }, {
-    "key" : "ss2017_t",
-    "name" : "Derived SEER Summary Stage 2017 T"
-  }, {
-    "key" : "ss2017_n",
-    "name" : "Derived SEER Summary Stage 2017 N"
-  }, {
-    "key" : "ss2017_m",
-    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "tnm7_stage",
@@ -320,9 +309,6 @@
         "from" : "path_t_out",
         "to" : "tmp_path_t"
       }, {
-        "from" : "ss2017_t_out",
-        "to" : "ss2017_t"
-      }, {
         "from" : "clin_t_out",
         "to" : "tmp_clin_t"
       }, {
@@ -347,11 +333,11 @@
         "from" : "source_n_out",
         "to" : "source_n"
       }, {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_n"
-      }, {
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
@@ -370,9 +356,6 @@
       }, {
         "from" : "combined_m_out",
         "to" : "tmp_combined_m"
-      }, {
-        "from" : "ss2017_m_out",
-        "to" : "ss2017_m"
       }, {
         "from" : "clin_m_out",
         "to" : "tmp_clin_m"
@@ -568,11 +551,11 @@
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
-        "from" : "path_m_prefix",
-        "to" : "path_prefix"
-      }, {
         "from" : "tmp_source_m",
         "to" : "cmb_source"
+      }, {
+        "from" : "path_m_prefix",
+        "to" : "path_prefix"
       }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
@@ -714,5 +697,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "path_m_hap", "clin_m_hap", "ssf2_kpd", "radiation_surg_seq", "mets_hap", "clin_n_dbm", "determine_default_m", "tnm7_stage_ups", "ssf1_jpe", "tnm7_inclusions_tae", "clin_t_pancreas_body_tail_71461", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "determine_default_n", "combined_n_to_summ_stage_n_84054", "ssf3_lpd", "histology", "concatenate_m_40642", "extension_bdf", "stage_group_c_2328", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "schema_selection_pancreas_body_tail", "behavior", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "determine_combined_prefix_91402", "stage_group_p_66747", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "pancreas_bodytail_t_46669", "parse_m_47057", "primary_site", "path_n_dbm", "combined_m", "combined_n", "nodes_dbm", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-04T19:22:02.411Z"
+  "last_modified" : "2015-12-10T18:54:25.851Z"
 }

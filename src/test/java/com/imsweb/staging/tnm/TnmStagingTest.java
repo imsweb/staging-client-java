@@ -268,7 +268,7 @@ public class TnmStagingTest extends StagingTest {
         Assert.assertEquals("urethra", data.getSchemaId());
         Assert.assertEquals(0, data.getErrors().size());
         Assert.assertEquals(29, data.getPath().size());
-        Assert.assertEquals(14, data.getOutput().size());
+        Assert.assertEquals(10, data.getOutput().size());
 
         // check outputs
         Assert.assertEquals("1.0", data.getOutput(TnmStagingData.TnmOutput.DERIVED_VERSION));

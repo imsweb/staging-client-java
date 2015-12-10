@@ -49,6 +49,7 @@
     "key" : "ssf1",
     "name" : "JAK2 (also known as Janus Kinase 2 and JAK2 Exon 12)",
     "naaccr_item" : 2880,
+    "default" : "999",
     "table" : "ssf1_jbt",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -99,20 +100,6 @@
     "key" : "source_m",
     "name" : "Derived SEER Combined M Source",
     "naaccr_item" : 3626
-  }, {
-    "key" : "ss2017",
-    "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762,
-    "default" : "90"
-  }, {
-    "key" : "ss2017_t",
-    "name" : "Derived SEER Summary Stage 2017 T"
-  }, {
-    "key" : "ss2017_n",
-    "name" : "Derived SEER Summary Stage 2017 N"
-  }, {
-    "key" : "ss2017_m",
-    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "summary_stage_2017",
@@ -137,5 +124,5 @@
   } ],
   "involved_tables" : [ "primary_site", "histology", "year_dx_validation", "ssf1_jbt", "summary_stage_rpa", "schema_selection_heme_retic", "mets_hna", "extension_bci", "nodes_dna" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-30T20:50:51.711Z"
+  "last_modified" : "2015-12-10T18:54:41.322Z"
 }

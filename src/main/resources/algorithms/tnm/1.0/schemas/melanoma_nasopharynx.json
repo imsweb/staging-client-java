@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Melanoma Nasopharynx",
   "title" : "Malignant Melanoma of Nasopharynx (including Pharyngeal Tonsil)",
-  "notes" : "M-8720-8790\nC110 Superior wall of nasopharynx\nC111 Posterior wall of nasopharynx (including pharyngeal tonsil)\nC112 Lateral wall of nasopharynx\nC113 Anterior wall of nasopharynx\nC118 Overlapping lesion of nasopharynx\nC119 Nasopharynx, NOS\n\n**Note: ** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Nasopharynx* chapter on page 62 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C110 Superior wall of nasopharynx\nC111 Posterior wall of nasopharynx (including pharyngeal tonsil)\nC112 Lateral wall of nasopharynx\nC113 Anterior wall of nasopharynx\nC118 Overlapping lesion of nasopharynx\nC119 Nasopharynx, NOS\n\n**Note: ** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Nasopharynx* chapter on page 62 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_melanoma_nasopharynx",
   "inputs" : [ {
     "key" : "year_dx",
@@ -229,20 +229,6 @@
     "key" : "source_m",
     "name" : "Derived SEER Combined M Source",
     "naaccr_item" : 3626
-  }, {
-    "key" : "ss2017",
-    "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762,
-    "default" : "90"
-  }, {
-    "key" : "ss2017_t",
-    "name" : "Derived SEER Summary Stage 2017 T"
-  }, {
-    "key" : "ss2017_n",
-    "name" : "Derived SEER Summary Stage 2017 N"
-  }, {
-    "key" : "ss2017_m",
-    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "tnm7_stage",
@@ -364,9 +350,6 @@
         "from" : "path_t_out",
         "to" : "tmp_path_t"
       }, {
-        "from" : "ss2017_t_out",
-        "to" : "ss2017_t"
-      }, {
         "from" : "clin_t_out",
         "to" : "tmp_clin_t"
       }, {
@@ -391,11 +374,11 @@
         "from" : "source_n_out",
         "to" : "source_n"
       }, {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_n"
-      }, {
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
@@ -414,9 +397,6 @@
       }, {
         "from" : "combined_m_out",
         "to" : "tmp_combined_m"
-      }, {
-        "from" : "ss2017_m_out",
-        "to" : "ss2017_m"
       }, {
         "from" : "clin_m_out",
         "to" : "tmp_clin_m"
@@ -612,11 +592,11 @@
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
-        "from" : "path_m_prefix",
-        "to" : "path_prefix"
-      }, {
         "from" : "tmp_source_m",
         "to" : "cmb_source"
+      }, {
+        "from" : "path_m_prefix",
+        "to" : "path_prefix"
       }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
@@ -758,5 +738,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "cpmbined_m_to_summ_stage_m_60564", "ssf10_spd", "stage_group_p_21201", "tnm7_stage_upu", "parse_t_2177", "concatenate_n_43246", "clin_m_hpd", "schema_selection_melanoma_nasopharynx", "clin_t_melanoma_nasopharynx_19497", "ssf11_spe", "histology", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "path_m_hpd", "tnm7_inclusions_tpa", "ssf1_jpu", "combined_t_to_summ_stage_t_4b_4e_d_9381", "concatenate_t_51262", "nodes_dee", "adjustments_for_no_clin_or_no_path_26261", "ssf9_spc", "systemic_surg_seq", "parse_m_47057", "combined_m", "extension_bej", "clinical_n_head_neck_melanoma_66648", "combined_n", "ssf5_npa", "summary_stage_rpa", "ssf8_spb", "determine_default_t", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpa", "stage_group_c_63552", "parse_n_67182", "determine_default_n", "combined_t_no_tis", "pathologic_n_head_neck_melanoma_copy_75380", "ssf4_mpa", "determine_combined_prefix_91402", "combined_n_to_summ_stage_n_headneck_nasotonsil_77031", "melanoma_nasopharynx_t_72770", "stop_if_no_clin_and_no_path_24035", "seer_mets_melanoma_nasopharynx_51981", "primary_site", "year_dx_validation" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-04T19:22:18.691Z"
+  "last_modified" : "2015-12-10T18:54:37.194Z"
 }

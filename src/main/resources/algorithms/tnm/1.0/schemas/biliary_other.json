@@ -92,20 +92,6 @@
     "key" : "source_m",
     "name" : "Derived SEER Combined M Source",
     "naaccr_item" : 3626
-  }, {
-    "key" : "ss2017",
-    "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762,
-    "default" : "90"
-  }, {
-    "key" : "ss2017_t",
-    "name" : "Derived SEER Summary Stage 2017 T"
-  }, {
-    "key" : "ss2017_n",
-    "name" : "Derived SEER Summary Stage 2017 N"
-  }, {
-    "key" : "ss2017_m",
-    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "summary_stage_2017",
@@ -130,5 +116,5 @@
   } ],
   "involved_tables" : [ "mets_hbj", "primary_site", "schema_selection_biliary_other", "histology", "extension_bcx", "year_dx_validation", "summary_stage_rpa", "nodes_dcl" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-16T16:53:44.707Z"
+  "last_modified" : "2015-12-10T18:54:39.539Z"
 }

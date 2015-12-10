@@ -4,8 +4,7 @@
   "version" : "1.0",
   "name" : "Retinoblastoma",
   "title" : "Retinoblastoma",
-  "description" : "TNM is defined for this site; however, there is no stage group.",
-  "notes" : "M-9510-9514\nC690  Conjunctiva\nC691  Cornea, NOS\nC692  Retina\nC693  Choroid\nC694  Ciliary Body\nC695  Lacrimal Gland\nC696  Orbit, NOS\nC698  Overlapping lesion of eye and adnexa\nC699  Eye, NOS\n\n**Note 1:**  Laterality must be coded for this site.\n\n**Note 2:** Code all retinoblastomas using this schema, including retinoblastomas described in other parts of eye. TNM categories will be derived for retinoblastomas with a primary site code of C692 only.\n\n**Note 3:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Retinoblastoma* chapter on page 264 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C690  Conjunctiva\nC691  Cornea, NOS\nC692  Retina\nC693  Choroid\nC694  Ciliary Body\nC695  Lacrimal Gland\nC696  Orbit, NOS\nC698  Overlapping lesion of eye and adnexa\nC699  Eye, NOS\n\n**Note 1:**  Laterality must be coded for this site.\n\n**Note 2:** Code all retinoblastomas using this schema, including retinoblastomas described in other parts of eye. TNM categories will be derived for retinoblastomas with a primary site code of C692 only.\n\n**Note 3:** TNM is defined for this site; however, there is no stage group.\n\n**Note 4:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Retinoblastoma* chapter on page 264 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_retinoblastoma",
   "inputs" : [ {
     "key" : "year_dx",
@@ -104,30 +103,35 @@
     "key" : "ssf2",
     "name" : "Retinoblastoma (RB) Gene Mutation",
     "naaccr_item" : 2890,
+    "default" : "988",
     "table" : "ssf2_kbb",
     "used_for_staging" : false
   }, {
     "key" : "ssf3",
     "name" : "Family History of Retinoblastoma",
     "naaccr_item" : 2900,
+    "default" : "988",
     "table" : "ssf3_lao",
     "used_for_staging" : false
   }, {
     "key" : "ssf4",
     "name" : "Primary Globe-Sparing Treatment Failure",
     "naaccr_item" : 2910,
+    "default" : "988",
     "table" : "ssf4_mat",
     "used_for_staging" : false
   }, {
     "key" : "ssf5",
     "name" : "Linear Choroidal Invasion",
     "naaccr_item" : 2920,
+    "default" : "988",
     "table" : "ssf5_naq",
     "used_for_staging" : false
   }, {
     "key" : "ssf6",
     "name" : "Clinical Extension for Second Eye",
     "naaccr_item" : 2930,
+    "default" : "988",
     "table" : "ssf6_oao",
     "used_for_staging" : false
   }, {
@@ -193,20 +197,6 @@
     "key" : "source_m",
     "name" : "Derived SEER Combined M Source",
     "naaccr_item" : 3626
-  }, {
-    "key" : "ss2017",
-    "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762,
-    "default" : "90"
-  }, {
-    "key" : "ss2017_t",
-    "name" : "Derived SEER Summary Stage 2017 T"
-  }, {
-    "key" : "ss2017_n",
-    "name" : "Derived SEER Summary Stage 2017 N"
-  }, {
-    "key" : "ss2017_m",
-    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "tnm7_stage",
@@ -328,9 +318,6 @@
         "from" : "path_t_out",
         "to" : "tmp_path_t"
       }, {
-        "from" : "ss2017_t_out",
-        "to" : "ss2017_t"
-      }, {
         "from" : "clin_t_out",
         "to" : "tmp_clin_t"
       }, {
@@ -355,11 +342,11 @@
         "from" : "source_n_out",
         "to" : "source_n"
       }, {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_n"
-      }, {
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
@@ -378,9 +365,6 @@
       }, {
         "from" : "combined_m_out",
         "to" : "tmp_combined_m"
-      }, {
-        "from" : "ss2017_m_out",
-        "to" : "ss2017_m"
       }, {
         "from" : "clin_m_out",
         "to" : "tmp_clin_m"
@@ -576,11 +560,11 @@
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
-        "from" : "path_m_prefix",
-        "to" : "path_prefix"
-      }, {
         "from" : "tmp_source_m",
         "to" : "cmb_source"
+      }, {
+        "from" : "path_m_prefix",
+        "to" : "path_prefix"
       }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
@@ -722,5 +706,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "tnm7_stage_for_sites_with_no_stage_groupings_unb", "radiation_surg_seq", "no_tnm_group_99227", "determine_default_m", "ssf6_oao", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "combined_n_to_summ_stage_n_n2_d_23338", "parse_n_67182", "determine_default_n", "combined_t_retinoblastoma", "histology", "ssf3_lao", "concatenate_m_40642", "combined_t_to_summ_stage_t_4c_4e_d_76300", "ssf2_kbb", "retinoblastoma_clinical_n_19393", "clinical_m_64416", "concatenate_t_51262", "path_m_hbn", "clin_t_bcu", "tnm7_inclusions_tpk", "path_t_bcu", "mets_hbn", "ssf4_mat", "extension_bcu", "determine_combined_prefix_91402", "seer_regional_nodes_melanomachoroid_3244", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "retinoblastoma_pathologic_n_93880", "no_tnm_group_p_41281", "parse_m_47057", "primary_site", "combined_m", "combined_n", "ssf5_naq", "year_dx_validation", "summary_stage_rpa", "schema_selection_retinoblastoma", "adjust_path_defaults_for_no_clin_no_path_stage_group_not_defined_61358" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-04T19:22:10.624Z"
+  "last_modified" : "2015-12-10T18:54:29.833Z"
 }

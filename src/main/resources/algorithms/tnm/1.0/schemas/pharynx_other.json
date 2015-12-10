@@ -153,20 +153,6 @@
     "key" : "source_m",
     "name" : "Derived SEER Combined M Source",
     "naaccr_item" : 3626
-  }, {
-    "key" : "ss2017",
-    "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762,
-    "default" : "90"
-  }, {
-    "key" : "ss2017_t",
-    "name" : "Derived SEER Summary Stage 2017 T"
-  }, {
-    "key" : "ss2017_n",
-    "name" : "Derived SEER Summary Stage 2017 N"
-  }, {
-    "key" : "ss2017_m",
-    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "summary_stage_2017",
@@ -191,5 +177,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "ssf10_spd", "schema_selection_pharynx_other", "ssf4_mpa", "ssf9_spc", "extension_bdd", "primary_site", "histology", "ssf6_opa", "ssf5_npa", "ssf3_lpa", "year_dx_validation", "nodes_dcy", "seer_mets_pharynxothervs2_3402", "summary_stage_rpa", "ssf1_jpu", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-16T17:38:44.230Z"
+  "last_modified" : "2015-12-10T18:54:40.021Z"
 }

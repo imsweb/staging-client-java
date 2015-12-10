@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Path M Bladder",
   "title" : "Pathologic M",
-  "notes" : "**Note:**  Positive common iliac lymph nodes are coded regional lymph nodes.",
-  "last_modified" : "2015-12-04T19:08:16.130Z",
+  "notes" : "**Note:**  Positive common iliac lymph nodes are coded as regional lymph nodes (N3) and not M1.",
+  "last_modified" : "2015-12-08T13:36:55.848Z",
   "definition" : [ {
     "key" : "path_m",
     "name" : "Pathologic M",

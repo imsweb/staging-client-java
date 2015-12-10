@@ -110,6 +110,7 @@
     "key" : "ssf1",
     "name" : "Tumor Size",
     "naaccr_item" : 2880,
+    "default" : "999",
     "table" : "ssf1_jbk",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -117,13 +118,14 @@
     "key" : "ssf2",
     "name" : "Ki-67/MIB Labeling Index (LI): Ophthalmic",
     "naaccr_item" : 2890,
+    "default" : "988",
     "table" : "ssf2_kay",
     "used_for_staging" : false
   }, {
     "key" : "clin_stage_group_direct",
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
-    "default" : "88",
+    "default" : "99",
     "table" : "no_tnm_group_99227",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -131,7 +133,7 @@
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
-    "default" : "88",
+    "default" : "99",
     "table" : "no_tnm_group_p_41281",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -182,20 +184,6 @@
     "key" : "source_m",
     "name" : "Derived SEER Combined M Source",
     "naaccr_item" : 3626
-  }, {
-    "key" : "ss2017",
-    "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762,
-    "default" : "90"
-  }, {
-    "key" : "ss2017_t",
-    "name" : "Derived SEER Summary Stage 2017 T"
-  }, {
-    "key" : "ss2017_n",
-    "name" : "Derived SEER Summary Stage 2017 N"
-  }, {
-    "key" : "ss2017_m",
-    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "tnm7_stage",
@@ -317,9 +305,6 @@
         "from" : "path_t_out",
         "to" : "tmp_path_t"
       }, {
-        "from" : "ss2017_t_out",
-        "to" : "ss2017_t"
-      }, {
         "from" : "clin_t_out",
         "to" : "tmp_clin_t"
       }, {
@@ -344,11 +329,11 @@
         "from" : "source_n_out",
         "to" : "source_n"
       }, {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_n"
-      }, {
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
@@ -367,9 +352,6 @@
       }, {
         "from" : "combined_m_out",
         "to" : "tmp_combined_m"
-      }, {
-        "from" : "ss2017_m_out",
-        "to" : "ss2017_m"
       }, {
         "from" : "clin_m_out",
         "to" : "tmp_clin_m"
@@ -565,11 +547,11 @@
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
-        "from" : "path_m_prefix",
-        "to" : "path_prefix"
-      }, {
         "from" : "tmp_source_m",
         "to" : "cmb_source"
+      }, {
+        "from" : "path_m_prefix",
+        "to" : "path_prefix"
       }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
@@ -711,5 +693,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "tnm7_stage_for_sites_with_no_stage_groupings_unb", "radiation_surg_seq", "no_tnm_group_99227", "determine_default_m", "path_n_conjunctiva_84900", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "path_m_conjunctiva_73224", "clin_n_conjunctiva_61091", "schema_selection_conjunctiva", "parse_n_67182", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "tnm7_inclusions_tpb", "extension_bbj", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "behavior", "ssf1_jbk", "concatenate_t_51262", "ssf2_kay", "clin_m_conjunctiva_59480", "determine_combined_prefix_91402", "seer_regional_nodes_melanomachoroid_3244", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "no_tnm_group_p_41281", "parse_m_47057", "primary_site", "combined_m", "seer_mets_conjunctiva_9338", "combined_n", "year_dx_validation", "conjunctiva_t_62523", "summary_stage_rpa", "combined_t", "adjust_path_defaults_for_no_clin_no_path_stage_group_not_defined_61358", "clin_t_conjunctiva_42760" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-04T19:22:10.716Z"
+  "last_modified" : "2015-12-10T18:54:30.154Z"
 }

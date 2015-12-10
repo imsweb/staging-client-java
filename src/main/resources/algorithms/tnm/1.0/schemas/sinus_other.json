@@ -159,20 +159,6 @@
     "key" : "source_m",
     "name" : "Derived SEER Combined M Source",
     "naaccr_item" : 3626
-  }, {
-    "key" : "ss2017",
-    "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762,
-    "default" : "90"
-  }, {
-    "key" : "ss2017_t",
-    "name" : "Derived SEER Summary Stage 2017 T"
-  }, {
-    "key" : "ss2017_n",
-    "name" : "Derived SEER Summary Stage 2017 N"
-  }, {
-    "key" : "ss2017_m",
-    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "summary_stage_2017",
@@ -197,5 +183,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "ssf10_spd", "ssf4_mpa", "ssf9_spc", "seer_mets_sinus_othervs2_15755", "primary_site", "nodes_daq", "ssf11_spe", "histology", "ssf6_opa", "ssf5_npa", "ssf3_lpa", "schema_selection_sinus_other", "year_dx_validation", "summary_stage_rpa", "extension_bdk", "ssf1_jpu", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-16T17:41:35.164Z"
+  "last_modified" : "2015-12-10T18:54:40.506Z"
 }

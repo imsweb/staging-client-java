@@ -4,7 +4,6 @@
   "version" : "1.0",
   "name" : "Liver",
   "title" : "Liver",
-  "description" : "Note, per UICC: The classification applies to hepatocellular carcinoma.",
   "notes" : "C220 Liver\nC221 Intrahepatic bile duct \n\n**Note 1:** The liver schema includes the following:\nPrimary site C220 and histologies M-8000-8157, 8162-8175, 8190-9136, 9141-9582, and 9700-9701 AND primary site C221 and hepatocellular histologies (8170-8175).\n\n**Note 2:** For primary site C220 and cholangiocarcinoma histologies (m-8160, 8161, and 8180), see the Bile DuctsIntraHepat schema.\n\n**Note 3:** TNM staging will be derived for hepatocellular carcinoma only, M-8170-8175 for liver (C220)\n\n**Note 4:** Although the presence of cirrhosis is an important prognostic factor, it does not affect the TNM classification, being an independent prognostic variable.\n\n**Note 5:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Liver and Intrahepatic Bile Ducts* chapter on page 108 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_liver",
   "inputs" : [ {
@@ -104,6 +103,7 @@
     "key" : "ssf1",
     "name" : "Alpha Fetoprotein (AFP) Interpretation",
     "naaccr_item" : 2880,
+    "default" : "999",
     "table" : "ssf1_jpw",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -111,6 +111,7 @@
     "key" : "ssf2",
     "name" : "Fibrosis Score",
     "naaccr_item" : 2890,
+    "default" : "988",
     "table" : "ssf2_kpq",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -118,6 +119,7 @@
     "key" : "ssf3",
     "name" : "Alpha Fetoprotein (AFP) Lab Value",
     "naaccr_item" : 2900,
+    "default" : "988",
     "table" : "ssf3_lps",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -125,6 +127,7 @@
     "key" : "ssf4",
     "name" : "Creatinine Value",
     "naaccr_item" : 2910,
+    "default" : "988",
     "table" : "ssf4_mal",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -132,6 +135,7 @@
     "key" : "ssf5",
     "name" : "Creatinine Unit of Measure",
     "naaccr_item" : 2920,
+    "default" : "988",
     "table" : "ssf5_nak",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -139,6 +143,7 @@
     "key" : "ssf6",
     "name" : "Total Bilirubin Value",
     "naaccr_item" : 2930,
+    "default" : "988",
     "table" : "ssf6_oag",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -146,6 +151,7 @@
     "key" : "ssf7",
     "name" : "Total Bilirubin Unit of Measure",
     "naaccr_item" : 2861,
+    "default" : "988",
     "table" : "ssf7_scb",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -153,6 +159,7 @@
     "key" : "ssf8",
     "name" : "International Normalized Ratio for Prothrombin Time (INR)",
     "naaccr_item" : 2862,
+    "default" : "988",
     "table" : "ssf8_scc",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -160,7 +167,7 @@
     "key" : "clin_stage_group_direct",
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_c_15811",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -168,7 +175,7 @@
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_p_81228",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -219,20 +226,6 @@
     "key" : "source_m",
     "name" : "Derived SEER Combined M Source",
     "naaccr_item" : 3626
-  }, {
-    "key" : "ss2017",
-    "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762,
-    "default" : "90"
-  }, {
-    "key" : "ss2017_t",
-    "name" : "Derived SEER Summary Stage 2017 T"
-  }, {
-    "key" : "ss2017_n",
-    "name" : "Derived SEER Summary Stage 2017 N"
-  }, {
-    "key" : "ss2017_m",
-    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "tnm7_stage",
@@ -354,9 +347,6 @@
         "from" : "path_t_out",
         "to" : "tmp_path_t"
       }, {
-        "from" : "ss2017_t_out",
-        "to" : "ss2017_t"
-      }, {
         "from" : "clin_t_out",
         "to" : "tmp_clin_t"
       }, {
@@ -381,11 +371,11 @@
         "from" : "source_n_out",
         "to" : "source_n"
       }, {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_n"
-      }, {
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
@@ -404,9 +394,6 @@
       }, {
         "from" : "combined_m_out",
         "to" : "tmp_combined_m"
-      }, {
-        "from" : "ss2017_m_out",
-        "to" : "ss2017_m"
       }, {
         "from" : "clin_m_out",
         "to" : "tmp_clin_m"
@@ -602,11 +589,11 @@
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
-        "from" : "path_m_prefix",
-        "to" : "path_prefix"
-      }, {
         "from" : "tmp_source_m",
         "to" : "cmb_source"
+      }, {
+        "from" : "path_m_prefix",
+        "to" : "path_prefix"
       }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
@@ -748,5 +735,5 @@
   } ],
   "involved_tables" : [ "ssf3_lps", "cpmbined_m_to_summ_stage_m_60564", "ssf6_oag", "determine_default_t", "radiation_surg_seq", "path_m_haf", "determine_default_m", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "mets_haf", "parse_n_67182", "determine_default_n", "extension_bbc", "ssf7_scb", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "ssf2_kpq", "stage_group_c_15811", "combined_t_no_tis", "path_n_dau", "ssf1_jpw", "clin_m_haf", "nodes_dau", "concatenate_t_51262", "combined_t_to_summ_stage_t_3b_4e_re_50371", "schema_selection_liver", "ssf8_scc", "adjustments_for_no_clin_or_no_path_26261", "tnm7_inclusions_tpn", "determine_combined_prefix_91402", "ssf4_mal", "liver_t_55652", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "clin_t_liver_16950", "stage_group_p_81228", "parse_m_47057", "ssf5_nak", "primary_site", "clin_n_dau", "combined_m", "combined_n", "tnm7_stage_ubl", "year_dx_validation", "summary_stage_rpa" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-04T19:22:12.098Z"
+  "last_modified" : "2015-12-10T18:54:31.011Z"
 }

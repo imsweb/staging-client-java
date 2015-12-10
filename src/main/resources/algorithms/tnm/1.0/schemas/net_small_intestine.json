@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "NET Small Intestine",
   "title" : "Neuroendocrine Tumors of Small Intestine",
-  "notes" : "M-8153, 8240-8242, 8246, 8249\nC170  Duodenum\nC171  Jejunum\nC172  Ileum (excludes ileocecal valve C180)\nC173  Meckel diverticulum (site of neoplasm)\nC178  Overlapping lesion of small intestine\nC179  Small intestine, NOS\n\n**Note 1:**  For this schema, TNM only stages well-differentiated neuroendocrine tumors.  Note that the \"concept\" of well-differentiated is reflected in the histology code.  The grade code is not needed in order to select the correct schema, but does need to be coded.\n\n**Note 2:** This schema is also used for carcinoid tumors and malignant gastrinomas.\n\n**Note 3:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Small Intestine* chapter on page 86 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C170  Duodenum\nC171  Jejunum\nC172  Ileum (excludes ileocecal valve C180)\nC173  Meckel diverticulum (site of neoplasm)\nC178  Overlapping lesion of small intestine\nC179  Small intestine, NOS\n\n**Note 1:**  For this schema, TNM only stages well-differentiated neuroendocrine tumors.  Note that the \"concept\" of well-differentiated is reflected in the histology code.  The grade code is not needed in order to select the correct schema, but does need to be coded.\n\n**Note 2:** This schema is also used for carcinoid tumors and malignant gastrinomas.\n\n**Note 3:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Small Intestine* chapter on page 86 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_net_small_intestine",
   "inputs" : [ {
     "key" : "year_dx",
@@ -182,20 +182,6 @@
     "key" : "source_m",
     "name" : "Derived SEER Combined M Source",
     "naaccr_item" : 3626
-  }, {
-    "key" : "ss2017",
-    "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762,
-    "default" : "90"
-  }, {
-    "key" : "ss2017_t",
-    "name" : "Derived SEER Summary Stage 2017 T"
-  }, {
-    "key" : "ss2017_n",
-    "name" : "Derived SEER Summary Stage 2017 N"
-  }, {
-    "key" : "ss2017_m",
-    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "tnm7_stage",
@@ -317,9 +303,6 @@
         "from" : "path_t_out",
         "to" : "tmp_path_t"
       }, {
-        "from" : "ss2017_t_out",
-        "to" : "ss2017_t"
-      }, {
         "from" : "clin_t_out",
         "to" : "tmp_clin_t"
       }, {
@@ -344,11 +327,11 @@
         "from" : "source_n_out",
         "to" : "source_n"
       }, {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_n"
-      }, {
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
@@ -367,9 +350,6 @@
       }, {
         "from" : "combined_m_out",
         "to" : "tmp_combined_m"
-      }, {
-        "from" : "ss2017_m_out",
-        "to" : "ss2017_m"
       }, {
         "from" : "clin_m_out",
         "to" : "tmp_clin_m"
@@ -565,11 +545,11 @@
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
-        "from" : "path_m_prefix",
-        "to" : "path_prefix"
-      }, {
         "from" : "tmp_source_m",
         "to" : "cmb_source"
+      }, {
+        "from" : "path_m_prefix",
+        "to" : "path_prefix"
       }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
@@ -711,5 +691,5 @@
   } ],
   "involved_tables" : [ "path_m_hcp", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "radiation_surg_seq", "clin_m_hcp", "mets_hcp", "nodes_dfl", "path_n_dfl", "determine_default_m", "schema_selection_net_small_intestine", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "ssf11_sri", "clin_n_dfl", "parse_n_67182", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "combined_t_no_tis", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "stage_group_c_79525", "ssf6_opi", "concatenate_t_51262", "extension_bfp", "stage_group_p_42930", "adjustments_for_no_clin_or_no_path_26261", "tnm7_inclusions_tpm", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "path_t_net_small_intestine_71548", "combined_m", "combined_n", "year_dx_validation", "ssf12_srj", "summary_stage_rpa", "tnm7_stage_uqa", "net_smallintestine_t_60400" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-04T19:22:03.200Z"
+  "last_modified" : "2015-12-10T18:54:26.350Z"
 }

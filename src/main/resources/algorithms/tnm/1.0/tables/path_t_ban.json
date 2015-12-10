@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "Path T Melanoma Skin",
   "title" : "Pathologic T",
-  "notes" : "**Note 1:** pTX includes shave biopsies and regressed melanomas.\n\n**Note 2:**  If there is a discrepancy between the Clark level and the pathologic description of extent (invasion into the layers of the dermis), assign the higher T.\n\n**Note 3:**  Code the greatest extent of invasion from any procedure performed on the lesion, whether it is described as a biopsy or an excision.  For example, if a punch biopsy with involvement of Clark level IV (T1b) is followed by a re-excision with residual tumor involving Clark level II (T1a), assign the Clark level IV (T1b).\n\n**Note 4:**  Satellite lesions/nodules or in-transit metastases are coded in regional lymph nodes.\n\n**Note 5:**  Ulceration of the melanoma is coded in Site-Specific Factor 2.",
+  "notes" : "**Note 1:** pTX includes shave biopsies and regressed melanomas.\n\n**Note 2:**  If there is a discrepancy between the Clark level and the pathologic description of extent (invasion into the layers of the dermis), assign the higher T.\n\n**Note 3:**  Code the greatest extent of invasion from any procedure performed on the lesion, whether it is described as a biopsy or an excision.  For example, if a punch biopsy with involvement of Clark level IV (T1b) is followed by a re-excision with residual tumor involving Clark level II (T1a), assign the Clark level IV (T1b).\n\n**Note 4:**  Satellite lesions/nodules or in-transit metastases are coded in N (regional lymph nodes). \n\n**Note 5:**  Ulceration of the melanoma is coded in Site-Specific Factor 2.",
   "footnotes" : "^ Definition from the updated pages from \"*TNM Classification of Malignant Tumours, Seventh edition*\" found at http://www.wileyanduicc.com/pdf/Corrected_pages.pdf",
-  "last_modified" : "2015-12-03T14:52:02.462Z",
+  "last_modified" : "2015-12-09T12:51:27.875Z",
   "definition" : [ {
     "key" : "path_t",
     "name" : "Pathologic T",

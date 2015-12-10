@@ -49,6 +49,7 @@
     "key" : "ssf1",
     "name" : "Associated with HIV/AIDS",
     "naaccr_item" : 2880,
+    "default" : "999",
     "table" : "ssf1_jpj",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -56,6 +57,7 @@
     "key" : "ssf2",
     "name" : "Systemic Symptoms at Diagnosis",
     "naaccr_item" : 2890,
+    "default" : "999",
     "table" : "ssf2_kpg",
     "used_for_staging" : true,
     "metadata" : [ "SEER_REQUIRED" ]
@@ -63,6 +65,7 @@
     "key" : "ssf3",
     "name" : "International Prognostic Index (IPI)",
     "naaccr_item" : 2900,
+    "default" : "988",
     "table" : "ssf3_lph",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -70,12 +73,14 @@
     "key" : "ssf4",
     "name" : "Follicular Lymphoma Prognostic Index (FLIPI)",
     "naaccr_item" : 2910,
+    "default" : "988",
     "table" : "ssf4_mpd",
     "used_for_staging" : false
   }, {
     "key" : "ssf5",
     "name" : "International Prognostic Score (IPS)",
     "naaccr_item" : 2920,
+    "default" : "988",
     "table" : "ssf5_npe",
     "used_for_staging" : false
   }, {
@@ -139,19 +144,6 @@
     "key" : "source_m",
     "name" : "Derived SEER Combined M Source",
     "naaccr_item" : 3626
-  }, {
-    "key" : "ss2017",
-    "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762
-  }, {
-    "key" : "ss2017_t",
-    "name" : "Derived SEER Summary Stage 2017 T"
-  }, {
-    "key" : "ss2017_n",
-    "name" : "Derived SEER Summary Stage 2017 N"
-  }, {
-    "key" : "ss2017_m",
-    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "tnm7_stage",
@@ -242,5 +234,5 @@
   } ],
   "involved_tables" : [ "ssf2_kpg", "combined_stage_group_for_lymphoma_19552", "tnm7_inclusions_tpr", "schema_selection_lymphoma", "ssf5_npe", "lymphoma_stage_group_detailed_35045", "stage_group_lymphoma_c_60180", "ssf3_lph", "primary_site", "ssf1_jpj", "extension_bch", "histology", "stage_group_lymphoma_p_48657", "year_dx_validation", "summary_stage_rpa", "mets_hna", "ssf4_mpd", "nodes_dna" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-04T19:22:24.254Z"
+  "last_modified" : "2015-12-10T18:54:41.194Z"
 }

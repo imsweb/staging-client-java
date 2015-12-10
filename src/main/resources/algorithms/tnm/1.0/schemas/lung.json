@@ -103,6 +103,7 @@
     "key" : "ssf1",
     "name" : "Separate Tumor Nodules - Ipsilateral Lung",
     "naaccr_item" : 2880,
+    "default" : "999",
     "table" : "ssf1_sbh",
     "used_for_staging" : false,
     "metadata" : [ "SEER_REQUIRED" ]
@@ -110,6 +111,7 @@
     "key" : "ssf2",
     "name" : "Pleural/Elastic Layer Invasion (PL) by H and E or Elastic Stain",
     "naaccr_item" : 2890,
+    "default" : "999",
     "table" : "ssf2_sbi",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -123,7 +125,7 @@
     "key" : "clin_stage_group_direct",
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_c_92535",
     "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -131,7 +133,7 @@
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_p_18837",
     "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -182,20 +184,6 @@
     "key" : "source_m",
     "name" : "Derived SEER Combined M Source",
     "naaccr_item" : 3626
-  }, {
-    "key" : "ss2017",
-    "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762,
-    "default" : "90"
-  }, {
-    "key" : "ss2017_t",
-    "name" : "Derived SEER Summary Stage 2017 T"
-  }, {
-    "key" : "ss2017_n",
-    "name" : "Derived SEER Summary Stage 2017 N"
-  }, {
-    "key" : "ss2017_m",
-    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "tnm7_stage",
@@ -565,11 +553,11 @@
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
-        "from" : "path_m_prefix",
-        "to" : "path_prefix"
-      }, {
         "from" : "tmp_source_m",
         "to" : "cmb_source"
+      }, {
+        "from" : "path_m_prefix",
+        "to" : "path_prefix"
       }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
@@ -725,5 +713,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "stage_group_p_18837", "radiation_surg_seq", "determine_default_m", "mets_hab", "combined_t_to_summ_stage_t_3_3d_re_4_4e_d_45184", "select_stage_group_19580", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "determine_default_n", "clin_m_hab", "histology", "concatenate_m_40642", "path_n_dai", "combined_t_lung", "tnm7_inclusions_tpb", "behavior", "combined_n_lung", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "schema_selection_lung", "ssf1_sbh", "ssf2_sbi", "determine_combined_prefix_91402", "nodes_dai", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "clin_n_dai", "lung_t_86537", "parse_m_47057", "primary_site", "combined_n_to_summ_stage_n_n3_d_copy_68044", "combined_m", "clin_t_lung_28486", "path_m_hab", "year_dx_validation", "extension_baj", "summary_stage_rpa", "lung_occult_stage_11131", "tnm7_stage_ubq", "stage_group_c_92535" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-04T19:22:08.318Z"
+  "last_modified" : "2015-12-10T18:54:29.320Z"
 }

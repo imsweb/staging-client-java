@@ -109,6 +109,7 @@
     "key" : "ssf1",
     "name" : "FIGO Stage",
     "naaccr_item" : 2880,
+    "default" : "988",
     "table" : "ssf1_jbp",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -116,18 +117,21 @@
     "key" : "ssf2",
     "name" : "Biopsy of Metastatic Site",
     "naaccr_item" : 2890,
+    "default" : "988",
     "table" : "ssf2_kbc",
     "used_for_staging" : false
   }, {
     "key" : "ssf3",
     "name" : "Primary Tumor Location",
     "naaccr_item" : 2900,
+    "default" : "988",
     "table" : "ssf3_laq",
     "used_for_staging" : false
   }, {
     "key" : "ssf4",
     "name" : "Number of Positive Pelvic Nodes",
     "naaccr_item" : 2910,
+    "default" : "999",
     "table" : "ssf4_mav",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -135,6 +139,7 @@
     "key" : "ssf5",
     "name" : "Number of Examined Pelvic Nodes",
     "naaccr_item" : 2920,
+    "default" : "999",
     "table" : "ssf5_nas",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -142,6 +147,7 @@
     "key" : "ssf6",
     "name" : "Number of Positive Para-Aortic Nodes",
     "naaccr_item" : 2930,
+    "default" : "999",
     "table" : "ssf6_oap",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -149,6 +155,7 @@
     "key" : "ssf7",
     "name" : "Number of Examined Para-Aortic Nodes",
     "naaccr_item" : 2861,
+    "default" : "999",
     "table" : "ssf7_sde",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -156,7 +163,7 @@
     "key" : "clin_stage_group_direct",
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_c_55797",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -164,7 +171,7 @@
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_p_94665",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -215,20 +222,6 @@
     "key" : "source_m",
     "name" : "Derived SEER Combined M Source",
     "naaccr_item" : 3626
-  }, {
-    "key" : "ss2017",
-    "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762,
-    "default" : "90"
-  }, {
-    "key" : "ss2017_t",
-    "name" : "Derived SEER Summary Stage 2017 T"
-  }, {
-    "key" : "ss2017_n",
-    "name" : "Derived SEER Summary Stage 2017 N"
-  }, {
-    "key" : "ss2017_m",
-    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "tnm7_stage",
@@ -350,9 +343,6 @@
         "from" : "path_t_out",
         "to" : "tmp_path_t"
       }, {
-        "from" : "ss2017_t_out",
-        "to" : "ss2017_t"
-      }, {
         "from" : "clin_t_out",
         "to" : "tmp_clin_t"
       }, {
@@ -377,11 +367,11 @@
         "from" : "source_n_out",
         "to" : "source_n"
       }, {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_n"
-      }, {
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
@@ -400,9 +390,6 @@
       }, {
         "from" : "combined_m_out",
         "to" : "tmp_combined_m"
-      }, {
-        "from" : "ss2017_m_out",
-        "to" : "ss2017_m"
       }, {
         "from" : "clin_m_out",
         "to" : "tmp_clin_m"
@@ -598,11 +585,11 @@
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
-        "from" : "path_m_prefix",
-        "to" : "path_prefix"
-      }, {
         "from" : "tmp_source_m",
         "to" : "cmb_source"
+      }, {
+        "from" : "path_m_prefix",
+        "to" : "path_prefix"
       }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
@@ -744,5 +731,5 @@
   } ],
   "involved_tables" : [ "mets_hai", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "radiation_surg_seq", "path_n_daz", "ssf6_oap", "clin_t_fallopian_tube_77615", "determine_default_m", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "path_m_hai", "tnm7_stage_ubb", "parse_n_67182", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "ssf2_kbc", "ssf3_laq", "tnm7_inclusions_tpb", "clin_m_hai", "stage_group_p_94665", "nodes_daz", "extension_bbh", "behavior", "concatenate_t_51262", "stage_group_c_55797", "adjustments_for_no_clin_or_no_path_26261", "fallopian_tube_t_96584", "ssf1_jbp", "determine_combined_prefix_91402", "ssf5_nas", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "ssf7_sde", "parse_m_47057", "primary_site", "combined_m", "combined_n", "schema_selection_fallopian_tube", "year_dx_validation", "summary_stage_rpa", "ssf4_mav", "combined_t", "combined_t_to_summ_stage_t_2_2b_re_2c_4e_d_26557", "clin_n_daz" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-04T19:22:13.559Z"
+  "last_modified" : "2015-12-10T18:54:31.863Z"
 }

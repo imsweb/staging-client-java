@@ -49,6 +49,7 @@
     "key" : "ssf1",
     "name" : "Size of Lymph Nodes",
     "naaccr_item" : 2880,
+    "default" : "999",
     "table" : "ssf1_jpu",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -56,6 +57,7 @@
     "key" : "ssf3",
     "name" : "Levels I-III, Lymph Nodes for Head and Neck",
     "naaccr_item" : 2900,
+    "default" : "999",
     "table" : "ssf3_lpa",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -63,6 +65,7 @@
     "key" : "ssf4",
     "name" : "Levels IV-V and Retropharyngeal Lymph Nodes for Head and Neck",
     "naaccr_item" : 2910,
+    "default" : "999",
     "table" : "ssf4_mpa",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -70,6 +73,7 @@
     "key" : "ssf5",
     "name" : "Levels VI-VII and Facial Lymph Nodes for Head and Neck",
     "naaccr_item" : 2920,
+    "default" : "999",
     "table" : "ssf5_npa",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -77,6 +81,7 @@
     "key" : "ssf6",
     "name" : "Parapharyngeal, Parotid, and Suboccipital/Retroauricular Lymph Nodes for Head and Neck",
     "naaccr_item" : 2930,
+    "default" : "999",
     "table" : "ssf6_opa",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -84,18 +89,21 @@
     "key" : "ssf7",
     "name" : "Upper and Lower Cervical Node Levels",
     "naaccr_item" : 2861,
+    "default" : "988",
     "table" : "ssf7_spa",
     "used_for_staging" : false
   }, {
     "key" : "ssf8",
     "name" : "Extracapsular Extension Clinically, Lymph Nodes for Head and Neck",
     "naaccr_item" : 2862,
+    "default" : "988",
     "table" : "ssf8_spb",
     "used_for_staging" : false
   }, {
     "key" : "ssf9",
     "name" : "Extracapsular Extension Pathologically, Lymph Nodes for Head and Neck",
     "naaccr_item" : 2863,
+    "default" : "999",
     "table" : "ssf9_spc",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -103,6 +111,7 @@
     "key" : "ssf10",
     "name" : "Human Papilloma Virus (HPV) Status",
     "naaccr_item" : 2864,
+    "default" : "988",
     "table" : "ssf10_spd",
     "used_for_staging" : false
   } ],
@@ -152,20 +161,6 @@
     "key" : "source_m",
     "name" : "Derived SEER Combined M Source",
     "naaccr_item" : 3626
-  }, {
-    "key" : "ss2017",
-    "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762,
-    "default" : "90"
-  }, {
-    "key" : "ss2017_t",
-    "name" : "Derived SEER Summary Stage 2017 T"
-  }, {
-    "key" : "ss2017_n",
-    "name" : "Derived SEER Summary Stage 2017 N"
-  }, {
-    "key" : "ss2017_m",
-    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "summary_stage_2017",
@@ -190,5 +185,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "extension_bcr", "ssf10_spd", "ssf4_mpa", "ssf9_spc", "nodes_dcf", "schema_selection_middle_ear", "primary_site", "histology", "ssf6_opa", "ssf5_npa", "ssf3_lpa", "year_dx_validation", "summary_stage_rpa", "ssf1_jpu", "seer_mets_middle_ear_9431", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-21T18:08:26.841Z"
+  "last_modified" : "2015-12-10T18:54:40.184Z"
 }

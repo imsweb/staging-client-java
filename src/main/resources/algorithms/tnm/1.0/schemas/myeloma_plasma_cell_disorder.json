@@ -49,6 +49,7 @@
     "key" : "ssf2",
     "name" : "Durie-Salmon Staging System",
     "naaccr_item" : 2890,
+    "default" : "999",
     "table" : "ssf2_kbx",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -56,6 +57,7 @@
     "key" : "ssf3",
     "name" : "Multiple Myeloma Terminology",
     "naaccr_item" : 2900,
+    "default" : "999",
     "table" : "ssf3_lbb",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -106,20 +108,6 @@
     "key" : "source_m",
     "name" : "Derived SEER Combined M Source",
     "naaccr_item" : 3626
-  }, {
-    "key" : "ss2017",
-    "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762,
-    "default" : "90"
-  }, {
-    "key" : "ss2017_t",
-    "name" : "Derived SEER Summary Stage 2017 T"
-  }, {
-    "key" : "ss2017_n",
-    "name" : "Derived SEER Summary Stage 2017 N"
-  }, {
-    "key" : "ss2017_m",
-    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "summary_stage_2017",
@@ -144,5 +132,5 @@
   } ],
   "involved_tables" : [ "primary_site", "ssf2_kbx", "histology", "schema_selection_myeloma_plasma_cell_disorder", "ssf3_lbb", "year_dx_validation", "summary_stage_rpa", "mets_hna", "nodes_dfy", "extension_bgc" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-30T20:52:25.541Z"
+  "last_modified" : "2015-12-10T18:54:40.634Z"
 }

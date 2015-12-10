@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Melanoma Larynx Subglottic",
   "title" : "Malignant Melanoma of Subglottic Larynx",
-  "notes" : "M-8720-8790\nC322  Subglottis\n\n**Note:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Larynx: Subglottis* chapter on page 146 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C322  Subglottis\n\n**Note:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Larynx: Subglottis* chapter on page 146 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_melanoma_larynx_subglottic",
   "inputs" : [ {
     "key" : "year_dx",
@@ -229,20 +229,6 @@
     "key" : "source_m",
     "name" : "Derived SEER Combined M Source",
     "naaccr_item" : 3626
-  }, {
-    "key" : "ss2017",
-    "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762,
-    "default" : "90"
-  }, {
-    "key" : "ss2017_t",
-    "name" : "Derived SEER Summary Stage 2017 T"
-  }, {
-    "key" : "ss2017_n",
-    "name" : "Derived SEER Summary Stage 2017 N"
-  }, {
-    "key" : "ss2017_m",
-    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "tnm7_stage",
@@ -364,9 +350,6 @@
         "from" : "path_t_out",
         "to" : "tmp_path_t"
       }, {
-        "from" : "ss2017_t_out",
-        "to" : "ss2017_t"
-      }, {
         "from" : "clin_t_out",
         "to" : "tmp_clin_t"
       }, {
@@ -391,11 +374,11 @@
         "from" : "source_n_out",
         "to" : "source_n"
       }, {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_n"
-      }, {
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
@@ -414,9 +397,6 @@
       }, {
         "from" : "combined_m_out",
         "to" : "tmp_combined_m"
-      }, {
-        "from" : "ss2017_m_out",
-        "to" : "ss2017_m"
       }, {
         "from" : "clin_m_out",
         "to" : "tmp_clin_m"
@@ -612,11 +592,11 @@
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
-        "from" : "path_m_prefix",
-        "to" : "path_prefix"
-      }, {
         "from" : "tmp_source_m",
         "to" : "cmb_source"
+      }, {
+        "from" : "path_m_prefix",
+        "to" : "path_prefix"
       }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
@@ -758,5 +738,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "cpmbined_m_to_summ_stage_m_60564", "ssf10_spd", "stage_group_p_21201", "tnm7_stage_upu", "seer_mets_melanoma_subglotticlarynx_4751", "parse_t_2177", "concatenate_n_43246", "clin_m_hpd", "ssf11_spe", "histology", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "path_m_hpd", "tnm7_inclusions_tpa", "ssf1_jpu", "combined_t_to_summ_stage_t_4b_4e_d_9381", "concatenate_t_51262", "clin_t_melanoma_larynx_subglottic_74637", "adjustments_for_no_clin_or_no_path_26261", "ssf9_spc", "systemic_surg_seq", "parse_m_47057", "nodes_dds", "combined_m", "clinical_n_head_neck_melanoma_66648", "combined_n", "ssf5_npa", "summary_stage_rpa", "ssf8_spb", "determine_default_t", "radiation_surg_seq", "extension_bdx", "melanoma_larynx_subglottic_81170", "determine_default_m", "nodes_pos_fpa", "stage_group_c_63552", "parse_n_67182", "combined_n_to_summ_stage_n_headneck_larynxsub_79302", "determine_default_n", "schema_selection_melanoma_larynx_subglottic", "combined_t_no_tis", "pathologic_n_head_neck_melanoma_copy_75380", "ssf4_mpa", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "primary_site", "year_dx_validation" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-04T19:22:18.491Z"
+  "last_modified" : "2015-12-10T18:54:35.969Z"
 }

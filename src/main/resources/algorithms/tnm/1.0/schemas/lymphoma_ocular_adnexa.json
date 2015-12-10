@@ -226,20 +226,6 @@
     "key" : "source_m",
     "name" : "Derived SEER Combined M Source",
     "naaccr_item" : 3626
-  }, {
-    "key" : "ss2017",
-    "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762,
-    "default" : "90"
-  }, {
-    "key" : "ss2017_t",
-    "name" : "Derived SEER Summary Stage 2017 T"
-  }, {
-    "key" : "ss2017_n",
-    "name" : "Derived SEER Summary Stage 2017 N"
-  }, {
-    "key" : "ss2017_m",
-    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "tnm7_stage",
@@ -710,5 +696,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "combined_stage_group_for_lymphoma_19552", "summary_stage_raa", "parse_t_2177", "lymphoma_stage_group_detailed_35045", "concatenate_n_43246", "ssf4_mbj", "ssf1_jpj", "combined_t_to_summ_stage_t_4_4e_d_99503", "histology", "concatenate_m_40642", "concatenate_t_51262", "extension_bez", "systemic_surg_seq", "lymphomaocularadnexa_t_no_uicc_definition_89433", "parse_m_47057", "combined_m_lymphocularadnexa", "combined_n", "ssf2_kpg", "determine_default_t", "schema_selection_lymphoma_ocular_adnexa", "ssf7_saq", "ssf10_sat", "radiation_surg_seq", "ssf3_lbc", "lymphomaocularadnexa_path_n_no_uicc_definition_17284", "determine_default_m", "nodes_pos_fpa", "parse_n_67182", "lymphomaocularadnexa_clin_n_no_uicc_definition_66872", "determine_default_n", "ssf6_oat", "combined_t_no_tis", "combined_n_to_summ_stage_n_nos_n3_d_42104", "stage_group_lymphoma_ocular_adnexa_c_86297", "mets_hna", "lymphomaocularadnexa_path_t_no_uicc_definition_copy_11297", "stage_group_lymphoma_ocular_adnexa_p_45342", "nodes_dna", "tnm7_inclusions_tpl", "determine_combined_prefix_91402", "ssf9_sas", "stop_if_no_clin_and_no_path_24035", "primary_site", "ssf8_sar", "year_dx_validation", "lymphomaocularadnexa_clin_m_no_uicc_definition_96511", "ssf5_nac", "lymphomaocularadnexa_path_m_no_uicc_definition_copy_6387" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-04T19:22:14.435Z"
+  "last_modified" : "2015-12-10T18:54:32.310Z"
 }

@@ -100,20 +100,6 @@
     "key" : "source_m",
     "name" : "Derived SEER Combined M Source",
     "naaccr_item" : 3626
-  }, {
-    "key" : "ss2017",
-    "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762,
-    "default" : "90"
-  }, {
-    "key" : "ss2017_t",
-    "name" : "Derived SEER Summary Stage 2017 T"
-  }, {
-    "key" : "ss2017_n",
-    "name" : "Derived SEER Summary Stage 2017 N"
-  }, {
-    "key" : "ss2017_m",
-    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "summary_stage_2017",
@@ -138,5 +124,5 @@
   } ],
   "involved_tables" : [ "primary_site", "discriminator_lacrimal", "seer_mets_lacrimal_sac_97972", "extension_btb", "histology", "year_dx_validation", "seer_regional_nodes_lacrimal_sac_33881", "summary_stage_rpa", "schema_selection_lacrimal_sac" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-11-16T17:32:33.679Z"
+  "last_modified" : "2015-12-10T18:54:40.096Z"
 }

@@ -110,12 +110,14 @@
     "key" : "ssf10",
     "name" : "Tumor Growth Pattern",
     "naaccr_item" : 2864,
+    "default" : "988",
     "table" : "ssf10_sfi",
     "used_for_staging" : false
   }, {
     "key" : "ssf11",
     "name" : "Primary Sclerosing Cholangitis (PSC)",
     "naaccr_item" : 2865,
+    "default" : "988",
     "table" : "ssf11_sqe",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -123,24 +125,28 @@
     "key" : "ssf12",
     "name" : "Carbohydrate Antigen 19-9 (CA 19-9) Lab Value",
     "naaccr_item" : 2866,
+    "default" : "988",
     "table" : "ssf12_sqf",
     "used_for_staging" : false
   }, {
     "key" : "ssf13",
     "name" : "Carcinoembryonic Antigen (CEA)",
     "naaccr_item" : 2867,
+    "default" : "988",
     "table" : "ssf13_sqg",
     "used_for_staging" : false
   }, {
     "key" : "ssf14",
     "name" : "Carcinoembryonic Antigen (CEA) Lab Value",
     "naaccr_item" : 2868,
+    "default" : "988",
     "table" : "ssf14_sqh",
     "used_for_staging" : false
   }, {
     "key" : "ssf25",
     "name" : "Schema Discriminator: BileDuctsDistal/BileDuctsPerihilar/CysticDuct",
     "naaccr_item" : 2879,
+    "default" : "999",
     "table" : "discriminator_bile_ducts",
     "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -148,7 +154,7 @@
     "key" : "clin_stage_group_direct",
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_c_73800",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -156,7 +162,7 @@
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_p_93370",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -207,20 +213,6 @@
     "key" : "source_m",
     "name" : "Derived SEER Combined M Source",
     "naaccr_item" : 3626
-  }, {
-    "key" : "ss2017",
-    "name" : "Derived SEER Summary Stage 2017",
-    "naaccr_item" : 762,
-    "default" : "90"
-  }, {
-    "key" : "ss2017_t",
-    "name" : "Derived SEER Summary Stage 2017 T"
-  }, {
-    "key" : "ss2017_n",
-    "name" : "Derived SEER Summary Stage 2017 N"
-  }, {
-    "key" : "ss2017_m",
-    "name" : "Derived SEER Summary Stage 2017 M"
   } ],
   "mappings" : [ {
     "id" : "tnm7_stage",
@@ -342,9 +334,6 @@
         "from" : "path_t_out",
         "to" : "tmp_path_t"
       }, {
-        "from" : "ss2017_t_out",
-        "to" : "ss2017_t"
-      }, {
         "from" : "clin_t_out",
         "to" : "tmp_clin_t"
       }, {
@@ -369,11 +358,11 @@
         "from" : "source_n_out",
         "to" : "source_n"
       }, {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_n"
-      }, {
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
@@ -392,9 +381,6 @@
       }, {
         "from" : "combined_m_out",
         "to" : "tmp_combined_m"
-      }, {
-        "from" : "ss2017_m_out",
-        "to" : "ss2017_m"
       }, {
         "from" : "clin_m_out",
         "to" : "tmp_clin_m"
@@ -590,11 +576,11 @@
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
-        "from" : "path_m_prefix",
-        "to" : "path_prefix"
-      }, {
         "from" : "tmp_source_m",
         "to" : "cmb_source"
+      }, {
+        "from" : "path_m_prefix",
+        "to" : "path_prefix"
       }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
@@ -736,5 +722,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "path_m_hcr", "extension_bft", "clin_m_hcr", "radiation_surg_seq", "mets_hcr", "determine_default_m", "ssf13_sqg", "nodes_dfo", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "clin_t_perihilar_bile_ducts_63594", "stage_group_p_93370", "combined_n_to_summ_stage_n_n2_d_23338", "clin_n_dfo", "parse_n_67182", "determine_default_n", "ssf10_sfi", "schema_selection_bile_ducts_perihilar", "histology", "concatenate_m_40642", "ssf12_sqf", "combined_t_to_summ_stage_t_2_4e_re_93413", "behavior", "stage_group_c_73800", "tnm7_inclusions_tpe", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "path_t_perihilar_bile_ducts_88350", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "discriminator_bile_ducts", "parse_m_47057", "primary_site", "tnm7_stage_ubn", "ssf14_sqh", "ssf11_sqe", "combined_m", "combined_n", "path_n_dfo", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-04T19:22:06.783Z"
+  "last_modified" : "2015-12-10T18:54:28.487Z"
 }
