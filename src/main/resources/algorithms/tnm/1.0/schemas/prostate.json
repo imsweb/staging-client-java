@@ -103,6 +103,7 @@
     "key" : "ssf1",
     "name" : "Prostatic Specific Antigen (PSA) Lab Value",
     "naaccr_item" : 2880,
+    "default" : "999",
     "table" : "ssf1_jav",
     "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED" ]
@@ -110,6 +111,7 @@
     "key" : "ssf2",
     "name" : "Prostatic Specific Antigen (PSA) Interpretation",
     "naaccr_item" : 2890,
+    "default" : "999",
     "table" : "ssf2_kab",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -117,6 +119,7 @@
     "key" : "ssf7",
     "name" : "Gleason's Primary Pattern and Secondary Pattern Values on Needle Core Biopsy/Transurethral Resection of Prostate (TURP)",
     "naaccr_item" : 2861,
+    "default" : "999",
     "table" : "ssf7_saw",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -124,6 +127,7 @@
     "key" : "ssf8",
     "name" : "Gleason's Score on Needle Core Biopsy/Transurethral Resection of Prostate (TURP)",
     "naaccr_item" : 2862,
+    "default" : "999",
     "table" : "ssf8_sax",
     "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED" ]
@@ -131,6 +135,7 @@
     "key" : "ssf9",
     "name" : "Gleason's Primary Pattern and Secondary Pattern Values on Prostatectomy/Autopsy",
     "naaccr_item" : 2863,
+    "default" : "999",
     "table" : "ssf9_say",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -138,6 +143,7 @@
     "key" : "ssf10",
     "name" : "Gleason's Score on Prostatectomy/Autopsy",
     "naaccr_item" : 2864,
+    "default" : "999",
     "table" : "ssf10_saz",
     "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "CCCR_REQUIRED" ]
@@ -145,6 +151,7 @@
     "key" : "ssf11",
     "name" : "Gleason's Tertiary Pattern Value on Prostatectomy/Autopsy",
     "naaccr_item" : 2865,
+    "default" : "988",
     "table" : "ssf11_sba",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -152,6 +159,7 @@
     "key" : "ssf12",
     "name" : "Number of Cores Positive",
     "naaccr_item" : 2866,
+    "default" : "999",
     "table" : "ssf12_sbb",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -159,6 +167,7 @@
     "key" : "ssf13",
     "name" : "Number of Cores Examined",
     "naaccr_item" : 2867,
+    "default" : "999",
     "table" : "ssf13_sbc",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -166,19 +175,21 @@
     "key" : "ssf14",
     "name" : "Needle Core Biopsy Findings",
     "naaccr_item" : 2868,
+    "default" : "988",
     "table" : "ssf14_sbd",
     "used_for_staging" : false
   }, {
     "key" : "ssf15",
     "name" : "Clinical Staging Procedures Performed",
     "naaccr_item" : 2869,
+    "default" : "988",
     "table" : "ssf15_sbe",
     "used_for_staging" : false
   }, {
     "key" : "clin_stage_group_direct",
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_c_59832",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -186,7 +197,7 @@
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_p_48545",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -768,5 +779,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "path_t_bbo", "clin_t_bbo", "parse_t_2177", "concatenate_n_43246", "combined_n_to_summ_stage_n_84054", "schema_selection_prostate", "histology", "concatenate_m_40642", "ssf14_sbd", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "extension_bbo", "concatenate_t_51262", "stage_group_c_59832", "adjustments_for_no_clin_or_no_path_26261", "prostate_pathologic_n_4662", "systemic_surg_seq", "parse_m_47057", "prostate_n_76551", "combined_m", "ssf15_sbe", "combined_n", "summary_stage_rpa", "combined_gleason_93464", "determine_default_t", "mets_hal", "ssf11_sba", "radiation_surg_seq", "clin_m_hal", "determine_default_m", "stage_group_p_48545", "ssf1_jav", "nodes_pos_fpa", "ssf7_saw", "nodes_dbf", "path_m_hal", "parse_n_67182", "determine_default_n", "combined_t_no_tis", "ssf10_saz", "ssf13_sbc", "determine_combined_prefix_91402", "tnm7_inclusions_tpv", "stop_if_no_clin_and_no_path_24035", "ssf9_say", "ssf12_sbb", "primary_site", "tnm7_stage_ubp", "ssf2_kab", "year_dx_validation", "ssf8_sax" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-10T18:54:41.777Z"
+  "last_modified" : "2015-12-12T15:23:53.065Z"
 }

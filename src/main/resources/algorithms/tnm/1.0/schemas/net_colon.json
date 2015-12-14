@@ -103,12 +103,14 @@
     "key" : "ssf11",
     "name" : "Mitotic Count",
     "naaccr_item" : 2865,
+    "default" : "988",
     "table" : "ssf11_sps",
     "used_for_staging" : false
   }, {
     "key" : "ssf16",
     "name" : "Serum Chromogranin A (CgA) Lab Value",
     "naaccr_item" : 2870,
+    "default" : "999",
     "table" : "ssf16_spt",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -116,6 +118,7 @@
     "key" : "ssf17",
     "name" : "Urinary 5-Hydroxyindoleacetic Acid (5-HIAA) Lab Value",
     "naaccr_item" : 2871,
+    "default" : "999",
     "table" : "ssf17_spu",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -123,7 +126,7 @@
     "key" : "clin_stage_group_direct",
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_c_52010",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -131,7 +134,7 @@
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_p_4759",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -691,5 +694,5 @@
   } ],
   "involved_tables" : [ "ssf16_spt", "ssf11_sps", "cpmbined_m_to_summ_stage_m_60564", "nodes_dfe", "determine_default_t", "clin_n_dfe", "radiation_surg_seq", "net_colon_t_5107", "determine_default_m", "path_t_bfi", "nodes_pos_fpa", "path_m_hci", "parse_t_2177", "concatenate_n_43246", "mets_hci", "parse_n_67182", "path_n_dfe", "determine_default_n", "schema_selection_net_colon", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "extension_bfi", "ssf17_spu", "combined_t_no_tis", "clin_m_hci", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "tnm7_inclusions_tpm", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "stage_group_c_52010", "parse_m_47057", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "stage_group_p_4759", "combined_n", "tnm7_stage_upx", "year_dx_validation", "summary_stage_rpa" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-10T18:54:26.631Z"
+  "last_modified" : "2015-12-12T15:39:31.773Z"
 }

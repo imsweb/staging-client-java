@@ -87,6 +87,7 @@
     "key" : "clin_stage_group_direct",
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
+    "default" : "99",
     "table" : "stage_group_lymphoma_c_60180",
     "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED", "SEER_REQUIRED" ]
@@ -94,6 +95,7 @@
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
+    "default" : "99",
     "table" : "stage_group_lymphoma_p_48657",
     "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED", "SEER_REQUIRED" ]
@@ -234,5 +236,5 @@
   } ],
   "involved_tables" : [ "ssf2_kpg", "combined_stage_group_for_lymphoma_19552", "tnm7_inclusions_tpr", "schema_selection_lymphoma", "ssf5_npe", "lymphoma_stage_group_detailed_35045", "stage_group_lymphoma_c_60180", "ssf3_lph", "primary_site", "ssf1_jpj", "extension_bch", "histology", "stage_group_lymphoma_p_48657", "year_dx_validation", "summary_stage_rpa", "mets_hna", "ssf4_mpd", "nodes_dna" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-10T18:54:41.194Z"
+  "last_modified" : "2015-12-12T14:35:12.003Z"
 }

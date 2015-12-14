@@ -109,6 +109,7 @@
     "key" : "ssf1",
     "name" : "Measured Thickness (Depth)",
     "naaccr_item" : 2880,
+    "default" : "988",
     "table" : "ssf1_jpp",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -116,18 +117,21 @@
     "key" : "ssf10",
     "name" : "Clark Level",
     "naaccr_item" : 2864,
+    "default" : "988",
     "table" : "ssf10_sqs",
     "used_for_staging" : false
   }, {
     "key" : "ssf11",
     "name" : "Perineural Invasion",
     "naaccr_item" : 2865,
+    "default" : "988",
     "table" : "ssf11_sqt",
     "used_for_staging" : false
   }, {
     "key" : "ssf12",
     "name" : "High Risk Features",
     "naaccr_item" : 2866,
+    "default" : "999",
     "table" : "ssf12_sev",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -135,6 +139,7 @@
     "key" : "ssf16",
     "name" : "Size of Lymph Nodes",
     "naaccr_item" : 2870,
+    "default" : "999",
     "table" : "ssf16_squ",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -142,7 +147,7 @@
     "key" : "clin_stage_group_direct",
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_c_34250",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -150,7 +155,7 @@
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_p_25104",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -322,9 +327,6 @@
         "from" : "path_t_out",
         "to" : "tmp_path_t"
       }, {
-        "from" : "ss2017_t_out",
-        "to" : "ss2017_t"
-      }, {
         "from" : "clin_t_out",
         "to" : "tmp_clin_t"
       }, {
@@ -349,11 +351,11 @@
         "from" : "source_n_out",
         "to" : "source_n"
       }, {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_n"
-      }, {
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
@@ -372,9 +374,6 @@
       }, {
         "from" : "combined_m_out",
         "to" : "tmp_combined_m"
-      }, {
-        "from" : "ss2017_m_out",
-        "to" : "ss2017_m"
       }, {
         "from" : "clin_m_out",
         "to" : "tmp_clin_m"
@@ -570,11 +569,11 @@
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
-        "from" : "path_m_prefix",
-        "to" : "path_prefix"
-      }, {
         "from" : "tmp_source_m",
         "to" : "cmb_source"
+      }, {
+        "from" : "path_m_prefix",
+        "to" : "path_prefix"
       }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
@@ -716,5 +715,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "radiation_surg_seq", "stage_group_c_34250", "tnm7_stage_uay", "nodes_ddj", "path_n_ddj", "determine_default_m", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "clin_n_ddj", "clin_m_hpe", "parse_n_67182", "stage_group_p_25104", "determine_default_n", "combined_n_to_summ_stage_n_84054", "clin_t_scrotum_13282", "histology", "concatenate_m_40642", "ssf1_jpp", "path_m_hpe", "scrotum_t_52966", "behavior", "extension_bdo", "concatenate_t_51262", "ssf16_squ", "ssf11_sqt", "adjustments_for_no_clin_or_no_path_26261", "ssf12_sev", "determine_combined_prefix_91402", "tnm7_inclusions_tpq", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "ssf10_sqs", "combined_n", "seer_mets_scrotum_84569", "year_dx_validation", "summary_stage_rpa", "combined_t", "schema_selection_scrotum" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-10T18:54:24.665Z"
+  "last_modified" : "2015-12-12T14:55:29.002Z"
 }

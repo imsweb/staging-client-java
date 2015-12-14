@@ -103,12 +103,14 @@
     "key" : "ssf6",
     "name" : "Mitotic Count",
     "naaccr_item" : 2930,
+    "default" : "988",
     "table" : "ssf6_opi",
     "used_for_staging" : false
   }, {
     "key" : "ssf11",
     "name" : "Serum Chromogranin A (CgA) Lab Value",
     "naaccr_item" : 2865,
+    "default" : "988",
     "table" : "ssf11_sri",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -116,6 +118,7 @@
     "key" : "ssf12",
     "name" : "Urinary 5-HIAA Lab Value",
     "naaccr_item" : 2866,
+    "default" : "988",
     "table" : "ssf12_srj",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -123,7 +126,7 @@
     "key" : "clin_stage_group_direct",
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_c_79525",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -131,7 +134,7 @@
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_p_42930",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -691,5 +694,5 @@
   } ],
   "involved_tables" : [ "path_m_hcp", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "radiation_surg_seq", "clin_m_hcp", "mets_hcp", "nodes_dfl", "path_n_dfl", "determine_default_m", "schema_selection_net_small_intestine", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "ssf11_sri", "clin_n_dfl", "parse_n_67182", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "combined_t_no_tis", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "stage_group_c_79525", "ssf6_opi", "concatenate_t_51262", "extension_bfp", "stage_group_p_42930", "adjustments_for_no_clin_or_no_path_26261", "tnm7_inclusions_tpm", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "path_t_net_small_intestine_71548", "combined_m", "combined_n", "year_dx_validation", "ssf12_srj", "summary_stage_rpa", "tnm7_stage_uqa", "net_smallintestine_t_60400" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-10T18:54:26.350Z"
+  "last_modified" : "2015-12-12T15:37:52.257Z"
 }

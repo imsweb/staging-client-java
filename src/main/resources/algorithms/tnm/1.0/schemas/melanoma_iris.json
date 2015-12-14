@@ -104,12 +104,14 @@
     "key" : "ssf2",
     "name" : "Measured Basal Diameter",
     "naaccr_item" : 2890,
+    "default" : "988",
     "table" : "ssf2_kbm",
     "used_for_staging" : false
   }, {
     "key" : "ssf3",
     "name" : "Measured Thickness (Depth)",
     "naaccr_item" : 2900,
+    "default" : "988",
     "table" : "ssf3_lpr",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -117,6 +119,7 @@
     "key" : "ssf4",
     "name" : "Size of Largest Metastasis",
     "naaccr_item" : 2910,
+    "default" : "999",
     "table" : "ssf4_mpe",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -124,6 +127,7 @@
     "key" : "ssf5",
     "name" : "Chromosome 3 Status",
     "naaccr_item" : 2920,
+    "default" : "988",
     "table" : "ssf5_npf",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -131,6 +135,7 @@
     "key" : "ssf6",
     "name" : "Chromosome 6p Status",
     "naaccr_item" : 2930,
+    "default" : "988",
     "table" : "ssf6_opd",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -138,6 +143,7 @@
     "key" : "ssf7",
     "name" : "Chromosome 8q Status",
     "naaccr_item" : 2861,
+    "default" : "988",
     "table" : "ssf7_spw",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -145,12 +151,14 @@
     "key" : "ssf8",
     "name" : "Gene Expression Profile",
     "naaccr_item" : 2862,
+    "default" : "988",
     "table" : "ssf8_spx",
     "used_for_staging" : false
   }, {
     "key" : "ssf9",
     "name" : "Mitotic Count",
     "naaccr_item" : 2863,
+    "default" : "988",
     "table" : "ssf9_sqm",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -158,6 +166,7 @@
     "key" : "ssf10",
     "name" : "Mean Diameter Nucleoli (MLN)",
     "naaccr_item" : 2864,
+    "default" : "988",
     "table" : "ssf10_spz",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -165,6 +174,7 @@
     "key" : "ssf11",
     "name" : "Extravascular Matrix Patterns, Loops",
     "naaccr_item" : 2865,
+    "default" : "988",
     "table" : "ssf11_sqa",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -172,6 +182,7 @@
     "key" : "ssf12",
     "name" : "Extravascular Matrix Patterns, Networks",
     "naaccr_item" : 2866,
+    "default" : "988",
     "table" : "ssf12_sqb",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -179,6 +190,7 @@
     "key" : "ssf13",
     "name" : "Microvascular Density (MVD)",
     "naaccr_item" : 2867,
+    "default" : "988",
     "table" : "ssf13_sqq",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -186,12 +198,14 @@
     "key" : "ssf14",
     "name" : "PET Standardized Uptake Values (SUV)",
     "naaccr_item" : 2868,
+    "default" : "988",
     "table" : "ssf14_sqr",
     "used_for_staging" : false
   }, {
     "key" : "ssf25",
     "name" : "Schema Discriminator: Melanoma Ciliary Body/Melanoma Iris",
     "naaccr_item" : 2879,
+    "default" : "020",
     "table" : "discriminator_melanoma",
     "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -199,7 +213,7 @@
     "key" : "clin_stage_group_direct",
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_c_89731",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -207,7 +221,7 @@
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_p_60572",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -767,5 +781,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "ssf3_lpr", "stage_group_p_60572", "ssf13_sqq", "ssf12_sqb", "ssf8_spx", "clin_m_hpg", "parse_t_2177", "concatenate_n_43246", "combined_n_to_summ_stage_n_84054", "ssf6_opd", "histology", "concatenate_m_40642", "tnm7_inclusions_tpa", "path_m_hpg", "schema_selection_melanoma_iris", "extension_bfr", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "clin_n_ophthalmic_n_94312", "tnm7_stage_uad", "ssf2_kbm", "ssf10_spz", "ssf5_npf", "systemic_surg_seq", "ophthalmic_n_36875", "parse_m_47057", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "ssf11_sqa", "summary_stage_rpa", "ssf7_spw", "determine_default_t", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpa", "melanoma_iris_t_65686", "parse_n_67182", "determine_default_n", "combined_t_no_tis", "stage_group_c_89731", "discriminator_melanoma", "determine_combined_prefix_91402", "seer_regional_nodes_melanomachoroid_3244", "stop_if_no_clin_and_no_path_24035", "ssf9_sqm", "primary_site", "clin_t_melanoma_iris_54551", "year_dx_validation", "ssf14_sqr", "ssf4_mpe", "seer_mets_melanomachoroid_55264" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-10T18:54:38.558Z"
+  "last_modified" : "2015-12-12T14:30:23.878Z"
 }

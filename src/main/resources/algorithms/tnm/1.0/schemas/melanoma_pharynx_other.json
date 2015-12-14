@@ -103,6 +103,7 @@
     "key" : "ssf1",
     "name" : "Size of Lymph Nodes",
     "naaccr_item" : 2880,
+    "default" : "999",
     "table" : "ssf1_jpu",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -110,6 +111,7 @@
     "key" : "ssf3",
     "name" : "Levels I-III, Lymph Nodes for Head and Neck",
     "naaccr_item" : 2900,
+    "default" : "999",
     "table" : "ssf3_lpa",
     "used_for_staging" : true,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -117,6 +119,7 @@
     "key" : "ssf4",
     "name" : "Levels IV-V and Retropharyngeal Lymph Nodes for Head and Neck",
     "naaccr_item" : 2910,
+    "default" : "999",
     "table" : "ssf4_mpa",
     "used_for_staging" : true,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -124,6 +127,7 @@
     "key" : "ssf5",
     "name" : "Levels VI-VII and Facial Lymph Nodes for Head and Neck",
     "naaccr_item" : 2920,
+    "default" : "999",
     "table" : "ssf5_npa",
     "used_for_staging" : true,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -131,6 +135,7 @@
     "key" : "ssf6",
     "name" : "Parapharyngeal, Parotid, and Suboccipital/Retroauricular Lymph Nodes for Head and Neck",
     "naaccr_item" : 2930,
+    "default" : "999",
     "table" : "ssf6_opa",
     "used_for_staging" : true,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -138,18 +143,21 @@
     "key" : "ssf7",
     "name" : "Upper and Lower Cervical Node Levels",
     "naaccr_item" : 2861,
+    "default" : "988",
     "table" : "ssf7_spa",
     "used_for_staging" : false
   }, {
     "key" : "ssf8",
     "name" : "Extracapsular Extension Clinically, Lymph Nodes for Head and Neck",
     "naaccr_item" : 2862,
+    "default" : "988",
     "table" : "ssf8_spb",
     "used_for_staging" : false
   }, {
     "key" : "ssf9",
     "name" : "Extracapsular Extension Pathologically, Lymph Nodes for Head and Neck",
     "naaccr_item" : 2863,
+    "default" : "999",
     "table" : "ssf9_spc",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -157,12 +165,14 @@
     "key" : "ssf10",
     "name" : "Human Papilloma Virus (HPV) Status",
     "naaccr_item" : 2864,
+    "default" : "988",
     "table" : "ssf10_spd",
     "used_for_staging" : false
   }, {
     "key" : "ssf11",
     "name" : "Measured Thickness (Depth)",
     "naaccr_item" : 2865,
+    "default" : "999",
     "table" : "ssf11_spe",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -170,7 +180,7 @@
     "key" : "clin_stage_group_direct",
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_c_63552",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -178,7 +188,7 @@
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_p_21201",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -738,5 +748,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "cpmbined_m_to_summ_stage_m_60564", "ssf10_spd", "melanoma_pharynx_other_t_82152", "stage_group_p_21201", "tnm7_stage_upu", "parse_t_2177", "concatenate_n_43246", "clin_m_hpd", "ssf11_spe", "schema_selection_melanoma_pharynx_other", "clin_t_melanoma_pharynx_other_3685", "histology", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "path_m_hpd", "tnm7_inclusions_tpa", "ssf1_jpu", "combined_t_to_summ_stage_t_4b_4e_d_9381", "concatenate_t_51262", "seer_mets_melanoma_pharynxother_20833", "adjustments_for_no_clin_or_no_path_26261", "combined_n_to_summ_stage_n_headneck_melpharynxother_59755", "ssf9_spc", "systemic_surg_seq", "parse_m_47057", "combined_m", "clinical_n_head_neck_melanoma_66648", "combined_n", "ssf5_npa", "extension_bem", "summary_stage_rpa", "ssf8_spb", "determine_default_t", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpa", "stage_group_c_63552", "parse_n_67182", "determine_default_n", "combined_t_no_tis", "pathologic_n_head_neck_melanoma_copy_75380", "ssf4_mpa", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "nodes_dft", "primary_site", "year_dx_validation" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-10T18:54:35.026Z"
+  "last_modified" : "2015-12-12T13:23:24.049Z"
 }

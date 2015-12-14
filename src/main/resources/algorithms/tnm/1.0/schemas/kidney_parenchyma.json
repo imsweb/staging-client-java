@@ -103,6 +103,7 @@
     "key" : "ssf1",
     "name" : "Invasion Beyond Capsule",
     "naaccr_item" : 2880,
+    "default" : "999",
     "table" : "ssf1_jbd",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -110,6 +111,7 @@
     "key" : "ssf2",
     "name" : "Vein Involvement",
     "naaccr_item" : 2890,
+    "default" : "999",
     "table" : "ssf2_kar",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -117,6 +119,7 @@
     "key" : "ssf3",
     "name" : "Ipsilateral Adrenal Gland Involvement",
     "naaccr_item" : 2900,
+    "default" : "988",
     "table" : "ssf3_lah",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -124,6 +127,7 @@
     "key" : "ssf4",
     "name" : "Sarcomatoid Features",
     "naaccr_item" : 2910,
+    "default" : "999",
     "table" : "ssf4_mam",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -131,12 +135,14 @@
     "key" : "ssf5",
     "name" : "Histologic Tumor Necrosis",
     "naaccr_item" : 2920,
+    "default" : "988",
     "table" : "ssf5_nai",
     "used_for_staging" : false
   }, {
     "key" : "ssf6",
     "name" : "Fuhrman Nuclear Grade",
     "naaccr_item" : 2930,
+    "default" : "999",
     "table" : "ssf6_oaf",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -144,12 +150,14 @@
     "key" : "ssf7",
     "name" : "Size of Metastasis in Lymph Nodes",
     "naaccr_item" : 2861,
+    "default" : "988",
     "table" : "ssf7_sbx",
     "used_for_staging" : false
   }, {
     "key" : "ssf8",
     "name" : "Extranodal Extension of Regional Lymph Nodes",
     "naaccr_item" : 2862,
+    "default" : "999",
     "table" : "ssf8_sby",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -157,7 +165,7 @@
     "key" : "clin_stage_group_direct",
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_c_14599",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -165,7 +173,7 @@
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_p_45269",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED" ]
@@ -337,9 +345,6 @@
         "from" : "path_t_out",
         "to" : "tmp_path_t"
       }, {
-        "from" : "ss2017_t_out",
-        "to" : "ss2017_t"
-      }, {
         "from" : "clin_t_out",
         "to" : "tmp_clin_t"
       }, {
@@ -364,11 +369,11 @@
         "from" : "source_n_out",
         "to" : "source_n"
       }, {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_n"
-      }, {
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
@@ -387,9 +392,6 @@
       }, {
         "from" : "combined_m_out",
         "to" : "tmp_combined_m"
-      }, {
-        "from" : "ss2017_m_out",
-        "to" : "ss2017_m"
       }, {
         "from" : "clin_m_out",
         "to" : "tmp_clin_m"
@@ -585,11 +587,11 @@
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
-        "from" : "path_m_prefix",
-        "to" : "path_prefix"
-      }, {
         "from" : "tmp_source_m",
         "to" : "cmb_source"
+      }, {
+        "from" : "path_m_prefix",
+        "to" : "path_prefix"
       }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
@@ -731,5 +733,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "ssf6_oaf", "extension_bbp", "radiation_surg_seq", "ssf2_kar", "determine_default_m", "path_m_hcg", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "mets_hcg", "parse_n_67182", "nodes_dbg", "determine_default_n", "clin_t_kidney_parenchyma_9887", "combined_n_to_summ_stage_n_84054", "histology", "kidney_n_42919", "concatenate_m_40642", "tnm7_inclusions_tpb", "ssf8_sby", "ssf1_jbd", "combined_t_no_tis", "clin_n_kidney_parenchyma_9806", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "tnm7_stage_uaw", "ssf3_lah", "clin_m_hcg", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "ssf4_mam", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "ssf7_sbx", "systemic_surg_seq", "stage_group_p_45269", "parse_m_47057", "primary_site", "combined_m", "combined_n", "year_dx_validation", "summary_stage_rpa", "stage_group_c_14599", "kidney_parenchyma_t_48027", "ssf5_nai", "schema_selection_kidney_parenchyma" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-10T18:54:27.181Z"
+  "last_modified" : "2015-12-12T14:37:43.737Z"
 }

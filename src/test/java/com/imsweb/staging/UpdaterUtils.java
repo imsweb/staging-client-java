@@ -5,8 +5,10 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Properties;
+import java.util.Set;
 import java.util.regex.Pattern;
 
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
@@ -82,16 +84,27 @@ public final class UpdaterUtils {
         r.withHeader("X-SEERAPI-Key", apiKey);
         r.withHeader("Accept", "application/json");
 
+        // first, get a list of unused tables so they can be ignored later
+        System.out.println("Getting list of unused table identifiers");
+        Set<String> unusedTableIds = new HashSet<>();
+        JSONResource tables = r.json(url + "staging/" + algorithm + "/" + version + "/tables?unused=true");
+        JSONArray tableArray = tables.array();
+        for (int i = 0; i < tableArray.length(); i++)
+            unusedTableIds.add(tableArray.getJSONObject(i).get("id").toString());
+        System.out.println(unusedTableIds.size() + " unused table identifiers found.");
+
         System.out.println("Getting list of table identifiers");
         List<String> tableIds = new ArrayList<>();
-        JSONResource tables = r.json(url + "staging/" + algorithm + "/" + version + "/tables");
-        JSONArray tableArray = tables.array();
+        tables = r.json(url + "staging/" + algorithm + "/" + version + "/tables");
+        tableArray = tables.array();
         for (int i = 0; i < tableArray.length(); i++) {
             String id = tableArray.getJSONObject(i).get("id").toString();
 
             // if there are invalid table identifiers, just skip them
             if (!_ID_CHARACTERS.matcher(id).matches())
                 System.out.println(" **** skipping bad table identifier: '" + id + "' ****");
+            else if (unusedTableIds.contains(id))
+                System.out.println(" **** skipping unused table identifier: '" + id + "' ****");
             else
                 tableIds.add(id);
         }

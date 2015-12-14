@@ -109,6 +109,7 @@
     "key" : "ssf4",
     "name" : "Radical Orchiectomy Performed",
     "naaccr_item" : 2910,
+    "default" : "999",
     "table" : "ssf4_mac",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -116,6 +117,7 @@
     "key" : "ssf5",
     "name" : "Size of Metastasis in Lymph Nodes",
     "naaccr_item" : 2920,
+    "default" : "999",
     "table" : "ssf5_nab",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -123,6 +125,7 @@
     "key" : "ssf6",
     "name" : "Pre-Orchiectomy Alpha Fetoprotein (AFP) Lab Value",
     "naaccr_item" : 2930,
+    "default" : "988",
     "table" : "ssf6_oay",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -130,6 +133,7 @@
     "key" : "ssf7",
     "name" : "Pre-Orchiectomy Alpha Fetoprotein (AFP) Range",
     "naaccr_item" : 2861,
+    "default" : "999",
     "table" : "ssf7_seh",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -137,6 +141,7 @@
     "key" : "ssf8",
     "name" : "Pre-Orchiectomy Human Chorionic Gonadotropin (hCG) Lab Value",
     "naaccr_item" : 2862,
+    "default" : "988",
     "table" : "ssf8_sei",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -144,6 +149,7 @@
     "key" : "ssf9",
     "name" : "Pre-Orchiectomy Human Chorionic Gonadotropin (hCG) Range",
     "naaccr_item" : 2863,
+    "default" : "999",
     "table" : "ssf9_sej",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -151,6 +157,7 @@
     "key" : "ssf10",
     "name" : "Pre-Orchiectomy Lactate Dehydrogenase (LDH) Range",
     "naaccr_item" : 2864,
+    "default" : "999",
     "table" : "ssf10_sek",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -158,37 +165,42 @@
     "key" : "ssf12",
     "name" : "Post-Orchiectomy Alpha Fetoprotein (AFP) Lab Value",
     "naaccr_item" : 2866,
+    "default" : "988",
     "table" : "ssf12_sfd",
     "used_for_staging" : false
   }, {
     "key" : "ssf13",
     "name" : "Post-Orchiectomy Alpha Fetoprotein (AFP) Range",
     "naaccr_item" : 2867,
+    "default" : "999",
     "table" : "ssf13_sfe",
     "used_for_staging" : true
   }, {
     "key" : "ssf14",
     "name" : "Post-Orchiectomy Human Chorionic Gonadotropin (hCG) Lab Value",
     "naaccr_item" : 2868,
+    "default" : "988",
     "table" : "ssf14_sff",
     "used_for_staging" : false
   }, {
     "key" : "ssf15",
     "name" : "Post-Orchiectomy Human Chorionic Gonadotropin (hCG) Range",
     "naaccr_item" : 2869,
+    "default" : "999",
     "table" : "ssf15_sfg",
     "used_for_staging" : true
   }, {
     "key" : "ssf16",
     "name" : "Post-Orchiectomy Lactate Dehydrogenase (LDH) Range",
     "naaccr_item" : 2870,
+    "default" : "999",
     "table" : "ssf16_sfh",
     "used_for_staging" : true
   }, {
     "key" : "clin_stage_group_direct",
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_c_83264",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -196,7 +208,7 @@
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_p_53847",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -368,9 +380,6 @@
         "from" : "path_t_out",
         "to" : "tmp_path_t"
       }, {
-        "from" : "ss2017_t_out",
-        "to" : "ss2017_t"
-      }, {
         "from" : "clin_t_out",
         "to" : "tmp_clin_t"
       }, {
@@ -395,11 +404,11 @@
         "from" : "source_n_out",
         "to" : "source_n"
       }, {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_n"
-      }, {
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
@@ -418,9 +427,6 @@
       }, {
         "from" : "combined_m_out",
         "to" : "tmp_combined_m"
-      }, {
-        "from" : "ss2017_m_out",
-        "to" : "ss2017_m"
       }, {
         "from" : "clin_m_out",
         "to" : "tmp_clin_m"
@@ -620,11 +626,11 @@
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
-        "from" : "path_m_prefix",
-        "to" : "path_prefix"
-      }, {
         "from" : "tmp_source_m",
         "to" : "cmb_source"
+      }, {
+        "from" : "path_m_prefix",
+        "to" : "path_prefix"
       }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
@@ -766,5 +772,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "ssf16_sfh", "ssf5_nab", "stage_group_c_83264", "ssf15_sfg", "parse_t_2177", "concatenate_n_43246", "nodes_ddf", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "schema_selection_testis", "ssf14_sff", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "clin_n_testis_17993", "mets_hbb", "testis_postorchiectomy_serum_tumor_marker_svalue_table_basedon_ssf131516", "systemic_surg_seq", "ssf10_sek", "parse_m_47057", "combined_m", "combined_n", "tnm7_stage_uqd", "summary_stage_rpa", "combined_t", "determine_default_t", "testis_path_t_76829", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpa", "parse_n_67182", "determine_default_n", "clin_t_bdh", "ssf4_mac", "extension_bdh", "path_m_hbb", "behavior", "ssf7_seh", "testis_n_51427", "ssf6_oay", "tnm7_inclusions_tpj", "ssf13_sfe", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "ssf8_sei", "primary_site", "ssf12_sfd", "clin_m_hbb", "year_dx_validation", "stage_group_p_53847", "ssf9_sej" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-10T18:54:39.463Z"
+  "last_modified" : "2015-12-12T14:45:02.262Z"
 }

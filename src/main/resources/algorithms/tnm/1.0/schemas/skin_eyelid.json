@@ -109,30 +109,35 @@
     "key" : "ssf1",
     "name" : "Measured Thickness (Depth) for Squamous Cell Carcinoma",
     "naaccr_item" : 2880,
+    "default" : "988",
     "table" : "ssf1_jbl",
     "used_for_staging" : false
   }, {
     "key" : "ssf2",
     "name" : "Clark Level",
     "naaccr_item" : 2890,
+    "default" : "988",
     "table" : "ssf2_kaz",
     "used_for_staging" : false
   }, {
     "key" : "ssf4",
     "name" : "Size of Lymph Nodes",
     "naaccr_item" : 2910,
+    "default" : "988",
     "table" : "ssf4_mbg",
     "used_for_staging" : false
   }, {
     "key" : "ssf5",
     "name" : "Sentinel Lymph Node Biopsy",
     "naaccr_item" : 2920,
+    "default" : "988",
     "table" : "ssf5_nar",
     "used_for_staging" : false
   }, {
     "key" : "ssf6",
     "name" : "Perineural Invasion",
     "naaccr_item" : 2930,
+    "default" : "999",
     "table" : "ssf6_oak",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -140,12 +145,14 @@
     "key" : "ssf7",
     "name" : "Tumor Necrosis",
     "naaccr_item" : 2861,
+    "default" : "988",
     "table" : "ssf7_scq",
     "used_for_staging" : false
   }, {
     "key" : "ssf8",
     "name" : "Pagetoid Spread",
     "naaccr_item" : 2862,
+    "default" : "988",
     "table" : "ssf8_sdd",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -153,12 +160,14 @@
     "key" : "ssf9",
     "name" : "Mohs Layers",
     "naaccr_item" : 2863,
+    "default" : "988",
     "table" : "ssf9_sdi",
     "used_for_staging" : false
   }, {
     "key" : "ssf10",
     "name" : "Prior Radiation",
     "naaccr_item" : 2864,
+    "default" : "988",
     "table" : "ssf10_scm",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -166,43 +175,49 @@
     "key" : "ssf11",
     "name" : "Human Immunodeficiency Virus (HIV) Status",
     "naaccr_item" : 2865,
+    "default" : "988",
     "table" : "ssf11_scj",
     "used_for_staging" : false
   }, {
     "key" : "ssf12",
     "name" : "Solid Organ Transplant",
     "naaccr_item" : 2866,
+    "default" : "988",
     "table" : "ssf12_sck",
     "used_for_staging" : false
   }, {
     "key" : "ssf13",
     "name" : "Leukemia",
     "naaccr_item" : 2867,
+    "default" : "988",
     "table" : "ssf13_scl",
     "used_for_staging" : false
   }, {
     "key" : "ssf14",
     "name" : "Multiple Carcinomas",
     "naaccr_item" : 2868,
+    "default" : "988",
     "table" : "ssf14_scn",
     "used_for_staging" : false
   }, {
     "key" : "ssf15",
     "name" : "Muir-Torre Syndrome",
     "naaccr_item" : 2869,
+    "default" : "988",
     "table" : "ssf15_sco",
     "used_for_staging" : false
   }, {
     "key" : "ssf16",
     "name" : "Xeroderma Pigmentosa",
     "naaccr_item" : 2870,
+    "default" : "988",
     "table" : "ssf16_scp",
     "used_for_staging" : false
   }, {
     "key" : "clin_stage_group_direct",
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_c_57716",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -210,7 +225,7 @@
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_p_66915",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -382,9 +397,6 @@
         "from" : "path_t_out",
         "to" : "tmp_path_t"
       }, {
-        "from" : "ss2017_t_out",
-        "to" : "ss2017_t"
-      }, {
         "from" : "clin_t_out",
         "to" : "tmp_clin_t"
       }, {
@@ -409,11 +421,11 @@
         "from" : "source_n_out",
         "to" : "source_n"
       }, {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_n"
-      }, {
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
@@ -432,9 +444,6 @@
       }, {
         "from" : "combined_m_out",
         "to" : "tmp_combined_m"
-      }, {
-        "from" : "ss2017_m_out",
-        "to" : "ss2017_m"
       }, {
         "from" : "clin_m_out",
         "to" : "tmp_clin_m"
@@ -630,11 +639,11 @@
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
-        "from" : "path_m_prefix",
-        "to" : "path_prefix"
-      }, {
         "from" : "tmp_source_m",
         "to" : "cmb_source"
+      }, {
+        "from" : "path_m_prefix",
+        "to" : "path_prefix"
       }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
@@ -776,5 +785,5 @@
   } ],
   "involved_tables" : [ "clin_m_hcu", "cpmbined_m_to_summ_stage_m_60564", "ssf8_sdd", "nodes_dde", "ssf7_scq", "path_m_hcu", "ssf4_mbg", "stage_group_p_66915", "parse_t_2177", "concatenate_n_43246", "ssf10_scm", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "tnm7_inclusions_tpb", "mets_hcu", "ssf11_scj", "ssf9_sdi", "ssf2_kaz", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "skin_eyelid_t_57348", "clin_t_skin_eyelid_93914", "ssf12_sck", "tnm7_stage_uaf", "systemic_surg_seq", "parse_m_47057", "combined_m", "combined_n", "summary_stage_rpa", "combined_t", "ssf13_scl", "determine_default_t", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpa", "ssf6_oak", "parse_n_67182", "ssf14_scn", "determine_default_n", "stage_group_c_57716", "skin_eyelid_n_65771", "extension_bdg", "behavior", "schema_selection_skin_eyelid", "ssf15_sco", "ssf1_jbl", "clin_n_skin_eyelid_10770", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "ssf16_scp", "primary_site", "ssf5_nar", "year_dx_validation", "combined_t_to_summ_stage_t_3b_3d_re_4_4e_d_48469" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-10T18:54:36.320Z"
+  "last_modified" : "2015-12-12T14:48:25.284Z"
 }

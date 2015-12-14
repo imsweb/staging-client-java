@@ -133,6 +133,7 @@
     "key" : "ssf4",
     "name" : "Immunohistochemistry (IHC) of Regional Lymph Nodes",
     "naaccr_item" : 2910,
+    "default" : "987",
     "table" : "ssf4_mab",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -140,6 +141,7 @@
     "key" : "ssf5",
     "name" : "Molecular (MOL) Studies of Regional Lymph Nodes",
     "naaccr_item" : 2920,
+    "default" : "987",
     "table" : "ssf5_naa",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -147,6 +149,7 @@
     "key" : "ssf6",
     "name" : "Size of Tumor-Invasive Component",
     "naaccr_item" : 2930,
+    "default" : "987",
     "table" : "ssf6_oaa",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -861,5 +864,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "ssf22_san", "ssf23_sao", "ssf5_naa", "parse_t_2177", "concatenate_n_43246", "schema_selection_breast", "stage_group_c_34977", "histology", "concatenate_m_40642", "ssf24_sap", "nodes_pos_fab", "concatenate_t_51262", "tnm7_inclusions_tpg", "ssf3_lac", "adjustments_for_no_clin_or_no_path_26261", "ssf11_sae", "ssf16_sah", "ssf14_sbf", "ssf20_sal", "nodes_daj", "systemic_surg_seq", "tnm7_stage_uac", "parse_m_47057", "ssf10_sad", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "ssf15_sbg", "ssf21_sam", "summary_stage_rpa", "ssf17_sai", "ssf1_jag", "combined_t_breast", "extension_bak", "combined_n_to_summ_stage_n_n3c_d_43145", "determine_default_t", "ssf19_sak", "radiation_surg_seq", "ssf6_oaa", "determine_default_m", "ssf18_saj", "breast_pathologic_t_84149", "clin_m_hau", "parse_n_67182", "determine_default_n", "ssf7_saa", "path_n_daj", "ssf4_mab", "path_m_hau", "behavior", "mets_hau", "ssf8_sab", "determine_combined_prefix_91402", "ssf12_saf", "stop_if_no_clin_and_no_path_24035", "clin_n_daj", "primary_site", "ssf2_kac", "year_dx_validation", "ssf9_sac", "breast_t_70656", "ssf13_sag", "stage_group_p_31599" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-10T18:54:40.429Z"
+  "last_modified" : "2015-12-11T15:00:35.947Z"
 }
