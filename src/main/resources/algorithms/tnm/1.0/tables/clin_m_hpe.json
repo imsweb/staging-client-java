@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Clin M",
   "title" : "Clinical M",
-  "notes" : "**Note:**  Nodes in contiguous (secondary) and bidirectional (cephalad/caudal) primary nodal basins are coded in distant metastasis.",
-  "last_modified" : "2015-12-04T19:08:13.076Z",
+  "notes" : "**Note:**  Nodes in contiguous (secondary) and bidirectional (cephalad/caudal) primary nodal basins are coded in M (distant metastasis).",
+  "last_modified" : "2015-12-18T15:12:56.886Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",

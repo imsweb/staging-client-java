@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Path N Pleura",
   "title" : "Pathologic N",
-  "notes" : "**Note 1:** Regional nodes are the intrathoracic, internal mammary, peridiaphragmatic, scalene, and supraclavicular nodes. \n\n**Note 2:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in distant metastasis.",
-  "last_modified" : "2015-12-08T18:36:49.236Z",
+  "notes" : "**Note:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Regional lymph nodes::** \n\n    Intrathoracic \n    Internal mammary\n    Peridiaphragmatic\n    Scalene\n    Supraclavicular nodes.",
+  "last_modified" : "2015-12-14T18:21:34.291Z",
   "definition" : [ {
     "key" : "path_n",
     "name" : "Pathologic N",

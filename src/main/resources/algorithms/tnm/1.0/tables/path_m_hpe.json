@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Path M",
   "title" : "Pathologic M",
-  "notes" : "**Note:**  Nodes in contiguous (secondary) and bidirectional (cephalad/caudal) primary nodal basins are coded in distant metastasis.",
-  "last_modified" : "2015-12-04T19:08:13.025Z",
+  "notes" : "**Note:**  Nodes in contiguous (secondary) and bidirectional (cephalad/caudal) primary nodal basins are coded in M (distant metastasis).",
+  "last_modified" : "2015-12-18T15:13:31.442Z",
   "definition" : [ {
     "key" : "path_m",
     "name" : "Pathologic M",

@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Path T Ampulla Vater",
   "title" : "Pathologic T",
-  "notes" : "**Note:** High grade dysplasia and severe dysplasia are generally not reportable in cancer registries, but if a registry does collect these, assign Tis.",
-  "last_modified" : "2015-11-25T20:26:56.044Z",
+  "notes" : "**Note:** High grade dysplasia and severe dysplasia of the ampulla vater are generally not reportable in cancer registries.\n* Assign pTis if your registry collects these tumors",
+  "last_modified" : "2015-12-18T17:09:47.633Z",
   "definition" : [ {
     "key" : "path_t",
     "name" : "Pathologic T",

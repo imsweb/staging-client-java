@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Path T Adrenal Gland",
   "title" : "Pathologic T",
-  "notes" : "**Note 1:**  Assign 88 for in situ cases (behavior code /2). TNM does not include an in situ category for adrenal gland tumors.\n\n**Note 2:** Tumor size must be known to assign a value of T1 or T2. You may use a physicianâs statement of the T category if this is the only information in the medical record. If the tumor appears to be in the T1 or T2 categories, but no size or category is specified, assign TX.\n\n**Note 3:** For the following descriptions, assign the appropriate T category based on the tumor size.\n\n    Invasive carcinoma confined to adrenal gland\n    Localized, NOS",
-  "last_modified" : "2015-12-07T13:10:35.192Z",
+  "notes" : "**Note 1:**  Assign 88 for in situ cases (behavior code /2). TNM does not include an in situ category for adrenal gland tumors.\n\n**Note 2:** Tumor size must be known to assign a value of T1 or T2. You may use a physicianâs statement of the T category if this is the only information in the medical record. If the tumor appears to be in the T1 or T2 categories, but no size or category is specified, assign TX.\n\n**Note 3:** Assign the appropriate T category (T1, T2) based on the tumor size for the following descriptions:\n\n    Invasive carcinoma confined to adrenal gland\n    Localized, NOS",
+  "last_modified" : "2015-12-18T16:25:34.775Z",
   "definition" : [ {
     "key" : "path_t",
     "name" : "Pathologic T",

@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Clin M Head & Neck Melanoma",
   "title" : "Clinical M",
-  "notes" : "**Note:** Supraclavicular and transverse cervical lymph nodes are coded in regional lymph nodes because they are categorized as N rather than M in TNM.",
-  "last_modified" : "2015-12-04T19:08:19.931Z",
+  "notes" : "**Note:** Supraclavicular and transverse cervical lymph nodes are coded in regional lymph nodes because they are categorized as N (regional lymph nodes) rather than M (distant metastasis) in TNM.",
+  "last_modified" : "2015-12-18T15:16:54.521Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",

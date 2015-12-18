@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Clin T Ampulla Vater",
   "title" : "Clinical T",
-  "notes" : "**Note:** High grade dysplasia and severe dysplasia are generally not reportable in cancer registries, but if a registry does collect these, assign Tis.",
-  "last_modified" : "2015-11-25T20:25:51.389Z",
+  "notes" : "**Note:** High grade dysplasia and severe dysplasia of the ampulla vater are generally not reportable in cancer registries.\n* Assign pTis if your registry collects these tumors",
+  "last_modified" : "2015-12-18T17:11:06.904Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

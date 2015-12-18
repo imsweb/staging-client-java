@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "Path N Carinoid Appendix",
   "title" : "Pathologic N",
-  "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 12 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0. (1)\n\n**Note 2:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in metastasis.\n\n**Note 3:**  Superior and inferior mesenteric nodes are coded in distant metastasis.  Mesenteric nodes, NOS are coded in regional lymph nodes.\n\n**Note 4:**  Assign N1 if regional lymph nodes are involved but there is no indication of the number of nodes involved.\n\n**Regional lymph nodes for appendix:**\n\n    Celiac\n        Anterior (prececal)\n        Ileocolic\n        Posterior (retrocecal)\n        Right colic\n    Colic, NOS\n    Epicolic (adjacent to bowel wall)\n    Mesenteric, NOS\n    Mesocolic, NOS\n    Paracolic/pericolic\n\n    Regional lymph nodes, NOS\n    Lymph nodes, NOS",
+  "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 12 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0. (1)\n\n**Note 2:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Note 3:**  Superior and inferior mesenteric nodes are coded in distant metastasis.  Mesenteric nodes, NOS are coded in regional lymph nodes.\n\n**Note 4:**  Assign N1 if regional lymph nodes are involved but there is no indication of the number of nodes involved.\n\n**Regional lymph nodes for appendix:**\n\n    Celiac\n        Anterior (prececal)\n        Ileocolic\n        Posterior (retrocecal)\n        Right colic\n    Colic, NOS\n    Epicolic (adjacent to bowel wall)\n    Mesenteric, NOS\n    Mesocolic, NOS\n    Paracolic/pericolic\n\n    Regional lymph nodes, NOS\n    Lymph nodes, NOS",
   "footnotes" : "(1) International Union Against Cancer (UICC) *TNM Classification of Malignant Tumors,* 7th ed., Sobin, LH, Gospodarowicz, M, Wittekind, CH, eds. New York: Wiley, 2009, pg., 92",
-  "last_modified" : "2015-11-25T20:26:42.344Z",
+  "last_modified" : "2015-12-14T15:24:27.079Z",
   "definition" : [ {
     "key" : "path_n",
     "name" : "Pathologic N",

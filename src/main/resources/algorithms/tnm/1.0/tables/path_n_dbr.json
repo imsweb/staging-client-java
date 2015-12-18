@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "Path N Thyroid",
   "title" : "Pathologic N",
-  "notes" : "**Note 1:** Histological examination of a selective neck dissection specimen will ordinarily include 6 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0. (1)\n\n**Note 2:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in distant metastasis.\n\n**Note 3:** This field includes all lymph nodes defined as Levels I-VI, retropharyngeal or superior mediastinal lymph nodes (Level VII). \n\n**Note 4:**  Assignment of N value for thyroid does not depend on laterality.  All codes for nodal involvement include ipsilateral, bilateral, contralateral, and midline lymph nodes.\n\n**Note 5:**  The description of lymph nodes has been standardized across the head and neck schemas.  All lymph node levels and groups listed here are considered regional nodes for TNM staging.",
+  "notes" : "**Note 1:** Histological examination of a selective neck dissection specimen will ordinarily include 6 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0. (1)\n\n**Note 2:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Note 3:** This field includes all lymph nodes defined as Levels I-VI, retropharyngeal or superior mediastinal lymph nodes (Level VII). \n\n**Note 4:**  Assignment of N value for thyroid does not depend on laterality.  All codes for nodal involvement include ipsilateral, bilateral, contralateral, and midline lymph nodes.\n\n**Note 5:**  The description of lymph nodes has been standardized across the head and neck schemas.  All lymph node levels and groups listed here are considered regional nodes for TNM staging.",
   "footnotes" : "(1) International Union Against Cancer (UICC) *TNM Classification of Malignant Tumors,* 7th ed., Sobin, LH, Gospodarowicz, M, Wittekind, CH, eds. New York: Wiley, 2009, pg., 60",
-  "last_modified" : "2015-11-25T20:26:48.648Z",
+  "last_modified" : "2015-12-14T18:32:52.229Z",
   "definition" : [ {
     "key" : "path_n",
     "name" : "Pathologic N",

@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Path N GIST Peritoneum",
   "title" : "Pathologic N",
-  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS  in this field.  Distant nodes are coded in distant metastasis.\n\n**Note 2:**  Regional lymph node involvement is rare for GISTs, so that cases in which the nodal status is not associated clinically or pathologically could be considered N0 instead of cNX or pNX.\n \n**Regional lymph nodes for peritoneum:**\n\n     Intra-abdominal:\n        Paracaval\n        Pelvic\n        Subdiaphragmatic",
-  "last_modified" : "2015-11-25T20:26:39.015Z",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Note 2:**  Regional lymph node involvement is rare for GISTs, so that cases in which the nodal status is not associated clinically or pathologically could be considered N0 instead of cNX or pNX.\n \n**Regional lymph nodes for peritoneum:**\n\n     Intra-abdominal:\n        Paracaval\n        Pelvic\n        Subdiaphragmatic",
+  "last_modified" : "2015-12-14T15:35:16.433Z",
   "definition" : [ {
     "key" : "path_n",
     "name" : "Pathologic N",

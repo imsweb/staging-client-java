@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "Path N Kidney Parenchyma",
   "title" : "Pathologic N",
-  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in distant metastasis.\n\n**Note 2:**  Regional nodes include unilateral, bilateral or contralateral involvement of named node(s).\n\n**Regional lymph nodes:**\n\n    Aortic, NOS:\n        Lateral (lumbar)\n        Para-aortic\n        Periaortic\n        Preaortic\n        Retroaortic\n     Interaortocaval    \n     Pericaval, NOS\n        Paracaval\n        Precaval\n        Retrocaval\n\n    Renal hilar\n    Retroperitoneal, NOS\n\n**Note 3:** N1 includes single and multiple regional node(s).",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Note 2:**  Regional nodes include unilateral, bilateral or contralateral involvement of named node(s).\n\n**Regional lymph nodes:**\n\n    Aortic, NOS:\n        Lateral (lumbar)\n        Para-aortic\n        Periaortic\n        Preaortic\n        Retroaortic\n     Interaortocaval    \n     Pericaval, NOS\n        Paracaval\n        Precaval\n        Retrocaval\n\n    Renal hilar\n    Retroperitoneal, NOS\n\n**Note 3:** N1 includes single and multiple regional node(s).",
   "footnotes" : "^ Definition from the updated pages from \"*TNM Classification of Malignant Tumours, Seventh edition*\" found at http://www.wileyanduicc.com/pdf/Corrected_pages.pdf",
-  "last_modified" : "2015-11-25T20:35:27.621Z",
+  "last_modified" : "2015-12-14T15:40:01.616Z",
   "definition" : [ {
     "key" : "path_n",
     "name" : "Pathologic N",
