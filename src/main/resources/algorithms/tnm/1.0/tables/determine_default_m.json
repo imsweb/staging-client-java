@@ -5,7 +5,7 @@
   "name" : "Determine Default M",
   "title" : "Determine the Default M for Calculations",
   "description" : "Determine the default value for M to be used in calculations.  This is used when Clin M or Path M (or both) are blank, but other T, N and M information is present.   This will have no impact on the stored value and is solely a temporary state.",
-  "last_modified" : "2015-12-04T17:42:24.770Z",
+  "last_modified" : "2015-12-22T15:04:22.672Z",
   "definition" : [ {
     "key" : "clin_m_in",
     "name" : "Clinical M",

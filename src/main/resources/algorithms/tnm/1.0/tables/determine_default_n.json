@@ -5,7 +5,7 @@
   "name" : "Determine Default N",
   "title" : "Determine the Default N for Calculations",
   "description" : "Determine the default value for N to be used in calculations.  This is used when Clin N or Path N (or both) are blank, but other T, N and M information is present.   This will have no impact on the stored value and is solely a temporary state.",
-  "last_modified" : "2015-12-04T16:24:50.575Z",
+  "last_modified" : "2015-12-22T15:04:05.755Z",
   "definition" : [ {
     "key" : "clin_n_in",
     "name" : "Clinical N",

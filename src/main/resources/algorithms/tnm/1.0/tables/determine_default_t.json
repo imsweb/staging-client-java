@@ -5,7 +5,7 @@
   "name" : "Determine Default T",
   "title" : "Determine Default T for Calculations",
   "description" : "Determine the default value for T to be used in calculations.  This is used when Clin T or Path T (or both) are blank, but other T, N and M information is present.   This will have no impact on the stored value and is solely a temporary state.",
-  "last_modified" : "2015-12-04T16:24:00.542Z",
+  "last_modified" : "2015-12-22T15:03:49.499Z",
   "definition" : [ {
     "key" : "clin_t_in",
     "name" : "Clinical T",

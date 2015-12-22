@@ -176,7 +176,7 @@
     "key" : "clin_stage_group_direct",
     "name" : "TNM Clin Stage Group",
     "naaccr_item" : 970,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_c_51542",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -184,7 +184,7 @@
     "key" : "path_stage_group_direct",
     "name" : "TNM Path Stage Group",
     "naaccr_item" : 910,
-    "default" : "88",
+    "default" : "99",
     "table" : "stage_group_p_35702",
     "used_for_staging" : false,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
@@ -356,9 +356,6 @@
         "from" : "path_t_out",
         "to" : "tmp_path_t"
       }, {
-        "from" : "ss2017_t_out",
-        "to" : "ss2017_t"
-      }, {
         "from" : "clin_t_out",
         "to" : "tmp_clin_t"
       }, {
@@ -383,11 +380,11 @@
         "from" : "source_n_out",
         "to" : "source_n"
       }, {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_n"
-      }, {
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
@@ -406,9 +403,6 @@
       }, {
         "from" : "combined_m_out",
         "to" : "tmp_combined_m"
-      }, {
-        "from" : "ss2017_m_out",
-        "to" : "ss2017_m"
       }, {
         "from" : "clin_m_out",
         "to" : "tmp_clin_m"
@@ -604,11 +598,11 @@
     }, {
       "id" : "determine_combined_prefix_91402",
       "input_mapping" : [ {
-        "from" : "path_m_prefix",
-        "to" : "path_prefix"
-      }, {
         "from" : "tmp_source_m",
         "to" : "cmb_source"
+      }, {
+        "from" : "path_m_prefix",
+        "to" : "path_prefix"
       }, {
         "from" : "clin_m_prefix",
         "to" : "clin_prefix"
@@ -750,5 +744,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "ssf10_spd", "ssf1_jpa", "path_m_hpb", "tnm7_stage_upt", "parse_t_2177", "concatenate_n_43246", "nodes_ddh", "ssf11_spe", "histology", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "tnm7_inclusions_tpb", "seer_mets_gum_lower_82824", "combined_t_to_summ_stage_t_4b_4e_d_9381", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "gum_lower_t_24295", "ssf9_spc", "systemic_surg_seq", "parse_m_47057", "combined_n_to_summ_stage_n_headneck_gumlowerother_40886", "combined_m", "combined_n", "ssf5_npa", "summary_stage_rpa", "combined_t", "ssf8_spb", "determine_default_t", "clinical_n_head_neck_except_nasopharynx_25237", "radiation_surg_seq", "determine_default_m", "path_n_head_neck_except_nasopharynx_40357", "nodes_pos_fpa", "parse_n_67182", "determine_default_n", "schema_selection_gum_lower", "clin_t_gum_lower_57588", "extension_bdl", "stage_group_p_35702", "behavior", "ssf4_mpa", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "primary_site", "year_dx_validation", "stage_group_c_51542" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-10T18:54:33.854Z"
+  "last_modified" : "2015-12-22T14:20:59.598Z"
 }
