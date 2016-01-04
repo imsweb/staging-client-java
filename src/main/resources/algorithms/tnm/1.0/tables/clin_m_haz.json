@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Clin M Mycosis Fungoides",
   "title" : "Clinical M",
-  "notes" : "**Note 1:**  For this site, code all lymph node (regional and distant) involvement in regional lymph nodes (N). Only visceral and bone marrow involvement are coded in distant metastasis (M). Peripheral blood involvement is coded in Site-Specific Factor 1.\n\n**Note 2:**  Visceral involvement is considered metastatic and should be questioned in the absence of node or blood involvement.\n\n**Note 3:**  For visceral disease (Stage IVB), documentation of involvement by only one organ outside the skin, nodes, or blood is needed.\n\n**Note 4:**  Visceral involvement must be pathologically confirmed, except for the liver and spleen, which may be documented with only imaging.",
-  "last_modified" : "2015-12-04T19:08:14.705Z",
+  "notes" : "**Note 1:**  For this schema, code all lymph node (regional and distant) involvement in regional lymph nodes (N). Only visceral and bone marrow involvement are coded in M (distant metastasis). \n* Peripheral blood involvement is coded in **Site-Specific Factor 1**.\n\n**Note 2:**  Visceral involvement is metastatic and should be questioned in the absence of node or blood involvement.\n\n**Note 3:**  For visceral disease (Stage IVB), documentation of involvement by only one organ outside the skin, nodes, or blood is needed.\n\n**Note 4:**  Visceral involvement must be pathologically confirmed, except for the liver and spleen, which may be documented with only imaging.",
+  "last_modified" : "2016-01-04T20:24:45.003Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",

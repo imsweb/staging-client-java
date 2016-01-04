@@ -248,7 +248,6 @@ ssf9_sqm
 ssf3_lpr
 nodes_dbt
 extension_bca
-path_n_dbt
 clin_n_dbt
 extension_bbq
 extension_bbx
@@ -558,6 +557,7 @@ ssf1_jbz
 mets_ham
 nodes_dbd
 path_m_ham
+path_n_dbt
 stage_group_c_32742
 extension_bbe
 combined_n_to_summ_stage_n_n3_d_copy_68044
@@ -663,6 +663,7 @@ nodes_dfj
 ssf3_lac
 extension_bfn
 ssf2_kac
+path_m_had
 clin_t_melanoma_lower_lip_15469
 ssf1_jag
 mets_hau
@@ -769,7 +770,6 @@ ssf8_sdp
 melanoma_nasal_cavity_t_57160
 stage_group_p_79956
 nodes_dfp
-path_m_had
 stage_group_c_90191
 nodes_det
 extension_bey
@@ -779,7 +779,6 @@ stage_group_lymphoma_ocular_adnexa_c_86297
 extension_bcu
 ssf6_oao
 melanoma_lip_other_t_71709
-clin_m_had
 clin_t_melanoma_lip_other_38821
 ssf22_src
 mets_hbe
@@ -992,7 +991,6 @@ clin_m_hcu
 ssf11_sqt
 ssf10_sqs
 ssf1_jpp
-path_m_hpe
 clin_m_hpe
 bone_histologies_stage
 ssf4_mbd
@@ -1016,6 +1014,7 @@ tnm7_stage_ubq
 tnm7_stage_upt
 tnm7_stage_ubk
 tnm7_stage_ubn
+clin_m_had
 extension_bbo
 extension_bcg
 nodes_deg
@@ -1311,6 +1310,7 @@ clin_t_melanoma_oropharynx_83498
 ssf5_nbb
 clin_t_melanoma_larynx_supraglottic_25433
 ssf3_lpe
+path_m_hpe
 nodes_daw
 path_n_daw
 ssf9_sph

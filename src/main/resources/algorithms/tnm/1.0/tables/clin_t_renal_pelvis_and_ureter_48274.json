@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Clin T Renal Pelvis and Ureter",
   "title" : "Clinical T",
-  "notes" : "**Note 1:** In case of multifocal noninvasive Ta and Tis tumors, assign Tis.\n\n**Note 2:** If Ta or Tis is assigned, then Behavior ICD-O-3 must be 2.\n\n**Note 3:**  Tumor involving both renal pelvis and ureter (unifocal or multifocal) is classified by the depth of greatest invasion in either organ for TNM staging.  Assign T1 for tumor involving the wall of both renal pelvis and ureter.\n\n**Note 4:**  Direct invasion of the bladder by a ureteral tumor is classified by the depth of greatest invasion of the bladder or ureter for TNM staging.",
-  "last_modified" : "2015-11-25T20:26:32.328Z",
+  "notes" : "**Note 1:** Assign pTa or pTis for in situ cases (behavior code /2).\n\n**Note 2:** In case of multifocal noninvasive Ta and Tis tumors, assign pTis.\n\n**Note 3:**  Tumor involving both renal pelvis and ureter (unifocal or multifocal) is classified by the depth of greatest invasion in either organ for TNM staging.  \n* Assign T1 for tumor involving the wall of both renal pelvis and ureter.\n\n**Note 4:**  Direct invasion of the bladder by a ureteral tumor is classified by the depth of greatest invasion of the bladder or ureter for TNM staging.",
+  "last_modified" : "2016-01-04T16:05:13.363Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

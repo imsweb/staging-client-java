@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Clin M Fallopian Tube",
   "title" : "Clinical M",
-  "notes" : "**Note 1:**  Discontinuous metastasis to any of the following abdominal organs by way of peritoneal seeding or implants is included in the T3 category (FIGO Stage III) and coded in primary tumor: abdominal mesentery; diaphragm; gallbladder; infracolic omentum; kidneys; large intestine except rectum, rectosigmoid, and sigmoid colon; liver (peritoneal surface); omentum; pancreas; pericolic gutter; peritoneum, NOS; small intestine; spleen; stomach; and ureters outside pelvis. Hematogenous metastases are included in M1 (FIGO Stage IV) disease.\n\n**Note 2:**  The Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stages are included for coding where no more specific information is available in the record.",
-  "last_modified" : "2015-12-04T19:08:19.090Z",
+  "notes" : "**Note 1:**  Discontinuous metastasis to any of the following abdominal organs by way of peritoneal seeding or implants is included in the T3 category (FIGO Stage III) and coded in primary tumor: \n* Abdominal mesentery; diaphragm; gallbladder; infracolic omentum; kidneys; large intestine except rectum, rectosigmoid, and sigmoid colon; liver (peritoneal surface); omentum; pancreas; pericolic gutter; peritoneum, NOS; small intestine; spleen; stomach; and ureters outside pelvis. \n* Hematogenous metastases are included in M1 (FIGO Stage IV) disease.\n\n**Note 2:**  The Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stages are included for coding where no more specific information is available in the record.",
+  "last_modified" : "2015-12-29T11:43:30.251Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",

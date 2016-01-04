@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Pancreas Head",
   "title" : "Head of Pancreas",
-  "notes" : "C250  Head of pancreas\n\n**Note 1:**  For tumors of the islet cells, determine which subsite of the pancreas is involved and use that primary site code and the corresponding schema.  If the subsite cannot be determined, use the general code for Islets of Langerhans, C254, and use the schema for Pancreas, Other and Unspecified.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Pancreas: Head, Body and Tail* chapter on page 116 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C250  Head of pancreas\n\n**Note 1:**  For tumors of the islet cells, determine which subsite of the pancreas is involved and use that primary site code and the corresponding schema.  \n* If the subsite cannot be determined, use the general code for Islets of Langerhans, C254, and use the schema for Pancreas, Other and Unspecified.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Pancreas: Head, Body and Tail* chapter on page 116 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_pancreas_head",
   "inputs" : [ {
     "key" : "year_dx",
@@ -698,5 +698,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "clin_m_haq", "ssf2_kpd", "radiation_surg_seq", "extension_bbv", "path_m_haq", "determine_default_m", "tnm7_stage_ups", "ssf1_jpe", "tnm7_inclusions_tae", "clin_n_dbn", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "determine_default_n", "combined_n_to_summ_stage_n_84054", "ssf3_lpd", "histology", "concatenate_m_40642", "stage_group_c_2328", "mets_haq", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "pancreas_head_t_4793", "behavior", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "determine_combined_prefix_91402", "stage_group_p_66747", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "path_n_dbn", "combined_m", "combined_n", "nodes_dbn", "clin_t_pancreas_head_97928", "schema_selection_pancreas_head", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-10T18:54:25.522Z"
+  "last_modified" : "2016-01-04T14:51:25.668Z"
 }

@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Clin T Orbit",
   "title" : "Clinical T",
-  "notes" : "**Note 1:**  The orbital tissues are the support systems of the globe, confined to the space within the surrounding bony structure.  The tissues include fat, striated and smooth muscle, and fibroconnective, vascular, lymphoid, peripheral nerve, and optic nerve tissue.\n\n**Note 2:** Assign 88 for in situ cases (behavior code /2). TNM does not include an in situ category for orbit sarcoma tumors.\n\n**Note 3:**  Tis may be used only for non-sarcoma histologies coded to this site. Sarcomas do not present as in situ or noninvasive tumors.",
-  "last_modified" : "2015-12-07T17:02:48.282Z",
+  "notes" : "**Note 1:**  The orbital tissues are the support systems of the globe, confined to the space within the surrounding bony structure.  The tissues include:  \n* Fat, striated and smooth muscle, and fibroconnective, vascular, lymphoid, peripheral nerve, and optic nerve tissue.\n\n**Note 2:** Assign 88 for in situ cases (behavior code /2). TNM does not include an in situ category for orbit sarcoma tumors.\n\n**Note 3:**  Tis may be used only for *non-sarcoma* histologies coded to this site. \n* Sarcomas do not present as in situ or noninvasive tumors",
+  "last_modified" : "2016-01-04T15:28:40.369Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "Path T Corpus Adenosarcoma",
   "title" : "Pathologic T",
-  "notes" : "**Note 1:** When both FIGO stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage.\n\n**Note 2:** TNM and FIGO do not include an in situ category for corpus adenosarcoma tumors. Assign 88 and behavior code /2 for in situ tumors.\n\n**Note 3:** FIGO Stage IV, NOS is assigned based on tumor extension and/or metastasis.  Code primary tumor based on a physician's statement of FIGO Stage IV, NOS only if it is known that the stage value is assigned because of tumor extension.\n\n**Note 4:** Extension to the bowel or bladder mucosa must be proven by biopsy in order to rule out bullous edema.",
+  "notes" : "**Note 1:** When both FIGO stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage.\n\n**Note 2:** Assign 88 for in situ cases (behavior code /2). TNM and FIGO do not include an in situ category for corpus adenosarcoma tumors. \n\n**Note 3:** FIGO Stage IV, NOS is assigned based on tumor extension and/or metastasis.  \n* Code primary tumor based on a physician's statement of FIGO Stage IV, NOS only if it is known that the stage value is assigned because of tumor extension.\n\n**Note 4:** Extension to the bowel or bladder mucosa must be proven by biopsy in order to rule out bullous edema.",
   "footnotes" : "\\* TX is not defined by UICC in the 7th edition. Approval has been provided by UICC to use the standard definition \"Primary tumor cannot be assessed,\" as TX.\n\\** T0 is not defined by UICC in the 7th edition. Approval has been provided by UICC to use the standard definition \"No evidence of primary tumor,\" as T0.",
-  "last_modified" : "2015-11-25T20:27:01.670Z",
+  "last_modified" : "2015-12-30T12:27:24.292Z",
   "definition" : [ {
     "key" : "path_t",
     "name" : "Pathologic T",

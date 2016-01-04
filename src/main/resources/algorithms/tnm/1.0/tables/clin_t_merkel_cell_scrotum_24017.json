@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Clin T Merkel Cell Scrotum",
   "title" : "Clinical T",
-  "notes" : "**Note 1:**  In the case of multiple simultaneous tumors, code the tumor with the greatest extension.\n\n**Note 2:**  Skin ulceration does not alter the T category.\n\n**Note 3:**  In-transit metastasis is coded in regional lymph nodes.\n\n**Note 4:** Tumor size must be known to assign a value of T1, T2 or T3. You may use a physicianâs statement of the T category if this is the only information in the medical record. If the tumor appears to be in the T1, T2 or T3 categories, but no size or category is specified, assign TX.\n\n**Note 5:**  For the following descriptions, assign the appropriate T category based on the tumor size.\n\n    Lesion(s) confined to dermis\n    Confined to scrotum\n\n    Subcutaneous tissue (through entire dermis)\n    Adjacent connective tissue  EXCLUDING deep fascia\n\n    Localized, NOS",
-  "last_modified" : "2015-12-03T17:24:49.253Z",
+  "notes" : "**Note 1:**  In the case of multiple simultaneous tumors, code the tumor with the greatest extension.\n\n**Note 2:**  Skin ulceration does not alter the T category.\n\n**Note 3:**  In-transit metastasis is coded in N (regional lymph nodes).\n\n**Note 4:** Tumor size must be known to assign a value of T1, T2 or T3. You may use a physicianâs statement of the T category if this is the only information in the medical record.\n* If the tumor appears to be in the T1, T2 or T3 categories, but no size or category is specified, assign TX.\n\n**Note 5:**  For the following descriptions, assign the appropriate T category (T1, T2 or T3) based on the tumor size.\n\n    Adjacent connective tissue  EXCLUDING deep fascia\n    Lesion(s) confined to dermis\n    Subcutaneous tissue (through entire dermis)\n\n    Confined to scrotum\n    Localized, NOS",
+  "last_modified" : "2016-01-04T10:15:57.981Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",
