@@ -4,8 +4,9 @@
   "version" : "1.0",
   "name" : "Clin T Conjunctiva",
   "title" : "Clinical T",
-  "notes" : "**Note 1:**  Palpebral and tarsal conjunctiva line the eyelid, bulbar conjunctiva covers the eyeball, forniceal conjunctiva covers the space between the eyelid and the globe.  According to TNM, tumors are most likely to arise at the exposed site where the conjunctival epithelium merges with the corneal epithelium, particularly at the temporal limbus.\n\n**Note 2:** For the following descriptions, assign the appropriate T category based on the tumor size recorded in Site-Specific Factor 1.\n\n    Tumor confined to one subsite of conjunctiva:\n       Bulbar conjunctiva\n       Forniceal conjunctiva\n       Palpebral conjunctiva\n       Tarsal conjunctiva\n\n    Tumor confined to one subsite of conjunctiva, NOS\n\n    Localized, NOS",
-  "last_modified" : "2015-12-28T21:55:18.019Z",
+  "notes" : "**Note 1:**  Palpebral and tarsal conjunctiva line the eyelid, bulbar conjunctiva covers the eyeball, forniceal conjunctiva covers the space between the eyelid and the globe.  According to TNM, tumors are most likely to arise at the exposed site where the conjunctival epithelium merges with the corneal epithelium, particularly at the temporal limbus. (1)\n\n**Note 2:** For the following descriptions, assign the appropriate T category based on the tumor size recorded in Site-Specific Factor 1.\n\n    Tumor confined to one subsite of conjunctiva:\n       Bulbar conjunctiva\n       Forniceal conjunctiva\n       Palpebral conjunctiva\n       Tarsal conjunctiva\n\n    Tumor confined to one subsite of conjunctiva, NOS\n\n    Localized, NOS",
+  "footnotes" : "(1) American Joint Committee on Cancer., & Edge, S.B. (2010) AJCC Cancer Staging Manual (7th ed.). New York; London: Springer, pgs. 531-537",
+  "last_modified" : "2016-01-10T16:43:28.411Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

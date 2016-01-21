@@ -113,7 +113,7 @@
     "naaccr_item" : 2900,
     "default" : "999",
     "table" : "ssf3_lpa",
-    "used_for_staging" : true,
+    "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf4",
@@ -121,7 +121,7 @@
     "naaccr_item" : 2910,
     "default" : "999",
     "table" : "ssf4_mpa",
-    "used_for_staging" : true,
+    "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf5",
@@ -129,7 +129,7 @@
     "naaccr_item" : 2920,
     "default" : "999",
     "table" : "ssf5_npa",
-    "used_for_staging" : true,
+    "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf6",
@@ -137,7 +137,7 @@
     "naaccr_item" : 2930,
     "default" : "999",
     "table" : "ssf6_opa",
-    "used_for_staging" : true,
+    "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf7",
@@ -182,7 +182,7 @@
     "naaccr_item" : 970,
     "default" : "99",
     "table" : "stage_group_c_63552",
-    "used_for_staging" : false,
+    "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   }, {
     "key" : "path_stage_group_direct",
@@ -190,7 +190,7 @@
     "naaccr_item" : 910,
     "default" : "99",
     "table" : "stage_group_p_21201",
-    "used_for_staging" : false,
+    "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   } ],
   "outputs" : [ {
@@ -435,7 +435,7 @@
       "inputs" : [ "tmp_clin_n", "tmp_clin_m", "tmp_clin_t" ],
       "outputs" : [ "clin_stage_group" ]
     }, {
-      "id" : "tnm7_stage_upu",
+      "id" : "tnm7_path_stage_upu",
       "input_mapping" : [ {
         "from" : "tmp_path_m",
         "to" : "m"
@@ -473,7 +473,7 @@
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
       } ],
-      "inputs" : [ "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "tmp_path_n", "path_m", "tmp_path_t", "tmp_clin_t", "clin_n", "clin_m", "path_n" ],
+      "inputs" : [ "tmp_path_t", "clin_n", "clin_m", "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "clin_stage_group_direct", "tmp_path_n", "path_m", "tmp_clin_t", "path_stage_group_direct", "path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_combined_m", "source_t", "clin_stage_group", "path_stage_group", "source_n", "tmp_combined_t", "source_m" ]
     } ]
   }, {
@@ -498,7 +498,7 @@
     } ],
     "tables" : [ {
       "id" : "stop_if_no_clin_and_no_path_24035",
-      "inputs" : [ "clin_stage_group", "path_stage_group" ],
+      "inputs" : [ "clin_t", "path_t", "clin_stage_group_direct", "path_m", "clin_n", "path_stage_group_direct", "clin_m", "path_n" ],
       "outputs" : [ "combined_m", "combined_n", "source_t", "tmp_continue", "combined_t", "combined_stage_group", "source_n", "ss2017", "source_m" ]
     }, {
       "id" : "combined_t_no_tis",
@@ -663,7 +663,7 @@
       "inputs" : [ "cmb_m_prefix", "tmp_combined_m" ],
       "outputs" : [ "combined_m" ]
     }, {
-      "id" : "tnm7_stage_upu",
+      "id" : "tnm7_path_stage_upu",
       "input_mapping" : [ {
         "from" : "tmp_combined_n",
         "to" : "n"
@@ -693,7 +693,7 @@
       "inputs" : [ "tmp_combined_t" ],
       "outputs" : [ "ss2017_t" ]
     }, {
-      "id" : "combined_n_to_summ_stage_n_headneck_palatehardsoftepiant_45582",
+      "id" : "combined_n_to_summ_stage_n_headneck_temp_18777",
       "input_mapping" : [ {
         "from" : "tmp_combined_n",
         "to" : "combined_n_in"
@@ -702,7 +702,7 @@
         "from" : "ss2017_n_out",
         "to" : "ss2017_n"
       } ],
-      "inputs" : [ "tmp_combined_n", "ssf6", "ssf4", "ssf5", "ssf3" ],
+      "inputs" : [ "tmp_combined_n" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "cpmbined_m_to_summ_stage_m_60564",
@@ -746,7 +746,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "ssf7_spa", "cpmbined_m_to_summ_stage_m_60564", "ssf10_spd", "stage_group_p_21201", "combined_n_to_summ_stage_n_headneck_palatehardsoftepiant_45582", "tnm7_stage_upu", "parse_t_2177", "concatenate_n_43246", "clin_m_hpd", "ssf11_spe", "histology", "melanoma_palate_soft_t_15766", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "path_m_hpd", "tnm7_inclusions_tpa", "ssf1_jpu", "combined_t_to_summ_stage_t_4b_4e_d_9381", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "ssf9_spc", "nodes_deg", "systemic_surg_seq", "parse_m_47057", "combined_m", "clinical_n_head_neck_melanoma_66648", "combined_n", "ssf5_npa", "summary_stage_rpa", "extension_bel", "ssf8_spb", "determine_default_t", "radiation_surg_seq", "determine_default_m", "clin_t_melanoma_palate_soft_21789", "nodes_pos_fpa", "stage_group_c_63552", "parse_n_67182", "determine_default_n", "combined_t_no_tis", "pathologic_n_head_neck_melanoma_copy_75380", "ssf4_mpa", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "schema_selection_melanoma_palate_soft", "primary_site", "year_dx_validation", "seer_mets_melanoma_palatesoft_56324" ],
+  "involved_tables" : [ "ssf7_spa", "cpmbined_m_to_summ_stage_m_60564", "ssf10_spd", "stage_group_p_21201", "tnm7_stage_upu", "parse_t_2177", "concatenate_n_43246", "clin_m_hpd", "ssf11_spe", "histology", "melanoma_palate_soft_t_15766", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "path_m_hpd", "tnm7_inclusions_tpa", "ssf1_jpu", "combined_t_to_summ_stage_t_4b_4e_d_9381", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "ssf9_spc", "nodes_deg", "systemic_surg_seq", "combined_n_to_summ_stage_n_headneck_temp_18777", "parse_m_47057", "combined_m", "clinical_n_head_neck_melanoma_66648", "combined_n", "ssf5_npa", "summary_stage_rpa", "extension_bel", "ssf8_spb", "determine_default_t", "radiation_surg_seq", "determine_default_m", "tnm7_path_stage_upu", "clin_t_melanoma_palate_soft_21789", "nodes_pos_fpa", "stage_group_c_63552", "parse_n_67182", "determine_default_n", "combined_t_no_tis", "pathologic_n_head_neck_melanoma_copy_75380", "ssf4_mpa", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "schema_selection_melanoma_palate_soft", "primary_site", "year_dx_validation", "seer_mets_melanoma_palatesoft_56324" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-12T13:25:14.045Z"
+  "last_modified" : "2016-01-12T18:16:30.535Z"
 }

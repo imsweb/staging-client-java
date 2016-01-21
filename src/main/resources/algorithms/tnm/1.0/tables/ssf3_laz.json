@@ -5,8 +5,8 @@
   "name" : "SSF3",
   "title" : "Site-Specific Factor 3",
   "subtitle" : "Ulceration and Edema",
-  "notes" : "**Note 1:**  Tumor associated edema or ulceration is considered a poor risk.\n\n**Note 2:**  Tumor associated edema or ulceration is usually histologically confirmed and documented in the pathology report.  If tumor associated edema or ulceration is diagnosed clinically without pathologic confirmation, use code 040.\n\n**Note 3:**  If there is no documentation or no mention of ulceration or edema in the pathology report or clinical examination, assume ulceration and edema are not present and use code 000.",
-  "last_modified" : "2015-11-25T20:26:06.321Z",
+  "notes" : "**Note 1:**  Tumor associated edema or ulceration is a poor risk.\n\n**Note 2:**  Tumor associated edema or ulceration is usually histologically confirmed and documented in the pathology report.  If tumor associated edema or ulceration is diagnosed clinically without pathologic confirmation, use code 040.\n\n**Note 3:**  If there is no documentation or no mention of ulceration or edema in the pathology report or clinical examination, assume ulceration and edema are not present and use code 000.",
+  "last_modified" : "2016-01-10T14:08:34.514Z",
   "definition" : [ {
     "key" : "ssf3",
     "name" : "Code",

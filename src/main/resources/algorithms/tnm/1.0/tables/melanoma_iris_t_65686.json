@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "Path T Melanoma Iris",
   "title" : "Pathologic T",
-  "notes" : "**Note 1:**  Ciliary body and Iris are both included in the ICD-O-3 site code of C694, but they are staged with different criteria by TNM.  \n* The Schema Discriminator is used to select the schema appropriate for coding extension for melanoma of the iris.  \n\n**Note 2:**  Melanomas of the uveal arise most commonly in the choroid, less frequently in the ciliary body, and least often in the iris.  Melanomas of the iris tend to be small, and those arising from or extending to the ciliary body typically are large.\n\n**Note 3:** Assign 88 for in situ cases (behavior code /2). TNM does not include an in situ category for iris tumors.\n\n**Note 4:** Iris melanomas originate from, and are predominantly located in, this region of the uvea. If less than one-half of the tumor volume is located within the iris, the tumor may have originated in the ciliary body and consideration should be given to classifying it accordingly. (1)",
+  "notes" : "**Note 1:**  Ciliary body and Iris are both included in the ICD-O-3 site code of C694, but they are staged with different criteria by TNM.  \n* The Schema Discriminator is used to select the schema appropriate for coding extension for melanoma of the iris.  \n\n**Note 2:**  Melanomas of the uvea arise most commonly in the choroid, less frequently in the ciliary body, and least often in the iris.  Melanomas of the iris tend to be small, and those arising from or extending to the ciliary body typically are large.\n\n**Note 3:** Assign 88 for in situ cases (behavior code /2). TNM does not include an in situ category for iris tumors.\n\n**Note 4:** Iris melanomas originate from, and are predominantly located in, this region of the uvea. If less than one-half of the tumor volume is located within the iris, the tumor may have originated in the ciliary body and evaluation should be given to classifying it accordingly. (1)",
   "footnotes" : "(1) International Union Against Cancer (UICC) *TNM Classification of Malignant Tumors,* 7th ed., Sobin, LH, Gospodarowicz, M, Wittekind, CH, eds. New York: Wiley, 2009, pg., 285",
-  "last_modified" : "2016-01-04T21:01:19.287Z",
+  "last_modified" : "2016-01-10T14:29:58.146Z",
   "definition" : [ {
     "key" : "path_t",
     "name" : "Pathologic T",

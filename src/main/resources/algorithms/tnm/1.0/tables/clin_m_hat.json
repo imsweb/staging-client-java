@@ -4,7 +4,8 @@
   "version" : "1.0",
   "name" : "Clin M",
   "title" : "Clinical M",
-  "last_modified" : "2015-12-08T18:35:54.616Z",
+  "notes" : "**Distant lymph nodes** \n\n    Cervical lymph nodes",
+  "last_modified" : "2016-01-12T20:02:55.123Z",
   "definition" : [ {
     "key" : "clin_m",
     "name" : "Clinical M",
@@ -22,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "CLINICAL assessment only:\nDistant lymph node(s):\n    Cervical lymph nodes\n\n    Distant lymph node(s), NOS\n\nDistant metastasis:\n    Direct extension to contralateral lung\n    Discontinuous involvement of contralateral pleura/chest wall\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastases, NOS\n\nStated as M1" ], [ "p1", "pM1", "Distant metastasis", "HISTOLOGICALLY confirmed:\nDistant lymph node(s):\n    Cervical lymph nodes\n\n    Distant lymph node(s), NOS\n\nDistant metastasis:\n    Direct extension to contralateral lung\n    Discontinuous involvement of contralateral pleura/chest wall\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastases, NOS" ], [ "88", "88", "Not applicable", "Clinical M is not defined for the specific site/histology" ], [ "", "BLANK", "See Registrar Notes", "No clinical workup for T and N AND no clinical or pathologic evidence of distant metastasis" ] ]
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "CLINICAL assessment only:\nDistant lymph node(s), NOS\n\nDistant metastasis:\n    Direct extension to contralateral lung\n    Discontinuous involvement of contralateral pleura/chest wall\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastases, NOS\n\nStated as M1" ], [ "p1", "pM1", "Distant metastasis", "HISTOLOGICALLY confirmed:\nDistant lymph node(s), NOS\n\nDistant metastasis:\n    Direct extension to contralateral lung\n    Discontinuous involvement of contralateral pleura/chest wall\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastases, NOS" ], [ "88", "88", "Not applicable", "Clinical M is not defined for the specific site/histology" ], [ "", "BLANK", "See Registrar Notes", "No clinical workup for T and N AND no clinical or pathologic evidence of distant metastasis" ] ]
 }

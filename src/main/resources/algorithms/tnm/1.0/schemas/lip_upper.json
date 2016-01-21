@@ -120,7 +120,7 @@
     "naaccr_item" : 2900,
     "default" : "999",
     "table" : "ssf3_lpa",
-    "used_for_staging" : true,
+    "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf4",
@@ -128,7 +128,7 @@
     "naaccr_item" : 2910,
     "default" : "999",
     "table" : "ssf4_mpa",
-    "used_for_staging" : true,
+    "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf5",
@@ -136,7 +136,7 @@
     "naaccr_item" : 2920,
     "default" : "999",
     "table" : "ssf5_npa",
-    "used_for_staging" : true,
+    "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf6",
@@ -144,7 +144,7 @@
     "naaccr_item" : 2930,
     "default" : "999",
     "table" : "ssf6_opa",
-    "used_for_staging" : true,
+    "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
   }, {
     "key" : "ssf7",
@@ -189,7 +189,7 @@
     "naaccr_item" : 970,
     "default" : "99",
     "table" : "stage_group_c_51542",
-    "used_for_staging" : false,
+    "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   }, {
     "key" : "path_stage_group_direct",
@@ -197,7 +197,7 @@
     "naaccr_item" : 910,
     "default" : "99",
     "table" : "stage_group_p_35702",
-    "used_for_staging" : false,
+    "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   } ],
   "outputs" : [ {
@@ -442,7 +442,7 @@
       "inputs" : [ "tmp_clin_n", "tmp_clin_m", "tmp_clin_t" ],
       "outputs" : [ "clin_stage_group" ]
     }, {
-      "id" : "tnm7_stage_upt",
+      "id" : "tnm7_path_stage_upt",
       "input_mapping" : [ {
         "from" : "tmp_path_m",
         "to" : "m"
@@ -480,7 +480,7 @@
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
       } ],
-      "inputs" : [ "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "tmp_path_n", "path_m", "tmp_path_t", "tmp_clin_t", "clin_n", "clin_m", "path_n" ],
+      "inputs" : [ "tmp_path_t", "clin_n", "clin_m", "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "clin_stage_group_direct", "tmp_path_n", "path_m", "tmp_clin_t", "path_stage_group_direct", "path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_combined_m", "source_t", "clin_stage_group", "path_stage_group", "source_n", "tmp_combined_t", "source_m" ]
     } ]
   }, {
@@ -505,7 +505,7 @@
     } ],
     "tables" : [ {
       "id" : "stop_if_no_clin_and_no_path_24035",
-      "inputs" : [ "clin_stage_group", "path_stage_group" ],
+      "inputs" : [ "clin_t", "path_t", "clin_stage_group_direct", "path_m", "clin_n", "path_stage_group_direct", "clin_m", "path_n" ],
       "outputs" : [ "combined_m", "combined_n", "source_t", "tmp_continue", "combined_t", "combined_stage_group", "source_n", "ss2017", "source_m" ]
     }, {
       "id" : "combined_t",
@@ -670,7 +670,7 @@
       "inputs" : [ "cmb_m_prefix", "tmp_combined_m" ],
       "outputs" : [ "combined_m" ]
     }, {
-      "id" : "tnm7_stage_upt",
+      "id" : "tnm7_path_stage_upt",
       "input_mapping" : [ {
         "from" : "tmp_combined_n",
         "to" : "n"
@@ -700,7 +700,7 @@
       "inputs" : [ "tmp_combined_t" ],
       "outputs" : [ "ss2017_t" ]
     }, {
-      "id" : "combined_n_to_summ_stage_n_headneck_lipupper_4124",
+      "id" : "combined_n_to_summ_stage_n_headneck_temp_18777",
       "input_mapping" : [ {
         "from" : "tmp_combined_n",
         "to" : "combined_n_in"
@@ -709,7 +709,7 @@
         "from" : "ss2017_n_out",
         "to" : "ss2017_n"
       } ],
-      "inputs" : [ "tmp_combined_n", "ssf6", "ssf4", "ssf5", "ssf3" ],
+      "inputs" : [ "tmp_combined_n" ],
       "outputs" : [ "ss2017_n" ]
     }, {
       "id" : "cpmbined_m_to_summ_stage_m_60564",
@@ -753,7 +753,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "nodes_ddd", "ssf10_spd", "ssf1_jpa", "path_m_hpb", "tnm7_stage_upt", "parse_t_2177", "concatenate_n_43246", "seer_mets_lip_upper_76304", "ssf11_spe", "histology", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "tnm7_inclusions_tpb", "combined_t_to_summ_stage_t_4b_4e_d_9381", "concatenate_t_51262", "lip_upper_t_48652", "adjustments_for_no_clin_or_no_path_26261", "ssf9_spc", "systemic_surg_seq", "parse_m_47057", "combined_m", "combined_n", "ssf5_npa", "summary_stage_rpa", "combined_t", "ssf8_spb", "clin_t_lip_upper_3775", "determine_default_t", "clinical_n_head_neck_except_nasopharynx_25237", "radiation_surg_seq", "determine_default_m", "path_n_head_neck_except_nasopharynx_40357", "nodes_pos_fpa", "parse_n_67182", "determine_default_n", "extension_bdc", "stage_group_p_35702", "behavior", "ssf4_mpa", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "primary_site", "year_dx_validation", "schema_selection_lip_upper", "combined_n_to_summ_stage_n_headneck_lipupper_4124", "stage_group_c_51542" ],
+  "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "nodes_ddd", "ssf10_spd", "ssf1_jpa", "path_m_hpb", "tnm7_stage_upt", "parse_t_2177", "concatenate_n_43246", "seer_mets_lip_upper_76304", "ssf11_spe", "histology", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "tnm7_inclusions_tpb", "combined_t_to_summ_stage_t_4b_4e_d_9381", "concatenate_t_51262", "lip_upper_t_48652", "adjustments_for_no_clin_or_no_path_26261", "ssf9_spc", "systemic_surg_seq", "combined_n_to_summ_stage_n_headneck_temp_18777", "parse_m_47057", "combined_m", "combined_n", "ssf5_npa", "summary_stage_rpa", "combined_t", "ssf8_spb", "clin_t_lip_upper_3775", "determine_default_t", "clinical_n_head_neck_except_nasopharynx_25237", "radiation_surg_seq", "determine_default_m", "path_n_head_neck_except_nasopharynx_40357", "nodes_pos_fpa", "tnm7_path_stage_upt", "parse_n_67182", "determine_default_n", "extension_bdc", "stage_group_p_35702", "behavior", "ssf4_mpa", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "primary_site", "year_dx_validation", "schema_selection_lip_upper", "stage_group_c_51542" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-12T15:44:50.713Z"
+  "last_modified" : "2016-01-12T18:16:27.126Z"
 }

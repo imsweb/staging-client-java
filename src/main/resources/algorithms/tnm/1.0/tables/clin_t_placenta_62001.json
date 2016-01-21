@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Clin T Placenta",
   "title" : "Clinical T",
-  "notes" : "**Note 1:**  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage.\n\n**Note 2:** Genital metastasis (vagina, ovary, broad ligament, fallopian tube) is classified T2. Any involvement of non-genital structures, whether by direct invasion or metastasis is described using the M (distant metastasis) classification.\n\n**Note 3:** For T, substaging is determined by the values in **Site-Specific Factor 1, Prognostic Scoring Index**.",
-  "last_modified" : "2016-01-04T14:09:22.250Z",
+  "notes" : "**Note 1:** Assign 88 for in situ cases (behavior code /2). TNM does not include an in situ category for placental tumors.\n\n**Note 2:**  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage.\n\n**Note 3:** Genital metastasis (vagina, ovary, broad ligament, fallopian tube) is classified T2. Any involvement of non-genital structures, whether by direct invasion or metastasis is described using the M (distant metastasis) classification.\n\n**Note 4:** For T, substaging is determined by the values in **Site-Specific Factor 1, Prognostic Scoring Index**.",
+  "last_modified" : "2016-01-21T19:15:36.471Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",

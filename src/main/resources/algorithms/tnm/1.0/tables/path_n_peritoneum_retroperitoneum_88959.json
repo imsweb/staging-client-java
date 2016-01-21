@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Path N Peritoneum-Retroperitoneum",
   "title" : "Pathologic N",
-  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Note 2:**  Regional lymph nodes are defined as those in the vicinity of the primary tumor.\n\n**Note 3:**  Regional lymph node involvement is rare.  For this schema, if there is no mention of lymph node involvement clinically, assume that lymph nodes are negative.  Assign NX only when there is no available information on the extent of the patient's disease, for example when a lab-only case is abstracted from a biopsy report and no clinical history is available.\n\n**Regional lymph nodes:**\n\n    Intra-abdominal:\n        Paracaval\n        Pelvic\n        Subdiaphragmatic",
-  "last_modified" : "2015-12-14T18:18:11.189Z",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Note 2:**  Regional lymph nodes are defined as those in the vicinity of the primary tumor.\n\n**Regional lymph nodes:**\n\n    Intra-abdominal:\n        Paracaval\n        Pelvic\n        Subdiaphragmatic",
+  "last_modified" : "2016-01-10T15:32:24.173Z",
   "definition" : [ {
     "key" : "path_n",
     "name" : "Pathologic N",

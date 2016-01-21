@@ -172,7 +172,7 @@
     "naaccr_item" : 970,
     "default" : "99",
     "table" : "stage_group_c_59028",
-    "used_for_staging" : false,
+    "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   }, {
     "key" : "path_stage_group_direct",
@@ -180,7 +180,7 @@
     "naaccr_item" : 910,
     "default" : "99",
     "table" : "stage_group_p_79934",
-    "used_for_staging" : false,
+    "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   } ],
   "outputs" : [ {
@@ -425,7 +425,7 @@
       "inputs" : [ "tmp_clin_n", "tmp_clin_m", "tmp_clin_t" ],
       "outputs" : [ "clin_stage_group" ]
     }, {
-      "id" : "tnm7_stage_ubt",
+      "id" : "tnm7_path_stage_ubt",
       "input_mapping" : [ {
         "from" : "tmp_path_m",
         "to" : "m"
@@ -463,7 +463,7 @@
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
       } ],
-      "inputs" : [ "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "tmp_path_n", "path_m", "tmp_path_t", "tmp_clin_t", "clin_n", "clin_m", "path_n" ],
+      "inputs" : [ "tmp_path_t", "clin_n", "clin_m", "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "clin_stage_group_direct", "tmp_path_n", "path_m", "tmp_clin_t", "path_stage_group_direct", "path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_combined_m", "source_t", "clin_stage_group", "path_stage_group", "source_n", "tmp_combined_t", "source_m" ]
     } ]
   }, {
@@ -488,7 +488,7 @@
     } ],
     "tables" : [ {
       "id" : "stop_if_no_clin_and_no_path_24035",
-      "inputs" : [ "clin_stage_group", "path_stage_group" ],
+      "inputs" : [ "clin_t", "path_t", "clin_stage_group_direct", "path_m", "clin_n", "path_stage_group_direct", "clin_m", "path_n" ],
       "outputs" : [ "combined_m", "combined_n", "source_t", "tmp_continue", "combined_t", "combined_stage_group", "source_n", "ss2017", "source_m" ]
     }, {
       "id" : "combined_t_no_tis",
@@ -653,7 +653,7 @@
       "inputs" : [ "cmb_m_prefix", "tmp_combined_m" ],
       "outputs" : [ "combined_m" ]
     }, {
-      "id" : "tnm7_stage_ubt",
+      "id" : "tnm7_path_stage_ubt",
       "input_mapping" : [ {
         "from" : "tmp_combined_n",
         "to" : "n"
@@ -740,7 +740,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "mets_hcl", "ssf3_lpp", "parse_t_2177", "concatenate_n_43246", "path_m_hcl", "ssf6_opg", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "clin_m_hcl", "extension_bfl", "concatenate_t_51262", "ssf5_npk", "adjustments_for_no_clin_or_no_path_26261", "pathological_n_corpus_31147", "systemic_surg_seq", "parse_m_47057", "combined_m", "combined_n", "summary_stage_rpa", "combined_t_to_summ_stage_t_2_2b_re_2c_4e_d_26557", "corpus_adenosarcoma_extension_cytology_summary_stage", "corpus_adenosarcoma_pathologic_t_90591", "clinical_n_corpus_48422", "determine_default_t", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpa", "nodes_dfh", "parse_n_67182", "determine_default_n", "ssf7_sqn", "ssf2_kpo", "combined_t_no_tis", "behavior", "ssf8_sqo", "summary_stage_corpus_9973", "determine_combined_prefix_91402", "schema_selection_corpus_adenosarcoma", "stop_if_no_clin_and_no_path_24035", "primary_site", "ssf1_jca", "ssf4_mpq", "year_dx_validation", "stage_group_c_59028", "corpus_adenosarcoma_t_34843", "stage_group_p_79934", "tnm7_inclusions_tqh", "tnm7_stage_ubt" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "mets_hcl", "ssf3_lpp", "parse_t_2177", "concatenate_n_43246", "path_m_hcl", "ssf6_opg", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "clin_m_hcl", "extension_bfl", "concatenate_t_51262", "ssf5_npk", "adjustments_for_no_clin_or_no_path_26261", "pathological_n_corpus_31147", "systemic_surg_seq", "parse_m_47057", "combined_m", "combined_n", "tnm7_path_stage_ubt", "summary_stage_rpa", "combined_t_to_summ_stage_t_2_2b_re_2c_4e_d_26557", "corpus_adenosarcoma_extension_cytology_summary_stage", "corpus_adenosarcoma_pathologic_t_90591", "clinical_n_corpus_48422", "determine_default_t", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpa", "nodes_dfh", "parse_n_67182", "determine_default_n", "ssf7_sqn", "ssf2_kpo", "combined_t_no_tis", "behavior", "ssf8_sqo", "summary_stage_corpus_9973", "determine_combined_prefix_91402", "schema_selection_corpus_adenosarcoma", "stop_if_no_clin_and_no_path_24035", "primary_site", "ssf1_jca", "ssf4_mpq", "year_dx_validation", "stage_group_c_59028", "corpus_adenosarcoma_t_34843", "stage_group_p_79934", "tnm7_inclusions_tqh", "tnm7_stage_ubt" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-10T18:54:38.021Z"
+  "last_modified" : "2016-01-12T18:16:38.890Z"
 }

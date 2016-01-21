@@ -128,7 +128,7 @@
     "naaccr_item" : 970,
     "default" : "99",
     "table" : "stage_group_c_52010",
-    "used_for_staging" : false,
+    "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   }, {
     "key" : "path_stage_group_direct",
@@ -136,7 +136,7 @@
     "naaccr_item" : 910,
     "default" : "99",
     "table" : "stage_group_p_4759",
-    "used_for_staging" : false,
+    "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   } ],
   "outputs" : [ {
@@ -381,7 +381,7 @@
       "inputs" : [ "tmp_clin_n", "tmp_clin_m", "tmp_clin_t" ],
       "outputs" : [ "clin_stage_group" ]
     }, {
-      "id" : "tnm7_stage_upx",
+      "id" : "tnm7_path_stage_upx",
       "input_mapping" : [ {
         "from" : "tmp_path_m",
         "to" : "m"
@@ -419,7 +419,7 @@
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
       } ],
-      "inputs" : [ "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "tmp_path_n", "path_m", "tmp_path_t", "tmp_clin_t", "clin_n", "clin_m", "path_n" ],
+      "inputs" : [ "tmp_path_t", "clin_n", "clin_m", "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "clin_stage_group_direct", "tmp_path_n", "path_m", "tmp_clin_t", "path_stage_group_direct", "path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_combined_m", "source_t", "clin_stage_group", "path_stage_group", "source_n", "tmp_combined_t", "source_m" ]
     } ]
   }, {
@@ -444,7 +444,7 @@
     } ],
     "tables" : [ {
       "id" : "stop_if_no_clin_and_no_path_24035",
-      "inputs" : [ "clin_stage_group", "path_stage_group" ],
+      "inputs" : [ "clin_t", "path_t", "clin_stage_group_direct", "path_m", "clin_n", "path_stage_group_direct", "clin_m", "path_n" ],
       "outputs" : [ "combined_m", "combined_n", "source_t", "tmp_continue", "combined_t", "combined_stage_group", "source_n", "ss2017", "source_m" ]
     }, {
       "id" : "combined_t_no_tis",
@@ -609,7 +609,7 @@
       "inputs" : [ "cmb_m_prefix", "tmp_combined_m" ],
       "outputs" : [ "combined_m" ]
     }, {
-      "id" : "tnm7_stage_upx",
+      "id" : "tnm7_path_stage_upx",
       "input_mapping" : [ {
         "from" : "tmp_combined_n",
         "to" : "n"
@@ -692,7 +692,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "ssf16_spt", "ssf11_sps", "cpmbined_m_to_summ_stage_m_60564", "nodes_dfe", "determine_default_t", "clin_n_dfe", "radiation_surg_seq", "net_colon_t_5107", "determine_default_m", "path_t_bfi", "nodes_pos_fpa", "path_m_hci", "parse_t_2177", "concatenate_n_43246", "mets_hci", "parse_n_67182", "path_n_dfe", "determine_default_n", "schema_selection_net_colon", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "extension_bfi", "ssf17_spu", "combined_t_no_tis", "clin_m_hci", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "tnm7_inclusions_tpm", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "stage_group_c_52010", "parse_m_47057", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "stage_group_p_4759", "combined_n", "tnm7_stage_upx", "year_dx_validation", "summary_stage_rpa" ],
+  "involved_tables" : [ "ssf16_spt", "ssf11_sps", "cpmbined_m_to_summ_stage_m_60564", "nodes_dfe", "determine_default_t", "clin_n_dfe", "radiation_surg_seq", "net_colon_t_5107", "determine_default_m", "path_t_bfi", "nodes_pos_fpa", "path_m_hci", "parse_t_2177", "concatenate_n_43246", "mets_hci", "parse_n_67182", "path_n_dfe", "determine_default_n", "tnm7_path_stage_upx", "schema_selection_net_colon", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "extension_bfi", "ssf17_spu", "combined_t_no_tis", "clin_m_hci", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "tnm7_inclusions_tpm", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "stage_group_c_52010", "parse_m_47057", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "stage_group_p_4759", "combined_n", "tnm7_stage_upx", "year_dx_validation", "summary_stage_rpa" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-04T18:39:05.164Z"
+  "last_modified" : "2016-01-12T18:16:16.547Z"
 }

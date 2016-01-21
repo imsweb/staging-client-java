@@ -6,7 +6,8 @@
   "title" : "Site-Specific Factor 25",
   "subtitle" : "Schema Discriminator: BileDuctsDistal/BileDuctsPerihilar/CysticDuct",
   "notes" : "**Note 1:**  For cases coded to primary site code C240 (extrahepatic bile ducts), code the subsite in which the tumor arose.  This information will be used to determine which schemas will be used to assign T, N, M, and stage group.\n\n**Note 2:**  According to TNM, perihilar tumors are defined as those located in the extrahepatic biliary tree proximal to the origin of the cystic duct.  These represent 70-80% of extrahepatic bile duct tumors.  Distal bile duct tumors are those arising between the junction of the cystic duct and the ampulla of Vater, including those arising in the intrapancreatic portion of the common bile duct.  These represent 20-30% of extrahepatic bile duct tumors.",
-  "last_modified" : "2015-11-25T20:26:33.380Z",
+  "footnotes" : "(1) American Joint Committee on Cancer., & Edge, S.B. (2010) AJCC Cancer Staging Manual (7th ed.). New York; London: Springer, pg. 211-217",
+  "last_modified" : "2016-01-10T16:45:09.990Z",
   "definition" : [ {
     "key" : "ssf25",
     "name" : "Code",

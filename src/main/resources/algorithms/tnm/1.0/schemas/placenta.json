@@ -101,7 +101,7 @@
     "naaccr_item" : 970,
     "default" : "99",
     "table" : "stage_group_c_20505",
-    "used_for_staging" : false,
+    "used_for_staging" : true,
     "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED" ]
   }, {
     "key" : "path_stage_group_direct",
@@ -109,7 +109,7 @@
     "naaccr_item" : 910,
     "default" : "99",
     "table" : "stage_group_p_5079",
-    "used_for_staging" : false,
+    "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   } ],
   "outputs" : [ {
@@ -297,7 +297,7 @@
       "inputs" : [ "tmp_clin_m", "tmp_clin_t", "ssf1" ],
       "outputs" : [ "clin_stage_group" ]
     }, {
-      "id" : "tnm7_stage_uax",
+      "id" : "tnm7_path_stage_uax",
       "input_mapping" : [ {
         "from" : "tmp_path_m",
         "to" : "m"
@@ -332,7 +332,7 @@
         "from" : "combined_t_out",
         "to" : "tmp_combined_t"
       } ],
-      "inputs" : [ "clin_t", "path_t", "tmp_path_m", "tmp_clin_m", "path_m", "tmp_path_t", "tmp_clin_t", "clin_m" ],
+      "inputs" : [ "clin_t", "path_t", "tmp_path_m", "tmp_clin_m", "clin_stage_group_direct", "path_m", "tmp_path_t", "tmp_clin_t", "path_stage_group_direct", "clin_m" ],
       "outputs" : [ "combined_n", "tmp_combined_m", "source_t", "clin_stage_group", "path_stage_group", "source_n", "tmp_combined_t", "source_m" ]
     } ]
   }, {
@@ -353,8 +353,8 @@
       "value" : "90"
     } ],
     "tables" : [ {
-      "id" : "stop_if_no_clin_and_no_path_24035",
-      "inputs" : [ "clin_stage_group", "path_stage_group" ],
+      "id" : "stop_if_no_clin_and_no_path_placenta_53933",
+      "inputs" : [ "clin_t", "path_t", "clin_stage_group_direct", "path_m", "path_stage_group_direct", "clin_m" ],
       "outputs" : [ "combined_m", "combined_n", "source_t", "tmp_continue", "combined_t", "combined_stage_group", "source_n", "ss2017", "source_m" ]
     }, {
       "id" : "combined_t_no_tis",
@@ -465,7 +465,7 @@
       "inputs" : [ "cmb_m_prefix", "tmp_combined_m" ],
       "outputs" : [ "combined_m" ]
     }, {
-      "id" : "tnm7_stage_uax",
+      "id" : "tnm7_path_stage_uax",
       "input_mapping" : [ {
         "from" : "tmp_combined_m",
         "to" : "m"
@@ -545,7 +545,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "ssf2_kaw", "determine_default_t", "mets_hak", "tnm7_stage_uax", "radiation_surg_seq", "stage_group_c_20505", "summ_stage_n_if_no_n_defined_61314", "ssf1_jaq", "determine_default_m", "nodes_dfm", "clin_t_placenta_62001", "parse_t_2177", "stage_group_p_5079", "path_m_hak", "schema_selection_placenta", "histology", "placenta_t_12749", "concatenate_m_40642", "clin_m_hak", "combined_t_no_tis", "combined_t_to_summ_stage_t_2_4e_re_93413", "extension_bbm", "concatenate_t_51262", "tnm7_inclusions_tpi", "adjust_path_defaults_for_no_path_placenta_37763", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "combined_m", "year_dx_validation", "summary_stage_rpa" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "ssf2_kaw", "determine_default_t", "mets_hak", "tnm7_stage_uax", "radiation_surg_seq", "stage_group_c_20505", "summ_stage_n_if_no_n_defined_61314", "ssf1_jaq", "determine_default_m", "nodes_dfm", "clin_t_placenta_62001", "parse_t_2177", "stage_group_p_5079", "path_m_hak", "schema_selection_placenta", "histology", "placenta_t_12749", "concatenate_m_40642", "clin_m_hak", "combined_t_no_tis", "combined_t_to_summ_stage_t_2_4e_re_93413", "extension_bbm", "tnm7_path_stage_uax", "concatenate_t_51262", "stop_if_no_clin_and_no_path_placenta_53933", "tnm7_inclusions_tpi", "adjust_path_defaults_for_no_path_placenta_37763", "determine_combined_prefix_91402", "systemic_surg_seq", "parse_m_47057", "primary_site", "combined_m", "year_dx_validation", "summary_stage_rpa" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-10T18:54:29.703Z"
+  "last_modified" : "2016-01-12T18:16:23.269Z"
 }

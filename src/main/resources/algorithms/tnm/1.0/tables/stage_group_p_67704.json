@@ -5,7 +5,7 @@
   "name" : "Stage Group (p)",
   "title" : "TNM 7 Stage Group",
   "notes" : "**Note:** The Stage Groups displayed are the enhanced UICC groups.  If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC manual to ensure you are using the appropriate logic.",
-  "last_modified" : "2015-12-04T19:22:22.732Z",
+  "last_modified" : "2016-01-15T17:42:26.793Z",
   "definition" : [ {
     "key" : "path_stage_group_direct",
     "name" : "Stage",
@@ -27,5 +27,5 @@
     "name" : "M",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "0", "0", "Tis", "N0,X", "M0" ], [ "1", "I", "T1 ", "N0  ", "M0" ], [ "2", "II", "T1\nT2", "N1  \nN0,1", "M0\nM0" ], [ "3", "III", "T1,2 \nT3", "N2  \nN0-2", "M0\nM0" ], [ "4", "IV", "T4    ", "NX      ", "M0" ], [ "4A", "IVA", "T4    ", "N0-2    ", "M0" ], [ "4B", "IVB", "T0-4,X", "N3,3a,3b", "M0" ], [ "4C", "IVC", "T0-4,X", "Any N   ", "M1" ], [ "99", "Unknown", "T0   \nT1-3 \nTX", "N1,2,X\nNX    \nAny N", "M0\nM0\nM0" ], [ "88", "Not Applicable", "88", "88", "88" ] ]
+  "rows" : [ [ "0", "0", "Tis", "N0,X", "M0" ], [ "1", "I", "T1 ", "N0  ", "M0" ], [ "2", "II", "Tis,T1\nT2", "N1  \nN0,1", "M0\nM0" ], [ "3", "III", "Tis,T1,2 \nT3", "N2  \nN0-2", "M0\nM0" ], [ "4", "IV", "T4    ", "NX      ", "M0" ], [ "4A", "IVA", "T4    ", "N0-2    ", "M0" ], [ "4B", "IVB", "Any T", "N3,3a,3b", "M0" ], [ "4C", "IVC", "Any T", "Any N   ", "M1" ], [ "99", "Unknown", "T0   \nT1-3 \nTX", "N0,1,2,X\nNX    \nAny N", "M0\nM0\nM0" ], [ "88", "Not Applicable", "88", "88", "88" ] ]
 }

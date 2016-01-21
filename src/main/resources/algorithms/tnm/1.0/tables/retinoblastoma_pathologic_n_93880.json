@@ -5,7 +5,7 @@
   "name" : "Path N Retinoblastoma",
   "title" : "Pathologic N",
   "notes" : "**Regional lymph nodes:**\n\n    Cervical, NOS:\n        Submandibular (submaxillary)\n    Parotid, NOS:\n        Infra-auricular\n        Preauricular",
-  "last_modified" : "2015-12-08T18:40:29.623Z",
+  "last_modified" : "2016-01-21T18:37:21.061Z",
   "definition" : [ {
     "key" : "path_n",
     "name" : "Pathologic N",
@@ -23,5 +23,5 @@
     "name" : "Registrar Notes",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "pX", "pNX", "Regional lymph nodes cannot be assessed", "Surgical resection of primary and pathologic assessment of regional nodes are done but involvement of regional nodes not stated\nSurgical resection of primary and pathologic assessment of regional nodes are done but involvement of regional nodes not documented in patient record" ], [ "p0", "pN0", "No regional lymph node involvement", "" ], [ "p1", "pN1", "Regional lymph node involvement (preauricular, cervical)", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "p2", "pN2", "Distant lymph node involvement", "Stated as N2" ], [ "c0", "cN0", "Clinically no nodes positive and no pathologic evaluation of nodes", "" ], [ "88", "88", "Not applicable", "Pathologic N is not defined for the specific site/histology" ], [ "", "BLANK", "See Registrar Notes", "No pathologic evaluation of regional lymph nodes and case is not in situ\nRegional lymph node(s) cannot be assessed pathologically\nNo resection of a known primary (not T0)\nNo surgical resection of primary tumor and no positive biopsy of the highest N \nUnknown if any pathologic assessment performed" ] ]
+  "rows" : [ [ "pX", "pNX", "Regional lymph nodes cannot be assessed", "Surgical resection of primary and pathologic assessment of regional nodes are done but involvement of regional nodes not stated\nSurgical resection of primary and pathologic assessment of regional nodes are done but involvement of regional nodes not documented in patient record" ], [ "p0", "pN0", "No regional lymph node involvement", "" ], [ "p1", "pN1", "Regional lymph node involvement (preauricular, cervical)", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "p2", "pN2", "Distant lymph node involvement", "Stated as N2" ], [ "c0", "cN0", "Clinically: No regional lymph node metastasis", "Use only for TNM defined pTis cases where there is a resection of the primary and the nodes are not evaluated pathologically" ], [ "88", "88", "Not applicable", "Pathologic N is not defined for the specific site/histology" ], [ "", "BLANK", "See Registrar Notes", "No pathologic evaluation of regional lymph nodes and case is not in situ\nRegional lymph node(s) cannot be assessed pathologically\nNo resection of a known primary (not T0)\nNo surgical resection of primary tumor and no positive biopsy of the highest N \nUnknown if any pathologic assessment performed" ] ]
 }

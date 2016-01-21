@@ -5,7 +5,7 @@
   "name" : "Stage Group (p)",
   "title" : "TNM 7 Stage Group",
   "notes" : "**Note 1:** The Stage Groups displayed are the enhanced UICC groups.  If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC manual to ensure you are using the appropriate logic.\n\n**Note 2 :** Serum Tumor Markers are used to calculate S Stage.  They can be found in the following site-specific factors:  \n  \n     SSF 13: Post-Orchiectomy Alpha Fetoprotein (AFP) Range  \n     SSF 15: Post-Orchiectomy Human Chorionic Gonadotropin (hCG) Range  \n     SSF 16: Post-Orchiectomy Lactate Dehydrogenase (LDH) Range  \n  \nThe S Stage is set using the following logic:  \n\n     SX - Serum marker studies not available  \n     S0 - Serum marker study levels within normal limits  \n     S1 - LDH: < 1.5 x N   AND   hCG: < 5000   AND   AFP < 1000  \n     S2 - LDH: 1.5 to 10 x N   OR   hCG: 5000 to 50,000   OR   AFP: 1000 to 10,000  \n     S3 - LDH: > 10 x N   OR   hCG: > 50,000   OR   AFP: > 10,000",
-  "last_modified" : "2015-12-04T19:22:23.441Z",
+  "last_modified" : "2016-01-16T22:23:49.336Z",
   "definition" : [ {
     "key" : "path_stage_group_direct",
     "name" : "Stage",
@@ -31,5 +31,5 @@
     "name" : "S Stage",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "0 ", "0  ", "Tis   ", "N0  ", "M0", "S0" ], [ "1 ", "I  ", "T1-4  ", "N0  ", "M0", "SX" ], [ "1A", "IA ", "T1    ", "N0  ", "M0", "S0" ], [ "1B", "IB ", "T2-4  ", "N0  ", "M0", "S0" ], [ "1S", "IS ", "T0-4,X", "N0  ", "M0", "S1-S3" ], [ "2 ", "II ", "T0-4,X", "N1-3", "M0", "SX" ], [ "2A", "IIA", "T0-4,X", "N1  ", "M0", "S0,S1" ], [ "2B", "IIB", "T0-4,X", "N2  ", "M0", "S0,S1" ], [ "2C", "IIC", "T0-4,X", "N3  ", "M0", "S0,S1" ], [ "3 ", "III", "T0-4,X\nT0-4,X", "Any N\nAny N", "M1 \nM1a", "Any\nSX" ], [ "3A", "IIIA", "T0-4,X", "Any N", "M1a", "S0,S1" ], [ "3B", "IIIB", "T0-4,X\nT0-4,X", "N1-3 \nAny N", "M0 \nM1a", "S2\nS2" ], [ "3C", "IIIC", "T0-4,X\nT0-4,X\nT0-4,X", "N1-3 \nAny N\nAny N", "M0 \nM1a\nM1b", "S3\nS3\nAny" ], [ "99", "Unknown", "Tis   \nT0-4,X\nTX", "N0,X\nNX  \nN0", "M0\nM0\nM0", "SX\nAny\nS0,SX" ], [ "88", "Not Applicable", "88", "88", "88", "Any" ] ]
+  "rows" : [ [ "0 ", "0  ", "Tis   ", "N0  ", "M0", "S0" ], [ "1 ", "I  ", "T1-4  ", "N0  ", "M0", "SX" ], [ "1A", "IA ", "T1    ", "N0  ", "M0", "S0" ], [ "1B", "IB ", "T2-4  ", "N0  ", "M0", "S0" ], [ "1S", "IS ", "T0-4,X", "N0  ", "M0", "S1-S3" ], [ "2 ", "II ", "Any T", "N1-3", "M0", "SX" ], [ "2A", "IIA", "Any T", "N1  ", "M0", "S0,S1" ], [ "2B", "IIB", "Any T", "N2  ", "M0", "S0,S1" ], [ "2C", "IIC", "Any T", "N3  ", "M0", "S0,S1" ], [ "3 ", "III", "Any T\nAny T", "Any N\nAny N", "M1 \nM1a", "Any\nSX" ], [ "3A", "IIIA", "Any T", "Any N", "M1a", "S0,S1" ], [ "3B", "IIIB", "Any T\nAny T", "N1-3 \nAny N", "M0 \nM1a", "S2\nS2" ], [ "3C", "IIIC", "Any T\nAny T\nAny T", "N1-3 \nAny N\nAny N", "M0 \nM1a\nM1b", "S3\nS3\nAny" ], [ "99", "Unknown", "Tis\nTis\nT0\nT0-4,X\nTX", "N0,X\nNX\nN0\nNX  \nN0", "M0\nM0\nM0\nM0\nM0", "SX\nS0-3\nS0,SX\nAny\nS0,SX" ], [ "88", "Not Applicable", "88", "88", "88", "Any" ] ]
 }

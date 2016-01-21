@@ -147,7 +147,7 @@
     "naaccr_item" : 970,
     "default" : "99",
     "table" : "stage_group_c_75034",
-    "used_for_staging" : false,
+    "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   }, {
     "key" : "path_stage_group_direct",
@@ -155,7 +155,7 @@
     "naaccr_item" : 910,
     "default" : "99",
     "table" : "stage_group_p_63631",
-    "used_for_staging" : false,
+    "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   } ],
   "outputs" : [ {
@@ -400,7 +400,7 @@
       "inputs" : [ "hist", "tmp_clin_n", "tmp_clin_m", "grade", "tmp_clin_t" ],
       "outputs" : [ "stage_table", "clin_stage_group" ]
     }, {
-      "id" : "esophagus_gejunction_histologies_stage",
+      "id" : "histologies_path_stage_47414",
       "input_mapping" : [ {
         "from" : "tmp_path_m",
         "to" : "m"
@@ -438,7 +438,7 @@
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
       } ],
-      "inputs" : [ "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "tmp_path_n", "path_m", "tmp_path_t", "tmp_clin_t", "clin_n", "clin_m", "path_n" ],
+      "inputs" : [ "tmp_path_t", "clin_n", "clin_m", "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "clin_stage_group_direct", "tmp_path_n", "path_m", "tmp_clin_t", "path_stage_group_direct", "path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_combined_m", "source_t", "clin_stage_group", "path_stage_group", "source_n", "tmp_combined_t", "source_m" ]
     } ]
   }, {
@@ -463,7 +463,7 @@
     } ],
     "tables" : [ {
       "id" : "stop_if_no_clin_and_no_path_24035",
-      "inputs" : [ "clin_stage_group", "path_stage_group" ],
+      "inputs" : [ "clin_t", "path_t", "clin_stage_group_direct", "path_m", "clin_n", "path_stage_group_direct", "clin_m", "path_n" ],
       "outputs" : [ "combined_m", "combined_n", "source_t", "tmp_continue", "combined_t", "combined_stage_group", "source_n", "ss2017", "source_m" ]
     }, {
       "id" : "combined_t",
@@ -628,7 +628,7 @@
       "inputs" : [ "cmb_m_prefix", "tmp_combined_m" ],
       "outputs" : [ "combined_m" ]
     }, {
-      "id" : "esophagus_gejunction_histologies_stage",
+      "id" : "histologies_path_stage_47414",
       "input_mapping" : [ {
         "from" : "tmp_combined_n",
         "to" : "n"
@@ -711,7 +711,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "esophagus_gejunction_histologies_stage", "extension_bdr", "clin_n_esophagus_ge_junction_51247", "radiation_surg_seq", "determine_default_m", "nodes_ddm", "nodes_pos_fpa", "ssf3_lpl", "parse_t_2177", "concatenate_n_43246", "clin_n_ddm", "parse_n_67182", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "tnm_7_stage_squamous_64205", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "tnm7_inclusions_tpc", "behavior", "concatenate_t_51262", "schema_selection_esophagus_gejunction", "stage_group_p_63631", "adjustments_for_no_clin_or_no_path_26261", "path_m_hbu", "determine_combined_prefix_91402", "ssf5_npg", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "clin_m_hbu", "parse_m_47057", "primary_site", "esophagusgejunction_t_39319", "combined_m", "combined_n", "stage_group_c_75034", "path_n_ddm", "grade", "year_dx_validation", "ssf4_mpg", "summary_stage_rpa", "combined_t", "discriminator_esophogus_ge_junction", "mets_hbu", "tnm_7_stage_adenocarcinoma_86531" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "esophagus_gejunction_histologies_stage", "clin_n_esophagus_ge_junction_51247", "tnm_7_path_stage_squamous_29624", "tnm_7_path_stage_adenocarcinoma_41458", "nodes_ddm", "ssf3_lpl", "parse_t_2177", "concatenate_n_43246", "clin_n_ddm", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "tnm7_inclusions_tpc", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "path_m_hbu", "ssf5_npg", "systemic_surg_seq", "parse_m_47057", "combined_m", "combined_n", "stage_group_c_75034", "grade", "summary_stage_rpa", "combined_t", "discriminator_esophogus_ge_junction", "mets_hbu", "tnm_7_stage_adenocarcinoma_86531", "determine_default_t", "extension_bdr", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpa", "parse_n_67182", "determine_default_n", "tnm_7_stage_squamous_64205", "behavior", "histologies_path_stage_47414", "schema_selection_esophagus_gejunction", "stage_group_p_63631", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "clin_m_hbu", "primary_site", "esophagusgejunction_t_39319", "path_n_ddm", "year_dx_validation", "ssf4_mpg" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-18T12:57:54.348Z"
+  "last_modified" : "2016-01-15T18:43:14.561Z"
 }

@@ -383,7 +383,7 @@
       "inputs" : [ "tmp_clin_n", "tmp_clin_m", "clin_stage_group_direct", "tmp_clin_t" ],
       "outputs" : [ "clin_stage_group" ]
     }, {
-      "id" : "tnm7_stage_ubq",
+      "id" : "tnm7_path_stage_ubq",
       "input_mapping" : [ {
         "from" : "path_stage_group_direct",
         "to" : "stage_group_in"
@@ -424,7 +424,7 @@
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
       } ],
-      "inputs" : [ "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "tmp_path_n", "path_m", "tmp_path_t", "tmp_clin_t", "clin_n", "clin_m", "path_n" ],
+      "inputs" : [ "tmp_path_t", "clin_n", "clin_m", "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "clin_stage_group_direct", "tmp_path_n", "path_m", "tmp_clin_t", "path_stage_group_direct", "path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_combined_m", "source_t", "clin_stage_group", "path_stage_group", "source_n", "tmp_combined_t", "source_m" ]
     } ]
   }, {
@@ -449,7 +449,7 @@
     } ],
     "tables" : [ {
       "id" : "stop_if_no_clin_and_no_path_24035",
-      "inputs" : [ "clin_stage_group", "path_stage_group" ],
+      "inputs" : [ "clin_t", "path_t", "clin_stage_group_direct", "path_m", "clin_n", "path_stage_group_direct", "clin_m", "path_n" ],
       "outputs" : [ "combined_m", "combined_n", "source_t", "tmp_continue", "combined_t", "combined_stage_group", "source_n", "ss2017", "source_m" ]
     }, {
       "id" : "combined_t_lung",
@@ -625,7 +625,7 @@
       "inputs" : [ "clin_stage_group", "path_stage_group_direct" ],
       "outputs" : [ "tmp_stage_group" ]
     }, {
-      "id" : "tnm7_stage_ubq",
+      "id" : "tnm7_path_stage_ubq",
       "input_mapping" : [ {
         "from" : "tmp_combined_n",
         "to" : "n"
@@ -711,7 +711,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "stage_group_p_18837", "radiation_surg_seq", "determine_default_m", "mets_hab", "combined_t_to_summ_stage_t_3_3d_re_4_4e_d_45184", "select_stage_group_19580", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "determine_default_n", "clin_m_hab", "histology", "concatenate_m_40642", "path_n_dai", "combined_t_lung", "tnm7_inclusions_tpb", "behavior", "combined_n_lung", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "schema_selection_lung", "ssf1_sbh", "ssf2_sbi", "determine_combined_prefix_91402", "nodes_dai", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "clin_n_dai", "lung_t_86537", "parse_m_47057", "primary_site", "combined_n_to_summ_stage_n_n3_d_copy_68044", "combined_m", "clin_t_lung_28486", "path_m_hab", "year_dx_validation", "extension_baj", "summary_stage_rpa", "lung_occult_stage_11131", "tnm7_stage_ubq", "stage_group_c_92535" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "stage_group_p_18837", "radiation_surg_seq", "determine_default_m", "mets_hab", "combined_t_to_summ_stage_t_3_3d_re_4_4e_d_45184", "select_stage_group_19580", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "determine_default_n", "clin_m_hab", "histology", "concatenate_m_40642", "path_n_dai", "combined_t_lung", "tnm7_inclusions_tpb", "behavior", "combined_n_lung", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "schema_selection_lung", "ssf1_sbh", "ssf2_sbi", "determine_combined_prefix_91402", "nodes_dai", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "clin_n_dai", "lung_t_86537", "parse_m_47057", "primary_site", "combined_n_to_summ_stage_n_n3_d_copy_68044", "combined_m", "clin_t_lung_28486", "path_m_hab", "tnm7_path_stage_ubq", "year_dx_validation", "extension_baj", "summary_stage_rpa", "lung_occult_stage_11131", "tnm7_stage_ubq", "stage_group_c_92535" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-10T18:54:29.320Z"
+  "last_modified" : "2016-01-15T14:10:16.523Z"
 }

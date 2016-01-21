@@ -172,7 +172,7 @@
     "naaccr_item" : 970,
     "default" : "99",
     "table" : "stage_group_c_19537",
-    "used_for_staging" : false,
+    "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   }, {
     "key" : "path_stage_group_direct",
@@ -180,7 +180,7 @@
     "naaccr_item" : 910,
     "default" : "99",
     "table" : "stage_group_p_54695",
-    "used_for_staging" : false,
+    "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
   } ],
   "outputs" : [ {
@@ -428,7 +428,7 @@
       "inputs" : [ "clin_n_prefix", "tmp_clin_n", "tmp_clin_m", "tmp_clin_t" ],
       "outputs" : [ "clin_stage_group" ]
     }, {
-      "id" : "tnm7_stage_uqe",
+      "id" : "tnm7_path_stage_uqe",
       "input_mapping" : [ {
         "from" : "tmp_path_m",
         "to" : "m"
@@ -469,7 +469,7 @@
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
       } ],
-      "inputs" : [ "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "tmp_path_n", "path_m", "tmp_path_t", "tmp_clin_t", "clin_n", "clin_m", "path_n" ],
+      "inputs" : [ "tmp_path_t", "clin_n", "clin_m", "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "clin_stage_group_direct", "tmp_path_n", "path_m", "tmp_clin_t", "path_stage_group_direct", "path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_combined_m", "source_t", "clin_stage_group", "path_stage_group", "source_n", "tmp_combined_t", "source_m" ]
     } ]
   }, {
@@ -494,7 +494,7 @@
     } ],
     "tables" : [ {
       "id" : "stop_if_no_clin_and_no_path_24035",
-      "inputs" : [ "clin_stage_group", "path_stage_group" ],
+      "inputs" : [ "clin_t", "path_t", "clin_stage_group_direct", "path_m", "clin_n", "path_stage_group_direct", "clin_m", "path_n" ],
       "outputs" : [ "combined_m", "combined_n", "source_t", "tmp_continue", "combined_t", "combined_stage_group", "source_n", "ss2017", "source_m" ]
     }, {
       "id" : "combined_t",
@@ -659,7 +659,7 @@
       "inputs" : [ "cmb_m_prefix", "tmp_combined_m" ],
       "outputs" : [ "combined_m" ]
     }, {
-      "id" : "tnm7_stage_uqe",
+      "id" : "tnm7_path_stage_uqe",
       "input_mapping" : [ {
         "from" : "tmp_combined_n",
         "to" : "n"
@@ -745,7 +745,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "nodes_pos_fah", "stage_group_c_19537", "clin_m_hph", "ssf22_src", "parse_t_2177", "concatenate_n_43246", "extension_bga", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "ssf1_jpt", "path_m_hph", "parse_n_merkel_path_copy_67865", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "ssf20_sra", "ssf16_sqw", "systemic_surg_seq", "merkel_cell_scrotum_t_30089", "parse_m_47057", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "ssf17_sqx", "parse_n_merkel_clin_55445", "seer_mets_merkelcellscrotum_96689", "tnm7_stage_uqe", "summary_stage_rpa", "clin_t_merkel_cell_scrotum_24017", "combined_t", "ssf21_srb", "path_n_dfw", "determine_default_t", "radiation_surg_seq", "ssf19_sqz", "determine_default_m", "ssf18_sqy", "determine_default_n", "clin_n_dfw", "schema_selection_merkel_cell_scrotum", "behavior", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "primary_site", "nodes_dfw", "stage_group_p_54695", "year_dx_validation", "tnm7_inclusions_tqb" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "nodes_pos_fah", "stage_group_c_19537", "clin_m_hph", "ssf22_src", "parse_t_2177", "concatenate_n_43246", "extension_bga", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "ssf1_jpt", "path_m_hph", "parse_n_merkel_path_copy_67865", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "ssf20_sra", "ssf16_sqw", "systemic_surg_seq", "merkel_cell_scrotum_t_30089", "parse_m_47057", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "ssf17_sqx", "parse_n_merkel_clin_55445", "seer_mets_merkelcellscrotum_96689", "tnm7_stage_uqe", "summary_stage_rpa", "clin_t_merkel_cell_scrotum_24017", "combined_t", "ssf21_srb", "path_n_dfw", "determine_default_t", "radiation_surg_seq", "ssf19_sqz", "determine_default_m", "ssf18_sqy", "determine_default_n", "clin_n_dfw", "schema_selection_merkel_cell_scrotum", "behavior", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "primary_site", "nodes_dfw", "stage_group_p_54695", "year_dx_validation", "tnm7_inclusions_tqb", "tnm7_path_stage_uqe" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-10T18:54:32.144Z"
+  "last_modified" : "2016-01-12T18:16:26.652Z"
 }

@@ -5,7 +5,7 @@
   "name" : "Stage Group (c)",
   "title" : "TNM 7 Stage Group",
   "notes" : "**Note 1:** The Stage Groups displayed are the enhanced UICC groups.  If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC manual to ensure you are using the appropriate logic.\n\n**Note 2:** TNM does not include an in situ category for this schema. Assign 88 to stage group for in situ cases.",
-  "last_modified" : "2015-12-04T19:22:16.669Z",
+  "last_modified" : "2016-01-11T22:40:09.181Z",
   "definition" : [ {
     "key" : "clin_stage_group_direct",
     "name" : "Stage",
@@ -27,5 +27,5 @@
     "name" : "M",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "3", "III", "T3", "N0", "M0" ], [ "4", "IV", "T4  \nT0,X", "NX   \nAny N", "M0\nM1" ], [ "4A", "IVA", "T4     \nT4a    \nT3,4,4a", "N0  \nN0,X\nN1", "M0\nM0\nM0" ], [ "4B", "IVB", "T4b  ", "Any N", "M0" ], [ "4C", "IVC", "Any T", "Any N", "M1" ], [ "99", "Unknown", "T3  \nT0,X", "NX   \nAny N", "M0\nM0" ], [ "88", "Not Applicable", "88", "88", "88" ] ]
+  "rows" : [ [ "3", "III", "T3", "N0", "M0" ], [ "4", "IV", "T4  \nT0,X", "NX   \nAny N", "M0\nM1" ], [ "4A", "IVA", "T4     \nT4a    \nT3,4,4a", "N0  \nN0,X\nN1", "M0\nM0\nM0" ], [ "4B", "IVB", "T4b  ", "Any N", "M0" ], [ "4C", "IVC", "Any T", "Any N", "M1" ], [ "99", "Unknown", "T0\nT3  \nTX", "N1,X\nNX   \nAny N", "M0\nM0\nM0" ], [ "88", "Not Applicable", "88", "88", "88" ] ]
 }

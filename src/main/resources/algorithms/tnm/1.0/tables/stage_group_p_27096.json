@@ -5,7 +5,7 @@
   "name" : "Stage Group (p)",
   "title" : "TNM 7 Stage Group",
   "notes" : "**Note:** The Stage Groups displayed are the enhanced UICC groups.  If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC manual to ensure you are using the appropriate logic.",
-  "last_modified" : "2015-12-04T19:22:00.000Z",
+  "last_modified" : "2016-01-15T18:44:29.910Z",
   "definition" : [ {
     "key" : "path_stage_group_direct",
     "name" : "Stage",
@@ -27,5 +27,5 @@
     "name" : "M",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "0", "0", "Tis     ", "N0,X", "M0" ], [ "1A", "IA", "T1,1a,1b", "N0", "M0" ], [ "1B", "IB", "T2      \nT1,1a,1b", "N0\nN1", "M0\nM0" ], [ "2A", "IIA", "T3      \nT2      \nT1,1a,1b", "N0\nN1\nN2", "M0\nM0\nM0" ], [ "2B", "IIB", "T4,4a   \nT3      \nT2      \nT1,1a,1b", "N0      \nN1      \nN2      \nN3,3a,3b", "M0\nM0\nM0\nM0" ], [ "3", "III", "T4b", "NX", "M0" ], [ "3A", "IIIA", "T4,4a\nT3   \nT2", "N1      \nN2      \nN3,3a,3b", "M0\nM0\nM0" ], [ "3B", "IIIB", "T4b  \nT4,4a\nT3", "N0,1    \nN2      \nN3,3a,3b", "M0\nM0\nM0" ], [ "3C", "IIIC", "T4,4a\nT4b", "N3,3a,3b  \nN2,3,3a,3b", "M0\nM0" ], [ "4", "IV", "T0,1,1a,1b,2,3,4,4a,4b,X", "N0-2,3,3a,3b,X", "M1" ], [ "99", "Unknown", "T0               \nT1,1a,1b,2,3,4,4a\nTX", "N1,2,3,3a,3b,X\nNX            \nAny N", "M0\nM0\nM0" ], [ "88", "Not Applicable", "88", "88", "88" ] ]
+  "rows" : [ [ "0", "0", "Tis     ", "N0,X", "M0" ], [ "1A", "IA", "T1,1a,1b", "N0", "M0" ], [ "1B", "IB", "T2      \nTis,T1,1a,1b", "N0\nN1", "M0\nM0" ], [ "2A", "IIA", "T3      \nT2      \nTis,T1,1a,1b", "N0\nN1\nN2", "M0\nM0\nM0" ], [ "2B", "IIB", "T4,4a   \nT3      \nT2      \nTis,T1,1a,1b", "N0      \nN1      \nN2      \nN3,3a,3b", "M0\nM0\nM0\nM0" ], [ "3", "III", "T4b", "NX", "M0" ], [ "3A", "IIIA", "T4,4a\nT3   \nT2", "N1      \nN2      \nN3,3a,3b", "M0\nM0\nM0" ], [ "3B", "IIIB", "T4b  \nT4,4a\nT3", "N0,1    \nN2      \nN3,3a,3b", "M0\nM0\nM0" ], [ "3C", "IIIC", "T4,4a\nT4b", "N3,3a,3b  \nN2,3,3a,3b", "M0\nM0" ], [ "4", "IV", "Any T", "Any N", "M1" ], [ "99", "Unknown", "T0               \nT1,1a,1b,2,3,4,4a\nTX", "N0,1,2,3,3a,3b,X\nNX            \nAny N", "M0\nM0\nM0" ], [ "88", "Not Applicable", "88", "88", "88" ] ]
 }
