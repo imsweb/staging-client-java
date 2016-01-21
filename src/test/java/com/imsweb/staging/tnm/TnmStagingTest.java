@@ -334,12 +334,12 @@ public class TnmStagingTest extends StagingTest {
 
         Assert.assertEquals(
                 Sets.newHashSet("site", "hist", "behavior", "systemic_surg_seq", "radiation_surg_seq", "nodes_pos", "clin_t", "clin_n", "clin_m", "path_t", "path_n", "path_m", "seer_primary_tumor",
-                        "seer_nodes", "seer_mets", "ssf13", "ssf15", "ssf16"), _STAGING.getInputs(_STAGING.getSchema("testis")));
+                        "seer_nodes", "seer_mets", "ssf13", "ssf15", "ssf16", "clin_stage_group_direct", "path_stage_group_direct"), _STAGING.getInputs(_STAGING.getSchema("testis")));
 
         // test with and without context
         Assert.assertEquals(
                 Sets.newHashSet("site", "hist", "systemic_surg_seq", "radiation_surg_seq", "nodes_pos", "clin_t", "clin_n", "clin_m", "path_t", "path_n", "path_m", "seer_primary_tumor", "seer_nodes",
-                        "seer_mets", "ssf1", "ssf8", "ssf10"), _STAGING.getInputs(_STAGING.getSchema("prostate")));
+                        "seer_mets", "ssf1", "ssf8", "ssf10", "clin_stage_group_direct", "path_stage_group_direct"), _STAGING.getInputs(_STAGING.getSchema("prostate")));
 
         Map<String, String> context = new HashMap<>();
         context.put(StagingData.PRIMARY_SITE_KEY, "C619");
