@@ -139,7 +139,7 @@
     "key" : "ssf1",
     "name" : "Associated with HIV/AIDS",
     "naaccr_item" : 2880,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf1_jpj",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_III_COLLECTED_IN_CSV1", "COC_ALREADY_COLLECTED", "SEER_ALREADY_COLLECTED" ]
@@ -1147,5 +1147,5 @@
     } ]
   } ],
   "involved_tables" : [ "ajcc6_stage_qdy", "ssf13_seg", "summary_stage_raa", "ssf25_snt", "ajcc7_stage_unb", "ssf4_mbj", "ssf15_snj", "ajcc7_t_codes", "ssf23_snr", "ssf1_jpj", "histology", "ssf12_sef", "cs_input_version_original", "size_aaw", "ssf22_snq", "lvi", "ssf14_sni", "ajcc_tdescriptor_cleanup", "ajcc_tnm6_stage_csv1_xie", "extension_bez", "ssf11_see", "ajcc7_year_validation", "ssf21_snp", "ssf17_snl", "ajcc_descriptor_codes", "mets_eval_iad", "determine_correct_table_for_ajcc6_stg_ns15", "grade", "ajcc7_m_codes", "ssf20_sno", "ajcc7_inclusions_tpl", "ajcc_ndescriptor_cleanup", "extension_eval_cak", "ssf16_snk", "mets_hby", "ssf2_kpg", "nodes_eval_eai", "schema_selection_lymphoma_ocular_adnexa", "ssf7_saq", "ssf10_sat", "ssf3_lbc", "ajcc6_t_codes", "nodes_pos_fpa", "ajcc_mdescriptor_cleanup", "ss_codes", "nodes_dev", "ssf6_oat", "nodes_exam_gpa", "ajcc6_n_codes", "behavior", "ssf18_snm", "ajcc7_n_codes", "ajcc6_stage_codes", "ssf9_sas", "ssf19_snn", "ajcc7_stage_codes", "primary_site", "ajcc6_year_validation", "ssf8_sar", "ajcc6_m_codes", "ssf5_nac", "cs_year_validation", "ssf24_sns" ],
-  "last_modified" : "2015-08-25T16:44:13.960Z"
+  "last_modified" : "2016-01-28T18:55:49.708Z"
 }

@@ -139,7 +139,7 @@
     "key" : "ssf1",
     "name" : "World Health Organization (WHO) Grade Classification",
     "naaccr_item" : 2880,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf1_jpo",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_III_COLLECTED_IN_CSV1", "NPCR_REQUIRED_BY_NPCR_2011_FORWARD", "COC_ALREADY_COLLECTED", "SEER_ALREADY_COLLECTED" ]
@@ -1162,5 +1162,5 @@
     } ]
   } ],
   "involved_tables" : [ "ssf25_snt", "ssf3_lpm", "ajcc7_stage_una", "ssf15_snj", "ajcc7_t_codes", "ssf6_opf", "ssf23_snr", "histology", "ssf1_jpo", "ajcc7_inclusions_tqf", "cs_input_version_original", "nodes_exam_gna", "ssf22_snq", "lvi", "ssf14_sni", "mets_eval_ina", "ajcc_tdescriptor_cleanup", "extension_eval_cna", "ajcc6_stage_qna", "ajcc7_year_validation", "ssf7_sqk", "ssf21_snp", "ssf17_snl", "ajcc_descriptor_codes", "schema_selection_brain", "ssf5_nph", "nodes_pos_fna", "grade", "summary_stage_rpa", "nodes_eval_ena", "ajcc7_m_codes", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "ajcc6_t_codes", "ajcc_mdescriptor_cleanup", "ssf11_snf", "ss_codes", "size_apa", "ajcc6_n_codes", "ssf2_kpl", "behavior", "nodes_dna", "mets_haw", "ssf10_sne", "ssf18_snm", "ajcc7_n_codes", "ssf8_sql", "ajcc6_stage_codes", "ssf19_snn", "ajcc7_stage_codes", "ssf9_snd", "ssf13_snh", "extension_bcc", "ssf4_mpn", "primary_site", "ajcc6_year_validation", "ajcc6_m_codes", "cs_year_validation", "ssf24_sns", "ssf12_sng" ],
-  "last_modified" : "2015-08-25T16:44:01.285Z"
+  "last_modified" : "2016-01-28T18:55:45.159Z"
 }

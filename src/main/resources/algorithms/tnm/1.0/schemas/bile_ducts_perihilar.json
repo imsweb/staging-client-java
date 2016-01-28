@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Bile Ducts Perihilar",
   "title" : "Perihilar Bile Ducts",
-  "notes" : "C240 Extrahepatic bile duct\n\n**Note 1:** Perihilar cholangiocarcinomas are tumors located in the extrahepatic biliary tree proximal to the origin of the cystic duct.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Extrahepatic Bile Duct* chapter on page 112 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C240 Extrahepatic bile duct\n\n**Note 1:** This schema is based on the UICC chapter *Extrahepatic Bile Ducts-Perihilar,* pages 122-125.\n\n**Note 2:** Perihilar cholangiocarcinomas are tumors located in the extrahepatic biliary tree proximal to the origin of the cystic duct.\n\n**Note 3:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Extrahepatic Bile Duct* chapter on page 112 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_bile_ducts_perihilar",
   "schema_discriminators" : [ "ssf25" ],
   "inputs" : [ {
@@ -722,5 +722,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "path_m_hcr", "extension_bft", "clin_m_hcr", "radiation_surg_seq", "mets_hcr", "determine_default_m", "ssf13_sqg", "nodes_dfo", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "clin_t_perihilar_bile_ducts_63594", "stage_group_p_93370", "combined_n_to_summ_stage_n_n2_d_23338", "clin_n_dfo", "parse_n_67182", "determine_default_n", "ssf10_sfi", "schema_selection_bile_ducts_perihilar", "histology", "concatenate_m_40642", "ssf12_sqf", "combined_t_to_summ_stage_t_2_4e_re_93413", "behavior", "stage_group_c_73800", "tnm7_inclusions_tpe", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "path_t_perihilar_bile_ducts_88350", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "discriminator_bile_ducts", "parse_m_47057", "primary_site", "tnm7_stage_ubn", "ssf14_sqh", "ssf11_sqe", "tnm7_path_stage_ubn", "combined_m", "combined_n", "path_n_dfo", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-12T18:16:21.022Z"
+  "last_modified" : "2016-01-27T22:32:49.522Z"
 }

@@ -139,7 +139,7 @@
     "key" : "ssf1",
     "name" : "Carcinoembryonic Antigen (CEA)",
     "naaccr_item" : 2880,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf1_jpf",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_III_COLLECTED_IN_CSV1", "COC_ALREADY_COLLECTED", "SEER_ALREADY_COLLECTED" ]
@@ -163,7 +163,7 @@
     "key" : "ssf4",
     "name" : "Tumor Deposits",
     "naaccr_item" : 2910,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf4_mpb",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -178,7 +178,7 @@
     "key" : "ssf6",
     "name" : "Circumferential Resection Margin (CRM)",
     "naaccr_item" : 2930,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf6_opb",
     "used_for_staging" : false,
     "metadata" : [ "COC_CLINICALLY_SIGNIFICANT", "CCCR_II_ESSENTIAL_FOR_CLINICAL_DECISION", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -193,7 +193,7 @@
     "key" : "ssf8",
     "name" : "Perineural Invasion",
     "naaccr_item" : 2862,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf8_spg",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -201,7 +201,7 @@
     "key" : "ssf9",
     "name" : "KRAS",
     "naaccr_item" : 2863,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf9_sph",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -1217,5 +1217,5 @@
     } ]
   } ],
   "involved_tables" : [ "ajcc6_exclusions_ppd", "size_aae", "ssf25_snt", "ssf7_spf", "ssf1_jpf", "ssf15_snj", "ajcc7_t_codes", "ssf23_snr", "ssf3_lpe", "histology", "extension_bbf", "ssf6_opb", "cs_input_version_original", "ssf22_snq", "ssf10_spi", "lvi", "ssf14_sni", "lymph_nodes_pathologic_evaluation_ajcc7_table_also_used_when_cslymph_nodes_evalis_not_coded_xqi", "ajcc_tdescriptor_cleanup", "schema_selection_rectum", "ajcc7_year_validation", "ssf21_snp", "ssf5_npb", "ssf17_snl", "ssf9_sph", "ajcc_descriptor_codes", "lymph_nodes_clinical_evaluation_ajcc6_xbi", "ajcc7_inclusions_tpc", "ajcc7_stage_upw", "grade", "ssf8_spg", "summary_stage_rpa", "ajcc7_m_codes", "lymph_nodes_pathologic_evaluation_ajcc6_table_also_used_when_cslymph_nodes_eval_is_not_coded_xpr", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "ajcc6_t_codes", "nodes_pos_fpb", "ajcc_mdescriptor_cleanup", "mets_hag", "ssf11_snf", "determine_correct_table_for_ajcc6_n_ns24", "ss_codes", "determine_correct_table_for_ajcc7_n_ns25", "nodes_exam_gpa", "ssf2_kpp", "ajcc6_n_codes", "nodes_dax", "behavior", "mets_eval_ipb", "ssf18_snm", "ajcc6_stage_qpf", "extension_eval_cpa", "ajcc7_n_codes", "ssf4_mpb", "ajcc6_stage_codes", "ssf19_snn", "lymph_nodes_clinical_eval_priorto_v0205_ajcc7_xqh", "ajcc7_stage_codes", "ssf13_snh", "primary_site", "ajcc6_year_validation", "ajcc6_m_codes", "nodes_eval_epa", "cs_year_validation", "lymph_nodes_clinical_eval_v0205_ajcc7_xch", "ssf24_sns", "ssf12_sng" ],
-  "last_modified" : "2015-08-25T16:44:32.030Z"
+  "last_modified" : "2016-01-28T18:55:55.456Z"
 }

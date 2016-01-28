@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "GIST Esophagus",
   "title" : "Gastrointestinal Stromal Tumor of Esophagus",
-  "notes" : "C150  Cervical esophagus\nC151  Thoracic esophagus\nC152  Abdominal esophagus\nC153  Upper third of esophagus\nC154  Middle third of esophagus\nC155  Lower third of esophagus\nC158  Overlapping lesion of esophagus\nC159  Esophagus, NOS\n\n**Note:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Esophagus* chapter on page 74 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C150  Cervical esophagus\nC151  Thoracic esophagus\nC152  Abdominal esophagus\nC153  Upper third of esophagus\nC154  Middle third of esophagus\nC155  Lower third of esophagus\nC158  Overlapping lesion of esophagus\nC159  Esophagus, NOS\n\n**Note 1:** This schema is based on the UICC chapter *Gastrointestinal Stromal Tumour (GIST),* pages 78-81.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Esophagus* chapter on page 74 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_gist_esophagus",
   "inputs" : [ {
     "key" : "year_dx",
@@ -711,5 +711,5 @@
   } ],
   "involved_tables" : [ "ssf10_srh", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "mets_hcn", "tnm7_path_stage_gist_small_intestine_upy", "radiation_surg_seq", "gist_esophagus_t_61710", "clin_m_hcn", "determine_default_m", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "ssf7_sre", "nodes_dfj", "path_m_hcn", "parse_n_67182", "stage_group_p_82525", "determine_default_n", "tnm7_stage_gist_small_intestine_upy", "combined_n_to_summ_stage_n_84054", "schema_selection_gist_esophagus", "histology", "concatenate_m_40642", "extension_bfn", "clin_t_gist_esophagus_47140", "combined_t_no_tis", "concatenate_t_51262", "ssf6_oph", "adjustments_for_no_clin_or_no_path_26261", "tnm7_inclusions_tpo", "determine_combined_prefix_91402", "gistesophagus_n_17925", "stage_group_c_86666", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "ssf9_srg", "parse_m_47057", "primary_site", "clin_n_gist_esophagus_87582", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "year_dx_validation", "gist_esophagus_mitotic_rate_calculation", "summary_stage_rpa", "ssf8_srf" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-12T18:16:19.357Z"
+  "last_modified" : "2016-01-27T21:51:35.567Z"
 }

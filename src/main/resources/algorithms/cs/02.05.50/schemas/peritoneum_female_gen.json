@@ -140,7 +140,7 @@
     "key" : "ssf1",
     "name" : "Carbohydrate Antigen 125 (CA-125)",
     "naaccr_item" : 2880,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf1_jpr",
     "used_for_staging" : false,
     "metadata" : [ "COC_CLINICALLY_SIGNIFICANT", "CCCR_IVB_COLLECT_IF_IN_CLINICAL_CHART", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -156,7 +156,7 @@
     "key" : "ssf3",
     "name" : "Residual Tumor Status and Size After Primary Cytoreduction Surgery",
     "naaccr_item" : 2900,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf3_lpt",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -330,6 +330,7 @@
     "key" : "ssf25",
     "name" : "Schema Discriminator: Peritoneum/PeritoneumFemaleGen",
     "naaccr_item" : 2879,
+    "default" : "009",
     "table" : "ssf25_sqp",
     "used_for_staging" : true,
     "metadata" : [ "CCCR_ESSENTIAL_FOR_TNM_CLASSIFICATION", "NPCR_REQUIRED_2004_FORWARD" ]
@@ -1226,5 +1227,5 @@
     } ]
   } ],
   "involved_tables" : [ "ajcc6_exclusions_ppc", "ssf3_lpt", "extension_bfx", "ajcc7_inclusions_tqa", "ssf15_snj", "ajcc7_t_codes", "ssf23_snr", "histology", "cs_input_version_original", "ssf1_jpr", "mets_hcw", "ssf22_snq", "lvi", "ssf14_sni", "ajcc_tdescriptor_cleanup", "ssf5_npl", "ajcc7_year_validation", "ssf21_snp", "ssf17_snl", "ajcc_descriptor_codes", "grade", "summary_stage_rpa", "ajcc7_m_codes", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "ajcc6_t_codes", "nodes_pos_fpa", "ajcc_mdescriptor_cleanup", "ssf7_snb", "ssf11_snf", "ss_codes", "ssf6_ona", "nodes_exam_gpa", "ssf25_sqp", "ajcc6_n_codes", "ssf2_kpn", "extension_size_xgn", "behavior", "ssf10_sne", "ssf18_snm", "ajcc6_stage_qpi", "mets_eval_ipa", "size_app", "extension_eval_cpa", "ajcc7_n_codes", "ajcc7_stage_uby", "ajcc6_stage_codes", "ssf19_snn", "ajcc7_stage_codes", "ssf9_snd", "ssf13_snh", "primary_site", "ajcc6_year_validation", "schema_selection_peritoneum_female_gen", "ssf4_mpr", "nodes_dfs", "ajcc6_m_codes", "nodes_eval_epa", "cs_year_validation", "ssf24_sns", "ssf8_snc", "ssf12_sng" ],
-  "last_modified" : "2015-08-25T16:44:27.662Z"
+  "last_modified" : "2016-01-28T18:55:54.284Z"
 }

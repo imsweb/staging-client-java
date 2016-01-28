@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Larynx Supraglottic",
   "title" : "Supraglottic Larynx (excluding Malignant Melanoma)",
-  "notes" : "C321  Supraglottis\n\n**Note 1:**  Excludes Anterior Surface of Epiglottis -  see separate schema (C101).\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Larynx: Supraglottis* chapter on page 142 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C321  Supraglottis\n* Aryepiglottic fold, laryngeal aspect\n* Arytenoid\n* Infrahyoid epiglottis\n* Ventricular bands (false cords)\n\n**Note 1:** This schema is based on the UICC chapter *Larynx,* pages 39-45.\n* *Excludes* Anterior Surface of Epiglottis -  see separate schema (C101).\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Larynx: Supraglottis* chapter on page 142 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_larynx_supraglottic",
   "inputs" : [ {
     "key" : "year_dx",
@@ -746,5 +746,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "ssf10_spd", "ssf1_jpa", "path_m_hpb", "tnm7_stage_upt", "parse_t_2177", "concatenate_n_43246", "nodes_dcq", "histology", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "tnm7_inclusions_tpb", "combined_t_to_summ_stage_t_4b_4e_d_9381", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "extension_bau", "ssf9_spc", "systemic_surg_seq", "combined_n_to_summ_stage_n_headneck_temp_18777", "clin_t_larynx_supraglottic_69988", "parse_m_47057", "combined_m", "combined_n", "ssf5_npa", "summary_stage_rpa", "combined_t", "ssf8_spb", "determine_default_t", "clinical_n_head_neck_except_nasopharynx_25237", "radiation_surg_seq", "determine_default_m", "path_n_head_neck_except_nasopharynx_40357", "nodes_pos_fpa", "tnm7_path_stage_upt", "parse_n_67182", "determine_default_n", "schema_selection_larynx_supraglottic", "stage_group_p_35702", "behavior", "ssf4_mpa", "seer_mets_supraglotticlarynx_33914", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "larynx_supraglottic_t_57946", "primary_site", "year_dx_validation", "stage_group_c_51542" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-12T18:16:33.217Z"
+  "last_modified" : "2016-01-28T19:48:58.253Z"
 }

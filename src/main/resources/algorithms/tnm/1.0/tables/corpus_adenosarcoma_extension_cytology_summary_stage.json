@@ -5,7 +5,7 @@
   "name" : "SEER Primary Tumor Cytology Summary Stage",
   "title" : "SEER Primary Tumor Cytology Summary Stage Table",
   "notes" : "**Note:** For SEER Primary Tumor code 100 ONLY. The SS2000 T value is assigned based on the value of SEER Primary Tumor and peritoneal cytology status coded in Site Specific Factor 2 (SSF2).",
-  "last_modified" : "2015-11-25T20:26:03.500Z",
+  "last_modified" : "2016-01-27T22:51:44.856Z",
   "definition" : [ {
     "key" : "seer_primary_tumor",
     "name" : "SEER Primary Tumor",
@@ -13,7 +13,7 @@
   }, {
     "key" : "ssf2",
     "name" : "SSF2",
-    "type" : "INPUT"
+    "type" : "DESCRIPTION"
   }, {
     "key" : "ss2017",
     "name" : "SS2017 Category",

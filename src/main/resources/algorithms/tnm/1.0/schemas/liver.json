@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Liver",
   "title" : "Liver",
-  "notes" : "C220 Liver\nC221 Intrahepatic bile duct \n\n**Note 1:** For primary site C220 and cholangiocarcinoma histologies (M-8160, 8161, and 8180), see the Bile DuctsIntraHepat schema.\n\n**Note 2:** Although the presence of cirrhosis is an important prognostic factor, it does not affect the TNM classification, being an independent prognostic variable.\n\n**Note 3:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Liver and Intrahepatic Bile Ducts* chapter on page 108 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C220 Liver\nC221 Intrahepatic bile duct \n\n**Note 1:** This schema is based on the UICC chapter *Liver-Hepatocellular Carcinoma* pages 110-113.\n* Primary site C221 with histologies 8170-8175 is not listed in this chapter of the UICC manual; however, it is included in this schema and TNM staged. \n* For primary site C220 and cholangiocarcinoma histologies (M-8160, 8161, and 8180), see the Bile DuctsIntraHepat schema.\n\n**Note 2:** Although the presence of cirrhosis is an important prognostic factor, it does not affect the TNM classification, being an independent prognostic variable.\n\n**Note 3:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Liver and Intrahepatic Bile Ducts* chapter on page 108 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_liver",
   "inputs" : [ {
     "key" : "year_dx",
@@ -735,5 +735,5 @@
   } ],
   "involved_tables" : [ "ssf3_lps", "cpmbined_m_to_summ_stage_m_60564", "ssf6_oag", "determine_default_t", "radiation_surg_seq", "path_m_haf", "determine_default_m", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "mets_haf", "tnm7_path_stage_ubl", "parse_n_67182", "determine_default_n", "extension_bbc", "ssf7_scb", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "ssf2_kpq", "stage_group_c_15811", "combined_t_no_tis", "path_n_dau", "ssf1_jpw", "clin_m_haf", "nodes_dau", "concatenate_t_51262", "combined_t_to_summ_stage_t_3b_4e_re_50371", "schema_selection_liver", "ssf8_scc", "adjustments_for_no_clin_or_no_path_26261", "tnm7_inclusions_tpn", "determine_combined_prefix_91402", "ssf4_mal", "liver_t_55652", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "clin_t_liver_16950", "stage_group_p_81228", "parse_m_47057", "ssf5_nak", "primary_site", "clin_n_dau", "combined_m", "combined_n", "tnm7_stage_ubl", "year_dx_validation", "summary_stage_rpa" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-12T18:16:24.802Z"
+  "last_modified" : "2016-01-28T18:51:45.875Z"
 }

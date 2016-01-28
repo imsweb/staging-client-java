@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Sinus Ethmoid",
   "title" : "Ethmoid Sinus (excluding Malignant Melanoma)",
-  "notes" : "C311  Ethmoid sinus\n\n**Note:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Sinus Ethmoid* chapter on page 132 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C311  Ethmoid sinus\n\n**Note 1:** This schema is based on the UICC chapter *Nasal Cavity and Paranasal Sinuses,* pages 46-50.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Sinus Ethmoid* chapter on page 132 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_sinus_ethmoid",
   "inputs" : [ {
     "key" : "year_dx",
@@ -754,5 +754,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "ssf10_spd", "ssf1_jpa", "path_m_hpb", "tnm7_stage_upt", "parse_t_2177", "concatenate_n_43246", "ssf11_spe", "nodes_dcm", "histology", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "clin_t_sinus_ethmoid_61914", "tnm7_inclusions_tpb", "concatenate_t_51262", "sinus_ethmoid_t_70472", "adjustments_for_no_clin_or_no_path_26261", "ssf9_spc", "extension_bay", "systemic_surg_seq", "combined_n_to_summ_stage_n_headneck_temp_18777", "parse_m_47057", "combined_m", "combined_n", "ssf5_npa", "summary_stage_rpa", "combined_t", "ssf8_spb", "schema_selection_sinus_ethmoid", "determine_default_t", "clinical_n_head_neck_except_nasopharynx_25237", "radiation_surg_seq", "determine_default_m", "path_n_head_neck_except_nasopharynx_40357", "nodes_pos_fpa", "tnm7_path_stage_upt", "combined_t_to_summ_stage_t_2_4a_re_4b_4e_d_88285", "parse_n_67182", "determine_default_n", "seer_mets_ethmoidsinusvs2_80791", "stage_group_p_35702", "behavior", "ssf4_mpa", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "primary_site", "year_dx_validation", "stage_group_c_51542" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-12T18:16:32.471Z"
+  "last_modified" : "2016-01-27T21:27:16.785Z"
 }

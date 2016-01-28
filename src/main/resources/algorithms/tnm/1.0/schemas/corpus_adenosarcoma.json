@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Corpus Adenosarcoma",
   "title" : "Adenosarcoma of the Corpus Uteri; Uterus, NOS",
-  "notes" : "C540  Isthmus uteri\nC541  Endometrium\nC542  Myometrium\nC543  Fundus uteri\nC548  Overlapping lesion of corpus uteri\nC549  Corpus uteri\nC559  Uterus, NOS\n\n**Note 1:** The TNM 7th Edition staging reflects the new staging adopted by the International Federation of Gynecology and Obstetrics (FIGO) and utilizes three new staging schemas for cancer of the Corpus Uteri based on histology. The three new schemas are: \n\n1.   Carcinoma and carcinosarcoma \n2.   Leiomyosarcoma and endometrial stromal sarcoma (ESS) \n3.   Adenosarcoma \n\n**Note 2:** This schema is for adenosarcoma ONLY.  When coding pay attention to the FIGO Editions and descriptions about cell and tumor types, disease extension, lymph node status and metastasis.  \n\n**Note 3:**  TNM values correspond to the stages accepted by FIGO.  Note that FIGO uses a single stage value which corresponds to different groupings of T, N, and M values.\n\n**Note 4:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Corpus Uteri* chapter on page 207 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C540  Isthmus uteri\nC541  Endometrium\nC542  Myometrium\nC543  Fundus uteri\nC548  Overlapping lesion of corpus uteri\nC549  Corpus uteri\nC559  Uterus, NOS\n\n**Note 1:** This schema is based on the UICC chapter *Uterus-Uterine Sarcomas* pages 217-221.\n* Primary sites C541, C542, C548, and C549 are not listed in this chapter of the UICC manual; however, they are included in this schema and TNM staged if appropriate histology criteria are met.\n* Primary site group C53 is listed; however, is not included in this schema. See the *Cervix* schema.\n\n**Note 2:** The TNM 7th Edition staging reflects the new staging adopted by the International Federation of Gynecology and Obstetrics (FIGO) and utilizes three new staging schemas for cancer of the Corpus Uteri based on histology. The three new schemas are: \n\n1.   Carcinoma and carcinosarcoma \n2.   Leiomyosarcoma and endometrial stromal sarcoma (ESS) \n3.   Adenosarcoma \n\n**Note 3:** The FIGO stages are based on surgical staging. (TNM stages are based on clinical and/or pathologic classification). \n\n**Note 4:** This schema is for adenosarcoma ONLY.  When coding pay attention to the FIGO Editions and descriptions about cell and tumor types, disease extension, lymph node status and metastasis.  \n\n**Note 5:**  TNM values correspond to the stages accepted by FIGO.  Note that FIGO uses a single stage value which corresponds to different groupings of T, N, and M values.\n\n**Note 6:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Corpus Uteri* chapter on page 207 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_corpus_adenosarcoma",
   "inputs" : [ {
     "key" : "year_dx",
@@ -119,7 +119,8 @@
     "naaccr_item" : 2890,
     "default" : "999",
     "table" : "ssf2_kpo",
-    "used_for_staging" : true
+    "used_for_staging" : false,
+    "metadata" : [ "SEER_REQUIRED" ]
   }, {
     "key" : "ssf3",
     "name" : "Number of Positive Pelvic Nodes",
@@ -720,7 +721,7 @@
     } ],
     "tables" : [ {
       "id" : "extension_bfl",
-      "inputs" : [ "ssf2", "seer_primary_tumor" ],
+      "inputs" : [ "seer_primary_tumor" ],
       "outputs" : [ "ss2017_t", "ss2017" ]
     }, {
       "id" : "nodes_dfh",
@@ -742,5 +743,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "mets_hcl", "ssf3_lpp", "parse_t_2177", "concatenate_n_43246", "path_m_hcl", "ssf6_opg", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "clin_m_hcl", "extension_bfl", "concatenate_t_51262", "ssf5_npk", "adjustments_for_no_clin_or_no_path_26261", "pathological_n_corpus_31147", "systemic_surg_seq", "parse_m_47057", "combined_m", "combined_n", "tnm7_path_stage_ubt", "summary_stage_rpa", "combined_t_to_summ_stage_t_2_2b_re_2c_4e_d_26557", "corpus_adenosarcoma_extension_cytology_summary_stage", "corpus_adenosarcoma_pathologic_t_90591", "clinical_n_corpus_48422", "determine_default_t", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpa", "nodes_dfh", "parse_n_67182", "determine_default_n", "ssf7_sqn", "ssf2_kpo", "combined_t_no_tis", "behavior", "ssf8_sqo", "summary_stage_corpus_9973", "determine_combined_prefix_91402", "schema_selection_corpus_adenosarcoma", "stop_if_no_clin_and_no_path_24035", "primary_site", "ssf1_jca", "ssf4_mpq", "year_dx_validation", "stage_group_c_59028", "corpus_adenosarcoma_t_34843", "stage_group_p_79934", "tnm7_inclusions_tqh", "tnm7_stage_ubt" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-12T18:16:38.890Z"
+  "last_modified" : "2016-01-28T18:28:06.998Z"
 }

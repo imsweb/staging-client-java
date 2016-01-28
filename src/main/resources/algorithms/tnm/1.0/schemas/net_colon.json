@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "NET Colon",
   "title" : "Neuroendocrine Tumors of Colon (excluding Appendix)",
-  "notes" : "C180 Cecum\nC182 Ascending colon\nC183 Hepatic flexure of colon\nC184 Transverse colon\nC185 Splenic flexure of colon\nC186 Descending colon\nC187 Sigmoid colon\nC188 Overlapping lesion of colon\nC189 Colon, NOS\n\n**Note 1: ** This schema is also used for carcinoid tumors and malignant gastrinomas.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Colon* chapter on page 94 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C180 Cecum\nC182 Ascending colon\nC183 Hepatic flexure of colon\nC184 Transverse colon\nC185 Splenic flexure of colon\nC186 Descending colon\nC187 Sigmoid colon\nC188 Overlapping lesion of colon\nC189 Colon, NOS\n\n**Note 1:** This schema is based on the UICC chapter *Gastric, Small & Large Intestinal Carcinoid Tumours,* pages 94-99.\n* This schema is also used for carcinoid tumors and malignant gastrinomas.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Colon* chapter on page 94 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_net_colon",
   "inputs" : [ {
     "key" : "year_dx",
@@ -694,5 +694,5 @@
   } ],
   "involved_tables" : [ "ssf16_spt", "ssf11_sps", "cpmbined_m_to_summ_stage_m_60564", "nodes_dfe", "determine_default_t", "clin_n_dfe", "radiation_surg_seq", "net_colon_t_5107", "determine_default_m", "path_t_bfi", "nodes_pos_fpa", "path_m_hci", "parse_t_2177", "concatenate_n_43246", "mets_hci", "parse_n_67182", "path_n_dfe", "determine_default_n", "tnm7_path_stage_upx", "schema_selection_net_colon", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "extension_bfi", "ssf17_spu", "combined_t_no_tis", "clin_m_hci", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "tnm7_inclusions_tpm", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "stage_group_c_52010", "parse_m_47057", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "stage_group_p_4759", "combined_n", "tnm7_stage_upx", "year_dx_validation", "summary_stage_rpa" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-12T18:16:16.547Z"
+  "last_modified" : "2016-01-27T22:20:30.177Z"
 }

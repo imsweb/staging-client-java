@@ -154,7 +154,7 @@
     "key" : "ssf3",
     "name" : "Levels I-III, Lymph Nodes for Head and Neck",
     "naaccr_item" : 2900,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf3_lpa",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_III_COLLECTED_IN_CSV1", "COC_ALREADY_COLLECTED", "SEER_ALREADY_COLLECTED" ]
@@ -162,7 +162,7 @@
     "key" : "ssf4",
     "name" : "Levels IV-V and Retropharyngeal Lymph Nodes for Head and Neck",
     "naaccr_item" : 2910,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf4_mpa",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_III_COLLECTED_IN_CSV1", "COC_ALREADY_COLLECTED", "SEER_ALREADY_COLLECTED" ]
@@ -170,7 +170,7 @@
     "key" : "ssf5",
     "name" : "Levels VI-VII and Facial Lymph Nodes for Head and Neck",
     "naaccr_item" : 2920,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf5_npa",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_III_COLLECTED_IN_CSV1", "COC_ALREADY_COLLECTED", "SEER_ALREADY_COLLECTED" ]
@@ -178,7 +178,7 @@
     "key" : "ssf6",
     "name" : "Parapharyngeal, Parotid, and Suboccipital/Retroauricular Lymph Nodes for Head and Neck",
     "naaccr_item" : 2930,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf6_opa",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_III_COLLECTED_IN_CSV1", "COC_ALREADY_COLLECTED", "SEER_ALREADY_COLLECTED" ]
@@ -200,7 +200,7 @@
     "key" : "ssf9",
     "name" : "Extracapsular Extension Pathologically, Lymph Nodes for Head and Neck",
     "naaccr_item" : 2863,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf9_spc",
     "used_for_staging" : false,
     "metadata" : [ "COC_CLINICALLY_SIGNIFICANT", "CCCR_II_ESSENTIAL_FOR_CLINICAL_DECISION", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -1217,5 +1217,5 @@
     } ]
   } ],
   "involved_tables" : [ "ssf7_spa", "ajcc6_exclusions_ppd", "ssf1_jpa", "ssf25_snt", "ssf15_snj", "ajcc7_t_codes", "ssf23_snr", "histology", "ssf6_opa", "ssf3_lpa", "ajcc6_stage_qpr", "cs_input_version_original", "mets_hpb", "ssf22_snq", "nodes_dcv", "lvi", "ajcc7_inclusions_tqn", "ssf14_sni", "ajcc_tdescriptor_cleanup", "ssf9_spc", "ajcc7_year_validation", "ssf21_snp", "ajcc7_stage_uqc", "schema_selection_parotid_gland", "ssf17_snl", "lymph_nodes_size_xpg", "ajcc_descriptor_codes", "ssf5_npa", "grade", "summary_stage_rpa", "ajcc7_m_codes", "ssf8_spb", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "ssf2_kpa", "ajcc6_t_codes", "extension_size_xpf", "nodes_pos_fpa", "ajcc_mdescriptor_cleanup", "ssf11_snf", "ss_codes", "nodes_exam_gpa", "ajcc6_n_codes", "size_aph", "behavior", "ssf10_sne", "ssf18_snm", "mets_eval_ipa", "extension_eval_cpa", "ajcc7_n_codes", "extension_bcv", "ssf4_mpa", "ajcc6_stage_codes", "ssf19_snn", "ajcc7_stage_codes", "ssf13_snh", "primary_site", "ajcc6_year_validation", "ajcc6_m_codes", "nodes_eval_epa", "cs_year_validation", "ssf24_sns", "ssf12_sng" ],
-  "last_modified" : "2015-08-25T16:44:26.975Z"
+  "last_modified" : "2016-01-28T18:55:53.957Z"
 }

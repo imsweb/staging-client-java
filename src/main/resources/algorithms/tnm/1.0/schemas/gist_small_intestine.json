@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "GIST Small Intestine",
   "title" : "Gastrointestinal Stromal Tumor of Small Intestine",
-  "notes" : "C170  Duodenum\nC171  Jejunum\nC172  Ileum (excludes ileocecal valve C180)\nC173  Meckel diverticulum (site of neoplasm)\nC178  Overlapping lesion of small intestine\nC179  Small intestine, NOS\n\n**Note:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Small Intestine* chapter on page 86 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C170  Duodenum\nC171  Jejunum\nC172  Ileum (excludes ileocecal valve C180)\nC173  Meckel diverticulum (site of neoplasm)\nC178  Overlapping lesion of small intestine\nC179  Small intestine, NOS\n\n**Note 1:** This schema is based on the UICC chapter *Gastrointestinal Stromal Tumour (GIST),* pages 78-81.\n* Primary sites C178 and C179 are not listed in this chapter of the UICC manual; however, they are included in this schema in and TNM stage.\n* Primary site C173 is not listed in this chapter of the UICC manual; however, it is included in this schema and not TNM staged (Summary Stage only).\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Small Intestine* chapter on page 86 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_gist_small_intestine",
   "inputs" : [ {
     "key" : "year_dx",
@@ -711,5 +711,5 @@
   } ],
   "involved_tables" : [ "ssf10_srh", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "tnm7_inclusions_tql", "tnm7_path_stage_gist_small_intestine_upy", "radiation_surg_seq", "nodes_dfb", "determine_default_m", "mets_hce", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "ssf7_sre", "parse_n_67182", "stage_group_p_82525", "determine_default_n", "clin_m_hce", "tnm7_stage_gist_small_intestine_upy", "combined_n_to_summ_stage_n_84054", "extension_bfd", "histology", "concatenate_m_40642", "combined_t_no_tis", "concatenate_t_51262", "ssf6_oph", "adjustments_for_no_clin_or_no_path_26261", "clin_t_gist_small_intestine_3299", "determine_combined_prefix_91402", "stage_group_c_86666", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "ssf9_srg", "parse_m_47057", "primary_site", "gist_small_intestine_t_83343", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "clin_n_gist_small_intestine_23294", "path_m_hce", "year_dx_validation", "gist_small_intestine_n_18642", "gist_esophagus_mitotic_rate_calculation", "summary_stage_rpa", "schema_selection_gist_small_intestine", "ssf8_srf" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-12T18:16:18.880Z"
+  "last_modified" : "2016-01-27T21:55:19.998Z"
 }

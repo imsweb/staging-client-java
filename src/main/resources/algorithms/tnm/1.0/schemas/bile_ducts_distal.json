@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Bile Ducts Distal",
   "title" : "Distal Bile Duct",
-  "notes" : "C240 Extrahepatic bile duct\n\n**Note:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Extrahepatic Bile Duct* chapter on page 112 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C240 Extrahepatic bile duct\n\n**Note 1:** This schema is based on the UICC chapter *Extrahepatic Bile Ducts-Distal,* pages 126-128.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Extrahepatic Bile Duct* chapter on page 112 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_bile_ducts_distal",
   "schema_discriminators" : [ "ssf25" ],
   "inputs" : [ {
@@ -707,5 +707,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "path_m_hcq", "clin_m_hcq", "radiation_surg_seq", "mets_hcq", "determine_default_m", "nodes_dfn", "ssf13_sqg", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "path_t_distal_bile_duct_50879", "parse_n_67182", "clin_n_dfn", "stage_group_c_82556", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "ssf12_sqf", "stage_group_p_89660", "combined_t_to_summ_stage_t_2_4e_re_93413", "extension_bfs", "behavior", "tnm7_inclusions_tpe", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "determine_combined_prefix_91402", "schema_selection_bile_ducts_distal", "distal_blie_duct_t_30646", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "discriminator_bile_ducts", "parse_m_47057", "tnm7_stage_ubm", "primary_site", "tnm7_path_stage_ubm", "ssf14_sqh", "combined_m", "combined_n", "path_n_dfn", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-12T18:16:21.523Z"
+  "last_modified" : "2016-01-27T22:33:36.485Z"
 }

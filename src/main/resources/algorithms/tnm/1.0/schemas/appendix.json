@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Appendix",
   "title" : "Carcinomas of the Appendix (excluding Carcinoid Tumor and Neuroendocrine Carcinoma)",
-  "notes" : "C181 Appendix\n\n**Note 1:** Carcinoid tumor and neuroendocrine carcinoma (histology codes 8153, 8240-8242, 8246, 8249) of the appendix are included in the \"CarcinoidAppendix\" schema.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Colon* chapter on page 94 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C181 Appendix\n\n**Note 1:** This schema is based on the UICC chapter *Appendix-Carcinoma,* pages 86-90.\n* Carcinoid tumor and neuroendocrine carcinoma (histology codes 8153, 8240-8242, 8246, 8249) of the appendix are included in the \"CarcinoidAppendix\" schema.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Colon* chapter on page 94 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_appendix",
   "inputs" : [ {
     "key" : "year_dx",
@@ -732,5 +732,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "appendix_grade_category_calculation", "mets_hcf", "parse_t_2177", "concatenate_n_43246", "ssf7_spf", "ssf1_jpf", "extension_bfg", "stage_group_p_96481", "ssf3_lpe", "combined_n_to_summ_stage_n_84054", "histology", "tnm7_path_stage_uar", "concatenate_m_40642", "tnm7_inclusions_tpc", "ssf10_spi", "concatenate_t_51262", "clin_m_hcf", "adjustments_for_no_clin_or_no_path_26261", "systemic_surg_seq", "parse_m_47057", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "path_m_hcf", "path_t_appendix_94760", "summary_stage_rpa", "combined_t", "path_n_dfc", "determine_default_t", "radiation_surg_seq", "ssf12_sbu", "nodes_dfc", "determine_default_m", "nodes_pos_fpa", "parse_n_67182", "determine_default_n", "behavior", "clin_t_appendix_24847", "tnm7_stage_uar", "ssf4_mpb", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "schema_selection_appendix", "ssf11_sbt", "primary_site", "year_dx_validation", "clin_n_dfc", "stage_group_c_37137" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-15T16:06:38.057Z"
+  "last_modified" : "2016-01-27T22:17:22.467Z"
 }

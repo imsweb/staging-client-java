@@ -161,7 +161,7 @@
     "key" : "ssf4",
     "name" : "Perineural Invasion",
     "naaccr_item" : 2910,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf4_maj",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -176,7 +176,7 @@
     "key" : "ssf6",
     "name" : "Adenoid Cystic Carcinoma - Presence of Basaloid Pattern",
     "naaccr_item" : 2930,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf6_oae",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -191,7 +191,7 @@
     "key" : "ssf8",
     "name" : "Orbital Bone",
     "naaccr_item" : 2862,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf8_sfk",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -327,6 +327,7 @@
     "key" : "ssf25",
     "name" : "Schema Discriminator: Lacrimal Gland/Lacrimal Sac",
     "naaccr_item" : 2879,
+    "default" : "015",
     "table" : "ssf25_spp",
     "used_for_staging" : true,
     "metadata" : [ "CCCR_ESSENTIAL_FOR_TNM_CLASSIFICATION", "NPCR_REQUIRED_2004_FORWARD" ]
@@ -1223,5 +1224,5 @@
     } ]
   } ],
   "involved_tables" : [ "ssf2_kax", "ajcc6_exclusions_ppd", "ajcc7_stage_unb", "ssf15_snj", "ajcc7_t_codes", "size_aan", "ssf23_snr", "nodes_dpa", "histology", "cs_input_version_original", "mets_hpc", "ssf22_snq", "lvi", "ssf14_sni", "schema_selection_lacrimal_gland", "ajcc_tdescriptor_cleanup", "ajcc6_stage_qnb", "ajcc7_year_validation", "ssf21_snp", "ajcc7_inclusions_tpb", "ssf17_snl", "ajcc_descriptor_codes", "ssf4_maj", "ssf25_spp", "grade", "summary_stage_rpa", "ajcc7_m_codes", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "ssf6_oae", "ssf3_lba", "ajcc6_t_codes", "nodes_pos_fpa", "ajcc_mdescriptor_cleanup", "ssf8_sfk", "ssf11_snf", "ss_codes", "nodes_exam_gpa", "ajcc6_n_codes", "behavior", "ssf1_jbj", "ssf10_sne", "extension_bct", "ssf18_snm", "mets_eval_ipa", "extension_eval_cpa", "ajcc7_n_codes", "ajcc6_stage_codes", "ssf19_snn", "ajcc7_stage_codes", "ssf9_snd", "ssf7_sbv", "ssf13_snh", "primary_site", "ajcc6_year_validation", "ajcc6_m_codes", "nodes_eval_epa", "extension_size_ajcc7_xej", "cs_year_validation", "ssf5_nah", "extension_size_ajcc6_xat", "ssf24_sns", "ssf12_sng" ],
-  "last_modified" : "2015-08-25T16:44:11.069Z"
+  "last_modified" : "2016-01-28T18:55:48.059Z"
 }

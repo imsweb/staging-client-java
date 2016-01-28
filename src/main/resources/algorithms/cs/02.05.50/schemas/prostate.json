@@ -147,7 +147,7 @@
     "key" : "ssf2",
     "name" : "Prostatic Specific Antigen (PSA) Interpretation",
     "naaccr_item" : 2890,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf2_kab",
     "used_for_staging" : false,
     "metadata" : [ "COC_CLINICALLY_SIGNIFICANT", "CCCR_II_ESSENTIAL_FOR_CLINICAL_DECISION", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -185,7 +185,7 @@
     "key" : "ssf7",
     "name" : "Gleason's Primary Pattern and Secondary Pattern Values on Needle Core Biopsy/Transurethral Resection of Prostate (TURP)",
     "naaccr_item" : 2861,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf7_saw",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_III_COLLECTED_IN_CSV1", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -193,7 +193,7 @@
     "key" : "ssf8",
     "name" : "Gleason's Score on Needle Core Biopsy/Transurethral Resection of Prostate (TURP)",
     "naaccr_item" : 2862,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf8_sax",
     "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED_WHEN_AVAILABLE_2011_FORWARD", "CCCR_ESSENTIAL_FOR_TNM_CLASSIFICATION" ]
@@ -201,7 +201,7 @@
     "key" : "ssf9",
     "name" : "Gleason's Primary Pattern and Secondary Pattern Values on Prostatectomy/Autopsy",
     "naaccr_item" : 2863,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf9_say",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_III_COLLECTED_IN_CSV1", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -209,7 +209,7 @@
     "key" : "ssf10",
     "name" : "Gleason's Score on Prostatectomy/Autopsy",
     "naaccr_item" : 2864,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf10_saz",
     "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED_WHEN_AVAILABLE_2011_FORWARD", "CCCR_ESSENTIAL_FOR_TNM_CLASSIFICATION" ]
@@ -225,7 +225,7 @@
     "key" : "ssf12",
     "name" : "Number of Cores Positive",
     "naaccr_item" : 2866,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf12_sbb",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -233,7 +233,7 @@
     "key" : "ssf13",
     "name" : "Number of Cores Examined",
     "naaccr_item" : 2867,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf13_sbc",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -1200,5 +1200,5 @@
     } ]
   } ],
   "involved_tables" : [ "ajcc7_inclusions_tpv", "ssf25_snt", "ajcc7_t_codes", "ssf23_snr", "extension_eval_6_cab", "schema_selection_prostate", "histology", "special_calculation_non_invasive_pathologic_extension_xdr_xdt_xdq", "ssf14_sbd", "cs_input_version_original", "extension_sstg_bbo", "extension_bbo", "ssf22_snq", "lvi", "ssf3_sstg_lab", "ajcc_tdescriptor_cleanup", "ssf3_lab", "ajcc7_year_validation", "ssf21_snp", "ssf4_maf", "ssf17_snl", "ajcc_descriptor_codes", "special_calculation_invasive_unknown_pathologic_extension_xds_xdu_xdq", "ajcc6_stage_qaj", "extension_eval_cab", "ssf15_sbe", "grade", "summary_stage_rpa", "ajcc7_m_codes", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "ajcc6_stage_qaj_grade", "mets_hal", "ssf6_oad", "ssf11_sba", "ajcc6_t_codes", "ssf1_jav", "nodes_pos_fpa", "ajcc_mdescriptor_cleanup", "ssf7_saw", "nodes_dbf", "ss_codes", "size_apa", "nodes_exam_gpa", "ajcc6_exclusions_pag", "ajcc6_n_codes", "behavior", "ssf10_saz", "mets_eval_ipb", "ssf18_snm", "ssf13_sbc", "ajcc7_n_codes", "ajcc6_stage_codes", "ssf19_snn", "ajcc7_stage_codes", "ssf9_say", "ajcc7_stage_ubp", "ssf12_sbb", "primary_site", "ajcc6_year_validation", "ssf2_kab", "determine_correct_table_for_t_ns28", "ajcc6_m_codes", "nodes_eval_epa", "ssf8_sax", "cs_year_validation", "ssf5_nae", "ssf24_sns" ],
-  "last_modified" : "2015-08-25T16:44:31.483Z"
+  "last_modified" : "2016-01-28T18:55:55.381Z"
 }

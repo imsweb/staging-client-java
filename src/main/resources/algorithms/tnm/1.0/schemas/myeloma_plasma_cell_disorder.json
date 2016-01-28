@@ -49,7 +49,7 @@
     "key" : "ssf2",
     "name" : "Durie-Salmon Staging System",
     "naaccr_item" : 2890,
-    "default" : "999",
+    "default" : "987",
     "table" : "ssf2_kbx",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -57,7 +57,7 @@
     "key" : "ssf3",
     "name" : "Multiple Myeloma Terminology",
     "naaccr_item" : 2900,
-    "default" : "999",
+    "default" : "987",
     "table" : "ssf3_lbb",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -132,5 +132,5 @@
   } ],
   "involved_tables" : [ "primary_site", "ssf2_kbx", "histology", "schema_selection_myeloma_plasma_cell_disorder", "ssf3_lbb", "year_dx_validation", "summary_stage_rpa", "mets_hna", "nodes_dfy", "extension_bgc" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-10T18:54:40.634Z"
+  "last_modified" : "2016-01-26T19:22:02.377Z"
 }

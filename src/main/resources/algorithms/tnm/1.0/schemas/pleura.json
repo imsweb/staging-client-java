@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Pleura",
   "title" : "Pleura (Including pleural mesothelioma)",
-  "notes" : "M-8000-9136,9141-9582,9700-9701 \nC384 Pleura, NOS\n\n**Note:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Pleura* chapter on page 160 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "M-8000-9136,9141-9582,9700-9701 \nC384 Pleura, NOS\n\n**Note 1:** This schema is based on the UICC chapter *Pleural Mesothelioma,* pages 147-150.\n* The TNM staging system applies only to pleural mesotheliomas. \n* Peritoneal and pericardial mesotheliomas are not TNM staged.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Pleura* chapter on page 160 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_pleura",
   "inputs" : [ {
     "key" : "year_dx",
@@ -714,5 +714,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "ssf1_jam", "radiation_surg_seq", "path_m_hat", "determine_default_m", "extension_bbx", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "clin_m_hat", "stage_group_c_4134", "determine_default_n", "schema_selection_pleura", "ssf3_lat", "ssf2_kbf", "histology", "concatenate_m_40642", "tnm7_path_stage_uaq", "mets_hat", "behavior", "tnm7_inclusions_tpf", "tnm7_stage_uaq", "concatenate_t_51262", "clin_t_pleura_24291", "adjustments_for_no_clin_or_no_path_26261", "stage_group_p_42915", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "ssf5_naw", "pleural_n_14342", "parse_m_47057", "nodes_dbq", "primary_site", "combined_n_to_summ_stage_n_n3_d_copy_68044", "pleura_t_20728", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "year_dx_validation", "summary_stage_rpa", "combined_t", "ssf4_maz", "clin_n_pleural_23905" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-12T18:16:13.836Z"
+  "last_modified" : "2016-01-28T15:32:56.933Z"
 }

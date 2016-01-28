@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Placenta",
   "title" : "Placenta",
-  "notes" : "C589  Placenta\n\n**Note 1:** This schema is based on the Gestational Trophoblastic Tumors chapter in the TNM 7th edition. \n\n**Note 2:** If a trophoblastic tumor is not associated with a pregnancy and arises in another site, such as ovary, use the primary site code and the appropriate TNM chapter.\n\n**Note 3:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Placenta* chapter on page 222 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C589  Placenta\n\n**Note 1:** This schema is based on the UICC chapter *Gestational Trophoblastic Tumours,* pages 232-236.\n\n**Note 2:** This classification applies to choriocarcinoma (9100/3). Placental site tumors should be reported separately. Histologic confirmation is not required if the human chorionic gonadotropin (BhCG) level is abnormally elevated.\n\n**Note 3:** If a trophoblastic tumor is not associated with a pregnancy and arises in another site, such as ovary, use the primary site code and the appropriate TNM chapter.\n\n**Note 4:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Placenta* chapter on page 222 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_placenta",
   "inputs" : [ {
     "key" : "year_dx",
@@ -85,13 +85,14 @@
     "key" : "ssf1",
     "name" : "Prognostic Scoring Index",
     "naaccr_item" : 2880,
+    "default" : "999",
     "table" : "ssf1_jaq",
     "used_for_staging" : true
   }, {
     "key" : "ssf2",
     "name" : "FIGO Stage",
     "naaccr_item" : 2890,
-    "default" : "999",
+    "default" : "988",
     "table" : "ssf2_kaw",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
@@ -547,5 +548,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "ssf2_kaw", "determine_default_t", "mets_hak", "tnm7_stage_uax", "radiation_surg_seq", "stage_group_c_20505", "summ_stage_n_if_no_n_defined_61314", "ssf1_jaq", "determine_default_m", "nodes_dfm", "clin_t_placenta_62001", "parse_t_2177", "stage_group_p_5079", "path_m_hak", "schema_selection_placenta", "histology", "placenta_t_12749", "concatenate_m_40642", "clin_m_hak", "combined_t_no_tis", "combined_t_to_summ_stage_t_2_4e_re_93413", "extension_bbm", "tnm7_path_stage_uax", "concatenate_t_51262", "stop_if_no_clin_and_no_path_placenta_53933", "tnm7_inclusions_tpi", "adjust_path_defaults_for_no_path_placenta_37763", "determine_combined_prefix_91402", "systemic_surg_seq", "parse_m_47057", "primary_site", "combined_m", "year_dx_validation", "summary_stage_rpa" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-12T18:16:23.269Z"
+  "last_modified" : "2016-01-28T15:37:07.327Z"
 }

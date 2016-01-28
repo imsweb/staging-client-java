@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Submandibular Gland",
   "title" : "Submandibular Gland",
-  "notes" : "C080  Submandibular gland\n\n**Note 1:**  Laterality must be coded for C080.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Parotid Gland, Other Major Salivary Glands* chapter on page 54 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C080  Submandibular gland\n\n**Note 1:** This schema is based on the UICC chapter *Major Salivary Glands,* pages 54-57.\n\n**Note 2:**  Laterality must be coded for C080.\n\n**Note 3:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Parotid Gland, Other Major Salivary Glands* chapter on page 54 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_submandibular_gland",
   "inputs" : [ {
     "key" : "year_dx",
@@ -733,5 +733,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "radiation_surg_seq", "tnm7_inclusions_tqn", "ssf1_jpa", "determine_default_m", "path_n_major_salivary_glands_7162", "stage_group_c_85588", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "determine_default_n", "schema_selection_submandibular_gland", "nodes_dar", "histology", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "combined_t_no_tis", "seer_mets_submandibular_77540", "combined_t_to_summ_stage_t_4b_4e_d_9381", "concatenate_t_51262", "submandibular_gland_t_42810", "adjustments_for_no_clin_or_no_path_26261", "ssf4_mpa", "ssf9_spc", "clin_t_submandibular_gland_45502", "extension_baz", "determine_combined_prefix_91402", "path_m_major_salivary_glands_13003", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "combined_n_to_summ_stage_n_headneck_temp_18777", "parse_m_47057", "primary_site", "clinical_n_major_salivary_glands_19191", "combined_m", "combined_n", "tnm7_path_stage_uqc", "ssf5_npa", "stage_group_p_54450", "year_dx_validation", "summary_stage_rpa", "ssf8_spb", "clin_m_major_salivary_glands_94644", "tnm7_stage_uqc" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-12T18:16:25.292Z"
+  "last_modified" : "2016-01-27T21:25:50.556Z"
 }

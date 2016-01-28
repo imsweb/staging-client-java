@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Lung",
   "title" : "Lung",
-  "notes" : "C340  Main bronchus\nC341  Upper lobe, lung\nC342  Middle lobe, lung\nC343  Lower lobe, lung\nC348  Overlapping lesion of lung\nC349  Lung, NOS\n\n**Note 1:**  Laterality must be coded for this site (except carina).\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Lung* chapter on page 154 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C340  Main bronchus\nC341  Upper lobe, lung\nC342  Middle lobe, lung\nC343  Lower lobe, lung\nC348  Overlapping lesion of lung\nC349  Lung, NOS\n\n**Note 1:** This schema is based on the UICC chapter *Lung,* pages 138-143.\n* Primary sites C348 and C349 are not listed in this chapter of the UICC manual; however, they are included in this schema and TNM staged if appropriate histology criteria are met.\n\n**Note 2:**  Laterality must be coded for this site (except carina).\n\n**Note 3:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Lung* chapter on page 154 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_lung",
   "inputs" : [ {
     "key" : "year_dx",
@@ -713,5 +713,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "stage_group_p_18837", "radiation_surg_seq", "determine_default_m", "mets_hab", "combined_t_to_summ_stage_t_3_3d_re_4_4e_d_45184", "select_stage_group_19580", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "determine_default_n", "clin_m_hab", "histology", "concatenate_m_40642", "path_n_dai", "combined_t_lung", "tnm7_inclusions_tpb", "behavior", "combined_n_lung", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "schema_selection_lung", "ssf1_sbh", "ssf2_sbi", "determine_combined_prefix_91402", "nodes_dai", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "clin_n_dai", "lung_t_86537", "parse_m_47057", "primary_site", "combined_n_to_summ_stage_n_n3_d_copy_68044", "combined_m", "clin_t_lung_28486", "path_m_hab", "tnm7_path_stage_ubq", "year_dx_validation", "extension_baj", "summary_stage_rpa", "lung_occult_stage_11131", "tnm7_stage_ubq", "stage_group_c_92535" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-15T14:10:16.523Z"
+  "last_modified" : "2016-01-28T18:42:08.131Z"
 }

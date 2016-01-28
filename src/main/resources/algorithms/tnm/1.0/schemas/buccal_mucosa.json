@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Buccal Mucosa",
   "title" : "Cheek (Buccal) Mucosa, Vestibule (excluding Malignant Melanoma)",
-  "notes" : "C060  Cheek mucosa\nC061  Vestibule of mouth\n\n**Note 1:** In ICD-O-3, C060 for buccal mucosa includes the membrane lining of the cheeks but not of the lips.\n(TNM includes labial mucosa with buccal mucosa.)\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Cheek (Buccal) Mucosa, Vestibule* chapter on page 48 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C060  Cheek mucosa\nC061  Vestibule of mouth\n\n**Note 1:** This schema is based on the UICC chapter *Lip and Oral Cavity,* pages 25-29.\n* In ICD-O-3, C060 for buccal mucosa includes the membrane lining of the cheeks but not of the lips.\n(TNM includes labial mucosa with buccal mucosa.)\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Cheek (Buccal) Mucosa, Vestibule* chapter on page 48 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_buccal_mucosa",
   "inputs" : [ {
     "key" : "year_dx",
@@ -171,7 +171,7 @@
     "key" : "ssf10",
     "name" : "Human Papilloma Virus (HPV) Status",
     "naaccr_item" : 2864,
-    "default" : "999",
+    "default" : "988",
     "table" : "ssf10_spd",
     "used_for_staging" : false
   }, {
@@ -754,5 +754,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "ssf10_spd", "ssf1_jpa", "path_m_hpb", "tnm7_stage_upt", "parse_t_2177", "concatenate_n_43246", "schema_selection_buccal_mucosa", "ssf11_spe", "combined_t_to_summ_stage_t_4_4e_d_99503", "histology", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "tnm7_inclusions_tpb", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "ssf9_spc", "nodes_dah", "systemic_surg_seq", "combined_n_to_summ_stage_n_headneck_temp_18777", "parse_m_47057", "combined_m", "combined_n", "ssf5_npa", "extension_bai", "summary_stage_rpa", "combined_t", "ssf8_spb", "determine_default_t", "clinical_n_head_neck_except_nasopharynx_25237", "radiation_surg_seq", "determine_default_m", "path_n_head_neck_except_nasopharynx_40357", "nodes_pos_fpa", "tnm7_path_stage_upt", "parse_n_67182", "determine_default_n", "stage_group_p_35702", "behavior", "seer_mets_buccal_mucosavs2_57393", "ssf4_mpa", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "buccal_mucosa_t_35895", "primary_site", "year_dx_validation", "stage_group_c_51542", "path_t_buccal_mucosa_7034" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-15T18:02:14.892Z"
+  "last_modified" : "2016-01-27T23:33:30.997Z"
 }

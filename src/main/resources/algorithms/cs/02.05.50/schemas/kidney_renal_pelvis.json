@@ -139,7 +139,7 @@
     "key" : "ssf1",
     "name" : "WHO/ISUP Grade",
     "naaccr_item" : 2880,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf1_jpd",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -1220,5 +1220,5 @@
     } ]
   } ],
   "involved_tables" : [ "ajcc6_exclusions_ppd", "ssf25_snt", "ssf1_jpd", "ssf2_kaj", "ssf15_snj", "ajcc7_t_codes", "ssf23_snr", "histology", "cs_input_version_original", "extension_bbn", "ssf22_snq", "mets_hpe", "lvi", "ssf14_sni", "ajcc_tdescriptor_cleanup", "ssf4_mna", "ajcc7_year_validation", "ssf21_snp", "ajcc7_inclusions_tpb", "ssf17_snl", "ajcc_descriptor_codes", "ajcc7_stage_upz", "grade", "summary_stage_rpa", "ajcc7_m_codes", "ajcc6_stage_qao", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "ajcc6_t_codes", "nodes_pos_fpa", "ajcc_mdescriptor_cleanup", "nodes_dbe", "ssf7_snb", "ssf11_snf", "ssf3_lna", "ss_codes", "ssf6_ona", "size_apa", "nodes_exam_gpa", "ajcc6_n_codes", "behavior", "ssf10_sne", "ssf18_snm", "mets_eval_ipa", "schema_selection_kidney_renal_pelvis", "extension_eval_cpa", "ajcc7_n_codes", "ajcc6_stage_codes", "ssf5_nna", "ssf19_snn", "ajcc7_stage_codes", "ssf9_snd", "ssf13_snh", "primary_site", "ajcc6_year_validation", "ajcc6_m_codes", "nodes_eval_epa", "cs_year_validation", "ssf24_sns", "ssf8_snc", "ssf12_sng" ],
-  "last_modified" : "2015-08-25T16:44:10.876Z"
+  "last_modified" : "2016-01-28T18:55:47.960Z"
 }

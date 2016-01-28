@@ -5,7 +5,7 @@
   "name" : "Stop if No Clin and No Path",
   "title" : "Stop if neither Clin nor Path were Captured",
   "notes" : "**Note:** We do not currently plan to accept records where Clin T, N, M, Stage Group, Path T, N M and Stage Group are all blank.   All Derived fields will be left blank.",
-  "last_modified" : "2016-01-08T07:01:36.176Z",
+  "last_modified" : "2016-01-26T16:18:53.245Z",
   "definition" : [ {
     "key" : "clin_t",
     "name" : "Clinical T",
@@ -76,5 +76,5 @@
     "type" : "ENDPOINT"
   } ],
   "extra_input" : [ "clin_stage_group_direct", "path_stage_group_direct" ],
-  "rows" : [ [ "", "", "", "", "", "", "", "", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "STOP" ], [ "", "", "", "*", "", "", "", "", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE: {{clin_stage_group_direct}}", "VALUE:", "STOP" ], [ "", "", "", "", "", "", "", "*", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE: {{path_stage_group_direct}}", "VALUE:", "STOP" ], [ "", "", "", "*", "", "", "", "*", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE: {{path_stage_group_direct}}", "VALUE:", "STOP" ], [ "*", "*", "*", "*", "*", "*", "*", "*", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH" ] ]
+  "rows" : [ [ "", "", "", "", "", "", "", "", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "STOP" ], [ "", "", "", "*", "", "", "", "", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE: {{clin_stage_group_direct}}", "VALUE:", "STOP" ], [ "", "", "", "", "", "", "", "*", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE: {{path_stage_group_direct}}", "VALUE:", "STOP" ], [ "", "", "", "99", "", "", "", "*", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE: {{path_stage_group_direct}}", "VALUE:", "STOP" ], [ "", "", "", "*", "", "", "", "99", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE: {{clin_stage_group_direct}}", "VALUE:", "STOP" ], [ "", "", "", "*", "", "", "", "*", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE: {{path_stage_group_direct}}", "VALUE:", "STOP" ], [ "*", "*", "*", "*", "*", "*", "*", "*", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH" ] ]
 }

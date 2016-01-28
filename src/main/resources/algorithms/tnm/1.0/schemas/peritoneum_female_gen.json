@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Peritoneum Female Gen",
   "title" : "Peritoneum for Females Only",
-  "notes" : "C481 Specified parts of peritoneum (including omentum and mesentery)\nC482 Peritoneum, NOS\nC488 Overlapping lesion of retroperitoneum and peritoneum\n\n**Note 1:** TNM only stages the carcinomas.\n\n**Note 2:**  TNM values correspond to the stages accepted by the Federation Internationale de Gynecologic et d'Obstetrique (FIGO).  Note that FIGO uses a single stage value which corresponds to different groupings of T, N, and M values.\n\n**Note 3:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Retroperitoneum & Peritoneum* chapter on page 188 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C481 Specified parts of peritoneum (including omentum and mesentery)\nC482 Peritoneum, NOS\nC488 Overlapping lesion of retroperitoneum and peritoneum\n\n**Note 1:** This schema is based on the UICC chapter *Ovary,* pages 222-225.\n* Primary sites C481, C482 and C488 are not listed in this chapter of the UICC manual; however, they are included in this schema and TNM staged if appropriate histology criteria are met.\n* TNM only stages the carcinomas for females.\n\n**Note 2:**  TNM values correspond to the stages accepted by the Federation Internationale de Gynecologic et d'Obstetrique (FIGO).  Note that FIGO uses a single stage value which corresponds to different groupings of T, N, and M values.\n\n**Note 3:** The FIGO stages are based on surgical staging. (TNM stages are based on clinical and/or pathologic classification). \n\n**Note 4:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Retroperitoneum & Peritoneum* chapter on page 188 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_peritoneum_female_gen",
   "schema_discriminators" : [ "sex" ],
   "inputs" : [ {
@@ -135,14 +135,14 @@
     "key" : "ssf5",
     "name" : "Malignant Ascites",
     "naaccr_item" : 2920,
-    "default" : "999",
+    "default" : "988",
     "table" : "ssf5_npl",
     "used_for_staging" : false
   }, {
     "key" : "sex",
     "name" : "Sex",
     "naaccr_item" : 220,
-    "default" : "2",
+    "default" : "9",
     "table" : "sex_19563",
     "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -717,5 +717,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "ssf3_lpt", "radiation_surg_seq", "extension_bfx", "determine_default_m", "clin_n_dfs", "clin_t_peritoneum_female_gen_47507", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "clin_m_hcw", "parse_n_67182", "determine_default_n", "stage_group_p_8706", "peritoneumfemalegen_t_87084", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "sex_19563", "path_m_hcw", "ssf2_kpn", "ssf1_jpr", "combined_t_no_tis", "mets_hcw", "concatenate_t_51262", "combined_t_to_summ_stage_t_3b_4e_re_50371", "adjustments_for_no_clin_or_no_path_26261", "ssf5_npl", "tnm7_stage_uby", "determine_combined_prefix_91402", "stage_group_c_42843", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "path_n_dfs", "schema_selection_peritoneum_female_gen", "combined_m", "combined_n", "ssf4_mpr", "tnm7_inclusions_tqa", "nodes_dfs", "year_dx_validation", "summary_stage_rpa", "tnm7_path_stage_uby" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-12T18:16:14.105Z"
+  "last_modified" : "2016-01-28T18:15:30.900Z"
 }

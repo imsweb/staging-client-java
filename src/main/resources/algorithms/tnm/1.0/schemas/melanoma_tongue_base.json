@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Melanoma Tongue Base",
   "title" : "Malignant Melanoma of Base of Tongue and Lingual Tonsil",
-  "notes" : "C019 Base of tongue, NOS\nC024 Lingual tonsil\n\n**Note:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Base of Tongue, Lingual Tonsil* chapter on page 36 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C019 Base of tongue, NOS\nC024 Lingual tonsil\n\n**Note 1:** This schema is based on the UICC chapter *Malignant Melanoma of Upper Aerodigestive Tract,* pages 51-53.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Base of Tongue, Lingual Tonsil* chapter on page 36 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_melanoma_tongue_base",
   "inputs" : [ {
     "key" : "year_dx",
@@ -748,5 +748,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "cpmbined_m_to_summ_stage_m_60564", "ssf10_spd", "stage_group_p_21201", "tnm7_stage_upu", "parse_t_2177", "concatenate_n_43246", "clin_m_hpd", "schema_selection_melanoma_tongue_base", "ssf11_spe", "histology", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "path_m_hpd", "tnm7_inclusions_tpa", "ssf1_jpu", "combined_t_to_summ_stage_t_4b_4e_d_9381", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "nodes_dea", "ssf9_spc", "systemic_surg_seq", "combined_n_to_summ_stage_n_headneck_temp_18777", "extension_bef", "parse_m_47057", "combined_m", "clinical_n_head_neck_melanoma_66648", "combined_n", "ssf5_npa", "summary_stage_rpa", "ssf8_spb", "determine_default_t", "radiation_surg_seq", "determine_default_m", "tnm7_path_stage_upu", "nodes_pos_fpa", "stage_group_c_63552", "parse_n_67182", "determine_default_n", "combined_t_no_tis", "seer_mets_melanoma_tongue_base_40789", "pathologic_n_head_neck_melanoma_copy_75380", "melanoma_tongue_base_60314", "ssf4_mpa", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "clin_t_melanoma_tongue_base_6605", "primary_site", "year_dx_validation" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-12T18:16:28.379Z"
+  "last_modified" : "2016-01-27T21:41:03.908Z"
 }

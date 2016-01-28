@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "GIST Stomach",
   "title" : "Gastrointestinal Stromal Tumor of Stomach",
-  "notes" : "C160 Cardia of stomach\nC161  Fundus of stomach\nC162  Body of stomach\nC163  Gastric antrum\nC164  Pylorus\nC165  Lesser curvature of stomach, NOS\nC166  Greater curvature of stomach, NOS\nC168  Overlapping lesion of stomach\nC169  Stomach, NOS\n\n**Note:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Stomach* chapter on page 80 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C160 Cardia of stomach\nC161  Fundus of stomach\nC162  Body of stomach\nC163  Gastric antrum\nC164  Pylorus\nC165  Lesser curvature of stomach, NOS\nC166  Greater curvature of stomach, NOS\nC168  Overlapping lesion of stomach\nC169  Stomach, NOS\n\n**Note 1:** This schema is based on the UICC chapter *Gastrointestinal Stromal Tumour (GIST),* pages 78-81.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Stomach* chapter on page 80 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_gist_stomach",
   "inputs" : [ {
     "key" : "year_dx",
@@ -711,5 +711,5 @@
   } ],
   "involved_tables" : [ "ssf10_srh", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "clin_t_gist_stomach_46079", "path_n_dfa", "tnm_7_stage_group_gist_stomach_36358", "radiation_surg_seq", "nodes_dfa", "determine_default_m", "mets_hcd", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "ssf7_sre", "parse_n_67182", "determine_default_n", "clin_m_hcd", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "combined_t_no_tis", "concatenate_t_51262", "ssf6_oph", "adjustments_for_no_clin_or_no_path_26261", "tnm7_inclusions_tpo", "determine_combined_prefix_91402", "gist_stomach_n_73991", "extension_bfc", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "ssf9_srg", "stage_group_c_32742", "parse_m_47057", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "path_m_hcd", "combined_n", "gist_stomach_t_60871", "schema_selection_gist_stomach", "year_dx_validation", "gist_esophagus_mitotic_rate_calculation", "summary_stage_rpa", "ssf8_srf", "stage_group_p_71358", "tnm7_path_stage_group_gist_stomach_36358" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-12T18:16:18.618Z"
+  "last_modified" : "2016-01-27T21:55:48.520Z"
 }

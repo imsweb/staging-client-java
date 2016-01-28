@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Kidney Parenchyma",
   "title" : "Kidney (Renal Parenchyma)",
-  "notes" : "C649  Kidney, NOS (Renal parenchyma)\n\n**Note 1:**  Laterality must be coded for this site.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Kidney* chapter on page 242 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C649  Kidney, NOS (Renal parenchyma)\n\n**Note 1:** This schema is based on the UICC chapter *Kidney* pages 255-257.\n\n**Note 2:**  Laterality must be coded for this site.\n\n**Note 3:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Kidney* chapter on page 242 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_kidney_parenchyma",
   "inputs" : [ {
     "key" : "year_dx",
@@ -119,7 +119,7 @@
     "key" : "ssf3",
     "name" : "Ipsilateral Adrenal Gland Involvement",
     "naaccr_item" : 2900,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf3_lah",
     "used_for_staging" : false,
     "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -733,5 +733,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "ssf6_oaf", "extension_bbp", "radiation_surg_seq", "ssf2_kar", "determine_default_m", "path_m_hcg", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "mets_hcg", "parse_n_67182", "nodes_dbg", "determine_default_n", "clin_t_kidney_parenchyma_9887", "combined_n_to_summ_stage_n_84054", "histology", "kidney_n_42919", "concatenate_m_40642", "tnm7_inclusions_tpb", "ssf8_sby", "ssf1_jbd", "tnm7_path_stage_uaw", "combined_t_no_tis", "clin_n_kidney_parenchyma_9806", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "tnm7_stage_uaw", "ssf3_lah", "clin_m_hcg", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "ssf4_mam", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "ssf7_sbx", "systemic_surg_seq", "stage_group_p_45269", "parse_m_47057", "primary_site", "combined_m", "combined_n", "year_dx_validation", "summary_stage_rpa", "stage_group_c_14599", "kidney_parenchyma_t_48027", "ssf5_nai", "schema_selection_kidney_parenchyma" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-12T18:16:18.157Z"
+  "last_modified" : "2016-01-27T23:36:27.392Z"
 }

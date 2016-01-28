@@ -139,7 +139,7 @@
     "key" : "ssf1",
     "name" : "Associated with HIV/AIDS",
     "naaccr_item" : 2880,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf1_jpj",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_III_COLLECTED_IN_CSV1", "COC_ALREADY_COLLECTED", "SEER_ALREADY_COLLECTED" ]
@@ -1144,5 +1144,5 @@
     } ]
   } ],
   "involved_tables" : [ "size_aaf", "ssf25_snt", "ssf3_lph", "ssf15_snj", "ajcc7_t_codes", "ssf23_snr", "ssf1_jpj", "histology", "cs_input_version_original", "nodes_exam_gna", "ssf22_snq", "lvi", "ssf14_sni", "ajcc_tdescriptor_cleanup", "ajcc7_year_validation", "schema_selection_lymphoma", "ssf21_snp", "ssf5_npe", "ssf17_snl", "ajcc_descriptor_codes", "extension_eval_caf", "mets_eval_iaa", "nodes_pos_fna", "grade", "summary_stage_rpa", "ajcc7_m_codes", "ajcc7_inclusions_tpr", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "ssf2_kpg", "ajcc6_t_codes", "nodes_eval_eaf", "ajcc_mdescriptor_cleanup", "ssf7_snb", "ssf11_snf", "ss_codes", "ssf6_ona", "ajcc6_n_codes", "mets_hna", "behavior", "nodes_dna", "ssf10_sne", "ssf18_snm", "ajcc7_n_codes", "ajcc7_stage_ubw", "ajcc6_stage_codes", "ajcc6_stage_qpo", "ssf19_snn", "ajcc7_stage_codes", "ssf9_snd", "ssf13_snh", "primary_site", "ajcc6_year_validation", "extension_bch", "ajcc6_m_codes", "cs_year_validation", "ssf4_mpd", "ssf24_sns", "ssf8_snc", "ssf12_sng" ],
-  "last_modified" : "2015-08-25T16:44:13.356Z"
+  "last_modified" : "2016-01-28T18:55:49.410Z"
 }

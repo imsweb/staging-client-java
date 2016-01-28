@@ -161,7 +161,7 @@
     "key" : "ssf4",
     "name" : "Number of Positive Pelvic Nodes",
     "naaccr_item" : 2910,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf4_mav",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -169,7 +169,7 @@
     "key" : "ssf5",
     "name" : "Number of Examined Pelvic Nodes",
     "naaccr_item" : 2920,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf5_nas",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -177,7 +177,7 @@
     "key" : "ssf6",
     "name" : "Number of Positive Para-Aortic Nodes",
     "naaccr_item" : 2930,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf6_oap",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -185,7 +185,7 @@
     "key" : "ssf7",
     "name" : "Number of Examined Para-Aortic Nodes",
     "naaccr_item" : 2861,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf7_sde",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -1218,5 +1218,5 @@
     } ]
   } ],
   "involved_tables" : [ "ajcc6_exclusions_ppd", "ssf25_snt", "ssf15_snj", "ajcc7_t_codes", "ssf23_snr", "histology", "ssf2_kbc", "cs_input_version_original", "extension_bbh", "ssf22_snq", "lvi", "ssf14_sni", "ajcc_tdescriptor_cleanup", "ajcc7_year_validation", "ssf21_snp", "ajcc7_inclusions_tpb", "ssf17_snl", "ajcc_descriptor_codes", "ssf7_sde", "schema_selection_fallopian_tube", "grade", "ajcc6_stage_qac", "summary_stage_rpa", "ssf4_mav", "ajcc7_m_codes", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "mets_hai", "ssf6_oap", "ajcc6_t_codes", "nodes_pos_fpa", "ajcc_mdescriptor_cleanup", "ssf11_snf", "ss_codes", "size_apa", "nodes_exam_gpa", "ssf3_laq", "ajcc6_n_codes", "nodes_daz", "behavior", "lymph_nodes_metsat_dxajcc6_xfm", "ssf10_sne", "ssf18_snm", "mets_eval_ipa", "extension_eval_cpa", "ajcc7_n_codes", "ssf1_jbp", "ajcc6_stage_codes", "ssf5_nas", "ssf19_snn", "ajcc7_stage_codes", "ssf9_snd", "ssf13_snh", "primary_site", "ajcc6_year_validation", "ajcc6_m_codes", "nodes_eval_epa", "cs_year_validation", "ssf24_sns", "ssf8_snc", "ssf12_sng", "ajcc7_stage_ubb" ],
-  "last_modified" : "2015-08-25T16:44:06.108Z"
+  "last_modified" : "2016-01-28T18:55:46.733Z"
 }

@@ -50,7 +50,7 @@
     "key" : "ssf25",
     "name" : "Schema Discriminator: Lacrimal Gland/Lacrimal Sac",
     "naaccr_item" : 2879,
-    "default" : "025",
+    "default" : "015",
     "table" : "discriminator_lacrimal",
     "used_for_staging" : true,
     "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
@@ -125,5 +125,5 @@
   } ],
   "involved_tables" : [ "primary_site", "discriminator_lacrimal", "seer_mets_lacrimal_sac_97972", "extension_btb", "histology", "year_dx_validation", "seer_regional_nodes_lacrimal_sac_33881", "summary_stage_rpa", "schema_selection_lacrimal_sac" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2015-12-12T14:39:35.164Z"
+  "last_modified" : "2016-01-22T12:33:13.969Z"
 }

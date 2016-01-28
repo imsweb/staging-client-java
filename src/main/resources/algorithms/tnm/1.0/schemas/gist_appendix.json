@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "GIST Appendix",
   "title" : "Gastrointestinal Stromal Tumor of Appendix",
-  "notes" : "**Note:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Colon* chapter on page 94 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "**Note 1:** This schema is based on the UICC chapter *Gastrointestinal Stromal Tumour (GIST),* pages 78-81.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Colon* chapter on page 94 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_gist_appendix",
   "inputs" : [ {
     "key" : "year_dx",
@@ -711,5 +711,5 @@
   } ],
   "involved_tables" : [ "nodes_dfd", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "tnm7_path_stage_gist_small_intestine_upy", "radiation_surg_seq", "ssf15_spo", "ssf11_spk", "path_m_hch", "determine_default_m", "gist_appendix_t_67124", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "mets_hch", "parse_n_67182", "stage_group_p_82525", "determine_default_n", "tnm7_stage_gist_small_intestine_upy", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "extension_bfh", "combined_t_no_tis", "clin_t_gist_appendix_41981", "ssf14_spn", "clin_m_hch", "concatenate_t_51262", "ssf13_spm", "adjustments_for_no_clin_or_no_path_26261", "gist_appendix_mitotic_rate_calculation", "tnm7_inclusions_tpo", "determine_combined_prefix_91402", "clin_n_gist_appendix_93665", "stage_group_c_86666", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "schema_selection_gist_appendix", "parse_m_47057", "primary_site", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "year_dx_validation", "summary_stage_rpa", "gist_appendix_n_87661", "ssf12_spl" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-12T18:16:19.738Z"
+  "last_modified" : "2016-01-27T21:50:50.476Z"
 }
