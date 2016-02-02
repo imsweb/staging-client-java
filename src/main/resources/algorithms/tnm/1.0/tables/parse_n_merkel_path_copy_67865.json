@@ -5,8 +5,8 @@
   "name" : "Parse N Merkel (path)",
   "title" : "Parse N",
   "description" : "With the addition of the c and p prefixes to the existing codes, the prefix must be parsed from the main value during calculations.  It will be retained for the combined value.  This will have no impact on the stored value and is solely a temporary state.",
-  "notes" : "**Note:** For the Merkel schemas and Melanoma Skin, the stage derivation depends on the N prefix. Therefore, the prefix will be defaulted to match the field (c for Clin N and p for Path N) in the absence of a specific prefix.",
-  "last_modified" : "2015-11-30T18:56:22.921Z",
+  "notes" : "**Note:** For the Merkel schemas, the stage derivation depends on the N prefix. Therefore, the prefix will be defaulted to match the field (c for Clin N and p for Path N) in the absence of a specific prefix.",
+  "last_modified" : "2016-02-02T16:49:04.616Z",
   "definition" : [ {
     "key" : "n",
     "name" : "N",

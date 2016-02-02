@@ -117,6 +117,7 @@
     "name" : "Age at Diagnosis",
     "naaccr_item" : 230,
     "default" : "999",
+    "table" : "age_at_diagnosis_validation_65093",
     "used_for_staging" : true
   }, {
     "key" : "clin_stage_group_direct",
@@ -326,11 +327,11 @@
         "from" : "source_n_out",
         "to" : "source_n"
       }, {
-        "from" : "clin_n_out",
-        "to" : "tmp_clin_n"
-      }, {
         "from" : "combined_n_out",
         "to" : "tmp_combined_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
@@ -688,7 +689,7 @@
       "outputs" : [ "ss2017" ]
     } ]
   } ],
-  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "combined_t_to_summ_stage_t_thyroid_68736", "tnm_7_path_stage_thyroid_papillary_and_follicular_age_45_and_older_71342", "extension_bby", "parse_t_2177", "thyroid_anaplastic_74409", "concatenate_n_43246", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "thyroid_t_6166", "histologies_grade_stage_tnm_7_20594", "tnm7_inclusions_tpb", "concatenate_t_51262", "determine_default_t_anaplastic_77806", "adjustments_for_no_clin_or_no_path_26261", "thyroid_ajcctnm7_stage_thyroid_papillaryand_follicular_lessthan_45", "stage_group_p_39380", "path_m_hbf", "thyroid_ajcctnm7_stage_thyroid_papillaryand_follicular_age45and_older", "mets_hbf", "systemic_surg_seq", "parse_m_47057", "combined_m", "combined_n", "grade", "summary_stage_rpa", "path_n_dbr", "stage_group_c_30166", "tnm_7_path_stage_thyroid_anaplastic_79873", "determine_default_t", "ssf1_jap", "radiation_surg_seq", "tnm_7_path_stage_thyroid_papillary_and_follicular_age_less_than_45_95553", "tnm_7_path_stage_thyroid_medullary_77691", "determine_default_m", "schema_selection_thyroid", "nodes_pos_fpa", "parse_n_67182", "determine_default_n", "thyroid_ajcctnm7_stage_thyroid_medullary", "clin_n_dbr", "combined_t_no_tis", "histologies_grade_path_stage_tnm_7_37149", "determine_combined_prefix_91402", "thyroid_ajcctnm7_stage_thyroid_anaplastic", "stop_if_no_clin_and_no_path_24035", "primary_site", "nodes_dbr", "clin_t_thyroid_93682", "year_dx_validation", "clin_m_hbf" ],
+  "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "combined_t_to_summ_stage_t_thyroid_68736", "tnm_7_path_stage_thyroid_papillary_and_follicular_age_45_and_older_71342", "extension_bby", "parse_t_2177", "thyroid_anaplastic_74409", "concatenate_n_43246", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "thyroid_t_6166", "histologies_grade_stage_tnm_7_20594", "tnm7_inclusions_tpb", "age_at_diagnosis_validation_65093", "concatenate_t_51262", "determine_default_t_anaplastic_77806", "adjustments_for_no_clin_or_no_path_26261", "thyroid_ajcctnm7_stage_thyroid_papillaryand_follicular_lessthan_45", "stage_group_p_39380", "path_m_hbf", "thyroid_ajcctnm7_stage_thyroid_papillaryand_follicular_age45and_older", "mets_hbf", "systemic_surg_seq", "parse_m_47057", "combined_m", "combined_n", "grade", "summary_stage_rpa", "path_n_dbr", "stage_group_c_30166", "tnm_7_path_stage_thyroid_anaplastic_79873", "determine_default_t", "ssf1_jap", "radiation_surg_seq", "tnm_7_path_stage_thyroid_papillary_and_follicular_age_less_than_45_95553", "tnm_7_path_stage_thyroid_medullary_77691", "determine_default_m", "schema_selection_thyroid", "nodes_pos_fpa", "parse_n_67182", "determine_default_n", "thyroid_ajcctnm7_stage_thyroid_medullary", "clin_n_dbr", "combined_t_no_tis", "histologies_grade_path_stage_tnm_7_37149", "determine_combined_prefix_91402", "thyroid_ajcctnm7_stage_thyroid_anaplastic", "stop_if_no_clin_and_no_path_24035", "primary_site", "nodes_dbr", "clin_t_thyroid_93682", "year_dx_validation", "clin_m_hbf" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-27T21:42:21.029Z"
+  "last_modified" : "2016-02-02T16:40:11.003Z"
 }
