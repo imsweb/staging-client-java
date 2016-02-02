@@ -250,7 +250,7 @@ public class TnmStagingTest extends StagingTest {
         data.setInput(TnmStagingData.TnmInput.PRIMARY_SITE, "C680");
         data.setInput(TnmStagingData.TnmInput.HISTOLOGY, "8000");
         data.setInput(TnmStagingData.TnmInput.BEHAVIOR, "3");
-        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "2015");
+        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "2016");
         data.setInput(TnmStagingData.TnmInput.RX_SUMM_SURGERY, "2");
         data.setInput(TnmStagingData.TnmInput.RX_SUMM_RADIATION, "4");
         data.setInput(TnmStagingData.TnmInput.REGIONAL_NODES_POSITIVE, "02");
@@ -366,7 +366,7 @@ public class TnmStagingTest extends StagingTest {
         Assert.assertFalse(_STAGING.isCodeValid("urethra", "year_dx", "200"));
         Assert.assertFalse(_STAGING.isCodeValid("urethra", "year_dx", "2003"));
         Assert.assertFalse(_STAGING.isCodeValid("urethra", "year_dx", "2145"));
-        Assert.assertTrue(_STAGING.isCodeValid("urethra", "year_dx", "2015"));
+        Assert.assertTrue(_STAGING.isCodeValid("urethra", "year_dx", "2016"));
 
         // test valid and invalid fields
         Assert.assertTrue(_STAGING.isCodeValid("urethra", "seer_primary_tumor", "100"));
@@ -379,10 +379,10 @@ public class TnmStagingTest extends StagingTest {
     public void testIsContextValid() {
         TnmStagingData data = new TnmStagingData();
 
-        data.setInput(Staging.CTX_YEAR_CURRENT, "2015");
+        data.setInput(Staging.CTX_YEAR_CURRENT, "2016");
 
         // test valid year
-        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "2015");
+        data.setInput(TnmStagingData.TnmInput.DX_YEAR, "2016");
         Assert.assertTrue(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
 
         // test invalid year

@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "Age at Diagnosis Validation",
   "title" : "Age at Diagnosis Validation",
-  "last_modified" : "2016-01-04T19:50:19.170Z",
+  "last_modified" : "2016-02-02T18:08:31.736Z",
   "definition" : [ {
-    "key" : "age_at_Dx",
+    "key" : "age_dx",
     "name" : "Age At Diagnosis",
     "type" : "INPUT"
   }, {
