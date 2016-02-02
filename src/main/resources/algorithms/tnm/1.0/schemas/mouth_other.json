@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Mouth Other",
   "title" : "Other Mouth (excluding Malignant Melanoma)",
-  "notes" : "C058  Overlapping lesion of palate\nC059  Palate, NOS\nC068  Overlapping lesion of other and unspecified parts of mouth\nC069  Mouth, NOS\n\n**Note 1:** This schema is based on the UICC chapter *Lip and Oral Cavity,* pages 25-29.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Other Mouth* chapter on page 50 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C058  Overlapping lesion of palate\nC059  Palate, NOS\nC068  Overlapping lesion of other and unspecified parts of mouth\nC069  Mouth, NOS\n\n**Note 1:** This schema is based on the UICC chapter *Lip and Oral Cavity,* pages 25-29.\n* Primary sites C058, C059, C068, and C069 are not listed in this chapter of the UICC manual; however, they are included in this schema and TNM staged if appropriate histology criteria are met.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Other Mouth* chapter on page 50 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_mouth_other",
   "inputs" : [ {
     "key" : "year_dx",
@@ -390,11 +390,11 @@
         "from" : "source_n_out",
         "to" : "source_n"
       }, {
-        "from" : "combined_n_out",
-        "to" : "tmp_combined_n"
-      }, {
         "from" : "clin_n_out",
         "to" : "tmp_clin_n"
+      }, {
+        "from" : "combined_n_out",
+        "to" : "tmp_combined_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
@@ -754,5 +754,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "ssf10_spd", "seer_regional_nodes_mouthother_27091", "ssf1_jpa", "path_m_hpb", "tnm7_stage_upt", "parse_t_2177", "concatenate_n_43246", "schema_selection_mouth_other", "ssf11_spe", "combined_t_to_summ_stage_t_4_4e_d_99503", "histology", "mouth_other_t_88942", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "tnm7_inclusions_tpb", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "ssf9_spc", "systemic_surg_seq", "combined_n_to_summ_stage_n_headneck_temp_18777", "parse_m_47057", "combined_m", "extension_baf", "combined_n", "ssf5_npa", "summary_stage_rpa", "combined_t", "ssf8_spb", "determine_default_t", "clinical_n_head_neck_except_nasopharynx_25237", "radiation_surg_seq", "determine_default_m", "path_n_head_neck_except_nasopharynx_40357", "nodes_pos_fpa", "tnm7_path_stage_upt", "parse_n_67182", "determine_default_n", "seer_mets_mouthothervs2_65015", "stage_group_p_35702", "behavior", "clin_t_mouth_other_28324", "ssf4_mpa", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "primary_site", "year_dx_validation", "stage_group_c_51542" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-27T20:57:22.982Z"
+  "last_modified" : "2016-01-30T10:45:55.165Z"
 }

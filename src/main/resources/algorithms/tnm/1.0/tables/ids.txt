@@ -1199,8 +1199,6 @@ path_m_hcd
 extension_beo
 ssf5_nak
 ssf4_mal
-stage_group_c_14599
-stage_group_p_45269
 stage_group_p_74045
 ssf2_kpc
 tnm7_stage_uqb
@@ -1218,6 +1216,7 @@ clin_m_haf
 ssf1_jce
 seer_mets_anus_24893
 path_n_dab
+stage_group_c_14599
 clin_n_dab
 clin_t_mouth_other_28324
 gist_stomach_t_60871
@@ -1251,6 +1250,7 @@ path_m_hcp
 mets_hag
 path_m_hag
 ssf16_sdn
+stage_group_p_45269
 ssf17_spu
 ssf16_spt
 tnm7_stage_upx
@@ -1802,6 +1802,6 @@ tnm_7_combined_stage_group_69346
 clin_n_dbt
 determine_default_t_anaplastic_77806
 tnm_7_combined_stage_group_55778
-tnm_7_combined_stage_group_38789
 stop_if_no_clin_and_no_path_24035
 lymphoma_path_stage_group_detailed_88547
+tnm_7_combined_stage_group_48585

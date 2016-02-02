@@ -5,7 +5,7 @@
   "name" : "Stage Group (p)",
   "title" : "TNM 7 Stage Group",
   "notes" : "**Note:** The Stage Groups displayed are the enhanced UICC groups.  If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC manual to ensure you are using the appropriate logic.",
-  "last_modified" : "2016-01-15T17:41:00.027Z",
+  "last_modified" : "2016-01-28T22:05:31.509Z",
   "definition" : [ {
     "key" : "path_stage_group_direct",
     "name" : "Stage",
@@ -28,8 +28,8 @@
     "type" : "DESCRIPTION"
   }, {
     "key" : "clin_path",
-    "name" : "Clinical or Pathologic",
+    "name" : "N Prefix (c or p)",
     "type" : "DESCRIPTION"
   } ],
-  "rows" : [ [ "0 ", "0  ", "Tis  ", "N0,X", "M0", "" ], [ "1A", "IA", "T1   ", "N0  ", "M0", "Pathologic" ], [ "1B", "IB ", "T1   ", "N0  ", "M0", "Clinical  " ], [ "2A", "IIA", "T2,3 ", "N0  ", "M0", "Pathologic" ], [ "2B", "IIB", "T2,3 ", "N0  ", "M0", "Clinical  " ], [ "2C", "IIC", "T4", "N0  ", "M0", "" ], [ "3 ", "III", "Any T", "N1", "M0\n", "Pathologic" ], [ "3A", "IIIA", "Any T", "N1a  ", "M0      ", "Pathologic" ], [ "3B", "IIIB", "Any T\nAny T", "N1,1a\nN1b,2", "M0  \nM0", "Clinical\nBoth" ], [ "4", "IV", "Any T", "Any N", "M1,1a-1c", "" ], [ "99", "Unknown", "T0\nT0-4\nTX", "N0\nNX  \nN0,X", "M0\nM0\nM0", "" ] ]
+  "rows" : [ [ "0 ", "0  ", "Tis  ", "N0,X", "M0", "" ], [ "1A", "IA", "T1   ", "N0  ", "M0", "Pathologic" ], [ "1B", "IB ", "T1   ", "N0  ", "M0", "Clinical  " ], [ "2A", "IIA", "T2,3 ", "N0  ", "M0", "Pathologic" ], [ "2B", "IIB", "T2,3 ", "N0  ", "M0", "Clinical  " ], [ "2C", "IIC", "T4", "N0  ", "M0", "" ], [ "3 ", "III", "Any T", "N1", "M0\n", "" ], [ "3A", "IIIA", "Any T", "N1a  ", "M0      ", "" ], [ "3B", "IIIB", "Any T", "N1b,2", "M0", "" ], [ "4", "IV", "Any T", "Any N", "M1,1a-1c", "" ], [ "99", "Unknown", "T0\nT0-4\nTX", "N0\nNX  \nN0,X", "M0\nM0\nM0", "" ] ]
 }

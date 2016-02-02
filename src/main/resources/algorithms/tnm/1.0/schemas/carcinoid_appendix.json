@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Carcinoid Appendix",
   "title" : "Carcinoid Tumor and Neuroendocrine Carcinoma of Appendix",
-  "notes" : "C181 Appendix\n\n**Note 1:** This schema is based on the UICC chapter *Appendix-Carcinoid,* pages 91-93.\n* This schema is also used for neuroendocrine carcinoma and malignant gastrinomas.\n\n**Note 2:** Carcinoid tumor of the appendix is typically not reportable.  \n* Use this schema if your institution collects this tumor as reportable by agreement.\n\n**Note 3:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Colon* chapter on page 94 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C181 Appendix\n\n**Note 1:** This schema is based on the UICC chapter *Appendix-Carcinoid,* pages 91-93.\n\n**Note 2:** Carcinoid tumor of the appendix is typically not reportable.  \n* Use this schema if your institution collects this tumor as reportable by agreement.\n\n**Note 3:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Colon* chapter on page 94 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_carcinoid_appendix",
   "inputs" : [ {
     "key" : "year_dx",
@@ -314,11 +314,11 @@
         "from" : "source_n_out",
         "to" : "source_n"
       }, {
-        "from" : "combined_n_out",
-        "to" : "tmp_combined_n"
-      }, {
         "from" : "clin_n_out",
         "to" : "tmp_clin_n"
+      }, {
+        "from" : "combined_n_out",
+        "to" : "tmp_combined_n"
       } ],
       "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
       "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
@@ -678,5 +678,5 @@
   } ],
   "involved_tables" : [ "extension_bdu", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "ssf13_sca", "radiation_surg_seq", "determine_default_m", "clin_n_ddp", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "tnm7_stage_uak", "combined_t_no_tis", "schema_selection_carcinoid_appendix", "carcinoidappendix_t_41163", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "tnm7_inclusions_tpm", "determine_combined_prefix_91402", "clin_m_hbx", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "tnm7_path_stage_uak", "stage_group_c_47235", "parse_m_47057", "primary_site", "path_n_ddp", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "nodes_ddp", "path_t_carcinoid_appendix_77608", "year_dx_validation", "stage_group_p_15208", "summary_stage_rpa", "path_m_hbx", "mets_hbx" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-27T22:18:37.772Z"
+  "last_modified" : "2016-01-31T20:13:35.637Z"
 }

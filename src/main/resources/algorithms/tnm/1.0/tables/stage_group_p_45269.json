@@ -4,8 +4,9 @@
   "version" : "1.0",
   "name" : "Stage Group (p)",
   "title" : "TNM 7 Stage Group",
-  "notes" : "**Note 1:** The Stage Groups displayed are the enhanced UICC groups.  If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC manual to ensure you are using the appropriate logic.\n\n**Note 2:** TNM does not include an in situ category for this schema. Assign 88 to stage group for in situ cases.",
-  "last_modified" : "2016-01-11T22:34:57.547Z",
+  "notes" : "**Note 1:** The Stage Groups displayed are the enhanced UICC groups.  If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC manual to ensure you are using the appropriate logic.^\n\n**Note 2:** TNM does not include an in situ category for this schema. Assign 88 to stage group for in situ cases.",
+  "footnotes" : "^ \"Any T, N2, M0\" removed from stage grouping table based  on *TNM Classification of Malignant Tumours, Seventh edition*\" found at http://www.wileyanduicc.com/pdf/Corrected_pages.pdf",
+  "last_modified" : "2016-01-29T17:52:29.645Z",
   "definition" : [ {
     "key" : "path_stage_group_direct",
     "name" : "Stage",

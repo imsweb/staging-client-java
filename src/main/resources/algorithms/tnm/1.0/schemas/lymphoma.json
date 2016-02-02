@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Lymphoma",
   "title" : "Hodgkin and Non-Hodgkin Lymphomas of All Sites (excluding Mycosis Fungoides and Sezary Disease)",
-  "notes" : "M-9590, 9591, 9596, 9597, 9650-9653, 9655, 9659, 9663, 9671, 9673, 9678-9680, 9687-9691, 9695, 9698-9699, 9702, 9705, 9708-9709, 9712, 9714, 9716-9719, 9724-9726, 9735, 9737-9738 (EXCEPT C441, C690, C695-C696)\n\nM-9727, 9811-9818,9823,9827,9837 (EXCEPT C421, C441, C690, C695-C696)\n\n**Note 1:** This schema is based on the UICC chapters *Hodgkin & Non-Hodgkin Lymphomas,* pages 304-310.\n\n**Note 2:** In addition to directly assigning Clinical and Pathologic Stage Group, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Hodgkin & Non-Hodgkin Lymphoma of All Sites* chapter on page 284 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "M-9590, 9591, 9596, 9597, 9650-9653, 9655, 9659, 9663, 9671, 9673, 9678-9680, 9687-9691, 9695, 9698-9699, 9702, 9705, 9708-9709, 9712, 9714, 9716-9719, 9724-9726, 9727, 9735, 9737-9738 (EXCEPT C441, C690, C695-C696)\n\nM-9811-9818,9823,9827,9837 (EXCEPT C421, C441, C690, C695-C696)\n\n**Note 1:** This schema is based on the UICC chapters *Hodgkin & Non-Hodgkin Lymphomas,* pages 304-310.\n\n**Note 2:** In addition to directly assigning Clinical and Pathologic Stage Group, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Hodgkin & Non-Hodgkin Lymphoma of All Sites* chapter on page 284 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_lymphoma",
   "inputs" : [ {
     "key" : "year_dx",
@@ -239,5 +239,5 @@
   } ],
   "involved_tables" : [ "ssf2_kpg", "combined_stage_group_for_lymphoma_19552", "tnm7_inclusions_tpr", "schema_selection_lymphoma", "ssf5_npe", "lymphoma_stage_group_detailed_35045", "lymphoma_path_stage_group_detailed_88547", "stage_group_lymphoma_c_60180", "ssf3_lph", "primary_site", "ssf1_jpj", "extension_bch", "histology", "stage_group_lymphoma_p_48657", "year_dx_validation", "summary_stage_rpa", "mets_hna", "ssf4_mpd", "nodes_dna" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-28T14:42:39.269Z"
+  "last_modified" : "2016-02-01T15:18:15.371Z"
 }
