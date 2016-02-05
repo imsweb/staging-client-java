@@ -28,7 +28,7 @@ Initial release include UICC TNM Classification of Malignant Tumor 7th edition a
 
 Versions supported:
 
-- 1.0 (released January 2016)
+- 1.0 (released February 2016)
 
 ## Download
 
@@ -40,14 +40,14 @@ Download [the latest JAR][1] or grab via Maven:
 <dependency>
     <groupId>com.imsweb</groupId>
     <artifactId>staging-client-java</artifactId>
-    <version>1.6.2</version>
+    <version>2.0</version>
 </dependency>
 ```
 
 or via Gradle:
 
 ```groovy
-compile 'com.imsweb.com:staging-client-java:1.6.2'
+compile 'com.imsweb.com:staging-client-java:2.0'
 ```
 
 ## Usage
