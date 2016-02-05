@@ -4,8 +4,8 @@
   "version" : "1.0",
   "name" : "Path T Vagina",
   "title" : "Pathologic T",
-  "notes" : "**Note 1:**    FIGO does not include an in situ category for tumors of the vagina, but TNM does. Assign pTis (behavior code /2) for in situ cases. \n\n**Note 2:**  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension information on the primary tumor are available, use the extension information to assign the T in preference to a statement of FIGO stage - see Registrar notes.\n* If the only information is (pathologic) FIGO III, assign the appropriate stage and leave pathologic T, N, and M blank. If the only information is (pathologic) FIGO stage IVB, leave pathologic T and N blank and see M.\n\n**Note 3:** The presence of bullous edema is not sufficient evidence to classify a tumor as T4.\n\n**Note 3:**  The pelvic wall is defined as muscle, fascia, neurovascular structures, or skeletal portions of the bony pelvis.",
-  "last_modified" : "2016-01-31T15:46:55.100Z",
+  "notes" : "**Note 1:**    FIGO does not include an in situ category for tumors of the vagina, but TNM does. Assign pTis (behavior code /2) for in situ cases. \n\n**Note 2:**  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension information on the primary tumor are available, use the extension information to assign the T in preference to a statement of FIGO stage - see Registrar notes.\n* If the only information is (pathologic) FIGO III, assign the appropriate stage and leave pathologic T, N, and M blank. If the only information is (pathologic) FIGO stage IVB, leave pathologic T and N blank and see M.\n\n**Note 3:** The presence of bullous edema is not sufficient evidence to classify a tumor as T4.\n\n**Note 4:**  The pelvic wall is defined as muscle, fascia, neurovascular structures, or skeletal portions of the bony pelvis.",
+  "last_modified" : "2016-02-02T22:47:17.923Z",
   "definition" : [ {
     "key" : "path_t",
     "name" : "Pathologic T",

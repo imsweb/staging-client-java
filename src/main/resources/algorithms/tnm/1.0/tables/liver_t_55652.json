@@ -4,9 +4,9 @@
   "version" : "1.0",
   "name" : "Path T Liver",
   "title" : "Pathologic T",
-  "notes" : "**Note 1:**  Assign 88 for in situ cases (behavior code /2). TNM does not include an in situ category for liver tumors.\n\n**Note 1:** Assign T2 or T3 based on the tumor size for the following descriptions:\n\n    Multiple (satellite) nodules/tumors (one lobe) \n       WITH or WITHOUT intrahepatic vascular invasion, including vascular invasion not stated\n       WITH extension to gallbladder WITH or WITHOUT intrahepatic vascular invasion\n\n    Multiple (satellite) nodules/tumors in more than one lobe of liver or on surface of parenchyma \n\n    Satellite nodules, NOS\n\n**Note 2:**  Major vascular invasion (T3b) is defined as invasion of the branches of the main portal vein (right or left portal vein, not including sectoral or segmental branches) or as invasion of one or more of the three hepatic veins (right, middle, or left).  \n* Invasion of hepatic artery or vena cava is coded to T4",
+  "notes" : "**Note 1:**  Assign 88 for in situ cases (behavior code /2). TNM does not include an in situ category for liver tumors.\n\n**Note 2:** Assign T2 or T3 based on the tumor size for the following descriptions:\n\n    Multiple (satellite) nodules/tumors (one lobe) \n       WITH or WITHOUT intrahepatic vascular invasion, including vascular invasion not stated\n       WITH extension to gallbladder WITH or WITHOUT intrahepatic vascular invasion\n\n    Multiple (satellite) nodules/tumors in more than one lobe of liver or on surface of parenchyma \n\n    Satellite nodules, NOS\n\n**Note 3:**  Major vascular invasion (T3b) is defined as invasion of the branches of the main portal vein (right or left portal vein, not including sectoral or segmental branches) or as invasion of one or more of the three hepatic veins (right, middle, or left).  \n* Invasion of hepatic artery or vena cava is coded to T4",
   "footnotes" : "\\* T3 is not defined in AJCC 7th edition",
-  "last_modified" : "2016-01-26T15:12:13.289Z",
+  "last_modified" : "2016-02-02T20:14:00.659Z",
   "definition" : [ {
     "key" : "path_t",
     "name" : "Pathologic T",

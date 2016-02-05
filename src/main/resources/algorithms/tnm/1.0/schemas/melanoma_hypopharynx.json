@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "Melanoma Hypopharynx",
   "title" : "Malignant Melanoma of Pyriform Sinus, Hypopharynx, and Laryngopharynx",
-  "notes" : "C129 Pyriform sinus\nC130 Postcricoid region\nC131 Hypopharyngeal aspect of aryepiglottic fold\nC132 Posterior wall of hypopharynx\nC138 Overlapping lesion of hypopharynx\nC139 Hypopharynx, NOS (laryngopharynx)\n\n**Note 1:** This schema is based on the UICC chapter *Malignant Melanoma of Upper Aerodigestive Tract,* pages 51-53.\n\n**Note 2: ** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Pyriform Sinus, Hypopharynx, Laryngopharynx* chapter on page 64 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C129 Pyriform sinus\nC130 Postcricoid region\nC131 Hypopharyngeal aspect of aryepiglottic fold\nC132 Posterior wall of hypopharynx\nC138 Overlapping lesion of hypopharynx\nC139 Hypopharynx, NOS (laryngopharynx)\n\n**Note 1:** This schema is based on the UICC chapter *Malignant Melanoma of Upper Aerodigestive Tract,* pages 51-53.\n\n**Note 2:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Pyriform Sinus, Hypopharynx, Laryngopharynx* chapter on page 64 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_melanoma_hypopharynx",
   "inputs" : [ {
     "key" : "year_dx",
@@ -748,5 +748,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "cpmbined_m_to_summ_stage_m_60564", "ssf10_spd", "stage_group_p_21201", "seer_regional_nodes_melanoma_hypopharynx_7175", "melanoma_hypopharynx_t_81125", "tnm7_stage_upu", "path_m_head_neck_melanoma_32288", "parse_t_2177", "concatenate_n_43246", "ssf11_spe", "histology", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "tnm7_inclusions_tpa", "ssf1_jpu", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "ssf9_spc", "systemic_surg_seq", "combined_n_to_summ_stage_n_headneck_temp_18777", "parse_m_47057", "extension_bee", "combined_m", "combined_to_summ_stage_t_80394", "clinical_n_head_neck_melanoma_66648", "combined_n", "schema_selection_melanoma_hypopharynx", "ssf5_npa", "summary_stage_rpa", "ssf8_spb", "clin_t_melanoma_hypopharynx_41386", "determine_default_t", "radiation_surg_seq", "determine_default_m", "tnm7_path_stage_upu", "nodes_pos_fpa", "stage_group_c_63552", "parse_n_67182", "determine_default_n", "combined_t_no_tis", "pathologic_n_head_neck_melanoma_copy_75380", "seer_mets_hypopharynxvs2_15179", "ssf4_mpa", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "primary_site", "year_dx_validation", "clin_m_head_neck_melanoma_25497" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-27T21:31:57.473Z"
+  "last_modified" : "2016-02-04T22:26:14.831Z"
 }

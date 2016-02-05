@@ -4,7 +4,7 @@
   "version" : "1.0",
   "name" : "CNS Other",
   "title" : "Other Parts of Central Nervous System",
-  "notes" : "C701  Spinal meninges\nC709  Meninges, NOS\nC720  Spinal cord\nC721  Cauda equina\nC722  Olfactory nerve\nC723  Optic nerve\nC724  Acoustic nerve\nC725  Cranial nerve, NOS\nC728  Overlapping lesion of brain and central nervous system\nC729  Nervous system, NOS\n\n**Note 1:** TNM opted not to recommend a TNM scheme in 7th edition.\n\n**Note 2:** TNM is not defined for this schema. If directly assigning Summary Stage 2000 (SS2000), use the *Brain and Cerebral Meninges* chapter on page 272 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "notes" : "C701  Spinal meninges\nC709  Meninges, NOS\nC720  Spinal cord\nC721  Cauda equina\nC722  Olfactory nerve\nC723  Optic nerve\nC724  Acoustic nerve\nC725  Cranial nerve, NOS\nC728  Overlapping lesion of brain and central nervous system\nC729  Nervous system, NOS\n\n**Note 1:** TNM opted not to recommend a TNM scheme in 7th edition.\n\n**Note 2:** TNM is not defined for this schema. If directly assigning Summary Stage 2000 (SS2000), use the *Other Parts of Central Nervous System* chapter on page 274 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
   "schema_selection_table" : "schema_selection_cns_other",
   "inputs" : [ {
     "key" : "year_dx",
@@ -176,5 +176,5 @@
   } ],
   "involved_tables" : [ "ssf8_sql", "ssf3_lpm", "ssf5_nph", "extension_bcd", "ssf6_opf", "primary_site", "ssf4_mpn", "seer_mets_cns_other_75706", "schema_selection_cns_other", "histology", "ssf1_jpo", "year_dx_validation", "summary_stage_rpa", "ssf2_kpl", "ssf7_sfl", "nodes_dna" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-01-31T20:32:24.106Z"
+  "last_modified" : "2016-02-03T21:44:06.295Z"
 }
