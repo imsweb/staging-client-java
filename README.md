@@ -24,7 +24,7 @@ Clinical and Pathologic Stage Groups.  In addition, this algorithm calculates a 
 Predictive and Prognostic Factors on a schema specific basis.    Staging information is collected for site and histology combinations that are not defined in TNM in 
 order to support SEER Summary Stage calculations (these calculations will not be implemented for diagnosis year 2016). 
 
-Initial release include UICC TNM Classification of Malignant Tumor 7th edition as well as SEER Summary Stage 2017 (for cases diagnosed 2017 and later)
+The initial release includes UICC TNM Classification of Malignant Tumor 7th edition.
 
 Versions supported:
 
