@@ -139,7 +139,7 @@
     "key" : "ssf1",
     "name" : "Carbohydrate Antigen 125 (CA-125)",
     "naaccr_item" : 2880,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf1_jae",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_III_COLLECTED_IN_CSV1", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -155,7 +155,7 @@
     "key" : "ssf3",
     "name" : "Residual Tumor Status and Size After Primary Cytoreduction Surgery",
     "naaccr_item" : 2900,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf3_lpt",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -1218,5 +1218,5 @@
     } ]
   } ],
   "involved_tables" : [ "ajcc7_inclusions_tpx", "ssf3_lpt", "ssf25_snt", "ssf15_snj", "ajcc7_t_codes", "ssf23_snr", "extension_bbg", "histology", "schema_selection_ovary", "cs_input_version_original", "ssf22_snq", "lvi", "ssf14_sni", "ajcc_tdescriptor_cleanup", "ssf5_npl", "ssf2_kbu", "ajcc7_year_validation", "ssf21_snp", "ssf17_snl", "ajcc_descriptor_codes", "grade", "summary_stage_rpa", "ajcc7_m_codes", "ssf1_jae", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "ajcc6_t_codes", "nodes_pos_fpa", "ajcc_mdescriptor_cleanup", "ssf7_snb", "mets_hah", "ssf11_snf", "ss_codes", "ajcc6_exclusions_pad", "ajcc6_stage_qbi", "ssf6_ona", "size_apa", "nodes_exam_gpa", "ajcc6_n_codes", "nodes_day", "behavior", "ssf10_sne", "ssf18_snm", "mets_eval_ipa", "extension_eval_cpa", "ajcc7_n_codes", "ajcc6_stage_codes", "ssf19_snn", "ajcc7_stage_codes", "ssf9_snd", "ssf13_snh", "primary_site", "ajcc6_year_validation", "ssf4_mpr", "ajcc6_m_codes", "nodes_eval_epa", "cs_year_validation", "ajcc7_stage_ubf", "ssf24_sns", "ssf8_snc", "ssf12_sng" ],
-  "last_modified" : "2015-08-25T16:44:25.301Z"
+  "last_modified" : "2016-01-28T18:55:53.674Z"
 }

@@ -154,7 +154,7 @@
     "key" : "ssf3",
     "name" : "Bone Invasion",
     "naaccr_item" : 2900,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf3_lpk",
     "used_for_staging" : false,
     "metadata" : [ "COC_CLINICALLY_SIGNIFICANT", "CCCR_IVB_COLLECT_IF_IN_CLINICAL_CHART", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -1222,5 +1222,5 @@
     } ]
   } ],
   "involved_tables" : [ "ajcc6_exclusions_ppc", "ajcc7_inclusions_tps", "extension_bbt", "ssf3_lpk", "ssf25_snt", "ssf15_snj", "ajcc7_t_codes", "ssf23_snr", "ssf1_jpm", "histology", "cs_input_version_original", "mets_hpc", "ssf22_snq", "lvi", "ssf14_sni", "ajcc_tdescriptor_cleanup", "extension_size_xqj", "ajcc7_year_validation", "ssf21_snp", "ssf17_snl", "ajcc_descriptor_codes", "grade", "summary_stage_rpa", "ajcc7_m_codes", "ajcc7_stage_upm", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "ajcc6_t_codes", "nodes_pos_fpa", "nodes_dbk", "ajcc_mdescriptor_cleanup", "ssf7_snb", "ssf11_snf", "ss_codes", "ssf6_ona", "nodes_exam_gpa", "schema_selection_heart_mediastinum", "ajcc6_n_codes", "ssf2_kpk", "behavior", "ssf10_sne", "ssf18_snm", "ajcc6_stage_qpi", "mets_eval_ipa", "extension_eval_cpa", "ajcc7_n_codes", "ajcc6_stage_codes", "ssf5_nna", "size_apu", "ssf19_snn", "ajcc7_stage_codes", "ssf9_snd", "ssf13_snh", "primary_site", "ajcc6_year_validation", "ajcc6_m_codes", "nodes_eval_epa", "ssf4_mpf", "cs_year_validation", "ssf24_sns", "ssf8_snc", "ssf12_sng" ],
-  "last_modified" : "2015-08-25T16:44:08.888Z"
+  "last_modified" : "2016-01-28T18:55:47.312Z"
 }

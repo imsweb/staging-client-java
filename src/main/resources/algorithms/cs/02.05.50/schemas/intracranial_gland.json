@@ -139,7 +139,7 @@
     "key" : "ssf1",
     "name" : "World Health Organization (WHO) Grade Classification",
     "naaccr_item" : 2880,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf1_jpo",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_III_COLLECTED_IN_CSV1", "COC_CLINICALLY_SIGNIFICANT", "NPCR_REQUIRED_BY_NPCR_2011_FORWARD", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -1124,5 +1124,5 @@
     } ]
   } ],
   "involved_tables" : [ "extension_bfy", "ssf25_snt", "ssf15_snj", "ajcc7_t_codes", "ssf23_snr", "histology", "ssf1_jpo", "cs_input_version_original", "mets_hpa", "nodes_exam_gna", "ssf22_snq", "lvi", "ssf14_sni", "mets_eval_ina", "ajcc_tdescriptor_cleanup", "ssf4_mna", "extension_eval_cna", "ajcc6_stage_qna", "ajcc7_year_validation", "ssf21_snp", "ssf17_snl", "ajcc_descriptor_codes", "nodes_pos_fna", "grade", "summary_stage_rpa", "nodes_eval_ena", "ajcc7_m_codes", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "ajcc6_t_codes", "ajcc_mdescriptor_cleanup", "ssf7_snb", "ssf11_snf", "ssf3_lna", "ss_codes", "schema_selection_intracranial_gland", "ssf6_ona", "size_apa", "ajcc6_n_codes", "ssf2_kpl", "behavior", "ssf10_sne", "ssf18_snm", "ajcc7_n_codes", "ajcc6_stage_codes", "ssf5_nna", "ssf19_snn", "ssf9_snd", "ssf13_snh", "primary_site", "nodes_dfu", "ajcc6_year_validation", "ajcc6_m_codes", "cs_year_validation", "ssf24_sns", "ssf8_snc", "ssf12_sng" ],
-  "last_modified" : "2015-08-25T16:44:10.280Z"
+  "last_modified" : "2016-01-28T18:55:47.577Z"
 }

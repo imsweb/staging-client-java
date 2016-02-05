@@ -1,0 +1,28 @@
+{
+  "id" : "nodes_dan",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Regional Nodes",
+  "title" : "SEER Regional Nodes",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in SEER Mets. \n\n**Note 2:**  One or more malignant satellite peritumoral nodules in the pericolorectal adipose tissue of a primary carcinoma without histologic evidence of residual lymph node in the nodule(s) may represent discontinuous spread, venous invasion with extravascular spread, or a totally replaced lymph node. These are tumor deposits. Code 300 for lymph node involvement WITH or WITHOUT tumor deposits.\n\n**Note 3:**  Inferior mesenteric nodes are coded in SEER Mets for cecum, ascending colon, transverse colon, and hepatic flexure. Superior mesenteric nodes are coded in SEER Mets for all colon sites.",
+  "footnotes" : "Â¥ Considered distant for splenic flexure in Historic Stage\n\\### Considered distant in Historic Stage",
+  "last_modified" : "2015-11-25T20:26:01.483Z",
+  "definition" : [ {
+    "key" : "seer_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summary Stage 2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "No regional lymph node involvement and no tumor deposits (TD)", "VALUE:NONE" ], [ "300", "Regional lymph node(s) involved only\n\nREGIONAL Lymph Nodes\n     All colon subsites:\n          Colic, NOS\n          Epicolic (adjacent to bowel wall)          \n          Mesenteric, NOS\n          Paracolic/pericolic\n\n          Nodule(s) in pericolic fat\n\n     Cecum (C180):\n          Cecal, NOS\n               Anterior (prececal)\n               Posterior (retrocecal)\n           Ileocolic\n           Right colic\n\n     Ascending colon (C182):\n            Ileocolic\n            Middle colic\n            Right colic\n\n     Transverse colon and flexures (C183-C185):\n            Inferior mesenteric for splenic flexure only\n            Left colic for splenic flexure only\n            Middle colicÂ¥\n            Right colic for hepatic flexure only\n\n      Descending colon (C186):\n            Inferior mesenteric\n            Left colic\n            Sigmoid###\n\n      Sigmoid (C187):\n             Inferior mesenteric\n             Sigmoidal (sigmoid mesenteric)\n             Superior hemorrhoidal###\n             Superior rectal###\n\nRegional lymph node(s), NOS", "TD in the subserosa, mesentery, or nonperitonealized pericolic or \nperirectal tissues WITHOUT regional nodal metastasis\n\nStated as N1c \n\nRegional lymph nodes for all colon sites:\n    Mesocolic, NOS \n\nStated as N1 (N1a, N1b, N1 [NOS]) or N2 (N2a, N2b, N2 [NOS])\n\nLymph nodes, NOS", "VALUE:RN" ], [ "999", "Unknown; regional nodes not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

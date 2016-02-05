@@ -8,7 +8,7 @@ plugins {
 }
 
 group = 'com.imsweb'
-version = '1.6.2'
+version = '2.0-SNAPSHOT'
 description = 'Java client library for staging calculations'
 
 println "Starting build using ${Jvm.current()}"
@@ -66,7 +66,7 @@ findbugs {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.7'
+    gradleVersion = '2.8'
 }
 
 // run the full CS integration test suite

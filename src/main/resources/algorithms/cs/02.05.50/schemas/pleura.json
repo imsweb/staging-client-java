@@ -147,7 +147,7 @@
     "key" : "ssf2",
     "name" : "Histologic Subtype",
     "naaccr_item" : 2890,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf2_kbf",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -1217,5 +1217,5 @@
     } ]
   } ],
   "involved_tables" : [ "ssf25_snt", "extension_bbx", "ssf15_snj", "ajcc7_t_codes", "ajcc7_stage_uaq", "schema_selection_pleura", "ssf23_snr", "ssf2_kbf", "histology", "cs_input_version_original", "ssf22_snq", "lvi", "ssf14_sni", "ajcc_tdescriptor_cleanup", "ajcc7_year_validation", "ssf21_snp", "ssf17_snl", "ajcc_descriptor_codes", "pleural_effusion_extension_xbz", "lymph_nodes_metsat_dxajcc6_xki", "grade", "ajcc7_inclusions_tpf", "summary_stage_rpa", "ajcc7_m_codes", "ssf20_sno", "ajcc6_stage_qam", "ssf4_maz", "ajcc_ndescriptor_cleanup", "ssf16_snk", "ssf1_jam", "ajcc6_t_codes", "nodes_pos_fpa", "ajcc_mdescriptor_cleanup", "ajcc6_exclusions_pam", "ssf7_snb", "ssf11_snf", "ssf3_lat", "ss_codes", "ssf6_ona", "size_apa", "nodes_exam_gpa", "ajcc6_n_codes", "mets_hat", "behavior", "ssf10_sne", "ssf18_snm", "mets_eval_ipa", "extension_eval_cpa", "ajcc7_n_codes", "ajcc6_stage_codes", "ssf19_snn", "ajcc7_stage_codes", "ssf5_naw", "ssf9_snd", "ssf13_snh", "primary_site", "nodes_dbq", "ajcc6_year_validation", "ajcc6_m_codes", "nodes_eval_epa", "cs_year_validation", "ssf24_sns", "ssf8_snc", "ssf12_sng" ],
-  "last_modified" : "2015-08-25T16:44:29.118Z"
+  "last_modified" : "2016-01-28T18:55:54.803Z"
 }

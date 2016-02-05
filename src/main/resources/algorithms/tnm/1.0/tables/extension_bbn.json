@@ -1,0 +1,27 @@
+{
+  "id" : "extension_bbn",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "footnotes" : "\\### Considered distant in Historic Stage",
+  "last_modified" : "2016-01-10T15:27:52.799Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ: Noninvasive; intraepithelial\n\nCarcinoma in situ, NOS\n\nPapillary noninvasive carcinoma", "Noninvasive (flat, sessile)", "VALUE:IS" ], [ "100", "Localized only\n\n    Muscularis invaded\n    Subepithelial connective tissue (lamina propria, submucosa) invaded\n\n    Localized, NOS", "Stated as T1 or T2", "VALUE:L" ], [ "200", "Regional by direct extension only \n\nExtension to:\n    Adjacent tissue(s), NOS:\n         Connective tissue\n         Peripelvic/periureteric tissue\n         Retroperitoneal soft/connective tissue\n    Adrenal (suprarenal) gland  from renal pelvis###\n    Bladder from ureter\n    Blood vessel(s) (major):###\n         Aorta\n         Renal artery/vein\n         Tumor thrombus in a renal vein, NOS\n         Vena cava (inferior)\n     Duodenum from right renal pelvis or right ureter###\n     Implants in ureter\n     Ipsilateral kidney parenchyma and kidney, NOS from renal pelvis\n     Psoas muscle from ureter\n     Ureter from renal pelvis", "Renal pelvis and ureter (unifocal or multifocal):\n   Muscularis\n        Renal pelvis from ureter\n        Distal ureter from proximal ureter\n    Subepithelial connective tissue\n        Renal pelvis from ureter\n        Ureter from renal pelvis\n        Distal ureter from proximal ureter\n\nExtension to bladder from ureter:\n    Muscularis of distal ureter and/or bladder \n    Subepithelial connective tissue of distal ureter and/or bladder \n\nIpsilateral adrenal (suprarenal) gland from renal pelvis\n\nStated as T3 or T4", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "extension_bch",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "notes" : "**Note 1:**  An \"E\" lesion is defined as disease that involves extralymphatic site(s), or sites other than lymph nodes and other lymphatic structures.  Other lymphatic structures include spleen (see Note 2), thymus gland (C379), and Waldeyer's ring (tonsils) (C024, C090-C099, C111, C142).  Any lymphatic structure (other than spleen) is coded the same as a lymph node region. \n \n**Note 2:**  While spleen is considered a lymphatic structure, it is coded differently. \"S\" equals spleen involvement.\n\n**Note 3:**  If there is no mention of lymphatic or extralymphatic involvement but several diagnostic procedures were done, interpret as no involvement.\n\n**Note 4:**  Involvement of adjacent soft tissue does not alter the classification.",
+  "last_modified" : "2016-01-10T15:14:25.091Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "Localized \n\n    Stage I\n          Involvement of a single lymph node region\n\n    Stage IE\n          Localized involvement of a single extralymphatic organ/site\n          Multifocal involvement of one extralymphatic organ/site\n\n    Stage IS\n          Localized involvement of spleen only", "", "VALUE:L" ], [ "500", "Regional, NOS\n\n    Stage II\n          Involvement of two or more lymph node regions on the SAME side of the diaphragm\n    Stage IIE\n         Direct extension to adjacent organs or tissues\n         Localized involvement of a single extralymphatic organ/site WITH\n         involvement of its regional lymph node(s) or WITH involvement of\n         other lymph node(s) on the SAME side of the diaphragm\n    Stage IIS\n          Involvement of spleen PLUS lymph node(s) BELOW the diaphragm\n    Stage IIES\n          Involvement of spleen PLUS localized involvement of a single extralymphatic organ/site\n          BELOW the diaphragm WITH or WITHOUT involvement of lymph node(s) BELOW the diaphragm", "", "VALUE:RNOS" ], [ "700", "Distant\n\n     Stage III\n           Involvement of lymph node regions on BOTH sides of the diaphragm\n     Stage IIIE\n           Involvement of an extralymphatic organ or site PLUS involvement of lymph node(s) on the OPPOSITE side of the diaphragm\n     Stage IIIS\n           Involvement of the spleen PLUS involvement of lymph node(s) ABOVE the diaphragm\n     Stage IIIES\n           Involvement of the spleen PLUS involvement of lymph node region(s) ABOVE the diaphragm PLUS involvement of a single extralymphatic organ/site on either side of the diaphragm\n           Involvement of the spleen PLUS a single extralymphatic organ/site\n           ABOVE the diaphragm WITH or WITHOUT involvement of lymph node(s)\n     Stage IV\n           Disseminated involvement of ONE OR MORE extralymphatic organ(s)/site(s)\n           (Multifocal) involvement of MORE THAN ONE extralymphatic or organ/site\n\n     Metastases\n          Bone marrow\n          Liver", "Diffuse involvement of ONE OR MORE extralymphatic organ(s)/site(s)\nWITH or WITHOUT associated lymph node involvement\n\nInvolvement of isolated extralymphatic organ in absence of involvement of adjacent lymph nodes, but in conjunction with disease in distant sites\n\nMetastasis/involvement:\n    Nodular involvement of lung(s)", "VALUE:D" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

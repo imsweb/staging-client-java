@@ -259,7 +259,7 @@
     "key" : "ssf16",
     "name" : "Size of Metastasis in Lymph Nodes",
     "naaccr_item" : 2870,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf16_sqw",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -267,7 +267,7 @@
     "key" : "ssf17",
     "name" : "Extracapsular Extension of Regional Lymph Nodes",
     "naaccr_item" : 2871,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf17_sqx",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -275,7 +275,7 @@
     "key" : "ssf18",
     "name" : "Isolated Tumor Cells (ITC) in Regional Lymph Node(s)",
     "naaccr_item" : 2872,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf18_sqy",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -304,7 +304,7 @@
     "key" : "ssf22",
     "name" : "Profound Immune Suppression",
     "naaccr_item" : 2876,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf22_src",
     "used_for_staging" : false,
     "metadata" : [ "COC_CLINICALLY_SIGNIFICANT", "CCCR_IVB_COLLECT_IF_IN_CLINICAL_CHART", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -1217,5 +1217,5 @@
     } ]
   } ],
   "involved_tables" : [ "nodes_pos_fah", "ssf2_kna", "ajcc6_exclusions_ppd", "ssf3_lpq", "ssf25_snt", "lymph_nodes_metsat_dxajcc6_xlf", "ajcc7_inclusions_tqb", "ssf22_src", "extension_bgb", "extension_size_ajcc6_xjj", "ssf15_snj", "ajcc7_t_codes", "ssf23_snr", "histology", "ajcc6_stage_qpu", "cs_input_version_original", "ssf1_jpt", "lvi", "mets_hcy", "ssf14_sni", "ajcc_tdescriptor_cleanup", "ssf20_sra", "ssf4_mna", "ssf16_sqw", "ajcc7_year_validation", "ajcc7_stage_uqe", "ajcc_descriptor_codes", "ssf17_sqx", "nodes_eval_eba", "lymph_nodeand_nodal_status_eval_blank_ajcc7_xlq", "grade", "summary_stage_rpa", "ajcc7_m_codes", "ssf21_srb", "ajcc_ndescriptor_cleanup", "ssf19_sqz", "ajcc6_t_codes", "ssf18_sqy", "ajcc_mdescriptor_cleanup", "determine_correct_table_for_ajcc7_n_ns21", "ssf7_snb", "ss_codes", "ssf11_srd", "ssf6_ona", "nodes_exam_gpa", "ajcc6_n_codes", "behavior", "ssf10_sne", "schema_selection_merkel_cell_vulva", "mets_eval_ipa", "size_apo", "extension_eval_cpa", "ajcc7_n_codes", "ajcc6_stage_codes", "ssf5_nna", "ajcc7_stage_codes", "ssf9_snd", "ssf13_snh", "primary_site", "ajcc6_year_validation", "lymph_nodesand_ssf11_ajcc6_xiq", "lymph_nodeand_nodal_status_eval_ajcc7_xld", "ajcc6_m_codes", "cs_year_validation", "extension_size_ajcc7_xio", "nodes_dfx", "ssf24_sns", "ssf8_snc", "ssf12_sng" ],
-  "last_modified" : "2015-08-25T16:44:22.012Z"
+  "last_modified" : "2016-01-28T18:55:52.833Z"
 }

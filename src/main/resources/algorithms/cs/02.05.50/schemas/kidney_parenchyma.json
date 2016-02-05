@@ -139,7 +139,7 @@
     "key" : "ssf1",
     "name" : "Invasion Beyond Capsule",
     "naaccr_item" : 2880,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf1_jbd",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -147,7 +147,7 @@
     "key" : "ssf2",
     "name" : "Vein Involvement",
     "naaccr_item" : 2890,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf2_kar",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -155,7 +155,7 @@
     "key" : "ssf3",
     "name" : "Ipsilateral Adrenal Gland Involvement",
     "naaccr_item" : 2900,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf3_lah",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -163,7 +163,7 @@
     "key" : "ssf4",
     "name" : "Sarcomatoid Features",
     "naaccr_item" : 2910,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf4_mam",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -178,7 +178,7 @@
     "key" : "ssf6",
     "name" : "Fuhrman Nuclear Grade",
     "naaccr_item" : 2930,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf6_oaf",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -193,7 +193,7 @@
     "key" : "ssf8",
     "name" : "Extranodal Extension of Regional Lymph Nodes",
     "naaccr_item" : 2862,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf8_sby",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -1218,5 +1218,5 @@
     } ]
   } ],
   "involved_tables" : [ "extension_bbp", "ajcc7_stage_uaw", "ajcc6_exclusions_ppd", "ssf2_kar", "ssf25_snt", "mets_hcg", "ssf15_snj", "ajcc7_t_codes", "ssf23_snr", "size_aao", "histology", "cs_input_version_original", "ssf22_snq", "lvi", "ssf14_sni", "extension_size_table_ajcc7_xek", "ajcc_tdescriptor_cleanup", "ssf4_mam", "ajcc7_year_validation", "ssf21_snp", "ajcc7_inclusions_tpb", "ssf17_snl", "ajcc_descriptor_codes", "grade", "summary_stage_rpa", "ajcc7_m_codes", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ajcc6_stage_qal", "ssf16_snk", "ssf6_oaf", "ajcc6_t_codes", "nodes_pos_fpa", "extension_size_table_ajcc6_xal", "ajcc_mdescriptor_cleanup", "ssf11_snf", "nodes_dbg", "ss_codes", "nodes_exam_gpa", "ajcc6_n_codes", "ssf8_sby", "ssf1_jbd", "ssf3_lah", "behavior", "ssf10_sne", "ssf18_snm", "mets_eval_ipa", "extension_eval_cpa", "ajcc7_n_codes", "ajcc6_stage_codes", "ssf19_snn", "ajcc7_stage_codes", "ssf7_sbx", "ssf9_snd", "ssf13_snh", "primary_site", "ajcc6_year_validation", "ajcc6_m_codes", "nodes_eval_epa", "cs_year_validation", "ssf24_sns", "ssf5_nai", "ssf12_sng", "schema_selection_kidney_parenchyma" ],
-  "last_modified" : "2015-08-25T16:44:10.705Z"
+  "last_modified" : "2016-01-28T18:55:47.842Z"
 }

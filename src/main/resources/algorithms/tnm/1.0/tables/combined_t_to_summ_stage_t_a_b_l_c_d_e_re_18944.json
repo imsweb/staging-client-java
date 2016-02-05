@@ -1,0 +1,18 @@
+{
+  "id" : "combined_t_to_summ_stage_t_a_b_l_c_d_e_re_18944",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Combined T to Summ Stage T (N-Nb-L, Nc-Ne-RE)",
+  "title" : "Combined T to Summary Stage T (N-Nb-L, Nc-Ne-RE)",
+  "last_modified" : "2015-11-25T20:27:05.667Z",
+  "definition" : [ {
+    "key" : "combined_t_in",
+    "name" : "Combined T",
+    "type" : "INPUT"
+  }, {
+    "key" : "ss2017_t_out",
+    "name" : "SS2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "X", "VALUE:U" ], [ "0", "VALUE:U" ], [ "1", "VALUE:L" ], [ "1A", "VALUE:L" ], [ "1B", "VALUE:L" ], [ "1C", "VALUE:RE" ], [ "1D", "VALUE:RE" ], [ "2", "VALUE:L" ], [ "2A", "VALUE:L" ], [ "2B", "VALUE:L" ], [ "2C", "VALUE:RE" ], [ "2D", "VALUE:RE" ], [ "3", "VALUE:L" ], [ "3A", "VALUE:L" ], [ "3B", "VALUE:L" ], [ "3C", "VALUE:RE" ], [ "3D", "VALUE:RE" ], [ "4", "VALUE:L" ], [ "4A", "VALUE:L" ], [ "4B", "VALUE:L" ], [ "4C", "VALUE:RE" ], [ "4D", "VALUE:RE" ], [ "4E", "VALUE:RE" ], [ "88", "VALUE:NA" ], [ "*", "VALUE:NA" ] ]
+}

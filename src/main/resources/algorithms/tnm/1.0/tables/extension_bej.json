@@ -1,0 +1,28 @@
+{
+  "id" : "extension_bej",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "notes" : "**Note 1:**  Parapharyngeal involvement denotes postero-lateral infiltration of tumor beyond the pharyngobasilar fascia.  The pharyngobasilar fascia is the fibrous layer of the pharyngeal wall between the mucosa and the muscular layer, attached superiorly to the basilar part of the occipital bone and diminishing in thickness as it descends.\n\n**Note 2:**  The masticator space primarily consists of the muscles of mastication, the medial and lateral pterygoid, masseter, and temporalis muscles.  The space also includes the ramus of the mandible and the third division of cranial nerve V as it passes through the foramen ovale into the suprahyoid neck.",
+  "footnotes" : "\\## Considered regional in Historic Stage\n\\### Considered distant in Historic Stage\n\\*** Considered distant in 1977 Summary Staging Guide",
+  "last_modified" : "2015-11-25T20:26:16.150Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ: intraepithelial, noninvasive", "", "VALUE:IS" ], [ "100", "Localized only\n\nInvasive tumor confined to one of the following subsites:\n     Inferior wall (superior surface of soft palate)\n     One lateral wall\n     Posterior superior wall (vault)\nInvolvement of two or more subsites:##\n     Lateral wall extending into eustachian tube/middle ear\n     Posterior, inferior, or lateral wall(s)\n\nLocalized, NOS", "Tumor involving mucosa of one or more of the following subsites:\n    Inferior wall (superior surface of soft palate)\n    Lateral wall extending into Eustachian tube/middle ear\n    Posterior superior wall (vault)\n\nTumor involving mucosa only of nasopharynx, NOS\n\nLocalized, NOS\n\nStated as T3, T4a or T4 [NOS]", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nExtension to:\n\n     Bone including skull\n     Hard palate###***\n     Nasal cavity\n     Oropharynx\n     Paranasal sinus###***\n     Pterygopalatine fossa\n     Soft palate, inferior surface###\n\nTumor described only as FIXED", "Tumor involving mucosa only:\n    Hard palate\n    Nasal cavity\n    Oropharynx\n    Paranasal sinus\n    Soft palate including uvula\n\nInvolvement of any structures in T3 WITH tumor described as fixed OR WITH parapharyngeal extension\n\nBone excluding base of skull\nBone, NOS\nCartilage, NOS\nPterygopalatine fossa WITHOUT bone invasion\nSkull base including floor of orbit", "VALUE:RE" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

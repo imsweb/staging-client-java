@@ -139,7 +139,7 @@
     "key" : "ssf1",
     "name" : "WHO/ISUP Grade",
     "naaccr_item" : 2880,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf1_jpd",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -155,7 +155,7 @@
     "key" : "ssf3",
     "name" : "Extranodal Extension of Regional Lymph Nodes",
     "naaccr_item" : 2900,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf3_lai",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -1224,5 +1224,5 @@
     } ]
   } ],
   "involved_tables" : [ "ajcc6_exclusions_ppd", "determine_correct_table_for_ajcc6_m_ns4", "ssf25_snt", "ssf2_kao", "ssf1_jpd", "ajcc7_stage_uau", "ssf15_snj", "ajcc7_t_codes", "ssf23_snr", "histology", "cs_input_version_original", "determine_correct_table_for_ajcc6_n_ns3", "ssf22_snq", "lvi", "ssf14_sni", "ajcc_tdescriptor_cleanup", "ssf4_mna", "lymph_nodes_size_mets114055or60_ajcc6_xdv_n", "ajcc7_year_validation", "ssf21_snp", "mets_hbc", "lymph_nodes_size_mets114055or60_ajcc6_xdv_m", "ajcc7_inclusions_tpb", "ssf17_snl", "ajcc_descriptor_codes", "extension_eval_cag", "grade", "summary_stage_rpa", "ajcc7_m_codes", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "lymph_nodes_size_mets00_ajcc6_xdo_n", "lymph_nodes_size_mets00_ajcc6_xdo_m", "ajcc6_t_codes", "lymph_nodes_size_mets99_ajcc6_xdp_m", "lymph_nodes_size_mets99_ajcc6_xdp_n", "nodes_pos_fpa", "ajcc_mdescriptor_cleanup", "ssf7_snb", "ssf11_snf", "ss_codes", "ajcc6_stage_qbh", "ssf6_ona", "size_apa", "nodes_exam_gpa", "ajcc6_n_codes", "behavior", "ssf3_lai", "ssf10_sne", "ssf18_snm", "mets_eval_ipa", "schema_selection_bladder", "ajcc7_n_codes", "ajcc6_stage_codes", "ssf5_nna", "nodes_dck", "ssf19_snn", "ajcc7_stage_codes", "lymph_nodes_size_mets10or50_ajcc6_xid_n", "lymph_nodes_size_mets10or50_ajcc6_xid_m", "ssf9_snd", "ssf13_snh", "primary_site", "ajcc6_year_validation", "extension_bcb", "ajcc6_m_codes", "nodes_eval_epa", "cs_year_validation", "ssf24_sns", "ssf8_snc", "ssf12_sng" ],
-  "last_modified" : "2015-08-25T16:44:00.701Z"
+  "last_modified" : "2016-01-28T18:55:45.054Z"
 }

@@ -1,0 +1,120 @@
+{
+  "id" : "adnexa_uterine_other",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "Adnexa Uterine Other",
+  "title" : "Broad and Round Ligaments, Parametrium, Uterine Adnexa",
+  "notes" : "C571  Broad ligament\nC572  Round ligament\nC573  Parametrium\nC574  Uterine adnexa\n\n**Note:** TNM is not defined for this schema. If directly assigning Summary Stage 2000 (SS2000), use the *Broad and Round Ligaments, Parametrium, Uterine Adnexa* chapter on page 218 of the SS2000 on-line manual [http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf]",
+  "schema_selection_table" : "schema_selection_adnexa_uterine_other",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "seer_primary_tumor",
+    "name" : "SEER Primary Tumor",
+    "naaccr_item" : 772,
+    "default" : "999",
+    "table" : "extension_bcn",
+    "used_for_staging" : true
+  }, {
+    "key" : "seer_nodes",
+    "name" : "SEER Regional Nodes",
+    "naaccr_item" : 774,
+    "default" : "999",
+    "table" : "nodes_dcc",
+    "used_for_staging" : true
+  }, {
+    "key" : "seer_mets",
+    "name" : "SEER Mets",
+    "naaccr_item" : 776,
+    "default" : "99",
+    "table" : "seer_mets_48348",
+    "used_for_staging" : true
+  } ],
+  "outputs" : [ {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "1.0"
+  }, {
+    "key" : "clin_stage_group",
+    "name" : "Derived SEER Clin Stage Group",
+    "naaccr_item" : 3610,
+    "default" : "88"
+  }, {
+    "key" : "path_stage_group",
+    "name" : "Derived SEER Path Stage Group",
+    "naaccr_item" : 3605,
+    "default" : "88"
+  }, {
+    "key" : "combined_stage_group",
+    "name" : "Derived SEER Combined Stage Group",
+    "naaccr_item" : 3614,
+    "default" : "88"
+  }, {
+    "key" : "combined_t",
+    "name" : "Derived SEER Combined T",
+    "naaccr_item" : 3616,
+    "default" : "88"
+  }, {
+    "key" : "combined_n",
+    "name" : "Derived SEER Combined N",
+    "naaccr_item" : 3618,
+    "default" : "88"
+  }, {
+    "key" : "combined_m",
+    "name" : "Derived SEER Combined M",
+    "naaccr_item" : 3620,
+    "default" : "88"
+  }, {
+    "key" : "source_t",
+    "name" : "Derived SEER Combined T Source",
+    "naaccr_item" : 3622
+  }, {
+    "key" : "source_n",
+    "name" : "Derived SEER Combined N Source",
+    "naaccr_item" : 3624
+  }, {
+    "key" : "source_m",
+    "name" : "Derived SEER Combined M Source",
+    "naaccr_item" : 3626
+  } ],
+  "mappings" : [ {
+    "id" : "summary_stage_2017",
+    "name" : "Summary Stage 2017",
+    "tables" : [ {
+      "id" : "extension_bcn",
+      "inputs" : [ "seer_primary_tumor" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "nodes_dcc",
+      "inputs" : [ "seer_nodes" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "seer_mets_48348",
+      "inputs" : [ "seer_mets" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  } ],
+  "involved_tables" : [ "primary_site", "seer_mets_48348", "nodes_dcc", "histology", "schema_selection_adnexa_uterine_other", "year_dx_validation", "summary_stage_rpa", "extension_bcn" ],
+  "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
+  "last_modified" : "2016-02-03T21:45:14.837Z"
+}

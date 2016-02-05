@@ -1,0 +1,27 @@
+{
+  "id" : "seer_mets_gum_lower_82824",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Mets Gum Lower",
+  "title" : "SEER Mets",
+  "footnotes" : "\\## Considered regional in Historic Stage",
+  "last_modified" : "2015-11-25T20:25:49.139Z",
+  "definition" : [ {
+    "key" : "seer_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/lymph node(s) involved\n\nDistant lymph node(s):\n    Mediastinal\n    Supraclavicular (transverse cervical)\n    Other distant lymph node(s)\n\nExtension to:\n    Skin##\n    Skull##\n    Upper gum only:\n        Maxillary antrum (sinus)##\n    Nasal cavity##\n\nFurther contiguous extension\n\nMetastasis", "Distant lymph nodes:\nLevel V - Posterior triangle group \n    Posterior cervical\nLevel VA - Spinal accessory        \nLevel VB - Transverse cervical, supraclavicular \nLevel VI - Anterior compartment group:\n    Laterotracheal\n    Paralaryngeal\n    Paratracheal - above suprasternal notch\n    Perithyroidal\n    Precricoid (Delphian)\n    Prelaryngeal\n    Pretracheal - above suprasternal notch\n    Recurrent laryngeal\nLevel VII - Superior mediastinal group \n    Esophageal groove\n    Paratracheal - below suprasternal notch\n    Pretracheal - below suprasternal notch    \nOther groups:\n    Parotid:\n        Infraauricular \n        Intraparotid \n        Periparotid \n        Preauricular \nParapharyngeal\nRetroauricular (mastoid)         \nRetropharyngeal \nSuboccipital\n\nDistant lymph nodes, NOS\n\nDistant metastasis:\n    Bone of maxilla\n    Masticator space \n    Maxilla, NOS\n    Pterygoid plates\n    Skin of face\n    Specified bone (other than mandible, maxilla)\n\nFurther contiguous extension\n    Base of skull\n    Internal carotid artery (encased)\n\nStated as T4b or T4 [NOS]\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed  \nNot documented in patient record", "", "VALUE:U" ] ]
+}

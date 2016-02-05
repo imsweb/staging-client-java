@@ -1,0 +1,26 @@
+{
+  "id" : "extension_bep",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "last_modified" : "2015-11-25T20:26:40.165Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ: Noninvasive; intraepithelial", "", "VALUE:IS" ], [ "100", "Localized only\n\n    Invasive tumor confined to lamina propria (mucoperiosteum) (stroma)\n\n    Localized, NOS", "Involvement of deep tissue or periosteum of lower gum\nTumor confined to mucosa of lower gum\n\nStated as T3, T4a, or T4 [NOS]", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nExtension to:\n     Buccal mucosa (inner cheek)\n     Deep muscle of tongue\n     Facial muscle, NOS\n     Labial mucosa (inner lip)\n     Lateral pharyngeal wall\n     Lip\n     Soft palate\n     Subcutaneous soft tissue of face\n     Tonsillar pillars and fossae\n     Tonsils\n\nLower gum/retromolar trigone only:\n     Floor of mouth\n     Mandible\n     Tongue (mucosa)\n      Uvula", "Extension involving mucosa and/or deep soft tissue or musculature of any structure listed below: \n    Bone, NOS except base of skull, maxilla\n    Cartilage of mandible \n    Cartilage, NOS\n    Cortical bone of mandible\n    Cortical bone, NOS\n    Lip, NOS (labial mucosa)                         \n    Lower lip (labial mucosa)\n\nExtension involving mucosa only to upper lip (labial mucosa)\n\nExtrinsic muscle of tongue:\n    Genioglossus\n    Hyoglossus\n    Palatoglossus\n    Styloglossus\n\nDeep soft tissues or musculature of upper lip", "VALUE:RE" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

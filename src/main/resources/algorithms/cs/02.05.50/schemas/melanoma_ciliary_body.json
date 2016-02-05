@@ -329,6 +329,7 @@
     "key" : "ssf25",
     "name" : "Schema Discriminator: Melanoma Ciliary Body/Melanoma Iris",
     "naaccr_item" : 2879,
+    "default" : "010",
     "table" : "ssf25_sqc",
     "used_for_staging" : true,
     "metadata" : [ "CCCR_ESSENTIAL_FOR_TNM_CLASSIFICATION", "NPCR_REQUIRED_2004_FORWARD" ]
@@ -1171,5 +1172,5 @@
     } ]
   } ],
   "involved_tables" : [ "extension_size_category_ajcc7_xpm", "ssf12_sqb", "ssf3_lpj", "ssf8_spx", "ssf15_snj", "ajcc7_t_codes", "ssf23_snr", "ajcc6_stage_qpx", "ssf6_opd", "nodes_dpa", "histology", "ssf1_jpq", "cs_input_version_original", "tumor_size_category_ajcc7_xpk", "ssf22_snq", "extension_bfq", "lvi", "mets_hpg", "ajcc_tdescriptor_cleanup", "ssf13_sdg", "ajcc7_year_validation", "ssf21_snp", "ajcc7_inclusions_tpa", "ssf17_snl", "ssf10_spz", "ssf5_npf", "ajcc_descriptor_codes", "ajcc7_stage_upv", "ssf11_sqa", "grade", "summary_stage_rpa", "ssf7_spw", "ajcc7_m_codes", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "ssf25_sqc", "ajcc6_t_codes", "nodes_pos_fpa", "ajcc_mdescriptor_cleanup", "ss_codes", "tumor_size_pair_ajcc6_xpl", "schema_selection_melanoma_ciliary_body", "nodes_exam_gpa", "size_apb", "ajcc6_n_codes", "behavior", "ssf2_kpj", "extension_size_pair_ajcc6_xpn", "ssf18_snm", "mets_eval_ipa", "extension_eval_cpa", "ajcc7_n_codes", "ssf14_sdh", "ajcc6_stage_codes", "ssf19_snn", "ajcc7_stage_codes", "size_metastasis_ajcc7_xpx", "ssf9_sqm", "primary_site", "ajcc6_year_validation", "ajcc6_m_codes", "nodes_eval_epa", "ssf4_mpe", "cs_year_validation", "ssf24_sns" ],
-  "last_modified" : "2015-08-25T16:44:14.785Z"
+  "last_modified" : "2016-01-28T18:55:49.935Z"
 }

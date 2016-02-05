@@ -1,0 +1,27 @@
+{
+  "id" : "nodes_dbf",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Regional Nodes",
+  "title" : "SEER Regional Nodes",
+  "notes" : "**Note:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in SEER Mets.",
+  "last_modified" : "2015-11-25T20:26:43.340Z",
+  "definition" : [ {
+    "key" : "seer_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summary Stage 2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:NONE" ], [ "300", "Regional lymph node(s) involved only\n\nREGIONAL Lymph Nodes (including contralateral or bilateral nodes)\n\nIliac, NOS:\n    External\n    Internal (hypogastric), NOS:\n        Obturator\nPelvic, NOS\nPeriprostatic\nSacral, NOS:\n    Lateral (laterosacral)\n    Middle (promontorial) (Gerotaâs node)\n    Presacral\n\nRegional lymph node(s), NOS", "Lymph nodes, NOS\n    \nStated as N1", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

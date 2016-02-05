@@ -139,7 +139,7 @@
     "key" : "ssf1",
     "name" : "Alpha Fetoprotein (AFP) Interpretation",
     "naaccr_item" : 2880,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf1_jpw",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_III_COLLECTED_IN_CSV1", "COC_ALREADY_COLLECTED", "SEER_ALREADY_COLLECTED" ]
@@ -1220,5 +1220,5 @@
     } ]
   } ],
   "involved_tables" : [ "ssf3_lps", "ajcc6_exclusions_ppd", "ssf25_snt", "ssf15_snj", "ajcc7_t_codes", "extension_bbc", "ssf23_snr", "ssf7_scb", "histology", "cs_input_version_original", "ssf1_jpw", "ssf22_snq", "lvi", "ssf14_sni", "schema_selection_liver", "ssf8_scc", "ajcc_tdescriptor_cleanup", "ajcc7_year_validation", "ssf21_snp", "ssf4_mal", "ssf17_snl", "ajcc_descriptor_codes", "grade", "summary_stage_rpa", "ajcc7_m_codes", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "ajcc7_inclusions_tpn", "ssf6_oag", "lymph_nodes_metsat_dxajcc6_xew", "ajcc6_t_codes", "ajcc6_stage_qcc", "nodes_pos_fpa", "ajcc_mdescriptor_cleanup", "mets_haf", "ssf11_snf", "ss_codes", "nodes_exam_gpa", "ssf2_kpq", "ajcc6_n_codes", "behavior", "nodes_dau", "ssf10_sne", "ssf18_snm", "mets_eval_ipa", "ajcc7_n_codes", "extension_eval_cpc", "ajcc6_stage_codes", "size_apt", "ssf19_snn", "ajcc7_stage_codes", "extension_size_ajcc7_xev", "ssf9_snd", "ssf13_snh", "ssf5_nak", "primary_site", "ajcc7_stage_ubl", "ajcc6_year_validation", "extension_size_ajcc6_xak", "ajcc6_m_codes", "nodes_eval_epa", "cs_year_validation", "ssf24_sns", "ssf12_sng" ],
-  "last_modified" : "2015-08-25T16:44:12.581Z"
+  "last_modified" : "2016-01-28T18:55:49.008Z"
 }

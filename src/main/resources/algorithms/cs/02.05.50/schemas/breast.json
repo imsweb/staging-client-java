@@ -139,7 +139,7 @@
     "key" : "ssf1",
     "name" : "Estrogen Receptor (ER) Assay",
     "naaccr_item" : 2880,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf1_jag",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_III_COLLECTED_IN_CSV1", "NPCR_REQUIRED_BY_NPCR_2010_FORWARD", "COC_ALREADY_COLLECTED", "SEER_ALREADY_COLLECTED" ]
@@ -147,7 +147,7 @@
     "key" : "ssf2",
     "name" : "Progesterone Receptor (PR) Assay",
     "naaccr_item" : 2890,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf2_kac",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_III_COLLECTED_IN_CSV1", "NPCR_REQUIRED_BY_NPCR_2010_FORWARD", "COC_ALREADY_COLLECTED", "SEER_ALREADY_COLLECTED" ]
@@ -179,7 +179,7 @@
     "key" : "ssf6",
     "name" : "Size of Tumor-Invasive Component",
     "naaccr_item" : 2930,
-    "default" : "988",
+    "default" : "987",
     "table" : "ssf6_oaa",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_III_COLLECTED_IN_CSV1", "COC_ALREADY_COLLECTED", "SEER_ALREADY_COLLECTED" ]
@@ -187,7 +187,7 @@
     "key" : "ssf7",
     "name" : "Nottingham or Bloom-Richardson (BR) Score/Grade",
     "naaccr_item" : 2861,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf7_saa",
     "used_for_staging" : false,
     "metadata" : [ "COC_CLINICALLY_SIGNIFICANT", "CCCR_II_ESSENTIAL_FOR_CLINICAL_DECISION", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -195,7 +195,7 @@
     "key" : "ssf8",
     "name" : "HER2: Immunohistochemistry (IHC) Lab Value",
     "naaccr_item" : 2862,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf8_sab",
     "used_for_staging" : false,
     "metadata" : [ "COC_CLINICALLY_SIGNIFICANT", "CCCR_II_ESSENTIAL_FOR_CLINICAL_DECISION", "NPCR_REQUIRED_BY_NPCR_2010_FORWARD", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -203,7 +203,7 @@
     "key" : "ssf9",
     "name" : "HER2: Immunohistochemistry (IHC) Test Interpretation",
     "naaccr_item" : 2863,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf9_sac",
     "used_for_staging" : false,
     "metadata" : [ "COC_CLINICALLY_SIGNIFICANT", "CCCR_II_ESSENTIAL_FOR_CLINICAL_DECISION", "NPCR_REQUIRED_BY_NPCR_2010_FORWARD", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -219,7 +219,7 @@
     "key" : "ssf11",
     "name" : "HER2: Fluorescence In Situ Hybridization (FISH) Test Interpretation",
     "naaccr_item" : 2865,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf11_sae",
     "used_for_staging" : false,
     "metadata" : [ "COC_CLINICALLY_SIGNIFICANT", "CCCR_II_ESSENTIAL_FOR_CLINICAL_DECISION", "NPCR_REQUIRED_BY_NPCR_2010_FORWARD", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -235,7 +235,7 @@
     "key" : "ssf13",
     "name" : "HER2: Chromogenic In Situ Hybridization (CISH) Test Interpretation",
     "naaccr_item" : 2867,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf13_sag",
     "used_for_staging" : false,
     "metadata" : [ "COC_CLINICALLY_SIGNIFICANT", "CCCR_II_ESSENTIAL_FOR_CLINICAL_DECISION", "NPCR_REQUIRED_BY_NPCR_2010_FORWARD", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -243,7 +243,7 @@
     "key" : "ssf14",
     "name" : "HER2: Result of Other or Unknown Test",
     "naaccr_item" : 2868,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf14_sbf",
     "used_for_staging" : false,
     "metadata" : [ "COC_CLINICALLY_SIGNIFICANT", "CCCR_II_ESSENTIAL_FOR_CLINICAL_DECISION", "NPCR_REQUIRED_BY_NPCR_2010_FORWARD", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -251,7 +251,7 @@
     "key" : "ssf15",
     "name" : "HER2: Summary Result of Testing",
     "naaccr_item" : 2869,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf15_sbg",
     "used_for_staging" : false,
     "metadata" : [ "COC_CLINICALLY_SIGNIFICANT", "CCCR_II_ESSENTIAL_FOR_CLINICAL_DECISION", "NPCR_REQUIRED_BY_NPCR_2011_FORWARD", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -303,7 +303,7 @@
     "key" : "ssf22",
     "name" : "Multigene Signature Method",
     "naaccr_item" : 2876,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf22_san",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -311,7 +311,7 @@
     "key" : "ssf23",
     "name" : "Multigene Signature Results",
     "naaccr_item" : 2877,
-    "default" : "988",
+    "default" : "999",
     "table" : "ssf23_sao",
     "used_for_staging" : false,
     "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
@@ -1215,5 +1215,5 @@
     } ]
   } ],
   "involved_tables" : [ "lymph_nodes_clinical_evaluation_xcx", "size_aab", "ssf22_san", "ssf23_sao", "ssf5_naa", "ssf25_snt", "extension_behavior_xci", "schema_selection_breast", "lymph_nodes_positive_axillary_node_xcy", "ajcc7_t_codes", "extension_size_xar", "determine_correct_table_for_ajcc6_n_ns9", "histology", "ssf24_sap", "cs_input_version_original", "ajcc7_stage_uac", "nodes_pos_fab", "lvi", "ssf3_lac", "ajcc_tdescriptor_cleanup", "ssf11_sae", "ssf16_sah", "ssf14_sbf", "ssf20_sal", "ajcc7_year_validation", "nodes_daj", "ajcc_descriptor_codes", "ajcc7_inclusions_tpg", "ssf10_sad", "ssf15_sbg", "ajcc6_stage_qad", "ssf21_sam", "grade", "summary_stage_rpa", "ssf17_sai", "ajcc7_m_codes", "ssf1_jag", "ajcc_ndescriptor_cleanup", "extension_bak", "ssf19_sak", "ssf6_oaa", "ajcc6_t_codes", "ssf18_saj", "ajcc_mdescriptor_cleanup", "ajcc6_exclusions_pan", "ss_codes", "ssf7_saa", "nodes_exam_gpa", "ssf4_mab", "ajcc6_n_codes", "behavior", "mets_hau", "mets_eval_ipa", "ssf8_sab", "extension_eval_cpa", "ajcc7_n_codes", "ajcc6_stage_codes", "ssf12_saf", "ajcc7_stage_codes", "ihcmol_xcc", "primary_site", "ajcc6_year_validation", "ssf2_kac", "lymph_nodes_pathologic_evaluation_xcw", "ajcc6_m_codes", "nodes_eval_epa", "cs_year_validation", "ssf9_sac", "ssf13_sag" ],
-  "last_modified" : "2015-08-25T16:44:02.148Z"
+  "last_modified" : "2016-01-28T18:55:45.436Z"
 }

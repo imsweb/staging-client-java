@@ -1,0 +1,27 @@
+{
+  "id" : "mets_hcw",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Mets",
+  "title" : "SEER Mets",
+  "notes" : "**Note:**  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and metastatic detail are available, record the code with metastatic detail in preference to a statement of FIGO stage.",
+  "last_modified" : "2015-11-25T20:25:52.940Z",
+  "definition" : [ {
+    "key" : "seer_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/lymph node(s) involved\n\nMicroscopic peritoneal implants beyond pelvis, including peritoneal surface of liver\nFIGO Stage IIIA\n\nMacroscopic peritoneal implants beyond pelvis, less than or equal to 2 cm in diameter,  including peritoneal surface of liver\nFIGO Stage IIIB\n\nPeritoneal implants beyond pelvis, greater than 2 cm in diameter, including peritoneal surface of liver\nFIGO Stage IIIC\n\nPeritoneal implants, NOS\nFIGO Stage III, not further specified\n\nDistant lymph node(s)\n\nFurther contiguous extension or metastasis:\n     Abdominal mesentery\n     Colon except sigmoid\n     Diaphragm\n     Gallbladder\n     Kidney\n     Liver (peritoneal surface)\n     Omentum\n     Pancreas\n     Pericolic gutter\n     Peritoneum, NOS (excluding adjacent pelvic peritoneum)\n     Small intestine\n     Spleen\n     Stomach\n      Ureter (retroperitoneal portion)\n\nMetastasis, including:\n     Liver parenchymal metastasis\n     Pleural fluid (positive cytology)\nFIGO Stage IV", "Macroscopic peritoneal implants beyond pelvis \n    Ascending colon\n    Descending colon\nWITH invasion of underlying structures\n\nStated as T3c\n\nFIGO Stage IIIC based on tumor extension OR unknown if based on tumor extension or nodes\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nFIGO Stage IV\n\nStated as M1", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

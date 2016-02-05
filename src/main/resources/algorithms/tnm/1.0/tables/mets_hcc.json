@@ -1,0 +1,28 @@
+{
+  "id" : "mets_hcc",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Mets",
+  "title" : "SEER Mets",
+  "notes" : "**Note 1:**  Liver metastasis implies the presence of tumor inside the liver parenchyma as one or more nodules.  Adherence to the liver capsule, even if extensive, should not be considered liver metastasis.  \n\n**Note 2:** When a patient has more than one area of GIST, it is important to try to distinguish between intra-abdominal metastasis and tumor multiplicity. Distant metastases are relatively rare in GISTs, but they are increasingly detected with sophisticated radiological studies. Intra-abdominal metastasis will present as tumor involvement in the abdominal cavity outside the main tumor mass, in the peritoneum, omentum, serosae of organs, and the cul-de-sac, among other areas.  \n\nTumor multiplicity, in contrast, will present with anatomically separate, multiple tumors of different sizes arising independently in the GI tract. This form of tumor multiplicity usually will be seen in patients with neurofibromatosis type 1 or familial GIST syndrome, but in rare instances may be seen in patients without these conditions. This form of multiplicity should not be coded as metastasis.\nWhen a solitary omental or mesenteric tumor mass is found with a primary GIST elsewhere, do not code this as a metastasis. \nWhen multiple tumor areas are present and it is not stated whether these are metastases or independent tumors, consult with a physician if possible to determine how to code them.",
+  "footnotes" : "\\## Considered regional in Historic Stage\n\\### Considered distant in Historic Stage\n\\** Considered regional in 1977 Summary Staging Guide",
+  "last_modified" : "2015-12-22T19:27:30.431Z",
+  "definition" : [ {
+    "key" : "seer_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/node(s) involved\n\nDistant lymph node(s):\n    Internal iliac (hypogastric), NOS: for rectosigmoid:**\n    Obturator for rectosigmoid\n    Left colic for rectum##\n    Other distant lymph node(s)\n\nExtension to:\nRectosigmoid (C199):\n    Bladder##\n    Colon via serosa##\n    Fallopian tube(s)##\n    Ovary(ies)##\n    Prostate##\n    Ureter(s)\n    Uterus##\n\nRectum (C209):\n    Bladder for females only##\n    Bone(s) of pelvis##\n    Urethra##\n    Uterus###\n\nFurther contiguous extension\n\nMetastasis", "Distant lymph nodes: \n    Common iliac\n    External iliac\n    Superior mesenteric\n    For rectosigmoid (C199):\n         Hemorrhoidal, inferior\n         Rectal, inferior\n\nDistant lymph node(s), NOS\n\nDistant metastasis:\nFor all sites:\n    Ovary(ies)\n\nFor rectosigmoid (C199):\n    Skeletal muscles of pelvic floor\n    Vagina\n\nFor rectum (C209):\n    Cervix\n    Perineum, perianal skin\n    Sacrum\n    Sacral plexus\n\nCarcinomatosis \n\nDistant metastases WITH or WITHOUT distant lymph node(s) including:\n    Peritoneal nodules \n    Liver parenchymal nodules \n\nDistant metastasis, NOS\n\nStated as M1", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

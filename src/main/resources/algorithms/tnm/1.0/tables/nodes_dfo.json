@@ -1,0 +1,27 @@
+{
+  "id" : "nodes_dfo",
+  "algorithm" : "tnm",
+  "version" : "1.0",
+  "name" : "SEER Regional Nodes",
+  "title" : "SEER Regional Nodes",
+  "notes" : "**Note:**  Code only regional nodes and nodes, NOS, in this field. Distant nodes are coded in SEER Mets.",
+  "last_modified" : "2015-11-25T20:26:33.459Z",
+  "definition" : [ {
+    "key" : "seer_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summary Stage 2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:NONE" ], [ "300", "Regional lymph node(s) involved only\n\n    REGIONAL Lymph Nodes\n\n    Cystic duct (Calotâs node) (node of the neck of the gallbladder)\n    Node of the foramen of Winslow (epiploic) (omental)\n    Pancreaticoduodenal\n    Pericholedochal (node along common bile duct)\n    Periduodenal\n    Peripancreatic (near head of pancreas only)\n    Periportal\n    Porta hepatis (portal) (hilar) (in hilus of liver)\n\n    Regional lymph node(s), NOS", "Hepatic \nHepatic artery\nHilar (in the hepatoduodenal ligament)\nPortal vein\n\nLymph nodes, NOS\n\nStated as N1", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

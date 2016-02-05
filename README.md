@@ -15,9 +15,20 @@ assessments, and compatibility across all of the systems for all cancer sites.
 
 Versions supported:
 
-- 02.05.50 (originally released October 2013)
+- 02.05.50 (released October 2013)
 
-### More algorithms coming soon
+### TNM
+
+The TNM staging algorithm contains the data items and descriptions necessary to collect T, N and M stage components, as well as other data items required to calculate 
+Clinical and Pathologic Stage Groups.  In addition, this algorithm calculates a combined stage group.  It also contains the data item definitions for the associated 
+Predictive and Prognostic Factors on a schema specific basis.    Staging information is collected for site and histology combinations that are not defined in TNM in 
+order to support SEER Summary Stage calculations (these calculations will not be implemented for diagnosis year 2016). 
+
+Initial release include UICC TNM Classification of Malignant Tumor 7th edition as well as SEER Summary Stage 2017 (for cases diagnosed 2017 and later)
+
+Versions supported:
+
+- 1.0 (released January 2016)
 
 ## Download
 
