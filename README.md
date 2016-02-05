@@ -23,7 +23,7 @@ TNM is a widely accepted system of cancer staging. TNM stands for Tumor, Nodes, 
 
 For each cancer site, or schema, valid values, definitions, and registrar notes are provided for clinical TNM and stage group, pathologic TNM and stage group, and relevant Site-Specific Factors (SSFs).
 
-TNM categories, stage groups, and definitions are based on the Union for International Cancer Control (UICC) TNM 7th edition classification.  UICC 7th edition and AJCC 7th edition TNM categories and stage groups are very similar; however, there are some differences.
+TNM categories, stage groups, and definitions are based on the Union for International Cancer Control ([UICC](http://www.uicc.org/)) TNM 7th edition classification.  UICC 7th edition and AJCC 7th edition TNM categories and stage groups are very similar; however, there are some differences.
 
 Versions supported:
 
