@@ -440,8 +440,7 @@ public final class Staging {
         // any outputs that have default values need to be included since they will produce output no matter what
         if (schema.getOutputMap() != null) {
             for (Entry<String, ? extends Output> entry : schema.getOutputMap().entrySet())
-                if (entry.getValue().getDefault() != null)
-                    outputs.add(entry.getKey());
+                outputs.add(entry.getKey());
         }
 
         if (schema.getMappings() != null)
