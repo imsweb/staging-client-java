@@ -427,9 +427,9 @@ public final class Staging {
     }
 
     /**
-     * Looks at all tables involved in all the mappings in the definition and returns a list of output keys that could be created.  It will also deal with mapped
+     * Looks at all tables involved in all the mappings in the definition and returns a list of output keys that will be created.  It will also deal with mapped
      * outputs.  The outputs from each mapping will only be included if it passes the inclusion/exclusion criteria based on the context.  If the schema has StagingOutputs
-     * defined, then the calulated output list will be trimmed to only include outputs that are defined there.
+     * defined, then the calulated output list is exactly the same as the schema output list.
      * @param schema a StagingSchema
      * @param context a context of values used to to check mapping inclusion/exclusion
      * @return a Set of unique output keys
@@ -437,11 +437,16 @@ public final class Staging {
     public Set<String> getOutputs(StagingSchema schema, Map<String, String> context) {
         Set<String> outputs = new HashSet<>();
 
-        // any outputs that have default values need to be included since they will produce output no matter what
+        // if outputs are defined in the schema, then there is no reason to look any further into the mappings; the output defines exactly what keys will
+        // be returned and it doesn't matter what context is passed in that case
         if (schema.getOutputMap() != null) {
             for (Entry<String, ? extends Output> entry : schema.getOutputMap().entrySet())
                 outputs.add(entry.getKey());
+
+            return outputs;
         }
+
+        // if outputs were not defined, then the tables involved in the mappings will be used to determine the possible outputs
 
         if (schema.getMappings() != null)
             for (StagingMapping mapping : schema.getMappings())
