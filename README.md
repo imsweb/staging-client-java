@@ -19,7 +19,7 @@ TNM categories, stage groups, and definitions are based on the Union for Interna
 
 In 2016, SEER Summary Stage 2000 will continue to be used. For those schemas and site/histology combinations that are not defined in TNM, SEER Summary Stage 2000 should be collected manually.
 
-NCI will be developing SEER Summary Stage 2017, which will be effective for diagnosis year 2017. In preparation for SEER Summary Stage 2017, three data fields have been defined, SEER Primary Tumor, SEER Regional Nodes and SEER Mets. Some work has been done to define these fields, but they do NOT apply in 2016 and should be ignored. Do not utilize theses fields for data collection in 2016. Only use the SEER Summary Stage 2000 directly coded field.
+NCI will be developing SEER Summary Stage 2017, which will be effective for diagnosis year 2017. In preparation for SEER Summary Stage 2017, three data fields have been defined, SEER Primary Tumor, SEER Regional Nodes and SEER Mets. Some work has been done to define these fields, but they do NOT apply in 2016 and should be ignored. Do not utilize these fields for data collection in 2016. Only use the SEER Summary Stage 2000 directly coded field.
 
 Versions supported:
 
