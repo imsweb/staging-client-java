@@ -7,6 +7,24 @@ A cancer staging client library for Java applications.
 
 ## Supported staging algorithms
 
+### TNM
+
+TNM is a widely accepted system of cancer staging. TNM stands for Tumor, Nodes, and Metastasis. T is assigned based on the extent of involvement at the primary tumor site, N for the extent of involvement in regional lymph nodes, and M for distant spread. Clinical TNM is assigned prior to treatment and pathologic TNM is assigned based on clinical information plus information from surgery. The clinical TNM and the pathologic TNM values are summarized as clinical stage group or pathologic stage group.
+
+For each cancer site, or schema, valid values, definitions, and registrar notes are provided for clinical TNM and stage group, pathologic TNM and stage group, and relevant Site-Specific Factors (SSFs).
+
+TNM categories, stage groups, and definitions are based on the Union for International Cancer Control ([UICC](http://www.uicc.org/)) TNM 7th edition classification.  UICC 7th edition and AJCC 7th edition TNM categories and stage groups are very similar; however, there are some differences.
+
+**WARNING**: SEER Primary Tumor, SEER Regional Nodes, and SEER Mets not used in 2016!!
+
+In 2016, SEER Summary Stage 2000 will continue to be used. For those schemas and site/histology combinations that are not defined in TNM, SEER Summary Stage 2000 should be collected manually.
+
+NCI will be developing SEER Summary Stage 2017, which will be effective for diagnosis year 2017. In preparation for SEER Summary Stage 2017, three data fields have been defined, SEER Primary Tumor, SEER Regional Nodes and SEER Mets. Some work has been done to define these fields, but they do NOT apply in 2016 and should be ignored. Do not utilize theses fields for data collection in 2016. Only use the SEER Summary Stage 2000 directly coded field.
+
+Versions supported:
+
+- 1.0 (released February 2016)
+
 ### Collaborative Staging
 
 [Collaborative Stage](https://cancerstaging.org/cstage/) is a unified data collection system designed to provide a common data set to meet the needs of all three
@@ -16,18 +34,6 @@ assessments, and compatibility across all of the systems for all cancer sites.
 Versions supported:
 
 - 02.05.50 (released October 2013)
-
-### TNM
-
-TNM is a widely accepted system of cancer staging. TNM stands for Tumor, Nodes, and Metastasis. T is assigned based on the extent of involvement at the primary tumor site, N for the extent of involvement in regional lymph nodes, and M for distant spread. Clinical TNM is assigned prior to treatment and pathologic TNM is assigned based on clinical information plus information from surgery. The clinical TNM and the pathologic TNM values are summarized as clinical stage group or pathologic stage group.
-
-For each cancer site, or schema, valid values, definitions, and registrar notes are provided for clinical TNM and stage group, pathologic TNM and stage group, and relevant Site-Specific Factors (SSFs).
-
-TNM categories, stage groups, and definitions are based on the Union for International Cancer Control ([UICC](http://www.uicc.org/)) TNM 7th edition classification.  UICC 7th edition and AJCC 7th edition TNM categories and stage groups are very similar; however, there are some differences.
-
-Versions supported:
-
-- 1.0 (released February 2016)
 
 ## Download
 
