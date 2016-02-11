@@ -23,6 +23,7 @@ import com.imsweb.staging.StagingData;
 import com.imsweb.staging.StagingFileDataProvider;
 import com.imsweb.staging.StagingTest;
 import com.imsweb.staging.entities.StagingSchema;
+import com.imsweb.staging.entities.StagingSchemaOutput;
 import com.imsweb.staging.entities.StagingTable;
 
 public class TnmStagingTest extends StagingTest {
@@ -123,13 +124,6 @@ public class TnmStagingTest extends StagingTest {
         lookup = _STAGING.lookupSchema(schemaLookup);
         Assert.assertEquals(0, lookup.size());
 
-        // test specific failure case:  Line #1995826 [C695,9701,100,lacrimal_gland] --> The schema selection should have found a schema, lacrimal_gland, but did not.
-//        schemaLookup = new TnmSchemaLookup("C695", "9701");
-//        schemaLookup.setInput(TnmStagingData.SSF25_KEY, "100");
-//        lookup = _STAGING.lookupSchema(schemaLookup);
-//        Assert.assertEquals(1, lookup.size());
-//        Assert.assertEquals("lacrimal_gland", lookup.get(0).getId());
-
         // test searching on only site
         lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C401", null));
         Assert.assertEquals(5, lookup.size());
@@ -171,15 +165,6 @@ public class TnmStagingTest extends StagingTest {
         lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C629", "9231"));
         Assert.assertEquals(1, lookup.size());
         Assert.assertEquals("testis", lookup.get(0).getId());
-    }
-
-    @Test
-    public void testSchemaSelectionIntegration() throws IOException, InterruptedException {
-        // TODO need to tweak this since the disciminator is not always SSF25 
-        // test complete file of cases
-        //        IntegrationUtils.IntegrationResult result = IntegrationUtils.processSchemaSelection(_STAGING, "cs_schema_identification_unit_test.txt.gz",
-        //                new GZIPInputStream(Thread.currentThread().getContextClassLoader().getResourceAsStream("test-data/cs/020550/cs_schema_identification_unit_test.txt.gz")));
-        //        Assert.assertEquals(0, result.getNumFailures());
     }
 
     @Test
@@ -281,10 +266,10 @@ public class TnmStagingTest extends StagingTest {
         Assert.assertEquals("1", data.getOutput(TnmStagingData.TnmOutput.SOURCE_N));
         Assert.assertEquals("p1", data.getOutput(TnmStagingData.TnmOutput.COMBINED_M));
         Assert.assertEquals("2", data.getOutput(TnmStagingData.TnmOutput.SOURCE_M));
-//        Assert.assertEquals("D", data.getOutput(TnmStagingData.TnmOutput.SS2017));
-//        Assert.assertEquals("U", data.getOutput(TnmStagingData.TnmOutput.SS2017_T));
-//        Assert.assertEquals("RN", data.getOutput(TnmStagingData.TnmOutput.SS2017_N));
-//        Assert.assertEquals("D", data.getOutput(TnmStagingData.TnmOutput.SS2017_M));
+        //        Assert.assertEquals("D", data.getOutput(TnmStagingData.TnmOutput.SS2017));
+        //        Assert.assertEquals("U", data.getOutput(TnmStagingData.TnmOutput.SS2017_T));
+        //        Assert.assertEquals("RN", data.getOutput(TnmStagingData.TnmOutput.SS2017_N));
+        //        Assert.assertEquals("D", data.getOutput(TnmStagingData.TnmOutput.SS2017_M));
     }
 
     @Test
@@ -414,18 +399,6 @@ public class TnmStagingTest extends StagingTest {
     }
 
     @Test
-    public void testExpectedOutput() throws Exception {
-        //        IntegrationUtils.IntegrationResult ajcc6Result = IntegrationUtils.processSchema(_STAGING, "AJCC_6.V020550.txt.gz",
-        //                new GZIPInputStream(Thread.currentThread().getContextClassLoader().getResourceAsStream("test-data/cs/020550/AJCC_6.V020550.txt.gz")));
-        //        IntegrationUtils.IntegrationResult ajcc7Result = IntegrationUtils.processSchema(_STAGING, "AJCC_7.V020550.txt.gz",
-        //                new GZIPInputStream(Thread.currentThread().getContextClassLoader().getResourceAsStream("test-data/cs/020550/AJCC_7.V020550.txt.gz")));
-        //
-        //        // make sure there were no errors returned
-        //        Assert.assertEquals("There were failures in the AJCC6 tests", 0, ajcc6Result.getNumFailures());
-        //        Assert.assertEquals("There were failures in the AJCC7 tests", 0, ajcc7Result.getNumFailures());
-    }
-
-    @Test
     public void testLookupInputs() {
         // test valid combinations that do not require a discriminator
         StagingSchema schema = _STAGING.getSchema("prostate");
@@ -434,6 +407,27 @@ public class TnmStagingTest extends StagingTest {
 
         lookup = new TnmSchemaLookup("C619", "8120");
         Assert.assertFalse(_STAGING.getInputs(schema, lookup.getInputs()).contains("clin_t"));
+    }
+
+    @Test
+    public void testLookupOutputs() {
+        TnmSchemaLookup lookup = new TnmSchemaLookup("C680", "8590");
+        List<StagingSchema> lookups = _STAGING.lookupSchema(lookup);
+        Assert.assertEquals(1, lookups.size());
+
+        StagingSchema schema = _STAGING.getSchema(lookups.get(0).getId());
+        Assert.assertEquals("urethra", schema.getId());
+
+        // build list of output keys
+        Set<String> definedOutputs = new HashSet<>();
+        for (StagingSchemaOutput output : schema.getOutputs())
+            definedOutputs.add(output.getKey());
+
+        // test without context
+        Assert.assertEquals(definedOutputs, _STAGING.getOutputs(schema));
+
+        // test with context
+        Assert.assertEquals(definedOutputs, _STAGING.getOutputs(schema, lookup.getInputs()));
     }
 
     @Test
