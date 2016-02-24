@@ -21,17 +21,17 @@ repositories {
 }
 
 dependencies {
-    compile 'com.fasterxml.jackson.core:jackson-core:2.4.4'
-    compile 'com.fasterxml.jackson.core:jackson-annotations:2.4.4'
-    compile 'com.fasterxml.jackson.core:jackson-databind:2.4.4'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.7.1'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.7.1'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.7.1-1'
 
     // morphia annotations are needed to make it easier to use in SEER*API
-    compile 'org.mongodb.morphia:morphia:1.0.1'
+    compile 'org.mongodb.morphia:morphia:1.1.1'
 
-    compile 'com.google.guava:guava:18.0'
+    compile 'com.google.guava:guava:19.0'
 
-    testCompile 'junit:junit:4.11'
-    testCompile 'org.unitils:unitils-core:3.4'
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.unitils:unitils-core:3.4.2'
     testCompile 'us.monoid.web:resty:0.3.2'
 }
 
