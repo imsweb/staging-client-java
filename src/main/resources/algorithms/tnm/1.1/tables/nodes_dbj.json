@@ -1,0 +1,28 @@
+{
+  "id" : "nodes_dbj",
+  "algorithm" : "tnm",
+  "version" : "1.1",
+  "name" : "SEER Regional Nodes",
+  "title" : "SEER Regional Nodes",
+  "notes" : "**Note:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in the field SEER Mets.",
+  "footnotes" : "\\### Considered distant in Historic Stage",
+  "last_modified" : "2016-02-10T18:25:18.685Z",
+  "definition" : [ {
+    "key" : "seer_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summary Stage 2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:NONE" ], [ "300", "Regional lymph node(s) involved only\n\nREGIONAL Lymph Nodes\n\nIliac, NOS###:\n    External\n    Internal (hypogastric), NOS:\n        Obturator\nInguinal:\n    Deep, NOS:\n        Node of Cloquet or Rosenmuller (highest deep inguinal)\n    Superficial (femoral)\nPelvic, NOS###\n\nRegional lymph node(s), NOS", "Lymph nodes, NOS\n\nStated as N1, N2, or N3", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

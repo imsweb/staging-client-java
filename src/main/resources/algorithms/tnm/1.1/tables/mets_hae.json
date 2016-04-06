@@ -1,0 +1,27 @@
+{
+  "id" : "mets_hae",
+  "algorithm" : "tnm",
+  "version" : "1.1",
+  "name" : "SEER Mets",
+  "title" : "SEER Mets",
+  "footnotes" : "Â£ Considered regional for cecum, ascending, descending and sigmoid for Historic Stage\nÂ§ Considered regional for cecum, appendix, ascending, hepatic flexure and transverse colon in 1977 Summary Staging Guide\n\\## Considered regional in Historic Stage",
+  "last_modified" : "2016-02-10T18:25:22.943Z",
+  "definition" : [ {
+    "key" : "seer_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/node(s) involved\n\n     All colon sites unless included in regional (see SEER Primary Tumor)\n          Distant lymph node(s):\n               Para-aortic\n               Retroperitoneal\n               Superior mesentericÂ§\n               Other distant lymph node(s)\n           Extension to:\n                Adrenal (suprarenal) gland\n                Bladder\n                Diaphragm\n                Fallopian tubeÂ£\n                Fistula to skin\n               Gallbladder\n               Other segment(s) of colon via serosa\n               OvaryÂ£\n               UterusÂ£\n     Cecum (C180):\n          Distant lymph node(s):\n                Inferior mesenteric\n                Other distant lymph node(s)\n          Extension to:\n                Kidney, right\n                Liver##\n                Ureter, right\n\n     Ascending colon (C182):\n           Distant lymph node(s):\n                Inferior mesenteric\n                Other distant lymph node(s)\n\n     Transverse colon and flexures (C183-C185):\n            Distant lymph node(s):\n                  Inferior mesenteric for hepatic flexure and transverse colon only\n                  Other distant lymph node(s)\n            Extension to:\n                   Ureter\n\n      Sigmoid colon (C187):\n            Extension to:\n                   Cul de sac (rectouterine pouch)\n                   Ureter\n\nFurther contiguous extension\n\nMetastasis", "Distant lymph nodes: \n    Common iliac \n    External iliac \n        \nDistant metastasis: \n    Cecum, ascending, descending and sigmoid colon: \n        Fallopian tube\n        Ovary\n        Uterus\n\nFurther contiguous extension:\n    Transverse colon and flexures:\n    Ovary \n    Fallopian tube\n    Uterus\n    Ureter \n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1 (M1a, M1b, M1 [NOS])", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

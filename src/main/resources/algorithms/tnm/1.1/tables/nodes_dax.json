@@ -1,0 +1,52 @@
+{
+  "id": "nodes_dax",
+  "algorithm": "tnm",
+  "version": "1.1",
+  "name": "SEER Regional Nodes",
+  "title": "SEER Regional Nodes",
+  "notes": "**Note 1:**  Code only regional nodes and nodes, NOS, in this field.  Note 2 specifies when to code tumor deposits (TD) here.  Distant nodes are coded in SEER Mets.\n\n**Note 2:**  One or more malignant satellite peritumoral nodules in the pericolorectal adipose tissue of a primary carcinoma without histologic evidence of residual lymph node in the nodule(s) may represent discontinuous spread, venous invasion with extravascular spread, or a totally replaced lymph node. The total number of TD must always be coded in Site-Specific Factor 4. TD with or without regional node involvement is coded in SEER Regional Nodes.\n\n**Note 3:**  Middle rectal, superior rectal, or rectal nodes, NOS, are coded in SEER Regional Nodes for both rectosigmoidal and rectal primaries.  Inferior rectal nodes are coded in SEER Regional Nodes for rectal primaries. Inferior rectal nodes are coded in SEER Mets for rectosigmoidal primaries.\n\n**Note 4:**  Middle or superior hemorrhoidal nodes are coded in SEER Regional Nodes for both rectosigmoidal and rectal primaries.  Inferior hemorrhoidal nodes are coded in SEER Regional Nodes for rectal primaries.  Inferior hemorrhoidal nodes are coded in SEER Mets for rectosigmoidal primaries.\n\n**Note 5:**  Inferior mesenteric, sigmoid mesenteric, or mesenteric nodes, NOS are coded in SEER Regional Nodes. Superior mesenteric nodes are coded in SEER Mets.\n\n**Note 6:**  Summary Stage does not collect information on otherwise negative lymph nodes containing isolated tumor cells (ITCs) for this schema. Count otherwise negative regional nodes containing ITCs as negative nodes.",
+  "footnotes": "\\### Considered distant in Historic Stage",
+  "last_modified": "2016-02-10T18:25:18.649Z",
+  "definition": [
+    {
+      "key": "seer_nodes",
+      "name": "Code",
+      "type": "INPUT"
+    },
+    {
+      "key": "manual",
+      "name": "Summary Stage Manual",
+      "type": "DESCRIPTION"
+    },
+    {
+      "key": "notes",
+      "name": "Registrar Notes",
+      "type": "DESCRIPTION"
+    },
+    {
+      "key": "ss2017_n",
+      "name": "Summary Stage 2017 N",
+      "type": "ENDPOINT"
+    }
+  ],
+  "rows": [
+    [
+      "000",
+      "None\n\nNo regional lymph node involvement",
+      "No tumor deposits (TD)",
+      "VALUE:NONE"
+    ],
+    [
+      "300",
+      "REGIONAL Lymph Nodes\n\nRectosigmoid (C199):\n    Colic, NOS:###\n        Left colic###\n   Hemorrhoidal superior or middle\n    Inferior mesenteric\n    Mesenteric, NOS\n    Paracolic/pericolic\n    Perirectal\n    Rectal \n    Sigmoidal (sigmoid mesenteric)\n    Superior rectal\n\n    Nodule(s) in pericolic fat\n\nRectum (C209):\n    Hemorrhoidal superior, middle or inferior\n    Inferior mesenteric\n    Internal iliac (hypogastric), NOS:###\n        Obturator\n    Mesenteric, NOS\n    Perirectal\n    Rectal\n    Sacral, NOS:###\n         Lateral (laterosacral)\n         Middle sacral (promontorial) (Gerotaâs node)\n         Presacral\n   Sigmoidal (sigmoid mesenteric)\n\nNodule(s) in perirectal fat\n\nRegional lymph node(s), NOS",
+      "Rectal, middle \nRectal, superior\n \nRegional lymph nodes for rectum (C209):\n    Rectal, inferior\n    Sacral promontory\n\nTumor deposits (TD) in the subserosa, mesentery, or nonperitonealized pericolic or perirectal tissues with or without regional nodal metastasis\n\nLymph nodes, NOS\n\nStated as N1 (N1a, N1b, N1c, N1 [NOS]) or N2 (N2a, N2b, N2 [NOS])",
+      "VALUE:RN"
+    ],
+    [
+      "999",
+      "Unknown; regional lymph nodes not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record",
+      "",
+      "VALUE:U"
+    ]
+  ]
+}

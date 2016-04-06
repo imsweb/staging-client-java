@@ -1,0 +1,27 @@
+{
+  "id" : "nodes_dce",
+  "algorithm" : "tnm",
+  "version" : "1.1",
+  "name" : "SEER Regional Nodes",
+  "title" : "SEER Regional Nodes",
+  "notes" : "**Note 1:**  Only peripheral lymph nodes are assessed; these include the cervical, supraclavicular, epitrochlear, axillary, and inguinal nodal groups. Clinically abnormal peripheral lymph node(s) is defined as any palpable peripheral node that on physical examination is firm, irregular, clustered, fixed, or 1.5 centimeter (cm) or larger in diameter. \n\n**Note 2:**  Dutch grade system includes: \n\n    Grade 1 - Dermatopathic lymphadenopathy (DL)\n    Grade 2 - Early involvement by mycosis fungoides (MF), (presence of cerebriform nuclei larger than 7.5 micrometers (um)\n    Grade 3 - Partial effacement of lymph node architecture; many atypical cerebriform mononuclear cells (CMCs)\n    Grade 4 - Complete effacement of lymph node architecture\n\n**Note 3:**  National Cancer Institute - Lymph Nodes (NCI LN) grade system includes:\n\n    LN 0 - No atypical lymphocytes\n    LN 1 - Occasional and isolated atypical lymphocytes not arranged in clusters\n    LN 2 - Many atypical lymphocytes or in 3-6 cell clusters\n    LN 3 - Aggregates of atypical lymphocytes; nodal architecture preserved\n    LN 4 - Partial/complete effacement of nodal architecture by atypical lymphocytes or frankly neoplastic cells\n\n**Note 4:**  A T-cell clone (clone negative or clone positive) is defined by polymerase chain reaction (PCR) or Southern blot analysis of the T-cell receptor gene. \n\n**Note 5:**  For this site, code all lymph node (regional and distant) involvement in this field.",
+  "last_modified" : "2016-02-10T18:25:18.002Z",
+  "definition" : [ {
+    "key" : "seer_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summary Stage 2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "No clinically abnormal peripheral lymph nodes", "VALUE:NONE" ], [ "300", "Lymph node(s) involved only\n\nLymph Nodes:\n\n    Both clinically enlarged palpable lymph node(s) (adenopathy) and pathologically positive lymph nodes\n\n    Clinically enlarged palpable lymph node(s) (adenopathy), and either pathologically negative nodes or no pathologic statement\n\n    No clinically enlarged palpable lymph nodes(s) (adenopathy) but pathologically positive lymph node(s)\n\n    Lymph node(s), NOS", "Clinically normal peripheral lymph node(s) WITH or WITHOUT any Dutch or NCI LN grade \n     Clone negative\n     Clone positive\n     Clone unknown\n\nClinically abnormal peripheral lymph node(s) WITH or WITHOUT histopathologically any Dutch or NCI LN grade\n     Clone negative\n     Clone positive\n     Clone unknown\n\nStated as N1 (N1a, N1b, N1 [NOS]) or N2 (N2a, N2b, N2 [NOS])", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "Clinically abnormal peripheral lymph nodes \nAND no histopathologic confirmation", "VALUE:U" ] ]
+}

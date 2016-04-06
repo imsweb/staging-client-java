@@ -1,0 +1,27 @@
+{
+  "id" : "extension_ben",
+  "algorithm" : "tnm",
+  "version" : "1.1",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "footnotes" : "\\## Considered regional in Historic Stage\n\\** Considered regional in 1977 Summary Staging Guide",
+  "last_modified" : "2016-02-10T18:25:18.762Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ: Noninvasive; intraepithelial", "", "VALUE:IS" ], [ "100", "Localized only\n\n    Invasive tumor confined to:\n\n        Lamina propria\n        Musculature (buccinator)##**\n        Submucosa\n\n    Localized, NOS", "Involvement of deep soft tissue or musculature of cheek (buccinators)\nSoft tissue, NOS\n\nStated as T3, T4a or T4[NOS]", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nExtension to:\n\n     Gingiva\n     Lateral pharyngeal wall\n     Lip(s) including commissure\n     Subcutaneous soft tissue of cheek\n     Tonsillar pillars and fossae\n     Tonsils", "Involvement of deep soft tissue or musculature \nSubcutaneous soft tissue of cheek\n\nSkin of check WITH or WITHOUT ulceration", "VALUE:RE" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

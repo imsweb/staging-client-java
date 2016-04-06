@@ -1,0 +1,27 @@
+{
+  "id" : "extension_bay",
+  "algorithm" : "tnm",
+  "version" : "1.1",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "notes" : "**Note 1:**  Involvement of or extension to bone includes any type of tumor extension to the bone, such as erosion, invasion, extension, penetration, or destruction.\n\n**Note 2:** \"Minimal extension to anterior cranial fossa\" implies tumor pushing through cribriform plate, but without invasion of the dura or brain.",
+  "last_modified" : "2016-02-10T18:25:18.166Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "In Situ", "VALUE:IS" ], [ "100", "Localized only\n\n    Invasive tumor confined to ethmoid with or without bone erosion (cribriform plate)\n\n    Localized, NOS", "Invasive tumor confined to ethmoid sinus WITH or WITHOUT bony involvement\n   Bony involvement includes: involvement of perpendicular plate of ethmoid bone or ethmoid air cells\n\nStated as T1", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nExtension to:\n    More than one ethmoid sinus\n\n    Anterior orbit\n    Base of skull\n    Frontal sinus\n    Intracranial extension\n    Maxillary sinus\n    Nasal cavity, NOS: \n        Floor \n        Lateral wall \n        Septum \n        Turbinates \n    Nasopharynx\n    Orbital extension including apex of orbit\n    Skin of external nose\n    Sphenoid", "Confined to both ethmoid sinuses WITH or WITHOUT bony involvement \n    Bony involvement includes: involvement of perpendicular plate of ethmoid bone or ethmoid air cells\n\nExtension to nasal cavity with or without bony invasion (Involvement of perpendicular plate of ethmoid bone or ethmoid air cells):\n    Floor\n    Lateral wall\n    Nasal vestibule\n    Nasal cavity, NOS\n    Septum\n    Turbinates\n\nExtension to:\n    Anterior cranial fossa (minimal extension)\n    Anterior orbital contents\n    Brain\n    Clivus\n    Cranial nerves (other than V2, maxillary division of trigeminal nerve) \n    Cribriform plate\n    Dura\n    Medial wall or floor of orbit\n    Middle cranial fossa\n    Orbital apex\n    Orbital plate\n    Pterygoid plates\n    Skin of cheek\n\nStated as T2, T3, T4a, or T4 [NOS]", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

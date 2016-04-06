@@ -1,0 +1,27 @@
+{
+  "id" : "seer_mets_melanoma_nasopharynx_51981",
+  "algorithm" : "tnm",
+  "version" : "1.1",
+  "name" : "SEER Mets Melanoma Nasopharynx",
+  "title" : "SEER Mets",
+  "footnotes" : "\\## Considered regional in Historic Stage\n\\** Considered regional in 1977 Summary Staging Guide",
+  "last_modified" : "2016-02-10T18:25:17.993Z",
+  "definition" : [ {
+    "key" : "seer_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/lymph node(s) involved\n\nDistant lymph node(s):\n    Mediastinal\n    Supraclavicular (transverse cervical)\n    Supraclavicular fossa\n    Other distant lymph node(s)\n\nExtension to:\n    Brain##\n    Cranial nerves##\n    Hypopharynx\n    Infratemporal fossa\n    Orbit**\n    Soft tissues of neck\n\nFurther contiguous extension\n\nMetastasis", "Distant lymph nodes:\nLevel VI - Anterior compartment group:\n    Laterotracheal\n    Paralaryngeal\n    Paratracheal - above suprasternal notch\n    Perithyroidal\n    Precricoid (Delphian)\n    Prelaryngeal\n    Pretracheal - above suprasternal notch\n    Recurrent laryngeal\nOther groups:\n    Facial:\n        Buccinator (buccal)\n        Mandibular\n        Nasolabial\n     Parotid:\n         Infraauricular\n         Intraparotid\n         Periparotid\n         Preauricular\n     Parapharyngeal\n     Retroauricular (mastoid)\n     Suboccipital\n\nStated as N3b\n\nDistant metastasis: \nIntracranial extension, NOS\nMasticator space\n\nStated as T4 \n\nCarcinomatosis \n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed  \nNot documented in patient record", "", "VALUE:U" ] ]
+}

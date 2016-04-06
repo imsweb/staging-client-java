@@ -1,0 +1,28 @@
+{
+  "id" : "extension_bdh",
+  "algorithm" : "tnm",
+  "version" : "1.1",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "notes" : "**Note:**  Involvement of para-testicular (hilar/mediastinal) soft tissues does not alter the extension code. Code extent of the primary tumor based on other criteria documented in the patient record.",
+  "footnotes" : "\\### Considered distant in Historic Stage",
+  "last_modified" : "2016-02-10T18:25:16.870Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ: Noninvasive; intraepithelial", "Intratubular germ cell neoplasia", "VALUE:IS" ], [ "100", "Localized only\n\nInvasive tumor with/without vascular invasion limited to:\n     Body of testis\n     Rete testis\n     Tunica albuginea\nSurface implants\nTunica, NOS\nTunica vaginalis involved\n\nLocalized, NOS", "Surface implants (surface of tunica vaginalis)\nTunica, NOS\n\nStated as T1 or T2", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nExtension to:\n     Dartos muscle, ipsilateral\n     Epididymis with/without vascular/lymphatic invasion\n     Scrotum, ipsilateral\n     Spermatic cord, ipsilateral\n     Vas deferens###", "Stated as T3 or T4", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown extension\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

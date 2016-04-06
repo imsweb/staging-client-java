@@ -1,0 +1,28 @@
+{
+  "id" : "nodes_dez",
+  "algorithm" : "tnm",
+  "version" : "1.1",
+  "name" : "SEER Regional Nodes",
+  "title" : "SEER Regional Nodes",
+  "notes" : "**Note:**  Nodal metastasis is very rare in gastrointestinal stromal tumors and surgeons generally agree that nodal dissection is not indicated.",
+  "footnotes" : "\\### Considered distant in Historic Stage",
+  "last_modified" : "2016-02-10T18:25:23.633Z",
+  "definition" : [ {
+    "key" : "seer_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summary Stage 2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:NONE" ], [ "300", "REGIONAL Lymph Nodes\n\nRectosigmoid (C199):\n    Colic, NOS:###\n        Left colic###\n    Hemorrhoidal, superior or middle\n    Inferior mesenteric\n    Mesenteric, NOS\n    Paracolic/pericolic\n    Perirectal\n    Rectal \n    Sigmoidal (sigmoid mesenteric)\n    Superior rectal\n\n    Nodule(s) in pericolic fat\n\nRectum (C209):\n    Hemorrhoidal, superior, middle or inferior\n    Inferior mesenteric\n    Internal iliac (hypogastric), NOS:###\n        Obturator\n    Mesenteric, NOS\n    Perirectal\n    Rectal\n    Sacral, NOS:###\n         Lateral (laterosacral)\n         Middle sacral (promontorial) (Gerotaâs node)\n         Presacral\n   Sigmoidal (sigmoid mesenteric)\n\nNodule(s) in perirectal fat\n\nRegional lymph node(s), NOS", "Rectal, middle \nRectal, superior\n \nRegional lymph nodes for rectum (C209):\n    Rectal, inferior\n    Sacral promontory\n\nLymph nodes, NOS\n\nStated as N1", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "nodes_dfx",
+  "algorithm": "tnm",
+  "version": "1.1",
+  "name": "SEER Regional Nodes",
+  "title": "SEER Regional Nodes",
+  "notes": "**Note 1:**  Code only regional nodes and nodes, NOS, in this field Distant nodes coded in Mets at DX.\n\n**Note 2:**  Bilateral nodes are considered regional nodes for tumors with bidirectional drainage to primary nodal basins, as shown on lymphoscintigraphy.  Clinical assessment of bilateral regional nodal involvement is required for tumors where lymphoscintigraphy is not performed.\n\n**Note 3:**  In transit metastasis is defined as a tumor distinct from the primary lesion and located either between the primary lesion and the draining regional lymph nodes or distal to the primary lesion. In transit metastasis is coded in the SEER Regional Nodes field. \n\n**Note 4:**  Isolated tumor cells (ITCs) should be considered positive nodes. If only ITCs are present, defined as any tumor deposits in lymph nodes less than or equal to 0.2 mm, use code  300.",
+  "last_modified": "2016-02-10T18:25:17.958Z",
+  "definition": [
+    {
+      "key": "seer_nodes",
+      "name": "Code",
+      "type": "INPUT"
+    },
+    {
+      "key": "manual",
+      "name": "Summary Stage Manual",
+      "type": "DESCRIPTION"
+    },
+    {
+      "key": "notes",
+      "name": "Registrar Notes",
+      "type": "DESCRIPTION"
+    },
+    {
+      "key": "ss2017_n",
+      "name": "Summary Stage 2017 N",
+      "type": "ENDPOINT"
+    }
+  ],
+  "rows": [
+    [
+      "000",
+      "None\n\nNo regional lymph node involvement",
+      "",
+      "VALUE:NONE"
+    ],
+    [
+      "300",
+      "Regional lymph node(s) involved only\n\nREGIONAL Lymph Nodes (including bilateral or contralateral nodes)\n\nInguinal, NOS:\n    Deep, NOS:\n        Node of Cloquet or Rosenmuller (highest deep inguinal)\n    Superficial (femoral)\n    FIGO Stage III\n\nRegional lymph node(s), NOS\n\nBilateral/contralateral regional lymph node(s)\nFIGO Stage IVA",
+      "Isolated tumor cells (ITCs) only\n\nSatellite nodule(s) or in transit metastasis (See Note 3) \n\nLymph nodes, NOS",
+      "VALUE:RN"
+    ],
+    [
+      "999",
+      "Unknown; regional lymph nodes not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record",
+      "",
+      "VALUE:RE"
+    ]
+  ]
+}
