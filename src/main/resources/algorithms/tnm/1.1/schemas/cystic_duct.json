@@ -134,7 +134,7 @@
   "outputs" : [ {
     "key" : "derived_version",
     "name" : "Derived Version",
-    "default" : "1.0"
+    "default" : "1.1"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -686,5 +686,5 @@
   } ],
   "involved_tables" : [ "extension_bfw", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "stage_group_p_24418", "radiation_surg_seq", "path_m_hcv", "determine_default_m", "clin_n_dfr", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "combined_n_to_summ_stage_n_n2_d_23338", "parse_n_67182", "clin_m_hcv", "determine_default_n", "histology", "concatenate_m_40642", "mets_hcv", "combined_t_to_summ_stage_t_2_4e_re_93413", "behavior", "tnm7_inclusions_tpe", "concatenate_t_51262", "path_t_cystic_duct_38967", "adjustments_for_no_clin_or_no_path_26261", "cystic_duct_t_52091", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "discriminator_bile_ducts", "parse_m_47057", "primary_site", "path_n_dfr", "schema_selection_cystic_duct", "combined_m", "tnm7_path_stage_uqb", "combined_n", "nodes_dfr", "year_dx_validation", "summary_stage_rpa", "combined_t", "stage_group_c_59520", "tnm7_stage_uqb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-03-16T17:21:20.920Z"
+  "last_modified" : "2016-04-06T20:38:51.526Z"
 }

@@ -154,7 +154,7 @@
   "outputs" : [ {
     "key" : "derived_version",
     "name" : "Derived Version",
-    "default" : "1.0"
+    "default" : "1.1"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -706,5 +706,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "extension_bbq", "tnm_7_stage_not_ewing_14573", "parse_t_2177", "concatenate_n_43246", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "stage_group_c_76779", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "clin_n_bone_13753", "tnm_7_path_stage_ewing_61213", "systemic_surg_seq", "ssf2_kbl", "parse_m_47057", "combined_m", "combined_n", "ssf4_mbd", "grade", "summary_stage_rpa", "schema_selection_bone", "determine_default_t", "radiation_surg_seq", "path_t_bone_59009", "nodes_dbh", "determine_default_m", "tnm_7_stage_ewing_17708", "nodes_pos_fpa", "tnm_7_path_stage_not_ewing_41435", "clin_m_hav", "parse_n_67182", "ssf3_lay", "determine_default_n", "path_m_hav", "combined_t_no_tis", "mets_hav", "combined_t_to_summ_stage_t_3_4e_d_76738", "bone_histologies_stage", "stage_group_p_84556", "determine_combined_prefix_91402", "clin_t_bone_70163", "histologies_path_stage_56616", "stop_if_no_clin_and_no_path_24035", "ssf1_jbx", "primary_site", "tnm7_inclusions_tpy", "path_n_bone_31243", "year_dx_validation" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-03-11T13:05:50.428Z"
+  "last_modified" : "2016-04-06T20:38:53.092Z"
 }

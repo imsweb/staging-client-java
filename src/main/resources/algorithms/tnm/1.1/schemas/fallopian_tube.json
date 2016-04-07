@@ -179,7 +179,7 @@
   "outputs" : [ {
     "key" : "derived_version",
     "name" : "Derived Version",
-    "default" : "1.0"
+    "default" : "1.1"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -731,5 +731,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "tnm7_path_stage_ubb", "parse_t_2177", "concatenate_n_43246", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "ssf2_kbc", "tnm7_inclusions_tpb", "stage_group_p_94665", "extension_bbh", "concatenate_t_51262", "stage_group_c_55797", "adjustments_for_no_clin_or_no_path_26261", "systemic_surg_seq", "ssf7_sde", "parse_m_47057", "combined_m", "combined_n", "schema_selection_fallopian_tube", "summary_stage_rpa", "ssf4_mav", "combined_t", "combined_t_to_summ_stage_t_2_2b_re_2c_4e_d_26557", "mets_hai", "determine_default_t", "tnm_7_combined_stage_group_69346", "radiation_surg_seq", "path_n_daz", "ssf6_oap", "clin_t_fallopian_tube_77615", "determine_default_m", "nodes_pos_fpa", "path_m_hai", "tnm7_stage_ubb", "parse_n_67182", "determine_default_n", "ssf3_laq", "clin_m_hai", "nodes_daz", "behavior", "fallopian_tube_t_96584", "ssf1_jbp", "determine_combined_prefix_91402", "ssf5_nas", "stop_if_no_clin_and_no_path_24035", "primary_site", "year_dx_validation", "clin_n_daz" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-02-18T20:52:22.600Z"
+  "last_modified" : "2016-04-06T20:38:56.422Z"
 }

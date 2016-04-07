@@ -148,7 +148,7 @@
   "outputs" : [ {
     "key" : "derived_version",
     "name" : "Derived Version",
-    "default" : "1.0"
+    "default" : "1.1"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -713,5 +713,5 @@
   } ],
   "involved_tables" : [ "tnm7_path_stage_upm", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "tnm7_stage_upm", "radiation_surg_seq", "extension_bbt", "heart_mediastinum_t_30394", "ssf3_lpk", "determine_default_m", "nodes_dbk", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "determine_default_n", "ssf1_jpm", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "schema_selection_heart_mediastinum", "combined_t_no_tis", "ssf2_kpk", "clin_n_heart_mediastinum_77775", "concatenate_t_51262", "seer_mets_peritoneum_retroperitoneum_44461", "adjustments_for_no_clin_or_no_path_26261", "determine_combined_prefix_91402", "tnm7_inclusions_tps", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "clin_t_heart_mediastinum_11552", "parse_m_47057", "primary_site", "path_m_soft_tissues_96225", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "stage_group_p_79654", "stage_group_c_49395", "year_dx_validation", "ssf4_mpf", "summary_stage_rpa", "heart_mediastinum_n_50568", "clin_m_soft_tissues_97765" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-03-11T12:42:23.028Z"
+  "last_modified" : "2016-04-06T20:38:50.261Z"
 }

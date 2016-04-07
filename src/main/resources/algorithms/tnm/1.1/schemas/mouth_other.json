@@ -202,7 +202,7 @@
   "outputs" : [ {
     "key" : "derived_version",
     "name" : "Derived Version",
-    "default" : "1.0"
+    "default" : "1.1"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -754,5 +754,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "ssf10_spd", "seer_regional_nodes_mouthother_27091", "ssf1_jpa", "path_m_hpb", "tnm7_stage_upt", "parse_t_2177", "concatenate_n_43246", "schema_selection_mouth_other", "ssf11_spe", "combined_t_to_summ_stage_t_4_4e_d_99503", "histology", "mouth_other_t_88942", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "tnm7_inclusions_tpb", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "ssf9_spc", "systemic_surg_seq", "combined_n_to_summ_stage_n_headneck_temp_18777", "parse_m_47057", "combined_m", "extension_baf", "combined_n", "ssf5_npa", "summary_stage_rpa", "combined_t", "ssf8_spb", "determine_default_t", "clinical_n_head_neck_except_nasopharynx_25237", "radiation_surg_seq", "determine_default_m", "path_n_head_neck_except_nasopharynx_40357", "nodes_pos_fpa", "tnm7_path_stage_upt", "parse_n_67182", "determine_default_n", "seer_mets_mouthothervs2_65015", "stage_group_p_35702", "behavior", "clin_t_mouth_other_28324", "ssf4_mpa", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "primary_site", "year_dx_validation", "stage_group_c_51542" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-03-11T00:29:04.699Z"
+  "last_modified" : "2016-04-06T20:39:02.735Z"
 }

@@ -126,7 +126,7 @@
   "outputs" : [ {
     "key" : "derived_version",
     "name" : "Derived Version",
-    "default" : "1.0"
+    "default" : "1.1"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -193,5 +193,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "ssf10_spd", "ssf4_mpa", "ssf9_spc", "seer_mets_sinus_othervs2_15755", "primary_site", "nodes_daq", "ssf11_spe", "histology", "ssf6_opa", "ssf5_npa", "ssf3_lpa", "schema_selection_sinus_other", "year_dx_validation", "summary_stage_rpa", "extension_bdk", "ssf1_jpu", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-02-18T20:51:56.785Z"
+  "last_modified" : "2016-04-06T20:38:43.541Z"
 }

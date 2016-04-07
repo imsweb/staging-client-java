@@ -118,7 +118,7 @@
   "outputs" : [ {
     "key" : "derived_version",
     "name" : "Derived Version",
-    "default" : "1.0"
+    "default" : "1.1"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -185,5 +185,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "extension_bcr", "ssf10_spd", "ssf4_mpa", "ssf9_spc", "nodes_dcf", "schema_selection_middle_ear", "primary_site", "histology", "ssf6_opa", "ssf5_npa", "ssf3_lpa", "year_dx_validation", "summary_stage_rpa", "ssf1_jpu", "seer_mets_middle_ear_9431", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-02-18T20:52:07.914Z"
+  "last_modified" : "2016-04-06T20:38:49.337Z"
 }

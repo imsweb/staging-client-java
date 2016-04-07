@@ -119,7 +119,7 @@
   "outputs" : [ {
     "key" : "derived_version",
     "name" : "Derived Version",
-    "default" : "1.0"
+    "default" : "1.1"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -186,5 +186,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "ssf10_spd", "schema_selection_pharynx_other", "ssf4_mpa", "ssf9_spc", "extension_bdd", "primary_site", "histology", "ssf6_opa", "ssf5_npa", "ssf3_lpa", "year_dx_validation", "nodes_dcy", "seer_mets_pharynxothervs2_3402", "summary_stage_rpa", "ssf1_jpu", "ssf8_spb" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-02-18T20:52:07.801Z"
+  "last_modified" : "2016-04-06T20:38:49.270Z"
 }

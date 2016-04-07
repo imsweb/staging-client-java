@@ -49,7 +49,7 @@
   "outputs" : [ {
     "key" : "derived_version",
     "name" : "Derived Version",
-    "default" : "1.0"
+    "default" : "1.1"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -116,5 +116,5 @@
   } ],
   "involved_tables" : [ "nodes_dca", "primary_site", "histology", "year_dx_validation", "seer_mets_genitalmaleother_scrotum_92956", "extension_bcl", "summary_stage_rpa", "schema_selection_genital_male_other" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-02-18T20:52:03.303Z"
+  "last_modified" : "2016-04-06T20:38:46.877Z"
 }

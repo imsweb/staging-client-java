@@ -194,7 +194,7 @@
   "outputs" : [ {
     "key" : "derived_version",
     "name" : "Derived Version",
-    "default" : "1.0"
+    "default" : "1.1"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -746,5 +746,5 @@
   } ],
   "involved_tables" : [ "ssf7_spa", "clin_m_hpb", "cpmbined_m_to_summ_stage_m_60564", "ssf10_spd", "ssf1_jpa", "path_m_hpb", "parse_t_2177", "concatenate_n_43246", "tnm7_path_stage_ubk", "histology", "concatenate_m_40642", "ssf6_opa", "ssf3_lpa", "nodes_dcp", "tnm7_inclusions_tpb", "combined_t_to_summ_stage_t_4b_4e_d_9381", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "extension_bat", "ssf9_spc", "stage_group_c_95471", "systemic_surg_seq", "combined_n_to_summ_stage_n_headneck_temp_18777", "parse_m_47057", "combined_m", "combined_n", "ssf5_npa", "summary_stage_rpa", "combined_t", "ssf8_spb", "determine_default_t", "clinical_n_head_neck_except_nasopharynx_25237", "seer_mets_glottislarynxvs2_27392", "radiation_surg_seq", "determine_default_m", "path_n_head_neck_except_nasopharynx_40357", "nodes_pos_fpa", "parse_n_67182", "glottic_larynx_t_8691", "determine_default_n", "behavior", "ssf4_mpa", "determine_combined_prefix_91402", "schema_selection_larynx_glottic", "stage_group_p_61212", "stop_if_no_clin_and_no_path_24035", "primary_site", "tnm7_stage_ubk", "year_dx_validation", "clin_t_glottic_larynx_36272" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-02-18T20:52:29.903Z"
+  "last_modified" : "2016-04-06T20:39:01.302Z"
 }

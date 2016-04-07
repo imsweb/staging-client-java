@@ -58,7 +58,7 @@
   "outputs" : [ {
     "key" : "derived_version",
     "name" : "Derived Version",
-    "default" : "1.0"
+    "default" : "1.1"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -125,5 +125,5 @@
   } ],
   "involved_tables" : [ "primary_site", "discriminator_lacrimal", "seer_mets_lacrimal_sac_97972", "extension_btb", "histology", "year_dx_validation", "seer_regional_nodes_lacrimal_sac_33881", "summary_stage_rpa", "schema_selection_lacrimal_sac" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-03-16T17:13:03.309Z"
+  "last_modified" : "2016-04-06T20:38:49.879Z"
 }

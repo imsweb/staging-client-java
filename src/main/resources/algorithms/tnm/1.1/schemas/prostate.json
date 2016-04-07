@@ -205,7 +205,7 @@
   "outputs" : [ {
     "key" : "derived_version",
     "name" : "Derived Version",
-    "default" : "1.0"
+    "default" : "1.1"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -779,5 +779,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "path_t_bbo", "clin_t_bbo", "parse_t_2177", "concatenate_n_43246", "combined_n_to_summ_stage_n_84054", "schema_selection_prostate", "histology", "concatenate_m_40642", "ssf14_sbd", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "extension_bbo", "concatenate_t_51262", "stage_group_c_59832", "adjustments_for_no_clin_or_no_path_26261", "prostate_pathologic_n_4662", "systemic_surg_seq", "tnm_7_combined_stage_group_12118", "parse_m_47057", "tnm7_path_stage_ubp", "prostate_n_76551", "combined_m", "ssf15_sbe", "combined_n", "summary_stage_rpa", "combined_gleason_93464", "determine_default_t", "mets_hal", "ssf11_sba", "radiation_surg_seq", "clin_m_hal", "determine_default_m", "stage_group_p_48545", "ssf1_jav", "nodes_pos_fpa", "ssf7_saw", "nodes_dbf", "path_m_hal", "parse_n_67182", "determine_default_n", "combined_t_no_tis", "ssf10_saz", "ssf13_sbc", "determine_combined_prefix_91402", "tnm7_inclusions_tpv", "stop_if_no_clin_and_no_path_24035", "ssf9_say", "ssf12_sbb", "primary_site", "tnm7_stage_ubp", "ssf2_kab", "year_dx_validation", "ssf8_sax" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-02-18T20:52:40.441Z"
+  "last_modified" : "2016-04-06T20:39:06.743Z"
 }

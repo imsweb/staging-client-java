@@ -188,7 +188,7 @@
   "outputs" : [ {
     "key" : "derived_version",
     "name" : "Derived Version",
-    "default" : "1.0"
+    "default" : "1.1"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -740,5 +740,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "combined_t_colon", "parse_t_2177", "concatenate_n_43246", "ssf7_spf", "ssf1_jpf", "ssf3_lpe", "combined_n_to_summ_stage_n_84054", "histology", "ssf6_opb", "concatenate_m_40642", "schema_selection_colon", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "tnm7_inclusions_tpc", "ssf10_spi", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "extension_bao", "ssf5_npb", "ssf9_sph", "systemic_surg_seq", "parse_m_47057", "combined_m", "tnm7_stage_upw", "combined_n", "ssf8_spg", "summary_stage_rpa", "determine_default_t", "radiation_surg_seq", "determine_default_m", "path_m_hae", "colon_65083", "nodes_pos_fpa", "mets_hae", "parse_n_67182", "tnm7_path_stage_upw", "determine_default_n", "path_n_dan", "nodes_dan", "clin_m_hae", "ssf4_mpb", "determine_combined_prefix_91402", "stage_group_c_26613", "clin_n_dan", "stop_if_no_clin_and_no_path_24035", "path_t_colon_98925", "primary_site", "stage_group_p_78368", "year_dx_validation" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-03-12T13:34:39.119Z"
+  "last_modified" : "2016-04-06T20:38:54.476Z"
 }

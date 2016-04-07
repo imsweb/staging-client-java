@@ -65,7 +65,7 @@
   "outputs" : [ {
     "key" : "derived_version",
     "name" : "Derived Version",
-    "default" : "1.0"
+    "default" : "1.1"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -132,5 +132,5 @@
   } ],
   "involved_tables" : [ "primary_site", "ssf2_kbx", "histology", "schema_selection_myeloma_plasma_cell_disorder", "ssf3_lbb", "year_dx_validation", "summary_stage_rpa", "mets_hna", "nodes_dfy", "extension_bgc" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-02-18T20:52:07.410Z"
+  "last_modified" : "2016-04-06T20:38:49.079Z"
 }

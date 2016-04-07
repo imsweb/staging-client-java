@@ -187,7 +187,7 @@
   "outputs" : [ {
     "key" : "derived_version",
     "name" : "Derived Version",
-    "default" : "1.0"
+    "default" : "1.1"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -743,5 +743,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "mets_hcl", "ssf3_lpp", "parse_t_2177", "concatenate_n_43246", "path_m_hcl", "ssf6_opg", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "clin_m_hcl", "extension_bfl", "concatenate_t_51262", "ssf5_npk", "adjustments_for_no_clin_or_no_path_26261", "pathological_n_corpus_31147", "systemic_surg_seq", "parse_m_47057", "combined_m", "combined_n", "tnm7_path_stage_ubt", "summary_stage_rpa", "combined_t_to_summ_stage_t_2_2b_re_2c_4e_d_26557", "corpus_adenosarcoma_extension_cytology_summary_stage", "corpus_adenosarcoma_pathologic_t_90591", "clinical_n_corpus_48422", "determine_default_t", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpa", "nodes_dfh", "parse_n_67182", "determine_default_n", "ssf7_sqn", "ssf2_kpo", "combined_t_no_tis", "behavior", "ssf8_sqo", "summary_stage_corpus_9973", "determine_combined_prefix_91402", "schema_selection_corpus_adenosarcoma", "stop_if_no_clin_and_no_path_24035", "primary_site", "ssf1_jca", "ssf4_mpq", "year_dx_validation", "stage_group_c_59028", "corpus_adenosarcoma_t_34843", "stage_group_p_79934", "tnm7_inclusions_tqh", "tnm7_stage_ubt" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-03-10T22:47:22.701Z"
+  "last_modified" : "2016-04-06T20:39:03.902Z"
 }

@@ -175,7 +175,7 @@
   "outputs" : [ {
     "key" : "derived_version",
     "name" : "Derived Version",
-    "default" : "1.0"
+    "default" : "1.1"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -311,5 +311,5 @@
   } ],
   "involved_tables" : [ "ssf2_kpg", "schema_selection_lymphoma_ocular_adnexa", "ssf7_saq", "ssf10_sat", "combined_stage_group_for_lymphoma_19552", "ssf3_lbc", "lymphomaocularadnexa_path_n_no_uicc_definition_17284", "summary_stage_raa", "lymphoma_stage_group_detailed_35045", "lymphoma_path_stage_group_detailed_88547", "lymphomaocularadnexa_clin_n_no_uicc_definition_66872", "ssf4_mbj", "ssf1_jpj", "ssf6_oat", "histology", "stage_group_lymphoma_ocular_adnexa_c_86297", "mets_hna", "lymphomaocularadnexa_path_t_no_uicc_definition_copy_11297", "stage_group_lymphoma_ocular_adnexa_p_45342", "nodes_dna", "tnm7_inclusions_tpl", "extension_bez", "ssf9_sas", "lymphomaocularadnexa_t_no_uicc_definition_89433", "primary_site", "ssf8_sar", "year_dx_validation", "lymphomaocularadnexa_clin_m_no_uicc_definition_96511", "ssf5_nac", "lymphomaocularadnexa_path_m_no_uicc_definition_copy_6387" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-03-30T17:57:51.280Z"
+  "last_modified" : "2016-04-06T20:38:56.963Z"
 }

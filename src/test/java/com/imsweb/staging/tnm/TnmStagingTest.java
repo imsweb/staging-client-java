@@ -256,7 +256,7 @@ public class TnmStagingTest extends StagingTest {
         Assert.assertEquals(10, data.getOutput().size());
 
         // check outputs
-        Assert.assertEquals("1.0", data.getOutput(TnmStagingData.TnmOutput.DERIVED_VERSION));
+        Assert.assertEquals("1.1", data.getOutput(TnmStagingData.TnmOutput.DERIVED_VERSION));
         Assert.assertEquals("3", data.getOutput(TnmStagingData.TnmOutput.CLIN_STAGE_GROUP));
         Assert.assertEquals("4", data.getOutput(TnmStagingData.TnmOutput.PATH_STAGE_GROUP));
         Assert.assertEquals("4", data.getOutput(TnmStagingData.TnmOutput.COMBINED_STAGE_GROUP));

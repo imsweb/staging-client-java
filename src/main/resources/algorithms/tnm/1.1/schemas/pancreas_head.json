@@ -146,7 +146,7 @@
   "outputs" : [ {
     "key" : "derived_version",
     "name" : "Derived Version",
-    "default" : "1.0"
+    "default" : "1.1"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -698,5 +698,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "clin_m_haq", "ssf2_kpd", "radiation_surg_seq", "extension_bbv", "path_m_haq", "determine_default_m", "tnm7_stage_ups", "ssf1_jpe", "tnm7_inclusions_tae", "tnm7_path_stage_ups", "clin_n_dbn", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "determine_default_n", "combined_n_to_summ_stage_n_84054", "ssf3_lpd", "histology", "concatenate_m_40642", "stage_group_c_2328", "mets_haq", "combined_t_to_summ_stage_t_3_4c_re_4d_4e_d_54890", "pancreas_head_t_4793", "behavior", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "determine_combined_prefix_91402", "stage_group_p_66747", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "path_n_dbn", "combined_m", "combined_n", "nodes_dbn", "clin_t_pancreas_head_97928", "schema_selection_pancreas_head", "year_dx_validation", "summary_stage_rpa", "combined_t" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-03-11T13:37:34.738Z"
+  "last_modified" : "2016-04-06T20:38:46.464Z"
 }

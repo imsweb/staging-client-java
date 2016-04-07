@@ -49,7 +49,7 @@
   "outputs" : [ {
     "key" : "derived_version",
     "name" : "Derived Version",
-    "default" : "1.0"
+    "default" : "1.1"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -116,5 +116,5 @@
   } ],
   "involved_tables" : [ "primary_site", "seer_mets_48348", "histology", "year_dx_validation", "schema_selection_eye_other", "summary_stage_rpa", "seer_regional_nodes_eyeother_16963", "seer_primary_tumor_eyeother_64077" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-02-18T20:52:08.997Z"
+  "last_modified" : "2016-04-06T20:38:50.005Z"
 }

@@ -141,7 +141,7 @@
   "outputs" : [ {
     "key" : "derived_version",
     "name" : "Derived Version",
-    "default" : "1.0"
+    "default" : "1.1"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -713,5 +713,5 @@
   } ],
   "involved_tables" : [ "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "stage_group_p_18837", "radiation_surg_seq", "determine_default_m", "mets_hab", "combined_t_to_summ_stage_t_3_3d_re_4_4e_d_45184", "select_stage_group_19580", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "determine_default_n", "clin_m_hab", "histology", "concatenate_m_40642", "path_n_dai", "combined_t_lung", "tnm7_inclusions_tpb", "behavior", "combined_n_lung", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "schema_selection_lung", "ssf1_sbh", "ssf2_sbi", "determine_combined_prefix_91402", "nodes_dai", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "clin_n_dai", "lung_t_86537", "parse_m_47057", "primary_site", "combined_n_to_summ_stage_n_n3_d_copy_68044", "combined_m", "clin_t_lung_28486", "path_m_hab", "tnm7_path_stage_ubq", "year_dx_validation", "extension_baj", "summary_stage_rpa", "lung_occult_stage_11131", "tnm7_stage_ubq", "stage_group_c_92535" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-03-11T13:27:48.608Z"
+  "last_modified" : "2016-04-06T20:38:52.902Z"
 }

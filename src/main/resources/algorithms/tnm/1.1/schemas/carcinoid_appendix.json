@@ -126,7 +126,7 @@
   "outputs" : [ {
     "key" : "derived_version",
     "name" : "Derived Version",
-    "default" : "1.0"
+    "default" : "1.1"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -678,5 +678,5 @@
   } ],
   "involved_tables" : [ "extension_bdu", "cpmbined_m_to_summ_stage_m_60564", "determine_default_t", "ssf13_sca", "radiation_surg_seq", "determine_default_m", "clin_n_ddp", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "parse_n_67182", "determine_default_n", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "tnm7_stage_uak", "combined_t_no_tis", "schema_selection_carcinoid_appendix", "carcinoidappendix_t_41163", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "tnm7_inclusions_tpm", "determine_combined_prefix_91402", "clin_m_hbx", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "tnm7_path_stage_uak", "stage_group_c_47235", "parse_m_47057", "primary_site", "path_n_ddp", "combined_m", "combined_to_summ_stage_t_80394", "combined_n", "nodes_ddp", "path_t_carcinoid_appendix_77608", "year_dx_validation", "stage_group_p_15208", "summary_stage_rpa", "path_m_hbx", "mets_hbx" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-02-18T20:52:12.425Z"
+  "last_modified" : "2016-04-06T20:38:51.632Z"
 }

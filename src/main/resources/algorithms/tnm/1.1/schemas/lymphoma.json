@@ -103,7 +103,7 @@
   "outputs" : [ {
     "key" : "derived_version",
     "name" : "Derived Version",
-    "default" : "1.0"
+    "default" : "1.1"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -239,5 +239,5 @@
   } ],
   "involved_tables" : [ "ssf2_kpg", "combined_stage_group_for_lymphoma_19552", "tnm7_inclusions_tpr", "schema_selection_lymphoma", "ssf5_npe", "lymphoma_stage_group_detailed_35045", "lymphoma_path_stage_group_detailed_88547", "stage_group_lymphoma_c_60180", "ssf3_lph", "primary_site", "ssf1_jpj", "extension_bch", "histology", "stage_group_lymphoma_p_48657", "year_dx_validation", "summary_stage_rpa", "mets_hna", "ssf4_mpd", "nodes_dna" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-02-18T20:52:08.248Z"
+  "last_modified" : "2016-04-06T20:38:49.550Z"
 }

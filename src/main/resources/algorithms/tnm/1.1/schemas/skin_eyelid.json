@@ -233,7 +233,7 @@
   "outputs" : [ {
     "key" : "derived_version",
     "name" : "Derived Version",
-    "default" : "1.0"
+    "default" : "1.1"
   }, {
     "key" : "clin_stage_group",
     "name" : "Derived SEER Clin Stage Group",
@@ -785,5 +785,5 @@
   } ],
   "involved_tables" : [ "clin_m_hcu", "cpmbined_m_to_summ_stage_m_60564", "ssf8_sdd", "nodes_dde", "ssf7_scq", "path_m_hcu", "ssf4_mbg", "stage_group_p_66915", "parse_t_2177", "concatenate_n_43246", "ssf10_scm", "combined_n_to_summ_stage_n_84054", "histology", "concatenate_m_40642", "tnm7_inclusions_tpb", "mets_hcu", "ssf11_scj", "ssf9_sdi", "ssf2_kaz", "concatenate_t_51262", "adjustments_for_no_clin_or_no_path_26261", "skin_eyelid_t_57348", "clin_t_skin_eyelid_93914", "ssf12_sck", "tnm7_stage_uaf", "systemic_surg_seq", "parse_m_47057", "combined_m", "combined_n", "summary_stage_rpa", "combined_t", "ssf13_scl", "determine_default_t", "radiation_surg_seq", "determine_default_m", "nodes_pos_fpa", "ssf6_oak", "parse_n_67182", "ssf14_scn", "determine_default_n", "stage_group_c_57716", "skin_eyelid_n_65771", "extension_bdg", "behavior", "schema_selection_skin_eyelid", "ssf15_sco", "ssf1_jbl", "clin_n_skin_eyelid_10770", "tnm7_path_stage_uaf", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "ssf16_scp", "primary_site", "ssf5_nar", "year_dx_validation", "combined_t_to_summ_stage_t_3b_3d_re_4_4e_d_48469" ],
   "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
-  "last_modified" : "2016-02-18T20:52:31.007Z"
+  "last_modified" : "2016-04-06T20:39:02.091Z"
 }
