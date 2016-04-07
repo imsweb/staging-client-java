@@ -23,7 +23,7 @@ NCI will be developing SEER Summary Stage 2017, which will be effective for diag
 
 Versions supported:
 
-- 1.0 (released February 2016)
+- 1.1 (released April 2016)
 
 ### Collaborative Staging
 

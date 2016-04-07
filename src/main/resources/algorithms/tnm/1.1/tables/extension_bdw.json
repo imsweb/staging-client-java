@@ -1,0 +1,26 @@
+{
+  "id" : "extension_bdw",
+  "algorithm" : "tnm",
+  "version" : "1.1",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "last_modified" : "2016-02-10T18:25:18.082Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "", "VALUE:IS" ], [ "100", "Localized only\n\n    Invasive tumor confined to site of origin\n\n    Impaired vocal cord mobility\n    Tumor involves adjacent region(s) of larynx\n    Tumor involves more than one subsite without fixation or NOS\n    Tumor limited to larynx WITH vocal cord fixation\n\n     Localized, NOS", "Tumor confined to mucosa of site of origin\nSoft tissue, NOS\n\nStated as T3, T4a, or T4 [NOS]", "VALUE:L" ], [ "200", "Regional by direct extension only\n\n     Extension to:\n          Hypopharynx, NOS\n          Postcricoid area\n          Pre-epiglottic tissues\n          Pyriform sinus (pyriform fossa)\n          Vallecula", "Extension involving mucosa only of adjacent regions:\n    Base of tongue\n    \nInvolvement of deep tissue or musculature of any structure WITH or WITHOUT vocal impairment or fixation of larynx or NOS", "VALUE:RE" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "extension_baf",
+  "algorithm" : "tnm",
+  "version" : "1.1",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "notes" : "**Note:**  Periosteum is a fibrous membrane that wraps the outer surface of bones. Cortical bone is the dense compact outer layer of the bone. Trabecular, cancellous, or spongy bone (spongiosa) is a porous network of tissue filling the interior of bone, decreasing weight and allowing room for blood vessels and marrow.",
+  "last_modified" : "2016-02-10T18:25:19.808Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ:\nNoninvasive; intraepithelial", "", "VALUE:IS" ], [ "100", "Localized only\n\n     Invasive tumor confined to:\n     Lamina propria\n     Musculature\n     Submucosa\n\nLocalized, NOS", "Stated as T1, T2, or T3", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nExtension to:\nAdjacent oral cavity\nOropharynx:\n     Inferior surface of soft palate\n     Lateral pharyngeal wall\n     Lingual surface of epiglottis\n     Vallecula", "", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "extension_bdv",
+  "algorithm" : "tnm",
+  "version" : "1.1",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "footnotes" : "\\## Considered regional in Historic Stage\n\\### Considered distant in Historic Stage",
+  "last_modified" : "2016-02-10T18:25:18.128Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "", "VALUE:IS" ], [ "100", "Localized only\n\n     Confined to glottis, NOS\n\n     Intrinsic larynx\n     Laryngeal commissure(s):\n          Anterior\n          Posterior\n     Vocal cord(s), NOS:\n          True cord(s), NOS\n          True vocal cord(s)\n\nInvasive tumor WITH or WITHOUT## normal vocal cord mobility:\n\n     One vocal cord\n     Both vocal cords\n\nTumor involves adjacent region(s) of larynx:##\n     Subglottis\n     Supraglottis\n          False vocal cord(s)\n\nTumor limited to larynx WITH vocal cord fixation##\nInvolvement of intrinsic muscle(s):##\n     Aryepiglottic\n          Corniculate tubercle\n          Cuneform tubercle\n     Arytenoid\n     Cricoarytenoid\n     Cricothyroid\n     Thyroarytenoid\n     Thyroepiglottic\n     Vocalis\n\nLocalized, NOS", "Soft tissue, NOS\n   \nExtension involving mucosa only of adjacent region(s) of larynx:\n   Subglottis\n   Supraglottis:\n       Aryepiglottic fold\n       Arytenoid cartilage:\n             Corniculate tubercle\n             Cuneiform tubercle\n     Ventricular bands (false vocal cord(s))\n\nStated as T3, T4a", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nExtension to:\n     Base of tongue###\n     Hypopharynx, NOS###\n     Postcricoid area\n     Pre-epiglottic tissues\n     Pyriform sinus (pyriform fossa)\n     Vallecula###", "Involvement of deep tissue or musculature of any structures WITH or WITHOUT vocal impairment or fixation of larynx or NOS\n\nParaglottic space", "VALUE:RE" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in patient record", "", "VALUE:U" ] ]
+}

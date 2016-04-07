@@ -1,0 +1,120 @@
+{
+  "id" : "eye_other",
+  "algorithm" : "tnm",
+  "version" : "1.1",
+  "name" : "Eye Other",
+  "title" : "Cornea, Retina, Choroid, Ciliary Body, Iris, Overlapping Lesion of Eye, and Other Eye (excluding Melanoma and Retinoblastoma)",
+  "notes" : "C691  Cornea, NOS\nC692  Retina\nC693  Choroid\nC694  Ciliary body\nC698  Overlapping lesion of eye and adnexa\nC699  Eye, NOS\n\n**Note 1:**  Laterality must be coded for this site.\n\n**Note 2:** Melanomas and retinoblastomas are not included in this schema.\n\n**Note 3:** TNM is not defined for this schema. If directly assigning Summary Stage 2000 (SS2000), use the *Cornea, Retina, Choroid, Ciliary Body* chapter on page 260 of the [SS2000 on-line manual](http://seer.cancer.gov/tools/ssm/SSSM2000-122012.pdf#page=260).",
+  "schema_selection_table" : "schema_selection_eye_other",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "seer_primary_tumor",
+    "name" : "SEER Primary Tumor",
+    "naaccr_item" : 772,
+    "default" : "999",
+    "table" : "seer_primary_tumor_eyeother_64077",
+    "used_for_staging" : true
+  }, {
+    "key" : "seer_nodes",
+    "name" : "SEER Regional Nodes",
+    "naaccr_item" : 774,
+    "default" : "999",
+    "table" : "seer_regional_nodes_eyeother_16963",
+    "used_for_staging" : true
+  }, {
+    "key" : "seer_mets",
+    "name" : "SEER Mets",
+    "naaccr_item" : 776,
+    "default" : "99",
+    "table" : "seer_mets_48348",
+    "used_for_staging" : true
+  } ],
+  "outputs" : [ {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "1.1"
+  }, {
+    "key" : "clin_stage_group",
+    "name" : "Derived SEER Clin Stage Group",
+    "naaccr_item" : 3610,
+    "default" : "88"
+  }, {
+    "key" : "path_stage_group",
+    "name" : "Derived SEER Path Stage Group",
+    "naaccr_item" : 3605,
+    "default" : "88"
+  }, {
+    "key" : "combined_stage_group",
+    "name" : "Derived SEER Combined Stage Group",
+    "naaccr_item" : 3614,
+    "default" : "88"
+  }, {
+    "key" : "combined_t",
+    "name" : "Derived SEER Combined T",
+    "naaccr_item" : 3616,
+    "default" : "88"
+  }, {
+    "key" : "combined_n",
+    "name" : "Derived SEER Combined N",
+    "naaccr_item" : 3618,
+    "default" : "88"
+  }, {
+    "key" : "combined_m",
+    "name" : "Derived SEER Combined M",
+    "naaccr_item" : 3620,
+    "default" : "88"
+  }, {
+    "key" : "source_t",
+    "name" : "Derived SEER Combined T Source",
+    "naaccr_item" : 3622
+  }, {
+    "key" : "source_n",
+    "name" : "Derived SEER Combined N Source",
+    "naaccr_item" : 3624
+  }, {
+    "key" : "source_m",
+    "name" : "Derived SEER Combined M Source",
+    "naaccr_item" : 3626
+  } ],
+  "mappings" : [ {
+    "id" : "summary_stage_2017",
+    "name" : "Summary Stage 2017",
+    "tables" : [ {
+      "id" : "seer_primary_tumor_eyeother_64077",
+      "inputs" : [ "seer_primary_tumor" ],
+      "outputs" : [ "ss2017_t" ]
+    }, {
+      "id" : "seer_regional_nodes_eyeother_16963",
+      "inputs" : [ "seer_nodes" ],
+      "outputs" : [ "ss2017_n" ]
+    }, {
+      "id" : "seer_mets_48348",
+      "inputs" : [ "seer_mets" ],
+      "outputs" : [ "ss2017_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2017_n", "ss2017_m", "ss2017_t" ],
+      "outputs" : [ "ss2017" ]
+    } ]
+  } ],
+  "involved_tables" : [ "primary_site", "seer_mets_48348", "histology", "year_dx_validation", "schema_selection_eye_other", "summary_stage_rpa", "seer_regional_nodes_eyeother_16963", "seer_primary_tumor_eyeother_64077" ],
+  "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
+  "last_modified" : "2016-04-06T20:38:50.005Z"
+}

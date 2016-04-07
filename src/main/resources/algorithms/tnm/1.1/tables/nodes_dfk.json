@@ -1,0 +1,28 @@
+{
+  "id" : "nodes_dfk",
+  "algorithm" : "tnm",
+  "version" : "1.1",
+  "name" : "SEER Regional Nodes",
+  "title" : "SEER Regional Nodes",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in SEER Mets.\n\n**Note 2:** Splenic lymph nodes and those located at the tail of the pancreas are not considered regional and should be coded SEER Mets.",
+  "footnotes" : "\\### Considered distant in Historic Stage\n\\*** Considered distant in 1977 Summary Stage Guide",
+  "last_modified" : "2016-02-10T18:25:21.166Z",
+  "definition" : [ {
+    "key" : "seer_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summary Stage 2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:NONE" ], [ "300", "Regional lymph node(s) involved only\n\n    REGIONAL Lymph Nodes:\n          Celiac###***\n          Hepatic\n          Infrapyloric (subpyloric)###***\n          Lateral aortic (lumbar)###***\n          Node of the foramen of Winslow (epiploic) (omental)\n          Pancreaticoduodenal\n          Peripancreatic\n          Periportal\n          Proximal mesenteric###***\n          Retroperitoneal###***\n          Superior mesenteric###***\n\n     Lymph Nodes:\n         Anterior to ampulla of Vater\n         Inferior to ampulla of Vater\n         Posterior to ampulla of Vater\n         Superior to ampulla of Vater\n\n         Regional lymph node(s), NOS", "Hepatic artery\nPeripancreatic (EXCEPT nodes at tail of pancreas)\nPeriportal (portal vein)\n\nLymph nodes, NOS\n\nStated  as N1", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}
