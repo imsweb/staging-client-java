@@ -72,10 +72,20 @@ public abstract class StagingTest {
     @Test
     public void testValidCode() {
         Map<String, String> context = new HashMap<>();
+        context.put("hist", "7000");
+        Assert.assertFalse(_STAGING.isContextValid("prostate", "hist", context));
         context.put("hist", "8000");
         Assert.assertTrue(_STAGING.isContextValid("prostate", "hist", context));
         context.put("hist", "8542");
         Assert.assertTrue(_STAGING.isContextValid("prostate", "hist", context));
+
+        // make sure null is handled
+        context.put("hist", null);
+        Assert.assertFalse(_STAGING.isContextValid("prostate", "hist", context));
+
+        // make sure blank is handled
+        context.put("hist", "");
+        Assert.assertFalse(_STAGING.isContextValid("prostate", "hist", context));
     }
 
     @Test
