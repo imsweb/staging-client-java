@@ -4,7 +4,7 @@
   "version" : "1.1",
   "name" : "Clin T NET Ampulla",
   "title" : "Clinical T",
-  "notes" : "**Note 1:** Assign 88 for in situ cases (behavior code /2). TNM does not include an in situ category for NET ampulla tumors.\n\n**Note 2:** Tumor size must be known to assign a value of T1 or T2. You may use a physicianâs statement of the T category if this is the only information in the medical record.\n* If the tumor appears to be in the T1 or T2 categories, but no size or category is specified, assign TX\n\n**Note 3:** Assign the appropriate T category (T1, T2) based on the tumor size for the following descriptions\n\n    Invasive tumor confined/limited to ampulla of Vater or extending to sphincter of Oddi\n    Duodenal wall\n\n    Confined to ampulla, NOS\n    Localized, NOS",
+  "notes" : "**Note 1:** Assign 88 for in situ cases (behavior code /2). TNM does not include an in situ category for NET ampulla tumors.\n\n**Note 2:** Tumor size must be known to assign a value of T1 or T2. You may use a physician’s statement of the T category if this is the only information in the medical record.\n* If the tumor appears to be in the T1 or T2 categories, but no size or category is specified, assign TX\n\n**Note 3:** Assign the appropriate T category (T1, T2) based on the tumor size for the following descriptions\n\n    Invasive tumor confined/limited to ampulla of Vater or extending to sphincter of Oddi\n    Duodenal wall\n\n    Confined to ampulla, NOS\n    Localized, NOS",
   "last_modified" : "2016-03-12T09:40:57.380Z",
   "definition" : [ {
     "key" : "clin_t",

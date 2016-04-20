@@ -5,7 +5,7 @@
   "name" : "SEER Primary Tumor",
   "title" : "SEER Primary Tumor",
   "notes" : "**Note 1:** Code 0 is not applicable for this schema.\n\n**Note 2:**  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage. FIGO Stage IIIC is assigned based on tumor extension and/or regional lymph node involvement.",
-  "footnotes" : "^ Since âcancer cells in ascites or in peritoneal washingsâ was not specifically categorized in either the Historic Stage or in the 1977 Summary Staging Guide, previous cases may have been coded to either regional or distant.\n\n\\+ Involvement of **contralateral** fallopian tube, broad ligament, mesovarium, or adnexa was considered distant in 1977 Summary Staging Guide.\n\n\\#   Considered localized in Historic Stage\n\\### Considered distant in Historic Stage\n\\*   Considered localized in 1977 Summary Staging Guide\n\\*** Considered distant in 1977 Summary Staging Guide",
+  "footnotes" : "^ Since “cancer cells in ascites or in peritoneal washings” was not specifically categorized in either the Historic Stage or in the 1977 Summary Staging Guide, previous cases may have been coded to either regional or distant.\n\n\\+ Involvement of **contralateral** fallopian tube, broad ligament, mesovarium, or adnexa was considered distant in 1977 Summary Staging Guide.\n\n\\#   Considered localized in Historic Stage\n\\### Considered distant in Historic Stage\n\\*   Considered localized in 1977 Summary Staging Guide\n\\*** Considered distant in 1977 Summary Staging Guide",
   "last_modified" : "2016-02-10T18:25:17.986Z",
   "definition" : [ {
     "key" : "seer_primary_tumor",

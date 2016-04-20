@@ -4,7 +4,7 @@
   "version" : "1.1",
   "name" : "Clin T Merkel Cell Skin T",
   "title" : "Clinical T",
-  "notes" : "**Note 1:** Code the tumor with the greatest extension when there are multiple simultaneous tumors.\n\n**Note 2:**  Skin ulceration does not alter the T category.\n\n**Note 3:**  In-transit metastasis is coded in N (regional lymph nodes).\n\n**Note 4:** Tumor size must be known to assign a value of T1, T2 or T3. You may use a physicianâs statement of the T category if this is the only information in the medical record.\n* If the tumor appears to be in the T1, T2 or T3 categories, but no size or category is specified, assign TX\n\n**Note 5:** For the following descriptions, assign the appropriate T category (T1, T2 or T3) based on the tumor size.\n\n    Lesion(s) confirmed to dermis\n    Localized, NOS\n    Subcutaneous tissue (through entire dermis)",
+  "notes" : "**Note 1:** Code the tumor with the greatest extension when there are multiple simultaneous tumors.\n\n**Note 2:**  Skin ulceration does not alter the T category.\n\n**Note 3:**  In-transit metastasis is coded in N (regional lymph nodes).\n\n**Note 4:** Tumor size must be known to assign a value of T1, T2 or T3. You may use a physician’s statement of the T category if this is the only information in the medical record.\n* If the tumor appears to be in the T1, T2 or T3 categories, but no size or category is specified, assign TX\n\n**Note 5:** For the following descriptions, assign the appropriate T category (T1, T2 or T3) based on the tumor size.\n\n    Lesion(s) confirmed to dermis\n    Localized, NOS\n    Subcutaneous tissue (through entire dermis)",
   "last_modified" : "2016-03-11T11:24:37.599Z",
   "definition" : [ {
     "key" : "clin_t",

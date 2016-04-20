@@ -4,7 +4,7 @@
   "version" : "1.1",
   "name" : "Clin T Peritoneum",
   "title" : "Clinical T",
-  "notes" : "**Note 1:**  Peritoneal sarcomas are classified as deep tumors. Only T1b or T2b are available. \n\n**Note 2:** Tumor size must be known to assign T. You may use a physicianâs statement of the T category if this is the only information in the medical record.\n* If no size or category is specified, assign TX\n\n\n    Tumor confined to site of origin\n\n    Adjacent connective tissue \n    Adjacent organs/structures \n        Bone/cartilage    \n        Colon (except ascending and descending colon)\n        Esophagus\n        Gallbladder\n        Liver\n        Small intestine\n        Spleen\n        Stomach\n\n    Further contiguous extension, including:   \n        Extension to ascending or descending colon\n\n    Localized, NOS",
+  "notes" : "**Note 1:**  Peritoneal sarcomas are classified as deep tumors. Only T1b or T2b are available. \n\n**Note 2:** Tumor size must be known to assign T. You may use a physician’s statement of the T category if this is the only information in the medical record.\n* If no size or category is specified, assign TX\n\n\n    Tumor confined to site of origin\n\n    Adjacent connective tissue \n    Adjacent organs/structures \n        Bone/cartilage    \n        Colon (except ascending and descending colon)\n        Esophagus\n        Gallbladder\n        Liver\n        Small intestine\n        Spleen\n        Stomach\n\n    Further contiguous extension, including:   \n        Extension to ascending or descending colon\n\n    Localized, NOS",
   "last_modified" : "2016-03-13T00:43:02.144Z",
   "definition" : [ {
     "key" : "clin_t",
