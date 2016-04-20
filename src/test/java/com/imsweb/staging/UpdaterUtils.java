@@ -66,7 +66,7 @@ public final class UpdaterUtils {
         in.close();
 
         String url = settings.getProperty("url");
-        String apiKey = settings.getProperty("apikey");
+        final String apiKey = settings.getProperty("apikey");
 
         if (url == null || apiKey == null)
             throw new IllegalStateException("URL and API Key must be in the .seerapi file");
