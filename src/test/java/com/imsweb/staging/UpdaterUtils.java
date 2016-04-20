@@ -118,7 +118,7 @@ public final class UpdaterUtils {
 
         System.out.println("Getting list of table identifiers");
         List<String> tableIds = new ArrayList<>();
-        for (StagingTable table : staging.getTables(algorithm, version).execute().body()) {
+        for (StagingTable table : staging.getTables(algorithm, version, null).execute().body()) {
             String id = table.getId();
 
             // if there are invalid table identifiers, just skip them
@@ -202,6 +202,7 @@ public final class UpdaterUtils {
                     }
                 }
         }
+
         return count;
     }
 
