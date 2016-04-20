@@ -19,10 +19,11 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Stopwatch;
 import com.google.common.io.Files;
 
-import us.monoid.json.JSONArray;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import retrofit2.Retrofit;
+import retrofit2.converter.jackson.JacksonConverterFactory;
 import us.monoid.json.JSONException;
-import us.monoid.web.JSONResource;
-import us.monoid.web.Resty;
 
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingTable;
@@ -80,25 +81,41 @@ public final class UpdaterUtils {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
         mapper.setDateFormat(format);
 
-        Resty r = new Resty();
-        r.withHeader("X-SEERAPI-Key", apiKey);
-        r.withHeader("Accept", "application/json");
+        OkHttpClient client = new OkHttpClient.Builder()
+                .addInterceptor(chain -> {
+                    Request original = chain.request();
+
+                    // add the api key to all requests
+                    Request request = original.newBuilder()
+                            .header("Accept", "application/json")
+                            .header("X-SEERAPI-Key", apiKey)
+                            .method(original.method(), original.body())
+                            .build();
+
+                    return chain.proceed(request);
+                })
+                .addInterceptor(new ErrorInterceptor())
+                .build();
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(url)
+                .addConverterFactory(JacksonConverterFactory.create(mapper))
+                .client(client)
+                .build();
+
+        StagingService staging = retrofit.create(StagingService.class);
 
         // first, get a list of unused tables so they can be ignored later
         System.out.println("Getting list of unused table identifiers");
         Set<String> unusedTableIds = new HashSet<>();
-        JSONResource tables = r.json(url + "staging/" + algorithm + "/" + version + "/tables?unused=true");
-        JSONArray tableArray = tables.array();
-        for (int i = 0; i < tableArray.length(); i++)
-            unusedTableIds.add(tableArray.getJSONObject(i).get("id").toString());
+        for (StagingTable table : staging.getTables(algorithm, version, true).execute().body())
+            unusedTableIds.add(table.getId());
         System.out.println(unusedTableIds.size() + " unused table identifiers found.");
 
         System.out.println("Getting list of table identifiers");
         List<String> tableIds = new ArrayList<>();
-        tables = r.json(url + "staging/" + algorithm + "/" + version + "/tables");
-        tableArray = tables.array();
-        for (int i = 0; i < tableArray.length(); i++) {
-            String id = tableArray.getJSONObject(i).get("id").toString();
+        for (StagingTable table : staging.getTables(algorithm, version).execute().body()) {
+            String id = table.getId();
 
             // if there are invalid table identifiers, just skip them
             if (!_ID_CHARACTERS.matcher(id).matches())
@@ -112,10 +129,8 @@ public final class UpdaterUtils {
 
         System.out.println("Getting list of schema identifiers...");
         List<String> schemaIds = new ArrayList<>();
-        JSONResource schemas = r.json(url + "staging/" + algorithm + "/" + version + "/schemas");
-        JSONArray schemaArray = schemas.array();
-        for (int i = 0; i < schemaArray.length(); i++) {
-            String id = schemaArray.getJSONObject(i).get("id").toString();
+        for (StagingSchema schema : staging.getSchemas(algorithm, version).execute().body()) {
+            String id = schema.getId();
 
             // if there are invalid schema identifiers, just skip them
             if (!_ID_CHARACTERS.matcher(id).matches())
@@ -137,10 +152,8 @@ public final class UpdaterUtils {
 
         // import the tables
         for (String tableId : tableIds) {
-            String tableText = r.text(url + "staging/" + algorithm + "/" + version + "/table/" + tableId).toString();
-            StagingTable table = mapper.readValue(tableText, StagingTable.class);
-
-            tableText = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(table);
+            StagingTable table = staging.getTable(algorithm, version, tableId).execute().body();
+            String tableText = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(table);
 
             Files.write(tableText, new File(tableDir + "/" + table.getId() + ".json"), Charsets.UTF_8);
             System.out.println("Saved table: " + table.getId());
@@ -151,10 +164,9 @@ public final class UpdaterUtils {
 
         // import the schemas
         for (String schemaId : schemaIds) {
-            String schemaText = r.text(url + "staging/" + algorithm + "/" + version + "/schema/" + schemaId).toString();
-            StagingSchema schema = mapper.readValue(schemaText, StagingSchema.class);
+            StagingSchema schema = staging.getSchema(algorithm, version, schemaId).execute().body();
 
-            schemaText = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(schema);
+            String schemaText = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(schema);
 
             Files.write(schemaText, new File(schemaDir + "/" + schema.getId() + ".json"), Charsets.UTF_8);
             System.out.println("Saved schema: " + schema.getId());
