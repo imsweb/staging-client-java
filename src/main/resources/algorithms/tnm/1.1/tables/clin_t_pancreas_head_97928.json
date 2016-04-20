@@ -4,7 +4,7 @@
   "version" : "1.1",
   "name" : "Clin T Pancreas Head",
   "title" : "Clinical T",
-  "notes" : "**Note 1:**  Tumors of the head of the pancreas arise to the right of the superior mesenteric-portal vein confluence.\n\n**Note 2:**  Islets of Langerhans are distributed throughout the pancreas. \n* An islet tumor is coded to the subsite of the pancreas in which the tumor arises if the information is available\n\n**Note 3:** Tumor size must be known to assign a value of T1 or T2. You may use a physicianâs statement of the T category if this is the only information in the medical record.\n* If the tumor appears to be in the T1 or T2 categories, but no size or category is specified, assign TX\n\n**Note 4:**  Assign the appropriate T category (T1, T2) based on the tumor size for the following descriptions\n\n    Confined to pancreas\n    Localized, NOS",
+  "notes" : "**Note 1:**  Tumors of the head of the pancreas arise to the right of the superior mesenteric-portal vein confluence.\n\n**Note 2:**  Islets of Langerhans are distributed throughout the pancreas. \n* An islet tumor is coded to the subsite of the pancreas in which the tumor arises if the information is available\n\n**Note 3:** Tumor size must be known to assign a value of T1 or T2. You may use a physician’s statement of the T category if this is the only information in the medical record.\n* If the tumor appears to be in the T1 or T2 categories, but no size or category is specified, assign TX\n\n**Note 4:**  Assign the appropriate T category (T1, T2) based on the tumor size for the following descriptions\n\n    Confined to pancreas\n    Localized, NOS",
   "last_modified" : "2016-03-11T13:35:58.483Z",
   "definition" : [ {
     "key" : "clin_t",

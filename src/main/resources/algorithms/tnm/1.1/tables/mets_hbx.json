@@ -4,7 +4,7 @@
   "version" : "1.1",
   "name" : "SEER Mets",
   "title" : "SEER Mets",
-  "footnotes" : "Â§ Considered regional for cecum, appendix, ascending, hepatic flexure and transverse colon in 1977 Summary Staging Guide\nÂ£ Considered regional for cecum, ascending, desending and sigmoid for Historic stage\n\\## Considered regional in Historic Stage",
+  "footnotes" : "§ Considered regional for cecum, appendix, ascending, hepatic flexure and transverse colon in 1977 Summary Staging Guide\n£ Considered regional for cecum, ascending, desending and sigmoid for Historic stage\n\\## Considered regional in Historic Stage",
   "last_modified" : "2016-02-10T18:25:18.133Z",
   "definition" : [ {
     "key" : "seer_mets",
@@ -23,5 +23,5 @@
     "name" : "Summary Stage 2017 M",
     "type" : "ENDPOINT"
   } ],
-  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/node(s) involved\n\nDistant lymph node(s):\n    Inferior mesenteric\n    Para-aortic\n    Retroperitoneal\n    Superior mesentericÂ§\n    Other distant lymph node(s)\n\nExtension to:\n    Adrenal (suprarenal) gland\n    Bladder\n    Diaphragm\n    Fallopian tubeÂ£\n    Fistula to skin\n    Gallbladder\n    Kidney, right\n    Liver##\n    Other segment(s) of colon via serosa\n    OvaryÂ£ \n    Ureter, right\n    UterusÂ£", "Carcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph nodes\n\nDistant metastasis, NOS\n\nStated as M1", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/node(s) involved\n\nDistant lymph node(s):\n    Inferior mesenteric\n    Para-aortic\n    Retroperitoneal\n    Superior mesenteric§\n    Other distant lymph node(s)\n\nExtension to:\n    Adrenal (suprarenal) gland\n    Bladder\n    Diaphragm\n    Fallopian tube£\n    Fistula to skin\n    Gallbladder\n    Kidney, right\n    Liver##\n    Other segment(s) of colon via serosa\n    Ovary£ \n    Ureter, right\n    Uterus£", "Carcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph nodes\n\nDistant metastasis, NOS\n\nStated as M1", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
 }

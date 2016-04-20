@@ -14,8 +14,6 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
 
-import us.monoid.json.JSONException;
-
 import com.imsweb.staging.Staging;
 import com.imsweb.staging.cs.CsDataProvider;
 import com.imsweb.staging.cs.CsDataProvider.CsVersion;
@@ -29,7 +27,7 @@ public class CsStagingAddOutputFields {
     private static final String _VERSION = "02.05.50";
     private static final String _BASE_DIRECTORY = "C:/Prj/staging-client-java/src/main/resources/algorithms";
 
-    public static void main(String[] args) throws IOException, JSONException, URISyntaxException {
+    public static void main(String[] args) throws IOException, URISyntaxException {
         // create an object mapper
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(SerializationFeature.WRITE_NULL_MAP_VALUES, false);

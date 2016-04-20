@@ -22,5 +22,5 @@
     "name" : "Summary Stage 2017 N",
     "type" : "ENDPOINT"
   } ],
-  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:None" ], [ "300", "Regional lymph node(s) involved only\n\nREGIONAL Lymph Nodes\n\nAortic, NOS:\n    Lateral (lumbar)\n    Para-aortic\n    Peri-aortic\nIliac, NOS:\n    Common\n    External\n    Internal (hypogastric), NOS:\n        Obturator\nParametrial\nPelvic, NOS\nSacral:\n    Lateral (laterosacral)\n    Middle (promontorial) (Gerotaâs node)\n    Presacral\n    Uterosacral\n\nRegional lymph node(s), NOS", "", "VALUE:RN" ], [ "999", "Unknown; not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:None" ], [ "300", "Regional lymph node(s) involved only\n\nREGIONAL Lymph Nodes\n\nAortic, NOS:\n    Lateral (lumbar)\n    Para-aortic\n    Peri-aortic\nIliac, NOS:\n    Common\n    External\n    Internal (hypogastric), NOS:\n        Obturator\nParametrial\nPelvic, NOS\nSacral:\n    Lateral (laterosacral)\n    Middle (promontorial) (Gerota’s node)\n    Presacral\n    Uterosacral\n\nRegional lymph node(s), NOS", "", "VALUE:RN" ], [ "999", "Unknown; not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
 }

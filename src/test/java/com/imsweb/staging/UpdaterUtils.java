@@ -23,7 +23,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
-import us.monoid.json.JSONException;
 
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingTable;
@@ -45,7 +44,7 @@ public final class UpdaterUtils {
 
     private static Pattern _ID_CHARACTERS = Pattern.compile("[a-z0-9_]+");
 
-    public static void update(String algorithm, String version) throws IOException, JSONException {
+    public static void update(String algorithm, String version) throws IOException {
         Stopwatch stopwatch = Stopwatch.createStarted();
 
         System.out.println("Updating " + algorithm + " version " + version + " from SEER*API");
