@@ -454,7 +454,6 @@ public class TnmStagingTest extends StagingTest {
 
         // converting to other encoding should change the text
         Assert.assertNotEquals(table.getNotes(), new String(table.getNotes().getBytes("ISO-8859-1")));
-        Assert.assertNotEquals(table.getNotes(), new String(table.getNotes().getBytes("US-ASCII")));
     }
 
 }
