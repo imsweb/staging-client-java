@@ -451,11 +451,11 @@ public class TnmStagingTest extends StagingTest {
         // the notes of this table contain UTF-8 characters, specifically the single quote character in this phrase: "You may use a physician’s statement"
 
         // converting to UTF-8 should change nothing
-        Assert.assertEquals(table.getNotes(), new String(table.getNotes().getBytes("UTF-8")));
+        Assert.assertEquals(table.getNotes(), new String(table.getNotes().getBytes(StandardCharsets.UTF_8), StandardCharsets.UTF_8));
 
         // converting to other encoding should change the text
-        Assert.assertNotEquals(table.getNotes(), new String(table.getNotes().getBytes("ISO-8859-1"), StandardCharsets.ISO_8859_1));
-        Assert.assertNotEquals(table.getNotes(), new String(table.getNotes().getBytes("US-ASCII"), StandardCharsets.US_ASCII));
+        Assert.assertNotEquals(table.getNotes(), new String(table.getNotes().getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.ISO_8859_1));
+        Assert.assertNotEquals(table.getNotes(), new String(table.getNotes().getBytes(StandardCharsets.US_ASCII), StandardCharsets.US_ASCII));
     }
 
 }
