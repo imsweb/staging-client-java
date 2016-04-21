@@ -6,7 +6,6 @@ package com.imsweb.staging;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.Reader;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -65,7 +64,7 @@ public class StagingFileDataProvider extends StagingDataProvider {
                 .build(new CacheLoader<String, StagingTable>() {
                     @Override
                     public StagingTable load(String id) throws Exception {
-                        StagingTable table = getMapper().reader().readValue(getMapper().getFactory().createParser(createReader(_tableDirectory + "/" + id + ".json")),
+                        StagingTable table = getMapper().reader().readValue(getMapper().getFactory().createParser(getStagingInputStream(_tableDirectory + "/" + id + ".json")),
                                 StagingTable.class);
 
                         if (!id.equals(table.getId()))
@@ -82,7 +81,7 @@ public class StagingFileDataProvider extends StagingDataProvider {
             String directory = "algorithms/" + algorithm.toLowerCase() + "/" + version + "/schemas";
             for (String file : readLines(directory + "/ids.txt")) {
                 if (!file.isEmpty()) {
-                    StagingSchema schema = getMapper().reader().readValue(getMapper().getFactory().createParser(createReader(directory + "/" + file + ".json")), StagingSchema.class);
+                    StagingSchema schema = getMapper().reader().readValue(getMapper().getFactory().createParser(getStagingInputStream(directory + "/" + file + ".json")), StagingSchema.class);
 
                     initSchema(schema);
 
@@ -150,20 +149,20 @@ public class StagingFileDataProvider extends StagingDataProvider {
      * @throws IOException error reading file
      */
     private static List<String> readLines(String location) throws IOException {
-        return CharStreams.readLines(createReader(location));
+        return CharStreams.readLines(new InputStreamReader(getStagingInputStream(location), StandardCharsets.UTF_8));
     }
 
     /**
      * @param location relative file location within the classpath
      * @return The {@link java.io.Reader} resource
      */
-    private static Reader createReader(String location) {
+    private static InputStream getStagingInputStream(String location) {
         InputStream input = Thread.currentThread().getContextClassLoader().getResourceAsStream(location);
 
         if (input == null)
             throw new IllegalStateException("Internal error reading file; File could not be found: " + location);
 
-        return new InputStreamReader(input, StandardCharsets.UTF_8);
+        return input;
     }
 
 }

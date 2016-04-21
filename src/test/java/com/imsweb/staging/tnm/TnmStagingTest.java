@@ -4,6 +4,7 @@
 package com.imsweb.staging.tnm;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -438,6 +439,22 @@ public class TnmStagingTest extends StagingTest {
         Assert.assertEquals("p0I-", table.getRawRows().get(2).get(0));
         Assert.assertEquals("p0I-", table.getTableRows().get(2).getInputs().get("path_n").get(0).getLow());
         Assert.assertEquals("p0I-", table.getTableRows().get(2).getInputs().get("path_n").get(0).getHigh());
+    }
+
+    @Test
+    public void testEncoding() throws UnsupportedEncodingException {
+        StagingTable table = _STAGING.getTable("thyroid_t_6166");
+
+        Assert.assertNotNull(table);
+
+        // the notes of this table contain UTF-8 characters, specifically the single quote character in this phrase: "You may use a physician’s statement"
+
+        // converting to UTF-8 should change nothing
+        Assert.assertEquals(table.getNotes(), new String(table.getNotes().getBytes("UTF-8")));
+
+        // converting to other encoding should change the text
+        Assert.assertNotEquals(table.getNotes(), new String(table.getNotes().getBytes("ISO-8859-1")));
+        Assert.assertNotEquals(table.getNotes(), new String(table.getNotes().getBytes("US-ASCII")));
     }
 
 }
