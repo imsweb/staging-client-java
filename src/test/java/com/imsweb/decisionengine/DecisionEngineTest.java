@@ -291,13 +291,13 @@ public class DecisionEngineTest {
         range.add(new BasicStringRange("1", "1"));
         range.add(new BasicStringRange("4", "4"));
         range.add(new BasicStringRange("9", "9"));
-        Assert.assertTrue(DecisionEngine.testMatch(range, "9", new HashMap<String, String>()));
-        Assert.assertFalse(DecisionEngine.testMatch(range, "7", new HashMap<String, String>()));
+        Assert.assertTrue(DecisionEngine.testMatch(range, "9", new HashMap<>()));
+        Assert.assertFalse(DecisionEngine.testMatch(range, "7", new HashMap<>()));
 
         range = new ArrayList<>();
         range.add(new BasicStringRange("11", "54"));
         range.add(new BasicStringRange("99", "99"));
-        Assert.assertTrue(DecisionEngine.testMatch(range, "23", new HashMap<String, String>()));
+        Assert.assertTrue(DecisionEngine.testMatch(range, "23", new HashMap<>()));
     }
 
     @Test
@@ -393,7 +393,7 @@ public class DecisionEngineTest {
         Assert.assertNotNull(matchTable);
 
         // first try it with missing input (null should match just like blank))
-        Assert.assertNull(DecisionEngine.matchTable(matchTable, new HashMap<String, String>()));
+        Assert.assertNull(DecisionEngine.matchTable(matchTable, new HashMap<>()));
 
         input.put("a", "2");
         Assert.assertNotNull(DecisionEngine.matchTable(matchTable, input));

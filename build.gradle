@@ -29,7 +29,6 @@ dependencies {
     compile 'org.mongodb.morphia:morphia:1.1.1'
 
     compile 'com.github.ben-manes.caffeine:caffeine:2.3.0'
-    compile 'com.github.ben-manes.caffeine:guava:2.3.0'
 
     testCompile 'junit:junit:4.12'
     testCompile 'org.unitils:unitils-core:3.4.2'

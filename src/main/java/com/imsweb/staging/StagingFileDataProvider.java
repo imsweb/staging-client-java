@@ -15,7 +15,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import com.github.benmanes.caffeine.cache.CacheLoader;
 import com.github.benmanes.caffeine.cache.Caffeine;
 import com.github.benmanes.caffeine.cache.LoadingCache;
 
@@ -50,30 +49,14 @@ public class StagingFileDataProvider extends StagingDataProvider {
         // first get a list of all tables ids
         try {
             _tableIds = new HashSet<>();
-            for (String tableId : readLines(_tableDirectory + "/ids.txt"))
-                _tableIds.add(tableId);
+            _tableIds.addAll(readLines(_tableDirectory + "/ids.txt"));
         }
         catch (IOException e) {
             throw new IllegalStateException("IOException reading ids: " + e.getMessage());
         }
 
         // set up table cache; it is too slow to load all the tables at startup
-        _tableCache = Caffeine.newBuilder()
-                .maximumSize(2500)
-                .build(new CacheLoader<String, StagingTable>() {
-                    @Override
-                    public StagingTable load(String id) throws Exception {
-                        StagingTable table = getMapper().reader().readValue(getMapper().getFactory().createParser(getStagingInputStream(_tableDirectory + "/" + id + ".json")),
-                                StagingTable.class);
-
-                        if (!id.equals(table.getId()))
-                            throw new IllegalStateException("The table " + id + " has an identifier that doesn't match the name (" + table.getId() + ")");
-
-                        initTable(table);
-
-                        return table;
-                    }
-                });
+        _tableCache = Caffeine.newBuilder().maximumSize(2500).build(this::load);
 
         // loop over all schemas and load them into Map
         try {
@@ -135,6 +118,23 @@ public class StagingFileDataProvider extends StagingDataProvider {
     @Override
     public StagingSchema getDefinition(String id) {
         return _schemas.get(id);
+    }
+
+    /**
+     * Load the StagingTable from a file specified by the passed identifier.
+     * @param id table identifier
+     * @return StagingTable
+     * @throws IllegalStateException if the table has an identifier that does not match the name
+     */
+    private StagingTable load(String id) throws Exception {
+        StagingTable table = getMapper().reader().readValue(getMapper().getFactory().createParser(getStagingInputStream(_tableDirectory + "/" + id + ".json")), StagingTable.class);
+
+        if (!id.equals(table.getId()))
+            throw new IllegalStateException("The table " + id + " has an identifier that doesn't match the name (" + table.getId() + ")");
+
+        initTable(table);
+
+        return table;
     }
 
     /**

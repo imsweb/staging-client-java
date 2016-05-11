@@ -13,13 +13,13 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.github.benmanes.caffeine.cache.CacheLoader;
 import com.github.benmanes.caffeine.cache.Caffeine;
 import com.github.benmanes.caffeine.cache.LoadingCache;
 
@@ -78,21 +78,10 @@ public abstract class StagingDataProvider implements DataProvider {
      */
     protected StagingDataProvider() {
         // cache schema lookups
-        _lookupCache = Caffeine.newBuilder().maximumSize(500).expireAfterWrite(10, TimeUnit.MINUTES).build(new CacheLoader<SchemaLookup, List<StagingSchema>>() {
-            @Override
-            public List<StagingSchema> load(SchemaLookup lookup) throws Exception {
-                return getSchemas(lookup);
-            }
-        });
+        _lookupCache = Caffeine.newBuilder().maximumSize(500).expireAfterWrite(10, TimeUnit.MINUTES).build(this::getSchemas);
 
         // cache the valid values for certain tables including site and histology
-        _validValuesCache = Caffeine.newBuilder().build(new CacheLoader<String, Set<String>>() {
-            @Override
-            public Set<String> load(String tableId) throws Exception {
-                return getAllInputValues(tableId);
-            }
-        });
-
+        _validValuesCache = Caffeine.newBuilder().build(this::getAllInputValues);
     }
 
     /**
@@ -436,13 +425,11 @@ public abstract class StagingDataProvider implements DataProvider {
             if (hasDiscriminator && matchedSchemas.size() > 1) {
                 List<StagingSchema> trimmedMatches = new ArrayList<>();
 
-                for (StagingSchema schema : matchedSchemas) {
-                    if (schema.getSchemaSelectionTable() != null) {
-                        StagingTable table = getTable(schema.getSchemaSelectionTable());
-                        if (table != null && DecisionEngine.matchTable(table, lookup.getInputs()) != null)
-                            trimmedMatches.add(schema);
-                    }
-                }
+                matchedSchemas.stream().filter(schema -> schema.getSchemaSelectionTable() != null).forEach(schema -> {
+                    StagingTable table = getTable(schema.getSchemaSelectionTable());
+                    if (table != null && DecisionEngine.matchTable(table, lookup.getInputs()) != null)
+                        trimmedMatches.add(schema);
+                });
 
                 matchedSchemas = trimmedMatches;
             }
@@ -465,10 +452,10 @@ public abstract class StagingDataProvider implements DataProvider {
             return values;
 
         // find the input key
-        Set<String> inputKeys = new HashSet<>();
-        for (StagingColumnDefinition def : table.getColumnDefinitions())
-            if (ColumnType.INPUT.equals(def.getType()))
-                inputKeys.add(def.getKey());
+        Set<String> inputKeys = table.getColumnDefinitions().stream()
+                .filter(def -> ColumnType.INPUT.equals(def.getType()))
+                .map(StagingColumnDefinition::getKey)
+                .collect(Collectors.toSet());
 
         if (inputKeys.size() != 1)
             throw new IllegalStateException("Table '" + table.getId() + "' must have one and only one INPUT column.");

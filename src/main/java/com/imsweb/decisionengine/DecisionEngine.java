@@ -405,7 +405,7 @@ public class DecisionEngine {
                     outputMappings.put(keymapping.getFrom(), keymapping.getTo());
 
             // process the table (and any "JUMP" tables) for the mapping
-            for (String tableId : getInvolvedTables(getProvider().getTable(path.getId()), new LinkedHashSet<String>())) {
+            for (String tableId : getInvolvedTables(getProvider().getTable(path.getId()), new LinkedHashSet<>())) {
                 Table table = getProvider().getTable(tableId);
                 if (table != null) {
                     // first process the inputs from the column definitions
@@ -501,7 +501,7 @@ public class DecisionEngine {
                 for (KeyMapping keymapping : path.getOutputMapping())
                     mappings.put(keymapping.getFrom(), keymapping.getTo());
 
-            for (String tableId : getInvolvedTables(getProvider().getTable(path.getId()), new LinkedHashSet<String>())) {
+            for (String tableId : getInvolvedTables(getProvider().getTable(path.getId()), new LinkedHashSet<>())) {
                 Table table = getProvider().getTable(tableId);
                 if (table != null && table.getColumnDefinitions() != null) {
                     for (ColumnDefinition def : table.getColumnDefinitions()) {
