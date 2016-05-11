@@ -3,6 +3,7 @@
  */
 package com.imsweb.staging;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -12,13 +13,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.ExecutionException;
+import java.util.stream.Collectors;
 
-import com.google.common.cache.CacheBuilder;
-import com.google.common.cache.CacheLoader;
-import com.google.common.cache.LoadingCache;
-import com.google.common.io.CharStreams;
-import com.google.common.util.concurrent.UncheckedExecutionException;
+import com.github.benmanes.caffeine.cache.CacheLoader;
+import com.github.benmanes.caffeine.cache.Caffeine;
+import com.github.benmanes.caffeine.cache.LoadingCache;
 
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingTable;
@@ -59,7 +58,7 @@ public class StagingFileDataProvider extends StagingDataProvider {
         }
 
         // set up table cache; it is too slow to load all the tables at startup
-        _tableCache = CacheBuilder.newBuilder()
+        _tableCache = Caffeine.newBuilder()
                 .maximumSize(2500)
                 .build(new CacheLoader<String, StagingTable>() {
                     @Override
@@ -117,15 +116,10 @@ public class StagingFileDataProvider extends StagingDataProvider {
 
     @Override
     public StagingTable getTable(String id) {
-        try {
-            if (id == null)
-                return null;
+        if (id == null)
+            return null;
 
-            return _tableCache.get(id);
-        }
-        catch (ExecutionException | UncheckedExecutionException e) {
-            throw new IllegalStateException(e.getCause());
-        }
+        return _tableCache.get(id);
     }
 
     @Override
@@ -149,7 +143,9 @@ public class StagingFileDataProvider extends StagingDataProvider {
      * @throws IOException error reading file
      */
     private static List<String> readLines(String location) throws IOException {
-        return CharStreams.readLines(new InputStreamReader(getStagingInputStream(location), StandardCharsets.UTF_8));
+        try (BufferedReader buffer = new BufferedReader(new InputStreamReader(getStagingInputStream(location), StandardCharsets.UTF_8))) {
+            return buffer.lines().collect(Collectors.toList());
+        }
     }
 
     /**

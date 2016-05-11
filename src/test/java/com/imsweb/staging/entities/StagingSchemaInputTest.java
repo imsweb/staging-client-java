@@ -1,9 +1,10 @@
 package com.imsweb.staging.entities;
 
+import java.util.Collections;
+import java.util.HashSet;
+
 import org.junit.Assert;
 import org.junit.Test;
-
-import com.google.common.collect.Sets;
 
 public class StagingSchemaInputTest {
 
@@ -18,18 +19,13 @@ public class StagingSchemaInputTest {
         input2.setKey("key");
         input1.setName("name");
         input2.setName("name");
-        input1.setMetadata(Sets.newHashSet("META1"));
-        input2.setMetadata(Sets.newHashSet("META1"));
+        input1.setMetadata(new HashSet<>(Collections.singletonList("META1")));
+        input2.setMetadata(new HashSet<>(Collections.singletonList("META1")));
 
         Assert.assertEquals(input1, input2);
 
-        input2.setMetadata(Sets.newHashSet("META2"));
+        input2.setMetadata(new HashSet<>(Collections.singletonList("META2")));
 
         Assert.assertNotEquals(input1, input2);
-
-        //        input1.setMetadata(null);
-        //        input2.setMetadata(Collections.<String>emptySet());
-        //
-        //        Assert.assertEquals(input1, input2);
     }
 }

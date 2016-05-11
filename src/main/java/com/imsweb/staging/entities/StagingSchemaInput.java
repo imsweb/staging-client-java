@@ -5,6 +5,7 @@ package com.imsweb.staging.entities;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.Objects;
 import java.util.Set;
 
 import org.mongodb.morphia.annotations.Embedded;
@@ -13,7 +14,6 @@ import org.mongodb.morphia.annotations.Property;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.google.common.base.Objects;
 
 import com.imsweb.decisionengine.Input;
 
@@ -182,21 +182,21 @@ public class StagingSchemaInput implements Input {
         StagingSchemaInput that = (StagingSchemaInput)o;
 
         // do not include _parsedValues
-        return Objects.equal(_key, that._key) &&
-                Objects.equal(_name, that._name) &&
-                Objects.equal(_description, that._description) &&
-                Objects.equal(_naaccrItem, that._naaccrItem) &&
-                Objects.equal(_default, that._default) &&
-                Objects.equal(_table, that._table) &&
-                Objects.equal(_usedForStaging, that._usedForStaging) &&
-                Objects.equal(_unit, that._unit) &&
-                Objects.equal(_decimalPlaces, that._decimalPlaces) &&
-                Objects.equal(_metadata, that._metadata);
+        return Objects.equals(_key, that._key) &&
+                Objects.equals(_name, that._name) &&
+                Objects.equals(_description, that._description) &&
+                Objects.equals(_naaccrItem, that._naaccrItem) &&
+                Objects.equals(_default, that._default) &&
+                Objects.equals(_table, that._table) &&
+                Objects.equals(_usedForStaging, that._usedForStaging) &&
+                Objects.equals(_unit, that._unit) &&
+                Objects.equals(_decimalPlaces, that._decimalPlaces) &&
+                Objects.equals(_metadata, that._metadata);
     }
 
     @Override
     public int hashCode() {
         // do not include _parsedValues
-        return Objects.hashCode(_key, _name, _description, _naaccrItem, _default, _table, _usedForStaging, _unit, _decimalPlaces, _metadata);
+        return Objects.hash(_key, _name, _description, _naaccrItem, _default, _table, _usedForStaging, _unit, _decimalPlaces, _metadata);
     }
 }

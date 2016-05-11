@@ -3,12 +3,13 @@
  */
 package com.imsweb.staging.entities;
 
+import java.util.Objects;
+
 import org.mongodb.morphia.annotations.Embedded;
 import org.mongodb.morphia.annotations.Property;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.google.common.base.Objects;
 
 import com.imsweb.decisionengine.KeyMapping;
 
@@ -58,11 +59,11 @@ public class StagingKeyMapping implements KeyMapping {
 
         StagingKeyMapping that = (StagingKeyMapping)o;
 
-        return Objects.equal(_from, that._from) && Objects.equal(_to, that._to);
+        return Objects.equals(_from, that._from) && Objects.equals(_to, that._to);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(_from, _to);
+        return Objects.hash(_from, _to);
     }
 }

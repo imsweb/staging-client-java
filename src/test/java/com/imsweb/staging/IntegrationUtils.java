@@ -9,23 +9,19 @@ import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.ThreadPoolExecutor.CallerRunsPolicy;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
-
-import com.google.common.base.Joiner;
-import com.google.common.base.Splitter;
-import com.google.common.base.Stopwatch;
-import com.google.common.collect.Iterables;
+import java.util.stream.Collectors;
 
 import com.imsweb.staging.cs.CsStagingData;
 import com.imsweb.staging.cs.CsStagingData.CsInput;
@@ -65,9 +61,9 @@ public final class IntegrationUtils {
     public static IntegrationResult processSchemaSelection(final Staging staging, String fileName, InputStream is) throws IOException, InterruptedException {
         // initialize the threads pool (don't use more than 9 threads)
         int n = Math.min(9, Runtime.getRuntime().availableProcessors() + 1);
-        ExecutorService pool = new ThreadPoolExecutor(n, n, 5, TimeUnit.SECONDS, new LinkedBlockingDeque<Runnable>(1000), new CallerRunsPolicy());
+        ExecutorService pool = new ThreadPoolExecutor(n, n, 5, TimeUnit.SECONDS, new LinkedBlockingDeque<>(1000), new CallerRunsPolicy());
 
-        Stopwatch stopwatch = Stopwatch.createStarted();
+        long start = System.currentTimeMillis();
 
         AtomicInteger processedCases = new AtomicInteger(0);
         final AtomicInteger failedCases = new AtomicInteger(0);
@@ -81,42 +77,42 @@ public final class IntegrationUtils {
         while (line != null) {
             if (!line.startsWith("#")) {
                 processedCases.getAndIncrement();
-                final String[] parts = Iterables.toArray(Splitter.on(',').trimResults().split(line), String.class);
+
+                // split the string; important to keep empty trailing values in the resulting array
+                String[] parts = Arrays.stream(line.split(",", -1)).map(String::trim).toArray(String[]::new);
+
                 if (parts.length != 4)
                     throw new IllegalStateException("Bad record in schema_selection.txt on line number" + reader.getLineNumber());
 
                 final int lineNum = reader.getLineNumber();
                 final String fullLine = line;
 
-                pool.submit(new Callable<Object>() {
-                    @Override
-                    public Object call() throws Exception {
-                        try {
-                            SchemaLookup lookup = new SchemaLookup(parts[0], parts[1]);
-                            lookup.setInput(CsStagingData.SSF25_KEY, parts[2]);
+                pool.submit(() -> {
+                    try {
+                        SchemaLookup lookup = new SchemaLookup(parts[0], parts[1]);
+                        lookup.setInput(CsStagingData.SSF25_KEY, parts[2]);
 
-                            List<StagingSchema> lookups = staging.lookupSchema(lookup);
-                            if (parts[3].length() == 0) {
-                                if (lookups.size() == 1) {
-                                    System.out.println("Line #" + lineNum + " [" + fullLine + "] --> The schema selection should not have found any schema but did: " + lookups.get(0).getId());
-                                    failedCases.getAndIncrement();
-                                }
-                            }
-                            else {
-                                if (lookups.size() != 1) {
-                                    System.out.println("Line #" + lineNum + " [" + fullLine + "] --> The schema selection should have found a schema, " + parts[3] + ", but did not.");
-                                    failedCases.getAndIncrement();
-                                }
+                        List<StagingSchema> lookups = staging.lookupSchema(lookup);
+                        if (parts[3].length() == 0) {
+                            if (lookups.size() == 1) {
+                                System.out.println("Line #" + lineNum + " [" + fullLine + "] --> The schema selection should not have found any schema but did: " + lookups.get(0).getId());
+                                failedCases.getAndIncrement();
                             }
                         }
-                        catch (Throwable t) {
-                            if (failedCases.get() == 0)
-                                System.out.println("Line #" + lineNum + " --> Exception processing schema selection: " + t.getMessage());
-                            failedCases.getAndIncrement();
+                        else {
+                            if (lookups.size() != 1) {
+                                System.out.println("Line #" + lineNum + " [" + fullLine + "] --> The schema selection should have found a schema, " + parts[3] + ", but did not.");
+                                failedCases.getAndIncrement();
+                            }
                         }
-
-                        return null;
                     }
+                    catch (Throwable t) {
+                        if (failedCases.get() == 0)
+                            System.out.println("Line #" + lineNum + " --> Exception processing schema selection: " + t.getMessage());
+                        failedCases.getAndIncrement();
+                    }
+
+                    return null;
                 });
             }
 
@@ -126,9 +122,9 @@ public final class IntegrationUtils {
         pool.shutdown();
         pool.awaitTermination(30, TimeUnit.SECONDS);
 
-        stopwatch.stop();
-        String perMs = String.format("%.3f", ((float)stopwatch.elapsed(TimeUnit.MILLISECONDS) / processedCases.get()));
-        System.out.print("Completed " + NumberFormat.getNumberInstance(Locale.US).format(processedCases.get()) + " cases in " + stopwatch + " (" + perMs + "ms/case).");
+        long elapsed = System.currentTimeMillis() - start;
+        String perMs = String.format("%.3f", ((float)elapsed / processedCases.get()));
+        System.out.print("Completed " + NumberFormat.getNumberInstance(Locale.US).format(processedCases.get()) + " cases in " + elapsed + "ms (" + perMs + "ms/case).");
         if (failedCases.get() > 0)
             System.out.println("There were " + NumberFormat.getNumberInstance(Locale.US).format(failedCases.get()) + " failures.");
         else
@@ -204,13 +200,13 @@ public final class IntegrationUtils {
 
         // initialize the threads pool
         int n = Math.min(9, Runtime.getRuntime().availableProcessors() + 1);
-        ExecutorService pool = new ThreadPoolExecutor(n, n, 5, TimeUnit.SECONDS, new LinkedBlockingDeque<Runnable>(1000), new CallerRunsPolicy());
+        ExecutorService pool = new ThreadPoolExecutor(n, n, 5, TimeUnit.SECONDS, new LinkedBlockingDeque<>(1000), new CallerRunsPolicy());
 
         // go over each file
         final AtomicInteger processedCases = new AtomicInteger(0);
         final AtomicInteger failedCases = new AtomicInteger(0);
 
-        Stopwatch stopwatch = Stopwatch.createStarted();
+        long start = System.currentTimeMillis();
 
         if (singleLineNumber != null)
             System.out.println("Starting " + fileName + ", line # " + singleLineNumber + " [" + n + " threads]");
@@ -235,114 +231,111 @@ public final class IntegrationUtils {
             if (values.length != 80)
                 System.out.println("Line " + lineNum + " has " + values.length + " cells; it should be 80.");
             else
-                pool.submit(new Callable<Object>() {
-                    @Override
-                    public Object call() throws Exception {
-                        // load up inputs
-                        CsStagingData data = new CsStagingData();
-                        data.setInput(CsInput.PRIMARY_SITE, values[0]);
-                        data.setInput(CsInput.HISTOLOGY, values[1]);
-                        data.setInput(CsInput.DX_YEAR, values[2]);
-                        data.setInput(CsInput.CS_VERSION_ORIGINAL, values[3]);
-                        data.setInput(CsInput.BEHAVIOR, values[4]);
-                        data.setInput(CsInput.GRADE, values[5]);
-                        data.setInput(CsInput.AGE_AT_DX, values[6]);
-                        data.setInput(CsInput.LVI, values[7]);
-                        data.setInput(CsInput.TUMOR_SIZE, values[8]);
-                        data.setInput(CsInput.EXTENSION, values[9]);
-                        data.setInput(CsInput.EXTENSION_EVAL, values[10]);
-                        data.setInput(CsInput.LYMPH_NODES, values[11]);
-                        data.setInput(CsInput.LYMPH_NODES_EVAL, values[12]);
-                        data.setInput(CsInput.REGIONAL_NODES_POSITIVE, values[13]);
-                        data.setInput(CsInput.REGIONAL_NODES_EXAMINED, values[14]);
-                        data.setInput(CsInput.METS_AT_DX, values[15]);
-                        data.setInput(CsInput.METS_EVAL, values[16]);
-                        data.setInput(CsInput.SSF1, values[17]);
-                        data.setInput(CsInput.SSF2, values[18]);
-                        data.setInput(CsInput.SSF3, values[19]);
-                        data.setInput(CsInput.SSF4, values[20]);
-                        data.setInput(CsInput.SSF5, values[21]);
-                        data.setInput(CsInput.SSF6, values[22]);
-                        data.setInput(CsInput.SSF7, values[23]);
-                        data.setInput(CsInput.SSF8, values[24]);
-                        data.setInput(CsInput.SSF9, values[25]);
-                        data.setInput(CsInput.SSF10, values[26]);
-                        data.setInput(CsInput.SSF11, values[27]);
-                        data.setInput(CsInput.SSF12, values[28]);
-                        data.setInput(CsInput.SSF13, values[29]);
-                        data.setInput(CsInput.SSF14, values[30]);
-                        data.setInput(CsInput.SSF15, values[31]);
-                        data.setInput(CsInput.SSF16, values[32]);
-                        data.setInput(CsInput.SSF17, values[33]);
-                        data.setInput(CsInput.SSF18, values[34]);
-                        data.setInput(CsInput.SSF19, values[35]);
-                        data.setInput(CsInput.SSF20, values[36]);
-                        data.setInput(CsInput.SSF21, values[37]);
-                        data.setInput(CsInput.SSF22, values[38]);
-                        data.setInput(CsInput.SSF23, values[39]);
-                        data.setInput(CsInput.SSF24, values[40]);
-                        data.setInput(CsInput.SSF25, values[41]);
+                pool.submit(() -> {
+                    // load up inputs
+                    CsStagingData data = new CsStagingData();
+                    data.setInput(CsInput.PRIMARY_SITE, values[0]);
+                    data.setInput(CsInput.HISTOLOGY, values[1]);
+                    data.setInput(CsInput.DX_YEAR, values[2]);
+                    data.setInput(CsInput.CS_VERSION_ORIGINAL, values[3]);
+                    data.setInput(CsInput.BEHAVIOR, values[4]);
+                    data.setInput(CsInput.GRADE, values[5]);
+                    data.setInput(CsInput.AGE_AT_DX, values[6]);
+                    data.setInput(CsInput.LVI, values[7]);
+                    data.setInput(CsInput.TUMOR_SIZE, values[8]);
+                    data.setInput(CsInput.EXTENSION, values[9]);
+                    data.setInput(CsInput.EXTENSION_EVAL, values[10]);
+                    data.setInput(CsInput.LYMPH_NODES, values[11]);
+                    data.setInput(CsInput.LYMPH_NODES_EVAL, values[12]);
+                    data.setInput(CsInput.REGIONAL_NODES_POSITIVE, values[13]);
+                    data.setInput(CsInput.REGIONAL_NODES_EXAMINED, values[14]);
+                    data.setInput(CsInput.METS_AT_DX, values[15]);
+                    data.setInput(CsInput.METS_EVAL, values[16]);
+                    data.setInput(CsInput.SSF1, values[17]);
+                    data.setInput(CsInput.SSF2, values[18]);
+                    data.setInput(CsInput.SSF3, values[19]);
+                    data.setInput(CsInput.SSF4, values[20]);
+                    data.setInput(CsInput.SSF5, values[21]);
+                    data.setInput(CsInput.SSF6, values[22]);
+                    data.setInput(CsInput.SSF7, values[23]);
+                    data.setInput(CsInput.SSF8, values[24]);
+                    data.setInput(CsInput.SSF9, values[25]);
+                    data.setInput(CsInput.SSF10, values[26]);
+                    data.setInput(CsInput.SSF11, values[27]);
+                    data.setInput(CsInput.SSF12, values[28]);
+                    data.setInput(CsInput.SSF13, values[29]);
+                    data.setInput(CsInput.SSF14, values[30]);
+                    data.setInput(CsInput.SSF15, values[31]);
+                    data.setInput(CsInput.SSF16, values[32]);
+                    data.setInput(CsInput.SSF17, values[33]);
+                    data.setInput(CsInput.SSF18, values[34]);
+                    data.setInput(CsInput.SSF19, values[35]);
+                    data.setInput(CsInput.SSF20, values[36]);
+                    data.setInput(CsInput.SSF21, values[37]);
+                    data.setInput(CsInput.SSF22, values[38]);
+                    data.setInput(CsInput.SSF23, values[39]);
+                    data.setInput(CsInput.SSF24, values[40]);
+                    data.setInput(CsInput.SSF25, values[41]);
 
-                        try {
-                            // save the expected outputs
-                            Map<String, String> output = new HashMap<>();
-                            for (Map.Entry<CsOutput, Integer> entry : mappings.entrySet())
-                                output.put(entry.getKey().toString(), values[entry.getValue()]);
+                    try {
+                        // save the expected outputs
+                        Map<String, String> output = new HashMap<>();
+                        for (Map.Entry<CsOutput, Integer> entry : mappings.entrySet())
+                            output.put(entry.getKey().toString(), values[entry.getValue()]);
 
-                            // run collaborative stage; if no schema found, set the output to empty
-                            SchemaLookup lookup = new SchemaLookup(data.getInput(CsInput.PRIMARY_SITE), data.getInput(CsInput.HISTOLOGY));
-                            lookup.setInput(CsStagingData.SSF25_KEY, data.getInput(CsInput.SSF25));
-                            List<StagingSchema> schemas = staging.lookupSchema(lookup);
+                        // run collaborative stage; if no schema found, set the output to empty
+                        SchemaLookup lookup = new SchemaLookup(data.getInput(CsInput.PRIMARY_SITE), data.getInput(CsInput.HISTOLOGY));
+                        lookup.setInput(CsStagingData.SSF25_KEY, data.getInput(CsInput.SSF25));
+                        List<StagingSchema> schemas = staging.lookupSchema(lookup);
 
-                            if (schemas.size() == 1)
-                                staging.stage(data);
-                            else {
-                                Map<String, String> out = new HashMap<>();
-                                out.put("schema_id", "<invalid>");
-                                data.setOutput(out);
-                            }
-
-                            List<String> mismatches = new ArrayList<>();
-
-                            // compare results
-                            for (Map.Entry<String, String> entry : output.entrySet()) {
-                                String expected = output.get(entry.getKey()).trim();
-                                String actual = data.getOutput().get(entry.getKey());
-                                if (actual == null)
-                                    actual = "";
-
-                                if (!expected.equals(actual))
-                                    mismatches.add("   " + lineNum + " --> " + entry.getKey() + ": EXPECTED '" + expected + "' ACTUAL: '" + actual + "'");
-                            }
-
-                            if (!mismatches.isEmpty()) {
-                                if (failedCases.get() == 0) {
-                                    System.out.println("   " + lineNum + " --> [" + data.getOutput().get("schema_id") + "] Mismatches in " + fileName);
-                                    for (String mismatch : mismatches)
-                                        System.out.println(mismatch);
-                                    System.out.println("   " + lineNum + " *** RESULT: " + data.getResult());
-                                    System.out.println("   " + lineNum + " --> " + convertInputMap(data.getInput()));
-                                    if (data.getErrors().size() > 0) {
-                                        System.out.print("   " + lineNum + " --> ERRORS: ");
-                                        for (com.imsweb.decisionengine.Error e : data.getErrors())
-                                            System.out.print("(" + e.getTable() + ": " + e.getMessage() + ") ");
-                                        System.out.println();
-                                    }
-                                }
-
-                                failedCases.getAndIncrement();
-                            }
+                        if (schemas.size() == 1)
+                            staging.stage(data);
+                        else {
+                            Map<String, String> out = new HashMap<>();
+                            out.put("schema_id", "<invalid>");
+                            data.setOutput(out);
                         }
-                        catch (Throwable t) {
-                            if (failedCases.get() == 0)
-                                System.out.println("   " + lineNum + " --> Exception processing " + fileName + " : " + t.getMessage());
+
+                        List<String> mismatches = new ArrayList<>();
+
+                        // compare results
+                        for (Map.Entry<String, String> entry : output.entrySet()) {
+                            String expected = output.get(entry.getKey()).trim();
+                            String actual = data.getOutput().get(entry.getKey());
+                            if (actual == null)
+                                actual = "";
+
+                            if (!expected.equals(actual))
+                                mismatches.add("   " + lineNum + " --> " + entry.getKey() + ": EXPECTED '" + expected + "' ACTUAL: '" + actual + "'");
+                        }
+
+                        if (!mismatches.isEmpty()) {
+                            if (failedCases.get() == 0) {
+                                System.out.println("   " + lineNum + " --> [" + data.getOutput().get("schema_id") + "] Mismatches in " + fileName);
+                                for (String mismatch : mismatches)
+                                    System.out.println(mismatch);
+                                System.out.println("   " + lineNum + " *** RESULT: " + data.getResult());
+                                System.out.println("   " + lineNum + " --> " + convertInputMap(data.getInput()));
+                                if (data.getErrors().size() > 0) {
+                                    System.out.print("   " + lineNum + " --> ERRORS: ");
+                                    for (com.imsweb.decisionengine.Error e : data.getErrors())
+                                        System.out.print("(" + e.getTable() + ": " + e.getMessage() + ") ");
+                                    System.out.println();
+                                }
+                            }
+
                             failedCases.getAndIncrement();
                         }
-
-                        processedCases.getAndIncrement();
-
-                        return null;
                     }
+                    catch (Throwable t) {
+                        if (failedCases.get() == 0)
+                            System.out.println("   " + lineNum + " --> Exception processing " + fileName + " : " + t.getMessage());
+                        failedCases.getAndIncrement();
+                    }
+
+                    processedCases.getAndIncrement();
+
+                    return null;
                 });
 
             line = reader.readLine();
@@ -351,9 +344,9 @@ public final class IntegrationUtils {
         pool.shutdown();
         pool.awaitTermination(30, TimeUnit.SECONDS);
 
-        stopwatch.stop();
-        String perMs = String.format("%.3f", ((float)stopwatch.elapsed(TimeUnit.MILLISECONDS) / processedCases.get()));
-        System.out.print("Completed " + NumberFormat.getNumberInstance(Locale.US).format(processedCases.get()) + " cases for " + fileName + " in " + stopwatch + " (" + perMs + "ms/case).");
+        long elapsed = System.currentTimeMillis() - start;
+        String perMs = String.format("%.3f", ((float)elapsed / processedCases.get()));
+        System.out.print("Completed " + NumberFormat.getNumberInstance(Locale.US).format(processedCases.get()) + " cases for " + fileName + " in " + elapsed + "ms (" + perMs + "ms/case).");
         if (failedCases.get() > 0)
             System.out.println("  There were " + NumberFormat.getNumberInstance(Locale.US).format(failedCases) + " failures.");
         else
@@ -370,6 +363,6 @@ public final class IntegrationUtils {
         List<String> inputValues = new ArrayList<>();
         for (Map.Entry<String, String> entry : input.entrySet())
             inputValues.add("\"" + entry.getKey() + "\": \"" + entry.getValue() + "\"");
-        return "{ " + Joiner.on(", ").join(inputValues) + " }";
+        return "{ " + inputValues.stream().collect(Collectors.joining(",")) + " }";
     }
 }

@@ -3,12 +3,11 @@ package com.imsweb.staging;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 
 import org.junit.Assert;
 import org.junit.Test;
-
-import com.google.common.collect.Sets;
 
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.staging.entities.StagingColumnDefinition;
@@ -30,7 +29,7 @@ public class StagingDataProviderTest {
         def2.setName("Result1");
         def2.setType(ColumnType.ENDPOINT);
         table.setColumnDefinitions(Arrays.asList(def1, def2));
-        table.setRawRows(new ArrayList<List<String>>());
+        table.setRawRows(new ArrayList<>());
         table.getRawRows().add(Arrays.asList("1", "MATCH"));
         table.getRawRows().add(Arrays.asList("2", "VALUE:{{extra1}}"));
         table.getRawRows().add(Arrays.asList("{{extra2}}", "MATCH"));
@@ -42,9 +41,9 @@ public class StagingDataProviderTest {
         StagingDataProvider.initTable(table);
 
         // since context variables are not user-supplied, they should not be included in the extra input
-        Assert.assertEquals(Sets.newHashSet("extra1", "extra2"), table.getExtraInput());
+        Assert.assertEquals(new HashSet<>(Arrays.asList("extra1", "extra2")), table.getExtraInput());
 
-        table.setRawRows(new ArrayList<List<String>>());
+        table.setRawRows(new ArrayList<>());
         table.getRawRows().add(Arrays.asList("{{ctx_year_current}}", "MATCH"));
 
         StagingDataProvider.initTable(table);
@@ -131,7 +130,7 @@ public class StagingDataProviderTest {
         StagingTable table = new StagingTable();
         table.setId("test_table");
         table.setColumnDefinitions(Collections.singletonList(new StagingColumnDefinition("key1", "Input 1", ColumnType.INPUT)));
-        table.setRawRows(new ArrayList<List<String>>());
+        table.setRawRows(new ArrayList<>());
         table.getRawRows().add(Collections.singletonList(",1,2,3"));
         table.getRawRows().add(Collections.singletonList("1,2,3,"));
 
@@ -140,5 +139,15 @@ public class StagingDataProviderTest {
         Assert.assertEquals(2, table.getTableRows().size());
         Assert.assertEquals(4, table.getTableRows().get(0).getInputs().get("key1").size());
         Assert.assertEquals(4, table.getTableRows().get(1).getInputs().get("key1").size());
+    }
+
+    @Test
+    public void testPadStart() {
+        Assert.assertNull(StagingDataProvider.padStart(null, 1, '0'));
+
+        Assert.assertEquals(StagingDataProvider.padStart("123", 1, '0'), "123");
+        Assert.assertEquals(StagingDataProvider.padStart("123", 3, '0'), "123");
+        Assert.assertEquals(StagingDataProvider.padStart("123", 4, '0'), "0123");
+        Assert.assertEquals(StagingDataProvider.padStart("1", 5, '0'), "00001");
     }
 }

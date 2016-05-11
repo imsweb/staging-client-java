@@ -3,12 +3,13 @@
  */
 package com.imsweb.staging.entities;
 
+import java.util.Objects;
+
 import org.mongodb.morphia.annotations.Embedded;
 import org.mongodb.morphia.annotations.Property;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.google.common.base.Objects;
 
 import com.imsweb.decisionengine.Output;
 
@@ -126,17 +127,17 @@ public class StagingSchemaOutput implements Output {
         StagingSchemaOutput that = (StagingSchemaOutput)o;
 
         // do not include _parsedValues
-        return Objects.equal(_key, that._key) &&
-                Objects.equal(_name, that._name) &&
-                Objects.equal(_description, that._description) &&
-                Objects.equal(_naaccrItem, that._naaccrItem) &&
-                Objects.equal(_table, that._table) &&
-                Objects.equal(_default, that._default);
+        return Objects.equals(_key, that._key) &&
+                Objects.equals(_name, that._name) &&
+                Objects.equals(_description, that._description) &&
+                Objects.equals(_naaccrItem, that._naaccrItem) &&
+                Objects.equals(_table, that._table) &&
+                Objects.equals(_default, that._default);
     }
 
     @Override
     public int hashCode() {
         // do not include _parsedValues
-        return Objects.hashCode(_key, _name, _description, _naaccrItem, _table, _default);
+        return Objects.hash(_key, _name, _description, _naaccrItem, _table, _default);
     }
 }

@@ -6,6 +6,7 @@ package com.imsweb.staging.entities;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 import org.bson.types.ObjectId;
@@ -18,7 +19,6 @@ import org.mongodb.morphia.annotations.Property;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.google.common.base.Objects;
 
 import com.imsweb.decisionengine.Table;
 
@@ -217,23 +217,23 @@ public class StagingTable implements Table {
         StagingTable table = (StagingTable)o;
 
         // intentionally does not include _id, _lastModified, _parsedTableRows
-        return Objects.equal(_displayId, table._displayId) &&
-                Objects.equal(_algorithm, table._algorithm) &&
-                Objects.equal(_version, table._version) &&
-                Objects.equal(_name, table._name) &&
-                Objects.equal(_title, table._title) &&
-                Objects.equal(_description, table._description) &&
-                Objects.equal(_subtitle, table._subtitle) &&
-                Objects.equal(_notes, table._notes) &&
-                Objects.equal(_footnotes, table._footnotes) &&
-                Objects.equal(_definition, table._definition) &&
-                Objects.equal(_extraInput, table._extraInput) &&
-                Objects.equal(_rows, table._rows);
+        return Objects.equals(_displayId, table._displayId) &&
+                Objects.equals(_algorithm, table._algorithm) &&
+                Objects.equals(_version, table._version) &&
+                Objects.equals(_name, table._name) &&
+                Objects.equals(_title, table._title) &&
+                Objects.equals(_description, table._description) &&
+                Objects.equals(_subtitle, table._subtitle) &&
+                Objects.equals(_notes, table._notes) &&
+                Objects.equals(_footnotes, table._footnotes) &&
+                Objects.equals(_definition, table._definition) &&
+                Objects.equals(_extraInput, table._extraInput) &&
+                Objects.equals(_rows, table._rows);
     }
 
     @Override
     public int hashCode() {
         // intentionally does not include _id, _lastModified, _parsedTableRows
-        return Objects.hashCode(_displayId, _algorithm, _version, _name, _title, _description, _subtitle, _notes, _footnotes, _definition, _extraInput, _rows);
+        return Objects.hash(_displayId, _algorithm, _version, _name, _title, _description, _subtitle, _notes, _footnotes, _definition, _extraInput, _rows);
     }
 }

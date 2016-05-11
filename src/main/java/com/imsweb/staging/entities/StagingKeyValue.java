@@ -3,12 +3,13 @@
  */
 package com.imsweb.staging.entities;
 
+import java.util.Objects;
+
 import org.mongodb.morphia.annotations.Embedded;
 import org.mongodb.morphia.annotations.Property;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.google.common.base.Objects;
 
 import com.imsweb.decisionengine.KeyValue;
 
@@ -58,12 +59,12 @@ public class StagingKeyValue implements KeyValue {
 
         StagingKeyValue that = (StagingKeyValue)o;
 
-        return Objects.equal(_key, that._key) && Objects.equal(_value, that._value);
+        return Objects.equals(_key, that._key) && Objects.equals(_value, that._value);
 
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(_key, _value);
+        return Objects.hash(_key, _value);
     }
 }
