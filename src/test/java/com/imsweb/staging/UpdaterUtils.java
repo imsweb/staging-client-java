@@ -8,7 +8,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Properties;
@@ -154,7 +153,7 @@ public final class UpdaterUtils {
             StagingTable table = staging.getTable(algorithm, version, tableId).execute().body();
             String tableText = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(table);
 
-            Files.write(Paths.get(tableDir + "/" + table.getId() + ".json"), Collections.singleton(tableText), StandardCharsets.UTF_8);
+            Files.write(Paths.get(tableDir + "/" + table.getId() + ".json"), tableText.getBytes(StandardCharsets.UTF_8));
             System.out.println("Saved table: " + table.getId());
         }
 
@@ -167,7 +166,7 @@ public final class UpdaterUtils {
 
             String schemaText = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(schema);
 
-            Files.write(Paths.get(schemaDir + "/" + schema.getId() + ".json"), Collections.singleton(schemaText), StandardCharsets.UTF_8);
+            Files.write(Paths.get(schemaDir + "/" + schema.getId() + ".json"), schemaText.getBytes(StandardCharsets.UTF_8));
             System.out.println("Saved schema: " + schema.getId());
         }
 
