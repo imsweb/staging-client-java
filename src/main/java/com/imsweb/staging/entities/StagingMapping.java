@@ -5,6 +5,7 @@ package com.imsweb.staging.entities;
 
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 import org.mongodb.morphia.annotations.Embedded;
@@ -13,7 +14,6 @@ import org.mongodb.morphia.annotations.Property;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.google.common.base.Objects;
 
 import com.imsweb.decisionengine.Mapping;
 
@@ -119,16 +119,16 @@ public class StagingMapping implements Mapping {
 
         StagingMapping mapping = (StagingMapping)o;
 
-        return Objects.equal(_id, mapping._id) &&
-                Objects.equal(_name, mapping._name) &&
-                Objects.equal(_inclusionTables, mapping._inclusionTables) &&
-                Objects.equal(_exclusionTables, mapping._exclusionTables) &&
-                Objects.equal(_initialContext, mapping._initialContext) &&
-                Objects.equal(_tablePaths, mapping._tablePaths);
+        return Objects.equals(_id, mapping._id) &&
+                Objects.equals(_name, mapping._name) &&
+                Objects.equals(_inclusionTables, mapping._inclusionTables) &&
+                Objects.equals(_exclusionTables, mapping._exclusionTables) &&
+                Objects.equals(_initialContext, mapping._initialContext) &&
+                Objects.equals(_tablePaths, mapping._tablePaths);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(_id, _name, _inclusionTables, _exclusionTables, _initialContext, _tablePaths);
+        return Objects.hash(_id, _name, _inclusionTables, _exclusionTables, _initialContext, _tablePaths);
     }
 }

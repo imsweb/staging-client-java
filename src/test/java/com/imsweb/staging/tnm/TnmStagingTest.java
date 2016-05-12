@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -16,8 +17,6 @@ import java.util.Set;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
-import com.google.common.collect.Sets;
 
 import com.imsweb.staging.SchemaLookup;
 import com.imsweb.staging.Staging;
@@ -70,8 +69,8 @@ public class TnmStagingTest extends StagingTest {
 
     @Test
     public void testDescriminatorKeys() {
-        Assert.assertEquals(Sets.newHashSet("ssf25"), _STAGING.getSchema("nasopharynx").getSchemaDiscriminators());
-        Assert.assertEquals(Sets.newHashSet("sex"), _STAGING.getSchema("peritoneum_female_gen").getSchemaDiscriminators());
+        Assert.assertEquals(new HashSet<>(Collections.singletonList("ssf25")), _STAGING.getSchema("nasopharynx").getSchemaDiscriminators());
+        Assert.assertEquals(new HashSet<>(Collections.singletonList("sex")), _STAGING.getSchema("peritoneum_female_gen").getSchemaDiscriminators());
     }
 
     @Test
@@ -109,7 +108,7 @@ public class TnmStagingTest extends StagingTest {
         lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C111", "8200"));
         Assert.assertEquals(2, lookup.size());
         for (StagingSchema schema : lookup)
-            Assert.assertEquals(Sets.newHashSet("ssf25"), schema.getSchemaDiscriminators());
+            Assert.assertEquals(new HashSet<>(Collections.singletonList("ssf25")), schema.getSchemaDiscriminators());
 
         // test valid combination that requires discriminator and a good discriminator is supplied
         schemaLookup = new TnmSchemaLookup("C111", "8200");
@@ -117,7 +116,7 @@ public class TnmStagingTest extends StagingTest {
         lookup = _STAGING.lookupSchema(schemaLookup);
         Assert.assertEquals(1, lookup.size());
         for (StagingSchema schema : lookup)
-            Assert.assertEquals(Sets.newHashSet("ssf25"), schema.getSchemaDiscriminators());
+            Assert.assertEquals(new HashSet<>(Collections.singletonList("ssf25")), schema.getSchemaDiscriminators());
         Assert.assertEquals("nasopharynx", lookup.get(0).getId());
 
         // test valid combination that requires a discriminator but is supplied a bad disciminator value
@@ -304,8 +303,8 @@ public class TnmStagingTest extends StagingTest {
         Set<String> tables = _STAGING.getInvolvedTables("adnexa_uterine_other");
 
         Assert.assertEquals(
-                Sets.newHashSet("extension_bcn", "histology", "nodes_dcc", "primary_site", "schema_selection_adnexa_uterine_other", "seer_mets_48348", "summary_stage_rpa", "year_dx_validation"),
-                tables);
+                new HashSet<>(Arrays.asList("extension_bcn", "histology", "nodes_dcc", "primary_site", "schema_selection_adnexa_uterine_other", "seer_mets_48348",
+                        "summary_stage_rpa", "year_dx_validation")), tables);
     }
 
     @Test
@@ -317,16 +316,19 @@ public class TnmStagingTest extends StagingTest {
 
     @Test
     public void testGetInputs() {
-        Assert.assertEquals(Sets.newHashSet("site", "hist", "seer_primary_tumor", "seer_nodes", "seer_mets"), _STAGING.getInputs(_STAGING.getSchema("adnexa_uterine_other")));
+        Assert.assertEquals(new HashSet<>(Arrays.asList("site", "hist", "seer_primary_tumor", "seer_nodes", "seer_mets")),
+                _STAGING.getInputs(_STAGING.getSchema("adnexa_uterine_other")));
 
         Assert.assertEquals(
-                Sets.newHashSet("site", "hist", "behavior", "systemic_surg_seq", "radiation_surg_seq", "nodes_pos", "clin_t", "clin_n", "clin_m", "path_t", "path_n", "path_m", "seer_primary_tumor",
-                        "seer_nodes", "seer_mets", "ssf13", "ssf15", "ssf16", "clin_stage_group_direct", "path_stage_group_direct"), _STAGING.getInputs(_STAGING.getSchema("testis")));
+                new HashSet<>(Arrays.asList("site", "hist", "behavior", "systemic_surg_seq", "radiation_surg_seq", "nodes_pos", "clin_t", "clin_n", "clin_m",
+                        "path_t", "path_n", "path_m", "seer_primary_tumor", "seer_nodes", "seer_mets", "ssf13", "ssf15", "ssf16", "clin_stage_group_direct",
+                        "path_stage_group_direct")), _STAGING.getInputs(_STAGING.getSchema("testis")));
 
         // test with and without context
         Assert.assertEquals(
-                Sets.newHashSet("site", "hist", "systemic_surg_seq", "radiation_surg_seq", "nodes_pos", "clin_t", "clin_n", "clin_m", "path_t", "path_n", "path_m", "seer_primary_tumor", "seer_nodes",
-                        "seer_mets", "ssf1", "ssf8", "ssf10", "clin_stage_group_direct", "path_stage_group_direct"), _STAGING.getInputs(_STAGING.getSchema("prostate")));
+                new HashSet<>(Arrays.asList("site", "hist", "systemic_surg_seq", "radiation_surg_seq", "nodes_pos", "clin_t", "clin_n", "clin_m", "path_t",
+                        "path_n", "path_m", "seer_primary_tumor", "seer_nodes", "seer_mets", "ssf1", "ssf8", "ssf10", "clin_stage_group_direct",
+                        "path_stage_group_direct")), _STAGING.getInputs(_STAGING.getSchema("prostate")));
 
         Map<String, String> context = new HashMap<>();
         context.put(StagingData.PRIMARY_SITE_KEY, "C619");
@@ -334,7 +336,8 @@ public class TnmStagingTest extends StagingTest {
         context.put(StagingData.YEAR_DX_KEY, "2004");
 
         // for that context, only summary stage is calculated
-        Assert.assertEquals(Sets.newHashSet("site", "hist", "seer_primary_tumor", "seer_nodes", "seer_mets"), _STAGING.getInputs(_STAGING.getSchema("prostate"), context));
+        Assert.assertEquals(new HashSet<>(Arrays.asList("site", "hist", "seer_primary_tumor", "seer_nodes", "seer_mets")),
+                _STAGING.getInputs(_STAGING.getSchema("prostate"), context));
     }
 
     @Test

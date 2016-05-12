@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 
 import org.bson.types.ObjectId;
@@ -21,7 +22,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.google.common.base.Objects;
 
 import com.imsweb.decisionengine.Definition;
 
@@ -292,29 +292,29 @@ public class StagingSchema implements Definition {
         StagingSchema schema = (StagingSchema)o;
 
         // do not include _id, _lastModified and _parsedInputMap
-        return Objects.equal(_displayId, schema._displayId) &&
-                Objects.equal(_algorithm, schema._algorithm) &&
-                Objects.equal(_version, schema._version) &&
-                Objects.equal(_name, schema._name) &&
-                Objects.equal(_title, schema._title) &&
-                Objects.equal(_description, schema._description) &&
-                Objects.equal(_subtitle, schema._subtitle) &&
-                Objects.equal(_notes, schema._notes) &&
-                Objects.equal(_schemaNum, schema._schemaNum) &&
-                Objects.equal(_schemaSelectionTable, schema._schemaSelectionTable) &&
-                Objects.equal(_schemaDiscriminators, schema._schemaDiscriminators) &&
-                Objects.equal(_inputs, schema._inputs) &&
-                Objects.equal(_outputs, schema._outputs) &&
-                Objects.equal(_initialContext, schema._initialContext) &&
-                Objects.equal(_mappings, schema._mappings) &&
-                Objects.equal(_onInvalidInput, schema._onInvalidInput) &&
-                Objects.equal(_involvedTables, schema._involvedTables);
+        return Objects.equals(_displayId, schema._displayId) &&
+                Objects.equals(_algorithm, schema._algorithm) &&
+                Objects.equals(_version, schema._version) &&
+                Objects.equals(_name, schema._name) &&
+                Objects.equals(_title, schema._title) &&
+                Objects.equals(_description, schema._description) &&
+                Objects.equals(_subtitle, schema._subtitle) &&
+                Objects.equals(_notes, schema._notes) &&
+                Objects.equals(_schemaNum, schema._schemaNum) &&
+                Objects.equals(_schemaSelectionTable, schema._schemaSelectionTable) &&
+                Objects.equals(_schemaDiscriminators, schema._schemaDiscriminators) &&
+                Objects.equals(_inputs, schema._inputs) &&
+                Objects.equals(_outputs, schema._outputs) &&
+                Objects.equals(_initialContext, schema._initialContext) &&
+                Objects.equals(_mappings, schema._mappings) &&
+                Objects.equals(_onInvalidInput, schema._onInvalidInput) &&
+                Objects.equals(_involvedTables, schema._involvedTables);
     }
 
     @Override
     public int hashCode() {
         // do not include _id, _lastModified and _parsedInputMap
-        return Objects.hashCode(_displayId, _algorithm, _version, _name, _title, _description, _subtitle, _notes, _schemaNum, _schemaSelectionTable,
+        return Objects.hash(_displayId, _algorithm, _version, _name, _title, _description, _subtitle, _notes, _schemaNum, _schemaSelectionTable,
                 _schemaDiscriminators, _inputs, _outputs, _initialContext, _mappings, _onInvalidInput, _involvedTables);
     }
 }

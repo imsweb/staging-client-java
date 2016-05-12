@@ -19,8 +19,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.unitils.reflectionassert.ReflectionAssert;
 
-import com.google.common.collect.Sets;
-
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.Endpoint.EndpointType;
 import com.imsweb.decisionengine.Result.Type;
@@ -293,13 +291,13 @@ public class DecisionEngineTest {
         range.add(new BasicStringRange("1", "1"));
         range.add(new BasicStringRange("4", "4"));
         range.add(new BasicStringRange("9", "9"));
-        Assert.assertTrue(DecisionEngine.testMatch(range, "9", new HashMap<String, String>()));
-        Assert.assertFalse(DecisionEngine.testMatch(range, "7", new HashMap<String, String>()));
+        Assert.assertTrue(DecisionEngine.testMatch(range, "9", new HashMap<>()));
+        Assert.assertFalse(DecisionEngine.testMatch(range, "7", new HashMap<>()));
 
         range = new ArrayList<>();
         range.add(new BasicStringRange("11", "54"));
         range.add(new BasicStringRange("99", "99"));
-        Assert.assertTrue(DecisionEngine.testMatch(range, "23", new HashMap<String, String>()));
+        Assert.assertTrue(DecisionEngine.testMatch(range, "23", new HashMap<>()));
     }
 
     @Test
@@ -395,7 +393,7 @@ public class DecisionEngineTest {
         Assert.assertNotNull(matchTable);
 
         // first try it with missing input (null should match just like blank))
-        Assert.assertNull(DecisionEngine.matchTable(matchTable, new HashMap<String, String>()));
+        Assert.assertNull(DecisionEngine.matchTable(matchTable, new HashMap<>()));
 
         input.put("a", "2");
         Assert.assertNotNull(DecisionEngine.matchTable(matchTable, input));
@@ -427,21 +425,24 @@ public class DecisionEngineTest {
         Assert.assertNull(DecisionEngine.matchTable(matchTable, input));
 
         // specify to only match on key1, there should be a match to the first line
-        ReflectionAssert.assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1")), DecisionEngine.matchTable(matchTable, input, Sets.newHashSet("key1")));
+        ReflectionAssert.assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1")),
+                DecisionEngine.matchTable(matchTable, input, new HashSet<>(Collections.singletonList("key1"))));
 
         // add key2 to the input map and there should be a match
         input.put("key2", "7");
         ReflectionAssert.assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE2")), DecisionEngine.matchTable(matchTable, input));
 
         // if searching on key1 only, even though key2 was supplied should still match to first line
-        ReflectionAssert.assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1")), DecisionEngine.matchTable(matchTable, input, Sets.newHashSet("key1")));
+        ReflectionAssert.assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1")),
+                DecisionEngine.matchTable(matchTable, input, new HashSet<>(Collections.singletonList("key1"))));
 
         // supply an empty set of keys (the same meaning as not passing any keys
-        ReflectionAssert.assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1")), DecisionEngine.matchTable(matchTable, input, new HashSet<String>()));
+        ReflectionAssert.assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1")), DecisionEngine.matchTable(matchTable, input, new HashSet<>()));
 
         // supply an invalid key.  I think this should find nothing, but for the moment finds a match to the first row since none of the cells were compared to.  It
         // is the same as matching to a table with no INPUTS which would currently find a match to the first row.
-        ReflectionAssert.assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1")), DecisionEngine.matchTable(matchTable, input, Sets.newHashSet("bad_key")));
+        ReflectionAssert.assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1")),
+                DecisionEngine.matchTable(matchTable, input, new HashSet<>(Collections.singletonList("bad_key"))));
     }
 
     @Test
@@ -1308,7 +1309,7 @@ public class DecisionEngineTest {
 
         Assert.assertFalse(result.hasErrors());
 
-        Assert.assertEquals(Sets.newHashSet("table_input", "table_output"), engine.getInvolvedTables(def));
+        Assert.assertEquals(new HashSet<>(Arrays.asList("table_input", "table_output")), engine.getInvolvedTables(def));
 
         // modify the definition to create a bad default value for output1
         def.getOutputs().get(0).setDefault("BAD");
@@ -1358,7 +1359,7 @@ public class DecisionEngineTest {
 
         DecisionEngine engine = new DecisionEngine(provider);
 
-        Assert.assertEquals(Sets.newHashSet("remapped1"), engine.getInputs(def.getMappings().get(0).getTablePaths().get(0)));
+        Assert.assertEquals(new HashSet<>(Collections.singletonList("remapped1")), engine.getInputs(def.getMappings().get(0).getTablePaths().get(0)));
     }
 
 }

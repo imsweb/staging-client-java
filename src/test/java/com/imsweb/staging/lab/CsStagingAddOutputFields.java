@@ -3,7 +3,11 @@ package com.imsweb.staging.lab;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -11,8 +15,6 @@ import java.util.Map.Entry;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.google.common.base.Charsets;
-import com.google.common.io.Files;
 
 import com.imsweb.staging.Staging;
 import com.imsweb.staging.cs.CsDataProvider;
@@ -155,7 +157,8 @@ public class CsStagingAddOutputFields {
             File schemaFile = new File(schemaDir + "/" + schema.getId() + ".json");
             if (!schemaFile.delete())
                 throw new IllegalStateException("Unable to delete file " + schemaFile.getName());
-            Files.write(schemaText, schemaFile, Charsets.UTF_8);
+            Files.write(Paths.get(schemaFile.toURI()), Collections.singleton(schemaText), StandardCharsets.UTF_8);
+
             System.out.println("Saved: " + schema.getId());
         }
 

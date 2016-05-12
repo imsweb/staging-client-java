@@ -3,6 +3,7 @@
  */
 package com.imsweb.staging;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -12,13 +13,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.ExecutionException;
+import java.util.stream.Collectors;
 
-import com.google.common.cache.CacheBuilder;
-import com.google.common.cache.CacheLoader;
-import com.google.common.cache.LoadingCache;
-import com.google.common.io.CharStreams;
-import com.google.common.util.concurrent.UncheckedExecutionException;
+import com.github.benmanes.caffeine.cache.Caffeine;
+import com.github.benmanes.caffeine.cache.LoadingCache;
 
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingTable;
@@ -51,30 +49,14 @@ public class StagingFileDataProvider extends StagingDataProvider {
         // first get a list of all tables ids
         try {
             _tableIds = new HashSet<>();
-            for (String tableId : readLines(_tableDirectory + "/ids.txt"))
-                _tableIds.add(tableId);
+            _tableIds.addAll(readLines(_tableDirectory + "/ids.txt"));
         }
         catch (IOException e) {
             throw new IllegalStateException("IOException reading ids: " + e.getMessage());
         }
 
         // set up table cache; it is too slow to load all the tables at startup
-        _tableCache = CacheBuilder.newBuilder()
-                .maximumSize(2500)
-                .build(new CacheLoader<String, StagingTable>() {
-                    @Override
-                    public StagingTable load(String id) throws Exception {
-                        StagingTable table = getMapper().reader().readValue(getMapper().getFactory().createParser(getStagingInputStream(_tableDirectory + "/" + id + ".json")),
-                                StagingTable.class);
-
-                        if (!id.equals(table.getId()))
-                            throw new IllegalStateException("The table " + id + " has an identifier that doesn't match the name (" + table.getId() + ")");
-
-                        initTable(table);
-
-                        return table;
-                    }
-                });
+        _tableCache = Caffeine.newBuilder().maximumSize(2500).build(this::load);
 
         // loop over all schemas and load them into Map
         try {
@@ -117,15 +99,10 @@ public class StagingFileDataProvider extends StagingDataProvider {
 
     @Override
     public StagingTable getTable(String id) {
-        try {
-            if (id == null)
-                return null;
+        if (id == null)
+            return null;
 
-            return _tableCache.get(id);
-        }
-        catch (ExecutionException | UncheckedExecutionException e) {
-            throw new IllegalStateException(e.getCause());
-        }
+        return _tableCache.get(id);
     }
 
     @Override
@@ -144,12 +121,31 @@ public class StagingFileDataProvider extends StagingDataProvider {
     }
 
     /**
+     * Load the StagingTable from a file specified by the passed identifier.
+     * @param id table identifier
+     * @return StagingTable
+     * @throws IllegalStateException if the table has an identifier that does not match the name
+     */
+    private StagingTable load(String id) throws Exception {
+        StagingTable table = getMapper().reader().readValue(getMapper().getFactory().createParser(getStagingInputStream(_tableDirectory + "/" + id + ".json")), StagingTable.class);
+
+        if (!id.equals(table.getId()))
+            throw new IllegalStateException("The table " + id + " has an identifier that doesn't match the name (" + table.getId() + ")");
+
+        initTable(table);
+
+        return table;
+    }
+
+    /**
      * @param location relative file location within the classpath
      * @return a {@link String} {@link java.util.List} of all lines in the file
      * @throws IOException error reading file
      */
     private static List<String> readLines(String location) throws IOException {
-        return CharStreams.readLines(new InputStreamReader(getStagingInputStream(location), StandardCharsets.UTF_8));
+        try (BufferedReader buffer = new BufferedReader(new InputStreamReader(getStagingInputStream(location), StandardCharsets.UTF_8))) {
+            return buffer.lines().collect(Collectors.toList());
+        }
     }
 
     /**

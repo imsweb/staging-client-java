@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.DecisionEngine;
@@ -250,9 +251,7 @@ public final class Staging {
         Set<String> schemas = new HashSet<>();
 
         // loop over all schemas and find the ones that have the passed table identifier in the involved table set
-        for (String schemaId : getSchemaIds())
-            if (getInvolvedTables(schemaId).contains(tableId))
-                schemas.add(schemaId);
+        schemas.addAll(getSchemaIds().stream().filter(schemaId -> getInvolvedTables(schemaId).contains(tableId)).collect(Collectors.toList()));
 
         return schemas;
     }
@@ -264,7 +263,7 @@ public final class Staging {
      * @return a Set of unique input keys
      */
     public Set<String> getInputs(StagingTablePath path) {
-        return getInputs(path, new HashSet<String>());
+        return getInputs(path, new HashSet<>());
     }
 
     /**
@@ -293,7 +292,7 @@ public final class Staging {
      * @return a Set of unique input keys
      */
     public Set<String> getInputs(StagingMapping mapping) {
-        return getInputs(mapping, null, new HashSet<String>());
+        return getInputs(mapping, null, new HashSet<>());
     }
 
     /**
@@ -474,9 +473,9 @@ public final class Staging {
     public StagingData stage(StagingData data) {
         // first clear out schema/output/errors/path
         data.setSchemaId(null);
-        data.setOutput(new HashMap<String, String>());
-        data.setErrors(new ArrayList<Error>());
-        data.setPath(new ArrayList<String>());
+        data.setOutput(new HashMap<>());
+        data.setErrors(new ArrayList<>());
+        data.setPath(new ArrayList<>());
 
         // make sure site and histology are supplied
         if (data.getInput(StagingData.PRIMARY_SITE_KEY) == null || data.getInput(StagingData.HISTOLOGY_KEY) == null) {

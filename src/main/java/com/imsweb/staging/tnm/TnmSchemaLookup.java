@@ -3,15 +3,15 @@
  */
 package com.imsweb.staging.tnm;
 
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Set;
-
-import com.google.common.collect.Sets;
 
 import com.imsweb.staging.SchemaLookup;
 
 public class TnmSchemaLookup extends SchemaLookup {
 
-    private static final Set<String> _ALLOWED_KEYS = Sets.newHashSet(TnmStagingData.PRIMARY_SITE_KEY, TnmStagingData.HISTOLOGY_KEY, TnmStagingData.SSF25_KEY, TnmStagingData.SEX_KEY);
+    private static final Set<String> _ALLOWED_KEYS = new HashSet<>(Arrays.asList(TnmStagingData.PRIMARY_SITE_KEY, TnmStagingData.HISTOLOGY_KEY, TnmStagingData.SSF25_KEY, TnmStagingData.SEX_KEY));
 
     /**
      * Constructor

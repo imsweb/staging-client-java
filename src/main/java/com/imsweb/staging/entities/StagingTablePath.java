@@ -4,6 +4,7 @@
 package com.imsweb.staging.entities;
 
 import java.util.LinkedHashSet;
+import java.util.Objects;
 import java.util.Set;
 
 import org.mongodb.morphia.annotations.Embedded;
@@ -12,7 +13,6 @@ import org.mongodb.morphia.annotations.Property;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.google.common.base.Objects;
 
 import com.imsweb.decisionengine.TablePath;
 
@@ -102,15 +102,15 @@ public class StagingTablePath implements TablePath {
 
         StagingTablePath that = (StagingTablePath)o;
 
-        return Objects.equal(_id, that._id) &&
-                Objects.equal(_inputMapping, that._inputMapping) &&
-                Objects.equal(_inputs, that._inputs) &&
-                Objects.equal(_outputMapping, that._outputMapping) &&
-                Objects.equal(_outputs, that._outputs);
+        return Objects.equals(_id, that._id) &&
+                Objects.equals(_inputMapping, that._inputMapping) &&
+                Objects.equals(_inputs, that._inputs) &&
+                Objects.equals(_outputMapping, that._outputMapping) &&
+                Objects.equals(_outputs, that._outputs);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(_id, _inputMapping, _inputs, _outputMapping, _outputs);
+        return Objects.hash(_id, _inputMapping, _inputs, _outputMapping, _outputs);
     }
 }

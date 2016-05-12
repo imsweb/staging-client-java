@@ -3,12 +3,13 @@
  */
 package com.imsweb.staging.entities;
 
+import java.util.Objects;
+
 import org.mongodb.morphia.annotations.Embedded;
 import org.mongodb.morphia.annotations.Property;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.google.common.base.Objects;
 
 import com.imsweb.decisionengine.ColumnDefinition;
 
@@ -90,14 +91,14 @@ public class StagingColumnDefinition implements ColumnDefinition {
 
         StagingColumnDefinition that = (StagingColumnDefinition)o;
 
-        return Objects.equal(_key, that._key) &&
-                Objects.equal(_name, that._name) &&
-                Objects.equal(_type, that._type) &&
-                Objects.equal(_source, that._source);
+        return Objects.equals(_key, that._key) &&
+                Objects.equals(_name, that._name) &&
+                Objects.equals(_type, that._type) &&
+                Objects.equals(_source, that._source);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(_key, _name, _type, _source);
+        return Objects.hash(_key, _name, _type, _source);
     }
 }

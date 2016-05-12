@@ -10,7 +10,7 @@ import com.imsweb.staging.StagingFileDataProvider;
 
 public final class TnmDataProvider extends StagingFileDataProvider {
 
-    private static final Map<TnmVersion, TnmDataProvider> _PROVIDERS = new ConcurrentHashMap<TnmVersion, TnmDataProvider>();
+    private static final Map<TnmVersion, TnmDataProvider> _PROVIDERS = new ConcurrentHashMap<>();
 
     public enum TnmVersion {
         LATEST("1.1"),

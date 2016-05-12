@@ -17,8 +17,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import com.google.common.base.Joiner;
+import java.util.stream.Collectors;
 
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.Endpoint.EndpointType;
@@ -35,7 +34,7 @@ public class DecisionEngine {
     // string to use for blank or null in error strings
     public static String _BLANK_OUTPUT = "<blank>";
 
-    protected DataProvider _provider;
+    private DataProvider _provider;
 
     /**
      * Construct the decision engine with the passed data provider
@@ -350,7 +349,7 @@ public class DecisionEngine {
      * @param tables a Set of Strings representing the involved table identifiers
      * @return the same Set that was passed in, with possibly extra table identifiers added
      */
-    protected Set<String> getInvolvedTables(Table table, Set<String> tables) {
+    private Set<String> getInvolvedTables(Table table, Set<String> tables) {
         if (table == null)
             return tables;
 
@@ -379,7 +378,7 @@ public class DecisionEngine {
      * @return a Set of unique inputs
      */
     public Set<String> getInputs(TablePath path) {
-        return getInputs(path, new HashSet<String>());
+        return getInputs(path, new HashSet<>());
     }
 
     /**
@@ -406,7 +405,7 @@ public class DecisionEngine {
                     outputMappings.put(keymapping.getFrom(), keymapping.getTo());
 
             // process the table (and any "JUMP" tables) for the mapping
-            for (String tableId : getInvolvedTables(getProvider().getTable(path.getId()), new LinkedHashSet<String>())) {
+            for (String tableId : getInvolvedTables(getProvider().getTable(path.getId()), new LinkedHashSet<>())) {
                 Table table = getProvider().getTable(tableId);
                 if (table != null) {
                     // first process the inputs from the column definitions
@@ -502,7 +501,7 @@ public class DecisionEngine {
                 for (KeyMapping keymapping : path.getOutputMapping())
                     mappings.put(keymapping.getFrom(), keymapping.getTo());
 
-            for (String tableId : getInvolvedTables(getProvider().getTable(path.getId()), new LinkedHashSet<String>())) {
+            for (String tableId : getInvolvedTables(getProvider().getTable(path.getId()), new LinkedHashSet<>())) {
                 Table table = getProvider().getTable(tableId);
                 if (table != null && table.getColumnDefinitions() != null) {
                     for (ColumnDefinition def : table.getColumnDefinitions()) {
@@ -807,7 +806,7 @@ public class DecisionEngine {
      * @param context a Map of context
      * @return a String representing the input for the table
      */
-    protected static String getTableInputsAsString(Table table, Map<String, String> context) {
+    static String getTableInputsAsString(Table table, Map<String, String> context) {
         List<String> inputs = new ArrayList<>();
 
         if (table.getColumnDefinitions() != null)
@@ -817,7 +816,7 @@ public class DecisionEngine {
                     inputs.add((value == null || value.trim().isEmpty()) ? _BLANK_OUTPUT : value.trim());
                 }
 
-        return Joiner.on(",").join(inputs);
+        return inputs.stream().collect(Collectors.joining(","));
     }
 
 }

@@ -3,6 +3,9 @@ package com.imsweb.staging;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -14,15 +17,9 @@ import java.util.regex.Pattern;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.google.common.base.Charsets;
-import com.google.common.base.Joiner;
-import com.google.common.base.Stopwatch;
-import com.google.common.io.Files;
 
-import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
 
@@ -47,7 +44,7 @@ public final class UpdaterUtils {
     private static Pattern _ID_CHARACTERS = Pattern.compile("[a-z0-9_]+");
 
     public static void update(String algorithm, String version) throws IOException {
-        Stopwatch stopwatch = Stopwatch.createStarted();
+        long start = System.currentTimeMillis();
 
         System.out.println("Updating " + algorithm + " version " + version + " from SEER*API");
 
@@ -83,20 +80,17 @@ public final class UpdaterUtils {
         mapper.setDateFormat(format);
 
         OkHttpClient client = new OkHttpClient.Builder()
-                .addInterceptor(new Interceptor() {
-                    @Override
-                    public Response intercept(Chain chain) throws IOException {
-                        Request original = chain.request();
+                .addInterceptor(chain -> {
+                    Request original = chain.request();
 
-                        // add the api key to all requests
-                        Request request = original.newBuilder()
-                                .header("Accept", "application/json")
-                                .header("X-SEERAPI-Key", apiKey)
-                                .method(original.method(), original.body())
-                                .build();
+                    // add the api key to all requests
+                    Request request = original.newBuilder()
+                            .header("Accept", "application/json")
+                            .header("X-SEERAPI-Key", apiKey)
+                            .method(original.method(), original.body())
+                            .build();
 
-                        return chain.proceed(request);
-                    }
+                    return chain.proceed(request);
                 })
                 .addInterceptor(new ErrorInterceptor())
                 .build();
@@ -159,12 +153,12 @@ public final class UpdaterUtils {
             StagingTable table = staging.getTable(algorithm, version, tableId).execute().body();
             String tableText = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(table);
 
-            Files.write(tableText, new File(tableDir + "/" + table.getId() + ".json"), Charsets.UTF_8);
+            Files.write(Paths.get(tableDir + "/" + table.getId() + ".json"), tableText.getBytes(StandardCharsets.UTF_8));
             System.out.println("Saved table: " + table.getId());
         }
 
         // output the table ids.txt file
-        Files.write(Joiner.on("\n").join(tableIds), new File(tableDir + "/ids.txt"), Charsets.UTF_8);
+        Files.write(Paths.get(tableDir + "/ids.txt"), tableIds, StandardCharsets.UTF_8);
 
         // import the schemas
         for (String schemaId : schemaIds) {
@@ -172,15 +166,14 @@ public final class UpdaterUtils {
 
             String schemaText = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(schema);
 
-            Files.write(schemaText, new File(schemaDir + "/" + schema.getId() + ".json"), Charsets.UTF_8);
+            Files.write(Paths.get(schemaDir + "/" + schema.getId() + ".json"), schemaText.getBytes(StandardCharsets.UTF_8));
             System.out.println("Saved schema: " + schema.getId());
         }
 
         // output the table ids.txt file
-        Files.write(Joiner.on("\n").join(schemaIds), new File(schemaDir + "/ids.txt"), Charsets.UTF_8);
+        Files.write(Paths.get(schemaDir + "/ids.txt"), schemaIds, StandardCharsets.UTF_8);
 
-        stopwatch.stop();
-        System.out.println("Completed in " + stopwatch);
+        System.out.println("Completed in " + (System.currentTimeMillis() - start) + "ms");
     }
 
     private static int purgeDirectory(File dir) {

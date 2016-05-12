@@ -12,19 +12,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TimeZone;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.google.common.base.Strings;
-import com.google.common.cache.CacheBuilder;
-import com.google.common.cache.CacheLoader;
-import com.google.common.cache.LoadingCache;
-import com.google.common.util.concurrent.UncheckedExecutionException;
+import com.github.benmanes.caffeine.cache.Caffeine;
+import com.github.benmanes.caffeine.cache.LoadingCache;
 
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.DataProvider;
@@ -81,21 +78,10 @@ public abstract class StagingDataProvider implements DataProvider {
      */
     protected StagingDataProvider() {
         // cache schema lookups
-        _lookupCache = CacheBuilder.newBuilder().maximumSize(500).expireAfterWrite(10, TimeUnit.MINUTES).build(new CacheLoader<SchemaLookup, List<StagingSchema>>() {
-            @Override
-            public List<StagingSchema> load(SchemaLookup lookup) throws Exception {
-                return getSchemas(lookup);
-            }
-        });
+        _lookupCache = Caffeine.newBuilder().maximumSize(500).expireAfterWrite(10, TimeUnit.MINUTES).build(this::getSchemas);
 
         // cache the valid values for certain tables including site and histology
-        _validValuesCache = CacheBuilder.newBuilder().build(new CacheLoader<String, Set<String>>() {
-            @Override
-            public Set<String> load(String tableId) throws Exception {
-                return getAllInputValues(tableId);
-            }
-        });
-
+        _validValuesCache = Caffeine.newBuilder().build(this::getAllInputValues);
     }
 
     /**
@@ -158,7 +144,7 @@ public abstract class StagingDataProvider implements DataProvider {
         Set<String> extraInputs = new HashSet<>();
 
         // empty out the parsed rows
-        table.setTableRows(new ArrayList<StagingTableRow>());
+        table.setTableRows(new ArrayList<>());
 
         if (table.getRawRows() != null) {
             for (List<String> row : table.getRawRows()) {
@@ -368,12 +354,7 @@ public abstract class StagingDataProvider implements DataProvider {
      * @return a set of valid sites
      */
     public Set<String> getValidSites() {
-        try {
-            return _validValuesCache.get(PRIMARY_SITE_TABLE);
-        }
-        catch (ExecutionException | UncheckedExecutionException e) {
-            throw new IllegalStateException(e.getCause());
-        }
+        return _validValuesCache.get(PRIMARY_SITE_TABLE);
     }
 
     /**
@@ -381,12 +362,7 @@ public abstract class StagingDataProvider implements DataProvider {
      * @return a set of valid histologies
      */
     public Set<String> getValidHistologies() {
-        try {
-            return _validValuesCache.get(HISTOLOGY_TABLE);
-        }
-        catch (ExecutionException | UncheckedExecutionException e) {
-            throw new IllegalStateException(e.getCause());
-        }
+        return _validValuesCache.get(HISTOLOGY_TABLE);
     }
 
     /**
@@ -400,12 +376,7 @@ public abstract class StagingDataProvider implements DataProvider {
         if (lookup.getSite() == null || lookup.getHistology() == null)
             return getSchemas(lookup);
 
-        try {
-            return _lookupCache.get(lookup);
-        }
-        catch (ExecutionException | UncheckedExecutionException e) {
-            throw new IllegalStateException(e.getCause());
-        }
+        return _lookupCache.get(lookup);
     }
 
     /**
@@ -454,13 +425,11 @@ public abstract class StagingDataProvider implements DataProvider {
             if (hasDiscriminator && matchedSchemas.size() > 1) {
                 List<StagingSchema> trimmedMatches = new ArrayList<>();
 
-                for (StagingSchema schema : matchedSchemas) {
-                    if (schema.getSchemaSelectionTable() != null) {
-                        StagingTable table = getTable(schema.getSchemaSelectionTable());
-                        if (table != null && DecisionEngine.matchTable(table, lookup.getInputs()) != null)
-                            trimmedMatches.add(schema);
-                    }
-                }
+                matchedSchemas.stream().filter(schema -> schema.getSchemaSelectionTable() != null).forEach(schema -> {
+                    StagingTable table = getTable(schema.getSchemaSelectionTable());
+                    if (table != null && DecisionEngine.matchTable(table, lookup.getInputs()) != null)
+                        trimmedMatches.add(schema);
+                });
 
                 matchedSchemas = trimmedMatches;
             }
@@ -483,10 +452,10 @@ public abstract class StagingDataProvider implements DataProvider {
             return values;
 
         // find the input key
-        Set<String> inputKeys = new HashSet<>();
-        for (StagingColumnDefinition def : table.getColumnDefinitions())
-            if (ColumnType.INPUT.equals(def.getType()))
-                inputKeys.add(def.getKey());
+        Set<String> inputKeys = table.getColumnDefinitions().stream()
+                .filter(def -> ColumnType.INPUT.equals(def.getType()))
+                .map(StagingColumnDefinition::getKey)
+                .collect(Collectors.toSet());
 
         if (inputKeys.size() != 1)
             throw new IllegalStateException("Table '" + table.getId() + "' must have one and only one INPUT column.");
@@ -503,7 +472,7 @@ public abstract class StagingDataProvider implements DataProvider {
 
                         // add all values in range
                         for (Integer i = low; i <= high; i++)
-                            values.add(Strings.padStart(String.valueOf(i), range.getLow().length(), '0'));
+                            values.add(padStart(String.valueOf(i), range.getLow().length(), '0'));
                     }
                 }
             }
@@ -511,6 +480,22 @@ public abstract class StagingDataProvider implements DataProvider {
         }
 
         return values;
+    }
+
+    /**
+     * Returns a string, of length at least {@code minLength}, consisting of {@code string} prepended
+     * with as many copies of {@code padChar} as are necessary to reach that length.
+     */
+    static String padStart(String string, int minLength, char padChar) {
+        if (string == null || string.length() >= minLength)
+            return string;
+
+        StringBuilder sb = new StringBuilder(minLength);
+        for (int i = string.length(); i < minLength; i++)
+            sb.append(padChar);
+        sb.append(string);
+
+        return sb.toString();
     }
 
 }

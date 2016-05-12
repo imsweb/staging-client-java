@@ -11,10 +11,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
-import java.util.concurrent.TimeUnit;
 import java.util.zip.GZIPInputStream;
-
-import com.google.common.base.Stopwatch;
 
 import com.imsweb.staging.IntegrationUtils;
 import com.imsweb.staging.IntegrationUtils.IntegrationResult;
@@ -45,7 +42,7 @@ public class CsIntegrationTest {
             System.out.println("-----------------------------------------------");
         }
 
-        Stopwatch stopwatch = Stopwatch.createStarted();
+        long start = System.currentTimeMillis();
 
         long totalFiles = 0;
         long totalCases = 0;
@@ -71,11 +68,10 @@ public class CsIntegrationTest {
             }
         }
 
-        stopwatch.stop();
-
-        String perMs = String.format("%.3f", ((float)stopwatch.elapsed(TimeUnit.MILLISECONDS) / totalCases));
+        long elapsed = System.currentTimeMillis() - start;
+        String perMs = String.format("%.3f", ((float)elapsed / totalCases));
         System.out.println("");
-        System.out.println("Completed " + NumberFormat.getNumberInstance(Locale.US).format(totalCases) + " cases (" + totalFiles + " files) in " + stopwatch + " (" + perMs + "ms/case).");
+        System.out.println("Completed " + NumberFormat.getNumberInstance(Locale.US).format(totalCases) + " cases (" + totalFiles + " files) in " + elapsed + "ms (" + perMs + "ms/case).");
         if (totalFailures > 0)
             System.out.println("There were " + totalFailures + " failing cases.");
     }
