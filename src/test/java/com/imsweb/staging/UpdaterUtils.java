@@ -25,6 +25,7 @@ import retrofit2.converter.jackson.JacksonConverterFactory;
 
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingTable;
+import com.imsweb.staging.util.Stopwatch;
 
 /**
  * Updates the staging library data from the API.
@@ -44,7 +45,7 @@ public final class UpdaterUtils {
     private static Pattern _ID_CHARACTERS = Pattern.compile("[a-z0-9_]+");
 
     public static void update(String algorithm, String version) throws IOException {
-        long start = System.currentTimeMillis();
+        Stopwatch stopwatch = Stopwatch.create();
 
         System.out.println("Updating " + algorithm + " version " + version + " from SEER*API");
 
@@ -173,7 +174,8 @@ public final class UpdaterUtils {
         // output the table ids.txt file
         Files.write(Paths.get(schemaDir + "/ids.txt"), schemaIds, StandardCharsets.UTF_8);
 
-        System.out.println("Completed in " + (System.currentTimeMillis() - start) + "ms");
+        stopwatch.stop();
+        System.out.println("Completed in " + stopwatch);
     }
 
     private static int purgeDirectory(File dir) {

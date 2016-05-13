@@ -27,6 +27,7 @@ import com.imsweb.staging.cs.CsStagingData;
 import com.imsweb.staging.cs.CsStagingData.CsInput;
 import com.imsweb.staging.cs.CsStagingData.CsOutput;
 import com.imsweb.staging.entities.StagingSchema;
+import com.imsweb.staging.util.Stopwatch;
 
 public final class IntegrationUtils {
 
@@ -63,7 +64,7 @@ public final class IntegrationUtils {
         int n = Math.min(9, Runtime.getRuntime().availableProcessors() + 1);
         ExecutorService pool = new ThreadPoolExecutor(n, n, 5, TimeUnit.SECONDS, new LinkedBlockingDeque<>(1000), new CallerRunsPolicy());
 
-        long start = System.currentTimeMillis();
+        Stopwatch stopwatch = Stopwatch.create();
 
         AtomicInteger processedCases = new AtomicInteger(0);
         final AtomicInteger failedCases = new AtomicInteger(0);
@@ -122,9 +123,9 @@ public final class IntegrationUtils {
         pool.shutdown();
         pool.awaitTermination(30, TimeUnit.SECONDS);
 
-        long elapsed = System.currentTimeMillis() - start;
-        String perMs = String.format("%.3f", ((float)elapsed / processedCases.get()));
-        System.out.print("Completed " + NumberFormat.getNumberInstance(Locale.US).format(processedCases.get()) + " cases in " + elapsed + "ms (" + perMs + "ms/case).");
+        stopwatch.stop();
+        String perMs = String.format("%.3f", ((float)stopwatch.elapsed(TimeUnit.MILLISECONDS) / processedCases.get()));
+        System.out.print("Completed " + NumberFormat.getNumberInstance(Locale.US).format(processedCases.get()) + " cases in " + stopwatch + " (" + perMs + "ms/case).");
         if (failedCases.get() > 0)
             System.out.println("There were " + NumberFormat.getNumberInstance(Locale.US).format(failedCases.get()) + " failures.");
         else
@@ -206,7 +207,7 @@ public final class IntegrationUtils {
         final AtomicInteger processedCases = new AtomicInteger(0);
         final AtomicInteger failedCases = new AtomicInteger(0);
 
-        long start = System.currentTimeMillis();
+        Stopwatch stopwatch = Stopwatch.create();
 
         if (singleLineNumber != null)
             System.out.println("Starting " + fileName + ", line # " + singleLineNumber + " [" + n + " threads]");
@@ -344,9 +345,9 @@ public final class IntegrationUtils {
         pool.shutdown();
         pool.awaitTermination(30, TimeUnit.SECONDS);
 
-        long elapsed = System.currentTimeMillis() - start;
-        String perMs = String.format("%.3f", ((float)elapsed / processedCases.get()));
-        System.out.print("Completed " + NumberFormat.getNumberInstance(Locale.US).format(processedCases.get()) + " cases for " + fileName + " in " + elapsed + "ms (" + perMs + "ms/case).");
+        stopwatch.stop();
+        String perMs = String.format("%.3f", ((float)stopwatch.elapsed(TimeUnit.MILLISECONDS) / processedCases.get()));
+        System.out.print("Completed " + NumberFormat.getNumberInstance(Locale.US).format(processedCases.get()) + " cases for " + fileName + " in " + stopwatch + " (" + perMs + "ms/case).");
         if (failedCases.get() > 0)
             System.out.println("  There were " + NumberFormat.getNumberInstance(Locale.US).format(failedCases) + " failures.");
         else
