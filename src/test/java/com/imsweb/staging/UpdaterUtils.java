@@ -40,7 +40,7 @@ import com.imsweb.staging.util.Stopwatch;
  */
 public final class UpdaterUtils {
 
-    private static final String _BASE_DIRECTORY = "C:/Prj/staging-client-java/src/main/resources/algorithms";
+    private static final String _BASE_DIRECTORY = "src/main/resources/algorithms";
 
     private static Pattern _ID_CHARACTERS = Pattern.compile("[a-z0-9_]+");
 
