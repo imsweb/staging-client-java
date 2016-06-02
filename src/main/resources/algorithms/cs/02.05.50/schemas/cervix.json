@@ -941,14 +941,6 @@
       "value" : ""
     } ],
     "tables" : [ {
-      "id" : "extension_size_ajcc7_xgi",
-      "inputs" : [ "extension", "size" ],
-      "outputs" : [ "ajcc7_t" ]
-    }, {
-      "id" : "csextension_size_tablefor_ajcc6th_xba",
-      "inputs" : [ "extension", "size" ],
-      "outputs" : [ "ajcc6_t" ]
-    }, {
       "id" : "ajcc6_stage_qaz",
       "input_mapping" : [ {
         "from" : "ajcc6_t",
@@ -1220,5 +1212,5 @@
     } ]
   } ],
   "involved_tables" : [ "ssf3_lpu", "size_aac", "ajcc6_exclusions_ppd", "csextension_size_tablefor_ajcc6th_xba", "ssf25_snt", "ssf9_sdz", "ssf15_snj", "ajcc7_t_codes", "ssf23_snr", "histology", "extension_bbk", "cs_input_version_original", "ssf22_snq", "lvi", "ssf8_sdy", "ssf14_sni", "ajcc6_stage_qaz", "ssf5_npm", "ajcc_tdescriptor_cleanup", "ajcc7_year_validation", "ssf21_snp", "ajcc7_inclusions_tpb", "ssf17_snl", "ajcc_descriptor_codes", "ssf7_sdx", "grade", "summary_stage_rpa", "ajcc7_m_codes", "ssf20_sno", "ajcc_ndescriptor_cleanup", "extension_size_ajcc7_xgi", "ssf16_snk", "nodes_dbc", "mets_han", "ajcc6_t_codes", "nodes_pos_fpa", "ajcc_mdescriptor_cleanup", "ssf11_snf", "ss_codes", "ssf6_oaw", "nodes_exam_gpa", "ssf2_kpr", "ajcc6_n_codes", "behavior", "ssf10_sne", "ssf18_snm", "mets_eval_ipa", "extension_eval_cpa", "ajcc7_n_codes", "ajcc6_stage_codes", "ssf1_jbv", "ssf19_snn", "ajcc7_stage_codes", "ssf13_snh", "primary_site", "ajcc6_year_validation", "schema_selection_cervix", "ssf4_mps", "ajcc7_stage_ubh", "ajcc6_m_codes", "nodes_eval_epa", "cs_year_validation", "ssf24_sns", "ssf12_sng" ],
-  "last_modified" : "2015-08-25T18:31:08.077Z"
+  "last_modified" : "2016-06-02T17:54:09.453Z"
 }

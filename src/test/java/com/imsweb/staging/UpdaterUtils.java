@@ -159,6 +159,7 @@ public final class UpdaterUtils {
         }
 
         // output the table ids.txt file
+        tableIds.sort(String::compareTo);
         Files.write(Paths.get(tableDir + "/ids.txt"), tableIds, StandardCharsets.UTF_8);
 
         // import the schemas
@@ -172,6 +173,7 @@ public final class UpdaterUtils {
         }
 
         // output the table ids.txt file
+        schemaIds.sort(String::compareTo);
         Files.write(Paths.get(schemaDir + "/ids.txt"), schemaIds, StandardCharsets.UTF_8);
 
         stopwatch.stop();
