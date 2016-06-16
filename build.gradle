@@ -16,6 +16,11 @@ println "Starting build using ${Jvm.current()}"
 // UTF-8 for all compilation tasks
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
+// fail the build if there are compiler warnings
+tasks.withType(JavaCompile) {
+    options.compilerArgs << "-Xlint:all" << "-Xlint:-processing" << "-Xlint:-serial" << "-Werror"
+}
+
 repositories {
     mavenCentral()
 }
@@ -67,7 +72,7 @@ findbugs {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.13'
+    gradleVersion = '2.14'
 }
 
 // run the full CS integration test suite
