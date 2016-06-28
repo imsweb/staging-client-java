@@ -4,7 +4,7 @@
   "version" : "02.05.50",
   "name" : "Schema Selection Nasopharynx",
   "title" : "Schema selection for Nasopharynx",
-  "last_modified" : "2015-05-27T16:19:46.307Z",
+  "last_modified" : "2016-06-28T19:03:51.013Z",
   "definition" : [ {
     "key" : "site",
     "name" : "Primary Site",
@@ -22,5 +22,5 @@
     "name" : "Result",
     "type" : "ENDPOINT"
   } ],
-  "rows" : [ [ "C110,C112,C113,C118-C119", "8000-8713,8800-9136,9141-9582,9700-9701", "*", "MATCH" ], [ "C111", "8000-8713,8800-9136,9141-9582,9700-9701", "010,100,981", "MATCH" ] ]
+  "rows" : [ [ "C110,C112,C113,C118-C119", "8000-8713,8800-9136,9141-9582,9700-9701", "*", "MATCH" ], [ "C111", "8000-8713,8800-9136,9141-9582,9700-9701", "010,100", "MATCH" ] ]
 }
