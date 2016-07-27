@@ -584,7 +584,7 @@ public class DecisionEngine {
 
             // if value not supplied, use the default and set it back into the context; if not supplied and no default, set the input the blank
             if (value == null) {
-                value = (input.getDefault() != null ? input.getDefault() : "");
+                value = (input.getDefault() != null ? translateValue(input.getDefault(), context) : "");
                 context.put(input.getKey(), value);
             }
 
@@ -620,7 +620,7 @@ public class DecisionEngine {
 
         // add all output keys to the context; if no default is supplied, use an empty string
         for (Entry<String, ? extends Output> entry : definition.getOutputMap().entrySet())
-            context.put(entry.getValue().getKey(), entry.getValue().getDefault() != null ? entry.getValue().getDefault() : "");
+            context.put(entry.getValue().getKey(), entry.getValue().getDefault() != null ? translateValue(entry.getValue().getDefault(), context) : "");
 
         // add the initial context
         if (definition.getInitialContext() != null)

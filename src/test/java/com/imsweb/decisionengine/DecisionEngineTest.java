@@ -1333,6 +1333,59 @@ public class DecisionEngineTest {
     }
 
     @Test
+    public void testOutputsDefaultContextReferences() {
+        BasicDefinition def = new BasicDefinition("test_context");
+        def.setOnInvalidInput(Definition.StagingInputErrorHandler.FAIL);
+
+        // add inputs
+        BasicInput input = new BasicInput("input1");
+        input.setDefault("foo1");
+        def.addInput(input);
+
+        input = new BasicInput("input2");
+        input.setDefault("{{foo1}}");
+        def.addInput(input);
+
+        // add outputs
+        BasicOutput output = new BasicOutput("output1", "table_output");
+        output.setDefault("foo2");
+        def.addOutput(output);
+
+        output = new BasicOutput("output2");
+        output.setDefault("{{foo2}}");
+        def.addOutput(output);
+
+        output = new BasicOutput("output3");
+        output.setDefault("{{bad_key}}");
+        def.addOutput(output);
+
+        output = new BasicOutput("output4");
+        output.setDefault("{{input1}}");
+        def.addOutput(output);
+
+        output = new BasicOutput("output5");
+        output.setDefault("{{input2}}");
+        def.addOutput(output);
+
+        BasicDataProvider provider = new BasicDataProvider();
+        provider.addDefinition(def);
+        DecisionEngine engine = new DecisionEngine(provider);
+
+        Map<String, String> context = new HashMap<>();
+        context.put("foo1", "FIRST");
+        context.put("foo2", "SECOND");
+        Result result = engine.process("test_context", context);
+
+        Assert.assertEquals(Type.STAGED, result.getType());
+
+        Assert.assertEquals(context.get("output1"), "foo2");
+        Assert.assertEquals(context.get("output2"), "SECOND");
+        Assert.assertEquals(context.get("output3"), "");
+        Assert.assertEquals(context.get("output4"), "foo1");
+        Assert.assertEquals(context.get("output5"), "FIRST");
+    }
+
+    @Test
     public void testMappingInputsWithReferenceInTable() {
         BasicDataProvider provider = new BasicDataProvider();
 

@@ -32,6 +32,7 @@ import com.imsweb.staging.entities.StagingTablePath;
 public final class Staging {
 
     // context keys definitions
+    public static final String CTX_ALGORITHM_VERSION = "ctx_alg_version";
     public static final String CTX_YEAR_CURRENT = "ctx_year_current";
 
     // list of all context keys
@@ -554,6 +555,10 @@ public final class Staging {
      * @return updated Map of context
      */
     private Map<String, String> addContextKeys(Map<String, String> context) {
+        // make the algorithm version available in the context
+        context.put(CTX_ALGORITHM_VERSION, getVersion());
+
+        // put the current year in the context
         Calendar now = Calendar.getInstance();
         context.put(CTX_YEAR_CURRENT, String.valueOf(now.get(Calendar.YEAR)));
 
