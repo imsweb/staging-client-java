@@ -1347,7 +1347,7 @@ public class DecisionEngineTest {
         def.addInput(input);
 
         // add outputs
-        BasicOutput output = new BasicOutput("output1", "table_output");
+        BasicOutput output = new BasicOutput("output1");
         output.setDefault("foo2");
         def.addOutput(output);
 
