@@ -1,9 +1,11 @@
 package com.imsweb.decisionengine.basic;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import com.imsweb.decisionengine.Endpoint.EndpointType;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class BasicDataProviderTest {
 
@@ -13,20 +15,20 @@ public class BasicDataProviderTest {
         BasicDataProvider provider = new BasicDataProvider();
 
         endpoint = provider.parseEndpoint("VALUE:123");
-        Assert.assertEquals(EndpointType.VALUE, endpoint.getType());
-        Assert.assertEquals("123", endpoint.getValue());
+        assertEquals(EndpointType.VALUE, endpoint.getType());
+        assertEquals("123", endpoint.getValue());
 
         endpoint = provider.parseEndpoint("VALUE:");
-        Assert.assertEquals(EndpointType.VALUE, endpoint.getType());
-        Assert.assertEquals("", endpoint.getValue());
+        assertEquals(EndpointType.VALUE, endpoint.getType());
+        assertEquals("", endpoint.getValue());
 
         endpoint = provider.parseEndpoint("VALUE");
-        Assert.assertEquals(EndpointType.VALUE, endpoint.getType());
-        Assert.assertNull(endpoint.getValue());
+        assertEquals(EndpointType.VALUE, endpoint.getType());
+        assertNull(endpoint.getValue());
 
         endpoint = provider.parseEndpoint("VALUE:ABC:123:XYZ");
-        Assert.assertEquals(EndpointType.VALUE, endpoint.getType());
-        Assert.assertEquals("ABC:123:XYZ", endpoint.getValue());
+        assertEquals(EndpointType.VALUE, endpoint.getType());
+        assertEquals("ABC:123:XYZ", endpoint.getValue());
     }
 
     @Test(expected = IllegalStateException.class)
