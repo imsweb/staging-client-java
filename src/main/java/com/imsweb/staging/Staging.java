@@ -4,8 +4,8 @@
 package com.imsweb.staging;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -32,10 +32,11 @@ import com.imsweb.staging.entities.StagingTablePath;
 public final class Staging {
 
     // context keys definitions
+    public static final String CTX_ALGORITHM_VERSION = "ctx_alg_version";
     public static final String CTX_YEAR_CURRENT = "ctx_year_current";
 
     // list of all context keys
-    public static final List<String> CONTEXT_KEYS = Collections.singletonList(CTX_YEAR_CURRENT);
+    public static final List<String> CONTEXT_KEYS = Arrays.asList(CTX_ALGORITHM_VERSION, CTX_YEAR_CURRENT);
 
     private DecisionEngine _engine = null;
     private StagingDataProvider _provider = null;
@@ -554,6 +555,10 @@ public final class Staging {
      * @return updated Map of context
      */
     private Map<String, String> addContextKeys(Map<String, String> context) {
+        // make the algorithm version available in the context
+        context.put(CTX_ALGORITHM_VERSION, getVersion());
+
+        // put the current year in the context
         Calendar now = Calendar.getInstance();
         context.put(CTX_YEAR_CURRENT, String.valueOf(now.get(Calendar.YEAR)));
 
