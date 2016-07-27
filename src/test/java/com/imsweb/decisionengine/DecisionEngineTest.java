@@ -1333,7 +1333,36 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testOutputsDefaultContextReferences() {
+    public void testInitialContextReferences() {
+        BasicDefinition def = new BasicDefinition("test_initial_context");
+        def.setOnInvalidInput(Definition.StagingInputErrorHandler.FAIL);
+
+        def.addInitialContext("a", "foo1");
+        def.addInitialContext("b", "{{foo1}}");
+        def.addInitialContext("c", "foo2");
+        def.addInitialContext("d", "{{foo2}}");
+        def.addInitialContext("e", "{{bad_key}}");
+
+        BasicDataProvider provider = new BasicDataProvider();
+        provider.addDefinition(def);
+        DecisionEngine engine = new DecisionEngine(provider);
+
+        Map<String, String> context = new HashMap<>();
+        context.put("foo1", "FIRST");
+        context.put("foo2", "SECOND");
+        Result result = engine.process("test_initial_context", context);
+
+        Assert.assertEquals(Type.STAGED, result.getType());
+
+        Assert.assertEquals(context.get("a"), "foo1");
+        Assert.assertEquals(context.get("b"), "FIRST");
+        Assert.assertEquals(context.get("c"), "foo2");
+        Assert.assertEquals(context.get("d"), "SECOND");
+        Assert.assertEquals(context.get("e"), "");
+    }
+
+    @Test
+    public void testInputsOutputsDefaultContextReferences() {
         BasicDefinition def = new BasicDefinition("test_context");
         def.setOnInvalidInput(Definition.StagingInputErrorHandler.FAIL);
 

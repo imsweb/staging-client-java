@@ -625,7 +625,7 @@ public class DecisionEngine {
         // add the initial context
         if (definition.getInitialContext() != null)
             for (KeyValue keyValue : definition.getInitialContext())
-                context.put(keyValue.getKey(), keyValue.getValue());
+                context.put(keyValue.getKey(), translateValue(keyValue.getValue(), context));
 
         // process each mapping if it is "involved", which is checked using the current context against inclusion/exclusion criteria
         if (definition.getMappings() != null) {
