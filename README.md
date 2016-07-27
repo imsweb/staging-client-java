@@ -23,7 +23,7 @@ NCI will be developing SEER Summary Stage 2017, which will be effective for diag
 
 Versions supported:
 
-- 1.1 (released April 2016)
+- 1.2 (released July 2016)
 
 ### Collaborative Staging
 
@@ -45,14 +45,14 @@ Download [the latest JAR][1] or grab via Maven:
 <dependency>
     <groupId>com.imsweb</groupId>
     <artifactId>staging-client-java</artifactId>
-    <version>2.2.1</version>
+    <version>2.2.2</version>
 </dependency>
 ```
 
 or via Gradle:
 
 ```groovy
-compile 'com.imsweb.com:staging-client-java:2.2.1'
+compile 'com.imsweb.com:staging-client-java:2.2.2'
 ```
 
 ## Usage
