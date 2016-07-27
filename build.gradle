@@ -8,7 +8,7 @@ plugins {
 }
 
 group = 'com.imsweb'
-version = '2.2.2'
+version = '2.3'
 description = 'Java client library for staging calculations'
 
 println "Starting build using ${Jvm.current()}"
@@ -37,8 +37,8 @@ dependencies {
 
     testCompile 'junit:junit:4.12'
     testCompile 'org.unitils:unitils-core:3.4.2'
-    testCompile 'com.squareup.retrofit2:retrofit:2.0.2'
-    testCompile 'com.squareup.retrofit2:converter-jackson:2.0.2'
+    testCompile 'com.squareup.retrofit2:retrofit:2.1.0'
+    testCompile 'com.squareup.retrofit2:converter-jackson:2.1.0'
 }
 
 jar {
