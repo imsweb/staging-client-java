@@ -1,0 +1,27 @@
+{
+  "id" : "seer_mets_anus_24893",
+  "algorithm" : "tnm",
+  "version" : "1.2",
+  "name" : "SEER Mets Anus",
+  "title" : "SEER Mets",
+  "footnotes" : "\\## Considered Regional in Historic Stage",
+  "last_modified" : "2016-06-06T18:59:29.766Z",
+  "definition" : [ {
+    "key" : "seer_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/node(s) involved\n\nDistant lymph node(s)\n\nExtension to:\n    Bladder##\n    Broad ligament(s)##\n    Cervix uteri##\n    Corpus uteri##\n    Pelvic peritoneum\n    Prostate##\n    Urethra##\n    Vagina##\n\nFurther contiguous extension\n\nMetastasis", "Distant lymph node(s) \nFor all subsites: \n    Bilateral:\n        Internal iliac (hypogastric):\n            Obturator\n        AND\n        Superficial inguinal (femoral)\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS \n\nStated as M1", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

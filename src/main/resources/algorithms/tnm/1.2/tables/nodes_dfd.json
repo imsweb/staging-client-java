@@ -1,0 +1,27 @@
+{
+  "id" : "nodes_dfd",
+  "algorithm" : "tnm",
+  "version" : "1.2",
+  "name" : "SEER Regional Nodes",
+  "title" : "SEER Regional Nodes",
+  "notes" : "**Note 1:**  Superior and inferior mesenteric nodes are coded in SEER Mets.  Mesenteric nodes, NOS are coded in SEER Regional Nodes.  \n\n**Note 2:**  Nodal metastasis is very rare in gastrointestinal stromal tumors and surgeons generally agree that nodal dissection is not indicated.  In the absence of information on regional lymph node status, assign no regional lymph node involvement (code 000).",
+  "last_modified" : "2016-06-06T18:59:29.953Z",
+  "definition" : [ {
+    "key" : "seer_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summary Stage 2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:NONE" ], [ "300", "Regional lymph node(s) involved only\n\nREGIONAL Lymph Nodes\n\nColic, NOS\nEpicolic (adjacent to bowel wall)\nMesenteric, NOS\nParacolic/pericolic\n\nNodule(s) in pericolic fat\n\nCecal, NOS\n     Anterior (prececal)\n     Posterior (retrocecal)\nIleocolic\nRight colic\n\nRegional lymph nodes, NOS", "Nodule(s) or foci in pericolic fat/adjacent mesentery/mesocolic fat\n\nMesocolic, NOS \n\nLymph nodes, NOS\n\nStated as N1", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

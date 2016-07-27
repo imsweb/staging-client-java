@@ -1,0 +1,28 @@
+{
+  "id" : "mets_hav",
+  "algorithm" : "tnm",
+  "version" : "1.2",
+  "name" : "SEER Mets",
+  "title" : "SEER Mets",
+  "notes" : "**Note 1:** The term \"skip metastasis\" is not used with a consistent meaning in the literature.  In some cases, it refers to discontinuous metastasis in the same bone as the primary tumor, while in other cases it refers to discontinuous metastasis in an adjacent bone, usually in the same limb.",
+  "footnotes" : "\\## Considered regional in Historic Stage",
+  "last_modified" : "2016-06-06T18:59:27.899Z",
+  "definition" : [ {
+    "key" : "seer_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/node(s) involved\n\nDistant lymph node(s)\n\nExtension to:\n    Skin##\n\nFurther contiguous extension\n\nMetastasis", "Discontinuous tumors in the primary bone site\n\nStated as T3\n\nCarcinomatosis\n\nDistant metastasis WITH or WITH distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1 (M1a, M1b, M1[NOS])", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}
