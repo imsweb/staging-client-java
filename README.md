@@ -138,8 +138,8 @@ For Collaborative Staging, use the `CsSchemaLookup` object.  Here is a lookup ba
 
 ```java
 List<StagingSchema> lookup = staging.lookupSchema(new CsSchemaLookup("C629", "9231"));
-Assert.assertEquals(1, lookup.size());
-Assert.assertEquals("testis", lookup.get(0).getId());
+assertEquals(1, lookup.size());
+assertEquals("testis", lookup.get(0).getId());
 ```
 
 If the call returns a single result, then it was successful.  If it returns more than one result, then it needs a discriminator.  Information about the required discriminator
@@ -149,15 +149,15 @@ sets of discriminators that can be determined based on the result.
 ```java
 // do not supply a discriminator
 List<StagingSchema> lookup = staging.lookupSchema(new CsSchemaLookup("C111", "8200"));
-Assert.assertEquals(2, lookup.size());
+assertEquals(2, lookup.size());
 for (StagingSchema schema : lookup)
-    Assert.assertTrue(schema.getSchemaDiscriminators().contains(CsStagingData.SSF25_KEY));
+    assertTrue(schema.getSchemaDiscriminators().contains(CsStagingData.SSF25_KEY));
 
 // supply a discriminator
 lookup = staging.lookupSchema(new CsSchemaLookup("C111", "8200", "010"));
-Assert.assertEquals(1, lookup.size());
-Assert.assertEquals("nasopharynx", lookup.get(0).getId());
-Assert.assertEquals(Integer.valueOf(34), lookup.get(0).getSchemaNum());
+assertEquals(1, lookup.size());
+assertEquals("nasopharynx", lookup.get(0).getId());
+assertEquals(Integer.valueOf(34), lookup.get(0).getSchemaNum());
 ```
 
 ### Calculate stage
@@ -200,58 +200,58 @@ data.setSsf(1, "020");
 // perform the staging
 staging.stage(data);
 
-Assert.assertEquals(Result.STAGED, data.getResult());
-Assert.assertEquals("urethra", data.getSchemaId());
-Assert.assertEquals(0, data.getErrors().size());
-Assert.assertEquals(37, data.getPath().size());
+assertEquals(Result.STAGED, data.getResult());
+assertEquals("urethra", data.getSchemaId());
+assertEquals(0, data.getErrors().size());
+assertEquals(37, data.getPath().size());
 
 // check output
-Assert.assertEquals("129", data.getOutput(CsOutput.SCHEMA_NUMBER));
-Assert.assertEquals("020550", data.getOutput(CsOutput.CSVER_DERIVED));
+assertEquals("129", data.getOutput(CsOutput.SCHEMA_NUMBER));
+assertEquals("020550", data.getOutput(CsOutput.CSVER_DERIVED));
 
 // AJCC 6
-Assert.assertEquals("T1", data.getOutput(CsOutput.AJCC6_T));
-Assert.assertEquals("c", data.getOutput(CsOutput.AJCC6_TDESCRIPTOR));
-Assert.assertEquals("N1", data.getOutput(CsOutput.AJCC6_N));
-Assert.assertEquals("c", data.getOutput(CsOutput.AJCC6_NDESCRIPTOR));
-Assert.assertEquals("M1", data.getOutput(CsOutput.AJCC6_M));
-Assert.assertEquals("c", data.getOutput(CsOutput.AJCC6_MDESCRIPTOR));
-Assert.assertEquals("IV", data.getOutput(CsOutput.AJCC6_STAGE));
-Assert.assertEquals("10", data.getOutput(CsOutput.STOR_AJCC6_T));
-Assert.assertEquals("c", data.getOutput(CsOutput.STOR_AJCC6_TDESCRIPTOR));
-Assert.assertEquals("10", data.getOutput(CsOutput.STOR_AJCC6_N));
-Assert.assertEquals("c", data.getOutput(CsOutput.STOR_AJCC6_NDESCRIPTOR));
-Assert.assertEquals("10", data.getOutput(CsOutput.STOR_AJCC6_M));
-Assert.assertEquals("c", data.getOutput(CsOutput.STOR_AJCC6_MDESCRIPTOR));
-Assert.assertEquals("70", data.getOutput(CsOutput.STOR_AJCC6_STAGE));
+assertEquals("T1", data.getOutput(CsOutput.AJCC6_T));
+assertEquals("c", data.getOutput(CsOutput.AJCC6_TDESCRIPTOR));
+assertEquals("N1", data.getOutput(CsOutput.AJCC6_N));
+assertEquals("c", data.getOutput(CsOutput.AJCC6_NDESCRIPTOR));
+assertEquals("M1", data.getOutput(CsOutput.AJCC6_M));
+assertEquals("c", data.getOutput(CsOutput.AJCC6_MDESCRIPTOR));
+assertEquals("IV", data.getOutput(CsOutput.AJCC6_STAGE));
+assertEquals("10", data.getOutput(CsOutput.STOR_AJCC6_T));
+assertEquals("c", data.getOutput(CsOutput.STOR_AJCC6_TDESCRIPTOR));
+assertEquals("10", data.getOutput(CsOutput.STOR_AJCC6_N));
+assertEquals("c", data.getOutput(CsOutput.STOR_AJCC6_NDESCRIPTOR));
+assertEquals("10", data.getOutput(CsOutput.STOR_AJCC6_M));
+assertEquals("c", data.getOutput(CsOutput.STOR_AJCC6_MDESCRIPTOR));
+assertEquals("70", data.getOutput(CsOutput.STOR_AJCC6_STAGE));
 
 // AJCC 7
-Assert.assertEquals("T1", data.getOutput(CsOutput.AJCC7_T));
-Assert.assertEquals("c", data.getOutput(CsOutput.AJCC7_TDESCRIPTOR));
-Assert.assertEquals("N1", data.getOutput(CsOutput.AJCC7_N));
-Assert.assertEquals("c", data.getOutput(CsOutput.AJCC7_NDESCRIPTOR));
-Assert.assertEquals("M1", data.getOutput(CsOutput.AJCC7_M));
-Assert.assertEquals("c", data.getOutput(CsOutput.AJCC7_MDESCRIPTOR));
-Assert.assertEquals("IV", data.getOutput(CsOutput.AJCC7_STAGE));
-Assert.assertEquals("100", data.getOutput(CsOutput.STOR_AJCC7_T));
-Assert.assertEquals("c", data.getOutput(CsOutput.STOR_AJCC6_TDESCRIPTOR));
-Assert.assertEquals("100", data.getOutput(CsOutput.STOR_AJCC7_N));
-Assert.assertEquals("c", data.getOutput(CsOutput.STOR_AJCC7_NDESCRIPTOR));
-Assert.assertEquals("100", data.getOutput(CsOutput.STOR_AJCC7_M));
-Assert.assertEquals("c", data.getOutput(CsOutput.STOR_AJCC7_MDESCRIPTOR));
-Assert.assertEquals("700", data.getOutput(CsOutput.STOR_AJCC7_STAGE));
+assertEquals("T1", data.getOutput(CsOutput.AJCC7_T));
+assertEquals("c", data.getOutput(CsOutput.AJCC7_TDESCRIPTOR));
+assertEquals("N1", data.getOutput(CsOutput.AJCC7_N));
+assertEquals("c", data.getOutput(CsOutput.AJCC7_NDESCRIPTOR));
+assertEquals("M1", data.getOutput(CsOutput.AJCC7_M));
+assertEquals("c", data.getOutput(CsOutput.AJCC7_MDESCRIPTOR));
+assertEquals("IV", data.getOutput(CsOutput.AJCC7_STAGE));
+assertEquals("100", data.getOutput(CsOutput.STOR_AJCC7_T));
+assertEquals("c", data.getOutput(CsOutput.STOR_AJCC6_TDESCRIPTOR));
+assertEquals("100", data.getOutput(CsOutput.STOR_AJCC7_N));
+assertEquals("c", data.getOutput(CsOutput.STOR_AJCC7_NDESCRIPTOR));
+assertEquals("100", data.getOutput(CsOutput.STOR_AJCC7_M));
+assertEquals("c", data.getOutput(CsOutput.STOR_AJCC7_MDESCRIPTOR));
+assertEquals("700", data.getOutput(CsOutput.STOR_AJCC7_STAGE));
 
 // Summary Stage
-Assert.assertEquals("L", data.getOutput(CsOutput.SS1977_T));
-Assert.assertEquals("RN", data.getOutput(CsOutput.SS1977_N));
-Assert.assertEquals("D", data.getOutput(CsOutput.SS1977_M));
-Assert.assertEquals("D", data.getOutput(CsOutput.SS1977_STAGE));
-Assert.assertEquals("L", data.getOutput(CsOutput.SS2000_T));
-Assert.assertEquals("RN", data.getOutput(CsOutput.SS2000_N));
-Assert.assertEquals("D", data.getOutput(CsOutput.SS2000_M));
-Assert.assertEquals("D", data.getOutput(CsOutput.SS2000_STAGE));
-Assert.assertEquals("7", data.getOutput(CsOutput.STOR_SS1977_STAGE));
-Assert.assertEquals("7", data.getOutput(CsOutput.STOR_SS2000_STAGE));
+assertEquals("L", data.getOutput(CsOutput.SS1977_T));
+assertEquals("RN", data.getOutput(CsOutput.SS1977_N));
+assertEquals("D", data.getOutput(CsOutput.SS1977_M));
+assertEquals("D", data.getOutput(CsOutput.SS1977_STAGE));
+assertEquals("L", data.getOutput(CsOutput.SS2000_T));
+assertEquals("RN", data.getOutput(CsOutput.SS2000_N));
+assertEquals("D", data.getOutput(CsOutput.SS2000_M));
+assertEquals("D", data.getOutput(CsOutput.SS2000_STAGE));
+assertEquals("7", data.getOutput(CsOutput.STOR_SS1977_STAGE));
+assertEquals("7", data.getOutput(CsOutput.STOR_SS2000_STAGE));
 ```
 
 ## About SEER

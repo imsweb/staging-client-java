@@ -6,13 +6,15 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.staging.entities.StagingColumnDefinition;
 import com.imsweb.staging.entities.StagingStringRange;
 import com.imsweb.staging.entities.StagingTable;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class StagingDataProviderTest {
 
@@ -41,88 +43,88 @@ public class StagingDataProviderTest {
         StagingDataProvider.initTable(table);
 
         // since context variables are not user-supplied, they should not be included in the extra input
-        Assert.assertEquals(new HashSet<>(Arrays.asList("extra1", "extra2")), table.getExtraInput());
+        assertEquals(new HashSet<>(Arrays.asList("extra1", "extra2")), table.getExtraInput());
 
         table.setRawRows(new ArrayList<>());
         table.getRawRows().add(Arrays.asList("{{ctx_year_current}}", "MATCH"));
 
         StagingDataProvider.initTable(table);
 
-        Assert.assertNull(table.getExtraInput());
+        assertNull(table.getExtraInput());
     }
 
     @Test
     public void testSplitValues() {
-        Assert.assertEquals(0, StagingDataProvider.splitValues(null).size());
+        assertEquals(0, StagingDataProvider.splitValues(null).size());
 
-        Assert.assertEquals(1, StagingDataProvider.splitValues("").size());
-        Assert.assertEquals(1, StagingDataProvider.splitValues("*").size());
-        Assert.assertEquals(1, StagingDataProvider.splitValues("1 2 3").size());
-        Assert.assertEquals(1, StagingDataProvider.splitValues("23589258625086").size());
+        assertEquals(1, StagingDataProvider.splitValues("").size());
+        assertEquals(1, StagingDataProvider.splitValues("*").size());
+        assertEquals(1, StagingDataProvider.splitValues("1 2 3").size());
+        assertEquals(1, StagingDataProvider.splitValues("23589258625086").size());
 
-        Assert.assertEquals(2, StagingDataProvider.splitValues("A,B").size());
-        Assert.assertEquals(2, StagingDataProvider.splitValues(" A , B ").size());
-        Assert.assertEquals(2, StagingDataProvider.splitValues("A , B").size());
+        assertEquals(2, StagingDataProvider.splitValues("A,B").size());
+        assertEquals(2, StagingDataProvider.splitValues(" A , B ").size());
+        assertEquals(2, StagingDataProvider.splitValues("A , B").size());
 
-        Assert.assertEquals(10, StagingDataProvider.splitValues("A,B,C,D,E,F,G,H,I,J").size());
+        assertEquals(10, StagingDataProvider.splitValues("A,B,C,D,E,F,G,H,I,J").size());
 
         List<StagingStringRange> ranges = StagingDataProvider.splitValues(",1,2,3,4");
-        Assert.assertEquals(5, ranges.size());
-        Assert.assertEquals("", ranges.get(0).getLow());
-        Assert.assertEquals("", ranges.get(0).getHigh());
+        assertEquals(5, ranges.size());
+        assertEquals("", ranges.get(0).getLow());
+        assertEquals("", ranges.get(0).getHigh());
 
         ranges = StagingDataProvider.splitValues("     ,1,2,3,4");
-        Assert.assertEquals(5, ranges.size());
-        Assert.assertEquals("", ranges.get(0).getLow());
-        Assert.assertEquals("", ranges.get(0).getHigh());
+        assertEquals(5, ranges.size());
+        assertEquals("", ranges.get(0).getLow());
+        assertEquals("", ranges.get(0).getHigh());
 
         ranges = StagingDataProvider.splitValues("1,2,3,4,");
-        Assert.assertEquals(5, ranges.size());
-        Assert.assertEquals("", ranges.get(4).getLow());
-        Assert.assertEquals("", ranges.get(4).getHigh());
+        assertEquals(5, ranges.size());
+        assertEquals("", ranges.get(4).getLow());
+        assertEquals("", ranges.get(4).getHigh());
 
         ranges = StagingDataProvider.splitValues("1,2,3,4,    ");
-        Assert.assertEquals(5, ranges.size());
-        Assert.assertEquals("", ranges.get(4).getLow());
-        Assert.assertEquals("", ranges.get(4).getHigh());
+        assertEquals(5, ranges.size());
+        assertEquals("", ranges.get(4).getLow());
+        assertEquals("", ranges.get(4).getHigh());
 
         ranges = StagingDataProvider.splitValues("1,11,111-222");
-        Assert.assertEquals(3, ranges.size());
-        Assert.assertEquals("1", ranges.get(0).getLow());
-        Assert.assertEquals("1", ranges.get(0).getHigh());
-        Assert.assertEquals("11", ranges.get(1).getLow());
-        Assert.assertEquals("11", ranges.get(1).getHigh());
-        Assert.assertEquals("111", ranges.get(2).getLow());
-        Assert.assertEquals("222", ranges.get(2).getHigh());
+        assertEquals(3, ranges.size());
+        assertEquals("1", ranges.get(0).getLow());
+        assertEquals("1", ranges.get(0).getHigh());
+        assertEquals("11", ranges.get(1).getLow());
+        assertEquals("11", ranges.get(1).getHigh());
+        assertEquals("111", ranges.get(2).getLow());
+        assertEquals("222", ranges.get(2).getHigh());
 
         ranges = StagingDataProvider.splitValues("88,90-95,99");
-        Assert.assertEquals(3, ranges.size());
-        Assert.assertEquals("88", ranges.get(0).getLow());
-        Assert.assertEquals("88", ranges.get(0).getHigh());
-        Assert.assertEquals("90", ranges.get(1).getLow());
-        Assert.assertEquals("95", ranges.get(1).getHigh());
-        Assert.assertEquals("99", ranges.get(2).getLow());
-        Assert.assertEquals("99", ranges.get(2).getHigh());
+        assertEquals(3, ranges.size());
+        assertEquals("88", ranges.get(0).getLow());
+        assertEquals("88", ranges.get(0).getHigh());
+        assertEquals("90", ranges.get(1).getLow());
+        assertEquals("95", ranges.get(1).getHigh());
+        assertEquals("99", ranges.get(2).getLow());
+        assertEquals("99", ranges.get(2).getHigh());
 
         ranges = StagingDataProvider.splitValues("p0I-");
-        Assert.assertEquals(1, ranges.size());
-        Assert.assertEquals("p0I-", ranges.get(0).getLow());
-        Assert.assertEquals("p0I-", ranges.get(0).getHigh());
+        assertEquals(1, ranges.size());
+        assertEquals("p0I-", ranges.get(0).getLow());
+        assertEquals("p0I-", ranges.get(0).getHigh());
 
         ranges = StagingDataProvider.splitValues("N0(mol-)");
-        Assert.assertEquals(1, ranges.size());
-        Assert.assertEquals("N0(mol-)", ranges.get(0).getLow());
-        Assert.assertEquals("N0(mol-)", ranges.get(0).getHigh());
+        assertEquals(1, ranges.size());
+        assertEquals("N0(mol-)", ranges.get(0).getLow());
+        assertEquals("N0(mol-)", ranges.get(0).getHigh());
 
         ranges = StagingDataProvider.splitValues("1-21");
-        Assert.assertEquals(1, ranges.size());
-        Assert.assertEquals("1-21", ranges.get(0).getLow());
-        Assert.assertEquals("1-21", ranges.get(0).getHigh());
+        assertEquals(1, ranges.size());
+        assertEquals("1-21", ranges.get(0).getLow());
+        assertEquals("1-21", ranges.get(0).getHigh());
 
         ranges = StagingDataProvider.splitValues("21-111");
-        Assert.assertEquals(1, ranges.size());
-        Assert.assertEquals("21-111", ranges.get(0).getLow());
-        Assert.assertEquals("21-111", ranges.get(0).getHigh());
+        assertEquals(1, ranges.size());
+        assertEquals("21-111", ranges.get(0).getLow());
+        assertEquals("21-111", ranges.get(0).getHigh());
     }
 
     @Test
@@ -136,18 +138,18 @@ public class StagingDataProviderTest {
 
         StagingDataProvider.initTable(table);
 
-        Assert.assertEquals(2, table.getTableRows().size());
-        Assert.assertEquals(4, table.getTableRows().get(0).getInputs().get("key1").size());
-        Assert.assertEquals(4, table.getTableRows().get(1).getInputs().get("key1").size());
+        assertEquals(2, table.getTableRows().size());
+        assertEquals(4, table.getTableRows().get(0).getInputs().get("key1").size());
+        assertEquals(4, table.getTableRows().get(1).getInputs().get("key1").size());
     }
 
     @Test
     public void testPadStart() {
-        Assert.assertNull(StagingDataProvider.padStart(null, 1, '0'));
+        assertNull(StagingDataProvider.padStart(null, 1, '0'));
 
-        Assert.assertEquals(StagingDataProvider.padStart("123", 1, '0'), "123");
-        Assert.assertEquals(StagingDataProvider.padStart("123", 3, '0'), "123");
-        Assert.assertEquals(StagingDataProvider.padStart("123", 4, '0'), "0123");
-        Assert.assertEquals(StagingDataProvider.padStart("1", 5, '0'), "00001");
+        assertEquals(StagingDataProvider.padStart("123", 1, '0'), "123");
+        assertEquals(StagingDataProvider.padStart("123", 3, '0'), "123");
+        assertEquals(StagingDataProvider.padStart("123", 4, '0'), "0123");
+        assertEquals(StagingDataProvider.padStart("1", 5, '0'), "00001");
     }
 }

@@ -1,18 +1,20 @@
 package com.imsweb.staging.tnm;
 
-import org.junit.Assert;
 import org.junit.Test;
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class TnmSchemaLookupTest {
 
     @Test
     public void testDescriminator() {
         TnmSchemaLookup lookup = new TnmSchemaLookup("C629", "9100");
-        Assert.assertFalse(lookup.hasDiscriminator());
+        assertFalse(lookup.hasDiscriminator());
         lookup.setInput(TnmStagingData.SSF25_KEY, "");
-        Assert.assertFalse(lookup.hasDiscriminator());
+        assertFalse(lookup.hasDiscriminator());
         lookup.setInput(TnmStagingData.SSF25_KEY, "001");
-        Assert.assertTrue(lookup.hasDiscriminator());
+        assertTrue(lookup.hasDiscriminator());
     }
 
     @Test(expected = IllegalStateException.class)
