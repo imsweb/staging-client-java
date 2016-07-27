@@ -1,0 +1,27 @@
+{
+  "id" : "extension_bee",
+  "algorithm" : "tnm",
+  "version" : "1.2",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "footnotes" : "\\## Considered regional in Historic Stage\n\\### Considered distant in Historic Stage\n\\*** Considered distant in 1977 Summary Staging Guide",
+  "last_modified" : "2016-06-06T18:59:30.406Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ: Noninvasive; intraepithelial", "", "VALUE:IS" ], [ "100", "Localized only\n\nInvasive tumor confined to one of the following subsites:\n     Laryngopharynx\n     Postcricoid area\n     Posterior pharyngeal wall\n     Pyriform sinus (pyriform fossa)\n\nTumor involves adjacent subsite(s) (listed above) WITHOUT fixation##\n\nLocalized, NOS", "Involvement of deep soft tissue or musculature \nSoft tissue, NOS\n\nStated as T3, T4a, or T4 [NOS]", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nAny of the subsites above WITH fixation of tumor or fixation, NOS\n\nExtension to:\n     Carotid artery###***\n     Cricoid cartilage###***\n     Esophagus###\n     Larynx\n     Oropharynx\n     Prevertebral fascia/muscle(s)\n     Soft tissues of neck\n     Thyroid cartilage###***\n     Thyroid gland###***\n\nFixation of hemilarynx, larynx or oropharynx", "Involvement of mucosa only:\n    Larynx\n    Nasopharynx\n    Oropharynx\n\nCartilage, NOS\nCarotid artery (encased)\nEsophagus", "VALUE:RE" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

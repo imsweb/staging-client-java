@@ -36,17 +36,17 @@ public class TnmStagingTest extends StagingTest {
 
     @Override
     public String getVersion() {
-        return "1.1";
+        return "1.2";
     }
 
     @Override
     public StagingFileDataProvider getProvider() {
-        return TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_1);
+        return TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_2);
     }
 
     @BeforeClass
     public static void init() throws IOException {
-        _STAGING = Staging.getInstance(TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_1));
+        _STAGING = Staging.getInstance(TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_2));
     }
 
     @Test
@@ -60,11 +60,11 @@ public class TnmStagingTest extends StagingTest {
 
     @Test
     public void testVersionInitiaizationTypes() {
-        Staging staging10 = Staging.getInstance(TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_1));
-        Assert.assertEquals("1.1", staging10.getVersion());
+        Staging staging10 = Staging.getInstance(TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_2));
+        Assert.assertEquals("1.2", staging10.getVersion());
 
         Staging stagingLatest = Staging.getInstance(TnmDataProvider.getInstance());
-        Assert.assertEquals("1.1", stagingLatest.getVersion());
+        Assert.assertEquals("1.2", stagingLatest.getVersion());
     }
 
     @Test
@@ -160,7 +160,7 @@ public class TnmStagingTest extends StagingTest {
         Assert.assertEquals("testis", lookup.get(0).getId());
 
         // now invalidate the cache
-        TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_1).invalidateCache();
+        TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_2).invalidateCache();
 
         // try the lookup again
         lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C629", "9231"));
@@ -257,7 +257,7 @@ public class TnmStagingTest extends StagingTest {
         Assert.assertEquals(10, data.getOutput().size());
 
         // check outputs
-        Assert.assertEquals("1.1", data.getOutput(TnmStagingData.TnmOutput.DERIVED_VERSION));
+        Assert.assertEquals("1.2", data.getOutput(TnmStagingData.TnmOutput.DERIVED_VERSION));
         Assert.assertEquals("3", data.getOutput(TnmStagingData.TnmOutput.CLIN_STAGE_GROUP));
         Assert.assertEquals("4", data.getOutput(TnmStagingData.TnmOutput.PATH_STAGE_GROUP));
         Assert.assertEquals("4", data.getOutput(TnmStagingData.TnmOutput.COMBINED_STAGE_GROUP));

@@ -1,0 +1,27 @@
+{
+  "id" : "extension_bew",
+  "algorithm" : "tnm",
+  "version" : "1.2",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "footnotes" : "\\## Considered regional in Historic Stage",
+  "last_modified" : "2016-06-06T18:59:31.123Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ:\nNoninvasive; intraepithelia", "", "VALUE:IS" ], [ "100", "Localized only\nInvasive tumor on one side confined to mucoperiosteum (stroma)\nTumor crosses midline##\n\nLocalized, NOS", "Localized-KEEP AS HEADING?\n\nStated as T3 with no other information on extension\n\nInvolvement of deep tissue or periosteum of hard palate\n\nStated as T4a with no other information on extension\n\nStated as T4 [NOS] with no other information on extension", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nExtension to:\n     Buccal mucosa (inner cheek)\n     Gingiva, upper\n     Glossopalatine arch\n     Maxilla (maxillary bone)\n     Palatine bone\n     Pharyngopalatine arch\n     Soft palate\n     Uvula", "Regional - Direct Extension-KEEP AS HEADING?\n\n\n\nCartilage of maxilla or palatine bone\nCortical bone of maxilla or palatine bone\nMaxilla, NOS **Delete**\nPalatine bone, NOS **Delete**\nCartilage, NOS\nCortical bone, NOS\nBone, NOS except base of skull", "VALUE:RE" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

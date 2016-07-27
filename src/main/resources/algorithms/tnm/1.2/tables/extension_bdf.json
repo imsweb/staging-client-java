@@ -1,0 +1,27 @@
+{
+  "id" : "extension_bdf",
+  "algorithm" : "tnm",
+  "version" : "1.2",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "notes" : "**Note 1:**  Tumors of the body of the pancreas arise between the left edge of the superior mesenteric-portal vein confluence and the left edge of the aorta.  Tumors of the tail of the pancreas arise to the left of the left edge of the aorta.\n\n**Note 2:**  Islets of Langerhans are distributed throughout the pancreas; an islet tumor is coded according to the subsite of the pancreas in which the tumor arises if the information is available.",
+  "last_modified" : "2016-06-06T18:59:25.352Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ: Noninvasive, intraepithelial", "", "VALUE:IS" ], [ "100", "Localized only\n\n    Confined to pancreas\n\n    Localized, NOS", "Stated as T1 or T2", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nExtension to:\n\nAll sites:\n    Ampulla of Vater\n    Blood vessel(s) (major):\n         Hepatic artery\n         Portal vein\n         Superior mesenteric artery/vein\n    Duodenum\n    Extrahepatic bile duct(s)\n    Peripancreatic tissue, NOS\n\nBody and/or tail of pancreas:\n     Blood vessel(s) (major):\n          Aortic artery\n          Celiac artery\n          Splenic artery/vein\n     Spleen\n     Splenic flexure (of colon)\n     Stomach\n\nFixation to adjacent structures, NOS", "Tumor is inseparable from the celiac axis or superior mesenteric artery\n\nStated as T3 or T4", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

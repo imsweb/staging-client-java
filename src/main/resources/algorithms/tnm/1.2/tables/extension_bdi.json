@@ -1,0 +1,27 @@
+{
+  "id" : "extension_bdi",
+  "algorithm" : "tnm",
+  "version" : "1.2",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "notes" : "**Note 1:**  Assign 000 for multifocal noninvasive Ta and Tis tumors.\n\n**Note 2:**  If primary tumor is coded to in situ (code 000), then Behavior Code ICD-O-3 must be 2. \n\n**Note 3:**  The presence of muscle around the urethra varies between males and females and, in males, varies among the segments of the urethra. The outer muscular coat (muscularis) is absent in most of the male urethra except for the membranous portion. In females, the muscle coat is continuous from the bladder wall. In addition, in both males and females, there is sphincteric muscle, which may be smooth or skeletal muscle. Invasion of periurethral muscle, sphincter muscle or muscle at the neck are all assigned 200 for regional.",
+  "last_modified" : "2016-06-06T18:59:26.040Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ: Noninvasive; intraepithelial\n\nCarcinoma in situ, NOS\nNoninvasive papillary, polypoid, or verrucous carcinoma", "Involvement of prostatic urethra\nInvolvement of prostatic ducts\nNoninvasive (flat, sessile), NOS", "VALUE:IS" ], [ "100", "Localized only\n\n     Muscularis invaded\n     Subepithelial connective tissue (lamina propria, submucosa) invaded\n\n     Localized, NOS", "Stated as T1 or T2", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nExtension beyond the prostatic capsule\n\nExtension to:\n    Bladder neck\n    Corpus cavernosum\n    Corpus spongiosum\n    Periurethral muscle (sphincter)\n    Prostate\n    Vagina, anterior or NOS", "Sphincter muscle; periurethral muscle specified as sphincter\n\nStated as T3", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in patient record", "", "VALUE:U" ] ]
+}
