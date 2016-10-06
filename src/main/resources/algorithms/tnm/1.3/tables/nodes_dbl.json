@@ -1,0 +1,27 @@
+{
+  "id" : "nodes_dbl",
+  "algorithm" : "tnm",
+  "version" : "1.3",
+  "name" : "SEER Regional Nodes",
+  "title" : "SEER Regional Nodes",
+  "notes" : "**Note:** Code only regional nodes and nodes, NOS in this field. Distant nodes are coded in SEER Mets.",
+  "last_modified" : "2016-09-26T15:40:47.320Z",
+  "definition" : [ {
+    "key" : "seer_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summary Stage 2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:NONE" ], [ "300", "Regional lymph node(s) involved only\n\nREGIONAL Lymph Nodes\n\nCeliac\nHepatic\nInfrapyloric (subpyloric)\nLateral aortic (lumbar)\nPancreaticosplenic (pancreaticolienal)\nPeripancreatic, NOS:\n        Anterior, NOS:\n             Anterior pancreaticoduodenal\n             Anterior proximal mesenteric\n             Pyloric\n         Inferior to the head and body of pancreas\n         Posterior, NOS:\n             Pericholedochal (common bile duct)\n             Posterior pancreaticoduodenal\n             Posterior proximal mesentery\n        Superior to the head and body of pancreas\nRetroperitoneal\nSplenic (lienal), NOS:\n       Gastroepiploic (gastro-omental), left\n       Splenic hilum\n       Suprapancreatic\nSuperior mesenteric\n\nRegional lymph node(s), NOS", "Lymph nodes, NOS\n\nStated as N1", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

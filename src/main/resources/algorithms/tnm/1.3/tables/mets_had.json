@@ -1,0 +1,27 @@
+{
+  "id" : "mets_had",
+  "algorithm" : "tnm",
+  "version" : "1.3",
+  "name" : "SEER Mets",
+  "title" : "SEER Mets",
+  "notes" : "**Note:** Nodes in contiguous (secondary) and bidirectional (cephalad/caudal) primary nodal basins are coded in regional lymph nodes.",
+  "last_modified" : "2016-09-26T15:40:51.347Z",
+  "definition" : [ {
+    "key" : "seer_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/lymph node(s) involved\nDistant lymph node(s):\nFurther contiguous extension:\nUnderlying cartilage, bone, skeletal muscle\nMetastasis:\nMetastasis to skin or subcutaneous tissue beyond regional lymph nodes\nVisceral metastasis", "Distant lymph nodes                                                  \n\nHead (includes bilateral or contralateral nodes for head and trunk):\n    All subsites:\n        Supraclavicular\nUpper Trunk:\n    Femoral (or cephalad/caudal drainage from primary tumor)  \nLower Trunk:\n    Axillary (or cephalad/caudal drainage from primary tumor) \nArm/Shoulder:\n    Supraclavicular\nLeg/Hip:\n    Iliac\nAll sites:\n    Regional lymph node(s) in two contiguous secondary nodal basins (to secondary nodal basin) \n\nMetastasis to skin or subcutaneous tissue beyond regional lymph nodes (M1a)    \n\nLung (M1b)         \n\nMets to any site with elevated serum lactic dehydrogenase (LDH) (See Site-Specific Factor 6)\nCarcinomatosis \n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1 (M1a, M1b, M1c, M1[NOS])", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

@@ -1,0 +1,26 @@
+{
+  "id" : "extension_bbx",
+  "algorithm" : "tnm",
+  "version" : "1.3",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "last_modified" : "2016-09-26T15:40:44.100Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "Localized only\n\n    Invasive tumor (mesothelioma) confined to pleura\n    Ipsilateral parietal and/or visceral pleura\n    Mesothelioma WITH nodule(s) beneath visceral pleural surface\n\n    Localized, NOS", "Ipsilateral parietal pleura, including mediastinal or diaphragmatic pleura, WITH or WITHOUT involvement of visceral pleura\nIpsilateral pleura WITH nodule(s) beneath visceral pleural surface\n\nInvasive tumor (mesothelioma) confined to pleura, NOS \n\nStated as T1", "VALUE:L" ], [ "200", "Regional by direct extension only\n\n    Extension to adjacent organs/structure:\n         Chest wall\n         Connective tissue\n         Diaphragm\n         Endothoracic fascia\n         Heart muscle\n         Lung involvement, NOS\n         Mediastinal organs or tissues\n         Pericardium\n         Rib\n\n         Mesothelioma nodule(s) which have broken through the visceral pleural surface to lung surface", "Chest wall, solitary focus of tumor ONLY\nDiaphragm (diaphragmatic muscle)\nLung parenchyma, NOS\nMediastinal fat\nMyocardium\nPericardium, non-transmural or NOS\n\nDiffuse or multifocal invasion of soft tissues of chest wall\n\nStated as T2 or T3", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

@@ -1,0 +1,28 @@
+{
+  "id" : "mets_hbb",
+  "algorithm" : "tnm",
+  "version" : "1.3",
+  "name" : "SEER Mets",
+  "title" : "SEER Mets",
+  "notes" : "**Note:** Involvement of inguinal, pelvic, or external iliac lymph nodes with previous scrotal or inguinal surgery prior to presentation of the testis tumor are coded in SEER Regional Nodes.",
+  "footnotes" : "\\## Considered regional in Historic Stage",
+  "last_modified" : "2016-09-26T15:40:43.361Z",
+  "definition" : [ {
+    "key" : "seer_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/lymph node(s) involved\n\nDistant lymph node(s):\n     Inguinal, NOS:\n          Deep, NOS:\n                Node of Cloquet or Rosenmuller (highest deep inguinal)\n          Superficial (femoral)\n      Other distant lymph node(s)\n\nExtension to:\n     Contralateral scrotum##\n     Penis##\n\nUlceration of scrotum##\n\nFurther contiguous extension\n\nMetastasis:\n     Adrenal (surprarenal) gland\n     Kidney\n     Retroperitoneum\n     Testis, bilateral", "Distant lymph node(s):\n    Pelvic, NOS\n    External iliac\nWITHOUT previous scrotal or inguinal surgery \nOr unknown if previous scrotal or inguinal surgery\n\nDistant lymph node(s), NOS\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph nodes\n\nDistant metastasis, NOS\n\nStated as M1 (M1a, M1b, M1[NOS])", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

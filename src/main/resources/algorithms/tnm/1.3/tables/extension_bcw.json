@@ -1,0 +1,28 @@
+{
+  "id" : "extension_bcw",
+  "algorithm" : "tnm",
+  "version" : "1.3",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "notes" : "**Note:**  Impaired vocal cord mobility, also described as vocal cord paresis, may suggest invasion of intrinsic laryngeal muscle. Fixation of the vocal cord may be described as immobility of the arytenoids noted on endoscopy, vocal cord cord paralysis, or deviation of larynx to fixed side.",
+  "footnotes" : "\\## Considered regional in Historic Stage\n\\### Considered distant in Historic Stage",
+  "last_modified" : "2016-09-26T15:40:45.879Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "", "VALUE:IS" ], [ "100", "Localized only\n\nInvasive tumor confined to one of the following subsites:\n     Anterior wall (including vallecula and lingual (anterior) surface of epiglottis)\n     One lateral wall\n     Posterior wall\n     oropharynx\nInvolvement of two or more subsites:##\n     Anterior,  lateral or posterior wall(s)\n\nLocalized, NOS", "Invasive tumor, of oropharynx, confined to anterior surface of epiglottis with normal vocal cord mobility \n\nStated as T1 or T2", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nExtension to:\n     Base of tongue\n     Buccal mucosa (inner cheek)###\n     Floor of mouth###\n     Gum (gingiva)###\n     Hypopharynx, NOS\n     Larynx, NOS\n     Nasopharynx, NOS###\n     Posterior surface of epiglottis\n     Prevertebral fascia or muscle\n     Pterygoid muscle\n     Pyriform sinus (pyriform fossa)\n     Soft palate:\n          Inferior surface\n          Superior (nasopharyngeal) surface\n          Uvula\nSoft tissue of neck\n\nFixation to adjacent tissue", "Glottis\nMucosa of adjacent subsite(s) of supraglottis (including posterior surface of epiglottis) \nParaglottic space\nPostcricoid area\nPre-epiglottic tissues\nPyriform sinus, medial wall or NOS \nSoft palate, NOS\n\nStated as T3, T4a, or T4 [NOS]", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "No evidence of primary tumor", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

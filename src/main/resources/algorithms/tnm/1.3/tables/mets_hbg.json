@@ -1,0 +1,27 @@
+{
+  "id" : "mets_hbg",
+  "algorithm" : "tnm",
+  "version" : "1.3",
+  "name" : "SEER Mets",
+  "title" : "SEER Mets",
+  "footnotes" : "\\**  Considered regional in 1977 Summary Staging Guide",
+  "last_modified" : "2016-09-26T15:40:43.422Z",
+  "definition" : [ {
+    "key" : "seer_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/lymph node(s) involved\n\nAdjacent structures:\n     Cervical/upper esophagus:\n          Lung\n          Main stem bronchus\n          Pleura\n     Thoracic/middle esophagus:\n          Pericardium**\n     Abdominal/lower esophagus:\n          Diaphragm fixed\n\nDistant lymph node(s):\n    Celiac for intrathoracic esophagus\n    Cervical, NOS for intrathoracic esophagus\n    Para-aortic for lower/abdominal esophagus only\n    Scalene (inferior deep cervical) for intrathoracic esophagus only\n    Superior mediastinal for cervical esophagus only\n    Supraclavicular (transverse cervical node) for intrathoracic only\n \n    Other distant lymph node(s) \n\nFurther contiguous extension\n\nMetastasis", "Distant metastasis: \nCervical/upper esophagus:\n     Lung\n     Main stem bronchus\n     Pleura   \nThoracic/middle esophagus:\n    Pericardium\nAbdominal/lower esophagus:\n    Diaphragm fixed\n\nStated as T4b\n\nDistant lymph nodes:\nAll esophagus subsites:\n    Anterior mediastinal (6)\n    Mediastinal, NOS\n\nCervical esophagus only:\n    Aortopulmonary (5):\n        Para-aortic (ascending aorta or phrenic)\n        Subaortic\n    Diaphragmatic (15)\n    Paratracheal (2R, 2L, 4R, 4L)\n    Posterior mediastinal  (3P)\n    Pulmonary ligament (9)\n    Superior mediastinal\n\nIntrathoracic esophagus, upper or middle, only:\n    Aortopulmonary (5):\n        Para-aortic (ascending aorta or phrenic)\n    Diaphragmatic (15)\n    Pulmonary ligament (9)\n\nLower thoracic (abdominal) esophagus only:\n    Aortopulmonary:(5):\n        Para-aortic (ascending aorta or phrenic)\n        Subaortic\n        Celiac lymph nodes (20)\n        Pulmonary ligament (9)\n    Diaphragmatic (15)\n    Paratracheal (2R, 2L, 4R, 4L)\n    Superior mediastinal\n\nUpper thoracic esophagus only:\n    Cervical lymph nodes\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

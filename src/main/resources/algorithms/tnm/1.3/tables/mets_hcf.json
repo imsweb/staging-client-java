@@ -1,0 +1,27 @@
+{
+  "id" : "mets_hcf",
+  "algorithm" : "tnm",
+  "version" : "1.3",
+  "name" : "SEER Mets",
+  "title" : "SEER Mets",
+  "footnotes" : "§ Considered regional for cecum, appendix, ascending, hepatic flexure and transverse colon in 1977 Summary Staging Guide\n£ Considered regional for cecum, ascending, desending and sigmoid for Historic stage\n\\## Considered regional in Historic Stage",
+  "last_modified" : "2016-09-26T15:40:43.452Z",
+  "definition" : [ {
+    "key" : "seer_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/node(s) involved\n\nDistant lymph node(s):\n    Inferior mesenteric\n    Para-aortic\n    Retroperitoneal\n    Superior mesenteric§\n    Other distant lymph node(s)\n\nExtension to:\n    Adrenal (suprarenal) gland\n    Bladder\n    Diaphragm\n    Fallopian tube£\n    Fistula to skin\n    Gallbladder\n    Kidney, right\n    Liver##\n    Other segment(s) of colon via serosa\n    Ovary£ \n    Ureter, right\n    Uterus£", "For mucinous tumors only:\n    Peritoneal involvement confined within right lower quadrant ONLY   \n    Intraperitoneal metastasis BEYOND the right lower quadrant, including pseudomyxoma peritonei          \n\nFor non-mucinous tumors only:      \n    Any intraperitoneal spread\n\nNon-peritoneal metastasis\n  \nCarcinomatosis   \n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1 (M1a, M1b, M1[NOS])", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

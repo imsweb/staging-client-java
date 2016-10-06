@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_nasal_cavity",
+  "algorithm" : "tnm",
+  "version" : "1.3",
+  "name" : "Schema Selection NasalCavity",
+  "title" : "Schema selection for NasalCavity",
+  "last_modified" : "2016-09-26T15:40:44.300Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C300", "8000-8713,8800-9136,9141-9582,9700-9701", "MATCH" ] ]
+}
