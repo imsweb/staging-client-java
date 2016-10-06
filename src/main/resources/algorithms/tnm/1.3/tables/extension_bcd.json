@@ -1,0 +1,26 @@
+{
+  "id" : "extension_bcd",
+  "algorithm" : "tnm",
+  "version" : "1.3",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "last_modified" : "2016-09-26T15:40:45.659Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "050", "Benign or borderline tumor of other parts of the central nervous system (CNS)", "", "VALUE:NA" ], [ "100", "Localized only\n\n    Tumor confined to tissue or site of origin\n\n     Localized, NOS", "", "VALUE:L" ], [ "500", "Regional, NOS\n\n     Adjacent connective/soft tissue\n     Adjacent muscle\n     Brain for cranial nerve tumors\n     Major blood vessel(s)\n     Meningeal tumor infiltrates nerve\n     Nerve tumor infiltrates meninges (dura)\n     Sphenoid and frontal sinuses (skull)", "", "VALUE:RNOS" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

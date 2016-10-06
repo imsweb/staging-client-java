@@ -1,0 +1,28 @@
+{
+  "id" : "extension_bcp",
+  "algorithm" : "tnm",
+  "version" : "1.3",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "description" : "Modified Notes",
+  "notes" : "**Note 1:** For skin, patch indicates any size skin lesion without significant elevation or induration.\n\n**Note 2:** For skin, plaque indicates any size skin lesion that is elevated or indurated.\n\n**Note 3:** For skin, tumor indicates at least one 1 centimeter (cm) diameter solid or nodular lesion with evidence of depth and/or vertical growth. \n\n**Note 4:** Ignore erythroderma if stated to involve less than 50% of the skin.\n\n**Note 5:**  Physicians use more than one method to estimate percentage of skin involvement by mycosis fungoides (MF).  Code percent of skin involvement as stated by the physician.  If no percentage is stated and no word such as localized or generalized is used and no stage is given, code as percent not stated.",
+  "last_modified" : "2016-09-26T15:40:43.487Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "Localized only\n\nPlaques, papules, or erythematous patches (“plaque stage”):\n\n     <10% of skin surface, no tumors\n     Limited plaques\n     MFCG Stage I \n\n     > 10% of skin surface, no tumors\n     Generalized plaques\n     MFCG Stage II \n\n     % of body surface not stated, no tumors\n\n     Skin involvement, NOS: extent not stated, no tumors\n\n     Localized, NOS", "Generalized plaques/patches\n% Skin involvement not known\nUnknown whether plaques, papules or patches, no tumors\n\nStated as T1 (T1a, T1b, T1 [NOS]) or T2 (T2a, T2b, T2 [NOS])", "VALUE:L" ], [ "200", "Regional by direct extension only\n\n    Tumor Stage\n\n          One or more tumors (tumor stage)\n\n         Generalized erythroderma \n             >50% of body involved with diffuse redness\n         Sezary syndrome\n         MFCG Stage III", "Skin lesion described as tumor less than 1 cm\n\nOne or more tumors equal to 1 cm or greater\nCutaneous tumor, size not stated\n\nStated as T3 or T4", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

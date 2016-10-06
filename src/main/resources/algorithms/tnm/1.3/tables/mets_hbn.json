@@ -1,0 +1,26 @@
+{
+  "id" : "mets_hbn",
+  "algorithm" : "tnm",
+  "version" : "1.3",
+  "name" : "SEER Mets",
+  "title" : "SEER Mets",
+  "last_modified" : "2016-09-26T15:40:44.324Z",
+  "definition" : [ {
+    "key" : "seer_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/lymph node(s) involved\n\n    Distant lymph node(s)\n\n    Further contiguous extension\n\n    Metastasis", "Extraocular disease detected by imaging studies:\n    Intracranial extension past or not past optic chiasm\n  \nStated as T4c or T4d \n\nMetastasis to CNS, WITH or WITHOUT leptomeningeal and/or CSF involvement:\n     Postchiasmatic lesions\n     Prechiasmatic lesions\n     Location in CNS not specified  \n\nStated as M1 (M1a, M1b, M1c, M1d, M1e)\n\nDistant metastasis, NOS", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

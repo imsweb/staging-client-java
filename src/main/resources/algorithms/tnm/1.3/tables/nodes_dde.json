@@ -1,0 +1,27 @@
+{
+  "id" : "nodes_dde",
+  "algorithm" : "tnm",
+  "version" : "1.3",
+  "name" : "SEER Regional Nodes",
+  "title" : "SEER Regional Nodes",
+  "footnotes" : "\\### Considered distant in Historic Stage\n\\*** Considered distant in 1977 Summary Staging Guide",
+  "last_modified" : "2016-09-26T15:40:47.223Z",
+  "definition" : [ {
+    "key" : "seer_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summary Stage 2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:NONE" ], [ "300", "Regional lymph node(s) involved only\n\nREGIONAL Lymph Nodes\n\nCervical, NOS\nFacial, NOS:\n    Buccinator (buccal)\n    Nasolabial\nMandibular, NOS:\n    Submandibular (submaxillary)\n    Submental###***\nParotid, NOS:\n    Infra-auricular\n    Preauricular\n\nRegional lymph node(s), NOS", "Lymph nodes, NOS\n\nStated as N1", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

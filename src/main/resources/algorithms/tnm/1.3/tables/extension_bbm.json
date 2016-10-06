@@ -1,0 +1,26 @@
+{
+  "id" : "extension_bbm",
+  "algorithm" : "tnm",
+  "version" : "1.3",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "last_modified" : "2016-09-26T15:40:44.159Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "Localized only\n\n    Confined to placenta\n\n    Localized, NOS", "FIGO Stage I (IA, IB, I [NOS])\n\nStated as T1", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nExtension to:\n    Adjacent connective tissue\n\nOther genital structures:\n    Broad ligament(s)\n    Cervix uteri\n    Corpus uteri\n    Fallopian tube(s)\n    Ovary(ies)\n    Uterus, NOS\n    Vagina", "Confined to uterus: cervix, corpus, and NOS\n\nGenital structures, NOS \n\nFIGO Stage II (IIA, IIB, II [NOS])\n\nStated as T2", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in patient record", "", "VALUE:U" ] ]
+}

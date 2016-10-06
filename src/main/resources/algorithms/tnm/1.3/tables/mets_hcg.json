@@ -1,0 +1,27 @@
+{
+  "id" : "mets_hcg",
+  "algorithm" : "tnm",
+  "version" : "1.3",
+  "name" : "SEER Mets",
+  "title" : "SEER Mets",
+  "footnotes" : "\\## Considered regional in Historic Stage",
+  "last_modified" : "2016-09-26T15:40:44.245Z",
+  "definition" : [ {
+    "key" : "seer_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/lymph node(s) involved\n\nDistant lymph node(s)\n\nFurther contiguous extension:\n    Aorta\n    Contralateral:\n        Adrenal (suprarenal) gland\n        Kidney\n        Ureter\n    Liver\n    Ribs##\n    Spleen\n    Stomach\n\n    Other direct extension\n\nMetastasis", "Liver from right kidney\nSpleen from left kidney\n\nExtension to:\n     Liver from left kidney\n     Spleen from right kidney\n\nNoncontiguous ipsilateral adrenal (suprarenal) gland metastasis \n(Contiguous involvement coded in SEER Primary Tumor)\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nCarcinomatosis\n\nDistant metastasis, NOS  \n\nStated as M1", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed \nNot documented in patient record", "", "VALUE:U" ] ]
+}

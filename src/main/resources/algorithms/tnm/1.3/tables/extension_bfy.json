@@ -1,0 +1,26 @@
+{
+  "id" : "extension_bfy",
+  "algorithm" : "tnm",
+  "version" : "1.3",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "last_modified" : "2016-09-26T15:40:45.625Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ: Noninvasive; intraepithelial", "", "VALUE:IS" ], [ "050", "Benign or borderline tumor", "", "VALUE:NA" ], [ "100", "Localized only\n\n    Invasive carcinoma confined to gland of origin\n\n    Localized, NOS", "", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nExtension to:\n    Adjacent tissue(s), NOS\n    Connective tissue\n\n    Adjacent organs/structures\n\nPituitary (C751) and craniopharyngeal duct (C752):\n    Cavernous sinus\n    Infundibulum\n    Pons\n    Sphenoid body and sinuses\n\nPineal (C753): \n    Infratentorial and central brain", "", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in patient record", "", "VALUE:U" ] ]
+}

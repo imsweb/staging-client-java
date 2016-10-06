@@ -1,0 +1,28 @@
+{
+  "id" : "extension_bam",
+  "algorithm" : "tnm",
+  "version" : "1.3",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "notes" : "**Note:**  The intrinsic muscles of tongue are four paired muscles within the tongue which control its shape.  The extrinsic muscles originate from structures outside the tongue and control its positioning.",
+  "footnotes" : "\\## Considered regional in Historic Stage\n\\### Considered distant in Historic Stage\n\\*** Considered distant in 1977 Summary Stag",
+  "last_modified" : "2016-09-26T15:40:48.810Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "", "VALUE:IS" ], [ "100", "Localized only\n\nInvasive tumor  on one side confined to posterior 1/3 of tongue:\n     Lamina propria\n     Musculature, intrinsic or NOS\n     Posterior 1/3 of tongue, NOS\n     Submucosa\nMidline tumor\nTumor crosses midline##\n\nLocalized, NOS", "Tumor of lingual tonsil on both sides \n\nStated as T1 or T2", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nExtension to:\n     Anterior 2/3 of tongue\n     Epiglottis, lingual (pharyngeal) surface\n     Floor of mouth\n     Gingiva, lower\n     Glossopharyngeal sulcus\n     Glossoepiglottic fold\n     Lateral pharyngeal wall\n     Pharyngoepiglottic fold\n     Soft palate, inferior surface/NOS###***\n     Sublingual gland\n     Tonsillar pillars and fossae\n     Tonsils\n     Vallecula", "Lingual tonsil for base of tongue \nBase of tongue for lingual tonsil \n\nEpiglottis, lingual surface plus soft palate\n\nStated as T3, T4a, or T4 [NOS]", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

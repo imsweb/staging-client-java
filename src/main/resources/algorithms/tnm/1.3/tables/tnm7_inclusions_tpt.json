@@ -1,0 +1,18 @@
+{
+  "id" : "tnm7_inclusions_tpt",
+  "algorithm" : "tnm",
+  "version" : "1.3",
+  "name" : "TNM7 Inclusions",
+  "title" : "Histology Inclusion Table TNM 7th ed.",
+  "last_modified" : "2016-09-26T15:40:44.445Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  } ],
+  "rows" : [ [ "C221", "8160" ], [ "C221", "8161" ], [ "C221", "8180" ] ]
+}

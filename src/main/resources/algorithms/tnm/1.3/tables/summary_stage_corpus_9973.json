@@ -1,0 +1,19 @@
+{
+  "id" : "summary_stage_corpus_9973",
+  "algorithm" : "tnm",
+  "version" : "1.3",
+  "name" : "Summary Stage Corpus",
+  "title" : "Summary Stage Corpus",
+  "description" : "For SEER Primary Tumor 100, Summary Stage has already been set.",
+  "last_modified" : "2016-09-26T15:40:44.393Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor_in",
+    "name" : "SEER Primary Tumor",
+    "type" : "INPUT"
+  }, {
+    "key" : "ss2017",
+    "name" : "Summary Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "MATCH" ], [ "000,200,800,999", "JUMP:summary_stage_rpa" ] ]
+}
