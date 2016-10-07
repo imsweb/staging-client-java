@@ -56,8 +56,6 @@ jar {
 
 test {
     maxHeapSize = "1g"
-//    forkEvery = 50
-//    maxParallelForks = Runtime.runtime.availableProcessors()
 }
 
 checkstyle {
@@ -67,7 +65,7 @@ checkstyle {
 
 findbugs {
     ignoreFailures = true
-    effort = 'max'
+    //reportLevel = 'low'
     excludeFilter = file('config/findbugs/findbugs-exclude.xml')
 }
 

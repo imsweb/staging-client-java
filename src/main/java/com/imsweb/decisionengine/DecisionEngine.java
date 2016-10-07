@@ -32,7 +32,7 @@ public class DecisionEngine {
     private static Pattern _TEMPLATE_REFERENCE = Pattern.compile("\\{\\{(.*?)\\}\\}");
 
     // string to use for blank or null in error strings
-    public static String _BLANK_OUTPUT = "<blank>";
+    public static final String _BLANK_OUTPUT = "<blank>";
 
     private DataProvider _provider;
 

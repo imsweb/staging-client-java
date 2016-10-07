@@ -6,6 +6,7 @@ package com.imsweb.staging;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -36,7 +37,7 @@ public final class Staging {
     public static final String CTX_YEAR_CURRENT = "ctx_year_current";
 
     // list of all context keys
-    public static final List<String> CONTEXT_KEYS = Arrays.asList(CTX_ALGORITHM_VERSION, CTX_YEAR_CURRENT);
+    public static final List<String> CONTEXT_KEYS = Collections.unmodifiableList(Arrays.asList(CTX_ALGORITHM_VERSION, CTX_YEAR_CURRENT));
 
     private DecisionEngine _engine = null;
     private StagingDataProvider _provider = null;
