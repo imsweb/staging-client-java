@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_melanoma_sinus_other",
+  "algorithm" : "tnm",
+  "version" : "1.4",
+  "name" : "Schema Selection MelanomaSinusOther",
+  "title" : "Schema selection for MelanomaSinusOther",
+  "last_modified" : "2016-11-29T17:24:18.534Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C312-C313,C318-C319", "8720-8790", "MATCH" ] ]
+}

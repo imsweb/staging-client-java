@@ -1,0 +1,18 @@
+{
+  "id" : "combined_n_to_summ_stage_n_n3c_d_43145",
+  "algorithm" : "tnm",
+  "version" : "1.4",
+  "name" : "Combined N to Summ Stage N (N3c-D)",
+  "title" : "Combined N to Summary Stage N",
+  "last_modified" : "2016-11-29T17:24:15.321Z",
+  "definition" : [ {
+    "key" : "combined_n_in",
+    "name" : "Combined N",
+    "type" : "INPUT"
+  }, {
+    "key" : "ss2017_n_out",
+    "name" : "SS2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "X", "VALUE:U" ], [ "0", "VALUE:NONE" ], [ "0I-", "VALUE:NONE" ], [ "0I+", "VALUE:NONE" ], [ "0M-", "VALUE:NONE" ], [ "0M+", "VALUE:NONE" ], [ "1", "VALUE:RN" ], [ "1MI", "VALUE:RN" ], [ "1A", "VALUE:RN" ], [ "1B", "VALUE:RN" ], [ "1C", "VALUE:RN" ], [ "2", "VALUE:RN" ], [ "2A", "VALUE:RN" ], [ "2B", "VALUE:RN" ], [ "3", "VALUE:RN" ], [ "3A", "VALUE:RN" ], [ "3B", "VALUE:RN" ], [ "3C", "VALUE:D" ], [ "88", "VALUE:NA" ] ]
+}

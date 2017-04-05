@@ -1,0 +1,26 @@
+{
+  "id" : "seer_mets_cns_other_75706",
+  "algorithm" : "tnm",
+  "version" : "1.4",
+  "name" : "SEER Mets CNS Other",
+  "title" : "SEER Mets",
+  "last_modified" : "2016-11-29T17:24:13.945Z",
+  "definition" : [ {
+    "key" : "seer_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/lymph node(s) involved\n\n    Distant lymph node(s)\n\n    Bone except for skull\n    Brain except for cranial nerve tumors\n    Eye\n\n    Further contiguous extension\n\n    Metastasis", "Carcinomatosis \n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

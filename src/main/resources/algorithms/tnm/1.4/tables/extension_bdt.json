@@ -1,0 +1,27 @@
+{
+  "id" : "extension_bdt",
+  "algorithm" : "tnm",
+  "version" : "1.4",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "footnotes" : "\\## Considered regional in Historic Stage",
+  "last_modified" : "2016-11-29T17:24:19.985Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ: Noninvasive; intraepithelial", "", "VALUE:IS" ], [ "100", "Localized only\n\nInvasive tumor confined to:\n\n     Labial mucosa (inner lip)\n     Lamina propria\n     Multiple foci\n     Musculature##\n     Submucosa (superficial invasion)\n     Vermilion surface\n\nSuperficial extension to:\n\n     Skin of lip\n     Subcutaneous soft tissue of lip\n\nLocalized, NOS", "Involvement of deep soft tissue or musculature of upper lip\n\nSoft tissue NOS\n\nTumor confined to mucosa of upper lip\n \nStated as T3 or T4 [NOS]", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nExtension to:\n\n     Buccal mucosa (inner cheek)\n     Commissure\n     Gingiva\n     Opposite (both) lip(s)\n\nLower lip/commissure:\n\n     Mandible\n\nUpper lip/commissure:\n\n     Maxilla", "Extension involving mucosa only:\n    Inner cheek (buccal mucosa)\n    Commissure\n    Opposite lip (both lips)\n    Upper gingiva\n    Gingiva, NOS\n\nExtension involving mucosa only:\n    Lower gingiva\n\nInvolvement of deep tissue or periosteum of upper gingiva\n\nCartilage of maxilla\nCortical bone of maxilla\nMaxilla, NOS\nCartilage NOS\nCortical bone, NOS\nBone, NOS except base of skull\n\nDeep tissue or periosteum of lower gingiva\n\nStated as T4a", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:V" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:" ] ]
+}

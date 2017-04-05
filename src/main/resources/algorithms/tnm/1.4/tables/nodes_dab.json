@@ -1,0 +1,28 @@
+{
+  "id" : "nodes_dab",
+  "algorithm" : "tnm",
+  "version" : "1.4",
+  "name" : "SEER Regional Nodes",
+  "title" : "SEER Regional Nodes",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in SEER Mets.\n\n**Note 2:**  Use codes for anal canal unless tumor is stated to occur at the anus, arising just proximal to the squamous mucocutaneous junction or the anal verge.",
+  "footnotes" : "\\### Considered Distant in Historic Stage\n\\*** Considered Distant in 1977 Summary Staging Guide",
+  "last_modified" : "2016-11-29T17:24:15.234Z",
+  "definition" : [ {
+    "key" : "seer_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summary Stage 2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:NONE" ], [ "300", "Regional lymph node(s) involved only\n\nREGIONAL Lymph Nodes\n\nAnorectal\n    Inferior hemorrhoidal\nInternal iliac (hypogastric), NOS: for anus###*** and anal canal:###\n    Obturator for anus###*** and anal canal###\nLateral sacral (laterosacral)###\nPerirectal\nSuperficial inguinal (femoral) for anus and anal canal ***\nRegional lymph node(s), NOS", "Stated as N1, N2, or N3\n\nLymph nodes, NOS", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

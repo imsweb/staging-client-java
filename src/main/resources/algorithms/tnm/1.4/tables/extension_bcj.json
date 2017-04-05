@@ -1,0 +1,27 @@
+{
+  "id" : "extension_bcj",
+  "algorithm" : "tnm",
+  "version" : "1.4",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "notes" : "**Note 1:** In the United States and Canada, Kaposi sarcoma is usually an illness related to Acquired Immunodeficiency Syndrome (AIDS) which affects primarily the skin; however, lesions may also form in the connective tissue, mucosa (e.g. oral cavity) or visceral organs (e.g. lungs).  For connective tissue tumors (C49._), use extension codes for skin.\n\n**Note 2:**  Choice of Summary Stage for Kaposi sarcoma depends on number and location of lesions.  For example, use code 100 (Localized)  for a single or multiple lesions involving skin.  Use code 200 (Regional) for any number of lesions involving both skin and viscera.",
+  "last_modified" : "2016-11-29T17:24:15.462Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "Localized only\n\nSingle lesion or multiple lesions in ONE of the following:\n     Mucosa (e.g., oral cavity, anus, rectum, vagina, vulva)\n     Skin and/or connective tissue\n     Viscera (e.g., pulmonary, gastrointestinal tract, spleen, other)", "", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nMultiple lesions in any TWO of the following:\n     Mucosa (e.g., oral cavity, anus, rectum, vagina, vulva)\n     Skin and/or connective tissue\n     Viscera (e.g., pulmonary, gastrointestinal tract, spleen, other)", "", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in patient record", "Multiple lesions, NOS", "VALUE:U" ] ]
+}
