@@ -1,0 +1,27 @@
+{
+  "id" : "nodes_dby",
+  "algorithm" : "tnm",
+  "version" : "1.4",
+  "name" : "SEER Regional Nodes",
+  "title" : "SEER Regional Nodes",
+  "notes" : "**Note 1:**  For this site, code ALL lymph node involvement in this field.\n\n**Note 2:**  When coding Regional Nodes Positive and Regional Nodes Examined, only include regional nodes. Do not include distant nodes coded in SEER Mets.",
+  "last_modified" : "2016-11-29T17:24:15.464Z",
+  "definition" : [ {
+    "key" : "seer_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summary Stage 2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "None\n\nNo lymph node involvement", "No clinical adenopathy and either pathologically negative or no pathologic statement", "VALUE:NONE" ], [ "300", "Lymph node(s) involved only\n\nBoth clinically enlarged palpable lymph node(s) (adenopathy) and pathologically positive\nlymph nodes\n\nClinically enlarged palpable lymph node(s) (adenopathy), and either pathologically\nnegative nodes or no pathological statement\n\nNo clinically enlarged palpable lymph nodes(s) (adenopathy) but pathologically positive\nlymph node(s)\n\nLymph node(s), NOS", "Regional lymph nodes, NOS", "VALUE:RN" ], [ "999", "Unknown; not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

@@ -1,0 +1,28 @@
+{
+  "id" : "nodes_dam",
+  "algorithm" : "tnm",
+  "version" : "1.4",
+  "name" : "SEER Regional Nodes",
+  "title" : "SEER Regional Nodes",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in SEER Mets.   \n\n**Note 2:**   Any finding of melanoma in lymph nodes, regardless of size should be coded as positive lymph nodes in this field. Isolated tumor cells only should be coded as negative lymph nodes for Summary Stage 2000 (they are positive for TNM 7th edition).\n\n**Note 3:**  Bilateral or contralateral nodes are considered regional nodes for head, neck, and truncal tumors with bidirectional drainage to primary nodal basins, as shown on lymphoscintigraphy.  Truncal tumors may also drain to both cephalad and caudal primary nodal basins as shown on lymphoscintigraphy.  Clinical assessment of bilateral/contralateral or cephalad/caudal regional nodal involvement is required for tumors where lymphoscintigraphy is not performed. \n\n**Note 4:**  Contiguous or secondary nodal basins are the next nodal drainage basins beyond the primary nodal basins.  Secondary basins are considered regional for TNM staging but may be distant for Summary Stage.  \n\n**Note 5:**  Satellite lesions/nodules or in-transit metastases are coded in this field when there is no regional lymph node involvement, or it is unknown if this is regional lymph node involvement. If both satellite nodules/in transit metastases and regional lymph nodes are present, code in SEER Mets.",
+  "footnotes" : "\\### Considered distant in Historic Stage\n\\*** Considered distant in 1977 Summary Staging Guide",
+  "last_modified" : "2016-11-29T17:24:18.646Z",
+  "definition" : [ {
+    "key" : "seer_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summary Stage 2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "Isolated tumor cells (ITCs) only", "VALUE:NONE" ], [ "300", "Regional lymph node(s) involved only\n\nREGIONAL Lymph Nodes by primary site\n\n  Head and neck:\n    All head and neck subsites:\n      Cervical, NOS\n    Lip:\n      Facial, NOS:###***\n        Buccinator (buccal)###***\n        Nasolabial###***\n      Mandibular, NOS:\n        Submandibular (submaxillary)\n        Submental###***\n      Parotid, NOS:###***\n        Infra-auricular###***\n        Preauricular###***\n    Eyelid/canthus:\n      Facial, NOS:\n        Buccinator (buccal)\n        Nasolabial\n      Mandibular, NOS:\n        Submandibular (submaxillary)\n        Submental###***\n      Parotid, NOS:\n        Infra-auricular\n    External ear/auditory canal:\n      Mastoid (post-/retro-auricular)\n      Preauricular\n    Face, Other (cheek, chin, forehead, jaw, nose and temple):\n      Facial, NOS:\n        Buccinator (buccal)\n        Nasolabial\n      Mandibular, NOS:\n        Submandibular (submaxillary)\n        Submental###***\n      Parotid, NOS:\n        Infra-auricular\n        Preauricular\n    Scalp:\n      Mastoid (post-/retro-auricular)\n      Parotid, NOS:\n        Infra-auricular\n        Preauricular\n      Spinal accessory (posterior cervical)\n    Neck:\n      Axillary\n      Mandibular, NOS:\n        Submental###***\n      Mastoid (post-/retro-auricular)\n      Parotid, NOS:\n        Infra-auricular\n        Preauricular\n      Spinal accessory (posterior cervical)\n      Supraclavicular (transverse cervical)\n\n  Upper trunk:\n    Axillary\n    Cervical\n    Internal mammary\n    Supraclavicular (transverse cervical)\n\n  Lower trunk:\n    Superficial inguinal (femoral)\n\n  Arm/shoulder:\n    Axillary\n    Epitrochlear for hand/forearm\n    Spinal accessory (posterior cervical) for shoulder\n\n  Leg/hip:\n    Popliteal for heel and calf\n    Superficial inguinal (femoral)\n\n  Vulva/penis/scrotum:\n    Deep inguinal, NOS:\n      Node of  Cloquet or Rosenmuller (highest deep inguinal)\n    Superficial inguinal (femoral)\n\n  All sites:\n    In-transit metastasis (satellite nodules >2 cm from primary tumor)\n    Regional lymph node(s), NOS", "Regional lymph node(s) by primary site (includes bilateral or contralateral nodes for head and neck):\n\nSatellite nodule(s) or in-transit metastases greater than 2cm from primary tumor\nWITHOUT regional lymph node involvement or involvement of regional nodes not stated.\n\nMatted lymph nodes \n\nLymph nodes, NOS\n\nStated as N1 (N1a, N1b, N1NOS); N2 (N2a, N2b, N2c, N2NOS); N3", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}
