@@ -37,8 +37,8 @@ dependencies {
 
     testCompile 'junit:junit:4.12'
     testCompile 'org.unitils:unitils-core:3.4.2'
-    testCompile 'com.squareup.retrofit2:retrofit:2.1.0'
-    testCompile 'com.squareup.retrofit2:converter-jackson:2.1.0'
+    testCompile 'com.squareup.retrofit2:retrofit:2.2.0'
+    testCompile 'com.squareup.retrofit2:converter-jackson:2.2.0'
 }
 
 jar {
@@ -70,7 +70,7 @@ findbugs {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '3.1'
+    gradleVersion = '3.5'
 }
 
 // run the full CS integration test suite
