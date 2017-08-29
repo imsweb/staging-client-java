@@ -103,10 +103,16 @@ public class StagingVersion {
         return Type.DEVELOPMENT.equals(getType());
     }
 
+    @JsonIgnore
+    public boolean isInactive() {
+        return Type.INACTIVE.equals(getType());
+    }
+
     public enum Type {
         PRODUCTION,
         BETA,
-        DEVELOPMENT
+        DEVELOPMENT,
+        INACTIVE
     }
 
 }
