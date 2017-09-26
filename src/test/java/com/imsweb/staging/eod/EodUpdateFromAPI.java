@@ -1,16 +1,16 @@
-package com.imsweb.staging.tnm;
+package com.imsweb.staging.eod;
 
 import java.io.IOException;
 
 import com.imsweb.staging.UpdaterUtils;
 
 /**
- * Update the TNM data from the API
+ * Update the EOD data from the API
  */
-public class TnmUpdateFromAPI {
+public class EodUpdateFromAPI {
 
-    private static final String _ALGORITHM = "tnm";
-    private static final String _VERSION = "1.4";
+    private static final String _ALGORITHM = "eod";
+    private static final String _VERSION = "1.0";
 
     public static void main(String[] args) throws IOException {
         UpdaterUtils.update(_ALGORITHM, _VERSION);

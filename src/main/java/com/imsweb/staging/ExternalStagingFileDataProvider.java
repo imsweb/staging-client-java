@@ -5,9 +5,11 @@ package com.imsweb.staging;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
+import java.net.URI;
+import java.nio.file.FileSystem;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -22,37 +24,38 @@ import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingTable;
 
 /**
- * Implementation of DataProvider which loads from internal directories and holds all data in memory
+ * Implementation of DataProvider which loads from an external ZIP file and holds all data in memory
  */
-public class StagingFileDataProvider extends StagingDataProvider {
+public class ExternalStagingFileDataProvider extends StagingDataProvider {
 
+    private FileSystem _zipFs;
     private String _algorithm;
     private String _version;
-    private String _tableDirectory;
     private Set<String> _tableIds;
     private LoadingCache<String, StagingTable> _tableCache;
     private Map<String, StagingSchema> _schemas = new HashMap<>();
 
     /**
      * Constructor loads all schemas and sets up table cache
+     * @param zipPath path to zip file containing algorithm version
      * @param algorithm algorithm
      * @param version version
      */
-    protected StagingFileDataProvider(String algorithm, String version) {
+    public ExternalStagingFileDataProvider(String zipPath, String algorithm, String version) throws IOException {
         super();
+
+        _zipFs = FileSystems.newFileSystem(URI.create("jar:file:/" + zipPath), Collections.emptyMap());
 
         _algorithm = algorithm;
         _version = version;
 
-        _tableDirectory = "algorithms/" + algorithm.toLowerCase() + "/" + version + "/tables";
-
         // first get a list of all tables ids
         try {
             _tableIds = new HashSet<>();
-            _tableIds.addAll(readLines(_tableDirectory + "/ids.txt"));
+            _tableIds.addAll(readLines("tables/ids.txt"));
         }
         catch (IOException e) {
-            throw new IllegalStateException("IOException reading ids: " + e.getMessage());
+            throw new IllegalStateException("Exception reading ids: " + e.getMessage());
         }
 
         // set up table cache; it is too slow to load all the tables at startup
@@ -60,19 +63,20 @@ public class StagingFileDataProvider extends StagingDataProvider {
 
         // loop over all schemas and load them into Map
         try {
-            String directory = "algorithms/" + algorithm.toLowerCase() + "/" + version + "/schemas";
-            for (String file : readLines(directory + "/ids.txt")) {
+            for (String file : readLines("schemas/ids.txt")) {
                 if (!file.isEmpty()) {
-                    StagingSchema schema = getMapper().reader().readValue(getMapper().getFactory().createParser(getStagingInputStream(directory + "/" + file + ".json")), StagingSchema.class);
+                    try (BufferedReader reader = Files.newBufferedReader(_zipFs.getPath("schemas/" + file + ".json"))) {
+                        StagingSchema schema = getMapper().reader().readValue(getMapper().getFactory().createParser(reader), StagingSchema.class);
 
-                    initSchema(schema);
+                        initSchema(schema);
 
-                    _schemas.put(schema.getId(), schema);
+                        _schemas.put(schema.getId(), schema);
+                    }
                 }
             }
         }
         catch (IOException e) {
-            throw new IllegalStateException("IOException reading schemas: " + e.getMessage());
+            throw new IllegalStateException("Exception reading schemas: " + e.getMessage());
         }
 
         // finally, initialize any caches now that everything else has been set up
@@ -81,26 +85,13 @@ public class StagingFileDataProvider extends StagingDataProvider {
 
     /**
      * @param location relative file location within the classpath
-     * @return a {@link String} {@link java.util.List} of all lines in the file
+     * @return a {@link String} {@link List} of all lines in the file
      * @throws IOException error reading file
      */
-    private static List<String> readLines(String location) throws IOException {
-        try (BufferedReader buffer = new BufferedReader(new InputStreamReader(getStagingInputStream(location), StandardCharsets.UTF_8))) {
+    private List<String> readLines(String location) throws IOException {
+        try (BufferedReader buffer = Files.newBufferedReader(_zipFs.getPath(location))) {
             return buffer.lines().collect(Collectors.toList());
         }
-    }
-
-    /**
-     * @param location relative file location within the classpath
-     * @return The {@link java.io.Reader} resource
-     */
-    private static InputStream getStagingInputStream(String location) {
-        InputStream input = Thread.currentThread().getContextClassLoader().getResourceAsStream(location);
-
-        if (input == null)
-            throw new IllegalStateException("Internal error reading file; File could not be found: " + location);
-
-        return input;
     }
 
     /**
@@ -151,14 +142,16 @@ public class StagingFileDataProvider extends StagingDataProvider {
      * @throws IllegalStateException if the table has an identifier that does not match the name
      */
     private StagingTable load(String id) throws Exception {
-        StagingTable table = getMapper().reader().readValue(getMapper().getFactory().createParser(getStagingInputStream(_tableDirectory + "/" + id + ".json")), StagingTable.class);
+        try (BufferedReader reader = Files.newBufferedReader(_zipFs.getPath("tables/" + id + ".json"))) {
+            StagingTable table = getMapper().reader().readValue(getMapper().getFactory().createParser(reader), StagingTable.class);
 
-        if (!id.equals(table.getId()))
-            throw new IllegalStateException("The table " + id + " has an identifier that doesn't match the name (" + table.getId() + ")");
+            if (!id.equals(table.getId()))
+                throw new IllegalStateException("The table " + id + " has an identifier that doesn't match the name (" + table.getId() + ")");
 
-        initTable(table);
+            initTable(table);
 
-        return table;
+            return table;
+        }
     }
 
 }
