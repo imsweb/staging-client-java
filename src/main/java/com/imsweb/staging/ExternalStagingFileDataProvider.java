@@ -42,7 +42,7 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
      * Read a zip entry from an inputstream and return as a byte array
      */
     private static String extractEntry(InputStream is) throws IOException {
-        return new BufferedReader(new InputStreamReader(is)).lines().collect(Collectors.joining("\n"));
+        return new BufferedReader(new InputStreamReader(is, "UTF-8")).lines().collect(Collectors.joining("\n"));
     }
 
     /**
