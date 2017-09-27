@@ -19,6 +19,8 @@ public class ExternalStagingFileDataProviderTest {
         Path resourceDirectory = Paths.get("src/test/resources/external_algorithm.zip");
         String absolutePath = resourceDirectory.toAbsolutePath().toString().replaceAll("\\\\", "/");
 
+        System.out.println(absolutePath);
+
         _STAGING = Staging.getInstance(new ExternalStagingFileDataProvider(absolutePath));
     }
 
