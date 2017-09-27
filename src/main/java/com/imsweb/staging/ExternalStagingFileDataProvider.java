@@ -3,17 +3,15 @@
  */
 package com.imsweb.staging;
 
-import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.net.URI;
-import java.nio.file.FileSystem;
-import java.nio.file.FileSystems;
-import java.nio.file.Files;
-import java.util.Collections;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
 
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingTable;
@@ -30,61 +28,43 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
 
     /**
      * Constructor loads all schemas and sets up table cache
-     * @param zipPath path to zip file containing algorithm version
+     * @param is InputStream pointing the the zip file
      */
-    public ExternalStagingFileDataProvider(String zipPath) throws IOException {
+    public ExternalStagingFileDataProvider(InputStream is) throws IOException {
         super();
-
-        FileSystem fs = FileSystems.newFileSystem(URI.create("jar:file:/" + zipPath), Collections.emptyMap());
 
         // verify that all the algorithm names and versions are consistent
         Set<String> algorithms = new HashSet<>();
         Set<String> versions = new HashSet<>();
 
-        // iterate over files in the zip file and process schemas and tables
-        fs.getRootDirectories()
-                .forEach(root -> {
-                    try {
-                        Files.walk(root)
-                                .filter(path -> Files.isRegularFile(path) && path.toString().contains(".json"))
-                                .forEach(path -> {
-                                            if (path.startsWith("/tables/")) {
-                                                try (BufferedReader reader = Files.newBufferedReader(path)) {
-                                                    StagingTable table = getMapper().reader().readValue(getMapper().getFactory().createParser(reader), StagingTable.class);
+        try (ZipInputStream stream = new ZipInputStream(is)) {
+            ZipEntry entry;
+            while ((entry = stream.getNextEntry()) != null) {
+                if (entry.isDirectory() || !entry.getName().endsWith(".json"))
+                    continue;
 
-                                                    initTable(table);
+                if (entry.getName().startsWith("tables")) {
+                    StagingTable table = getMapper().reader().readValue(getMapper().getFactory().createParser(extractEntry(stream).toByteArray()), StagingTable.class);
 
-                                                    algorithms.add(table.getAlgorithm());
-                                                    versions.add(table.getVersion());
+                    initTable(table);
 
-                                                    _tables.put(table.getId(), table);
-                                                }
-                                                catch (IOException e) {
-                                                    throw new IllegalStateException("Exception processing table: " + e.getMessage());
-                                                }
-                                            }
-                                            else if (path.startsWith("/schemas")) {
-                                                try (BufferedReader reader = Files.newBufferedReader(path)) {
-                                                    StagingSchema schema = getMapper().reader().readValue(getMapper().getFactory().createParser(reader), StagingSchema.class);
+                    algorithms.add(table.getAlgorithm());
+                    versions.add(table.getVersion());
 
-                                                    initSchema(schema);
+                    _tables.put(table.getId(), table);
+                }
+                else if (entry.getName().startsWith("schemas")) {
+                    StagingSchema schema = getMapper().reader().readValue(getMapper().getFactory().createParser(extractEntry(stream).toByteArray()), StagingSchema.class);
 
-                                                    algorithms.add(schema.getAlgorithm());
-                                                    versions.add(schema.getVersion());
+                    initSchema(schema);
 
-                                                    _schemas.put(schema.getId(), schema);
-                                                }
-                                                catch (IOException e) {
-                                                    throw new IllegalStateException("Exception processing schema: " + e.getMessage());
-                                                }
-                                            }
-                                        }
-                                );
-                    }
-                    catch (IOException e) {
-                        throw new IllegalStateException("Exception processing external algorithm: " + e.getMessage());
-                    }
-                });
+                    algorithms.add(schema.getAlgorithm());
+                    versions.add(schema.getVersion());
+
+                    _schemas.put(schema.getId(), schema);
+                }
+            }
+        }
 
         if (algorithms.size() != 1)
             throw new IllegalStateException("Error initializing provider; only one algorithm should be included in file");
@@ -96,6 +76,21 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
 
         // finally, initialize any caches now that everything else has been set up
         invalidateCache();
+    }
+
+    /**
+     * Read a zip entry from an inputstream and return as a byte array
+     */
+    private static ByteArrayOutputStream extractEntry(InputStream is) throws IOException {
+        try (ByteArrayOutputStream os = new ByteArrayOutputStream()) {
+            final byte[] buf = new byte[2048];
+            int length;
+
+            while ((length = is.read(buf, 0, buf.length)) >= 0)
+                os.write(buf, 0, length);
+
+            return os;
+        }
     }
 
     @Override

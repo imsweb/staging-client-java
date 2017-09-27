@@ -1,8 +1,7 @@
 package com.imsweb.staging;
 
 import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.InputStream;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -15,13 +14,9 @@ public class ExternalStagingFileDataProviderTest {
 
     @BeforeClass
     public static void setup() throws IOException {
-        // need way to get absolute path of the testing external algorithm; it also needs to use forward slashes
-        Path resourceDirectory = Paths.get("src/test/resources/external_algorithm.zip");
-        String absolutePath = resourceDirectory.toAbsolutePath().toString().replaceAll("\\\\", "/");
+        InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream("external_algorithm.zip");
 
-        System.out.println(absolutePath);
-
-        _STAGING = Staging.getInstance(new ExternalStagingFileDataProvider(absolutePath));
+        _STAGING = Staging.getInstance(new ExternalStagingFileDataProvider(is));
     }
 
     @Test
