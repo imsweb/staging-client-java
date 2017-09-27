@@ -17,9 +17,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import com.github.benmanes.caffeine.cache.Caffeine;
-import com.github.benmanes.caffeine.cache.LoadingCache;
-
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingTable;
 
@@ -28,47 +25,56 @@ import com.imsweb.staging.entities.StagingTable;
  */
 public class ExternalStagingFileDataProvider extends StagingDataProvider {
 
-    private FileSystem _zipFs;
     private String _algorithm;
     private String _version;
-    private Set<String> _tableIds;
-    private LoadingCache<String, StagingTable> _tableCache;
+    private Map<String, StagingTable> _tables = new HashMap<>();
     private Map<String, StagingSchema> _schemas = new HashMap<>();
 
     /**
      * Constructor loads all schemas and sets up table cache
      * @param zipPath path to zip file containing algorithm version
-     * @param algorithm algorithm
-     * @param version version
      */
-    public ExternalStagingFileDataProvider(String zipPath, String algorithm, String version) throws IOException {
+    public ExternalStagingFileDataProvider(String zipPath) throws IOException {
         super();
 
-        _zipFs = FileSystems.newFileSystem(URI.create("jar:file:/" + zipPath), Collections.emptyMap());
+        FileSystem fs = FileSystems.newFileSystem(URI.create("jar:file:/" + zipPath), Collections.emptyMap());
 
-        _algorithm = algorithm;
-        _version = version;
+        // verify that all the algorithm names and versions are consistent
+        Set<String> algorithms = new HashSet<>();
+        Set<String> versions = new HashSet<>();
 
-        // first get a list of all tables ids
+        // loop over all tables and load them into Map
         try {
-            _tableIds = new HashSet<>();
-            _tableIds.addAll(readLines("tables/ids.txt"));
+            for (String file : readLines(fs, "tables/ids.txt")) {
+                if (!file.isEmpty()) {
+                    try (BufferedReader reader = Files.newBufferedReader(fs.getPath("tables/" + file + ".json"))) {
+                        StagingTable table = getMapper().reader().readValue(getMapper().getFactory().createParser(reader), StagingTable.class);
+
+                        initTable(table);
+
+                        algorithms.add(table.getAlgorithm());
+                        versions.add(table.getVersion());
+
+                        _tables.put(table.getId(), table);
+                    }
+                }
+            }
         }
         catch (IOException e) {
-            throw new IllegalStateException("Exception reading ids: " + e.getMessage());
+            throw new IllegalStateException("Exception reading tables: " + e.getMessage());
         }
-
-        // set up table cache; it is too slow to load all the tables at startup
-        _tableCache = Caffeine.newBuilder().maximumSize(2500).build(this::load);
 
         // loop over all schemas and load them into Map
         try {
-            for (String file : readLines("schemas/ids.txt")) {
+            for (String file : readLines(fs, "schemas/ids.txt")) {
                 if (!file.isEmpty()) {
-                    try (BufferedReader reader = Files.newBufferedReader(_zipFs.getPath("schemas/" + file + ".json"))) {
+                    try (BufferedReader reader = Files.newBufferedReader(fs.getPath("schemas/" + file + ".json"))) {
                         StagingSchema schema = getMapper().reader().readValue(getMapper().getFactory().createParser(reader), StagingSchema.class);
 
                         initSchema(schema);
+
+                        algorithms.add(schema.getAlgorithm());
+                        versions.add(schema.getVersion());
 
                         _schemas.put(schema.getId(), schema);
                     }
@@ -79,6 +85,14 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
             throw new IllegalStateException("Exception reading schemas: " + e.getMessage());
         }
 
+        if (algorithms.size() != 1)
+            throw new IllegalStateException("Error initializing provider; only one algorithm should be included in file");
+        if (versions.size() != 1)
+            throw new IllegalStateException("Error initializing provider; only one version should be included in file");
+
+        _algorithm = algorithms.iterator().next();
+        _version = versions.iterator().next();
+
         // finally, initialize any caches now that everything else has been set up
         invalidateCache();
     }
@@ -88,25 +102,17 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
      * @return a {@link String} {@link List} of all lines in the file
      * @throws IOException error reading file
      */
-    private List<String> readLines(String location) throws IOException {
-        try (BufferedReader buffer = Files.newBufferedReader(_zipFs.getPath(location))) {
+    private static List<String> readLines(FileSystem fs, String location) throws IOException {
+        try (BufferedReader buffer = Files.newBufferedReader(fs.getPath(location))) {
             return buffer.lines().collect(Collectors.toList());
         }
     }
 
-    /**
-     * Return the algorithm
-     * @return the algorithm
-     */
     @Override
     public String getAlgorithm() {
         return _algorithm.toLowerCase();
     }
 
-    /**
-     * Return the data version
-     * @return a String representing the version
-     */
     @Override
     public String getVersion() {
         return _version;
@@ -114,10 +120,7 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
 
     @Override
     public StagingTable getTable(String id) {
-        if (id == null)
-            return null;
-
-        return _tableCache.get(id);
+        return _tables.get(id);
     }
 
     @Override
@@ -127,31 +130,12 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
 
     @Override
     public Set<String> getTableIds() {
-        return _tableIds;
+        return _tables.keySet();
     }
 
     @Override
     public StagingSchema getDefinition(String id) {
         return _schemas.get(id);
-    }
-
-    /**
-     * Load the StagingTable from a file specified by the passed identifier.
-     * @param id table identifier
-     * @return StagingTable
-     * @throws IllegalStateException if the table has an identifier that does not match the name
-     */
-    private StagingTable load(String id) throws Exception {
-        try (BufferedReader reader = Files.newBufferedReader(_zipFs.getPath("tables/" + id + ".json"))) {
-            StagingTable table = getMapper().reader().readValue(getMapper().getFactory().createParser(reader), StagingTable.class);
-
-            if (!id.equals(table.getId()))
-                throw new IllegalStateException("The table " + id + " has an identifier that doesn't match the name (" + table.getId() + ")");
-
-            initTable(table);
-
-            return table;
-        }
     }
 
 }
