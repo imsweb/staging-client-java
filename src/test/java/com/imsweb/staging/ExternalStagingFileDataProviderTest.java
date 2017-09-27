@@ -49,7 +49,6 @@ public class ExternalStagingFileDataProviderTest {
         assertEquals(62, involved.size());
         assertTrue(involved.contains("mets_eval_ipa"));
 
-        // test this case:  http://seer.cancer.gov/seertools/cstest/?mets=10&lnexam=99&diagnosis_year=2013&grade=9&exteval=9&age=060&site=C680&metseval=9&hist=8000&ext=100&version=020550&nodeseval=9&behav=3&lnpos=99&nodes=100&csver_original=020440&lvi=9&ssf1=020&size=075
         CsStagingData data = new CsStagingData();
         data.setInput("site", "C680");
         data.setInput("hist", "8000");
