@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 Information Management Services, Inc.
+ * Copyright (C) 2017 Information Management Services, Inc.
  */
 package com.imsweb.staging;
 
