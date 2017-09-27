@@ -3,13 +3,15 @@
  */
 package com.imsweb.staging;
 
-import java.io.ByteArrayOutputStream;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
@@ -33,7 +35,20 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
     public ExternalStagingFileDataProvider(InputStream is) throws IOException {
         super();
 
-        // verify that all the algorithm names and versions are consistent
+        init(is);
+    }
+
+    /**
+     * Read a zip entry from an inputstream and return as a byte array
+     */
+    private static String extractEntry(InputStream is) throws IOException {
+        return new BufferedReader(new InputStreamReader(is)).lines().collect(Collectors.joining("\n"));
+    }
+
+    /**
+     * Initialize data provider
+     */
+    private void init(InputStream is) throws IOException {
         Set<String> algorithms = new HashSet<>();
         Set<String> versions = new HashSet<>();
 
@@ -44,7 +59,7 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
                     continue;
 
                 if (entry.getName().startsWith("tables")) {
-                    StagingTable table = getMapper().reader().readValue(getMapper().getFactory().createParser(extractEntry(stream).toByteArray()), StagingTable.class);
+                    StagingTable table = getMapper().reader().readValue(getMapper().getFactory().createParser(extractEntry(stream)), StagingTable.class);
 
                     initTable(table);
 
@@ -54,7 +69,7 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
                     _tables.put(table.getId(), table);
                 }
                 else if (entry.getName().startsWith("schemas")) {
-                    StagingSchema schema = getMapper().reader().readValue(getMapper().getFactory().createParser(extractEntry(stream).toByteArray()), StagingSchema.class);
+                    StagingSchema schema = getMapper().reader().readValue(getMapper().getFactory().createParser(extractEntry(stream)), StagingSchema.class);
 
                     initSchema(schema);
 
@@ -66,31 +81,17 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
             }
         }
 
+        // verify that all the algorithm names and versions are consistent
         if (algorithms.size() != 1)
-            throw new IllegalStateException("Error initializing provider; only one algorithm should be included in file");
+            throw new IllegalStateException("Error initializing provider; only a single algorithm should be included in file");
         if (versions.size() != 1)
-            throw new IllegalStateException("Error initializing provider; only one version should be included in file");
+            throw new IllegalStateException("Error initializing provider; only a single version should be included in file");
 
         _algorithm = algorithms.iterator().next();
         _version = versions.iterator().next();
 
         // finally, initialize any caches now that everything else has been set up
         invalidateCache();
-    }
-
-    /**
-     * Read a zip entry from an inputstream and return as a byte array
-     */
-    private static ByteArrayOutputStream extractEntry(InputStream is) throws IOException {
-        try (ByteArrayOutputStream os = new ByteArrayOutputStream()) {
-            final byte[] buf = new byte[2048];
-            int length;
-
-            while ((length = is.read(buf, 0, buf.length)) >= 0)
-                os.write(buf, 0, length);
-
-            return os;
-        }
     }
 
     @Override
