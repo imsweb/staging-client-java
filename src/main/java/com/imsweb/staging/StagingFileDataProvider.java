@@ -22,7 +22,7 @@ import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingTable;
 
 /**
- * In implementation of DataProvider which holds all data in memory
+ * Implementation of DataProvider which loads from internal directories and holds all data in memory
  */
 public class StagingFileDataProvider extends StagingDataProvider {
 
@@ -77,6 +77,30 @@ public class StagingFileDataProvider extends StagingDataProvider {
 
         // finally, initialize any caches now that everything else has been set up
         invalidateCache();
+    }
+
+    /**
+     * @param location relative file location within the classpath
+     * @return a {@link String} {@link java.util.List} of all lines in the file
+     * @throws IOException error reading file
+     */
+    private static List<String> readLines(String location) throws IOException {
+        try (BufferedReader buffer = new BufferedReader(new InputStreamReader(getStagingInputStream(location), StandardCharsets.UTF_8))) {
+            return buffer.lines().collect(Collectors.toList());
+        }
+    }
+
+    /**
+     * @param location relative file location within the classpath
+     * @return The {@link java.io.Reader} resource
+     */
+    private static InputStream getStagingInputStream(String location) {
+        InputStream input = Thread.currentThread().getContextClassLoader().getResourceAsStream(location);
+
+        if (input == null)
+            throw new IllegalStateException("Internal error reading file; File could not be found: " + location);
+
+        return input;
     }
 
     /**
@@ -135,30 +159,6 @@ public class StagingFileDataProvider extends StagingDataProvider {
         initTable(table);
 
         return table;
-    }
-
-    /**
-     * @param location relative file location within the classpath
-     * @return a {@link String} {@link java.util.List} of all lines in the file
-     * @throws IOException error reading file
-     */
-    private static List<String> readLines(String location) throws IOException {
-        try (BufferedReader buffer = new BufferedReader(new InputStreamReader(getStagingInputStream(location), StandardCharsets.UTF_8))) {
-            return buffer.lines().collect(Collectors.toList());
-        }
-    }
-
-    /**
-     * @param location relative file location within the classpath
-     * @return The {@link java.io.Reader} resource
-     */
-    private static InputStream getStagingInputStream(String location) {
-        InputStream input = Thread.currentThread().getContextClassLoader().getResourceAsStream(location);
-
-        if (input == null)
-            throw new IllegalStateException("Internal error reading file; File could not be found: " + location);
-
-        return input;
     }
 
 }
