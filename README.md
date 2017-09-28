@@ -33,6 +33,7 @@ assessments, and compatibility across all of the systems for all cancer sites.
 
 Versions supported:
 
+
 - 02.05.50 (released October 2013)
 
 ## Download
@@ -45,14 +46,14 @@ Download [the latest JAR][1] or grab via Maven:
 <dependency>
     <groupId>com.imsweb</groupId>
     <artifactId>staging-client-java</artifactId>
-    <version>2.7</version>
+    <version>2.8</version>
 </dependency>
 ```
 
 or via Gradle:
 
 ```groovy
-compile 'com.imsweb.com:staging-client-java:2.7'
+compile 'com.imsweb.com:staging-client-java:2.8'
 ```
 
 ## Usage
