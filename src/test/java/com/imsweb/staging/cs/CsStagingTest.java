@@ -656,11 +656,6 @@ public class CsStagingTest extends StagingTest {
     }
 
     @Test
-    public void testGetTable() {
-        assertNull(_STAGING.getTable("bad_table_name"));
-    }
-
-    @Test
     public void testStagingInputsAndOutputs() {
         StagingSchema schema = _STAGING.getSchema("testis");
 

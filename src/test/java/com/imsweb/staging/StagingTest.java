@@ -128,9 +128,9 @@ public abstract class StagingTest {
         assertTrue(_STAGING.isValidHistology("8201"));
     }
 
-    @Test(expected = IllegalStateException.class)
+    @Test
     public void testGetTable() {
-        _STAGING.getTable("bad_table_name");
+        assertNull(_STAGING.getTable("bad_table_name"));
     }
 
     @Test
