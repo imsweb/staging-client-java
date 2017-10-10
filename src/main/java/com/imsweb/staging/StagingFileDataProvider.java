@@ -9,14 +9,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
-
-import com.github.benmanes.caffeine.cache.Caffeine;
-import com.github.benmanes.caffeine.cache.LoadingCache;
 
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingTable;
@@ -28,9 +24,7 @@ public class StagingFileDataProvider extends StagingDataProvider {
 
     private String _algorithm;
     private String _version;
-    private String _tableDirectory;
-    private Set<String> _tableIds;
-    private LoadingCache<String, StagingTable> _tableCache;
+    private Map<String, StagingTable> _tables = new HashMap<>();
     private Map<String, StagingSchema> _schemas = new HashMap<>();
 
     /**
@@ -44,19 +38,22 @@ public class StagingFileDataProvider extends StagingDataProvider {
         _algorithm = algorithm;
         _version = version;
 
-        _tableDirectory = "algorithms/" + algorithm.toLowerCase() + "/" + version + "/tables";
-
-        // first get a list of all tables ids
+        // loop over all tables and load them into Map
         try {
-            _tableIds = new HashSet<>();
-            _tableIds.addAll(readLines(_tableDirectory + "/ids.txt"));
+            String directory = "algorithms/" + algorithm.toLowerCase() + "/" + version + "/tables";
+            for (String file : readLines(directory + "/ids.txt")) {
+                if (!file.isEmpty()) {
+                    StagingTable table = getMapper().reader().readValue(getMapper().getFactory().createParser(getStagingInputStream(directory + "/" + file + ".json")), StagingTable.class);
+
+                    initTable(table);
+
+                    _tables.put(table.getId(), table);
+                }
+            }
         }
         catch (IOException e) {
-            throw new IllegalStateException("IOException reading ids: " + e.getMessage());
+            throw new IllegalStateException("IOException reading schemas: " + e.getMessage());
         }
-
-        // set up table cache; it is too slow to load all the tables at startup
-        _tableCache = Caffeine.newBuilder().maximumSize(2500).build(this::load);
 
         // loop over all schemas and load them into Map
         try {
@@ -123,10 +120,7 @@ public class StagingFileDataProvider extends StagingDataProvider {
 
     @Override
     public StagingTable getTable(String id) {
-        if (id == null)
-            return null;
-
-        return _tableCache.get(id);
+        return _tables.get(id);
     }
 
     @Override
@@ -136,29 +130,12 @@ public class StagingFileDataProvider extends StagingDataProvider {
 
     @Override
     public Set<String> getTableIds() {
-        return _tableIds;
+        return _tables.keySet();
     }
 
     @Override
     public StagingSchema getDefinition(String id) {
         return _schemas.get(id);
-    }
-
-    /**
-     * Load the StagingTable from a file specified by the passed identifier.
-     * @param id table identifier
-     * @return StagingTable
-     * @throws IllegalStateException if the table has an identifier that does not match the name
-     */
-    private StagingTable load(String id) throws Exception {
-        StagingTable table = getMapper().reader().readValue(getMapper().getFactory().createParser(getStagingInputStream(_tableDirectory + "/" + id + ".json")), StagingTable.class);
-
-        if (!id.equals(table.getId()))
-            throw new IllegalStateException("The table " + id + " has an identifier that doesn't match the name (" + table.getId() + ")");
-
-        initTable(table);
-
-        return table;
     }
 
 }
