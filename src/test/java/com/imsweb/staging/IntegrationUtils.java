@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -30,28 +31,6 @@ import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.util.Stopwatch;
 
 public final class IntegrationUtils {
-
-    /**
-     * Result object
-     */
-    public static class IntegrationResult {
-
-        private long _numCases;
-        private long _numFailures;
-
-        public IntegrationResult(long numCases, long numFailures) {
-            _numCases = numCases;
-            _numFailures = numFailures;
-        }
-
-        public long getNumCases() {
-            return _numCases;
-        }
-
-        public long getNumFailures() {
-            return _numFailures;
-        }
-    }
 
     /**
      * Private constructor
@@ -103,6 +82,11 @@ public final class IntegrationUtils {
                         else {
                             if (lookups.size() != 1) {
                                 System.out.println("Line #" + lineNum + " [" + fullLine + "] --> The schema selection should have found a schema, " + parts[3] + ", but did not.");
+                                failedCases.getAndIncrement();
+                            }
+                            else if (!Objects.equals(lookups.get(0).getId(), parts[3])) {
+                                System.out.println(
+                                        "Line #" + lineNum + " [" + fullLine + "] --> The schema selection found schema " + lookups.get(0).getId() + " but it should have found " + parts[3] + ".");
                                 failedCases.getAndIncrement();
                             }
                         }
@@ -365,5 +349,27 @@ public final class IntegrationUtils {
         for (Map.Entry<String, String> entry : input.entrySet())
             inputValues.add("\"" + entry.getKey() + "\": \"" + entry.getValue() + "\"");
         return "{ " + inputValues.stream().collect(Collectors.joining(",")) + " }";
+    }
+
+    /**
+     * Result object
+     */
+    public static class IntegrationResult {
+
+        private long _numCases;
+        private long _numFailures;
+
+        public IntegrationResult(long numCases, long numFailures) {
+            _numCases = numCases;
+            _numFailures = numFailures;
+        }
+
+        public long getNumCases() {
+            return _numCases;
+        }
+
+        public long getNumFailures() {
+            return _numFailures;
+        }
     }
 }
