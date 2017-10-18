@@ -30,9 +30,9 @@ public class CsIntegrationTest {
         // hard-code data directory based on Windows vs Linux
         List<String> dataDirectories;
         if (System.getProperty("os.name").toLowerCase().contains("windows"))
-            dataDirectories = Arrays.asList("p:/csb/Staging/CS_ErrorCases", "p:/csb/Staging/CS");
+            dataDirectories = Collections.singletonList("p:/csb/Staging/CS");
         else
-            dataDirectories = Arrays.asList("/prj/csb/Staging/CS_ErrorCases", "/prj/csb/Staging/CS");
+            dataDirectories = Collections.singletonList("/prj/csb/Staging/CS");
 
         for (String dataDirectory : dataDirectories) {
             System.out.println("*******************************************");
