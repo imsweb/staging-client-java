@@ -27,14 +27,23 @@ public class CsIntegrationTest {
     //private static final List<String> _SCHEMA_FILES = Arrays.asList("corpus_carcinoma.gz");
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.v020550));
-
         // hard-code data directory based on Windows vs Linux
-        String dataDirectory;
+        List<String> dataDirectories;
         if (System.getProperty("os.name").toLowerCase().contains("windows"))
-            dataDirectory = "p:/csb/Staging/CS";
+            dataDirectories = Arrays.asList("p:/csb/Staging/CS_ErrorCases", "p:/csb/Staging/CS");
         else
-            dataDirectory = "/prj/csb/Staging/CS";
+            dataDirectories = Arrays.asList("/prj/csb/Staging/CS_ErrorCases", "/prj/csb/Staging/CS");
+
+        for (String dataDirectory : dataDirectories) {
+            System.out.println("*******************************************");
+            System.out.println("EXECUTING CASES IN " + dataDirectory);
+            System.out.println("*******************************************");
+            execute(dataDirectory);
+        }
+    }
+
+    private static void execute(String dataDirectory) throws IOException, InterruptedException {
+        Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.v020550));
 
         // only do schema selection test if running all schemas
         if (_SCHEMA_FILES.isEmpty()) {
