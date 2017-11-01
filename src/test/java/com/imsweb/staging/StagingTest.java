@@ -135,7 +135,7 @@ public abstract class StagingTest {
 
     @Test
     public void testCachedSiteAndHistology() {
-        TnmDataProvider provider = TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_4);
+        TnmDataProvider provider = TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_5);
         assertTrue(provider.getValidSites().size() > 0);
         assertTrue(provider.getValidHistologies().size() > 0);
 

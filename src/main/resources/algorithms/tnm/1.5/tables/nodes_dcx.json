@@ -1,0 +1,27 @@
+{
+  "id" : "nodes_dcx",
+  "algorithm" : "tnm",
+  "version" : "1.5",
+  "name" : "SEER Regional Nodes",
+  "title" : "SEER Regional Nodes",
+  "notes" : "**Note 1:** The description of lymph nodes has been standardized across the head and neck schemas for TNM.  Levels I-VII and Other lymph nodes are all now regional. Summary Stage 2000 divides these nodes into regional and distant groups based on the head and neck sub-site.\n\n**Note 2:**  For head and neck cancers, if lymph nodes are described only as \"supraclavicular\", try to determine if they are in Level IV (deep to the sternocleidomastoid muscle, in the lower jugular chain) or Level V (in the posterior triangle, inferior to the transverse cervical artery) and code appropriately.  If the specific level cannot be determined, consider them as Level V nodes. If the only information available is \"supraclavicular,\" code to distant mets in SEER Mets.",
+  "last_modified" : "2017-10-31T13:48:28.729Z",
+  "definition" : [ {
+    "key" : "seer_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summary Stage 2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:NONE" ], [ "300", "Regional lymph node(s) involved only\n\nREGIONAL Lymph Nodes\n\nCervical, NOS\nInternal jugular, NOS:\n     Deep cervical, NOS:\n          Upper, NOS:\n              Jugulodigastric (subdigastric)\nMandibular, NOS:\n     Submandibular (submaxillary)\n     Submental\nMastoid  (post-/retro-auricular)  for middle ear\nRetropharyngeal\n\nRegional lymph node(s), NOS", "Level I:\n    Level IA - Submental\n    Level IB - Submandibular (submaxillary), sublingual\nLevel II - Upper jugular:\n   Jugulodigastric (subdigastric)\n   Upper deep cervical\n   Level IIA - Anterior\n   Level IIB - Posterior\nRetropharyngeal\nCervical, NOS\nDeep cervical, NOS\nInternal jugular, NOS\n\nLymph nodes, NOS\n\nStated as N1, N2 (N2a, N2b, N2c, N2 [NOS]), or N3", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

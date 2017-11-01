@@ -1,0 +1,27 @@
+{
+  "id" : "extension_bct",
+  "algorithm" : "tnm",
+  "version" : "1.5",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "notes" : "**Note:**  Periosteum is a fibrous membrane that wraps the outer surface of bones.",
+  "last_modified" : "2017-10-31T13:48:33.548Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ: Noninvasive; intraepithelial", "", "VALUE:IS" ], [ "100", "Localized only\n\n    Tumor confined to lacrimal gland/duct\n\n    Localized, NOS", "Stated as T1, T2 or T3", "VALUE:L" ], [ "200", "Regional by direct extension only\n\n    Extension to:\n         Bone (adjacent)\n         Globe \n         Optic nerve\n         Orbital soft tissues\n         Periosteum of fossa of lacrimal gland/duct", "Extension to any of the following WITHOUT bone invasion:\n    Globe (eyeball)\n    Optic nerve\n    Orbital soft tissues\n\nAdjacent periorbital bone\n\nStated as T4a, T4b, or T4 [NOS]", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in patient record", "", "VALUE:U" ] ]
+}

@@ -1,0 +1,28 @@
+{
+  "id" : "nodes_ddf",
+  "algorithm" : "tnm",
+  "version" : "1.5",
+  "name" : "SEER Regional Nodes",
+  "title" : "SEER Regional Nodes",
+  "notes" : "**Note:**    Involvement of inguinal, pelvic, or external iliac lymph nodes WITHOUT or unknown if previous scrotal or inguinal surgery prior to presentation  of the testis tumor is coded in SEER Mets as distant lymph node involvement.",
+  "footnotes" : "\\### Considered distant in Historic Stage\n\\*** Considered distant in 1977 Summary Staging Guide",
+  "last_modified" : "2017-10-31T13:48:28.640Z",
+  "definition" : [ {
+    "key" : "seer_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summary Stage 2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:NONE" ], [ "300", "Regional lymph node(s) involved only\n\nREGIONAL Lymph Nodes (including contralateral or bilateral nodes)\n\nAortic, NOS###:\n    Lateral (lumbar)\n    Para-aortic\n    Periaortic\n    Retroaortic\nExternal iliac\nPericaval, NOS:###***\n    Interaortocaval\n    Paracaval\n    Precaval\n    Retrocaval\nPelvic, NOS\nRetroperitoneal, NOS\nSpermatic vein\n\nRegional lymph node(s), NOS", "Preaortic \nLymph nodes, NOS\n\nDistant lymph node(s):\n    Pelvic, NOS\n    External iliac\nWITH previous scrotal or inguinal surgery \n\nStated as N1, N2 or N3", "VALUE:RN" ], [ "999", "Unknown; not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

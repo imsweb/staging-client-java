@@ -1,0 +1,28 @@
+{
+  "id" : "extension_bdc",
+  "algorithm" : "tnm",
+  "version" : "1.5",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "notes" : "**Note:**  Periosteum is a fibrous membrane that wraps the outer surface of bones. Cortical bone is the dense compact outer layer of bone. Trabecular, cancellous, or spongy bone (spongiosa) is a porous network of tissue filling the interior of bone, decreasing weight and allowing room for blood vessels and marrow.",
+  "footnotes" : "\\## Considered regional in Historic Stage",
+  "last_modified" : "2017-10-31T13:48:38.759Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ: Noninvasive; intraepithelia", "In Situ\n\nIn situ, intraepithelial, noninvasive", "VALUE:IS" ], [ "100", "Localized only\n\nInvasive tumor confined to:\n\n     Labial mucosa (inner lip)\n     Lamina propria\n     Multiple foci\n     Musculature##\n     Submucosa (superficial invasion)\n     Vermilion surface\n\nSuperficial extension to:\n\n     Skin of lip\n     Subcutaneous soft tissue of lip\n\nLocalized, NOS", "Stated as T1, T2, or T3", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nExtension to:\n     Buccal mucosa (inner cheek)\n     Commissure\n     Gingiva\n     Opposite (both) lip(s)\n\nUpper lip/commissure:\n     Maxilla", "Gingiva\n\nBone, NOS\nCortical bone of maxilla\nCortical bone, NOS \nTrabecular bone of maxilla\n\nStated as T4a or T4 [NOS]", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

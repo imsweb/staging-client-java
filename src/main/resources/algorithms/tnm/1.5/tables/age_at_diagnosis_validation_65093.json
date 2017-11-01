@@ -1,0 +1,18 @@
+{
+  "id" : "age_at_diagnosis_validation_65093",
+  "algorithm" : "tnm",
+  "version" : "1.5",
+  "name" : "Age at Diagnosis Validation",
+  "title" : "Age at Diagnosis Validation",
+  "last_modified" : "2017-10-31T13:48:35.952Z",
+  "definition" : [ {
+    "key" : "age_dx",
+    "name" : "Age At Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000-120,999", "MATCH" ], [ "0-9", "MATCH" ], [ "10-99", "MATCH" ] ]
+}

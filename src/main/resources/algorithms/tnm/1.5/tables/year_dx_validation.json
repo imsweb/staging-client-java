@@ -1,0 +1,18 @@
+{
+  "id" : "year_dx_validation",
+  "algorithm" : "tnm",
+  "version" : "1.5",
+  "name" : "Year DX Validation",
+  "title" : "Year of Diagnosis Validation",
+  "last_modified" : "2017-10-31T13:48:39.032Z",
+  "definition" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "2016-{{ctx_year_current}},9999", "MATCH" ] ]
+}

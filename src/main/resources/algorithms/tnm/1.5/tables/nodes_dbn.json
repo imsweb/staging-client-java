@@ -1,0 +1,27 @@
+{
+  "id" : "nodes_dbn",
+  "algorithm" : "tnm",
+  "version" : "1.5",
+  "name" : "SEER Regional Nodes",
+  "title" : "SEER Regional Nodes",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in SEER Mets.\n\n**Note 2:**  Celiac axis and splenic nodes are classified as distant nodes and are coded in SEER Mets.",
+  "last_modified" : "2017-10-31T13:48:37.320Z",
+  "definition" : [ {
+    "key" : "seer_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summary Stage 2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:NONE" ], [ "300", "Regional lymph node(s) involved only\n\nREGIONAL Lymph Nodes\n\n    Celiac \n    Hepatic\n    Gastroepiploic (gastro-omental), left\n    Infrapyloric (subpyloric) \n    Lateral aortic (lumbar)\n    Peripancreatic, NOS:\n        Anterior, NOS:\n             Anterior pancreaticoduodenal\n             Anterior proximal mesenteric\n             Pyloric\n        Inferior to the head and body of pancreas\n        Posterior, NOS:\n             Pericholedochal (common bile duct)\n             Posterior pancreaticoduodenal\n             Posterior proximal mesentery\n        Superior to the head and body of pancreas\n    Retroperitoneal\n    Superior mesenteric\n\n   Regional lymph node(s), NOS", "Pyloric:\n    Infrapyloric\n    Retropyloric\n    Suprapyloric\n    Subpyloric\n\nLymph nodes, NOS\n\nStated as N1", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}
