@@ -1,0 +1,27 @@
+{
+  "id" : "extension_bel",
+  "algorithm" : "tnm",
+  "version" : "1.5",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "footnotes" : "\\## Considered regional in Historic Stage",
+  "last_modified" : "2017-10-31T13:48:36.693Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ: Noninvasive; intraepithelial", "", "VALUE:IS" ], [ "100", "Localized only\n\n     Invasive tumor on one side confined to:\n          Lamina propria\n          Musculature\n          Submucosa\n     Tumor crosses midline##\n\n     Localized, NOS", "Tumor confined to mucosa of soft palate or uvula on one side\nInvolvement of deep soft tissue or musculature of soft palate or uvula  \n\nStated as T3, T4a, or T4 [NOS]", "VALUE:L" ], [ "200", "Regional by direct extension only\n\n     Extension to:\n          Buccal mucosa (inner cheek)\n          Gum (gingiva), upper\n          Hard palate\n          Lateral pharyngeal wall\n          Tonsillar pillars and fossae\n          Tonsils", "Extension involving mucosa only:\n     Buccal mucosa (inner cheek)\n     Hard palate\n     \nInvolvement of deep soft tissue or musculature of soft palate or uvula plus mucosal involvement of structures listed", "VALUE:RE" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

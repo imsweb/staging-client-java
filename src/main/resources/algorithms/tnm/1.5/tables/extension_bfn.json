@@ -1,0 +1,27 @@
+{
+  "id" : "extension_bfn",
+  "algorithm" : "tnm",
+  "version" : "1.5",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "notes" : "**Note:**  Ignore intraluminal extension to adjacent segment(s) of esophagus or to cardia of stomach, and code depth of invasion or extra-esophageal spread as indicated.",
+  "last_modified" : "2017-10-31T13:48:35.875Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ:  Noninvasive; intraepithelial", "", "VALUE:IS" ], [ "100", "Localized only\n\n    Invasive tumor confined to:\n         Intramucosa, NOS\n         Lamina propria\n         Mucosa, NOS\n         Muscularis mucosae\n         Muscularis propria invaded\n         Submucosa\n\nLocalized, NOS", "Tumor confined to muscular wall\nTumor invades through submucosa and muscularis mucosae to involve mucosa\n\nStated as T1, T2, T3, or T4", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nAdventitia and/or soft tissue invaded\nEsophagus is described as “FIXED”\n\nExtension to:\nCervical esophagus (including first 18 cm of upper esophagus):\n    Blood vessel(s) (major):\n         Carotid artery\n         Jugular vein\n         Subclavian artery\n    Carina\n    Cervical vertebra(e)\n    Hypopharynx\n    Larynx\n    Trachea\n    Thyroid gland\nIntrathoracic: \n     Lung via bronchus\n     Mediastinal structure(s) \n     Pleura\n     Rib(s) \n     Thoracic vertebra(e)\nIntrathoracic, upper or mid-portion, esophagus:\n     Blood vessel(s) (major):\n          Aorta\n          Azygos vein\n          Pulmonary artery/vein\n          Vena cava\n     Carina\n     Diaphragm\n     Main stem bronchus\n     Trachea\nIntrathoracic, lower portion (abdominal), esophagus:\n      Blood vessel(s) (major):\n           Aorta\n           Gastric artery/vein\n           Vena cava\n      Diaphragm   \n      Stomach, cardia (via serosa)", "Invasion into adventitia with invasion of/through mucosa", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

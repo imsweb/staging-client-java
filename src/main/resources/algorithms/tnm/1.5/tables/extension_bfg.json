@@ -1,0 +1,28 @@
+{
+  "id" : "extension_bfg",
+  "algorithm" : "tnm",
+  "version" : "1.5",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "notes" : "**Note 1:**  Ignore intraluminal extension to adjacent segment(s) of colon; code depth of invasion or extracolonic spread as indicated.\n\n**Note 2:**  Mucinous tumors are identified by morphology codes 8480, 8481, and 8490.\n\n**Note 3:** One or more malignant satellite peritumoral nodules or tumor deposits (TD) in the periappendiceal adipose tissue of a primary carcinoma without histologic evidence of residual lymph node in the nodule may represent discontinuous spread, venous invasion with extravascular spread, or a totally replaced lymph node. Replaced nodes are counted as positive nodes and coded in SEER Regional Lymph Nodes. TD representing discontinuous spread or venous invasion are coded in SEER Primary Tumor, Regional by direct extension only, code 200.\n\n**Note 4:**  High-grade dysplasia is not always collected by cancer registries but, if collected, it should be coded In situ 000.\n\n**Note 5:**  Terminology such as “Transmural, NOS” and “Extension through the wall, NOS” typically means that the tumor has invaded the muscularis propria but has not necessarily invaded the entire thickness of the colon wall.",
+  "footnotes" : "\\#     Considered localized in Historic Stage   \n\\### Considered distant in Historic Stage",
+  "last_modified" : "2017-10-31T13:48:35.538Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ: Noninvasive; intraepithelial\n(Adeno)carcinoma in a polyp or adenoma, noninvasive", "", "VALUE:IS" ], [ "100", "Localized only\n\nInvasive tumor confined to:\n    Intramucosa, NOS\n    Lamina propria\n    Mucosa, NOS\n    Muscularis mucosae\n    Muscularis propria\n    Perimuscular tissue invaded\n    Polyp, NOS:\n           Head of polyp\n           Stalk of polyp\n    Submucosa (superficial invasion)\n    Subserosal tissue/(sub)serosal fat\n    Transmural, NOS\n    Wall, NOS\n\nConfined to colon, NOS\nExtension through wall, NOS\nInvasion through muscularis propria or muscularis, NOS\n\nLocalized, NOS", "Confined to appendix, NOS  \n\nNon-peritonealized pericolic tissues invaded\n\nStated as T1, T2 or T3", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nExtension to:\nInvasion of/through serosa (mesothelium) (visceral peritoneum)#\nExtension into/through:\n       Abdominal wall###\n       Adjacent tissue(s), NOS\n       Connective tissue\n       Fat, NOS\n       Greater omentum\n       Mesenteric fat\n       Mesentery\n       Mesocolon\n       Pericolic fat\n       Retroperitoneum (excluding fat)###\n       Small intestine", "Mesoappendix\nTumor penetrates to surface of visceral peritoneum\n\nAdherent to other organs or structures clinically with no microscopic examination \nTumor found in adhesion(s) if microscopic examination performed \n\nAdherent to other organs or structures, NOS\n\nStated as T4 (T4a, T4b, T4[NOS])", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

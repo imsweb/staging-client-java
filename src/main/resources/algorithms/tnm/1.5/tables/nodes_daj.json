@@ -1,0 +1,28 @@
+{
+  "id" : "nodes_daj",
+  "algorithm" : "tnm",
+  "version" : "1.5",
+  "name" : "SEER Regional Nodes",
+  "title" : "SEER Regional Nodes",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes such as cervical (excluding supraclavicular) or contralateral axillary are coded in SEER Mets.\n\n**Note 2:**  Micrometastases are defined as tumor deposits greater than 0.2 millimeter (mm) but not greater than 2.0 mm in largest dimension.  Macrometastases are tumor deposits greater than 2.0 mm.  All nodes with at least micrometastases are included in the count of positive lymph nodes (code 300).\n\n**Note 3:**  Isolated tumor cells (ITC) are defined as single tumor cells or small clusters not greater than 0.2 mm, usually detected only by immunohistochemical (IHC) or molecular methods but which may be verified on hematoxylin and eosin (H and E) stains.  ITCs do not usually show evidence of malignant activity (e.g., proliferation or stromal reaction). Lymph nodes with ITCs only are not considered positive lymph nodes.  If the record only states N0(i+), code to 000 for no regional lymph node involvement.",
+  "footnotes" : "\\### Considered distant in Historic Stage\n\\*** Considered distant in 1977 Summary Stage Guide",
+  "last_modified" : "2017-10-31T13:48:37.399Z",
+  "definition" : [ {
+    "key" : "seer_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summary Stage 2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "None \n\nNo regional lymph node involvement", "No regional lymph node involvement OR\n\nIsolated tumor cells (ITCs) detected by immunohistochemistry/immunohistochemical (IHC) methods or molecular methods OR\n\nITCs detected on routine hematoxylin and eosin (H and E) stains", "VALUE:NONE" ], [ "300", "Ipsilateral regional lymph node(s) involved only \n\nREGIONAL Lymph Nodes\n\nAxillary, NOS:\n    Level I (low) (superficial), NOS [adjacent to tail of breast]:\n           Anterior (pectoral)\n           Lateral (brachial)\n           Posterior (subscapular)\n    Level II (mid-level) (central), NOS:\n           Interpectoral (Rotter’s)\n    Level III (high) (deep), NOS:\n           Apical (subclavian)\n           Axillary vein\nInfraclavicular ###*** (subclavicular)\nInternal mammary (parasternal)\nIntramammary\nNodule(s) in axillary fat\n\nRegional lymph node(s), NOS", "Axillary lymph node(s), ipsilateral, micrometastasis ONLY, detected by IHC ONLY\n(At least one micrometastasis greater than 0.2 mm  or more than 200 cells \nAND all micrometastases less than or equal to 2 mm)\n\nAxillary lymph node(s), ipsilateral, micrometastasis ONLY, detected or verified on H&E \n(At least one micrometastasis greater than 0.2 mm or more than 200 cells \nAND all micrometastases less than or equal to 2 mm)\n\nMicrometastasis, NOS\n\nMovable axillary lymph node(s), ipsilateral, positive with more than micrometastasis \n(At least one metastasis greater than 2 mm) \n\nFixed/matted ipsilateral axillary nodes clinically with pathologic involvement of lymph nodes\nWITH at least one metastasis greater than 2 mm\n\nAxillary/regional lymph node(s), NOS\nLymph nodes, NOS\n\nStated as N1 (N1mi, N1a, N1b, N1c, N1[NOS]),  N2 (N2a, N2b, N2c, N2[NOS]), or N3 (N3a, N3b, N3[NOS]) \n\nNote: See SEER Mets for supraclavicular node(s), ipsilateral (N3c)", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

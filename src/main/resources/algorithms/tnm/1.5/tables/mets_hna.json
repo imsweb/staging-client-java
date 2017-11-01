@@ -1,0 +1,26 @@
+{
+  "id" : "mets_hna",
+  "algorithm" : "tnm",
+  "version" : "1.5",
+  "name" : "SEER Mets",
+  "title" : "SEER Mets",
+  "last_modified" : "2017-10-31T13:48:33.550Z",
+  "definition" : [ {
+    "key" : "seer_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "88", "Not applicable: Information not collected for this schema", "", "VALUE:NA" ] ]
+}

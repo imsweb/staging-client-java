@@ -1,0 +1,27 @@
+{
+  "id" : "extension_bbb",
+  "algorithm" : "tnm",
+  "version" : "1.5",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "notes" : "**Note 1:**  Ignore intraluminal extension to adjacent segment(s) of esophagus or to cardia of stomach and code depth of invasion or extra-esophageal spread as indicated.\n\n**Note 2:**  The three layers of the mucosa (epithelium, lamina propria, and muscularis mucosae) may be called the m1, m2, and m3 layers.  The submucosa may be described as having inner, middle, and outer thirds called sm1, sm2, and sm3.\n\n**Note 3:**  For this schema, high-grade dysplasia includes \"all non-invasive neoplastic epithelium that was formerly called carcinoma in situ.\"  Cancers stated to be noninvasive or in situ are classified as in situ.  High grade dysplasia is generally not reportable in cancer registries; but if a registry does collect high grade dysplasia, code 000 should be used. \n\n**Note 4:**  If the tumor's extension is only described by a phrase like \"through the muscularis propria,\" this could mean that the cancer has penetrated the outermost muscle cells but not beyond localized (code 100); but usually \"through the muscularis\" is used to indicate that the cancer extends beyond the muscle and into adjacent tissue, consistent with a regional tumor (code 200).  When the most specific description is a phrase like \"through the muscularis\" or \"through the esophageal wall,\" code regional (code 200).",
+  "last_modified" : "2017-10-31T13:48:35.940Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ:\n Noninvasive; intraepithelial", "", "VALUE:IS" ], [ "100", "Localized only\n\n    Invasive tumor confined to:\n         Intramucosa, NOS\n         Lamina propria\n         Mucosa, NOS\n         Muscularis mucosae\n         Muscularis propria invaded\n         Submucosa\n\nLocalized, NOS", "Stated as T1 or T2", "VALUE:L" ], [ "200", "Regional by direct extension only\n\nAdventitia and/or soft tissue invaded\nEsophagus is described as “FIXED”\n\nExtension to:\nCervical esophagus (including first 18 cm of upper esophagus):\n    Blood vessel(s) (major):\n         Carotid artery\n         Jugular vein\n         Subclavian artery\n    Carina\n    Cervical vertebra(e)\n    Hypopharynx\n    Larynx\n    Trachea\n    Thyroid gland\nIntrathoracic: \n     Lung via bronchus\n     Mediastinal structure(s) \n     Pleura\n     Rib(s) \n     Thoracic vertebra(e)\nIntrathoracic, upper or mid-portion, esophagus:\n     Blood vessel(s) (major):\n          Aorta\n          Azygos vein\n          Pulmonary artery/vein\n          Vena cava\n     Carina\n     Diaphragm\n     Main stem bronchus\n     Trachea\nIntrathoracic, lower portion (abdominal), esophagus:\n      Blood vessel(s) (major):\n           Aorta\n           Gastric artery/vein\n           Vena cava\n      Diaphragm   \n      Stomach, cardia (via serosa)", "Diaphragm, not fixed; diaphragm, NOS\nIntrathoracic esophagus (all portions):\n    Adjacent rib(s) \n    Mediastinal structure(s), NOS \n Invades adjacent structures, NOS\n\nStated as T3 or T4", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

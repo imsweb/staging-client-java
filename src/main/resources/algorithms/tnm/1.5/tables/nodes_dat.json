@@ -1,0 +1,28 @@
+{
+  "id" : "nodes_dat",
+  "algorithm" : "tnm",
+  "version" : "1.5",
+  "name" : "SEER Regional Nodes",
+  "title" : "SEER Regional Nodes",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in SEER Mets.\n\n**Note 2:**  Regional lymph nodes for any part of the esophagus fall in the range from periesophageal/cervical to the celiac region.  Contralateral and bilateral cervical, supraclavicular, and mediastinal lymph nodes are included.  However, TNM has clarified that some nodal chains in this large area are partially regional and partially distant because they include both nodes that are close to the esophagus toward the body's midline and nodes that run laterally away from the esophagus or perpendicular to it.  Regional nodes are those that lie in the bed of the esophagus.  \n\n*Examples:*   \n\n    Regional supraclavicular nodes (level 1)\n    Regional pulmonary ligament nodes (level 9)\n    Regional hilar tracheobronchial nodes (level 10)\n    Regional diaphragmatic nodes (level 15)\n\nThese nodes are closest to the esophagus; nodes in these chains that are further from the esophagus are distant. \n\nMedical record terminology is unlikely to be so specific in describing involved node locations, so try to correlate involved node information with staging statements that indicate whether the nodes were considered regional or distant by the physicians; lacking such physician guidance, presume regional nodes.  If the record just indicates involvement of supraclavicular nodes, for example, and there is no further information available, presume that the involved nodes were close to the esophagus and regional.\n\n**Note 3:**  Imaging studies often refer to involved nodes in the gastrohepatic ligament or at the gastrohepatic level for esophageal primaries.  Code as left gastric nodes if there is no more specific information.",
+  "footnotes" : "\\###  Considered distant in Historic Stage\n\\***    Considered distant in 1977 Summary Staging Guide",
+  "last_modified" : "2017-10-31T13:48:38.621Z",
+  "definition" : [ {
+    "key" : "seer_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summary Stage 2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "", "VALUE:NONE" ], [ "300", "Regional lymph node(s) involved only\n\nREGIONAL Lymph Nodes (including contralateral or bilateral)  \n\nCervical only:\nCervical, NOS:\n     Anterior deep cervical (laterotracheal) (recurrent laryngeal)\n     Internal jugular, NOS:\n           Deep cervical, NOS:\n                 Upper, NOS:\n                       Jugulodigastric (subdigastric)\nPeri-/paraesophageal \nScalene (inferior deep cervical)###***\nSupraclavicular (transverse cervical)###***\n\nIntrathoracic, upper thoracic or middle, only:\n      Internal jugular, NOS:\n           Deep cervical, NOS:\n                 Lower, NOS:\n                       Jugulo-omohyoid (supraomohyoid)\n                 Middle\n                 Upper, NOS:\n                       Jugulodigastric (subdigastric)\nIntrabronchial:\n      Carinal (tracheobronchial) (tracheal bifurcation) \n      Hilar (bronchopulmonary) (proximal lobar) (pulmonary root)\n      Peritracheal\nLeft gastric (superior gastric):###\n      Cardiac (cardial)\n      Lesser curvature\n      Perigastric, NOS\nPeri-/paraesophageal \nPosterior mediastinal (tracheoesophageal)###\nSuperior mediastinal###***\n\nIntrathoracic, lower (abdominal), only:\nLeft gastric (superior gastric):\n      Cardiac (cardial)\n      Lesser curvature\n      Perigastric, NOS\nPeri-/paraesophageal \nPosterior mediastinal (tracheoesophageal)\n\nRegional lymph node(s), NOS", "For all subsites:\n     Peri-/paraesophageal (8L, 8M)\n\nIntrabronchial:\n     Carinal (tracheobronchial) (10R, 10L) (tracheal bifurcation)\n     Hilar (bronchopulmonary) (proximal lobar) (pulmonary root)\n     Left gastric (superior gastric) (17): \n\nIntrathoracic esophagus, lower (abdominal) only:\n    Left gastric (superior gastric) (17):\n    Posterior mediastinal (3P) (tracheoesophageal)\n\nCervical esophagus only:\n    Scalene (inferior deep cervical) (1)\n    Supraclavicular (transverse cervical) (1)\n\nIntrathoracic, upper thoracic or middle, only:\n    Superior mediastinal\n\nStated as N1, N2, or N3\n\nLymph nodes, NOS", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

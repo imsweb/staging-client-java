@@ -1,0 +1,27 @@
+{
+  "id" : "seer_mets_renal_pelvis_and_ureter_14972",
+  "algorithm" : "tnm",
+  "version" : "1.5",
+  "name" : "SEER Mets Renal Pelvis and Ureter",
+  "title" : "SEER Mets",
+  "footnotes" : "\\##  Considered regional in Historic Stage",
+  "last_modified" : "2017-10-31T13:48:32.954Z",
+  "definition" : [ {
+    "key" : "seer_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/lymph node(s) involved\n\nDistant lymph node(s)\n\nExtension to##:\n    Ascending colon\n    Bladder (wall or mucosa) from renal pelvis\n    Colon, NOS\n    Descending colon\n    Ipsilateral kidney parenchyma from ureter\n    Liver\n    Pancreas\n    Perirenal (perinephric) fat via kidney\n    Spleen\n\nFurther contiguous extension\n\nUreter:\n     Prostate\n     Uterus\n\nOther direct extension\n\nMetastasis", "Ascending colon from right ureter \nDescending colon from left ureter \n\nExtension to:\n    Ascending colon from right renal pelvis\n    Descending colon from left renal pelvis\n  \nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph nodes\n\nDistant metastasis, NOS\n\nStated as M1", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

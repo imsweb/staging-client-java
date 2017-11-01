@@ -1,0 +1,18 @@
+{
+  "id" : "combined_to_summ_stage_t_80394",
+  "algorithm" : "tnm",
+  "version" : "1.5",
+  "name" : "Combined T to Summ Stage T",
+  "title" : "Combined T to Summary Stage T",
+  "last_modified" : "2017-10-31T13:48:38.312Z",
+  "definition" : [ {
+    "key" : "combined_t_in",
+    "name" : "Combined T",
+    "type" : "INPUT"
+  }, {
+    "key" : "ss2017_t_out",
+    "name" : "SS2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "X", "VALUE:U" ], [ "0", "VALUE:U" ], [ "A", "VALUE:IS" ], [ "IS", "VALUE:IS" ], [ "ISPU", "VALUE:IS" ], [ "ISPD", "VALUE:IS" ], [ "1", "VALUE:L" ], [ "1MI", "VALUE:L" ], [ "1A", "VALUE:L" ], [ "1A1", "VALUE:L" ], [ "1A2", "VALUE:L" ], [ "1B", "VALUE:L" ], [ "1B1", "VALUE:L" ], [ "1B2", "VALUE:L" ], [ "1C", "VALUE:L" ], [ "1D", "VALUE:L" ], [ "2", "VALUE:L" ], [ "2A", "VALUE:L" ], [ "2A1", "VALUE:L" ], [ "2A2", "VALUE:L" ], [ "2B", "VALUE:L" ], [ "2C", "VALUE:L" ], [ "2D", "VALUE:L" ], [ "3", "VALUE:L" ], [ "3A", "VALUE:L" ], [ "3B", "VALUE:L" ], [ "3C", "VALUE:L" ], [ "3D", "VALUE:L" ], [ "4", "VALUE:RE" ], [ "4A", "VALUE:RE" ], [ "4B", "VALUE:RE" ], [ "4C", "VALUE:RE" ], [ "4D", "VALUE:RE" ], [ "4E", "VALUE:RE" ], [ "88", "VALUE:NA" ], [ "*", "VALUE:NA" ] ]
+}

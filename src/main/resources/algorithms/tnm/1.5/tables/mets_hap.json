@@ -1,0 +1,28 @@
+{
+  "id" : "mets_hap",
+  "algorithm" : "tnm",
+  "version" : "1.5",
+  "name" : "SEER Mets",
+  "title" : "SEER Mets",
+  "notes" : "**Note 1:**  The lesser sac of the peritoneum, or omental bursa, is the cavity in the abdomen formed by the lesser and greater omentum; the pancreas forms part of the posterior wall of the lesser sac.\n\n**Note 2:** The specific location of the mesenteric nodes determines whether they are regional or distant. If the specific location is not described, code in SEER Regional Nodes.\n\n**Note 3:** Porta hepatic nodes are considered distant for Body and Tail and should be coded in SEER Mets. If the specific location for hepatic nodes is not described, code in SEER Regional Nodes.",
+  "footnotes" : "\\## Considered regional in Historic Stage\n\\**  Considered regional in 1977 Summary  Staging Guide",
+  "last_modified" : "2017-10-31T13:48:39.983Z",
+  "definition" : [ {
+    "key" : "seer_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_m",
+    "name" : "Summary Stage 2017 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "None\n\nNo distant metastasis", "", "VALUE:NONE" ], [ "70", "Distant site(s)/node(s) involved\n\nDistant lymph node(s)\n\nExtension to:\nAll sites:\n    Adrenal (suprarenal) gland**\n    Adrenal, left##**\n    Adrenal, right\n    Colon (other than splenic flexure)\n    Diaphragm\n    Gallbladder##**\n    Ileum**\n    Jejunum**\n    Kidney\n    Kidney, left##**\n    Kidney, right\n    Liver including porta hepatis##**\n    Mesenteric fat##**\n    Mesentery##**\n    Mesocolon##**\n    Peritoneum##**\n    Retroperitoneal soft tissue (retroperitoneal space)\n    Ureter, left##**\n    Ureter, right\n\nFurther contiguous extension\n\nMetastasis", "Distant lymph node(s):\n    Celiac\n    Pericholedochal (common bile duct)\n    Superior mesenteric\n    Pyloric:\n        Infrapyloric\n        Retropyloric\n        Subpyloric\n        Suprapyloric\n\nDistant metastasis: \n\nSeeding of peritoneum, even if limited to the lesser sac region\nPositive peritoneal cytology\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph nodes\n\nDistant metastasis, NOS\n\nStated as M1", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

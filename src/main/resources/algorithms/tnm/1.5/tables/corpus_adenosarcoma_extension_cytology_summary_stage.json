@@ -1,0 +1,23 @@
+{
+  "id" : "corpus_adenosarcoma_extension_cytology_summary_stage",
+  "algorithm" : "tnm",
+  "version" : "1.5",
+  "name" : "SEER Primary Tumor Cytology Summary Stage",
+  "title" : "SEER Primary Tumor Cytology Summary Stage Table",
+  "notes" : "**Note:** For SEER Primary Tumor code 100 ONLY. The SS2000 T value is assigned based on the value of SEER Primary Tumor and peritoneal cytology status coded in Site Specific Factor 2 (SSF2).",
+  "last_modified" : "2017-10-31T13:48:35.507Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "SEER Primary Tumor",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf2",
+    "name" : "SSF2",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017",
+    "name" : "SS2017 Category",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "000", "VALUE:L" ], [ "100", "010", "VALUE:RE" ], [ "100", "020", "VALUE:L" ], [ "100", "988", "VALUE:L" ], [ "100", "997-999", "VALUE:L" ], [ "000,200, 800, 999", "*", "MATCH" ] ]
+}

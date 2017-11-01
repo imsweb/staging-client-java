@@ -1,0 +1,28 @@
+{
+  "id" : "nodes_ddn",
+  "algorithm" : "tnm",
+  "version" : "1.5",
+  "name" : "SEER Regional Nodes",
+  "title" : "SEER Regional Nodes",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field.  \n\n**Note 2:**  Bilateral or contralateral nodes are considered regional nodes for head, neck, and truncal tumors with bidirectional drainage to primary nodal basins, as shown on lymphoscintigraphy.  Truncal tumors may also drain to both cephalad and caudal primary nodal basins as shown on lymphoscintigraphy.  Clinical assessment of bilateral/contralateral or cephalad/caudal regional nodal involvement is required for tumors where lymphoscintigraphy is not performed.\n\n**Note 3:**  Contiguous or secondary nodal basins are the next nodal drainage basins beyond the primary nodal basins.  Secondary basins are considered regional for TNM staging but may be distant for Summary Stage. \n\n**Note 4:**  In transit metastasis is defined as a tumor distinct from the primary lesion and located either between the primary lesion and the draining regional lymph nodes or distal to the primary lesion. In transit metastasis is coded to Regional Lymph nodes.\n\n**Note 5:**  Isolated tumor cells (ITCs) should be considered negative nodes for Summary Stage 2000.",
+  "footnotes" : "\\### Considered regional in Historical Stage\n\\*** Considered distant in 1977 Summary Staging Guide",
+  "last_modified" : "2017-10-31T13:48:37.730Z",
+  "definition" : [ {
+    "key" : "seer_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_n",
+    "name" : "Summary Stage 2017 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "None\n\nNo regional lymph node involvement", "Isolated tumor cells (ITCs) only", "VALUE:NONE" ], [ "300", "Regional lymph node(s) involved only\n\nREGIONAL Lymph Nodes by primary site\n\nHead and neck:\nAll head and neck subsites:\n    Cervical, NOS\nLip:\n    Facial, NOS:###***\n        Buccinator (buccal)###***\n        Nasolabial###***\n    Mandibular, NOS:\n        Submandibular (submaxillary)\n        Submental###***\n    Parotid, NOS:###***\n        Infra-auricular###***\n        Preauricular###***\nExternal ear/auditory canal:\n     Mastoid (post-/retro-auricular) (occipital)\n     Preauricular\nFace, Other (cheek, chin, forehead, jaw, nose and temple):\n     Facial, NOS:\n        Buccinator (buccal)\n        Nasolabial\n    Mandibular, NOS:\n        Submandibular (submaxillary)\n        Submental###***\n    Parotid, NOS:\n         Infra-auricular\n         Preauricular\nScalp:\n    Mastoid (post-/retro-auricular) \n    Parotid, NOS:\n        Infra-auricular\n        Preauricular\n    Spinal accessory (posterior cervical)\nNeck:\n    Axillary\n    Mandibular, NOS:\n       Submental###***\n    Mastoid (post-/retro-auricular)\n    Parotid, NOS:\n        Infra-auricular\n        Preauricular\nSpinal accessory (posterior cervical)\n    Supraclavicular (transverse cervical)    \nUpper Trunk:\n    Axillary\n    Cervical\n    Internal mammary (parasternal)\n    Supraclavicular (transverse cervical)\nLower Trunk:\n    Femoral (superficial inguinal)\nArm/Shoulder:\n    Axillary\n    Epitrochlear for hand/forearm\n    Spinal accessory for shoulder\nLeg/Hip:\n    Femoral (superficial inguinal)\n    Popliteal for heel and calf\nAll sites:\n    Regional lymph node, NOS", "Head and Neck (includes bilateral or contralateral nodes for head and neck)\n\nSatellite nodule(s) or in transit metastasis, WITHOUT OR WITH regional lymph node involvement\n    Includes cases with ITCs only and cases with regional lymph node involvement not stated  OR\n\nDescribed as tumor with in transit metastasis, NOS WITHOUT OR WITH regional lymph node involvement or regional lymph node involvement not stated\n\nLymph nodes, NOS \n\nStated as N1 (N1a, N2b, N1 [NOS]) or N2", "VALUE:RN" ], [ "700", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "Distant\n\nBidirectional nodal involvement (includes bilateral or contralateral nodes) \n(See Note 2):\n    Upper Trunk:\n        Femoral (or cephalad/caudal drainage from primary tumor)\n    Lower Trunk:\n        Axillary (or cephalad/caudal drainage from primary tumor) \n\nSecondary nodal basin involvement (includes bilateral or contralateral nodes for head and trunk)\n(See Note 3):\n    Head:\n        All subsites:\n            Supraclavicular\n    Arm/Shoulder:\n        Supraclavicular\n    Leg/Hip:\n        Iliac\n    All sites:\n        Regional lymph node(s) in secondary nodal basins , NOS \n\nSatellite nodule(s) or in transit metastasis  \nWITH regional lymph nodes listed above \n(See Note 4)", "VALUE:D" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "", "VALUE:U" ] ]
+}

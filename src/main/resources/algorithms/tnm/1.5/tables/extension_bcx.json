@@ -1,0 +1,27 @@
+{
+  "id" : "extension_bcx",
+  "algorithm" : "tnm",
+  "version" : "1.5",
+  "name" : "SEER Primary Tumor",
+  "title" : "SEER Primary Tumor",
+  "footnotes" : "\\# Considered localized in Historic stage\n\\### Considered distant in Historic stage\n\\* Considered localized in 1977 Summary Stage Guide",
+  "last_modified" : "2017-10-31T13:48:37.329Z",
+  "definition" : [ {
+    "key" : "seer_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "manual",
+    "name" : "Summary Stage Manual",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2017_t",
+    "name" : "Summary Stage 2017 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ: Noninvasive; intraepithelial", "", "VALUE:IS" ], [ "100", "Localized only\n\n    Invasive tumor confined to:\n        Lamina propria\n        Mucosa, NOS\n        Muscularis propria\n        Submucosa (superficial invasion)\n\n    Localized, NOS", "Tumor confined to bile duct", "VALUE:L" ], [ "200", "Regional by direct extension only\n\n    Extension (in)to one of the following:\n        Ampulla of Vater\n        Duodenum\n        Extrahepatic bile duct(s)\n        Liver, NOS:\n             Less than or equal to 2 cm into liver\n        Omentum, NOS:\n             Greater\n             Lesser###\n        Pancreas\n        Perimuscular connective tissue\n        Small intestine, NOS\n\n    Invasion of/through serosa#*", "Gallbladder \n    Unilateral branches of the right or left hepatic artery\n    Unilateral branches of the right or left portal vein\n\nTumor invades beyond the wall of the bile duct", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in patient record", "", "VALUE:U" ] ]
+}
