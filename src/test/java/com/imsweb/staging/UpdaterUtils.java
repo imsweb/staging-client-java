@@ -75,7 +75,7 @@ public final class UpdaterUtils {
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(SerializationFeature.WRITE_NULL_MAP_VALUES, false);
         mapper.setSerializationInclusion(Include.NON_NULL);
-        mapper.configure(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS, false);
+        mapper.setSerializationInclusion(Include.NON_EMPTY);
         mapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
         mapper.setDateFormat(format);
