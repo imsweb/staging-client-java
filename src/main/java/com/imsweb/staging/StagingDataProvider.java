@@ -62,7 +62,7 @@ public abstract class StagingDataProvider implements DataProvider {
         _DATE_FORMAT.setTimeZone(TimeZone.getTimeZone("UTC"));
 
         // do not write null values
-        _MAPPER.configure(SerializationFeature.WRITE_NULL_MAP_VALUES, false);
+        //_MAPPER.configure(SerializationFeature.WRITE_NULL_MAP_VALUES, false);
         _MAPPER.setSerializationInclusion(Include.NON_NULL);
 
         // set Date objects to output in readable customized format
