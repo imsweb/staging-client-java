@@ -3,8 +3,6 @@
  */
 package com.imsweb.staging.tnm;
 
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Collections;
@@ -36,6 +34,11 @@ import static org.junit.Assert.assertTrue;
 
 public class TnmStagingTest extends StagingTest {
 
+    @BeforeClass
+    public static void init() {
+        _STAGING = Staging.getInstance(TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.LATEST));
+    }
+
     @Override
     public String getAlgorithm() {
         return "tnm";
@@ -49,11 +52,6 @@ public class TnmStagingTest extends StagingTest {
     @Override
     public StagingFileDataProvider getProvider() {
         return TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.LATEST);
-    }
-
-    @BeforeClass
-    public static void init() throws IOException {
-        _STAGING = Staging.getInstance(TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.LATEST));
     }
 
     @Test
@@ -81,7 +79,7 @@ public class TnmStagingTest extends StagingTest {
     }
 
     @Test
-    public void testSchemaSelection() throws IOException, InterruptedException {
+    public void testSchemaSelection() {
         // test bad values
         List<StagingSchema> lookup = _STAGING.lookupSchema(new SchemaLookup());
         assertEquals(0, lookup.size());
@@ -451,7 +449,7 @@ public class TnmStagingTest extends StagingTest {
     }
 
     @Test
-    public void testEncoding() throws UnsupportedEncodingException {
+    public void testEncoding() {
         StagingTable table = _STAGING.getTable("thyroid_t_6166");
 
         assertNotNull(table);
