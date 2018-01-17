@@ -52,12 +52,6 @@ public abstract class StagingDataProvider implements DataProvider {
 
     private static StagingStringRange _MATCH_ALL_ENDPOINT = new StagingStringRange();
 
-    // lookup cache
-    private LoadingCache<SchemaLookup, List<StagingSchema>> _lookupCache;
-
-    // site/hist cache
-    private LoadingCache<String, Set<String>> _validValuesCache;
-
     static {
         _DATE_FORMAT.setTimeZone(TimeZone.getTimeZone("UTC"));
 
@@ -73,6 +67,11 @@ public abstract class StagingDataProvider implements DataProvider {
         _MAPPER.setVisibility(PropertyAccessor.GETTER, Visibility.ANY);
     }
 
+    // lookup cache
+    private LoadingCache<SchemaLookup, List<StagingSchema>> _lookupCache;
+    // site/hist cache
+    private LoadingCache<String, Set<String>> _validValuesCache;
+
     /**
      * Constructor loads all schemas and sets up cache
      */
@@ -82,14 +81,6 @@ public abstract class StagingDataProvider implements DataProvider {
 
         // cache the valid values for certain tables including site and histology
         _validValuesCache = Caffeine.newBuilder().build(this::getAllInputValues);
-    }
-
-    /**
-     * Clear the caches
-     */
-    public void invalidateCache() {
-        _lookupCache.invalidateAll();
-        _validValuesCache.invalidateAll();
     }
 
     /**
@@ -205,44 +196,6 @@ public abstract class StagingDataProvider implements DataProvider {
     }
 
     /**
-     * Return true if the site is valid
-     * @param site primary site
-     * @return true if the side is valid
-     */
-    public boolean isValidSite(String site) {
-        boolean valid = (site != null);
-
-        if (valid) {
-            StagingTable table = getTable(PRIMARY_SITE_TABLE);
-            if (table == null)
-                throw new IllegalStateException("Unable to locate " + PRIMARY_SITE_TABLE + " table");
-
-            valid = getValidSites().contains(site);
-        }
-
-        return valid;
-    }
-
-    /**
-     * Return true if the histology is valid
-     * @param histology histology
-     * @return true if the histology is valid
-     */
-    public boolean isValidHistology(String histology) {
-        boolean valid = (histology != null);
-
-        if (valid) {
-            StagingTable table = getTable(HISTOLOGY_TABLE);
-            if (table == null)
-                throw new IllegalStateException("Unable to locate " + HISTOLOGY_TABLE + " table");
-
-            valid = getValidHistologies().contains(histology);
-        }
-
-        return valid;
-    }
-
-    /**
      * Parse the string representation of an endpoint into a Endpoint object
      * @param endpoint endpoint String
      * @return an Endpoint object
@@ -309,6 +262,68 @@ public abstract class StagingDataProvider implements DataProvider {
         }
 
         return convertedRanges;
+    }
+
+    /**
+     * Returns a string, of length at least {@code minLength}, consisting of {@code string} prepended
+     * with as many copies of {@code padChar} as are necessary to reach that length.
+     */
+    static String padStart(String string, int minLength, char padChar) {
+        if (string == null || string.length() >= minLength)
+            return string;
+
+        StringBuilder sb = new StringBuilder(minLength);
+        for (int i = string.length(); i < minLength; i++)
+            sb.append(padChar);
+        sb.append(string);
+
+        return sb.toString();
+    }
+
+    /**
+     * Clear the caches
+     */
+    public void invalidateCache() {
+        _lookupCache.invalidateAll();
+        _validValuesCache.invalidateAll();
+    }
+
+    /**
+     * Return true if the site is valid
+     * @param site primary site
+     * @return true if the side is valid
+     */
+    public boolean isValidSite(String site) {
+        boolean valid = (site != null);
+
+        if (valid) {
+            StagingTable table = getTable(PRIMARY_SITE_TABLE);
+            if (table == null)
+                throw new IllegalStateException("Unable to locate " + PRIMARY_SITE_TABLE + " table");
+
+            valid = getValidSites().contains(site);
+        }
+
+        return valid;
+    }
+
+    /**
+     * Return true if the histology is valid
+     * @param histology histology
+     * @return true if the histology is valid
+     */
+    public boolean isValidHistology(String histology) {
+        boolean valid = (histology != null);
+
+        if (valid) {
+            StagingTable table = getTable(HISTOLOGY_TABLE);
+            if (table == null)
+                throw new IllegalStateException("Unable to locate " + HISTOLOGY_TABLE + " table");
+
+            valid = getValidHistologies().contains(histology);
+        }
+
+        return valid;
     }
 
     /**
@@ -403,35 +418,15 @@ public abstract class StagingDataProvider implements DataProvider {
 
         // site or histology must be supplied
         if (site != null || histology != null) {
-            Set<String> keysToMatch = new HashSet<>();
-
-            if (site != null)
-                keysToMatch.add(StagingData.PRIMARY_SITE_KEY);
-            if (histology != null)
-                keysToMatch.add(StagingData.HISTOLOGY_KEY);
-
-            // sometimes discriminator is a default value (like 988), so first search for site/hist only match even if discriminator was supplied
+            // loop over selection table and match using only the supplied keys
             for (String schemaId : getSchemaIds()) {
                 StagingSchema schema = getDefinition(schemaId);
 
                 if (schema.getSchemaSelectionTable() != null) {
                     StagingTable table = getTable(schema.getSchemaSelectionTable());
-                    if (table != null && DecisionEngine.matchTable(table, lookup.getInputs(), keysToMatch) != null)
+                    if (table != null && DecisionEngine.matchTable(table, lookup.getInputs(), lookup.getKeys()) != null)
                         matchedSchemas.add(schema);
                 }
-            }
-
-            // if multiple matches were found on site/hist and a discriminator was supplied, trim down the list
-            if (hasDiscriminator && matchedSchemas.size() > 1) {
-                List<StagingSchema> trimmedMatches = new ArrayList<>();
-
-                matchedSchemas.stream().filter(schema -> schema.getSchemaSelectionTable() != null).forEach(schema -> {
-                    StagingTable table = getTable(schema.getSchemaSelectionTable());
-                    if (table != null && DecisionEngine.matchTable(table, lookup.getInputs()) != null)
-                        trimmedMatches.add(schema);
-                });
-
-                matchedSchemas = trimmedMatches;
             }
         }
 
@@ -480,22 +475,6 @@ public abstract class StagingDataProvider implements DataProvider {
         }
 
         return values;
-    }
-
-    /**
-     * Returns a string, of length at least {@code minLength}, consisting of {@code string} prepended
-     * with as many copies of {@code padChar} as are necessary to reach that length.
-     */
-    static String padStart(String string, int minLength, char padChar) {
-        if (string == null || string.length() >= minLength)
-            return string;
-
-        StringBuilder sb = new StringBuilder(minLength);
-        for (int i = string.length(); i < minLength; i++)
-            sb.append(padChar);
-        sb.append(string);
-
-        return sb.toString();
     }
 
 }

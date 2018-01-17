@@ -45,6 +45,14 @@ public class SchemaLookup {
     }
 
     /**
+     * Return a list of keys that are set
+     * @return a set of keys
+     */
+    public Set<String> getKeys() {
+        return _inputs.keySet();
+    }
+
+    /**
      * Return a Map of all inputs
      * @return a Map of all inputs
      */
