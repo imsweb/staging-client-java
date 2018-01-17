@@ -32,8 +32,10 @@ public class SchemaLookup {
      * @param histology histology
      */
     public SchemaLookup(String site, String histology) {
-        setInput(StagingData.PRIMARY_SITE_KEY, site);
-        setInput(StagingData.HISTOLOGY_KEY, histology);
+        if (site != null && !site.isEmpty())
+            setInput(StagingData.PRIMARY_SITE_KEY, site);
+        if (histology != null && !histology.isEmpty())
+            setInput(StagingData.HISTOLOGY_KEY, histology);
     }
 
     /**
@@ -42,6 +44,14 @@ public class SchemaLookup {
      */
     public Set<String> getAllowedKeys() {
         return null;
+    }
+
+    /**
+     * Return a list of keys that are set
+     * @return a set of keys
+     */
+    public Set<String> getKeys() {
+        return _inputs.keySet();
     }
 
     /**

@@ -143,11 +143,11 @@ public class CsStagingTest extends StagingTest {
         assertEquals(Integer.valueOf(138), lookup.get(0).getSchemaNum());
 
         // test searching on only site
-        lookup = _STAGING.lookupSchema(new CsSchemaLookup("C401", null, null));
+        lookup = _STAGING.lookupSchema(new CsSchemaLookup("C401", null));
         assertEquals(5, lookup.size());
 
         // test searching on only hist
-        lookup = _STAGING.lookupSchema(new CsSchemaLookup(null, "9702", null));
+        lookup = _STAGING.lookupSchema(new CsSchemaLookup(null, "9702"));
         assertEquals(2, lookup.size());
 
         // test that searching on only ssf25 returns no results
