@@ -32,7 +32,6 @@ public class CsSchemaLookupTest {
     @Test
     public void testGetKeys() {
         assertEquals(new CsSchemaLookup("C629", "9100").getKeys(), Stream.of("site", "hist").collect(Collectors.toSet()));
-        assertEquals(new CsSchemaLookup("C629", "9100").getKeys(), Stream.of("site", "hist").collect(Collectors.toSet()));
         assertEquals(new CsSchemaLookup("C629", "9100", "001").getKeys(), Stream.of("site", "hist", "ssf25").collect(Collectors.toSet()));
     }
 
