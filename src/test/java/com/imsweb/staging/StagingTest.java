@@ -42,19 +42,16 @@ public abstract class StagingTest {
 
     /**
      * Return the algorithm name
-     * @return
      */
     public abstract String getAlgorithm();
 
     /**
      * Return the algorithm version
-     * @return
      */
     public abstract String getVersion();
 
     /**
      * Return the staging data provider
-     * @return
      */
     public abstract StagingFileDataProvider getProvider();
 
@@ -135,7 +132,7 @@ public abstract class StagingTest {
 
     @Test
     public void testCachedSiteAndHistology() {
-        TnmDataProvider provider = TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_5);
+        TnmDataProvider provider = TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_6);
         assertTrue(provider.getValidSites().size() > 0);
         assertTrue(provider.getValidHistologies().size() > 0);
 
@@ -219,11 +216,14 @@ public abstract class StagingTest {
 
             // build a list of input tables that should be excluded
             Set<String> ids = new HashSet<>();
-            for (StagingMapping mapping : schema.getMappings()) {
-                if (ids.contains(mapping.getId()))
-                    errors.add("The mapping id " + schemaId + ":" + mapping.getId() + " is duplicated.  This should never happen");
-                ids.add(mapping.getId());
-            }
+
+            List<StagingMapping> mappings = schema.getMappings();
+            if (mappings != null)
+                for (StagingMapping mapping : mappings) {
+                    if (ids.contains(mapping.getId()))
+                        errors.add("The mapping id " + schemaId + ":" + mapping.getId() + " is duplicated.  This should never happen");
+                    ids.add(mapping.getId());
+                }
         }
 
         assertNoErrors(errors, "input values and their assocated validation tables");
@@ -231,8 +231,6 @@ public abstract class StagingTest {
 
     /**
      * Helper method to assert failures when tracked errors exist
-     * @param errors
-     * @param description
      */
     public void assertNoErrors(Collection<String> errors, String description) {
         if (!errors.isEmpty()) {

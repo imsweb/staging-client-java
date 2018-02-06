@@ -46,7 +46,7 @@ public class TnmStagingTest extends StagingTest {
 
     @Override
     public String getVersion() {
-        return "1.5";
+        return "1.6";
     }
 
     @Override
@@ -60,12 +60,12 @@ public class TnmStagingTest extends StagingTest {
         assertTrue(_STAGING.getTableIds().size() > 0);
 
         assertNotNull(_STAGING.getSchema("urethra"));
-        assertNotNull(_STAGING.getTable("extension_bdi"));
+        assertNotNull(_STAGING.getTable("ssf4_mpn"));
     }
 
     @Test
     public void testVersionInitiaizationTypes() {
-        Staging staging10 = Staging.getInstance(TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_5));
+        Staging staging10 = Staging.getInstance(TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_6));
         assertEquals(TnmDataProvider.TnmVersion.LATEST.getVersion(), staging10.getVersion());
 
         Staging stagingLatest = Staging.getInstance(TnmDataProvider.getInstance());
@@ -165,7 +165,7 @@ public class TnmStagingTest extends StagingTest {
         assertEquals("testis", lookup.get(0).getId());
 
         // now invalidate the cache
-        TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_5).invalidateCache();
+        TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_6).invalidateCache();
 
         // try the lookup again
         lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C629", "9231"));
@@ -194,10 +194,9 @@ public class TnmStagingTest extends StagingTest {
 
         // test a table that has multiple inputs
         context = new HashMap<>();
-        context.put("ss2017_t", "L");
-        context.put("ss2017_n", "RE");
-        context.put("ss2017_m", "D");
-        assertEquals(Integer.valueOf(136), _STAGING.findMatchingTableRow("summary_stage_rpa", context));
+        context.put("m_prefix", "p");
+        context.put("root_m", "0");
+        assertEquals(Integer.valueOf(8), _STAGING.findMatchingTableRow("concatenate_m_40642", context));
     }
 
     @Test
@@ -258,7 +257,7 @@ public class TnmStagingTest extends StagingTest {
         assertEquals(StagingData.Result.STAGED, data.getResult());
         assertEquals("urethra", data.getSchemaId());
         assertEquals(0, data.getErrors().size());
-        assertEquals(29, data.getPath().size());
+        assertEquals(25, data.getPath().size());
         assertEquals(10, data.getOutput().size());
 
         // check outputs
@@ -272,10 +271,6 @@ public class TnmStagingTest extends StagingTest {
         assertEquals("1", data.getOutput(TnmStagingData.TnmOutput.SOURCE_N));
         assertEquals("p1", data.getOutput(TnmStagingData.TnmOutput.COMBINED_M));
         assertEquals("2", data.getOutput(TnmStagingData.TnmOutput.SOURCE_M));
-        //        assertEquals("D", data.getOutput(TnmStagingData.TnmOutput.SS2017));
-        //        assertEquals("U", data.getOutput(TnmStagingData.TnmOutput.SS2017_T));
-        //        assertEquals("RN", data.getOutput(TnmStagingData.TnmOutput.SS2017_N));
-        //        assertEquals("D", data.getOutput(TnmStagingData.TnmOutput.SS2017_M));
     }
 
     @Test
@@ -308,8 +303,7 @@ public class TnmStagingTest extends StagingTest {
         Set<String> tables = _STAGING.getInvolvedTables("adnexa_uterine_other");
 
         assertEquals(
-                new HashSet<>(Arrays.asList("extension_bcn", "histology", "nodes_dcc", "primary_site", "schema_selection_adnexa_uterine_other", "seer_mets_48348",
-                        "summary_stage_rpa", "year_dx_validation")), tables);
+                new HashSet<>(Arrays.asList("primary_site", "histology", "schema_selection_adnexa_uterine_other", "year_dx_validation")), tables);
     }
 
     @Test
@@ -321,18 +315,18 @@ public class TnmStagingTest extends StagingTest {
 
     @Test
     public void testGetInputs() {
-        assertEquals(new HashSet<>(Arrays.asList("site", "hist", "seer_primary_tumor", "seer_nodes", "seer_mets")),
+        assertEquals(new HashSet<>(Arrays.asList("site", "hist")),
                 _STAGING.getInputs(_STAGING.getSchema("adnexa_uterine_other")));
 
         assertEquals(
                 new HashSet<>(Arrays.asList("site", "hist", "behavior", "systemic_surg_seq", "radiation_surg_seq", "nodes_pos", "clin_t", "clin_n", "clin_m",
-                        "path_t", "path_n", "path_m", "seer_primary_tumor", "seer_nodes", "seer_mets", "ssf13", "ssf15", "ssf16", "clin_stage_group_direct",
+                        "path_t", "path_n", "path_m", "ssf13", "ssf15", "ssf16", "clin_stage_group_direct",
                         "path_stage_group_direct")), _STAGING.getInputs(_STAGING.getSchema("testis")));
 
         // test with and without context
         assertEquals(
                 new HashSet<>(Arrays.asList("site", "hist", "systemic_surg_seq", "radiation_surg_seq", "nodes_pos", "clin_t", "clin_n", "clin_m", "path_t",
-                        "path_n", "path_m", "seer_primary_tumor", "seer_nodes", "seer_mets", "ssf1", "ssf8", "ssf10", "clin_stage_group_direct",
+                        "path_n", "path_m", "ssf1", "ssf8", "ssf10", "clin_stage_group_direct",
                         "path_stage_group_direct")), _STAGING.getInputs(_STAGING.getSchema("prostate")));
 
         Map<String, String> context = new HashMap<>();
@@ -341,7 +335,7 @@ public class TnmStagingTest extends StagingTest {
         context.put(StagingData.YEAR_DX_KEY, "2004");
 
         // for that context, only summary stage is calculated
-        assertEquals(new HashSet<>(Arrays.asList("site", "hist", "seer_primary_tumor", "seer_nodes", "seer_mets")),
+        assertEquals(new HashSet<>(Arrays.asList("site", "hist")),
                 _STAGING.getInputs(_STAGING.getSchema("prostate"), context));
     }
 
@@ -364,8 +358,8 @@ public class TnmStagingTest extends StagingTest {
         assertTrue(_STAGING.isCodeValid("urethra", "year_dx", "2016"));
 
         // test valid and invalid fields
-        assertTrue(_STAGING.isCodeValid("urethra", "seer_primary_tumor", "100"));
-        assertFalse(_STAGING.isCodeValid("urethra", "seer_primary_tumor", "150"));
+        assertTrue(_STAGING.isCodeValid("urethra", "clin_t", "c4"));
+        assertFalse(_STAGING.isCodeValid("urethra", "clin_t", "c5"));
         assertTrue(_STAGING.isCodeValid("urethra", "ssf1", "020"));
         assertFalse(_STAGING.isCodeValid("urethra", "ssf1", "030"));
     }

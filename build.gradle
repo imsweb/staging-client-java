@@ -9,7 +9,7 @@ plugins {
 }
 
 group = 'com.imsweb'
-version = '2.11'
+version = '2.12'
 description = 'Java client library for staging calculations'
 
 println "Starting build using ${Jvm.current()}"
@@ -75,7 +75,7 @@ if (version.endsWith('-SNAPSHOT'))
     gradle.startParameter.excludedTaskNames += 'closeAndReleaseRepository'
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '4.4.1'
+    gradleVersion = '4.5.1'
 }
 
 // run the full CS integration test suite
