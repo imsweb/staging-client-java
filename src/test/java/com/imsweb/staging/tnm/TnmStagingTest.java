@@ -207,10 +207,7 @@ public class TnmStagingTest extends StagingTest {
         data1.setInput(TnmStagingData.TnmInput.BEHAVIOR, "3");
         data1.setInput(TnmStagingData.TnmInput.GRADE, "9");
         data1.setInput(TnmStagingData.TnmInput.DX_YEAR, "2013");
-        data1.setInput(TnmStagingData.TnmInput.SEER_PRIMARY_TUMOR, "100");
-        data1.setInput(TnmStagingData.TnmInput.SEER_REGIONAL_NODES, "100");
         data1.setInput(TnmStagingData.TnmInput.REGIONAL_NODES_POSITIVE, "99");
-        data1.setInput(TnmStagingData.TnmInput.SEER_METS, "10");
         data1.setInput(TnmStagingData.TnmInput.AGE_AT_DX, "060");
         data1.setInput(TnmStagingData.TnmInput.SEX, "1");
         data1.setInput(TnmStagingData.TnmInput.RX_SUMM_SURGERY, "8");
@@ -223,13 +220,24 @@ public class TnmStagingTest extends StagingTest {
         data1.setInput(TnmStagingData.TnmInput.PATH_M, "6");
         data1.setSsf(1, "020");
 
-        TnmStagingData data2 = new TnmStagingData.TnmStagingInputBuilder().withInput(TnmStagingData.TnmInput.PRIMARY_SITE, "C680").withInput(TnmStagingData.TnmInput.HISTOLOGY, "8000").withInput(
-                TnmStagingData.TnmInput.BEHAVIOR, "3").withInput(TnmStagingData.TnmInput.GRADE, "9").withInput(TnmStagingData.TnmInput.DX_YEAR, "2013").withInput(
-                TnmStagingData.TnmInput.SEER_PRIMARY_TUMOR, "100").withInput(TnmStagingData.TnmInput.SEER_REGIONAL_NODES, "100").withInput(TnmStagingData.TnmInput.REGIONAL_NODES_POSITIVE, "99")
-                .withInput(TnmStagingData.TnmInput.SEER_METS, "10").withInput(TnmStagingData.TnmInput.AGE_AT_DX, "060").withInput(TnmStagingData.TnmInput.SEX, "1").withInput(
-                        TnmStagingData.TnmInput.RX_SUMM_SURGERY, "8").withInput(TnmStagingData.TnmInput.RX_SUMM_RADIATION, "9").withInput(TnmStagingData.TnmInput.CLIN_T, "1").withInput(
-                        TnmStagingData.TnmInput.CLIN_N, "2").withInput(TnmStagingData.TnmInput.CLIN_M, "3").withInput(TnmStagingData.TnmInput.PATH_T, "4").withInput(TnmStagingData.TnmInput.PATH_N,
-                        "5").withInput(TnmStagingData.TnmInput.PATH_M, "6").withSsf(1, "020").build();
+        TnmStagingData data2 = new TnmStagingData.TnmStagingInputBuilder()
+                .withInput(TnmStagingData.TnmInput.PRIMARY_SITE, "C680")
+                .withInput(TnmStagingData.TnmInput.HISTOLOGY, "8000")
+                .withInput(TnmStagingData.TnmInput.BEHAVIOR, "3")
+                .withInput(TnmStagingData.TnmInput.GRADE, "9")
+                .withInput(TnmStagingData.TnmInput.DX_YEAR, "2013")
+                .withInput(TnmStagingData.TnmInput.REGIONAL_NODES_POSITIVE, "99")
+                .withInput(TnmStagingData.TnmInput.AGE_AT_DX, "060")
+                .withInput(TnmStagingData.TnmInput.SEX, "1")
+                .withInput(TnmStagingData.TnmInput.RX_SUMM_SURGERY, "8")
+                .withInput(TnmStagingData.TnmInput.RX_SUMM_RADIATION, "9")
+                .withInput(TnmStagingData.TnmInput.CLIN_T, "1")
+                .withInput(TnmStagingData.TnmInput.CLIN_N, "2")
+                .withInput(TnmStagingData.TnmInput.CLIN_M, "3")
+                .withInput(TnmStagingData.TnmInput.PATH_T, "4")
+                .withInput(TnmStagingData.TnmInput.PATH_N, "5")
+                .withInput(TnmStagingData.TnmInput.PATH_M, "6")
+                .withSsf(1, "020").build();
 
         assertEquals(data1.getInput(), data2.getInput());
     }
