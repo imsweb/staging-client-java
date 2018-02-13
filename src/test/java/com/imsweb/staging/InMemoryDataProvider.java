@@ -13,11 +13,11 @@ import com.imsweb.staging.entities.StagingTable;
 /**
  * In implementation of DataProvider which holds all data in memory
  */
-public class UpdatingDataProvider extends StagingDataProvider {
+public class InMemoryDataProvider extends StagingDataProvider {
 
     // a list of supported algorithms
     public enum Algorithm {
-        CS
+        TEST1
     }
 
     private String _algorithm;
@@ -29,7 +29,7 @@ public class UpdatingDataProvider extends StagingDataProvider {
     /**
      * Constructor loads all schemas and sets up table cache
      */
-    public UpdatingDataProvider(String algorithm, String version) {
+    public InMemoryDataProvider(String algorithm, String version) {
         _algorithm = algorithm;
         _version = version;
     }
@@ -51,7 +51,6 @@ public class UpdatingDataProvider extends StagingDataProvider {
 
     /**
      * Add a table
-     * @param table a StagingTable
      */
     public void addTable(StagingTable table) {
         _tables.put(table.getId(), table);
@@ -59,7 +58,6 @@ public class UpdatingDataProvider extends StagingDataProvider {
 
     /**
      * Return a set of all the table names
-     * @return a List of Table identifier
      */
     @Override
     public Set<String> getTableIds() {
@@ -78,7 +76,6 @@ public class UpdatingDataProvider extends StagingDataProvider {
 
     /**
      * Add a schema
-     * @param schema a StagingSchema
      */
     public void addSchema(StagingSchema schema) {
         _schemas.put(schema.getId(), schema);

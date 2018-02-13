@@ -9,7 +9,6 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -39,8 +38,8 @@ public final class Staging {
     // list of all context keys
     public static final List<String> CONTEXT_KEYS = Collections.unmodifiableList(Arrays.asList(CTX_ALGORITHM_VERSION, CTX_YEAR_CURRENT));
 
-    private DecisionEngine _engine = null;
-    private StagingDataProvider _provider = null;
+    private DecisionEngine _engine;
+    private StagingDataProvider _provider;
 
     /**
      * Private constructor
@@ -455,14 +454,8 @@ public final class Staging {
 
         // if valid outputs are defined on the schema level, only return outputs that defined; this removed "temporary" outputs that may be defined during the
         // staging process
-        if (schema.getOutputMap() != null) {
-            Iterator<String> iter = outputs.iterator();
-            while (iter.hasNext()) {
-                String entry = iter.next();
-                if (!schema.getOutputMap().containsKey(entry))
-                    iter.remove();
-            }
-        }
+        if (schema.getOutputMap() != null)
+            outputs.removeIf(entry -> !schema.getOutputMap().containsKey(entry));
 
         return outputs;
     }

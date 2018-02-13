@@ -28,7 +28,7 @@ public class ExternalStagingFileDataProviderTest {
     }
 
     @Test
-    public void testExternalLoad() throws IOException {
+    public void testExternalLoad() {
         assertEquals("testing", _STAGING.getAlgorithm());
         assertEquals("99.99", _STAGING.getVersion());
         assertEquals(1, _STAGING.getSchemaIds().size());

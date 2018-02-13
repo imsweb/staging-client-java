@@ -29,11 +29,9 @@ import com.imsweb.decisionengine.Error.Type;
  */
 public class DecisionEngine {
 
-    private static Pattern _TEMPLATE_REFERENCE = Pattern.compile("\\{\\{(.*?)\\}\\}");
-
     // string to use for blank or null in error strings
     public static final String _BLANK_OUTPUT = "<blank>";
-
+    private static Pattern _TEMPLATE_REFERENCE = Pattern.compile("\\{\\{(.*?)\\}\\}");
     private DataProvider _provider;
 
     /**
@@ -168,14 +166,30 @@ public class DecisionEngine {
             Matcher m = _TEMPLATE_REFERENCE.matcher(value);
             if (m.matches()) {
                 String referencedKey = m.group(1);
-                if (context.containsKey(referencedKey))
-                    value = context.get(referencedKey);
-                else
-                    value = "";
+                value = context.getOrDefault(referencedKey, "");
             }
         }
 
         return value;
+    }
+
+    /**
+     * Return a comma-separated list of input values the table needs taken from the passed context.  Used for error message.
+     * @param table a Table
+     * @param context a Map of context
+     * @return a String representing the input for the table
+     */
+    static String getTableInputsAsString(Table table, Map<String, String> context) {
+        List<String> inputs = new ArrayList<>();
+
+        if (table.getColumnDefinitions() != null)
+            for (ColumnDefinition def : table.getColumnDefinitions())
+                if (ColumnType.INPUT.equals(def.getType())) {
+                    String value = context.get(def.getKey());
+                    inputs.add((value == null || value.trim().isEmpty()) ? _BLANK_OUTPUT : value.trim());
+                }
+
+        return inputs.stream().collect(Collectors.joining(","));
     }
 
     /**
@@ -210,8 +224,7 @@ public class DecisionEngine {
         if (mapping.getInclusionTables() != null) {
             for (TablePath path : mapping.getInclusionTables()) {
                 // make a copy of the context so mapping changes are only included for a single table path
-                Map<String, String> pathContext = new HashMap<>();
-                pathContext.putAll(context);
+                Map<String, String> pathContext = new HashMap<>(context);
 
                 Table table = getProvider().getTable(path.getId());
                 if (table == null)
@@ -238,8 +251,7 @@ public class DecisionEngine {
         if (matches && mapping.getExclusionTables() != null) {
             for (TablePath path : mapping.getExclusionTables()) {
                 // make a copy of the context so mapping changes are only included for a single table path
-                Map<String, String> pathContext = new HashMap<>();
-                pathContext.putAll(context);
+                Map<String, String> pathContext = new HashMap<>(context);
 
                 Table table = getProvider().getTable(path.getId());
                 if (table == null)
@@ -798,25 +810,6 @@ public class DecisionEngine {
         stack.pop();
 
         return continueProcessing;
-    }
-
-    /**
-     * Return a comma-separated list of input values the table needs taken from the passed context.  Used for error message.
-     * @param table a Table
-     * @param context a Map of context
-     * @return a String representing the input for the table
-     */
-    static String getTableInputsAsString(Table table, Map<String, String> context) {
-        List<String> inputs = new ArrayList<>();
-
-        if (table.getColumnDefinitions() != null)
-            for (ColumnDefinition def : table.getColumnDefinitions())
-                if (ColumnType.INPUT.equals(def.getType())) {
-                    String value = context.get(def.getKey());
-                    inputs.add((value == null || value.trim().isEmpty()) ? _BLANK_OUTPUT : value.trim());
-                }
-
-        return inputs.stream().collect(Collectors.joining(","));
     }
 
 }

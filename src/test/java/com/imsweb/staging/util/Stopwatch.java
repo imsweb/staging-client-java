@@ -30,7 +30,7 @@ public final class Stopwatch {
         return new Stopwatch().start();
     }
 
-    Stopwatch() {
+    private Stopwatch() {
     }
 
     /**
