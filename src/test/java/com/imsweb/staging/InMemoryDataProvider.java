@@ -15,11 +15,6 @@ import com.imsweb.staging.entities.StagingTable;
  */
 public class InMemoryDataProvider extends StagingDataProvider {
 
-    // a list of supported algorithms
-    public enum Algorithm {
-        TEST1
-    }
-
     private String _algorithm;
     private String _version;
 
@@ -53,6 +48,7 @@ public class InMemoryDataProvider extends StagingDataProvider {
      * Add a table
      */
     public void addTable(StagingTable table) {
+        initTable(table);
         _tables.put(table.getId(), table);
     }
 
@@ -71,13 +67,14 @@ public class InMemoryDataProvider extends StagingDataProvider {
 
     @Override
     public Set<String> getSchemaIds() {
-        return null;
+        return _schemas.keySet();
     }
 
     /**
      * Add a schema
      */
     public void addSchema(StagingSchema schema) {
+        initSchema(schema);
         _schemas.put(schema.getId(), schema);
     }
 
