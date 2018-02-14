@@ -2,7 +2,6 @@ package com.imsweb.staging.lab;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -29,7 +28,7 @@ public class CsStagingAddOutputFields {
     private static final String _VERSION = "02.05.50";
     private static final String _BASE_DIRECTORY = "C:/Prj/staging-client-java/src/main/resources/algorithms";
 
-    public static void main(String[] args) throws IOException, URISyntaxException {
+    public static void main(String[] args) throws IOException {
         // create an object mapper
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(SerializationFeature.WRITE_NULL_MAP_VALUES, false);
@@ -85,7 +84,6 @@ public class CsStagingAddOutputFields {
         descriptions.put("ajcc6_ndescriptor", "");
         descriptions.put("ajcc6_m", "");
         descriptions.put("ajcc6_mdescriptor", "");
-        descriptions.put("ajcc7_stage", "");
         descriptions.put("ajcc7_t", "");
         descriptions.put("ajcc7_tdescriptor", "");
         descriptions.put("ajcc7_n", "");

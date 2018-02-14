@@ -62,7 +62,7 @@ public class CsStagingTest extends StagingTest {
     }
 
     @BeforeClass
-    public static void init() throws IOException {
+    public static void init() {
         _STAGING = Staging.getInstance(CsDataProvider.getInstance(CsVersion.v020550));
     }
 
@@ -91,7 +91,7 @@ public class CsStagingTest extends StagingTest {
     }
 
     @Test
-    public void testSchemaSelection() throws IOException, InterruptedException {
+    public void testSchemaSelection() {
         // test bad values
         List<StagingSchema> lookup = _STAGING.lookupSchema(new SchemaLookup());
         assertEquals(0, lookup.size());

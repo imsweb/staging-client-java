@@ -4,7 +4,6 @@
  */
 package com.imsweb.decisionengine;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -45,7 +44,7 @@ public class DecisionEngineTest {
     private static DecisionEngine _ENGINE;
 
     @BeforeClass
-    public static void init() throws IOException {
+    public static void init() {
         BasicDataProvider provider = new BasicDataProvider();
 
         BasicTable table = new BasicTable("table_lookup_sample");
@@ -306,7 +305,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testEmptyTable() throws IOException {
+    public void testEmptyTable() {
         BasicDataProvider provider = new BasicDataProvider();
         BasicTable table = new BasicTable("basic_test_table");
         table.addColumnDefinition("size", ColumnType.INPUT);
@@ -319,7 +318,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testMatchTable() throws IOException {
+    public void testMatchTable() {
         BasicDataProvider provider = new BasicDataProvider();
         BasicTable table = new BasicTable("basic_test_table");
         table.addColumnDefinition("size", ColumnType.INPUT);
@@ -359,7 +358,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testMatchTableWithBlankOrMissingInput() throws IOException {
+    public void testMatchTableWithBlankOrMissingInput() {
         BasicDataProvider provider = new BasicDataProvider();
         BasicTable table = new BasicTable("basic_test_table");
         table.addColumnDefinition("size", ColumnType.INPUT);
@@ -532,7 +531,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testMatchTableMissingCell() throws IOException {
+    public void testMatchTableMissingCell() {
         BasicDataProvider provider = new BasicDataProvider();
         BasicTable table = new BasicTable("table_sample_first");
         table.addColumnDefinition("a", ColumnType.INPUT);
@@ -598,7 +597,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testLookupTable() throws IOException {
+    public void testLookupTable() {
         BasicDataProvider provider = new BasicDataProvider();
         BasicTable table = new BasicTable("site_table");
         table.addColumnDefinition("site", ColumnType.INPUT);
@@ -627,7 +626,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testAllValuesMatching() throws IOException {
+    public void testAllValuesMatching() {
         BasicDataProvider provider = new BasicDataProvider();
         BasicTable table = new BasicTable("all_values_test");
         table.addColumnDefinition("a", ColumnType.INPUT);
@@ -1188,7 +1187,7 @@ public class DecisionEngineTest {
     }
 
     @Test(expected = IllegalStateException.class)
-    public void testDuplicateAlgorithms() throws IOException {
+    public void testDuplicateAlgorithms() {
         BasicDataProvider provider = new BasicDataProvider();
         BasicDefinition def = new BasicDefinition();
         def.setId("TEST1");
