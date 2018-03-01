@@ -81,7 +81,10 @@ public class StagingRange extends Range {
         String high = DecisionEngine.translateValue(_high, context);
 
         // if input, low and high values represent decimal numbers then do a float comparison
-        if (!low.equals(high) && isNumeric(low) && isNumeric(high) && isNumeric(value)) {
+        if (!low.equals(high) && isNumeric(low) && isNumeric(high)) {
+            if (!isNumeric(value))
+                return false;
+
             Float converted = NumberUtils.createFloat(value);
 
             return converted >= NumberUtils.createFloat(low) && converted <= NumberUtils.createFloat(high);

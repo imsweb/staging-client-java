@@ -68,11 +68,28 @@ public class StagingRangeTest {
 
     @Test
     public void testDifferentLength() {
+        // string ranges must be the same length
         assertFalse(new StagingRange("AA", "AAA").contains("AAA", new HashMap<>()));
         assertFalse(new StagingRange("BBB", "BB").contains("BBB", new HashMap<>()));
-
         assertFalse(new StagingRange("CCC", "CC").contains("CC", new HashMap<>()));
         assertFalse(new StagingRange("DD", "DDD").contains("DD", new HashMap<>()));
 
+        // numeric ranges do not have to be the same length
+        assertTrue(new StagingRange("99", "999").contains("150", new HashMap<>()));
+        assertFalse(new StagingRange("999", "99").contains("150", new HashMap<>()));
+    }
+
+    @Test
+    public void testNumericRanges() {
+        assertFalse(new StagingRange("0.1", "99999.9").contains("0.0", new HashMap<>()));
+        assertFalse(new StagingRange("0.1", "99999.9").contains("100000", new HashMap<>()));
+        assertFalse(new StagingRange("0.1", "99999.9").contains("100000.1", new HashMap<>()));
+
+        assertTrue(new StagingRange("0.1", "99999.9").contains("0.1", new HashMap<>()));
+        assertTrue(new StagingRange("0.1", "99999.9").contains("500.1", new HashMap<>()));
+        assertTrue(new StagingRange("0.1", "99999.9").contains("99999.9", new HashMap<>()));
+
+        // nothing checks that a decimal is there.  Non-decimal value will still be considered in the range.
+        assertTrue(new StagingRange("0.1", "99999.9").contains("1000", new HashMap<>()));
     }
 }
