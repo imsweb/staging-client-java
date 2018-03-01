@@ -73,7 +73,7 @@ public class StagingRange extends Range {
     /**
      * Returns true if the value is contained in the range.  Note that the low and high values will be replaced with context if
      * they are specified that way.  There are two ways in which the values are compared.
-     * <p/>
+     * <p>
      * 1. If the low and high values aer different and are both "numeric", then the value will be compared using floats.
      * 2. Otherwise it will be compared using String but the strings must be the same length othersize the method will always return false.
      */
