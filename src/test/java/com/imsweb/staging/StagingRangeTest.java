@@ -5,29 +5,29 @@ import java.util.Map;
 
 import org.junit.Test;
 
-import com.imsweb.staging.entities.StagingStringRange;
+import com.imsweb.staging.entities.StagingRange;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class StagingStringRangeTest {
+public class StagingRangeTest {
 
     @Test
     public void testRanges() {
-        assertFalse(new StagingStringRange("100", "103").contains("099", new HashMap<>()));
-        assertTrue(new StagingStringRange("100", "103").contains("100", new HashMap<>()));
-        assertTrue(new StagingStringRange("100", "103").contains("102", new HashMap<>()));
-        assertTrue(new StagingStringRange("100", "103").contains("103", new HashMap<>()));
-        assertFalse(new StagingStringRange("100", "103").contains("104", new HashMap<>()));
+        assertFalse(new StagingRange("100", "103").contains("099", new HashMap<>()));
+        assertTrue(new StagingRange("100", "103").contains("100", new HashMap<>()));
+        assertTrue(new StagingRange("100", "103").contains("102", new HashMap<>()));
+        assertTrue(new StagingRange("100", "103").contains("103", new HashMap<>()));
+        assertFalse(new StagingRange("100", "103").contains("104", new HashMap<>()));
 
         // test that if the value is a shorter length it is not found to be a match
-        assertFalse(new StagingStringRange("020500", "999999").contains("1", new HashMap<>()));
+        assertFalse(new StagingRange("020500", "999999").contains("1", new HashMap<>()));
     }
 
     @Test
     public void testContext() {
         Map<String, String> context = new HashMap<>();
-        StagingStringRange range = new StagingStringRange("2000", "{{current_year}}");
+        StagingRange range = new StagingRange("2000", "{{current_year}}");
 
         assertFalse(range.contains("2004", context));
 
@@ -52,27 +52,27 @@ public class StagingStringRangeTest {
 
     @Test(expected = IllegalStateException.class)
     public void testNull() {
-        assertFalse(new StagingStringRange(null, null).contains("099", new HashMap<>()));
+        assertFalse(new StagingRange(null, null).contains("099", new HashMap<>()));
     }
 
     @Test
     public void testEmptyBothValues() {
-        assertFalse(new StagingStringRange("", "").contains("099", new HashMap<>()));
+        assertFalse(new StagingRange("", "").contains("099", new HashMap<>()));
     }
 
     @Test
     public void testEmptyOneValues() {
-        assertFalse(new StagingStringRange("999", "").contains("999", new HashMap<>()));
-        assertFalse(new StagingStringRange("", "999").contains("999", new HashMap<>()));
+        assertFalse(new StagingRange("999", "").contains("999", new HashMap<>()));
+        assertFalse(new StagingRange("", "999").contains("999", new HashMap<>()));
     }
 
     @Test
     public void testDifferentLength() {
-        assertFalse(new StagingStringRange("99", "999").contains("099", new HashMap<>()));
-        assertFalse(new StagingStringRange("999", "99").contains("099", new HashMap<>()));
+        assertFalse(new StagingRange("AA", "AAA").contains("AAA", new HashMap<>()));
+        assertFalse(new StagingRange("BBB", "BB").contains("BBB", new HashMap<>()));
 
-        assertFalse(new StagingStringRange("999", "99").contains("99", new HashMap<>()));
-        assertFalse(new StagingStringRange("99", "999").contains("99", new HashMap<>()));
+        assertFalse(new StagingRange("CCC", "CC").contains("CC", new HashMap<>()));
+        assertFalse(new StagingRange("DD", "DDD").contains("DD", new HashMap<>()));
 
     }
 }

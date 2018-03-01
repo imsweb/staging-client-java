@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * An interface representing a string range
  */
-public abstract class StringRange {
+public abstract class Range {
 
     /**
      * Returns true of the passed value is contained in the range

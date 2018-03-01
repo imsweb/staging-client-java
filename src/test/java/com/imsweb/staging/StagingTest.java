@@ -19,9 +19,9 @@ import org.junit.Test;
 import com.imsweb.decisionengine.ColumnDefinition;
 import com.imsweb.staging.entities.StagingColumnDefinition;
 import com.imsweb.staging.entities.StagingMapping;
+import com.imsweb.staging.entities.StagingRange;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingSchemaInput;
-import com.imsweb.staging.entities.StagingStringRange;
 import com.imsweb.staging.entities.StagingTable;
 import com.imsweb.staging.entities.StagingTableRow;
 import com.imsweb.staging.tnm.TnmDataProvider;
@@ -252,9 +252,9 @@ public abstract class StagingTest {
 
         // loop over each row
         for (StagingTableRow row : table.getTableRows()) {
-            List<StagingStringRange> ranges = row.getInputs().get(key);
+            List<StagingRange> ranges = row.getInputs().get(key);
 
-            for (StagingStringRange range : ranges) {
+            for (StagingRange range : ranges) {
                 String low = range.getLow();
                 String high = range.getHigh();
 

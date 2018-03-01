@@ -10,7 +10,7 @@ import org.junit.Test;
 
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.staging.entities.StagingColumnDefinition;
-import com.imsweb.staging.entities.StagingStringRange;
+import com.imsweb.staging.entities.StagingRange;
 import com.imsweb.staging.entities.StagingTable;
 
 import static org.junit.Assert.assertEquals;
@@ -68,7 +68,7 @@ public class StagingDataProviderTest {
 
         assertEquals(10, StagingDataProvider.splitValues("A,B,C,D,E,F,G,H,I,J").size());
 
-        List<StagingStringRange> ranges = StagingDataProvider.splitValues(",1,2,3,4");
+        List<StagingRange> ranges = StagingDataProvider.splitValues(",1,2,3,4");
         assertEquals(5, ranges.size());
         assertEquals("", ranges.get(0).getLow());
         assertEquals("", ranges.get(0).getHigh());

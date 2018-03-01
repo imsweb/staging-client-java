@@ -5,22 +5,23 @@ package com.imsweb.staging.entities;
 
 import java.util.Map;
 
+import org.apache.commons.lang3.math.NumberUtils;
 import org.mongodb.morphia.annotations.Embedded;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Property;
 
 import com.imsweb.decisionengine.DecisionEngine;
-import com.imsweb.decisionengine.StringRange;
+import com.imsweb.decisionengine.Range;
 
 /**
- * For some reason, the className was being stored for every StagingStringRange in MongoDB.  I think it was getting confused
+ * For some reason, the className was being stored for every StagingRange in MongoDB.  I think it was getting confused
  * because the StagingTableRow has a Map of String to a List of StagingStringRanges. Since the string range was buried two levels deep it thought it
  * needed to add the className.  The workaround I used was to add "@Entity(noClassnameStored = true)" even though you don't normally
  * need to add the @Entity to an @Embedded class.  It seems to fix the problem.
  */
 @Embedded
 @Entity(noClassnameStored = true)
-public class StagingStringRange extends StringRange {
+public class StagingRange extends Range {
 
     @Property("low")
     private String _low;
@@ -30,7 +31,7 @@ public class StagingStringRange extends StringRange {
     /**
      * Construct a string range that matches any string
      */
-    public StagingStringRange() {
+    public StagingRange() {
     }
 
     /**
@@ -38,7 +39,7 @@ public class StagingStringRange extends StringRange {
      * @param low low value
      * @param high high value
      */
-    public StagingStringRange(String low, String high) {
+    public StagingRange(String low, String high) {
         if (low == null || high == null)
             throw new IllegalStateException("Invalid range");
 
@@ -62,6 +63,10 @@ public class StagingStringRange extends StringRange {
         return _low == null && _high == null;
     }
 
+    private boolean isNumeric(String value) {
+        return NumberUtils.isParsable(value);
+    }
+
     @Override
     public boolean contains(String value, Map<String, String> context) {
         if (matchesAll())
@@ -74,6 +79,13 @@ public class StagingStringRange extends StringRange {
         // translate the context values if they are there
         String low = DecisionEngine.translateValue(_low, context);
         String high = DecisionEngine.translateValue(_high, context);
+
+        // if input, low and high values represent decimal numbers then do a float comparison
+        if (isNumeric(low) && isNumeric(high) && isNumeric(value)) {
+            Float converted = NumberUtils.createFloat(value);
+
+            return converted >= NumberUtils.createFloat(low) && converted <= NumberUtils.createFloat(high);
+        }
 
         // if the context value(s) failed or the low and high values are different length, return false
         if (low.length() != high.length() || low.length() != value.length())

@@ -31,9 +31,9 @@ import com.imsweb.staging.StagingTest;
 import com.imsweb.staging.cs.CsDataProvider.CsVersion;
 import com.imsweb.staging.cs.CsStagingData.CsOutput;
 import com.imsweb.staging.cs.CsStagingData.CsStagingInputBuilder;
+import com.imsweb.staging.entities.StagingRange;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingSchemaInput;
-import com.imsweb.staging.entities.StagingStringRange;
 import com.imsweb.staging.entities.StagingTable;
 import com.imsweb.staging.entities.StagingTableRow;
 
@@ -784,7 +784,7 @@ public class CsStagingTest extends StagingTest {
                 // loop over each row
                 for (StagingTableRow row : table.getTableRows()) {
                     // loop over all input cells
-                    for (Map.Entry<String, List<StagingStringRange>> entry : row.getInputs().entrySet()) {
+                    for (Map.Entry<String, List<StagingRange>> entry : row.getInputs().entrySet()) {
                         String key = entry.getKey();
 
                         // only validate keys that are actually INPUT values
@@ -799,7 +799,7 @@ public class CsStagingTest extends StagingTest {
                         Integer expectedFieldLength = inputTableLengths.get(validationTableId);
 
                         // loop over list of ranges
-                        for (StagingStringRange range : entry.getValue()) {
+                        for (StagingRange range : entry.getValue()) {
                             String low = range.getLow();
                             String high = range.getHigh();
 

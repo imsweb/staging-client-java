@@ -29,10 +29,10 @@ import com.imsweb.decisionengine.DecisionEngine;
 import com.imsweb.decisionengine.Endpoint.EndpointType;
 import com.imsweb.staging.entities.StagingColumnDefinition;
 import com.imsweb.staging.entities.StagingEndpoint;
+import com.imsweb.staging.entities.StagingRange;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingSchemaInput;
 import com.imsweb.staging.entities.StagingSchemaOutput;
-import com.imsweb.staging.entities.StagingStringRange;
 import com.imsweb.staging.entities.StagingTable;
 import com.imsweb.staging.entities.StagingTableRow;
 
@@ -50,7 +50,7 @@ public abstract class StagingDataProvider implements DataProvider {
 
     private static final ObjectMapper _MAPPER = new ObjectMapper();
 
-    private static StagingStringRange _MATCH_ALL_ENDPOINT = new StagingStringRange();
+    private static StagingRange _MATCH_ALL_ENDPOINT = new StagingRange();
 
     static {
         _DATE_FORMAT.setTimeZone(TimeZone.getTimeZone("UTC"));
@@ -153,12 +153,12 @@ public abstract class StagingDataProvider implements DataProvider {
                     switch (col.getType()) {
                         case INPUT:
                             // if there are no ranges in the list, that means the cell was "blank" and is not needed in the table row
-                            List<StagingStringRange> ranges = splitValues(cellValue);
+                            List<StagingRange> ranges = splitValues(cellValue);
                             if (!ranges.isEmpty()) {
                                 tableRowEntity.addInput(col.getKey(), ranges);
 
                                 // if there are key references used (values that reference other inputs) like {{key}}, then add them to the extra inputs list
-                                for (StagingStringRange range : ranges) {
+                                for (StagingRange range : ranges) {
                                     if (DecisionEngine.isReferenceVariable(range.getLow()))
                                         extraInputs.add(DecisionEngine.trimBraces(range.getLow()));
                                     if (DecisionEngine.isReferenceVariable(range.getHigh()))
@@ -226,12 +226,12 @@ public abstract class StagingDataProvider implements DataProvider {
     }
 
     /**
-     * Parses a string in having lists of ranges into a List of StringRange objects
+     * Parses a string in having lists of ranges into a List of Range objects
      * @param values String representing sets value ranges
      * @return a parsed list of string Range objects
      */
-    public static List<StagingStringRange> splitValues(String values) {
-        List<StagingStringRange> convertedRanges = new ArrayList<>();
+    public static List<StagingRange> splitValues(String values) {
+        List<StagingRange> convertedRanges = new ArrayList<>();
 
         if (values != null) {
             // if the value of the string is "*", then consider it as matching anything
@@ -251,12 +251,12 @@ public abstract class StagingDataProvider implements DataProvider {
                     if (parts.length == 2) {
                         // don't worry about length differences if one of the parts is a context variable
                         if (parts[0].trim().length() != parts[1].trim().length() && !DecisionEngine.isReferenceVariable(parts[0].trim()) && !DecisionEngine.isReferenceVariable(parts[1].trim()))
-                            convertedRanges.add(new StagingStringRange(range.trim(), range.trim()));
+                            convertedRanges.add(new StagingRange(range.trim(), range.trim()));
                         else
-                            convertedRanges.add(new StagingStringRange(parts[0].trim(), parts[1].trim()));
+                            convertedRanges.add(new StagingRange(parts[0].trim(), parts[1].trim()));
                     }
                     else
-                        convertedRanges.add(new StagingStringRange(range.trim(), range.trim()));
+                        convertedRanges.add(new StagingRange(range.trim(), range.trim()));
                 }
             }
         }
@@ -457,7 +457,7 @@ public abstract class StagingDataProvider implements DataProvider {
 
         String inputKey = inputKeys.iterator().next();
         for (StagingTableRow row : table.getTableRows()) {
-            for (StagingStringRange range : row.getColumnInput(inputKey)) {
+            for (StagingRange range : row.getColumnInput(inputKey)) {
                 if (range.getLow() != null) {
                     if (range.getLow().equals(range.getHigh()))
                         values.add(range.getLow());

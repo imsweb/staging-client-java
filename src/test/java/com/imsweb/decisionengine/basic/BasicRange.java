@@ -6,9 +6,9 @@ package com.imsweb.decisionengine.basic;
 import java.util.Map;
 
 import com.imsweb.decisionengine.DecisionEngine;
-import com.imsweb.decisionengine.StringRange;
+import com.imsweb.decisionengine.Range;
 
-public class BasicStringRange extends StringRange {
+public class BasicRange extends Range {
 
     private String _low;
     private String _high;
@@ -17,16 +17,16 @@ public class BasicStringRange extends StringRange {
     /**
      * Construct a BasicString range that matches any string
      */
-    public BasicStringRange() {
+    public BasicRange() {
         _usesContext = false;
     }
 
     /**
-     * Construct a BasicStringRange with a low and high bound
+     * Construct a BasicRange with a low and high bound
      * @param low low value
      * @param high high value
      */
-    public BasicStringRange(String low, String high) {
+    public BasicRange(String low, String high) {
         if (low == null || high == null)
             throw new IllegalStateException("Invalid range");
         if (low.length() != high.length())

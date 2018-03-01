@@ -21,7 +21,7 @@ import com.imsweb.staging.Staging;
 public class BasicDataProvider implements DataProvider {
 
     private static String _MATCH_ALL_STRING = "*";
-    private static BasicStringRange _MATCH_ALL_ENDPOINT = new BasicStringRange();
+    private static BasicRange _MATCH_ALL_ENDPOINT = new BasicRange();
     private Map<String, BasicTable> _tables = new HashMap<>();
     private Map<String, BasicDefinition> _definitions = new HashMap<>();
 
@@ -90,12 +90,12 @@ public class BasicDataProvider implements DataProvider {
                     switch (col.getType()) {
                         case INPUT:
                             // if there are no ranges in the list, that means the cell was "blank" and is not needed in the table row
-                            List<BasicStringRange> ranges = splitValues(cellValue);
+                            List<BasicRange> ranges = splitValues(cellValue);
                             if (!ranges.isEmpty()) {
                                 tableRowEntity.addInput(col.getKey(), ranges);
 
                                 // if there are key references used (values that reference other inputs) like {{key}}, then add them to the extra inputs list
-                                for (BasicStringRange range : ranges) {
+                                for (BasicRange range : ranges) {
                                     if (DecisionEngine.isReferenceVariable(range.getLow()))
                                         extraInputs.add(DecisionEngine.trimBraces(range.getLow()));
                                     if (DecisionEngine.isReferenceVariable(range.getHigh()))
@@ -165,7 +165,7 @@ public class BasicDataProvider implements DataProvider {
     }
 
     /**
-     * Parses a string of values into a List of StringRange entities.  The values can contain ranges and multiple values.  Some examples might be:
+     * Parses a string of values into a List of Range entities.  The values can contain ranges and multiple values.  Some examples might be:
      * <p>
      * 10
      * 10-14
@@ -174,10 +174,10 @@ public class BasicDataProvider implements DataProvider {
      * </p>
      * Note that all values (both low and high) must be the same length since they are evaluated using String comparison.
      * @param values a string of values
-     * @return a List of BasicStringRange objects
+     * @return a List of BasicRange objects
      */
-    protected List<BasicStringRange> splitValues(String values) {
-        List<BasicStringRange> convertedRanges = new ArrayList<>();
+    protected List<BasicRange> splitValues(String values) {
+        List<BasicRange> convertedRanges = new ArrayList<>();
 
         if (values != null) {
             // if the value of the string is "*", then consider it as matching anything
@@ -194,15 +194,15 @@ public class BasicDataProvider implements DataProvider {
                     // may need to revisit this issue later.
                     String[] parts = range.split("-");
                     if (parts.length == 1)
-                        convertedRanges.add(new BasicStringRange(parts[0].trim(), parts[0].trim()));
+                        convertedRanges.add(new BasicRange(parts[0].trim(), parts[0].trim()));
                     else if (parts.length == 2) {
                         if (parts[0].trim().length() != parts[1].trim().length())
-                            convertedRanges.add(new BasicStringRange(range.trim(), range.trim()));
+                            convertedRanges.add(new BasicRange(range.trim(), range.trim()));
                         else
-                            convertedRanges.add(new BasicStringRange(parts[0].trim(), parts[1].trim()));
+                            convertedRanges.add(new BasicRange(parts[0].trim(), parts[1].trim()));
                     }
                     else
-                        convertedRanges.add(new BasicStringRange(range.trim(), range.trim()));
+                        convertedRanges.add(new BasicRange(range.trim(), range.trim()));
                 }
             }
         }
