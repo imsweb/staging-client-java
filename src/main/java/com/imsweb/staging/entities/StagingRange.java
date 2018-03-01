@@ -47,6 +47,13 @@ public class StagingRange extends Range {
         _high = high;
     }
 
+    /**
+     * Return true if the string can converted into a number
+     */
+    public static boolean isNumeric(String value) {
+        return NumberUtils.isParsable(value);
+    }
+
     public String getLow() {
         return _low;
     }
@@ -63,10 +70,13 @@ public class StagingRange extends Range {
         return _low == null && _high == null;
     }
 
-    private boolean isNumeric(String value) {
-        return NumberUtils.isParsable(value);
-    }
-
+    /**
+     * Returns true if the value is contained in the range.  Note that the low and high values will be replaced with context if
+     * they are specified that way.  There are two ways in which the values are compared.
+     * <p/>
+     * 1. If the low and high values aer different and are both "numeric", then the value will be compared using floats.
+     * 2. Otherwise it will be compared using String but the strings must be the same length othersize the method will always return false.
+     */
     @Override
     public boolean contains(String value, Map<String, String> context) {
         if (matchesAll())

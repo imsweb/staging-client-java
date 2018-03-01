@@ -92,4 +92,17 @@ public class StagingRangeTest {
         // nothing checks that a decimal is there.  Non-decimal value will still be considered in the range.
         assertTrue(new StagingRange("0.1", "99999.9").contains("1000", new HashMap<>()));
     }
+
+    @Test
+    public void testIsNumeric() {
+        assertTrue(StagingRange.isNumeric("0"));
+        assertTrue(StagingRange.isNumeric("1"));
+        assertTrue(StagingRange.isNumeric("-1"));
+        assertTrue(StagingRange.isNumeric("1.1"));
+
+        assertFalse(StagingRange.isNumeric(null));
+        assertFalse(StagingRange.isNumeric(""));
+        assertFalse(StagingRange.isNumeric("1.1.1"));
+        assertFalse(StagingRange.isNumeric("NAN"));
+    }
 }
