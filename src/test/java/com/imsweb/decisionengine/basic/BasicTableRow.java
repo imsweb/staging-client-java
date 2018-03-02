@@ -12,29 +12,29 @@ import com.imsweb.decisionengine.TableRow;
 
 public class BasicTableRow implements TableRow {
 
-    private Map<String, List<BasicStringRange>> _inputs = new HashMap<>();
+    private Map<String, List<BasicRange>> _inputs = new HashMap<>();
     private String _description;
     private List<BasicEndpoint> _endpoints = new ArrayList<>();
 
     @Override
-    public List<BasicStringRange> getColumnInput(String key) {
+    public List<BasicRange> getColumnInput(String key) {
         return _inputs.get(key);
     }
 
-    public Map<String, List<BasicStringRange>> getInputs() {
+    public Map<String, List<BasicRange>> getInputs() {
         return _inputs;
     }
 
-    public void setInputs(Map<String, List<BasicStringRange>> inputs) {
+    public void setInputs(Map<String, List<BasicRange>> inputs) {
         _inputs = inputs;
     }
 
     /**
      * Add a single columns input list
      * @param key an input key
-     * @param range a List of BasicStringRange objects
+     * @param range a List of BasicRange objects
      */
-    public void addInput(String key, List<BasicStringRange> range) {
+    public void addInput(String key, List<BasicRange> range) {
         _inputs.put(key, range);
     }
 

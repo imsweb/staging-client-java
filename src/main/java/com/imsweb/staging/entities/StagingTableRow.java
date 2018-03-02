@@ -19,22 +19,22 @@ import com.imsweb.decisionengine.TableRow;
 public class StagingTableRow implements TableRow {
 
     @Embedded("inputs")
-    private Map<String, List<StagingStringRange>> _inputs = new HashMap<>();
+    private Map<String, List<StagingRange>> _inputs = new HashMap<>();
     @Embedded("endpoints")
     private List<StagingEndpoint> _endpoints = new ArrayList<>();
 
     @Override
     @JsonIgnore
-    public List<StagingStringRange> getColumnInput(String key) {
+    public List<StagingRange> getColumnInput(String key) {
         return _inputs.get(key);
     }
 
     @JsonProperty("inputs")
-    public Map<String, List<StagingStringRange>> getInputs() {
+    public Map<String, List<StagingRange>> getInputs() {
         return _inputs;
     }
 
-    public void setInputs(Map<String, List<StagingStringRange>> inputs) {
+    public void setInputs(Map<String, List<StagingRange>> inputs) {
         _inputs = inputs;
     }
 
@@ -43,7 +43,7 @@ public class StagingTableRow implements TableRow {
      * @param key key
      * @param range range
      */
-    public void addInput(String key, List<StagingStringRange> range) {
+    public void addInput(String key, List<StagingRange> range) {
         _inputs.put(key, range);
     }
 
