@@ -46,14 +46,14 @@ Download [the latest JAR][1] or grab via Maven:
 <dependency>
     <groupId>com.imsweb</groupId>
     <artifactId>staging-client-java</artifactId>
-    <version>2.13</version>
+    <version>2.14</version>
 </dependency>
 ```
 
 or via Gradle:
 
 ```groovy
-compile 'com.imsweb.com:staging-client-java:2.13'
+compile 'com.imsweb.com:staging-client-java:2.14'
 ```
 
 ## Usage

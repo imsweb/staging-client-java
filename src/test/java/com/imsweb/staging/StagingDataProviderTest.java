@@ -116,15 +116,16 @@ public class StagingDataProviderTest {
         assertEquals("N0(mol-)", ranges.get(0).getLow());
         assertEquals("N0(mol-)", ranges.get(0).getHigh());
 
+        // test numeric ranges
         ranges = StagingDataProvider.splitValues("1-21");
         assertEquals(1, ranges.size());
-        assertEquals("1-21", ranges.get(0).getLow());
-        assertEquals("1-21", ranges.get(0).getHigh());
+        assertEquals("1", ranges.get(0).getLow());
+        assertEquals("21", ranges.get(0).getHigh());
 
         ranges = StagingDataProvider.splitValues("21-111");
         assertEquals(1, ranges.size());
-        assertEquals("21-111", ranges.get(0).getLow());
-        assertEquals("21-111", ranges.get(0).getHigh());
+        assertEquals("21", ranges.get(0).getLow());
+        assertEquals("111", ranges.get(0).getHigh());
     }
 
     @Test
