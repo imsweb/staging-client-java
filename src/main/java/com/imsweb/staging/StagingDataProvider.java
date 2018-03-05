@@ -13,6 +13,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
@@ -44,7 +45,9 @@ public abstract class StagingDataProvider implements DataProvider {
     // tables that all algorithm versions must have
     public static final String PRIMARY_SITE_TABLE = "primary_site";
     public static final String HISTOLOGY_TABLE = "histology";
-
+    private static final Pattern _COLON = Pattern.compile(":");
+    private static final Pattern _COMMA = Pattern.compile(",");
+    private static final Pattern _DASH = Pattern.compile("-");
     // output all dates in ISO-8061 format and UTC time
     private static final DateFormat _DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
 
@@ -201,7 +204,7 @@ public abstract class StagingDataProvider implements DataProvider {
      * @return an Endpoint object
      */
     public static StagingEndpoint parseEndpoint(String endpoint) {
-        String[] parts = endpoint.split(":", 2);
+        String[] parts = _COLON.split(endpoint, 2);
 
         EndpointType type = null;
 
@@ -239,7 +242,7 @@ public abstract class StagingDataProvider implements DataProvider {
                 convertedRanges.add(_MATCH_ALL_ENDPOINT);
             else {
                 // split the string; the "-1" makes sure to not discard empty strings
-                String[] ranges = values.split(",", -1);
+                String[] ranges = _COMMA.split(values, -1);
 
                 for (String range : ranges) {
                     // Not sure if this is the best way to handle this, but I ran into a problem when I converted the CS data.  One of the tables had
@@ -247,7 +250,7 @@ public abstract class StagingDataProvider implements DataProvider {
                     // The only thing I can think of is for cases like this, assume it is not a range and use the whole string as a non-range value.
                     // The problem is that if something is entered incorrectly and was supposed to be a range, we will not process it correctly.  We
                     // may need to revisit this issue later.
-                    String[] parts = range.split("-");
+                    String[] parts = _DASH.split(range);
                     if (parts.length == 2) {
                         String low = parts[0].trim();
                         String high = parts[1].trim();
