@@ -8,7 +8,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
@@ -22,10 +21,8 @@ import static org.junit.Assert.assertEquals;
 
 public class BasicStagingTest {
 
-    private static Staging _STAGING;
-
-    @BeforeClass
-    public static void init() {
+    @Test
+    public void testBlankInputs() {
         InMemoryDataProvider provider = new InMemoryDataProvider("test", "1.0");
 
         StagingTable table = new StagingTable();
@@ -118,12 +115,9 @@ public class BasicStagingTest {
 
         provider.addSchema(schema);
 
-        _STAGING = Staging.getInstance(provider);
-    }
+        Staging staging = Staging.getInstance(provider);
 
-    @Test
-    public void testBlankInputs() {
-        assertEquals("schema_test", _STAGING.getSchema("schema_test").getId());
+        assertEquals("schema_test", staging.getSchema("schema_test").getId());
 
         // check case where required input field not supplied (i.e. no default); since there are is no workflow defined, this should
         // not cause an error
@@ -132,7 +126,7 @@ public class BasicStagingTest {
         data.setInput("year_dx", "2018");
         data.setInput("input1", "1");
 
-        _STAGING.stage(data);
+        staging.stage(data);
         assertEquals(Result.STAGED, data.getResult());
 
         // pass in blank for "input2"
@@ -142,7 +136,7 @@ public class BasicStagingTest {
         data.setInput("input1", "1");
         data.setInput("input2", "");
 
-        _STAGING.stage(data);
+        staging.stage(data);
         assertEquals(Result.STAGED, data.getResult());
 
         // pass in null for "input2"
@@ -152,7 +146,37 @@ public class BasicStagingTest {
         data.setInput("input1", "1");
         data.setInput("input2", null);
 
-        _STAGING.stage(data);
+        staging.stage(data);
         assertEquals(Result.STAGED, data.getResult());
+    }
+
+    @Test
+    public void testNumericRangeTableMatch() {
+        InMemoryDataProvider provider = new InMemoryDataProvider("test", "1.0");
+
+        StagingTable table = new StagingTable();
+        table.setId("psa");
+        StagingColumnDefinition def1 = new StagingColumnDefinition();
+        def1.setKey("psa");
+        def1.setName("PSA Value");
+        def1.setType(ColumnType.INPUT);
+        StagingColumnDefinition def2 = new StagingColumnDefinition();
+        def2.setKey("description");
+        def2.setName("PSA Description");
+        def2.setType(ColumnType.DESCRIPTION);
+        table.setColumnDefinitions(Arrays.asList(def1, def2));
+        table.setRawRows(new ArrayList<>());
+        table.getRawRows().add(Arrays.asList("0.1", "0.1 or less nanograms/milliliter (ng/ml)"));
+        table.getRawRows().add(Arrays.asList("0.2-999.9", "0.2 – 999.9 ng/ml"));
+        provider.addTable(table);
+
+        Staging staging = Staging.getInstance(provider);
+
+        assertEquals(Integer.valueOf(0), staging.findMatchingTableRow("psa", "psa", "0.1"));
+        assertEquals(Integer.valueOf(1), staging.findMatchingTableRow("psa", "psa", "0.2"));
+        assertEquals(Integer.valueOf(1), staging.findMatchingTableRow("psa", "psa", "500"));
+        assertEquals(Integer.valueOf(1), staging.findMatchingTableRow("psa", "psa", "500.99"));
+        assertEquals(Integer.valueOf(1), staging.findMatchingTableRow("psa", "psa", "500.0001"));
+        assertEquals(Integer.valueOf(1), staging.findMatchingTableRow("psa", "psa", "999.9"));
     }
 }

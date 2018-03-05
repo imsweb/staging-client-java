@@ -249,11 +249,18 @@ public abstract class StagingDataProvider implements DataProvider {
                     // may need to revisit this issue later.
                     String[] parts = range.split("-");
                     if (parts.length == 2) {
-                        // don't worry about length differences if one of the parts is a context variable
-                        if (parts[0].trim().length() != parts[1].trim().length() && !DecisionEngine.isReferenceVariable(parts[0].trim()) && !DecisionEngine.isReferenceVariable(parts[1].trim()))
-                            convertedRanges.add(new StagingRange(range.trim(), range.trim()));
+                        String low = parts[0].trim();
+                        String high = parts[1].trim();
+
+                        // check if both sides of the range are numeric values; if so the length does not have to match
+                        boolean isNumericRange = StagingRange.isNumeric(low) && StagingRange.isNumeric(high);
+
+                        // if same length, a numeric range, or one of the parts is a context variable, use the low and high as range.  Otherwise consier
+                        // a single value (i.e. low = high)
+                        if (low.length() == high.length() || isNumericRange || DecisionEngine.isReferenceVariable(low) || DecisionEngine.isReferenceVariable(high))
+                            convertedRanges.add(new StagingRange(low, high));
                         else
-                            convertedRanges.add(new StagingRange(parts[0].trim(), parts[1].trim()));
+                            convertedRanges.add(new StagingRange(range.trim(), range.trim()));
                     }
                     else
                         convertedRanges.add(new StagingRange(range.trim(), range.trim()));
