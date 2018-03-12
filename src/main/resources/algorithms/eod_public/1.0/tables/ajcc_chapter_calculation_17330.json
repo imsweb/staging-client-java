@@ -1,0 +1,22 @@
+{
+  "id" : "ajcc_chapter_calculation_17330",
+  "algorithm" : "eod_public",
+  "version" : "1.0",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2018-03-12T16:39:59.151Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "8041,8190,8247", "VALUE:46", "Merkel Cell Carcinoma" ] ]
+}

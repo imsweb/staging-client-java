@@ -1,0 +1,18 @@
+{
+  "id" : "behavior",
+  "algorithm" : "eod_public",
+  "version" : "1.0",
+  "name" : "Behavior",
+  "title" : "Behavior ICD-O-3",
+  "last_modified" : "2018-03-12T16:39:57.514Z",
+  "definition" : [ {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "desc",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Benign" ], [ "1", "Uncertain Benign/Malig" ], [ "2", "In Situ" ], [ "3", "Malignant Primary" ] ]
+}

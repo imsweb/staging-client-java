@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_small_intestine",
+  "algorithm" : "eod_public",
+  "version" : "1.0",
+  "name" : "Schema Selection SmallIntestine",
+  "title" : "Schema selection for SmallIntestine",
+  "last_modified" : "2018-03-12T16:39:57.454Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C170-C173,C178-C179", "8000-8149, 8154, 8157, 8160-8231, 8243-8248, 8250-8682, 8690-8700, 8720-8790, 9700-9701", "MATCH" ] ]
+}

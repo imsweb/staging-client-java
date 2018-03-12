@@ -1,0 +1,14 @@
+{
+  "id" : "tnm8_inclusions_tqn",
+  "algorithm" : "eod_public",
+  "version" : "1.0",
+  "name" : "TNM8 Inclusions",
+  "title" : "Inclusion Table TNM 8th ed. new",
+  "last_modified" : "2018-03-12T16:39:56.635Z",
+  "definition" : [ {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "INPUT"
+  } ],
+  "rows" : [ [ "8" ] ]
+}
