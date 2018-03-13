@@ -72,7 +72,7 @@ public class EodStagingData extends StagingData {
      * @param key output key
      * @return output
      */
-    public String getOutput(TnmOutput key) {
+    public String getOutput(EodOutput key) {
         return getOutput(key.toString());
     }
 
@@ -94,7 +94,7 @@ public class EodStagingData extends StagingData {
         DX_YEAR("year_dx"),
         TUMOR_SIZE_CLIN("size_clin"),
         TUMOR_SIZE_PATH("size_path"),
-        TUMOR_SIZE_SUMMARY("size_SUMMARY"),
+        TUMOR_SIZE_SUMMARY("size_summary"),
         RADIATION_SURG_SEQ("radiation_surg_seq"),
         SYSTEMIC_SURG_SEQ("systemic_surg_seq"),
         SS_2018("ss2018");
@@ -112,7 +112,7 @@ public class EodStagingData extends StagingData {
     }
 
     // output key definitions
-    public enum TnmOutput {
+    public enum EodOutput {
         NAACCR_SCHEMA_ID("naaccr_schema_id"),
         AJCC_ID("ajcc_id"),
         DERIVED_VERSION("derived_version"),
@@ -124,7 +124,7 @@ public class EodStagingData extends StagingData {
 
         private String _name;
 
-        TnmOutput(String name) {
+        EodOutput(String name) {
             _name = name;
         }
 
