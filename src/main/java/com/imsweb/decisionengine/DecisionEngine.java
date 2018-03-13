@@ -464,6 +464,12 @@ public class DecisionEngine {
     public Set<String> getInputs(Mapping mapping, Set<String> excludedInputs) {
         Set<String> inputs = new LinkedHashSet<>();
 
+        // if any fields are added in the initial context, they should not be considered inputs since their value is set
+        if (mapping.getInitialContext() != null) {
+            for (KeyValue kv : mapping.getInitialContext())
+                excludedInputs.add(kv.getKey());
+        }
+
         // handle inclusion tables if any
         if (mapping.getInclusionTables() != null)
             for (TablePath path : mapping.getInclusionTables())
