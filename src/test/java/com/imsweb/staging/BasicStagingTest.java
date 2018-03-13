@@ -23,7 +23,8 @@ import com.imsweb.staging.entities.StagingSchemaOutput;
 import com.imsweb.staging.entities.StagingTable;
 import com.imsweb.staging.entities.StagingTablePath;
 
-import static org.junit.Assert.assertEquals;
+import static org.assertj.core.api.Assertions.catchThrowable;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class BasicStagingTest {
 
@@ -91,7 +92,7 @@ public class BasicStagingTest {
 
         Staging staging = Staging.getInstance(provider);
 
-        assertEquals("schema_test", staging.getSchema("schema_test").getId());
+        assertThat(staging.getSchema("schema_test").getId()).isEqualTo("schema_test");
 
         // check case where required input field not supplied (i.e. no default); since there are is no workflow defined, this should
         // not cause an error
@@ -101,7 +102,7 @@ public class BasicStagingTest {
         data.setInput("input1", "1");
 
         staging.stage(data);
-        assertEquals(Result.STAGED, data.getResult());
+        assertThat(data.getResult()).isEqualTo(Result.STAGED);
 
         // pass in blank for "input2"
 
@@ -111,7 +112,7 @@ public class BasicStagingTest {
         data.setInput("input2", "");
 
         staging.stage(data);
-        assertEquals(Result.STAGED, data.getResult());
+        assertThat(data.getResult()).isEqualTo(Result.STAGED);
 
         // pass in null for "input2"
 
@@ -121,7 +122,7 @@ public class BasicStagingTest {
         data.setInput("input2", null);
 
         staging.stage(data);
-        assertEquals(Result.STAGED, data.getResult());
+        assertThat(data.getResult()).isEqualTo(Result.STAGED);
     }
 
     @Test
@@ -138,12 +139,12 @@ public class BasicStagingTest {
 
         Staging staging = Staging.getInstance(provider);
 
-        assertEquals(Integer.valueOf(0), staging.findMatchingTableRow("psa", "psa", "0.1"));
-        assertEquals(Integer.valueOf(1), staging.findMatchingTableRow("psa", "psa", "0.2"));
-        assertEquals(Integer.valueOf(1), staging.findMatchingTableRow("psa", "psa", "500"));
-        assertEquals(Integer.valueOf(1), staging.findMatchingTableRow("psa", "psa", "500.99"));
-        assertEquals(Integer.valueOf(1), staging.findMatchingTableRow("psa", "psa", "500.0001"));
-        assertEquals(Integer.valueOf(1), staging.findMatchingTableRow("psa", "psa", "999.9"));
+        assertThat(staging.findMatchingTableRow("psa", "psa", "0.1")).isEqualTo(0);
+        assertThat(staging.findMatchingTableRow("psa", "psa", "0.2")).isEqualTo(1);
+        assertThat(staging.findMatchingTableRow("psa", "psa", "500")).isEqualTo(1);
+        assertThat(staging.findMatchingTableRow("psa", "psa", "500.99")).isEqualTo(1);
+        assertThat(staging.findMatchingTableRow("psa", "psa", "500.0001")).isEqualTo(1);
+        assertThat(staging.findMatchingTableRow("psa", "psa", "999.9")).isEqualTo(1);
     }
 
     @Test
@@ -208,7 +209,58 @@ public class BasicStagingTest {
 
         Staging staging = Staging.getInstance(provider);
 
-        // should only return the real inputs and not the temp values
-        assertEquals(new HashSet<>(Arrays.asList("input1", "input2")), staging.getInputs(staging.getSchema("schema_test")));
+        // should only return the "real" inputs and not the temp field set in initial context
+        assertThat(staging.getInputs(staging.getSchema("schema_test"))).isEqualTo(new HashSet<>(Arrays.asList("input1", "input2")));
+    }
+
+    @Test
+    public void testInvalidContext() {
+        InMemoryDataProvider provider = new InMemoryDataProvider("test", "1.0");
+
+        StagingTable table = new StagingTable();
+        table.setId("table_input1");
+        table.setColumnDefinitions(Collections.singletonList(new StagingColumnDefinition("input1", "Input 1", ColumnType.INPUT)));
+        table.setRawRows(new ArrayList<>());
+        table.getRawRows().add(Collections.singletonList("1"));
+        table.getRawRows().add(Collections.singletonList("2"));
+        provider.addTable(table);
+
+        table = new StagingTable();
+        table.setId("table_selection");
+        table.setColumnDefinitions(Collections.singletonList(new StagingColumnDefinition("input1", "Input 1", ColumnType.INPUT)));
+        table.setRawRows(new ArrayList<>());
+        table.getRawRows().add(Collections.singletonList("*"));
+        provider.addTable(table);
+
+        table = new StagingTable();
+        table.setId("table_mapping");
+        table.setColumnDefinitions(Arrays.asList(new StagingColumnDefinition("input1", "Input 1", ColumnType.INPUT),
+                new StagingColumnDefinition("final_output", "Output", ColumnType.ENDPOINT)));
+        table.setRawRows(new ArrayList<>());
+        table.getRawRows().add(Arrays.asList("*", "VALUE:ABC"));
+        provider.addTable(table);
+
+        StagingSchema schema = new StagingSchema();
+        schema.setId("schema_test");
+        schema.setSchemaSelectionTable("table_selection");
+        List<StagingSchemaInput> inputs = new ArrayList<>();
+        inputs.add(new StagingSchemaInput("input1", "Input 1", "table_input1"));
+        schema.setInputs(inputs);
+        schema.setOutputs(Collections.singletonList(new StagingSchemaOutput("final_output", "Final Output")));
+
+        StagingMapping mapping = new StagingMapping();
+        mapping.setId("m1");
+        mapping.setInitialContext(new HashSet<>(Collections.singletonList(new StagingKeyValue("input1", "XXX"))));
+        StagingTablePath path = new StagingTablePath();
+        path.setId("table_mapping");
+        path.setInputs(new HashSet<>(Collections.singletonList("input1")));
+        path.setOutputs(new HashSet<>(Collections.singletonList("final_output")));
+        mapping.setTablePaths(Collections.singletonList(path));
+        schema.setMappings(Collections.singletonList(mapping));
+
+        // initializing should throw an exception since the initial context maps a real input variable
+        Throwable thrown = catchThrowable(() -> provider.addSchema(schema));
+
+        assertThat(thrown).isInstanceOf(IllegalStateException.class).hasNoCause().hasMessageContaining("not allowed since it is also defined as an input");
     }
 }
