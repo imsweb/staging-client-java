@@ -148,6 +148,15 @@ public class EodStagingTest extends StagingTest {
         schemaLookup.setInput(EodInput.DISCRIMINATOR_1.toString(), "1");
         lookup = _STAGING.lookupSchema(schemaLookup);
         assertEquals(0, lookup.size());
+
+        // test lookups based on sex
+        schemaLookup = new EodSchemaLookup("C481", "8720");
+        lookup = _STAGING.lookupSchema(schemaLookup);
+        assertEquals(2, lookup.size());
+        schemaLookup.setInput(EodInput.SEX.toString(), "1");
+        lookup = _STAGING.lookupSchema(schemaLookup);
+        assertEquals(1, lookup.size());
+        assertEquals("retroperitoneum", lookup.get(0).getId());
     }
 
     @Test
