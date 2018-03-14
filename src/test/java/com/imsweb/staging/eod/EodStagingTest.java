@@ -160,6 +160,18 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
+    public void testDiscriminatorInputs() {
+        Set<String> discriminators = new HashSet<>();
+        _STAGING.getSchemaIds().stream()
+                .map(schemaId -> _STAGING.getSchema(schemaId))
+                .filter(schema -> schema.getSchemaDiscriminators() != null)
+                .map(StagingSchema::getSchemaDiscriminators)
+                .forEach(discriminators::addAll);
+
+        assertEquals(new HashSet<>(Arrays.asList("sex", "discriminator_1", "discriminator_2")), discriminators);
+    }
+
+    @Test
     public void testLookupCache() {
         // do the same lookup twice
         List<StagingSchema> lookup = _STAGING.lookupSchema(new EodSchemaLookup("C629", "9231"));
