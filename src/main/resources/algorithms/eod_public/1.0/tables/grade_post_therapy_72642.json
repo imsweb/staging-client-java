@@ -1,0 +1,19 @@
+{
+  "id" : "grade_post_therapy_72642",
+  "algorithm" : "eod_public",
+  "version" : "1.0",
+  "name" : "Grade Post Therapy",
+  "title" : "Grade Post Therapy",
+  "notes" : "**Note 1:** Leave post-therapy grade blank when\n* No neoadjuvant therapy\n* Clinical or pathological case only\n\n**Note 2:** Grade (cell indicator) is no longer applicable for this hematopoietic neoplasm.",
+  "last_modified" : "2018-03-12T16:40:03.106Z",
+  "definition" : [ {
+    "key" : "grade_post_therapy",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "8", "Not applicable" ], [ "", "See Note 1" ] ]
+}

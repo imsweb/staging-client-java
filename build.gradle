@@ -9,7 +9,7 @@ plugins {
 }
 
 group = 'com.imsweb'
-version = '2.14'
+version = '3.0'
 description = 'Java client library for staging calculations'
 
 println "Starting build using ${Jvm.current()}"
@@ -38,6 +38,7 @@ dependencies {
     compile 'org.apache.commons:commons-lang3:3.7'
 
     testCompile 'junit:junit:4.12'
+    testCompile 'org.assertj:assertj-core:3.9.0'
     testCompile 'org.unitils:unitils-core:3.4.6'
     testCompile 'com.squareup.retrofit2:retrofit:2.3.0'
     testCompile 'com.squareup.retrofit2:converter-jackson:2.3.0'

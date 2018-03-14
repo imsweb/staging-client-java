@@ -29,6 +29,8 @@ import com.imsweb.decisionengine.DecisionEngine;
 import com.imsweb.decisionengine.Endpoint.EndpointType;
 import com.imsweb.staging.entities.StagingColumnDefinition;
 import com.imsweb.staging.entities.StagingEndpoint;
+import com.imsweb.staging.entities.StagingKeyValue;
+import com.imsweb.staging.entities.StagingMapping;
 import com.imsweb.staging.entities.StagingRange;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingSchemaInput;
@@ -122,6 +124,14 @@ public abstract class StagingDataProvider implements DataProvider {
 
             schema.setOutputMap(parsedOutputMap);
         }
+
+        // make sure that the mapping initial context does not set a value for an input field
+        if (schema.getMappings() != null)
+            for (StagingMapping mapping : schema.getMappings())
+                if (mapping.getInitialContext() != null)
+                    for (StagingKeyValue kv : mapping.getInitialContext())
+                        if (schema.getInputMap().containsKey(kv.getKey()))
+                            throw new IllegalStateException("The key '" + kv.getKey() + "' is defined in an initial context, but that is not allowed since it is also defined as an input.");
 
         return schema;
     }

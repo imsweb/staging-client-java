@@ -7,6 +7,27 @@ A cancer staging client library for Java applications.
 
 ## Supported staging algorithms
 
+### EOD
+
+Extent of Disease (EOD) is a set of three data items that describe how far a cancer has spread at the time of diagnosis. EOD 2018 is effective for cases diagnosed in 2018 and later.
+ 
+In each EOD schema, valid values, definitions, and registrar notes are provided for
+ 
+- EOD Primary Tumor
+- EOD Lymph Nodes
+- EOD Mets
+- Summary Stage 2018
+- Site-Specific Data Items (SSDIs), including grade, pertinent to the schema
+
+For cancer cases diagnosed January 1, 2018 and later, the NCI SEER program will collect Extent of Disease (EOD) revised for 2018 and Summary Stage 2018. The schemas have been developed to be compatible with the AJCC 8th Edition chapter definitions. 
+
+All of the standard setting organizations will collect the predictive and prognostic factors through Site Specific Data Items (SSDIs). Unlike the SSFs, these data items have formats and code structures specific to the data item.
+ 
+Versions supported:
+
+- 1.0 (released March 2018)
+
+
 ### TNM
 
 TNM is a widely accepted system of cancer staging. TNM stands for Tumor, Nodes, and Metastasis. T is assigned based on the extent of involvement at the primary tumor site, N for the extent of involvement in regional lymph nodes, and M for distant spread. Clinical TNM is assigned prior to treatment and pathologic TNM is assigned based on clinical information plus information from surgery. The clinical TNM and the pathologic TNM values are summarized as clinical stage group or pathologic stage group.
@@ -15,11 +36,7 @@ For each cancer site, or schema, valid values, definitions, and registrar notes 
 
 TNM categories, stage groups, and definitions are based on the Union for International Cancer Control ([UICC](http://www.uicc.org/)) TNM 7th edition classification.  UICC 7th edition and AJCC 7th edition TNM categories and stage groups are very similar; however, there are some differences.
 
-**WARNING**: SEER Primary Tumor, SEER Regional Nodes, and SEER Mets not used in 2016!!
-
-In 2016, SEER Summary Stage 2000 will continue to be used. For those schemas and site/histology combinations that are not defined in TNM, SEER Summary Stage 2000 should be collected manually.
-
-NCI will be developing SEER Summary Stage 2017, which will be effective for diagnosis year 2017. In preparation for SEER Summary Stage 2017, three data fields have been defined, SEER Primary Tumor, SEER Regional Nodes and SEER Mets. Some work has been done to define these fields, but they do NOT apply in 2016 and should be ignored. Do not utilize these fields for data collection in 2016. Only use the SEER Summary Stage 2000 directly coded field.
+For diagnosis years 2016-2017, SEER Summary Stage 2000 is required. SEER Summary Stage 2000 should be collected manually unless the registry is collecting Collaborative Stage, which would derive Summary Stage 2000.
 
 Versions supported:
 
@@ -46,14 +63,14 @@ Download [the latest JAR][1] or grab via Maven:
 <dependency>
     <groupId>com.imsweb</groupId>
     <artifactId>staging-client-java</artifactId>
-    <version>2.14</version>
+    <version>3.0</version>
 </dependency>
 ```
 
 or via Gradle:
 
 ```groovy
-compile 'com.imsweb.com:staging-client-java:2.14'
+compile 'com.imsweb.com:staging-client-java:3.0'
 ```
 
 ## Usage
