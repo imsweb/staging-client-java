@@ -88,6 +88,18 @@ For example, to get an instance of the Collaborative Staging algorithm
 Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.v020550));
 ```
 
+There are some algorithms that are distributed outside of the library.  If you need to instantiate a `Staging` instance with an external algorithm use 
+the `ExternalStagingFileDataProvider`.
+
+```java
+Path path = Paths.get("C:/path/to/algorithm", "external_algorithm.zip");
+try (InputStream is = Files.newInputStream(path)) {
+    Staging staging = Staging.getInstance(new ExternalStagingFileDataProvider(is));
+
+    // use staging instance
+}
+```
+
 ### Schemas
 
 Schemas represent sets of specific staging instructions.  Determining the schema to use for staging is based on primary site, histology and sometimes additional
