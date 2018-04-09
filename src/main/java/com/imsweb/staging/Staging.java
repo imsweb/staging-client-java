@@ -249,12 +249,8 @@ public final class Staging {
      * @return a Set of schema identifiers
      */
     public Set<String> getInvolvedSchemas(String tableId) {
-        Set<String> schemas = new HashSet<>();
-
         // loop over all schemas and find the ones that have the passed table identifier in the involved table set
-        schemas.addAll(getSchemaIds().stream().filter(schemaId -> getInvolvedTables(schemaId).contains(tableId)).collect(Collectors.toList()));
-
-        return schemas;
+        return getSchemaIds().stream().filter(schemaId -> getInvolvedTables(schemaId).contains(tableId)).collect(Collectors.toSet());
     }
 
     /**
@@ -546,9 +542,8 @@ public final class Staging {
     /**
      * Add the context keys which are used in staging and other calls
      * @param context Map of context
-     * @return updated Map of context
      */
-    private Map<String, String> addContextKeys(Map<String, String> context) {
+    private void addContextKeys(Map<String, String> context) {
         // make the algorithm version available in the context
         context.put(CTX_ALGORITHM_VERSION, getVersion());
 
@@ -556,17 +551,15 @@ public final class Staging {
         Calendar now = Calendar.getInstance();
         context.put(CTX_YEAR_CURRENT, String.valueOf(now.get(Calendar.YEAR)));
 
-        return context;
     }
 
     /**
      * Remove all context keys
      * @param context Map of context
-     * @return updated Map of context
      */
-    private Map<String, String> removeContextKeys(Map<String, String> context) {
+    private void removeContextKeys(Map<String, String> context) {
+        context.remove(CTX_ALGORITHM_VERSION);
         context.remove(CTX_YEAR_CURRENT);
 
-        return context;
     }
 }

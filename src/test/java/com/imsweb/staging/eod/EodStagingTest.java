@@ -17,6 +17,7 @@ import org.junit.Test;
 import com.imsweb.staging.SchemaLookup;
 import com.imsweb.staging.Staging;
 import com.imsweb.staging.StagingData;
+import com.imsweb.staging.StagingData.Result;
 import com.imsweb.staging.StagingFileDataProvider;
 import com.imsweb.staging.StagingTest;
 import com.imsweb.staging.entities.StagingSchema;
@@ -383,6 +384,48 @@ public class EodStagingTest extends StagingTest {
         // converting to other encoding should change the text
         assertNotEquals(table.getNotes(), new String(table.getNotes().getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.ISO_8859_1));
         assertNotEquals(table.getNotes(), new String(table.getNotes().getBytes(StandardCharsets.US_ASCII), StandardCharsets.US_ASCII));
+    }
+
+    @Test
+    public void testContentNotReturnedForInvalidInput() {
+        EodStagingData data = new EodStagingInputBuilder()
+                .withInput(EodInput.PRIMARY_SITE, "C713")
+                .withInput(EodInput.HISTOLOGY, "8020")
+                .withInput(EodInput.BEHAVIOR, "3")
+                .withInput(EodInput.DX_YEAR, "2018")
+                .withInput(EodInput.EOD_PRIMARY_TUMOR, "200")
+                .withInput(EodInput.EOD_REGIONAL_NODES, "300")
+                .withInput(EodInput.EOD_METS, "00").build();
+
+        // perform the staging
+        _STAGING.stage(data);
+
+        assertEquals(Result.FAILED_INVALID_INPUT, data.getResult());
+        assertEquals("brain", data.getSchemaId());
+        assertEquals(2, data.getErrors().size());
+        assertEquals(0, data.getPath().size());
+        assertEquals(0, data.getOutput().size());
+    }
+
+    @Test
+    public void testContentNotReturnedForInvalidYear() {
+        EodStagingData data = new EodStagingInputBuilder()
+                .withInput(EodInput.PRIMARY_SITE, "C713")
+                .withInput(EodInput.HISTOLOGY, "8020")
+                .withInput(EodInput.BEHAVIOR, "3")
+                .withInput(EodInput.DX_YEAR, "2010")
+                .withInput(EodInput.EOD_PRIMARY_TUMOR, "200")
+                .withInput(EodInput.EOD_REGIONAL_NODES, "300")
+                .withInput(EodInput.EOD_METS, "00").build();
+
+        // perform the staging
+        _STAGING.stage(data);
+
+        assertEquals(Result.FAILED_INVALID_YEAR_DX, data.getResult());
+        assertEquals("brain", data.getSchemaId());
+        assertEquals(0, data.getErrors().size());
+        assertEquals(0, data.getPath().size());
+        assertEquals(0, data.getOutput().size());
     }
 
 }
