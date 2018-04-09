@@ -404,7 +404,11 @@ public class EodStagingTest extends StagingTest {
         assertEquals("brain", data.getSchemaId());
         assertEquals(2, data.getErrors().size());
         assertEquals(0, data.getPath().size());
-        assertEquals(0, data.getOutput().size());
+
+        // note that invalid input will still return the default outputs
+        assertEquals(8, data.getOutput().size());
+        assertEquals("XX", data.getOutput().get(EodOutput.AJCC_ID.toString()));
+        assertEquals("00721", data.getOutput().get(EodOutput.NAACCR_SCHEMA_ID.toString()));
     }
 
     @Test
@@ -425,6 +429,8 @@ public class EodStagingTest extends StagingTest {
         assertEquals("brain", data.getSchemaId());
         assertEquals(0, data.getErrors().size());
         assertEquals(0, data.getPath().size());
+
+        // invalid year of dx never gets into the engine process method so there is no default output set
         assertEquals(0, data.getOutput().size());
     }
 
