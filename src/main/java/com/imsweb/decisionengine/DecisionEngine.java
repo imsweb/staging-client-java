@@ -593,6 +593,10 @@ public class DecisionEngine {
             if (entry.getValue() != null)
                 context.put(entry.getKey(), entry.getValue().trim());
 
+        // add all output keys to the context; if no default is supplied, use an empty string
+        for (Entry<String, ? extends Output> entry : definition.getOutputMap().entrySet())
+            context.put(entry.getValue().getKey(), entry.getValue().getDefault() != null ? translateValue(entry.getValue().getDefault(), context) : "");
+
         // validate inputs
         boolean stopForBadInput = false;
         for (String key : definition.getInputMap().keySet()) {
@@ -627,7 +631,6 @@ public class DecisionEngine {
                         stopForBadInput = true;
                 }
             }
-
         }
 
         // if an invalid input was flagged to stop processing, set result and exit
@@ -635,10 +638,6 @@ public class DecisionEngine {
             result.setType(Result.Type.FAILED_INPUT);
             return result;
         }
-
-        // add all output keys to the context; if no default is supplied, use an empty string
-        for (Entry<String, ? extends Output> entry : definition.getOutputMap().entrySet())
-            context.put(entry.getValue().getKey(), entry.getValue().getDefault() != null ? translateValue(entry.getValue().getDefault(), context) : "");
 
         // add the initial context
         if (definition.getInitialContext() != null)

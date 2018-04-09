@@ -385,4 +385,9 @@ public class EodStagingTest extends StagingTest {
         assertNotEquals(table.getNotes(), new String(table.getNotes().getBytes(StandardCharsets.US_ASCII), StandardCharsets.US_ASCII));
     }
 
+    @Test
+    public void testBadInputsWithDefaultOutput() {
+
+    }
+
 }
