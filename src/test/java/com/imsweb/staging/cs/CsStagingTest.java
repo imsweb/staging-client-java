@@ -831,4 +831,36 @@ public class CsStagingTest extends StagingTest {
 
         assertNoErrors(errors, "inputs values in tables which are not valid");
     }
+
+    @Test
+    public void testInvalidInputProducesOutput() {
+        CsStagingData data = new CsStagingData();
+        data.setInput(CsStagingData.CsInput.PRIMARY_SITE, "C680");
+        data.setInput(CsStagingData.CsInput.HISTOLOGY, "8000");
+        data.setInput(CsStagingData.CsInput.BEHAVIOR, "3");
+        data.setInput(CsStagingData.CsInput.GRADE, "9");
+        data.setInput(CsStagingData.CsInput.DX_YEAR, "2013");
+        data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "020550");
+        data.setInput(CsStagingData.CsInput.TUMOR_SIZE, "075");
+        data.setInput(CsStagingData.CsInput.EXTENSION, "100");
+        data.setInput(CsStagingData.CsInput.EXTENSION_EVAL, "9");
+        data.setInput(CsStagingData.CsInput.LYMPH_NODES, "100");
+        data.setInput(CsStagingData.CsInput.LYMPH_NODES_EVAL, "9");
+        data.setInput(CsStagingData.CsInput.REGIONAL_NODES_POSITIVE, "99");
+        data.setInput(CsStagingData.CsInput.REGIONAL_NODES_EXAMINED, "99");
+        data.setInput(CsStagingData.CsInput.METS_AT_DX, "20");  // this is an invalid value
+        data.setInput(CsStagingData.CsInput.METS_EVAL, "9");
+        data.setInput(CsStagingData.CsInput.LVI, "9");
+        data.setInput(CsStagingData.CsInput.AGE_AT_DX, "060");
+        data.setSsf(1, "020");
+
+        // perform the staging
+        _STAGING.stage(data);
+
+        assertEquals(Result.STAGED, data.getResult());
+        assertEquals("urethra", data.getSchemaId());
+        assertEquals(6, data.getErrors().size());
+        assertEquals(37, data.getPath().size());
+        assertEquals("129", data.getOutput(CsOutput.SCHEMA_NUMBER));
+    }
 }
