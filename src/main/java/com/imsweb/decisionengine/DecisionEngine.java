@@ -593,10 +593,6 @@ public class DecisionEngine {
             if (entry.getValue() != null)
                 context.put(entry.getKey(), entry.getValue().trim());
 
-        // add all output keys to the context; if no default is supplied, use an empty string
-        for (Entry<String, ? extends Output> entry : definition.getOutputMap().entrySet())
-            context.put(entry.getValue().getKey(), entry.getValue().getDefault() != null ? translateValue(entry.getValue().getDefault(), context) : "");
-
         // validate inputs
         boolean stopForBadInput = false;
         for (String key : definition.getInputMap().keySet()) {
@@ -631,18 +627,23 @@ public class DecisionEngine {
                         stopForBadInput = true;
                 }
             }
+
         }
+
+        // add all output keys to the context; if no default is supplied, use an empty string
+        for (Entry<String, ? extends Output> entry : definition.getOutputMap().entrySet())
+            context.put(entry.getValue().getKey(), entry.getValue().getDefault() != null ? translateValue(entry.getValue().getDefault(), context) : "");
+
+        // add the initial context
+        if (definition.getInitialContext() != null)
+            for (KeyValue keyValue : definition.getInitialContext())
+                context.put(keyValue.getKey(), translateValue(keyValue.getValue(), context));
 
         // if an invalid input was flagged to stop processing, set result and exit
         if (stopForBadInput) {
             result.setType(Result.Type.FAILED_INPUT);
             return result;
         }
-
-        // add the initial context
-        if (definition.getInitialContext() != null)
-            for (KeyValue keyValue : definition.getInitialContext())
-                context.put(keyValue.getKey(), translateValue(keyValue.getValue(), context));
 
         // process each mapping if it is "involved", which is checked using the current context against inclusion/exclusion criteria
         if (definition.getMappings() != null) {
