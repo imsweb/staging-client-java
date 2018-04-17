@@ -40,7 +40,7 @@ For diagnosis years 2016-2017, SEER Summary Stage 2000 is required. SEER Summary
 
 Versions supported:
 
-- 1.6 (released February 2018)
+- 1.7 (released April 2018)
 
 ### Collaborative Staging
 
@@ -63,14 +63,14 @@ Download [the latest JAR][1] or grab via Maven:
 <dependency>
     <groupId>com.imsweb</groupId>
     <artifactId>staging-client-java</artifactId>
-    <version>3.1</version>
+    <version>3.2</version>
 </dependency>
 ```
 
 or via Gradle:
 
 ```groovy
-compile 'com.imsweb.com:staging-client-java:3.1'
+compile 'com.imsweb.com:staging-client-java:3.2'
 ```
 
 ## Usage
