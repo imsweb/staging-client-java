@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_gist_esophagus",
+  "algorithm" : "tnm",
+  "version" : "1.7",
+  "name" : "Schema Selection GISTEsophagus",
+  "title" : "Schema selection for GISTEsophagus",
+  "last_modified" : "2018-04-11T19:52:58.785Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C150-C155,C158-C159", "8935-8936", "MATCH" ] ]
+}

@@ -13,8 +13,8 @@ public final class TnmDataProvider extends StagingFileDataProvider {
     private static final Map<TnmVersion, TnmDataProvider> _PROVIDERS = new ConcurrentHashMap<>();
 
     public enum TnmVersion {
-        LATEST("1.6"),
-        v1_6("1.6");
+        LATEST("1.7"),
+        v1_6("1.7");
 
         private String _version;
 
