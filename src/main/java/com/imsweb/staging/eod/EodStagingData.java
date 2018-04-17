@@ -86,7 +86,7 @@ public class EodStagingData extends StagingData {
         DISCRIMINATOR_1("discriminator_1"),
         DISCRIMINATOR_2("discriminator_2"),
         CLIN_T("clin_t"),
-        CLIN_T_SUFFIUX("clin_t_suffix"),
+        CLIN_T_SUFFIX("clin_t_suffix"),
         CLIN_N("clin_n"),
         CLIN_N_SUFFIX("clin_n_suffix"),
         CLIN_M("clin_m"),
