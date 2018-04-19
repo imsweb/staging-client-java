@@ -9,7 +9,7 @@ plugins {
 }
 
 group = 'com.imsweb'
-version = '3.2'
+version = '3.3-SNAPSHOT'
 description = 'Java client library for staging calculations'
 
 println "Starting build using ${Jvm.current()}"
@@ -62,13 +62,10 @@ test {
 }
 
 checkstyle {
-    ignoreFailures = true
     configFile = file('config/checkstyle/checkstyle.xml')
 }
 
 findbugs {
-    ignoreFailures = true
-    //reportLevel = 'low'
     excludeFilter = file('config/findbugs/findbugs-exclude.xml')
 }
 
