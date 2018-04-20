@@ -25,7 +25,7 @@ All of the standard setting organizations will collect the predictive and progno
  
 Versions supported:
 
-- 1.0 (released March 2018)
+- 1.1 (released April 2018)
 
 
 ### TNM
@@ -63,14 +63,14 @@ Download [the latest JAR][1] or grab via Maven:
 <dependency>
     <groupId>com.imsweb</groupId>
     <artifactId>staging-client-java</artifactId>
-    <version>3.2</version>
+    <version>3.3</version>
 </dependency>
 ```
 
 or via Gradle:
 
 ```groovy
-compile 'com.imsweb.com:staging-client-java:3.2'
+compile 'com.imsweb.com:staging-client-java:3.3'
 ```
 
 ## Usage
