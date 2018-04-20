@@ -48,7 +48,7 @@ public class EodStagingTest extends StagingTest {
 
     @Override
     public String getVersion() {
-        return "1.0";
+        return "1.1";
     }
 
     @Override
@@ -67,7 +67,7 @@ public class EodStagingTest extends StagingTest {
 
     @Test
     public void testVersionInitiaizationTypes() {
-        Staging staging10 = Staging.getInstance(EodDataProvider.getInstance(EodDataProvider.EodVersion.v1_0));
+        Staging staging10 = Staging.getInstance(EodDataProvider.getInstance(EodDataProvider.EodVersion.v1_1));
         assertEquals(EodDataProvider.EodVersion.LATEST.getVersion(), staging10.getVersion());
 
         Staging stagingLatest = Staging.getInstance(EodDataProvider.getInstance());
@@ -184,7 +184,7 @@ public class EodStagingTest extends StagingTest {
         assertEquals("soft_tissue_other", lookup.get(0).getId());
 
         // now invalidate the cache
-        EodDataProvider.getInstance(EodDataProvider.EodVersion.v1_0).invalidateCache();
+        EodDataProvider.getInstance(EodDataProvider.EodVersion.v1_1).invalidateCache();
 
         // try the lookup again
         lookup = _STAGING.lookupSchema(new EodSchemaLookup("C629", "9231"));
@@ -387,7 +387,7 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
-    public void testContentNotReturnedForInvalidInput() {
+    public void testContentReturnedForInvalidInput() {
         EodStagingData data = new EodStagingInputBuilder()
                 .withInput(EodInput.PRIMARY_SITE, "C713")
                 .withInput(EodInput.HISTOLOGY, "8020")
@@ -400,11 +400,12 @@ public class EodStagingTest extends StagingTest {
         // perform the staging
         _STAGING.stage(data);
 
-        assertEquals(Result.FAILED_INVALID_INPUT, data.getResult());
+        assertEquals(Result.STAGED, data.getResult());
         assertEquals("brain", data.getSchemaId());
-        assertEquals(2, data.getErrors().size());
-        assertEquals(0, data.getPath().size());
-        assertEquals(0, data.getOutput().size());
+        assertEquals(5, data.getErrors().size());
+        assertEquals(5, data.getPath().size());
+        assertEquals(8, data.getOutput().size());
+        assertEquals("1.1", data.getOutput().get(EodOutput.DERIVED_VERSION.toString()));
     }
 
     @Test

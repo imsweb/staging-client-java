@@ -10,7 +10,7 @@ import com.imsweb.staging.UpdaterUtils;
 public class EodPublicUpdateFromAPI {
 
     private static final String _ALGORITHM = "eod_public";
-    private static final String _VERSION = "1.0";
+    private static final String _VERSION = "1.1";
 
     public static void main(String[] args) throws IOException {
         UpdaterUtils.update(_ALGORITHM, _VERSION);
