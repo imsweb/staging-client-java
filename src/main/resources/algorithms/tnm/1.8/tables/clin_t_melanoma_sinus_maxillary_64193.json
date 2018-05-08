@@ -1,0 +1,28 @@
+{
+  "id" : "clin_t_melanoma_sinus_maxillary_64193",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Clin T Melanoma Sinus Maxillary",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  Assign 88 for in situ cases (behavior code /2). TNM does not include an in situ category for mucosal melanoma tumors.\n\n**Note 2:**  Mucosal melanomas are aggressive tumors, therefore, T1 and T2 are omitted, as are Stages I and II.\n\n**Note 3:**  Assign T3 for localized tumor when no other information is available or for extension involving the mucosa only of adjacent sites.\n\n**Note 4:**  Assign T4a or T4b for extension involving the deeper tissues of the primary or adjacent sites.",
+  "footnotes" : "\\* T4 [NOS] is not defined by UICC in the 7th edition. Approval has been provided by UICC to use \"Tumor invades bone, nerve or extrinsic deep muscles\" as T4 [NOS].\n\\# TX, T0 and T4 [NOS] are not defined in AJCC 7th edition.",
+  "last_modified" : "2018-05-02T20:27:53.245Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed#", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T \n    Extension cannot be determined\nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor#", "" ], [ "c3", "cT3", "Tumor limited to the epithelium and/or submucosa (mucosal disease)", "Tumor confined to mucosa of maxillary antrum (sinus)\n\nExtension involving mucosa only:\n    Frontal sinus\n    Sphenoid sinus\n    Ethmoid sinus\n    Nasal cavity\n    Nasopharynx\n\nLocalized, NOS\n\nStated as T3" ], [ "c4", "cT4", "Not defined by UICC*#", "Note: T4 has subcategories of T4a and T4b. Assign T4 only when there is no information available to assign one of the subcategories\n\nTumor invades bone, nerve or extrinsic deep muscles\n\nStated as T4[NOS]" ], [ "c4A", "cT4a", "Tumor invades: \n     Deep soft tissue\n     Cartilage\n     Bone\n     Overlying skin", "Involvement of deep tissue or mucoperiosteum of maxillary sinus plus mucosal involvement of any structure in T3\nInvolvement of  deep tissues, mucoperiosteum, cartilage, or bony wall of any structures in T3\nInvolvement of deep soft tissues, cartilage, or bony wall of any structures in T3\nInvolvement of palatine bone\n\nInfratemporal fossa\nOrbital contents including eye\nPterygoid plates\nPterygoid fossa\nSkin of cheek\nSkin of nose\nSoft palate\nSubcutaneous tissues\n\nStated as T4a" ], [ "c4B", "cT4b", "Tumor invades any of the following:\n    Brain\n    Dura\n    Skull base\n    Lower cranial nerves (IX, X, XI, XII)\n    Masticator space\n    Carotid artery\n    Prevertebral space\n    Mediastinal structures", "Anterior cranial fossa \nBase of skull\nClivus\nCribriform plate\nMiddle cranial fossa\nOrbital apex\nPterygomaxillary (temporal) fossa\n\nFurther contiguous extension :\n    Carotid artery (encased)\n \nStated as T4b" ], [ "88", "88", "Not applicable", "In situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

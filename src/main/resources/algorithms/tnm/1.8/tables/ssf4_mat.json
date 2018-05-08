@@ -1,0 +1,20 @@
+{
+  "id" : "ssf4_mat",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF4",
+  "title" : "Site-Specific Factor 4",
+  "subtitle" : "Primary Globe-Sparing Treatment Failure",
+  "notes" : "**Note 1:**  This is a unique site-specific factor that collects information from recurrence after the initial diagnosis.  The initial code is updated at the time of recurrence after the first course of globe-sparing treatment.\n\n**Note 2:**  Record 000 or 987 at initial diagnosis and treatment, depending on whether the initial treatment was globe-sparing or surgical enucleation.\n\n**Note 3:**  Change the recorded value of 000 to 010, 020, or 030 at the first recurrence in a treated eye after globe-sparing treatment.   \n* Use code 999 if recurrence is known but there is no more specific information available",
+  "last_modified" : "2018-05-02T20:27:52.661Z",
+  "definition" : [ {
+    "key" : "ssf4",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Initial diagnosis with primary globe-sparing treatment of retinoblastoma" ], [ "010", "Failure of primary globe-sparing treatment in unilateral retinoblastoma  " ], [ "020", "Failure of primary globe-sparing treatment in bilateral retinoblastoma, neither eye enucleated at initial diagnosis" ], [ "030", "Failure of primary globe-sparing treatment in bilateral retinoblastoma, one eye only enucleated at initial diagnosis" ], [ "987", "Initial course of treatment was not globe-sparing for unilateral or bilateral retinoblastoma" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

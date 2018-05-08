@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_retroperitoneum",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Schema Selection Retroperitoneum",
+  "title" : "Schema selection for Retroperitoneum",
+  "last_modified" : "2018-05-07T14:17:45.366Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C480", "8000-8934,8940-9136,9141-9582,9700-9701", "MATCH" ] ]
+}

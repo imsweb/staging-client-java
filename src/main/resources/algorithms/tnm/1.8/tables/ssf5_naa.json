@@ -1,0 +1,20 @@
+{
+  "id" : "ssf5_naa",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF5",
+  "title" : "Site-Specific Factor 5",
+  "subtitle" : "Molecular (MOL) Studies of Regional Lymph Nodes",
+  "notes" : "**Note 1:**  Isolated tumor cells (ITCs) are defined as single tumor cells or small clusters not greater than 0.2 mm, usually detected by immunohistochemistry (IHC) (see **Site-Specific Factor 4), Hematoxylin and Eosin (H and E)** (see pN0(i+)), or molecular (MOL) methods (Reverse Transcription Polymerase Chain Reaction, RT-PCR). \n\n* ITCs do not usually show evidence of malignant activity (e.g., proliferation or stromal reaction)\n\n**Note 2:**  Use codes 000-002 only to report results of MOL studies (RT-PCR) when Regional Lymph nodes are negative (N0). \n\n* If there are positive nodes, code 987 in this field\n\n**Note 3:**  If it is not stated whether molecular tests are done, assume they are not done.",
+  "last_modified" : "2018-05-02T20:27:53.510Z",
+  "definition" : [ {
+    "key" : "ssf5",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Regional lymph nodes negative on routine hematoxylin and eosin (H and E), no RT-PCR molecular (MOL) studies done \nOR unknown if RT-PCR studies done\nNodes clinically negative, not examined pathologically" ], [ "001", "Regional lymph nodes negative on routine H and E, RT-PCR MOL studies done, negative for tumor" ], [ "002", "Regional lymph nodes negative on routine H and E, RT-PCR MOL studies done, positive for tumor" ], [ "987", "Not applicable: Regional Lymph Nodes not assigned pN0" ], [ "988", "Not applicable: Information not collected for this case" ] ]
+}

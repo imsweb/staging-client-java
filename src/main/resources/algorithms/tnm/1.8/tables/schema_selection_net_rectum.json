@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_net_rectum",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Schema Selection NETRectum",
+  "title" : "Schema selection for NETRectum",
+  "last_modified" : "2018-05-02T20:27:52.506Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C199,C209", "8153,8240-8242,8246,8249", "MATCH" ] ]
+}

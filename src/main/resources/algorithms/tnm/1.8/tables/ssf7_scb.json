@@ -1,0 +1,20 @@
+{
+  "id" : "ssf7_scb",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF7",
+  "title" : "Site-Specific Factor 7",
+  "subtitle" : "Total Bilirubin Unit of Measure",
+  "notes" : "**Note 1:** There are two main methods of describing concentrations: by weight, and by molecular count. Weights are recorded in grams, and molecular counts are recorded in moles.  Milligrams/deciliter (mg/dl) is the unit of measure commonly used in the United States. Micromoles/liter (umol/l) is the designated Systeme International (SI) unit of measure commonly used in Canada and Europe.\n\n**Note 2:**  If the test was done but the total bilirubin unit of measure is not stated, code 997.\n\n**Note 3:**  The same laboratory test should be used to record information in **Site-Specific Factor 6, Total Bilirubin Value** and **Site Specific Factor 7, Total Bilirubin Unit of Measure**.",
+  "last_modified" : "2018-05-02T20:27:54.806Z",
+  "definition" : [ {
+    "key" : "ssf7",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Milligrams per deciliter (mg/dL)" ], [ "020", "Micromoles/liter (umol/L)" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Test ordered, results not in chart\nTest performed, unit of measure not specified\nTest performed, different unit of measure used, unit not specified" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

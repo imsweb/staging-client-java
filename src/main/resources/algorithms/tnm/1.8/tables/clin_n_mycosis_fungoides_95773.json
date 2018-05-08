@@ -1,0 +1,27 @@
+{
+  "id" : "clin_n_mycosis_fungoides_95773",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Clin N Mycosis Fungoides",
+  "title" : "Clinical N",
+  "notes" : "**Note 1:**  Only peripheral lymph nodes are assessed which include the cervical, supraclavicular, epitrochlear, axillary, and inguinal nodal groups.\n* Clinically abnormal peripheral lymph node(s) is defined as any palpable peripheral node that on physical examination is firm, irregular, clustered, fixed, or 1.5 centimeter (cm) or larger in diameter\n* Central nodes, which are not generally amenable to pathologic assessment, are not currently classified in the nodal classification unless used to establish N3 histopathologically\n\n**Note 2:**  Dutch grade system includes\n\n    Grade 1 - Dermatopathic lymphadenopathy (DL)\n    Grade 2 - Early involvement by mycosis fungoides (MF), (presence of cerebriform nuclei larger than 7.5 micrometers (um)\n    Grade 3 - Partial effacement of lymph node architecture; many atypical cerebriform mononuclear cells (CMCs)\n    Grade 4 - Complete effacement of lymph node architecture\n\n**Note 3:**  National Cancer Institute - Lymph Nodes (NCI LN) grade system includes\n\n    LN0 - No atypical lymphocytes\n    LN1 - Occasional and isolated atypical lymphocytes not arranged in clusters\n    LN2 - Many atypical lymphocytes or in 3-6 cell clusters\n    LN3 - Aggregates of atypical lymphocytes; nodal architecture preserved\n    LN4 - Partial/complete effacement of nodal architecture by atypical lymphocytes or frankly neoplastic cells\n\n**Note 4:**  A T-cell clone (clone negative or clone positive) is defined by polymerase chain reaction (PCR) or Southern blot analysis of the T-cell receptor gene. \n\n**Note 5:**  For this site, code all lymph node(s) (regional and distant) involvement in this field.",
+  "last_modified" : "2018-05-02T20:27:54.966Z",
+  "definition" : [ {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n_display",
+    "name" : "Clinical N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cNX", "Clinically abnormal peripheral lymph nodes; no histologic confirmation", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess N\n    Regional lymph node involvement cannot be determined or findings inconclusive\nPhysician assigns cNX, no other information available to determine N" ], [ "c0", "cN0", "No clinically abnormal peripheral lymph nodes; biopsy not required", "No regional lymph node involvement\n\nClinically enlarged palpable lymph node(s) (adenopathy) WITH pathologically negative nodes" ], [ "c1", "cN1", "Clinically abnormal peripheral lymph nodes; histolopathology Dutch grade1 or NCI LN0-2", "Note: N1 has subcategories of N1a and N1b. Assign N1 only when there is no information available to assign one of the subcategories\n\nClinically abnormal or  normal peripheral lymph node(s) \nAND histopathologically Dutch grade 1 or unknown OR NCI LN0-2 or unknown\n     Clone unknown\n\nRegional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1 [NOS]" ], [ "c1A", "cN1a", "Clone negative", "Clinically abnormal or normal peripheral lymph node(s) \nAND histopathologically Dutch grade 1 or NCI LN0-2:\n     Clone negative\n\nStated as N1a" ], [ "c1B", "cN1b", "Clone positive", "Clinically abnormal or normal peripheral lymph node(s) \nAND histopathologically Dutch grade 1 or NCI LN0-2:\n     Clone positive\n\nStated as N1b" ], [ "c2", "cN2", "Clinically abnormal peripheral lymph nodes; histopathology Dutch grade 2 or NCI LN3", "Note: N2 has subcategories of N2a and N2b. Assign N2 only when there is no information available to assign one of the subcategories\n\nClinically abnormal or normal peripheral lymph node(s) \nAND histopathologically Dutch grade 2 or NCI LN3:\n     Clone unknown\n\nStated as N2 [NOS]" ], [ "c2A", "cN2a", "Clone negative", "Clinically abnormal or normal peripheral lymph node(s) \nAND histopathologically Dutch grade 2 or NCI LN3:\n     Clone negative\n\nStated as N2a" ], [ "c2B", "cN2b", "Clone positive", "Clinically abnormal or normal peripheral lymph node(s) \nAND histopathologically Dutch grade 2 or NCI LN3:\n     Clone positive\n\nStated as N2b" ], [ "c3", "cN3", "Clinically abnormal peripheral lymph nodes; histolopathology Dutch grades 3-4 or NCI LN4; clone positive or negative", "Clinically abnormal or normal peripheral lymph nodes \nAND histopathologically Dutch grades 3-4 or NCI LN4:\n     Clone positive or negative or unknown\n\nStated as N3" ], [ "88", "88", "Not applicable ", "In situ case but no pTis is defined by EORTC\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met\nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

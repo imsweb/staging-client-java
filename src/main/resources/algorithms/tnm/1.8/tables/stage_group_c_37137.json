@@ -1,0 +1,35 @@
+{
+  "id" : "stage_group_c_37137",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Stage Group (c)",
+  "title" : "TNM 7 Stage Group",
+  "notes" : "**Note 1:** SEER*RSA added additional information to UICC 7th edition stages with UICC approval. If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC 7th edition manual to ensure you are using the appropriate logic. \n* Stage Group II (as defined in the table)\n* Stage Group III (as defined in the table)\n* Stage Group IV (as defined in the table)\n\n**Note 2:** The stage group below is valid in UICC 7th edition ERRATA, but not AJCC 7th edition.\n* Stage Group IVB - Any T, N0, M1a, Grade 4\n\n**Note 3:**  While the stage group below is valid, the specified TNM combination is only included in SEER*RSA.\n* Stage Group IVA - Any T, N0, M1a, Grade X - Grade X is not included in the  stage group definition",
+  "last_modified" : "2018-05-02T20:27:59.256Z",
+  "definition" : [ {
+    "key" : "clin_stage_group_direct",
+    "name" : "Stage",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_stage_group_direct_display",
+    "name" : "Stage Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "t",
+    "name" : "T",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "grade",
+    "name" : "Grade",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0 ", "0   ", "Tis           ", "N0,X", "M0", "Any Grade" ], [ "1 ", "I   ", "T1,2          ", "N0  ", "M0", "Any Grade" ], [ "2 ", "II  ", "T4            ", "N0  ", "M0", "Any Grade" ], [ "2A", "IIA ", "T3            ", "N0  ", "M0", "Any Grade" ], [ "2B", "IIB ", "T4a           ", "N0  ", "M0", "Any Grade" ], [ "2C", "IIC ", "T4b           ", "N0  ", "M0", "Any Grade" ], [ "3 ", "III", "T0,X          ", "N1  ", "M0", "Any Grade" ], [ "3A", "IIIA", "T1,2          ", "N1  ", "M0", "Any Grade" ], [ "3B", "IIIB", "T3,4,4a,4b    ", "N1  ", "M0", "Any Grade" ], [ "3C", "IIIC", "T0-3,4,4a,4b,X", "N2  ", "M0", "Any Grade" ], [ "4 ", "IV  ", "T0-3,4,4a,4b,X\nT0-3,4,4a,4b,X", "Any N \nNX", "M1 \nM1a", "Any Grade\nAny Grade" ], [ "4A", "IVA", "T0-3,4,4a,4b,X", "N0", "M1a", "1,9" ], [ "4B", "IVB", "T0-3,4,4a,4b,X\nT0-3,4,4a,4b,X", "N0  \nN1,2", "M1a\nM1a", "2-4      \nAny Grade" ], [ "4C", "IVC", "T0-3,4,4a,4b,X", "Any N", "M1b", "Any Grade" ], [ "99", "Unknown", "T0-3,4,4a,4b\nTX", "NX  \nN0,X", "M0\nM0", "Any Grade\nAny Grade" ], [ "88", "Not Applicable", "88", "88", "88", "Any Grade" ] ]
+}

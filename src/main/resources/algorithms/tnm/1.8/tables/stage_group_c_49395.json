@@ -1,0 +1,35 @@
+{
+  "id" : "stage_group_c_49395",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Stage Group (c)",
+  "title" : "TNM 7 Stage Group",
+  "notes" : "**Note 1:**  SEER*RSA added additional information to UICC 7th edition stages with UICC approval. If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC 7th edition manual to ensure you are using the appropriate logic.\n* Stage Group I (as defined in this table)\n* Stage Group II (as defined in this table)\n\n**Note 2:** The TNM combinations are valid in AJCC 7th, but not UICC 7th, approved by UICC.\n* Stage IA - T1b, N0, M0, Grade (988, 998, 999)\n* Stage IB - T2b, N0, M0, Grade (988, 998, 999)",
+  "last_modified" : "2018-05-02T20:27:53.336Z",
+  "definition" : [ {
+    "key" : "clin_stage_group_direct",
+    "name" : "Stage",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_stage_group_direct_display",
+    "name" : "Stage Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "t",
+    "name" : "T",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ssf1",
+    "name" : "Grade (SSF1)",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1 ", "I  ", "TX   ", "N0", "M0", "010,100,988,998,999" ], [ "1A", "IA ", "T1b", "N0", "M0", "010,100,988,998,999" ], [ "1B", "IB ", "T2b", "N0", "M0", "010,100,988,998,999" ], [ "2 ", "II ", "TX   ", "N0", "M0", "020  " ], [ "2A", "IIA", "T1b", "N0", "M0", "020,030,200  " ], [ "2B", "IIB", "T2b", "N0", "M0", "020  " ], [ "3 ", "III", "T2b\nAny T", "N0\nN1", "M0\nM0", "030,200 \nAny" ], [ "4", "IV", "Any T", "Any N", "M1", "Any" ], [ "99", "Unknown", "Any T\nTX", "NX\nN0", "M0\nM0", "Any  \n030,200" ], [ "88", "Not Applicable", "88", "88", "88", "Any" ] ]
+}

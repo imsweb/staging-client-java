@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_soft_tissue_43767",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Clin T Soft Tissue",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  Superficial lesions are located entirely in the subcutaneous tissues without any degree of extension through the muscular fascia or into underlying muscle. \n\n**Note 2:**  Deep lesions are located partly or completely within one or more muscle groups within the extremity. Deep tumors may extend through the muscular fascia into the subcutaneous tissues or even to the skin but the critical criterion is location of any portion of the tumor within the muscular components of the extremity. \n* Deep lesions include retroperitoneal and intrathoracic lesions, and the majority of head and neck tumors\n\n**Note 3:**  For tumors of the extremities and trunk ONLY. \n* Superficial lesions are defined as those not involving the superficial muscular fascia\n* Deep lesions are those that involve or are beneath the superficial fascia\n\n**Note 4:**  Adjacent connective tissue is defined as the unnamed tissues that immediately surround an organ or structure containing a primary cancer. \n* Assign T1b or T2b (deep tumor) when a tumor has invaded past the outer border (capsule, serosa, or other edge) of the primary organ into the organ's surrounding supportive structures but has not invaded into larger structures or adjacent organs\n* Blood, cartilage, and bone are coded as connective tissues, but they are coded separately\n\n**Note 5:**  If a vessel has a name, for example brachial artery or recurrent laryngeal nerve, code it as a structure.\n\n**Note 6:** Tumor size must be known to assign a value of T1 or T2. You may use a physician’s statement of the T category if this is the only information in the medical record. \n* If the tumor appears to be in the T1 or T2 categories, but no size or category is specified, assign TX\n\n**Note 7:** Assign the appropriate T category (T1, T2) based on the tumor size for the following descriptions \n\n**Superficial tumors (T1a or T2a)**\n\n    Invasive tumor confined to site/tissue of origin (Lesion does not involve superficial fascia)\n    Tumor involves adjacent connective tissue\n       \n**Deep tumors (T1b or T2b)**\n\n    Confined to site/tissue of origin\n    Tumor involves adjacent connective tissue\n    Deep tumor involving adjacent organs/structures including bone/cartilage (including major vessel invasion)\n    Further contiguous extension",
+  "last_modified" : "2018-05-02T20:27:55.374Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T\n    Extension cannot be determined \n    Tumor size (TS) unknown for T categories where TS  needed to determine T\nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor", "" ], [ "c1", "cT1", "Tumor 5 cm or less in greatest dimension", "Note: T1 has subcategories of T1a and T1b. Assign T1 only when there is no information available to assign one of the subcategories\n\nLocalized, NOS\n\nStated T1 [NOS]" ], [ "c1A", "cT1a", "Tumor 5 cm or less in greatest dimension:\nSuperficial tumor", "Superficial: Localized, NOS\n\nStated as T1a" ], [ "c1B", "cT1b", "Tumor 5 cm or less in greatest dimension:\nDeep tumor", "Deep: Localized, NOS\n\nStated as T1b" ], [ "c2", "cT2", "Tumor more than 5 cm in greatest dimension", "Note: T2 has subcategories of T2a and T2b. Assign T2 only when there is no information available to assign one of the subcategories\n\nStated as T2 [NOS]" ], [ "c2A", "cT2a", "Tumor more than 5 cm in greatest dimension:\nSuperficial tumor", "Stated as T2a" ], [ "c2B", "cT2b", "Tumor more than 5 cm in greatest dimension:\nDeep tumor", "Stated as T2b" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

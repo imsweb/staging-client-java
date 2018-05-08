@@ -1,0 +1,39 @@
+{
+  "id" : "stage_group_p_44218",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Stage Group (p)",
+  "title" : "TNM 7 Stage Group",
+  "notes" : "**Note 1:** SEER*RSA added additional information to UICC 7th edition stages with UICC approval. If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC 7th edition manual to ensure you are using the appropriate logic.\n* Stage Group III\n\n**Note 2:** TNM does not include an in situ category for this schema. Assign 88 to stage group for in situ cases.",
+  "last_modified" : "2018-05-02T20:27:53.341Z",
+  "definition" : [ {
+    "key" : "path_stage_group_direct",
+    "name" : "Stage",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_stage_group_direct_display",
+    "name" : "Stage Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "t",
+    "name" : "T",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "mitotic_rate",
+    "name" : "Mitotic Rate",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ssf10",
+    "name" : "Location (SSF10)",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "I", "T1,2", "N0,X", "M0", "000-050,988,990", "010,030,040,998,999" ], [ "1A", "IA", "T1,2", "N0,X", "M0", "000-050,988,990", "020  " ], [ "1B", "IB", "T3  ", "N0,X", "M0", "000-050,988,990", "020  " ], [ "2", "II", "T3  \nT4  \nT1,2", "N0,X\nN0,X\nN0,X", "M0\nM0\nM0", "000-050,988,990\n000-050,988,990\n051-110,991", "010,030,040,998,999\n020  \n020" ], [ "3", "III", "T4   ", "N0,X", "M0", "996,998,999  ", "010,030,040,998,999" ], [ "3A", "IIIA", "T4\nT1\nT3", "N0,X\nN0,X\nN0,X", "M0\nM0\nM0", "000-050,988,990\n051-110,991    \n051-110,991", "010,030,040,998,999\n010,030,040,998,999\n020" ], [ "3B", "IIIB", "T2-4\nT4", "N0,X\nN0,X", "M0\nM0", "051-110,991\n051-110,991", "010,030,040,998,999\n020" ], [ "4", "IV", "Any T\nAny T", "N1   \nAny N", "M0\nM1", "Any Rate\nAny Rate", "Any\nAny" ], [ "99", "Unknown", "T0\nT1-3\nT4  \nTX", "N0,X\nN0,X\nN0,X\nN0,X", "M0\nM0\nM0\nM0", "Any Rate\n996,998,999\n996,998,999\nAny Rate", "Any\nAny\n020\nAny" ], [ "88", "Not Applicable", "88", "88", "88", "Any Rate ", "Any" ] ]
+}

@@ -1,0 +1,76 @@
+{
+  "id" : "adjustments_for_no_clin_or_no_path_26261",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Adjustments for No Clin or No Path",
+  "title" : "Adjust Path T, N, M Defaults if No Clinical exam done or No Pathologic procedure done",
+  "notes" : "**Note 1:** A cancer may have only clinical information if no pathologic procedure (like a resection) is done.   In these cases, the Pathologic T, N and M will be left blank.  The algorithm will set the Derived Pathologic Stage Group to 99.  The Clinical T, N and M will be used for the Combined fields.\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n**Note 2:** Similarly, a cancer may not have had a clinical workup, but pathologic information is available.  In these cases, the Clinical T and N will be left blank.  The algorithm will set the Derived Clinical Stage Group based on the defaults of TX and NX.  Generally, if Clin M is set to M0, the Clinical Stage Group will be set to 99, and if Clin M is set to a variation of M1, then the Clinical Stage Group will be set to IV.  The Pathologic T, N and M will be used for the Combined fields.\n\n**Note 3:** The medical record may only have the stage group and not the T, N and M values.  In this case, the stage group will be copied into the derived stage group.  If there are values for one set of T, N and M (Clinical or Pathologic) only a stage group for the other, the T, N and M values that are present will determine the Combined T, N and M values.",
+  "last_modified" : "2018-05-02T20:27:55.392Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "Directly Assigned Clin Stage",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_m",
+    "name" : "Pathologic M",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "Directly Assigned Path Group",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_stage_group",
+    "name" : "Derived Clin Stage Group",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "path_stage_group",
+    "name" : "Derived Path Stage Group",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "combined_t_out",
+    "name" : "Combined T after Adjustments",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "source_t_out",
+    "name" : "Source of Combined T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "combined_n_out",
+    "name" : "Combined N after Adjustments",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "source_n_out",
+    "name" : "Source of Combined N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "combined_m_out",
+    "name" : "Combined M after Adjustments",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "source_m_out",
+    "name" : "Source of Combined M",
+    "type" : "ENDPOINT"
+  } ],
+  "extra_input" : [ "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "clin_stage_group_direct", "tmp_path_n", "tmp_path_t", "tmp_clin_t", "path_stage_group_direct" ],
+  "rows" : [ [ "", "", "", "", "", "", "", "", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:" ], [ "", "", "", "*", "", "", "", "*", "VALUE:{{clin_stage_group_direct}}", "VALUE:{{path_stage_group_direct}}", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:" ], [ "", "", "", "*", "88", "88", "88", "*", "VALUE:{{clin_stage_group_direct}}", "MATCH", "VALUE:88", "VALUE:9", "VALUE:88", "VALUE:9", "VALUE:88", "VALUE:9" ], [ "88", "88", "88", "*", "", "", "", "*", "MATCH", "VALUE:{{path_stage_group_direct}}", "VALUE:88", "VALUE:9", "VALUE:88", "VALUE:9", "VALUE:88", "VALUE:9" ], [ "*", "*", "*", "*", "", "", "", "*", "MATCH", "VALUE:{{path_stage_group_direct}}", "VALUE:{{tmp_clin_t}}", "VALUE:1", "VALUE:{{tmp_clin_n}}", "VALUE:1", "VALUE:{{tmp_clin_m}}", "VALUE:1" ], [ "", "", "", "*", "*", "*", "*", "*", "VALUE:{{clin_stage_group_direct}}", "MATCH", "VALUE:{{tmp_path_t}}", "VALUE:2", "VALUE:{{tmp_path_n}}", "VALUE:2", "VALUE:{{tmp_path_m}}", "VALUE:2" ], [ "*", "*", "*", "*", "*", "*", "*", "*", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH" ] ]
+}

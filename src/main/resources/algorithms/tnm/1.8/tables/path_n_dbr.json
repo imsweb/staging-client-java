@@ -1,0 +1,28 @@
+{
+  "id" : "path_n_dbr",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Path N Thyroid",
+  "title" : "Pathologic N",
+  "notes" : "**Note 1:** Histological examination of a selective neck dissection specimen will ordinarily include 6 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0. (1)\n\n**Note 2:** Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Note 3:**  This field includes all lymph nodes defined as Levels I-VI, retropharyngeal or superior mediastinal lymph nodes (Level VII). \n\n**Note 4:**  Assignment of N value for thyroid does not depend on laterality.  All codes for nodal involvement include ipsilateral, bilateral, contralateral, and midline lymph nodes.\n\n**Note 5:**  The description of lymph nodes has been standardized across the head and neck schemas.  All lymph node levels and groups listed here are regional nodes for TNM staging.\n\n**Level I**\n \n    Level IA - Submental\n    Level IB - Submandibular (submaxillary), sublingual\n**Level II - Upper jugular** \n\n    Jugulodigastric (subdigastric)\n    Upper deep cervical        \n    Level IIA - Anterior\n    Level IIB - Posterior    \n**Level III - Middle jugular**\n\n    Middle deep cervical\n**Level IV - Lower jugular**\n\n    Jugulo-omohyoid (supraomohyoid)\n    Lower deep cervical        \n    Virchow node\n**Level V - Posterior triangle group**\n\n    Posterior cervical\n    Level VA - Spinal accessory        \n    Level VB - Transverse cervical, supraclavicular \n**Level VI - Anterior compartment group**\n\n  Laterotracheal\n    Paralaryngeal\n    Paratracheal - above suprasternal notch\n    Perithyroidal\n    Precricoid (Delphian)\n    Prelaryngeal\n    Pretracheal - above suprasternal notch\n    Recurrent laryngeal\n**Level VII - Superior mediastinal group (for other mediastinal nodes see M [distant metastasis])**\n\n    Esophageal groove\n    Paratracheal - below suprasternal notch\n    Pretracheal - below suprasternal notch    \n**Other groups**\n\n    Cervical, NOS\n    Deep cervical, NOS\n    Facial\n       Buccinator (buccal)\n       Mandibular\n       Nasolabial\n    Internal jugular, NOS\n    Parapharyngeal \n    Parotid\n       Infraauricular\n       Intraparotid\n       Periparotid\n       Preauricular\n    Retroauricular (mastoid)\n    Retropharyngeal\n    Suboccipital",
+  "footnotes" : "(1) International Union Against Cancer (UICC) *TNM Classification of Malignant Tumors,* 7th ed., Sobin, LH, Gospodarowicz, M, Wittekind, CH, eds. New York: Wiley, 2009, pg., 60",
+  "last_modified" : "2018-05-02T20:27:55.512Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathologic N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pNX", "Regional lymph node(s) cannot be assessed", "Pathologic classification criteria met, evaluation done:\n    Physician unable to assess N\n    Surgical resection primary tumor, no regional lymph nodes removed\n    Involvement of regional lymph nodes not documented\nPhysician assigns pNX, no other information available to determine N" ], [ "p0", "pN0", "No regional lymph node metastasis", "" ], [ "p1", "pN1", "Regional lymph node metastasis", "Note: N1 has subcategories of N1a and N1b. Assign N1 only when there is no information available to assign one of the subcategories\n\nRegional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1 [NOS]" ], [ "p1A", "pN1a", "Metastasis in Level VI \n    Pretracheal\n    Paratracheal\n    Prelaryngeal/Delphian lymph nodes", "Level VI nodes - Anterior compartment group:\n       \nStated as N1a" ], [ "p1B", "pN1b", "Metastasis in other unilateral, bilateral or contralateral cervical \n    Levels I, II, III, IV or V\n    Retropharyngeal \n    Superior mediastinal lymph nodes", "Other groups of lymph nodes\n\nStated as N1b" ], [ "c0", "cN0", "Clinically: No regional lymph node metastasis", "Use only for TNM defined pTis cases where there is a resection of the primary and the nodes are not evaluated pathologically" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined \nIn situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nNo surgical resection of primary tumor and there isn’t a positive biopsy of a structure in the highest T category and highest N category\nEvidence of metastatic disease (pM1), no other workup\nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_gist_appendix",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Schema Selection GISTAppendix",
+  "title" : "Schema selection for GISTAppendix",
+  "last_modified" : "2018-05-07T14:05:59.465Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C181", "8935-8936", "MATCH" ] ]
+}

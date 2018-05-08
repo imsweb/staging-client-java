@@ -1,0 +1,21 @@
+{
+  "id" : "ssf9_sqm",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF9",
+  "title" : "Site-Specific Factor 9",
+  "subtitle" : "Mitotic Count",
+  "notes" : "**Note 1:**  The mitotic count, the number of mitoses per 40 high-power fields (HPF), reflects the potential aggressiveness or prognosis of uveal melanomas.  This site-specific factor presumes the denominator of 40 HPF, so just the numerator (the mitotic count) is coded here.  \n* For other schemas in which mitotic count is collected, the denominator may vary\n\n**Note 2:**  An HPF usually has a magnification objective of 40 (a 40x field).  As described in the AJCC chapter on uveal melanomas, the typical field area is 0.15 - 0.19 square millimeters (mm). (1)\n\n**Note 3:**  Record mitotic count to the nearest tenth as documented in the pathology report.  \n* For example, a mitotic count of 6/40 HPF would be coded 060\n\n**Note 4:**  Code the specific mitotic count only per 40 HPF; assume the denominator is 40 HPF if not specified.  \n* Use code 996 only if the mitotic count is expressed with a specific denominator other than 40 HPF",
+  "footnotes" : "(1) American Joint Committee on Cancer., & Edge, S.B. (2010) AJCC Cancer Staging Manual (7th ed.). New York; London: Springer, pg. 550",
+  "last_modified" : "2018-05-02T20:27:52.982Z",
+  "definition" : [ {
+    "key" : "ssf9",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "0 mitoses per 40 high-power fields (HPF) (40x field) \nMitoses absent, no mitoses present, no mitotic activity" ], [ "001-008", "0.1 - 0.8 mitosis per 40 HPF (40x field)" ], [ "009", "0.9 mitosis per 40 HPF (40x field)\n\nStated as less than 1 mitosis per 40 HPF (40x field)" ], [ "010-100", "1 - 10 mitoses per 40 HPF (40x field)" ], [ "110", "11 or more mitoses per 40 HPF (40x field) " ], [ "988", "Not applicable: Information not collected for this case" ], [ "990", "Stated as low mitotic count or rate with no specific number" ], [ "991", "Stated as high mitotic count or rate with no specific number" ], [ "996", "Mitotic count described with denominator other than 40 HPF (40x field)" ], [ "998", "No histologic specimen from primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

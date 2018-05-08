@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_jbj",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF1",
+  "title" : "Site-Specific Factor 1",
+  "subtitle" : "Ki-67/MIB-1 Labeling Index (LI): Ophthalmic",
+  "notes" : "**Note 1:**  Ki-67 antigen is a nuclear protein, expressed by cells in all phases of the active cell cycle (G1, S, G2, and M phase) and absent in resting cells (G0 phase). Tumor cells with positive staining for Ki-67 antibodies are actively growing or proliferating.  The fraction of Ki-67-positive tumor cells (the Ki-67 labeling index, or LI) may correlate with the clinical course of cancer.  The value is expressed as the percentage of carcinoma cells in the tissue sample with positive immunohistochemical staining for the Ki-67 protein.  The staining may be performed with the MIB-1 monoclonal antibody, so the test may be referred to as either Ki-67 or MIB-1\n\n**Note 2:**  Code the LI fraction percentage using Ki-67 or MIB-1 when it is available in the pathology report for the primary tumor.  The Ki-67 or MIB-1 LI may also be called the growth fraction or proliferative fraction.\n\n**Note 3:**  Record the LI as an exact whole number (000-100). For example\n\n* If the LI level is recorded by the pathologist as 15%, assign code 015\n* If the percentage is documented as 13.7%, round up to 14% and assign code 014\n* If the percentage is documented as 13.2%, round down to 13% and assign code 013  \n* If the percentage is documented as less than 0.5%, round down to 0% and code 000 \n* If the percentage is documented as greater than 0.5% and less than 1%, round up to 1% and code as 001\n\n**Note 4:**  In the absence of a specific percentage value, use codes 110-140 for a stated range of the LI, or codes 991-993 for an interpretation of the LI.",
+  "last_modified" : "2018-05-02T20:27:53.687Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000-100", "Percentage of Ki-67 growth fraction\n(Exact labeling index (LI) rounded to nearest percent)\n\nExamples:\n    000    0.2%\n    001    1%\n    010    10%\n    014    13.7%\n    055    55.2%" ], [ "110", "Stated as Ki-67 growth fraction less than or equal to 5%" ], [ "120", "Stated as Ki-67 growth fraction greater than 5% or less than or equal to 10%" ], [ "130", "Stated as Ki-67 growth fraction greater than 10%,or less than or equal to 20%" ], [ "140", "Stated as Ki-67 growth fraction greater than 20% or less than or equal to 50%" ], [ "150", "Stated as Ki-67 growth fraction greater than 50%" ], [ "988", "Not applicable: Information not collected for this case" ], [ "991", "Stated as low proliferation rate" ], [ "992", "Stated as increased proliferation rate" ], [ "993", "Stated as high proliferation rate" ], [ "997", "Ki-67 growth fraction study performed, results not available" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

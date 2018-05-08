@@ -1,0 +1,19 @@
+{
+  "id" : "ssf4_mac",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF4",
+  "title" : "Site-Specific Factor 4",
+  "subtitle" : "Radical Orchiectomy Performed",
+  "last_modified" : "2018-05-02T20:27:52.462Z",
+  "definition" : [ {
+    "key" : "ssf4",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Radical orchiectomy not performed " ], [ "010", "Radical orchiectomy performed" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown if radical orchiectomy performed" ] ]
+}

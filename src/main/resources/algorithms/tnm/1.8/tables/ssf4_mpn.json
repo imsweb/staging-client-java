@@ -1,0 +1,20 @@
+{
+  "id" : "ssf4_mpn",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF4",
+  "title" : "Site-Specific Factor 4",
+  "subtitle" : "Methylation of O6-Methylguanine-Methyltransferase (MGMT)",
+  "notes" : "**Note 1:**  O6-methylguanine-methyltransferase (MGMT) is an enzyme in cells that repairs DNA.  DNA repair is undesirable in tumors, because they may be able to overcome the DNA damage done by chemotherapy.  With methylation, less MGMT enzyme is produced, which may lead to prolonged survival compared to unmethylated MGMT.\n\n**Note 2:**  Code the methylation status of the MGMT gene (also termed MGMT promoter) as stated in the medical record.  A positive test result may be termed \"methylated,\" \"hypermethylated,\" or \"high.\"  A negative result may be termed \"unmethylated\" or \"low.\"  This molecular test is not part of a routine pathology report.",
+  "last_modified" : "2018-05-02T20:27:53.577Z",
+  "definition" : [ {
+    "key" : "ssf4",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Gene status methylated\nHypermethylated\nHigh levels of methylation" ], [ "020", "Gene status unmethylated\nLow levels of methylation" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "No histologic examination of primary site\nTest not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

@@ -1,0 +1,20 @@
+{
+  "id" : "ssf8_spx",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF8",
+  "title" : "Site-Specific Factor 8",
+  "subtitle" : "Gene Expression Profile",
+  "notes" : "**Note:**  Primary uveal melanomas cluster into two distinct molecular classes based on gene expression profile, class 1 (low-grade) and class 2 (high-grade).  Record the information as stated in the medical record.",
+  "last_modified" : "2018-05-02T20:27:50.137Z",
+  "definition" : [ {
+    "key" : "ssf8",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Class 1 gene expression profile " ], [ "020", "Class 2 gene expression profile " ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Gene expression profile performed, unknown results" ], [ "998", "No assessment of gene expression profile" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

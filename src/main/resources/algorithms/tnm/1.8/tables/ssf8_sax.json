@@ -1,0 +1,20 @@
+{
+  "id" : "ssf8_sax",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF8",
+  "title" : "Site-Specific Factor 8",
+  "subtitle" : "Gleason's Score on Needle Core Biopsy/Transurethral Resection of Prostate (TURP)",
+  "notes" : "**Note 1:**  Code the Gleason's score from needle core biopsy or TURP only in this field. Gleason's score provided on prostate tissue on a transurethral resection of bladder (TURB) can also be used in this field.\n\n**Note 2:**  Code the Gleason's score prior to neoadjuvant treatment.\n\n**Note 3:**  Usually prostate cancers are graded using Gleason's score or pattern.  Gleason's grading for prostate primaries is based on a 5-component system (5 histologic patterns).  Prostatic cancer generally shows two main histologic patterns.  \n* The primary pattern, the pattern occupying greater than 50% of the cancer, is usually indicated by the first number of the Gleason's grade\n* The secondary pattern is usually indicated by the second number.  These two numbers are added together to create a pattern score, ranging from 2 to 10\n\n**A.** If there are two numbers, assume that they refer to two patterns (the first number being the primary pattern and the second number the secondary pattern), and sum them to obtain the score.\n**B.** If only one number is given and it is less than or equal to 5, code the total score to 999, unknown or no information. \n**C.** If only one number is given and it is greater than 5, assume that it is a score and code as stated.  \n**D.** If the pathology report specifies a specific number out of a total of 10, the first number given is the score.  \n\n* Example:  The pathology report says Gleason's 3/10.  The Gleason's score would be 3, and coded as 003\n\n**Note 4:**  Record the Gleason's score based on the addition of the primary and secondary patterns coded in **Site-Specific Factor 7, Gleason's Primary Pattern and Secondary Pattern Values on Needle Core Biopsy/Transurethral Resection of Prostate (TURP)**.\n\n**Note 5:**  If needle core biopsy and TURP are not performed, assign code 998. \n* If the Gleason's pattern and score are not documented on needle core biopsy or TURP, assign code 999",
+  "last_modified" : "2018-05-02T20:27:53.060Z",
+  "definition" : [ {
+    "key" : "ssf8",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "002-010", "Gleason's score" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "No needle core biopsy/TURP performed" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

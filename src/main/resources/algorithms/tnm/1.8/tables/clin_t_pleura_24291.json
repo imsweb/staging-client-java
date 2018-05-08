@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_pleura_24291",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Clin T Pleura",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  Pleural effusion does not affect the coding Clinical and Pathologic T, but is coded in **Site-Specific Factor 1**.\n\n**Note 2:**  T3 describes locally advanced, but potentially resectable tumor.\n\n**Note 3:**  T4 describes locally advanced, technically unresectable tumor.",
+  "last_modified" : "2018-05-02T20:27:56.669Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T \n    Extension cannot be determined\nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor", "" ], [ "c1", "cT1", "Tumor involves ipsilateral parietal pleura \nWITH or WITHOUT focal involvement of visceral pleura", "Note: T1 has subcategories of T1a and T1b. Assign T1 only when there is no information available to assign one of the subcategories\n\nInvasive tumor (mesothelioma) confined to pleura, NOS \nIpsilateral parietal pleura, including mediastinal or diaphragmatic pleura, involvement of visceral pleura not stated\n\nLocalized, NOS\n\nStated as T1 [NOS]" ], [ "c1A", "cT1a", "Tumor involves ipsilateral parietal (mediastinal, diaphragmatic) pleura\nNO involvement of visceral pleura", "Stated as T1a" ], [ "c1B", "cT1b", "Tumor involves ipsilateral parietal (mediastinal, diaphragmatic) pleura\nWITH focal involvement of the visceral pleura", "Stated as T1b" ], [ "c2", "cT2", "Tumor involves any of the ipsilateral pleural surfaces, with at least one of the following:\n    Confluent visceral pleura tumor (including the fissure)\n    Invasion of diaphragmatic muscle\n    Invasion of lung parenchyma", "Ipsilateral pleura WITH nodule(s) beneath visceral pleural surface\nLung involvement, NOS\nMesothelioma nodule(s) which have broken through the visceral pleural surface to the lung surface\n\nStated as T2" ], [ "c3", "cT3", "Tumor involves any ipsilateral pleural surfaces, with at least one of the following:\n    Invasion of endothoracic fascia\n    Invasion into mediastinal fat\n    Solitary focus of tumor invading soft tissues of the chest wall\n    Non-transmural involvement of the pericardium", "Mediastinal tissues\n\nStated as T3" ], [ "c4", "cT4", "Tumor involves any ipsilateral pleural surfaces, with at least one of the following: \n    Diffuse or multifocal invasion of soft tissues of chest wall\n    Any involvement of rib\n    Invasion through diaphragm to peritoneum\n    Invasion of any mediastinal organ(s)\n    Direct extension to contralateral pleura \n    Invasion into the spine\n    Extension to internal surface of pericardium\n    Pericardial effusion with positive cytology\n    Invasion of myocardium\n    Invasion of brachial plexus", "Heart muscle, myocardium\n\nFurther contiguous extension:\n    Cervical tissues\n    Intra-abdominal organs\n\n(For contralateral lung, see distant metastasis)\n\nStated as T4" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

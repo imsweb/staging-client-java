@@ -1,0 +1,27 @@
+{
+  "id" : "clin_n_ampulla_vater_45064",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Clin N Ampulla Vater",
+  "title" : "Clinical N",
+  "notes" : "**Note:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Regional lymph nodes**\n\n    Anterior to the ampulla of Vater\n    Inferior to the ampulla of Vater\n    Posterior to the ampulla of Vater\n    Superior to the ampulla of Vater\n    \n    Celiac\n    Hepatic \n    Hepatic artery\n    Infrapyloric (subpyloric)\n    Lateral aortic (lumbar)\n    Node of the foramen of Winslow (epiploic) (omental)\n    Pancreaticoduodenal\n    Peripancreatic (EXCEPT nodes at tail of pancreas)\n    Periportal (portal vein)\n    Proximal mesenteric\n    Retroperitoneal\n    Superior mesenteric",
+  "last_modified" : "2018-05-02T20:27:55.645Z",
+  "definition" : [ {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n_display",
+    "name" : "Clinical N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cNX", "Regional lymph nodes cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess N\n    Regional lymph node involvement cannot be determined or findings inconclusive\nPhysician assigns cNX, no other information available to determine N" ], [ "c0", "cN0", "No regional lymph node metastasis", "No regional lymph node involvement" ], [ "c1", "cN1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met\nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

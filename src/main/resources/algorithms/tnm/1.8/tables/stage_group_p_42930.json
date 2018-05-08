@@ -1,0 +1,31 @@
+{
+  "id" : "stage_group_p_42930",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Stage Group (p)",
+  "title" : "TNM 7 Stage Group",
+  "notes" : "**Note 1:** SEER*RSA added additional information to UICC 7th edition stages with UICC approval. If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC 7th edition manual to ensure you are using the appropriate logic. \n\n**Note 2:** TNM does not include an in situ category for this schema. Assign 88 to stage group for in situ cases.",
+  "last_modified" : "2018-05-02T20:27:53.066Z",
+  "definition" : [ {
+    "key" : "path_stage_group_direct",
+    "name" : "Stage",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_stage_group_direct_display",
+    "name" : "Stage Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "t",
+    "name" : "T",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "I", "T1   ", "N0   ", "M0" ], [ "2A", "IIA ", "T2   ", "N0   ", "M0" ], [ "2B", "IIB ", "T3   ", "N0   ", "M0" ], [ "3A", "IIIA", "T4   ", "N0   ", "M0" ], [ "3B", "IIIB", "Any T", "N1   ", "M0" ], [ "4", "IV", "Any T", "Any N", "M1" ], [ "99", "Unknown", "T0\nAny T\nTX", "N0\nNX\nN0", "M0\nM0\nM0" ], [ "88", "Not Applicable", "88", "88", "88" ] ]
+}

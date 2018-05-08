@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_jby",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF1",
+  "title" : "Site-Specific Factor 1",
+  "subtitle" : "Measured Thickness (Depth)",
+  "notes" : "**Note 1:**  Code measured thickness (depth) of tumor, not size or diameter.  Record actual measurement in hundredths of millimeter (mm) from  the pathology report.\n\n**Note 2:**  Use code 991, 993, or 996 if the tumor is resected and the only information about depth is the physician's assignment of a stage value.\n\n**Note 3:**  Use code 998 if there is no resection of the primary site tumor.",
+  "last_modified" : "2018-05-02T20:27:52.588Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No mass/tumor found" ], [ "001-979", "0.01 - 9.79 millimeters (mm)\n(Exact measurement to nearest hundredth of mm)\n\nExamples:\n    001    0.01 mm\n    002    0.02 mm\n    010    0.10 mm\n    074    0.74 mm\n    100    1.00 mm\n    105    1.05 mm\n    979    9.79 mm" ], [ "980", "9.80 mm or larger" ], [ "988", "Not applicable: Information not collected for this case" ], [ "991", "Less than 0.5 mm\nMicroinvasion; microscopic focus or foci only\n\nStated as pathologic T1a with no other information on size, tumor resected \nStated as pathologic T2a with no other information on size, tumor resected" ], [ "992", "Described as \"less than 0.8 mm\"" ], [ "993", "Described as \"greater than 0.5 mm\"\n\nStated as pathologic T1b with no other information on size, tumor resected\nStated as pathologic T2b with no other information on size, tumor resected" ], [ "994", "Described as \"greater than 0.8 mm\"" ], [ "995", "Described as \"less than 1.5 mm\"" ], [ "996", "Described as \"greater than 1.5 mm\"\nStated as pathologic T1c with no other information on size, tumor resected\nStated as pathologic T2c with no other information on size, tumor resected" ], [ "998", "No resection of primary site tumor" ], [ "999", "Unknown; size not stated; Not documented in patient record" ] ]
+}

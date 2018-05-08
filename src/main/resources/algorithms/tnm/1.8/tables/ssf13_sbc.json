@@ -1,0 +1,20 @@
+{
+  "id" : "ssf13_sbc",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF13",
+  "title" : "Site-Specific Factor 13",
+  "subtitle" : "Number of Cores Examined",
+  "notes" : "**Note 1:**  Record the number of prostate core biopsies examined for cancer documented in the pathology report. Do not make assumptions on the number of cores examined based on the number of anatomic locations biopsied because often several cores are submitted per site. Fragments are not synonymous with cores and are not counted as cores unless the pathologist has included the fragments in the core count. \n* If the number of cores examined is not specifically documented, code 991\n\n**Note 2:**  If multiple needle core biopsy procedures are performed during the initial diagnostic workup, do not add together the cores examined from the separate procedures. \n* Record the number of cores examined from the procedure with the highest number of cores positive, the same procedure used to record **Site-Specific Factor 12, Number of Cores Positive**\n\n**Note 3:**  Transperineal template-guided saturation biopsy (TTSB) is a stereotactic prostate biopsy technique that typically produces 30 to 80 core biopsies. This is an alternative biopsy technique used for some high risk patients including men with persistently elevated PSA, those who have atypia on prior prostate biopsies, or men with biopsies showing high grade prostatic intraepithelial neoplasia (PIN).",
+  "last_modified" : "2018-05-02T20:27:53.031Z",
+  "definition" : [ {
+    "key" : "ssf13",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "001-024", "1 - 24 cores examined \n(Exact number of cores examined) " ], [ "025", "25 cores examined" ], [ "026-100", "26 - 100 cores examined\n(Exact number of cores examined)" ], [ "101", "101 or more cores examined" ], [ "988", "Not applicable: Information not collected for this case" ], [ "991", "Biopsy cores examined, number unknown" ], [ "998", "No needle core biopsy performed" ], [ "999", "Unknown or no information \nNot documented in patient record" ] ]
+}

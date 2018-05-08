@@ -1,0 +1,35 @@
+{
+  "id" : "stage_group_c_61951",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Stage Group (c)",
+  "title" : "TNM 7 Stage Group",
+  "notes" : "**Note 1:** The Stage Groups displayed are the Mycosis Fungoides and Sezary Syndrome staging system proposed by the *International Society for Cutaneous lymphomas* and *EORTC*.\n* Stage Group IVA (as defined in the table)\n\n**Note 2:** While the stage groups below are valid, the specified TNM combinations, when B (SSF1) is unknown (080, 090, 988, 997, 999), are only included in SEER*RSA.\n* Stage Group IA - (T1 [NOS], T1a, 1b), N0, M0 \n* Stage Group IB - (T2 [NOS], T2a-T2b), N0, M0\n* Stage Group IIA - (T1 [NOS], T1a, T1b, T2 [NOS], T2a, 2b), (N1-N2b), M0\n* Stage Group IIB - T3, (N0-2b), M0\n* Stage Group IIIA - T4, (N0-2b), M0\n* Stage Group IVA2 - Any T, N3, M0\n* Stage Group IVB - Any T, Any N, M1\n\n**Note 3:** While the stage groups below are valid, the specified TNM combinations are only included in SEER*RSA.\n* Stage Group IVA1 - TX, (N0-N2b), M0, SSF1 (070) - TX is not included in the stage group definition\n* Stage Group  IVA1 - T0, (N1-N2b), M0, SSF1 (070) - T0 is not included in the stage group definition\n* Stage Group IVA2 - (T0, TX), N3, M0, Any SSF1 - TX, T0 not included in the stage group definition\n* Stage Group IVB - (T0, TX), Any N, M1, Any SSF1 - TX, T0, not included in the stage group definition",
+  "last_modified" : "2018-05-02T20:27:59.252Z",
+  "definition" : [ {
+    "key" : "clin_stage_group_direct",
+    "name" : "Stage",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_stage_group_direct_display",
+    "name" : "Stage Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "t",
+    "name" : "T",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ssf1",
+    "name" : "Peripheral Blood Involvement (SSF1)",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1A ", "IA  ", "T1,1a,1b        ", "N0                ", "M0", "010-060,080,090,988,997,999" ], [ "1B ", "IB  ", "T2,2a,2b        ", "N0                ", "M0", "010-060,080,090,988,997,999" ], [ "2A ", "IIA ", "T1,1a,1b,2,2a,2b", "N1,1a,1b,2,2a,2b  ", "M0", "010-060,080,090,988,997,999" ], [ "2B ", "IIB ", "T3              ", "N0,1,1a,1b,2,2a,2b", "M0", "010-060,080,090,988,997,999" ], [ "3A ", "IIIA", "T4              ", "N0,1,1a,1b,2,2a,2b", "M0", "010-030,080,090,988,997,999" ], [ "3B ", "IIIB", "T4              ", "N0,1,1a,1b,2,2a,2b", "M0", "040-060  " ], [ "4A ", "IVA ", "Any T           ", "NX                ", "M0", "070  " ], [ "4A1", "IVA1", "T0                    \nT1,1a,1b,2,2a,2b,3,4,X", "N1,1a,1b,2,2a,2b  \nN0,1,1a,1b,2,2a,2b", "M0\nM0", "070\n070" ], [ "4A2", "IVA2", "Any T", "N3    ", "M0", "Any" ], [ "4B ", "IVB ", "Any T", "Any N ", "M1", "Any" ], [ "99", "Unknown", "T0                  \nT1,1a,1b,2,2a,2b,3,4\nTX", "N1,1a,1b,2,2a,2b,X  \nNX                  \nN0,1,1a,1b,2,2a,2b,X", "M0\nM0\nM0", "010-060,080,090,988,997,999\n010-060,080,090,988,997,999\n010-060,080,090,988,997,999" ], [ "88", "Not Applicable", "88", "88", "88", "Any" ] ]
+}

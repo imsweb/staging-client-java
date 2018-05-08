@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_genital_male_other",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Schema Selection GenitalMaleOther",
+  "title" : "Schema selection for GenitalMaleOther",
+  "last_modified" : "2018-05-02T20:27:50.130Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C630-C631,C637-C639", "8000-9136,9141-9582,9700-9701", "MATCH" ] ]
+}

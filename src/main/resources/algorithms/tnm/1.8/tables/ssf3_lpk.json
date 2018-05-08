@@ -1,0 +1,20 @@
+{
+  "id" : "ssf3_lpk",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF3",
+  "title" : "Site-Specific Factor 3",
+  "subtitle" : "Bone Invasion",
+  "notes" : "**Note:**  Record bone invasion as determined by imaging only for the primary tumor.  Imaging methodologies include computed tomography (CT) scans and magnetic resonance imaging (MRI)",
+  "last_modified" : "2018-05-02T20:27:54.639Z",
+  "definition" : [ {
+    "key" : "ssf3",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Bone invasion not present/not identified on imaging" ], [ "010", "Bone invasion present/identified on imaging" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "No imaging done for bone invasion" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

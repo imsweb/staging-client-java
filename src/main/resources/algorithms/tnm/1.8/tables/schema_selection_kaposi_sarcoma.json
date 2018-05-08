@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_kaposi_sarcoma",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Schema Selection KaposiSarcoma",
+  "title" : "Schema selection for KaposiSarcoma",
+  "last_modified" : "2018-05-02T20:27:50.251Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C000-C809", "9140", "MATCH" ] ]
+}

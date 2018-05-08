@@ -1,0 +1,23 @@
+{
+  "id" : "bone_histologies_stage",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Histologies Stage",
+  "title" : "Histologies Stage Table",
+  "notes" : "**Note:**  The determination of TNM stage group from T, N, M, and grade for bone depends further on histologic type.  This table shows the selection of the appropriate version of the TNM Stage table based on histology.",
+  "last_modified" : "2018-05-02T20:27:53.923Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "ICD-O-3 Histology Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "stage_table",
+    "name" : "Stage Table",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "9260", "Ewing sarcoma", "JUMP:tnm_7_stage_ewing_17708" ], [ "9364", "Peripheral neuroectodermal tumor", "JUMP:tnm_7_stage_ewing_17708" ], [ "8800-9136,9142-9252,9261-9363,9365-9582", "ALL OTHER HISTOLOGIES IN INCLUSION TABLE", "JUMP:tnm_7_stage_not_ewing_14573" ] ]
+}

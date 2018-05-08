@@ -1,0 +1,20 @@
+{
+  "id" : "ssf2_kpr",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF2",
+  "title" : "Site-Specific Factor 2",
+  "subtitle" : "Pelvic Nodal Status",
+  "notes" : "**Note:**  The pelvic nodal status corresponds to the assessment method recorded in **Site-Specific Factor 3, Assessment Method of Pelvic Nodal Status**.",
+  "last_modified" : "2018-05-02T20:27:53.556Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Negative pelvic lymph nodes" ], [ "010", "Positive pelvic lymph nodes" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "Pelvic lymph nodes not assessed" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

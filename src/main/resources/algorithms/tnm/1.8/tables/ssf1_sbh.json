@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_sbh",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF1",
+  "title" : "Site-Specific Factor 1",
+  "subtitle" : "Separate Tumor Nodules - Ipsilateral Lung",
+  "notes" : "**Note 1:** Information about separate tumor nodules in the ipsilateral lung (same lung) are collected in T as an element in anatomic staging. It is also collected in this field as it may have an independent effect on prognosis. See distant metastasis for separate tumor nodules in the contralateral lung.\n\n**Note 2:**  Separate tumor nodules can be defined clinically (by imaging) and/or pathologically.\n\n**Note 3:**  If separate tumor nodules are not mentioned in imaging and/or pathologic reports, use code 000.\n\n**Note 4:** For in situ tumors, code Site-Specific Factor 1 to 000.",
+  "last_modified" : "2018-05-02T20:27:53.815Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No separate tumor nodules noted" ], [ "010", "Separate tumor nodules in ipsilateral lung, same lobe" ], [ "020", "Separate tumor nodules in ipsilateral lung, different lobe" ], [ "030", "020 + 010\n\nSeparate tumor nodules, ipsilateral lung, same and different lobe" ], [ "040", "Separate tumor nodules, ipsilateral lung, unknown if same or different lobe" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown if separate tumor nodules \nSeparate tumor nodules cannot be assessed\nNot documented in patient record" ] ]
+}

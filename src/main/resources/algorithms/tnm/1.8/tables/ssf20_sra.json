@@ -1,0 +1,20 @@
+{
+  "id" : "ssf20_sra",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF20",
+  "title" : "Site-Specific Factor 20",
+  "subtitle" : "Tumor Infiltrating Lymphocytes (TIL)",
+  "notes" : "**Note 1:**  Tumor infiltrating lymphocytes (TILs) are white blood cells that have migrated into a tumor from the bloodstream.  They are believed to represent an immune reaction/response to the tumor cells.  A brisk response may indicate a favorable prognosis.\n\n**Note 2:** Code the status of tumor infiltrating lymphocytes (TIL) in the primary tumor as documented in the pathology report.",
+  "last_modified" : "2018-05-02T20:27:53.831Z",
+  "definition" : [ {
+    "key" : "ssf20",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No tumor infiltrating lymphocytes (TIL) present" ], [ "010", "TIL present, non-brisk" ], [ "020", "TIL present, brisk" ], [ "030", "TIL present, NOS" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "No histologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

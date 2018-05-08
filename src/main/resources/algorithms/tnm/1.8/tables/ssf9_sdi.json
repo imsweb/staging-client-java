@@ -1,0 +1,20 @@
+{
+  "id" : "ssf9_sdi",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF9",
+  "title" : "Site-Specific Factor 9",
+  "subtitle" : "Mohs Layers",
+  "notes" : "**Note 1:**  Code the number of Mohs micrographic surgical layers required to clear the tumor, as stated on the operative report.\n\n**Note 2:**  Use codes 991, 992, and 997 only if the specific number of Mohs layers is not documented.",
+  "last_modified" : "2018-05-02T20:27:53.893Z",
+  "definition" : [ {
+    "key" : "ssf9",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "001-010", "1-10 Mohs micrographic surgical layers required to clear tumor\n(Exact number of Mohs micrographic surgical layers required to clear tumor)" ], [ "011", "11 or more Mohs micrographic surgical layers required to clear tumor" ], [ "988", "Not applicable: Information not collected for this case" ], [ "991", "Less than 3 Mohs micrographic surgical layers required to clear tumor" ], [ "992", "Greater than 3 Mohs micrographic surgical layers required to clear tumor" ], [ "997", "Mohs surgery performed, unknown number of micrographic surgical layers required to clear tumor" ], [ "998", "Mohs surgery not performed" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

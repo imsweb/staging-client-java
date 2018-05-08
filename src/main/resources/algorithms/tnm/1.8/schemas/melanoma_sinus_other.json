@@ -1,0 +1,155 @@
+{
+  "id" : "melanoma_sinus_other",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Melanoma Sinus Other",
+  "title" : "Malignant Melanoma of Accessory (Paranasal) Sinuses",
+  "notes" : "C312 Frontal sinus\nC313 Sphenoid sinus\nC318 Overlapping lesion of accessory sinuses\nC319 Accessory sinus, NOS\n\n**Note 1:**  Laterality must be coded for frontal sinus (C312).\n\n**Note 2:** TNM is not defined for this schema. If directly assigning Summary Stage 2000 (SS2000), use the *Accessory (Paranasal) Sinuses* chapter on page 134 of the [SS2000 on-line manual](https://seer.cancer.gov/tools/ssm/ssm2000/SSSM2000-122012.pdf#page=134).",
+  "schema_selection_table" : "schema_selection_melanoma_sinus_other",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "ssf1",
+    "name" : "Size of Lymph Nodes",
+    "naaccr_item" : 2880,
+    "default" : "999",
+    "table" : "ssf1_jpu",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf3",
+    "name" : "Levels I-III, Lymph Nodes for Head and Neck",
+    "naaccr_item" : 2900,
+    "default" : "999",
+    "table" : "ssf3_lpa",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf4",
+    "name" : "Levels IV-V and Retropharyngeal Lymph Nodes for Head and Neck",
+    "naaccr_item" : 2910,
+    "default" : "999",
+    "table" : "ssf4_mpa",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf5",
+    "name" : "Levels VI-VII and Facial Lymph Nodes for Head and Neck",
+    "naaccr_item" : 2920,
+    "default" : "999",
+    "table" : "ssf5_npa",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf6",
+    "name" : "Parapharyngeal, Parotid, and Suboccipital/Retroauricular Lymph Nodes for Head and Neck",
+    "naaccr_item" : 2930,
+    "default" : "999",
+    "table" : "ssf6_opa",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf7",
+    "name" : "Upper and Lower Cervical Node Levels",
+    "naaccr_item" : 2861,
+    "default" : "988",
+    "table" : "ssf7_spa",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf8",
+    "name" : "Extracapsular Extension Clinically, Lymph Nodes for Head and Neck",
+    "naaccr_item" : 2862,
+    "default" : "988",
+    "table" : "ssf8_spb",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf9",
+    "name" : "Extracapsular Extension Pathologically, Lymph Nodes for Head and Neck",
+    "naaccr_item" : 2863,
+    "default" : "999",
+    "table" : "ssf9_spc",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf10",
+    "name" : "Human Papilloma Virus (HPV) Status",
+    "naaccr_item" : 2864,
+    "default" : "988",
+    "table" : "ssf10_spd",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf11",
+    "name" : "Measured Thickness (Depth)",
+    "naaccr_item" : 2865,
+    "default" : "999",
+    "table" : "ssf11_spe",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  } ],
+  "outputs" : [ {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "clin_stage_group",
+    "name" : "Derived SEER Clin Stage Group",
+    "naaccr_item" : 3610,
+    "default" : "88"
+  }, {
+    "key" : "path_stage_group",
+    "name" : "Derived SEER Path Stage Group",
+    "naaccr_item" : 3605,
+    "default" : "88"
+  }, {
+    "key" : "combined_stage_group",
+    "name" : "Derived SEER Combined Stage Group",
+    "naaccr_item" : 3614,
+    "default" : "88"
+  }, {
+    "key" : "combined_t",
+    "name" : "Derived SEER Combined T",
+    "naaccr_item" : 3616,
+    "default" : "88"
+  }, {
+    "key" : "combined_n",
+    "name" : "Derived SEER Combined N",
+    "naaccr_item" : 3618,
+    "default" : "88"
+  }, {
+    "key" : "combined_m",
+    "name" : "Derived SEER Combined M",
+    "naaccr_item" : 3620,
+    "default" : "88"
+  }, {
+    "key" : "source_t",
+    "name" : "Derived SEER Combined T Source",
+    "naaccr_item" : 3622
+  }, {
+    "key" : "source_n",
+    "name" : "Derived SEER Combined N Source",
+    "naaccr_item" : 3624
+  }, {
+    "key" : "source_m",
+    "name" : "Derived SEER Combined M Source",
+    "naaccr_item" : 3626
+  } ],
+  "involved_tables" : [ "ssf7_spa", "ssf10_spd", "ssf4_mpa", "ssf9_spc", "primary_site", "ssf11_spe", "histology", "ssf6_opa", "ssf5_npa", "ssf3_lpa", "year_dx_validation", "schema_selection_melanoma_sinus_other", "ssf1_jpu", "ssf8_spb" ],
+  "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
+  "last_modified" : "2018-05-08T17:39:16.093Z"
+}

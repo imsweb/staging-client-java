@@ -1,0 +1,20 @@
+{
+  "id" : "ssf20_sal",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF20",
+  "title" : "Site-Specific Factor 20",
+  "subtitle" : "Assessment of Positive Distant Metastases",
+  "notes" : "**Note 1:**  Code the assessment method used for determining the presence of metastasis as coded in the Clinical M and Path M fields.   \n* If there are no mets (cM0), this field must be coded 000\n\n**Note 2:**  If multiple methods of assessments determined positive metastases, use the highest code that applies.",
+  "last_modified" : "2018-05-02T20:27:53.477Z",
+  "definition" : [ {
+    "key" : "ssf20",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No positive metastases identified" ], [ "005", "No clinical or radiographic evidence of distant metastasis, but deposits of molecularly or microscopically detected tumor cells in circulating blood, bone marrow or other non-regional nodal tissue that are 0.2 millimeters (mm) or less in a patient without symptoms or signs of metastasis" ], [ "010", "Physical examination or laboratory tests only" ], [ "020", "Radiography,imaging:\n    Ultrasound (US)\n    Computed tomography scan (CT)\n    Magnetic resonance imaging (MRI)\n    Positron emission tomography scan (PET)" ], [ "030", "Incisional biopsy; fine needle aspiration (FNA)" ], [ "040", "Excisional biopsy or resection with microscopic confirmation" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

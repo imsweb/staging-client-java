@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_orbit",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Schema Selection Orbit",
+  "title" : "Schema selection for Orbit",
+  "last_modified" : "2018-05-02T20:27:52.606Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C696", "8000-9136,9141-9508,9520-9582,9700-9701", "MATCH" ] ]
+}

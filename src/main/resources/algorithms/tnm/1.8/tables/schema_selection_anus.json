@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_anus",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Schema Selection Anus",
+  "title" : "Schema selection for Anus",
+  "last_modified" : "2018-05-02T20:27:52.507Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C210-C212,C218", "8000-9136,9141-9582,9700-9701", "MATCH" ] ]
+}

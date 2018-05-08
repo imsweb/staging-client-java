@@ -1,0 +1,20 @@
+{
+  "id" : "ssf6_oak",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF6",
+  "title" : "Site-Specific Factor 6",
+  "subtitle" : "Perineural Invasion",
+  "notes" : "**Note:**  Code the presence or absence of perineural invasion as documented in the pathology report.  \n* Use code 000 if histologic examination of primary site was performed, the pathology report is available for review, and perineural invasion is not mentioned",
+  "last_modified" : "2018-05-02T20:27:53.908Z",
+  "definition" : [ {
+    "key" : "ssf6",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Perineural invasion not present/not identified " ], [ "010", "Perineural invasion present/identified" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Histologic examination of primary site performed, unknown results" ], [ "998", "No histologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "ssf2_kbc",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF2",
+  "title" : "Site-Specific Factor 2",
+  "subtitle" : "Biopsy of Metastatic Site",
+  "last_modified" : "2018-05-02T20:27:53.443Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "100", "Pathologic examination of metastatic tissue performed, NOS" ], [ "110", "Biopsy of omentum performed" ], [ "120", "Biopsy of small intestine performed" ], [ "130", "Biopsy of liver parenchymal tissue performed" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "No pathologic examination of metastatic tissue" ], [ "999", "Unknown or no information\nNot documented in the patient record" ] ]
+}

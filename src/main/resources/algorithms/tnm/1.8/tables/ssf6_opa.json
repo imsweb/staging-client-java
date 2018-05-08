@@ -1,0 +1,20 @@
+{
+  "id" : "ssf6_opa",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF6",
+  "title" : "Site-Specific Factor 6",
+  "subtitle" : "Parapharyngeal, Parotid, and Suboccipital/Retroauricular Lymph Nodes for Head and Neck",
+  "notes" : "**Note 1:**   **Site-Specific Factors 3-6** are used to code the presence or absence of lymph node involvement in each of 7 different levels and other groups defined by TNM.  The definitions of the levels are the same for all applicable head and neck sites.  One digit is used to represent lymph nodes of a single level, with the digits of **Site-Specific Factor 3** representing lymph nodes of Levels I-III; the digits of **Site-Specific Factor 4** representing lymph nodes of Levels IV and V and the retropharyngeal nodes; the digits of  **Site-Specific Factor 5** representing lymph nodes of Levels VI and VII and the facial nodes; and the digits of **Site-Specific Factor 6** representing the remaining Other groups as defined by TNM.  In each digit, a code 1 means yes, the nodes are involved.\n\n**Note 2:**  If involved regional node levels are documented as a range, or if the involved nodes overlap multiple levels, code all levels specified.\n\n**Note 3:**  If regional node(s) are known to be positive but the level of node(s) involved is unknown, use code 000.",
+  "last_modified" : "2018-05-02T20:27:56.063Z",
+  "definition" : [ {
+    "key" : "ssf6",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No involvement of any group: \n    Parapharyngeal lymph nodes   \n    Parotid (preauricular, periparotid, and/or intraparotid) lymph nodes\n    Suboccipital/retroauricular lymph nodes" ], [ "100", "Parapharyngeal lymph node(s) involved" ], [ "010", "Parotid (preauricular, periparotid, and/or intraparotid) lymph node(s) involved" ], [ "001", "Suboccipital/retroauricular lymph node(s) involved" ], [ "110", "Involvement of two groups:\n    Parapharyngeal lymph nodes \n    Parotid (preauricular, periparotid, and/or intraparotid) lymph nodes" ], [ "101", "Involvement of two groups:\n    Parapharyngeal lymph nodes \n    Suboccipital/retroauricular lymph nodes" ], [ "011", "Involvement of two groups:\n    Parotid (preauricular, periparotid, and/or intraparotid) lymph nodes\n    Suboccipital  lymph nodes" ], [ "111", "Involvement of three groups:\n    Parapharyngeal lymph nodes\n    Parotid (preauricular, periparotid, and/or intraparotid) lymph nodes\n    Suboccipital/retroauricular lymph nodes" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown if regional lymph node involved, not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record" ] ]
+}

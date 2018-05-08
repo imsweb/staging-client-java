@@ -46,7 +46,7 @@ public class TnmStagingTest extends StagingTest {
 
     @Override
     public String getVersion() {
-        return "1.7";
+        return "1.8";
     }
 
     @Override
@@ -65,7 +65,7 @@ public class TnmStagingTest extends StagingTest {
 
     @Test
     public void testVersionInitiaizationTypes() {
-        Staging staging10 = Staging.getInstance(TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_7));
+        Staging staging10 = Staging.getInstance(TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_8));
         assertEquals(TnmDataProvider.TnmVersion.LATEST.getVersion(), staging10.getVersion());
 
         Staging stagingLatest = Staging.getInstance(TnmDataProvider.getInstance());
@@ -165,7 +165,7 @@ public class TnmStagingTest extends StagingTest {
         assertEquals("testis", lookup.get(0).getId());
 
         // now invalidate the cache
-        TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_7).invalidateCache();
+        TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_8).invalidateCache();
 
         // try the lookup again
         lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C629", "9231"));

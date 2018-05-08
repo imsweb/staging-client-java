@@ -1,0 +1,24 @@
+{
+  "id" : "ssf1_jpm",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF1",
+  "title" : "Site-Specific Factor 1",
+  "subtitle" : "Grade for Sarcomas",
+  "notes" : "**Note 1:**  Comprehensive grading of soft tissue sarcomas is strongly correlated with disease specific survival and incorporates differentiation, mitotic rate, and extent of necrosis.  The grading system of the French Federation of Cancer Centers Sarcoma Group (FNCLCC) is preferred system.\n\n**Note 2:**   Record the grade from any three-grade sarcoma grading system the pathologist uses prior to neoadjuvant treatment.  \n* Do not code terms such as \"well differentiated\" or \"poorly differentiated\" in this field\n\n**Note 3:**  In some cases, especially for needle biopsies, grade may be specified only as \"low grade\" or \"high grade\".  Use code 100, which maps to G1, or 200, which maps to G3.  \n* Codes 010-030 take priority over codes 100 and 200\n\n**Note 4:**  The mapping of grade as shown in this table is used in the derivation of TNM 7th edition staging.",
+  "last_modified" : "2018-05-02T20:27:53.784Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "mapping_of_grade",
+    "name" : "Mapping of Grade",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "010", "Specified as Grade 1 [of 3]", "VALUE:1" ], [ "020", "Specified as Grade 2 [of 3]", "VALUE:2" ], [ "030", "Specified as Grade 3 [of 3]", "VALUE:3" ], [ "100", "Grade stated as low grade, NOS", "VALUE:1" ], [ "200", "Grade stated as high grade, NOS", "VALUE:3" ], [ "988", "Not applicable: Information not collected for this case", "VALUE:9" ], [ "998", "No histologic examination of primary site", "VALUE:9" ], [ "999", "Unknown or no information\nNot documented in patient record", "VALUE:9" ] ]
+}

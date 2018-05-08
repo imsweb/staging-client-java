@@ -1,0 +1,20 @@
+{
+  "id" : "ssf3_lbb",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF3",
+  "title" : "Site-Specific Factor 3",
+  "subtitle" : "Multiple Myeloma Terminology",
+  "notes" : "**Note 1:** Descriptors for multiple myeloma (9732) only are collected. Code 987, not applicable, for histologies 9731 and 9734.  \n\n**Note 2:** A number of terms are used to characterize early multiple myeloma at time of diagnosis. All these terms are reportable according to the new Hematopoietic and Lymphoid Neoplasms rules effective for cases diagnosed January 1, 2010 and later. \n\n**Note 3:**  Code the terminology used by a physician at the time of diagnosis. The terminology may be taken from sections of the record other than a pathology report.  Do not change the code in this Site-Specific Factor if a term used at a later time indicates progression to a more aggressive disease course..",
+  "last_modified" : "2018-05-02T20:27:53.335Z",
+  "definition" : [ {
+    "key" : "ssf3",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Multiple myeloma/Plasma cell myeloma with no other modifiers\nMultiple myeloma, NOS; Myeloma, NOS" ], [ "010", "Asymptomatic myeloma" ], [ "020", "Early or evolving myeloma" ], [ "030", "Inactive, indolent, or smoldering myeloma " ], [ "080", "Other terminology describing myeloma" ], [ "100", "Any combination of terms in codes 010-080" ], [ "987", "Not applicable:  Use for codes 9731 (Plasmacytoma, NOS) and 9734 (Plasmacytoma, extramedullary) \nNot multiple myeloma or plasma cell myeloma (9732)" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

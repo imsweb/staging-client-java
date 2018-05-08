@@ -1,0 +1,20 @@
+{
+  "id" : "ssf3_lat",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF3",
+  "title" : "Site-Specific Factor 3",
+  "subtitle" : "History of Asbestos Exposure",
+  "notes" : "**Note 1:** The most common risk factor for malignant mesotheliomas is previous exposure to asbestos. The latency period between asbestos exposure and the development of mesothelioma is generally 20 years or more.\n\n**Note 2:** Document any stated asbestos exposure based on documentation from medical record.",
+  "last_modified" : "2018-05-02T20:27:54.031Z",
+  "definition" : [ {
+    "key" : "ssf3",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No history of asbestos exposure/negative" ], [ "010", "History of asbestos exposure/positive " ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

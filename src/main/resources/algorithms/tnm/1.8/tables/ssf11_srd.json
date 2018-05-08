@@ -1,0 +1,19 @@
+{
+  "id" : "ssf11_srd",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF11",
+  "title" : "Site-Specific Factor 11",
+  "subtitle" : "Regional Lymph Node - Laterality",
+  "last_modified" : "2018-05-02T20:27:53.572Z",
+  "definition" : [ {
+    "key" : "ssf11",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "All regional lymph nodes negative" ], [ "010", "Unilateral - all positive regional nodes with same laterality\nOR only one regional node positive" ], [ "020", "Bilateral  - positive bilateral regional lymph nodes" ], [ "030", "Laterality unknown - positive regional lymph nodes with unknown  laterality" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "Lymph nodes not assessed" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

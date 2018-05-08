@@ -1,0 +1,20 @@
+{
+  "id" : "ssf2_kbf",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF2",
+  "title" : "Site-Specific Factor 2",
+  "subtitle" : "Histologic Subtype",
+  "notes" : "**Note:** Histologic subtype has prognostic significance in pleural mesothelioma. The pure epithelioid tumors are associated with a better prognosis then the biphasic or sarcomatoid tumors. Desmoplastic tumors appear to have the worst prognosis.",
+  "last_modified" : "2018-05-02T20:27:54.628Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No histologic subtype stated" ], [ "010", "Epithelioid (9052)" ], [ "020", "Biphasic (9053)\n(At least 10% of both epithelioid and sarcomatoid components)" ], [ "030", "Sarcomatoid (9051)" ], [ "040", "Desmoplastic (9051)" ], [ "050", "Other histologic subtype" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "No pathologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

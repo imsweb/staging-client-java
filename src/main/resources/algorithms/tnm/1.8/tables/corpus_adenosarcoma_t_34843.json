@@ -1,0 +1,28 @@
+{
+  "id" : "corpus_adenosarcoma_t_34843",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Clin T Corpus Adenosarcoma",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:** Assign 88 for in situ cases (behavior code /2). TNM nor FIGO  include an in situ category for sarcomas of the corpus.\n\n**Note 2:**  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension information on the primary tumor are available, use the extension information to assign the T in preference to a statement of FIGO stage - see Registrar notes.\n* If the only information is FIGO III [NOS] or IIIC, assign the appropriate stage and leave clinical T, N, and M blank. If the only information is FIGO stage IVB, leave T and N blank and see M\n\n**Note 3:** Extension to the bowel or bladder mucosa must be proven by biopsy in order to rule out bullous edema.",
+  "footnotes" : "\\* TX is not defined by UICC in the 7th edition. Approval has been provided by UICC to use the standard definition \"Primary tumor cannot be assessed,\" as TX.\n\\** T0 is not defined by UICC in the 7th edition. Approval has been provided by UICC to use the standard definition \"No evidence of primary tumor,\" as T0.",
+  "last_modified" : "2018-05-02T20:27:56.715Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Not defined by UICC*", "Primary tumor cannot be assessed\n\nClinical classification criteria met, evaluation done:\n     Physician unable to assess T\n     Extension cannot be determined OR\n Physician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "Not defined by UICC**", "No evidence of primary tumor" ], [ "c1", "cT1", "Tumor limited to the uterus", "Note: T1 has subcategories of T1a, T1b and T1c. Assign T1 only when there is no information available to assign one of the subcategories.\n\nInvasive cancer confined to corpus uteri \n\nInvasion of myometrium, NOS WITH or WITHOUT involvement of endocervix\n\nTunica serosa of the visceral peritoneum (serosa covering the corpus)\n\nCervix uteri, NOS, but not beyond uterus\n\nLocalized, NOS\n\nFIGO Stage I [NOS]\n\nStated as T1 [NOS]" ], [ "c1A", "cT1a", "Tumor limited to the endometrium/endocervix", "Confined to endometrium OR endocervix (Glandular, stromal or both)\n\nFIGO Stage IA\n\nStated as T1" ], [ "c1B", "cT1b", "Tumor invades less than half of the myometrium", "Tumor invades less than one-half of myometrium WITH involvement of endocervix\n\nFIGO Stage IB\n\nStated as T1b" ], [ "c1C", "cT1c", "Tumor invades one half or more of the myometrium", "Invasion of outer half of myometrium WITH involvement of endocervix\n\nFIGO Stage IC\n\nStated as T1c" ], [ "c2", "cT2", "Tumor extends beyond the uterus, within the pelvis", "Note: T2 has subcategories of T2a and T2b. Assign T2 only when there is no information available to assign one of the subcategories.\n\nFIGO Stage II [NOS]\n\nStated as T2 [NOS]" ], [ "c2A", "cT2a", "Tumor involves adnexa", "Adnexal involvement, NOS\nExtension or metastasis within true pelvis:\n    Adnexa\n    Fallopian tube(s)\n    Ligaments:\n        Broad\n        Round\n        Uterosacral\n    Ovary(ies)\n    Parametrium\n    Visceral peritoneum of pelvic organs excluding serosa of corpus uteri\n\nFIGO Stage IIA\n\nStated as T2a" ], [ "c2B", "cT2b", "Tumor involves other pelvic tissues", "Extension or metastasis to:\n    Cul de sac (rectouterine pouch)\n    Pelvic wall(s)\n    Parietal serosa of pelvic cavity\n    Ureter\n    Vagina\n    Vulva\n\nDescribed clinically as \"frozen pelvis\", NOS\n\nFIGO Stage IIB\n\nStated as T2b" ], [ "c3", "cT3", "Tumor involves abdominal tissues", "Note: T3 has subcategories of T3a and T3b. Assign T3 only when there is no information available to assign one of the subcategories.\n\nAbdominal tissues involvement, NOS\n\nFurther contiguous extension\n\nStated as T3 [NOS]" ], [ "c3A", "cT3a", "One site", "Infiltration of abdominal tissues, one of the following sites:\n    Abdominal serosa (visceral or parietal peritoneum of abdomen)\n    Sigmoid colon\n    Small intestine\n    Other abdominal structures\n\nFIGO Stage IIIA\n\nStated as T3a" ], [ "c3B", "cT3b", "More than one site", "FIGO Stage IIIB\n\nStated as T3b" ], [ "c4", "cT4", "Tumor invades bladder or rectal mucosa", "Invasion of:\n    Bladder wall\n    Bladder, NOS excluding mucosa\n    Rectal wall\n    Rectum, NOS excluding mucosa\n\nExtension to bowel mucosa or bladder (excluding bullous edema)\n\nFIGO Stage IVA\n\nStated as T4" ], [ "88", "88", "Not applicable", "In situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Only information is FIGO Stage III [NOS], IIIC, or  IVB\n\nClinical classification not met\nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup" ] ]
+}

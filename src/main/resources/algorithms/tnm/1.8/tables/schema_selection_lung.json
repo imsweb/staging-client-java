@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_lung",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Schema Selection Lung",
+  "title" : "Schema selection for Lung",
+  "last_modified" : "2018-05-02T20:27:50.164Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C340-C343,C348-C349", "8000-9136,9141-9582,9700-9701", "MATCH" ] ]
+}

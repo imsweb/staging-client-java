@@ -1,0 +1,27 @@
+{
+  "id" : "path_n_dbj",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Path N Penis",
+  "title" : "Pathologic N",
+  "notes" : "**Note:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Regional lymph nodes**\n\n    Inguinal\n        Deep inguinal, NOS\n           Node of Cloquet or Rosenmuller (highest deep inguinal)\n        Superficial inguinal (femoral) \n        Inguinal node, NOS (unknown if superficial or deep)\n\n    Pelvic lymph  nodes, NOS\n        External iliac\n        Internal iliac (hypogastric)\n            Obturator",
+  "last_modified" : "2018-05-02T20:27:53.199Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathologic N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pNX", "Regional lymph node(s) cannot be assessed", "Pathologic classification criteria met, evaluation done:\n    Physician unable to assess N\n    Surgical resection primary tumor, no regional lymph nodes removed\n    Involvement of regional lymph nodes not documented\nPhysician assigns pNX, no other information available to determine N" ], [ "p0", "pN0", "No regional lymph node metastasis", "No regional lymph node involvement" ], [ "p1", "pN1", "Metastasis in a single inguinal lymph node", "SINGLE regional lymph nodes, NOS\n\nNot stated if single or multiple AND not stated if inguinal or pelvic\n\nRegional lymph node(s), NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "p2", "pN2", "Metastasis in multiple OR \n\nBilateral inguinal lymph nodes", "Inguinal lymph nodes, NOS\n\nStated as N2" ], [ "p3", "pN3", "Metastasis in pelvic lymph node(s), unilateral or bilateral\nOR \n\nExtranodal extension of regional lymph node metastasis", "Pelvic lymph node(s), NOS\n\nStated as N3" ], [ "c0", "cN0", "Clinically: No regional lymph node metastasis", "Use only for TNM defined pTis cases where there is a resection of the primary and the nodes are not evaluated pathologically" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nNo surgical resection of primary tumor and there isn’t a positive biopsy of a structure in the highest T category and highest N category\nEvidence of metastatic disease (pM1), no other workup\nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

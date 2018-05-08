@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_melanoma_larynx_subglottic",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Schema Selection MelanomaLarynxSubglottic",
+  "title" : "Schema selection for MelanomaLarynxSubglottic",
+  "last_modified" : "2018-05-02T20:27:54.961Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C322", "8720-8790", "MATCH" ] ]
+}

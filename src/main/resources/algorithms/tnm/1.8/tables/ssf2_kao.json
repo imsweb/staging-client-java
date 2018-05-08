@@ -1,0 +1,20 @@
+{
+  "id" : "ssf2_kao",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF2",
+  "title" : "Site-Specific Factor 2",
+  "subtitle" : "Size of Metastasis in Lymph Nodes",
+  "notes" : "**Note:**  Code the size of the largest metastasis in a lymph node as documented in the pathology report, not the size of the lymph node. If the size of the metastasis is not documented, code the size of the largest involved node as documented pathologically or clinically, with pathology taking priority. \n\n* Do not code the size of any node(s) coded in distant metastasis",
+  "last_modified" : "2018-05-02T20:27:52.488Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No regional lymph nodes involved" ], [ "001-979", "1 - 979 millimeter (mm) \n(Exact size of lymph node metastasis to nearest mm)" ], [ "980", "980 mm or larger" ], [ "988", "Not applicable: Information not collected for this case" ], [ "990", "Microscopic focus or foci only and no size of focus given" ], [ "991", "Described as \"less than 1 centimeter (cm)\"" ], [ "992", "Described as \"less than 2 cm\" or \"greater than 1 cm\" or \"between 1 cm and 2 cm\"" ], [ "993", "Described as \"less than 3 cm\" or \"greater than 2 cm\" or \"between 2 cm and 3 cm\"" ], [ "994", "Described as \"less than 4 cm\" or \"greater than 3 cm\" or \"between 3 cm and 4 cm\"" ], [ "995", "Described as \"less than 5 cm\" or \"greater than 4 cm\" or \"between 4 cm and 5 cm\"" ], [ "996", "Described as \"less than 6 cm\" or \"greater than 5 cm\" or \"between 5 cm and 6 cm\"" ], [ "997", "Described as \"more than 6 cm\"" ], [ "999", "Regional lymph node(s) involved, size not stated\nCommon iliac node involvement only\nUnknown if regional lymph node(s) involved\nNot documented in patient record" ] ]
+}

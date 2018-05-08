@@ -1,0 +1,27 @@
+{
+  "id" : "clin_n_esophagus_ge_junction_51247",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Clin T Esophagus GE Junction",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  Non-invasive carcinomas in the esophagus formerly called in situ are now called high grade dysplasia. High grade dysplasia and severe dysplasia are generally not reportable in cancer registries. \n* Assign pTis if your registry collects these tumors\n\n**Note 2:**  Ignore intraluminal extension to adjacent segment(s) of esophagus or to cardia of stomach and code depth of invasion or extra-esophageal spread as indicated.\n\n**Note 3:**  The three layers of the mucosa (epithelium, lamina propria, and muscularis mucosae) may be called the m1, m2, and m3 layers.  The submucosa may be described as having inner, middle, and outer thirds called sm1, sm2, and sm3.\n\n**Note 4:**  If the diagnosis states linitis plastica and no other information regarding primary tumor is available, assign T1.  Linitis plastica is defined as diffuse involvement of the entire stomach wall.\n\n**Note 5:**  Assign T4a for contiguous extension from the site of origin. Discontinuous involvement is coded in distant metastasis.except for implants within the stomach (T1).",
+  "last_modified" : "2018-05-02T20:27:55.634Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T \n    Extension cannot be determined\nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor", "" ], [ "pIS", "pTis", "Carcinoma in situ/high-grade dysplasia", "Non-invasive\n\n(Adeno)carcinoma, noninvasive, in a polyp\n\nStated as Tis" ], [ "c1", "cT1", "Tumor invades: \n    Lamina propria\n    Muscularis mucosae\n    Submucosa", "Note: T1 has subcategories of T1a and T1b. Assign T1 only when there is no information available to assign one of the subcategories\n\nTumor in polyp,  NOS\n\nImplants inside stomach \n\nLocalized, NOS\n\nStated as T1 [NOS]" ], [ "c1A", "cT1a", "Tumor invades lamina propria or muscularis mucosae", "Invasive tumor confined to mucosa, NOS (including intramucosal, NOS)\n\nInvades lamina propria or muscularis mucosae\n\nStated as T1a" ], [ "c1B", "cT1b", "Tumor invades submucosa", "Stated as T1b" ], [ "c2", "cT2", "Tumor invades muscularis propria", "Invades into but not through muscularis propria\n\nLinitis plastica (and no other information regarding extension available) \n\nStated as T2" ], [ "c3", "cT3", "Tumor invades adventitia", "Extension through wall, NOS \nInvasion through muscularis propria or muscularis, NOS\nPerimuscular tissue invaded\nSubserosal tissue/(sub)serosal fat invaded\n\nAdventitia and/or soft tissue invaded\nEsophagus is described as \"FIXED\"\n\nExtension to adjacent (connective) tissue WITHOUT perforation of visceral peritoneum covering these structures:\n    Gastric artery\n    Ligaments:     \n        Gastrocolic\n        Gastrohepatic\n        Gastrosplenic\n    Omentum, NOS\n        Greater\n        Lesser\n    Perigastric fat\n\nStated as T3" ], [ "c4", "cT4", "Tumor invades adjacent structures", "Note: T4 has subcategories of T4a and T4b. Assign T4 only when there is no information available to assign one of the subcategories\n\nStated as T4[NOS]" ], [ "c4A", "cT4a", "Tumor invades: \n    Pleura\n    Pericardium\n    Diaphragm", "Invasion of/through serosa (mesothelium) (tunica serosa) (visceral peritoneum), including: \n    Perforation of visceral peritoneum covering the gastric ligaments or the omentum WITHOUT invasion of adjacent structures\n\nAbdominal wall\nAdrenal gland\nKidney\nRetroperitoneum\nPericardium\nPleura\nDiaphragm\n\nStated as T4a" ], [ "c4B", "cT4b", "Tumor invades other adjacent structures such as:\n    Aorta\n    Trachea\n    Vertebral body", "Tumor invades adjacent structures:\n    Duodenum via serosa \n    Duodenum, NOS\n    Esophagus via serosa\n    Ileum\n   Jejunum\n    Liver\n    Pancreas\n    Small intestine, NOS\n    Spleen\n    Transverse colon (including flexures)\n\nStated as unresectable, NOS\n\nStated as T4b" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

@@ -1,0 +1,20 @@
+{
+  "id" : "ssf18_sqy",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF18",
+  "title" : "Site-Specific Factor 18",
+  "subtitle" : "Isolated Tumor Cells (ITC) in Regional Lymph Node(s)",
+  "notes" : "**Note 1:**  Isolated tumor cells (ITCs) are defined as single tumor cells or small clusters not greater than 0.2 mm, usually detected by immunohistochemical (IHC) methods such as Cytokeratin 20 (CK20) or CAM 5.2 or pancytokeratins. \n* For Merkel cell carcinoma, the presence of ITCs in regional lymph node(s) is coded as positive nodal involvement\n\n**Note 2:**  Record the status of ITCs as documented by the pathologist.\n\n**Note 3:**  If regional lymph nodes are removed and are pathologically negative with no mention of ITC status, assume there are no ITCs and assign code 000.\n\n**Note 4:**  Use code 999 if nodes are clinically involved but no pathologic examination of regional nodes is performed.",
+  "last_modified" : "2018-05-02T20:27:53.658Z",
+  "definition" : [ {
+    "key" : "ssf18",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Regional lymph nodes negative on routine hematoxylin and eosin (H and E) stains,  no immunohistochemical (IHC) studies for isolated tumor cells (ITC) done (CK20, CAM 5.2, pancytokeratins) or unknown if IHC studies done    \nNodes clinically negative, not examined pathologically" ], [ "010", "Regional lymph nodes negative on routine H and E, IHC studies done (CK20, CAM5.2, pancytokeratins) and ITCs NOT PRESENT" ], [ "020", "Regional lymph nodes negative on routine H and E, IHC studies done (CK20, CAM 5.2, pancytokeratins) and ITCs PRESENT" ], [ "090", "Regional lymph nodes negative on routine H and E, positive for tumor detected by IHC, size of tumor cell clusters or metastases not stated" ], [ "100", "Regional lymph nodes positive with ITCs on routine H and E" ], [ "200", "Regional lymph nodes positive with ITCs, NOS, method of detection not stated" ], [ "300", "Regional lymph nodes positive other than ITCs \n(Tumor cells greater than 0.2 millimeter (mm))" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\nNot documented in pathology report or patient record\nClinical assessment of nodal involvement only" ] ]
+}
