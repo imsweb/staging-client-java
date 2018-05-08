@@ -1,0 +1,27 @@
+{
+  "id" : "net_smallintestine_t_60400",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Clin T NET Small Intestine",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:** Assign 88 for in situ cases (behavior code /2). TNM does not include an in situ category for NET small intestine tumors.\n\n**Note 2:**  Ignore intraluminal extension to adjacent segment(s) of colon/rectum or to the ileum from the cecum; code depth of invasion or extracolonic spread as indicated.\n\n**Note 3:**  The nonperitonealized perimuscular tissue is, for jejunum and ileum, part of the mesentery and, for duodenum in areas where serosa is lacking, part of the retroperitoneum.\n\n**Note 4:** Tumor size must be known to assign a value of T1 or T2. You may use a physician’s statement of the T category if this is the only information in the medical record.\n* If the tumor appears to be in the T1 or T2 categories, but no size or category is specified, assign TX\n\n**Note 5:** Assign the appropriate T category (T1, T2) based on the tumor size for the following descriptions:\n\n    Invasive tumor confined to mucosa, NOS including intramucosal, NOS\n    Invades lamina propria, including lamina propria in the stalk of a polyp\n    Invades submucosa (superficial invasion), including submucosa in the stalk of a polyp\n    Confined to and not through the muscularis mucosae, including muscularis mucosae in the stalk of a polyp\n\n    Confined to colon, NOS\n    Localized, NOS \n\n**Note 6:**  Assign T4 for tumor with macroscopic adhesions to other organs or structures and for pathologically confirmed tumor in adhesions.  \n* If no tumor is present in adhesions upon microscopic examination, use lower codes to describe the microscopically confirmed depth of tumor invasion for these cases",
+  "last_modified" : "2018-05-02T20:27:56.812Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T\n    Extension cannot be determined \n    Tumor size (TS) unknown for T categories where TS  needed to determine T\nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor", "No evidence of primary tumor" ], [ "c1", "cT1", "Tumor invades lamina propria or submucosa and is no greater than 1 cm in size", "Confined to:\n     Mucosa, NOS, including intramucosal, NOS\n     Muscularis mucosae, including muscularis mucosae in a polyp\n\nIntraluminal spread to other segments of small intestine or cecum\n\nLocalized, NOS\n\nStated as T1" ], [ "c2", "cT2", "Tumor invades muscularis propria or is greater than 1 cm in size", "Muscularis propria invaded\n\nStated as T2" ], [ "c3", "cT3", "Jejunal or ileal tumor invades subserosa\nAmpullary or duodenal tumor invades pancreas or retroperitoneum", "Adjacent connective tissue \nFat, NOS\nInvasion through muscularis propria or muscularis, NOS\nExtension through wall, NOS\nMesentery\nNonperitonealized perimuscular tissue\nSubserosal tissue/(sub)serosal fat invaded\nTransmural, NOS\n\nFor duodenum primary only (C170):\n    Ampulla of Vater\n    Pancreatic duct\n    \nStated as T3" ], [ "c4", "cT4", "Tumor perforates visceral peritoneum (serosa) or invades other organs or adjacent structures", "Invasion of/through serosa (mesothelium) (tunica serosa) (visceral peritoneum)\n\nFor all small intestine sites:\n   Abdominal wall\n   Other segments of the small intestine via serosa\n\nFor duodenum primary only (C170):\n    Blood vessel(s), major:\n        Aorta\n        Gastroduodenal artery\n        Portal vein\n        Renal vein\n        Superior mesenteric artery or vein\n        Vena cava\n    Diaphragm\n    Extrahepatic bile ducts\n    Gallbladder\n    Hepatic flexure\n    Kidney, right or NOS\n    Liver\n    Omentum\n    Stomach\n    Transverse colon\n    Ureter, right\n \nFor jejunum or ileum primary only (C171, C172):\n    Bladder\n    Colon, including appendix\n    Fallopian tube\n    Ovary\n    Retroperitoneum invaded greater than 2 cm in depth\n    Uterus\n\nFurther contiguous extension\n\nStated as T4" ], [ "88", "88", "Not applicable", "In situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

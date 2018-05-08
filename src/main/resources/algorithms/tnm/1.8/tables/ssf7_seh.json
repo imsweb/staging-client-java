@@ -1,0 +1,20 @@
+{
+  "id" : "ssf7_seh",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF7",
+  "title" : "Site-Specific Factor 7",
+  "subtitle" : "Pre-Orchiectomy Alpha Fetoprotein (AFP) Range",
+  "notes" : "**Note 1:**  Record the range of the alpha fetoprotein (AFP) test as documented in the patient record prior to orchiectomy and other treatment.\n\n**Note 2:**  Use the same laboratory test to record values in **Site-Specific Factor 6, Pre-Orchiectomy Alpha Fetoprotein (AFP) Lab Value** and **Site-Specific Factor 7, Pre-Orchiectomy Alpha Fetoprotein (AFP) Range**.\n\n**Note 3:**  A lab value expressed in micrograms/liter (ug/L) is equivalent to the same value expressed in nanograms/milliliter (ng/ml).\n\n**Note 4:** If the pre-orchiectomy AFP test is unavailable but a physician's statement of the result is documented, use codes 991-993.\n\n**Note 5:** For rare cases that are treated prior to orchiectomy, use code 995 in this field and record the initial AFP range in **Site-Specific Factor 13, Post-Orchiectomy Alpha Fetoprotein (AFP) Range**.\n\n**Note 6:** For rare cases that an orchiectomy is not performed, use code 996 in this field and record the initial AFP range in **Site-Specific Factor 13, Post-Orchiectomy Alpha Fetoprotein (AFP) Range**.",
+  "last_modified" : "2018-05-02T20:27:52.972Z",
+  "definition" : [ {
+    "key" : "ssf7",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Within normal limits (S0)" ], [ "010", "Range 1 (S1) above normal and less than 1,000 nanograms/milliliter (ng/ml)" ], [ "020", "Range 2 (S2) 1,000 -10,000 ng/ml" ], [ "030", "Range 3 (S3)  greater than 10,000 ng/ml" ], [ "988", "Not applicable: Information not collected for this case" ], [ "991", "Pre-orchiectomy alpha fetoprotein (AFP) stated to be elevated" ], [ "992", "Pre-orchiectomy AFP unknown but preorchiectomy serum tumor markers NOS stated to be normal" ], [ "993", "Pre-orchiectomy AFP unknown but preorchiectomy serum tumor markers NOS stated to be elevated" ], [ "995", "Pretreated case, initial AFP range recorded in Site-Specific Factor 13" ], [ "996", "No orchiectomy performed, initial AFP range recorded in Site-Specific Factor 13" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

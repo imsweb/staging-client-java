@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_melanoma_sinus_ethmoid",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Schema Selection MelanomaSinusEthmoid",
+  "title" : "Schema selection for MelanomaSinusEthmoid",
+  "last_modified" : "2018-05-02T20:27:54.868Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C311", "8720-8790", "MATCH" ] ]
+}

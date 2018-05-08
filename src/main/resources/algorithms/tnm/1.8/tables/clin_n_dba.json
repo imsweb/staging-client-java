@@ -1,0 +1,27 @@
+{
+  "id" : "clin_n_dba",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Clin N Vagina",
+  "title" : "Clinical N",
+  "notes" : "**Note 1:** When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and regional lymph node detail are available, use the regional lymph node detail in preference to a statement of FIGO stage - see Registrar notes.\n* If the only information is FIGO III, assign the appropriate stage and leave clinical T, N, and M blank. If the only information is FIGO stage IVB, leave T and N blank and see M\n\n**Note 2:** Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).  \n\n**Regional lymph nodes**\n\n    Upper two thirds of vagina, regional nodes \n       Pelvic lymph nodes\n           Iliac, NOS\n              Common\n              External\n               Internal (hypogastric)\n                   Obturator\n                   Middle sacral (promontorial) (Gerota's node)\n       Pelvic lymph node(s), NOS\n\n    Lower third of vagina, regional nodes\n       Ipsilateral or bilateral\n          Inguinal, NOS\n             Superficial inguinal (femoral)",
+  "last_modified" : "2018-05-02T20:27:53.437Z",
+  "definition" : [ {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n_display",
+    "name" : "Clinical N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cNX", "Regional lymph nodes cannot be assessed", "Only information available is FIGO Stage IVA\n\nClinical classification criteria met, evaluation done:\n    Physician unable to assess N\n    Regional lymph node involvement cannot be determine or findings inconclusive\nPhysician assigns cNX, no other information available to determine N" ], [ "c0", "cN0", "No regional lymph node metastases", "Only information available is FIGO Stage I or II" ], [ "c1", "cN1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Only information available is FIGO Stage III or IVB\n\nClinical classification criteria not met\nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup" ] ]
+}

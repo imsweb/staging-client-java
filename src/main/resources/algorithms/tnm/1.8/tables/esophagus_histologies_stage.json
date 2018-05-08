@@ -1,0 +1,19 @@
+{
+  "id" : "esophagus_histologies_stage",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Histologies Stage",
+  "title" : "Histologies Stage Table",
+  "notes" : "**Note 1:**  The determination of the TNM 7 stage group from T, N, M, and grade for esophagus depends further on histologic type.   Since squamous cell carcinoma typically has a poorer prognosis than adenocarcinoma, a tumor of mixed histopathologic type (including a squamous component or NOS histology) or a type that is not otherwise specified should be staged as squamous cell carcinoma. \n\n**Note 2:**  This table shows the selection of the appropriate version of the Stage table based on histology.",
+  "last_modified" : "2018-05-02T20:27:53.557Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "ICD-O-3 Histology Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage_table",
+    "name" : "Stage Table",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8000-8046", "JUMP:tnm_7_stage_squamous_34274" ], [ "8050", "JUMP:tnm_7_stage_adenocarcinoma_44054" ], [ "8051-8131", "JUMP:tnm_7_stage_squamous_34274" ], [ "8140-8147", "JUMP:tnm_7_stage_adenocarcinoma_44054" ], [ "8148-8157", "JUMP:tnm_7_stage_squamous_34274" ], [ "8160-8162", "JUMP:tnm_7_stage_adenocarcinoma_44054" ], [ "8170-8175", "JUMP:tnm_7_stage_adenocarcinoma_44054" ], [ "8180-8221", "JUMP:tnm_7_stage_adenocarcinoma_44054" ], [ "8230-8249", "JUMP:tnm_7_stage_squamous_34274" ], [ "8250-8507", "JUMP:tnm_7_stage_adenocarcinoma_44054" ], [ "8508", "JUMP:tnm_7_stage_squamous_34274" ], [ "8510-8513", "JUMP:tnm_7_stage_squamous_34274" ], [ "8514-8551", "JUMP:tnm_7_stage_adenocarcinoma_44054" ], [ "8560-8570", "JUMP:tnm_7_stage_squamous_34274" ], [ "8571-8574", "JUMP:tnm_7_stage_adenocarcinoma_44054" ], [ "8575", "JUMP:tnm_7_stage_squamous_34274" ], [ "8576", "JUMP:tnm_7_stage_adenocarcinoma_44054" ], [ "8940-8941", "JUMP:tnm_7_stage_adenocarcinoma_44054" ], [ "8950", "JUMP:tnm_7_stage_squamous_34274" ], [ "8980-8981", "JUMP:tnm_7_stage_squamous_34274" ] ]
+}

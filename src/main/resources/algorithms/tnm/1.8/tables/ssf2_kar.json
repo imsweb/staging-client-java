@@ -1,0 +1,20 @@
+{
+  "id" : "ssf2_kar",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF2",
+  "title" : "Site-Specific Factor 2",
+  "subtitle" : "Vein Involvement",
+  "notes" : "**Note 1:** Information about vein involvement is collected in T as an element in anatomic staging.  It is also collected in this field as it may have an independent effect on prognosis.\n\n**Note 2:**  Record the involvement of specific named veins as documented in the pathology report. Do not code invasion of small unnamed vein(s) of the type collected as lymph-vascular invasion. Lymph-vascular invasion is usually only seen microscopically. \n* Assign code 000 if surgical resection of the primary site is performed, the pathology report is available for review, and involvement of these specified veins is not mentioned",
+  "last_modified" : "2018-05-02T20:27:52.974Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Vein involvement not present/not identified" ], [ "010", "Involvement of renal vein only" ], [ "020", "Involvement of inferior vena cava (IVC) below the diaphragm only" ], [ "030", "Involvement of IVC above the diaphragm only" ], [ "040", "Involvement of IVC, NOS only" ], [ "050", "020 + 010 \n\nInvolvement of IVC below the diaphragm plus involvement of renal vein" ], [ "060", "030 + 010 \n \nInvolvement of IVC above the diaphragm plus involvement of renal vein" ], [ "070", "040 + 010\n\nInvolvement of IVC, NOS plus involvement of renal vein" ], [ "080", "030 + 020 \n\nInvolvement of IVC above the diaphragm plus involvement of IVC below the diaphragm" ], [ "090", "030 + 020 + 010 \n\nInvolvement of IVC above the diaphragm plus involvement of IVC below the diaphragm plus involvement of renal vein" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "No surgical resection of primary site" ], [ "999", "Unknown or no information  \nNot documented in patient record" ] ]
+}

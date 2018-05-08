@@ -1,0 +1,28 @@
+{
+  "id" : "buccal_mucosa_t_35895",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Clin T Buccal Mucosa",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:** Periosteum is a fibrous membrane that wraps the outer surface of bones. Cortical bone is the dense compact outer layer of the bone. Trabecular, cancellous, or spongy bone (spongiosa) is a porous network of tissue filling the interior of bone, decreasing weight and allowing room for blood vessels and marrow.\n\n**Note 2:** Tumor size must be known to assign a value of T1, T2 or T3. You may use a physician’s statement of the T category if this is the only information in the medical record. \n* If the tumor appears to be in the T1, T2 or T3 categories, but no size or category is specified, assign TX\n\n**Note 3:** For the following descriptions, assign the appropriate T category (T1, T2 or T3) based on the tumor size when involvement is limited to the cortical bone.\n\n    Invasive tumor confined to\n        Lamina propria\n        Submucosa (superficial invasion)\n      \n    Extension to\n         Bone, NOS\n         Buccal mucosa (inner cheek)\n         Cartilage, NOS\n         Commissure (from lower lip only)\n         Cortical bone, NOS\n         Cortical bone of mandible\n         Cortical bone of maxilla \n         Gingiva \n         Hard palate including cortical palantine bone\n         Lateral pharyngeal wall\n         Lip(s) including commissure\n         Mandible, NOS\n         Maxilla, NOS \n         Musculature (buccinator)\n         Opposite lip (both lips)\n         Soft palate\n         Subcutaneous soft tissue of cheek\n         Tonsillar pillars and fossae\n         Tonsils\n\n    Confined to buccal mucosa\n    Localized, NOS\n\n**Note 4:**  Involvement through cortical bone is required for assignment of T4a.",
+  "footnotes" : "\\* T4 [NOS] is not defined by UICC in the 7th edition. Approval has been provided by UICC to use \"Tumor invades bone, nerve or extrinsic deep muscles\" as T4 [NOS].\n\\# T4 [NOS] is not defined in AJCC 7th edition.",
+  "last_modified" : "2018-05-02T20:27:56.819Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T\n    Extension cannot be determined \n    Tumor size (TS) unknown for T categories where TS  needed to determine T\nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor", "" ], [ "pIS", "pTis", "Carcinoma in situ", "Intraepithelial, noninvasive\n\nStated as Tis" ], [ "c1", "cT1", "Tumor 2 cm or less in greatest dimension", "Stated as T1" ], [ "c2", "cT2", "Tumor more than 2 cm but not more than 4 cm in greatest dimension", "Stated as T2" ], [ "c3", "cT3", "Tumor more than 4 cm in greatest dimension", "Stated as T3" ], [ "c4", "cT4", "Not defined by UICC*#", "Note: T4 has subcategories of T4a and T4b. Assign T4 only when there is no information available to assign one of the subcategories\n\nTumor invades bone, nerve or extrinsic deep muscles\n\nStated as T4[NOS]" ], [ "c4A", "cT4a", "(lip) Tumor invades through: \n     Cortical bone \n     Floor of mouth\n     Inferior alveolar nerve\n     Skin (chin or nose)\n\n(oral cavity) Tumor invades through: \n     Cortical bone \n     Into deep/extrinsic muscle of tongue: \n          Genioglossus\n          Hyoglossus\n          Palatoglossus\n          Styloglossus \n     Maxillary sinus \n     Skin of face", "Skin of cheek with or without ulceration\n\nTrabecular bone:\n    Mandible\n    Maxilla \n    Palatine bone\n\nMaxillary sinus (antrum) Nasal cavity\n\nTongue\n\nStated as T4a" ], [ "c4B", "cT4b", "(lip and oral cavity) Tumor invades: \n    Masticator space \n    Pterygoid plates\n    Skull base\n\nor Encases internal carotid artery", "Masticator space\nPterygoid plates\n\nOther specified bone(s) \n(Other than maxilla, mandible, palatine, masticator space, pterygoid plates)\n\nFurther contiguous extension including:\n    Base of skull  \n    Internal carotid artery (encased)\n    Skull \n\nStated as T4b" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

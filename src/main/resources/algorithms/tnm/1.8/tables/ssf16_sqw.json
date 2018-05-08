@@ -1,0 +1,20 @@
+{
+  "id" : "ssf16_sqw",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF16",
+  "title" : "Site-Specific Factor 16",
+  "subtitle" : "Size of Metastasis in Lymph Nodes",
+  "notes" : "**Note:**  Code size of metastasis or tumor nests in regional lymph nodes (not the size of the lymph node).  Record the actual measurement in hundredths of millimeters (mm) from the pathology report. \n* Do not code the size of any distant lymph node(s)",
+  "last_modified" : "2018-05-02T20:27:53.833Z",
+  "definition" : [ {
+    "key" : "ssf16",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement" ], [ "001-979", "0.01 - 9.79 millimeters  (mm)  \n(Exact size of largest described metastasis or tumor nest to nearest HUNDREDTH of mm) \n  \nExamples: \n    001    0.01 mm      \n    002    0.02 mm     \n    010    0.1 mm    \n    074    0.74 mm    \n    100    1 mm     \n    105    1.05 mm    \n    979    9.79 mm" ], [ "980", "9.80 mm or larger" ], [ "988", "Not applicable: Information not collected for this case" ], [ "990", "Metastasis or tumor nests in regional lymph nodes, size cannot be assessed" ], [ "998", "No histologic examination of regional lymph nodes" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

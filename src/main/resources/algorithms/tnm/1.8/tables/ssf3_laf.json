@@ -1,0 +1,20 @@
+{
+  "id" : "ssf3_laf",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF3",
+  "title" : "Site-Specific Factor 3",
+  "subtitle" : "Vascular Invasion",
+  "notes" : "**Note 1:**  Large vessel (venous) invasion may have a worse prognosis than small vessel (capillary/lymphatic) invasion.\n\n**Note 2:**  Record large vessel (venous) invasion as documented in the pathology report. \n* Assign code 000 if surgical resection of the primary site is performed, the pathology report is available for review, and invasion of adrenal vein, renal vein, inferior vena cava (IVC), or large vessel, NOS is not mentioned",
+  "last_modified" : "2018-05-02T20:27:53.474Z",
+  "definition" : [ {
+    "key" : "ssf3",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Vascular invasion not present/not identified" ], [ "010", "Invasion of adrenal vein only" ], [ "020", "Invasion of renal vein only" ], [ "030", "Invasion of inferior vena cava (IVC) only" ], [ "040", "020 + 010\n\nInvasion of renal vein and adrenal vein" ], [ "050", "030 + 010\n\nInvasion of IVC and adrenal vein" ], [ "060", "030 + 020\n\nInvasion of IVC and renal vein" ], [ "070", "030 + 020 + 010\n\nInvasion of IVC, renal vein, and adrenal vein" ], [ "988", "Not applicable: Information not collected for this case" ], [ "991", "Large vessel venous invasion, vein not specified" ], [ "998", "No surgical resection of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

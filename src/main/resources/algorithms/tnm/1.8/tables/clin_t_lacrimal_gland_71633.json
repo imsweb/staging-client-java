@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_lacrimal_gland_71633",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Clin T Lacrimal Gland",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  Assign 88 for in situ cases (behavior code /2). TNM does not include an in situ category for lacrimal gland tumors.\n\n**Note 2:**  Tumors greater than 2 cm (the size of the lacrimal gland) usually extend into the orbital soft tissue.\n\n**Note 3:**  Periosteum is a fibrous membrane that wraps the outer surface of bones.\n\n**Note 4:** Tumor size must be known to assign a value of T1 or T2. You may use a physician’s statement of the T category if this is the only information in the medical record.\n* If the tumor appears to be in the T1 or T2 categories, but no size or category is specified, assign TX\n\n**Note 5:** Assign the appropriate T category (T1, T2) based on the tumor size for the following descriptions\n\n    Extension to any of the following WITHOUT bone invasion\n       Globe (eyeball)\n       Optic nerve\n       Orbital soft tissues\n\n    Confined to lacrimal gland\n    Localized, NOS",
+  "last_modified" : "2018-05-02T20:27:53.388Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T\n    Extension cannot be determined \n    Tumor size (TS) unknown for T categories where TS  needed to determine T\nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor", "" ], [ "c1", "cT1", "Tumor 2 cm or less in greatest dimension\nLIMITED to the lacrimal gland", "Stated as T1" ], [ "c2", "cT2", "Tumor more than 2 cm but not more than 4 cm in greatest dimension\nLIMITED to the lacrimal gland", "Stated as T2" ], [ "c3", "cT3", "Tumor more than 4 cm OR \nWITH extraglandular extension into orbital soft tissue, including optic nerve or globe", "Stated as T3" ], [ "c4", "cT4", "Tumor invades periosteum or orbital bone or adjacent structures", "Note: T4 has subcategories of T4a, T4b and T4c. Assign T4 only when there is no information available to assign one of the subcategories\n\nStated as T4 [NOS]" ], [ "c4A", "cT4a", "Tumor invades periosteum", "Stated as T4a" ], [ "c4B", "cT4b", "Tumor invades orbital bone", "Stated as T4b" ], [ "c4C", "cT4c", "Tumor invades adjacent structures: \n    Brain\n    Sinus\n    Pterygoid fossa\n    Temporal fossa", "Stated as T4c" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined \nIn situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

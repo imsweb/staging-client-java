@@ -1,0 +1,27 @@
+{
+  "id" : "clin_m_hcf",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Clin M Appendix",
+  "title" : "Clinical M",
+  "notes" : "**Note 1:** Distant lymph nodes are assigned as M1b.\n\n**Distant lymph nodes**\n\n    Inferior mesenteric lymph nodes\n    Superior mesenteric lymph nodes\n\n**Note 2:**  Mucinous tumors (morphology codes 8480, 8481, and 8490) with peritoneal involvement confined to the right lower quadrant (RLQ) are classified as T4a and are assigned in T (primary tumor).",
+  "last_modified" : "2018-05-02T20:27:53.430Z",
+  "definition" : [ {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_m_display",
+    "name" : "Clinical M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "CLINICAL assessment only:\nNote: M1 has subcategories of M1a and M1b. Assign M1 only when there is no information available to assign one of the subcategories\n\nStated as M1 [NOS]" ], [ "c1A", "cM1a", "Intraperitoneal metastasis beyond the right lower quadrant, including pseudomyxoma peritonei", "CLINICAL assessment only:\nFor mucinous tumors only:\n    Intraperitoneal metastasis BEYOND the right lower quadrant, including pseudomyxoma peritonei\n\nStated as M1a" ], [ "c1B", "cM1b", "Non-peritoneal metastasis", "CLINICAL assessment only:\nDistant lymph nodes, NOS\n\nFor mucinous tumors only:  \nDistant lymph node(s) plus intraperitoneal metastasis BEYOND the right lower quadrant, including pseudomyxoma peritonei\n\nFor non-mucinous tumors only:\n    Any intraperitoneal spread\n\nIntraperitoneal spread plus distant lymph node(s)\n\nNon-peritoneal metastasis\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated as M1b" ], [ "p1", "pM1", "Distant metastasis", "HISTOLOGICALLY confirmed:\nNote: M1 has subcategories of M1a and M1b. Assign M1 only when there is no information available to assign one of the subcategories" ], [ "p1A", "pM1a", "Intraperitoneal metastasis beyond the right lower quadrant, including pseudomyxoma peritonei", "HISTOLOGICALLY confirmed:\nFor mucinous tumors only:\n    Intraperitoneal metastasis BEYOND the right lower quadrant, including pseudomyxoma peritonei" ], [ "p1B", "pM1b", "Non-peritoneal metastasis", "HISTOLOGICALLY confirmed:\nDistant lymph nodes, NOS\n\nFor mucinous tumors only:  \nDistant lymph node(s) plus intraperitoneal metastasis BEYOND the right lower quadrant, including pseudomyxoma peritonei\n\nFor non-mucinous tumors only:\n    Any intraperitoneal spread\n\nIntraperitoneal spread plus distant lymph node(s)\n\nNon-peritoneal metastasis\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in patient record\nClinical evaluation of T and N not done, no evidence metastatic disease\nTumor first detected on surgical resection (no clinical workup)\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

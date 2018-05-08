@@ -1,0 +1,27 @@
+{
+  "id" : "clin_m_hah",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Clin M Ovary",
+  "title" : "Clinical M",
+  "notes" : "**Note 1:** When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and metastatic detail are available, use the metastatic detail in preference to a statement of FIGO stage - see Registrar notes.\n* If the only information is FIGO III [NOS] or IIIC, assign the appropriate stage and leave clinical T, N, and M blank\n\n**Note 2:**  Discontinuous metastasis to any of the following abdominal organs by way of peritoneal seeding or implants is included in the T3 category (FIGO Stage III) and coded in T (primary tumor).\n* Abdominal mesentery; diaphragm; gallbladder; infracolic omentum; kidneys; large intestine except rectum, rectosigmoid, and sigmoid colon; liver (peritoneal surface); omentum; pancreas; pericolic gutter; peritoneum, NOS; small intestine; spleen; stomach; and ureters outside pelvis\n\n**Note 3:** Hematogenous metastases are included in M1 (FIGO Stage IV) disease.",
+  "last_modified" : "2018-05-02T20:27:53.254Z",
+  "definition" : [ {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_m_display",
+    "name" : "Clinical M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Only information available is FIGO Stage I [NOS], IA, IB, II [NOS], IIA, IIB, IIC, IIIA, or IIIB\n\nUnknown; distant metastasis not stated\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis except peritoneal metastasis", "CLINICAL assessment only:\nDistant lymph nodes, NOS\n\nInvolvement of other organs by peritoneal seeding or implants including:\n    Liver parenchymal metastasis\n    Pleural effusion WITH positive cytology\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis, NOS\n\nFIGO Stage IV\n\nStated as M1" ], [ "p1", "pM1", "Distant metastasis except peritoneal metastasis", "HISTOLOGICALLY confirmed:\nDistant lymph nodes, NOS\n\nInvolvement of other organs by peritoneal seeding or implants including:\n    Liver parenchymal metastasis\n    Pleural effusion WITH positive cytology\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis, NOS\n\nFIGO Stage IV" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nIn situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Only information is FIGO Stage III [NOS] or IIIC\n\nClinical classification criteria not met\nClinical classification criteria met, evaluation done:\n     No information about diagnostic workup\n     Results not documented in patient record\nClinical evaluation of T and N not done, no evidence metastatic disease \nTumor first detected on surgical resection (no clinical workup)" ] ]
+}

@@ -1,0 +1,20 @@
+{
+  "id" : "ssf2_kpl",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF2",
+  "title" : "Site-Specific Factor 2",
+  "subtitle" : "Ki-67/MIB-1 Labeling Index (LI): Brain",
+  "notes" : "**Note 1:** Ki-67 antigen is a nuclear protein, expressed by cells in all phases of the active cell cycle (G1,S, G2, and M phase) and absent in resting cells (G0 phase). Tumor cells with positive staining for Ki-67 antibodies are actively growing or proliferating.  The fraction of Ki-67-positive tumor cells (the Ki-67 labeling index, or LI) may correlate with the clinical course of cancer.  The value is expressed as the percentage of carcinoma cells in the tissue sample with positive immunohistochemical staining for the Ki-67 protein.  The staining may be performed with the MIB-1 monoclonal antibody, so the test may be referred to as either Ki-67 or MIB-1.\n\n**Note 2:**  Code the LI fraction percentage using Ki-67 or MIB-1 (monoclonal antibody) when it is available on the pathology report of the primary tumor.  The Ki-67 or MIB-1 LI may also be called the growth fraction or proliferative fraction.\n\n**Note 3:**  Record the LI as an exact whole number (000-100). For example:\n\n* If the LI level is recorded by the pathologist as 15%, assign code 015.  \n* If the percentage is documented as 13.7%, round up to 14% and assign code 014.  \n* If the percentage is documented as 13.2%, round down to 13% and assign code 013.  \n* If the percentage is documented as less than 0.5%, round down to 0% and code 000. \n* If the percentage is documented as greater than 0.5% and less than 1%, round up to 1% and code as 001.\n\n**Note 4:**  In the absence of a specific percentage value, use codes 200-400 for an interpretation of the LI.",
+  "last_modified" : "2018-05-02T20:27:53.594Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "0% Labeling index (LI) \nLI stated as \"0%\"\nLI stated as \"less than 0.5%\"" ], [ "001-100", "1-100% \n(Exact labeling index (LI) rounded to nearest percent) \n\nExamples:\n    000    0.2%\n    001    1%\n    010    10%\n    014    13.7%\n    055    55.2%" ], [ "200", "LI stated as normal and no percentage provided" ], [ "300", "LI stated as slightly elevated and no percentage provided" ], [ "400", "LI stated as elevated and no percentage provided" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Test ordered, results not in chart\nTest performed, interpretation not recorded" ], [ "998", "No histologic examination of primary site\nTest not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record " ] ]
+}

@@ -1,0 +1,20 @@
+{
+  "id" : "ssf9_sej",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF9",
+  "title" : "Site-Specific Factor 9",
+  "subtitle" : "Pre-Orchiectomy Human Chorionic Gonadotropin (hCG) Range",
+  "notes" : "**Note 1:**  Record the range of the human chorionic gonadotropin (hCG) test as documented in the patient record prior to orchiectomy and other treatment.\n\n**Note 2:**  Use the same laboratory test to record values in **Site-Specific Factor 8, Pre-Orchiectomy Human Chorionic Gonadotropin (hCG) Lab Value** and **Site-Specific Factor 9, Pre-Orchiectomy Human Chorionic Gonadotropin (hCG) Range**.\n\n**Note 3:**  A lab value expressed in International Units/liter (IU/L) is equivalent to the same value expressed in milli-International Units/milliliter (mIU/ml).\n\n**Note 4:**  If the pre-orchiectomy hCG test is unavailable but a physician's statement of the result is documented, use codes 991-993.\n\n**Note 5:**  For rare cases that are treated prior to orchiectomy, use code 995 in this field and record the initial hCG range in **Site-Specific Factor 15, Post-Orchiectomy Human Chorionic Gonadotropin (hCG) Range**.\n\n**Note 6:**  For rare cases that an orchiectomy is not performed, use code 996 in this field and record the initial hCG range in **Site-Specific Factor 15, Post-Orchiectomy Human Chorionic Gonadotropin (hCG) Range**.",
+  "last_modified" : "2018-05-02T20:27:50.246Z",
+  "definition" : [ {
+    "key" : "ssf9",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Within normal limits (S0)" ], [ "010", "Range 1 (S1) above normal and less than 5,000 milli-International Units/milliliter (mIU/ml)" ], [ "020", "Range 2 (S2) 5,000 - 50,000 mIU/ml" ], [ "030", "Range 3 (S3) greater than 50,000 mIU/ml" ], [ "988", "Not applicable: Information not collected for this case" ], [ "991", "Pre-orchiectomy human chorionic gonadotropin (hCG) stated to be elevated" ], [ "992", "Pre-orchiectomy hCG unknown but preorchiectomy serum tumor markers NOS stated to be normal" ], [ "993", "Pre-orchiectomy hCG unknown but preorchiectomy serum tumor markers NOS stated to be elevated" ], [ "995", "Pretreated case, initial hCG range recorded in Site-Specific Factor 15" ], [ "996", "No orchiectomy performed, initial hCG range recorded in Site-Specific Factor 15" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

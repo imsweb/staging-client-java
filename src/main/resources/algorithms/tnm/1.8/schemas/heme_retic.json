@@ -1,0 +1,86 @@
+{
+  "id" : "heme_retic",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Heme Retic",
+  "title" : "Hematopoietic, Reticuloendothelial, Immunoproliferative, and Myeloproliferative Neoplasms",
+  "notes" : "**Note 1:** TNM is not defined for this schema. If directly assigning Summary Stage 2000 (SS2000), use the *Hematopoietic, Reticuloendothelial, Immunoproliferative, and Myeloproliferative Neoplasms* chapter on page 286 of the [SS2000 on-line manual](https://seer.cancer.gov/tools/ssm/ssm2000/SSSM2000-122012.pdf#page=286).\n\n**Note 2:** M-See list of specific histologies below, effective for cases diagnosed 2010 and forward.  All primary sites (C000-C809) are included unless otherwise specified. \n\n**Note 3:** Schema includes the preferred terms based on the *2008 WHO Classification of Haematopoietic and Lymphoid Tissues*\n\n9740     Mast cell sarcoma\n9741     Malignant mastocytosis\n9742     Mast cell leukemia\n9751     Langerhans cell histiocytosis, NOS\n9755     Histiocytic sarcoma\n9756     Langerhans cell sarcoma\n9757     Interdigitating dendritic cell sarcoma\n9758     Follicular dendritic cell sarcoma\n9761     Waldenstrom macroglobulinemia\n9762     Heavy chain disease, NOS\n9800     Leukemia, NOS\n9801     Acute leukemia, NOS\n9806     Mixed phenotype acute leukemia with t(9;22(q34;q11.2); BCR-ABL1\n9807     Mixed phenotype acute leukemia with t(v;11q23); MLL, rearranged\n9808     Mixed phenotype acute leukemia, B/myeloid, NOS\n9809     Mixed phenotype acute leukemia, T/myeloid, NOS\n9811     B lymphoblastic leukemia/lymphoma, NOS [C421 ONLY]\n9812     B lymphoblastic leukemia/lymphoma with t(9;22))q34;q11.2); BCR-ABL1 [C421 ONLY]\n9813     B lymphoblastic leukemia/lymphoma with t(v;11q23); MLL rearranged [C421 ONLY]\n9814     B lymphoblastic leukemia/lymphoma with t(12;21)(p13;q22); TEL-AML1 (ETV6-RUNX1) [C421 ONLY]\n9815     B lymphoblastic/lymphoma with hyperdiploidy [C421 ONLY]\n9816     B lymphoblastic/lymphoma with hypodiploidy (hypodiploid ALL)  [C421 ONLY]\n9817     B lymphoblastic/lymphoma with t(5;14)(q31;q32); IL3-IGH [C421 ONLY]\n9818     B lymphoblastic/lymphoma with t(1;19)(q23;p13.3); E2A PBX1 (TCF3 PBX1) [C421 ONLY]\n9820     Lymphoid leukemia, NOS\n9823     B-cell chronic lymphocytic leukemia/small lymphocytic lymphoma [C421 ONLY]\n9826     Burkitt cell leukemia leukemia\n9827     Adult T-cell leukemia/lymphoma (HTLV-1 positive)[C421 ONLY]\n9831     T-cell large granular lymphocytic leukemia \n9832     Prolymphocytic leukemia, NOS \n9833     Prolymphocytic leukemia, B-cell type\n9834     Prolymphocytic leukemia, T-cell type\n9837     T lymphoblastic leukemia/lymphoma [C421 ONLY]\n9840     Acute myeloid leukemia, M6 type\n9860     Myeloid leukemia, NOS\n9861     Acute myeloid leukemia, NOS\n9863     Chronic myeloid leukemia\n9865     Acute myeloid leukemia with t(6;9)([23;q34) DEK-NUP214\n9866     Acute promyelocytic leukemia\n9867     Acute myelomonocytic leukemia\n9869     Acute myeloid leukemia with inv(3)(q21q26.2) or t(3;3)(q21;q26;2); RPN1EVI1\n9870     Acute basophilic leukemia\n9871     Acute myeloid leukemia with abnormal marrow, eosinophils\n9872     Acute myeloid leukemia, minimal differentiation\n9873     Acute myeloid leukemia without maturation\n9874     Acute myeloid leukemia with maturation\n9875     Chronic myelogenous leukemia, BCR/ABL positive\n9876     Atypical chronic myeloid leukemia BCR/ABL negative\n9891     Acute monocytic leukemia\n9895     Acute myeloid leukemia with multilineage dysplasia\n9896     Acute myeloid leukemia, t(8;21)(q22;q22)\n9897     Acute myeloid leukemia, 11q23 abnormalities\n9898     Myeloid leukemia associated with Down Syndrome\n9910     Acute megakaryoblastic leukemia\n9911     Acute myeloid leukemia (megakaryoblastic) with t(1;22)(p13;q13); RBM15-MKL1\n9920     Therapy-related acute myeloid leukemia, NOS\n9930     Myeloid sarcoma\n9931     Acute panmyelosis with myelofibrosis\n9940     Hairy cell leukemia\n9945     Chronic myelomonocytic leukemia, NOS\n9946     Juvenile myelomonocytic leukemia\n9948     Aggressive NK-cell leukemia\n9950     Polycythemia (rubra) vera\n9961     Myelosclerosis with myeloid metaplasia\n9962     Essential thrombocythemia\n9963     Chronic neutrophilic leukemia\n9964     Hypereosinophilic syndrome\n9965     Myeloid and lymphoid neoplasms with PDGFRA rearrangement\n9966     Myeloid neoplasm with PDGFRB rearrangement\n9967     Myeloid and lymphoid neoplasm with FGFR1 abnormalities\n9971     Polymorphic PTLD\n9975     Myeloproliferative neoplasm, unclassifiable\n9980     Refractory anemia, NOS\n9982     Refractory anemia with sideroblasts\n9983     Refractory anemia with excess blasts\n9985     Refractory cytopenia with multilineage dysplasia\n9986     Myelodysplastic syndrome with 5q deletion (5q-) syndrome\n9989     Myelodysplastic syndrome, NOS\n9991     Refractory neutropenia\n9992     Refractory thrombocytopenia",
+  "schema_selection_table" : "schema_selection_heme_retic",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "ssf1",
+    "name" : "JAK2 (also known as Janus Kinase 2 and JAK2 Exon 12)",
+    "naaccr_item" : 2880,
+    "default" : "999",
+    "table" : "ssf1_jbt",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  } ],
+  "outputs" : [ {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "clin_stage_group",
+    "name" : "Derived SEER Clin Stage Group",
+    "naaccr_item" : 3610,
+    "default" : "88"
+  }, {
+    "key" : "path_stage_group",
+    "name" : "Derived SEER Path Stage Group",
+    "naaccr_item" : 3605,
+    "default" : "88"
+  }, {
+    "key" : "combined_stage_group",
+    "name" : "Derived SEER Combined Stage Group",
+    "naaccr_item" : 3614,
+    "default" : "88"
+  }, {
+    "key" : "combined_t",
+    "name" : "Derived SEER Combined T",
+    "naaccr_item" : 3616,
+    "default" : "88"
+  }, {
+    "key" : "combined_n",
+    "name" : "Derived SEER Combined N",
+    "naaccr_item" : 3618,
+    "default" : "88"
+  }, {
+    "key" : "combined_m",
+    "name" : "Derived SEER Combined M",
+    "naaccr_item" : 3620,
+    "default" : "88"
+  }, {
+    "key" : "source_t",
+    "name" : "Derived SEER Combined T Source",
+    "naaccr_item" : 3622
+  }, {
+    "key" : "source_n",
+    "name" : "Derived SEER Combined N Source",
+    "naaccr_item" : 3624
+  }, {
+    "key" : "source_m",
+    "name" : "Derived SEER Combined M Source",
+    "naaccr_item" : 3626
+  } ],
+  "involved_tables" : [ "primary_site", "histology", "year_dx_validation", "ssf1_jbt", "schema_selection_heme_retic" ],
+  "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
+  "last_modified" : "2018-05-08T17:39:14.191Z"
+}

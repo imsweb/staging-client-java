@@ -1,0 +1,27 @@
+{
+  "id" : "lymphoma_path_stage_group_detailed_88547",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Lymphoma Path Stage Group Detailed",
+  "title" : "Lymphoma Path Stage Group Detailed",
+  "description" : "Based on the Assigned Stage Group and SSF2 (Systemic Symptoms at Diagnosis), calculates the detailed stage group, verifying that the assigned group and SSF2 are not in conflict.",
+  "last_modified" : "2018-05-02T20:27:59.164Z",
+  "definition" : [ {
+    "key" : "path_stage_group_in",
+    "name" : "Assigned Path Stage Group",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_stage_group_in",
+    "name" : "Assigned Clin Stage Group",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf2",
+    "name" : "SSF2",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Derived Stage Group",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "1", "*", "000,020", "VALUE:1A" ], [ "1A", "*", "000,020", "VALUE:1A" ], [ "1B", "1A,2A,3A,4A", "000,020", "VALUE:1B" ], [ "1B", ",1,2,3,4,1B,2B,3B,4B,99", "000,020", "ERROR:SSF2 and directly assigned stages in conflict" ], [ "2", "*", "000,020", "VALUE:2A" ], [ "2A", "*", "000,020", "VALUE:2A" ], [ "2B", "1A,2A,3A,4A", "000,020", "VALUE:2B" ], [ "2B", ",1,2,3,4,1B,2B,3B,4B,99", "000,020", "ERROR:SSF2 and directly assigned stages in conflict" ], [ "3", "*", "000,020", "VALUE:3A" ], [ "3A", "*", "000,020", "VALUE:3A" ], [ "3B", "1A,2A,3A,4A", "000,020", "VALUE:3B" ], [ "3B", ",1,2,3,4,1B,2B,3B,4B,99", "000,020", "ERROR:SSF2 and directly assigned stages in conflict" ], [ "4", "*", "000,020", "VALUE:4A" ], [ "4A", "*", "000,020", "VALUE:4A" ], [ "4B", "1A,2A,3A,4A", "000,020", "VALUE:4B" ], [ "4B", ",1,2,3,4,1B,2B,3B,4B,99", "000,020", "ERROR:SSF2 and directly assigned stages in conflict" ], [ "1", "*", "010,030", "VALUE:1B" ], [ "1A", "1B,2B,3B,4B", "010,030", "VALUE:1A" ], [ "1A", ",1,2,3,4,1A,2A,3A,4A,99", "010,030", "ERROR:SSF2 and directly assigned stages in conflict" ], [ "1B", "*", "010,030", "VALUE:1B" ], [ "2", "*", "010,030", "VALUE:2B" ], [ "2A", "1B,2B,3B,4B", "010,030", "VALUE:2A" ], [ "2A", ",1,2,3,4,1A,2A,3A,4A,99", "010,030", "ERROR:SSF2 and directly assigned stages in conflict" ], [ "2B", "*", "010,030", "VALUE:2B" ], [ "3", "*", "010,030", "VALUE:3B" ], [ "3A", "1B,2B,3B,4B", "010,030", "VALUE:3A" ], [ "3A", ",1,2,3,4,1A,2A,3A,4A,99", "010,030", "ERROR:SSF2 and directly assigned stages in conflict" ], [ "3B", "*", "010,030", "VALUE:3B" ], [ "4", "*", "010,030", "VALUE:4B" ], [ "4A", "1B,2B,3B,4B", "010,030", "VALUE:4A" ], [ "4A", ",1,2,3,4,1A,2A,3A,4A,99", "010,030", "ERROR:SSF2 and directly assigned stages in conflict" ], [ "4B", "*", "010,030", "VALUE:4B" ], [ "1", "*", "999", "VALUE:1" ], [ "1A", "*", "999", "ERROR:SSF2 and directly assigned stages in conflict" ], [ "1B", "*", "999", "ERROR:SSF2 and directly assigned stages in conflict" ], [ "2", "*", "999", "VALUE:2" ], [ "2A", "*", "999", "ERROR:SSF2 and directly assigned stages in conflict" ], [ "2B", "*", "999", "ERROR:SSF2 and directly assigned stages in conflict" ], [ "3", "*", "999", "VALUE:3" ], [ "3A", "*", "999", "ERROR:SSF2 and directly assigned stages in conflict" ], [ "3B", "*", "999", "ERROR:SSF2 and directly assigned stages in conflict" ], [ "4", "*", "999", "VALUE:4" ], [ "4A", "*", "999", "ERROR:SSF2 and directly assigned stages in conflict" ], [ "4B", "*", "999", "ERROR:SSF2 and directly assigned stages in conflict" ], [ "88", "*", "*", "VALUE:88" ], [ "99", "*", "*", "VALUE:99" ], [ "*", "*", "988", "ERROR:SSF2 not collected" ], [ "", "*", "*", "VALUE:" ] ]
+}

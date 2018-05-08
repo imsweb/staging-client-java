@@ -1,0 +1,27 @@
+{
+  "id" : "tnm7_stage_for_sites_with_no_stage_groupings_unb",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "TNM 7 Stage Group",
+  "title" : "TNM 7 Stage Group",
+  "notes" : "In the table below, \"ANY\" designates any valid (allowable) value.",
+  "last_modified" : "2018-05-02T20:27:52.920Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "*", "*", "*", "VALUE:88" ] ]
+}

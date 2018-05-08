@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_cns_other",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Schema Selection CNSOther",
+  "title" : "Schema selection for CNSOther",
+  "last_modified" : "2018-05-02T20:27:50.099Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C701,C709,C720-C725,C728-C729", "8000-9136,9141-9582,9700-9701", "MATCH" ] ]
+}

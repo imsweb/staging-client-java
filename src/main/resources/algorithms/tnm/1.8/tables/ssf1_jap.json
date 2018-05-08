@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_jap",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF1",
+  "title" : "Site-Specific Factor 1",
+  "subtitle" : "Solitary vs Multifocal Tumor",
+  "notes" : "**Note:**  Use code 020 for any tumor with multiple foci, even if foci are not measured.",
+  "last_modified" : "2018-05-02T20:27:53.503Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No evidence of primary tumor (T0)\nPrimary tumor in ectopic thyroid tissue" ], [ "010", "Solitary tumor (s)" ], [ "020", "Multifocal tumor (m)" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_adrenal_gland",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Schema Selection AdrenalGland",
+  "title" : "Schema selection for AdrenalGland",
+  "last_modified" : "2018-05-02T20:27:55.918Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C740-C741", "8000-9136,9141-9582,9700-9701", "MATCH" ], [ "C749", "8000-9136,9141-9582,9700-9701", "MATCH" ] ]
+}

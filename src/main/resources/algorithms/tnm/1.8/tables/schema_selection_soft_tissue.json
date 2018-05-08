@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_soft_tissue",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Schema Selection SoftTissue",
+  "title" : "Schema selection for SoftTissue",
+  "last_modified" : "2018-05-07T14:07:54.619Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C470-C476,C478-C479,C490-C496,C498-C499", "8000-9136,9141-9582,9700-9701", "MATCH" ] ]
+}

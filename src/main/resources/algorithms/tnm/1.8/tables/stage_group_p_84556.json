@@ -1,0 +1,39 @@
+{
+  "id" : "stage_group_p_84556",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Stage Group (p)",
+  "title" : "TNM 7 Stage Group",
+  "notes" : "**Note 1:** SEER*RSA added additional information to UICC 7th edition stages with UICC approval. If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC 7th edition manual to ensure you are using the appropriate logic. \n* Stage Group IV (as defined in the table)\n\n**Note 2:**  While the stage groups below are valid, the specified TNM combinations are only included in SEER*RSA.\n* Stage Group IIA - T1, NX, M0 (Grade 3,4) - NX is not included in the stage group definition\n* Stage Group IIB - T2, NX, M0 (Grade 3,4) - NX is not included in the stage group definition \n* Stage Group III - T3, NX, M0 (Grade 3, 4) - NX is not included in the stage group definition\n* Stage Group IVA - Any T, NX, M1a, Any Grade - NX is not included in the stage group definition\n\n**Note 3:**  While the stage group below is valid, the specified TNM combination is only included in SEER*RSA for non-Ewing histologies.\n* Stage Group IA - T1, NX, M0, Grade (1, 2, 9) - NX is not included in the stage group definition\n* Stage Group IB - (T2, T3), NX, M0, Grade (1, 2, 9) - NX is not included in the stage group definition \n\n**Note 4:** Ewing sarcoma (ICD-O-3 Histology 9260, 9364) is always classified as High Grade (3 or 4).  Ewing sarcoma should NOT be assigned Stage group IA or IB.",
+  "last_modified" : "2018-05-02T20:27:59.261Z",
+  "definition" : [ {
+    "key" : "path_stage_group_direct",
+    "name" : "Stage",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_stage_group_direct_display",
+    "name" : "Stage Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "t",
+    "name" : "T",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "grade",
+    "name" : "Grade",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "histology",
+    "name" : "Histology",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1A", "IA ", "T1   ", "N0,X", "M0 ", "1,2,9    ", "NOT 9260, 9364  (Not Ewing)" ], [ "1B", "IB ", "T2,3 ", "N0,X", "M0 ", "1,2,9    ", "NOT 9260, 9364  (Not Ewing)" ], [ "2A", "IIA", "T1   ", "N0,X", "M0 ", "3,4      ", "Any Histology              " ], [ "2B", "IIB", "T2   ", "N0,X", "M0 ", "3,4      ", "Any Histology              " ], [ "3 ", "III", "T3   ", "N0,X", "M0 ", "3,4      ", "Any Histology              " ], [ "4 ", "IV ", "Any T", "N0,X", "M1 ", "Any Grade", "Any Histology              " ], [ "4A", "IVA", "Any T", "N0,X", "M1a", "Any Grade", "Any Histology              " ], [ "4B", "IVB", "Any T\nAny T", "N1   \nAny N", "M0,1,1a \nM1b", "Any Grade\nAny Grade", "Any Histology\nAny Histology" ], [ "99", "Unknown", "T0\nTX", "N0\nN0,X", "M0\nM0", "Any Grade\nAny Grade", "Any Histology \nAny Histology" ], [ "88", "Not Applicable", "88", "88", "88", "Any Grade", "Any Histology              " ] ]
+}

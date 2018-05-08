@@ -1,0 +1,21 @@
+{
+  "id" : "ssf6_opi",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF6",
+  "title" : "Site-Specific Factor 6",
+  "subtitle" : "Mitotic Count",
+  "notes" : "**Note 1:**  The mitotic count, the number of mitoses per 10 high-power fields (HPF), is an element in a proposed grading scheme for neuroendocrine tumors (NET) of the gastrointestinal system.  This site-specific factor presumes the denominator of 10 HPF, so just the numerator (the mitotic count) is coded here.  For other schemas in which mitotic count is collected, the denominator may vary.\n\n**Note 2:**  As described in the AJCC chapter on NETs, 10 HPF at a magnficiation objective of 40 (40x) are equivalent to 2 square millimeters (mm). (1)\n\n**Note 3:**  Record mitotic count to the nearest tenth as documented in the pathology report.  For example, a mitotic count of 3/10 HPF would be coded 030.\n\n**Note 4:**  Code the specific mitotic count only per 10 HPF or 2 square mm; assume the denominator is 10 HPF or 2 square mm if not specified.  Use code 996 only if the mitotic count is expressed with a specific denominator other than 10 HPF or 2 square mm.",
+  "footnotes" : "(1) American Joint Committee on Cancer., & Edge, S.B. (2010) *AJCC Cancer Staging Manual (7th ed.)*. New York; London: Springer, pg. 184",
+  "last_modified" : "2018-05-02T20:27:55.121Z",
+  "definition" : [ {
+    "key" : "ssf6",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "0.0 mitoses per 10 high-power fields (HPF) (40x field)\n0.0 mitoses per 2 square millimeters (mm)\nMitoses absent\nNo mitoses present" ], [ "001-008", "0.1 - 0.8 mitosis per 10 HPF (40x field)\n0.1 - 0.8 mitosis per 2 square mm" ], [ "009", "0.9 mitosis per 10 HPF (40x field)\n0.9 mitosis per 2 square mm\n\nStated as less than 1 mitosis per 10 HPF (40x field)\nStated as less than 1 mitosis per 2 square mm" ], [ "010-500", "1 - 50 mitoses per 10 HPF (40x field)\n1 - 50 mitoses per 2 square mm" ], [ "510", "51 or more mitoses per 10 HPF (40x field)\n51 or more mitoses per 2 square mm" ], [ "988", "Not applicable: Information not collected for this case" ], [ "990", "Specific number not stated, described as less than 2 mitoses per 10 HPF (40x field)\nSpecific number not stated, described as less than 2 mitoses per 2 square mm\n\nStated as low mitotic count or rate with no specific number" ], [ "991", "Specific number not stated, described as between 2 and 20 mitoses per 10 HPF (40x field)\nSpecific number not stated, described as between 2 and 20 mitoses per 2 square mm" ], [ "992", "Specific number not stated, described as more than 20 mitoses per 10 HPF (40x field)\nSpecific number not stated, described as more than 20 mitoses per 2 square mm\n\nStated as high mitotic count or rate with no specific number" ], [ "996", "Mitotic count described with denominator other than 10 HPF (40x field) or 2 square mm" ], [ "998", "No histologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

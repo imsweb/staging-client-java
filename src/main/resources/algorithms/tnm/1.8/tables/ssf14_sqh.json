@@ -1,0 +1,20 @@
+{
+  "id" : "ssf14_sqh",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF14",
+  "title" : "Site-Specific Factor 14",
+  "subtitle" : "Carcinoembryonic Antigen (CEA) Lab Value",
+  "notes" : "**Note 1:**  Carcinoembryonic Antigen (CEA) is a tumor marker that has value in the management of certain malignancies.\n\n**Note 2:**  The same laboratory test should be used to record information in **Site-Specific Factor 13, Carcinoembryonic Antigen (CEA)** and **Site Specific Factor 14, Carcinoembryonic Antigen (CEA) Lab Value.**\n\n**Note 3:**  Record to the nearest tenth in nanograms/milliliter (ng/ml) the highest CEA lab value documented in the medical record prior to treatment. \n\n* For example, a pretreatment CEA of 7.34 ng/ml would be recorded as 073\n\n**Note 4:**  Code 000 is reserved for exactly 0.0 ng/ml (no measurable amount of CEA).  Do not round tiny values down to 0.0 ng/ml; any measured value less than or equal to 0.1 ng/ml should be coded 001.  \n\n* For code 001, also round 0.11-0.14 ng/ml down to 0.1 ng/ml \n* For codes 002-980, round values to the nearest tenth of a ng/ml\n\n**Note 5:**  For an uncertain value, record the stated closest value.  \n\n* For example, code a value stated as \"less than 0.5 ng/ml\" as 005",
+  "last_modified" : "2018-05-02T20:27:54.707Z",
+  "definition" : [ {
+    "key" : "ssf14",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "0.0 nanograms/milliliter (ng/ml) exactly" ], [ "001", "0.1 or less ng/ml \nStated as less than 0.1 ng/ml with no exact value" ], [ "002-979", "0.2-97.9 ng/ml\n(Exact value to nearest tenth in ng/ml)" ], [ "980", "98.0 or greater ng/ml" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

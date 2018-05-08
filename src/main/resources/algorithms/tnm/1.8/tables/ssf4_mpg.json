@@ -1,0 +1,20 @@
+{
+  "id" : "ssf4_mpg",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF4",
+  "title" : "Site-Specific Factor 4",
+  "subtitle" : "Distance to Proximal Edge of Tumor from Incisors",
+  "notes" : "**Note 1:**  The location of the primary cancer site is defined by the position of the upper (proximal) edge of the tumor in the esophagus.  The distance from the incisors to the proximal edge of the tumor is collected in this Site-Specific Factor.  The location of the tumor's proximal edge within the esophagus may be described based on imaging, esophagoscopy, or surgical results.\n\n**Note 2:**  Record the distance from the incisors to the proximal edge of tumor to the nearest centimeter (cm).\n\n**Note 3:**  Calculate the distance to the proximal edge of tumor if the distance to the distal edge and the length of the tumor is known.",
+  "last_modified" : "2018-05-02T20:27:55.470Z",
+  "definition" : [ {
+    "key" : "ssf4",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "001-060", "1 - 60  centimeters  (cm)\n(Exact distance from incisors to proximal edge of tumor to the nearest cm)" ], [ "988", "Not applicable: Information not collected for this case" ], [ "991", "Described as \"less than 20 cm\" or \"greater than 15 cm\" or \"between 15 and 20 cm\"" ], [ "992", "Described as \"less than 25 cm\" or \"greater than 20 cm\" or \"between 20 and 25 cm\"" ], [ "993", "Described as \"less than 30 cm\" or \"greater than 25 cm\" or \"between 25 and 30 cm\"" ], [ "994", "Described as \"less than 40 cm\" or \"greater than 30 cm\" or \"between 30 and 40 cm\"" ], [ "995", "Described as \"less than 45 cm\" or \"greater than 40 cm\" or \"between 40 and 45 cm\"" ], [ "996", "Described as \"less than 60 cm\" or \"greater than 45 cm\" or \"between 45 and 60 cm\"" ], [ "997", "Described as \"greater than 60 cm\"" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

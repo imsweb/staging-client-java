@@ -1,0 +1,198 @@
+{
+  "id" : "lymphoma",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Lymphoma",
+  "title" : "Hodgkin and Non-Hodgkin Lymphomas of All Sites (excluding Mycosis Fungoides and Sezary Disease)",
+  "notes" : "M-9590, 9591, 9596, 9597, 9650-9653, 9655, 9659, 9663, 9671, 9673, 9678-9680, 9687-9691, 9695, 9698-9699, 9702, 9705, 9708-9709, 9712, 9714, 9716-9719, 9724-9726, 9727, 9735, 9737-9738 (EXCEPT C441, C690, C695-C696)\n\nM-9811-9818,9823,9827,9837 (EXCEPT C421, C441, C690, C695-C696)\n\n**Note 1:** This schema is based on the UICC chapters *Hodgkin & Non-Hodgkin Lymphomas,* pages 304-310.\n\n**Note 2:** In addition to directly assigning Clinical and Pathologic Stage Group, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Hodgkin & Non-Hodgkin Lymphoma of All Sites* chapter on page 284 of the [SS2000 on-line manual](https://seer.cancer.gov/tools/ssm/ssm2000/SSSM2000-122012.pdf#page=284).",
+  "schema_selection_table" : "schema_selection_lymphoma",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "ssf1",
+    "name" : "Associated with HIV/AIDS",
+    "naaccr_item" : 2880,
+    "default" : "999",
+    "table" : "ssf1_jpj",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf2",
+    "name" : "Systemic Symptoms at Diagnosis",
+    "naaccr_item" : 2890,
+    "default" : "999",
+    "table" : "ssf2_kpg",
+    "used_for_staging" : true,
+    "metadata" : [ "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf3",
+    "name" : "International Prognostic Index (IPI)",
+    "naaccr_item" : 2900,
+    "default" : "988",
+    "table" : "ssf3_lph",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf4",
+    "name" : "Follicular Lymphoma Prognostic Index (FLIPI)",
+    "naaccr_item" : 2910,
+    "default" : "988",
+    "table" : "ssf4_mpd",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf5",
+    "name" : "International Prognostic Score (IPS)",
+    "naaccr_item" : 2920,
+    "default" : "988",
+    "table" : "ssf5_npe",
+    "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "99",
+    "table" : "stage_group_lymphoma_c_60180",
+    "used_for_staging" : true,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "99",
+    "table" : "stage_group_lymphoma_p_48657",
+    "used_for_staging" : true,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED", "SEER_REQUIRED" ]
+  } ],
+  "outputs" : [ {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "clin_stage_group",
+    "name" : "Derived SEER Clin Stage Group",
+    "naaccr_item" : 3610,
+    "default" : "88"
+  }, {
+    "key" : "path_stage_group",
+    "name" : "Derived SEER Path Stage Group",
+    "naaccr_item" : 3605,
+    "default" : "88"
+  }, {
+    "key" : "combined_stage_group",
+    "name" : "Derived SEER Combined Stage Group",
+    "naaccr_item" : 3614,
+    "default" : "88"
+  }, {
+    "key" : "combined_t",
+    "name" : "Derived SEER Combined T",
+    "naaccr_item" : 3616,
+    "default" : "88"
+  }, {
+    "key" : "combined_n",
+    "name" : "Derived SEER Combined N",
+    "naaccr_item" : 3618,
+    "default" : "88"
+  }, {
+    "key" : "combined_m",
+    "name" : "Derived SEER Combined M",
+    "naaccr_item" : 3620,
+    "default" : "88"
+  }, {
+    "key" : "source_t",
+    "name" : "Derived SEER Combined T Source",
+    "naaccr_item" : 3622
+  }, {
+    "key" : "source_n",
+    "name" : "Derived SEER Combined N Source",
+    "naaccr_item" : 3624
+  }, {
+    "key" : "source_m",
+    "name" : "Derived SEER Combined M Source",
+    "naaccr_item" : 3626
+  } ],
+  "mappings" : [ {
+    "id" : "tnm7_stage",
+    "name" : "TNM 7 Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpr",
+      "inputs" : [ "hist" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "clin_stage_group",
+      "value" : "90"
+    }, {
+      "key" : "path_stage_group",
+      "value" : "90"
+    } ],
+    "tables" : [ {
+      "id" : "lymphoma_stage_group_detailed_35045",
+      "input_mapping" : [ {
+        "from" : "clin_stage_group_direct",
+        "to" : "stage_group_in"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "clin_stage_group"
+      } ],
+      "inputs" : [ "clin_stage_group_direct", "ssf2" ],
+      "outputs" : [ "clin_stage_group" ]
+    }, {
+      "id" : "lymphoma_path_stage_group_detailed_88547",
+      "input_mapping" : [ {
+        "from" : "clin_stage_group_direct",
+        "to" : "clin_stage_group_in"
+      }, {
+        "from" : "path_stage_group_direct",
+        "to" : "path_stage_group_in"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "path_stage_group"
+      } ],
+      "inputs" : [ "clin_stage_group_direct", "ssf2", "path_stage_group_direct" ],
+      "outputs" : [ "path_stage_group" ]
+    } ]
+  }, {
+    "id" : "combined_stage",
+    "name" : "Combined Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tpr",
+      "inputs" : [ "hist" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "combined_stage_group",
+      "value" : "90"
+    } ],
+    "tables" : [ {
+      "id" : "combined_stage_group_for_lymphoma_19552",
+      "input_mapping" : [ {
+        "from" : "clin_stage_group",
+        "to" : "clin_stage_group_in"
+      }, {
+        "from" : "path_stage_group",
+        "to" : "path_stage_group_in"
+      } ],
+      "inputs" : [ "clin_stage_group", "path_stage_group" ],
+      "outputs" : [ "combined_stage_group" ]
+    } ]
+  } ],
+  "involved_tables" : [ "ssf2_kpg", "combined_stage_group_for_lymphoma_19552", "tnm7_inclusions_tpr", "schema_selection_lymphoma", "ssf5_npe", "lymphoma_stage_group_detailed_35045", "lymphoma_path_stage_group_detailed_88547", "stage_group_lymphoma_c_60180", "ssf3_lph", "primary_site", "ssf1_jpj", "histology", "stage_group_lymphoma_p_48657", "year_dx_validation", "ssf4_mpd" ],
+  "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
+  "last_modified" : "2018-05-08T17:39:16.567Z"
+}

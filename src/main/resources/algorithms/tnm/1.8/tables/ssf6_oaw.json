@@ -1,0 +1,20 @@
+{
+  "id" : "ssf6_oaw",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF6",
+  "title" : "Site-Specific Factor 6",
+  "subtitle" : "Mediastinal Nodal Status",
+  "notes" : "**Note:**  The mediastinal nodal status corresponds to the assessment method recorded in Site-Specific Factor 7.",
+  "last_modified" : "2018-05-02T20:27:53.511Z",
+  "definition" : [ {
+    "key" : "ssf6",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Negative lymph nodes" ], [ "010", "Positive lymph nodes" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "Lymph nodes not assessed" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

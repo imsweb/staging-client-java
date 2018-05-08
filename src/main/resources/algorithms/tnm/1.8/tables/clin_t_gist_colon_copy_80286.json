@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_gist_colon_copy_80286",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Path T GIST Colon",
+  "title" : "Pathologic T",
+  "notes" : "**Note 1:**  Assign 88 for in situ cases (behavior code /2). TNM does not include an in situ category for GIST colon tumors.\n\n**Note 2:**  Ignore intraluminal extension to adjacent segment(s) of colon; code depth of invasion or extra-appendiceal spread as indicated.\n\n**Note 3:** Tumor size must be known to assign T. You may use a physician’s statement of the T category if this is the only information in the medical record.\n* If no size or category is specified, assign TX\n\n**Note 4:** Assign the appropriate T category based on the tumor size for the following descriptions:\n\n**All colon subsites**\n\n    Confined to colon\n    Localized, NOS\n\n    Adherent to liver capsule\n    Extension through wall, NOS\n    Invasive tumor in polyp, NOS\n    Invasion of/through serosa (mesothelium) (visceral peritoneum)\n    Invasion of/through serosa with invasion of/through mucosa\n    Invasion through muscularis propria or muscularis, NOS\n    Non-peritonealized pericolic tissues invaded\n    Perimuscular tissue invaded\n    Subserosal tissue/(sub)serosal fat invaded\n    Transmural, NOS\n    Tumor confined to muscular wall\n    Tumor invades through submucosa and muscularis mucosae to involve mucosa    \n     Wall, NOS   \n\n**All colon subsites** \n \n    Abdominal wall\n    Adjacent tissue(s), NOS    \n    Adrenal (suprarenal) gland\n    Bladder\n    Connective tissue\n    Diaphragm\n    Fat, NOS\n    Fistula to skin\n    Gallbladder\n    Mesenteric fat\n    Mesentery \n    Mesocolon\n    Other segment(s) of colon via serosa\n    Pericolic fat\n    Retroperitoneum (excluding fat)\n    Small intestine\n\n**Cecum (C180)**\n\n    Fallopian tube\n    Greater omentum\n    Kidney, right\n    Liver\n    Ovary\n    Ureter, right\n    Uterus\n\n**Ascending colon (C182)**\n\n    Fallopian tube\n    Greater omentum\n    Liver, right lobe\n    Kidney, right\n    Ovary\n    Retroperitoneal fat\n    Ureter, right\n    Uterus\n\n**Transverse colon (C183) and flexures (C184, C185)**\n\n    Bile ducts\n    Gallbladder\n    Gastrocolic ligament\n    Greater omentum\n    Kidney\n    Liver\n    Pancreas\n    Spleen\n    Stomach\n    Ureter\n\n**Descending colon (C186)**\n\n    Fallopian tube\n    Greater omentum\n    Kidney, left\n    Ovary\n    Pelvic wall\n    Retroperitoneal fat\n    Spleen\n    Ureter, left\n    Uterus\n\n**Sigmoid colon (C187)**\n\n    Cul de sac (rectouterine pouch)\n    Greater omentum \n    Fallopian tube\n    Ovary\n    Pelvic wall\n    Ureter\n    Uterus",
+  "last_modified" : "2018-05-02T20:27:55.774Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pTX", "Primary tumor cannot be assessed", "Pathologic classification criteria met, evaluation done: \n    Physician unable to assess T\n    Surgical resection of primary tumor, extension not stated \n    Tumor size (TS) unknown for T categories where TS  needed to determine T\nPhysician assigns pTX, no other information available to determine T" ], [ "p0", "pT0", "No evidence of primary tumor", "" ], [ "p1", "pT1", "Tumor 2 cm or less in greatest dimension", "Stated as T1" ], [ "p2", "pT2", "Tumor more than 2 cm but not more than 5 cm in greatest dimension", "Stated as T2" ], [ "p3", "pT3", "Tumor more than 5 cm but not more than 10 cm in greatest dimension", "Stated as T3" ], [ "p4", "pT4", "Tumor more than 10 cm in greatest dimension", "Stated as T4" ], [ "88", "88", "Not applicable", "In situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nPathologic classification criteria met, evaluation done: \n    Results not documented in patient record \n    No surgical resection of  known primary tumor (not T0) \n    Resection insufficient for site-specific pathologic assessment\nNo surgical resection of primary tumor and there isn’t a positive biopsy of a structure in the highest T category and highest N category\nEvidence of metastatic disease (pM1), no other workup\nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

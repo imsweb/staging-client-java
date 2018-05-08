@@ -1,0 +1,20 @@
+{
+  "id" : "ssf19_sqz",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF19",
+  "title" : "Site-Specific Factor 19",
+  "subtitle" : "Tumor Base Transection Status",
+  "notes" : "**Note 1:**  Record transection of the tumor base from documentation in pathology reports.  If the whole depth of tumor cannot be seen on a single specimen, the tumor base is assumed to be transected.  Multiple specimens (two or more) may be taken from a  combination of biopsy and resection procedures.\n\n**Note 2:**  Use code 010\n\n* If tumor depth is noted on multiple specimens (two or more)\n* If only one specimen is taken and has positive deep margins\n* If the pathologist indicates the tumor base is transected\n\n**Note 3:**  If a single specimen removes the entire depth of tumor and deep margins are not involved, assign code 020.",
+  "last_modified" : "2018-05-02T20:27:53.832Z",
+  "definition" : [ {
+    "key" : "ssf19",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No mass/tumor found" ], [ "010", "Tumor base transected" ], [ "020", "Tumor base not transected" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "No histologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

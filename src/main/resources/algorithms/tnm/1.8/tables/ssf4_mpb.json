@@ -1,0 +1,20 @@
+{
+  "id" : "ssf4_mpb",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF4",
+  "title" : "Site-Specific Factor 4",
+  "subtitle" : "Tumor Deposits",
+  "notes" : "**Note 1:**  Tumor deposits (TD) are defined as one or more satellite peritumoral nodules in the pericolorectal adipose tissue of a primary carcinoma without histologic evidence of residual lymph node in the nodule.  Such TD may represent discontinuous spread, venous invasion with extravascular spread, or a totally replaced lymph node.\n\n**Note 2:**  Record the number of TD whether or not there are positive lymph nodes.\n\n**Note 3:**  Assign code 000 if surgical resection of the primary site is performed, the pathology report is available for review, and tumor deposits are not mentioned.",
+  "last_modified" : "2018-05-02T20:27:54.982Z",
+  "definition" : [ {
+    "key" : "ssf4",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "None" ], [ "001-080", "1-80 Tumor deposits (TD) \n(Exact number of TD)" ], [ "081", "81 or more TD" ], [ "988", "Not applicable: Information not collected for this case" ], [ "990", "TD identified, number unknown" ], [ "998", "No surgical resection of primary site" ], [ "999", "Unknown or no information\nInsufficient information; indeterminiate if TD present\nNot documented in patient record" ] ]
+}

@@ -1,0 +1,28 @@
+{
+  "id" : "clin_t_ban",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Clin T Melanoma Skin",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  In addition to the depth of invasion, a Clark's level may be assigned by the pathologist. If there is a discrepancy between the Clark's level and the pathologic description of extent (invasion into the layers of the dermis), assign the higher T.\n\n**Note 2:**  Code the greatest extent of invasion from any procedure performed on the lesion, whether it is described as a biopsy or an excision.  \n\n**Note 3:**  Satellite lesions/nodules or in-transit metastases are coded in regional lymph nodes.\n\n**Note 4:** Breslow's depth is coded in **Site-Specific Factor 1, Measured Thickness (Depth), Breslow Measurement.**\n\n**Note 5:**  Ulceration of the melanoma is coded in **Site-Specific Factor 2, Ulceration.**",
+  "footnotes" : "^ Definition from the updated pages from [TNM Classification of Malignant Tumours, Seventh edition](http://www.wileyanduicc.com/pdf/Corrected_pages.pdf)",
+  "last_modified" : "2018-05-02T20:27:53.075Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T \n    Extension cannot be determined\n    Depth unknown for T categories \nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor", "" ], [ "pIS", "pTis", "Melanoma in situ (Clark Level I)\n   Atypical melanocytic hyperplasia\n   Several melanocytic dysplasia\n   Not an invasive malignant lesion", "Intraepidermal, intraepithelial, noninvasive \n(Basement membrane of the epidermis is intact)\n\nStated as Tis" ], [ "c1", "cT1", "Tumor 1 mm or less in thickness", "Note: T1 has subcategories of T1a and T1b. Assign T1 only when there is no information available to assign one of the subcategories\n\nSkin/dermis, NOS\nLocalized, NOS\n\nStated as T1 [NOS]" ], [ "c1A", "cT1a", "without ulceration and mitosis less than 1mm (squared)^", "Clarks levels II-V WITHOUT ulceration\n\nPapillary dermis invaded WITHOUT ulceration or UNKNOWN if ulceration\nPapillary-reticular dermal interface invaded WITHOUT ulceration or UNKNOWN if ulceration\n\nReticular dermis invaded WITHOUT ulceration or UNKNOWN if ulceration\n\nSubcutaneous tissue invaded (through entire dermis) WITHOUT ulceration or UNKNOWN if ulceration\n\nStated as T1a\n\nNote: Depth of invasion (breslow's depth) has priority over any other information" ], [ "c1B", "cT1b", "with ulceration or mitoses equal to or greater than 1mm (squared)^", "Clarks levels II-V WITH ulceration\n\nPapillary dermis invaded WITH ulceration \nPapillary-reticular dermal interface invaded WITH ulceration \n\nReticular dermis invaded WITH ulceration\n\nSubcutaneous tissue invaded (through entire dermis) WITH ulceration\n\nStated as T1b\n\nNote: Depth of invasion (breslow's depth) has priority over any other information." ], [ "c2", "cT2", "Tumor more than 1 mm but not more than 2 mm in thickness", "Note: T2 has subcategories of T2a and T2b. Assign T2 only when there is no information available to assign one of the subcategories\n\nStated as T2 [NOS]" ], [ "c2A", "cT2a", "without ulceration", "Stated as T2a" ], [ "c2B", "cT2b", "with ulceration", "Stated as T2b" ], [ "c3", "cT3", "Tumor more than 2 mm but not more than 4 mm in thickness", "Note: T3 has subcategories of T3a and T3b. Assign T3 only when there is no information available to assign one of the subcategories\n\nStated as T3 [NOS]" ], [ "c3A", "cT3a", "without ulceration", "Stated as T3a" ], [ "c3B", "cT3b", "with ulceration", "Stated as T3b" ], [ "c4", "cT4", "Tumor more than 4 mm in thickness", "Note: T4 has subcategories of T4a and T4b. Assign T4 only when there is no information available to assign one of the subcategories\n\nStated as T4 [NOS]" ], [ "c4A", "cT4a", "without ulceration", "Further contiguous extension:\nUnderlying cartilage, bone, skeletal muscle WITHOUT ulceration\n\nStated as T4a" ], [ "c4B", "cT4b", "with ulceration", "Further contiguous extension:\nUnderlying cartilage, bone, skeletal muscle WITH ulceration\n\nStated as T4b" ], [ "88", "88", "Not applicable", "Death certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

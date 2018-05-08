@@ -1,0 +1,20 @@
+{
+  "id" : "ssf13_scl",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF13",
+  "title" : "Site-Specific Factor 13",
+  "subtitle" : "Leukemia",
+  "notes" : "**Note:**  Code history of leukemia as documented by the physician in the medical record.  Do not code from results of complete blood count (CBC) or white blood count (WBC).",
+  "last_modified" : "2018-05-02T20:27:53.862Z",
+  "definition" : [ {
+    "key" : "ssf13",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No history of leukemia" ], [ "010", "History of leukemia" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

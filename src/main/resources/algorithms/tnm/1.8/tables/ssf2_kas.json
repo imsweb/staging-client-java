@@ -1,0 +1,21 @@
+{
+  "id" : "ssf2_kas",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF2",
+  "title" : "Site-Specific Factor 2",
+  "subtitle" : "Specific Location of Tumor",
+  "notes" : "**Note 1:** The location of a primary squamous cell carcinoma of the esophagus is a staging element for AJCC 7 staging.  The location of the primary cancer site is defined as the position of the upper (proximal) edge of the tumor in the esophagus.  The location of the tumor in the esophagus provides important information about the tumor's relation to adjacent structures.  The location of the proximal edge of the tumor within the esophagus may be described based on imaging, esophagoscopy, or surgical results. (1)\n\n**Note 2:**  As described in the TNM 7th Edition and used in this Site-Specific Factor, the cervical esophagus is bordered superiorly by the hypopharynx and inferiorly by the thoracic inlet at the level of the sternal notch.  The upper thoracic esophagus is bordered inferiorly by the lower border of the azygos vein.  The middle thoracic esophagus is bordered inferiorly by the inferior pulmonary veins.  The lower thoracic esophagus is bordered inferiorly by the stomach.  The abdominal esophagus extends from the esophagogastric junction to 5 centimeters (cm) below the junction in the proximal stomach. (1) \n\n**Note 3:**  Code the specific location of the primary tumor according to the term(s) found in the medical record.  If multiple terms are used, give priority to codes 010-060 over 070-090.",
+  "footnotes" : "(1) American Joint Committee on Cancer., & Edge, S.B. (2010) *AJCC Cancer Staging Manual (7th ed.)*. New York; London: Springer, pgs. 104-105",
+  "last_modified" : "2018-05-02T20:27:55.539Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Stated as cervical esophagus " ], [ "020", "Stated as upper thoracic esophagus" ], [ "030", "Stated as middle thoracic esophagus" ], [ "050", "Stated as lower thoracic esophagus" ], [ "060", "Stated as abdominal esophagus" ], [ "070", "Stated as upper third " ], [ "080", "Stated as middle third" ], [ "090", "Stated as lower third" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown; Esophagus, NOS" ] ]
+}

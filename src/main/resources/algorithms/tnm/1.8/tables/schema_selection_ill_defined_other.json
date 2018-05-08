@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_ill_defined_other",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Schema Selection IllDefinedOther",
+  "title" : "Schema selection for IllDefinedOther",
+  "last_modified" : "2018-05-02T20:27:52.583Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C420-C424,C760-C765,C767-C768,C770-C775,C778-C779,C809", "8000-9136,9141-9582,9700-9701", "MATCH" ] ]
+}

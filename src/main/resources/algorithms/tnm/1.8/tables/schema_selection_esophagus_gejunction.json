@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_esophagus_gejunction",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Schema Selection EsophagusGEJunction",
+  "title" : "Schema selection for EsophagusGEJunction",
+  "last_modified" : "2018-05-02T20:27:56.037Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf25",
+    "name" : "Schema Discriminator: EsophagusGEJunction (EGJ)/Stomach",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C160", "8000-8152,8154-8231,8243-8245,8247,8248,8250-8934,8940-9136,9141-9582,9700-9701", "*", "MATCH" ], [ "C161-C162", "8000-8152,8154-8231,8243-8245,8247,8248,8250-8934,8940-9136,9141-9582,9700-9701", "020,040,060", "MATCH" ] ]
+}

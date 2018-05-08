@@ -1,0 +1,20 @@
+{
+  "id" : "ssf6_oag",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF6",
+  "title" : "Site-Specific Factor 6",
+  "subtitle" : "Total Bilirubin Value",
+  "notes" : "**Note 1:**  *The Model for End-Stage Liver Disease (MELD)* is a numerical scale used to determine how urgently a patient with liver disease needs a liver transplant within the next three months.  Results from three routine lab tests are used to calculate the MELD score.  Bilirubin, one of the tests, measures how effectively the liver excretes bile.\n\n**Note 2:**  Assay of total bilirubin includes conjugated (direct) and unconjugated (indirect) bilirubin.  Record the total bilirubin value for this data item.\n\n**Note 3:**  Normal values may vary from lab to lab. The typical human reference ranges are 0.5 to 1.0 milligrams/deciliter (mg/dl) (about 45-90 micromoles/liter (umol/l) for women and 0.7 to 1.2 mg/dl (60-110 umol/l) for men.\n\n**Note 4:**  Record to the nearest tenth of mg/dl or umol/l the highest total bilirubin value prior to treatment. \n* Record a total bilirubin value of 0.53 mg/dl as 005\n* Record a value of 5.3 umol/l as 053\n\n**Note 5:**  Record the total bilirubin unit of measure for the same laboratory test in **Site-Specific Factor 7, Total Bilirubin Unit of Measure**.\n\n**Note 6:**  Use code 997 if the test was done but the actual value is not stated.  Use code 997 if the test was done but the unit is not in mg/dl or umol/l.",
+  "last_modified" : "2018-05-02T20:27:54.807Z",
+  "definition" : [ {
+    "key" : "ssf6",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "001", "0.1 milligram/deciliter (mg/dl) or less \n0.1 micromole per liter (umol/l)\n(Exact value to nearest tenth in mg/dl or umol/l)" ], [ "002-979", "0.1 - 97.9 mg/dl\n0.2 - 97.9 umol/l\n(Exact value to nearest tenth in mg/dl or umol/l)" ], [ "980", "98.0 mg/dl or greater\n98.0 umol/l or greater" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

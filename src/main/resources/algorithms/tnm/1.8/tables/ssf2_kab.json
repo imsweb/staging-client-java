@@ -1,0 +1,20 @@
+{
+  "id" : "ssf2_kab",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF2",
+  "title" : "Site-Specific Factor 2",
+  "subtitle" : "Prostatic Specific Antigen (PSA) Interpretation",
+  "notes" : "**Note 1:** Record the interpretation for the highest PSA lab value recorded in the medical record prior to diagnostic biopsy of prostate and treatment.   This lab value may be recorded in the lab report, history and physical, or clinical statement in the pathology report. \n\n**Note 2:**  The interpretation should be for the same laboratory test recorded in **Site-Specific Factor 1, Prostatic Specific Antigen (PSA) Lab Value**.",
+  "last_modified" : "2018-05-02T20:27:52.597Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Positive/elevated" ], [ "020", "Negative/normal; within normal limits" ], [ "030", "Borderline; undetermined whether positive or negative" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "lymphomaocularadnexa_path_t_no_uicc_definition_copy_11297",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Path T",
+  "title" : "LymphomaOcularAdnexa Path T (no UICC definition)",
+  "notes" : "**Note 1:**  Ocular adnexal lymphomas (OAL) originate in conjunctiva, eyelids, lacrimal gland, lacrimal drainage apparatus, and other orbital tissues surrounding the eye.  This schema should not be used for secondary lymphomatous involvement of ocular adnexa or for intraocular lymphomas.\n\n**Note 2:**  Preseptal eyelid involvement includes infiltration of the outer three layers of the eyelid: skin, subcutaneous connective tissue, and orbicularis oculi muscle.\n\n**Note 3:**  The orbit is the bony cavity containing the eye, lacrimal gland, lacrimal sac, nasolacrimal duct, extraocular muscles, fat. arteries, veins, and nerves, but no lymphatics.\n\n**Note 4:** UICC does not define Lymphoma Ocular Adnexa.  A list of all possible Pathologic T values is provided.",
+  "last_modified" : "2018-05-02T20:27:56.797Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pTX" ], [ "p0", "pT0" ], [ "pA", "pTa" ], [ "pIS", "pTis" ], [ "pISU", "pTispu" ], [ "pISD", "pTispd" ], [ "p1MI", "pT1mi" ], [ "p1", "pT1" ], [ "p1A", "pT1a" ], [ "p1A1", "pT1a1" ], [ "p1A2", "pT1a2" ], [ "p1B", "pT1b" ], [ "p1B1", "pT1b1" ], [ "p1B2", "pT1b2" ], [ "p1C", "pT1c" ], [ "p1D", "pT1d" ], [ "p2", "pT2" ], [ "p2A", "pT2a" ], [ "p2A1", "pT2a1" ], [ "p2A2", "pT2a2" ], [ "p2B", "pT2b" ], [ "p2C", "pT2c" ], [ "p2D", "pT2d" ], [ "p3", "pT3" ], [ "p3A", "pT3a" ], [ "p3B", "pT3b" ], [ "p3C", "pT3c" ], [ "p3D", "pT3d" ], [ "p4", "pT4" ], [ "p4A", "pT4a" ], [ "p4B", "pT4b" ], [ "p4C", "pT4c" ], [ "p4D", "pT4d" ], [ "p4E", "pT4e" ], [ "88", "Not Applicable" ] ]
+}

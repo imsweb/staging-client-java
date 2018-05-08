@@ -1,0 +1,20 @@
+{
+  "id" : "ssf4_mbh",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF4",
+  "title" : "Site-Specific Factor 4",
+  "subtitle" : "CD4 Cell Count",
+  "notes" : "**Note 1:** The CD4 cell count is used to monitor how well the immune system is working in a patient who is Human Immunodeficiency Virus (HIV) positive.  A blood test measures the number of CD4 T-cells in each microliter (ul) of blood. The measurement may also be in CD4 cells per cubic millimeter of blood. One microliter (ul) is equivalent to 1 cubic millimeter of fluid. A low CD4 count (less than 200) indicates a weakened immune system. For Kaposi Sarcoma patients, a CD4 count lower than 200 is a poor risk factor.\n\n**Note 2:**  Record the CD4 count at the time of the Kaposi Sarcoma diagnosis as documented in the patient record. If the CD4+ count is 980 or greater use code 980.  If the test is done but the actual value is not available or not stated, use code 997.\n\n**Note 3:**  If the patient is HIV negative, use code 987.\n\n**Note 4:**  Record the actual value of the CD4 count as documented in the patient record. If the actual CD4+ count is 980 or greater, use code 980.",
+  "last_modified" : "2018-05-02T20:27:53.412Z",
+  "definition" : [ {
+    "key" : "ssf4",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "001-979", "CD4 count 001-979/cubic millimeter or microliter (ul) of blood\n(Exact count of CD4 cells)" ], [ "980", "CD4 count 980 or greater/cubic millimeter or microliter (ul) of blood" ], [ "987", "Not applicable:  Patient is HIV negative" ], [ "988", "Not applicable: Information not collected for this case" ], [ "990", "CD4 count less than 200, NOS\nCD4 count stated to be low\nCD4 count stated to be poor risk" ], [ "991", "CD4 count greater than or equal to 200, NOS\nCD4 count stated to be normal\nCD4 count stated to good risk" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

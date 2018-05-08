@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_net_small_intestine",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Schema Selection NETSmallIntestine",
+  "title" : "Schema selection for NETSmallIntestine",
+  "last_modified" : "2018-05-02T20:27:50.250Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C170-C173,C178-C179", "8153,8240-8242,8246,8249", "MATCH" ] ]
+}

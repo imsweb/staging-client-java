@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_melanoma_iris",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Schema Selection MelanomaIris",
+  "title" : "Schema selection for MelanomaIris",
+  "last_modified" : "2018-05-07T20:00:50.587Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf25",
+    "name" : "Schema Discriminator: Melanoma Ciliary Body/Melanoma Iris",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C694", "8720-8790", "020", "MATCH" ] ]
+}

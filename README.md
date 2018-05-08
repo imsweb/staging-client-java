@@ -40,7 +40,7 @@ For diagnosis years 2016-2017, SEER Summary Stage 2000 is required. SEER Summary
 
 Versions supported:
 
-- 1.7 (released April 2018)
+- 1.8 (released May 2018)
 
 ### Collaborative Staging
 

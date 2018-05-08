@@ -1,0 +1,20 @@
+{
+  "id" : "ssf5_nah",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF5",
+  "title" : "Site-Specific Factor 5",
+  "subtitle" : "Carcinoma ex Pleomorphic Adenoma, Invasion Beyond Capsule",
+  "notes" : "**Note 1:**  Code only for cases described as arising from a benign pleomorphic adenoma.  The diagnosis may be stated as carcinoma ex pleomorphic adenoma or carcinoma arising from a mixed tumor or mixed tumor of salivary gland type.  The histology code assigned to the case may be 8941/3, or other codes for carcinoma.  Extent of invasion beyond capsule is a prognostic factor for these glandular tumors.  \n\n**Note 2:**  Use code 000 for no invasion beyond capsule.  Use codes 001-979 if specific measurement is given for invasion beyond capsule.  Use code 990 if invasion is only described as \"minimally invasive\" or \"less than 1.5mm\" or \"less than or equal to 1.5 mm\".\n\n**Note 3:**  Use code 987 for all cases with pathologic examination of primary site not described as arising from a benign adenoma.  Use code 998 if no pathologic examination of primary site.",
+  "last_modified" : "2018-05-02T20:27:52.983Z",
+  "definition" : [ {
+    "key" : "ssf5",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Noninvasive, confined within the capsule" ], [ "001", "00.1 millimeter (mm) of invasion beyond capsule of pleomorphic adenoma into adjacent tissue" ], [ "002", "0.2 mm invasion beyond capsule of pleomorphic adenoma into adjacent tissue" ], [ "003-979", "0.3 - 97.9 mm of invasion beyond capsule of pleomorphic adenoma into adjacent tissue\n(Exact measurement to nearest tenth of mm) \n\nExamples:\n    015    1.5 mm\n    020    2.0 mm\n    100    10 mm\n    150    15 mm, 1.5 centimeters (cm)" ], [ "980", "98.0 mm or greater invasion beyond capsule" ], [ "987", "Not applicable:  Histology not carcinoma ex pleomorphic adenoma" ], [ "988", "Not applicable: Information not collected for this case" ], [ "990", "Minimally invasive Stated as \"less than 1.5 mm invasion beyond capsule\" Stated as \"less than or equal to 1.5 mm invasion beyond capsule\"" ], [ "991", "Stated as \"greater than 1.5 mm invasion beyond capsule\"" ], [ "998", "No pathologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

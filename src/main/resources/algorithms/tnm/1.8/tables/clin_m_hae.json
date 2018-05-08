@@ -1,0 +1,27 @@
+{
+  "id" : "clin_m_hae",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Clin M Colon",
+  "title" : "Clinical M",
+  "notes" : "**Distant lymph nodes**\n\n**All subsites**\n \n    Common iliac\n    External iliac\n    Para-aortic\n    Retroperitoneal\n    Superior mesenteric\n\n    Distant lymph nodes, NOS\n\n**Cecum (C180), Ascending colon (C182), Hepatic Flexure (C183), Transverse colon (C184)** \n\n    Inferior mesenteric",
+  "last_modified" : "2018-05-02T20:27:54.931Z",
+  "definition" : [ {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_m_display",
+    "name" : "Clinical M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "CLINICAL assessment only:\nNote: M1 has subcategories of M1a and M1b. Assign M1 only when there is no information available to assign one of the subcategories\n\nDistant metastasis, NOS\n\nStated as M1 [NOS]" ], [ "c1A", "cM1a", "Metastasis confined to one organ (liver, lung, ovary, non-regional lymph nodes(s))", "CLINICAL assessment only:\nMetastasis limited to:\n    Single distant lymph node chain\n    Single distant organ except peritoneum\n\nStated as M1a" ], [ "c1B", "cM1b", "Metastasis in more than one organ or the peritoneum", "CLINICAL assessment only:\nMetastasis to multiple distant lymph node chains, NOS\n\nCarcinomatosis\n\nDistant metastasis WITH distant lymph nodes\n\nDistant metastasis to more than one organ WITH or WITHOUT distant lymph nodes\n\nStated as M1b" ], [ "p1", "pM1", "Distant metastasis", "HISTOLOGICALLY confirmed:\nNote: M1 has subcategories of M1a and M1b. Assign M1 only when there is no information available to assign one of the subcategories\n\nDistant metastasis, NOS" ], [ "p1A", "pM1a", "Metastasis confined to one organ (liver, lung, ovary, non-regional lymph nodes(s))", "HISTOLOGICALLY confirmed:\nMetastasis limited to:\n    Single distant lymph node chain\n    Single distant organ except peritoneum\n\nStated as M1a" ], [ "p1B", "pM1b", "Metastasis in more than one organ or the peritoneum", "HISTOLOGICALLY confirmed:\nMetastasis to multiple distant lymph node chains, NOS\n\nCarcinomatosis\n\nDistant metastasis WITH distant lymph nodes\n\nDistant metastasis to more than one organ WITH or WITHOUT distant lymph nodes" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in patient record\nClinical evaluation of T and N not done, no evidence metastatic disease\nTumor first detected on surgical resection (no clinical workup)\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

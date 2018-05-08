@@ -1,0 +1,27 @@
+{
+  "id" : "path_m_hcw",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Path M Peritoneum Female Gen",
+  "title" : "Pathologic M",
+  "notes" : "**Note:** When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and metastatic detail are available, use the metastatic detail in preference to a statement of FIGO stage - see Registrar notes.\n* If the only information is (pathologic) FIGO stage III [NOS] or IIIC, assign the appropriate stage and leave pathologic T, N, and M blank",
+  "last_modified" : "2018-05-02T20:27:55.138Z",
+  "definition" : [ {
+    "key" : "path_m",
+    "name" : "Pathologic M",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_m_display",
+    "name" : "Pathologic M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Only information available is FIGO Stage IIIA or IIIB\n\nUnknown; distant metastasis not stated\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis except peritoneal metastasis", "CLINICAL assessment only:\nDistant lymph node(s)\n \nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph nodes\n\nDistant metastasis, NOS\n\nFIGO Stage IV\n\nStated as M1" ], [ "p1", "pM1", "Distant metastasis except peritoneal metastasis", "HISTOLOGICALLY confirmed:\nDistant lymph node(s)\n \nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph nodes\n\nDistant metastasis, NOS\n\nFIGO Stage IV" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Only information is FIGO Stage III [NOS] or IIIC\n\nPathologic classification not met\nNo pathologic workup for T and N categories and no pathologic evidence of metastasis" ] ]
+}

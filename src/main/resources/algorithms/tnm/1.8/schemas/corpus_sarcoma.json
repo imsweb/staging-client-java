@@ -1,0 +1,652 @@
+{
+  "id" : "corpus_sarcoma",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Corpus Sarcoma",
+  "title" : "Sarcoma (Leiomyosarcoma and Endometrial Stromal Sarcoma) of the Corpus Uteri; Uterus, NOS (excluding Placenta and Adenosarcoma, Carcinoma, and Carcinosaroma)",
+  "notes" : "C540  Isthmus uteri\nC541  Endometrium\nC542  Myometrium\nC543  Fundus uteri\nC548  Overlapping lesion of corpus uteri\nC549  Corpus uteri\nC559  Uterus, NOS\n\n**Note 1:** This schema is based on the UICC chapter *Uterus-Uterine Sarcomas* pages 217-221.\n* Primary sites C541, C542, C548, and C549 are listed in the chapter heading but are not specified in the anatomic subsites in this chapter of the UICC manual; however, they are included in this schema and TNM staged if appropriate histology criteria are met.\n* Primary site group C53 is listed; however, is not included in this schema. See the *Cervix* schema.\n\n**Note 2:** The TNM 7th Edition staging reflects the new staging adopted by the International Federation of Gynecology and Obstetrics (FIGO) and utilizes three new staging schemas for cancer of the Corpus Uteri based on histology. The three new schemas are\n\n1. Carcinoma and carcinosarcoma\n2. Leiomyosarcoma and endometrial stromal sarcoma (ESS)\n3.  Adenosarcoma \n\n**Note 3:** The FIGO stages are based on surgical staging. (TNM stages are based on clinical and/or pathologic classification). \n\n**Note 4:**  This schema is for leiomyosarcoma and endometrial stromal sarcoma (ESS). \n\n**Note 5:**  When coding pay attention to the FIGO Editions and descriptions about cell and tumor types, disease extension, lymph node status and metastasis.\n\n**Note 6:** UICC 7th edition includes sarcomas of the cervix uteri with Uterine sarcomas and AJCC 7th edition limits it to sarcoma of the corpus uteri. SEER is not currently collecting TNM information on cervical sarcomas.\n\n**Note 7:** In addition to directly assigning TNM, Summary Stage 2000 (SS2000) must be captured.  If directly assigning SS2000, use the *Corpus Uteri, Uterus, NOS* chapter on page 208 of the [SS2000 on-line manual](https://seer.cancer.gov/tools/ssm/ssm2000/SSSM2000-122012.pdf#page=208).",
+  "schema_selection_table" : "schema_selection_corpus_sarcoma",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "systemic_surg_seq",
+    "name" : "RX Summ Systemic/Surgery Sequence",
+    "naaccr_item" : 1639,
+    "table" : "systemic_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "radiation_surg_seq",
+    "name" : "RX Summ Surgery/Radiation Sequence",
+    "naaccr_item" : 1380,
+    "table" : "radiation_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "table" : "nodes_pos_fpa",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "naaccr_item" : 940,
+    "table" : "corpus_sarcoma_clinical_t_23604",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "naaccr_item" : 950,
+    "table" : "clinical_n_corpus_48422",
+    "used_for_staging" : true
+  }, {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "naaccr_item" : 960,
+    "table" : "clin_m_hcl",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "naaccr_item" : 880,
+    "table" : "corpus_sarcoma_t_13268",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "naaccr_item" : 890,
+    "table" : "pathological_n_corpus_31147",
+    "used_for_staging" : true
+  }, {
+    "key" : "path_m",
+    "name" : "Pathologic M",
+    "naaccr_item" : 900,
+    "table" : "path_m_hcl",
+    "used_for_staging" : true
+  }, {
+    "key" : "ssf1",
+    "name" : "FIGO Stage",
+    "naaccr_item" : 2880,
+    "default" : "988",
+    "table" : "ssf1_jbh",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED" ]
+  }, {
+    "key" : "ssf2",
+    "name" : "Peritoneal Cytology",
+    "naaccr_item" : 2890,
+    "default" : "999",
+    "table" : "ssf2_kpo",
+    "used_for_staging" : false,
+    "metadata" : [ "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf3",
+    "name" : "Number of Positive Pelvic Nodes",
+    "naaccr_item" : 2900,
+    "default" : "999",
+    "table" : "ssf3_lpp",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf4",
+    "name" : "Number of Examined Pelvic Nodes",
+    "naaccr_item" : 2910,
+    "default" : "999",
+    "table" : "ssf4_mpq",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf5",
+    "name" : "Number of Positive Para-Aortic Nodes",
+    "naaccr_item" : 2920,
+    "default" : "999",
+    "table" : "ssf5_npk",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf6",
+    "name" : "Number of Examined Para-Aortic Nodes",
+    "naaccr_item" : 2930,
+    "default" : "999",
+    "table" : "ssf6_opg",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ssf7",
+    "name" : "Percentage of Non-Endometrioid Cell Type in Mixed Histology Tumors",
+    "naaccr_item" : 2861,
+    "default" : "988",
+    "table" : "ssf7_sqn",
+    "used_for_staging" : false
+  }, {
+    "key" : "ssf8",
+    "name" : "Omentectomy",
+    "naaccr_item" : 2862,
+    "default" : "988",
+    "table" : "ssf8_sqo",
+    "used_for_staging" : false
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "TNM Clin Stage Group",
+    "naaccr_item" : 970,
+    "default" : "99",
+    "table" : "stage_group_c_29799",
+    "used_for_staging" : true,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "TNM Path Stage Group",
+    "naaccr_item" : 910,
+    "default" : "99",
+    "table" : "stage_group_p_65545",
+    "used_for_staging" : true,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED" ]
+  } ],
+  "outputs" : [ {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "clin_stage_group",
+    "name" : "Derived SEER Clin Stage Group",
+    "naaccr_item" : 3610,
+    "default" : "88"
+  }, {
+    "key" : "path_stage_group",
+    "name" : "Derived SEER Path Stage Group",
+    "naaccr_item" : 3605,
+    "default" : "88"
+  }, {
+    "key" : "combined_stage_group",
+    "name" : "Derived SEER Combined Stage Group",
+    "naaccr_item" : 3614,
+    "default" : "88"
+  }, {
+    "key" : "combined_t",
+    "name" : "Derived SEER Combined T",
+    "naaccr_item" : 3616,
+    "default" : "88"
+  }, {
+    "key" : "combined_n",
+    "name" : "Derived SEER Combined N",
+    "naaccr_item" : 3618,
+    "default" : "88"
+  }, {
+    "key" : "combined_m",
+    "name" : "Derived SEER Combined M",
+    "naaccr_item" : 3620,
+    "default" : "88"
+  }, {
+    "key" : "source_t",
+    "name" : "Derived SEER Combined T Source",
+    "naaccr_item" : 3622
+  }, {
+    "key" : "source_n",
+    "name" : "Derived SEER Combined N Source",
+    "naaccr_item" : 3624
+  }, {
+    "key" : "source_m",
+    "name" : "Derived SEER Combined M Source",
+    "naaccr_item" : 3626
+  } ],
+  "mappings" : [ {
+    "id" : "tnm7_stage",
+    "name" : "TNM 7 Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tqi",
+      "inputs" : [ "hist" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "clin_stage_group",
+      "value" : "90"
+    }, {
+      "key" : "path_stage_group",
+      "value" : "90"
+    } ],
+    "tables" : [ {
+      "id" : "parse_t_2177",
+      "input_mapping" : [ {
+        "from" : "clin_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_t",
+        "to" : "tmp_clin_t"
+      }, {
+        "from" : "t_prefix",
+        "to" : "clin_t_prefix"
+      } ],
+      "inputs" : [ "clin_t" ],
+      "outputs" : [ "clin_t_prefix", "tmp_clin_t" ]
+    }, {
+      "id" : "parse_n_67182",
+      "input_mapping" : [ {
+        "from" : "clin_n",
+        "to" : "n"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_n",
+        "to" : "tmp_clin_n"
+      }, {
+        "from" : "n_prefix",
+        "to" : "clin_n_prefix"
+      } ],
+      "inputs" : [ "clin_n" ],
+      "outputs" : [ "clin_n_prefix", "tmp_clin_n" ]
+    }, {
+      "id" : "parse_m_47057",
+      "input_mapping" : [ {
+        "from" : "clin_m",
+        "to" : "m"
+      } ],
+      "output_mapping" : [ {
+        "from" : "m_prefix",
+        "to" : "clin_m_prefix"
+      }, {
+        "from" : "root_m",
+        "to" : "tmp_clin_m"
+      } ],
+      "inputs" : [ "clin_m" ],
+      "outputs" : [ "tmp_clin_m", "clin_m_prefix" ]
+    }, {
+      "id" : "parse_t_2177",
+      "input_mapping" : [ {
+        "from" : "path_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_t",
+        "to" : "tmp_path_t"
+      }, {
+        "from" : "t_prefix",
+        "to" : "path_t_prefix"
+      } ],
+      "inputs" : [ "path_t" ],
+      "outputs" : [ "tmp_path_t", "path_t_prefix" ]
+    }, {
+      "id" : "parse_n_67182",
+      "input_mapping" : [ {
+        "from" : "path_n",
+        "to" : "n"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_n",
+        "to" : "tmp_path_n"
+      }, {
+        "from" : "n_prefix",
+        "to" : "path_n_prefix"
+      } ],
+      "inputs" : [ "path_n" ],
+      "outputs" : [ "tmp_path_n", "path_n_prefix" ]
+    }, {
+      "id" : "parse_m_47057",
+      "input_mapping" : [ {
+        "from" : "path_m",
+        "to" : "m"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_m",
+        "to" : "tmp_path_m"
+      }, {
+        "from" : "m_prefix",
+        "to" : "path_m_prefix"
+      } ],
+      "inputs" : [ "path_m" ],
+      "outputs" : [ "tmp_path_m", "path_m_prefix" ]
+    }, {
+      "id" : "determine_default_t",
+      "input_mapping" : [ {
+        "from" : "tmp_path_t",
+        "to" : "path_t_in"
+      }, {
+        "from" : "tmp_clin_t",
+        "to" : "clin_t_in"
+      } ],
+      "output_mapping" : [ {
+        "from" : "source_t_out",
+        "to" : "source_t"
+      }, {
+        "from" : "path_t_out",
+        "to" : "tmp_path_t"
+      }, {
+        "from" : "clin_t_out",
+        "to" : "tmp_clin_t"
+      }, {
+        "from" : "combined_t_out",
+        "to" : "tmp_combined_t"
+      } ],
+      "inputs" : [ "tmp_path_t", "tmp_clin_t" ],
+      "outputs" : [ "source_t", "tmp_path_t", "tmp_clin_t", "tmp_combined_t" ]
+    }, {
+      "id" : "determine_default_n",
+      "input_mapping" : [ {
+        "from" : "tmp_path_n",
+        "to" : "path_n_in"
+      }, {
+        "from" : "tmp_clin_n",
+        "to" : "clin_n_in"
+      } ],
+      "output_mapping" : [ {
+        "from" : "path_n_out",
+        "to" : "tmp_path_n"
+      }, {
+        "from" : "source_n_out",
+        "to" : "source_n"
+      }, {
+        "from" : "combined_n_out",
+        "to" : "tmp_combined_n"
+      }, {
+        "from" : "clin_n_out",
+        "to" : "tmp_clin_n"
+      } ],
+      "inputs" : [ "tmp_clin_n", "tmp_path_n" ],
+      "outputs" : [ "tmp_combined_n", "tmp_clin_n", "tmp_path_n", "source_n" ]
+    }, {
+      "id" : "determine_default_m",
+      "input_mapping" : [ {
+        "from" : "tmp_path_m",
+        "to" : "path_m_in"
+      }, {
+        "from" : "tmp_clin_m",
+        "to" : "clin_m_in"
+      } ],
+      "output_mapping" : [ {
+        "from" : "source_m_out",
+        "to" : "source_m"
+      }, {
+        "from" : "combined_m_out",
+        "to" : "tmp_combined_m"
+      }, {
+        "from" : "clin_m_out",
+        "to" : "tmp_clin_m"
+      }, {
+        "from" : "path_m_out",
+        "to" : "tmp_path_m"
+      } ],
+      "inputs" : [ "tmp_path_m", "tmp_clin_m" ],
+      "outputs" : [ "tmp_path_m", "tmp_combined_m", "tmp_clin_m", "source_m" ]
+    }, {
+      "id" : "tnm7_stage_ubu",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_clin_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_clin_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "clin_stage_group"
+      } ],
+      "inputs" : [ "tmp_clin_n", "tmp_clin_m", "tmp_clin_t" ],
+      "outputs" : [ "clin_stage_group" ]
+    }, {
+      "id" : "tnm7_path_stage_ubu",
+      "input_mapping" : [ {
+        "from" : "tmp_path_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_path_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_path_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "path_stage_group"
+      } ],
+      "inputs" : [ "tmp_path_m", "tmp_path_n", "tmp_path_t" ],
+      "outputs" : [ "path_stage_group" ]
+    }, {
+      "id" : "adjustments_for_no_clin_or_no_path_26261",
+      "output_mapping" : [ {
+        "from" : "source_t_out",
+        "to" : "source_t"
+      }, {
+        "from" : "source_m_out",
+        "to" : "source_m"
+      }, {
+        "from" : "combined_m_out",
+        "to" : "tmp_combined_m"
+      }, {
+        "from" : "source_n_out",
+        "to" : "source_n"
+      }, {
+        "from" : "combined_t_out",
+        "to" : "tmp_combined_t"
+      }, {
+        "from" : "combined_n_out",
+        "to" : "tmp_combined_n"
+      } ],
+      "inputs" : [ "tmp_path_t", "clin_n", "clin_m", "clin_t", "path_t", "tmp_path_m", "tmp_clin_n", "tmp_clin_m", "clin_stage_group_direct", "tmp_path_n", "path_m", "tmp_clin_t", "path_stage_group_direct", "path_n" ],
+      "outputs" : [ "tmp_combined_n", "tmp_combined_m", "source_t", "clin_stage_group", "path_stage_group", "source_n", "tmp_combined_t", "source_m" ]
+    } ]
+  }, {
+    "id" : "combined_stage",
+    "name" : "Combined Stage",
+    "inclusion_tables" : [ {
+      "id" : "tnm7_inclusions_tqi",
+      "inputs" : [ "hist" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "combined_m",
+      "value" : "90"
+    }, {
+      "key" : "combined_n",
+      "value" : "90"
+    }, {
+      "key" : "combined_stage_group",
+      "value" : "90"
+    }, {
+      "key" : "combined_t",
+      "value" : "90"
+    } ],
+    "tables" : [ {
+      "id" : "stop_if_no_clin_and_no_path_24035",
+      "inputs" : [ "clin_t", "path_t", "clin_stage_group_direct", "path_m", "clin_n", "path_stage_group_direct", "clin_m", "path_n" ],
+      "outputs" : [ "combined_m", "combined_n", "source_t", "tmp_continue", "combined_t", "combined_stage_group", "source_n", "source_m" ]
+    }, {
+      "id" : "combined_t_no_tis",
+      "input_mapping" : [ {
+        "from" : "tmp_path_t",
+        "to" : "path_t_in"
+      }, {
+        "from" : "tmp_combined_t",
+        "to" : "combined_t_in"
+      }, {
+        "from" : "tmp_clin_t",
+        "to" : "clin_t_in"
+      } ],
+      "output_mapping" : [ {
+        "from" : "source_t_out",
+        "to" : "source_t"
+      }, {
+        "from" : "combined_t_out",
+        "to" : "tmp_combined_t"
+      } ],
+      "inputs" : [ "radiation_surg_seq", "tmp_path_t", "tmp_clin_t", "systemic_surg_seq", "tmp_combined_t" ],
+      "outputs" : [ "source_t", "tmp_combined_t" ]
+    }, {
+      "id" : "combined_n_no_tis_path_n_cn0_allowed_73884",
+      "input_mapping" : [ {
+        "from" : "tmp_path_n",
+        "to" : "path_n_in"
+      }, {
+        "from" : "tmp_combined_n",
+        "to" : "combined_n_in"
+      }, {
+        "from" : "tmp_clin_n",
+        "to" : "clin_n_in"
+      } ],
+      "output_mapping" : [ {
+        "from" : "source_n_out",
+        "to" : "source_n"
+      }, {
+        "from" : "combined_n_out",
+        "to" : "tmp_combined_n"
+      } ],
+      "inputs" : [ "nodes_pos", "tmp_combined_n", "tmp_clin_n", "radiation_surg_seq", "tmp_path_n", "systemic_surg_seq" ],
+      "outputs" : [ "tmp_combined_n", "source_n" ]
+    }, {
+      "id" : "combined_m",
+      "input_mapping" : [ {
+        "from" : "tmp_combined_m",
+        "to" : "combined_m_in"
+      }, {
+        "from" : "tmp_path_m",
+        "to" : "path_m_in"
+      }, {
+        "from" : "tmp_clin_m",
+        "to" : "clin_m_in"
+      } ],
+      "output_mapping" : [ {
+        "from" : "source_m_out",
+        "to" : "source_m"
+      }, {
+        "from" : "combined_m_out",
+        "to" : "tmp_combined_m"
+      } ],
+      "inputs" : [ "tmp_path_m", "tmp_combined_m", "tmp_clin_m" ],
+      "outputs" : [ "tmp_combined_m", "tmp_source_m", "source_m" ]
+    }, {
+      "id" : "determine_combined_prefix_91402",
+      "input_mapping" : [ {
+        "from" : "clin_t_prefix",
+        "to" : "clin_prefix"
+      }, {
+        "from" : "source_t",
+        "to" : "cmb_source"
+      }, {
+        "from" : "path_t_prefix",
+        "to" : "path_prefix"
+      } ],
+      "output_mapping" : [ {
+        "from" : "cmb_prefix",
+        "to" : "cmb_t_prefix"
+      } ],
+      "inputs" : [ "clin_t_prefix", "source_t", "path_t_prefix" ],
+      "outputs" : [ "cmb_t_prefix" ]
+    }, {
+      "id" : "determine_combined_prefix_91402",
+      "input_mapping" : [ {
+        "from" : "path_n_prefix",
+        "to" : "path_prefix"
+      }, {
+        "from" : "source_n",
+        "to" : "cmb_source"
+      }, {
+        "from" : "clin_n_prefix",
+        "to" : "clin_prefix"
+      } ],
+      "output_mapping" : [ {
+        "from" : "cmb_prefix",
+        "to" : "cmb_n_prefix"
+      } ],
+      "inputs" : [ "clin_n_prefix", "path_n_prefix", "source_n" ],
+      "outputs" : [ "cmb_n_prefix" ]
+    }, {
+      "id" : "determine_combined_prefix_91402",
+      "input_mapping" : [ {
+        "from" : "tmp_source_m",
+        "to" : "cmb_source"
+      }, {
+        "from" : "path_m_prefix",
+        "to" : "path_prefix"
+      }, {
+        "from" : "clin_m_prefix",
+        "to" : "clin_prefix"
+      } ],
+      "output_mapping" : [ {
+        "from" : "cmb_prefix",
+        "to" : "cmb_m_prefix"
+      } ],
+      "inputs" : [ "clin_m_prefix", "tmp_source_m", "path_m_prefix" ],
+      "outputs" : [ "cmb_m_prefix" ]
+    }, {
+      "id" : "concatenate_t_51262",
+      "input_mapping" : [ {
+        "from" : "tmp_combined_t",
+        "to" : "root_t"
+      }, {
+        "from" : "cmb_t_prefix",
+        "to" : "t_prefix"
+      } ],
+      "output_mapping" : [ {
+        "from" : "t",
+        "to" : "combined_t"
+      } ],
+      "inputs" : [ "cmb_t_prefix", "tmp_combined_t" ],
+      "outputs" : [ "combined_t" ]
+    }, {
+      "id" : "concatenate_n_43246",
+      "input_mapping" : [ {
+        "from" : "cmb_n_prefix",
+        "to" : "n_prefix"
+      }, {
+        "from" : "tmp_combined_n",
+        "to" : "root_n"
+      } ],
+      "output_mapping" : [ {
+        "from" : "n",
+        "to" : "combined_n"
+      } ],
+      "inputs" : [ "cmb_n_prefix", "tmp_combined_n" ],
+      "outputs" : [ "combined_n" ]
+    }, {
+      "id" : "concatenate_m_40642",
+      "input_mapping" : [ {
+        "from" : "tmp_combined_m",
+        "to" : "root_m"
+      }, {
+        "from" : "cmb_m_prefix",
+        "to" : "m_prefix"
+      } ],
+      "output_mapping" : [ {
+        "from" : "m",
+        "to" : "combined_m"
+      } ],
+      "inputs" : [ "cmb_m_prefix", "tmp_combined_m" ],
+      "outputs" : [ "combined_m" ]
+    }, {
+      "id" : "tnm7_path_stage_ubu",
+      "input_mapping" : [ {
+        "from" : "tmp_combined_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_combined_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_combined_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "combined_stage_group"
+      } ],
+      "inputs" : [ "tmp_combined_n", "tmp_combined_m", "tmp_combined_t" ],
+      "outputs" : [ "combined_stage_group" ]
+    } ]
+  } ],
+  "involved_tables" : [ "clinical_n_corpus_48422", "stage_group_p_65545", "determine_default_t", "radiation_surg_seq", "ssf3_lpp", "determine_default_m", "nodes_pos_fpa", "parse_t_2177", "concatenate_n_43246", "path_m_hcl", "stage_group_c_29799", "parse_n_67182", "determine_default_n", "ssf6_opg", "ssf7_sqn", "histology", "concatenate_m_40642", "ssf2_kpo", "clin_m_hcl", "combined_t_no_tis", "combined_n_no_tis_path_n_cn0_allowed_73884", "ssf1_jbh", "concatenate_t_51262", "ssf8_sqo", "corpus_sarcoma_clinical_t_23604", "ssf5_npk", "adjustments_for_no_clin_or_no_path_26261", "schema_selection_corpus_sarcoma", "pathological_n_corpus_31147", "determine_combined_prefix_91402", "stop_if_no_clin_and_no_path_24035", "systemic_surg_seq", "parse_m_47057", "primary_site", "combined_m", "ssf4_mpq", "year_dx_validation", "tnm7_stage_ubu", "tnm7_path_stage_ubu", "corpus_sarcoma_t_13268", "tnm7_inclusions_tqi" ],
+  "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING",
+  "last_modified" : "2018-05-08T17:39:31.472Z"
+}

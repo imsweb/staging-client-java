@@ -1,0 +1,21 @@
+{
+  "id" : "ssf2_kpq",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF2",
+  "title" : "Site-Specific Factor 2",
+  "subtitle" : "Fibrosis Score",
+  "notes" : "**Note:**  AJCC classifies fibrosis scores 0-4 (none to moderate fibrosis) as F0, and fibrosis scoares 5-6 (severe fibrosis or cirrhosis) as F1. Fibrosis score is also called Ishak score. (1)",
+  "footnotes" : "(1) American Joint Committee on Cancer., & Edge, S.B. (2010) *AJCC Cancer Staging Manual (7th ed.)*. New York; London: Springer, pg. 194",
+  "last_modified" : "2018-05-02T20:27:54.914Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "F0:  Fibrosis score 0-4 \n(None to moderate fibrosis)" ], [ "001", "F1:  Fibrosis score 5-6 \n(Severe fibrosis or cirrhosis)" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

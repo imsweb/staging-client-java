@@ -1,0 +1,19 @@
+{
+  "id" : "lung_occult_stage_11131",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Lung Occult Stage",
+  "title" : "Determine Lung Occult or Unknown Stage",
+  "description" : "Since TX, N0, M0 can be both Occult or Unknown, this looks at the directly assigned stage group when this combination is found.  Only this combination is sent to this table.",
+  "last_modified" : "2018-05-02T20:27:53.816Z",
+  "definition" : [ {
+    "key" : "stage_group_in",
+    "name" : "Directly Assigned Stage Group",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Derived Stage Group",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "OC", "VALUE:OC" ], [ "99", "VALUE:99" ], [ "*", "ERROR:Assigned Stage and assigned T, N and M values do not match." ] ]
+}

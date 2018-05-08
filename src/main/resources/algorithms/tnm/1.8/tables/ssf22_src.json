@@ -1,0 +1,20 @@
+{
+  "id" : "ssf22_src",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF22",
+  "title" : "Site-Specific Factor 22",
+  "subtitle" : "Profound Immune Suppression",
+  "notes" : "**Note 1:**  Profound immune suppression may greatly increase the risk of developing Merkel cell carcinoma. Immune suppression is suppression of the body's immune system and its ability to fight infections and other diseases. Immune suppression may be deliberately induced with drugs, as in preparation for bone marrow or other organ transplantation, to prevent rejection of the donor tissue. It may also result from certain diseases such as Acquired Immune Deficiency Syndrome (AIDS) or lymphoma, and from the use of anti-cancer drugs.\n\n**Note 2:**  Code the patient's history of profound immune suppression condition(s) as documented by the physician.",
+  "last_modified" : "2018-05-02T20:27:53.656Z",
+  "definition" : [ {
+    "key" : "ssf22",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No immune suppression condition(s)" ], [ "010", "Human Immunodeficiency Virus (HIV)/Acquired Immunodeficiency Syndrome (AIDS)" ], [ "020", "Solid organ transplant recipient" ], [ "030", "Chronic lymphocytic leukemia" ], [ "040", "Non-Hodgkin lymphoma" ], [ "050", "More than one of the above conditions" ], [ "060", "Other specified diagnosis resulting in profound immune suppression" ], [ "070", "Profound immune suppression present, diagnosis not recorded" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

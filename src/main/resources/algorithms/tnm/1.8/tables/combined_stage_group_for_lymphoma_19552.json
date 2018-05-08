@@ -1,0 +1,24 @@
+{
+  "id" : "combined_stage_group_for_lymphoma_19552",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Combined Stage Group for Lymphoma",
+  "title" : "Combined Stage Group for Lymphoma",
+  "description" : "Based on the Derived Clin Stage Group and Derived Path Stage Group, selected the most aggressive stage group.",
+  "last_modified" : "2018-05-02T20:27:59.269Z",
+  "definition" : [ {
+    "key" : "clin_stage_group_in",
+    "name" : "Derived Clin Stage",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_stage_group_in",
+    "name" : "Derived Path Stage",
+    "type" : "INPUT"
+  }, {
+    "key" : "combined_stage_group",
+    "name" : "Combined Stage Group",
+    "type" : "ENDPOINT"
+  } ],
+  "extra_input" : [ "clin_stage_group_in", "path_stage_group_in" ],
+  "rows" : [ [ "1", "99", "VALUE:{{clin_stage_group_in}}" ], [ "1", "1,1A,1B,2,2A,2B,3,3A,3B,4,4A,4B", "VALUE:{{path_stage_group_in}}" ], [ "1A", "1,99", "VALUE:{{clin_stage_group_in}}" ], [ "1A", "1A,1B,2,2A,2B,3,3A,3B,4,4A,4B", "VALUE:{{path_stage_group_in}}" ], [ "1B", "1,1A,99", "VALUE:{{clin_stage_group_in}}" ], [ "1B", "1B,2,2A,2B,3,3A,3B,4,4A,4B", "VALUE:{{path_stage_group_in}}" ], [ "2", "1,1A,1B,99", "VALUE:{{clin_stage_group_in}}" ], [ "2", "2,2A,2B,3,3A,3B,4,4A,4B", "VALUE:{{path_stage_group_in}}" ], [ "2A", "1,1A,1B,2,99", "VALUE:{{clin_stage_group_in}}" ], [ "2A", "2A,2B,3,3A,3B,4,4A,4B", "VALUE:{{path_stage_group_in}}" ], [ "2B", "1,1A,1B,2,2A,99", "VALUE:{{clin_stage_group_in}}" ], [ "2B", "2B,3,3A,3B,4,4A,4B", "VALUE:{{path_stage_group_in}}" ], [ "3", "1,1A,1B,2,2A,2B,99", "VALUE:{{clin_stage_group_in}}" ], [ "3", "3,3A,3B,4,4A,4B", "VALUE:{{path_stage_group_in}}" ], [ "3A", "1,1A,1B,2,2A,2B,3,99", "VALUE:{{clin_stage_group_in}}" ], [ "3A", "3A,3B,4,4A,4B", "VALUE:{{path_stage_group_in}}" ], [ "3B", "1,1A,1B,2,2A,2B,3,3A,99", "VALUE:{{clin_stage_group_in}}" ], [ "3B", "3B,4,4A,4B", "VALUE:{{path_stage_group_in}}" ], [ "4", "1,1A,1B,2,2A,2B,3,3A,3B,99", "VALUE:{{clin_stage_group_in}}" ], [ "4", "4,4A,4B", "VALUE:{{path_stage_group_in}}" ], [ "4A", "1,1A,1B,2,2A,2B,3,3A,3B,4,99", "VALUE:{{clin_stage_group_in}}" ], [ "4A", "4A,4B", "VALUE:{{path_stage_group_in}}" ], [ "4B", "1,1A,1B,2,2A,2B,3,3A,3B,4,4A,99", "VALUE:{{clin_stage_group_in}}" ], [ "4B", "4B", "VALUE:{{path_stage_group_in}}" ], [ "88", "1,1A,1B,2,2A,2B,3,3A,3B,4,4A,4B,99", "VALUE:{{path_stage_group_in}}" ], [ "1,1A,1B,2,2A,2B,3,3A,3B,4,4A,4B,99", "88", "VALUE:{{clin_stage_group_in}}" ], [ "88", "88", "VALUE:{{clin_stage_group_in}}" ], [ "99", "1,1A,1B,2,2A,2B,3,3A,3B,4,4A,4B", "VALUE:{{path_stage_group_in}}" ], [ "99", "99", "VALUE:{{clin_stage_group_in}}" ], [ "", "1,1A,1B,2,2A,2B,3,3A,3B,4,4A,4B,99", "VALUE:{{path_stage_group_in}}" ], [ "1,1A,1B,2,2A,2B,3,3A,3B,4,4A,4B,99", "", "VALUE:{{clin_stage_group_in}}" ], [ "", "", "VALUE:" ] ]
+}

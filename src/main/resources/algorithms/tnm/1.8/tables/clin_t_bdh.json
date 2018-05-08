@@ -1,0 +1,28 @@
+{
+  "id" : "clin_t_bdh",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Clin T Testis",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  Except for pT4, where radical orchiectomy is not always necessary for classification purposes, the extent of the primary tumor is classified after radical orchiectomy; see pT. \n\n**Note 2:** Assign TX for clinical T prior to radical orchiectomy or if no radical orchiectomy is performed unless there is a cT4.",
+  "footnotes" : "\\* Except for pT4, where radical orchiectomy is not always necessary for classification purposes, the extent of the primary tumor is classified after radical orchiectomy; see pT. In other circumstances, TX is used if no radical orchiectomy has been performed. ( International Union Against Cancer (UICC) TNM Classification of Malignant Tumors, 7th ed., Sobin, LH, Gospodarowicz, M, Wittekind, CH, eds. New York: Wiley, 2009, pg. 250)\n* UICC has given permission to allow a cTX and cT4 for Testis.\n\n\\# Except for pTis and pT4, extent of primary tumor is classified by radical orchiectomy. TX may be used for other categories in the absence of radical orchiectomy. (American Joint Committee on Cancer., & Edge, S.B. (2010) AJCC Cancer Staging Manual (7th ed.). New York; London: Springer, pg. 471)\n* Only cTX can be used for Clinical T for Testis in  AJCC.",
+  "last_modified" : "2018-05-02T20:27:53.030Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T \n    Extension cannot be determined\nPhysician assigns cTX, no other information available to determine T" ], [ "c4", "cT4", "Tumor invades scrotum \nWITH or WITHOUT vascular lymphatic invasion*#", "Dartos muscle, ipsilateral\nScrotum, ipsilateral\n\nExtension to scrotum, contralateral\nUlceration of scrotum\n\nPenis\n\nFurther contiguous extension\n\nStated as T4" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

@@ -1,0 +1,35 @@
+{
+  "id" : "stage_group_c_83264",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Stage Group (c)",
+  "title" : "TNM 7 Stage Group",
+  "notes" : "**Note 1:** SEER*RSA added additional information to UICC 7th edition stages with UICC approval. If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC 7th edition manual to ensure you are using the appropriate logic. \n\n**Note 2:** The stage group below is valid in AJCC 7th edition, but not UICC. Approved by UICC.\n* Stage III - Any T, Any N, M1, SX\n\n**Note 3:** While the stage group below is valid, the specified TNM combination is only included in SEER*RSA.\n* Stage Group III - Any T, Any N, M1, S0-S3 - M1 is not included in the stage group definition\n\n**Note 4:** Serum Tumor Markers are used to calculate S Stage.  They can be found in the following site-specific factors\n* **SSF 13: Post-Orchiectomy Alpha Fetoprotein (AFP) Range**  \n* **SSF 15: Post-Orchiectomy Human Chorionic Gonadotropin (hCG) Range**  \n* **SSF 16: Post-Orchiectomy Lactate Dehydrogenase (LDH) Range**  \n  \nThe S Stage is set using the following logic\n* SX - Serum marker studies not available  \n* S0 - Serum marker study levels within normal limits   \n* S1 - LDH: < 1.5 x N   AND   hCG: < 5000   AND   AFP < 1000  \n* S2 - LDH: 1.5 to 10 x N   OR   hCG: 5000 to 50,000   OR   AFP: 1000 to 10,000  \n* S3 - LDH: > 10 x N   OR   hCG: > 50,000   OR   AFP: > 10,000",
+  "last_modified" : "2018-05-02T20:27:59.260Z",
+  "definition" : [ {
+    "key" : "clin_stage_group_direct",
+    "name" : "Stage",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_stage_group_direct_display",
+    "name" : "Stage Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "t",
+    "name" : "T",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "s_stage",
+    "name" : "S Stage",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1 ", "I  ", "T4", "N0  ", "M0", "SX" ], [ "1B", "IB ", "T4", "N0  ", "M0", "S0" ], [ "1S", "IS ", "T4,X", "N0  ", "M0", "S1-S3" ], [ "2 ", "II ", "T4,X", "N1-3", "M0", "SX" ], [ "2A", "IIA", "T4,X", "N1  ", "M0", "S0,S1" ], [ "2B", "IIB", "T4,X", "N2  ", "M0", "S0,S1" ], [ "2C", "IIC", "T4,X", "N3  ", "M0", "S0,S1" ], [ "3 ", "III", "T4,X\nT4,X", "Any N\nAny N", "M1 \nM1a", "Any\nSX" ], [ "3A", "IIIA", "T4,X", "Any N", "M1a", "S0,S1" ], [ "3B", "IIIB", "T4,X\nT4,X", "N1-3 \nAny N", "M0 \nM1a", "S2\nS2" ], [ "3C", "IIIC", "T4,X\nT4,X\nT4,X", "N1-3 \nAny N\nAny N", "M0 \nM1a\nM1b", "S3\nS3\nAny" ], [ "99", "Unknown", "T4,X\nTX", "NX  \nN0", "M0\nM0", "Any\nS0,SX" ], [ "88", "Not Applicable", "88", "88", "88", "Any" ] ]
+}

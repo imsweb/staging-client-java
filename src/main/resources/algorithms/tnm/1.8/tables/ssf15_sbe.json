@@ -1,0 +1,20 @@
+{
+  "id" : "ssf15_sbe",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF15",
+  "title" : "Site-Specific Factor 15",
+  "subtitle" : "Clinical Staging Procedures Performed",
+  "notes" : "**Note 1:**  Investigators are interested in determining the  clinical staging procedures used to assign tumors to the T1c category.  Procedures used in clinical staging include\n* Digital rectal examination (DRE) \n* Imaging techniques of the prostate T\n * Transrectal ultrasound (TRUS) E\n * Endorectal coil magnetic resonance imaging (erMRI)\n\n**Note 2:** Record the procedure(s) used in clinical staging for all T categories regardless of positive or negative findings.  \n* Record TRUS-guided biopsy as imaging\n\n**Note 3:**  Clinical procedures performed after needle core biopsy or any surgical procedure of the prostate are not included in this field.",
+  "last_modified" : "2018-05-02T20:27:52.461Z",
+  "definition" : [ {
+    "key" : "ssf15",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No DRE and no imaging performed" ], [ "010", "DRE only performed, imaging not performed or unknown if performed" ], [ "020", "Imaging only performed, DRE not performed or unknown if performed" ], [ "030", "Imaging and DRE performed" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

@@ -1,0 +1,24 @@
+{
+  "id" : "discriminator_melanoma",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF25",
+  "title" : "Site-Specific Factor 25",
+  "subtitle" : "Schema Discriminator: Melanoma Ciliary Body/Melanoma Iris",
+  "notes" : "**Note:**  For cases coded to melanoma with primary site code C694 Ciliary Body/Iris, code the site in which the tumor arose. This information will be used to determine which of two schemas will be used to assign staging values to the case.",
+  "last_modified" : "2018-05-02T20:27:50.115Z",
+  "definition" : [ {
+    "key" : "ssf25",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "schema",
+    "name" : "Schema",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "010", "Ciliary Body\nCrystalline lens\nSclera\nUveal tract\nIntraocular\nEyeball", "VALUE:melanoma_ciliary_body" ], [ "020", "Iris", "VALUE:melanoma_iris" ] ]
+}

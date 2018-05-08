@@ -1,0 +1,28 @@
+{
+  "id" : "clin_t_rectum_29212",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Clin T Rectum",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:** High grade dysplasia and severe dysplasia of the colon are generally not reportable in cancer registries.\n* Assign pTis if your registry collects these tumors\n\n**Note 2:** In situ includes cancer cells confined within the glandular basement membrane (intraepithelial); localized includes confined to lamina propria (intramucosal), the muscular mucosa, and muscularis propria. \n\n**Note 3:**  Ignore intraluminal extension to adjacent segment(s) of colon/rectum or to the ileum from the cecum; code depth of invasion or extracolonic spread as indicated.\n\n**Note 4:**  Direct invasion in cT4b includes invasion of other organs or segments of the colorectum by way of the serosa, as confirmed on microscopic examination, or for tumors in a retroperitoneal or subperitoneal location, direct invasion of other organs or structures by virtue of extension beyond the muscularis propria. \n\n**Note 5:**  Tumor that is adherent to other organs or structures, macroscopically, is classified T4b. However, if no tumor is present in the adhesion, microscopically, the classification should be pT1 - pT3.\n\n**Note 6:** Assign T4b for contiguous extension from the site of origin. Discontinuous involvement is coded in M (distant metastasis).",
+  "footnotes" : "\\# T4 [NOS] is not defined in AJCC 7th edition.",
+  "last_modified" : "2018-05-02T20:27:54.951Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T \n    Extension cannot be determined\nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor", "" ], [ "pIS", "pTis", "Carcinoma in situ: intraepithelial or invasion of lamina propria", "(Adeno)carcinoma, noninvasive, in a polyp or adenoma\n\nInvasive tumor confined to:\n     Lamina propria, including lamina propria in the stalk of a polyp\n     Mucosa, NOS, including intramucosal, NOS\n     Muscularis mucosae (but not through), including muscularis mucosae in the stalk of a polyp\n\nStated as Tis" ], [ "c1", "cT1", "Tumor invades submucosa", "Confined to: \n    Head of polyp, NOS\n    Stalk of polyp, NOS\n\nInvasive tumor in polyp, NOS\n\nInvades submucosa (superficial invasion), including submucosa in the head or stalk of polyp\n\nConfined to rectosigmoid, NOS\nConfined to rectum, NOS\nLocalized, NOS\n\nStated as T1" ], [ "c2", "cT2", "Tumor invades muscularis propria", "For rectum (C209):\n    Tumor invading muscularis propria with intraluminal extension to colon and/or anal canal/anus\n\nStated as T2" ], [ "c3", "cT3", "Tumor invades subserosa or into non-peritionalized pericolic or perirectal tissues", "Extension through wall, NOS\nInvasion through muscularis propria or muscularis, NOS\nPerimuscular tissue invaded\nSubserosal tissue/(sub)serosal fat invaded\nTransmural, NOS\n\nFor rectum (C209):\n    Tumor invading through muscularis propria with intraluminal extension to colon and/or anal canal/anus\n\nAdjacent (connective) tissue:\n    For all sites:\n        Perirectal fat\n    For rectosigmoid:\n        Mesentery (including mesenteric fat, mesocolon)\n        Pericolic fat\n    For rectum:\n        Rectovaginal septum\n\nFat, NOS\n\nStated as T3" ], [ "c4", "cT4", "Tumor perforates visceral peritoneum and/or directly invades other organs or structures#", "Note: T4 has subcategories of T4a and T4b. Assign T4 only when there is no information available to assign one of the subcategories\n\nStated as T4 [NOS]" ], [ "c4A", "cT4a", "Tumor perforates visceral peritoneum", "Invasion of/through serosa (mesothelium) (visceral peritoneum)\n\nStated as T4a" ], [ "c4B", "cT4b", "Tumor directly invades other organs or structures", "Tumor found in adhesion(s) if microscopic examination performed\n\nAdherent to other organs or structures, NOS\n\nFor both rectum and rectosigmoid sites:\n    Bladder\n    Cul de sac (rectouterine pouch)\n    Ovary(ies)\n    Pelvic wall/pelvic plexuses\n    Prostate\n    Skeletal muscle of pelvic floor\n    Uterus\n    Vagina\n\nFor rectosigmoid (C199):\n    Small intestine\n    Colon via serosa\n    Fallopian tube(s)\n    Ureter(s)\n    \nFor rectum (C209):\n    Anal canal/anus extraluminally\n    Bone(s) of pelvis\n    Cervix\n    Ductus deferens\n    Perineum, perianal skin\n    Rectovesical fascia for males only\n    Sacrum\n    Sacral plexus\n    Seminal vesicle(s)\n    Urethra\n\nFurther contiguous extension\n\nStated as T4b" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

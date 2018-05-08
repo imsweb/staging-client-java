@@ -1,0 +1,20 @@
+{
+  "id" : "ssf9_spc",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF9",
+  "title" : "Site-Specific Factor 9",
+  "subtitle" : "Extracapsular Extension Pathologically, Lymph Nodes for Head and Neck",
+  "notes" : "**Note 1:**  Extracapsular extension is assessed on histopathologic examination of surgically resected involved regional nodes.\n\n**Note 2:**  Code the status of extracapsular extension assessed on histopathologic examination of any involved regional lymph node(s) coded in Pathologic N. Do not code extracapsular extension for any distant lymph node(s).\n\n**Note 3:**  If nodes are involved pathologically but there is no statement of extranodal extension in the pathology report, use code 010.\n\n**Note 4:**  Code microscopic or macroscropic extranodal extension as stated in the final diagnosis of the pathology report. If not stated in the final diagnosis, code microscopic if extranodal extension is described only in the microscopic section of the pathology report and macroscopic if extranodal extension is described in the gross section of the pathology report. Macroscopic extension takes priority over microscopic extension.\n\n**Note 5:**  Use code 040 if pathologic extracapsular extension is described with no further information and the pathology report is not available for review.",
+  "last_modified" : "2018-05-02T20:27:56.051Z",
+  "definition" : [ {
+    "key" : "ssf9",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No regional lymph nodes involved pathologically" ], [ "010", "Regional lymph node(s) involved pathologically, no extracapsular extension pathologically" ], [ "020", "Regional lymph node(s) involved pathologically\nMICROSCOPIC extracapsular extension pathologically" ], [ "030", "Regional lymph node(s) involved pathologically\nMACROSCOPIC extracapsular extension pathologically" ], [ "040", "Regional lymph node(s) involved pathologically, extracapsular extension pathologically, unknown if microscopic or macroscopic" ], [ "050", "Regional lymph node(s) involved pathologically, unknown if extracapsular extension" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Histopathologic examination of regional lymph nodes performed, results not available" ], [ "998", "No histopathologic examination of regional lymph nodes OR\nFine needle aspiration or needle biopsy only of regional nodes" ], [ "999", "Unknown if regional lymph nodes involved  pathologically, not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record" ] ]
+}

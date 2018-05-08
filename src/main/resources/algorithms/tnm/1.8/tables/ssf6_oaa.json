@@ -1,0 +1,20 @@
+{
+  "id" : "ssf6_oaa",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF6",
+  "title" : "Site-Specific Factor 6",
+  "subtitle" : "Size of Tumor-Invasive Component",
+  "notes" : "**Note 1:**  Record the code that indicates how the pathologic tumor size was coded in the Tumor Size field. \n\n* [**SEER NOTE**: For cases with neoadjuvant therapy, code the SSF based on Tumor Size - Clinical, code 987]  \n\n**Note 2:**  For this field, \"mixed\" indicates a tumor with both invasive and in situ components.  The tumor may be a single histologic type such as mixed infiltrating ductal and ductal carcinoma in situ or a combined histologic type such as mixed infiltrating ductal and lobular carcinoma in situ.  \n* \"Pure\" indicates a tumor that is only invasive or only in situ\n\n**Note 3:** If size of tumor is given and it is described as an invasive tumor with focal areas of in situ, regard the in situ component as minimal and use code 030.\n\n**Note 4:**  This information is collected for analytic purposes and does not affect the stage grouping algorithm.  Different codes in this field may explain differences in outcome for patients in the same T category or stage group.\n\n**Examples:**\n\n**1.** Patient 1 has a \"mixed\"  tumor measuring 2.5 cm with extensive areas of in situ tumor, and the size of the invasive component is not stated.  Code to 025 in Tumor Size, and it will be classified as T2.  \n* Code to 040 in **Site-Specific Factor 6**\n\n**2.** Patient 2 has a purely invasive tumor measuring 2.5 cm.  Code to 025 in Tumor Size and it will be classified as T2.  \n* However, code to 000 in **Site-Specific Factor 6**\n\nPatient 1's tumor would probably have a better survival than Patient 2's tumor, since it would more likely be a T1 lesion if the true dimensions of the invasive component were known.\n\n**3.** Patient 3 has a 2.5 cm tumor which is invasive with focal areas of in situ. \n* Code **Site-Specific Factor 6** to 030 for in situ described as minimal",
+  "last_modified" : "2018-05-02T20:27:53.501Z",
+  "definition" : [ {
+    "key" : "ssf6",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Entire tumor reported as invasive \n(No in situ component reported)" ], [ "010", "Entire tumor reported as in situ \n(No invasive component reported)" ], [ "020", "Invasive and in situ components present, size of invasive component stated and coded in Tumor Size" ], [ "030", "Invasive and in situ components present, size of entire tumor coded in Tumor Size because size of invasive component not stated AND in situ described as minimal (less than 25%)" ], [ "040", "Invasive and in situ components present, size of entire tumor coded in Tumor Size because size of invasive component not stated AND in situ described as extensive (25% or more)" ], [ "050", "Invasive and in situ components present, size of entire tumor coded in Tumor Size because size of invasive component not stated AND proportions of in situ and invasive not known" ], [ "060", "Invasive and in situ components present, unknown size of tumor (Tumor Size coded 999)" ], [ "987", "Unknown if invasive and in situ components present, unknown if tumor size represents mixed tumor or a \"pure\" tumor (See Note 2)\nClinical tumor size coded" ], [ "988", "Not applicable: Information not collected for this case" ] ]
+}

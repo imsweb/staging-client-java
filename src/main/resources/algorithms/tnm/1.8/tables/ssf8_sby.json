@@ -1,0 +1,20 @@
+{
+  "id" : "ssf8_sby",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF8",
+  "title" : "Site-Specific Factor 8",
+  "subtitle" : "Extranodal Extension of Regional Lymph Nodes",
+  "notes" : "**Note 1:**  Code the status of extranodal extension whether assessed clinically or pathologically of any involved regional lymph node(s). \n* Do not code extranodal extension for any distant lymph node(s)\n\n**Note 2:**  A statement of the presence or absence of extranodal extension in a pathology report takes priority over clinical assessment.\n\n**Note 3:**  If nodes are involved but the clinical documentation and/or pathologic assessment does not indicate extranodal extension, assign code 010 (no extranodal extension documented on the available reports).\n\n**Note 4:**  If the only documentation is a reference to clinically or pathologically involved nodes with no reference to extranodal extension, assign code 030 (no physical exam/imaging report and/or no pathology report available).",
+  "last_modified" : "2018-05-02T20:27:50.097Z",
+  "definition" : [ {
+    "key" : "ssf8",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No regional lymph nodes involved" ], [ "010", "Extranodal extension not present  \nRegional nodes described as mobile" ], [ "020", "Extranodal extension present \nRegional nodes described as fixed or matted" ], [ "030", "Regional nodes involved, unknown if extranodal extension " ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown;  regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record" ] ]
+}

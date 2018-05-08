@@ -1,0 +1,27 @@
+{
+  "id" : "clin_m_ham",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Clin M Corpus Carcinoma",
+  "title" : "Clinical M",
+  "notes" : "**Note 1:** When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and metastatic detail are available, use the metastatic detail in preference to a statement of FIGO stage - see Registrar notes.\n* If the only information is FIGO III [NOS], IIIC [NOS], IIIC1, or IIIC2, assign the appropriate stage and leave clinical T, N, and M blank \n\n**Note 2:**  Metastasis to adnexa, parametria, pelvic serosa, or vagina is coded in primary tumor.\n\n**Distant lymph nodes**\n\n    Deep inguinal, NOS\n       Node of Cloquet or Rosenmuller (highest deep inguinal)\n    Superficial inguinal",
+  "last_modified" : "2018-05-02T20:27:53.387Z",
+  "definition" : [ {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_m_display",
+    "name" : "Clinical M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Only information available is FIGO Stage I [NOS], IA, IB, II, IIIA, IIIB, or IVA\n\nUnknown; distant metastasis not stated\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis, EXCLUDING metastasis to: \n    Vagina\n    Pelvic serosa\n    Adnexa \n    Inguinal lymph nodes\n    Intra-abdominal lymph nodes \n         Other than para-aortic or pelvic nodes", "CLINICAL assessment only:\nDistant lymph node(s), NOS\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n(Excluding metastasis to vagina, pelvic, serosa, or adnexa)\n\nFIGO Stage IVB\n\nStated as M1" ], [ "p1", "pM1", "Distant metastasis, EXCLUDING metastasis to: \n    Vagina\n    Pelvic serosa\n    Adnexa \n    Inguinal lymph nodes\n    Intra-abdominal lymph nodes \n         Other than para-aortic or pelvic nodes", "HISTOLOGICALLY confirmed:\nDistant lymph node(s), NOS\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n(Excluding metastasis to vagina, pelvic, serosa, or adnexa)\n\nFIGO Stage IVB" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Only information is FIGO Stage III [NOS], IIIC [NOS], IIIC1, or IIIC2\n\nClinical classification criteria not met\nClinical classification criteria met, evaluation done:\n     No information about diagnostic workup\n     Results not documented in patient record\nClinical evaluation of T and N not done, no evidence metastatic disease \nTumor first detected on surgical resection (no clinical workup)" ] ]
+}

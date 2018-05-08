@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_jbk",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF1",
+  "title" : "Site-Specific Factor 1",
+  "subtitle" : "Tumor Size",
+  "notes" : "**Note 1:**  Code the largest dimension of the tumor.  Record the actual measurement in tenths of millimeters.  \n\n**Note 2:**  Code the specific tumor size as stated in the medical record.  Use code 991 or 992 if the physician's statement about T value is the only information available about the size of the tumor.",
+  "last_modified" : "2018-05-02T20:27:52.582Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No mass/tumor found" ], [ "001-979", "00.1 - 97.9 millimeters (mm) \n(Largest tumor dimension to nearest tenth of mm)\n\nExamples:\n    001    0.1 mm         \n    010    1 mm\n    042    4.2 mm\n    100    10 mm, 1 centimeter (cm)\n    103    10.3 mm" ], [ "980", "98.0 mm or larger" ], [ "988", "Not applicable: Information not collected for this case" ], [ "990", "Microinvasion\nMicroscopic focus or foci only and no size of focus given" ], [ "991", "Described as \"less than 5 mm\"\n\nStated as T1 with no other information on size" ], [ "992", "Described as \"greater than 5 mm\"\n\nStated as T2 with no other information on size" ], [ "999", "Unknown; size not stated\nSize of tumor cannot be assessed\nNot documented in patient record" ] ]
+}

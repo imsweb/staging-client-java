@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_net_stomach",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Schema Selection NETStomach",
+  "title" : "Schema selection for NETStomach",
+  "last_modified" : "2018-05-02T20:27:52.455Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C160-C166,C168-C169", "8153,8240-8242,8246,8249", "MATCH" ] ]
+}

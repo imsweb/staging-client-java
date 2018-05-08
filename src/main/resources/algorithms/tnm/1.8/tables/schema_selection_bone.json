@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_bone",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Schema Selection Bone",
+  "title" : "Schema selection for Bone",
+  "last_modified" : "2018-05-07T19:54:53.821Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C400-C403,C408-C409,C410-C414,C418-C419", "8000-9136,9141-9582,9700-9701", "MATCH" ] ]
+}

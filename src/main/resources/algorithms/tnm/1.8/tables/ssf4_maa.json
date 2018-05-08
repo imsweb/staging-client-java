@@ -1,0 +1,21 @@
+{
+  "id" : "ssf4_maa",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF4",
+  "title" : "Site-Specific Factor 4",
+  "subtitle" : "Serum Lactate Dehydrogenase (LDH)",
+  "notes" : "**Note 1:**  Per AJCC, \"To confirm the elevated serum [lactate dehydrogenase] LDH for staging purposes, it is recommended to obtain two or more determinations obtained more than 24 [hours] apart, since an elevated serum LDH on a single determination can be falsely positive as a result of hemolysis or other factors unrelated to melanoma metastases.\" (1)\n\n**Note 2:**  Positive results from two laboratory tests are required to code a positive value in this field. If the first test is positive and the second test is negative, code the results as negative or within normal limits, unless an additional test with positive results is performed.  \n* If the first test is positive and there is no second test, record 998 if it is known that a second test was not performed; code 999 if there is no information about a second test\n* If the only test is negative or within normal limits, code the results from the single test\n\n**Note 3:**  Record the range for the positive LDH value prior to treatment or within six weeks of diagnosis.  Give priority to the first positive test performed.  \n* The information should be taken from the same test used to code **Site-Specific Factor 5, Serum Lactate Dehydrogenase (LDH) Lab Value** and **Site-Specific Factor 6, LDH Upper Limits of Normal.**",
+  "footnotes" : "(1) American Joint Committee on Cancer., & Edge, S.B. (2010) *AJCC Cancer Staging Manual (7th ed.)*. New York; London: Springer, pg. 334",
+  "last_modified" : "2018-05-02T20:27:53.634Z",
+  "definition" : [ {
+    "key" : "ssf4",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Within normal limits" ], [ "010", "Range 1:  Less than 1.5 x upper limit of normal for lactate dehydrogenase (LDH) assay\n\nStated as elevated, NOS" ], [ "020", "Range 2:  1.5 - 10 x upper limit of normal for LDH assay" ], [ "030", "Range 3:  More than 10 x upper limit of normal for LDH assay" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

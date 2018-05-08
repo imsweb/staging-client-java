@@ -1,0 +1,27 @@
+{
+  "id" : "clin_n_dfv",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Clin N Merkel Cell Penis",
+  "title" : "Clinical N",
+  "notes" : "**Note 1:** Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Note 2:**  Bilateral nodes are classified as regional nodes for tumors with bidirectional drainage to primary nodal basins, as shown on lymphoscintigraphy.  \n* Clinical assessment of bilateral regional nodal involvement is required for tumors where lymphoscintigraphy is not performed\n\n**Note 3:**  Contiguous or secondary nodal basins are the next nodal drainage basins beyond the primary nodal basins.  Secondary basins are regional for TNM staging. \n\n**Note 4:** In transit metastasis is defined as a tumor distinct from the primary lesion and located either between the primary lesion and the draining regional lymph nodes or distal to the primary lesion.\n* In transit metastasis is coded in N (regional lymph nodes)\n\n**Note 5:** Code isolated tumor cells (ITCs) as positive nodes.\n\n**Regional lymph nodes**\n\n    Isolated tumor cells (ITCs) only\n    SINGLE superficial inguinal (femoral) regional lymph node\n    SINGLE inguinal node, NOS (unknown if superficial or deep)\n    MULTIPLE or BILATERAL superficial inguinal (femoral) regional lymph nodes\n    MULTIPLE or BILATERAL inguinal nodes, NOS (unknown if superficial or deep)\n\n    Deep inguinal, NOS\n        Node of Cloquet or Rosenmuller (highest deep inguinal)\n    Pelvic lymph nodes (unilateral or bilateral)\n       External iliac\n       Internal iliac (hypogastric)\n        Obturator\n    Pelvic nodes in contiguous or secondary nodal basin \n    Pelvic nodes, NOS",
+  "last_modified" : "2018-05-02T20:27:52.932Z",
+  "definition" : [ {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n_display",
+    "name" : "Clinical N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cNX", "Regional lymph nodes cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess N\n    Regional lymph node involvement cannot be determined or findings inconclusive\nPhysician assigns cNX, no other information available to determine N" ], [ "c0", "cN0", "No regional lymph node metastasis", "" ], [ "c1", "cN1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "c2", "cN2", "In-transit metastasis", "Clinically apparent in-transit metastasis WITH or WITHOUT occult nodal metastasis\n\nClinically apparent in-transit metastasis and clinically apparent nodal metastasis \n\nStated as N2" ], [ "88", "88", "Not applicable", "Death certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met\nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

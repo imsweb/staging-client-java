@@ -1,0 +1,19 @@
+{
+  "id" : "gist_appendix_mitotic_rate_calculation",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Mitotic Rate Calculation",
+  "title" : "Mitotic Rate Calculation Table",
+  "notes" : "**Note:**  The mitotic count recorded in Site-Specific Factor 11 is used to determine the mitotic rate as shown in this table.  The mitotic rate from the Mitotic Rate Calculation Table, \"low\" or \"high\", is used in the calculation of the TNM 7 stage group as shown in the TNM 7 Stage tables.",
+  "last_modified" : "2018-05-02T20:27:54.933Z",
+  "definition" : [ {
+    "key" : "ssf11",
+    "name" : "SSF11",
+    "type" : "INPUT"
+  }, {
+    "key" : "mitotic_rate",
+    "name" : "Mitotic Rate",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000-050", "VALUE:Low" ], [ "051-100", "VALUE:High" ], [ "110", "VALUE:High" ], [ "988", "VALUE:Low" ], [ "990", "VALUE:Low" ], [ "991", "VALUE:High" ], [ "996", "VALUE:Unknown" ], [ "998", "VALUE:Unknown" ], [ "999", "VALUE:Unknown" ] ]
+}

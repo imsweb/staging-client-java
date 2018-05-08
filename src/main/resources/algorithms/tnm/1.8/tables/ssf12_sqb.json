@@ -1,0 +1,20 @@
+{
+  "id" : "ssf12_sqb",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF12",
+  "title" : "Site-Specific Factor 12",
+  "subtitle" : "Extravascular Matrix Patterns, Networks",
+  "notes" : "**Note:**  Record results as reported on clinical examination with confocal indocyanine green angiography, or on pathologic examination of tissue if resection performed.",
+  "last_modified" : "2018-05-02T20:27:50.133Z",
+  "definition" : [ {
+    "key" : "ssf12",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Networks not identified on clinical examination, not identified on pathologic assessment" ], [ "010", "Networks not identified on clinical examination, no pathologic assessment or pathologic assessment unknown" ], [ "020", "Networks identified on clinical examination, no pathologic assessment or pathologic assessment unknown" ], [ "030", "Networks not identified on pathologic assessment, no clinical examination or clinical examination unknown" ], [ "040", "Networks identified on pathologic assessment, no clinical examination or clinical examination unknown" ], [ "050", "Networks identified on clinical examination and pathologic assessment" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Extravascular matrix patterns assessed, results not available" ], [ "998", "Extravascular matrix patterns not assessed clinically or pathologically" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

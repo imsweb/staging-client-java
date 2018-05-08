@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_salivary_gland_other",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Schema Selection SalivaryGlandOther",
+  "title" : "Schema selection for SalivaryGlandOther",
+  "last_modified" : "2018-05-02T20:27:52.453Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C081,C088-C089", "8000-9136,9141-9582,9700-9701", "MATCH" ] ]
+}

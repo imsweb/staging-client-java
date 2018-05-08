@@ -1,0 +1,20 @@
+{
+  "id" : "ssf21_srb",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "SSF21",
+  "title" : "Site-Specific Factor 21",
+  "subtitle" : "Growth Pattern of Primary Tumor",
+  "notes" : "**Note:**  Code the growth pattern of the primary tumor as documented by the pathologist.",
+  "last_modified" : "2018-05-02T20:27:53.830Z",
+  "definition" : [ {
+    "key" : "ssf21",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Circumscribed/nodular" ], [ "020", "Diffusely infiltrative" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Test performed, results not in chart\nTest performed, results not able to be interpreted" ], [ "998", "No histologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

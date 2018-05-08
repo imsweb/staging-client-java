@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_urethra_39553",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Clin T Urethra",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  In case of multifocal noninvasive Ta and Tis tumors, assign pTis. \n\n**Note 2:**  If assigned pTis, then Behavior code ICD-O-3 must be /2.\n\n**Note 3:**  The presence of muscle around the urethra varies between males and females and, in males, varies among the segments of the urethra. The outer muscular coat (muscularis) is absent in most of the male urethra except for the membranous portion. In females, the muscle coat is continuous from the bladder wall. In addition, in both males and females, there is sphincteric muscle, which may be smooth or skeletal muscle. \n* Invasion of periurethral muscle is assigned T1, unless it is specified as invasion of sphincter muscle, which is assigned T2\n* Invasion of muscle at the neck of the bladder is assigned T3\n* If the only information is \"invasion of muscle\", NOS, or \"invasion of periurethral muscle\", NOS, assign T1",
+  "last_modified" : "2018-05-02T20:27:53.775Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T \n    Extension cannot be determined\nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor", "" ], [ "pA", "pTa", "Non-invasive papillary, polypoid, or verrucous carcinoma", "Histologically confirmed" ], [ "pIS", "pTis", "Carcinoma in situ", "Histologically confirmed:\nIntraepithelial, noninvasive (flat, sessile), NOS" ], [ "pISD", "pTispd", "Carcinoma in situ, involvement of prostatic ducts", "Histologically confirmed:\nIntraepithelial, noninvasive: involvement of prostatic ducts" ], [ "pISU", "pTispu", "Carcinoma in situ, involvement of prostatic urethra", "Histologically confirmed: \nIntraepithelial, noninvasive: involvement of prostatic urethra" ], [ "c1", "cT1", "Tumor invades subepithelial connective tissue", "Subepithelial connective tissue (lamina propria, submucosa) invaded\n\nLocalized, NOS\n\nStated as T1" ], [ "c2", "cT2", "Tumor invades any of the following: \n    Corpus spongiosum\n    Periurethral muscle\n    Prostate", "Muscularis invaded\n\nSphincter muscle; periurethral muscle specified as sphincter\n\nStated as T2" ], [ "c3", "cT3", "Tumor invades any of the following: \n    Beyond prostatic capsule \n    Bladder neck (extraprostatic extension)\n    Corpus cavernosum", "Vagina, anterior or NOS\n\nStated as T3" ], [ "c4", "cT4", "Tumor invades other adjacent organs (invasion of the bladder)", "Other adjacent organs, including\n    Bladder (excluding bladder neck)\n    Seminal vesicle(s)\n\nFurther contiguous extension\n\nStated as T4" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

@@ -1,0 +1,28 @@
+{
+  "id" : "path_t_perihilar_bile_ducts_88350",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Path T Perihilar Bile Ducts",
+  "title" : "Pathologic T",
+  "notes" : "**Note 1:**  Perihilar bile duct tumors arise at the confluence of the right and left hepatic ducts in the hilar area of the liver.\n\n**Note 2:**  The biliary radicals are the ducts or tubes that drain bile into the intestine as part of the digestive process.  The second-order biliary radicals are the next largest branches or ducts of the biliary system which join to form or empty into the main hepatic bile duct.\n\n**Note 3:**  T3 and T4 are defined strictly in terms of invasion into specific large blood vessels and the biliary radicals within the liver.  Assign T4  when the specified vessels and/or the biliary radical within the liver plus other named organs are involved. \n\n**Note 4:**  Involvement within the porta hepatis is coded according to the structures involved: portal vein, common hepatic artery, and common hepatic duct.",
+  "footnotes" : "\\* T2 [NOS] is not defined by UICC in the 7th edition. Approval has been provided by UICC to use \"Invasion beyond wall of the bile duct or invasion of hepatic parenchyma\" for T2 [NOS].\n\\# T2 [NOS] is not defined in AJCC 7th edition.",
+  "last_modified" : "2018-05-02T20:27:55.732Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pTX", "Primary tumor cannot be assessed", "Pathologic classification criteria met, evaluation done: \n    Physician unable to assess T\n    Surgical resection of primary tumor, extension not stated \nPhysician assigns pTX, no other information available to determine T" ], [ "p0", "pT0", "No evidence of primary tumor", "" ], [ "pIS", "pTis", "Carcinoma in situ", "Intraepithelial, noninvasive\n\nStated as Tis" ], [ "p1", "pT1", "Tumor confined to the bile duct, with extension up to the muscle layer or fibrous tissue", "Invasive tumor of perihilar (proximal) bile duct(s) confined to:\n    Fibromuscular layer (tunic muscularis)\n    Lamina propria\n    Mucosa, NOS\n    Muscularis propria\n    Submucosa (superficial invasion)\n    Subepithelial connective tissue (tunica mucosa)\n\nLocalized, NOS\n\nStated as T1" ], [ "p2", "pT2", "Not defined by UICC*#", "Note:  T2 has subcategories of T2a and T2b. Assign T2 only when there is no information available to assign one of the subcategories.\n\nInvasion beyond wall of the bile duct or invasion of hepatic parenchyma\n\nStated as T2[NOS]" ], [ "p2A", "pT2a", "Tumor invades beyond the wall of the bile duct to surrounding adipose tissue", "Beyond wall of bile duct\nPeriductal/fibromuscular connective tissue\n\nStated as T2a" ], [ "p2B", "pT2b", "Tumor invades adjacent hepatic parenchyma", "Adjacent hepatic parenchyma\nLiver extension, NOS\nLiver, NOS\n\nStated as T2b" ], [ "p3", "pT3", "Tumor invades unilateral branches of the portal vein or hepatic artery", "Unilateral branches of portal vein (right or left)\nUnilateral branches of hepatic artery (right or left)\n\nStated as T3" ], [ "p4", "pT4", "Tumor invades the main portal vein or it's branches bilaterally OR\nThe common hepatic artery OR\nThe second-order biliary radicals bilaterally OR\nUnilateral second-order biliary radicals with contralateral portal vein or hepatic artery involvement", "Main portal vein or its branches bilaterally\nCommon hepatic artery\nHepatic artery, NOS\nPortal vein, NOS\n\nStated as T4" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nPathologic classification criteria met, evaluation done: \n    Results not documented in patient record \n    No surgical resection of  known primary tumor (not T0) \n    Resection insufficient for site-specific pathologic assessment\nNo surgical resection of primary tumor and there isn’t a positive biopsy of a structure in the highest T category and highest N category\nEvidence of metastatic disease (pM1), no other workup\nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

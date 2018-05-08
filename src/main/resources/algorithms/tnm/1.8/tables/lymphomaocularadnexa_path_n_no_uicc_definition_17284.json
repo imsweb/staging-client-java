@@ -1,0 +1,19 @@
+{
+  "id" : "lymphomaocularadnexa_path_n_no_uicc_definition_17284",
+  "algorithm" : "tnm",
+  "version" : "1.8",
+  "name" : "Path N",
+  "title" : "LymphomaOcularAdnexa Path N (no UICC definition)",
+  "notes" : "**Note 1:**  Peripheral nodes are located in the upper and lower limbs, including axillary and inguinal nodes.  Central lymph nodes are located in the trunk, including mediastinal, para-aortic, and mesenteric nodes.\n\n**Note 2:**  Involvement of peripheral and central lymph nodes, distant nodes for ocular adnexal lymphomas, is coded in Pathologic N and not in Pathologic M.\n\n**Note 3:**  When coding Regional Nodes Positive and Regional Nodes Examined, only include regional nodes. Do not include distant nodes coded in Pathologic N. If the only information available is for Lymph Nodes, NOS, coded as NX in Pathologic N, assume these are regional nodes for coding Regional Nodes Positive and Regional Nodes Examined.\n\n**Note 4:** UICC does not define Lymphoma Ocular Adnexa. A list of all possible Pathologic N values is provided.",
+  "last_modified" : "2018-05-02T20:27:56.724Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathologic N Display",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pNX" ], [ "p0", "pN0" ], [ "p0I-", "pN0i-" ], [ "p0I+", "pN0i+" ], [ "p0M-", "pN0m-" ], [ "p0M+", "pN0m+" ], [ "p1MI", "pN1mi" ], [ "p0A", "pN0a" ], [ "p0B", "pN0b" ], [ "p1", "pN1" ], [ "p1A", "pN1a" ], [ "p1B", "pN1b" ], [ "p1C", "pN1c" ], [ "p2", "pN2" ], [ "p2A", "pN2a" ], [ "p2B", "pN2b" ], [ "p2C", "pN2c" ], [ "p3", "pN3" ], [ "p3A", "pN3a" ], [ "p3B", "pN3b" ], [ "p3C", "pN3c" ], [ "p4", "pN4" ], [ "c0", "cN0" ], [ "88", "Not Applicable" ] ]
+}
