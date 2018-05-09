@@ -1,0 +1,22 @@
+{
+  "id" : "ajcc_chapter_calculation_82941",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2018-05-09T15:33:18.564Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "8714", "VALUE:54.1", "Corpus Uteri: Leiomyosarcoma and Endometrial Stromal Sarcoma" ], [ "8800,8805,8890-8891,8896", "VALUE:54.1", "Corpus Uteri: Leiomyosarcoma and Endometrial Stromal Sarcoma" ], [ "8900,8910,8930-8931,8935", "VALUE:54.1", "Corpus Uteri: Leiomyosarcoma and Endometrial Stromal Sarcoma" ], [ "8710-8713,8801-8804,8806-8881,8892-8895,8897-8898", "VALUE:XX", "Other Corpus Uteri: Leiomyosarcoma and Endometrial Stromal Sarcoma" ], [ "8901-8905,8912-8921,8932,8934,8936-8941", "VALUE:XX", "Other Corpus Uteri: Leiomyosarcoma and Endometrial Stromal Sarcoma" ], [ "8951-8975, 8981-9137, 9141-9582", "VALUE:XX", "Other Corpus Uteri: Leiomyosarcoma and Endometrial Stromal Sarcoma" ] ]
+}

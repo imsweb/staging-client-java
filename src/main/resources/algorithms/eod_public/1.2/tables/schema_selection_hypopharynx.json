@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_hypopharynx",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Selection Hypopharynx",
+  "title" : "Schema selection for Hypopharynx",
+  "last_modified" : "2018-05-09T15:33:19.809Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C129,C130-C132,C138-C139", "8000-8700, 9700-9701", "MATCH" ] ]
+}

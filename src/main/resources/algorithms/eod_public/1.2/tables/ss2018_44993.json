@@ -1,0 +1,21 @@
+{
+  "id" : "ss2018_44993",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "SS2018: Myeloma and Plasma Cell Disorders",
+  "title" : "Summary Stage 2018: Myeloma and Plasma Cell Disorders",
+  "subtitle" : "Summary Stage 2018",
+  "notes" : "**Myeloma and Plasma Cell Disorders**\n\n9671 Lymphoplasmacytic lymphoma (except C441, C690, C695-C696)\n9731 Plasmacytoma, NOS\n9732 Plasma cell myeloma/multiple myeloma\n9734 Plasmacytoma, extramedullary (except C441, C690, C695-C696)\n9761 Waldenstrom Macroglobulinemia \n\n**Note 1:** The following sources were used in the development of this chapter\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)\n* SEER Summary Staging Manual-2000: Codes and Coding Instructions (https://seer.cancer.gov/tools/ssm/)\n* Collaborative Stage Data Collection System, version 02.05:  https://cancerstaging.org/cstage/Pages/default.aspx \n* Chapter 82 *Plasma Cell Myeloma and Plasma Cell Disorder*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.\n\n**Note 2:** Codes 0, 2, and 4 are not applicable for this chapter.\n\n**Note 3:** Plasma cell myeloma/multiple myeloma (9732) is a widely disseminated plasma cell neoplasm, characterized by a single clone of plasma cells derived from B cells that grows in the bone marrow. It is always coded to 7 for systemic involvement.\n\n**Note 4:** Lymphoplasmacytic lymphoma (9671) and Waldenstrom Macroglobulinemia (9761) are now collected with the plasma cell disorders. These are systemic diseases and should always be coded 7.",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 3-30\n\n(5) **Introduction to Hematologic Malignancies**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 931-935\n\n(6) Bergsagel, P.L., Jaffe, E.S., Leonard, J.P., et al. **Plasma Cell Myeloma and Plasma Cell Disorders**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 973-977",
+  "last_modified" : "2018-05-09T15:33:21.437Z",
+  "definition" : [ {
+    "key" : "ss2018",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Localized only\n- Single plasmacytoma occurring in bone (osseous or medullary) (9731)\n  + WITH or WITHOUT soft tissue extension\n- Single plasmacytoma, NOS (9734)\n  + Single plasmacytoma occurring outside of bone (extraosseous or extramedullary) (9731)" ], [ "3", "Regional lymph node(s) involved only\n- Extraosseous plasmacytomas only (9734)\n  + Regional lymph node(s), NOS\n     * Lymph node(s), NOS" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Lymphoplasmacytic lymphoma (9671)\n- Plasmacytomas (9731, 9734)\n  + Multiple extraosseous or extramedullary plasmacytomas (9734)\n  + Multiple osseous or medullary plasmacytomas (9731)\n  + Multiple plasmacytomas, NOS (9731, 9734)\n- Plasma cell myeloma (9732)\n  + Multiple myeloma\n  + Myeloma, NOS\n- Waldenstrom Macroglobulinemia (9761)" ], [ "9", "Unknown if extension or metastasis (applicable for 9731 and 9734 only)" ] ]
+}

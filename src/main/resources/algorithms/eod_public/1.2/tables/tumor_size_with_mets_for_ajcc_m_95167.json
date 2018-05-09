@@ -1,0 +1,23 @@
+{
+  "id" : "tumor_size_with_mets_for_ajcc_m_95167",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Tumor Size with Mets for M",
+  "title" : "Tumor Size with EOD Mets for M",
+  "notes" : "If EOD Mets = 00, Tumor Size Summary is necessary to determine the M value.",
+  "last_modified" : "2018-05-09T15:33:19.998Z",
+  "definition" : [ {
+    "key" : "eod_mets",
+    "name" : "EOD Mets",
+    "type" : "INPUT"
+  }, {
+    "key" : "size_summary",
+    "name" : "Tumor Size",
+    "type" : "INPUT"
+  }, {
+    "key" : "eod_2018_m",
+    "name" : "EOD 2018 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "000-990", "VALUE:M0" ], [ "00", "998", "VALUE:M1" ], [ "00", "999", "VALUE:M0" ], [ "10,20,30,70", "*", "MATCH" ] ]
+}

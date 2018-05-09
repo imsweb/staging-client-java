@@ -1,0 +1,21 @@
+{
+  "id" : "ss2018_kaposi_sarcoma_17563",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "SS2018: Kaposi Sarcoma",
+  "title" : "Summary Stage 2018: Kaposi Sarcoma",
+  "subtitle" : "Summary Stage 2018",
+  "notes" : "**Kaposi Sarcoma**\n\n9140 Kaposi Sarcoma (C000-C699, C739-C750, C754-C809)\n\n**Note 1:** The following sources were used in the development of this chapter\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)\n* SEER Summary Staging Manual-2000: Codes and Coding Instructions (https://seer.cancer.gov/tools/ssm/)\n* Collaborative Stage Data Collection System, version 02.05:  https://cancerstaging.org/cstage/Pages/default.aspx \n* Chapter 45 *Soft Tissue Sarcoma – Unusual Histologies and Sites*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.\n\n**Note 2:** Kaposi Sarcoma of the brain, central nervous system and intracranial glands is now collected in the following:\n* C700, C710-C719: Brain\n* C701, C709, C720-C725, C728-C729: CNS Other\n* C751-C753: Intracranial Gland\n\n**Note 3:** Summary Stage is the only applicable staging system for this site/histology/schema.\n\n**Note 4:** Code 0 is not applicable for this chapter.",
+  "footnotes" : "1. Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n2. Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions,** National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n3. Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05.** American Joint Committee on Cancer (Chicago, IL)\n\n4. Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 3-30\n\n5. Pollock, R.E., Maki, R.G. **Introduction to Soft Tissue Sarcoma** In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 489-497\n\n6. Maki, R.G., Pollock, R.E., et al. **Soft Tissue Sarcoma – Unusual Histologies and Sites**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 539-545",
+  "last_modified" : "2018-05-09T15:33:21.226Z",
+  "definition" : [ {
+    "key" : "ss2018",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Localized only\n- Single or multiple lesion(s)\n    + Mucosa (e.g., oral cavity, anus, rectum, vagina, vulva)\n    + Skin and/or connective tissue\n    + Viscera (e.g., pulmonary, gastrointestinal tract, spleen, other)" ], [ "2", "Regional by direct extension only\n- Multiple lesion(s)\n    + Mucosa plus skin and/or connective tissue\n    + Viscera plus mucosa    \n    + Viscera plus skin and/or connective tissue" ], [ "3", "Regional lymph node(s) involved only\n- Both clinically enlarged palpable lymph node(s) (adenopathy)  and pathologically positive lymph node(s)\n- Clinically enlarged palpable lymph node(s) (adenopathy)  and either pathologically negative node(s) or no pathological statement\n- No clinically enlarged palpable lymph node(s) (adenopathy) but pathologically positive lymph node(s)\n- Regional lymph node(s), NOS\n  + Lymph node(s), NOS" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n- Codes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant site(s) (including further contiguous extension)\n  + Multiple lesions in all THREE of following: viscera plus mucosa plus skin and/or connective tissue\n- Distant lymph node(s), NOS\n- Distant metastasis, NOS \n  + Carcinomatosis \n  + Distant metastasis WITH or WITHOUT distant lymph node(s)" ], [ "9", "Unknown if extension or metastasis" ] ]
+}

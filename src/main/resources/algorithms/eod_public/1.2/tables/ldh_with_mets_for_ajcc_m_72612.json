@@ -1,0 +1,23 @@
+{
+  "id" : "ldh_with_mets_for_ajcc_m_72612",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "LDH with Mets for M",
+  "title" : "LDH with Mets for M",
+  "notes" : "If EOD Mets = 10, 20, 30, 50, 60 or 70, LDH Level [#3869] is necessary to determine the M value.  This is the flag indicating normal vs elevated.",
+  "last_modified" : "2018-05-09T15:33:20.143Z",
+  "definition" : [ {
+    "key" : "eod_mets",
+    "name" : "EOD Mets",
+    "type" : "INPUT"
+  }, {
+    "key" : "ldh_pretx_level",
+    "name" : "LDH PreTX Level",
+    "type" : "INPUT"
+  }, {
+    "key" : "eod_2018_m",
+    "name" : "EOD 2018 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "10,20", "0", "VALUE:M1a(0)" ], [ "10,20", "1", "VALUE:M1a(1)" ], [ "10,20", "7,9", "VALUE:M1a" ], [ "30", "0", "VALUE:M1b(0)" ], [ "30", "1", "VALUE:M1b(1)" ], [ "30", "7,9", "VALUE:M1b" ], [ "50", "0", "VALUE:M1c(0)" ], [ "50", "1", "VALUE:M1c(1)" ], [ "50", "7,9", "VALUE:M1c" ], [ "60", "0", "VALUE:M1d(0)" ], [ "60", "1", "VALUE:M1d(1)" ], [ "60", "7,9", "VALUE:M1d" ], [ "70", "0", "VALUE:M1" ], [ "70", "1", "VALUE:M1" ], [ "70", "7,9", "VALUE:M1" ], [ "00", "*", "MATCH" ] ]
+}

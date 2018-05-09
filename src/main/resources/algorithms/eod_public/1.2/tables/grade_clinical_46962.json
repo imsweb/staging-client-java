@@ -1,0 +1,19 @@
+{
+  "id" : "grade_clinical_46962",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Grade Clinical",
+  "title" : "Grade Clinical",
+  "notes" : "**Note 1:** Clinical grade must not be blank.\n\n**Note 2:** Assign the highest grade from the primary tumor assessed during the clinical time frame. \n\n**Note 3:** Codes 1-5 take priority over A-E. \n\n**Note 4:** Code 9 when\n* Grade from primary site is not documented\n* Clinical workup is not done (for example, cancer is an incidental finding during surgery for another condition)\n* Grade checked “not applicable” on CAP Protocol (if available) and no other grade information is available\n\n**Note 5:** If there is only one grade available and it cannot be determined if it is clinical, pathological, or after neo-adjuvant therapy, assign as a clinical grade and code unknown (9) for pathological grade, and blank for post-therapy grade. \n\n**Note 6:** If you are assigning an AJCC 8th edition stage group\n* Grade is required to assign stage group\n* Codes A-E are treated as an unknown grade when assigning AJCC stage group \n* An unknown grade may result in an unknown stage group",
+  "last_modified" : "2018-05-09T15:33:19.224Z",
+  "definition" : [ {
+    "key" : "grade_clin",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "Description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Grade Group 1: Gleason score less than or equal to 6" ], [ "2", "Grade Group 2: Gleason score 7\nGleason pattern 3+4" ], [ "3", "Grade Group 3: Gleason score 7\nGleason pattern 4+3" ], [ "4", "Grade Group 4: Gleason score 8" ], [ "5", "Grade Group 5: Gleason score 9 or 10" ], [ "A", "Well differentiated" ], [ "B", "Moderately differentiated" ], [ "C", "Poorly differentiated" ], [ "D", "Undifferentiated, anaplastic" ], [ "E", "Stated as “Gleason score 7” with no patterns documented or \nAny Gleason patterns combination equal to 7 not specified in 2 or 3" ], [ "9", "Grade cannot be assessed; Unknown" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "nodes_pos_fah",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Nodes Pos",
+  "title" : "Regional Nodes Positive",
+  "notes" : "**Note 1:**  Record this field even if there has been preoperative treatment.\n\n**Note 2:**  Lymph nodes with isolated tumor cells (ITCs) are counted as positive lymph nodes.  ITCs are defined as any tumor deposits in lymph nodes less than or equal to 0.2 mm.\n\n**Note 3:**  Although satellite nodules and in-transit metastasis are coded under Regional Lymph Nodes (N), DO NOT count as Regional Nodes Positive in this field.",
+  "last_modified" : "2018-05-09T15:33:19.919Z",
+  "definition" : [ {
+    "key" : "nodes_pos",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "All nodes examined negative." ], [ "01-89", "1 - 89 nodes positive (code exact number of nodes positive)" ], [ "90", "90 or more nodes positive" ], [ "95", "Positive aspiration or core biopsy of lymph node(s)" ], [ "97", "Positive nodes - number unspecified" ], [ "98", "No nodes examined" ], [ "99", "Unknown if nodes are positive; not applicable\nNot documented in patient record" ] ]
+}

@@ -1,0 +1,26 @@
+{
+  "id" : "tnm8_path_stage_ubt",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "TNM 8 Path Stage Group",
+  "title" : "TNM 8 Path Stage Group",
+  "last_modified" : "2018-05-09T15:33:20.582Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0", "0", "0", "VALUE:99" ], [ "1", "0", "0", "VALUE:1" ], [ "1A ", "0", "0", "VALUE:1A" ], [ "1B ", "0", "0", "VALUE:1B" ], [ "1C ", "0", "0", "VALUE:1C" ], [ "2", "0", "0", "VALUE:2" ], [ "2A ", "0", "0", "VALUE:2" ], [ "2B ", "0", "0", "VALUE:2" ], [ "3", "0", "0", "VALUE:3" ], [ "3A ", "0", "0", "VALUE:3A" ], [ "3B ", "0", "0", "VALUE:3B" ], [ "4", "0", "0", "VALUE:4A" ], [ "X ", "0", "0", "VALUE:99" ], [ "0", " 0I+ ", "0", "VALUE:99" ], [ "1", " 0I+ ", "0", "VALUE:1" ], [ "1A ", " 0I+ ", "0", "VALUE:1A" ], [ "1B ", " 0I+ ", "0", "VALUE:1B" ], [ "1C ", " 0I+ ", "0", "VALUE:1C" ], [ "2", " 0I+ ", "0", "VALUE:2" ], [ "2A ", " 0I+ ", "0", "VALUE:2" ], [ "2B ", " 0I+ ", "0", "VALUE:2" ], [ "3", " 0I+ ", "0", "VALUE:3" ], [ "3A ", " 0I+ ", "0", "VALUE:3A" ], [ "3B ", " 0I+ ", "0", "VALUE:3B" ], [ "4", " 0I+ ", "0", "VALUE:4A" ], [ "X ", " 0I+ ", "0", "VALUE:99" ], [ "0", "1", "0", "VALUE:99" ], [ "1", "1", "0", "VALUE:3C" ], [ "1A ", "1", "0", "VALUE:3C" ], [ "1B ", "1", "0", "VALUE:3C" ], [ "1C ", "1", "0", "VALUE:3C" ], [ "2", "1", "0", "VALUE:3C" ], [ "2A ", "1", "0", "VALUE:3C" ], [ "2B ", "1", "0", "VALUE:3C" ], [ "3", "1", "0", "VALUE:3C" ], [ "3A ", "1", "0", "VALUE:3C" ], [ "3B ", "1", "0", "VALUE:3C" ], [ "4", "1", "0", "VALUE:4A" ], [ "X ", "1", "0", "VALUE:99" ], [ "0", " X ", "0", "VALUE:99" ], [ "1", " X ", "0", "VALUE:99" ], [ "1A ", " X ", "0", "VALUE:99" ], [ "1B ", " X ", "0", "VALUE:99" ], [ "1C ", " X ", "0", "VALUE:99" ], [ "2", " X ", "0", "VALUE:99" ], [ "2A ", " X ", "0", "VALUE:99" ], [ "2B ", " X ", "0", "VALUE:99" ], [ "3", " X ", "0", "VALUE:3" ], [ "3A ", " X ", "0", "VALUE:3" ], [ "3B ", " X ", "0", "VALUE:3" ], [ "4", " X ", "0", "VALUE:4A" ], [ "X ", " X ", "0", "VALUE:99" ], [ "*", "*", "1", "VALUE:4B" ], [ "88", "88", "88", "VALUE:88" ] ]
+}

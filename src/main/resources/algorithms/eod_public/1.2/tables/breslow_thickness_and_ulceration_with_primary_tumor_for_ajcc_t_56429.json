@@ -1,0 +1,27 @@
+{
+  "id" : "breslow_thickness_and_ulceration_with_primary_tumor_for_ajcc_t_56429",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Breslow Thickness and Ulceration with Primary Tumor for T",
+  "title" : "Breslow Thickness and Ulceration with Primary Tumor for T",
+  "notes" : "If EOD Primary Tumor = 100-700, Breslow Thickness and Melanoma Ulceration are necessary to determine the T value.",
+  "last_modified" : "2018-05-09T15:33:19.601Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "EOD Primary Tumor",
+    "type" : "INPUT"
+  }, {
+    "key" : "tmp_breslow",
+    "name" : "Breslow for Calculation",
+    "type" : "INPUT"
+  }, {
+    "key" : "ulceration",
+    "name" : "Ulceration",
+    "type" : "INPUT"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100,200,300,400,500,700", "0", "*", "ERROR:Localized tumor or tumor with extension - Breslow Thickness in conflict" ], [ "100,200,300,400,500,700", "1", "0", "VALUE:T1a" ], [ "100,200,300,400,500,700", "1", "1", "VALUE:T1b" ], [ "100,200,300,400,500,700", "1", "8,9", "VALUE:T1" ], [ "100,200,300,400,500,700", "2", "0", "VALUE:T1b" ], [ "100,200,300,400,500,700", "2", "1", "VALUE:T1b" ], [ "100,200,300,400,500,700", "2", "8,9", "VALUE:T1b" ], [ "100,200,300,400,500,700", "3", "0", "VALUE:T2a" ], [ "100,200,300,400,500,700", "3", "1", "VALUE:T2b" ], [ "100,200,300,400,500,700", "3", "8,9", "VALUE:T2" ], [ "100,200,300,400,500,700", "4", "0", "VALUE:T3a" ], [ "100,200,300,400,500,700", "4", "1", "VALUE:T3b" ], [ "100,200,300,400,500,700", "4", "8,9", "VALUE:T3" ], [ "100,200,300,400,500,700", "5", "0", "VALUE:T4a" ], [ "100,200,300,400,500,700", "5", "1", "VALUE:T4b" ], [ "100,200,300,400,500,700", "5", "8,9", "VALUE:T4" ], [ "100,200,300,400,500,700", "9", "*", "VALUE:TX" ], [ "000,800,999", "*", "*", "MATCH" ] ]
+}

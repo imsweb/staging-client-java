@@ -1,0 +1,26 @@
+{
+  "id" : "temp_eod_prefixes_52976",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "EOD Prefixes based on EOD Regional Nodes",
+  "title" : "EOD Prefixes based on EOD Regional Nodes",
+  "last_modified" : "2018-05-09T15:33:19.937Z",
+  "definition" : [ {
+    "key" : "prefix_n_in",
+    "name" : "Prefix N",
+    "type" : "INPUT"
+  }, {
+    "key" : "eod_t_source",
+    "name" : "EOD T Source",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "eod_n_source",
+    "name" : "EOD N Source",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "eod_m_source",
+    "name" : "EOD M Source",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "p", "VALUE:n", "VALUE:p", "VALUE:n" ], [ "c", "VALUE:n", "VALUE:c", "VALUE:n" ] ]
+}

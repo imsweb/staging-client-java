@@ -1,0 +1,18 @@
+{
+  "id" : "radiation_surg_seq",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Radiation Surg Seq",
+  "title" : "RX Summ Surgery/Radiation Sequence",
+  "last_modified" : "2018-05-09T15:33:20.062Z",
+  "definition" : [ {
+    "key" : "radiation_surg_seq",
+    "name" : "RX Summ Surgery/Radiation Sequence",
+    "type" : "INPUT"
+  }, {
+    "key" : "desc",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "No radiation and/or no surgery; unknown if surgery and/or radiation given" ], [ "2", "Radiation before surgery" ], [ "3", "Radiation after surgery" ], [ "4", "Radiation both before and after surgery" ], [ "5", "Intraoperative radiation" ], [ "6", "Intraoperative radiation with other radiation given before and/or after surgery" ], [ "7", "Surgery both before and after radiation" ], [ "9", "Sequence unknown, but both surgery and radiation were given" ] ]
+}

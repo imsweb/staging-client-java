@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc_chapter_calculation_24559",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2018-05-09T15:33:20.562Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "8010,8046,8051-8052,8070-8074,8082-8084", "3", "VALUE:6", "Cervical Lymph Nodes and Unknown Primary Tumors of the Head and Neck" ], [ "8121,8140,8147", "3", "VALUE:6", "Cervical Lymph Nodes and Unknown Primary Tumors of the Head and Neck" ], [ "8200,8310", "3", "VALUE:6", "Cervical Lymph Nodes and Unknown Primary Tumors of the Head and Neck" ], [ "8430,8450,8480", "3", "VALUE:6", "Cervical Lymph Nodes and Unknown Primary Tumors of the Head and Neck" ], [ "8525,8550,8562", "3", "VALUE:6", "Cervical Lymph Nodes and Unknown Primary Tumors of the Head and Neck" ], [ "8941", "3", "VALUE:6", "Cervical Lymph Nodes and Unknown Primary Tumors of the Head and Neck" ], [ "8010,8046,8051-8052,8070-8074,8082-8084", "2", "ERROR:Behavior = 2. Schema Discriminator 1 should be set to 1 if Lymph Nodes are negative", "" ], [ "8121,8140,8147", "2", "ERROR:Behavior = 2. Schema Discriminator 1 should be set to 1 if Lymph Nodes are negative", "" ], [ "8200,8310", "2", "ERROR:Behavior = 2. Schema Discriminator 1 should be set to 1 if Lymph Nodes are negative", "" ], [ "8430,8450,8480", "2", "ERROR:Behavior = 2. Schema Discriminator 1 should be set to 1 if Lymph Nodes are negative", "" ], [ "8525,8550,8562", "2", "ERROR:Behavior = 2. Schema Discriminator 1 should be set to 1 if Lymph Nodes are negative", "" ], [ "8941", "2", "ERROR:Behavior = 2. Schema Discriminator 1 should be set to 1 if Lymph Nodes are negative", "" ], [ "8000-8005,8011-8045,8050,8053-8060,8075-8081,8085-8120", "*", "VALUE:XX", "Other Cervical Lymph Nodes and Unknown Primary Tumors of the Head and Neck" ], [ "8122-8131,8141-8146,8148-8191", "*", "VALUE:XX", "Other Cervical Lymph Nodes and Unknown Primary Tumors of the Head and Neck" ], [ "8201-8300", "*", "VALUE:XX", "Other Cervical Lymph Nodes and Unknown Primary Tumors of the Head and Neck" ], [ "8311-8420,8440-8444,8451-8474,8481-8524", "*", "VALUE:XX", "Other Cervical Lymph Nodes and Unknown Primary Tumors of the Head and Neck" ], [ "8530-8543,8551-8561,8570-8700,8720-8790,9700-9701", "*", "VALUE:XX", "Other Cervical Lymph Nodes and Unknown Primary Tumors of the Head and Neck" ] ]
+}

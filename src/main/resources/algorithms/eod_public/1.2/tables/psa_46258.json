@@ -1,0 +1,19 @@
+{
+  "id" : "psa_46258",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "PSA Lab Value",
+  "title" : "PSA (Prostatic Specific Antigen) Lab Value",
+  "notes" : "**Note 1:** Physician statement of prostatic specific antigen (PSA) pre-diagnosis can be used to code this data item when no other information is available.\n\n**Note 2:** PSA is a prognostic factor required for AJCC staging.  It affects the stage group in most cases.\n\n**Note 3:** Record to the nearest tenth in nanograms/milliliter (ng/ml) the last pre-diagnosis PSA lab value prior to diagnostic biopsy of prostate and treatment. The lab value may be recorded in the lab report, history and physical, or clinical statement in the pathology report, etc. \n* A lab value expressed in micrograms per liter (ug/L) is equivalent to the same value expressed in nanograms per milliliter (ng/ml)\n* Record 0.1 when the lab results are stated as less than 0.1 ng/ml with no exact value.\n* For an uncertain value, record the stated closest value. For example, code a value stated as \"less than 5.0 ng/ml\" as 4.9.\n\n* ***Examples:*** \nPSA of 7.2. Code 7.2\nPSA of 10. Code 10.0\nPSA of 8.56. Code 8.6\nPSA of 110.35. Code 110.4\n\n**Note 4:** A discrepancy between the PSA documented in the lab report and the PSA documented by the clinician may arise due to the clinician’s adjusting the PSA value. Certain medications for benign prostatic hypertrophy (BPH) decrease the PSA. \n* If there is documentation by a clinician within the medical record of an adjusted PSA value, record the adjusted value. \n* The registrar does not adjust the PSA value based on BPH medication use. \n* If there is no documentation by a clinician within the medical record of an adjusted PSA value, record the PSA value provided. \n* The fact that an adjusted PSA value is being recorded should be documented in the Dx Proc – Lab Tests text field (NAACCR Item # 2550).",
+  "last_modified" : "2018-05-09T15:33:19.838Z",
+  "definition" : [ {
+    "key" : "psa",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.1", "0.1 or less nanograms/milliliter (ng/ml)\n(Exact value to nearest tenth of ng/ml)" ], [ "0.2-999.9", "0.2 – 999.9 ng/ml\n(Exact value to nearest tenth of ng/ml)" ], [ "XXX.1", "1,000 ng/ml or greater" ], [ "XXX.7", "Test ordered, results not in chart" ], [ "XXX.9", "Not documented in medical record\nPSA lab value not assessed or unknown if assessed" ] ]
+}

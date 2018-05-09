@@ -1,0 +1,19 @@
+{
+  "id" : "her2_ish_sp_copy_no_95955",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "HER2 ISH SP Copy No",
+  "title" : "HER2 ISH Single Probe Copy Number",
+  "notes" : "**Note 1:** Physician statement of HER2 in situ hybridization (ISH) Single Probe Copy Number can be used to code this data item.\n\n**Note 2:** A single probe test will report average number or mean signals per cell for HER2. Record the HER2 average number or mean signals per cells in this data item. The average number or mean signals per cell is also called the copy number.\n\n* ***Example:*** \n\n    SISH RESULTS: FINAL HER 2 IN SITU HYBRIDIZATION INTERPRETATION: POSITIVE (>6 gene copies) HER-2/neu gene amplification. \n \n    HER-2/neu SILVER IN SITU HYBRIDIZATION (SISH) \n    HER-2neu gene (Inform HER2 DNA probe) \n    Number of tumor cell nuclei counted: 60*\n    Number of Her-2/neu gene copies: 418\n    Mean HER-2/neu gene copy number: 6.9\n\n    Code Single Probe HER2 Copy Number: 6.9\n    [Note: This is calculated by dividing 418 by 60]\n\n**Note 3:** **Registrars are not to calculate the copy number.** \n\n**Note 4:** Following ASCO-CAP guidelines, a 2+ (equivocal) finding by immunohistochemistry (IHC) should result in additional testing with ISH to determine gene copy number. \n\n**Note 5:** Any type of ISH test (e.g., FISH, CISH, SISH) can be used to code this data item. The same test should be used to code all the HER2 ISH data items.\n\n**Note 6:** A HER2 ISH test may be called “ERBB2.”  ERBB2 is the standard symbol for the gene ‘erb-b2 receptor tyrosine kinase 2.’ An IHC test identifies the protein expressed by the gene, and an ISH test identifies the gene itself.\n\n**Note 7:** If a HER2 ISH single probe copy number test is done, and the results are between 4 and 6 (equivocal), dual probe tests are recommended.\n\n**Note 8:** If the test results are presented to the hundredth decimal, ignore the hundredth decimal. Do NOT round.\n\n* ***Example:***\n    Reported as 6.97, code 6.9",
+  "last_modified" : "2018-05-09T15:33:19.678Z",
+  "definition" : [ {
+    "key" : "her2_ish_sp_copy_no",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0-99.9", "Reported HER2 copy number of 0.0-99.9" ], [ "XX.1", "Reported HER2 copy number of 100 or greater" ], [ "XX.7", "Test ordered, results not in chart" ], [ "XX.8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code XX.8 will result in an edit error.)" ], [ "XX.9", "Not documented in medical record\nCannot be determined (indeterminate)\nHER2 ISH Single Probe Copy Number not assessed or unknown if assessed" ] ]
+}

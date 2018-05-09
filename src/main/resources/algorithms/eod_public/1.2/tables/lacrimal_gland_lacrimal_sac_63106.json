@@ -1,0 +1,23 @@
+{
+  "id" : "lacrimal_gland_lacrimal_sac_63106",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Discriminator 1",
+  "title" : "Schema Discriminator 1: Lacrimal Gland/Lacrimal Sac",
+  "notes" : "**Note 1:** A schema discriminator is used to discriminate between lacrimal gland and lacrimal sac tumors with primary site code C695: Lacrimal Gland. Code the site in which the tumor arose.  \n\n**Note 2:** If the histology is transitional cell carcinoma (8120/3, 8130/3), assign code 2.\n\n* **Lacrimal Gland (see code 1)**\n  Subsites include: lacrimal gland\n\n* **Lacrimal Sac (see code 2)**\n  Subsites include: lacrimal sac, lacrimal duct (NOS), nasal lacrimal duct",
+  "last_modified" : "2018-05-09T15:33:19.756Z",
+  "definition" : [ {
+    "key" : "discriminator_1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "disease",
+    "name" : "Disease",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Lacrimal gland", "69: Lacrimal Gland Carcinoma" ], [ "2", "Lacrimal sac\nLacrimal duct, NOS\nNasal lacrimal duct/sac\nNasolacrimal duct", "N/A: Lacrimal Sac\n(not TNM Staged)" ], [ "9", "Lacrimal, NOS", "N/A: Lacrimal Sac\n(not TNM Staged)" ] ]
+}

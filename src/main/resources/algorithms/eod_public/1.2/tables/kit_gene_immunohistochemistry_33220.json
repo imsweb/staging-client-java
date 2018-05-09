@@ -1,0 +1,19 @@
+{
+  "id" : "kit_gene_immunohistochemistry_33220",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "KIT Gene Immunohistochemistry",
+  "title" : "KIT Gene Immunohistochemistry (IHC)",
+  "notes" : "**Note 1:** Physician statement of KIT IHC can be used to code this data item when no other information is available.\n\n**Note 2:** KIT Gene Immunohistochemistry (IHC) is the expression of the KIT gene in tumor tissue specimens based on immunohistochemical (IHC) stains.  A positive test is a diagnostic and predictive marker for GIST tumors. Do not record secondary or acquired mutations that may have developed because of long-term imatinib treatment. \n\n**Note 3:** Other names for KIT are CD117 or c-kit.",
+  "last_modified" : "2018-05-09T15:33:19.707Z",
+  "definition" : [ {
+    "key" : "kit",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "KIT negative/normal; within normal limits" ], [ "1", "KIT positive" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nCannot be determined by pathologist\nKIT not assessed or unknown if assessed" ] ]
+}

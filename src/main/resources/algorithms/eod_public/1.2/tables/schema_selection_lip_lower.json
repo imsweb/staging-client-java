@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_lip_lower",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Selection LipLower",
+  "title" : "Schema selection for LipLower",
+  "last_modified" : "2018-05-09T15:33:19.847Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C003-C005, C008, C009", "8000-8040, 8042-8180, 8191-8246, 8248-8700, 8982, 9700-9701", "MATCH" ] ]
+}

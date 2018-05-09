@@ -1,0 +1,19 @@
+{
+  "id" : "primary_scleros_cholangitis_86402",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Primary Scleros Cholangitis",
+  "title" : "Primary Sclerosing Cholangitis (PSC)",
+  "notes" : "**Note 1:** Physician statement of Primary Sclerosing Cholangitis (PSC) can be used to code this data item when no other information is available.\n\n**Note 2:** PSC is an idiopathic liver disease characterized by inflammation and fibrosis of the entire biliary tree. The chronic inflammation and injury to ducts may lead to cirrhosis and predispose to cholangiocarcinoma at any site in the biliary tree. \n\n**Note 3:** Code stated diagnosis of PSC either clinically or pathologically as documented in the medical record. This may be by history.\n\n**Note 4:** Code 9 if there is no mention of primary sclerosing cholangitis (PSC).",
+  "last_modified" : "2018-05-09T15:33:19.726Z",
+  "definition" : [ {
+    "key" : "prim_scleros_cholangitis",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "PSC not identified/not present" ], [ "1", "PSC present" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nPSC not assessed or unknown if assessed" ] ]
+}

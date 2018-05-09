@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_urethra",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Selection Urethra",
+  "title" : "Schema selection for Urethra",
+  "last_modified" : "2018-05-09T15:33:19.759Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_1",
+    "name" : "Schema Discriminator 1",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C680", "8000-8700, 8720-8790, 9700-9701", "1", "MATCH" ] ]
+}

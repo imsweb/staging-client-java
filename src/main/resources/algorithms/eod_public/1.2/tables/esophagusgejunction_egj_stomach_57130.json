@@ -1,0 +1,23 @@
+{
+  "id" : "esophagusgejunction_egj_stomach_57130",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Discriminator 1",
+  "title" : "Schema Discriminator 1: EsophagusGEJunction (EGJ)/Stomach",
+  "notes" : "**Note:** When primary site code is C160, the cancer will be staged using either the stomach cancer schema or the esophagus schema depending on the distance of the tumor’s epicenter into the proximal stomach and whether or not the esophagogastric junction is involved.\nAssign the code that best reflects EGJ involvement and the distance of the tumor’s epicenter into the proximal stomach.\n* **Chapter 16: Esophagus and Esophagogastric Junction (see code 2)**\nTumor involving the EGJ with epicenter less than 2 cm into proximal stomach\n* **Chapter 17: Stomach (see codes 0, 3, and 9)**\nNo involvement of the EGJ or unknown if involvement of the EGJ AND epicenter at any distance",
+  "last_modified" : "2018-05-09T15:33:19.442Z",
+  "definition" : [ {
+    "key" : "discriminator_1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "disease",
+    "name" : "Disease",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "NO involvement of esophagus or gastroesophageal junction\n\nAND epicenter at ANY DISTANCE into the proximal stomach (including distance unknown)", "17: Stomach" ], [ "2", "INVOLVEMENT of esophagus or esophagogastric junction (EGJ)\n\nAND epicenter LESS THAN OR EQUAL TO 2 cm into the proximal stomach", "16 Esophagus AND go to Schema Discriminator 2: Histology Discriminator for 8020/3" ], [ "3", "INVOLVEMENT of esophagus or esophagogastric junction (EGJ) \n\nAND epicenter GREATER THAN 2 cm into the proximal stomach", "17: Stomach" ], [ "9", "UNKNOWN involvement of esophagus or gastroesophageal junction \n\nAND epicenter at ANY DISTANCE into the proximal stomach (including distance unknown)", "17: Stomach" ], [ "", "Primary Site is NOT C160, Discriminator is not necessary", "" ] ]
+}

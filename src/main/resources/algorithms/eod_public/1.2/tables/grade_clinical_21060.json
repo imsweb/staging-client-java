@@ -1,0 +1,19 @@
+{
+  "id" : "grade_clinical_21060",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Grade Clinical GIST",
+  "title" : "Grade Clinical",
+  "notes" : "**Note 1:** Clinical grade must not be blank.\n\n**Note 2:** Assign the highest grade from the primary tumor assessed during the clinical time frame. \n\n**Note 3:** Codes L and H take priority over A-D.\n\n**Note 4:** Record the mitotic rate as Low or High as indicated on the pathology report or CAP protocol. Assume the denominator is 5 square mm if not specified.\n* Low: 5 or fewer mitoses per 5 square mm (L)\n* High: Over 5 mitoses per 5 square mm (H)\n\n**Note 5:** Code 9 when\n* Grade from primary site is not documented\n* Clinical workup is not done (for example, cancer is an incidental finding during surgery for another condition)\n* Grade checked “not applicable” on CAP Protocol (if available) and no other grade information is available\n\n**Note 6:** If there is only one grade available and it cannot be determined if it is clinical, pathological, or after neo-adjuvant therapy, assign as a clinical grade and code unknown (9) for pathological grade, and blank for post-therapy grade. \n\n**Note 7:** If you are assigning an AJCC 8th edition stage group\n* Grade is required to assign stage group\n* Codes A-D are treated as an unknown grade when assigning AJCC stage group \n* An unknown grade may result in an unknown stage group",
+  "last_modified" : "2018-05-09T15:33:19.494Z",
+  "definition" : [ {
+    "key" : "grade_clin",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "L", "Low: 5 or fewer mitoses per 5 square mm" ], [ "H", "High: Over 5 mitoses per 5 square mm" ], [ "A", "Well differentiated" ], [ "B", "Moderately differentiated" ], [ "C", "Poorly differentiated" ], [ "D", "Undifferentiated, anaplastic" ], [ "9", "Grade cannot be assessed; Unknown" ] ]
+}

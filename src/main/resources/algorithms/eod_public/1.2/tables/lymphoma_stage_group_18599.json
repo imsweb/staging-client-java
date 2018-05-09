@@ -1,0 +1,19 @@
+{
+  "id" : "lymphoma_stage_group_18599",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Lymphoma Stage Group",
+  "title" : "Lymphoma Stage Group Detailed",
+  "last_modified" : "2018-05-09T15:33:19.514Z",
+  "definition" : [ {
+    "key" : "stage_group_in",
+    "name" : "Assigned Stage Group",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Derived Stage Group",
+    "type" : "ENDPOINT"
+  } ],
+  "extra_input" : [ "stage_group_in" ],
+  "rows" : [ [ "1,1E,2,2E,2 bulky,3,4", "VALUE:{{stage_group_in}}" ], [ "88", "VALUE:88" ], [ "99", "VALUE:99" ], [ "", "VALUE:" ] ]
+}

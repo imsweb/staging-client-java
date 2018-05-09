@@ -1,0 +1,19 @@
+{
+  "id" : "afp_post_orchiectomy_lab_value_90733",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AFP Post-Orchiectomy Lab Value",
+  "title" : "AFP (Alpha Fetoprotein) Post-Orchiectomy Lab Value",
+  "notes" : "**Note 1:** Physician statement of the AFP (Alpha Fetoprotein) Post-Orchiectomy Lab Value can be used to code this data item when no other information is available. \n\n**Note 2:** Record the lab value of the AFP test results documented in the medical record **after orchiectomy** but prior to adjuvant therapy. The lab value may be documented in a lab report, history and physical, or clinical statement in the pathology report.\n\n**Note 3:** If the initial post-orchiectomy AFP remains elevated, review subsequent tests and record the lowest AFP value (normalization or plateau) prior to adjuvant therapy or before the value rises again. \n\n**Note 4:** A lab value expressed in micrograms/liter (ug/L) is equivalent to the same value expressed in ng/mL.\n\n**Note 5:** If the pre-orchiectomy AFP was normal, a post-orchiectomy AFP may not be performed. In this case, code XXXXX.9 should be recorded.\n\n**Note 6:** If the only information available is a statement of elevated or normal, code XXXXX.9.\n\n**Note 7:** The same laboratory test should be used to record information in AFP Post-Orchiectomy Range [NAACCR Data Item #3806].",
+  "last_modified" : "2018-05-09T15:33:19.546Z",
+  "definition" : [ {
+    "key" : "afp_post_orch_lab_value",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0", "0.0 nanograms/milliliter (ng/mL)" ], [ "0.1-99999.9", "0.1 – 99,999.9 ng/mL" ], [ "XXXXX.1", "100,000 ng/mL or greater" ], [ "XXXXX.7", "Test ordered, results not in chart" ], [ "XXXXX.8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code XXXXX.8 may result in an edit error.)" ], [ "XXXXX.9", "Not documented in medical record\nNo orchiectomy performed\nAFP (Alpha Fetoprotein) Post-Orchiectomy Lab Value not assessed or unknown if assessed" ] ]
+}

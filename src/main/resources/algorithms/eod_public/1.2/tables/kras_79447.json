@@ -1,0 +1,19 @@
+{
+  "id" : "kras_79447",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "KRAS",
+  "title" : "KRAS",
+  "notes" : "**Note 1:** Physician statement of KRAS can be used to code this data item when no other information is available.\n\n**Note 2:** KRAS is a gene which belongs to a class of genes known as oncogenes. When mutated, oncogenes have the potential to cause normal cells to become cancerous. Studies suggest that KRAS gene mutations are often present in colorectal cancer.\n\n**Note 3:** KRAS analysis is commonly done for patients with metastatic disease.\n\n**Note 4:** If KRAS is positive and there is no mention of the mutated codon, or the mutated codon is not specified, code 4.",
+  "last_modified" : "2018-05-09T15:33:21.237Z",
+  "definition" : [ {
+    "key" : "kras",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Normal (wild type)\nNegative for mutations" ], [ "1", "Abnormal (mutated) in codon(s) 12, 13 and/or 61" ], [ "2", "Abnormal (mutated) in codon 146 only" ], [ "3", "Abnormal (mutated), but not in codon(s) 12, 13, 61, or 146" ], [ "4", "Abnormal (mutated), NOS, codon(s) not specified" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nKRAS not assessed or unknown if assessed" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "number_of_postive_pelvic_nodes_94512",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Number of Postive Pelvic Nodes",
+  "title" : "Number of Positive Pelvic Nodes",
+  "notes" : "**Note 1:** Physician statement of positive pelvic nodes can be used to code this data item when no other information is available.\n\n**Note 2:** Record the number of positive pelvic lymph nodes documented in the medical record. \n\n**Note 3:** For this data item, do not include isolated tumor cells (ITCs). \n\n**Note 4:** Micrometastasis and macrometastasis may be listed separately on the pathology report. Add these two together to get the total number of positive nodes. \n\n**Note 5:** The number of examined pelvic nodes is recorded in Number of Examined Pelvic Nodes [NAACCR Data Item # 3900].",
+  "last_modified" : "2018-05-09T15:33:18.858Z",
+  "definition" : [ {
+    "key" : "num_pos_pelvic_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "All pelvic nodes examined negative" ], [ "01-99", "1 - 99 pelvic nodes positive \n(Exact number of nodes positive)" ], [ "X1", "100 or more pelvic  nodes positive" ], [ "X2", "Positive pelvic nodes identified, number unknown" ], [ "X6", "Positive aspiration or core biopsy of pelvic lymph node(s)" ], [ "X8", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code X8 will result in an edit error.)" ], [ "X9", "Not documented in patient record\nCannot be determined, indeterminate if positive pelvic nodes present\nPelvic lymph nodes not assessed or unknown if assessed" ] ]
+}

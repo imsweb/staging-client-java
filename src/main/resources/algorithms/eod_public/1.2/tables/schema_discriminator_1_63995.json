@@ -1,0 +1,23 @@
+{
+  "id" : "schema_discriminator_1_63995",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Discriminator 1",
+  "title" : "Schema Discriminator 1: Histology Discriminator for 9591/3",
+  "notes" : "**Note:** A schema discriminator is used to discriminate for histology 9591/3: Non-Hodgkin lymphoma to determine which Stage Group table to use.\n\n* **9591/3: Splenic B-cell lymphoma/leukemia, unclassifiable (see code 1)**\nAbstracted and staged as a leukemia\n* **9591/3: Hairy cell leukemia variant (see code 2)**\nAbstracted and staged as a leukemia\n* **9591/3: Splenic diffuse red pulp small B-cell lymphoma (see code 3)**\nAbstracted and staged as a lymphoma\n* **9591/3: Non-Hodgkin lymphoma, NOS (see code 9)**\nAbstracted and staged as a lymphoma",
+  "last_modified" : "2018-05-09T15:33:18.466Z",
+  "definition" : [ {
+    "key" : "discriminator_1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "disease",
+    "name" : "Disease",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Splenic B-cell lymphoma/leukemia, unclassifiable", "83: Leukemia" ], [ "2", "Hairy cell leukemia variant\nProlymphocytic variant of hairy cell leukemia", "83: Leukemia" ], [ "3", "Splenic diffuse red pulp small B-cell lymphoma\nSplenic marginal zone lymphoma, diffuse variant\nSplenic red pulp lymphoma with numerous basophilic villous lymphocytes\nSplenic lymphoma with villous lymphocytes", "79.0: Lymphoma" ], [ "9", "Non-Hodgkin lymphoma, NOS\nAny other terminology describing non-Hodgkin lymphoma, NOS", "79.0: Lymphoma" ], [ "", "Histology is NOT 9591, Discriminator is not necessary", "" ] ]
+}

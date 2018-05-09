@@ -1,0 +1,23 @@
+{
+  "id" : "parse_m_47057",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Parse M",
+  "title" : "Parse M",
+  "description" : "With the addition of the c and p prefixes to the existing codes, the prefix must be parsed from the main value during calculations.  It will be retained for the combined value.  This will have no impact on the stored value and is solely a temporary state.",
+  "last_modified" : "2018-05-09T15:33:20.719Z",
+  "definition" : [ {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "m_prefix",
+    "name" : "M Prefix",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "root_m",
+    "name" : "Root M value",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "cM0", "VALUE:c", "VALUE:0" ], [ "cM0(i+)", "VALUE:c", "VALUE:0I+" ], [ "cM1", "VALUE:c", "VALUE:1" ], [ "cM1a", "VALUE:c", "VALUE:1A" ], [ "cM1a(0)", "VALUE:c", "VALUE:1A0" ], [ "cM1a(1)", "VALUE:c", "VALUE:1A1" ], [ "cM1b", "VALUE:c", "VALUE:1B" ], [ "cM1b(0)", "VALUE:c", "VALUE:1B0" ], [ "cM1b(1)", "VALUE:c", "VALUE:1B1" ], [ "cM1c", "VALUE:c", "VALUE:1C" ], [ "cM1c(0)", "VALUE:c", "VALUE:1C0" ], [ "cM1c(1)", "VALUE:c", "VALUE:1C1" ], [ "cM1d", "VALUE:c", "VALUE:1D" ], [ "cM1d(0)", "VALUE:c", "VALUE:1D0" ], [ "cM1d(1)", "VALUE:c", "VALUE:1D1" ], [ "pM1", "VALUE:p", "VALUE:1" ], [ "pM1a", "VALUE:p", "VALUE:1A" ], [ "pM1a(0)", "VALUE:p", "VALUE:1A0" ], [ "pM1a(1)", "VALUE:p", "VALUE:1A1" ], [ "pM1b", "VALUE:p", "VALUE:1B" ], [ "pM1b(0)", "VALUE:p", "VALUE:1B0" ], [ "pM1b(1)", "VALUE:p", "VALUE:1B1" ], [ "pM1c", "VALUE:p", "VALUE:1C" ], [ "pM1c(0)", "VALUE:p", "VALUE:1C0" ], [ "pM1c(1)", "VALUE:p", "VALUE:1C1" ], [ "pM1d", "VALUE:p", "VALUE:1D" ], [ "pM1d(0)", "VALUE:p", "VALUE:1D0" ], [ "pM1d(1)", "VALUE:p", "VALUE:1D1" ], [ "M0", "VALUE:", "VALUE:0" ], [ "M0(i+)", "VALUE:", "VALUE:0I+" ], [ "M1", "VALUE:", "VALUE:1" ], [ "M1a", "VALUE:", "VALUE:1A" ], [ "M1a(0)", "VALUE:", "VALUE:1A0" ], [ "M1a(1)", "VALUE:", "VALUE:1A1" ], [ "M1b", "VALUE:", "VALUE:1B" ], [ "M1b(0)", "VALUE:", "VALUE:1B0" ], [ "M1b(1)", "VALUE:", "VALUE:1B1" ], [ "M1c", "VALUE:", "VALUE:1C" ], [ "M1c(0)", "VALUE:", "VALUE:1C0" ], [ "M1c(1)", "VALUE:", "VALUE:1C1" ], [ "M1d", "VALUE:", "VALUE:1D" ], [ "M1d(0)", "VALUE:", "VALUE:1D0" ], [ "M1d(1)", "VALUE:", "VALUE:1D1" ], [ "88", "VALUE:", "VALUE:88" ], [ "", "VALUE:", "VALUE:" ] ]
+}

@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc_chapter_calculation_74928",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2018-05-09T15:33:19.592Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "8720,8730,8770-8774", "3", "VALUE:67.1", "Uvea: Iris Melanomas" ], [ "8720,8730,8770-8774", "2", "VALUE:XX", "Other Uvea: Iris Melanomas" ], [ "8721-8728,8740-8762,8780-8790", "*", "VALUE:XX", "Other Uvea: Iris Melanomas" ] ]
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_bone_appendicular_skeleton",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Selection Bone Appendicular Skeleton",
+  "title" : "Schema selection for Bone Appendicular Skeleton",
+  "last_modified" : "2018-05-09T15:33:20.034Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C400-C403, C408-C411, C413, C418-C419", "8000-8934, 8940-9137, 9141-9582, 9700-9701", "MATCH" ] ]
+}

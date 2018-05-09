@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc_chapter_calculation_58282",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2018-05-09T15:33:21.882Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "8720,8728", "3", "VALUE:72", "Brain and Spinal Cord" ], [ "8900", "3", "VALUE:72", "Brain and Spinal Cord" ], [ "9064,9070-9071,9080,9084-9085", "3", "VALUE:72", "Brain and Spinal Cord" ], [ "9100,9120,9140", "3", "VALUE:72", "Brain and Spinal Cord" ], [ "9220", "3", "VALUE:72", "Brain and Spinal Cord" ], [ "9362,9382,9385,9390-9393,9395-9396", "3", "VALUE:72", "Brain and Spinal Cord" ], [ "9400-9401,9411,9424-9425,9430,9440-9442,9445,9450-9451,9470-9471,9473-9478,9490", "3", "VALUE:72", "Brain and Spinal Cord" ], [ "9500-9501,9505,9508,9530,9538", "3", "VALUE:72", "Brain and Spinal Cord" ], [ "9680,9699", "3", "VALUE:72", "Brain and Spinal Cord" ], [ "9702,9712,9714,9751,9755", "3", "VALUE:72", "Brain and Spinal Cord" ], [ "8720,8728", "0,1,2", "VALUE:XX", "Other Intracranial Gland" ], [ "8900", "0,1,2", "VALUE:XX", "Other Intracranial Gland" ], [ "9064,9070-9071,9080,9084-9085", "0,1,2", "VALUE:XX", "Other Intracranial Gland" ], [ "9100,9120,9140", "0,1,2", "VALUE:XX", "Other Intracranial Gland" ], [ "9220", "0,1,2", "VALUE:XX", "Other Intracranial Gland" ], [ "9362,9382,9385,9390-9393,9395-9396", "0,1,2", "VALUE:XX", "Other Intracranial Gland" ], [ "9400-9401,9411,9424-9425,9430,9440-9442,9445,9450-9451,9470-9471,9473-9478,9490", "0,1,2", "VALUE:XX", "Other Intracranial Gland" ], [ "9500-9501,9505,9508,9530,9538", "0,1,2", "VALUE:XX", "Other Intracranial Gland" ], [ "9680,9699", "0,1,2", "VALUE:XX", "Other Intracranial Gland" ], [ "9702,9712,9714,9751,9755", "0,1,2", "VALUE:XX", "Other Intracranial Gland" ], [ "8000-8700,8721-8727,8730-8790", "*", "VALUE:XX", "Other Intracranial Gland" ], [ "9394,9700-9701,9705-9709,9756-9759", "*", "VALUE:XX", "Other Intracranial Gland" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "her2_ihc_summary_57693",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "HER2 IHC Summary",
+  "title" : "HER2 IHC Summary",
+  "notes" : "**Note 1:** Physician statement of HER2 IHC Summary can be used to code this data item when no other information is available.\n\n**Note 2:** The HER2 IHC test performed on the primary breast tissue is to be recorded in this data item. \n\n**Note 3:** Results from nodal or metastatic tissue may be used, ONLY when there is no evidence of primary tumor.\n\n**Note 4:** In cases where HER2 IHC is reported on more than one breast tumor specimen, record the highest value.  If any sample is positive, record as positive.\n\n**Note 5:** If neoadjuvant therapy is given, record the assay from tumor specimens prior to neoadjuvant therapy.\n* If neoadjuvant therapy is given and there are no HER2 IHC results from pre-treatment specimens, report the findings from post-treatment specimens.    \n\n**Note 6:** If HER2 IHC is positive on an in situ specimen and HER2 IHC is negative on all tested invasive specimens, code HER2 IHC as negative (code 0).\n\n**Note 7:** A 2+ (equivocal) finding by IHC should result in additional testing with ISH to determine gene copy number.\n\n**Note 8:** An immunohistochemistry (IHC) test identifies the protein expressed by the gene (ERBB2), and an in situ hybridization (ISH) test identifies the number of copies of the gene (ERBB2) itself.",
+  "last_modified" : "2018-05-09T15:33:19.712Z",
+  "definition" : [ {
+    "key" : "her2_ihc_summary",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Negative (Score 0)" ], [ "1", "Negative (Score 1+)" ], [ "2", "Equivocal (Score 2+)\nStated as equivocal" ], [ "3", "Positive (Score 3+)\nStated as positive" ], [ "4", "Stated as negative, but score not stated " ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nCannot be determined (indeterminate)\nHER2 IHC Summary not assessed or unknown if assessed" ] ]
+}

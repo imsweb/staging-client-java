@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_nasopharynx",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Selection Nasopharynx",
+  "title" : "Schema selection for Nasopharynx",
+  "last_modified" : "2018-05-09T15:33:19.516Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_1",
+    "name" : "Schema Discriminator 1",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C110,C112-C113,C118-C119", "8000-8700, 9700-9701", " ", "MATCH" ], [ "C111", "8000-8700, 9700-9701", "1", "MATCH" ] ]
+}

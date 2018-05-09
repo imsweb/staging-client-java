@@ -1,0 +1,28 @@
+{
+  "id" : "extension_btb",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "EOD Primary Tumor",
+  "title" : "EOD Primary Tumor",
+  "notes" : "**Note 1:** The lacrimal sac is the upper dilated end of the nasolacrimal duct, lodged in a deep groove formed by the lacrimal bone and frontal process of the maxilla. The sac connects the lacrimal canaliculi, which drain tears from the eye's surface, and the nasolacrimal duct, which conveys this fluid into the nasal cavity. The most common epithelial tumors of the lacrimal sac are squamous cell and transitional cell carcinomas.\n\n**Note 2:** Periosteum is a fibrous membrane that wraps the outer surface of bones.",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)",
+  "last_modified" : "2018-05-09T15:33:19.469Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_t",
+    "name" : "SS2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ: Noninvasive; intraepithelial", "VALUE:88", "VALUE:IS" ], [ "100", "Confined to lacrimal sac\n\nLocalized, NOS", "VALUE:88", "VALUE:L" ], [ "200", "Adjacent bone\nGlobe (eyeball)\nOptic nerve\nOrbital soft tissues\nPeriosteum", "VALUE:88", "VALUE:RE" ], [ "700", "Adjacent structures, NOS\nBrain\nPterygoid fossa\nSinus\nTemporal fossa\n\nFurther contiguous extension", "VALUE:88", "VALUE:D" ], [ "800", "No evidence of primary tumor", "VALUE:88", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in patient record\n\nDeath Certificate Only", "VALUE:88", "VALUE:U" ] ]
+}

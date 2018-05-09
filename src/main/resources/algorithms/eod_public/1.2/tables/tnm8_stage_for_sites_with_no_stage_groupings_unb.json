@@ -1,0 +1,27 @@
+{
+  "id" : "tnm8_stage_for_sites_with_no_stage_groupings_unb",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "TNM 8 Stage Group",
+  "title" : "TNM 8 Stage Group",
+  "notes" : "In the table below, \"ANY\" designates any valid (allowable) value.",
+  "last_modified" : "2018-05-09T15:33:19.035Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "*", "*", "*", "VALUE:88" ] ]
+}

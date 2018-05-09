@@ -1,0 +1,434 @@
+{
+  "id" : "prostate",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Prostate",
+  "title" : "Prostate",
+  "notes" : "8000-8700, 8720-8790, 9700-9701 \n\nC619 Prostate gland\n\n**Note 1:** The following sources were used in the development of this schema\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)\n* SEER Summary Staging Manual-2000: Codes and Coding Instructions (https://seer.cancer.gov/tools/ssm/)\n* Collaborative Stage Data Collection System, version 02.05:  https://cancerstaging.org/cstage/Pages/default.aspx \n* Chapter 58 *Prostate*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.\n\n**Note 2:** See the following schemas for the listed histologies \n* 8710-8714, 8800-8803, 8810-8921, 8932-8934, 8940-8990, 9000-9016, 9030-9043, 9045-9137, 9141-9230, 9240-9580, 9582: *Soft Tissue Abdomen and Thoracic*\n* 8804-8806, 8930-8931, 8991, 9020, 9044, 9231, 9581: *Soft Tissue Other*\n* 8935-8936: *GIST*\n* 9140: *Kaposi Sarcoma*\n\n**Note 3:** See the *Urethra* schema for transitional cell (urothelial) carcinoma of the prostatic urethra (C680).\n\n**Note 4:** In addition to coding *EOD Primary Tumor, EOD Regional Nodes* and *EOD Mets*, the following data items are also needed to assign a stage group for Prostate.\n* PSA (Prostatic Specific Antigen) Lab Value\n* Grade Clinical\n* Grade Pathological",
+  "schema_selection_table" : "schema_selection_prostate",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "naaccr_item" : 523,
+    "table" : "behavior",
+    "used_for_staging" : true
+  }, {
+    "key" : "size_clin",
+    "name" : "Tumor Size Clinical",
+    "naaccr_item" : 752,
+    "table" : "tumor_size_clinical_60979",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_path",
+    "name" : "Tumor Size Pathological",
+    "naaccr_item" : 754,
+    "table" : "tumor_size_pathological_25597",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_summary",
+    "name" : "Tumor Size Summary",
+    "naaccr_item" : 756,
+    "default" : "999",
+    "table" : "tumor_size_summary_63115",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "default" : "99",
+    "table" : "nodes_pos_fpa",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_exam",
+    "name" : "Regional Nodes Examined",
+    "naaccr_item" : 830,
+    "default" : "99",
+    "table" : "nodes_exam_76029",
+    "used_for_staging" : false
+  }, {
+    "key" : "radiation_surg_seq",
+    "name" : "RX Summ Surgery/Radiation Sequence",
+    "naaccr_item" : 1380,
+    "table" : "radiation_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "systemic_surg_seq",
+    "name" : "RX Summ Systemic/Surgery Sequence",
+    "naaccr_item" : 1639,
+    "table" : "systemic_surg_seq",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_primary_tumor",
+    "name" : "EOD Primary Tumor",
+    "naaccr_item" : 772,
+    "default" : "999",
+    "table" : "extension_bbo",
+    "used_for_staging" : true
+  }, {
+    "key" : "prostate_path_extension",
+    "name" : "Prostate Path Extension",
+    "naaccr_item" : 3919,
+    "default" : "999",
+    "table" : "prostate_path_extension_70758",
+    "used_for_staging" : true,
+    "metadata" : [ "COC_REQUIRED", "SSDI", "SEER_REQUIRED" ]
+  }, {
+    "key" : "eod_regional_nodes",
+    "name" : "EOD Regional Nodes",
+    "naaccr_item" : 774,
+    "default" : "999",
+    "table" : "nodes_dbf",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_mets",
+    "name" : "EOD Mets",
+    "naaccr_item" : 776,
+    "default" : "00",
+    "table" : "mets_hal",
+    "used_for_staging" : true
+  }, {
+    "key" : "ss2018",
+    "name" : "SS2018",
+    "naaccr_item" : 764,
+    "table" : "ss2018_prostate_76172",
+    "used_for_staging" : false
+  }, {
+    "key" : "grade_clin",
+    "name" : "Grade Clinical",
+    "naaccr_item" : 3843,
+    "default" : "9",
+    "table" : "grade_clinical_46962",
+    "used_for_staging" : true,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "grade_path",
+    "name" : "Grade Pathological",
+    "naaccr_item" : 3844,
+    "default" : "9",
+    "table" : "grade_pathological_20069",
+    "used_for_staging" : true,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "grade_post_therapy",
+    "name" : "Grade Post Therapy",
+    "naaccr_item" : 3845,
+    "table" : "grade_post_therapy_51269",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "psa",
+    "name" : "PSA Lab Value",
+    "naaccr_item" : 3920,
+    "default" : "XXX.9",
+    "table" : "psa_46258",
+    "used_for_staging" : true,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "number_cores_pos",
+    "name" : "Number of Cores Positive",
+    "naaccr_item" : 3898,
+    "default" : "X8",
+    "table" : "number_of_cores_positive_87819",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "number_cores_exam",
+    "name" : "Number of Cores Examined",
+    "naaccr_item" : 3897,
+    "default" : "X8",
+    "table" : "number_of_cores_examined_64985",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "gleason_score_clin",
+    "name" : "Gleason Score Clinical",
+    "naaccr_item" : 3840,
+    "default" : "X8",
+    "table" : "gleason_score_clinical_67175",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "gleason_patterns_clin",
+    "name" : "Gleason Patterns Clinical",
+    "naaccr_item" : 3838,
+    "default" : "X8",
+    "table" : "gleason_pattern_clinical_75179",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "gleason_score_path",
+    "name" : "Gleason Score Pathological",
+    "naaccr_item" : 3841,
+    "default" : "X8",
+    "table" : "gleason_score_pathological_82121",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "gleason_patterns_path",
+    "name" : "Gleason Patterns Pathological",
+    "naaccr_item" : 3839,
+    "default" : "X8",
+    "table" : "gleason_patterns_pathological_833",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "gleason_tertiary_pattern",
+    "name" : "Gleason Tertiary Pattern",
+    "naaccr_item" : 3842,
+    "default" : "X8",
+    "table" : "gleason_tertiary_pattern_6430",
+    "used_for_staging" : false,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  } ],
+  "outputs" : [ {
+    "key" : "naaccr_schema_id",
+    "name" : "Schema ID",
+    "naaccr_item" : 3800,
+    "default" : "00580"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "naaccr_item" : 995,
+    "default" : "XX"
+  }, {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "Derived EOD 2018 T",
+    "naaccr_item" : 785,
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_n",
+    "name" : "Derived EOD 2018 N",
+    "naaccr_item" : 815,
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_m",
+    "name" : "Derived EOD 2018 M",
+    "naaccr_item" : 795,
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_stage_group",
+    "name" : "Derived EOD 2018 Stage Group",
+    "naaccr_item" : 818,
+    "default" : "88"
+  }, {
+    "key" : "ss2018_derived",
+    "name" : "Derived Summary Stage 2018",
+    "naaccr_item" : 762,
+    "default" : "9"
+  } ],
+  "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_41833",
+      "inputs" : [ "hist", "behavior" ],
+      "outputs" : [ "ajcc_id" ]
+    } ]
+  }, {
+    "id" : "summary_stage_2018",
+    "name" : "Summary Stage 2018",
+    "initial_context" : [ {
+      "key" : "eod_2018_t",
+      "value" : "90"
+    }, {
+      "key" : "eod_2018_n",
+      "value" : "90"
+    }, {
+      "key" : "eod_2018_m",
+      "value" : "90"
+    } ],
+    "tables" : [ {
+      "id" : "extension_bbo",
+      "output_mapping" : [ {
+        "from" : "ss2018_t",
+        "to" : "clin_ss2018_t"
+      }, {
+        "from" : "eod_2018_t",
+        "to" : "clin_eod_2018_t"
+      } ],
+      "inputs" : [ "eod_primary_tumor" ],
+      "outputs" : [ "clin_eod_2018_t", "clin_ss2018_t" ]
+    }, {
+      "id" : "prostate_path_extension_70758",
+      "output_mapping" : [ {
+        "from" : "ss2018_t",
+        "to" : "path_ss2018_t"
+      }, {
+        "from" : "eod_2018_t",
+        "to" : "path_eod_2018_t"
+      } ],
+      "inputs" : [ "prostate_path_extension" ],
+      "outputs" : [ "path_eod_2018_t", "path_ss2018_t" ]
+    }, {
+      "id" : "combine_prostate_eod_extension_16771",
+      "inputs" : [ "path_ss2018_t", "clin_ss2018_t" ],
+      "outputs" : [ "ss2018_t" ]
+    }, {
+      "id" : "nodes_dbf",
+      "inputs" : [ "eod_regional_nodes" ],
+      "outputs" : [ "eod_2018_n", "ss2018_n" ]
+    }, {
+      "id" : "mets_hal",
+      "inputs" : [ "eod_mets" ],
+      "outputs" : [ "eod_2018_m", "ss2018_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2018_m", "ss2018_n", "ss2018_t" ],
+      "outputs" : [ "ss2018_derived" ]
+    } ]
+  }, {
+    "id" : "eod_2018_stage_group",
+    "name" : "EOD 2018 Stage Group",
+    "inclusion_tables" : [ {
+      "id" : "tnm8_inclusions_tpv",
+      "inputs" : [ "ajcc_id" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "eod_2018_stage_group",
+      "value" : "90"
+    }, {
+      "key" : "tmp_eod_t"
+    } ],
+    "tables" : [ {
+      "id" : "parse_t_2177",
+      "input_mapping" : [ {
+        "from" : "clin_eod_2018_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_t",
+        "to" : "tmp_clin_eod_t"
+      } ],
+      "inputs" : [ "clin_eod_2018_t" ],
+      "outputs" : [ "t_prefix", "tmp_clin_eod_t" ]
+    }, {
+      "id" : "parse_t_2177",
+      "input_mapping" : [ {
+        "from" : "path_eod_2018_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_t",
+        "to" : "tmp_path_eod_t"
+      } ],
+      "inputs" : [ "path_eod_2018_t" ],
+      "outputs" : [ "t_prefix", "tmp_path_eod_t" ]
+    }, {
+      "id" : "combined_t_no_tis",
+      "input_mapping" : [ {
+        "from" : "tmp_clin_eod_t",
+        "to" : "clin_t_in"
+      }, {
+        "from" : "tmp_eod_t",
+        "to" : "combined_t_in"
+      }, {
+        "from" : "tmp_path_eod_t",
+        "to" : "path_t_in"
+      } ],
+      "output_mapping" : [ {
+        "from" : "combined_t_out",
+        "to" : "tmp_eod_t"
+      } ],
+      "inputs" : [ "tmp_path_eod_t", "radiation_surg_seq", "tmp_clin_eod_t", "tmp_eod_t", "systemic_surg_seq" ],
+      "outputs" : [ "source_t_out", "tmp_eod_t" ]
+    }, {
+      "id" : "concatenate_t_51262",
+      "input_mapping" : [ {
+        "from" : "tmp_eod_t",
+        "to" : "root_t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "t",
+        "to" : "eod_2018_t"
+      } ],
+      "inputs" : [ "t_prefix", "tmp_eod_t" ],
+      "outputs" : [ "eod_2018_t" ]
+    }, {
+      "id" : "parse_n_67182",
+      "input_mapping" : [ {
+        "from" : "eod_2018_n",
+        "to" : "n"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_n",
+        "to" : "tmp_eod_n"
+      } ],
+      "inputs" : [ "eod_2018_n" ],
+      "outputs" : [ "n_prefix", "tmp_eod_n" ]
+    }, {
+      "id" : "parse_m_47057",
+      "input_mapping" : [ {
+        "from" : "eod_2018_m",
+        "to" : "m"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_m",
+        "to" : "tmp_eod_m"
+      } ],
+      "inputs" : [ "eod_2018_m" ],
+      "outputs" : [ "m_prefix", "tmp_eod_m" ]
+    }, {
+      "id" : "combined_grade_56638",
+      "inputs" : [ "grade_path", "grade_clin" ],
+      "outputs" : [ "grade_combined" ]
+    }, {
+      "id" : "tnm_8_combined_stage_group_for_eod_44498",
+      "input_mapping" : [ {
+        "from" : "grade_combined",
+        "to" : "grade"
+      }, {
+        "from" : "tmp_eod_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_eod_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_eod_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "eod_2018_stage_group"
+      } ],
+      "inputs" : [ "tmp_eod_n", "grade_combined", "tmp_eod_m", "tmp_eod_t", "psa" ],
+      "outputs" : [ "eod_2018_stage_group" ]
+    } ]
+  }, {
+    "id" : "eod_tnm_cleanup",
+    "name" : "EOD TNM Cleanup",
+    "exclusion_tables" : [ {
+      "id" : "tnm8_inclusions_tpv",
+      "inputs" : [ "ajcc_id" ]
+    } ],
+    "tables" : [ {
+      "id" : "eod_tnm_component_cleanup_58170",
+      "inputs" : [ "ajcc_id" ],
+      "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
+    } ]
+  } ],
+  "involved_tables" : [ "grade_post_therapy_51269", "mets_hal", "ajcc_chapter_calculation_41833", "radiation_surg_seq", "gleason_patterns_pathological_833", "nodes_pos_fpa", "parse_t_2177", "tnm_8_combined_stage_group_for_eod_44498", "nodes_dbf", "parse_n_67182", "grade_clinical_46962", "schema_selection_prostate", "histology", "combine_prostate_eod_extension_16771", "nodes_exam_76029", "gleason_score_pathological_82121", "combined_t_no_tis", "tumor_size_summary_63115", "ss2018_prostate_76172", "combined_grade_56638", "prostate_path_extension_70758", "behavior", "extension_bbo", "concatenate_t_51262", "tnm8_inclusions_tpv", "number_of_cores_examined_64985", "number_of_cores_positive_87819", "grade_pathological_20069", "gleason_pattern_clinical_75179", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "gleason_tertiary_pattern_6430", "systemic_surg_seq", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "psa_46258", "year_dx_validation", "summary_stage_rpa", "gleason_score_clinical_67175" ],
+  "on_invalid_input" : "CONTINUE",
+  "last_modified" : "2018-05-09T17:52:01.142Z"
+}

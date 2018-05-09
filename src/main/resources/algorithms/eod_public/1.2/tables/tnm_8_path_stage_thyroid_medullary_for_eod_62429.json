@@ -1,0 +1,26 @@
+{
+  "id" : "tnm_8_path_stage_thyroid_medullary_for_eod_62429",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "TNM 8 Path Stage Thyroid Medullary for EOD",
+  "title" : "TNM 8 Path Stage-Thyroid: Medullary",
+  "last_modified" : "2018-05-09T15:33:21.623Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0", "0", "0", "VALUE:99" ], [ "1", "0", "0", "VALUE:1" ], [ "1A ", "0", "0", "VALUE:1" ], [ "1B ", "0", "0", "VALUE:1" ], [ "2", "0", "0", "VALUE:2" ], [ "3", "0", "0", "VALUE:2" ], [ "3A ", "0", "0", "VALUE:2" ], [ "3B ", "0", "0", "VALUE:2" ], [ "4", "0", "0", "VALUE:4" ], [ "4A ", "0", "0", "VALUE:4A" ], [ "4B ", "0", "0", "VALUE:4B" ], [ "X ", "0", "0", "VALUE:99" ], [ "0", " 0A ", "0", "VALUE:99" ], [ "1", " 0A ", "0", "VALUE:1" ], [ "1A ", " 0A ", "0", "VALUE:1" ], [ "1B ", " 0A ", "0", "VALUE:1" ], [ "2", " 0A ", "0", "VALUE:2" ], [ "3", " 0A ", "0", "VALUE:2" ], [ "3A ", " 0A ", "0", "VALUE:2" ], [ "3B ", " 0A ", "0", "VALUE:2" ], [ "4", " 0A ", "0", "VALUE:4" ], [ "4A ", " 0A ", "0", "VALUE:4A" ], [ "4B ", " 0A ", "0", "VALUE:4B" ], [ "X ", " 0A ", "0", "VALUE:99" ], [ "0", " 0B ", "0", "VALUE:99" ], [ "1", " 0B ", "0", "VALUE:1" ], [ "1A ", " 0B ", "0", "VALUE:1" ], [ "1B ", " 0B ", "0", "VALUE:1" ], [ "2", " 0B ", "0", "VALUE:2" ], [ "3", " 0B ", "0", "VALUE:2" ], [ "3A ", " 0B ", "0", "VALUE:2" ], [ "3B ", " 0B ", "0", "VALUE:2" ], [ "4", " 0B ", "0", "VALUE:4" ], [ "4A ", " 0B ", "0", "VALUE:4A" ], [ "4B ", " 0B ", "0", "VALUE:4B" ], [ "X ", " 0B ", "0", "VALUE:99" ], [ "0", "1", "0", "VALUE:99" ], [ "1", "1", "0", "VALUE:99" ], [ "1A ", "1", "0", "VALUE:99" ], [ "1B ", "1", "0", "VALUE:99" ], [ "2", "1", "0", "VALUE:99" ], [ "3", "1", "0", "VALUE:99" ], [ "3A ", "1", "0", "VALUE:99" ], [ "3B ", "1", "0", "VALUE:99" ], [ "4", "1", "0", "VALUE:4" ], [ "4A ", "1", "0", "VALUE:4A" ], [ "4B ", "1", "0", "VALUE:4B" ], [ "X ", "1", "0", "VALUE:99" ], [ "0", " 1A ", "0", "VALUE:99" ], [ "1", " 1A ", "0", "VALUE:3" ], [ "1A ", " 1A ", "0", "VALUE:3" ], [ "1B ", " 1A ", "0", "VALUE:3" ], [ "2", " 1A ", "0", "VALUE:3" ], [ "3", " 1A ", "0", "VALUE:3" ], [ "3A ", " 1A ", "0", "VALUE:3" ], [ "3B ", " 1A ", "0", "VALUE:3" ], [ "4", " 1A ", "0", "VALUE:4" ], [ "4A ", " 1A ", "0", "VALUE:4A" ], [ "4B ", " 1A ", "0", "VALUE:4B" ], [ "X ", " 1A ", "0", "VALUE:99" ], [ "0", " 1B ", "0", "VALUE:4" ], [ "1", " 1B ", "0", "VALUE:4A" ], [ "1A ", " 1B ", "0", "VALUE:4A" ], [ "1B ", " 1B ", "0", "VALUE:4A" ], [ "2", " 1B ", "0", "VALUE:4A" ], [ "3", " 1B ", "0", "VALUE:4A" ], [ "3A ", " 1B ", "0", "VALUE:4A" ], [ "3B ", " 1B ", "0", "VALUE:4A" ], [ "4", " 1B ", "0", "VALUE:4" ], [ "4A ", " 1B ", "0", "VALUE:4A" ], [ "4B ", " 1B ", "0", "VALUE:4B" ], [ "X ", " 1B ", "0", "VALUE:4" ], [ "0", " X ", "0", "VALUE:99" ], [ "1", " X ", "0", "VALUE:99" ], [ "1A ", " X ", "0", "VALUE:99" ], [ "1B ", " X ", "0", "VALUE:99" ], [ "2", " X ", "0", "VALUE:99" ], [ "3", " X ", "0", "VALUE:99" ], [ "3A ", " X ", "0", "VALUE:99" ], [ "3B ", " X ", "0", "VALUE:99" ], [ "4", " X ", "0", "VALUE:4" ], [ "4A ", " X ", "0", "VALUE:4A" ], [ "4B ", " X ", "0", "VALUE:4B" ], [ "X ", " X ", "0", "VALUE:99" ], [ "*", "*", "1", "VALUE:4C" ], [ "88", "88", "88", "VALUE:88" ], [ "88", "*", "*", "VALUE:88" ] ]
+}

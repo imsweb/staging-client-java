@@ -1,0 +1,19 @@
+{
+  "id" : "lymph_nodes_assessment_method_pelvic_33476",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "LN Assessment Method Pelvic",
+  "title" : "Lymph Nodes Assessment Method Pelvic",
+  "notes" : "**Note 1:** Physician statement of pelvic assessment method can be used to code this data item when no other information is available.\n\n**Note 2:** Assign the highest applicable code (0-2) in the case of multiple assessments.\n\t\n**Note 3:** The assessment results are recorded in Lymph Nodes Status: Femoral-Inguinal, Para-aortic and Pelvic [NAACCR Data Item #3884].",
+  "last_modified" : "2018-05-09T15:33:19.763Z",
+  "definition" : [ {
+    "key" : "ln_assessment_pelvic",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Radiography, imaging \n(Ultrasound (US), computed tomography scan (CT), magnetic resonance imaging (MRI), positron emission tomography scan (PET))\n\nPhysical exam only" ], [ "1", "Incisional biopsy; fine needle aspiration (FNA)" ], [ "2", "Lymphadenectomy\nExcisional biopsy or resection with microscopic confirmation" ], [ "7", "Regional lymph node(s) assessed, unknown assessment method" ], [ "8", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in patient record\nRegional lymph node(s) not assessed or unknown if assessed" ] ]
+}

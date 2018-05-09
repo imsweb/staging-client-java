@@ -1,0 +1,19 @@
+{
+  "id" : "ldh_upper_limits_of_normal_34244",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "LDH Upper Limits of Normal",
+  "title" : "LDH (Lactate Dehydrogenase) Upper Limits of Normal",
+  "notes" : "**Note 1:** Physician statement of LDH (Lactate Dehydrogenase) Upper Limit of Normal can be used to code this data item.\n\n**Note 2:** Upper limits of normal for LDH vary widely depending on the lab. Common upper limits can be 200, 250, 618, or other values. \n\n**Note 3:** The same laboratory test should be used to record information LDH Pretreatment Lab Value [NAACCR Data Item # 3869]",
+  "last_modified" : "2018-05-09T15:33:19.947Z",
+  "definition" : [ {
+    "key" : "ldh_upper_limit",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "001-999", "001 - 999 upper limit of normal  \n(Exact upper limit of normal)" ], [ "XX8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code XX8 may result in an edit error.)" ], [ "XX9", "Not documented in patient record\nLDH Upper Limit not assessed or unknown if assessed" ] ]
+}

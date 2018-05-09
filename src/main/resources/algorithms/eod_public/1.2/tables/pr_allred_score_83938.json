@@ -1,0 +1,19 @@
+{
+  "id" : "pr_allred_score_83938",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Progesterone Receptor Total Allred Score",
+  "title" : "PR (Progesterone Receptor) Total Allred Score",
+  "notes" : "**Note 1:** Physician statement of PR (Progesterone Receptor) Total Allred Score  can be used to code this data item.\n\n**Note 2:** Code this data item using the same report used to record PR Summary. \n\n**Note 3:**  The Allred system looks at what percentage of cells test positive for hormone receptors, along with how well the receptors show up after staining (this is called “intensity”). This information is then combined to score the sample on a scale from 0 to 8. The higher the score, the more receptors were found and the easier they were to see in the sample.\n* The registrar should not calculate the intensity score unless both components are available (proportion score and intensity)\n\n**Note 4:** If PR test is performed, but Allred score is not documented, or it cannot be  calculated, code X9.",
+  "last_modified" : "2018-05-09T15:33:19.725Z",
+  "definition" : [ {
+    "key" : "pr_allred_score",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "Total PR Allred score of 0 " ], [ "01", "Total PR Allred score of 1" ], [ "02", "Total PR Allred score of 2" ], [ "03", "Total PR Allred score of 3" ], [ "04", "Total PR Allred score of 4" ], [ "05", "Total PR Allred score of 5" ], [ "06", "Total PR Allred score of 6" ], [ "07", "Total PR Allred score of 7" ], [ "08", "Total PR Allred score of 8" ], [ "X8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code X8 will result in an edit error.)" ], [ "X9", "Not documented in medical record\nPR (Progesterone Receptor) Total Allred Score not assessed, or unknown if assessed" ] ]
+}

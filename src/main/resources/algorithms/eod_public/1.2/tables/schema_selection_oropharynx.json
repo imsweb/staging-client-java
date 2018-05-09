@@ -1,0 +1,30 @@
+{
+  "id" : "schema_selection_oropharynx",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Selection Oropharynx",
+  "title" : "Schema selection for Oropharynx",
+  "last_modified" : "2018-05-09T15:33:19.637Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_1",
+    "name" : "Schema Discriminator 1",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_2",
+    "name" : "Schema Discriminator 2",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C019, C024, C051-C052, C090-C091, C098-C099, C100, C102-C104, C108-C109", "8000-8700, 9700-9701", " ", "2", "MATCH" ], [ "C111", "8000-8700, 9700-9701", "2", "2", "MATCH" ] ]
+}

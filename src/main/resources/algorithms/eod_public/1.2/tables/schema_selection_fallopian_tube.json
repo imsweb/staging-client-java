@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_fallopian_tube",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Selection Fallopian Tube",
+  "title" : "Schema selection for Fallopian Tube",
+  "last_modified" : "2018-05-09T15:33:20.067Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C570", "8000-8700, 8720-8790, 8806, 8810, 8815, 8822, 8825, 8890, 8930-8931,8933,8935-8936,8950,8960,8980,9000,9050,9052,9060,9070-9071,9073,9080,9085,9090-9091,9100,9110,9700-9701", "MATCH" ] ]
+}

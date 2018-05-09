@@ -1,0 +1,28 @@
+{
+  "id" : "mets_hau",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "EOD Mets",
+  "title" : "EOD Mets",
+  "notes" : "**Note:** For bone marrow micrometastasis, circulating tumor cells (CTCs) or disseminated tumor cells and clusters (DTCs) are less than or equal to 0.2 mm and assigned code 05.",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 3-30\n\n(5) Hortobagyi, G.N., Giuliano, A., et al. **Breast**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 589-628",
+  "last_modified" : "2018-05-09T15:33:19.524Z",
+  "definition" : [ {
+    "key" : "eod_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_m",
+    "name" : "EOD 2018 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_m",
+    "name" : "SS2018 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis\nUnknown if distant metastasis", "VALUE:M0", "VALUE:NONE" ], [ "05", "No clinical or radiographic evidence of distant mets\n- Tumor cells found in circulating blood, bone marrow or other distant lymph node tissue less than or equal to 0.2 mm", "VALUE:M0(i+)", "VALUE:NONE" ], [ "10", "Distant lymph node(s)\n- Cervical, NOS\n- Contralateral/bilateral axillary\n- Contralateral/bilateral internal mammary (parasternal)\n- Supraclavicular (transverse cervical) (contralateral)\n- Distant lymph node(s), NOS", "VALUE:M1", "VALUE:D" ], [ "70", "Skin over\n- Axilla\n- Contralateral (opposite) breast\n- Sternum\n- Upper abdomen\n\nFurther contiguous extension\n\nDistant metastasis\n- Adrenal (suprarenal) gland\n- Bone other than adjacent rib\n- Contralateral (opposite) breast-if stated as metastatic\n- Lung\n- Ovary\n- Satellite nodule(s) in skin other than primary breast\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS", "VALUE:M1", "VALUE:D" ], [ "99", "Death Certificate Only", "VALUE:M0", "VALUE:U" ] ]
+}

@@ -1,0 +1,26 @@
+{
+  "id" : "tnm_8_path_stage_group_for_eod_81951",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "TNM 8 Path Stage Group for EOD",
+  "title" : "TNM 8 Path Stage Group",
+  "last_modified" : "2018-05-09T15:33:21.691Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0", "0", "0", "VALUE:99" ], [ "0", "1", "0", "VALUE:3" ], [ "0", " X ", "0", "VALUE:99" ], [ "1", "0", "0", "VALUE:1" ], [ "1", "1", "0", "VALUE:3" ], [ "1", " X ", "0", "VALUE:99" ], [ "1A ", "0", "0", "VALUE:1" ], [ "1A ", "1", "0", "VALUE:3" ], [ "1A ", " X ", "0", "VALUE:99" ], [ "1B ", "0", "0", "VALUE:1" ], [ "1B ", "1", "0", "VALUE:3" ], [ "1B ", " X ", "0", "VALUE:99" ], [ "2", "0", "0", "VALUE:2" ], [ "2", "1", "0", "VALUE:3" ], [ "2", " X ", "0", "VALUE:99" ], [ "2A ", "0", "0", "VALUE:2" ], [ "2A ", "1", "0", "VALUE:3" ], [ "2A ", " X ", "0", "VALUE:99" ], [ "2B ", "0", "0", "VALUE:2" ], [ "2B ", "1", "0", "VALUE:3" ], [ "2B ", " X ", "0", "VALUE:99" ], [ "3,3A,3B,3C", "*", "0", "VALUE:3" ], [ "4", "*", "0", "VALUE:4" ], [ "X ", "0", "0", "VALUE:99" ], [ "X ", "1", "0", "VALUE:99" ], [ "X ", " X ", "0", "VALUE:99" ], [ "*", "*", "1", "VALUE:4" ], [ "88", "88", "88", "VALUE:88" ], [ "88", "*", "*", "VALUE:88" ] ]
+}

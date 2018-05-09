@@ -1,0 +1,28 @@
+{
+  "id" : "extension_bcc",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "EOD Primary Tumor",
+  "title" : "EOD Primary Tumor",
+  "notes" : "**Note 1:**  The tentorium cerebelli is an extension of the dura mater that separates the cerebellum from the inferior portion of the occipital lobes.  The location of the tumor above or below the tentorium can help in determining the type of tumor; also most adult brain tumors are supratentorial, and most pediatric brain tumors are infratentorial.  In the following list, note that ICD-O-3 codes C71.0 and C71.9 include both supratentorial and infratentorial subsites.\n\n**Infratentorial sites by ICD-O-3 codes**\nC710: Hypothalamus, pallium, thalamus\nC716-C717\n\n**Supratentorial sites by ICD-O-3 codes**\nC710, except hypothalamus, pallium, thalamus\nC711-C715\nC718: Corpus callosum, tapetum\nC719: Anterior cranial fossa, middle cranial fossa, suprasellar\n\n**Note 2:**  Discontiguous spread,  including circulating cells in cerebrospinal fluid (CSF), is coded in EOD Mets.",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) Laws, E.R., Curran, W.J., et al. **Brain and Spinal Cord**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 857-869",
+  "last_modified" : "2018-05-09T15:33:19.272Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_t",
+    "name" : "SS2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "050", "Benign or borderline brain tumor", "VALUE:88", "VALUE:B" ], [ "100", "Infratentorial tumor confined to\n- Brain stem or meninges of brain stem (one side)\n    + Medulla oblongata\n    + Midbrain (mesencephalon)\n    + Pons\n- Cerebellum or meninges of cerebellum (one side or midline) \n     + Lateral lobes\n     + Median lobe of cerebellum\n     + Vermis\n- Hypothalamus\n- Thalamus\n\nInfratentorial tumor\n- Both cerebellum and brain stem involved with tumor on one side\n\nSupratentorial tumor confined to\n- Cerebral hemisphere (cerebrum) or meninges of cerebral hemisphere (one side)\n    + Frontal lobe\n    + Occipital lobe\n    + Parietal lobe\n    + Temporal lobe\n\nConfined to ventricles \nTumor invades or encroaches upon ventricular system\n\nConfined to brain, NOS\nConfined to meninges, NOS", "VALUE:88", "VALUE:L" ], [ "500", "Tumor crosses the midline\n\nBone (skull)\nContralateral hemisphere\nCorpus callosum (including splenium)\nMajor blood vessel(s)\nMeninges (e.g., dura)\nNerves (cranial, NOS)\nSpinal cord/canal\n\nSupratentorial tumor extends infratentorially to involve\n- Brain stem \n- Cerebellum\n- Hypothalamus\n- Pallium\n- Posterior cranial fossa\n- Thalamus\n\nInfratentorial tumor extends supratentorially to involve \n- Cerebrum (cerebral hemisphere) (excluding hypothalamus, pallium, thalamus)\n- Anterior cranial fossa\n- Corpus callosum\n- Middle cranial fossa\n- Suprasellar brain\n- Tapetum", "VALUE:88", "VALUE:RE" ], [ "700", "Circulating cells in cerebral spinal fluid (CSF)\n\nNasal cavity\nNasopharynx\nOther direct extension outside CNS\nPosterior pharynx\n\nFurther contiguous extension", "VALUE:88", "VALUE:D" ], [ "800", "No evidence of primary tumor", "VALUE:88", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record\n\nDeath Certificate Only", "VALUE:88", "VALUE:U" ] ]
+}

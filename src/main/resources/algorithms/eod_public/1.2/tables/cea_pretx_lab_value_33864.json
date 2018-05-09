@@ -1,0 +1,19 @@
+{
+  "id" : "cea_pretx_lab_value_33864",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "CEA Pretreatment Lab Value",
+  "title" : "CEA (Carcinoembryonic Antigen) Pretreatment Lab Value",
+  "notes" : "**Note 1:** Physician statement of CEA (Carcinoembryonic Antigen) Pretreatment Lab Value can be used to code this data item when no other information is available. \n\n**Note 2:** Record the lab value of the highest CEA test result documented in the medical record **prior to treatment or polypectomy**. The lab value may be recorded in a lab report, history and physical, or clinical statement in the pathology report.\n\n**Note 3:** CEA is a tumor marker that has value in the management of certain malignancies.\n\n**Note 4:** Record to the nearest tenth in nanograms/milliliter (ng/ml) the highest CEA lab value documented in the medical record **prior to treatment or polypectomy.** \n* ***Example:*** Code a pretreatment CEA of 7 ng/ml as 7.0. \n\n**Note 5:** For an uncertain value, record the stated closest value. \n* ***Example:*** Code a value stated as \"less than 0.5 ng/ml\" as 0.5.\n\n**Note 6:** Record 0.1 when the lab results are stated as less than 0.1 ng/ml with no exact value.\n\n**Note 7:** The same laboratory test should be used to record information in CEA Pretreatment Interpretation [NAACCR Data Item #3819].",
+  "last_modified" : "2018-05-09T15:33:19.581Z",
+  "definition" : [ {
+    "key" : "cea_pretx_lab_value",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0", "0.0 nanograms/milliliter (ng/m) exactly" ], [ "0.1-9999.9", "0.1-9999.9 ng/ml\n(Exact value to nearest tenth in ng/ml)" ], [ "XXXX.1", "10,000 ng/ml or greater" ], [ "XXXX.7", "Test ordered, results not in chart" ], [ "XXXX.8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code XXXX.8 may result in an edit error.)" ], [ "XXXX.9", "Not documented in medical record\nCEA (Carcinoembryonic Antigen) Pretreatment Lab Value not assessed or unknown if assessed" ] ]
+}

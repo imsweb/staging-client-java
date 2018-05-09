@@ -1,0 +1,19 @@
+{
+  "id" : "multigene_signature_method_85043",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Multigene Signature Method",
+  "title" : "Multigene Signature Method",
+  "notes" : "**Note 1:** Physician statement of the Multigene Signature Method can be used to code this data item.\n\n**Note 2:** Multigene signatures or classifiers are assays of a panel of genes from a tumor specimen, intended to provide a quantitative assessment of the likelihood of response to chemotherapy and to evaluate prognosis or the likelihood of future metastasis.  \n\n**Note 3:** Code the type of test performed. The same test should be used to record information in Multigene Signature Results [NAACCR Data Item # 3895].\n\n**Note 4:** Oncotype Dx tests are not recorded in this data item. See the following data items for Oncotype Dx.\n* Oncotype Dx Recurrence Score-DCIS [NAACCR Data Item # 3903]\n* Oncotype Dx Recurrence Score-Invasive [NAACCR Data Item # 3904]\n* Oncotype Dx Risk Level-DCIS [NAACCR Data Item # 3905]\n* Oncotype Dx Risk Level-Invasive [NAACCR Data Item # 3906]",
+  "last_modified" : "2018-05-09T15:33:20.031Z",
+  "definition" : [ {
+    "key" : "multigene_signature_method",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Mammaprint" ], [ "2", "PAM50 (Prosigna)" ], [ "3", "Breast Cancer Index" ], [ "4", "EndoPredict" ], [ "5", "Test performed, type of test unknown" ], [ "6", "Multiple tests, any tests in codes 1-4" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nMultigene Signature Method not assessed or unknown if assessed" ] ]
+}

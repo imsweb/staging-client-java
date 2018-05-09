@@ -1,0 +1,22 @@
+{
+  "id" : "ajcc_chapter_calculation_78338",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2018-05-09T15:33:19.186Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "8051-8052,8070,8074-8075,8082-8083,8086", "VALUE:11.2", "Hypopharynx" ], [ "8560", "VALUE:11.2", "Hypopharynx" ], [ "8000-8050,8053-8060,8071-8073,8076-8081,8084-8085,8090-8552", "VALUE:XX", "Other Hypopharynx" ], [ "8561-8700,9700-9701", "VALUE:XX", "Other Hypopharynx" ] ]
+}

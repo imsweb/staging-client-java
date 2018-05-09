@@ -1,0 +1,19 @@
+{
+  "id" : "grade_pathological_68805",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Grade Pathological GIST",
+  "title" : "Grade Pathological",
+  "notes" : "**Note 1:** Pathological grade must not be blank.\n\n**Note 2:** Assign the highest grade from the primary tumor. If the clinical grade is higher than the grade determined during the pathological time frame, use the grade that was identified during the clinical time frame for both the clinical grade and the pathological grade.\n\n**Note 3:** Codes L and H take priority over A-D.\n\n**Note 4:** Record the mitotic rate as Low or High as indicated on the pathology report or CAP protocol. Assume the denominator is 5 square mm if not specified.\n* Low: 5 or fewer mitoses per 5 square mm (L)\n* High: Over 5 mitoses per 5 square mm (H)\n\n**Note 5:** Code 9 when\n* Grade from primary site is not documented\n* No resection of the primary site\n* Neo-adjuvant therapy is followed by a resection (see post-therapy grade)\n* Clinical case only (see clinical grade)\n* There is only one grade (mitotic rate) available and it cannot be determined if it is clinical, pathological, or after neo-adjuvant therapy\n* Grade checked “not applicable” on CAP Protocol (if available) and no other grade information is available\n\n**Note 6:** If you are assigning an AJCC 8th edition stage group\n* Grade is required to assign stage group\n* Codes A-D are treated as an unknown grade when assigning AJCC stage group \n* An unknown grade may result in an unknown stage group",
+  "last_modified" : "2018-05-09T15:33:19.496Z",
+  "definition" : [ {
+    "key" : "grade_path",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "L", "Low: 5 or fewer mitoses per 5 square mm" ], [ "H", "High: Over 5 mitoses per 5 square mm" ], [ "A", "Well differentiated" ], [ "B", "Moderately differentiated" ], [ "C", "Poorly differentiated" ], [ "D", "Undifferentiated, anaplastic" ], [ "9", "Grade cannot be assessed; Unknown" ] ]
+}

@@ -1,0 +1,28 @@
+{
+  "id" : "eod_primary_tumor_3433",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "EOD Primary Tumor",
+  "title" : "EOD Primary Tumor",
+  "notes" : "**Note 1:** Periosteum is a fibrous membrane that wraps the outer surface of bones. Cortical bone is the dense compact outer layer of the bone. Trabecular, cancellous, or spongy bone (spongiosa) is a porous network of tissue filling the interior of bone, decreasing weight and allowing room for blood vessels and marrow.\n\n**Note 2:** For codes 100-500, the derived EOD T is based on tumor size and depth of invasion. In addition, some of the anatomical structures listed are localized for Summary Stage 2018 while others are regional for Summary Stage 2018. The anatomical structures are divided into two groups: Group 1 is for localized tumors, while Group 2 is for regional tumor. \n\n**Group 1 extension WITH any size tumor: Use the following for codes 100, 150, 200**\n\n- Invasive tumor on one side confined to mucoperiosteum (stroma)\n- Tumor crosses midline\n- Confined to hard palate, NOS\n- Localized, NOS\n\n**Group 2 extension WITH any size tumor: Use the following for codes 300, 400, 500**\n- Bone, NOS\n    + Cortical bone (maxilla, palatine, NOS)\n    + Maxilla, NOS\n    + Palatine bone, NOS\n- Buccal mucosa (inner cheek)\n- Gingiva, upper\n- Glossopalatine arch\n- Pharyngopalatine arch\n- Soft palate including uvula\n\n\n**Note 3:** Once the correct group is determined, the codes are then determined based on the depth of invasion.\n- Depth of invasion less than or equal to 5 mm or UNKNOWN depth of invasion (codes 100, 300)\n- Depth of invasion greater than 5 mm to less than or equal to 10 mm (codes 150, 400)\n- Depth of invasion greater than 10 mm (codes 200, 500)\n\n**Note 4:** Involvement through cortical bone is required for assignment of code 600.\n- Code 300, 400, or 500 (depending on the depth of invasion) when the tumor is limited to the cortical bone/cortex of maxilla. Invasion of the bone, NOS (maxilla, NOS) is **not** equivalent to invasion through the cortical bone (code 600).",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 3-30\n\n(5) Lydiatt, W.M., Patel, S.G., Shah, J.P., et al.  **Staging Head and Neck Cancers**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 55-65\n\n(6) Ridge, J.A., Lydiatt, W.M., Shah, J.P., et al. **Lip and Oral Cavity**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 79-94",
+  "last_modified" : "2018-05-09T15:33:21.018Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_t",
+    "name" : "SS2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "VALUE:Tis", "VALUE:IS" ], [ "100", "Group 1 WITH depth of invasion (DOI) less than or equal to 5 mm\nOR unknown depth of invasion", "JUMP:tumor_size_with_primary_tumor_for_ajcc_t_79936", "VALUE:L" ], [ "150", "Group 1 WITH depth of invasion (DOI) greater than 5 mm and less than or equal to 10 mm", "JUMP:tumor_size_with_primary_tumor_for_ajcc_t_79936", "VALUE:L" ], [ "200", "Group 1 WITH depth of invasion (DOI) greater than 10 mm", "JUMP:tumor_size_with_primary_tumor_for_ajcc_t_79936", "VALUE:L" ], [ "300", "Group 2 WITH depth of invasion (DOI) less than or equal to 5 mm\nOR unknown depth of invasion", "JUMP:tumor_size_with_primary_tumor_for_ajcc_t_79936", "VALUE:RE" ], [ "400", "Group 2 WITH depth of invasion (DOI) greater than 5 mm and less than or equal to 10 mm", "JUMP:tumor_size_with_primary_tumor_for_ajcc_t_79936", "VALUE:RE" ], [ "500", "Group 2 WITH depth of invasion (DOI) greater than 10 mm", "JUMP:tumor_size_with_primary_tumor_for_ajcc_t_79936", "VALUE:RE" ], [ "600", "Invasion through cortical bone (maxilla, NOS)\nTrabecular bone (maxilla, palatine)", "VALUE:T4a", "VALUE:RE" ], [ "700", "Deep (extrinsic) muscle of tongue\n- Genioglossus  \n- Hyoglossus\n- Palatoglossus\n- Styloglossus\n\nFloor of nose\nMaxillary sinus (antrum)\nNasal cavity\nNasopharynx\nSkin of face", "VALUE:T4a", "VALUE:D" ], [ "750", "Internal carotid artery (encased)\nMandible\nMasticator space\nPterygoid plates\nSkull base\nSpecified bone (other than maxilla)\nSphenoid bone\n\nFurther contiguous extension", "VALUE:T4b", "VALUE:D" ], [ "999", "Unknown;  extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record\n\nDeath Certificate Only", "VALUE:TX", "VALUE:U" ] ]
+}

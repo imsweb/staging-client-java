@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_tongue_anterior",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Selection TongueAnterior",
+  "title" : "Schema selection for TongueAnterior",
+  "last_modified" : "2018-05-09T15:33:19.673Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C020-C023,C028-C029", "8000-8700,8982, 9700-9701", "MATCH" ] ]
+}

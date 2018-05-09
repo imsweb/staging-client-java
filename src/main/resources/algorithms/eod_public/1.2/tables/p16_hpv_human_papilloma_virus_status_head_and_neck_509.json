@@ -1,0 +1,19 @@
+{
+  "id" : "p16_hpv_human_papilloma_virus_status_head_and_neck_509",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Human Papilloma Virus (HPV) Status",
+  "title" : "Human Papilloma Virus (HPV) Status",
+  "notes" : "**Note 1:** There is evidence that human papilloma virus (HPV) plays a role in the pathogenesis of some cancers. HPV testing may be performed for prognostic purposes; testing may also be performed on metastatic sites to aid in determination of the primary site.\n\n**Note 2:** Record the results of any HPV testing performed on pathological specimens including surgical and cytological (from cell blocks) tissue from the primary tumor or a metastatic site, including lymph nodes.  Do not record the results of blood tests or serology.\n\n**Note 3:** There are several methods for determination of HPV status. The most frequently used test is IHC for p16 expression which is surrogate marker for HPV infection. **Do not record the results of IHC p16 expression in this field.** The rest of the tests (based on ISH, PCR, RT-PCR technologies) detect the viral DNA or RNA. **This data item is only for HPV status determined by tests designed to detect viral DNA or RNA.**\n\n**Note 4:** HPV-type 16 refers to virus type and is different from p16 overexpression (p16+).\n\n**Note 5:** Codes 0-7 are hierarchical; use the highest code that applies.",
+  "last_modified" : "2018-05-09T15:33:18.862Z",
+  "definition" : [ {
+    "key" : "seer_ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "HPV negative for viral DNA by ISH test" ], [ "1", "HPV positive for viral DNA by ISH test" ], [ "2", "HPV negative for viral DNA by PCR test" ], [ "3", "HPV positive for viral DNA by PCR test" ], [ "4", "HPV negative by ISH E6/E7 RNA test" ], [ "5", "HPV positive by ISH E6/E7 RNA test" ], [ "6", "HPV negative by RT-PCR E6/E7 RNA test" ], [ "7", "HPV positive by RT-PCR E6/E7 RNA test" ], [ "8", "HPV status reported in medical records as positive or negative but test type is unknown" ], [ "9", "Unknown if HPV test detecting viral DNA and or RNA was performed" ] ]
+}

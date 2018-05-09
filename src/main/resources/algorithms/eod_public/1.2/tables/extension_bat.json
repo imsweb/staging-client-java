@@ -1,0 +1,28 @@
+{
+  "id" : "extension_bat",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "EOD Primary Tumor",
+  "title" : "EOD Primary Tumor",
+  "notes" : "**Note 1:** Impaired vocal cord mobility, also described as vocal cord paresis, may suggest invasion of intrinsic laryngeal muscle. Fixation of the vocal cord may be described as immobility of the arytenoids noted on endoscopy, vocal cord paralysis, or deviation of larynx to fixed side.\n\n**Note 2:** Code 100 for localized tumor only if no information is available to identify further extension.",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 3-30\n\n(5) Lydiatt, W.M., Patel, S.G., Shah, J.P., et al.  **Staging Head and Neck Cancers**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 55-65\n\n(6) Patel, S.G., Lydiatt, W.M., Shah, J.P., et al. **Larynx**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 149-161",
+  "last_modified" : "2018-05-09T15:33:20.397Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_t",
+    "name" : "SS2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "VALUE:Tis", "VALUE:IS" ], [ "100", "One vocal cord with normal vocal cord mobility", "VALUE:T1a", "VALUE:L" ], [ "150", "Both vocal cords with normal vocal cord mobility", "VALUE:T1b", "VALUE:L" ], [ "200", "Invasive tumor with normal vocal cord mobility\n\nIntrinsic larynx\nLaryngeal  commissure(s) (anterior, posterior)\nVocal cord(s) (true cord(s), true vocal cord(s), NOS)\n\nConfined to glottis, NOS\nLocalized, NOS", "VALUE:T1", "VALUE:L" ], [ "250", "Impaired vocal cord mobility\n\nAdjacent region(s) of larynx involved\n\nSubglottis\nSupraglottis \n- Aryepiglottic fold\n- Arytenoid cartilage\n     + Corniculate tubercle\n     + Cuneiform tubercle\n     + Ventricular bands (false vocal cord(s))", "VALUE:T2", "VALUE:L" ], [ "300", "Limited to larynx WITH vocal cord fixation\n\nIntrinsic muscle(s) of larynx\n- Aryepiglottic\n- Arytenoid \n- Cricoarytenoid\n- Cricothyroid\n- Thyroarytenoid \n- Thyroepiglottic\n- Vocalis", "VALUE:T3", "VALUE:L" ], [ "400", "Paraglottic space\nThyroid cartilage (inner cortex)", "VALUE:T3", "VALUE:RE" ], [ "500", "Base of tongue \nHypopharynx, NOS\nPostcricoid area\nPre-epiglottic space\nPre-epiglottic tissues\nPyriform sinus (pyriform fossa)\nVallecula", "VALUE:T4a", "VALUE:RE" ], [ "600", "Cricoid cartilage \nEsophagus\nExtrinsic muscle(s) of tongue\n- Genioglossus\n- Geniohyoid\n- Hyoglossus\n- Mylohyoid\n- Palatoglossus\n- Styloglossus\n\nOropharynx, NOS\nSkin\nSoft tissues of neck\nStrap muscle(s)\n- Omohyoid\n- Sternohyoid\n- Sternothyroid\n- Thyrohyoid \n\nThyroid cartilage (outer cortex, NOS)\nThyroid gland\nTrachea", "VALUE:T4a", "VALUE:D" ], [ "700", "Carotid artery (encased)\nMediastinal structure(s)\nPrevertebral space\n\nFurther contiguous extension", "VALUE:T4b", "VALUE:D" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in patient record\n\nDeath Certificate Only", "VALUE:TX", "VALUE:U" ] ]
+}

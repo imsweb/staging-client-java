@@ -1,0 +1,19 @@
+{
+  "id" : "chromosome_3_status_93464",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Chromosome 3 Status",
+  "title" : "Chromosome 3 Status",
+  "notes" : "**Note 1:** Physician statement of chromosome 3 status can be used to code this data item when no other information is available.\n\n**Note 2:** Monosomy 3, especially if combined with a frequently coexisting gain in chromosome 8q, is independently associated with metastatic risk. Chromosome 3 and 8 statuses may be determined with karyotyping or fluorescent in situ hybridization (FISH). \n\n**Note 3:** See also Chromosome 8q Status (NAACCR Data Item #3822)",
+  "last_modified" : "2018-05-09T15:33:19.594Z",
+  "definition" : [ {
+    "key" : "chrom_3_status",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "No loss of chromosome 3" ], [ "1", "Partial loss of chromosome 3" ], [ "2", "Complete loss of chromosome 3" ], [ "3", "Loss of chromosome 3, NOS" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in patient record\nChromosome 3 status not assessed or unknown if assessed" ] ]
+}

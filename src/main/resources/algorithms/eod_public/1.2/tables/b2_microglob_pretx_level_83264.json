@@ -1,0 +1,19 @@
+{
+  "id" : "b2_microglob_pretx_level_83264",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Serum Beta-2 Microglobulin Pretreatment Level",
+  "title" : "Serum Beta-2 Microglobulin Pretreatment Level",
+  "notes" : "**Note 1:** Serum microglobulin is part of the Revised International Staging (RISS). Use the cut points listed in the table below regardless of the lab’s reference range.\n\n**Note 2:** Record this data item based on a blood test performed at diagnosis (pre-treatment). In the absence of the lab test, a physician’s statement of the exact value can be used. Use the highest value available. \n\n**Note 3:** If there is no mention of the serum beta-2 microglobulin, code 9.",
+  "last_modified" : "2018-05-09T15:33:19.877Z",
+  "definition" : [ {
+    "key" : "b2_microglob_pretx_level",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "β2-microglobulin < 3.5 mg/L" ], [ "1", "β2-microglobulin ≥ 3.5 mg/L < 5.5 mg/L" ], [ "2", "β2-microglobulin ≥ 5.5 mg/L" ], [ "7", "Test ordered, results not in chart" ], [ "9", "Not documented in medical record\nSerum Beta-2 Microglobulin Pretreatment Level not assessed or unknown if assessed" ] ]
+}

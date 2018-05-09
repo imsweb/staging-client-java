@@ -1,0 +1,22 @@
+{
+  "id" : "ajcc_chapter_calculation_64632",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2018-05-09T15:33:21.395Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "8070,8090", "VALUE:64", "Eyelid Carcinoma" ], [ "8140,8200,8390", "VALUE:64", "Eyelid Carcinoma" ], [ "8400-8401,8407,8410,8413,8430,8480-8481", "VALUE:64", "Eyelid Carcinoma" ], [ "8940-8941,8980", "VALUE:64", "Eyelid Carcinoma" ], [ "8000-8040,8042-8060,8071-8086,8091-8131", "VALUE:XX", "Other Eyelid Carcinoma" ], [ "8141-8180,8191,8201-8246,8248-8384,8391-8392", "VALUE:XX", "Other Eyelid Carcinoma" ], [ "8402-8406,8408-8409,8420,8440-8474,8482-8700", "VALUE:XX", "Other Eyelid Carcinoma" ] ]
+}

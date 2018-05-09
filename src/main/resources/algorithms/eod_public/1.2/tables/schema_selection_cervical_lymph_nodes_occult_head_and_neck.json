@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_cervical_lymph_nodes_occult_head_and_neck",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Selection Cervical Lymph Nodes, Occult Head and Neck",
+  "title" : "Schema selection for Cervical Lymph Nodes, Occult Head and Neck",
+  "last_modified" : "2018-05-09T15:33:19.669Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_1",
+    "name" : "Schema Discriminator 1",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C760", "8000-8700,8720-8790,8941,9700-9701", "2,3,4,5", "MATCH" ] ]
+}

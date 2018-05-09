@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_ill_defined_other",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Selection IllDefinedOther",
+  "title" : "Schema selection for IllDefinedOther",
+  "last_modified" : "2018-05-09T15:33:19.116Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_1",
+    "name" : "Schema Discriminator 1",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C420-C424,C761-C765,C767-C768,C770-C775,C778-C779", "8000-8700,8720-8790,9700-9701", " ", "MATCH" ], [ "C760", "8000-8700,8720-8790,9700-9701", "0,1", "MATCH" ], [ "C809", "8000-8040, 8042-8180, 8191-8246, 8248-8700,8720-8790,9700-9701", " ", "MATCH" ] ]
+}

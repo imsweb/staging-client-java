@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_skin_other",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Selection Skin Other",
+  "title" : "Schema selection for Skin Other",
+  "last_modified" : "2018-05-09T15:33:19.132Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C445-C449", "8000-8040, 8042-8180, 8191-8246, 8248-8700, 8940,8982", "MATCH" ] ]
+}

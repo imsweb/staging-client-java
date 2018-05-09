@@ -1,0 +1,28 @@
+{
+  "id" : "eod_primary_tumor_96275",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "EOD Primary Tumor",
+  "title" : "EOD Primary Tumor",
+  "notes" : "**Note 1:** When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension information on the primary tumor are available, use the extension information to assign the code in preference to a statement of FIGO stage.\n\n**Note 2:** Peritoneal implants may also be called seeding, salting, talcum powder appearance, or studding.\n\n**Note 3:** A tumor confined to the peritoneum (code 300) is when there is one pelvic peritoneal tumor, or multiple pelvic peritoneal tumors, without any mention of implants on the specific pelvic/abdominal structures listed in codes 400-750.\n\n**Note 4:** Both extension to and/or discontinuous metastasis to any of the following pelvic organs are included in code 450\n- Adnexa, NOS\n- Bladder and bladder serosa\n- Broad ligament (mesovarium)\n- Cul de sac\n- Parametrium\n- Pelvic peritoneum\n- Pelvic wall\n- Rectosigmoid\n- Rectum\n- Sigmoid colon\n- Sigmoid mesentery\n- Ureter, pelvic\n\n**Note 5:**  If implants are mentioned, determine whether they are in the pelvis or in the abdomen and code appropriately. If the location of the implants is not specified, code 750.\n\n**Note 6:** Both extension to and/or discontinuous metastasis to any of the following abdominal organs by way of peritoneal seeding or implants are included in codes 600-750\n- Abdominal mesentery\n- Diaphragm\n- Gallbladder\n- Intestine, large (except rectum)\n- Kidneys\n- Liver (peritoneal surface)\n- Omentum (infracolic, NOS)\n- Pancreas\n- Pericolic gutter\n- Peritoneum, NOS\n- Rectosigmoid\n- Sigmoid colon\n- Small intestine\n- Spleen (capsular involvement only)\n- Stomach\n- Ureters (outside pelvis)\n\n**Note 7:** Direct extension and/or metastasis to the liver or splenic parenchyma are coded in EOD Mets.",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05.** American Joint Committee on Cancer (Chicago, IL)\n\n(4) Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging.** In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 3-30\n\n(5) **Introduction to Female Reproductive Organs**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 631\n\n(6) Prat, J., Olawaiye, A.B., Mutch, D.G., et al. **Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 681-690",
+  "last_modified" : "2018-05-09T15:33:20.961Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_t",
+    "name" : "SS2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive, preinvasive\nLimited to tubal mucosa", "VALUE:88", "VALUE:IS" ], [ "300", "Confined to peritoneum, NOS", "VALUE:T2", "VALUE:L" ], [ "400", "Extension to or implants on\n- Adnexa\n- Fallopian tube(s)\n- Ovary(ies)\n- Uterus, NOS\n\nFIGO Stage IIA", "VALUE:T2a", "VALUE:RE" ], [ "450", "Extension to or implants to other pelvic tissues\n\nBladder\nBladder serosa\nCul de sac (rectouterine pouch)\nLigament(s) (broad, ovarian, round, suspensory)\nMesovarium\nParametrium\nPelvic wall\nRectosigmoid\nRectum\nSigmoid colon (including sigmoid mesentery)\nUreter (pelvic portion)\n\nFIGO Stage IIB", "VALUE:T2b", "VALUE:RE" ], [ "600", "Microscopic peritoneal implants beyond pelvis \n- Includes peritoneal surface/capsule of liver\n- Omentum \n- Small intestine    \n\nFIGO Stage IIIA", "VALUE:T3a", "VALUE:RE" ], [ "650", "Macroscopic peritoneal implants beyond pelvis\n- Less than or equal to 2 cm in diameter\n- Includes peritoneal surface of liver\n\n\nFIGO Stage IIIB", "VALUE:T3b", "VALUE:D" ], [ "700", "Macroscopic peritoneal implants beyond pelvis\n- Greater than 2 cm in diameter \n- Includes peritoneal surface of liver (liver capsule)\n    + Includes tumor extension to liver and spleen WITHOUT parenchymal\n    + Involvement of either organ\n\nFIGO Stage IIIC", "VALUE:T3c", "VALUE:D" ], [ "750", "One or both ovaries or fallopian tubes  involved\nOR primary peritoneal cancer\nWITH microscopic confirmed peritoneal metastasis outside of the pelvis\n\nPeritoneal implants, NOS\n\nFurther contiguous extension\n\nFIGO Stage III [NOS]", "VALUE:T3", "VALUE:D" ], [ "800", "No evidence of primary tumor", "VALUE:T0", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record\n\nDeath Certificate Only", "VALUE:TX", "VALUE:U" ] ]
+}
