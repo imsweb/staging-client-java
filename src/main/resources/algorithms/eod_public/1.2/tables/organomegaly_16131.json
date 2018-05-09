@@ -1,0 +1,19 @@
+{
+  "id" : "organomegaly_16131",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Organomegaly",
+  "title" : "Organomegaly",
+  "notes" : "**Note 1:** For cases diagnosed 1/1/2018 and later, all cases of CLL and SLL will require both the **Lugano classification, which is captured in the AJCC stage group data item, and the five components of the modified Rai staging system, which are captured in Site-Specific Data Items (adenopathy, anemia, lymphocytosis, organomegaly, and thrombocytopenia).**\n\nThe terms B-cell lymphocytic leukemia/chronic lymphocytic leukemia (CLL) and small lymphocytic lymphoma (SLL) are considered different clinical presentations of the same disease, with both terms coded 9823.  Traditionally the lymphoma diagnosis was staged with the Ann Arbor staging system and it is now staged with the Lugano classification.  In North America, CLL was staged with the Rai system. \n\n**Note 2:** Physician statement of presence or absence of organomegaly should be used to code this data item.\n\n**Note 3:** Organomegaly is defined as presence of enlarged liver and/or spleen on physical examination and is part of the staging criteria.\n\n**Note 4:** This data item is determined from physical exam alone. If a physical exam cannot be used to detect organomegaly due to issues related to the patients obesity, a physician statement of organomegaly based on a CT scan can be used.\n\n**Note 5:** If there is no mention of organomegaly (present or absent), code 9.",
+  "last_modified" : "2018-05-09T15:33:21.905Z",
+  "definition" : [ {
+    "key" : "organomegaly",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Organomegaly of liver and/or spleen not present" ], [ "1", "Organomegaly of liver and/or spleen present" ], [ "9", "Not documented in medical record\nOrganomegaly not assessed or unknown if assessed" ] ]
+}

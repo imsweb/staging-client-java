@@ -1,0 +1,23 @@
+{
+  "id" : "tumor_size_with_primary_tumor_for_t_34253",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Tumor Size with Primary Tumor for T",
+  "title" : "Tumor Size Summary with EOD Primary Tumor for T",
+  "notes" : "If EOD Primary Tumor = 100, 200 or 300, Tumor Size Summary is necessary to determine the T value.",
+  "last_modified" : "2018-05-09T15:33:19.322Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "EOD Primary Tumor",
+    "type" : "INPUT"
+  }, {
+    "key" : "size_summary",
+    "name" : "Tumor Size",
+    "type" : "INPUT"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100,200,300", "000", "ERROR:Localized tumor or tumor with extension - Tumor Size is in conflict" ], [ "100,200,300", "001-080", "VALUE:T1" ], [ "100,200,300", "081-989", "VALUE:T2" ], [ "100,200,300", "990", "VALUE:T1" ], [ "100,200,300", "998", "ERROR:Localized tumor or tumor with extension - Tumor Size is in conflict" ], [ "100,200,300", "999", "VALUE:TX" ], [ "500,800,999", "*", "MATCH" ] ]
+}

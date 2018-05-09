@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_respiratory_other",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Selection RespiratoryOther",
+  "title" : "Schema selection for RespiratoryOther",
+  "last_modified" : "2018-05-09T15:33:19.656Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C390,C398-C399", "8000-8700,8720-8790,9700-9701", "MATCH" ] ]
+}

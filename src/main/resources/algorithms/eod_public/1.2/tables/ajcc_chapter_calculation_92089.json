@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc_chapter_calculation_92089",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2018-05-09T15:33:21.321Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "8010,8070-8072,8082", "3", "VALUE:69", "Lacrimal Gland Carcinoma" ], [ "8140,8147", "3", "VALUE:69", "Lacrimal Gland Carcinoma" ], [ "8200", "3", "VALUE:69", "Lacrimal Gland Carcinoma" ], [ "8410,8430,8440,8450,8480", "3", "VALUE:69", "Lacrimal Gland Carcinoma" ], [ "8500,8525,8550,8562", "3", "VALUE:69", "Lacrimal Gland Carcinoma" ], [ "8941,8980,8982", "3", "VALUE:69", "Lacrimal Gland Carcinoma" ], [ "8010,8070-8072,8082", "2", "VALUE:XX", "Other Lacrimal Gland" ], [ "8140,8147", "2", "VALUE:XX", "Other Lacrimal Gland" ], [ "8200", "2", "VALUE:XX", "Other Lacrimal Gland" ], [ "8410,8430,8440,8450,8480", "2", "VALUE:XX", "Other Lacrimal Gland" ], [ "8500,8525,8550,8562", "2", "VALUE:XX", "Other Lacrimal Gland" ], [ "8941,8980,8982", "2", "VALUE:XX", "Other Lacrimal Gland" ], [ "8000-8005,8011-8060,8073-8081,8083-8131", "*", "VALUE:XX", "Other Lacrimal Gland" ], [ "8141-8146,8148-8191,8201-8409", "*", "VALUE:XX", "Other Lacrimal Gland" ], [ "8413-8420,8441-8444,8451-8474,8481-8490", "*", "VALUE:XX", "Other Lacrimal Gland" ], [ "8501-8524,8530-8543,8551-8561,8570-8700", "*", "VALUE:XX", "Other Lacrimal Gland" ], [ "9700-9701", "*", "VALUE:XX", "Other Lacrimal Gland" ] ]
+}

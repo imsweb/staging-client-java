@@ -1,0 +1,21 @@
+{
+  "id" : "ss2018_lymphoma_ocular_adnexa_3583",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "SS2018: Lymphoma Ocular Adnexa",
+  "title" : "Summary Stage 2018: Lymphoma Ocular Adnexa",
+  "subtitle" : "Summary Stage 2018",
+  "notes" : "**Lymphoma Ocular Adnexa**\n\n9590-9699, 9702-9719, 9725-9726, 9734-9738, 9823, 9823-9827, 9930 (C441, C690, C695-C696)\n\n**Note 1:** The following sources were used in the development of this chapter\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)\n* SEER Summary Staging Manual-2000: Codes and Coding Instructions (https://seer.cancer.gov/tools/ssm/)\n* Collaborative Stage Data Collection System, version 02.05:  https://cancerstaging.org/cstage/Pages/default.aspx \n* Chapter 71 *Ocular Adnexal Lymphoma*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.\n\n**Note 2:** Code 0 is not applicable for this chapter.\n\n**Note 3:** Ocular adnexal lymphomas (OAL) originate in conjunctiva, eyelids, lacrimal gland, lacrimal drainage apparatus, and other orbital tissues surrounding the eye. This chapter should not be used for secondary lymphomatous involvement of ocular adnexa or for intraocular lymphomas.",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 3-30\n\n(5) Heegaard, S., Finger, P.T., et al. **Ocular Adnexal Lymphoma**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 849-854",
+  "last_modified" : "2018-05-09T15:33:20.872Z",
+  "definition" : [ {
+    "key" : "ss2018",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Localized only (localized, NOS)\n- Lymphoma involving the conjunctiva alone WITHOUT or UNKNOWN eyelid or orbital involvement\n- Lymphoma with orbital involvement WITH or WITHOUT conjunctival involvement\n- Lymphoma with preseptal eyelid involvement WITH or WITHOUT orbital or conjunctival involvement" ], [ "2", "Regional by direct extension only\n- Orbital adnexal lymphoma AND extraorbital lymphoma extending beyond the orbit to adjacent structures\n   + Bone \n   + Brain\n   + Maxillofacial sinuses" ], [ "3", "Regional lymph node(s) involved only \n- Cervical\n- Parotid\n- Preauricular\n- Regions draining the ocular adnexal structures\n- Submandibular\n- Regional lymph node(s), NOS\n  + Lymph node(s), NOS" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n\nCodes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant sites\n  + Non-contiguous involvement of other extranodal sites including, but not limited to\n     * Breast\n     * Gastrointestinal tract\n     * Kidney\n     * Liver\n     * Lung\n     * Parotid gland\n     * Salivary gland\n     * Spleen\n     * Submandibular gland\n- Distant lymph node(s), NOS\n  + Diffuse OR disseminated involvement of peripheral and central lymph node regions\n  + Mediastinum\n- Distant metastasis, NOS\n  + Distant metastasis WITH or WITHOUT distant lymph node(s)" ], [ "9", "Unknown if extension or metastasis" ] ]
+}

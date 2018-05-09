@@ -48,7 +48,7 @@ public class EodStagingTest extends StagingTest {
 
     @Override
     public String getVersion() {
-        return "1.1";
+        return "1.2";
     }
 
     @Override
@@ -67,7 +67,7 @@ public class EodStagingTest extends StagingTest {
 
     @Test
     public void testVersionInitiaizationTypes() {
-        Staging staging10 = Staging.getInstance(EodDataProvider.getInstance(EodDataProvider.EodVersion.v1_1));
+        Staging staging10 = Staging.getInstance(EodDataProvider.getInstance(EodDataProvider.EodVersion.v1_2));
         assertEquals(EodDataProvider.EodVersion.LATEST.getVersion(), staging10.getVersion());
 
         Staging stagingLatest = Staging.getInstance(EodDataProvider.getInstance());
@@ -184,7 +184,7 @@ public class EodStagingTest extends StagingTest {
         assertEquals("soft_tissue_other", lookup.get(0).getId());
 
         // now invalidate the cache
-        EodDataProvider.getInstance(EodDataProvider.EodVersion.v1_1).invalidateCache();
+        EodDataProvider.getInstance(EodDataProvider.EodVersion.v1_2).invalidateCache();
 
         // try the lookup again
         lookup = _STAGING.lookupSchema(new EodSchemaLookup("C629", "9231"));
@@ -405,7 +405,7 @@ public class EodStagingTest extends StagingTest {
         assertEquals(5, data.getErrors().size());
         assertEquals(5, data.getPath().size());
         assertEquals(8, data.getOutput().size());
-        assertEquals("1.1", data.getOutput().get(EodOutput.DERIVED_VERSION.toString()));
+        assertEquals("1.2", data.getOutput().get(EodOutput.DERIVED_VERSION.toString()));
     }
 
     @Test

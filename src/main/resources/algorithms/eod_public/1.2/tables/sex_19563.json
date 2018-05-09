@@ -1,0 +1,18 @@
+{
+  "id" : "sex_19563",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Sex",
+  "title" : "Sex",
+  "last_modified" : "2018-05-09T15:33:19.773Z",
+  "definition" : [ {
+    "key" : "sex",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Male" ], [ "2", "Female" ], [ "3", "Other (Hermaphrodite)" ], [ "4", "Transsexual, NOS" ], [ "5", "Transsexual, natal male" ], [ "6", "Transsexual, natal female" ], [ "9", "Not stated/Unknown" ] ]
+}

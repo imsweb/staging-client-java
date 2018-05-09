@@ -1,0 +1,22 @@
+{
+  "id" : "ajcc_chapter_calculation_23295",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2018-05-09T15:33:19.121Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "8000,8591,8640,8650", "VALUE:59", "Testis" ], [ "9061,9064-9065,9070-9071,9080-9081,9084-9085", "VALUE:59", "Testis" ], [ "9100-9101,9104-9105", "VALUE:59", "Testis" ], [ "8001-8590,8592-8634,8641-8642,8660-8700,8720-8790", "VALUE:XX", "Other Testis" ], [ "9700-9701", "VALUE:XX", "Other Testis" ] ]
+}

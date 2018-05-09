@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_floor_mouth",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Selection FloorMouth",
+  "title" : "Schema selection for FloorMouth",
+  "last_modified" : "2018-05-09T15:33:19.729Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C040-C041,C048-C049", "8000-8700,8982, 9700-9701", "MATCH" ] ]
+}

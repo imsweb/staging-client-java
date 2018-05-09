@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_chapter_calculation_15027",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2018-05-09T15:33:21.132Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "C500-C506,C508-C509", "8000,8010,8022,8032,8035,8041,8070", "2", "VALUE:XX", "Other Breast" ], [ "C500-C506,C508-C509", "8140,8200,8211,8246,8255,8290", "2", "VALUE:XX", "Other Breast" ], [ "C500-C506,C508-C509", "8201", "2", "VALUE:48.1", "Breast DCIS" ], [ "C500-C506,C508-C509", "8314-8315,8401,8410,8430,8480", "2", "VALUE:XX", "Other Breast" ], [ "C500-C506,C508-C509", "8500-8501,8503-8504,8507", "2", "VALUE:48.1", "Breast DCIS" ], [ "C500-C506,C508-C509", "8502, 8509-8510,8513,8520-8525", "2", "VALUE:XX", "Other Breast" ], [ "C500-C506,C508-C509", "8530,8540-8541,8550,8570-8572,8574-8575", "2", "VALUE:XX", "Other Breast" ], [ "C500-C506,C508-C509", "8543", "2", "VALUE:48.1", "Breast DCIS" ], [ "C500-C506,C508-C509", "8982-8983", "2", "VALUE:XX", "Other Breast" ], [ "C500-C506,C508-C509", "8000,8010,8022,8032,8035,8041,8070", "3", "VALUE:48.2", "Breast Invasive" ], [ "C500-C506,C508-C509", "8140,8200-8201,8211,8246,8255,8290", "3", "VALUE:48.2", "Breast Invasive" ], [ "C500-C506,C508-C509", "8314-8315,8401,8410,8430,8480", "3", "VALUE:48.2", "Breast Invasive" ], [ "C500-C506,C508-C509", "8500-8504,8507,8509-8510,8513,8520-8525", "3", "VALUE:48.2", "Breast Invasive" ], [ "C500-C506,C508-C509", "8530,8540-8541,8543,8550,8570-8572,8574-8575", "3", "VALUE:48.2", "Breast Invasive" ], [ "C500-C506,C508-C509", "8982-8983", "3", "VALUE:48.2", "Breast Invasive" ], [ "C500-C506,C508-C509", "8001-8005,8011-8021,8023-8031,8033-8034,8040,8042-8060,8071-8131", "*", "VALUE:XX", "Other Breast" ], [ "C500-C506,C508-C509", "8141-8191,8202-8210,8212-8245,8247-8254,8256-8281", "*", "VALUE:XX", "Other Breast" ], [ "C500-C506,C508-C509", "8300-8313,8316-8400,8402-8409,8413-8420,8440-8474,8481-8490", "*", "VALUE:XX", "Other Breast" ], [ "C500-C506,C508-C509", "8505-8506,8508,8512,8514-8519,8542,8551-8562,8573,8576-8700", "*", "VALUE:XX", "Other Breast" ], [ "C501-C506,C508-C509", "8720-8790", "*", "VALUE:XX", "Other Breast" ], [ "C500-C506,C508-C509", "9700-9701", "*", "VALUE:XX", "Other Breast" ] ]
+}

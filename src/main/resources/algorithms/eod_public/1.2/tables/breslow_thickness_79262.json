@@ -1,0 +1,19 @@
+{
+  "id" : "breslow_thickness_79262",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Breslow Thickness",
+  "title" : "Breslow Tumor Thickness",
+  "notes" : "**Note 1:** Physician statement of Breslow Tumor Thickness can be used to code this data item when no other information is available or the available information is ambiguous.  \n\n**Note 2:** Code Breslow tumor thickness, not size. Record actual measurement in tenths of millimeters from the pathology report. Measurement given in hundredths of millimeters should be rounded to the nearest tenth. \n\n* ***Examples:***\n  0.4 mm – 0.4\n  1.0 mm- 1.0\n  2.5 mm – 2.5\n  2.56 mm- 2.6\n  11 mm – 11.0\n  12.35 mm – 12.4 \n\n**Note 3:** Code the greatest measured thickness from any procedure performed on the lesion, whether it is described as a biopsy or an excision. \n* For ***example,*** if a punch biopsy with a thickness of 1.5 mm is followed by a re-excision with a thickness of residual tumor of 0.2 mm, code 1.5. \n\n**Note 4:** Do not add measurements together from different procedures (even in the rare circumstance that the pathologist adds the measurements from two specimens).\n\n**Note 5:** If the pathologist describes the thickness as “at least,” use the appropriate A code. An exact measurement takes precedence over A codes.\n* If the pathologist states “greater than” instead of “at least”, code to XX.9, unless it is greater than 9.9 mm (Code AX.0)\n\n* ***Examples:*** \nPathologist states the thickness is “at least 2.0 mm.” Code A2.0\nPathologist states the thickness is “greater than 4 mm.” Code XX.9",
+  "last_modified" : "2018-05-09T15:33:19.585Z",
+  "definition" : [ {
+    "key" : "breslow_thickness",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0", "No mass/tumor found" ], [ "0.1", "Greater than 0.0 and less than or equal to 0.1" ], [ "0.2-99.9", "0.2 - 99.9 millimeters" ], [ "XX.1", "100 millimeters or larger" ], [ "A0.1-A9.9", "Stated as “at least” some measured value of 0.1 to 9.9" ], [ "AX.0", "Stated as greater than 9.9 mm" ], [ "XX.8", "Not applicable: Information not collected for this schema\n(If this item is required by your standard setter, use of code XX.8 will result in an edit error)" ], [ "XX.9", "Not documented in medical record\nMicroinvasion; microscopic focus or foci only and no depth given\nCannot be determined by pathologist\nIn situ melanoma\nBreslow Tumor Thickness not assessed or unknown if assessed" ] ]
+}

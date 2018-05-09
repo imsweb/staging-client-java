@@ -1,0 +1,19 @@
+{
+  "id" : "occult_from_eod_primary_tumor_15325",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Occult from EOD Primary Tumor",
+  "title" : "Occult from EOD Primary Tumor",
+  "notes" : "Since TXN0M0 can indicate Occult or Unknown, this table looks to see if EOD Primary Tumor is 980 or 990",
+  "last_modified" : "2018-05-09T15:33:19.577Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "EOD Primary Tumor",
+    "type" : "INPUT"
+  }, {
+    "key" : "tmp_stage_group",
+    "name" : "Stage Group for Combined Stage Calculation",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "980", "VALUE:OccultCarcinoma" ], [ "999", "VALUE:99" ], [ "000-800", "VALUE:" ] ]
+}

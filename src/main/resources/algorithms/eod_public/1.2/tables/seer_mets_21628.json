@@ -1,0 +1,27 @@
+{
+  "id" : "seer_mets_21628",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "EOD Mets",
+  "title" : "EOD Mets",
+  "footnotes" : "1. Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n2. Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions,** National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n3. Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05.** American Joint Committee on Cancer (Chicago, IL)\n\n4. Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 3-30\n\n5. Jimenez, C., Perrier, N.D., et al. **Adrenal – Neuroendocrine Tumors**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 919-927",
+  "last_modified" : "2018-05-09T15:33:17.511Z",
+  "definition" : [ {
+    "key" : "eod_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_m",
+    "name" : "EOD 2018 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_m",
+    "name" : "SS2018 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis\nUnknown if distant metastasis", "VALUE:M0", "VALUE:NONE" ], [ "10", "Bone", "VALUE:M1a", "VALUE:D" ], [ "20", "Distant lymph node(s), NOS", "VALUE:M1b", "VALUE:D" ], [ "30", "Liver\nLung", "VALUE:M1b", "VALUE:D" ], [ "50", "Any combination of codes 10, 20, 30\n\nOther distant metastasis \n\nCarcinomatosis", "VALUE:M1c", "VALUE:D" ], [ "70", "Distant metastasis, NOS", "VALUE:M1", "VALUE:D" ], [ "99", "Death Certificate Only", "VALUE:M0", "VALUE:U" ] ]
+}

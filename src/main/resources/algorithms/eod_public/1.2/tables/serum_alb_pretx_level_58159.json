@@ -1,0 +1,19 @@
+{
+  "id" : "serum_alb_pretx_level_58159",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Serum Albumin Pretreatment Level",
+  "title" : "Serum Albumin Pretreatment Level",
+  "notes" : "**Note 1:** Elevated serum albumin is defined by ≥3.5 g/dL and is part of the Revised International Staging System (RISS). \n* Use the cut points listed in the table regardless of the lab’s reference range\n* A lab value expressed in grams per liter (g/L) is 10 times the same value expressed in g/dL; therefore, the cut point of 3.5 g/dL is equivalent to 35 g/L.\n\n**Note 2:** Record this data item based on a blood test performed at diagnosis (pre-treatment). In the absence of the lab test, a physician’s statement of the exact value can be used. Do not use findings from a urine test.\n\n**Note 3:** If there is no mention of the serum albumin, code 9.",
+  "last_modified" : "2018-05-09T15:33:19.889Z",
+  "definition" : [ {
+    "key" : "serum_alb_pretx_level",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Serum albumin <3.5 g/dL  " ], [ "1", "Serum albumin ≥3.5 g/dL " ], [ "7", "Test ordered, results not in chart" ], [ "9", "Not documented in medical record\nSerum Albumin not assessed or unknown if assessed" ] ]
+}

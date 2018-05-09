@@ -1,0 +1,344 @@
+{
+  "id" : "melanoma_skin",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Melanoma Skin",
+  "title" : "Melanoma Skin",
+  "notes" : "8720-8790 (C000-C002, C006, C210, C440-C449, C500, C510-C512, C518-C519, C600-C602, C608-C609, C632)\n\n**Note 1:** The following sources were used in the development of this schema\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)\n* SEER Summary Staging Manual-2000: Codes and Coding Instructions (https://seer.cancer.gov/tools/ssm/)\n* Collaborative Stage Data Collection System, version 02.05:  https://cancerstaging.org/cstage/Pages/default.aspx \n* Chapter 47 *Melanoma of the Skin*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.\n\n**Note 2:** For melanoma of sites other than those above \n* C003-C005, C008-C069, C090-C148, C300-C329: See Melanoma Head and Neck\n* C690: See Melanoma Conjunctiva \n* C693, C694: See Melanoma Choroid and Ciliary Body, or Melanoma Iris\n* For all other sites, use the appropriate site-specific schema",
+  "schema_selection_table" : "schema_selection_melanoma_skin",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "naaccr_item" : 523,
+    "table" : "behavior",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_clin",
+    "name" : "Tumor Size Clinical",
+    "naaccr_item" : 752,
+    "table" : "tumor_size_clinical_60979",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_path",
+    "name" : "Tumor Size Pathological",
+    "naaccr_item" : 754,
+    "table" : "tumor_size_pathological_25597",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_summary",
+    "name" : "Tumor Size Summary",
+    "naaccr_item" : 756,
+    "default" : "999",
+    "table" : "tumor_size_summary_63115",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "default" : "99",
+    "table" : "nodes_pos_fah",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_exam",
+    "name" : "Regional Nodes Examined",
+    "naaccr_item" : 830,
+    "default" : "99",
+    "table" : "nodes_exam_76029",
+    "used_for_staging" : false
+  }, {
+    "key" : "radiation_surg_seq",
+    "name" : "RX Summ Surgery/Radiation Sequence",
+    "naaccr_item" : 1380,
+    "table" : "radiation_surg_seq",
+    "used_for_staging" : false
+  }, {
+    "key" : "systemic_surg_seq",
+    "name" : "RX Summ Systemic/Surgery Sequence",
+    "naaccr_item" : 1639,
+    "table" : "systemic_surg_seq",
+    "used_for_staging" : false
+  }, {
+    "key" : "eod_primary_tumor",
+    "name" : "EOD Primary Tumor",
+    "naaccr_item" : 772,
+    "default" : "999",
+    "table" : "extension_ban",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_regional_nodes",
+    "name" : "EOD Regional Nodes",
+    "naaccr_item" : 774,
+    "default" : "999",
+    "table" : "nodes_dam",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_mets",
+    "name" : "EOD Mets",
+    "naaccr_item" : 776,
+    "default" : "00",
+    "table" : "mets_had",
+    "used_for_staging" : true
+  }, {
+    "key" : "ss2018",
+    "name" : "SS2018",
+    "naaccr_item" : 764,
+    "table" : "ss2018_melanoma_skin_64985",
+    "used_for_staging" : false
+  }, {
+    "key" : "grade_clin",
+    "name" : "Grade Clinical",
+    "naaccr_item" : 3843,
+    "default" : "9",
+    "table" : "grade_clinical_standard_94331",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "grade_path",
+    "name" : "Grade Pathological",
+    "naaccr_item" : 3844,
+    "default" : "9",
+    "table" : "grade_pathological_standard_94268",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "grade_post_therapy",
+    "name" : "Grade Post Therapy",
+    "naaccr_item" : 3845,
+    "table" : "grade_post_therapy_standard_88293",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "breslow_thickness",
+    "name" : "Breslow Thickness",
+    "naaccr_item" : 3817,
+    "default" : "XX.8",
+    "table" : "breslow_thickness_79262",
+    "used_for_staging" : true,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ulceration",
+    "name" : "Ulceration",
+    "naaccr_item" : 3936,
+    "default" : "8",
+    "table" : "ulceration_5718",
+    "used_for_staging" : true,
+    "metadata" : [ "COC_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "mitotic_rate_melanoma",
+    "name" : "Mitotic Rate Melanoma",
+    "naaccr_item" : 3893,
+    "default" : "X8",
+    "table" : "mitotic_rate_melanoma_88184",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ldh_pretx_lab_value",
+    "name" : "LDH (Lactate Dehydrogenase) Pretreatment Lab Value",
+    "naaccr_item" : 3932,
+    "default" : "XXXXX.8",
+    "table" : "ldh_pretreatment_lab_value_8754",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "SSDI", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ldh_upper_limit",
+    "name" : "LDH Upper Limits of Normal",
+    "naaccr_item" : 3870,
+    "default" : "XX8",
+    "table" : "ldh_upper_limits_of_normal_34244",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "SSDI", "SEER_REQUIRED" ]
+  }, {
+    "key" : "ldh_pretx_level",
+    "name" : "LDH (Lactate Dehydrogenase) Pretreatment Level",
+    "naaccr_item" : 3869,
+    "default" : "9",
+    "table" : "ldh_pretreatment_level_82697",
+    "used_for_staging" : true,
+    "metadata" : [ "NPCR_REQUIRED", "COC_REQUIRED", "SSDI", "SEER_REQUIRED" ]
+  } ],
+  "outputs" : [ {
+    "key" : "naaccr_schema_id",
+    "name" : "Schema ID",
+    "naaccr_item" : 3800,
+    "default" : "00470"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "naaccr_item" : 995,
+    "default" : "XX"
+  }, {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "Derived EOD 2018 T",
+    "naaccr_item" : 785,
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_n",
+    "name" : "Derived EOD 2018 N",
+    "naaccr_item" : 815,
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_m",
+    "name" : "Derived EOD 2018 M",
+    "naaccr_item" : 795,
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_stage_group",
+    "name" : "Derived EOD 2018 Stage Group",
+    "naaccr_item" : 818,
+    "default" : "88"
+  }, {
+    "key" : "ss2018_derived",
+    "name" : "Derived Summary Stage 2018",
+    "naaccr_item" : 762,
+    "default" : "9"
+  } ],
+  "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_70850",
+      "inputs" : [ "hist" ],
+      "outputs" : [ "ajcc_id" ]
+    } ]
+  }, {
+    "id" : "summary_stage_2018",
+    "name" : "Summary Stage 2018",
+    "initial_context" : [ {
+      "key" : "eod_2018_t",
+      "value" : "90"
+    }, {
+      "key" : "eod_2018_n",
+      "value" : "90"
+    }, {
+      "key" : "eod_2018_m",
+      "value" : "90"
+    } ],
+    "tables" : [ {
+      "id" : "parsing_breslow_thickness_36132",
+      "inputs" : [ "breslow_thickness" ],
+      "outputs" : [ "tmp_breslow" ]
+    }, {
+      "id" : "extension_ban",
+      "inputs" : [ "ulceration", "tmp_breslow", "eod_primary_tumor" ],
+      "outputs" : [ "eod_2018_t", "ss2018_t" ]
+    }, {
+      "id" : "nodes_dam",
+      "inputs" : [ "eod_regional_nodes" ],
+      "outputs" : [ "eod_2018_n", "ss2018_n", "stage_table_for_n" ]
+    }, {
+      "id" : "mets_had",
+      "inputs" : [ "eod_mets", "ldh_pretx_level" ],
+      "outputs" : [ "eod_2018_m", "ss2018_m" ]
+    }, {
+      "id" : "summary_stage_rac",
+      "inputs" : [ "ss2018_m", "ss2018_n", "ss2018_t" ],
+      "outputs" : [ "ss2018_derived" ]
+    } ]
+  }, {
+    "id" : "eod_2018_stage_group",
+    "name" : "EOD 2018 Stage Group",
+    "inclusion_tables" : [ {
+      "id" : "tnm8_inclusions_52715",
+      "inputs" : [ "ajcc_id" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "eod_2018_stage_group",
+      "value" : "90"
+    } ],
+    "tables" : [ {
+      "id" : "parse_t_2177",
+      "input_mapping" : [ {
+        "from" : "eod_2018_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_t",
+        "to" : "tmp_eod_t"
+      } ],
+      "inputs" : [ "eod_2018_t" ],
+      "outputs" : [ "t_prefix", "tmp_eod_t" ]
+    }, {
+      "id" : "parse_n_67182",
+      "input_mapping" : [ {
+        "from" : "eod_2018_n",
+        "to" : "n"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_n",
+        "to" : "tmp_eod_n"
+      } ],
+      "inputs" : [ "eod_2018_n" ],
+      "outputs" : [ "n_prefix", "tmp_eod_n" ]
+    }, {
+      "id" : "parse_m_47057",
+      "input_mapping" : [ {
+        "from" : "eod_2018_m",
+        "to" : "m"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_m",
+        "to" : "tmp_eod_m"
+      } ],
+      "inputs" : [ "eod_2018_m" ],
+      "outputs" : [ "m_prefix", "tmp_eod_m" ]
+    }, {
+      "id" : "tnm_8_combined_stage_group_55778",
+      "input_mapping" : [ {
+        "from" : "tmp_eod_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_eod_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_eod_t",
+        "to" : "t"
+      }, {
+        "from" : "stage_table_for_n",
+        "to" : "prefix_n_in"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "eod_2018_stage_group"
+      } ],
+      "inputs" : [ "stage_table_for_n", "tmp_eod_n", "tmp_eod_m", "tmp_eod_t" ],
+      "outputs" : [ "eod_2018_stage_group" ]
+    } ]
+  }, {
+    "id" : "eod_tnm_cleanup",
+    "name" : "EOD TNM Cleanup",
+    "exclusion_tables" : [ {
+      "id" : "tnm8_inclusions_52715",
+      "inputs" : [ "ajcc_id" ]
+    } ],
+    "tables" : [ {
+      "id" : "eod_tnm_component_cleanup_58170",
+      "inputs" : [ "ajcc_id" ],
+      "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
+    } ]
+  } ],
+  "involved_tables" : [ "nodes_pos_fah", "schema_selection_melanoma_skin", "radiation_surg_seq", "summary_stage_rac", "mets_had", "parse_t_2177", "parse_n_67182", "mitotic_rate_melanoma_88184", "ulceration_5718", "histology", "tnm8_inclusions_52715", "nodes_exam_76029", "nodes_dam", "tnm_8_combined_stage_group_55778", "tumor_size_summary_63115", "ldh_with_mets_for_ajcc_m_72612", "behavior", "grade_post_therapy_standard_88293", "grade_clinical_standard_94331", "breslow_thickness_and_ulceration_with_primary_tumor_for_ajcc_t_56429", "breslow_thickness_79262", "ldh_pretreatment_lab_value_8754", "tumor_size_pathological_25597", "parsing_breslow_thickness_36132", "systemic_surg_seq", "tumor_size_clinical_60979", "parse_m_47057", "primary_site", "ldh_pretreatment_level_82697", "ss2018_melanoma_skin_64985", "eod_tnm_component_cleanup_58170", "ajcc_chapter_calculation_70850", "year_dx_validation", "grade_pathological_standard_94268", "ldh_upper_limits_of_normal_34244", "extension_ban" ],
+  "on_invalid_input" : "CONTINUE",
+  "last_modified" : "2018-05-09T17:52:22.916Z"
+}

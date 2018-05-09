@@ -1,0 +1,19 @@
+{
+  "id" : "number_of_examined_pelvic_nodes_60771",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Number of Examined Pelvic Nodes",
+  "title" : "Number of Examined Pelvic Nodes",
+  "notes" : "**Note 1:** Physician statement of examined pelvic nodes can be used to code this data item when no other information is available.\n\n**Note 2:** Record the number of examined pelvic lymph nodes documented in the medical record. \n\n**Note 3:** For this data item, do not include isolated tumor cells (ITCs). \n\n**Note 4:** The number of positive pelvic nodes is recorded in Number of Positive Pelvic Nodes [NAACCR Data Item # 3902]",
+  "last_modified" : "2018-05-09T15:33:18.855Z",
+  "definition" : [ {
+    "key" : "num_exam_pelvic_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "No pelvic lymph nodes examined" ], [ "01-99", "1 - 99 pelvic lymph nodes examined \n(Exact number of pelvic lymph nodes examined)" ], [ "X1", "100 or more pelvic  nodes examined" ], [ "X2", "Pelvic nodes examined, number unknown" ], [ "X6", "No pelvic lymph nodes removed, but aspiration or core biopsy of pelvic node(s) only" ], [ "X8", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code X8 will result in an edit error.)" ], [ "X9", "Not documented in patient record\nCannot be determined, indeterminate if examined pelvic nodes present\nPelvic lymph nodes not assessed or unknown if assessed" ] ]
+}

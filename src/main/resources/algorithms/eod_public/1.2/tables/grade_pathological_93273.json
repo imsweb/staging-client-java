@@ -1,0 +1,19 @@
+{
+  "id" : "grade_pathological_93273",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Grade Pathological",
+  "title" : "Grade Pathological",
+  "notes" : "**Note 1:** Pathological grade must not be blank.\n\n**Note 2:** Assign the highest grade from the primary tumor. If the clinical grade is higher than the grade determined during the pathological time frame, use the grade that was identified during the clinical time frame for both the clinical grade and the pathological grade.\n\n**Note 3:** Codes 1-4 take priority over L and H. \n\n**Note 4:** G4 includes anaplastic.\n\n**Note 5:** Code 9 when\n* Grade from primary site is not documented\n* No resection of the primary site\n* Neo-adjuvant therapy is followed by a resection (see post-therapy grade)\n* Clinical case only (see clinical grade)\n* There is only one grade available and it cannot be determined if it is clinical, pathological, or after neo-adjuvant therapy\n* Grade checked “not applicable” on CAP Protocol (if available) and no other grade information is available",
+  "last_modified" : "2018-05-09T15:33:18.583Z",
+  "definition" : [ {
+    "key" : "grade_path",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "G1: Well differentiated (low grade) " ], [ "2", "G2: Moderately differentiated (low grade)" ], [ "3", "G3: Poorly differentiated (high grade)" ], [ "4", "G4: Undifferentiated (high grade)" ], [ "L", "Stated as “low grade” NOS" ], [ "H", "Stated as “high grade” NOS " ], [ "9", "Grade cannot be assessed (GX); Unknown" ] ]
+}

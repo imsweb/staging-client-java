@@ -1,0 +1,23 @@
+{
+  "id" : "histology_discriminator_for_8020_3_93311",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Discriminator 2",
+  "title" : "Schema Discriminator 2: Histology Discriminator for 8020/3",
+  "notes" : "**Note:** A schema discriminator is used to discriminate for histology 8020/3: Undifferentiated carcinoma to determine which Stage Group table to use.\n* **8020/3: Undifferentiated carcinoma with squamous component (see code 1)**\nUse the Squamous Cell Carcinoma Stage Group Table\n* **8020/3: Undifferentiated carcinoma with glandular component (see code 2)**\nUse the Adenocarcinoma Stage Group Table\n* **8020/3: Undifferentiated carcinoma, NOS (no mention of squamous or glandular component) (see code 3)**\nUse the Squamous Cell Carcinoma Stage Group Table",
+  "last_modified" : "2018-05-09T15:33:19.950Z",
+  "definition" : [ {
+    "key" : "discriminator_2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "disease",
+    "name" : "Disease",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Undifferentiated carcinoma with squamous component", "16.1: Esophagus and Esophagogastric Junction: Squamous Cell Carcinoma" ], [ "2", "Undifferentiated carcinoma with glandular component", "16.2: Esophagus and Esophagogastric Junction: Adenocarcinoma" ], [ "9", "Undifferentiated carcinoma, NOS ", "16.1: Esophagus and Esophagogastric Junction: Squamous Cell Carcinoma" ], [ "", "Histology is NOT 8020, Discriminator is not necessary", "" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "pr_summary_49534",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Progesterone Receptor Summary",
+  "title" : "PR (Progesterone Receptor) Summary",
+  "notes" : "**Note 1:** Physician statement of PR (Progesterone Receptor) Summary status can be used to code this data item when no other information is available.\n\n**Note 2:** The result of the PR test performed on the primary breast tissue is to be recorded in this data item. Results from nodal or metastatic tissue may be used ONLY when there is no evidence of primary tumor.\n\n**Note 3:**  In cases where PR is reported on more than one breast tumor specimen, record the highest value.  If any sample is positive, record as positive.\n* ***Exception:*** If PR is positive on an in situ specimen and PR is negative on all tested invasive specimens, code PR as negative (code 0).\n\n**Note 4:** If neoadjuvant therapy is given, record the assay from tumor specimens prior to neoadjuvant therapy.  If neoadjuvant therapy is given and there are no PR results from pre-treatment specimens, report the findings from post-treatment specimens.\n\n**Note 5:** If the patient is PR positive and node negative, a multigene test such as Oncotype Dx may be performed, in which case another PR test will be performed.  Do not record the results of that test in this field.\n* Record only the results of the test which made the patient eligible to be given the multigene test.",
+  "last_modified" : "2018-05-09T15:33:19.834Z",
+  "definition" : [ {
+    "key" : "pr",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "PR negative" ], [ "1", "PR positive" ], [ "7", "Test ordered, results not in chart" ], [ "9", "Not documented in medical record\nPR (Progesterone Receptor) Summary  status not assessed or unknown if assessed" ] ]
+}

@@ -1,0 +1,175 @@
+{
+  "id" : "adnexa_uterine_other",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Adnexa Uterine Other",
+  "title" : "Adnexa Uterine Other",
+  "notes" : "8000-8700, 8720-8790, 9700-9701 (C571-C574)\n\nC571  Broad ligament\nC572  Round ligament\nC573  Parametrium\nC574  Uterine adnexa\n\n**Note 1:** The following sources were used in the development of this schema\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)\n* SEER Summary Staging Manual-2000: Codes and Coding Instructions (https://seer.cancer.gov/tools/ssm/)\n* Collaborative Stage Data Collection System, version 02.05:  https://cancerstaging.org/cstage/Pages/default.aspx\n\n**Note 2:** See the following schemas for the listed histologies \n* 8710-8714, 8800-8934, 8940-9137, 9141-9582: *Soft Tissue Other*\n* 8935-8936: *GIST*\n* 9140: *Kaposi Sarcoma*\n\n**Note 3:** Summary Stage is the only applicable staging system for this site/histology/schema.",
+  "schema_selection_table" : "schema_selection_adnexa_uterine_other",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "size_clin",
+    "name" : "Tumor Size Clinical",
+    "naaccr_item" : 752,
+    "table" : "tumor_size_clinical_60979",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_path",
+    "name" : "Tumor Size Pathological",
+    "naaccr_item" : 754,
+    "table" : "tumor_size_pathological_25597",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_summary",
+    "name" : "Tumor Size Summary",
+    "naaccr_item" : 756,
+    "default" : "999",
+    "table" : "tumor_size_summary_63115",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "default" : "99",
+    "table" : "nodes_pos_fpa",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_exam",
+    "name" : "Regional Nodes Examined",
+    "naaccr_item" : 830,
+    "default" : "99",
+    "table" : "nodes_exam_76029",
+    "used_for_staging" : false
+  }, {
+    "key" : "eod_primary_tumor",
+    "name" : "EOD Primary Tumor",
+    "naaccr_item" : 772,
+    "default" : "999",
+    "table" : "extension_bcn",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_regional_nodes",
+    "name" : "EOD Regional Nodes",
+    "naaccr_item" : 774,
+    "default" : "999",
+    "table" : "nodes_dcc",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_mets",
+    "name" : "EOD Mets",
+    "naaccr_item" : 776,
+    "default" : "00",
+    "table" : "seer_mets_48348",
+    "used_for_staging" : true
+  }, {
+    "key" : "ss2018",
+    "name" : "SS2018",
+    "naaccr_item" : 764,
+    "table" : "adnexa_uterine_other_97891",
+    "used_for_staging" : false
+  }, {
+    "key" : "grade_clin",
+    "name" : "Grade Clinical",
+    "naaccr_item" : 3843,
+    "default" : "9",
+    "table" : "grade_clinical_standard_non_ajcc_32473",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "grade_path",
+    "name" : "Grade Pathological",
+    "naaccr_item" : 3844,
+    "default" : "9",
+    "table" : "grade_pathological_standard_non_ajcc_5627",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "grade_post_therapy",
+    "name" : "Grade Post Therapy",
+    "naaccr_item" : 3845,
+    "table" : "grade_post_therapy_standard_non_ajcc_43091",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  } ],
+  "outputs" : [ {
+    "key" : "naaccr_schema_id",
+    "name" : "Schema ID",
+    "naaccr_item" : 3800,
+    "default" : "00558"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "naaccr_item" : 995,
+    "default" : "XX"
+  }, {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "Derived EOD 2018 T",
+    "naaccr_item" : 785,
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_n",
+    "name" : "Derived EOD 2018 N",
+    "naaccr_item" : 815,
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_m",
+    "name" : "Derived EOD 2018 M",
+    "naaccr_item" : 795,
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_stage_group",
+    "name" : "Derived EOD 2018 Stage Group",
+    "naaccr_item" : 818,
+    "default" : "88"
+  }, {
+    "key" : "ss2018_derived",
+    "name" : "Derived Summary Stage 2018",
+    "naaccr_item" : 762,
+    "default" : "9"
+  } ],
+  "mappings" : [ {
+    "id" : "summary_stage_2018",
+    "name" : "Summary Stage 2018",
+    "tables" : [ {
+      "id" : "extension_bcn",
+      "inputs" : [ "eod_primary_tumor" ],
+      "outputs" : [ "eod_2018_t", "ss2018_t" ]
+    }, {
+      "id" : "nodes_dcc",
+      "inputs" : [ "eod_regional_nodes" ],
+      "outputs" : [ "eod_2018_n", "ss2018_n" ]
+    }, {
+      "id" : "seer_mets_48348",
+      "inputs" : [ "eod_mets" ],
+      "outputs" : [ "eod_2018_m", "ss2018_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2018_m", "ss2018_n", "ss2018_t" ],
+      "outputs" : [ "ss2018_derived" ]
+    } ]
+  } ],
+  "involved_tables" : [ "seer_mets_48348", "nodes_dcc", "grade_clinical_standard_non_ajcc_32473", "grade_pathological_standard_non_ajcc_5627", "adnexa_uterine_other_97891", "nodes_pos_fpa", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "primary_site", "histology", "nodes_exam_76029", "grade_post_therapy_standard_non_ajcc_43091", "schema_selection_adnexa_uterine_other", "year_dx_validation", "summary_stage_rpa", "tumor_size_summary_63115", "extension_bcn" ],
+  "on_invalid_input" : "CONTINUE",
+  "last_modified" : "2018-05-09T17:51:58.465Z"
+}

@@ -1,0 +1,23 @@
+{
+  "id" : "tumor_size_with_primary_tumor_for_t_78654",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Tumor Size with Primary Tumor for T",
+  "title" : "Tumor Size Summary with EOD Primary Tumor for T",
+  "notes" : "If EOD Primary Tumor = 100, 200, 300 or 400, Tumor Size Summary is necessary to determine the T value.",
+  "last_modified" : "2018-05-09T15:33:20.970Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "EOD Primary Tumor",
+    "type" : "INPUT"
+  }, {
+    "key" : "size_summary",
+    "name" : "Tumor Size",
+    "type" : "INPUT"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "000", "ERROR:Localized tumor - Tumor Size is in conflict" ], [ "100", "001-080", "VALUE:T1a" ], [ "100", "081-989", "VALUE:T1b" ], [ "100", "990", "VALUE:T1a" ], [ "100", "998", "ERROR:Localized tumor - Tumor Size is in conflict" ], [ "100", "999", "VALUE:T1" ], [ "200,300", "000", "ERROR:Localized tumor or tumor with extension - Tumor Size is in conflict" ], [ "200,300", "001-080", "VALUE:T2a" ], [ "200,300", "081-989", "VALUE:T2b" ], [ "200,300", "990", "VALUE:T2a" ], [ "200,300", "998", "ERROR:Localized tumor or tumor with extension - Tumor Size is in conflict" ], [ "200,300", "999", "VALUE:T2" ], [ "400", "000", "ERROR:Tumor with extension - Tumor Size is in conflict" ], [ "400", "001-080", "VALUE:T3a" ], [ "400", "081-989", "VALUE:T3b" ], [ "400", "990", "VALUE:T3a" ], [ "400", "998", "ERROR:Tumor with extension - Tumor Size is in conflict" ], [ "400", "999", "VALUE:T3" ], [ "500,550,600,650,700,750,800,999", "*", "MATCH" ] ]
+}

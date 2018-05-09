@@ -1,0 +1,19 @@
+{
+  "id" : "ki67_8355",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Ki-67",
+  "title" : "Ki-67 (MIB-1)",
+  "notes" : "**Note 1:** Physician statement of Ki-67 (MIB-1) can be used to code this data item.\n\n**Note 2:**  Ki-67 is a marker of cell proliferation.  A high value indicates a tumor that is proliferating more rapidly.  \n\n**Note 3:** Ki-67 results are reported as the percentage cell nuclei that stain positive.  As of early 2017 there are no established standards for interpretation of results or for cutoffs for positive and negative.  \n\n* ***Examples:***\n    Ki-67 reported as 14%. Code 14.0\n    Ki-67 reported as 8.6%. Code 8.6",
+  "last_modified" : "2018-05-09T15:33:19.710Z",
+  "definition" : [ {
+    "key" : "ki67",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0-100.0", "0.0 to 100.0 percent positive: enter percent positive" ], [ "XXX.7", "Test done,  actual percentage not stated" ], [ "XXX.8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code XXX.8 will result in an edit error.)" ], [ "XXX.9", "Not documented in patient record\nKi-67 (MIB-1) not assessed or unknown if assessed" ] ]
+}

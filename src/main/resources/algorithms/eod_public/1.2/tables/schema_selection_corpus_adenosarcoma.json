@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_corpus_adenosarcoma",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Selection CorpusAdenosarcoma",
+  "title" : "Schema selection for CorpusAdenosarcoma",
+  "last_modified" : "2018-05-09T15:33:19.905Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C540-C543,C548-C549,C559", "8933", "MATCH" ] ]
+}

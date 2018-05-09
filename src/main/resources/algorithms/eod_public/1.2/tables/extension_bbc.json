@@ -1,0 +1,28 @@
+{
+  "id" : "extension_bbc",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "EOD Primary Tumor",
+  "title" : "EOD Primary Tumor",
+  "notes" : "**Note 1:** Intrahepatic vascular invasion is used synonymously with vascular invasion for tumors in codes 100-500 and includes gross and microscopic involvement (microvascular invasion) of vessels. \n\n**Note 2:** Multiple tumors include satellitosis, multifocal tumors, and intrahepatic metastasis.",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 3-30\n\n(5) Abou-Alfa, G.K., Pawlik, T.M., Vauthey, J.N., et al. **Liver**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 287-293",
+  "last_modified" : "2018-05-09T15:33:20.783Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_t",
+    "name" : "SS2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "Intraepithelial, noninvasive", "VALUE:88", "VALUE:IS" ], [ "100", "Any size tumor\n- Single lesion (one lobe) \n  + WITHOUT or UNKNOWN vascular invasion \n\nConfined to liver, NOS\nLocalized, NOS", "JUMP:tumor_size_with_primary_tumor_for_ajcc_t_82729", "VALUE:L" ], [ "150", "Code 100 WITH vascular invasion", "JUMP:tumor_size_with_primary_tumor_for_ajcc_t_82729", "VALUE:L" ], [ "200", "Multiple (satellite) nodules/tumors confined to one lobe\n- WITH or WITHOUT vascular invasion", "JUMP:tumor_size_with_primary_tumor_for_ajcc_t_82729", "VALUE:L" ], [ "300", "Any size tumor\n- More than one lobe involved by contiguous growth (single lesion)\n  + WITHOUT or UNKNOWN vascular invasion", "JUMP:tumor_size_with_primary_tumor_for_ajcc_t_82729", "VALUE:RE" ], [ "400", "Code 300 WITH vascular invasion", "JUMP:tumor_size_with_primary_tumor_for_ajcc_t_82729", "VALUE:RE" ], [ "500", "Multiple (satellite) nodules/tumors in more than one lobe of liver or on surface of parenchyma\n- WITH or WITHOUT vascular invasion", "JUMP:tumor_size_with_primary_tumor_for_ajcc_t_82729", "VALUE:RE" ], [ "600", "Diaphragm\nExtrahepatic bile duct(s)\nExtrahepatic blood vessel(s)\n- Hepatic artery\n- Portal vein\n- Vena cava\n\nGallbladder\nLesser omentum\nLigament(s)\n- Coronary\n- Falciform\n- Hepatoduodenal\n- Hepatogastric\n- Round (of liver)\n- Triangular\n\nPeritoneum, NOS\n- Parietal \n- Visceral\n\nMajor vascular invasion, NOS", "VALUE:T4", "VALUE:RE" ], [ "700", "Pancreas\nPleura\nStomach\n\nFurther contiguous extension", "VALUE:T4", "VALUE:D" ], [ "800", "No evidence of primary tumor", "VALUE:T0", "VALUE:U" ], [ "999", "Unknown, extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record\n\nDeath Certificate Only", "VALUE:TX", "VALUE:U" ] ]
+}

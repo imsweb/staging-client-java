@@ -1,0 +1,28 @@
+{
+  "id" : "nodes_dcn",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "EOD Regional Nodes",
+  "title" : "EOD Regional Nodes",
+  "notes" : "**Note 1:** For head and neck schemas, this field includes all lymph nodes defined as Levels I-VII and Other by TNM.\n\n**Note 2:** If laterality of lymph nodes is not specified, assume nodes are ipsilateral. Midline nodes are considered ipsilateral.\n\n**Note 3:** For head and neck cancers, if lymph nodes are described only as \"supraclavicular\", try to determine if they are in Level IV (deep to the sternocleidomastoid muscle, in the lower jugular chain) or Level V (in the posterior triangle, inferior to the transverse cervical artery) and code appropriately. If the specific level cannot be determined, consider them as Level V nodes.\n\n**Note 4:** For nasopharynx, Levels I, II, III, V, VI, are assigned code 300 or 400 based on size and/or unilateral vs bilateral. For Levels IV, VB, and VII, see code 600. If the only information available is “regional lymph nodes, NOS” or “lymph nodes,” code 800.\n\n**The following lymph nodes are regional for Head and Neck tumors**\n\n **Level I**\n Level IA - Submental\n Level IB - Submandibular (submaxillary), sublingual\n\n**Level II - Upper jugular** \n Jugulodigastric (subdigastric)\n Upper deep cervical        \n Level IIA - Anterior\n Level IIB - Posterior    \n\n**Level III - Middle jugular**\nMiddle deep cervical\n\n**Level IV - Lower jugular**\nJugulo-omohyoid (supraomohyoid)\nLower deep cervical        \nVirchow node\n\n**Level V - Posterior triangle group**\nPosterior cervical\nLevel VA - Spinal accessory        \nLevel VB - Transverse cervical, supraclavicular \n\n**Level VI - Anterior compartment group**\nLaterotracheal\nParalaryngeal\nParatracheal - above suprasternal notch\nPerithyroidal\nPrecricoid (Delphian)\nPrelaryngeal\nPretracheal - above suprasternal notch\nRecurrent laryngeal\n\n**Level VII - Superior mediastinal group (for other mediastinal node(s) see EOD Mets)**\nEsophageal groove\nParatracheal - below suprasternal notch\nPretracheal - below suprasternal notch    \n\n**Other groups**\nCervical, NOS\nDeep cervical, NOS\nFacial\n- Buccinator (buccal)\n- Mandibular\n- Nasolabial\n\nInternal jugular, NOS\nParapharyngeal \nParotid\n- Infraauricular\n- Intraparotid\n- Periparotid\n- Preauricular\n\nRetroauricular (mastoid)\nRetropharyngeal\nSuboccipital",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 3-30\n\n(5) Lydiatt, W.M., Patel, S.G., Shah, J.P., et al.  **Staging Head and Neck Cancers**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 55-65\n\n(6) Lee, A.W.M., Lydiatt, W.M., Shah, J.P., et al. **Nasopharynx**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 103-111",
+  "last_modified" : "2018-05-09T15:33:20.807Z",
+  "definition" : [ {
+    "key" : "eod_regional_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_n",
+    "name" : "EOD 2018 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_n",
+    "name" : "SS2018 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:NONE" ], [ "300", "Cervical lymph node(s), unilateral, 6 cm or smaller\n\nRetropharyngeal lymph node(s), unilateral or bilateral, 6 cm or smaller\nabove the caudal border of cricoid cartilage", "VALUE:N1", "VALUE:RN" ], [ "400", "Cervical lymph node(s), bilateral, 6 cm or smaller\nabove the caudal border of cricoid cartilage", "VALUE:N2", "VALUE:RN" ], [ "600", "Cervical lymph node(s), unilateral or bilateral, greater than 6 cm\nAND/OR extension below the caudal border of cricoid cartilage", "VALUE:N3", "VALUE:RN" ], [ "800", "Regional lymph node(s), NOS\nLymph node(s), NOS", "VALUE:N1", "VALUE:RN" ], [ "999", "Unknown; regional lymph node(s) not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record\n\nDeath Certificate Only", "VALUE:NX", "VALUE:U" ] ]
+}

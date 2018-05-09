@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_chapter_calculation_3803",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2018-05-09T15:33:21.357Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "C741,C755", "8680,8690,8692-8693", "3", "VALUE:77", "Adrenal Neuroendocrine Tumors" ], [ "C741,C755", "8700", "3", "VALUE:77", "Adrenal Neuroendocrine Tumors" ], [ "C741,C755", "8680,8690,8692-8693", "2", "VALUE:XX", "Other Adrenal Neuroendocrine Tumors" ], [ "C741,C755", "8700", "2", "VALUE:XX", "Other Adrenal Neuroendocrine Tumors" ], [ "C740,C749", "8680,8690,8692-8693", "*", "VALUE:XX", "Other Adrenal Neuroendocrine Tumors" ], [ "C740,C749", "8700", "*", "VALUE:XX", "Other Adrenal Neuroendocrine Tumors" ] ]
+}

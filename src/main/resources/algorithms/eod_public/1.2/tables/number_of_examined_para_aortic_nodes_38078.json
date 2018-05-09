@@ -1,0 +1,19 @@
+{
+  "id" : "number_of_examined_para_aortic_nodes_38078",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Number of Examined Para-Aortic Nodes",
+  "title" : "Number of Examined Para-Aortic Nodes",
+  "notes" : "**Note 1:** Physician statement of examined para-aortic nodes can be used to code this data item when no other information is available.\n\n**Note 2:** Record the number of examined para-aortic lymph nodes documented in the medical record. \n\n**Note 3:** For this data item, do not include isolated tumor cells (ITCs). \n\n**Note 4:** The number of para-aortic nodes positive is recorded in Number of Positive Para-aortic Nodes [NAACCR Data Item # 3901].",
+  "last_modified" : "2018-05-09T15:33:19.283Z",
+  "definition" : [ {
+    "key" : "num_exam_para_aortic_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "No para-aortic nodes examined" ], [ "01-99", "1 - 99 para-aortic nodes examined \n(Exact number of para-aortic lymph nodes examined)" ], [ "X1", "100 or more para-aortic nodes examined" ], [ "X2", "Para-aortic nodes examined, number unknown" ], [ "X6", "No para-aortic lymph nodes removed, but aspiration or core biopsy of para-aortic node(s) only" ], [ "X8", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code X8 will result in an edit error.)" ], [ "X9", "Not documented in patient record\nCannot be determined, indeterminate if examined para-aortic nodes present\nPara-aortic lymph nodes not assessed or unknown if assessed" ] ]
+}

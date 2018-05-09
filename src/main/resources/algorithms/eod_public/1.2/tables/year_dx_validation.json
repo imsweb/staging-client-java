@@ -1,0 +1,18 @@
+{
+  "id" : "year_dx_validation",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Year DX Validation",
+  "title" : "Year of Diagnosis Validation",
+  "last_modified" : "2018-05-09T15:33:18.577Z",
+  "definition" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "2018-{{ctx_year_current}},9999", "MATCH" ] ]
+}

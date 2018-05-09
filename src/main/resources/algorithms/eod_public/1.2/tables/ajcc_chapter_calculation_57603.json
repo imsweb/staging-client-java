@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc_chapter_calculation_57603",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2018-05-09T15:33:18.566Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "C440,C442-C449", "9700,9701", "VALUE:81.1", "Primary Cutaneous Lymphomas: Mycosis Fungoides and Sézary Syndrome" ], [ "C510", "9700,9701", "VALUE:81.1", "Primary Cutaneous Lymphomas: Mycosis Fungoides and Sézary Syndrome" ], [ "C609", "9700,9701", "VALUE:81.1", "Primary Cutaneous Lymphomas: Mycosis Fungoides and Sézary Syndrome" ], [ "C632", "9700,9701", "VALUE:81.1", "Primary Cutaneous Lymphomas: Mycosis Fungoides and Sézary Syndrome" ], [ "C000-C002,C006", "9700-9701", "VALUE:XX", "Other Primary Cutaneous Lymphomas: Mycosis Fungoides and Sézary Syndrome" ], [ "C441", "9700,9701", "VALUE:XX", "Other Primary Cutaneous Lymphomas: Mycosis Fungoides and Sézary Syndrome" ], [ "C511-C512,C518-C519", "9700,9701", "VALUE:XX", "Other Primary Cutaneous Lymphomas: Mycosis Fungoides and Sézary Syndrome" ], [ "C600-C602,C608", "9700,9701", "VALUE:XX", "Other Primary Cutaneous Lymphomas: Mycosis Fungoides and Sézary Syndrome" ] ]
+}

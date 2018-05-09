@@ -1,0 +1,23 @@
+{
+  "id" : "ajcc_id_age_eod_stage_tnm_8_6558",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AJCC ID, Age, EOD Stage - TNM 8",
+  "title" : "AJCC ID, Age, EOD Stage - TNM 8",
+  "notes" : "**Note:** Age at DX is described as both a three character value and a numeric value, so both 55 and 055 will work. While the NAACCR field definition includes the leading zeros, this avoids problems with different methods of storing the information.",
+  "last_modified" : "2018-05-09T15:33:19.552Z",
+  "definition" : [ {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "INPUT"
+  }, {
+    "key" : "age_dx",
+    "name" : "Age at Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "73.1", "000-054,0-9,10-54", "JUMP:tnm_8_eod_stage_thyroid_differentiated_age_less_than_55_15343" ], [ "73.1", "055-120,55-99", "JUMP:tnm_8_eod_stage_differentiated_age_55_and_older_23489" ], [ "73.1", "999", "VALUE:99" ], [ "73.2", "*", "JUMP:tnm_8_eod_stage_thyroid_anaplastic_25166" ] ]
+}

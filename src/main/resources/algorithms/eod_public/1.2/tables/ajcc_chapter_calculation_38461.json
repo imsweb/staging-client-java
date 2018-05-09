@@ -1,0 +1,22 @@
+{
+  "id" : "ajcc_chapter_calculation_38461",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2018-05-09T15:33:19.167Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "C000-C424,C470-C509,C511-C608,C619-C631,C637-C689,C691-C694,C739-C749,C760-C809", "VALUE:79.5", "Non-Hodgkin Lymphomas: Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma" ], [ "C440,C442-C449,C510,C609,C632,C698-C699,C700-C729,C750-C759", "VALUE:XX", "Other Non-Hodgkin Lymphomas: Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma" ] ]
+}

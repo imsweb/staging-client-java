@@ -1,0 +1,19 @@
+{
+  "id" : "mitotic_count_uveal_melanoma_26990",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Mitotic Count Uveal Melanoma",
+  "title" : "Mitotic Count  Uveal Melanoma",
+  "notes" : "**Note 1:** Physician statement of mitotic count for a uveal melanoma can be used to code this data item when no other information is available. \n\n**Note 2:** The mitotic count, the number of mitoses per 40 high-power fields (HPF), reflects the potential aggressiveness or prognosis of uveal melanomas.  This data item presumes the denominator of 40 HPF, so just the numerator (the mitotic count) is coded here.  \n* For other schemas in which mitotic count is collected, the denominator may vary.\n\n**Note 3:** An HPF usually has a magnification objective of 40 (a 40x field).  As described in the AJCC chapter on uveal melanomas, the typical field area is 0.152 square millimeters (mm2).\n\n**Note 4:** Record mitotic count to the nearest tenth as documented in the pathology report.  \n* For ***example,*** a mitotic count of 6/40 HPF would be coded 6.0.",
+  "last_modified" : "2018-05-09T15:33:19.536Z",
+  "definition" : [ {
+    "key" : "mitotic_count_uveal_mel",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0", "0 mitoses per 40 high-power fields (HPF) \nMitoses absent, no mitoses present, no mitotic activity" ], [ "0.1-99.9", "0.1-99.9 mitosis per 40 HPF " ], [ "XX.1", "100 or more mitoses per 40 HPF" ], [ "XX.2", "Stated as low mitotic count or rate with no specific number" ], [ "XX.3", "Stated as high mitotic count or rate with no specific number" ], [ "XX.4", "Mitotic count described with denominator other than 40 HPF " ], [ "XX.7", "Test ordered, results not in chart" ], [ "XX.8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code XX.8 may result in an edit error.)" ], [ "XX.9", "Not documented in medical record\nMitotic Count Uveal Melanoma not assessed or unknown if assessed" ] ]
+}

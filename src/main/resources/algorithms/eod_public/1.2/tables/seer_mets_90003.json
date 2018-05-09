@@ -1,0 +1,28 @@
+{
+  "id" : "seer_mets_90003",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "EOD Mets",
+  "title" : "EOD Mets",
+  "notes" : "**Note:** Distant lymph node involvement is coded in EOD Regional Nodes.",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 3-30\n\n(5) Heegaard, S., Finger, P.T., et al. **Ocular Adnexal Lymphoma**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 849-854",
+  "last_modified" : "2018-05-09T15:33:19.848Z",
+  "definition" : [ {
+    "key" : "eod_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_m",
+    "name" : "EOD 2018 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_m",
+    "name" : "SS2018 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No involvement of extranodal sites", "VALUE:M0", "VALUE:NONE" ], [ "10", "Non-contiguous involvement of tissues or organs external to the ocular adnexa  \n(excluding bone marrow), including but not limited to\n- Breast\n- Gastrointestinal tract\n- Kidney\n- Liver\n- Lung\n- Parotid gland\n- Salivary gland\n- Spleen\n- Submandibular gland", "VALUE:M1a", "VALUE:D" ], [ "30", "Bone marrow", "VALUE:M1b", "VALUE:D" ], [ "50", "Any site listed in code 10 plus involvement of bone marrow (code 30)", "VALUE:M1c", "VALUE:D" ], [ "70", "Distant metastasis, NOS", "VALUE:M1", "VALUE:D" ], [ "99", "Death Certificate Only", "VALUE:M0", "VALUE:U" ] ]
+}

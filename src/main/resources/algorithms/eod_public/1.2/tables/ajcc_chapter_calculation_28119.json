@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc_chapter_calculation_28119",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2018-05-09T15:33:21.895Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "8000,8010,8013,8020,8041,8070", "3", "VALUE:53", "Corpus Uteri: Carcinoma and Carcinosarcoma" ], [ "8140", "3", "VALUE:53", "Corpus Uteri: Carcinoma and Carcinosarcoma" ], [ "8240,8255,8263", "3", "VALUE:53", "Corpus Uteri: Carcinoma and Carcinosarcoma" ], [ "8310,8323,8380,8382", "3", "VALUE:53", "Corpus Uteri: Carcinoma and Carcinosarcoma" ], [ "8441,8460-8461,8480", "3", "VALUE:53", "Corpus Uteri: Carcinoma and Carcinosarcoma" ], [ "8560,8570", "3", "VALUE:53", "Corpus Uteri: Carcinoma and Carcinosarcoma" ], [ "8950,8980", "3", "VALUE:53", "Corpus Uteri: Carcinoma and Carcinosarcoma" ], [ "8000,8010,8013,8020,8041,8070", "2", "VALUE:XX", "Other Corpus Uteri: Carcinoma and Carcinosarcoma" ], [ "8140", "2", "VALUE:XX", "Other Corpus Uteri: Carcinoma and Carcinosarcoma" ], [ "8240,8255,8263", "2", "VALUE:XX", "Other Corpus Uteri: Carcinoma and Carcinosarcoma" ], [ "8310,8323,8380,8382", "2", "VALUE:XX", "Other Corpus Uteri: Carcinoma and Carcinosarcoma" ], [ "8441,8460-8461,8480", "2", "VALUE:XX", "Other Corpus Uteri: Carcinoma and Carcinosarcoma" ], [ "8560,8570", "2", "VALUE:XX", "Other Corpus Uteri: Carcinoma and Carcinosarcoma" ], [ "8950,8980", "2", "VALUE:XX", "Other Corpus Uteri: Carcinoma and Carcinosarcoma" ], [ "8001-8005,8011-8012,8014-8015,8021-8040,8042-8060,8071-8131", "*", "VALUE:XX", "Other Corpus Uteri: Carcinoma and Carcinosarcoma" ], [ "8141-8231", "*", "VALUE:XX", "Other Corpus Uteri: Carcinoma and Carcinosarcoma" ], [ "8241-8254,8256-8262,8264-8300", "*", "VALUE:XX", "Other Corpus Uteri: Carcinoma and Carcinosarcoma" ], [ "8311-8322,8324-8375,8381,8383-8440", "*", "VALUE:XX", "Other Corpus Uteri: Carcinoma and Carcinosarcoma" ], [ "8442-8454,8462-8474,8481-8552", "*", "VALUE:XX", "Other Corpus Uteri: Carcinoma and Carcinosarcoma" ], [ "8561-8562,8571-8700", "*", "VALUE:XX", "Other Corpus Uteri: Carcinoma and Carcinosarcoma" ], [ "8720-8790,9700-9701", "*", "VALUE:XX", "Other Corpus Uteri: Carcinoma and Carcinosarcoma" ] ]
+}

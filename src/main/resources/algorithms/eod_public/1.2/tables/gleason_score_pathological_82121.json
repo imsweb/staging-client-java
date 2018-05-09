@@ -1,0 +1,19 @@
+{
+  "id" : "gleason_score_pathological_82121",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Gleason Score Pathological",
+  "title" : "Gleason Score Pathological",
+  "notes" : "**Note 1:** Physician statement of Gleason Score Pathological can be used to code this data item when there is no other information available.\n\n**Note 2:** Code the Gleason Score Pathological from prostatectomy or autopsy only in this field. Unlike Grade Group Pathological, do not include patterns from tissues taken prior to prostatectomy.\n\n**Note 3:** Usually prostate cancers are graded using Gleason's score or pattern. Gleason's grading for prostate primaries is based on a 5-component system (5 histologic patterns). Prostatic cancer generally shows two main histologic patterns. The primary pattern, the pattern occupying greater than 50% of the cancer, is usually indicated by the first number of the Gleason's grade, and the secondary pattern is usually indicated by the second number. These two numbers are added together to create a pattern score, ranging from 2 to 10. \n* If there are two numbers, assume that they refer to two patterns (the first number being the primary pattern and the second number the secondary pattern), and sum them to obtain the score.\n* If only one number is given and it is less than or equal to 5, code the total score to X9, unknown or no information. \n* If only one number is given and it is greater than 5, assume that it is a score and code as stated. \n* If the pathology report specifies a specific number out of a total of 10, the first number given is the score. \n\n* ***Example:*** The pathology report says Gleason's 3/10. The Gleason's score would be 3, and coded as 03.\n\n**Note 4:** If neoadjuvant therapy was given, code Gleason pathological score as X9.\n\n**Note 5:** Do not infer the Gleason Score from Grade Group (Code X9).\n\n**Note 6:** Record the Gleason score based on the addition of the primary and secondary patterns coded in Gleason Patterns Pathological [NAACCR Data Item # 3839].",
+  "last_modified" : "2018-05-09T15:33:17.483Z",
+  "definition" : [ {
+    "key" : "gleason_score_path",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "02", "Gleason score 2" ], [ "03", "Gleason score 3" ], [ "04", "Gleason score 4" ], [ "05", "Gleason score 5" ], [ "06", "Gleason score 6" ], [ "07", "Gleason score 7" ], [ "08", "Gleason score 8" ], [ "09", "Gleason score 9" ], [ "10", "Gleason score 10" ], [ "X7", "No prostatectomy done" ], [ "X8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code X8 may result in an edit error.)" ], [ "X9", "Not documented in medical record\nGleason Score Pathological not assessed or unknown if assessed" ] ]
+}

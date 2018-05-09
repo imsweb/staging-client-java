@@ -1,0 +1,19 @@
+{
+  "id" : "measured_thickness_84907",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Measured Thickness",
+  "title" : "Measured Thickness",
+  "notes" : "**Note 1:** Physician statement of measured thickness, or height, can be used to code this data item when no other information is available. \n\n**Note 2:** Code Measured Thickness, or height, of tumor, not size. Record actual measurement in millimeters (mm) from clinical documentation, or from a pathology report if surgery performed.",
+  "last_modified" : "2018-05-09T15:33:19.537Z",
+  "definition" : [ {
+    "key" : "measured_thickness",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0", "No mass/tumor found" ], [ "0.1-99.9", "0.1 – 99.9 millimeters (mm)\n(Exact measurement to nearest tenth of mm)" ], [ "XX.0", "100 millimeters (mm) or larger " ], [ "XX.1", "Described as \"less than 3 mm\"" ], [ "XX.2", "Described as “at least” 3 mm  " ], [ "XX.3", "Described as “at least” 6 mm" ], [ "XX.4", "Described as “at least” 9 mm" ], [ "XX.5", "Described as “at least” 12 mm" ], [ "XX.6", "Described as “greater than” 15 mm" ], [ "XX.8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code XX.8 may result in an edit error.)" ], [ "XX.9", "Not documented in medical record\nCannot be determined \nMeasured Thickness not assessed or unknown if assessed" ] ]
+}

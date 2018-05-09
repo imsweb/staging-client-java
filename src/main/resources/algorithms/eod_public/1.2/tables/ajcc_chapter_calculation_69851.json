@@ -1,0 +1,22 @@
+{
+  "id" : "ajcc_chapter_calculation_69851",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2018-05-09T15:33:21.734Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "8000,8010,8013,8020,8041,8070", "VALUE:19", "Appendix" ], [ "8140,8148", "VALUE:19", "Appendix" ], [ "8210,8243-8246,8255", "VALUE:19", "Appendix" ], [ "8480-8481,8490", "VALUE:19", "Appendix" ], [ "8510,8560", "VALUE:19", "Appendix" ], [ "8001-8005,8011-8012,8014-8015,8021-8040,8042-8060,8071-8131", "VALUE:XX", "Other Appendix" ], [ "8141-8147,8149,8154,8157,8160-8204", "VALUE:XX", "Other Appendix" ], [ "8211-8231,8247-8248,8250-8254,8256-8474", "VALUE:XX", "Other Appendix" ], [ "8482,8500-8509,8512-8552,8561-8682", "VALUE:XX", "Other Appendix" ], [ "8690-8700,8720-8790,9700-9701", "VALUE:XX", "Other Appendix" ] ]
+}

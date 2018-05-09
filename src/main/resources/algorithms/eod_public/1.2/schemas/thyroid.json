@@ -1,0 +1,303 @@
+{
+  "id" : "thyroid",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Thyroid",
+  "title" : "Thyroid",
+  "notes" : "8000-8344, 8350-8420, 8440-8509, 8514-8700, 8720-8790, 9700-9701\n\nC739 Thyroid gland\n\n**Note 1:** The following sources were used in the development of this schema\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)\n* SEER Summary Staging Manual-2000: Codes and Coding Instructions (https://seer.cancer.gov/tools/ssm/)\n* Collaborative Stage Data Collection System, version 02.05:  https://cancerstaging.org/cstage/Pages/default.aspx \n* Chapter 73 *Thyroid-Differentiated and Anaplastic Carcinoma*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.\n\n**Note 2:** See the following schemas for the listed histologies \n* 8345-8347, 8430, 8510, 8512-8513: *Thyroid Medullary*\n* 8710-8714, 8800-8803, 8810-8905, 8912, 8921, 8932-8934, 8940-8990, 9000-9016, 9030-9043, 9045-9110, 9121-9137, 9141-9230, 9240-9580, 9582: *Soft Tissue Head and Neck*\n* 8804-8806, 8910, 8920, 8930-8931, 8991, 9020, 9044, 9120, 9231, 9581: *Soft Tissue Other*\n* 8935-8936: *GIST*\n* 9140: *Kaposi Sarcoma*",
+  "schema_selection_table" : "schema_selection_thyroid",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "naaccr_item" : 523,
+    "table" : "behavior",
+    "used_for_staging" : true
+  }, {
+    "key" : "age_dx",
+    "name" : "Age at Diagnosis",
+    "naaccr_item" : 230,
+    "table" : "age_at_diagnosis_validation_65093",
+    "used_for_staging" : true
+  }, {
+    "key" : "discriminator_1",
+    "name" : "Schema Discriminator 1",
+    "naaccr_item" : 3926,
+    "default" : "1",
+    "table" : "thyroid_gland_thyroglossal_duct_21498",
+    "used_for_staging" : true,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "size_clin",
+    "name" : "Tumor Size Clinical",
+    "naaccr_item" : 752,
+    "table" : "tumor_size_clinical_60979",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_path",
+    "name" : "Tumor Size Pathological",
+    "naaccr_item" : 754,
+    "table" : "tumor_size_pathological_25597",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_summary",
+    "name" : "Tumor Size Summary",
+    "naaccr_item" : 756,
+    "default" : "999",
+    "table" : "tumor_size_summary_63115",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "default" : "99",
+    "table" : "nodes_pos_fpa",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_exam",
+    "name" : "Regional Nodes Examined",
+    "naaccr_item" : 830,
+    "default" : "99",
+    "table" : "nodes_exam_76029",
+    "used_for_staging" : false
+  }, {
+    "key" : "radiation_surg_seq",
+    "name" : "RX Summ Surgery/Radiation Sequence",
+    "naaccr_item" : 1380,
+    "table" : "radiation_surg_seq",
+    "used_for_staging" : false
+  }, {
+    "key" : "systemic_surg_seq",
+    "name" : "RX Summ Systemic/Surgery Sequence",
+    "naaccr_item" : 1639,
+    "table" : "systemic_surg_seq",
+    "used_for_staging" : false
+  }, {
+    "key" : "eod_primary_tumor",
+    "name" : "EOD Primary Tumor",
+    "naaccr_item" : 772,
+    "default" : "999",
+    "table" : "seer_primary_tumor_6275",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_regional_nodes",
+    "name" : "EOD Regional Nodes",
+    "naaccr_item" : 774,
+    "default" : "999",
+    "table" : "eod_regional_nodes_29442",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_mets",
+    "name" : "EOD Mets",
+    "naaccr_item" : 776,
+    "default" : "00",
+    "table" : "eod_mets_91154",
+    "used_for_staging" : true
+  }, {
+    "key" : "ss2018",
+    "name" : "SS2018",
+    "naaccr_item" : 764,
+    "table" : "ss2018_thyroid_33058",
+    "used_for_staging" : false
+  }, {
+    "key" : "grade_clin",
+    "name" : "Grade Clinical",
+    "naaccr_item" : 3843,
+    "default" : "9",
+    "table" : "grade_clinical_standard_94331",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "grade_path",
+    "name" : "Grade Pathological",
+    "naaccr_item" : 3844,
+    "default" : "9",
+    "table" : "grade_pathological_standard_94268",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  }, {
+    "key" : "grade_post_therapy",
+    "name" : "Grade Post Therapy",
+    "naaccr_item" : 3845,
+    "table" : "grade_post_therapy_standard_88293",
+    "used_for_staging" : false,
+    "metadata" : [ "COC_REQUIRED", "NPCR_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED" ]
+  } ],
+  "outputs" : [ {
+    "key" : "naaccr_schema_id",
+    "name" : "Schema ID",
+    "naaccr_item" : 3800,
+    "default" : "00730"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "naaccr_item" : 995,
+    "default" : "XX"
+  }, {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "Derived EOD 2018 T",
+    "naaccr_item" : 785,
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_n",
+    "name" : "Derived EOD 2018 N",
+    "naaccr_item" : 815,
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_m",
+    "name" : "Derived EOD 2018 M",
+    "naaccr_item" : 795,
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_stage_group",
+    "name" : "Derived EOD 2018 Stage Group",
+    "naaccr_item" : 818,
+    "default" : "88"
+  }, {
+    "key" : "ss2018_derived",
+    "name" : "Derived Summary Stage 2018",
+    "naaccr_item" : 762,
+    "default" : "9"
+  } ],
+  "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_46717",
+      "inputs" : [ "hist", "discriminator_1", "behavior" ],
+      "outputs" : [ "ajcc_id" ]
+    } ]
+  }, {
+    "id" : "summary_stage_2018",
+    "name" : "Summary Stage 2018",
+    "initial_context" : [ {
+      "key" : "eod_2018_t",
+      "value" : "90"
+    }, {
+      "key" : "eod_2018_n",
+      "value" : "90"
+    }, {
+      "key" : "eod_2018_m",
+      "value" : "90"
+    } ],
+    "tables" : [ {
+      "id" : "seer_primary_tumor_6275",
+      "inputs" : [ "size_summary", "eod_primary_tumor" ],
+      "outputs" : [ "eod_2018_t", "ss2018_t" ]
+    }, {
+      "id" : "eod_regional_nodes_29442",
+      "inputs" : [ "eod_regional_nodes" ],
+      "outputs" : [ "eod_2018_n", "ss2018_n" ]
+    }, {
+      "id" : "eod_mets_91154",
+      "inputs" : [ "eod_mets" ],
+      "outputs" : [ "eod_2018_m", "ss2018_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2018_m", "ss2018_n", "ss2018_t" ],
+      "outputs" : [ "ss2018_derived" ]
+    } ]
+  }, {
+    "id" : "eod_2018_stage_group",
+    "name" : "EOD 2018 Stage Group",
+    "inclusion_tables" : [ {
+      "id" : "tnm8_inclusions_71108",
+      "inputs" : [ "ajcc_id" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "eod_2018_stage_group",
+      "value" : "90"
+    } ],
+    "tables" : [ {
+      "id" : "parse_t_2177",
+      "input_mapping" : [ {
+        "from" : "eod_2018_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_t",
+        "to" : "tmp_eod_t"
+      } ],
+      "inputs" : [ "eod_2018_t" ],
+      "outputs" : [ "t_prefix", "tmp_eod_t" ]
+    }, {
+      "id" : "parse_n_67182",
+      "input_mapping" : [ {
+        "from" : "eod_2018_n",
+        "to" : "n"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_n",
+        "to" : "tmp_eod_n"
+      } ],
+      "inputs" : [ "eod_2018_n" ],
+      "outputs" : [ "n_prefix", "tmp_eod_n" ]
+    }, {
+      "id" : "parse_m_47057",
+      "input_mapping" : [ {
+        "from" : "eod_2018_m",
+        "to" : "m"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_m",
+        "to" : "tmp_eod_m"
+      } ],
+      "inputs" : [ "eod_2018_m" ],
+      "outputs" : [ "m_prefix", "tmp_eod_m" ]
+    }, {
+      "id" : "ajcc_id_age_eod_stage_tnm_8_6558",
+      "input_mapping" : [ {
+        "from" : "tmp_eod_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_eod_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_eod_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "eod_2018_stage_group"
+      } ],
+      "inputs" : [ "age_dx", "tmp_eod_n", "tmp_eod_m", "tmp_eod_t", "ajcc_id" ],
+      "outputs" : [ "eod_2018_stage_group" ]
+    } ]
+  }, {
+    "id" : "eod_tnm_cleanup",
+    "name" : "EOD TNM Cleanup",
+    "exclusion_tables" : [ {
+      "id" : "tnm8_inclusions_71108",
+      "inputs" : [ "ajcc_id" ]
+    } ],
+    "tables" : [ {
+      "id" : "eod_tnm_component_cleanup_58170",
+      "inputs" : [ "ajcc_id" ],
+      "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
+    } ]
+  } ],
+  "involved_tables" : [ "radiation_surg_seq", "ss2018_thyroid_33058", "schema_selection_thyroid", "nodes_pos_fpa", "parse_t_2177", "tnm8_inclusions_71108", "parse_n_67182", "histology", "nodes_exam_76029", "eod_mets_91154", "age_at_diagnosis_validation_65093", "tumor_size_summary_63115", "thyroid_gland_thyroglossal_duct_21498", "behavior", "ajcc_chapter_calculation_46717", "ajcc_id_age_eod_stage_tnm_8_6558", "tnm_8_eod_stage_differentiated_age_55_and_older_23489", "grade_post_therapy_standard_88293", "eod_regional_nodes_29442", "grade_clinical_standard_94331", "tnm_8_eod_stage_thyroid_anaplastic_25166", "tumor_size_pathological_25597", "systemic_surg_seq", "tumor_size_clinical_60979", "tnm_8_eod_stage_thyroid_differentiated_age_less_than_55_15343", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "year_dx_validation", "grade_pathological_standard_94268", "summary_stage_rpa", "seer_primary_tumor_6275", "tumor_size_with_primary_tumor_for_ajcc_t_19033" ],
+  "on_invalid_input" : "CONTINUE",
+  "last_modified" : "2018-05-09T17:52:09.071Z"
+}

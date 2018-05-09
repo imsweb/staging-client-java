@@ -1,0 +1,22 @@
+{
+  "id" : "ajcc_chapter_calculation_23273",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2018-05-09T15:33:18.569Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "8010,8070-8076,8090", "VALUE:65", "Conjunctival Carcinoma" ], [ "8410,8430", "VALUE:65", "Conjunctival Carcinoma" ], [ "8560", "VALUE:65", "Conjunctival Carcinoma" ], [ "8000-8005,8011-8060,8077-8086,8091-8409", "VALUE:XX", "Other Conjunctival Carcinoma" ], [ "8413-8420,8440-8552", "VALUE:XX", "Other Conjunctival Carcinoma" ], [ "8561-8700,9700-9701", "VALUE:XX", "Other Conjunctival Carcinoma" ] ]
+}

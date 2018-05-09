@@ -1,0 +1,19 @@
+{
+  "id" : "figo_stage_corpus_adenosarcoma_24886",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "FIGO Stage",
+  "title" : "FIGO Stage Corpus Adenosarcoma",
+  "notes" : "**Note 1:** Take the highest Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage documented in the medical record. Do not attempt to code FIGO stage based only on T, N, and M.  If FIGO stage is not documented in the medical record, code 99. FIGO stage is not the same as FIGO grade. Only code FIGO stage in this field, do not code FIGO grade. \n\n**Note 2:** If a stage group is stated but it does not specify that it is a FIGO stage, assume that it is a FIGO stage and code it.\n\n**Note 3:** The FIGO stage definitions do not include Stage 0 (Tis). Code 97 for any case that is in situ (/2).",
+  "last_modified" : "2018-05-09T15:33:19.476Z",
+  "definition" : [ {
+    "key" : "figo",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "01", "FIGO Stage I " ], [ "02", "FIGO Stage IA " ], [ "05", "FIGO Stage IB " ], [ "08", "FIGO Stage IC " ], [ "20", "FIGO Stage II " ], [ "21", "FIGO Stage IIA " ], [ "24", "FIGO Stage IIB" ], [ "30", "FIGO Stage III" ], [ "31", "FIGO Stage IIIA" ], [ "36", "FIGO Stage IIIB" ], [ "37", "FIGO Stage IIIC" ], [ "40", "FIGO Stage IV " ], [ "41", "FIGO Stage IVA" ], [ "42", "FIGO Stage IVB" ], [ "97", "Carcinoma in situ (intraepithelial, noninvasive, preinvasive)" ], [ "98", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 98 will result in an edit error.)" ], [ "99", "Not documented in patient record\nFIGO stage not assessed or unknown if assessed" ] ]
+}

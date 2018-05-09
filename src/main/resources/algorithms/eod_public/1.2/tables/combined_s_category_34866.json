@@ -1,0 +1,23 @@
+{
+  "id" : "combined_s_category_34866",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Combined S Category",
+  "title" : "Combined S Category",
+  "last_modified" : "2018-05-09T15:33:19.109Z",
+  "definition" : [ {
+    "key" : "s_category_clin",
+    "name" : "S Clin",
+    "type" : "INPUT"
+  }, {
+    "key" : "s_category_path",
+    "name" : "S Path",
+    "type" : "INPUT"
+  }, {
+    "key" : "s_category_combined",
+    "name" : "S Combined",
+    "type" : "ENDPOINT"
+  } ],
+  "extra_input" : [ "s_category_path", "s_category_clin" ],
+  "rows" : [ [ "0-3,9", "0-3", "VALUE:{{s_category_path}}" ], [ "0-3", "9", "VALUE:{{s_category_clin}}" ], [ "9", "9", "VALUE:{{s_category_path}}" ] ]
+}

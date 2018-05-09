@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_soft_tissue_heart_and_mediastinum",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Selection Soft Tissue Heart and Mediastinum",
+  "title" : "Schema selection for Soft Tissue Heart and Mediastinum",
+  "last_modified" : "2018-05-09T15:33:21.288Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C380-C383,C388", "8000-8803, 8810-8921, 8932-8934,8940-8990, 9000-9016, 9030, 9040-9043, 9045-9137, 9141-9230, 9240-9580, 9582, 9700-9701", "MATCH" ], [ "C384", "8000-8803,8810-8921, 8932-8934,8940-8990, 9000-9016, 9030, 9040-9043, 9045,9054-9137, 9141-9230, 9240-9580, 9582, 9700-9701", "MATCH" ] ]
+}

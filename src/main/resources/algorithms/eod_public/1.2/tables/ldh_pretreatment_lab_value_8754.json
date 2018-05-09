@@ -1,0 +1,19 @@
+{
+  "id" : "ldh_pretreatment_lab_value_8754",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "LDH Pretreatment Lab Value",
+  "title" : "LDH (Lactate Dehydrogenase) Pretreatment Lab Value",
+  "notes" : "**Note 1:** Physician statement of LDH (Lactate Dehydrogenase) Pretreatment Lab Value can be used to code this data item when no other information is available. \n\n**Note 2:** Record the lab value of the highest serum LDH test results documented in the medical record **prior to treatment** or within 6 weeks of diagnosis. Give priority to the first test performed. The lab value may be recorded in a lab report, history and physical, or clinical statement in the pathology report.\n\n**Note 3:** The same laboratory test should be used to record information in LDH Upper Limits of Normal [NAACCR Data Item # 3870]",
+  "last_modified" : "2018-05-09T15:33:20.951Z",
+  "definition" : [ {
+    "key" : "ldh_pretx_lab_value",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0", "0.0 (U/L)" ], [ "0.1-99999.9", "0.1 – 99,999.9 U/L" ], [ "XXXXX.1", "100,000 U/L or greater" ], [ "XXXXX.7", "Test ordered, results not in chart" ], [ "XXXXX.8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code XXXXX.8 will result in an edit error.)" ], [ "XXXXX.9", "Not documented in medical record\nLDH (Lactate Dehydrogenase) Pretreatment Lab Value not assessed or unknown if assessed" ] ]
+}

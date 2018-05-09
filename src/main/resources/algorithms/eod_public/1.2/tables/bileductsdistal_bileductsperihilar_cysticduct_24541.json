@@ -1,0 +1,23 @@
+{
+  "id" : "bileductsdistal_bileductsperihilar_cysticduct_24541",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Discriminator 1",
+  "title" : "Schema Discriminator 1: BileDuctsDistal/BileDuctsPerihilar/CysticDuct",
+  "notes" : "**Note:** A schema discriminator is used to discriminate for primary site C240 (extrahepatic bile ducts) for the subsite in which the tumor arose.\n\n* **Chapter 24: Gallbladder (see code 3)**\nPer AJCC 8th edition, the gallbladder tapers into the cystic duct\n\n* **Chapter 25: Perihilar Bile Ducts (see codes 1, 5, 6, 9)**\nPer AJCC 8th edition, perihilar (or proximal) cholangiocarcinomas involve the main biliary confluence of the right and left hepatic ducts and comprise 50-70% of all cases of bile ducts carcinomas\n\n* **Chapter 26: Distal Bile Ducts ( see codes 4, 7)**\nPer AJCC 8th edition, these tumors have their center located between the confluence of the cystic duct and common hepatic duct and the Ampulla of Vater (excluding ampullary carcinomas.)",
+  "last_modified" : "2018-05-09T15:33:19.440Z",
+  "definition" : [ {
+    "key" : "discriminator_1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "disease",
+    "name" : "Disease",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Perihilar bile duct(s)\nProximal extrahepatic bile duct(s)\nHepatic duct(s)", "25: Perihilar Bile Ducts" ], [ "3", "Cystic bile duct; cystic duct", "24: Cystic Duct" ], [ "4", "Distal bile duct\nCommon bile duct\nCommon duct, NOS", "26: Distal Bile Ducts" ], [ "5", "Diffuse involvement \nMore than one subsite involved, subsite of origin not stated", "25: Perihilar Bile Ducts" ], [ "6", "Stated as middle extrahepatic bile duct\nAND treated with combined hepatic and hilar resection", "25: Perihilar Bile Ducts" ], [ "7", "Stated as middle extrahepatic bile duct\nAND treated with pancreaticoduodenectomy", "26: Distal Bile Ducts" ], [ "9", "Extrahepatic bile ducts, NOS ", "25: Perihilar Bile Ducts" ] ]
+}

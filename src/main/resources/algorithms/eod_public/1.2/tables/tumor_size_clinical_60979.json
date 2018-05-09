@@ -1,0 +1,18 @@
+{
+  "id" : "tumor_size_clinical_60979",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Tumor Size Clinical",
+  "title" : "Tumor Size Clinical",
+  "last_modified" : "2018-05-09T15:33:19.739Z",
+  "definition" : [ {
+    "key" : "size_clin",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Tumor Size Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No mass/tumor found" ], [ "001", "1 mm or described as less than 1 mm" ], [ "002-988", "Exact size in millimeters (2 mm to 988 mm)" ], [ "989", "989 millimeters or larger" ], [ "990", "Microscopic focus or foci only and no size of focus is given" ], [ "998", "Alternate descriptions of tumor size for specific sites:\n\nFamilial/multiple polyposis:\n- Rectosigmoid and rectum (C19.9, C20.9)\n- Colon (C18.0, C18.2-C18.9)\n\nIf no size is documented:\nCircumferential:\n- Esophagus (C15.0-C15.5, C15.8-C15.9)\n\nDiffuse; widespread: 3/4s or more; linitis plastica:\n- Stomach and Esophagus GE Junction (C16.0-C16.6, C16.8-C16.9)\n\nDiffuse, entire lung or NOS:\n- Lung and main stem bronchus (C34.0-C34.3, C34.8-C34.9)\n\nDiffuse:\n- Breast (C50.0-C50.6, C50.8-C50.9)" ], [ "999", "Unknown; \nSize not stated; \nNot documented in patient record;\nSize of tumor cannot be assessed; \nNot applicable" ] ]
+}

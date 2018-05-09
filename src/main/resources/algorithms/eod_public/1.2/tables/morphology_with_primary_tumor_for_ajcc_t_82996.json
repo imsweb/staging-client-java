@@ -1,0 +1,27 @@
+{
+  "id" : "morphology_with_primary_tumor_for_ajcc_t_82996",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Morphology with Primary Tumor for T",
+  "title" : "Morphology with EOD Primary Tumor for T",
+  "notes" : "If EOD Primary Tumor = 000, Histology and Behavior are necessary to determine the T value.",
+  "last_modified" : "2018-05-09T15:33:19.982Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "EOD Primary Tumor",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "8520", "2", "VALUE:88" ], [ "000", "8540,8542", "2", "VALUE:Tis(DCIS)" ], [ "000", "8543", "2", "VALUE:Tis(Paget)" ], [ "000", "*", "2", "VALUE:Tis" ], [ "000", "*", "0,1,3", "ERROR:In Situ tumor, Behavior should be 2" ], [ "050,070,100,200,300,400,450,500,600,700,800,999", "*", "*", "MATCH" ] ]
+}

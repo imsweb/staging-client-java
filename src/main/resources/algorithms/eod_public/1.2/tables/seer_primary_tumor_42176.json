@@ -1,0 +1,27 @@
+{
+  "id" : "seer_primary_tumor_42176",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "EOD Primary Tumor",
+  "title" : "EOD Primary Tumor",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 3-30\n\n(5) Pollock, R.E., Maki, R.G. **Introduction to Soft Tissue Sarcoma**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 489-497\n\n(6) O’Sullivan, B., Maki, R.G., Pollock, R.E., et al. **Soft Tissue Sarcoma of the Head and Neck**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017: 499-505",
+  "last_modified" : "2018-05-09T15:33:19.286Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_t",
+    "name" : "SS2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "Any size tumor\n- Confined to site of origin  \n- Localized, NOS", "JUMP:tumor_size_with_primary_tumor_for_ajcc_t_29391", "VALUE:L" ], [ "200", "Any size tumor\n- Adjacent connective tissue, NOS\n- Adjacent organs/structures, NOS\n- Bone/cartilage", "JUMP:tumor_size_with_primary_tumor_for_ajcc_t_29391", "VALUE:RE" ], [ "500", "Central compartment viscera\nFacial skeleton\nOrbital invasion\nPterygoid muscles\nSkull base/dural invasion", "VALUE:T4a", "VALUE:D" ], [ "600", "Brain parenchymal invasion\nCarotid artery encasement\nCentral nervous system involvement via perineural spread\nPrevertebral muscle invasion\n\nFurther contiguous extension", "VALUE:T4b", "VALUE:D" ], [ "700", "Invasion of adjacent organ(s)/structure(s), NOS", "VALUE:T4", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "VALUE:T0", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record\n\nDeath Certificate Only", "VALUE:TX", "VALUE:U" ] ]
+}

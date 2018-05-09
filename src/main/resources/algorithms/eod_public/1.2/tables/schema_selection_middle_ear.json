@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_middle_ear",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Selection MiddleEar",
+  "title" : "Schema selection for MiddleEar",
+  "last_modified" : "2018-05-09T15:33:20.035Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C301", "8000-8700, 9700-9701", "MATCH" ] ]
+}

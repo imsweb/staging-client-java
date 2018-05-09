@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc_chapter_calculation_86340",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2018-05-09T15:33:21.890Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "8000,8010,8020,8041,8044,8070", "3", "VALUE:55", "Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8120,8140", "3", "VALUE:55", "Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8240,8243", "3", "VALUE:55", "Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8310,8323", "3", "VALUE:55", "Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8313,8380", "0,1,3", "VALUE:55", "Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8410,8441,8452,8460-8461,8470,8480", "3", "VALUE:55", "Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8442,8472,8474", "0,1,3", "VALUE:55", "Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8590,8594", "3", "VALUE:55", "Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8620,8622-8623,8631,8633-8634,8640,8670", "3", "VALUE:55", "Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8806,8810,8815,8822,8825,8890", "3", "VALUE:55", "Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8930-8931,8933,8936,8950,8960,8980", "3", "VALUE:55", "Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "9050,9052,9060,9070-9071,9073,9080,9085,9090-9091", "3", "VALUE:55", "Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "9000", "0,1,3", "VALUE:55", "Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "9100,9110", "3", "VALUE:55", "Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8000,8010,8020,8041,8044,8070", "0,1,2", "VALUE:XX", "Other Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8120,8140", "0,1,2", "VALUE:XX", "Other Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8240,8243", "0,1,2", "VALUE:XX", "Other Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8310,8323", "0,1,2", "VALUE:XX", "Other Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8313,8380", "2", "VALUE:XX", "Other Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8410,8441,8452,8460-8461,8470,8480", "0,1,2", "VALUE:XX", "Other Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8442,8472,8474", "2", "VALUE:XX", "Other Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8590,8594", "0,1,2", "VALUE:XX", "Other Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8620,8622-8623,8631,8633-8634,8640,8670", "0,1,2", "VALUE:XX", "Other Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8806,8810,8815,8822,8825,8890", "0,1,2", "VALUE:XX", "Other Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8930-8931,8933,8936,8950,8960,8980", "0,1,2", "VALUE:XX", "Other Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "9000", "2", "VALUE:XX", "Other Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "9050,9052,9060,9070-9071,9073,9080,9085,9090-9091", "0,1,2", "VALUE:XX", "Other Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "9100,9110", "0,1,2", "VALUE:XX", "Other Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8001-8005,8011-8015,8021-8040,8042-8043,8045-8060,8071-8110", "*", "VALUE:XX", "Other Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8121-8131,8141-8231", "*", "VALUE:XX", "Other Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8241-8242,8244-8300", "*", "VALUE:XX", "Other Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8311-8312,8314-8322,8324-8375,8381-8409", "*", "VALUE:XX", "Other Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8413-8440,8443-8451,8453-8454,8462-8463,8471,8473,8481-8589", "*", "VALUE:XX", "Other Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8591-8593", "*", "VALUE:XX", "Other Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8600-8610,8621,8630,8632,8641-8660,8671-8700,8720-8790", "*", "VALUE:XX", "Other Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ], [ "8935,9700-9701", "*", "VALUE:XX", "Other Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma" ] ]
+}

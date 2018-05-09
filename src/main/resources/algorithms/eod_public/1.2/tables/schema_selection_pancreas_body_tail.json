@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_pancreas_body_tail",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Selection PancreasBodyTail",
+  "title" : "Schema selection for PancreasBodyTail",
+  "last_modified" : "2018-05-09T15:33:19.734Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C250-C254, C257-C259", "8000-8149, 8154, 8157, 8160-8231, 8243-8248, 8250-8682, 8690-8700, 8720-8790, 8971,9700-9701", "MATCH" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "high_risk_features_73750",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "High Risk Features",
+  "title" : "High Risk Histologic Features",
+  "notes" : "**Note 1:** Physician statement of high risk histologic features can be used to code this data item when no other information is available.\n\n**Note 2:** High risk histologic features include\n* Desmoplasia\n* Poor differentiation (grade 3)\n* Sarcomatoid differentiation (features)\n* Undifferentiated (grade 4)\n\n**Note 3:** Code 5 if more than one high risk histologic feature is present.\n\n**Note 4:** Record the presence of high risk histologic features as documented in the medical record.",
+  "last_modified" : "2018-05-09T15:33:20.950Z",
+  "definition" : [ {
+    "key" : "high_risk_features",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "No high risk histologic features" ], [ "1", "Desmoplasia" ], [ "2", "Poor differentiation (grade 3)" ], [ "3", "Sarcomatoid differentiation" ], [ "4", "Undifferentiated (grade 4)" ], [ "5", "Multiple high risk histologic features" ], [ "6", "Histologic features, NOS (type of high risk histologic feature not specified)" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error)" ], [ "9", "Not documented in medical record\nHigh risk histologic features not assessed or unknown if assessed" ] ]
+}

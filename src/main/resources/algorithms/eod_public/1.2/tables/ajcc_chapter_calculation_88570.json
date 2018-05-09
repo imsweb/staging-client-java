@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc_chapter_calculation_88570",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2018-05-09T15:33:21.429Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "8013,8020,8023,8033,8041,8045,8070,8082", "3", "VALUE:35", "Thymus" ], [ "8123,8140", "3", "VALUE:35", "Thymus" ], [ "8200,8240,8249,8260", "3", "VALUE:35", "Thymus" ], [ "8310", "3", "VALUE:35", "Thymus" ], [ "8430,8480", "3", "VALUE:35", "Thymus" ], [ "8560,8576,8580-8586", "3", "VALUE:35", "Thymus" ], [ "8013,8020,8023,8033,8041,8045,8070,8082", "2", "VALUE:XX", "Other Thymus" ], [ "8123,8140", "2", "VALUE:XX", "Other Thymus" ], [ "8200,8240,8249,8260", "2", "VALUE:XX", "Other Thymus" ], [ "8310", "2", "VALUE:XX", "Other Thymus" ], [ "8430,8480", "2", "VALUE:XX", "Other Thymus" ], [ "8560,8576,8580-8586", "2", "VALUE:XX", "Other Thymus" ], [ "8000-8012,8014-8015,8021-8022,8030-8032,8034-8040,8042-8044,8046-8060,8071-8081,8083-8122", "*", "VALUE:XX", "Other Thymus" ], [ "8124-8131,8141-8191", "*", "VALUE:XX", "Other Thymus" ], [ "8201-8231,8241-8248,8250-8257,8261-8300", "*", "VALUE:XX", "Other Thymus" ], [ "8311-8420,8440-8474,8481-8552,8561-8575,8587-8700,8720-8790,9700-9701", "*", "VALUE:XX", "Other Thymus" ] ]
+}

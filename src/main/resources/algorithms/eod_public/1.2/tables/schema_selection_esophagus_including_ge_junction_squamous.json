@@ -1,0 +1,30 @@
+{
+  "id" : "schema_selection_esophagus_including_ge_junction_squamous",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Selection Esophagus (including GE junction) Squamous",
+  "title" : "Schema selection for Esophagus (including GE junction) Squamous",
+  "last_modified" : "2018-05-09T15:33:18.878Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_1",
+    "name" : "Schema Discriminator 1",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_2",
+    "name" : "Schema Discriminator 2",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C150-C155, C158-C159", "8050-8054, 8070, 8074, 8077, 8083, 8560", " ", " ", "MATCH" ], [ "C160", "8050-8054, 8070, 8074, 8077, 8083, 8560", "2", " ", "MATCH" ], [ "C150-C155, C158-C159", "8020", " ", "1,9", "MATCH" ], [ "C160", "8020", "2", "1,9", "MATCH" ] ]
+}

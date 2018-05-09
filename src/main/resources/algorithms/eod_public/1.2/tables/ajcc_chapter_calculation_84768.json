@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc_chapter_calculation_84768",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2018-05-09T15:33:21.241Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "9671,9731,9734,9761", "C000-C301", "VALUE:XX", "Other Plasma Cell Disorders" ], [ "9671,9731,9734,9761", "C310-C319", "VALUE:82", "Plasma Cell Disorders" ], [ "9671,9731,9734,9761", "C320-C399", "VALUE:XX", "Other Plasma Cell Disorders" ], [ "9671,9731,9734,9761", "C400-C419", "VALUE:82", "Plasma Cell Disorders" ], [ "9671,9731,9734,9761", "C420", "VALUE:XX", "Other Plasma Cell Disorders" ], [ "9671,9731,9734,9761", "C421", "VALUE:82", "Plasma Cell Disorders" ], [ "9671,9731,9734,9761", "C422-C424", "VALUE:XX", "Other Plasma Cell Disorders" ], [ "9671,9731,9734,9761", "C440", "VALUE:82", "Plasma Cell Disorders" ], [ "9731,9761", "C441", "VALUE:XX", "Other Plasma Cell Disorders" ], [ "9671,9731,9734,9761", "C442-C449", "VALUE:82", "Plasma Cell Disorders" ], [ "9671,9731,9734,9761", "C470-C499", "VALUE:XX", "Other Plasma Cell Disorders" ], [ "9671,9731,9734,9761", "C500-C509", "VALUE:XX", "Other Plasma Cell Disorders" ], [ "9671,9731,9734,9761", "C510-C519", "VALUE:82", "Plasma Cell Disorders" ], [ "9671,9731,9734,9761", "C529-C589", "VALUE:XX", "Other Plasma Cell Disorders" ], [ "9671,9731,9734,9761", "C600-C609", "VALUE:82", "Plasma Cell Disorders" ], [ "9671,9731,9734,9761", "C619-C631", "VALUE:XX", "Other Plasma Cell Disorders" ], [ "9671,9731,9734,9761", "C632", "VALUE:82", "Plasma Cell Disorders" ], [ "9671,9731,9734,9761", "C637-C689", "VALUE:XX", "Other Plasma Cell Disorders" ], [ "9731,9761", "C690", "VALUE:XX", "Other Plasma Cell Disorders" ], [ "9671,9731,9734,9761", "C691-C694", "VALUE:XX", "Other Plasma Cell Disorders" ], [ "9731,9761", "C695-C696", "VALUE:XX", "Other Plasma Cell Disorders" ], [ "9671,9731,9734,9761", "C698-C809", "VALUE:XX", "Other Plasma Cell Disorders" ] ]
+}

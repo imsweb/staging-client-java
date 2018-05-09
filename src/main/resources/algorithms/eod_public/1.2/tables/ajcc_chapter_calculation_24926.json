@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_chapter_calculation_24926",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2018-05-09T15:33:21.902Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "C003-C005,C008-C009", "8720-8722,8730,8745-8746,8770-8772", "3", "VALUE:14", "Mucosal Melanoma of the Head and Neck" ], [ "C019-C069", "8720-8722,8730,8745-8746,8770-8772", "3", "VALUE:14", "Mucosal Melanoma of the Head and Neck" ], [ "C090-C091, C098-C099", "8720-8722,8730,8745-8746,8770-8772", "3", "VALUE:14", "Mucosal Melanoma of the Head and Neck" ], [ "C100-C103,C108-C109", "8720-8722,8730,8745-8746,8770-8772", "3", "VALUE:14", "Mucosal Melanoma of the Head and Neck" ], [ "C110-C148", "8720-8722,8730,8745-8746,8770-8772", "3", "VALUE:14", "Mucosal Melanoma of the Head and Neck" ], [ "C300", "8720-8722,8730,8745-8746,8770-8772", "3", "VALUE:14", "Mucosal Melanoma of the Head and Neck" ], [ "C310-C311", "8720-8722,8730,8745-8746,8770-8772", "3", "VALUE:14", "Mucosal Melanoma of the Head and Neck" ], [ "C320-C322,C328-C329", "8720-8722,8730,8745-8746,8770-8772", "3", "VALUE:14", "Mucosal Melanoma of the Head and Neck" ], [ "C003-C005,C008-C009", "8720-8722,8730,8745-8746,8770-8772", "2", "VALUE:XX", "Other Mucosal Melanoma of the Head and Neck" ], [ "C019-C069", "8720-8722,8730,8745-8746,8770-8772", "2", "VALUE:XX", "Other Mucosal Melanoma of the Head and Neck" ], [ "C090-C091, C098-C099", "8720-8722,8730,8745-8746,8770-8772", "2", "VALUE:XX", "Other Mucosal Melanoma of the Head and Neck" ], [ "C100-C103,C108-C109", "8720-8722,8730,8745-8746,8770-8772", "2", "VALUE:XX", "Other Mucosal Melanoma of the Head and Neck" ], [ "C110-C148", "8720-8722,8730,8745-8746,8770-8772", "2", "VALUE:XX", "Other Mucosal Melanoma of the Head and Neck" ], [ "C300", "8720-8722,8730,8745-8746,8770-8772", "2", "VALUE:XX", "Other Mucosal Melanoma of the Head and Neck" ], [ "C310-C311", "8720-8722,8730,8745-8746,8770-8772", "2", "VALUE:XX", "Other Mucosal Melanoma of the Head and Neck" ], [ "C320-C322,C328-C329", "8720-8722,8730,8745-8746,8770-8772", "2", "VALUE:XX", "Other Mucosal Melanoma of the Head and Neck" ], [ "C104,C301,C312-C313,C318-C319,C323", "8720-8722,8730,8745-8746,8770-8772", "*", "VALUE:XX", "Other Mucosal Melanoma of the Head and Neck" ], [ "C003-C005,C008-C009", "8723-8728,8740-8744,8750-8762,8773-8790", "*", "VALUE:XX", "Other Mucosal Melanoma of the Head and Neck" ], [ "C019-C069", "8723-8728,8740-8744,8750-8762,8773-8790", "*", "VALUE:XX", "Other Mucosal Melanoma of the Head and Neck" ], [ "C090-C148", "8723-8728,8740-8744,8750-8762,8773-8790", "*", "VALUE:XX", "Other Mucosal Melanoma of the Head and Neck" ], [ "C300-C329", "8723-8728,8740-8744,8750-8762,8773-8790", "*", "VALUE:XX", "Other Mucosal Melanoma of the Head and Neck" ] ]
+}

@@ -1,0 +1,23 @@
+{
+  "id" : "melanoma_ciliary_body_melanoma_iris_79773",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Discriminator 1",
+  "title" : "Schema Discriminator 1: Melanoma Ciliary Body/Melanoma Iris",
+  "notes" : "**Note:** A schema discriminator is used to discriminate between melanoma tumors with primary site code C694: Ciliary Body/Iris. Code the site in which the tumor arose. \n* **Melanoma Ciliary Body (see code 1)**\nSubsites include: Ciliary body, crystalline lens, sclera, uveal tract, intraocular, eyeball\n* **Melanoma Iris (see code 2)**\nSubsite includes: Iris",
+  "last_modified" : "2018-05-09T15:33:19.757Z",
+  "definition" : [ {
+    "key" : "discriminator_1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "disease",
+    "name" : "Disease",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Ciliary Body\nCrystalline lens\nSclera\nUveal tract\nIntraocular\nEyeball", "67:2 Uvea: Choroidal and Ciliary Body Melanomas" ], [ "2", "Iris", "67.1: Uveal Melanoma - Iris" ], [ "", "Primary Site is NOT C694, Discriminator is not necessary", "" ] ]
+}

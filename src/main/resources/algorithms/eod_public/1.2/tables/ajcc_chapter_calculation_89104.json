@@ -1,0 +1,22 @@
+{
+  "id" : "ajcc_chapter_calculation_89104",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2018-05-09T15:33:21.249Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "8000,8010,8013,8020,8035,8041,8070", "VALUE:27", "Ampulla of Vater" ], [ "8140,8144,8160,8163", "VALUE:27", "Ampulla of Vater" ], [ "8244,8246,8255,8260", "VALUE:27", "Ampulla of Vater" ], [ "8310", "VALUE:27", "Ampulla of Vater" ], [ "8480,8490", "VALUE:27", "Ampulla of Vater" ], [ "8560,8576", "VALUE:27", "Ampulla of Vater" ], [ "8001-8005,8011-8012,8014-8015,8021-8034,8040,8042-8060,8071-8131", "VALUE:XX", "Other Ampulla of Vater" ], [ "8141-8143,8145-8149,8154,8157,8161-8162,8170-8231", "VALUE:XX", "Other Ampulla of Vater" ], [ "8243,8245,8247-8248,8250-8254,8256-8257,8261-8300", "VALUE:XX", "Other Ampulla of Vater" ], [ "8311-8474,8481-8482,8500-8552,8561-8575,8580-8682", "VALUE:XX", "Other Ampulla of Vater" ], [ "8690-8700, 8720-8790,9700-9701", "VALUE:XX", "Other Ampulla of Vater" ] ]
+}

@@ -1,0 +1,18 @@
+{
+  "id" : "nodes_exam_dna_95635",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Nodes Exam DNA",
+  "title" : "Regional Nodes Examined",
+  "last_modified" : "2018-05-09T15:33:19.969Z",
+  "definition" : [ {
+    "key" : "nodes_exam",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "99", "Not applicable" ] ]
+}

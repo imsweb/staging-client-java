@@ -1,0 +1,19 @@
+{
+  "id" : "microvascular_density_70589",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Microvascular Density",
+  "title" : "Microvascular Density (MVD)",
+  "notes" : "**Note 1:** Physician statement of microvascular density (MVD) can be used to code this data item when no other information is available.\n\n**Note 2:** MVD is independently associated with metastatic risk. The number of immunopositive elements is labeled with a marker for vascular endothelial cells (e.g., CD34 epitope, CD31 epitope, factor VIII-related antigen) and counted from area of densest vascularization (typical field area, 0.3 mm2 squared). Higher counts are associated with shorter survival. \n\n**Note 3:** Record the results as expressed on the laboratory test. Record the information based on quartiles for laboratory standards if this is the only expression of results.",
+  "last_modified" : "2018-05-09T15:33:19.264Z",
+  "definition" : [ {
+    "key" : "mvd",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00 ", "No vessels involved" ], [ "01-99", "01-99 vessels per 0.3 square millimeter (mm2)" ], [ "X1", "Greater than or equal to 100 vessels per 0.3 square millimeter (mm2)" ], [ "X2", "Lowest quartile for laboratory" ], [ "X3", "Second quartile for laboratory" ], [ "X4", "Third quartile for laboratory" ], [ "X5", "Highest quartile for laboratory" ], [ "X7", "Test ordered, results not in chart" ], [ "X8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "X9", "Not documented in medical record\nMicrovascular Density (MVD) not assessed or unknown if assessed" ] ]
+}

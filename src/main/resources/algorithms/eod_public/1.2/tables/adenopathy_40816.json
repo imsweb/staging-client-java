@@ -1,0 +1,19 @@
+{
+  "id" : "adenopathy_40816",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Adenopathy",
+  "title" : "Adenopathy",
+  "notes" : "**Note 1:** For cases diagnosed 1/1/2018 and later, all cases of CLL and SLL will require both the **Lugano classification, which is captured in the AJCC stage group data item, and the five components of the modified Rai staging system, which are captured in Site-Specific Data Items (adenopathy, anemia, lymphocytosis, organomegaly, and thrombocytopenia).**\n\nThe terms B-cell lymphocytic leukemia/chronic lymphocytic leukemia (CLL) and small lymphocytic lymphoma (SLL) are considered different clinical presentations of the same disease, with both terms coded 9823.  Traditionally the lymphoma diagnosis was staged with the Ann Arbor staging system and it is now staged with the Lugano classification.  In North America, CLL was staged with the Rai system.  \n\n**Note 2:** Physician statement of presence or absence of adenopathy should be used to code this data item.\n\n**Note 3:** Adenopathy is defined as the presence of lymph nodes >1.5 cm on physical examination (PE) and is part of the staging criteria.\n\n**Note 4:** This data item is determined from physical exam alone. If a physical exam cannot be used to detect adenopathy due to issues related to the patients obesity, a physician statement of peripheral adenopathy based on a CT scan can be used.\n* A finding of retroperitoneal or mesenteric adenopathy on CT is not considered in determining adenopathy and does not affect the assigned stage\n\n**Note 5:** If there is no mention of adenopathy (present or absent), code 9.",
+  "last_modified" : "2018-05-09T15:33:19.859Z",
+  "definition" : [ {
+    "key" : "adenopathy",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Adenopathy not identified/not present \nNo lymph nodes > 1.5 cm" ], [ "1", "Adenopathy present \nPresence of lymph nodes > 1.5 cm" ], [ "9", "Not documented in medical record\nAdenopathy not assessed or unknown if assessed" ] ]
+}

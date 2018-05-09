@@ -1,0 +1,19 @@
+{
+  "id" : "peritoneal_cytology_38674",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Peritoneal Cytology",
+  "title" : "Peritoneal Cytology",
+  "notes" : "**Note 1:** Physician statement of Peritoneal Cytology can be used to code this data item when no other information is available.\n\n**Note 2:** Peritoneal cytology may also be called peritoneal ascitic fluid instead of peritoneal washing or pelvic washing.\n\n**Note 3:** Cytologic examination for malignant cells may be performed on ascites (fluid that has accumulated in the peritoneal cavity in excess amount) or the fluid (saline) that is introduced into the peritoneal cavity or pelvis, and then removed by suction. The introduction of fluid may be termed peritoneal or pelvic washing or peritoneal lavage.",
+  "last_modified" : "2018-05-09T15:33:19.529Z",
+  "definition" : [ {
+    "key" : "peritoneal_cytology",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Peritoneal cytology/washing negative for malignancy" ], [ "1", "Peritoneal cytology/washing atypical and/or suspicious" ], [ "2", "Peritoneal cytology/washing malignant (positive for malignancy)" ], [ "3", "Unsatisfactory/nondiagnostic" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in patient record\nPeritoneal cytology not assessed or unknown if assessed" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "mitotic_rate_melanoma_88184",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Mitotic Rate Melanoma",
+  "title" : "Mitotic Rate Melanoma",
+  "notes" : "**Note 1:** Physician statement of the Mitotic Rate Melanoma can be used to code this data item when no other information is available. \n\n**Note 2:** The term “mitotic figures” is the same as mitoses.\n\n**Note 3:** Record the mitotic rate/count as documented in the pathology report. If there is more than one pathology report for the same melanoma at initial diagnosis and different mitotic counts are documented, code the highest mitotic count from any of the pathology reports.",
+  "last_modified" : "2018-05-09T15:33:19.555Z",
+  "definition" : [ {
+    "key" : "mitotic_rate_melanoma",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "0 mitoses per square millimeter (mm)\nMitoses absent\nNo mitoses present" ], [ "01-99", "1 - 99 mitoses/square mm\n(Exact measurement in mitoses/square mm)" ], [ "X1", "100 mitoses/square mm or more" ], [ "X2", "Stated as \"less than 1 mitosis/square mm\"\nStated as \"nonmitogenic\"" ], [ "X3", "Stated as \"at least 1 mitosis/square mm\"\nStated as \"mitogenic\"" ], [ "X4", "Mitotic rate described with denominator other than square millimeter (mm)" ], [ "X7", "Test ordered, results not in chart" ], [ "X8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code X8 may result in an edit error.)" ], [ "X9", "Not documented in medical record\nMitotic Rate Melanoma not assessed or unknown if assessed" ] ]
+}

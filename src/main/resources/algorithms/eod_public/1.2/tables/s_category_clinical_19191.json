@@ -1,0 +1,20 @@
+{
+  "id" : "s_category_clinical_19191",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "S Category Clinical",
+  "title" : "Testis Serum Markers (S) Clinical (pre orchiectomy)",
+  "description" : "S Category Clinical combines the results of pre-orchiectomy Alpha Fetoprotein (AFP), Human Chorionic Gonadotropin (hCG) and Lactate Dehydrogenase (LDH) into a summary S value.",
+  "notes" : "**Note 1:** Code the S category as described by the physician. If the S category determined by available lab values or calculated by vendor software differs from the physician statement of the S category, the physician’s statement takes precedence. \n\n**Note 2:** Code the pre-orchiectomy S category according to the table below. This table is also available in AJCC 8th edition, Chapter 59, Testis.\n* For AFP, a lab value expressed in micrograms per liter (ug/L) is equivalent to the same value expressed in nanograms per milliliter (ng/ml).\n\n**Note 3:** Clinical stage values are those based on physician statement or lab values at diagnosis, prior to orchiectomy, and prior to any systemic treatment.\n\n**Note 4:** All three lab values are needed for S0-S2. Only one elevated test is needed to assign S3. If any individual test is not available and none of the available tests results meets the S3 criterion for that test, assign code 9 (SX).",
+  "last_modified" : "2018-05-09T15:33:19.518Z",
+  "definition" : [ {
+    "key" : "s_category_clin",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "S0: Marker study levels within normal levels" ], [ "1", "S1: At least one of these values is elevated AND\n- LDH less than 1.5 x N* AND\n- hCG (mIU/L) less than 5,000 AND \n- AFP (ng/mL) less than 1,000" ], [ "2", "S2:\n- LDH 1.5 x N* to 10 x N* OR \n- hCG (mIU/L) 5,000 to 50,000 OR \n- AFP (ng/mL) 1,000 to 10,000" ], [ "3", "S3: Only one elevated test is needed\n- LDH greater than 10 x N* OR \n- hcG (mIU/mL) greater than 50,000 OR \n- AFP (ng/mL) greater than 10,000" ], [ "9", "SX: Not documented in medical record\nS Category Clinical not assessed or unknown if assessed" ] ]
+}

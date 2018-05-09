@@ -1,0 +1,19 @@
+{
+  "id" : "gestational_prog_index_28647",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Gestational Prog Index",
+  "title" : "Gestational Trophoblastic Prognostic Scoring Index",
+  "notes" : "**Note 1:** This is based on clinician scoring only. The registrar is NOT to calculate the score based on available information.\n\n**Note 2:** The Prognostic Scoring Index is based on the following components\n* Age\n* Antecedent Pregnancy\n* Interval in Months from Index Pregnancy\n* Pretreatment Serum human chorionic gonadotropin (hCG) (IU/ml)\n* Largest Tumor Size, Including Uterus\n* Sites of Metastases\n* Number of Metastases Identified\n* Previous Failed Chemotherapy\n\n**Note 3:** The total score ranges from 00-25.\n\n**Note 4:** If there is no clinician scoring, or a stated value is greater than 25, code X9.",
+  "last_modified" : "2018-05-09T15:33:19.666Z",
+  "definition" : [ {
+    "key" : "gestational_prog_index",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00-25", "Risk factor score" ], [ "X9", "Not documented in medical record\nPrognostic scoring index not assessed, or unknown if assessed" ] ]
+}

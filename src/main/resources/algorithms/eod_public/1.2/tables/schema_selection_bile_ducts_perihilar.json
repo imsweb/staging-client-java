@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_bile_ducts_perihilar",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Selection BileDuctsPerihilar",
+  "title" : "Schema selection for BileDuctsPerihilar",
+  "last_modified" : "2018-05-09T15:33:19.619Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_1",
+    "name" : "Schema Discriminator 1",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C240", "8000-8700, 8720-8790, 9700-9701", "1,5,6,9", "MATCH" ] ]
+}

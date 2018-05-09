@@ -1,0 +1,22 @@
+{
+  "id" : "ajcc_chapter_calculation_60109",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2018-05-09T15:33:19.609Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "primary_site",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "C000-C388", "VALUE:45", "Soft Tissue Sarcoma - Unusual Histologies and Sites" ], [ "C470-C539", "VALUE:45", "Soft Tissue Sarcoma - Unusual Histologies and Sites" ], [ "C569-C695,C699", "VALUE:45", "Soft Tissue Sarcoma - Unusual Histologies and Sites" ], [ "C739-C749", "VALUE:45", "Soft Tissue Sarcoma - Unusual Histologies and Sites" ], [ "C809", "VALUE:45", "Soft Tissue Sarcoma - Unusual Histologies and Sites" ], [ "C390-C449", "VALUE:XX", "Other Kaposi Sarcoma" ], [ "C540-C559", "VALUE:XX", "Other Kaposi Sarcoma" ], [ "C696,C698", "VALUE:XX", "Other Kaposi Sarcoma" ], [ "C750,C754-C779", "VALUE:XX", "Other Kaposi Sarcoma" ] ]
+}

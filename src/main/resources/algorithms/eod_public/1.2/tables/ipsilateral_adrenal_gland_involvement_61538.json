@@ -1,0 +1,19 @@
+{
+  "id" : "ipsilateral_adrenal_gland_involvement_61538",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Ipsilateral Adrenal Gland Involvement",
+  "title" : "Ipsilateral Adrenal Gland Involvement",
+  "notes" : "**Note 1:** Physician statement of Ipsilateral Adrenal Gland Involvement can be used to code this data item.\n\n**Note 2:** Information about contiguous ipsilateral adrenal gland involvement is collected in primary tumor, and noncontiguous ipsilateral adrenal gland involvement is collected in distant metastasis, as elements in anatomic staging. This information is also collected in this field as it may have an independent effect on prognosis. \n\n**Note 3:** Record ipsilateral adrenal gland involvement as documented in the pathology report.\n\n**Note 4:** Do not use imaging findings to code this data item. \n\n**Note 5:** Code 9 if surgical resection of the primary site is performed and there is no mention of ipsilateral adrenal gland involvement.",
+  "last_modified" : "2018-05-09T15:33:19.431Z",
+  "definition" : [ {
+    "key" : "ipsilateral_adrenal_gland_involv",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Ipsilateral adrenal gland involvement not present/not identified" ], [ "1", "Adrenal gland involvement by direct involvement (contiguous involvement)" ], [ "2", "Adrenal gland involvement by separate nodule (noncontiguous involvement)" ], [ "3", "Combination of code 1-2" ], [ "4", "Ipsilateral adrenal gland involvement, unknown if direct involvement or separate nodule" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nIpsilateral adrenal gland not resected\nIpsilateral adrenal gland involvement not assessed or unknown if assessed\nNo surgical resection of primary site is performed" ] ]
+}

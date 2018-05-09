@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_placenta",
+  "algorithm" : "eod_public",
+  "version" : "1.2",
+  "name" : "Schema Selection Placenta",
+  "title" : "Schema selection for Placenta",
+  "last_modified" : "2018-05-09T15:33:20.004Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C589", "8000-8700, 8720-8790, 9100-9105,9700-9701", "MATCH" ] ]
+}
