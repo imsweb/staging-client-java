@@ -25,7 +25,7 @@ All of the standard setting organizations will collect the predictive and progno
  
 Versions supported:
 
-- 1.1 (released April 2018)
+- 1.2 (released May 2018)
 
 
 ### TNM
