@@ -81,7 +81,7 @@ More detailed documentation can be found in the [Wiki](https://github.com/imsweb
 Everything starts with getting an instance of the `Staging` object.  There are `DataProvider` objects for each staging algorithm and version.  The `Staging`
 object is thread safe and cached so subsequent calls to `Staging.getInstance()` will return the same object.
 
-For example, to get an instance of the Collaborative Staging algorithm
+For example, if you include the [collaborative staging](https://github.com/imsweb/staging-algorithm-cs) algorithm, the call will look like this:
 
 ```java
 Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.v020550));
