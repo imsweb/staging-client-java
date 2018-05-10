@@ -8,7 +8,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.imsweb.staging.StagingData.Result;
-import com.imsweb.staging.cs.CsStagingData;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingTable;
 
@@ -49,7 +48,7 @@ public class ExternalStagingFileDataProviderTest {
         assertEquals(62, involved.size());
         assertTrue(involved.contains("mets_eval_ipa"));
 
-        CsStagingData data = new CsStagingData();
+        StagingData data = new StagingData();
         data.setInput("site", "C680");
         data.setInput("hist", "8000");
         data.setInput("behavior", "3");

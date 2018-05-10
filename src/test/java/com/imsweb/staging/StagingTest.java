@@ -24,7 +24,6 @@ import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingSchemaInput;
 import com.imsweb.staging.entities.StagingTable;
 import com.imsweb.staging.entities.StagingTableRow;
-import com.imsweb.staging.tnm.TnmDataProvider;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -132,7 +131,7 @@ public abstract class StagingTest {
 
     @Test
     public void testCachedSiteAndHistology() {
-        TnmDataProvider provider = TnmDataProvider.getInstance(TnmDataProvider.TnmVersion.v1_8);
+        StagingDataProvider provider = getProvider();
         assertTrue(provider.getValidSites().size() > 0);
         assertTrue(provider.getValidHistologies().size() > 0);
 
