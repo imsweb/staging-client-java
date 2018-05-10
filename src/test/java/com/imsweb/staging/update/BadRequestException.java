@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2015 Information Management Services, Inc.
  */
-package com.imsweb.staging;
+package com.imsweb.staging.update;
 
 public class BadRequestException extends SeerApiException {
 

@@ -10,11 +10,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.Interceptor;
 import okhttp3.Response;
 
-import com.imsweb.staging.BadRequestException;
-import com.imsweb.staging.NotAuthorizedException;
-import com.imsweb.staging.NotFoundException;
-import com.imsweb.staging.SeerApiException;
-
 /**
  * Interceptor to catch all non-200 responses and convert them to exceptions.
  */
