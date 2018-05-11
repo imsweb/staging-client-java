@@ -7,9 +7,13 @@ A cancer staging client library for Java applications.
 
 ## Supported staging algorithms
 
-### EOD
+Starting with version 4.0, the library does not contain any algorithms.  The algorithms are maintained in separate repositories which are 
+described below.
 
-Extent of Disease (EOD) is a set of three data items that describe how far a cancer has spread at the time of diagnosis. EOD 2018 is effective for cases diagnosed in 2018 and later.
+### [EOD](https://github.com/imsweb/staging-algorithm-eod-public)
+
+Extent of Disease (EOD) is a set of three data items that describe how far a cancer has spread at the time of diagnosis. EOD 2018 is effective for 
+cases diagnosed in 2018 and later.
  
 In each EOD schema, valid values, definitions, and registrar notes are provided for
  
@@ -19,39 +23,34 @@ In each EOD schema, valid values, definitions, and registrar notes are provided 
 - Summary Stage 2018
 - Site-Specific Data Items (SSDIs), including grade, pertinent to the schema
 
-For cancer cases diagnosed January 1, 2018 and later, the NCI SEER program will collect Extent of Disease (EOD) revised for 2018 and Summary Stage 2018. The schemas have been developed to be compatible with the AJCC 8th Edition chapter definitions. 
+For cancer cases diagnosed January 1, 2018 and later, the NCI SEER program will collect Extent of Disease (EOD) revised for 2018 and Summary Stage 2018. The 
+schemas have been developed to be compatible with the AJCC 8th Edition chapter definitions. 
 
-All of the standard setting organizations will collect the predictive and prognostic factors through Site Specific Data Items (SSDIs). Unlike the SSFs, these data items have formats and code structures specific to the data item.
- 
-Versions supported:
-
-- 1.2 (released May 2018)
+All of the standard setting organizations will collect the predictive and prognostic factors through Site Specific Data Items (SSDIs). Unlike the 
+SSFs, these data items have formats and code structures specific to the data item.
 
 
-### TNM
+### [TNM](https://github.com/imsweb/staging-algorithm-tnm)
 
-TNM is a widely accepted system of cancer staging. TNM stands for Tumor, Nodes, and Metastasis. T is assigned based on the extent of involvement at the primary tumor site, N for the extent of involvement in regional lymph nodes, and M for distant spread. Clinical TNM is assigned prior to treatment and pathologic TNM is assigned based on clinical information plus information from surgery. The clinical TNM and the pathologic TNM values are summarized as clinical stage group or pathologic stage group.
+TNM is a widely accepted system of cancer staging. TNM stands for Tumor, Nodes, and Metastasis. T is assigned based on the extent of involvement at the 
+primary tumor site, N for the extent of involvement in regional lymph nodes, and M for distant spread. Clinical TNM is assigned prior to treatment and 
+pathologic TNM is assigned based on clinical information plus information from surgery. The clinical TNM and the pathologic TNM values are summarized 
+as clinical stage group or pathologic stage group.
 
-For each cancer site, or schema, valid values, definitions, and registrar notes are provided for clinical TNM and stage group, pathologic TNM and stage group, and relevant Site-Specific Factors (SSFs).
+For each cancer site, or schema, valid values, definitions, and registrar notes are provided for clinical TNM and stage group, pathologic TNM and stage 
+group, and relevant Site-Specific Factors (SSFs).
 
-TNM categories, stage groups, and definitions are based on the Union for International Cancer Control ([UICC](http://www.uicc.org/)) TNM 7th edition classification.  UICC 7th edition and AJCC 7th edition TNM categories and stage groups are very similar; however, there are some differences.
+TNM categories, stage groups, and definitions are based on the Union for International Cancer Control ([UICC](http://www.uicc.org/)) TNM 7th edition 
+classification.  UICC 7th edition and AJCC 7th edition TNM categories and stage groups are very similar; however, there are some differences.
 
-For diagnosis years 2016-2017, SEER Summary Stage 2000 is required. SEER Summary Stage 2000 should be collected manually unless the registry is collecting Collaborative Stage, which would derive Summary Stage 2000.
+For diagnosis years 2016-2017, SEER Summary Stage 2000 is required. SEER Summary Stage 2000 should be collected manually unless the registry is collecting 
+Collaborative Stage, which would derive Summary Stage 2000.
 
-Versions supported:
+### [Collaborative Staging](https://github.com/imsweb/staging-algorithm-cs)
 
-- 1.8 (released May 2018)
-
-### Collaborative Staging
-
-[Collaborative Stage](https://cancerstaging.org/cstage/) is a unified data collection system designed to provide a common data set to meet the needs of all three
+Collaborative Stage is a unified data collection system designed to provide a common data set to meet the needs of all three
 staging systems (TNM, SEER EOD, and SEER SS). It provides a comprehensive system to improve data quality by standardizing rules for timing, clinical and pathologic
 assessments, and compatibility across all of the systems for all cancer sites.
-
-Versions supported:
-
-
-- 02.05.50 (released October 2013)
 
 ## Download
 
@@ -82,7 +81,7 @@ More detailed documentation can be found in the [Wiki](https://github.com/imsweb
 Everything starts with getting an instance of the `Staging` object.  There are `DataProvider` objects for each staging algorithm and version.  The `Staging`
 object is thread safe and cached so subsequent calls to `Staging.getInstance()` will return the same object.
 
-For example, to get an instance of the Collaborative Staging algorithm
+For example, if you include the [collaborative staging](https://github.com/imsweb/staging-algorithm-cs) algorithm, the call will look like this:
 
 ```java
 Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.v020550));
@@ -130,8 +129,8 @@ StagingSchema schema = staging.getSchema("prostate");
 
 ### Tables
 
-Tables represent the building blocks of the staging instructions specified in schemas.  Tables are used to define schema selection criteria, input validation and staging logic.
-Tables include the following information:
+Tables represent the building blocks of the staging instructions specified in schemas.  Tables are used to define schema selection criteria, input 
+validation and staging logic. Tables include the following information:
 
 - table identifier (i.e. "ajcc7_stage")
 - algorithm identifier (i.e. "cs")
