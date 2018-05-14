@@ -10,7 +10,7 @@ A cancer staging client library for Java applications.
 Starting with version 4.0, the library does not contain any algorithms.  The algorithms are maintained in separate repositories which are 
 described below.
 
-### [EOD](https://github.com/imsweb/staging-algorithm-eod-public)
+### EOD ([view repository](https://github.com/imsweb/staging-algorithm-eod-public))
 
 Extent of Disease (EOD) is a set of three data items that describe how far a cancer has spread at the time of diagnosis. EOD 2018 is effective for 
 cases diagnosed in 2018 and later.
@@ -30,7 +30,7 @@ All of the standard setting organizations will collect the predictive and progno
 SSFs, these data items have formats and code structures specific to the data item.
 
 
-### [TNM](https://github.com/imsweb/staging-algorithm-tnm)
+### TNM ([view repository](https://github.com/imsweb/staging-algorithm-tnm))
 
 TNM is a widely accepted system of cancer staging. TNM stands for Tumor, Nodes, and Metastasis. T is assigned based on the extent of involvement at the 
 primary tumor site, N for the extent of involvement in regional lymph nodes, and M for distant spread. Clinical TNM is assigned prior to treatment and 
@@ -46,7 +46,7 @@ classification.  UICC 7th edition and AJCC 7th edition TNM categories and stage 
 For diagnosis years 2016-2017, SEER Summary Stage 2000 is required. SEER Summary Stage 2000 should be collected manually unless the registry is collecting 
 Collaborative Stage, which would derive Summary Stage 2000.
 
-### [Collaborative Staging](https://github.com/imsweb/staging-algorithm-cs)
+### Collaborative Staging ([view repository](https://github.com/imsweb/staging-algorithm-cs))
 
 Collaborative Stage is a unified data collection system designed to provide a common data set to meet the needs of all three
 staging systems (TNM, SEER EOD, and SEER SS). It provides a comprehensive system to improve data quality by standardizing rules for timing, clinical and pathologic
