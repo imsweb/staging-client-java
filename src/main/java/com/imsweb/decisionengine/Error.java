@@ -9,11 +9,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 /**
  * An error object
  */
-@JsonPropertyOrder({"type", "table", "key", "message"})
+@JsonPropertyOrder({"type", "table", "column", "key", "message"})
 public class Error {
 
     private Type _type;
     private String _table;
+    private String _column;
     private String _key;
     private String _message;
 
@@ -78,6 +79,15 @@ public class Error {
         _table = table;
     }
 
+    @JsonProperty("column")
+    public String getColumn() {
+        return _column;
+    }
+
+    public void setColumn(String column) {
+        _column = column;
+    }
+
     @JsonProperty("key")
     public String getKey() {
         return _key;
@@ -114,6 +124,11 @@ public class Error {
 
         public ErrorBuilder table(String table) {
             _error.setTable(table);
+            return this;
+        }
+
+        public ErrorBuilder column(String column) {
+            _error.setColumn(column);
             return this;
         }
 

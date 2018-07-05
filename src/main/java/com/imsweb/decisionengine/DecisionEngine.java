@@ -785,7 +785,7 @@ public class DecisionEngine {
                     if (message == null || message.isEmpty())
                         message = "Matching resulted in an error in table '" + tableId + "' (" + getTableInputsAsString(table, result.getContext()) + ")";
 
-                    result.addError(new ErrorBuilder(Type.STAGING_ERROR).message(message).table(tableId).build());
+                    result.addError(new ErrorBuilder(Type.STAGING_ERROR).message(message).table(tableId).column(endpoint.getResultKey()).build());
                 }
                 else if (EndpointType.VALUE.equals(endpoint.getType())) {
                     // if output mapping(s) were provided, check whether the key was mapped

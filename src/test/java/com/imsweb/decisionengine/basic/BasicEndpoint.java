@@ -18,13 +18,20 @@ public class BasicEndpoint implements Endpoint {
     }
 
     /**
-     * Construct with a type and value
-     * @param type a type
-     * @param value a value
+     * Constructor
      */
     public BasicEndpoint(EndpointType type, String value) {
         _type = type;
         _value = value;
+    }
+
+    /**
+     * Constructor
+     */
+    public BasicEndpoint(EndpointType type, String value, String resultKey) {
+        _type = type;
+        _value = value;
+        _resultKey = resultKey;
     }
 
     @Override

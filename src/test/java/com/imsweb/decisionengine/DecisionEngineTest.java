@@ -340,7 +340,7 @@ public class DecisionEngineTest {
         assertNull(DecisionEngine.matchTable(matchTable, input));
 
         input.put("size", "003");
-        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.JUMP, "some_crazy_table")), DecisionEngine.matchTable(matchTable, input));
+        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.JUMP, "some_crazy_table", "size_result")), DecisionEngine.matchTable(matchTable, input));
 
         input.put("size", "014");
         List<? extends Endpoint> results = DecisionEngine.matchTable(matchTable, input);
@@ -350,7 +350,7 @@ public class DecisionEngineTest {
         assertEquals("size_result", results.get(0).getResultKey());
 
         input.put("size", "086");
-        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.ERROR, "Get that huge stuff out of here!")), DecisionEngine.matchTable(matchTable, input));
+        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.ERROR, "Get that huge stuff out of here!", "size_result")), DecisionEngine.matchTable(matchTable, input));
 
         // try with a value not in the table
         input.put("size", "021");
@@ -429,23 +429,23 @@ public class DecisionEngineTest {
         assertNull(DecisionEngine.matchTable(matchTable, input));
 
         // specify to only match on key1, there should be a match to the first line
-        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1")),
+        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1", "result")),
                 DecisionEngine.matchTable(matchTable, input, new HashSet<>(Collections.singletonList("key1"))));
 
         // add key2 to the input map and there should be a match
         input.put("key2", "7");
-        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE2")), DecisionEngine.matchTable(matchTable, input));
+        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE2", "result")), DecisionEngine.matchTable(matchTable, input));
 
         // if searching on key1 only, even though key2 was supplied should still match to first line
-        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1")),
+        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1", "result")),
                 DecisionEngine.matchTable(matchTable, input, new HashSet<>(Collections.singletonList("key1"))));
 
         // supply an empty set of keys (the same meaning as not passing any keys
-        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1")), DecisionEngine.matchTable(matchTable, input, new HashSet<>()));
+        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1", "result")), DecisionEngine.matchTable(matchTable, input, new HashSet<>()));
 
         // supply an invalid key.  I think this should find nothing, but for the moment finds a match to the first row since none of the cells were compared to.  It
         // is the same as matching to a table with no INPUTS which would currently find a match to the first row.
-        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1")),
+        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1", "result")),
                 DecisionEngine.matchTable(matchTable, input, new HashSet<>(Collections.singletonList("bad_key"))));
     }
 
@@ -823,6 +823,7 @@ public class DecisionEngineTest {
         assertEquals("999", result.getErrors().get(0).getMessage());
         assertNull(result.getErrors().get(0).getKey());
         assertEquals("table_sample_first", result.getErrors().get(0).getTable());
+        assertEquals("result", result.getErrors().get(0).getColumn());
     }
 
     @Test
@@ -1054,6 +1055,7 @@ public class DecisionEngineTest {
         assertEquals(1, result.getErrors().size());
         assertEquals(1, result.getPath().size());
         assertEquals("table_recursion", result.getErrors().get(0).getTable());
+        assertNull(result.getErrors().get(0).getColumn());
     }
 
     @Test
@@ -1080,6 +1082,8 @@ public class DecisionEngineTest {
         assertEquals(Type.STAGED, result.getType());
         assertTrue(result.hasErrors());
         assertEquals(1, result.getErrors().size());
+        assertEquals("table_multiple_inputs", result.getErrors().get(0).getTable());
+        assertEquals("r2", result.getErrors().get(0).getColumn());
         assertEquals("2_LINE2", result.getErrors().get(0).getMessage());
         assertEquals(1, result.getPath().size());
 

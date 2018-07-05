@@ -178,8 +178,7 @@ public abstract class StagingDataProvider implements DataProvider {
                             break;
                         case ENDPOINT:
                             StagingEndpoint endpoint = parseEndpoint(cellValue);
-                            if (EndpointType.VALUE.equals(endpoint.getType()))
-                                endpoint.setResultKey(col.getKey());
+                            endpoint.setResultKey(col.getKey());
                             tableRowEntity.addEndpoint(endpoint);
 
                             // if there are key references used (values that reference other inputs) like {{key}}, then add them to the extra inputs list
