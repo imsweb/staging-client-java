@@ -823,7 +823,7 @@ public class DecisionEngineTest {
         assertEquals("999", result.getErrors().get(0).getMessage());
         assertNull(result.getErrors().get(0).getKey());
         assertEquals("table_sample_first", result.getErrors().get(0).getTable());
-        assertEquals("result", result.getErrors().get(0).getColumn());
+        assertEquals(Collections.singletonList("result"), result.getErrors().get(0).getColumns());
     }
 
     @Test
@@ -1055,7 +1055,7 @@ public class DecisionEngineTest {
         assertEquals(1, result.getErrors().size());
         assertEquals(1, result.getPath().size());
         assertEquals("table_recursion", result.getErrors().get(0).getTable());
-        assertNull(result.getErrors().get(0).getColumn());
+        assertNull(result.getErrors().get(0).getColumns());
     }
 
     @Test
@@ -1083,7 +1083,7 @@ public class DecisionEngineTest {
         assertTrue(result.hasErrors());
         assertEquals(1, result.getErrors().size());
         assertEquals("table_multiple_inputs", result.getErrors().get(0).getTable());
-        assertEquals("r2", result.getErrors().get(0).getColumn());
+        assertEquals(Collections.singletonList("r2"), result.getErrors().get(0).getColumns());
         assertEquals("2_LINE2", result.getErrors().get(0).getMessage());
         assertEquals(1, result.getPath().size());
 
@@ -1102,6 +1102,7 @@ public class DecisionEngineTest {
         assertTrue(result.getErrors().get(0).getMessage().startsWith("Match not found"));
         assertNull(result.getErrors().get(0).getKey());
         assertEquals("table_jump_sample", result.getErrors().get(0).getTable());
+        assertEquals(Collections.singletonList("result"), result.getErrors().get(0).getColumns());
 
         // test 1 JUMP and 2 VALUEs
         input.clear();
@@ -1135,6 +1136,42 @@ public class DecisionEngineTest {
         assertFalse(input.containsKey("r1"));
         assertFalse(input.containsKey("r2"));
         assertFalse(input.containsKey("r3"));
+    }
+
+    @Test
+    public void testRowNotFoundWithMultipleOutputs() {
+        BasicDataProvider provider = new BasicDataProvider();
+
+        // test a situation where a a row with mulitple inputs is not found
+        BasicTable table = new BasicTable("table_input");
+        table.addColumnDefinition("input1", ColumnType.INPUT);
+        table.addColumnDefinition("output1", ColumnType.ENDPOINT);
+        table.addColumnDefinition("output2", ColumnType.ENDPOINT);
+        table.addRawRow("000", "VALUE:000", "VALUE:000");
+        table.addRawRow("001", "VALUE:001", "VALUE:001");
+        provider.addTable(table);
+
+        BasicDefinition def = new BasicDefinition("sample_outputs");
+        def.setOnInvalidInput(Definition.StagingInputErrorHandler.FAIL);
+        def.addInput(new BasicInput("input1", "table_input"));
+
+        BasicMapping mapping = new BasicMapping("mapping1");
+        BasicTablePath path = new BasicTablePath("table_input");
+        mapping.addTablePath(path);
+        def.addMapping(mapping);
+        provider.addDefinition(def);
+
+        DecisionEngine engine = new DecisionEngine(provider);
+
+        // test match not found
+        Map<String, String> input = new HashMap<>();
+        input.put("a", "4");
+        input.put("b", "55");
+        Result result = engine.process("sample_outputs", input);
+        assertTrue(result.hasErrors());
+        assertEquals(1, result.getErrors().size());
+        assertEquals("table_input", result.getErrors().get(0).getTable());
+        assertEquals(Arrays.asList("output1", "output2"), result.getErrors().get(0).getColumns());
     }
 
     @Test

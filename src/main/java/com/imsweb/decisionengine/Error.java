@@ -3,49 +3,22 @@
  */
 package com.imsweb.decisionengine;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 /**
  * An error object
  */
-@JsonPropertyOrder({"type", "table", "column", "key", "message"})
+@JsonPropertyOrder({"type", "table", "columns", "key", "message"})
 public class Error {
 
     private Type _type;
     private String _table;
-    private String _column;
+    private List<String> _columns;
     private String _key;
     private String _message;
-
-    public enum Type {
-        // an input key was supplied that is not defined in the input definition
-        UNKNOWN_INPUT,
-
-        // a required input value was not contained in the input definition table
-        INVALID_REQUIRED_INPUT,
-
-        // a non-required input value was not contained in the input definition table
-        INVALID_NON_REQUIRED_INPUT,
-
-        // an input mapping from value did not exist
-        UNKNOWN_INPUT_MAPPING,
-
-        // an ERROR endpoint was hit during staging processing
-        STAGING_ERROR,
-
-        // a table was processed during staging and no match was found
-        MATCH_NOT_FOUND,
-
-        // a specified table does not exist
-        UNKNOWN_TABLE,
-
-        // processing a table ended up in an infinite loop due to JUMPs
-        INFINITE_LOOP,
-
-        // an output value was produced which was not contained in the output definition table
-        INVALID_OUTPUT
-    }
 
     /**
      * Default constructor
@@ -79,13 +52,13 @@ public class Error {
         _table = table;
     }
 
-    @JsonProperty("column")
-    public String getColumn() {
-        return _column;
+    @JsonProperty("columns")
+    public List<String> getColumns() {
+        return _columns;
     }
 
-    public void setColumn(String column) {
-        _column = column;
+    public void setColumns(List<String> columns) {
+        _columns = columns;
     }
 
     @JsonProperty("key")
@@ -104,6 +77,35 @@ public class Error {
 
     public void setMessage(String message) {
         _message = message;
+    }
+
+    public enum Type {
+        // an input key was supplied that is not defined in the input definition
+        UNKNOWN_INPUT,
+
+        // a required input value was not contained in the input definition table
+        INVALID_REQUIRED_INPUT,
+
+        // a non-required input value was not contained in the input definition table
+        INVALID_NON_REQUIRED_INPUT,
+
+        // an input mapping from value did not exist
+        UNKNOWN_INPUT_MAPPING,
+
+        // an ERROR endpoint was hit during staging processing
+        STAGING_ERROR,
+
+        // a table was processed during staging and no match was found
+        MATCH_NOT_FOUND,
+
+        // a specified table does not exist
+        UNKNOWN_TABLE,
+
+        // processing a table ended up in an infinite loop due to JUMPs
+        INFINITE_LOOP,
+
+        // an output value was produced which was not contained in the output definition table
+        INVALID_OUTPUT
     }
 
     /**
@@ -127,8 +129,8 @@ public class Error {
             return this;
         }
 
-        public ErrorBuilder column(String column) {
-            _error.setColumn(column);
+        public ErrorBuilder columns(List<String> columns) {
+            _error.setColumns(columns);
             return this;
         }
 

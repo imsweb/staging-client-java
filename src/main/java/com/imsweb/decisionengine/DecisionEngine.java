@@ -771,9 +771,14 @@ public class DecisionEngine {
 
         // look for the match in the mapping table; if no match is found, used the table-specific no_match value
         List<? extends Endpoint> endpoints = matchTable(table, result.getContext());
-        if (endpoints == null)
-            result.addError(new ErrorBuilder(Type.MATCH_NOT_FOUND).message("Match not found in table '" + tableId + "' (" + getTableInputsAsString(table, result.getContext()) + ")").table(tableId)
+        if (endpoints == null) {
+            // if a match is not found, include all the endpoints as columns in the error
+            result.addError(new ErrorBuilder(Type.MATCH_NOT_FOUND)
+                    .message("Match not found in table '" + tableId + "' (" + getTableInputsAsString(table, result.getContext()) + ")")
+                    .table(tableId)
+                    .columns(table.getColumnDefinitions().stream().filter(c -> c.getType().equals(ColumnType.ENDPOINT)).map(ColumnDefinition::getKey).collect(Collectors.toList()))
                     .build());
+        }
         else {
             for (Endpoint endpoint : endpoints) {
                 if (EndpointType.STOP.equals(endpoint.getType()))
@@ -785,7 +790,7 @@ public class DecisionEngine {
                     if (message == null || message.isEmpty())
                         message = "Matching resulted in an error in table '" + tableId + "' (" + getTableInputsAsString(table, result.getContext()) + ")";
 
-                    result.addError(new ErrorBuilder(Type.STAGING_ERROR).message(message).table(tableId).column(endpoint.getResultKey()).build());
+                    result.addError(new ErrorBuilder(Type.STAGING_ERROR).message(message).table(tableId).columns(Collections.singletonList(endpoint.getResultKey())).build());
                 }
                 else if (EndpointType.VALUE.equals(endpoint.getType())) {
                     // if output mapping(s) were provided, check whether the key was mapped
