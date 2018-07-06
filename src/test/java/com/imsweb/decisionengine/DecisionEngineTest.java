@@ -78,6 +78,7 @@ public class DecisionEngineTest {
         table.addRawRow("0", "23-30", "Line3", "VALUE:LINE3");
         table.addRawRow("5", "20", "Line4", "JUMP:table_jump_sample");
         table.addRawRow("*", "55", "Line5", "VALUE:LINE5");
+        table.addRawRow("8", "99", "Line6", "ERROR:");
         table.addRawRow("9", "99", "Line6", "ERROR:999");
         provider.addTable(table);
 
@@ -340,7 +341,7 @@ public class DecisionEngineTest {
         assertNull(DecisionEngine.matchTable(matchTable, input));
 
         input.put("size", "003");
-        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.JUMP, "some_crazy_table")), DecisionEngine.matchTable(matchTable, input));
+        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.JUMP, "some_crazy_table", "size_result")), DecisionEngine.matchTable(matchTable, input));
 
         input.put("size", "014");
         List<? extends Endpoint> results = DecisionEngine.matchTable(matchTable, input);
@@ -350,7 +351,7 @@ public class DecisionEngineTest {
         assertEquals("size_result", results.get(0).getResultKey());
 
         input.put("size", "086");
-        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.ERROR, "Get that huge stuff out of here!")), DecisionEngine.matchTable(matchTable, input));
+        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.ERROR, "Get that huge stuff out of here!", "size_result")), DecisionEngine.matchTable(matchTable, input));
 
         // try with a value not in the table
         input.put("size", "021");
@@ -429,23 +430,23 @@ public class DecisionEngineTest {
         assertNull(DecisionEngine.matchTable(matchTable, input));
 
         // specify to only match on key1, there should be a match to the first line
-        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1")),
+        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1", "result")),
                 DecisionEngine.matchTable(matchTable, input, new HashSet<>(Collections.singletonList("key1"))));
 
         // add key2 to the input map and there should be a match
         input.put("key2", "7");
-        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE2")), DecisionEngine.matchTable(matchTable, input));
+        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE2", "result")), DecisionEngine.matchTable(matchTable, input));
 
         // if searching on key1 only, even though key2 was supplied should still match to first line
-        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1")),
+        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1", "result")),
                 DecisionEngine.matchTable(matchTable, input, new HashSet<>(Collections.singletonList("key1"))));
 
         // supply an empty set of keys (the same meaning as not passing any keys
-        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1")), DecisionEngine.matchTable(matchTable, input, new HashSet<>()));
+        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1", "result")), DecisionEngine.matchTable(matchTable, input, new HashSet<>()));
 
         // supply an invalid key.  I think this should find nothing, but for the moment finds a match to the first row since none of the cells were compared to.  It
         // is the same as matching to a table with no INPUTS which would currently find a match to the first row.
-        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1")),
+        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1", "result")),
                 DecisionEngine.matchTable(matchTable, input, new HashSet<>(Collections.singletonList("bad_key"))));
     }
 
@@ -468,12 +469,6 @@ public class DecisionEngineTest {
         assertEquals(1, endpoints.size());
         assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
         assertEquals("missing", endpoints.get(0).getValue());
-
-        //        input.put("a", " ");
-        //        endpoints = DecisionEngine.matchTable(tableMissing, input);
-        //        assertEquals(1, endpoints.size());
-        //        assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
-        //        assertEquals("space", endpoints.get(0).getValue());
 
         input.put("a", "1");
         endpoints = DecisionEngine.matchTable(tableMissing, input);
@@ -823,6 +818,19 @@ public class DecisionEngineTest {
         assertEquals("999", result.getErrors().get(0).getMessage());
         assertNull(result.getErrors().get(0).getKey());
         assertEquals("table_sample_first", result.getErrors().get(0).getTable());
+        assertEquals(Collections.singletonList("result"), result.getErrors().get(0).getColumns());
+
+        // test case with generated error message (i.e. the column is "ERROR:" without a message
+        input.put("a", "8");
+        input.put("b", "99");
+        input.put("e", "X");
+        result = _ENGINE.process("starting_sample", input);
+        assertEquals(1, result.getErrors().size());
+        assertEquals(2, result.getPath().size());
+        assertEquals("Matching resulted in an error in table 'table_sample_first' for column 'result' (8,99)", result.getErrors().get(0).getMessage());
+        assertNull(result.getErrors().get(0).getKey());
+        assertEquals("table_sample_first", result.getErrors().get(0).getTable());
+        assertEquals(Collections.singletonList("result"), result.getErrors().get(0).getColumns());
     }
 
     @Test
@@ -1054,6 +1062,7 @@ public class DecisionEngineTest {
         assertEquals(1, result.getErrors().size());
         assertEquals(1, result.getPath().size());
         assertEquals("table_recursion", result.getErrors().get(0).getTable());
+        assertNull(result.getErrors().get(0).getColumns());
     }
 
     @Test
@@ -1080,6 +1089,8 @@ public class DecisionEngineTest {
         assertEquals(Type.STAGED, result.getType());
         assertTrue(result.hasErrors());
         assertEquals(1, result.getErrors().size());
+        assertEquals("table_multiple_inputs", result.getErrors().get(0).getTable());
+        assertEquals(Collections.singletonList("r2"), result.getErrors().get(0).getColumns());
         assertEquals("2_LINE2", result.getErrors().get(0).getMessage());
         assertEquals(1, result.getPath().size());
 
@@ -1098,6 +1109,7 @@ public class DecisionEngineTest {
         assertTrue(result.getErrors().get(0).getMessage().startsWith("Match not found"));
         assertNull(result.getErrors().get(0).getKey());
         assertEquals("table_jump_sample", result.getErrors().get(0).getTable());
+        assertEquals(Collections.singletonList("result"), result.getErrors().get(0).getColumns());
 
         // test 1 JUMP and 2 VALUEs
         input.clear();
@@ -1131,6 +1143,42 @@ public class DecisionEngineTest {
         assertFalse(input.containsKey("r1"));
         assertFalse(input.containsKey("r2"));
         assertFalse(input.containsKey("r3"));
+    }
+
+    @Test
+    public void testRowNotFoundWithMultipleOutputs() {
+        BasicDataProvider provider = new BasicDataProvider();
+
+        // test a situation where a a row with mulitple inputs is not found
+        BasicTable table = new BasicTable("table_input");
+        table.addColumnDefinition("input1", ColumnType.INPUT);
+        table.addColumnDefinition("output1", ColumnType.ENDPOINT);
+        table.addColumnDefinition("output2", ColumnType.ENDPOINT);
+        table.addRawRow("000", "VALUE:000", "VALUE:000");
+        table.addRawRow("001", "VALUE:001", "VALUE:001");
+        provider.addTable(table);
+
+        BasicDefinition def = new BasicDefinition("sample_outputs");
+        def.setOnInvalidInput(Definition.StagingInputErrorHandler.FAIL);
+        def.addInput(new BasicInput("input1", "table_input"));
+
+        BasicMapping mapping = new BasicMapping("mapping1");
+        BasicTablePath path = new BasicTablePath("table_input");
+        mapping.addTablePath(path);
+        def.addMapping(mapping);
+        provider.addDefinition(def);
+
+        DecisionEngine engine = new DecisionEngine(provider);
+
+        // test match not found
+        Map<String, String> input = new HashMap<>();
+        input.put("a", "4");
+        input.put("b", "55");
+        Result result = engine.process("sample_outputs", input);
+        assertTrue(result.hasErrors());
+        assertEquals(1, result.getErrors().size());
+        assertEquals("table_input", result.getErrors().get(0).getTable());
+        assertEquals(Arrays.asList("output1", "output2"), result.getErrors().get(0).getColumns());
     }
 
     @Test
