@@ -7,7 +7,7 @@ plugins {
 }
 
 group = 'com.imsweb'
-version = '4.1-SNAPSHOT'
+version = '4.1'
 description = 'Java client library for staging calculations'
 
 // UTF-8 for all compilation tasks
