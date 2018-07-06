@@ -788,7 +788,7 @@ public class DecisionEngine {
                 else if (EndpointType.ERROR.equals(endpoint.getType())) {
                     String message = endpoint.getValue();
                     if (message == null || message.isEmpty())
-                        message = "Matching resulted in an error in table '" + tableId + "' (" + getTableInputsAsString(table, result.getContext()) + ")";
+                        message = "Matching resulted in an error in table '" + tableId + "' for column '" + endpoint.getResultKey() + "' (" + getTableInputsAsString(table, result.getContext()) + ")";
 
                     result.addError(new ErrorBuilder(Type.STAGING_ERROR).message(message).table(tableId).columns(Collections.singletonList(endpoint.getResultKey())).build());
                 }

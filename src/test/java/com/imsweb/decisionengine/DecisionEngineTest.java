@@ -78,6 +78,7 @@ public class DecisionEngineTest {
         table.addRawRow("0", "23-30", "Line3", "VALUE:LINE3");
         table.addRawRow("5", "20", "Line4", "JUMP:table_jump_sample");
         table.addRawRow("*", "55", "Line5", "VALUE:LINE5");
+        table.addRawRow("8", "99", "Line6", "ERROR:");
         table.addRawRow("9", "99", "Line6", "ERROR:999");
         provider.addTable(table);
 
@@ -469,12 +470,6 @@ public class DecisionEngineTest {
         assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
         assertEquals("missing", endpoints.get(0).getValue());
 
-        //        input.put("a", " ");
-        //        endpoints = DecisionEngine.matchTable(tableMissing, input);
-        //        assertEquals(1, endpoints.size());
-        //        assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
-        //        assertEquals("space", endpoints.get(0).getValue());
-
         input.put("a", "1");
         endpoints = DecisionEngine.matchTable(tableMissing, input);
         assertEquals(1, endpoints.size());
@@ -821,6 +816,18 @@ public class DecisionEngineTest {
         assertEquals(1, result.getErrors().size());
         assertEquals(2, result.getPath().size());
         assertEquals("999", result.getErrors().get(0).getMessage());
+        assertNull(result.getErrors().get(0).getKey());
+        assertEquals("table_sample_first", result.getErrors().get(0).getTable());
+        assertEquals(Collections.singletonList("result"), result.getErrors().get(0).getColumns());
+
+        // test case with generated error message (i.e. the column is "ERROR:" without a message
+        input.put("a", "8");
+        input.put("b", "99");
+        input.put("e", "X");
+        result = _ENGINE.process("starting_sample", input);
+        assertEquals(1, result.getErrors().size());
+        assertEquals(2, result.getPath().size());
+        assertEquals("Matching resulted in an error in table 'table_sample_first' for column 'result' (8,99)", result.getErrors().get(0).getMessage());
         assertNull(result.getErrors().get(0).getKey());
         assertEquals("table_sample_first", result.getErrors().get(0).getTable());
         assertEquals(Collections.singletonList("result"), result.getErrors().get(0).getColumns());
