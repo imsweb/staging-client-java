@@ -49,6 +49,8 @@ public class StagingRange extends Range {
 
     /**
      * Return true if the string can converted into a number
+     * @param value string value
+     * @return true if string can be parsed to an integer
      */
     public static boolean isNumeric(String value) {
         return NumberUtils.isParsable(value);
