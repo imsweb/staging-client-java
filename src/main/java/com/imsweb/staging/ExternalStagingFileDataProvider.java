@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -31,6 +32,7 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
     /**
      * Constructor loads all schemas and sets up table cache
      * @param is InputStream pointing the the zip file
+     * @throws IOException exception for file operations
      */
     public ExternalStagingFileDataProvider(InputStream is) throws IOException {
         super();
@@ -41,8 +43,8 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
     /**
      * Read a zip entry from an inputstream and return as a byte array
      */
-    private static String extractEntry(InputStream is) throws IOException {
-        return new BufferedReader(new InputStreamReader(is, "UTF-8")).lines().collect(Collectors.joining("\n"));
+    private static String extractEntry(InputStream is) {
+        return new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8)).lines().collect(Collectors.joining("\n"));
     }
 
     /**

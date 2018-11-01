@@ -25,6 +25,7 @@ public final class Stopwatch {
 
     /**
      * Creates (and starts) a new stopwatch
+     * @return a new stopwatch instance
      */
     public static Stopwatch create() {
         return new Stopwatch().start();
@@ -37,6 +38,7 @@ public final class Stopwatch {
      * Returns {@code true} if {@link #start()} has been called on this stopwatch, and {@link #stop()}
      * has not been called since the last call to {@code
      * start()}.
+     * @return true if still running
      */
     public boolean isRunning() {
         return _isRunning;
@@ -87,9 +89,10 @@ public final class Stopwatch {
     /**
      * Returns the current elapsed time shown on this stopwatch, expressed in the desired time unit,
      * with any fraction rounded down.
-     * <p>
      * <p>Note that the overhead of measurement can be more than a microsecond, so it is generally not
-     * useful to specify {@link TimeUnit#NANOSECONDS} precision here.
+     * useful to specify {@link TimeUnit#NANOSECONDS} precision here.</p>
+     * @param desiredUnit timeunit
+     * @return current elapsed time
      */
     public long elapsed(TimeUnit desiredUnit) {
         return desiredUnit.convert(elapsedNanos(), NANOSECONDS);
