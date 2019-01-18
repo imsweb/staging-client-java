@@ -308,9 +308,8 @@ public abstract class StagingDataProvider implements DataProvider {
      * Clear the caches
      */
     public void invalidateCache() {
-        // TODO not sure how to do this?
-        //_lookupCache.invalidateAll();
-        //_validValuesCache.invalidateAll();
+        _lookupCache.removeAll();
+        _validValuesCache.removeAll();
     }
 
     /**
