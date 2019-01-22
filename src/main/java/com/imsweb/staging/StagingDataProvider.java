@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TimeZone;
-import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 import org.cache2k.Cache;
@@ -82,13 +81,13 @@ public abstract class StagingDataProvider implements DataProvider {
         // cache schema lookups
         _lookupCache = new Cache2kBuilder<SchemaLookup, List<StagingSchema>>() {}
                 .entryCapacity(500)
-                .expireAfterWrite(10, TimeUnit.MINUTES)
-                .resilienceDuration(30, TimeUnit.SECONDS)
+                .eternal(true)
                 .loader(this::getSchemas)
                 .build();
 
         // cache the valid values for certain tables including site and histology
         _validValuesCache = new Cache2kBuilder<String, Set<String>>() {}
+                .eternal(true)
                 .loader(this::getAllInputValues)
                 .build();
     }
@@ -98,6 +97,7 @@ public abstract class StagingDataProvider implements DataProvider {
      * @param schema schema entity
      * @return initialized schema entity
      */
+    @SuppressWarnings("UnusedReturnValue")
     public static StagingSchema initSchema(StagingSchema schema) {
         // parse the schema selection ranges
         if (schema.getSchemaSelectionTable() == null)
@@ -149,6 +149,7 @@ public abstract class StagingDataProvider implements DataProvider {
      * @param table table entity
      * @return initialized table entity
      */
+    @SuppressWarnings("UnusedReturnValue")
     public static StagingTable initTable(StagingTable table) {
         Set<String> extraInputs = new HashSet<>();
 
@@ -292,6 +293,7 @@ public abstract class StagingDataProvider implements DataProvider {
      * Returns a string, of length at least {@code minLength}, consisting of {@code string} prepended
      * with as many copies of {@code padChar} as are necessary to reach that length.
      */
+    @SuppressWarnings("SameParameterValue")
     static String padStart(String string, int minLength, char padChar) {
         if (string == null || string.length() >= minLength)
             return string;
