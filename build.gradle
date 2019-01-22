@@ -38,7 +38,7 @@ dependencies {
     api 'org.mongodb.morphia:morphia:1.3.2'
 
     implementation "org.cache2k:cache2k-api:1.2.0.Final"
-    runtimeOnly "org.cache2k:cache2k-core:1.2.0.Final"
+    implementation "org.cache2k:cache2k-core:1.2.0.Final"
     
     implementation 'org.apache.commons:commons-lang3:3.7'
 
