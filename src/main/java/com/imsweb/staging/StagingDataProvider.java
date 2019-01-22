@@ -15,13 +15,14 @@ import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
+import org.cache2k.Cache;
+import org.cache2k.Cache2kBuilder;
+
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.github.benmanes.caffeine.cache.Caffeine;
-import com.github.benmanes.caffeine.cache.LoadingCache;
 
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.DataProvider;
@@ -70,19 +71,26 @@ public abstract class StagingDataProvider implements DataProvider {
     }
 
     // lookup cache
-    private LoadingCache<SchemaLookup, List<StagingSchema>> _lookupCache;
+    private Cache<SchemaLookup, List<StagingSchema>> _lookupCache;
     // site/hist cache
-    private LoadingCache<String, Set<String>> _validValuesCache;
+    private Cache<String, Set<String>> _validValuesCache;
 
     /**
      * Constructor loads all schemas and sets up cache
      */
     protected StagingDataProvider() {
         // cache schema lookups
-        _lookupCache = Caffeine.newBuilder().maximumSize(500).expireAfterWrite(10, TimeUnit.MINUTES).build(this::getSchemas);
+        _lookupCache = new Cache2kBuilder<SchemaLookup, List<StagingSchema>>() {}
+                .entryCapacity(500)
+                .expireAfterWrite(10, TimeUnit.MINUTES)
+                .resilienceDuration(30, TimeUnit.SECONDS)
+                .loader(this::getSchemas)
+                .build();
 
         // cache the valid values for certain tables including site and histology
-        _validValuesCache = Caffeine.newBuilder().build(this::getAllInputValues);
+        _validValuesCache = new Cache2kBuilder<String, Set<String>>() {}
+                .loader(this::getAllInputValues)
+                .build();
     }
 
     /**
@@ -300,8 +308,8 @@ public abstract class StagingDataProvider implements DataProvider {
      * Clear the caches
      */
     public void invalidateCache() {
-        _lookupCache.invalidateAll();
-        _validValuesCache.invalidateAll();
+        _lookupCache.removeAll();
+        _validValuesCache.removeAll();
     }
 
     /**
