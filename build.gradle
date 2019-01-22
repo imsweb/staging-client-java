@@ -7,7 +7,7 @@ plugins {
 }
 
 group = 'com.imsweb'
-version = '4.4'
+version = '4.5'
 description = 'Java client library for staging calculations'
 
 // UTF-8 for all compilation tasks
@@ -37,7 +37,9 @@ dependencies {
     // morphia annotations to make it easier to use in SEER*API
     api 'org.mongodb.morphia:morphia:1.3.2'
 
-    implementation 'org.cache2k:cache2k-all:1.2.0.Final'
+    implementation "org.cache2k:cache2k-api:1.2.0.Final"
+    runtimeOnly "org.cache2k:cache2k-core:1.2.0.Final"
+    
     implementation 'org.apache.commons:commons-lang3:3.7'
 
     testImplementation 'junit:junit:4.12'
