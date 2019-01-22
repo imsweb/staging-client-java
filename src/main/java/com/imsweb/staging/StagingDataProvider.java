@@ -82,14 +82,14 @@ public abstract class StagingDataProvider implements DataProvider {
         // cache schema lookups
         _lookupCache = new Cache2kBuilder<SchemaLookup, List<StagingSchema>>() {}
                 .entryCapacity(500)
-                .expireAfterWrite(10, TimeUnit.MINUTES)    // expire/refresh after 5 minutes
-                .resilienceDuration(30, TimeUnit.SECONDS) // cope with at most 30 seconds
-                .loader(this::getSchemas)         // auto populating function
+                .expireAfterWrite(10, TimeUnit.MINUTES)
+                .resilienceDuration(30, TimeUnit.SECONDS)
+                .loader(this::getSchemas)
                 .build();
 
         // cache the valid values for certain tables including site and histology
         _validValuesCache = new Cache2kBuilder<String, Set<String>>() {}
-                .loader(this::getAllInputValues)         // auto populating function
+                .loader(this::getAllInputValues)
                 .build();
     }
 
