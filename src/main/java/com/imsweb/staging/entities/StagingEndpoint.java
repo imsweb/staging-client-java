@@ -3,11 +3,11 @@
  */
 package com.imsweb.staging.entities;
 
-import org.mongodb.morphia.annotations.Embedded;
-import org.mongodb.morphia.annotations.Property;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+import dev.morphia.annotations.Embedded;
+import dev.morphia.annotations.Property;
 
 import com.imsweb.decisionengine.Endpoint;
 
