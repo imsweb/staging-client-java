@@ -6,9 +6,10 @@ package com.imsweb.staging.entities;
 import java.util.Map;
 
 import org.apache.commons.lang3.math.NumberUtils;
-import org.mongodb.morphia.annotations.Embedded;
-import org.mongodb.morphia.annotations.Entity;
-import org.mongodb.morphia.annotations.Property;
+
+import dev.morphia.annotations.Embedded;
+import dev.morphia.annotations.Entity;
+import dev.morphia.annotations.Property;
 
 import com.imsweb.decisionengine.DecisionEngine;
 import com.imsweb.decisionengine.Range;

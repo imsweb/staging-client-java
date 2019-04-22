@@ -8,10 +8,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.mongodb.morphia.annotations.Embedded;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import dev.morphia.annotations.Embedded;
 
 import com.imsweb.decisionengine.TableRow;
 
