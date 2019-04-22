@@ -8,7 +8,7 @@ plugins {
 }
 
 group = 'com.imsweb'
-version = '4.6-SNAPSHOT'
+version = '4.6'
 description = 'Java client library for staging calculations'
 
 // fail the build if there are compiler warnings
@@ -34,7 +34,7 @@ dependencies {
     api 'com.fasterxml.jackson.core:jackson-databind:2.8.10'
 
     // morphia annotations to make it easier to use in SEER*API
-    api 'dev.morphia.morphia:core:1.5.0'
+    api 'dev.morphia.morphia:core:1.5.1'
 
     implementation "org.cache2k:cache2k-api:1.2.0.Final"
     implementation "org.cache2k:cache2k-core:1.2.0.Final"
