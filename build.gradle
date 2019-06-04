@@ -8,7 +8,7 @@ plugins {
 }
 
 group = 'com.imsweb'
-version = '4.7.1-SNAPSHOT'
+version = '4.7.2-SNAPSHOT'
 description = 'Java client library for staging calculations'
 
 // fail the build if there are compiler warnings
@@ -36,7 +36,9 @@ dependencies {
     // morphia annotations to make it easier to use in SEER*API
     api 'dev.morphia.morphia:core:1.5.1'
 
-    implementation 'net.jodah:expiringmap:0.5.9'
+    implementation "org.cache2k:cache2k-api:1.2.0.Final"
+    implementation "org.cache2k:cache2k-core:1.2.0.Final"
+    
     implementation 'org.apache.commons:commons-lang3:3.7'
 
     testImplementation 'junit:junit:4.12'
