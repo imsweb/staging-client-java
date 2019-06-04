@@ -20,7 +20,6 @@ import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
-import net.jodah.expiringmap.ExpirationPolicy;
 import net.jodah.expiringmap.ExpiringMap;
 
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
@@ -80,7 +79,6 @@ public abstract class StagingDataProvider implements DataProvider {
     protected StagingDataProvider() {
         _lookupCache = ExpiringMap.builder()
                 .maxSize(500)
-                .expirationPolicy(ExpirationPolicy.ACCESSED)
                 .entryLoader(this::getSchemas)
                 .build();
 
