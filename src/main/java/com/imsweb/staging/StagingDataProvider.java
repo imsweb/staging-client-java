@@ -14,14 +14,14 @@ import java.util.Set;
 import java.util.TimeZone;
 import java.util.stream.Collectors;
 
-import org.cache2k.Cache;
-import org.cache2k.Cache2kBuilder;
-
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+
+import net.jodah.expiringmap.ExpirationPolicy;
+import net.jodah.expiringmap.ExpiringMap;
 
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.DataProvider;
@@ -70,25 +70,22 @@ public abstract class StagingDataProvider implements DataProvider {
     }
 
     // lookup cache
-    private Cache<SchemaLookup, List<StagingSchema>> _lookupCache;
+    private Map<SchemaLookup, List<StagingSchema>> _lookupCache;
     // site/hist cache
-    private Cache<String, Set<String>> _validValuesCache;
+    private Map<String, Set<String>> _validValuesCache;
 
     /**
      * Constructor loads all schemas and sets up cache
      */
     protected StagingDataProvider() {
-        // cache schema lookups
-        _lookupCache = new Cache2kBuilder<SchemaLookup, List<StagingSchema>>() {}
-                .entryCapacity(500)
-                .eternal(true)
-                .loader(this::getSchemas)
+        _lookupCache = ExpiringMap.builder()
+                .maxSize(500)
+                .expirationPolicy(ExpirationPolicy.ACCESSED)
+                .entryLoader(this::getSchemas)
                 .build();
 
-        // cache the valid values for certain tables including site and histology
-        _validValuesCache = new Cache2kBuilder<String, Set<String>>() {}
-                .eternal(true)
-                .loader(this::getAllInputValues)
+        _validValuesCache = ExpiringMap.builder()
+                .entryLoader(this::getAllInputValues)
                 .build();
     }
 
@@ -310,8 +307,8 @@ public abstract class StagingDataProvider implements DataProvider {
      * Clear the caches
      */
     public void invalidateCache() {
-        _lookupCache.removeAll();
-        _validValuesCache.removeAll();
+        _lookupCache.clear();
+        _validValuesCache.clear();
     }
 
     /**
