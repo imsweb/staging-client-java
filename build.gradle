@@ -1,14 +1,15 @@
 plugins {
     id 'java-library'
     id 'checkstyle'
-    id "com.github.spotbugs" version "1.6.5"
+    id "com.github.spotbugs" version "2.0.0"
+    id "net.ossindex.audit" version "0.4.11"
     id 'com.bmuschko.nexus' version '2.3.1'
     id "io.codearte.nexus-staging" version "0.20.0"  // logs into Sonotype OSS and does a "Close" and "Release"
     id 'com.adarshr.test-logger' version '1.6.0'
 }
 
 group = 'com.imsweb'
-version = '4.6'
+version = '4.7'
 description = 'Java client library for staging calculations'
 
 // fail the build if there are compiler warnings
@@ -29,21 +30,20 @@ repositories {
 }
 
 dependencies {
-    api 'com.fasterxml.jackson.core:jackson-core:2.8.10'
-    api 'com.fasterxml.jackson.core:jackson-annotations:2.8.10'
-    api 'com.fasterxml.jackson.core:jackson-databind:2.8.10'
+    api 'com.fasterxml.jackson.core:jackson-core:2.9.9'
+    api 'com.fasterxml.jackson.core:jackson-annotations:2.9.9'
+    api 'com.fasterxml.jackson.core:jackson-databind:2.9.9'
 
     // morphia annotations to make it easier to use in SEER*API
     api 'dev.morphia.morphia:core:1.5.1'
 
-    implementation "org.cache2k:cache2k-api:1.2.0.Final"
-    implementation "org.cache2k:cache2k-core:1.2.0.Final"
+    implementation "org.cache2k:cache2k-api:1.2.2.Final"
+    implementation "org.cache2k:cache2k-core:1.2.2.Final"
     
-    implementation 'org.apache.commons:commons-lang3:3.7'
+    implementation 'org.apache.commons:commons-lang3:3.9'
 
     testImplementation 'junit:junit:4.12'
-    testImplementation 'org.assertj:assertj-core:3.9.0'
-    testImplementation 'org.unitils:unitils-core:3.4.6'
+    testImplementation 'org.assertj:assertj-core:3.12.2'
 }
 
 jar {
@@ -64,12 +64,24 @@ testlogger {
     theme 'mocha'
 }
 
+// auditing plugin
+audit {
+    failOnError = false
+    rateLimitAsError = false
+
+    // exclude test packages
+    exclusion {
+        packages = [ 'com.puppycrawl.tools:checkstyle', 'org.unitils:unitils-core', 'com.github.spotbugs:spotbugs' ]
+    }
+}
+
 checkstyle {
+    toolVersion = '8.21'
     configFile = file('config/checkstyle/checkstyle.xml')
 }
 
 spotbugs {
-    toolVersion = '3.1.8'
+    toolVersion = '3.1.12'
     excludeFilter = file('config/spotbugs/spotbugs-exclude.xml')
 }
 
@@ -78,7 +90,7 @@ if (version.endsWith('-SNAPSHOT'))
     gradle.startParameter.excludedTaskNames += 'closeAndReleaseRepository'
 
 wrapper {
-    gradleVersion = '5.3.1'
+    gradleVersion = '5.4.1'
     distributionType = Wrapper.DistributionType.ALL
 }
 

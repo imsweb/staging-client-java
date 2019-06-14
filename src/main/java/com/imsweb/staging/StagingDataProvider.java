@@ -41,6 +41,7 @@ import com.imsweb.staging.entities.StagingTableRow;
 /**
  * An abstract implementation of DataProvider customized for handling staging schemas/tables
  */
+@SuppressWarnings("deprecation")
 public abstract class StagingDataProvider implements DataProvider {
 
     // tables that all algorithm versions must have
