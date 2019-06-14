@@ -21,7 +21,6 @@ import com.imsweb.decisionengine.Endpoint.EndpointType;
 import com.imsweb.decisionengine.Result.Type;
 import com.imsweb.decisionengine.basic.BasicDataProvider;
 import com.imsweb.decisionengine.basic.BasicDefinition;
-import com.imsweb.decisionengine.basic.BasicEndpoint;
 import com.imsweb.decisionengine.basic.BasicInput;
 import com.imsweb.decisionengine.basic.BasicMapping;
 import com.imsweb.decisionengine.basic.BasicOutput;
@@ -29,12 +28,13 @@ import com.imsweb.decisionengine.basic.BasicRange;
 import com.imsweb.decisionengine.basic.BasicTable;
 import com.imsweb.decisionengine.basic.BasicTablePath;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.tuple;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import static org.unitils.reflectionassert.ReflectionAssert.assertReflectionEquals;
 
 /**
  * Test class for DecisionEngine
@@ -341,7 +341,9 @@ public class DecisionEngineTest {
         assertNull(DecisionEngine.matchTable(matchTable, input));
 
         input.put("size", "003");
-        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.JUMP, "some_crazy_table", "size_result")), DecisionEngine.matchTable(matchTable, input));
+        assertThat(DecisionEngine.matchTable(matchTable, input))
+                .extracting(Endpoint::getType, Endpoint::getValue, Endpoint::getResultKey)
+                .containsExactly(tuple(EndpointType.JUMP, "some_crazy_table", "size_result"));
 
         input.put("size", "014");
         List<? extends Endpoint> results = DecisionEngine.matchTable(matchTable, input);
@@ -351,7 +353,9 @@ public class DecisionEngineTest {
         assertEquals("size_result", results.get(0).getResultKey());
 
         input.put("size", "086");
-        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.ERROR, "Get that huge stuff out of here!", "size_result")), DecisionEngine.matchTable(matchTable, input));
+        assertThat(DecisionEngine.matchTable(matchTable, input))
+                .extracting(Endpoint::getType, Endpoint::getValue, Endpoint::getResultKey)
+                .containsExactly(tuple(EndpointType.ERROR, "Get that huge stuff out of here!", "size_result"));
 
         // try with a value not in the table
         input.put("size", "021");
@@ -430,24 +434,31 @@ public class DecisionEngineTest {
         assertNull(DecisionEngine.matchTable(matchTable, input));
 
         // specify to only match on key1, there should be a match to the first line
-        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1", "result")),
-                DecisionEngine.matchTable(matchTable, input, new HashSet<>(Collections.singletonList("key1"))));
+        assertThat(DecisionEngine.matchTable(matchTable, input, new HashSet<>(Collections.singletonList("key1"))))
+                .extracting(Endpoint::getType, Endpoint::getValue, Endpoint::getResultKey)
+                .containsExactly(tuple(EndpointType.MATCH, "LINE1", "result"));
 
         // add key2 to the input map and there should be a match
         input.put("key2", "7");
-        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE2", "result")), DecisionEngine.matchTable(matchTable, input));
+        assertThat(DecisionEngine.matchTable(matchTable, input))
+                .extracting(Endpoint::getType, Endpoint::getValue, Endpoint::getResultKey)
+                .containsExactly(tuple(EndpointType.MATCH, "LINE2", "result"));
 
         // if searching on key1 only, even though key2 was supplied should still match to first line
-        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1", "result")),
-                DecisionEngine.matchTable(matchTable, input, new HashSet<>(Collections.singletonList("key1"))));
+        assertThat(DecisionEngine.matchTable(matchTable, input, new HashSet<>(Collections.singletonList("key1"))))
+                .extracting(Endpoint::getType, Endpoint::getValue, Endpoint::getResultKey)
+                .containsExactly(tuple(EndpointType.MATCH, "LINE1", "result"));
 
         // supply an empty set of keys (the same meaning as not passing any keys
-        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1", "result")), DecisionEngine.matchTable(matchTable, input, new HashSet<>()));
+        assertThat(DecisionEngine.matchTable(matchTable, input, new HashSet<>()))
+                .extracting(Endpoint::getType, Endpoint::getValue, Endpoint::getResultKey)
+                .containsExactly(tuple(EndpointType.MATCH, "LINE1", "result"));
 
-        // supply an invalid key.  I think this should find nothing, but for the moment finds a match to the first row since none of the cells were compared to.  It
-        // is the same as matching to a table with no INPUTS which would currently find a match to the first row.
-        assertReflectionEquals(Collections.singletonList(new BasicEndpoint(EndpointType.MATCH, "LINE1", "result")),
-                DecisionEngine.matchTable(matchTable, input, new HashSet<>(Collections.singletonList("bad_key"))));
+        // supply an invalid key.  I think this should find nothing, but for the moment finds a match to the first row since none of the cells were
+        // compared to.  It is the same as matching to a table with no INPUTS which would currently find a match to the first row.
+        assertThat(DecisionEngine.matchTable(matchTable, input, new HashSet<>(Collections.singletonList("bad_key"))))
+                .extracting(Endpoint::getType, Endpoint::getValue, Endpoint::getResultKey)
+                .containsExactly(tuple(EndpointType.MATCH, "LINE1", "result"));
     }
 
     @Test
