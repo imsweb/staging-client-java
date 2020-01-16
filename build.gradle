@@ -1,12 +1,12 @@
 plugins {
     id 'java-library'
     id 'checkstyle'
-    id "com.github.spotbugs" version "2.0.0"
+    id "com.github.spotbugs" version "3.0.0"
     id "net.ossindex.audit" version "0.4.11"
     id 'com.bmuschko.nexus' version '2.3.1'
-    id "com.github.ben-manes.versions" version "0.25.0"
-    id "io.codearte.nexus-staging" version "0.21.1"  // logs into Sonotype OSS and does a "Close" and "Release"
-    id 'com.adarshr.test-logger' version '1.7.1'
+    id "com.github.ben-manes.versions" version "0.27.0"
+    id "io.codearte.nexus-staging" version "0.21.2"  // logs into Sonotype OSS and does a "Close" and "Release"
+    id 'com.adarshr.test-logger' version '2.0.0'
 }
 
 group = 'com.imsweb'
@@ -31,20 +31,20 @@ repositories {
 }
 
 dependencies {
-    api 'com.fasterxml.jackson.core:jackson-core:2.9.9'
-    api 'com.fasterxml.jackson.core:jackson-annotations:2.9.9'
-    api 'com.fasterxml.jackson.core:jackson-databind:2.9.9'
+    api 'com.fasterxml.jackson.core:jackson-core:2.10.2'
+    api 'com.fasterxml.jackson.core:jackson-annotations:2.10.2'
+    api 'com.fasterxml.jackson.core:jackson-databind:2.10.2'
 
     // morphia annotations to make it easier to use in SEER*API
-    api 'dev.morphia.morphia:core:1.5.1'
+    api 'dev.morphia.morphia:core:1.5.8'
 
-    implementation "org.cache2k:cache2k-api:1.2.2.Final"
-    implementation "org.cache2k:cache2k-core:1.2.2.Final"
+    implementation "org.cache2k:cache2k-api:1.2.4.Final"
+    implementation "org.cache2k:cache2k-core:1.2.4.Final"
     
     implementation 'org.apache.commons:commons-lang3:3.9'
 
-    testImplementation 'junit:junit:4.12'
-    testImplementation 'org.assertj:assertj-core:3.13.2'
+    testImplementation 'junit:junit:4.13'
+    testImplementation 'org.assertj:assertj-core:3.14.0'
 }
 
 jar {
@@ -86,12 +86,28 @@ spotbugs {
     excludeFilter = file('config/spotbugs/spotbugs-exclude.xml')
 }
 
+// when checking for later versions, exclude alphas, betas, etc..
+dependencyUpdates {
+    resolutionStrategy {
+        componentSelection { rules ->
+            rules.all { ComponentSelection selection ->
+                boolean rejected = ['alpha', 'beta', 'rc', 'cr', 'm'].any { qualifier ->
+                    selection.candidate.version ==~ /(?i).*[.-]${qualifier}[.\d-]*/
+                }
+                if (rejected) {
+                    selection.reject('Release candidate')
+                }
+            }
+        }
+    }
+}
+
 // don't try to release a snapshot to a non-snapshot repository, that won't work anyway
 if (version.endsWith('-SNAPSHOT'))
     gradle.startParameter.excludedTaskNames += 'closeAndReleaseRepository'
 
 wrapper {
-    gradleVersion = '5.6.2'
+    gradleVersion = '6.1'
     distributionType = Wrapper.DistributionType.ALL
 }
 
