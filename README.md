@@ -1,6 +1,6 @@
 # staging-client-java
 
-[![CircleCI](https://circleci.com/gh/imsweb/staging-client-java.svg?style=shield)](https://circleci.com/gh/imsweb/staging-client-java)
+[![integration](https://github.com/imsweb/staging-client-java/workflows/integration/badge.svg)](https://github.com/imsweb/staging-client-java/actions)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.imsweb/staging-client-java/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.imsweb/staging-client-java)
 
 A cancer staging client library for Java applications.
