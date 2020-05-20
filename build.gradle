@@ -1,16 +1,16 @@
 plugins {
     id 'java-library'
     id 'checkstyle'
-    id "com.github.spotbugs" version "3.0.0"
+    id "com.github.spotbugs" version "4.2.1"
     id "net.ossindex.audit" version "0.4.11"
     id 'com.bmuschko.nexus' version '2.3.1'
-    id "com.github.ben-manes.versions" version "0.27.0"
+    id "com.github.ben-manes.versions" version "0.28.0"
     id "io.codearte.nexus-staging" version "0.21.2"  // logs into Sonotype OSS and does a "Close" and "Release"
     id 'com.adarshr.test-logger' version '2.0.0'
 }
 
 group = 'com.imsweb'
-version = '4.7'
+version = '4.8-SNAPSHOT'
 description = 'Java client library for staging calculations'
 
 // fail the build if there are compiler warnings
@@ -31,9 +31,9 @@ repositories {
 }
 
 dependencies {
-    api 'com.fasterxml.jackson.core:jackson-core:2.10.2'
-    api 'com.fasterxml.jackson.core:jackson-annotations:2.10.2'
-    api 'com.fasterxml.jackson.core:jackson-databind:2.10.2'
+    api 'com.fasterxml.jackson.core:jackson-core:2.11.0'
+    api 'com.fasterxml.jackson.core:jackson-annotations:2.11.0'
+    api 'com.fasterxml.jackson.core:jackson-databind:2.11.0'
 
     // morphia annotations to make it easier to use in SEER*API
     api 'dev.morphia.morphia:core:1.5.8'
@@ -41,10 +41,10 @@ dependencies {
     implementation "org.cache2k:cache2k-api:1.2.4.Final"
     implementation "org.cache2k:cache2k-core:1.2.4.Final"
     
-    implementation 'org.apache.commons:commons-lang3:3.9'
+    implementation 'org.apache.commons:commons-lang3:3.10'
 
     testImplementation 'junit:junit:4.13'
-    testImplementation 'org.assertj:assertj-core:3.14.0'
+    testImplementation 'org.assertj:assertj-core:3.16.1'
 }
 
 jar {
@@ -82,7 +82,7 @@ checkstyle {
 }
 
 spotbugs {
-    toolVersion = '3.1.12'
+    toolVersion = '4.0.3'
     excludeFilter = file('config/spotbugs/spotbugs-exclude.xml')
 }
 
@@ -107,7 +107,7 @@ if (version.endsWith('-SNAPSHOT'))
     gradle.startParameter.excludedTaskNames += 'closeAndReleaseRepository'
 
 wrapper {
-    gradleVersion = '6.1'
+    gradleVersion = '6.4.1'
     distributionType = Wrapper.DistributionType.ALL
 }
 
