@@ -1,12 +1,13 @@
 plugins {
     id 'java-library'
     id 'checkstyle'
-    id "com.github.spotbugs" version "4.2.1"
+    id "com.github.spotbugs" version "4.2.4"
     id "net.ossindex.audit" version "0.4.11"
     id 'com.bmuschko.nexus' version '2.3.1'
     id "com.github.ben-manes.versions" version "0.28.0"
     id "io.codearte.nexus-staging" version "0.21.2"  // logs into Sonotype OSS and does a "Close" and "Release"
     id 'com.adarshr.test-logger' version '2.0.0'
+    id "org.owasp.dependencycheck" version "5.3.2.1"
 }
 
 group = 'com.imsweb'
@@ -77,13 +78,19 @@ audit {
 }
 
 checkstyle {
-    toolVersion = '8.21'
+    toolVersion = '8.29'
     configFile = file('config/checkstyle/checkstyle.xml')
 }
 
 spotbugs {
     toolVersion = '4.0.3'
     excludeFilter = file('config/spotbugs/spotbugs-exclude.xml')
+}
+
+// OWASP check (https://jeremylong.github.io/DependencyCheck/index.html)
+dependencyCheck {
+    failOnError = true
+    format = 'ALL'
 }
 
 // when checking for later versions, exclude alphas, betas, etc..
