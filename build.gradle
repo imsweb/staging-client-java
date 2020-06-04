@@ -114,7 +114,7 @@ if (version.endsWith('-SNAPSHOT'))
     gradle.startParameter.excludedTaskNames += 'closeAndReleaseRepository'
 
 wrapper {
-    gradleVersion = '6.4.1'
+    gradleVersion = '6.5'
     distributionType = Wrapper.DistributionType.ALL
 }
 
