@@ -70,11 +70,6 @@ jar {
 audit {
     failOnError = false
     rateLimitAsError = false
-
-    // exclude test packages
-    exclusion {
-        packages = ['com.puppycrawl.tools:checkstyle', 'org.unitils:unitils-core', 'com.github.spotbugs:spotbugs']
-    }
 }
 
 checkstyle {
