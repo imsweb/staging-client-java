@@ -2,12 +2,13 @@ plugins {
     id 'java-library'
     id 'checkstyle'
     id "com.github.spotbugs" version "4.2.4"
-    id "net.ossindex.audit" version "0.4.11"
-    id 'com.bmuschko.nexus' version '2.3.1'
-    id "com.github.ben-manes.versions" version "0.28.0"
+    id 'maven-publish'
+    id 'signing'
     id "io.codearte.nexus-staging" version "0.21.2"  // logs into Sonotype OSS and does a "Close" and "Release"
     id 'com.adarshr.test-logger' version '2.0.0'
+    id "com.github.ben-manes.versions" version "0.28.0"
     id "org.owasp.dependencycheck" version "5.3.2.1"
+    id "net.ossindex.audit" version "0.4.11"
 }
 
 group = 'com.imsweb'
@@ -16,15 +17,16 @@ description = 'Java client library for staging calculations'
 
 // fail the build if there are compiler warnings
 tasks.withType(JavaCompile) {
-    // UTF-8 for all compilation tasks
     options.encoding = 'UTF-8'
-
     options.compilerArgs << "-Xlint:all" << "-Xlint:-serial" << "-Werror"
 }
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
+
+    withJavadocJar()
+    withSourcesJar()
 }
 
 repositories {
@@ -32,6 +34,8 @@ repositories {
 }
 
 dependencies {
+    spotbugs 'com.github.spotbugs:spotbugs:4.0.3'
+
     api 'com.fasterxml.jackson.core:jackson-core:2.11.0'
     api 'com.fasterxml.jackson.core:jackson-annotations:2.11.0'
     api 'com.fasterxml.jackson.core:jackson-databind:2.11.0'
@@ -41,7 +45,7 @@ dependencies {
 
     implementation "org.cache2k:cache2k-api:1.2.4.Final"
     implementation "org.cache2k:cache2k-core:1.2.4.Final"
-    
+
     implementation 'org.apache.commons:commons-lang3:3.10'
 
     testImplementation 'junit:junit:4.13'
@@ -51,7 +55,7 @@ dependencies {
 jar {
     manifest {
         attributes('Implementation-Title': project.name,
-                'Implementation-Version': version,
+                'Implementation-Version': archiveVersion,
                 'Implementation-Vendor': group,
                 'Created-By': System.properties['java.vm.version'] + ' (' + System.properties['java.vm.vendor'] + ')',
                 'Built-By': System.getProperty('user.name'),
@@ -62,10 +66,6 @@ jar {
     }
 }
 
-testlogger {
-    theme 'mocha'
-}
-
 // auditing plugin
 audit {
     failOnError = false
@@ -73,7 +73,7 @@ audit {
 
     // exclude test packages
     exclusion {
-        packages = [ 'com.puppycrawl.tools:checkstyle', 'org.unitils:unitils-core', 'com.github.spotbugs:spotbugs' ]
+        packages = ['com.puppycrawl.tools:checkstyle', 'org.unitils:unitils-core', 'com.github.spotbugs:spotbugs']
     }
 }
 
@@ -83,73 +83,106 @@ checkstyle {
 }
 
 spotbugs {
-    toolVersion = '4.0.3'
     excludeFilter = file('config/spotbugs/spotbugs-exclude.xml')
+}
+
+dependencyUpdates {
+    // ignore alpha, beta, etc. versions
+    rejectVersionIf { selection ->
+        isNonStable(selection.candidate.version)
+    }
 }
 
 // OWASP check (https://jeremylong.github.io/DependencyCheck/index.html)
 dependencyCheck {
     failOnError = true
-    format = 'ALL'
 }
 
-// when checking for later versions, exclude alphas, betas, etc..
-dependencyUpdates {
-    resolutionStrategy {
-        componentSelection { rules ->
-            rules.all { ComponentSelection selection ->
-                boolean rejected = ['alpha', 'beta', 'rc', 'cr', 'm'].any { qualifier ->
-                    selection.candidate.version ==~ /(?i).*[.-]${qualifier}[.\d-]*/
+// don't try to release a snapshot to a non-snapshot repository, that won't work anyway
+if (version.endsWith('-SNAPSHOT')) {
+    gradle.startParameter.excludedTaskNames += 'signMavenJavaPublication'
+    gradle.startParameter.excludedTaskNames += 'closeAndReleaseRepository'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'seerapi-client-java'
+            from components.java
+            versionMapping {
+                usage('java-api') {
+                    fromResolutionOf('runtimeClasspath')
                 }
-                if (rejected) {
-                    selection.reject('Release candidate')
+                usage('java-runtime') {
+                    fromResolutionResult()
                 }
+            }
+            pom {
+                name = 'Staging Java Client'
+                description = 'A cancer staging client library'
+                url = 'https://github.com/imsweb/staging-client-java'
+                inceptionYear = '2015'
+
+                licenses {
+                    license {
+                        name = 'A modified BSD License (BSD)'
+                        url = 'https://github.com/imsweb/staging-client-java/blob/master/LICENSE'
+                        distribution = 'repo'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id = 'ctmay4'
+                        name = 'Chuck May'
+                        email = 'mayc@imsweb.com'
+                    }
+                }
+
+                scm {
+                    url = 'https://github.com/imsweb/staging-client-java'
+                    connection = 'scm:https://github.com/imsweb/staging-client-java.git'
+                    developerConnection = 'scm:git@github.com:imsweb/staging-client-java.git'
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            def releasesRepoUrl = "https://github.com/imsweb/staging-client-java"
+            def snapshotsRepoUrl = "scm:https://github.com/imsweb/staging-client-java.git"
+            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+
+            credentials {
+                username = project.findProperty('nexusUsername') ?: ''
+                password = project.findProperty('nexusPassword') ?: ''
             }
         }
     }
 }
 
-// don't try to release a snapshot to a non-snapshot repository, that won't work anyway
-if (version.endsWith('-SNAPSHOT'))
-    gradle.startParameter.excludedTaskNames += 'closeAndReleaseRepository'
+signing {
+    def signingKey = project.findProperty('signingKey') ?: ''
+    def signingPassword = project.findProperty('signingPassword') ?: ''
+
+    useInMemoryPgpKeys(signingKey, signingPassword)
+
+    sign publishing.publications.mavenJava
+}
+
+javadoc {
+    if (JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption('html5', true)
+    }
+}
+
+// configure nexus staging plugin
+nexusStaging {
+    numberOfRetries = 50
+    delayBetweenRetriesInMillis = 5000
+}
 
 wrapper {
     gradleVersion = '6.5'
     distributionType = Wrapper.DistributionType.ALL
-}
-
-modifyPom {
-    project {
-        name 'Staging Java Client'
-        description 'A cancer staging client library'
-        url 'https://github.com/imsweb/staging-client-java'
-        inceptionYear '2015'
-
-        scm {
-            url 'https://github.com/imsweb/staging-client-java'
-            connection 'scm:https://github.com/imsweb/staging-client-java.git'
-            developerConnection 'scm:git@github.com:imsweb/staging-client-java.git'
-        }
-
-        licenses {
-            license {
-                name 'A modified BSD License (BSD)'
-                url 'https://github.com/imsweb/staging-client-java/blob/master/LICENSE'
-                distribution 'repo'
-            }
-        }
-
-        developers {
-            developer {
-                id 'ctmay4'
-                name 'Chuck May'
-                email 'mayc@imsweb.com'
-            }
-            developer {
-                id 'depryf'
-                name 'Fabian Depry'
-                email 'depryf@imsweb.com'
-            }
-        }
-    }
 }
