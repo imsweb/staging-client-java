@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
     id 'checkstyle'
-    id "com.github.spotbugs" version "4.3.0"
+    id "com.github.spotbugs" version "4.4.2"
     id 'maven-publish'
     id 'signing'
     id "io.codearte.nexus-staging" version "0.21.2"  // logs into Sonotype OSS and does a "Close" and "Release"
@@ -34,7 +34,7 @@ repositories {
 }
 
 dependencies {
-    spotbugs 'com.github.spotbugs:spotbugs:4.0.4'
+    spotbugs 'com.github.spotbugs:spotbugs:4.0.6'
 
     api 'com.fasterxml.jackson.core:jackson-core:2.11.0'
     api 'com.fasterxml.jackson.core:jackson-annotations:2.11.0'
