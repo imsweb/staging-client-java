@@ -108,7 +108,7 @@ if (version.endsWith('-SNAPSHOT')) {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            artifactId = 'seerapi-client-java'
+            artifactId = 'staging-client-java'
             from components.java
             versionMapping {
                 usage('java-api') {
