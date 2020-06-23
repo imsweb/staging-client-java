@@ -17,7 +17,8 @@ import dev.morphia.annotations.Property;
 
 import com.imsweb.decisionengine.Input;
 
-@JsonPropertyOrder({"key", "name", "description", "naaccr_item", "values", "default", "table", "used_for_staging", "fail_on_invalid", "unit", "decimal_places", "metadata"})
+@JsonPropertyOrder({"key", "name", "description", "naaccr_item", "naaccr_xml_id", "values", "default", "table", "used_for_staging",
+        "fail_on_invalid", "unit", "decimal_places", "metadata"})
 @Embedded
 public class StagingSchemaInput implements Input {
 
@@ -29,6 +30,8 @@ public class StagingSchemaInput implements Input {
     private String _description;
     @Property("naaccr_item")
     private Integer _naaccrItem;
+    @Property("naaccr_xml_id")
+    private String _naaccrXmlId;
     @Property("default")
     private String _default;
     @Property("table")
@@ -68,6 +71,7 @@ public class StagingSchemaInput implements Input {
         setName(other.getName());
         setDescription(other.getDescription());
         setNaaccrItem(other.getNaaccrItem());
+        setNaaccrXmlId(other.getNaaccrXmlId());
         setDefault(other.getDefault());
         setTable(other.getTable());
         if (other.getMetadata() != null)
@@ -112,6 +116,15 @@ public class StagingSchemaInput implements Input {
 
     public void setNaaccrItem(Integer naaccrItem) {
         _naaccrItem = naaccrItem;
+    }
+
+    @JsonProperty("naaccr_xml_id")
+    public String getNaaccrXmlId() {
+        return _naaccrXmlId;
+    }
+
+    public void setNaaccrXmlId(String naaccrXmlId) {
+        _naaccrXmlId = naaccrXmlId;
     }
 
     @Override
@@ -186,6 +199,7 @@ public class StagingSchemaInput implements Input {
                 Objects.equals(_name, that._name) &&
                 Objects.equals(_description, that._description) &&
                 Objects.equals(_naaccrItem, that._naaccrItem) &&
+                Objects.equals(_naaccrXmlId, that._naaccrXmlId) &&
                 Objects.equals(_default, that._default) &&
                 Objects.equals(_table, that._table) &&
                 Objects.equals(_usedForStaging, that._usedForStaging) &&
@@ -197,6 +211,6 @@ public class StagingSchemaInput implements Input {
     @Override
     public int hashCode() {
         // do not include _parsedValues
-        return Objects.hash(_key, _name, _description, _naaccrItem, _default, _table, _usedForStaging, _unit, _decimalPlaces, _metadata);
+        return Objects.hash(_key, _name, _description, _naaccrItem, _naaccrXmlId, _default, _table, _usedForStaging, _unit, _decimalPlaces, _metadata);
     }
 }

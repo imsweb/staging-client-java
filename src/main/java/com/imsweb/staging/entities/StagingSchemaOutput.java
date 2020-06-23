@@ -13,7 +13,7 @@ import dev.morphia.annotations.Property;
 
 import com.imsweb.decisionengine.Output;
 
-@JsonPropertyOrder({"key", "name", "description", "naaccr_item", "table"})
+@JsonPropertyOrder({"key", "name", "description", "naaccr_item", "naaccr_xml_id", "table"})
 @Embedded
 public class StagingSchemaOutput implements Output {
 
@@ -25,6 +25,8 @@ public class StagingSchemaOutput implements Output {
     private String _description;
     @Property("naaccr_item")
     private Integer _naaccrItem;
+    @Property("naaccr_xml_id")
+    private String _naaccrXmlId;
     @Property("table")
     private String _table;
     @Property("default")
@@ -97,6 +99,15 @@ public class StagingSchemaOutput implements Output {
         _naaccrItem = naaccrItem;
     }
 
+    @JsonProperty("naaccr_xml_id")
+    public String getNaaccrXmlId() {
+        return _naaccrXmlId;
+    }
+
+    public void setNaaccrXmlId(String naaccrXmlId) {
+        _naaccrXmlId = naaccrXmlId;
+    }
+
     @Override
     @JsonProperty("table")
     public String getTable() {
@@ -131,6 +142,7 @@ public class StagingSchemaOutput implements Output {
                 Objects.equals(_name, that._name) &&
                 Objects.equals(_description, that._description) &&
                 Objects.equals(_naaccrItem, that._naaccrItem) &&
+                Objects.equals(_naaccrXmlId, that._naaccrXmlId) &&
                 Objects.equals(_table, that._table) &&
                 Objects.equals(_default, that._default);
     }
@@ -138,6 +150,6 @@ public class StagingSchemaOutput implements Output {
     @Override
     public int hashCode() {
         // do not include _parsedValues
-        return Objects.hash(_key, _name, _description, _naaccrItem, _table, _default);
+        return Objects.hash(_key, _name, _description, _naaccrItem, _naaccrXmlId, _table, _default);
     }
 }
