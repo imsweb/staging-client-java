@@ -1,18 +1,18 @@
 plugins {
     id 'java-library'
     id 'checkstyle'
-    id "com.github.spotbugs" version "4.4.2"
+    id "com.github.spotbugs" version "4.5.1"
     id 'maven-publish'
     id 'signing'
-    id "io.codearte.nexus-staging" version "0.21.2"  // logs into Sonotype OSS and does a "Close" and "Release"
-    id 'com.adarshr.test-logger' version '2.0.0'
-    id "com.github.ben-manes.versions" version "0.28.0"
-    id "org.owasp.dependencycheck" version "5.3.2.1"
+    id "io.codearte.nexus-staging" version "0.22.0"  // logs into Sonotype OSS and does a "Close" and "Release"
+    id 'com.adarshr.test-logger' version '2.1.1'
+    id "com.github.ben-manes.versions" version "0.34.0"
+    id "org.owasp.dependencycheck" version "6.0.3"
     id "net.ossindex.audit" version "0.4.11"
 }
 
 group = 'com.imsweb'
-version = '4.8'
+version = '5.0-SNAPSHOT'
 description = 'Java client library for staging calculations'
 
 // fail the build if there are compiler warnings
@@ -34,22 +34,22 @@ repositories {
 }
 
 dependencies {
-    spotbugs 'com.github.spotbugs:spotbugs:4.0.6'
+    spotbugs 'com.github.spotbugs:spotbugs:4.1.4'
 
-    api 'com.fasterxml.jackson.core:jackson-core:2.11.0'
-    api 'com.fasterxml.jackson.core:jackson-annotations:2.11.0'
-    api 'com.fasterxml.jackson.core:jackson-databind:2.11.0'
+    api 'com.fasterxml.jackson.core:jackson-core:2.11.3'
+    api 'com.fasterxml.jackson.core:jackson-annotations:2.11.3'
+    api 'com.fasterxml.jackson.core:jackson-databind:2.11.3'
 
     // morphia annotations to make it easier to use in SEER*API
     api 'dev.morphia.morphia:core:1.5.8'
 
-    implementation "org.cache2k:cache2k-api:1.2.4.Final"
-    implementation "org.cache2k:cache2k-core:1.2.4.Final"
+    implementation "org.cache2k:cache2k-api:1.6.0.Final"
+    implementation "org.cache2k:cache2k-core:1.6.0.Final"
 
-    implementation 'org.apache.commons:commons-lang3:3.10'
+    implementation 'org.apache.commons:commons-lang3:3.11'
 
-    testImplementation 'junit:junit:4.13'
-    testImplementation 'org.assertj:assertj-core:3.16.1'
+    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'org.assertj:assertj-core:3.18.0'
 }
 
 jar {
@@ -184,6 +184,6 @@ nexusStaging {
 }
 
 wrapper {
-    gradleVersion = '6.5'
+    gradleVersion = '6.7'
     distributionType = Wrapper.DistributionType.ALL
 }
