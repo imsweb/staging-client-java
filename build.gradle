@@ -27,6 +27,10 @@ java {
 
     withJavadocJar()
     withSourcesJar()
+
+    registerFeature('updateSupport') {
+        usingSourceSet(sourceSets.main)
+    }
 }
 
 repositories {
@@ -48,7 +52,8 @@ dependencies {
 
     implementation 'org.apache.commons:commons-lang3:3.11'
 
-    implementation 'com.imsweb:seerapi-client-java:3.21'
+    // split the seerapi-client-java dependency to an optional feature
+    updateSupportImplementation 'com.imsweb:seerapi-client-java:3.21'
 
     testImplementation 'junit:junit:4.13.1'
     testImplementation 'org.assertj:assertj-core:3.18.0'
