@@ -26,7 +26,6 @@ import com.imsweb.staging.util.Stopwatch;
 
 /**
  * Updates the staging library data from the API.
- * <p/>
  * 1. Gets a list of schema IDs
  * 2. Gets a list of table IDs
  * 3. Deletes all the existing schemas and tables
