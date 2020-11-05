@@ -22,6 +22,7 @@ import com.imsweb.decisionengine.Output;
 import com.imsweb.decisionengine.Result;
 import com.imsweb.decisionengine.Result.Type;
 import com.imsweb.decisionengine.Table;
+import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.StagingColumnDefinition;
 import com.imsweb.staging.entities.StagingMapping;
 import com.imsweb.staging.entities.StagingSchema;
@@ -38,8 +39,8 @@ public final class Staging {
     // list of all context keys
     public static final List<String> CONTEXT_KEYS = Collections.unmodifiableList(Arrays.asList(CTX_ALGORITHM_VERSION, CTX_YEAR_CURRENT));
 
-    private DecisionEngine _engine;
-    private StagingDataProvider _provider;
+    private final DecisionEngine _engine;
+    private final StagingDataProvider _provider;
 
     /**
      * Private constructor
@@ -540,6 +541,23 @@ public final class Staging {
     }
 
     /**
+     * Return a list of all supported glossary terms
+     * @return a set of terms
+     */
+    public Set<String> getGlossaryTerms() {
+        return _provider.getGlossaryTerms();
+    }
+
+    /**
+     * Return the definition of a glossary term
+     * @param term glossery term
+     * @return full glossary definition
+     */
+    public GlossaryDefinition getGlossaryDefinition(String term) {
+        return _provider.getGlossaryDefinition(term);
+    }
+
+    /**
      * Add the context keys which are used in staging and other calls
      * @param context Map of context
      */
@@ -560,6 +578,6 @@ public final class Staging {
     private void removeContextKeys(Map<String, String> context) {
         context.remove(CTX_ALGORITHM_VERSION);
         context.remove(CTX_YEAR_CURRENT);
-
     }
+
 }

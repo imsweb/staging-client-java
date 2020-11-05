@@ -7,10 +7,15 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.EnumSet;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
@@ -18,10 +23,15 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
 import com.imsweb.seerapi.client.SeerApi;
+import com.imsweb.seerapi.client.glossary.Glossary;
+import com.imsweb.seerapi.client.glossary.Glossary.Category;
+import com.imsweb.seerapi.client.glossary.GlossaryService;
+import com.imsweb.seerapi.client.shared.KeywordMatch;
 import com.imsweb.seerapi.client.staging.StagingSchema;
 import com.imsweb.seerapi.client.staging.StagingSchemaInfo;
 import com.imsweb.seerapi.client.staging.StagingService;
 import com.imsweb.seerapi.client.staging.StagingTable;
+import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.util.Stopwatch;
 
 /**
@@ -37,6 +47,9 @@ import com.imsweb.staging.util.Stopwatch;
 public final class UpdaterUtils {
 
     private static final Pattern _ID_CHARACTERS = Pattern.compile("[a-z0-9_]+");
+
+    // limit glossary keywords to these categories
+    private static final Set<Category> _GLOSSARY_CATEGORIES = EnumSet.of(Category.STAGING);
 
     @SuppressWarnings("ConstantConditions")
     public static void update(String algorithm, String version, String baseDirectory) throws IOException {
@@ -100,6 +113,9 @@ public final class UpdaterUtils {
         count = purgeDirectory(new File(tableDir));
         System.out.println("removed " + count + " files");
 
+        // create map to hold all the relevant glossary entries
+        Map<String, String> glossaryEntries = new HashMap<>();
+
         // import the tables
         for (String tableId : tableIds) {
             StagingTable table = staging.tableById(algorithm, version, tableId).execute().body();
@@ -107,13 +123,18 @@ public final class UpdaterUtils {
 
             Files.write(Paths.get(tableDir + "/" + table.getId() + ".json"), tableText.getBytes(StandardCharsets.UTF_8));
             System.out.println("Saved table: " + table.getId());
+
+            // collect the glossary hits
+            Set<KeywordMatch> matches = staging.tableGlossary(algorithm, version, tableId, _GLOSSARY_CATEGORIES, true).execute().body();
+            matches.forEach(match -> glossaryEntries.put(match.getKeyword(), match.getId()));
         }
 
         // output the table ids.txt file
         tableIds.sort(String::compareTo);
         Files.write(Paths.get(tableDir + "/ids.txt"), tableIds, StandardCharsets.UTF_8);
+        System.out.println("Saved table IDs to " + tableDir + "/ids.txt");
 
-        // import the schemas
+        // output the schemas
         for (String schemaId : schemaIds) {
             StagingSchema schema = staging.schemaById(algorithm, version, schemaId).execute().body();
 
@@ -121,11 +142,41 @@ public final class UpdaterUtils {
 
             Files.write(Paths.get(schemaDir + "/" + schema.getId() + ".json"), schemaText.getBytes(StandardCharsets.UTF_8));
             System.out.println("Saved schema: " + schema.getId());
+
+            // collect the glossary hits
+            Set<KeywordMatch> matches = staging.schemaGlossary(algorithm, version, schemaId, _GLOSSARY_CATEGORIES, true).execute().body();
+            matches.forEach(match -> glossaryEntries.put(match.getKeyword(), match.getId()));
         }
 
-        // output the table ids.txt file
+        // output the schema ids.txt file
         schemaIds.sort(String::compareTo);
         Files.write(Paths.get(schemaDir + "/ids.txt"), schemaIds, StandardCharsets.UTF_8);
+        System.out.println("Saved schema IDs to " + schemaDir + "/ids.txt");
+
+        // build glossary
+        String glossaryDir = baseDirectory + "/" + algorithm + "/" + version + "/glossary";
+        System.out.print("Deleting all files from " + glossaryDir + "...");
+        System.out.println("removed " + purgeDirectory(new File(glossaryDir)) + " files");
+
+        // write the individual glossary definitions
+        GlossaryService glossary = new SeerApi.Builder().connect().glossary();
+        for (String glossaryId : glossaryEntries.values()) {
+            Glossary entry = glossary.getById("latest", glossaryId).execute().body();
+
+            String glossaryText = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(
+                    new GlossaryDefinition(entry.getName(), entry.getDefinition(), entry.getAlternateName(), entry.getLastModified()));
+
+            Files.write(Paths.get(glossaryDir + "/" + entry.getId() + ".json"), glossaryText.getBytes(StandardCharsets.UTF_8));
+            System.out.println("Saved glossary term: " + entry.getName());
+        }
+
+        // write the keywords.txt file
+        List<String> keywords = glossaryEntries.entrySet().stream()
+                .sorted(Entry.comparingByKey())
+                .map(e -> e.getKey() + "~" + e.getValue())
+                .collect(Collectors.toList());
+        Files.write(Paths.get(glossaryDir + "/terms.txt"), keywords, StandardCharsets.UTF_8);
+        System.out.println("Saved glossary terms to " + schemaDir + "/terms.txt");
 
         stopwatch.stop();
         System.out.println("Completed in " + stopwatch);

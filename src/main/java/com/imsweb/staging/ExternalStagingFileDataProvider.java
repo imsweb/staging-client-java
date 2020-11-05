@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
+import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingTable;
 
@@ -26,8 +27,9 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
 
     private String _algorithm;
     private String _version;
-    private Map<String, StagingTable> _tables = new HashMap<>();
-    private Map<String, StagingSchema> _schemas = new HashMap<>();
+    private final Map<String, StagingTable> _tables = new HashMap<>();
+    private final Map<String, StagingSchema> _schemas = new HashMap<>();
+    private final Map<String, GlossaryDefinition> _glossary = new HashMap<>();
 
     /**
      * Constructor loads all schemas and sets up table cache
@@ -80,6 +82,10 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
 
                     _schemas.put(schema.getId(), schema);
                 }
+                else if (entry.getName().startsWith("glossary")) {
+                    GlossaryDefinition glossary = getMapper().reader().readValue(getMapper().getFactory().createParser(extractEntry(stream)), GlossaryDefinition.class);
+                    _glossary.put(glossary.getName(), glossary);
+                }
             }
         }
 
@@ -124,6 +130,16 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
     @Override
     public StagingSchema getDefinition(String id) {
         return _schemas.get(id);
+    }
+
+    @Override
+    public Set<String> getGlossaryTerms() {
+        return _glossary.keySet();
+    }
+
+    @Override
+    public GlossaryDefinition getGlossaryDefinition(String term) {
+        return _glossary.get(term);
     }
 
 }

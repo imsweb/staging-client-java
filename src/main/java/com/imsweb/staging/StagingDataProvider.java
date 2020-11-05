@@ -27,6 +27,7 @@ import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.DataProvider;
 import com.imsweb.decisionengine.DecisionEngine;
 import com.imsweb.decisionengine.Endpoint.EndpointType;
+import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.StagingColumnDefinition;
 import com.imsweb.staging.entities.StagingEndpoint;
 import com.imsweb.staging.entities.StagingKeyValue;
@@ -53,7 +54,7 @@ public abstract class StagingDataProvider implements DataProvider {
 
     private static final ObjectMapper _MAPPER = new ObjectMapper();
 
-    private static StagingRange _MATCH_ALL_ENDPOINT = new StagingRange();
+    private static final StagingRange _MATCH_ALL_ENDPOINT = new StagingRange();
 
     static {
         _DATE_FORMAT.setTimeZone(TimeZone.getTimeZone("UTC"));
@@ -390,6 +391,19 @@ public abstract class StagingDataProvider implements DataProvider {
      * @return a List of table identifier
      */
     public abstract Set<String> getTableIds();
+
+    /**
+     * Return a set of supported glossary terms
+     * @return a Set of terms
+     */
+    public abstract Set<String> getGlossaryTerms();
+
+    /**
+     * Return a defitition of a glossary term
+     * @param term glossary term
+     * @return a glossary definiiion
+     */
+    public abstract GlossaryDefinition getGlossaryDefinition(String term);
 
     /**
      * Return all the legal site values
