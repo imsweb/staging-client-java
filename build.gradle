@@ -51,6 +51,7 @@ dependencies {
     implementation "org.cache2k:cache2k-core:1.6.0.Final"
 
     implementation 'org.apache.commons:commons-lang3:3.11'
+    implementation 'com.hankcs:aho-corasick-double-array-trie:1.2.2'
 
     // split the seerapi-client-java dependency to an optional feature
     updateSupportImplementation 'com.imsweb:seerapi-client-java:3.21'

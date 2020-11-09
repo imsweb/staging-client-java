@@ -10,6 +10,7 @@ import org.junit.Test;
 
 import com.imsweb.staging.StagingData.Result;
 import com.imsweb.staging.entities.GlossaryDefinition;
+import com.imsweb.staging.entities.GlossaryHit;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingTable;
 
@@ -94,6 +95,15 @@ public class ExternalStagingFileDataProviderTest {
         assertTrue(entry.getDefinition().startsWith("The unnamed tissues that immediately surround"));
         assertEquals(Collections.singletonList("Connective tissue"), entry.getAlternateNames());
         assertNotNull(entry.getLastModified());
+
+        Set<GlossaryHit> hits = _STAGING.getGlossaryMatches("Some text and Cortex should be only match.");
+        assertEquals(1, hits.size());
+        GlossaryHit hit = hits.iterator().next();
+        assertEquals("cortex", hit.getTerm());
+        assertEquals(14, (long)hit.getBegin());
+        assertEquals(20, (long)hit.getEnd());
+        hits = _STAGING.getGlossaryMatches("Cortex and stroma should be two matches.");
+        assertEquals(2, hits.size());
     }
 
 }

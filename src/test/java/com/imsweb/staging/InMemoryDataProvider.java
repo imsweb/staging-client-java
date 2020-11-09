@@ -4,8 +4,11 @@
 package com.imsweb.staging;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import com.hankcs.algorithm.AhoCorasickDoubleArrayTrie.Hit;
 
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.StagingSchema;
@@ -21,7 +24,6 @@ public class InMemoryDataProvider extends StagingDataProvider {
 
     private final Map<String, StagingTable> _tables = new HashMap<>();
     private final Map<String, StagingSchema> _schemas = new HashMap<>();
-    private final Map<String, GlossaryDefinition> _glossary = new HashMap<>();
 
     /**
      * Constructor loads all schemas and sets up table cache
@@ -80,20 +82,18 @@ public class InMemoryDataProvider extends StagingDataProvider {
         _schemas.put(schema.getId(), schema);
     }
 
-    /**
-     * Add a glossary term
-     */
-    public void addGlossaryTerm(GlossaryDefinition term) {
-        _glossary.put(term.getName(), term);
-    }
-
     @Override
     public Set<String> getGlossaryTerms() {
-        return _glossary.keySet();
+        throw new RuntimeException("Glossary not supported in this provider");
     }
 
     @Override
     public GlossaryDefinition getGlossaryDefinition(String term) {
-        return _glossary.get(term);
+        throw new RuntimeException("Glossary not supported in this provider");
+    }
+
+    @Override
+    public List<Hit<String>> getGlossaryMatches(String text) {
+        throw new RuntimeException("Glossary not supported in this provider");
     }
 }

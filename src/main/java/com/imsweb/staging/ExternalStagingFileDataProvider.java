@@ -10,11 +10,15 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
+
+import com.hankcs.algorithm.AhoCorasickDoubleArrayTrie;
+import com.hankcs.algorithm.AhoCorasickDoubleArrayTrie.Hit;
 
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.StagingSchema;
@@ -29,7 +33,8 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
     private String _version;
     private final Map<String, StagingTable> _tables = new HashMap<>();
     private final Map<String, StagingSchema> _schemas = new HashMap<>();
-    private final Map<String, GlossaryDefinition> _glossary = new HashMap<>();
+    private final Map<String, GlossaryDefinition> _glossaryTerms = new HashMap<>();
+    private final AhoCorasickDoubleArrayTrie<String> _trie = new AhoCorasickDoubleArrayTrie<>();
 
     /**
      * Constructor loads all schemas and sets up table cache
@@ -84,10 +89,12 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
                 }
                 else if (entry.getName().startsWith("glossary")) {
                     GlossaryDefinition glossary = getMapper().reader().readValue(getMapper().getFactory().createParser(extractEntry(stream)), GlossaryDefinition.class);
-                    _glossary.put(glossary.getName(), glossary);
+                    _glossaryTerms.put(glossary.getName(), glossary);
                 }
             }
         }
+
+        _trie.build(_glossaryTerms.keySet().stream().collect(Collectors.toMap(String::toLowerCase, String::toLowerCase)));
 
         // verify that all the algorithm names and versions are consistent
         if (algorithms.size() != 1)
@@ -134,12 +141,17 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
 
     @Override
     public Set<String> getGlossaryTerms() {
-        return _glossary.keySet();
+        return _glossaryTerms.keySet();
     }
 
     @Override
     public GlossaryDefinition getGlossaryDefinition(String term) {
-        return _glossary.get(term);
+        return _glossaryTerms.get(term);
+    }
+
+    @Override
+    public List<Hit<String>> getGlossaryMatches(String text) {
+        return _trie.parseText(text);
     }
 
 }

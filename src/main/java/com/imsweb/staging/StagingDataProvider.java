@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.hankcs.algorithm.AhoCorasickDoubleArrayTrie.Hit;
 
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.DataProvider;
@@ -72,9 +73,9 @@ public abstract class StagingDataProvider implements DataProvider {
     }
 
     // lookup cache
-    private Cache<SchemaLookup, List<StagingSchema>> _lookupCache;
+    private final Cache<SchemaLookup, List<StagingSchema>> _lookupCache;
     // site/hist cache
-    private Cache<String, Set<String>> _validValuesCache;
+    private final Cache<String, Set<String>> _validValuesCache;
 
     /**
      * Constructor loads all schemas and sets up cache
@@ -406,6 +407,13 @@ public abstract class StagingDataProvider implements DataProvider {
     public abstract GlossaryDefinition getGlossaryDefinition(String term);
 
     /**
+     * Return a list of all glossary matches in the supplied text
+     * @param text text to match against
+     * @return a List of glossary hits
+     */
+    public abstract List<Hit<String>> getGlossaryMatches(String text);
+
+    /**
      * Return all the legal site values
      * @return a set of valid sites
      */
@@ -503,11 +511,11 @@ public abstract class StagingDataProvider implements DataProvider {
                     if (range.getLow().equals(range.getHigh()))
                         values.add(range.getLow());
                     else {
-                        Integer low = Integer.parseInt(range.getLow());
-                        Integer high = Integer.parseInt(range.getHigh());
+                        int low = Integer.parseInt(range.getLow());
+                        int high = Integer.parseInt(range.getHigh());
 
                         // add all values in range
-                        for (Integer i = low; i <= high; i++)
+                        for (int i = low; i <= high; i++)
                             values.add(padStart(String.valueOf(i), range.getLow().length(), '0'));
                     }
                 }

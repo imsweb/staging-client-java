@@ -14,6 +14,9 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import com.hankcs.algorithm.AhoCorasickDoubleArrayTrie;
+import com.hankcs.algorithm.AhoCorasickDoubleArrayTrie.Hit;
+
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingTable;
@@ -25,9 +28,12 @@ public class StagingFileDataProvider extends StagingDataProvider {
 
     private final String _algorithm;
     private final String _version;
+
     private final Map<String, StagingTable> _tables = new HashMap<>();
     private final Map<String, StagingSchema> _schemas = new HashMap<>();
+
     private final Map<String, String> _glossaryTerms = new HashMap<>();
+    private final AhoCorasickDoubleArrayTrie<String> _trie = new AhoCorasickDoubleArrayTrie<>();
 
     /**
      * Constructor loads all schemas and sets up table cache
@@ -80,7 +86,7 @@ public class StagingFileDataProvider extends StagingDataProvider {
 
             // if the file is not found, that just means that there are no glossary terms
             InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream(keywords);
-            if (is != null)
+            if (is != null) {
                 try (BufferedReader buffer = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8))) {
                     for (String line : buffer.lines().collect(Collectors.toList())) {
                         if (line.length() > 0) {
@@ -92,6 +98,9 @@ public class StagingFileDataProvider extends StagingDataProvider {
                         }
                     }
                 }
+
+                _trie.build(_glossaryTerms.keySet().stream().collect(Collectors.toMap(String::toLowerCase, String::toLowerCase)));
+            }
         }
         catch (IOException e) {
             throw new IllegalStateException("IOException reading glossary terms: " + e.getMessage());
@@ -185,6 +194,11 @@ public class StagingFileDataProvider extends StagingDataProvider {
         catch (IOException e) {
             throw new IllegalStateException("Error reading glossary term: " + e.getMessage());
         }
+    }
+
+    @Override
+    public List<Hit<String>> getGlossaryMatches(String text) {
+        return _trie.parseText(text);
     }
 
 }

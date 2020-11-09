@@ -23,6 +23,7 @@ import com.imsweb.decisionengine.Result;
 import com.imsweb.decisionengine.Result.Type;
 import com.imsweb.decisionengine.Table;
 import com.imsweb.staging.entities.GlossaryDefinition;
+import com.imsweb.staging.entities.GlossaryHit;
 import com.imsweb.staging.entities.StagingColumnDefinition;
 import com.imsweb.staging.entities.StagingMapping;
 import com.imsweb.staging.entities.StagingSchema;
@@ -558,6 +559,15 @@ public final class Staging {
     }
 
     /**
+     * Return a list of glossary terms in the passed text
+     * @param text text to match against
+     * @return a list of glossary terms
+     */
+    public Set<GlossaryHit> getGlossaryMatches(String text) {
+        return _provider.getGlossaryMatches(text.toLowerCase()).stream().map(hit -> new GlossaryHit(hit.value, hit.begin, hit.end)).collect(Collectors.toSet());
+    }
+
+    /**
      * Add the context keys which are used in staging and other calls
      * @param context Map of context
      */
@@ -568,7 +578,6 @@ public final class Staging {
         // put the current year in the context
         Calendar now = Calendar.getInstance();
         context.put(CTX_YEAR_CURRENT, String.valueOf(now.get(Calendar.YEAR)));
-
     }
 
     /**
