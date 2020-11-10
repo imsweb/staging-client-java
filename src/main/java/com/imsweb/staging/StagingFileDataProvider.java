@@ -8,14 +8,16 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import com.hankcs.algorithm.AhoCorasickDoubleArrayTrie;
-import com.hankcs.algorithm.AhoCorasickDoubleArrayTrie.Hit;
+import org.ahocorasick.trie.Emit;
+import org.ahocorasick.trie.Trie;
+import org.ahocorasick.trie.Trie.TrieBuilder;
 
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.StagingSchema;
@@ -33,7 +35,8 @@ public class StagingFileDataProvider extends StagingDataProvider {
     private final Map<String, StagingSchema> _schemas = new HashMap<>();
 
     private final Map<String, String> _glossaryTerms = new HashMap<>();
-    private final AhoCorasickDoubleArrayTrie<String> _trie = new AhoCorasickDoubleArrayTrie<>();
+
+    private Trie _trie;
 
     /**
      * Constructor loads all schemas and sets up table cache
@@ -87,6 +90,8 @@ public class StagingFileDataProvider extends StagingDataProvider {
             // if the file is not found, that just means that there are no glossary terms
             InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream(keywords);
             if (is != null) {
+                TrieBuilder builder = Trie.builder().onlyWholeWords().ignoreCase();
+
                 try (BufferedReader buffer = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8))) {
                     for (String line : buffer.lines().collect(Collectors.toList())) {
                         if (line.length() > 0) {
@@ -95,11 +100,12 @@ public class StagingFileDataProvider extends StagingDataProvider {
                                 throw new IllegalStateException("Error parsing glossary terms.  Should only be two parts of each line in terms.txt");
 
                             _glossaryTerms.put(parts[0], parts[1]);
+                            builder.addKeyword(parts[0]);
                         }
                     }
                 }
 
-                _trie.build(_glossaryTerms.keySet().stream().collect(Collectors.toMap(String::toLowerCase, String::toLowerCase)));
+                _trie = builder.build();
             }
         }
         catch (IOException e) {
@@ -197,7 +203,7 @@ public class StagingFileDataProvider extends StagingDataProvider {
     }
 
     @Override
-    public List<Hit<String>> getGlossaryMatches(String text) {
+    public Collection<Emit> getGlossaryMatches(String text) {
         return _trie.parseText(text);
     }
 

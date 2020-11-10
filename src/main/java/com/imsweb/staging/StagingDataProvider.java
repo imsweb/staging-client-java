@@ -6,6 +6,7 @@ package com.imsweb.staging;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -14,6 +15,7 @@ import java.util.Set;
 import java.util.TimeZone;
 import java.util.stream.Collectors;
 
+import org.ahocorasick.trie.Emit;
 import org.cache2k.Cache;
 import org.cache2k.Cache2kBuilder;
 
@@ -22,7 +24,6 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.hankcs.algorithm.AhoCorasickDoubleArrayTrie.Hit;
 
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.DataProvider;
@@ -411,7 +412,7 @@ public abstract class StagingDataProvider implements DataProvider {
      * @param text text to match against
      * @return a List of glossary hits
      */
-    public abstract List<Hit<String>> getGlossaryMatches(String text);
+    public abstract Collection<Emit> getGlossaryMatches(String text);
 
     /**
      * Return all the legal site values

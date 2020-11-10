@@ -564,7 +564,7 @@ public final class Staging {
      * @return a list of glossary terms
      */
     public Set<GlossaryHit> getGlossaryMatches(String text) {
-        return _provider.getGlossaryMatches(text.toLowerCase()).stream().map(hit -> new GlossaryHit(hit.value, hit.begin, hit.end)).collect(Collectors.toSet());
+        return _provider.getGlossaryMatches(text).stream().map(hit -> new GlossaryHit(hit.getKeyword(), hit.getStart(), hit.getEnd())).collect(Collectors.toSet());
     }
 
     /**

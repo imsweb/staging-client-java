@@ -8,17 +8,18 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-import com.hankcs.algorithm.AhoCorasickDoubleArrayTrie;
-import com.hankcs.algorithm.AhoCorasickDoubleArrayTrie.Hit;
+import org.ahocorasick.trie.Emit;
+import org.ahocorasick.trie.Trie;
+import org.ahocorasick.trie.Trie.TrieBuilder;
 
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.StagingSchema;
@@ -34,7 +35,8 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
     private final Map<String, StagingTable> _tables = new HashMap<>();
     private final Map<String, StagingSchema> _schemas = new HashMap<>();
     private final Map<String, GlossaryDefinition> _glossaryTerms = new HashMap<>();
-    private final AhoCorasickDoubleArrayTrie<String> _trie = new AhoCorasickDoubleArrayTrie<>();
+
+    private Trie _trie;
 
     /**
      * Constructor loads all schemas and sets up table cache
@@ -60,6 +62,8 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
     private void init(InputStream is) throws IOException {
         Set<String> algorithms = new HashSet<>();
         Set<String> versions = new HashSet<>();
+
+        TrieBuilder builder = Trie.builder().onlyWholeWords().ignoreCase();
 
         try (ZipInputStream stream = new ZipInputStream(is)) {
             ZipEntry entry;
@@ -90,11 +94,12 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
                 else if (entry.getName().startsWith("glossary")) {
                     GlossaryDefinition glossary = getMapper().reader().readValue(getMapper().getFactory().createParser(extractEntry(stream)), GlossaryDefinition.class);
                     _glossaryTerms.put(glossary.getName(), glossary);
+                    builder.addKeyword(glossary.getName());
                 }
             }
         }
 
-        _trie.build(_glossaryTerms.keySet().stream().collect(Collectors.toMap(String::toLowerCase, String::toLowerCase)));
+        _trie = builder.build();
 
         // verify that all the algorithm names and versions are consistent
         if (algorithms.size() != 1)
@@ -150,7 +155,7 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
     }
 
     @Override
-    public List<Hit<String>> getGlossaryMatches(String text) {
+    public Collection<Emit> getGlossaryMatches(String text) {
         return _trie.parseText(text);
     }
 

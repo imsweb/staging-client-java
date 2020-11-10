@@ -7,7 +7,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -48,11 +47,8 @@ public final class UpdaterUtils {
 
     private static final Pattern _ID_CHARACTERS = Pattern.compile("[a-z0-9_]+");
 
-    // limit glossary keywords to these categories
-    private static final Set<Category> _GLOSSARY_CATEGORIES = EnumSet.of(Category.STAGING);
-
     @SuppressWarnings("ConstantConditions")
-    public static void update(String algorithm, String version, String baseDirectory) throws IOException {
+    public static void update(String algorithm, String version, String baseDirectory, Set<Category> glossaryCategories) throws IOException {
         Stopwatch stopwatch = Stopwatch.create();
 
         System.out.println("Updating " + algorithm + " version " + version + " from SEER*API");
@@ -125,7 +121,7 @@ public final class UpdaterUtils {
             System.out.println("Saved table: " + table.getId());
 
             // collect the glossary hits
-            Set<KeywordMatch> matches = staging.tableGlossary(algorithm, version, tableId, _GLOSSARY_CATEGORIES, true).execute().body();
+            Set<KeywordMatch> matches = staging.tableGlossary(algorithm, version, tableId, glossaryCategories, true).execute().body();
             matches.forEach(match -> glossaryEntries.put(match.getKeyword(), match.getId()));
         }
 
@@ -144,7 +140,7 @@ public final class UpdaterUtils {
             System.out.println("Saved schema: " + schema.getId());
 
             // collect the glossary hits
-            Set<KeywordMatch> matches = staging.schemaGlossary(algorithm, version, schemaId, _GLOSSARY_CATEGORIES, true).execute().body();
+            Set<KeywordMatch> matches = staging.schemaGlossary(algorithm, version, schemaId, glossaryCategories, true).execute().body();
             matches.forEach(match -> glossaryEntries.put(match.getKeyword(), match.getId()));
         }
 

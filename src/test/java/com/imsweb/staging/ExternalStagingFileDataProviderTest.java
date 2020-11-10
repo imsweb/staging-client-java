@@ -101,7 +101,7 @@ public class ExternalStagingFileDataProviderTest {
         GlossaryHit hit = hits.iterator().next();
         assertEquals("cortex", hit.getTerm());
         assertEquals(14, (long)hit.getBegin());
-        assertEquals(20, (long)hit.getEnd());
+        assertEquals(19, (long)hit.getEnd());
         hits = _STAGING.getGlossaryMatches("Cortex and stroma should be two matches.");
         assertEquals(2, hits.size());
     }

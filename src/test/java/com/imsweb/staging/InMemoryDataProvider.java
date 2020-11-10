@@ -3,12 +3,12 @@
  */
 package com.imsweb.staging;
 
+import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import com.hankcs.algorithm.AhoCorasickDoubleArrayTrie.Hit;
+import org.ahocorasick.trie.Emit;
 
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.StagingSchema;
@@ -93,7 +93,7 @@ public class InMemoryDataProvider extends StagingDataProvider {
     }
 
     @Override
-    public List<Hit<String>> getGlossaryMatches(String text) {
+    public Collection<Emit> getGlossaryMatches(String text) {
         throw new RuntimeException("Glossary not supported in this provider");
     }
 }
