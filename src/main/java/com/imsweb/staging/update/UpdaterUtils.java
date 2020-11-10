@@ -48,8 +48,11 @@ public final class UpdaterUtils {
     private static final Pattern _ID_CHARACTERS = Pattern.compile("[a-z0-9_]+");
 
     @SuppressWarnings("ConstantConditions")
-    public static void update(String algorithm, String version, String baseDirectory, Set<Category> glossaryCategories) throws IOException {
+    public static void update(String algorithm, String version, String baseDirectory, Set<String> glossaryCategories) throws IOException {
         Stopwatch stopwatch = Stopwatch.create();
+
+        // convert set of strings to set of Enums; we can't expose the optional dependency Category class in the method signature.
+        Set<Category> categories = glossaryCategories.stream().map(Category::valueOf).collect(Collectors.toSet());
 
         System.out.println("Updating " + algorithm + " version " + version + " from SEER*API");
 
@@ -121,7 +124,7 @@ public final class UpdaterUtils {
             System.out.println("Saved table: " + table.getId());
 
             // collect the glossary hits
-            Set<KeywordMatch> matches = staging.tableGlossary(algorithm, version, tableId, glossaryCategories, true).execute().body();
+            Set<KeywordMatch> matches = staging.tableGlossary(algorithm, version, tableId, categories, true).execute().body();
             matches.forEach(match -> glossaryEntries.put(match.getKeyword(), match.getId()));
         }
 
@@ -140,7 +143,7 @@ public final class UpdaterUtils {
             System.out.println("Saved schema: " + schema.getId());
 
             // collect the glossary hits
-            Set<KeywordMatch> matches = staging.schemaGlossary(algorithm, version, schemaId, glossaryCategories, true).execute().body();
+            Set<KeywordMatch> matches = staging.schemaGlossary(algorithm, version, schemaId, categories, true).execute().body();
             matches.forEach(match -> glossaryEntries.put(match.getKeyword(), match.getId()));
         }
 
