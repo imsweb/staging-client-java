@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -17,7 +16,6 @@ import java.util.stream.Collectors;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-import org.ahocorasick.trie.Emit;
 import org.ahocorasick.trie.Trie;
 import org.ahocorasick.trie.Trie.TrieBuilder;
 
@@ -35,8 +33,6 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
     private final Map<String, StagingTable> _tables = new HashMap<>();
     private final Map<String, StagingSchema> _schemas = new HashMap<>();
     private final Map<String, GlossaryDefinition> _glossaryTerms = new HashMap<>();
-
-    private Trie _trie;
 
     /**
      * Constructor loads all schemas and sets up table cache
@@ -152,11 +148,6 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
     @Override
     public GlossaryDefinition getGlossaryDefinition(String term) {
         return _glossaryTerms.get(term);
-    }
-
-    @Override
-    public Collection<Emit> getGlossaryMatches(String text) {
-        return _trie.parseText(text);
     }
 
 }

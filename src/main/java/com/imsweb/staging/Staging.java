@@ -6,6 +6,7 @@ package com.imsweb.staging;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -563,8 +564,8 @@ public final class Staging {
      * @param text text to match against
      * @return a list of glossary terms
      */
-    public Set<GlossaryHit> getGlossaryMatches(String text) {
-        return _provider.getGlossaryMatches(text).stream().map(hit -> new GlossaryHit(hit.getKeyword(), hit.getStart(), hit.getEnd())).collect(Collectors.toSet());
+    public Collection<GlossaryHit> getGlossaryMatches(String text) {
+        return _provider.getGlossaryMatches(text);
     }
 
     /**

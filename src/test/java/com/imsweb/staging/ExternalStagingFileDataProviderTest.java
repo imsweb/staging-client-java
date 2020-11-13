@@ -2,6 +2,7 @@ package com.imsweb.staging;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Set;
 
@@ -96,7 +97,7 @@ public class ExternalStagingFileDataProviderTest {
         assertEquals(Collections.singletonList("Connective tissue"), entry.getAlternateNames());
         assertNotNull(entry.getLastModified());
 
-        Set<GlossaryHit> hits = _STAGING.getGlossaryMatches("Some text and Cortex should be only match.");
+        Collection<GlossaryHit> hits = _STAGING.getGlossaryMatches("Some text and Cortex should be only match.");
         assertEquals(1, hits.size());
         GlossaryHit hit = hits.iterator().next();
         assertEquals("cortex", hit.getTerm());

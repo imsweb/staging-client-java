@@ -8,14 +8,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import org.ahocorasick.trie.Emit;
 import org.ahocorasick.trie.Trie;
 import org.ahocorasick.trie.Trie.TrieBuilder;
 
@@ -35,8 +33,6 @@ public class StagingFileDataProvider extends StagingDataProvider {
     private final Map<String, StagingSchema> _schemas = new HashMap<>();
 
     private final Map<String, String> _glossaryTerms = new HashMap<>();
-
-    private Trie _trie;
 
     /**
      * Constructor loads all schemas and sets up table cache
@@ -200,11 +196,6 @@ public class StagingFileDataProvider extends StagingDataProvider {
         catch (IOException e) {
             throw new IllegalStateException("Error reading glossary term: " + e.getMessage());
         }
-    }
-
-    @Override
-    public Collection<Emit> getGlossaryMatches(String text) {
-        return _trie.parseText(text);
     }
 
 }

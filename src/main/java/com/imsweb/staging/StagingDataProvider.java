@@ -15,7 +15,7 @@ import java.util.Set;
 import java.util.TimeZone;
 import java.util.stream.Collectors;
 
-import org.ahocorasick.trie.Emit;
+import org.ahocorasick.trie.Trie;
 import org.cache2k.Cache;
 import org.cache2k.Cache2kBuilder;
 
@@ -30,6 +30,7 @@ import com.imsweb.decisionengine.DataProvider;
 import com.imsweb.decisionengine.DecisionEngine;
 import com.imsweb.decisionengine.Endpoint.EndpointType;
 import com.imsweb.staging.entities.GlossaryDefinition;
+import com.imsweb.staging.entities.GlossaryHit;
 import com.imsweb.staging.entities.StagingColumnDefinition;
 import com.imsweb.staging.entities.StagingEndpoint;
 import com.imsweb.staging.entities.StagingKeyValue;
@@ -57,6 +58,8 @@ public abstract class StagingDataProvider implements DataProvider {
     private static final ObjectMapper _MAPPER = new ObjectMapper();
 
     private static final StagingRange _MATCH_ALL_ENDPOINT = new StagingRange();
+
+    protected Trie _trie;
 
     static {
         _DATE_FORMAT.setTimeZone(TimeZone.getTimeZone("UTC"));
@@ -412,7 +415,9 @@ public abstract class StagingDataProvider implements DataProvider {
      * @param text text to match against
      * @return a List of glossary hits
      */
-    public abstract Collection<Emit> getGlossaryMatches(String text);
+    public Collection<GlossaryHit> getGlossaryMatches(String text) {
+        return _trie.parseText(text).stream().map(hit -> new GlossaryHit(hit.getKeyword(), hit.getStart(), hit.getEnd())).collect(Collectors.toSet());
+    }
 
     /**
      * Return all the legal site values

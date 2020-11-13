@@ -8,9 +8,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import org.ahocorasick.trie.Emit;
-
 import com.imsweb.staging.entities.GlossaryDefinition;
+import com.imsweb.staging.entities.GlossaryHit;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingTable;
 
@@ -93,7 +92,7 @@ public class InMemoryDataProvider extends StagingDataProvider {
     }
 
     @Override
-    public Collection<Emit> getGlossaryMatches(String text) {
+    public Collection<GlossaryHit> getGlossaryMatches(String text) {
         throw new RuntimeException("Glossary not supported in this provider");
     }
 }
