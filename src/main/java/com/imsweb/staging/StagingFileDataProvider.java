@@ -14,6 +14,10 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.ahocorasick.trie.Trie;
+import org.ahocorasick.trie.Trie.TrieBuilder;
+
+import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingTable;
 
@@ -22,10 +26,13 @@ import com.imsweb.staging.entities.StagingTable;
  */
 public class StagingFileDataProvider extends StagingDataProvider {
 
-    private String _algorithm;
-    private String _version;
-    private Map<String, StagingTable> _tables = new HashMap<>();
-    private Map<String, StagingSchema> _schemas = new HashMap<>();
+    private final String _algorithm;
+    private final String _version;
+
+    private final Map<String, StagingTable> _tables = new HashMap<>();
+    private final Map<String, StagingSchema> _schemas = new HashMap<>();
+
+    private final Map<String, String> _glossaryTerms = new HashMap<>();
 
     /**
      * Constructor loads all schemas and sets up table cache
@@ -70,6 +77,35 @@ public class StagingFileDataProvider extends StagingDataProvider {
         }
         catch (IOException e) {
             throw new IllegalStateException("IOException reading schemas: " + e.getMessage());
+        }
+
+        // load the glossary terms
+        try {
+            String keywords = "algorithms/" + algorithm.toLowerCase() + "/" + version + "/glossary/terms.txt";
+
+            // if the file is not found, that just means that there are no glossary terms
+            InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream(keywords);
+            if (is != null) {
+                TrieBuilder builder = Trie.builder().onlyWholeWords().ignoreCase();
+
+                try (BufferedReader buffer = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8))) {
+                    for (String line : buffer.lines().collect(Collectors.toList())) {
+                        if (line.length() > 0) {
+                            String[] parts = line.split("~");
+                            if (parts.length != 2)
+                                throw new IllegalStateException("Error parsing glossary terms.  Should only be two parts of each line in terms.txt");
+
+                            _glossaryTerms.put(parts[0], parts[1]);
+                            builder.addKeyword(parts[0]);
+                        }
+                    }
+                }
+
+                _trie = builder.build();
+            }
+        }
+        catch (IOException e) {
+            throw new IllegalStateException("IOException reading glossary terms: " + e.getMessage());
         }
 
         // finally, initialize any caches now that everything else has been set up
@@ -136,6 +172,30 @@ public class StagingFileDataProvider extends StagingDataProvider {
     @Override
     public StagingSchema getDefinition(String id) {
         return _schemas.get(id);
+    }
+
+    @Override
+    public Set<String> getGlossaryTerms() {
+        return _glossaryTerms.keySet();
+    }
+
+    @Override
+    public GlossaryDefinition getGlossaryDefinition(String term) {
+        String id = _glossaryTerms.get(term);
+        if (id == null)
+            return null;
+
+        String filename = "algorithms/" + getAlgorithm() + "/" + getVersion() + "/glossary/" + id + ".json";
+        InputStream input = Thread.currentThread().getContextClassLoader().getResourceAsStream(filename);
+        if (input == null)
+            return null;
+
+        try {
+            return getMapper().reader().readValue(getMapper().getFactory().createParser(input), GlossaryDefinition.class);
+        }
+        catch (IOException e) {
+            throw new IllegalStateException("Error reading glossary term: " + e.getMessage());
+        }
     }
 
 }

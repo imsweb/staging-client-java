@@ -6,6 +6,7 @@ package com.imsweb.staging;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -14,6 +15,7 @@ import java.util.Set;
 import java.util.TimeZone;
 import java.util.stream.Collectors;
 
+import org.ahocorasick.trie.Trie;
 import org.cache2k.Cache;
 import org.cache2k.Cache2kBuilder;
 
@@ -27,6 +29,8 @@ import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.DataProvider;
 import com.imsweb.decisionengine.DecisionEngine;
 import com.imsweb.decisionengine.Endpoint.EndpointType;
+import com.imsweb.staging.entities.GlossaryDefinition;
+import com.imsweb.staging.entities.GlossaryHit;
 import com.imsweb.staging.entities.StagingColumnDefinition;
 import com.imsweb.staging.entities.StagingEndpoint;
 import com.imsweb.staging.entities.StagingKeyValue;
@@ -53,7 +57,9 @@ public abstract class StagingDataProvider implements DataProvider {
 
     private static final ObjectMapper _MAPPER = new ObjectMapper();
 
-    private static StagingRange _MATCH_ALL_ENDPOINT = new StagingRange();
+    private static final StagingRange _MATCH_ALL_ENDPOINT = new StagingRange();
+
+    protected Trie _trie;
 
     static {
         _DATE_FORMAT.setTimeZone(TimeZone.getTimeZone("UTC"));
@@ -71,9 +77,9 @@ public abstract class StagingDataProvider implements DataProvider {
     }
 
     // lookup cache
-    private Cache<SchemaLookup, List<StagingSchema>> _lookupCache;
+    private final Cache<SchemaLookup, List<StagingSchema>> _lookupCache;
     // site/hist cache
-    private Cache<String, Set<String>> _validValuesCache;
+    private final Cache<String, Set<String>> _validValuesCache;
 
     /**
      * Constructor loads all schemas and sets up cache
@@ -392,6 +398,28 @@ public abstract class StagingDataProvider implements DataProvider {
     public abstract Set<String> getTableIds();
 
     /**
+     * Return a set of supported glossary terms
+     * @return a Set of terms
+     */
+    public abstract Set<String> getGlossaryTerms();
+
+    /**
+     * Return a defitition of a glossary term
+     * @param term glossary term
+     * @return a glossary definiiion
+     */
+    public abstract GlossaryDefinition getGlossaryDefinition(String term);
+
+    /**
+     * Return a list of all glossary matches in the supplied text
+     * @param text text to match against
+     * @return a List of glossary hits
+     */
+    public Collection<GlossaryHit> getGlossaryMatches(String text) {
+        return _trie.parseText(text).stream().map(hit -> new GlossaryHit(hit.getKeyword(), hit.getStart(), hit.getEnd())).collect(Collectors.toSet());
+    }
+
+    /**
      * Return all the legal site values
      * @return a set of valid sites
      */
@@ -489,11 +517,11 @@ public abstract class StagingDataProvider implements DataProvider {
                     if (range.getLow().equals(range.getHigh()))
                         values.add(range.getLow());
                     else {
-                        Integer low = Integer.parseInt(range.getLow());
-                        Integer high = Integer.parseInt(range.getHigh());
+                        int low = Integer.parseInt(range.getLow());
+                        int high = Integer.parseInt(range.getHigh());
 
                         // add all values in range
-                        for (Integer i = low; i <= high; i++)
+                        for (int i = low; i <= high; i++)
                             values.add(padStart(String.valueOf(i), range.getLow().length(), '0'));
                     }
                 }

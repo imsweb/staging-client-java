@@ -6,6 +6,7 @@ package com.imsweb.staging;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -14,6 +15,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.DecisionEngine;
@@ -22,12 +24,16 @@ import com.imsweb.decisionengine.Output;
 import com.imsweb.decisionengine.Result;
 import com.imsweb.decisionengine.Result.Type;
 import com.imsweb.decisionengine.Table;
+import com.imsweb.staging.entities.GlossaryDefinition;
+import com.imsweb.staging.entities.GlossaryHit;
 import com.imsweb.staging.entities.StagingColumnDefinition;
 import com.imsweb.staging.entities.StagingMapping;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingSchemaInput;
 import com.imsweb.staging.entities.StagingTable;
 import com.imsweb.staging.entities.StagingTablePath;
+
+import static com.imsweb.decisionengine.ColumnDefinition.ColumnType.DESCRIPTION;
 
 public final class Staging {
 
@@ -38,8 +44,8 @@ public final class Staging {
     // list of all context keys
     public static final List<String> CONTEXT_KEYS = Collections.unmodifiableList(Arrays.asList(CTX_ALGORITHM_VERSION, CTX_YEAR_CURRENT));
 
-    private DecisionEngine _engine;
-    private StagingDataProvider _provider;
+    private final DecisionEngine _engine;
+    private final StagingDataProvider _provider;
 
     /**
      * Private constructor
@@ -93,6 +99,26 @@ public final class Staging {
     }
 
     /**
+     * Return a list of glossary matches for the specific schema
+     * @param id Schema identifier
+     * @return a set of glossary terms
+     */
+    public Set<String> getSchemaGlossary(String id) {
+        Set<String> hits = new HashSet<>();
+
+        StagingSchema schema = getSchema(id);
+        if (schema != null) {
+            addGlossaryMatches(hits, schema.getName());
+            addGlossaryMatches(hits, schema.getTitle());
+            addGlossaryMatches(hits, schema.getDescription());
+            addGlossaryMatches(hits, schema.getSubtitle());
+            addGlossaryMatches(hits, schema.getNotes());
+        }
+
+        return hits;
+    }
+
+    /**
      * Return true if the site is valid
      * @param site primary site
      * @return true if the side is valid
@@ -134,6 +160,39 @@ public final class Staging {
      */
     public StagingTable getTable(String id) {
         return _provider.getTable(id);
+    }
+
+    /**
+     * Return a list of glossary matches for the specific table
+     * @param id Table identifier
+     * @return a set of glossary terms
+     */
+    public Set<String> getTableGlossary(String id) {
+        Set<String> hits = new HashSet<>();
+
+        StagingTable table = getTable(id);
+        if (table != null) {
+            // add all the String fields
+            addGlossaryMatches(hits, table.getName());
+            addGlossaryMatches(hits, table.getTitle());
+            addGlossaryMatches(hits, table.getDescription());
+            addGlossaryMatches(hits, table.getSubtitle());
+            addGlossaryMatches(hits, table.getNotes());
+            addGlossaryMatches(hits, table.getFootnotes());
+
+            // add any DESCRIPTION columns glossary matches
+            if (table.getColumnDefinitions() != null && table.getRawRows() != null) {
+                Set<Integer> descriptionCols = IntStream.range(0, table.getColumnDefinitions().size())
+                        .filter(i -> DESCRIPTION.equals(table.getColumnDefinitions().get(i).getType()))
+                        .boxed()
+                        .collect(Collectors.toSet());
+                for (List<String> row : table.getRawRows())
+                    for (Integer col : descriptionCols)
+                        addGlossaryMatches(hits, row.get(col));
+            }
+        }
+
+        return hits;
     }
 
     /**
@@ -540,6 +599,32 @@ public final class Staging {
     }
 
     /**
+     * Return a list of all supported glossary terms
+     * @return a set of terms
+     */
+    public Set<String> getGlossaryTerms() {
+        return _provider.getGlossaryTerms();
+    }
+
+    /**
+     * Return the definition of a glossary term
+     * @param term glossery term
+     * @return full glossary definition
+     */
+    public GlossaryDefinition getGlossaryDefinition(String term) {
+        return _provider.getGlossaryDefinition(term);
+    }
+
+    /**
+     * Return a list of glossary terms in the passed text
+     * @param text text to match against
+     * @return a list of glossary terms
+     */
+    public Collection<GlossaryHit> getGlossaryMatches(String text) {
+        return _provider.getGlossaryMatches(text);
+    }
+
+    /**
      * Add the context keys which are used in staging and other calls
      * @param context Map of context
      */
@@ -550,7 +635,6 @@ public final class Staging {
         // put the current year in the context
         Calendar now = Calendar.getInstance();
         context.put(CTX_YEAR_CURRENT, String.valueOf(now.get(Calendar.YEAR)));
-
     }
 
     /**
@@ -560,6 +644,17 @@ public final class Staging {
     private void removeContextKeys(Map<String, String> context) {
         context.remove(CTX_ALGORITHM_VERSION);
         context.remove(CTX_YEAR_CURRENT);
-
     }
+
+    /**
+     * Helper method to collect glossary matches
+     */
+    private void addGlossaryMatches(Set<String> hits, String text) {
+        if (text != null) {
+            Collection<GlossaryHit> matches = getGlossaryMatches(text);
+            if (matches != null)
+                matches.forEach(m -> hits.add(m.getTerm()));
+        }
+    }
+
 }

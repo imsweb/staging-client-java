@@ -16,6 +16,10 @@ import java.util.stream.Collectors;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
+import org.ahocorasick.trie.Trie;
+import org.ahocorasick.trie.Trie.TrieBuilder;
+
+import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingTable;
 
@@ -26,8 +30,9 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
 
     private String _algorithm;
     private String _version;
-    private Map<String, StagingTable> _tables = new HashMap<>();
-    private Map<String, StagingSchema> _schemas = new HashMap<>();
+    private final Map<String, StagingTable> _tables = new HashMap<>();
+    private final Map<String, StagingSchema> _schemas = new HashMap<>();
+    private final Map<String, GlossaryDefinition> _glossaryTerms = new HashMap<>();
 
     /**
      * Constructor loads all schemas and sets up table cache
@@ -53,6 +58,8 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
     private void init(InputStream is) throws IOException {
         Set<String> algorithms = new HashSet<>();
         Set<String> versions = new HashSet<>();
+
+        TrieBuilder builder = Trie.builder().onlyWholeWords().ignoreCase();
 
         try (ZipInputStream stream = new ZipInputStream(is)) {
             ZipEntry entry;
@@ -80,8 +87,15 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
 
                     _schemas.put(schema.getId(), schema);
                 }
+                else if (entry.getName().startsWith("glossary")) {
+                    GlossaryDefinition glossary = getMapper().reader().readValue(getMapper().getFactory().createParser(extractEntry(stream)), GlossaryDefinition.class);
+                    _glossaryTerms.put(glossary.getName(), glossary);
+                    builder.addKeyword(glossary.getName());
+                }
             }
         }
+
+        _trie = builder.build();
 
         // verify that all the algorithm names and versions are consistent
         if (algorithms.size() != 1)
@@ -124,6 +138,16 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
     @Override
     public StagingSchema getDefinition(String id) {
         return _schemas.get(id);
+    }
+
+    @Override
+    public Set<String> getGlossaryTerms() {
+        return _glossaryTerms.keySet();
+    }
+
+    @Override
+    public GlossaryDefinition getGlossaryDefinition(String term) {
+        return _glossaryTerms.get(term);
     }
 
 }
