@@ -15,6 +15,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.DecisionEngine;
@@ -31,6 +32,8 @@ import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingSchemaInput;
 import com.imsweb.staging.entities.StagingTable;
 import com.imsweb.staging.entities.StagingTablePath;
+
+import static com.imsweb.decisionengine.ColumnDefinition.ColumnType.DESCRIPTION;
 
 public final class Staging {
 
@@ -96,6 +99,26 @@ public final class Staging {
     }
 
     /**
+     * Return a list of glossary matches for the specific schema
+     * @param id Schema identifier
+     * @return a set of glossary terms
+     */
+    public Set<String> getSchemaGlossary(String id) {
+        Set<String> hits = new HashSet<>();
+
+        StagingSchema schema = getSchema(id);
+        if (schema != null) {
+            addGlossaryMatches(hits, schema.getName());
+            addGlossaryMatches(hits, schema.getTitle());
+            addGlossaryMatches(hits, schema.getDescription());
+            addGlossaryMatches(hits, schema.getSubtitle());
+            addGlossaryMatches(hits, schema.getNotes());
+        }
+
+        return hits;
+    }
+
+    /**
      * Return true if the site is valid
      * @param site primary site
      * @return true if the side is valid
@@ -137,6 +160,39 @@ public final class Staging {
      */
     public StagingTable getTable(String id) {
         return _provider.getTable(id);
+    }
+
+    /**
+     * Return a list of glossary matches for the specific table
+     * @param id Table identifier
+     * @return a set of glossary terms
+     */
+    public Set<String> getTableGlossary(String id) {
+        Set<String> hits = new HashSet<>();
+
+        StagingTable table = getTable(id);
+        if (table != null) {
+            // add all the String fields
+            addGlossaryMatches(hits, table.getName());
+            addGlossaryMatches(hits, table.getTitle());
+            addGlossaryMatches(hits, table.getDescription());
+            addGlossaryMatches(hits, table.getSubtitle());
+            addGlossaryMatches(hits, table.getNotes());
+            addGlossaryMatches(hits, table.getFootnotes());
+
+            // add any DESCRIPTION columns glossary matches
+            if (table.getColumnDefinitions() != null && table.getRawRows() != null) {
+                Set<Integer> descriptionCols = IntStream.range(0, table.getColumnDefinitions().size())
+                        .filter(i -> DESCRIPTION.equals(table.getColumnDefinitions().get(i).getType()))
+                        .boxed()
+                        .collect(Collectors.toSet());
+                for (List<String> row : table.getRawRows())
+                    for (Integer col : descriptionCols)
+                        addGlossaryMatches(hits, row.get(col));
+            }
+        }
+
+        return hits;
     }
 
     /**
@@ -588,6 +644,17 @@ public final class Staging {
     private void removeContextKeys(Map<String, String> context) {
         context.remove(CTX_ALGORITHM_VERSION);
         context.remove(CTX_YEAR_CURRENT);
+    }
+
+    /**
+     * Helper method to collect glossary matches
+     */
+    private void addGlossaryMatches(Set<String> hits, String text) {
+        if (text != null) {
+            Collection<GlossaryHit> matches = getGlossaryMatches(text);
+            if (matches != null)
+                matches.forEach(m -> hits.add(m.getTerm()));
+        }
     }
 
 }

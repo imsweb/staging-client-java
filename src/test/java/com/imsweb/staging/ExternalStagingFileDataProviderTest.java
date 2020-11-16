@@ -107,6 +107,11 @@ public class ExternalStagingFileDataProviderTest {
         assertEquals(2, hits.size());
         hits = _STAGING.getGlossaryMatches("stromafoo not be a match since the keyword it is not a whole word");
         assertEquals(0, hits.size());
+
+        Set<String> glossary = _STAGING.getSchemaGlossary("urethra");
+        assertEquals(1, glossary.size());
+        glossary = _STAGING.getTableGlossary("ssf1_jpd");
+        assertEquals(1, glossary.size());
     }
 
 }
