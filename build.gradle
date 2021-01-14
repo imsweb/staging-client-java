@@ -98,11 +98,15 @@ dependencyUpdates {
 // Nexus vulnerability scan (https://github.com/sonatype-nexus-community/scan-gradle-plugin)
 ossIndexAudit {
     dependencyGraph = true
-//    proxyConfiguration {
-//        protocol = 'http'
-//        host = 'webproxy-btp.imsweb.com'
-//        port = 8080
-//    }
+
+    // only set proxy if running outside of Github Actions
+    if (!System.getenv().GITHUB_ACTIONS) {
+        proxyConfiguration {
+            protocol = 'http'
+            host = 'webproxy-btp.imsweb.com'
+            port = 8080
+        }
+    }
 }
 check.dependsOn 'ossIndexAudit'
 
