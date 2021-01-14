@@ -7,8 +7,6 @@ plugins {
     id "io.codearte.nexus-staging" version "0.22.0"  // logs into Sonotype OSS and does a "Close" and "Release"
     id 'com.adarshr.test-logger' version '2.1.1'
     id "com.github.ben-manes.versions" version "0.36.0"
-    id "org.owasp.dependencycheck" version "6.0.5"
-    id "net.ossindex.audit" version "0.4.11"
     id 'org.sonatype.gradle.plugins.scan' version '2.0.0'
 }
 
@@ -75,12 +73,6 @@ jar {
     }
 }
 
-// auditing plugin
-audit {
-    failOnError = false
-    rateLimitAsError = false
-}
-
 checkstyle {
     toolVersion = '8.29'
     configFile = file('config/checkstyle/checkstyle.xml')
@@ -103,20 +95,20 @@ dependencyUpdates {
     }
 }
 
-// OWASP check (https://jeremylong.github.io/DependencyCheck/index.html)
-dependencyCheck {
-    failOnError = true
-}
-
 // Nexus vulnerability scan (https://github.com/sonatype-nexus-community/scan-gradle-plugin)
 ossIndexAudit {
     dependencyGraph = true
-    proxyConfiguration {
-        protocol = 'http'
-        host = 'webproxy-btp.imsweb.com'
-        port = 8080
+
+    // only set proxy if running outside of Github Actions
+    if (!System.getenv().GITHUB_ACTIONS) {
+        proxyConfiguration {
+            protocol = 'http'
+            host = 'webproxy-btp.imsweb.com'
+            port = 8080
+        }
     }
 }
+check.dependsOn 'ossIndexAudit'
 
 // don't try to release a snapshot to a non-snapshot repository, that won't work anyway
 if (version.endsWith('-SNAPSHOT')) {
