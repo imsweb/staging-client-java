@@ -41,7 +41,7 @@ def cache2kVersion = '2.0.0.Final'
 def jacksonVersion = '2.12.1'
 
 dependencies {
-    spotbugs 'com.github.spotbugs:spotbugs:4.1.4'
+    spotbugs 'com.github.spotbugs:spotbugs:4.2.0'
 
     api "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}"
     api "com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}"
