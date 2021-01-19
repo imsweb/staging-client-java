@@ -7,7 +7,7 @@ plugins {
     id "io.codearte.nexus-staging" version "0.22.0"  // logs into Sonotype OSS and does a "Close" and "Release"
     id 'com.adarshr.test-logger' version '2.1.1'
     id "com.github.ben-manes.versions" version "0.36.0"
-    id 'org.sonatype.gradle.plugins.scan' version '2.0.0'
+    id 'org.sonatype.gradle.plugins.scan' version '2.0.2'
 }
 
 group = 'com.imsweb'
