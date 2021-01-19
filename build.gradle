@@ -101,7 +101,7 @@ dependencyUpdates {
     }
 }
 
-// Nexus vulnerability scan (https://github.com/sonatype-nexus-community/scan-gradle-plugin)
+// Nexus vulnerability scan (see https://github.com/sonatype-nexus-community/scan-gradle-plugin)
 ossIndexAudit {
     dependencyGraph = true
 
