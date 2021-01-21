@@ -50,10 +50,8 @@ dependencies {
     // morphia annotations to make it easier to use in SEER*API
     api 'dev.morphia.morphia:core:1.5.8'
 
-    dependencies {
-        implementation "org.cache2k:cache2k-api:${cache2kVersion}"
-        runtimeOnly "org.cache2k:cache2k-core:${cache2kVersion}"
-    }
+    implementation "org.cache2k:cache2k-api:${cache2kVersion}"
+    runtimeOnly "org.cache2k:cache2k-core:${cache2kVersion}"
 
     implementation 'org.apache.commons:commons-lang3:3.11'
     implementation 'org.ahocorasick:ahocorasick:0.4.0'
