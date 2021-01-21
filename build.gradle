@@ -36,18 +36,22 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    spotbugs 'com.github.spotbugs:spotbugs:4.1.4'
+// shared versions
+def cache2kVersion = '2.0.0.Final'
+def jacksonVersion = '2.12.1'
 
-    api 'com.fasterxml.jackson.core:jackson-core:2.12.1'
-    api 'com.fasterxml.jackson.core:jackson-annotations:2.12.1'
-    api 'com.fasterxml.jackson.core:jackson-databind:2.12.1'
+dependencies {
+    spotbugs 'com.github.spotbugs:spotbugs:4.2.0'
+
+    api "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}"
+    api "com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}"
+    api "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
 
     // morphia annotations to make it easier to use in SEER*API
     api 'dev.morphia.morphia:core:1.5.8'
 
-    implementation "org.cache2k:cache2k-api:1.6.0.Final"
-    implementation "org.cache2k:cache2k-core:1.6.0.Final"
+    implementation "org.cache2k:cache2k-api:${cache2kVersion}"
+    runtimeOnly "org.cache2k:cache2k-core:${cache2kVersion}"
 
     implementation 'org.apache.commons:commons-lang3:3.11'
     implementation 'org.ahocorasick:ahocorasick:0.4.0'
@@ -95,7 +99,7 @@ dependencyUpdates {
     }
 }
 
-// Nexus vulnerability scan (https://github.com/sonatype-nexus-community/scan-gradle-plugin)
+// Nexus vulnerability scan (see https://github.com/sonatype-nexus-community/scan-gradle-plugin)
 ossIndexAudit {
     dependencyGraph = true
 
@@ -195,6 +199,6 @@ nexusStaging {
 }
 
 wrapper {
-    gradleVersion = '6.7'
+    gradleVersion = '6.8'
     distributionType = Wrapper.DistributionType.ALL
 }
