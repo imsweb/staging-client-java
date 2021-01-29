@@ -7,7 +7,7 @@ plugins {
     id "io.codearte.nexus-staging" version "0.22.0"  // logs into Sonotype OSS and does a "Close" and "Release"
     id 'com.adarshr.test-logger' version '2.1.1'
     id "com.github.ben-manes.versions" version "0.36.0"
-    id 'org.sonatype.gradle.plugins.scan' version '2.0.2'
+    id 'org.sonatype.gradle.plugins.scan' version '2.0.3'
 }
 
 group = 'com.imsweb'
@@ -98,6 +98,7 @@ dependencyUpdates {
 // Nexus vulnerability scan (see https://github.com/sonatype-nexus-community/scan-gradle-plugin)
 ossIndexAudit {
     dependencyGraph = true
+    printBanner = false
 
     // only set proxy if running outside of Github Actions
     if (!System.getenv().GITHUB_ACTIONS) {
@@ -195,6 +196,6 @@ nexusStaging {
 }
 
 wrapper {
-    gradleVersion = '6.8'
+    gradleVersion = '6.8.1'
     distributionType = Wrapper.DistributionType.ALL
 }
