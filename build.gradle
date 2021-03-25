@@ -1,17 +1,17 @@
 plugins {
     id 'java-library'
     id 'checkstyle'
-    id "com.github.spotbugs" version "4.6.0"
+    id "com.github.spotbugs" version "4.7.0"
     id 'maven-publish'
     id 'signing'
-    id "io.codearte.nexus-staging" version "0.22.0"  // logs into Sonotype OSS and does a "Close" and "Release"
+    id "io.codearte.nexus-staging" version "0.30.0"  // logs into Sonotype OSS and does a "Close" and "Release"
     id 'com.adarshr.test-logger' version '2.1.1'
-    id "com.github.ben-manes.versions" version "0.36.0"
-    id 'org.sonatype.gradle.plugins.scan' version '2.0.3'
+    id "com.github.ben-manes.versions" version "0.38.0"
+    id 'org.sonatype.gradle.plugins.scan' version '2.0.5'
 }
 
 group = 'com.imsweb'
-version = '5.0.1'
+version = '5.0.2-SNAPSHOT'
 description = 'Java client library for staging calculations'
 
 // fail the build if there are compiler warnings
@@ -37,11 +37,11 @@ repositories {
 }
 
 dependencies {
-    spotbugs 'com.github.spotbugs:spotbugs:4.2.0'
+    spotbugs 'com.github.spotbugs:spotbugs:4.2.2'
 
-    api "com.fasterxml.jackson.core:jackson-core:2.12.1"
-    api "com.fasterxml.jackson.core:jackson-annotations:2.12.1"
-    api "com.fasterxml.jackson.core:jackson-databind:2.12.1"
+    api "com.fasterxml.jackson.core:jackson-core:2.12.2"
+    api "com.fasterxml.jackson.core:jackson-annotations:2.12.2"
+    api "com.fasterxml.jackson.core:jackson-databind:2.12.2"
 
     // morphia annotations to make it easier to use in SEER*API
     api 'dev.morphia.morphia:core:1.5.8'
@@ -49,14 +49,14 @@ dependencies {
     implementation "org.cache2k:cache2k-api:2.0.0.Final"
     runtimeOnly "org.cache2k:cache2k-core:2.0.0.Final"
 
-    implementation 'org.apache.commons:commons-lang3:3.11'
-    implementation 'org.ahocorasick:ahocorasick:0.4.0'
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation 'org.ahocorasick:ahocorasick:0.6.3'
 
     // split the seerapi-client-java dependency to an optional feature
-    updateSupportImplementation 'com.imsweb:seerapi-client-java:3.21'
+    updateSupportImplementation 'com.imsweb:seerapi-client-java:3.22'
 
-    testImplementation 'junit:junit:4.13.1'
-    testImplementation 'org.assertj:assertj-core:3.18.1'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.assertj:assertj-core:3.19.0'
 }
 
 jar {
@@ -196,6 +196,6 @@ nexusStaging {
 }
 
 wrapper {
-    gradleVersion = '6.8.1'
+    gradleVersion = '6.8.3'
     distributionType = Wrapper.DistributionType.ALL
 }
