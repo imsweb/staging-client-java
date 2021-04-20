@@ -48,9 +48,8 @@ Collaborative Stage, which would derive Summary Stage 2000.
 
 ### Collaborative Staging ([view repository](https://github.com/imsweb/staging-algorithm-cs))
 
-Collaborative Stage is a unified data collection system designed to provide a common data set to meet the needs of all three
-staging systems (TNM, SEER EOD, and SEER SS). It provides a comprehensive system to improve data quality by standardizing rules for timing, clinical and pathologic
-assessments, and compatibility across all of the systems for all cancer sites.
+Collaborative Stage is a unified data collection system designed to provide a common data set to meet the needs of all three staging systems (TNM, SEER EOD, and SEER SS). It provides a comprehensive
+system to improve data quality by standardizing rules for timing, clinical and pathologic assessments, and compatibility across all the systems for all cancer sites.
 
 ## Download
 
