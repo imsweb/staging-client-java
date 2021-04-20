@@ -177,7 +177,8 @@ public class BasicStagingTest {
 
         table = new StagingTable();
         table.setId("table_mapping");
-        table.setColumnDefinitions(Arrays.asList(new StagingColumnDefinition("input1", "Input 1", ColumnType.INPUT),
+        table.setColumnDefinitions(Arrays.asList(
+                new StagingColumnDefinition("input1", "Input 1", ColumnType.INPUT),
                 new StagingColumnDefinition("input2", "Input 2", ColumnType.INPUT),
                 new StagingColumnDefinition("mapped_field", "Temp value", ColumnType.INPUT),
                 new StagingColumnDefinition("final_output", "Output", ColumnType.ENDPOINT)));
@@ -185,12 +186,37 @@ public class BasicStagingTest {
         table.getRawRows().add(Arrays.asList("*", "*", "*", "VALUE:ABC"));
         provider.addTable(table);
 
+        table = new StagingTable();
+        table.setId("primary_site");
+        table.setColumnDefinitions(Collections.singletonList(new StagingColumnDefinition("site", "Site", ColumnType.INPUT)));
+        table.setRawRows(new ArrayList<>());
+        table.getRawRows().add(Collections.singletonList("C509"));
+        provider.addTable(table);
+
+        table = new StagingTable();
+        table.setId("histology");
+        table.setColumnDefinitions(Collections.singletonList(new StagingColumnDefinition("hist", "Histology", ColumnType.INPUT)));
+        table.setRawRows(new ArrayList<>());
+        table.getRawRows().add(Collections.singletonList("8000"));
+        provider.addTable(table);
+
+        table = new StagingTable();
+        table.setId("table_year_dx");
+        table.setColumnDefinitions(Collections.singletonList(new StagingColumnDefinition("year_dx", "Year DX", ColumnType.INPUT)));
+        table.setRawRows(new ArrayList<>());
+        table.getRawRows().add(Collections.singletonList("1900-2100"));
+        provider.addTable(table);
+
         StagingSchema schema = new StagingSchema();
         schema.setId("schema_test");
         schema.setSchemaSelectionTable("table_selection");
         List<StagingSchemaInput> inputs = new ArrayList<>();
+        inputs.add(new StagingSchemaInput("site", "Primary Site", "primary_site"));
+        inputs.add(new StagingSchemaInput("hist", "Hist", "histology"));
+        inputs.add(new StagingSchemaInput("year_dx", "Year DX", "table_year_dx"));
         inputs.add(new StagingSchemaInput("input1", "Input 1", "table_input1"));
         inputs.add(new StagingSchemaInput("input2", "Input 2", "table_input2"));
+        inputs.add(new StagingSchemaInput("final_output", "Final Output"));  // field is input and output
         schema.setInputs(inputs);
         schema.setOutputs(Collections.singletonList(new StagingSchemaOutput("final_output", "Final Output")));
 
@@ -211,6 +237,14 @@ public class BasicStagingTest {
 
         // should only return the "real" inputs and not the temp field set in initial context
         assertThat(staging.getInputs(staging.getSchema("schema_test"))).isEqualTo(new HashSet<>(Arrays.asList("input1", "input2")));
+
+        StagingData data = new StagingData("C509", "8000");
+        data.setInput("year_dx", "2018");
+        data.setInput("input1", "1");
+        data.setInput("input2", "B");
+
+        staging.stage(data);
+        assertThat(data.getResult()).isEqualTo(Result.STAGED);
     }
 
     @Test

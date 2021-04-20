@@ -5,9 +5,9 @@ plugins {
     id 'maven-publish'
     id 'signing'
     id "io.codearte.nexus-staging" version "0.30.0"  // logs into Sonotype OSS and does a "Close" and "Release"
-    id 'com.adarshr.test-logger' version '2.1.1'
+    id 'com.adarshr.test-logger' version '3.0.0'
     id "com.github.ben-manes.versions" version "0.38.0"
-    id 'org.sonatype.gradle.plugins.scan' version '2.0.5'
+    id 'org.sonatype.gradle.plugins.scan' version '2.0.7'
 }
 
 group = 'com.imsweb'
@@ -37,11 +37,11 @@ repositories {
 }
 
 dependencies {
-    spotbugs 'com.github.spotbugs:spotbugs:4.2.2'
+    spotbugs 'com.github.spotbugs:spotbugs:4.2.3'
 
-    api "com.fasterxml.jackson.core:jackson-core:2.12.2"
-    api "com.fasterxml.jackson.core:jackson-annotations:2.12.2"
-    api "com.fasterxml.jackson.core:jackson-databind:2.12.2"
+    api "com.fasterxml.jackson.core:jackson-core:2.12.3"
+    api "com.fasterxml.jackson.core:jackson-annotations:2.12.3"
+    api "com.fasterxml.jackson.core:jackson-databind:2.12.3"
 
     // morphia annotations to make it easier to use in SEER*API
     api 'dev.morphia.morphia:core:1.5.8'
@@ -196,6 +196,6 @@ nexusStaging {
 }
 
 wrapper {
-    gradleVersion = '6.8.3'
+    gradleVersion = '7.0'
     distributionType = Wrapper.DistributionType.ALL
 }

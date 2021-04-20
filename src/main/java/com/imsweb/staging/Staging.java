@@ -30,6 +30,7 @@ import com.imsweb.staging.entities.StagingColumnDefinition;
 import com.imsweb.staging.entities.StagingMapping;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingSchemaInput;
+import com.imsweb.staging.entities.StagingSchemaOutput;
 import com.imsweb.staging.entities.StagingTable;
 import com.imsweb.staging.entities.StagingTablePath;
 
@@ -571,7 +572,7 @@ public final class Staging {
         }
 
         // perform the staging
-        Result result = _engine.process(schemas.get(0).getId(), context);
+        Result result = _engine.process(schema.getId(), context);
 
         // remove the context variables
         removeContextKeys(context);
@@ -585,10 +586,15 @@ public final class Staging {
         // remove the original input keys from the resulting context;  in addition, we want to remove any input keys
         // from the resulting context that were set with a default value; to accomplish this remove all keys that are
         // defined as input in the selected schema
+        Set<String> definedOutputs = new HashSet<>();
+        if (schema.getOutputs() != null)
+            definedOutputs = schema.getOutputs().stream().map(StagingSchemaOutput::getKey).collect(Collectors.toSet());
         for (Entry<String, String> entry : data.getInput().entrySet())
-            context.remove(entry.getKey());
-        for (StagingSchemaInput input : schemas.get(0).getInputs())
-            context.remove(input.getKey());
+            if (!definedOutputs.contains(entry.getKey()))
+                context.remove(entry.getKey());
+        for (StagingSchemaInput input : schema.getInputs())
+            if (!definedOutputs.contains(input.getKey()))
+                context.remove(input.getKey());
 
         // add the results to the data card
         data.setOutput(result.getContext());
