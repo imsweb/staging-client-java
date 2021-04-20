@@ -23,11 +23,11 @@ In each EOD schema, valid values, definitions, and registrar notes are provided 
 - Summary Stage 2018
 - Site-Specific Data Items (SSDIs), including grade, pertinent to the schema
 
-For cancer cases diagnosed January 1, 2018 and later, the NCI SEER program will collect Extent of Disease (EOD) revised for 2018 and Summary Stage 2018. The 
-schemas have been developed to be compatible with the AJCC 8th Edition chapter definitions. 
+For cancer cases diagnosed January 1, 2018 and later, the NCI SEER program will collect Extent of Disease (EOD) revised for 2018 and Summary Stage 2018. The schemas have been developed to be
+compatible with the AJCC 8th Edition chapter definitions.
 
-All of the standard setting organizations will collect the predictive and prognostic factors through Site Specific Data Items (SSDIs). Unlike the 
-SSFs, these data items have formats and code structures specific to the data item.
+All the standard setting organizations will collect the predictive and prognostic factors through Site Specific Data Items (SSDIs). Unlike the SSFs, these data items have formats and code structures
+specific to the data item.
 
 
 ### TNM ([view repository](https://github.com/imsweb/staging-algorithm-tnm))
