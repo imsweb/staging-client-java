@@ -18,10 +18,11 @@ public class StagingSchemaInputTest {
         assertEquals(input1, input2);
 
         input1.setKey("key");
-        input2.setKey("key");
         input1.setName("name");
-        input2.setName("name");
+        input1.setTable("table");
         input1.setMetadata(new HashSet<>(Collections.singletonList("META1")));
+
+        input2 = new StagingSchemaInput("key", "name", "table");
         input2.setMetadata(new HashSet<>(Collections.singletonList("META1")));
 
         assertEquals(input1, input2);
@@ -29,5 +30,9 @@ public class StagingSchemaInputTest {
         input2.setMetadata(new HashSet<>(Collections.singletonList("META2")));
 
         assertNotEquals(input1, input2);
+
+        // test copy constructor
+        StagingSchemaInput input3 = new StagingSchemaInput(input1);
+        assertEquals(input1, input3);
     }
 }
