@@ -17,7 +17,7 @@ import dev.morphia.annotations.Property;
 
 import com.imsweb.decisionengine.Output;
 
-@JsonPropertyOrder({"key", "name", "description", "naaccr_item", "naaccr_xml_id", "table"})
+@JsonPropertyOrder({"key", "name", "description", "naaccr_item", "naaccr_xml_id", "table", "default", "metadata"})
 @Embedded
 public class StagingSchemaOutput implements Output {
 
