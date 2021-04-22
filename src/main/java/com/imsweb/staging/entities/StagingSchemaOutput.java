@@ -3,10 +3,14 @@
  */
 package com.imsweb.staging.entities;
 
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Objects;
+import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import dev.morphia.annotations.Embedded;
 import dev.morphia.annotations.Property;
@@ -31,6 +35,8 @@ public class StagingSchemaOutput implements Output {
     private String _table;
     @Property("default")
     private String _default;
+    @Property("metadata")
+    private Set<String> _metadata;
 
     /**
      * Morphia requires a default constructor
@@ -58,8 +64,11 @@ public class StagingSchemaOutput implements Output {
         setName(other.getName());
         setDescription(other.getDescription());
         setNaaccrItem(other.getNaaccrItem());
+        setNaaccrXmlId(other.getNaaccrXmlId());
         setTable(other.getTable());
         setDefault(other.getDefault());
+        if (other.getMetadata() != null)
+            setMetadata(new HashSet<>(other.getMetadata()));
     }
 
     @Override
@@ -128,6 +137,16 @@ public class StagingSchemaOutput implements Output {
         _default = aDefault;
     }
 
+    @JsonProperty("metadata")
+    public Set<String> getMetadata() {
+        return _metadata;
+    }
+
+    @JsonDeserialize(as = LinkedHashSet.class)
+    public void setMetadata(Set<String> metadata) {
+        _metadata = metadata;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -144,12 +163,13 @@ public class StagingSchemaOutput implements Output {
                 Objects.equals(_naaccrItem, that._naaccrItem) &&
                 Objects.equals(_naaccrXmlId, that._naaccrXmlId) &&
                 Objects.equals(_table, that._table) &&
-                Objects.equals(_default, that._default);
+                Objects.equals(_default, that._default) &&
+                Objects.equals(_metadata, that._metadata);
     }
 
     @Override
     public int hashCode() {
         // do not include _parsedValues
-        return Objects.hash(_key, _name, _description, _naaccrItem, _naaccrXmlId, _table, _default);
+        return Objects.hash(_key, _name, _description, _naaccrItem, _naaccrXmlId, _table, _default, _metadata);
     }
 }
