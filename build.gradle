@@ -1,17 +1,17 @@
 plugins {
     id 'java-library'
     id 'checkstyle'
-    id "com.github.spotbugs" version "4.7.0"
+    id "com.github.spotbugs" version "4.7.1"
     id 'maven-publish'
     id 'signing'
     id "io.codearte.nexus-staging" version "0.30.0"  // logs into Sonotype OSS and does a "Close" and "Release"
     id 'com.adarshr.test-logger' version '3.0.0'
     id "com.github.ben-manes.versions" version "0.38.0"
-    id 'org.sonatype.gradle.plugins.scan' version '2.0.7'
+    id 'org.sonatype.gradle.plugins.scan' version '2.0.8'
 }
 
 group = 'com.imsweb'
-version = '5.0.3'
+version = '5.0.4'
 description = 'Java client library for staging calculations'
 
 // fail the build if there are compiler warnings
@@ -53,7 +53,7 @@ dependencies {
     implementation 'org.ahocorasick:ahocorasick:0.4.0'
 
     // split the seerapi-client-java dependency to an optional feature
-    updateSupportImplementation 'com.imsweb:seerapi-client-java:3.22'
+    updateSupportImplementation 'com.imsweb:seerapi-client-java:3.23'
 
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'org.assertj:assertj-core:3.19.0'
