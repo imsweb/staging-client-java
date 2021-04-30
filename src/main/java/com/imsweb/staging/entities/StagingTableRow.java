@@ -12,15 +12,16 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import dev.morphia.annotations.Embedded;
+import dev.morphia.annotations.Property;
 
 import com.imsweb.decisionengine.TableRow;
 
 @Embedded
 public class StagingTableRow implements TableRow {
 
-    @Embedded("inputs")
+    @Property("inputs")
     private Map<String, List<StagingRange>> _inputs = new HashMap<>();
-    @Embedded("endpoints")
+    @Property("endpoints")
     private List<StagingEndpoint> _endpoints = new ArrayList<>();
 
     @Override

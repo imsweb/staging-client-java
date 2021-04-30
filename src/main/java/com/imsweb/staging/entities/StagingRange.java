@@ -8,7 +8,6 @@ import java.util.Map;
 import org.apache.commons.lang3.math.NumberUtils;
 
 import dev.morphia.annotations.Embedded;
-import dev.morphia.annotations.Entity;
 import dev.morphia.annotations.Property;
 
 import com.imsweb.decisionengine.DecisionEngine;
@@ -21,7 +20,6 @@ import com.imsweb.decisionengine.Range;
  * need to add the @Entity to an @Embedded class.  It seems to fix the problem.
  */
 @Embedded
-@Entity(noClassnameStored = true)
 public class StagingRange extends Range {
 
     @Property("low")

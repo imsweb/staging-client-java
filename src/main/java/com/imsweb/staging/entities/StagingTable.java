@@ -15,7 +15,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-import dev.morphia.annotations.Embedded;
 import dev.morphia.annotations.Entity;
 import dev.morphia.annotations.Id;
 import dev.morphia.annotations.Indexed;
@@ -24,7 +23,7 @@ import dev.morphia.annotations.Property;
 import com.imsweb.decisionengine.Table;
 
 @JsonPropertyOrder({"id", "algorithm", "version", "name", "title", "subtitle", "description", "notes", "footnotes", "last_modified", "definition", "extra_input", "rows"})
-@Entity(value = "staging_tables", noClassnameStored = true)
+@Entity(value = "staging_tables")
 public class StagingTable implements Table {
 
     @Id
@@ -52,7 +51,7 @@ public class StagingTable implements Table {
     private String _footnotes;
     @Property("modified")
     private Date _lastModified;
-    @Embedded("definition")
+    @Property("definition")
     private List<StagingColumnDefinition> _definition;
     @Property("extra_input")
     private Set<String> _extraInput;
@@ -60,7 +59,7 @@ public class StagingTable implements Table {
     private List<List<String>> _rows = new ArrayList<>();
 
     // parsed fields
-    @Embedded("parsed_table_rows")
+    @Property("parsed_table_rows")
     private List<StagingTableRow> _parsedTableRows = new ArrayList<>();
 
     /**

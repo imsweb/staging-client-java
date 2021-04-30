@@ -25,13 +25,13 @@ public class StagingMapping implements Mapping {
     private String _id;
     @Property("name")
     private String _name;
-    @Embedded("inclusion_tables")
+    @Property("inclusion_tables")
     private List<StagingTablePath> _inclusionTables;
-    @Embedded("exclusion_tables")
+    @Property("exclusion_tables")
     private List<StagingTablePath> _exclusionTables;
-    @Embedded("initial_context")
+    @Property("initial_context")
     private Set<StagingKeyValue> _initialContext;
-    @Embedded("tables")
+    @Property("tables")
     private List<StagingTablePath> _tablePaths;
 
     /**
