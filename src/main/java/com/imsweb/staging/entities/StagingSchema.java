@@ -27,7 +27,7 @@ import com.imsweb.decisionengine.Definition;
 
 @JsonPropertyOrder({"id", "algorithm", "version", "name", "title", "subtitle", "description", "notes", "schema_num", "schema_selection_table",
         "schema_discriminators", "initial_context", "inputs", "outputs", "mappings", "involved_tables", "on_invalid_input", "last_modified"})
-@Entity(value = "staging_schemas")
+@Entity(value = "staging_schemas", useDiscriminator = false)
 public class StagingSchema implements Definition {
 
     @Id

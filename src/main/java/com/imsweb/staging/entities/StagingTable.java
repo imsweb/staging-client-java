@@ -23,7 +23,7 @@ import dev.morphia.annotations.Property;
 import com.imsweb.decisionengine.Table;
 
 @JsonPropertyOrder({"id", "algorithm", "version", "name", "title", "subtitle", "description", "notes", "footnotes", "last_modified", "definition", "extra_input", "rows"})
-@Entity(value = "staging_tables")
+@Entity(value = "staging_tables", useDiscriminator = false)
 public class StagingTable implements Table {
 
     @Id
