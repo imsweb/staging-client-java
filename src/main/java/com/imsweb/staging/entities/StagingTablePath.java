@@ -22,13 +22,13 @@ public class StagingTablePath implements TablePath {
 
     @Property("id")
     private String _id;
-    @Embedded("input_mapping")
+    @Property("input_mapping")
     private Set<StagingKeyMapping> _inputMapping;
-    @Embedded("output_mapping")
+    @Property("output_mapping")
     private Set<StagingKeyMapping> _outputMapping;
-    @Embedded("inputs")
+    @Property("inputs")
     private Set<String> _inputs;
-    @Embedded("outputs")
+    @Property("outputs")
     private Set<String> _outputs;
 
     /**

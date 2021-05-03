@@ -18,7 +18,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-import dev.morphia.annotations.Embedded;
 import dev.morphia.annotations.Entity;
 import dev.morphia.annotations.Id;
 import dev.morphia.annotations.Indexed;
@@ -28,7 +27,7 @@ import com.imsweb.decisionengine.Definition;
 
 @JsonPropertyOrder({"id", "algorithm", "version", "name", "title", "subtitle", "description", "notes", "schema_num", "schema_selection_table",
         "schema_discriminators", "initial_context", "inputs", "outputs", "mappings", "involved_tables", "on_invalid_input", "last_modified"})
-@Entity(value = "staging_schemas", noClassnameStored = true)
+@Entity(value = "staging_schemas", useDiscriminator = false)
 public class StagingSchema implements Definition {
 
     @Id
@@ -56,17 +55,17 @@ public class StagingSchema implements Definition {
     private Date _lastModified;
     @Property("schema_num")
     private Integer _schemaNum;
-    @Embedded("schema_selection_table")
+    @Property("schema_selection_table")
     private String _schemaSelectionTable;
-    @Embedded("schema_discriminators")
+    @Property("schema_discriminators")
     private Set<String> _schemaDiscriminators;
-    @Embedded("inputs")
+    @Property("inputs")
     private List<StagingSchemaInput> _inputs;
-    @Embedded("outputs")
+    @Property("outputs")
     private List<StagingSchemaOutput> _outputs;
-    @Embedded("initial_context")
+    @Property("initial_context")
     private Set<StagingKeyValue> _initialContext;
-    @Embedded("mappings")
+    @Property("mappings")
     private List<StagingMapping> _mappings;
     @Property("involved_tables")
     private Set<String> _involvedTables;
@@ -74,9 +73,9 @@ public class StagingSchema implements Definition {
     private StagingInputErrorHandler _onInvalidInput;
 
     // parsed fields
-    @Embedded("parsed_input_map")
+    @Property("parsed_input_map")
     private Map<String, StagingSchemaInput> _parsedInputMap = new HashMap<>();
-    @Embedded("parsed_output_map")
+    @Property("parsed_output_map")
     private Map<String, StagingSchemaOutput> _parsedOutputMap = new HashMap<>();
 
     /**
