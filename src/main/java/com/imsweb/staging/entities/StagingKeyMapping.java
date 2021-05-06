@@ -8,13 +8,13 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-import dev.morphia.annotations.Embedded;
+import dev.morphia.annotations.Entity;
 import dev.morphia.annotations.Property;
 
 import com.imsweb.decisionengine.KeyMapping;
 
 @JsonPropertyOrder({"from", "to"})
-@Embedded
+@Entity
 public class StagingKeyMapping implements KeyMapping {
 
     @Property("from")

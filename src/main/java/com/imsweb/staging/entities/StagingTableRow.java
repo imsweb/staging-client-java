@@ -11,12 +11,12 @@ import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import dev.morphia.annotations.Embedded;
+import dev.morphia.annotations.Entity;
 import dev.morphia.annotations.Property;
 
 import com.imsweb.decisionengine.TableRow;
 
-@Embedded
+@Entity
 public class StagingTableRow implements TableRow {
 
     @Property("inputs")

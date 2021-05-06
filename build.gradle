@@ -11,7 +11,7 @@ plugins {
 }
 
 group = 'com.imsweb'
-version = '5.0.6'
+version = '5.0.7-SNAPSHOT'
 description = 'Java client library for staging calculations'
 
 // fail the build if there are compiler warnings
@@ -34,6 +34,11 @@ java {
 
 repositories {
     mavenCentral()
+
+    // Keep SNAPSHOT repository commented out unless needed
+    maven {
+        url = 'https://oss.sonatype.org/content/repositories/snapshots/'
+    }
 }
 
 dependencies {
@@ -44,7 +49,7 @@ dependencies {
     api "com.fasterxml.jackson.core:jackson-databind:2.12.3"
 
     // morphia annotations to make it easier to use in SEER*API
-    api 'dev.morphia.morphia:morphia-core:2.1.5'
+    api 'dev.morphia.morphia:morphia-core:2.2.0-SNAPSHOT:annotations'
 
     implementation "org.cache2k:cache2k-api:2.0.0.Final"
     runtimeOnly "org.cache2k:cache2k-core:2.0.0.Final"

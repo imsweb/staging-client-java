@@ -11,13 +11,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-import dev.morphia.annotations.Embedded;
+import dev.morphia.annotations.Entity;
 import dev.morphia.annotations.Property;
 
 import com.imsweb.decisionengine.TablePath;
 
 @JsonPropertyOrder({"id", "input_mapping", "output_mapping", "inputs", "outputs"})
-@Embedded
+@Entity
 public class StagingTablePath implements TablePath {
 
     @Property("id")

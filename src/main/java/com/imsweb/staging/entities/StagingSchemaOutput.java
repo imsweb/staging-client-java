@@ -12,13 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-import dev.morphia.annotations.Embedded;
+import dev.morphia.annotations.Entity;
 import dev.morphia.annotations.Property;
 
 import com.imsweb.decisionengine.Output;
 
 @JsonPropertyOrder({"key", "name", "description", "naaccr_item", "naaccr_xml_id", "table", "default", "metadata"})
-@Embedded
+@Entity
 public class StagingSchemaOutput implements Output {
 
     @Property("key")
