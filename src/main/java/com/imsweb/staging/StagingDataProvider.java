@@ -291,7 +291,8 @@ public abstract class StagingDataProvider implements DataProvider {
                             convertedRanges.add(new StagingRange(low, high));
                         else
                             convertedRanges.add(new StagingRange(range.trim(), range.trim()));
-                    } else
+                    }
+                    else
                         convertedRanges.add(new StagingRange(range.trim(), range.trim()));
                 }
             }
