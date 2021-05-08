@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * A definition which can be processed by DecisionEngine
+ * A schema which can be processed by DecisionEngine
  */
 public interface Schema {
 
