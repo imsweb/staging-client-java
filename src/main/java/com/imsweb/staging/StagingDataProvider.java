@@ -237,7 +237,8 @@ public abstract class StagingDataProvider implements DataProvider {
 
         try {
             type = EndpointType.valueOf(parts[0].trim());
-        } catch (IllegalArgumentException e) {
+        }
+        catch (IllegalArgumentException e) {
             // catch exception; it will be re-thrown below
         }
 
