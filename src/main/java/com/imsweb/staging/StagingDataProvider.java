@@ -3,28 +3,11 @@
  */
 package com.imsweb.staging;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TimeZone;
-import java.util.stream.Collectors;
-
-import org.ahocorasick.trie.Trie;
-import org.cache2k.Cache;
-import org.cache2k.Cache2kBuilder;
-
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.DataProvider;
 import com.imsweb.decisionengine.DecisionEngine;
@@ -41,6 +24,21 @@ import com.imsweb.staging.entities.StagingSchemaInput;
 import com.imsweb.staging.entities.StagingSchemaOutput;
 import com.imsweb.staging.entities.StagingTable;
 import com.imsweb.staging.entities.StagingTableRow;
+import org.ahocorasick.trie.Trie;
+import org.cache2k.Cache;
+import org.cache2k.Cache2kBuilder;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TimeZone;
+import java.util.stream.Collectors;
 
 import static com.imsweb.staging.Staging.CONTEXT_KEYS;
 
@@ -394,7 +392,7 @@ public abstract class StagingDataProvider implements DataProvider {
     public abstract StagingTable getTable(String id);
 
     @Override
-    public abstract StagingSchema getDefinition(String id);
+    public abstract StagingSchema getSchema(String id);
 
     /**
      * Return a set of all schema identifiers
@@ -495,7 +493,7 @@ public abstract class StagingDataProvider implements DataProvider {
         if (site != null || histology != null) {
             // loop over selection table and match using only the supplied keys
             for (String schemaId : getSchemaIds()) {
-                StagingSchema schema = getDefinition(schemaId);
+                StagingSchema schema = getSchema(schemaId);
 
                 if (schema.getSchemaSelectionTable() != null) {
                     StagingTable table = getTable(schema.getSchemaSelectionTable());

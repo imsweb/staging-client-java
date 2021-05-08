@@ -3,6 +3,11 @@
  */
 package com.imsweb.decisionengine;
 
+import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
+import com.imsweb.decisionengine.Endpoint.EndpointType;
+import com.imsweb.decisionengine.Error.ErrorBuilder;
+import com.imsweb.decisionengine.Error.Type;
+
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -18,11 +23,6 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-
-import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
-import com.imsweb.decisionengine.Endpoint.EndpointType;
-import com.imsweb.decisionengine.Error.ErrorBuilder;
-import com.imsweb.decisionengine.Error.Type;
 
 /**
  * An engine for processing declarative algorithms.
@@ -291,9 +291,10 @@ public class DecisionEngine {
     }
 
     /**
-     * Given a definition and context, return a list of mappings that match inclusion and exclusion criteria
+     * Given a schema and context, return a list of mappings that match inclusion and exclusion criteria
+     * Given a schema and context, return a list of mappings that match inclusion and exclusion criteria
      *
-     * @param schema  a Definition
+     * @param schema  a Schema
      * @param context a Map containing the context
      * @return a List of involved Mapping entities
      */
@@ -315,11 +316,11 @@ public class DecisionEngine {
     /**
      * Return a list of tables involved in a definition
      *
-     * @param definitionId an Definition identifier
+     * @param definitionId an schema identifier
      * @return a set of table identifiers
      */
     public Set<String> getInvolvedTables(String definitionId) {
-        Schema schema = getProvider().getDefinition(definitionId);
+        Schema schema = getProvider().getSchema(definitionId);
 
         if (schema == null)
             throw new IllegalStateException("Unknown starting table: '" + definitionId + "'");
@@ -330,7 +331,7 @@ public class DecisionEngine {
     /**
      * Return a list of tables involved in an definition.  This includes not only the tables paths, but also tables references in the input section.
      *
-     * @param schema a Definition
+     * @param schema a schema
      * @return a set of table identifiers
      */
     public Set<String> getInvolvedTables(Schema schema) {
@@ -510,8 +511,8 @@ public class DecisionEngine {
     /**
      * Looks at all tables involved in all the mappings in the definition and returns a list of inputs that are used.  It will also deal with mapped inputs.
      *
-     * @param schema a Definition
-     * @return a Set of Strings contianing the unique Definition input keys
+     * @param schema a schema
+     * @return a Set of Strings containing the unique schema input keys
      */
     public Set<String> getInputs(Schema schema) {
         Set<String> inputs = new LinkedHashSet<>();
@@ -574,7 +575,7 @@ public class DecisionEngine {
     /**
      * Looks at all tables involved in all the mappings in the definition and returns a list of outputs produced.  It will also handle mapped outputs.
      *
-     * @param schema a Definition
+     * @param schema a schema
      * @return a Set of Strings containing the unique Mapping output keys
      */
     public Set<String> getOutputs(Schema schema) {
@@ -590,12 +591,12 @@ public class DecisionEngine {
     /**
      * Using the supplied context, process an definition.  The results will be added to the context.
      *
-     * @param definitionId an Definition identifier
+     * @param definitionId an schema identifier
      * @param context      a Map containing the context
      * @return a Result
      */
     public Result process(String definitionId, Map<String, String> context) {
-        Schema start = getProvider().getDefinition(definitionId);
+        Schema start = getProvider().getSchema(definitionId);
 
         if (start == null)
             throw new IllegalStateException("Unknown definition: '" + definitionId + "'");
@@ -606,7 +607,7 @@ public class DecisionEngine {
     /**
      * Using the supplied context, process a definition.  The results will be added to the context.
      *
-     * @param schema  a Definition
+     * @param schema  a schema
      * @param context a Map containing the context
      * @return a Result
      */

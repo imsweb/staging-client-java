@@ -16,10 +16,11 @@ public interface DataProvider {
     Table getTable(String id);
 
     /**
-     * Get an definition by identifier
-     * @param id the definition id
-     * @return a Definition instance or null if identifier was not found
+     * Get a schema by identifier
+     *
+     * @param id the schema id
+     * @return a Schema instance or null if identifier was not found
      */
-    Schema getDefinition(String id);
+    Schema getSchema(String id);
 
 }

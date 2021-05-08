@@ -3,17 +3,17 @@
  */
 package com.imsweb.decisionengine.basic;
 
+import com.imsweb.decisionengine.DataProvider;
+import com.imsweb.decisionengine.DecisionEngine;
+import com.imsweb.decisionengine.Endpoint.EndpointType;
+import com.imsweb.staging.Staging;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
-import com.imsweb.decisionengine.DataProvider;
-import com.imsweb.decisionengine.DecisionEngine;
-import com.imsweb.decisionengine.Endpoint.EndpointType;
-import com.imsweb.staging.Staging;
 
 /**
  * In implementation of DataProvider which holds all data in memory
@@ -215,7 +215,7 @@ public class BasicDataProvider implements DataProvider {
     }
 
     @Override
-    public BasicSchema getDefinition(String id) {
+    public BasicSchema getSchema(String id) {
         return _definitions.get(id);
     }
 

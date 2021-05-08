@@ -4,6 +4,20 @@
  */
 package com.imsweb.decisionengine;
 
+import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
+import com.imsweb.decisionengine.Endpoint.EndpointType;
+import com.imsweb.decisionengine.Result.Type;
+import com.imsweb.decisionengine.basic.BasicDataProvider;
+import com.imsweb.decisionengine.basic.BasicInput;
+import com.imsweb.decisionengine.basic.BasicMapping;
+import com.imsweb.decisionengine.basic.BasicOutput;
+import com.imsweb.decisionengine.basic.BasicRange;
+import com.imsweb.decisionengine.basic.BasicSchema;
+import com.imsweb.decisionengine.basic.BasicTable;
+import com.imsweb.decisionengine.basic.BasicTablePath;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -13,28 +27,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
-
-import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
-import com.imsweb.decisionengine.Endpoint.EndpointType;
-import com.imsweb.decisionengine.Result.Type;
-import com.imsweb.decisionengine.basic.BasicDataProvider;
-import com.imsweb.decisionengine.basic.BasicSchema;
-import com.imsweb.decisionengine.basic.BasicInput;
-import com.imsweb.decisionengine.basic.BasicMapping;
-import com.imsweb.decisionengine.basic.BasicOutput;
-import com.imsweb.decisionengine.basic.BasicRange;
-import com.imsweb.decisionengine.basic.BasicTable;
-import com.imsweb.decisionengine.basic.BasicTablePath;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 /**
  * Test class for DecisionEngine
@@ -693,7 +688,7 @@ public class DecisionEngineTest {
 
     @Test
     public void testMinimumAlgorithm() {
-        Schema minSchema = _ENGINE.getProvider().getDefinition("starting_min");
+        Schema minSchema = _ENGINE.getProvider().getSchema("starting_min");
         assertNotNull(minSchema);
         assertEquals("starting_min", minSchema.getId());
         assertNotNull(minSchema.getInitialContext());
@@ -707,7 +702,7 @@ public class DecisionEngineTest {
 
     @Test
     public void testAlgorithm() {
-        Schema starting = _ENGINE.getProvider().getDefinition("starting_sample");
+        Schema starting = _ENGINE.getProvider().getSchema("starting_sample");
         assertNotNull(starting);
         assertEquals("starting_sample", starting.getId());
         assertNotNull(starting.getInitialContext());
@@ -979,11 +974,11 @@ public class DecisionEngineTest {
         List<Mapping> mappings;
         Map<String, String> context = new HashMap<>();
 
-        Schema schema = _ENGINE.getProvider().getDefinition("starting_min");
+        Schema schema = _ENGINE.getProvider().getSchema("starting_min");
         mappings = _ENGINE.getInvolvedMappings(schema, context);
         assertEquals(0, mappings.size());
 
-        schema = _ENGINE.getProvider().getDefinition("starting_inclusions");
+        schema = _ENGINE.getProvider().getSchema("starting_inclusions");
 
         mappings = _ENGINE.getInvolvedMappings(schema, context);
         assertEquals(1, mappings.size());
@@ -1267,26 +1262,26 @@ public class DecisionEngineTest {
     public void testAlgorithmInputs() {
         DataProvider provider = _ENGINE.getProvider();
 
-        assertEquals(asSet(), _ENGINE.getInputs(provider.getDefinition("starting_min")));
-        assertEquals(asSet("a", "b", "c", "e"), _ENGINE.getInputs(provider.getDefinition("starting_sample")));
-        assertEquals(asSet("a", "b", "c"), _ENGINE.getInputs(provider.getDefinition("starting_inclusions")));
-        assertEquals(asSet("a"), _ENGINE.getInputs(provider.getDefinition("starting_recursion")));
-        assertEquals(asSet("a", "b", "c"), _ENGINE.getInputs(provider.getDefinition("starting_multiple_endpoints")));
-        assertEquals(asSet("b", "not_in_input_list"), _ENGINE.getInputs(provider.getDefinition("starting_inclusions_extra_inputs")));
-        assertEquals(asSet("main_input"), _ENGINE.getInputs(provider.getDefinition("starting_intermediate_values")));
+        assertEquals(asSet(), _ENGINE.getInputs(provider.getSchema("starting_min")));
+        assertEquals(asSet("a", "b", "c", "e"), _ENGINE.getInputs(provider.getSchema("starting_sample")));
+        assertEquals(asSet("a", "b", "c"), _ENGINE.getInputs(provider.getSchema("starting_inclusions")));
+        assertEquals(asSet("a"), _ENGINE.getInputs(provider.getSchema("starting_recursion")));
+        assertEquals(asSet("a", "b", "c"), _ENGINE.getInputs(provider.getSchema("starting_multiple_endpoints")));
+        assertEquals(asSet("b", "not_in_input_list"), _ENGINE.getInputs(provider.getSchema("starting_inclusions_extra_inputs")));
+        assertEquals(asSet("main_input"), _ENGINE.getInputs(provider.getSchema("starting_intermediate_values")));
     }
 
     @Test
     public void testGetAlgorithmOutputs() {
         DataProvider provider = _ENGINE.getProvider();
 
-        assertEquals(asSet(), _ENGINE.getOutputs(provider.getDefinition("starting_min")));
-        assertEquals(asSet("result", "shared_result"), _ENGINE.getOutputs(provider.getDefinition("starting_sample")));
-        assertEquals(asSet("result", "special"), _ENGINE.getOutputs(provider.getDefinition("starting_inclusions")));
-        assertEquals(asSet("result"), _ENGINE.getOutputs(provider.getDefinition("starting_recursion")));
-        assertEquals(asSet("result", "r1", "r2", "r3"), _ENGINE.getOutputs(provider.getDefinition("starting_multiple_endpoints")));
-        assertEquals(asSet("mapped_result"), _ENGINE.getOutputs(provider.getDefinition("starting_inclusions_extra_inputs")));
-        assertEquals(asSet("intermediate_output", "final_output"), _ENGINE.getOutputs(provider.getDefinition("starting_intermediate_values")));
+        assertEquals(asSet(), _ENGINE.getOutputs(provider.getSchema("starting_min")));
+        assertEquals(asSet("result", "shared_result"), _ENGINE.getOutputs(provider.getSchema("starting_sample")));
+        assertEquals(asSet("result", "special"), _ENGINE.getOutputs(provider.getSchema("starting_inclusions")));
+        assertEquals(asSet("result"), _ENGINE.getOutputs(provider.getSchema("starting_recursion")));
+        assertEquals(asSet("result", "r1", "r2", "r3"), _ENGINE.getOutputs(provider.getSchema("starting_multiple_endpoints")));
+        assertEquals(asSet("mapped_result"), _ENGINE.getOutputs(provider.getSchema("starting_inclusions_extra_inputs")));
+        assertEquals(asSet("intermediate_output", "final_output"), _ENGINE.getOutputs(provider.getSchema("starting_intermediate_values")));
     }
 
     @Test

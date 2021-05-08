@@ -3,15 +3,15 @@
  */
 package com.imsweb.staging;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.GlossaryHit;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingTable;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * In implementation of DataProvider which holds all data in memory
@@ -64,7 +64,7 @@ public class InMemoryDataProvider extends StagingDataProvider {
     }
 
     @Override
-    public StagingSchema getDefinition(String id) {
+    public StagingSchema getSchema(String id) {
         return _schemas.get(id);
     }
 

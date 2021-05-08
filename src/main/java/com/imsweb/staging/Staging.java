@@ -3,20 +3,6 @@
  */
 package com.imsweb.staging;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.DecisionEngine;
 import com.imsweb.decisionengine.Error;
@@ -33,6 +19,20 @@ import com.imsweb.staging.entities.StagingSchemaInput;
 import com.imsweb.staging.entities.StagingSchemaOutput;
 import com.imsweb.staging.entities.StagingTable;
 import com.imsweb.staging.entities.StagingTablePath;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import static com.imsweb.decisionengine.ColumnDefinition.ColumnType.DESCRIPTION;
 
@@ -96,7 +96,7 @@ public final class Staging {
      * @return an Algorithm object
      */
     public StagingSchema getSchema(String id) {
-        return _provider.getDefinition(id);
+        return _provider.getSchema(id);
     }
 
     /**

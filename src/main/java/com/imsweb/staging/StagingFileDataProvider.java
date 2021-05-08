@@ -3,6 +3,12 @@
  */
 package com.imsweb.staging;
 
+import com.imsweb.staging.entities.GlossaryDefinition;
+import com.imsweb.staging.entities.StagingSchema;
+import com.imsweb.staging.entities.StagingTable;
+import org.ahocorasick.trie.Trie;
+import org.ahocorasick.trie.Trie.TrieBuilder;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,13 +19,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
-
-import org.ahocorasick.trie.Trie;
-import org.ahocorasick.trie.Trie.TrieBuilder;
-
-import com.imsweb.staging.entities.GlossaryDefinition;
-import com.imsweb.staging.entities.StagingSchema;
-import com.imsweb.staging.entities.StagingTable;
 
 /**
  * Implementation of DataProvider which loads from internal directories and holds all data in memory
@@ -170,7 +169,7 @@ public class StagingFileDataProvider extends StagingDataProvider {
     }
 
     @Override
-    public StagingSchema getDefinition(String id) {
+    public StagingSchema getSchema(String id) {
         return _schemas.get(id);
     }
 
