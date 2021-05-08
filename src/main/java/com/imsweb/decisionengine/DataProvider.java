@@ -20,6 +20,6 @@ public interface DataProvider {
      * @param id the definition id
      * @return a Definition instance or null if identifier was not found
      */
-    Definition getDefinition(String id);
+    Schema getDefinition(String id);
 
 }

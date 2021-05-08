@@ -10,7 +10,7 @@ import java.util.Set;
 /**
  * A definition which can be processed by DecisionEngine
  */
-public interface Definition {
+public interface Schema {
 
     enum StagingInputErrorHandler {
         // continue staging

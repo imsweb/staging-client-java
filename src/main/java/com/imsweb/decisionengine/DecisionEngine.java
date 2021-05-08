@@ -31,11 +31,12 @@ public class DecisionEngine {
 
     // string to use for blank or null in error strings
     public static final String _BLANK_OUTPUT = "<blank>";
-    private static Pattern _TEMPLATE_REFERENCE = Pattern.compile("\\{\\{(.*?)\\}\\}");
+    private static final Pattern _TEMPLATE_REFERENCE = Pattern.compile("\\{\\{(.*?)\\}\\}");
     private DataProvider _provider;
 
     /**
      * Construct the decision engine with the passed data provider
+     *
      * @param provider a DataProvider
      */
     public DecisionEngine(DataProvider provider) {
@@ -44,6 +45,7 @@ public class DecisionEngine {
 
     /**
      * Checked whether the value is a reference to another variable or context
+     *
      * @param value String value
      * @return true if the value is a reference to another variable or context
      */
@@ -53,6 +55,7 @@ public class DecisionEngine {
 
     /**
      * Takes a key reference, like {{key}} and returns just the key ("key" in this example)
+     *
      * @param value a key refrerence
      * @return the inner key
      */
@@ -65,7 +68,8 @@ public class DecisionEngine {
 
     /**
      * Return the list of endpoints for the matching row in the table; returns null if there is no match
-     * @param table a Table
+     *
+     * @param table   a Table
      * @param context a Map containing the context
      * @return returns a List of Endpoint entities from the matching row or null if no match
      */
@@ -75,8 +79,9 @@ public class DecisionEngine {
 
     /**
      * Return the list of endpoints for the matching row in the table; returns null if there is no match
-     * @param table a Table
-     * @param context a Map containing the context
+     *
+     * @param table       a Table
+     * @param context     a Map containing the context
      * @param keysToMatch if not null, only keys in this set will be matched against
      * @return returns a List of Endpoint entities from the matching row or null if no match
      */
@@ -92,7 +97,8 @@ public class DecisionEngine {
 
     /**
      * Return the matching table row index based on the passed context
-     * @param table a Table
+     *
+     * @param table   a Table
      * @param context a Map containing the context
      * @return the index of the matching table row or null if no match was found
      */
@@ -102,8 +108,9 @@ public class DecisionEngine {
 
     /**
      * Return the matching table row index based on the passed context
-     * @param table a Table
-     * @param context a Map containing the context
+     *
+     * @param table       a Table
+     * @param context     a Map containing the context
      * @param keysToMatch if not null, only keys in this set will be matched against
      * @return the index of the matching table row or null if no match was found
      */
@@ -135,8 +142,9 @@ public class DecisionEngine {
 
     /**
      * Tests that a value is contained in a list of ranges; if the list of ranges is missing or empty, then all values will match to it
-     * @param values a List of Range objects
-     * @param value a value to look for
+     *
+     * @param values  a List of Range objects
+     * @param value   a value to look for
      * @param context the context will be used to do key lookups when values are in the format of {{var}}
      * @return return true if the value is contained in the List of Range objects
      */
@@ -157,7 +165,8 @@ public class DecisionEngine {
     /**
      * Translates a value.  If it is a reference to a context, like {{var}} it will return the context value; otherwise
      * if will return the value unchanged.  If the context key does not exist in the context, blank will be returned
-     * @param value String value
+     *
+     * @param value   String value
      * @param context Context for handling variable references
      * @return the context value if a reference, otherwise the original value is returned
      */
@@ -175,7 +184,8 @@ public class DecisionEngine {
 
     /**
      * Return a comma-separated list of input values the table needs taken from the passed context.  Used for error message.
-     * @param table a Table
+     *
+     * @param table   a Table
      * @param context a Map of context
      * @return a String representing the input for the table
      */
@@ -189,11 +199,12 @@ public class DecisionEngine {
                     inputs.add((value == null || value.trim().isEmpty()) ? _BLANK_OUTPUT : value.trim());
                 }
 
-        return inputs.stream().collect(Collectors.joining(","));
+        return String.join(",", inputs);
     }
 
     /**
      * Returns the internal data provider
+     *
      * @return a DataProvider
      */
     public DataProvider getProvider() {
@@ -202,6 +213,7 @@ public class DecisionEngine {
 
     /**
      * Sets the provider and initiaizes all definitions and tables
+     *
      * @param provider a DataProvider
      */
     public void setProvider(DataProvider provider) {
@@ -210,6 +222,7 @@ public class DecisionEngine {
 
     /**
      * Given a mapping and a context, check the inclusion/exclusion tables to see if mapping should be processed
+     *
      * @param mapping a Mapping
      * @param context a Map containing the context
      * @return true if the mapping is involved
@@ -279,18 +292,19 @@ public class DecisionEngine {
 
     /**
      * Given a definition and context, return a list of mappings that match inclusion and exclusion criteria
-     * @param definition a Definition
+     *
+     * @param schema  a Definition
      * @param context a Map containing the context
      * @return a List of involved Mapping entities
      */
-    public List<Mapping> getInvolvedMappings(Definition definition, Map<String, String> context) {
+    public List<Mapping> getInvolvedMappings(Schema schema, Map<String, String> context) {
         List<Mapping> mappings = new ArrayList<>();
 
         if (context == null)
             throw new IllegalStateException("Context must not be missing");
 
-        if (definition.getMappings() != null) {
-            for (Mapping mapping : definition.getMappings())
+        if (schema.getMappings() != null) {
+            for (Mapping mapping : schema.getMappings())
                 if (isMappingInvolved(mapping, context))
                     mappings.add(mapping);
         }
@@ -300,41 +314,43 @@ public class DecisionEngine {
 
     /**
      * Return a list of tables involved in a definition
+     *
      * @param definitionId an Definition identifier
      * @return a set of table identifiers
      */
     public Set<String> getInvolvedTables(String definitionId) {
-        Definition definition = getProvider().getDefinition(definitionId);
+        Schema schema = getProvider().getDefinition(definitionId);
 
-        if (definition == null)
+        if (schema == null)
             throw new IllegalStateException("Unknown starting table: '" + definitionId + "'");
 
-        return getInvolvedTables(definition);
+        return getInvolvedTables(schema);
     }
 
     /**
      * Return a list of tables involved in an definition.  This includes not only the tables paths, but also tables references in the input section.
-     * @param definition a Definition
+     *
+     * @param schema a Definition
      * @return a set of table identifiers
      */
-    public Set<String> getInvolvedTables(Definition definition) {
+    public Set<String> getInvolvedTables(Schema schema) {
         Set<String> tables = new LinkedHashSet<>();
 
         // first, evaluate inputs and outputs
-        for (String key : definition.getInputMap().keySet()) {
-            Input input = definition.getInputMap().get(key);
+        for (String key : schema.getInputMap().keySet()) {
+            Input input = schema.getInputMap().get(key);
             if (input.getTable() != null)
                 getInvolvedTables(getProvider().getTable(input.getTable()), tables);
         }
-        for (String key : definition.getOutputMap().keySet()) {
-            Output output = definition.getOutputMap().get(key);
+        for (String key : schema.getOutputMap().keySet()) {
+            Output output = schema.getOutputMap().get(key);
             if (output.getTable() != null)
                 getInvolvedTables(getProvider().getTable(output.getTable()), tables);
         }
 
         // next loop over mappings and paths
-        if (definition.getMappings() != null) {
-            for (Mapping mapping : definition.getMappings()) {
+        if (schema.getMappings() != null) {
+            for (Mapping mapping : schema.getMappings()) {
                 // handle inclusion tables
                 if (mapping.getInclusionTables() != null)
                     for (TablePath path : mapping.getInclusionTables())
@@ -357,7 +373,8 @@ public class DecisionEngine {
 
     /**
      * Internal recursive helper function to find the tables that could be called from within a table, stepping through all JUMPs
-     * @param table a Table
+     *
+     * @param table  a Table
      * @param tables a Set of Strings representing the involved table identifiers
      * @return the same Set that was passed in, with possibly extra table identifiers added
      */
@@ -386,6 +403,7 @@ public class DecisionEngine {
      * Note that if an output key is added during the mapping and used as an input in one of the later tables, we do not want
      * to include it in the final list of inputs.  Order matters here since if the key was already used as an input before being
      * re-mapped, then it is still considered an input, otherwise if should be excluded.
+     *
      * @param path a TablePath
      * @return a Set of unique inputs
      */
@@ -398,7 +416,8 @@ public class DecisionEngine {
      * Note that if an output key is added during the mapping and used as an input in one of the later tables, we do not want
      * to include it in the final list of inputs.  Order matters here since if the key was already used as an input before being
      * re-mapped, then it is still considered an input, otherwise if should be excluded.
-     * @param path a TablePath
+     *
+     * @param path           a TablePath
      * @param excludedInputs a list of keys that should not be included in the inputs
      * @return a Set of unique inputs
      */
@@ -427,8 +446,7 @@ public class DecisionEngine {
                                 String inputKey = inputMappings.containsKey(def.getKey()) ? inputMappings.get(def.getKey()) : def.getKey();
                                 if (!excludedInputs.contains(inputKey))
                                     inputs.add(inputKey);
-                            }
-                            else if (ColumnType.ENDPOINT.equals(def.getType())) {
+                            } else if (ColumnType.ENDPOINT.equals(def.getType())) {
                                 String outputKey = outputMappings.containsKey(def.getKey()) ? outputMappings.get(def.getKey()) : def.getKey();
                                 if (!inputs.contains(outputKey))
                                     excludedInputs.add(outputKey);
@@ -457,7 +475,8 @@ public class DecisionEngine {
     /**
      * Looks at all tables involved in the mapping and returns a list of inputs that are used.  This also includes the inputs
      * used in the inclusion and exclusion tables if any.
-     * @param mapping a Mapping
+     *
+     * @param mapping        a Mapping
      * @param excludedInputs a list of keys that should not be included in the inputs
      * @return a Set of unique inputs
      */
@@ -490,15 +509,16 @@ public class DecisionEngine {
 
     /**
      * Looks at all tables involved in all the mappings in the definition and returns a list of inputs that are used.  It will also deal with mapped inputs.
-     * @param definition a Definition
+     *
+     * @param schema a Definition
      * @return a Set of Strings contianing the unique Definition input keys
      */
-    public Set<String> getInputs(Definition definition) {
+    public Set<String> getInputs(Schema schema) {
         Set<String> inputs = new LinkedHashSet<>();
         Set<String> excludedInputs = new HashSet<>();
 
-        if (definition.getMappings() != null)
-            for (Mapping mapping : definition.getMappings())
+        if (schema.getMappings() != null)
+            for (Mapping mapping : schema.getMappings())
                 inputs.addAll(getInputs(mapping, excludedInputs));
 
         return inputs;
@@ -506,6 +526,7 @@ public class DecisionEngine {
 
     /**
      * Return a list of outputs that are produced form the specified TablePath.  It will also handle mapped outputs.
+     *
      * @param path a TablePath
      * @return a Set of Strings containing the unique Mapping output keys
      */
@@ -536,6 +557,7 @@ public class DecisionEngine {
     /**
      * Looks at all tables involved in the mapping and returns a list of outputs that are produced.  It will also handle mapped outputs.  Since
      * inclusion/exclusion tables should not map any new values, they are not included in the calculation.
+     *
      * @param mapping a Mapping
      * @return a Set of Strings containing the unique Mapping output keys
      */
@@ -551,14 +573,15 @@ public class DecisionEngine {
 
     /**
      * Looks at all tables involved in all the mappings in the definition and returns a list of outputs produced.  It will also handle mapped outputs.
-     * @param definition a Definition
+     *
+     * @param schema a Definition
      * @return a Set of Strings containing the unique Mapping output keys
      */
-    public Set<String> getOutputs(Definition definition) {
+    public Set<String> getOutputs(Schema schema) {
         Set<String> outputs = new LinkedHashSet<>();
 
-        if (definition.getMappings() != null)
-            for (Mapping mapping : definition.getMappings())
+        if (schema.getMappings() != null)
+            for (Mapping mapping : schema.getMappings())
                 outputs.addAll(getOutputs(mapping));
 
         return outputs;
@@ -566,12 +589,13 @@ public class DecisionEngine {
 
     /**
      * Using the supplied context, process an definition.  The results will be added to the context.
+     *
      * @param definitionId an Definition identifier
-     * @param context a Map containing the context
+     * @param context      a Map containing the context
      * @return a Result
      */
     public Result process(String definitionId, Map<String, String> context) {
-        Definition start = getProvider().getDefinition(definitionId);
+        Schema start = getProvider().getDefinition(definitionId);
 
         if (start == null)
             throw new IllegalStateException("Unknown definition: '" + definitionId + "'");
@@ -581,11 +605,12 @@ public class DecisionEngine {
 
     /**
      * Using the supplied context, process a definition.  The results will be added to the context.
-     * @param definition a Definition
+     *
+     * @param schema  a Definition
      * @param context a Map containing the context
      * @return a Result
      */
-    public Result process(Definition definition, Map<String, String> context) {
+    public Result process(Schema schema, Map<String, String> context) {
         Result result = new Result(context);
 
         // trim all context Strings; " " will match ""
@@ -595,8 +620,8 @@ public class DecisionEngine {
 
         // validate inputs
         boolean stopForBadInput = false;
-        for (String key : definition.getInputMap().keySet()) {
-            Input input = definition.getInputMap().get(key);
+        for (String key : schema.getInputMap().keySet()) {
+            Input input = schema.getInputMap().get(key);
 
             String value = context.get(input.getKey());
 
@@ -622,8 +647,8 @@ public class DecisionEngine {
 
                     // if the schema error handling is set to FAIL or if the input is required for staging and the error handling is set to FAIL_WHEN_REQUIRED_FOR_STAGING,
                     // then stop processing and return a failure result
-                    if (Definition.StagingInputErrorHandler.FAIL.equals(definition.getOnInvalidInput()) || (Boolean.TRUE.equals(input.getUsedForStaging())
-                            && Definition.StagingInputErrorHandler.FAIL_WHEN_USED_FOR_STAGING.equals(definition.getOnInvalidInput())))
+                    if (Schema.StagingInputErrorHandler.FAIL.equals(schema.getOnInvalidInput()) || (Boolean.TRUE.equals(input.getUsedForStaging())
+                            && Schema.StagingInputErrorHandler.FAIL_WHEN_USED_FOR_STAGING.equals(schema.getOnInvalidInput())))
                         stopForBadInput = true;
                 }
             }
@@ -637,17 +662,17 @@ public class DecisionEngine {
         }
 
         // add all output keys to the context; if no default is supplied, use an empty string
-        for (Entry<String, ? extends Output> entry : definition.getOutputMap().entrySet())
+        for (Entry<String, ? extends Output> entry : schema.getOutputMap().entrySet())
             context.put(entry.getValue().getKey(), entry.getValue().getDefault() != null ? translateValue(entry.getValue().getDefault(), context) : "");
 
         // add the initial context
-        if (definition.getInitialContext() != null)
-            for (KeyValue keyValue : definition.getInitialContext())
+        if (schema.getInitialContext() != null)
+            for (KeyValue keyValue : schema.getInitialContext())
                 context.put(keyValue.getKey(), translateValue(keyValue.getValue(), context));
 
         // process each mapping if it is "involved", which is checked using the current context against inclusion/exclusion criteria
-        if (definition.getMappings() != null) {
-            for (Mapping mapping : definition.getMappings()) {
+        if (schema.getMappings() != null) {
+            for (Mapping mapping : schema.getMappings()) {
                 // make sure mapping passes inclusion/exclusion tables if present
                 if (isMappingInvolved(mapping, context)) {
                     // if there are any inclusion/exclusion tables, add them to path
@@ -705,11 +730,11 @@ public class DecisionEngine {
         }
 
         // if outputs were specified, remove any extra keys and validate the others if a table was specified
-        if (definition.getOutputMap() != null && !definition.getOutputMap().isEmpty()) {
+        if (schema.getOutputMap() != null && !schema.getOutputMap().isEmpty()) {
             Iterator<Entry<String, String>> iter = context.entrySet().iterator();
             while (iter.hasNext()) {
                 Map.Entry<String, String> entry = iter.next();
-                Output output = definition.getOutputMap().get(entry.getKey());
+                Output output = schema.getOutputMap().get(entry.getKey());
 
                 // if the key is not defined in the output, remove it
                 if (output == null)
@@ -738,11 +763,12 @@ public class DecisionEngine {
 
     /**
      * Internal method to recursively process a table
+     *
      * @param mappingId a Mapping identifier
-     * @param tableId a Table identifier
-     * @param path a TablePath
-     * @param result a Result
-     * @param stack a stack which tracks the path and makes sure the path doesn't enter an infinite recusive state
+     * @param tableId   a Table identifier
+     * @param path      a TablePath
+     * @param result    a Result
+     * @param stack     a stack which tracks the path and makes sure the path doesn't enter an infinite recusive state
      * @return a boolean indicating whether processing should continue
      */
 
@@ -778,8 +804,7 @@ public class DecisionEngine {
                     .table(tableId)
                     .columns(table.getColumnDefinitions().stream().filter(c -> c.getType().equals(ColumnType.ENDPOINT)).map(ColumnDefinition::getKey).collect(Collectors.toList()))
                     .build());
-        }
-        else {
+        } else {
             for (Endpoint endpoint : endpoints) {
                 if (EndpointType.STOP.equals(endpoint.getType()))
                     continueProcessing = false;
@@ -791,8 +816,7 @@ public class DecisionEngine {
                         message = "Matching resulted in an error in table '" + tableId + "' for column '" + endpoint.getResultKey() + "' (" + getTableInputsAsString(table, result.getContext()) + ")";
 
                     result.addError(new ErrorBuilder(Type.STAGING_ERROR).message(message).table(tableId).columns(Collections.singletonList(endpoint.getResultKey())).build());
-                }
-                else if (EndpointType.VALUE.equals(endpoint.getType())) {
+                } else if (EndpointType.VALUE.equals(endpoint.getType())) {
                     // if output mapping(s) were provided, check whether the key was mapped
                     List<String> mappedKeys = new ArrayList<>();
                     if (path.getOutputMapping() != null) {

@@ -20,7 +20,7 @@ import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.Endpoint.EndpointType;
 import com.imsweb.decisionengine.Result.Type;
 import com.imsweb.decisionengine.basic.BasicDataProvider;
-import com.imsweb.decisionengine.basic.BasicDefinition;
+import com.imsweb.decisionengine.basic.BasicSchema;
 import com.imsweb.decisionengine.basic.BasicInput;
 import com.imsweb.decisionengine.basic.BasicMapping;
 import com.imsweb.decisionengine.basic.BasicOutput;
@@ -181,8 +181,8 @@ public class DecisionEngineTest {
         table.addRawRow("1", "1", "VALUE:LINE3");
         provider.addTable(table);
 
-        BasicDefinition def = new BasicDefinition("starting_sample");
-        def.setOnInvalidInput(Definition.StagingInputErrorHandler.FAIL);
+        BasicSchema def = new BasicSchema("starting_sample");
+        def.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
         def.addInput("a");
         BasicInput input = new BasicInput("b", "table_lookup_sample");
         def.addInput(input);
@@ -193,23 +193,23 @@ public class DecisionEngineTest {
         def.addMapping(mapping);
         provider.addDefinition(def);
 
-        def = new BasicDefinition("starting_min");
+        def = new BasicSchema("starting_min");
         def.addInitialContext("foo", "bar");
         provider.addDefinition(def);
 
-        def = new BasicDefinition("starting_multiple_endpoints");
+        def = new BasicSchema("starting_multiple_endpoints");
         def.addInput("a");
         def.addInput("b");
         def.addInput("c");
         def.addMapping(new BasicMapping("m1", Collections.singletonList(new BasicTablePath("table_multiple_inputs"))));
         provider.addDefinition(def);
 
-        def = new BasicDefinition("starting_recursion");
+        def = new BasicSchema("starting_recursion");
         def.addInput("a");
         def.addMapping(new BasicMapping("m1", Collections.singletonList(new BasicTablePath("table_recursion"))));
         provider.addDefinition(def);
 
-        def = new BasicDefinition("starting_inclusions");
+        def = new BasicSchema("starting_inclusions");
         def.addInput("a");
         def.addInput("b");
         def.addInput("c");
@@ -232,7 +232,7 @@ public class DecisionEngineTest {
         def.addMapping(mapping);
         provider.addDefinition(def);
 
-        def = new BasicDefinition("starting_intermediate_values");
+        def = new BasicSchema("starting_intermediate_values");
         def.addInput("main_input");
         mapping = new BasicMapping("m1");
         mapping.addTablePath(new BasicTablePath("table_create_intermediate"));
@@ -240,7 +240,7 @@ public class DecisionEngineTest {
         def.addMapping(mapping);
         provider.addDefinition(def);
 
-        def = new BasicDefinition("starting_inclusions_extra_inputs");
+        def = new BasicSchema("starting_inclusions_extra_inputs");
         def.addInput("a");
         def.addInput("b");
         def.addInput("c");
@@ -253,7 +253,7 @@ public class DecisionEngineTest {
         def.addMapping(mapping);
         provider.addDefinition(def);
 
-        def = new BasicDefinition("starting_blank");
+        def = new BasicSchema("starting_blank");
         def.addInput("a");
         def.addInput("b");
         mapping = new BasicMapping("m1");
@@ -266,7 +266,7 @@ public class DecisionEngineTest {
         def.addMapping(mapping);
         provider.addDefinition(def);
 
-        def = new BasicDefinition("starting_double_input");
+        def = new BasicSchema("starting_double_input");
         def.addInput("x");
         mapping = new BasicMapping("m1");
         path = new BasicTablePath("table_multiple_input");
@@ -276,7 +276,7 @@ public class DecisionEngineTest {
         def.addMapping(mapping);
         provider.addDefinition(def);
 
-        def = new BasicDefinition("starting_double_output");
+        def = new BasicSchema("starting_double_output");
         def.addInput("a");
         def.addInput("b");
         mapping = new BasicMapping("m1");
@@ -502,7 +502,7 @@ public class DecisionEngineTest {
         table.addRawRow("10", "*", "VALUE:{{b}}");
         table.addRawRow("11", "*", "VALUE:{{bad_key}}");
         provider.addTable(table);
-        BasicDefinition def = new BasicDefinition("alg_key_references");
+        BasicSchema def = new BasicSchema("alg_key_references");
         def.addInput("a");
         def.addInput("b");
         def.addMapping(new BasicMapping("m1", Collections.singletonList(new BasicTablePath("table_key_references"))));
@@ -693,13 +693,13 @@ public class DecisionEngineTest {
 
     @Test
     public void testMinimumAlgorithm() {
-        Definition minDefinition = _ENGINE.getProvider().getDefinition("starting_min");
-        assertNotNull(minDefinition);
-        assertEquals("starting_min", minDefinition.getId());
-        assertNotNull(minDefinition.getInitialContext());
+        Schema minSchema = _ENGINE.getProvider().getDefinition("starting_min");
+        assertNotNull(minSchema);
+        assertEquals("starting_min", minSchema.getId());
+        assertNotNull(minSchema.getInitialContext());
 
         Map<String, String> input = new HashMap<>();
-        Result result = _ENGINE.process(minDefinition, input);
+        Result result = _ENGINE.process(minSchema, input);
 
         assertFalse(result.hasErrors());
         assertEquals("bar", input.get("foo"));
@@ -707,7 +707,7 @@ public class DecisionEngineTest {
 
     @Test
     public void testAlgorithm() {
-        Definition starting = _ENGINE.getProvider().getDefinition("starting_sample");
+        Schema starting = _ENGINE.getProvider().getDefinition("starting_sample");
         assertNotNull(starting);
         assertEquals("starting_sample", starting.getId());
         assertNotNull(starting.getInitialContext());
@@ -857,7 +857,7 @@ public class DecisionEngineTest {
         table.addRawRow("*", "MATCH");
         provider.addTable(table);
 
-        BasicDefinition def = new BasicDefinition("starting_null_values");
+        BasicSchema def = new BasicSchema("starting_null_values");
         BasicInput inputKey = new BasicInput("a");
         inputKey.setDefault("0");
         def.addInput(inputKey);
@@ -979,21 +979,21 @@ public class DecisionEngineTest {
         List<Mapping> mappings;
         Map<String, String> context = new HashMap<>();
 
-        Definition definition = _ENGINE.getProvider().getDefinition("starting_min");
-        mappings = _ENGINE.getInvolvedMappings(definition, context);
+        Schema schema = _ENGINE.getProvider().getDefinition("starting_min");
+        mappings = _ENGINE.getInvolvedMappings(schema, context);
         assertEquals(0, mappings.size());
 
-        definition = _ENGINE.getProvider().getDefinition("starting_inclusions");
+        schema = _ENGINE.getProvider().getDefinition("starting_inclusions");
 
-        mappings = _ENGINE.getInvolvedMappings(definition, context);
+        mappings = _ENGINE.getInvolvedMappings(schema, context);
         assertEquals(1, mappings.size());
 
         context.put("a", "1");
-        mappings = _ENGINE.getInvolvedMappings(definition, context);
+        mappings = _ENGINE.getInvolvedMappings(schema, context);
         assertEquals(1, mappings.size());
 
         context.put("a", "2");
-        mappings = _ENGINE.getInvolvedMappings(definition, context);
+        mappings = _ENGINE.getInvolvedMappings(schema, context);
         assertEquals(2, mappings.size());
     }
 
@@ -1037,8 +1037,8 @@ public class DecisionEngineTest {
         table.addColumnDefinition("b", ColumnType.INPUT);
         provider.addTable(table);
 
-        BasicDefinition def = new BasicDefinition("def1");
-        def.setOnInvalidInput(Definition.StagingInputErrorHandler.FAIL);
+        BasicSchema def = new BasicSchema("def1");
+        def.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
         def.addInput("a");
         def.addInput("b");
         BasicMapping mapping = new BasicMapping("m1");
@@ -1169,8 +1169,8 @@ public class DecisionEngineTest {
         table.addRawRow("001", "VALUE:001", "VALUE:001");
         provider.addTable(table);
 
-        BasicDefinition def = new BasicDefinition("sample_outputs");
-        def.setOnInvalidInput(Definition.StagingInputErrorHandler.FAIL);
+        BasicSchema def = new BasicSchema("sample_outputs");
+        def.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
         def.addInput(new BasicInput("input1", "table_input"));
 
         BasicMapping mapping = new BasicMapping("mapping1");
@@ -1248,7 +1248,7 @@ public class DecisionEngineTest {
     @Test(expected = IllegalStateException.class)
     public void testDuplicateAlgorithms() {
         BasicDataProvider provider = new BasicDataProvider();
-        BasicDefinition def = new BasicDefinition();
+        BasicSchema def = new BasicSchema();
         def.setId("TEST1");
         provider.addDefinition(def);
         provider.addDefinition(def);
@@ -1342,8 +1342,8 @@ public class DecisionEngineTest {
         table.addRawRow("C", "Gamma");
         provider.addTable(table);
 
-        BasicDefinition def = new BasicDefinition("sample_outputs");
-        def.setOnInvalidInput(Definition.StagingInputErrorHandler.FAIL);
+        BasicSchema def = new BasicSchema("sample_outputs");
+        def.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
         def.addInput(new BasicInput("input1", "table_input"));
 
         BasicOutput output = new BasicOutput("output1", "table_output");
@@ -1397,8 +1397,8 @@ public class DecisionEngineTest {
 
     @Test
     public void testInitialContextReferences() {
-        BasicDefinition def = new BasicDefinition("test_initial_context");
-        def.setOnInvalidInput(Definition.StagingInputErrorHandler.FAIL);
+        BasicSchema def = new BasicSchema("test_initial_context");
+        def.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
 
         def.addInitialContext("a", "foo1");
         def.addInitialContext("b", "{{foo1}}");
@@ -1426,8 +1426,8 @@ public class DecisionEngineTest {
 
     @Test
     public void testInputsOutputsDefaultContextReferences() {
-        BasicDefinition def = new BasicDefinition("test_context");
-        def.setOnInvalidInput(Definition.StagingInputErrorHandler.FAIL);
+        BasicSchema def = new BasicSchema("test_context");
+        def.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
 
         // add inputs
         BasicInput input = new BasicInput("input1");
@@ -1491,8 +1491,8 @@ public class DecisionEngineTest {
         table.addRawRow("002", "VALUE:{{input1}}");
         provider.addTable(table);
 
-        BasicDefinition def = new BasicDefinition("sample_outputs");
-        def.setOnInvalidInput(Definition.StagingInputErrorHandler.FAIL);
+        BasicSchema def = new BasicSchema("sample_outputs");
+        def.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
         def.addInput(new BasicInput("input1", "table_input"));
 
         BasicMapping mapping = new BasicMapping("mapping1");

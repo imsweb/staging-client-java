@@ -16,11 +16,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-import com.imsweb.decisionengine.Definition;
+import com.imsweb.decisionengine.Schema;
 
 @JsonPropertyOrder({"id", "algorithm", "version", "name", "title", "subtitle", "description", "notes", "schema_num", "schema_selection_table",
         "schema_discriminators", "initial_context", "inputs", "outputs", "mappings", "involved_tables", "on_invalid_input", "last_modified"})
-public class StagingSchema implements Definition {
+public class StagingSchema implements Schema {
 
     private String _displayId;
     private String _algorithm;

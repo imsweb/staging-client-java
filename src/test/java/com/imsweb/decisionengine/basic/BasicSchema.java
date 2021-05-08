@@ -10,9 +10,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import com.imsweb.decisionengine.Definition;
+import com.imsweb.decisionengine.Schema;
 
-public class BasicDefinition implements Definition {
+public class BasicSchema implements Schema {
 
     private String _id;
     private List<BasicInput> _inputs;
@@ -28,14 +28,14 @@ public class BasicDefinition implements Definition {
     /**
      * Default constructor
      */
-    public BasicDefinition() {
+    public BasicSchema() {
     }
 
     /**
      * Construct with an indentifier
      * @param id a definition identifier
      */
-    public BasicDefinition(String id) {
+    public BasicSchema(String id) {
         setId(id);
     }
 

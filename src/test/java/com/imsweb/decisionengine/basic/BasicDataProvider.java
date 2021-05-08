@@ -23,7 +23,7 @@ public class BasicDataProvider implements DataProvider {
     private static String _MATCH_ALL_STRING = "*";
     private static BasicRange _MATCH_ALL_ENDPOINT = new BasicRange();
     private Map<String, BasicTable> _tables = new HashMap<>();
-    private Map<String, BasicDefinition> _definitions = new HashMap<>();
+    private Map<String, BasicSchema> _definitions = new HashMap<>();
 
     /**
      * Default constructor
@@ -35,7 +35,7 @@ public class BasicDataProvider implements DataProvider {
      * Initialize a definition.
      * @param definition a BasicDefinition
      */
-    public void initDefinition(BasicDefinition definition) {
+    public void initDefinition(BasicSchema definition) {
         // parse the values into something that can searched more efficiently
         if (definition.getInputs() != null) {
             Map<String, BasicInput> parsedInputMap = new HashMap<>();
@@ -215,7 +215,7 @@ public class BasicDataProvider implements DataProvider {
     }
 
     @Override
-    public BasicDefinition getDefinition(String id) {
+    public BasicSchema getDefinition(String id) {
         return _definitions.get(id);
     }
 
@@ -236,7 +236,7 @@ public class BasicDataProvider implements DataProvider {
      * Add a starting point to the list
      * @param definition a BasicDefinition
      */
-    public void addDefinition(BasicDefinition definition) {
+    public void addDefinition(BasicSchema definition) {
         if (_definitions.containsKey(definition.getId()))
             throw new IllegalStateException("ERROR: An definition with identifier '" + definition.getId() + "' already exists");
 
