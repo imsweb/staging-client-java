@@ -447,7 +447,8 @@ public class DecisionEngine {
                                 String inputKey = inputMappings.containsKey(def.getKey()) ? inputMappings.get(def.getKey()) : def.getKey();
                                 if (!excludedInputs.contains(inputKey))
                                     inputs.add(inputKey);
-                            } else if (ColumnType.ENDPOINT.equals(def.getType())) {
+                            }
+                            else if (ColumnType.ENDPOINT.equals(def.getType())) {
                                 String outputKey = outputMappings.containsKey(def.getKey()) ? outputMappings.get(def.getKey()) : def.getKey();
                                 if (!inputs.contains(outputKey))
                                     excludedInputs.add(outputKey);
@@ -805,7 +806,8 @@ public class DecisionEngine {
                     .table(tableId)
                     .columns(table.getColumnDefinitions().stream().filter(c -> c.getType().equals(ColumnType.ENDPOINT)).map(ColumnDefinition::getKey).collect(Collectors.toList()))
                     .build());
-        } else {
+        }
+        else {
             for (Endpoint endpoint : endpoints) {
                 if (EndpointType.STOP.equals(endpoint.getType()))
                     continueProcessing = false;
@@ -817,7 +819,8 @@ public class DecisionEngine {
                         message = "Matching resulted in an error in table '" + tableId + "' for column '" + endpoint.getResultKey() + "' (" + getTableInputsAsString(table, result.getContext()) + ")";
 
                     result.addError(new ErrorBuilder(Type.STAGING_ERROR).message(message).table(tableId).columns(Collections.singletonList(endpoint.getResultKey())).build());
-                } else if (EndpointType.VALUE.equals(endpoint.getType())) {
+                }
+                else if (EndpointType.VALUE.equals(endpoint.getType())) {
                     // if output mapping(s) were provided, check whether the key was mapped
                     List<String> mappedKeys = new ArrayList<>();
                     if (path.getOutputMapping() != null) {
