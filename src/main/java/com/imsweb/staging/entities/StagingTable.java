@@ -9,72 +9,36 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
-import org.bson.types.ObjectId;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-import dev.morphia.annotations.Entity;
-import dev.morphia.annotations.Id;
-import dev.morphia.annotations.Indexed;
-import dev.morphia.annotations.Property;
-
 import com.imsweb.decisionengine.Table;
 
 @JsonPropertyOrder({"id", "algorithm", "version", "name", "title", "subtitle", "description", "notes", "footnotes", "last_modified", "definition", "extra_input", "rows"})
-@Entity(value = "staging_tables", useDiscriminator = false)
 public class StagingTable implements Table {
 
-    @Id
-    private ObjectId _id;
-    @Indexed
-    @Property("id")
     private String _displayId;
-    @Indexed
-    @Property("algorithm")
     private String _algorithm;
-    @Indexed
-    @Property("version")
     private String _version;
-    @Property("name")
     private String _name;
-    @Property("title")
     private String _title;
-    @Property("description")
     private String _description;
-    @Property("subtitle")
     private String _subtitle;
-    @Property("notes")
     private String _notes;
-    @Property("footnotes")
     private String _footnotes;
-    @Property("modified")
     private Date _lastModified;
-    @Property("definition")
     private List<StagingColumnDefinition> _definition;
-    @Property("extra_input")
     private Set<String> _extraInput;
-    @Property("rows")
     private List<List<String>> _rows = new ArrayList<>();
 
     // parsed fields
-    @Property("parsed_table_rows")
     private List<StagingTableRow> _parsedTableRows = new ArrayList<>();
 
     /**
      * Morphia requires a default constructor
      */
     public StagingTable() {
-    }
-
-    @JsonIgnore
-    public ObjectId getInternalId() {
-        return _id;
-    }
-
-    public void setInternalId(ObjectId id) {
-        _id = id;
     }
 
     @Override
@@ -214,7 +178,7 @@ public class StagingTable implements Table {
         if (o == null || getClass() != o.getClass())
             return false;
 
-        StagingTable table = (StagingTable)o;
+        StagingTable table = (StagingTable) o;
 
         // intentionally does not include _id, _lastModified, _parsedTableRows
         return Objects.equals(_displayId, table._displayId) &&

@@ -11,86 +11,44 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 
-import org.bson.types.ObjectId;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-import dev.morphia.annotations.Entity;
-import dev.morphia.annotations.Id;
-import dev.morphia.annotations.Indexed;
-import dev.morphia.annotations.Property;
-
 import com.imsweb.decisionengine.Definition;
 
 @JsonPropertyOrder({"id", "algorithm", "version", "name", "title", "subtitle", "description", "notes", "schema_num", "schema_selection_table",
         "schema_discriminators", "initial_context", "inputs", "outputs", "mappings", "involved_tables", "on_invalid_input", "last_modified"})
-@Entity(value = "staging_schemas", useDiscriminator = false)
 public class StagingSchema implements Definition {
 
-    @Id
-    private ObjectId _id;
-    @Indexed
-    @Property("id")
     private String _displayId;
-    @Indexed
-    @Property("algorithm")
     private String _algorithm;
-    @Indexed
-    @Property("version")
     private String _version;
-    @Property("name")
     private String _name;
-    @Property("title")
     private String _title;
-    @Property("description")
     private String _description;
-    @Property("subtitle")
     private String _subtitle;
-    @Property("notes")
     private String _notes;
-    @Property("modified")
     private Date _lastModified;
-    @Property("schema_num")
     private Integer _schemaNum;
-    @Property("schema_selection_table")
     private String _schemaSelectionTable;
-    @Property("schema_discriminators")
     private Set<String> _schemaDiscriminators;
-    @Property("inputs")
     private List<StagingSchemaInput> _inputs;
-    @Property("outputs")
     private List<StagingSchemaOutput> _outputs;
-    @Property("initial_context")
     private Set<StagingKeyValue> _initialContext;
-    @Property("mappings")
     private List<StagingMapping> _mappings;
-    @Property("involved_tables")
     private Set<String> _involvedTables;
-    @Property("on_invalid_input")
     private StagingInputErrorHandler _onInvalidInput;
 
     // parsed fields
-    @Property("parsed_input_map")
     private Map<String, StagingSchemaInput> _parsedInputMap = new HashMap<>();
-    @Property("parsed_output_map")
     private Map<String, StagingSchemaOutput> _parsedOutputMap = new HashMap<>();
 
     /**
      * Morphia requires a default constructor
      */
     public StagingSchema() {
-    }
-
-    @JsonIgnore
-    public ObjectId getInternalId() {
-        return _id;
-    }
-
-    public void setInternalId(ObjectId id) {
-        _id = id;
     }
 
     @Override
@@ -289,7 +247,7 @@ public class StagingSchema implements Definition {
         if (o == null || getClass() != o.getClass())
             return false;
 
-        StagingSchema schema = (StagingSchema)o;
+        StagingSchema schema = (StagingSchema) o;
 
         // do not include _id, _lastModified and _parsedInputMap
         return Objects.equals(_displayId, schema._displayId) &&

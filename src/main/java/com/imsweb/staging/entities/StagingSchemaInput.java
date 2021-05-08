@@ -12,37 +12,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-import dev.morphia.annotations.Embedded;
-import dev.morphia.annotations.Property;
-
 import com.imsweb.decisionengine.Input;
 
 @JsonPropertyOrder({"key", "name", "description", "naaccr_item", "naaccr_xml_id", "values", "default", "table", "used_for_staging",
         "fail_on_invalid", "unit", "decimal_places", "metadata"})
-@Embedded
 public class StagingSchemaInput implements Input {
 
-    @Property("key")
     private String _key;
-    @Property("name")
     private String _name;
-    @Property("description")
     private String _description;
-    @Property("naaccr_item")
     private Integer _naaccrItem;
-    @Property("naaccr_xml_id")
     private String _naaccrXmlId;
-    @Property("default")
     private String _default;
-    @Property("table")
     private String _table;
-    @Property("used_for_staging")
     private Boolean _usedForStaging;
-    @Property("unit")
     private String _unit;
-    @Property("decimal_places")
     private Integer _decimalPlaces;
-    @Property("metadata")
     private Set<String> _metadata;
 
     /**

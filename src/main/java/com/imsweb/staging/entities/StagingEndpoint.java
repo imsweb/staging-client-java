@@ -6,20 +6,13 @@ package com.imsweb.staging.entities;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-import dev.morphia.annotations.Embedded;
-import dev.morphia.annotations.Property;
-
 import com.imsweb.decisionengine.Endpoint;
 
 @JsonPropertyOrder({"type", "value", "result_key"})
-@Embedded
 public class StagingEndpoint implements Endpoint {
 
-    @Property("type")
     private EndpointType _type;
-    @Property("value")
     private String _value;
-    @Property("result_key")
     private String _resultKey;
 
     public StagingEndpoint() {

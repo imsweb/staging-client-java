@@ -12,26 +12,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-import dev.morphia.annotations.Embedded;
-import dev.morphia.annotations.Property;
-
 import com.imsweb.decisionengine.Mapping;
 
 @JsonPropertyOrder({"id", "name", "inclusion_tables", "exclusion_tables", "initial_context", "tables"})
-@Embedded
 public class StagingMapping implements Mapping {
 
-    @Property("id")
     private String _id;
-    @Property("name")
     private String _name;
-    @Property("inclusion_tables")
     private List<StagingTablePath> _inclusionTables;
-    @Property("exclusion_tables")
     private List<StagingTablePath> _exclusionTables;
-    @Property("initial_context")
     private Set<StagingKeyValue> _initialContext;
-    @Property("tables")
     private List<StagingTablePath> _tablePaths;
 
     /**
@@ -42,7 +32,8 @@ public class StagingMapping implements Mapping {
 
     /**
      * Constructs with a name and title
-     * @param id identifier
+     *
+     * @param id   identifier
      * @param name name
      */
     public StagingMapping(String id, String name) {
@@ -117,7 +108,7 @@ public class StagingMapping implements Mapping {
         if (o == null || getClass() != o.getClass())
             return false;
 
-        StagingMapping mapping = (StagingMapping)o;
+        StagingMapping mapping = (StagingMapping) o;
 
         return Objects.equals(_id, mapping._id) &&
                 Objects.equals(_name, mapping._name) &&

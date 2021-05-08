@@ -11,17 +11,11 @@ import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import dev.morphia.annotations.Embedded;
-import dev.morphia.annotations.Property;
-
 import com.imsweb.decisionengine.TableRow;
 
-@Embedded
 public class StagingTableRow implements TableRow {
 
-    @Property("inputs")
     private Map<String, List<StagingRange>> _inputs = new HashMap<>();
-    @Property("endpoints")
     private List<StagingEndpoint> _endpoints = new ArrayList<>();
 
     @Override
@@ -41,7 +35,8 @@ public class StagingTableRow implements TableRow {
 
     /**
      * Add a single columns input list
-     * @param key key
+     *
+     * @param key   key
      * @param range range
      */
     public void addInput(String key, List<StagingRange> range) {

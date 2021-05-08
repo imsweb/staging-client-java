@@ -12,30 +12,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-import dev.morphia.annotations.Embedded;
-import dev.morphia.annotations.Property;
-
 import com.imsweb.decisionengine.Output;
 
 @JsonPropertyOrder({"key", "name", "description", "naaccr_item", "naaccr_xml_id", "table", "default", "metadata"})
-@Embedded
 public class StagingSchemaOutput implements Output {
 
-    @Property("key")
     private String _key;
-    @Property("name")
     private String _name;
-    @Property("description")
     private String _description;
-    @Property("naaccr_item")
     private Integer _naaccrItem;
-    @Property("naaccr_xml_id")
     private String _naaccrXmlId;
-    @Property("table")
     private String _table;
-    @Property("default")
     private String _default;
-    @Property("metadata")
     private Set<String> _metadata;
 
     /**
@@ -57,6 +45,7 @@ public class StagingSchemaOutput implements Output {
 
     /**
      * Copy constructor
+     *
      * @param other other StagingSchemaInput
      */
     public StagingSchemaOutput(StagingSchemaOutput other) {
@@ -154,7 +143,7 @@ public class StagingSchemaOutput implements Output {
         if (o == null || getClass() != o.getClass())
             return false;
 
-        StagingSchemaOutput that = (StagingSchemaOutput)o;
+        StagingSchemaOutput that = (StagingSchemaOutput) o;
 
         // do not include _parsedValues
         return Objects.equals(_key, that._key) &&

@@ -11,24 +11,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-import dev.morphia.annotations.Embedded;
-import dev.morphia.annotations.Property;
-
 import com.imsweb.decisionengine.TablePath;
 
 @JsonPropertyOrder({"id", "input_mapping", "output_mapping", "inputs", "outputs"})
-@Embedded
 public class StagingTablePath implements TablePath {
 
-    @Property("id")
     private String _id;
-    @Property("input_mapping")
     private Set<StagingKeyMapping> _inputMapping;
-    @Property("output_mapping")
     private Set<StagingKeyMapping> _outputMapping;
-    @Property("inputs")
     private Set<String> _inputs;
-    @Property("outputs")
     private Set<String> _outputs;
 
     /**
@@ -100,7 +91,7 @@ public class StagingTablePath implements TablePath {
         if (o == null || getClass() != o.getClass())
             return false;
 
-        StagingTablePath that = (StagingTablePath)o;
+        StagingTablePath that = (StagingTablePath) o;
 
         return Objects.equals(_id, that._id) &&
                 Objects.equals(_inputMapping, that._inputMapping) &&

@@ -42,6 +42,8 @@ import com.imsweb.staging.entities.StagingSchemaOutput;
 import com.imsweb.staging.entities.StagingTable;
 import com.imsweb.staging.entities.StagingTableRow;
 
+import static com.imsweb.staging.Staging.*;
+
 /**
  * An abstract implementation of DataProvider customized for handling staging schemas/tables
  */
@@ -214,7 +216,7 @@ public abstract class StagingDataProvider implements DataProvider {
         }
 
         // add extra inputs, if any; do not include context variables since they are not user input
-        extraInputs.removeAll(Staging.CONTEXT_KEYS);
+        CONTEXT_KEYS.forEach(extraInputs::remove);
         table.setExtraInput(extraInputs.isEmpty() ? null : extraInputs);
 
         return table;

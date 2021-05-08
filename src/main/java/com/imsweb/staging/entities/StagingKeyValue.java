@@ -8,18 +8,12 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-import dev.morphia.annotations.Embedded;
-import dev.morphia.annotations.Property;
-
 import com.imsweb.decisionengine.KeyValue;
 
 @JsonPropertyOrder({"key", "value"})
-@Embedded
 public class StagingKeyValue implements KeyValue {
 
-    @Property("key")
     private String _key;
-    @Property("value")
     private String _value;
 
     public StagingKeyValue() {

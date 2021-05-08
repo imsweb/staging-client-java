@@ -8,22 +8,14 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-import dev.morphia.annotations.Embedded;
-import dev.morphia.annotations.Property;
-
 import com.imsweb.decisionengine.ColumnDefinition;
 
 @JsonPropertyOrder({"key", "name", "type", "source"})
-@Embedded
 public class StagingColumnDefinition implements ColumnDefinition {
 
-    @Property("key")
     private String _key;
-    @Property("name")
     private String _name;
-    @Property("type")
     private ColumnType _type;
-    @Property("source")
     private String _source;
 
     /**
@@ -34,7 +26,8 @@ public class StagingColumnDefinition implements ColumnDefinition {
 
     /**
      * Constructor
-     * @param key input key
+     *
+     * @param key  input key
      * @param name column name
      * @param type column type
      */
@@ -89,7 +82,7 @@ public class StagingColumnDefinition implements ColumnDefinition {
         if (o == null || getClass() != o.getClass())
             return false;
 
-        StagingColumnDefinition that = (StagingColumnDefinition)o;
+        StagingColumnDefinition that = (StagingColumnDefinition) o;
 
         return Objects.equals(_key, that._key) &&
                 Objects.equals(_name, that._name) &&
