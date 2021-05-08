@@ -3,8 +3,6 @@
  */
 package com.imsweb.staging;
 
-import com.imsweb.decisionengine.Endpoint;
-import com.imsweb.decisionengine.TableRow;
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.StagingEndpoint;
 import com.imsweb.staging.entities.StagingSchema;
@@ -23,6 +21,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
+
+import static com.imsweb.decisionengine.Endpoint.EndpointType;
 
 /**
  * Implementation of DataProvider which loads from internal directories and holds all data in memory
@@ -166,12 +166,12 @@ public class StagingFileDataProvider extends StagingDataProvider {
     }
 
     @Override
-    public Endpoint getEndpoint(Endpoint.EndpointType type, String value) {
+    public StagingEndpoint getEndpoint(EndpointType type, String value) {
         return new StagingEndpoint(type, value);
     }
 
     @Override
-    public TableRow getTableRow() {
+    public StagingTableRow getTableRow() {
         return new StagingTableRow();
     }
 

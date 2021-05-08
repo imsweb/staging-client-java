@@ -1263,7 +1263,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testAlgorithmInputs() {
+    public void testSchemaInputs() {
         DataProvider provider = _ENGINE.getProvider();
 
         assertEquals(asSet(), _ENGINE.getInputs(provider.getSchema("starting_min")));
@@ -1276,7 +1276,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testGetAlgorithmOutputs() {
+    public void testGetSchemaOutputs() {
         DataProvider provider = _ENGINE.getProvider();
 
         assertEquals(asSet(), _ENGINE.getOutputs(provider.getSchema("starting_min")));
