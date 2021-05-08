@@ -3,16 +3,15 @@
  */
 package com.imsweb.staging.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.imsweb.decisionengine.Input;
+
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Set;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-
-import com.imsweb.decisionengine.Input;
 
 @JsonPropertyOrder({"key", "name", "description", "naaccr_item", "naaccr_xml_id", "values", "default", "table", "used_for_staging",
         "fail_on_invalid", "unit", "decimal_places", "metadata"})
@@ -76,6 +75,7 @@ public class StagingSchemaInput implements Input {
         _key = key;
     }
 
+    @Override
     @JsonProperty("name")
     public String getName() {
         return _name;
@@ -85,6 +85,7 @@ public class StagingSchemaInput implements Input {
         _name = name;
     }
 
+    @Override
     @JsonProperty("description")
     public String getDescription() {
         return _description;
@@ -94,6 +95,7 @@ public class StagingSchemaInput implements Input {
         _description = description;
     }
 
+    @Override
     @JsonProperty("naaccr_item")
     public Integer getNaaccrItem() {
         return _naaccrItem;
@@ -103,6 +105,7 @@ public class StagingSchemaInput implements Input {
         _naaccrItem = naaccrItem;
     }
 
+    @Override
     @JsonProperty("naaccr_xml_id")
     public String getNaaccrXmlId() {
         return _naaccrXmlId;
@@ -142,6 +145,7 @@ public class StagingSchemaInput implements Input {
         _usedForStaging = usedForStaging;
     }
 
+    @Override
     @JsonProperty("decimal_places")
     public Integer getDecimalPlaces() {
         return _decimalPlaces;
@@ -151,6 +155,7 @@ public class StagingSchemaInput implements Input {
         _decimalPlaces = decimalPlaces;
     }
 
+    @Override
     @JsonProperty("unit")
     public String getUnit() {
         return _unit;
@@ -160,6 +165,7 @@ public class StagingSchemaInput implements Input {
         _unit = unit;
     }
 
+    @Override
     @JsonProperty("metadata")
     public Set<String> getMetadata() {
         return _metadata;

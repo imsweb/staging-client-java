@@ -5,6 +5,8 @@ package com.imsweb.decisionengine.basic;
 
 import com.imsweb.decisionengine.Input;
 
+import java.util.Set;
+
 public class BasicInput implements Input {
 
     private String _key;
@@ -20,6 +22,7 @@ public class BasicInput implements Input {
 
     /**
      * Construct with an input key
+     *
      * @param key input key
      */
     public BasicInput(String key) {
@@ -28,7 +31,8 @@ public class BasicInput implements Input {
 
     /**
      * Construct with an input key and table
-     * @param key input key
+     *
+     * @param key   input key
      * @param table table
      */
     public BasicInput(String key, String table) {
@@ -39,6 +43,26 @@ public class BasicInput implements Input {
     @Override
     public String getKey() {
         return _key;
+    }
+
+    @Override
+    public String getName() {
+        return null;
+    }
+
+    @Override
+    public String getDescription() {
+        return null;
+    }
+
+    @Override
+    public Integer getNaaccrItem() {
+        return null;
+    }
+
+    @Override
+    public String getNaaccrXmlId() {
+        return null;
     }
 
     public void setKey(String key) {
@@ -66,6 +90,21 @@ public class BasicInput implements Input {
     @Override
     public Boolean getUsedForStaging() {
         return _usedForStaging;
+    }
+
+    @Override
+    public String getUnit() {
+        return null;
+    }
+
+    @Override
+    public Integer getDecimalPlaces() {
+        return null;
+    }
+
+    @Override
+    public Set<String> getMetadata() {
+        return null;
     }
 
     public void setUsedForStaging(Boolean usedForStaging) {

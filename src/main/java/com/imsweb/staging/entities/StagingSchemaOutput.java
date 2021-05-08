@@ -3,16 +3,15 @@
  */
 package com.imsweb.staging.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.imsweb.decisionengine.Output;
+
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Set;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-
-import com.imsweb.decisionengine.Output;
 
 @JsonPropertyOrder({"key", "name", "description", "naaccr_item", "naaccr_xml_id", "table", "default", "metadata"})
 public class StagingSchemaOutput implements Output {
@@ -70,6 +69,7 @@ public class StagingSchemaOutput implements Output {
         _key = key;
     }
 
+    @Override
     @JsonProperty("name")
     public String getName() {
         return _name;
@@ -79,6 +79,7 @@ public class StagingSchemaOutput implements Output {
         _name = name;
     }
 
+    @Override
     @JsonProperty("description")
     public String getDescription() {
         return _description;
@@ -88,6 +89,7 @@ public class StagingSchemaOutput implements Output {
         _description = description;
     }
 
+    @Override
     @JsonProperty("naaccr_item")
     public Integer getNaaccrItem() {
         return _naaccrItem;
@@ -97,6 +99,7 @@ public class StagingSchemaOutput implements Output {
         _naaccrItem = naaccrItem;
     }
 
+    @Override
     @JsonProperty("naaccr_xml_id")
     public String getNaaccrXmlId() {
         return _naaccrXmlId;
@@ -126,6 +129,7 @@ public class StagingSchemaOutput implements Output {
         _default = aDefault;
     }
 
+    @Override
     @JsonProperty("metadata")
     public Set<String> getMetadata() {
         return _metadata;

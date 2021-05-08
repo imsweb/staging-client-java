@@ -1,17 +1,16 @@
 package com.imsweb.staging;
 
+import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
+import com.imsweb.decisionengine.Range;
+import com.imsweb.staging.entities.StagingColumnDefinition;
+import com.imsweb.staging.entities.StagingTable;
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
-
-import org.junit.Test;
-
-import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
-import com.imsweb.staging.entities.StagingColumnDefinition;
-import com.imsweb.staging.entities.StagingRange;
-import com.imsweb.staging.entities.StagingTable;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
@@ -40,7 +39,9 @@ public class StagingDataProviderTest {
         table.getRawRows().add(Arrays.asList("6", "MATCH:{{match_extra}}"));
         table.getRawRows().add(Arrays.asList("7", "ERROR:{{error_extra}}"));
 
-        StagingDataProvider.initTable(table);
+        StagingDataProvider provider = new InMemoryDataProvider("test", "1.0");
+
+        provider.initTable(table);
 
         // since context variables are not user-supplied, they should not be included in the extra input
         assertEquals(new HashSet<>(Arrays.asList("extra1", "extra2")), table.getExtraInput());
@@ -48,7 +49,7 @@ public class StagingDataProviderTest {
         table.setRawRows(new ArrayList<>());
         table.getRawRows().add(Arrays.asList("{{ctx_year_current}}", "MATCH"));
 
-        StagingDataProvider.initTable(table);
+        provider.initTable(table);
 
         assertNull(table.getExtraInput());
     }
@@ -68,7 +69,7 @@ public class StagingDataProviderTest {
 
         assertEquals(10, StagingDataProvider.splitValues("A,B,C,D,E,F,G,H,I,J").size());
 
-        List<StagingRange> ranges = StagingDataProvider.splitValues(",1,2,3,4");
+        List<Range> ranges = StagingDataProvider.splitValues(",1,2,3,4");
         assertEquals(5, ranges.size());
         assertEquals("", ranges.get(0).getLow());
         assertEquals("", ranges.get(0).getHigh());
@@ -137,7 +138,9 @@ public class StagingDataProviderTest {
         table.getRawRows().add(Collections.singletonList(",1,2,3"));
         table.getRawRows().add(Collections.singletonList("1,2,3,"));
 
-        StagingDataProvider.initTable(table);
+        StagingDataProvider provider = new InMemoryDataProvider("test", "1.0");
+
+        provider.initTable(table);
 
         assertEquals(2, table.getTableRows().size());
         assertEquals(4, table.getTableRows().get(0).getInputs().get("key1").size());

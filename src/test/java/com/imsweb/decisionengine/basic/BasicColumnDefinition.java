@@ -31,8 +31,14 @@ public class BasicColumnDefinition implements ColumnDefinition {
         return _key;
     }
 
+    @Override
+    public String getName() {
+        return null;
+    }
+
     /**
      * Set the column key
+     *
      * @param key a column key
      */
     public void setKey(String key) {
@@ -44,8 +50,14 @@ public class BasicColumnDefinition implements ColumnDefinition {
         return _type;
     }
 
+    @Override
+    public String getSource() {
+        return null;
+    }
+
     /**
      * Set the column type
+     *
      * @param type a column type
      */
     public void setType(ColumnType type) {

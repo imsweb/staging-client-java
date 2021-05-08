@@ -22,9 +22,12 @@ public interface Endpoint {
 
     /**
      * The key representing the field that the value is mapped to
+     *
      * @return a String field key
      */
     String getResultKey();
+
+    void setResultKey(String resultKey);
 
     enum EndpointType {
         JUMP,

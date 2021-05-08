@@ -3,10 +3,10 @@
  */
 package com.imsweb.decisionengine.basic;
 
+import com.imsweb.decisionengine.TablePath;
+
 import java.util.HashSet;
 import java.util.Set;
-
-import com.imsweb.decisionengine.TablePath;
 
 public class BasicTablePath implements TablePath {
 
@@ -68,4 +68,15 @@ public class BasicTablePath implements TablePath {
 
         _output.add(new BasicKeyMapping(from, to));
     }
+
+    @Override
+    public Set<String> getInputs() {
+        return null;
+    }
+
+    @Override
+    public Set<String> getOutputs() {
+        return null;
+    }
+
 }

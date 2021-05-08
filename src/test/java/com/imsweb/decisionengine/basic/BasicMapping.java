@@ -3,16 +3,17 @@
  */
 package com.imsweb.decisionengine.basic;
 
+import com.imsweb.decisionengine.Mapping;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import com.imsweb.decisionengine.Mapping;
-
 public class BasicMapping implements Mapping {
 
     private String _id;
+    private String _name;
     private List<BasicTablePath> _inclusionTables;
     private List<BasicTablePath> _exclusionTables;
     private Set<BasicKeyValue> _initialContext;
@@ -20,6 +21,7 @@ public class BasicMapping implements Mapping {
 
     /**
      * Constructor
+     *
      * @param id
      */
     public BasicMapping(String id) {
@@ -28,7 +30,8 @@ public class BasicMapping implements Mapping {
 
     /**
      * Contruct a BasicAlgorithm with an intial set of table paths
-     * @param id String identifier
+     *
+     * @param id         String identifier
      * @param tablePaths a List of BasicTablePath objects
      */
     public BasicMapping(String id, List<BasicTablePath> tablePaths) {
@@ -43,6 +46,15 @@ public class BasicMapping implements Mapping {
 
     public void setId(String id) {
         _id = id;
+    }
+
+    @Override
+    public String getName() {
+        return _name;
+    }
+
+    public void setName(String name) {
+        _name = name;
     }
 
     @Override
@@ -86,6 +98,7 @@ public class BasicMapping implements Mapping {
 
     /**
      * Set the table paths
+     *
      * @param tablePaths a List of BasicTablePath objects
      */
     public void setTablePaths(List<BasicTablePath> tablePaths) {
@@ -94,6 +107,7 @@ public class BasicMapping implements Mapping {
 
     /**
      * Add a new table path
+     *
      * @param path a BasicTablePath
      */
     public void addTablePath(BasicTablePath path) {

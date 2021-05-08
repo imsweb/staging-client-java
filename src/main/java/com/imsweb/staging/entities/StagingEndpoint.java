@@ -5,7 +5,6 @@ package com.imsweb.staging.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-
 import com.imsweb.decisionengine.Endpoint;
 
 @JsonPropertyOrder({"type", "value", "result_key"})
@@ -49,6 +48,7 @@ public class StagingEndpoint implements Endpoint {
         return _resultKey;
     }
 
+    @Override
     public void setResultKey(String resultKey) {
         _resultKey = resultKey;
     }

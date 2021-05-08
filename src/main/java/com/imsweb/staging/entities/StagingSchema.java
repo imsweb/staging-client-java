@@ -3,6 +3,14 @@
  */
 package com.imsweb.staging.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.imsweb.decisionengine.Input;
+import com.imsweb.decisionengine.Output;
+import com.imsweb.decisionengine.Schema;
+
 import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashSet;
@@ -10,13 +18,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-
-import com.imsweb.decisionengine.Schema;
 
 @JsonPropertyOrder({"id", "algorithm", "version", "name", "title", "subtitle", "description", "notes", "schema_num", "schema_selection_table",
         "schema_discriminators", "initial_context", "inputs", "outputs", "mappings", "involved_tables", "on_invalid_input", "last_modified"})
@@ -61,6 +62,7 @@ public class StagingSchema implements Schema {
         _displayId = id;
     }
 
+    @Override
     @JsonProperty("algorithm")
     public String getAlgorithm() {
         return _algorithm;
@@ -70,6 +72,7 @@ public class StagingSchema implements Schema {
         _algorithm = algorithm;
     }
 
+    @Override
     @JsonProperty("version")
     public String getVersion() {
         return _version;
@@ -79,6 +82,7 @@ public class StagingSchema implements Schema {
         _version = version;
     }
 
+    @Override
     @JsonProperty("name")
     public String getName() {
         return _name;
@@ -88,6 +92,7 @@ public class StagingSchema implements Schema {
         _name = name;
     }
 
+    @Override
     @JsonProperty("title")
     public String getTitle() {
         return _title;
@@ -97,6 +102,7 @@ public class StagingSchema implements Schema {
         _title = title;
     }
 
+    @Override
     @JsonProperty("description")
     public String getDescription() {
         return _description;
@@ -106,6 +112,7 @@ public class StagingSchema implements Schema {
         _description = description;
     }
 
+    @Override
     @JsonProperty("subtitle")
     public String getSubtitle() {
         return _subtitle;
@@ -115,6 +122,7 @@ public class StagingSchema implements Schema {
         _subtitle = subtitle;
     }
 
+    @Override
     @JsonProperty("notes")
     public String getNotes() {
         return _notes;
@@ -124,6 +132,7 @@ public class StagingSchema implements Schema {
         _notes = notes;
     }
 
+    @Override
     @JsonProperty("last_modified")
     public Date getLastModified() {
         return _lastModified;
@@ -133,6 +142,7 @@ public class StagingSchema implements Schema {
         _lastModified = lastModified;
     }
 
+    @Override
     @JsonProperty("schema_num")
     public Integer getSchemaNum() {
         return _schemaNum;
@@ -142,6 +152,7 @@ public class StagingSchema implements Schema {
         _schemaNum = schemaNum;
     }
 
+    @Override
     @JsonProperty("schema_selection_table")
     public String getSchemaSelectionTable() {
         return _schemaSelectionTable;
@@ -151,6 +162,7 @@ public class StagingSchema implements Schema {
         _schemaSelectionTable = schemaSelectionTable;
     }
 
+    @Override
     @JsonProperty("schema_discriminators")
     public Set<String> getSchemaDiscriminators() {
         return _schemaDiscriminators;
@@ -161,6 +173,7 @@ public class StagingSchema implements Schema {
         _schemaDiscriminators = schemaDiscriminators;
     }
 
+    @Override
     @JsonProperty("inputs")
     public List<StagingSchemaInput> getInputs() {
         return _inputs;
@@ -170,6 +183,7 @@ public class StagingSchema implements Schema {
         _inputs = inputs;
     }
 
+    @Override
     @JsonProperty("outputs")
     public List<StagingSchemaOutput> getOutputs() {
         return _outputs;
@@ -206,8 +220,10 @@ public class StagingSchema implements Schema {
         return _parsedInputMap;
     }
 
-    public void setInputMap(Map<String, StagingSchemaInput> parsedInputMap) {
-        _parsedInputMap = parsedInputMap;
+    @SuppressWarnings("unchecked")
+    @Override
+    public void setInputMap(Map<String, ? extends Input> parsedInputMap) {
+        _parsedInputMap = (Map<String, StagingSchemaInput>) parsedInputMap;
     }
 
     @Override
@@ -216,10 +232,13 @@ public class StagingSchema implements Schema {
         return _parsedOutputMap;
     }
 
-    public void setOutputMap(Map<String, StagingSchemaOutput> parsedOutputMap) {
-        _parsedOutputMap = parsedOutputMap;
+    @SuppressWarnings("unchecked")
+    @Override
+    public void setOutputMap(Map<String, ? extends Output> parsedOutputMap) {
+        _parsedOutputMap = (Map<String, StagingSchemaOutput>) parsedOutputMap;
     }
 
+    @Override
     @JsonProperty("involved_tables")
     public Set<String> getInvolvedTables() {
         return _involvedTables;

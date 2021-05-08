@@ -11,7 +11,6 @@ import com.imsweb.decisionengine.basic.BasicDataProvider;
 import com.imsweb.decisionengine.basic.BasicInput;
 import com.imsweb.decisionengine.basic.BasicMapping;
 import com.imsweb.decisionengine.basic.BasicOutput;
-import com.imsweb.decisionengine.basic.BasicRange;
 import com.imsweb.decisionengine.basic.BasicSchema;
 import com.imsweb.decisionengine.basic.BasicTable;
 import com.imsweb.decisionengine.basic.BasicTablePath;
@@ -292,15 +291,15 @@ public class DecisionEngineTest {
     @Test
     public void testMatch() {
         List<Range> range = new ArrayList<>();
-        range.add(new BasicRange("1", "1"));
-        range.add(new BasicRange("4", "4"));
-        range.add(new BasicRange("9", "9"));
+        range.add(new Range("1", "1"));
+        range.add(new Range("4", "4"));
+        range.add(new Range("9", "9"));
         assertTrue(DecisionEngine.testMatch(range, "9", new HashMap<>()));
         assertFalse(DecisionEngine.testMatch(range, "7", new HashMap<>()));
 
         range = new ArrayList<>();
-        range.add(new BasicRange("11", "54"));
-        range.add(new BasicRange("99", "99"));
+        range.add(new Range("11", "54"));
+        range.add(new Range("99", "99"));
         assertTrue(DecisionEngine.testMatch(range, "23", new HashMap<>()));
     }
 

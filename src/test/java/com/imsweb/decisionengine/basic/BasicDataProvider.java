@@ -6,6 +6,7 @@ package com.imsweb.decisionengine.basic;
 import com.imsweb.decisionengine.DataProvider;
 import com.imsweb.decisionengine.DecisionEngine;
 import com.imsweb.decisionengine.Endpoint.EndpointType;
+import com.imsweb.decisionengine.Range;
 import com.imsweb.staging.Staging;
 
 import java.util.ArrayList;
@@ -20,10 +21,10 @@ import java.util.Set;
  */
 public class BasicDataProvider implements DataProvider {
 
-    private static String _MATCH_ALL_STRING = "*";
-    private static BasicRange _MATCH_ALL_ENDPOINT = new BasicRange();
-    private Map<String, BasicTable> _tables = new HashMap<>();
-    private Map<String, BasicSchema> _definitions = new HashMap<>();
+    private static final String _MATCH_ALL_STRING = "*";
+    private static final Range _MATCH_ALL_ENDPOINT = new Range();
+    private final Map<String, BasicTable> _tables = new HashMap<>();
+    private final Map<String, BasicSchema> _definitions = new HashMap<>();
 
     /**
      * Default constructor
@@ -33,6 +34,7 @@ public class BasicDataProvider implements DataProvider {
 
     /**
      * Initialize a definition.
+     *
      * @param definition a BasicDefinition
      */
     public void initDefinition(BasicSchema definition) {
@@ -69,6 +71,7 @@ public class BasicDataProvider implements DataProvider {
 
     /**
      * Initialize a table.
+     *
      * @param table a BasicTable
      */
     public void initTable(BasicTable table) {
@@ -90,12 +93,12 @@ public class BasicDataProvider implements DataProvider {
                     switch (col.getType()) {
                         case INPUT:
                             // if there are no ranges in the list, that means the cell was "blank" and is not needed in the table row
-                            List<BasicRange> ranges = splitValues(cellValue);
+                            List<Range> ranges = splitValues(cellValue);
                             if (!ranges.isEmpty()) {
                                 tableRowEntity.addInput(col.getKey(), ranges);
 
                                 // if there are key references used (values that reference other inputs) like {{key}}, then add them to the extra inputs list
-                                for (BasicRange range : ranges) {
+                                for (Range range : ranges) {
                                     if (DecisionEngine.isReferenceVariable(range.getLow()))
                                         extraInputs.add(DecisionEngine.trimBraces(range.getLow()));
                                     if (DecisionEngine.isReferenceVariable(range.getHigh()))
@@ -135,6 +138,7 @@ public class BasicDataProvider implements DataProvider {
      * ENDPOINT_TYPE
      * ENDPOINT_TYPE:PARAMETER
      * </p>
+     *
      * @param endpoint an endpoint
      * @return an BasicEndpoint object
      */
@@ -172,11 +176,12 @@ public class BasicDataProvider implements DataProvider {
      * 11,13-15,25-29,35
      * </p>
      * Note that all values (both low and high) must be the same length since they are evaluated using String comparison.
+     *
      * @param values a string of values
-     * @return a List of BasicRange objects
+     * @return a List of Range objects
      */
-    protected List<BasicRange> splitValues(String values) {
-        List<BasicRange> convertedRanges = new ArrayList<>();
+    protected List<Range> splitValues(String values) {
+        List<Range> convertedRanges = new ArrayList<>();
 
         if (values != null) {
             // if the value of the string is "*", then consider it as matching anything
@@ -193,15 +198,15 @@ public class BasicDataProvider implements DataProvider {
                     // may need to revisit this issue later.
                     String[] parts = range.split("-");
                     if (parts.length == 1)
-                        convertedRanges.add(new BasicRange(parts[0].trim(), parts[0].trim()));
+                        convertedRanges.add(new Range(parts[0].trim(), parts[0].trim()));
                     else if (parts.length == 2) {
                         if (parts[0].trim().length() != parts[1].trim().length())
-                            convertedRanges.add(new BasicRange(range.trim(), range.trim()));
+                            convertedRanges.add(new Range(range.trim(), range.trim()));
                         else
-                            convertedRanges.add(new BasicRange(parts[0].trim(), parts[1].trim()));
+                            convertedRanges.add(new Range(parts[0].trim(), parts[1].trim()));
                     }
                     else
-                        convertedRanges.add(new BasicRange(range.trim(), range.trim()));
+                        convertedRanges.add(new Range(range.trim(), range.trim()));
                 }
             }
         }
@@ -221,6 +226,7 @@ public class BasicDataProvider implements DataProvider {
 
     /**
      * Add a table to the list
+     *
      * @param table a BasicTable
      */
     public void addTable(BasicTable table) {
@@ -234,6 +240,7 @@ public class BasicDataProvider implements DataProvider {
 
     /**
      * Add a starting point to the list
+     *
      * @param definition a BasicDefinition
      */
     public void addDefinition(BasicSchema definition) {

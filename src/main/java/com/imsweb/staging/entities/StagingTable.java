@@ -3,17 +3,17 @@
  */
 package com.imsweb.staging.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.imsweb.decisionengine.Table;
+import com.imsweb.decisionengine.TableRow;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-
-import com.imsweb.decisionengine.Table;
 
 @JsonPropertyOrder({"id", "algorithm", "version", "name", "title", "subtitle", "description", "notes", "footnotes", "last_modified", "definition", "extra_input", "rows"})
 public class StagingTable implements Table {
@@ -51,6 +51,7 @@ public class StagingTable implements Table {
         _displayId = id;
     }
 
+    @Override
     @JsonProperty("algorithm")
     public String getAlgorithm() {
         return _algorithm;
@@ -60,6 +61,7 @@ public class StagingTable implements Table {
         _algorithm = algorithm;
     }
 
+    @Override
     @JsonProperty("version")
     public String getVersion() {
         return _version;
@@ -69,6 +71,7 @@ public class StagingTable implements Table {
         _version = version;
     }
 
+    @Override
     @JsonProperty("name")
     public String getName() {
         return _name;
@@ -78,6 +81,7 @@ public class StagingTable implements Table {
         _name = name;
     }
 
+    @Override
     @JsonProperty("title")
     public String getTitle() {
         return _title;
@@ -87,6 +91,7 @@ public class StagingTable implements Table {
         _title = title;
     }
 
+    @Override
     @JsonProperty("description")
     public String getDescription() {
         return _description;
@@ -96,6 +101,7 @@ public class StagingTable implements Table {
         _description = description;
     }
 
+    @Override
     @JsonProperty("subtitle")
     public String getSubtitle() {
         return _subtitle;
@@ -105,6 +111,7 @@ public class StagingTable implements Table {
         _subtitle = subtitle;
     }
 
+    @Override
     @JsonProperty("notes")
     public String getNotes() {
         return _notes;
@@ -114,6 +121,7 @@ public class StagingTable implements Table {
         _notes = notes;
     }
 
+    @Override
     @JsonProperty("footnotes")
     public String getFootnotes() {
         return _footnotes;
@@ -123,6 +131,7 @@ public class StagingTable implements Table {
         _footnotes = footnotes;
     }
 
+    @Override
     @JsonProperty("last_modified")
     public Date getLastModified() {
         return _lastModified;
@@ -148,10 +157,12 @@ public class StagingTable implements Table {
         return _extraInput;
     }
 
+    @Override
     public void setExtraInput(Set<String> extraInput) {
         _extraInput = extraInput;
     }
 
+    @Override
     @JsonProperty("rows")
     public List<List<String>> getRawRows() {
         return _rows;
@@ -169,6 +180,16 @@ public class StagingTable implements Table {
 
     public void setTableRows(List<StagingTableRow> parsedTableRows) {
         _parsedTableRows = parsedTableRows;
+    }
+
+    @Override
+    public void addTableRow(TableRow row) {
+        getTableRows().add((StagingTableRow) row);
+    }
+
+    @Override
+    public void clearTableRows() {
+        _parsedTableRows.clear();
     }
 
     @Override

@@ -3,13 +3,15 @@
  */
 package com.imsweb.decisionengine.basic;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
-
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.Table;
+import com.imsweb.decisionengine.TableRow;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
+import java.util.Set;
 
 public class BasicTable implements Table {
 
@@ -29,6 +31,7 @@ public class BasicTable implements Table {
 
     /**
      * Construct with a table name
+     *
      * @param name a table name
      */
     public BasicTable(String name) {
@@ -38,6 +41,51 @@ public class BasicTable implements Table {
     @Override
     public String getId() {
         return _id;
+    }
+
+    @Override
+    public String getAlgorithm() {
+        return null;
+    }
+
+    @Override
+    public String getVersion() {
+        return null;
+    }
+
+    @Override
+    public String getName() {
+        return null;
+    }
+
+    @Override
+    public String getTitle() {
+        return null;
+    }
+
+    @Override
+    public String getDescription() {
+        return null;
+    }
+
+    @Override
+    public String getSubtitle() {
+        return null;
+    }
+
+    @Override
+    public String getNotes() {
+        return null;
+    }
+
+    @Override
+    public String getFootnotes() {
+        return null;
+    }
+
+    @Override
+    public Date getLastModified() {
+        return null;
     }
 
     public void setId(String id) {
@@ -87,6 +135,17 @@ public class BasicTable implements Table {
     @Override
     public List<BasicTableRow> getTableRows() {
         return _parsedTableRows;
+    }
+
+    @Override
+    public void addTableRow(TableRow row) {
+        getTableRows().add((BasicTableRow) row);
+
+    }
+
+    @Override
+    public void clearTableRows() {
+        _parsedTableRows.clear();
     }
 
     public void setTableRows(List<BasicTableRow> parsedTableRows) {

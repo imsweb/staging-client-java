@@ -3,15 +3,14 @@
  */
 package com.imsweb.staging.entities;
 
-import java.util.LinkedHashSet;
-import java.util.Objects;
-import java.util.Set;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-
 import com.imsweb.decisionengine.TablePath;
+
+import java.util.LinkedHashSet;
+import java.util.Objects;
+import java.util.Set;
 
 @JsonPropertyOrder({"id", "input_mapping", "output_mapping", "inputs", "outputs"})
 public class StagingTablePath implements TablePath {
@@ -64,6 +63,7 @@ public class StagingTablePath implements TablePath {
         _outputMapping = output;
     }
 
+    @Override
     @JsonProperty("inputs")
     public Set<String> getInputs() {
         return _inputs;
@@ -74,6 +74,7 @@ public class StagingTablePath implements TablePath {
         _inputs = inputs;
     }
 
+    @Override
     @JsonProperty("outputs")
     public Set<String> getOutputs() {
         return _outputs;

@@ -3,10 +3,14 @@
  */
 package com.imsweb.staging;
 
+import com.imsweb.decisionengine.Endpoint;
+import com.imsweb.decisionengine.TableRow;
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.GlossaryHit;
+import com.imsweb.staging.entities.StagingEndpoint;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingTable;
+import com.imsweb.staging.entities.StagingTableRow;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -45,6 +49,16 @@ public class InMemoryDataProvider extends StagingDataProvider {
     @Override
     public StagingTable getTable(String id) {
         return _tables.get(id);
+    }
+
+    @Override
+    public Endpoint getEndpoint(Endpoint.EndpointType type, String value) {
+        return new StagingEndpoint(type, value);
+    }
+
+    @Override
+    public TableRow getTableRow() {
+        return new StagingTableRow();
     }
 
     /**

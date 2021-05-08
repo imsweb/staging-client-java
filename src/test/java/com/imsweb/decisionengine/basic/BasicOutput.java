@@ -5,6 +5,8 @@ package com.imsweb.decisionengine.basic;
 
 import com.imsweb.decisionengine.Output;
 
+import java.util.Set;
+
 public class BasicOutput implements Output {
 
     private String _key;
@@ -19,6 +21,7 @@ public class BasicOutput implements Output {
 
     /**
      * Construct with an input key
+     *
      * @param key input key
      */
     public BasicOutput(String key) {
@@ -27,7 +30,8 @@ public class BasicOutput implements Output {
 
     /**
      * Construct with an input key and table
-     * @param key input key
+     *
+     * @param key   input key
      * @param table table
      */
     public BasicOutput(String key, String table) {
@@ -38,6 +42,26 @@ public class BasicOutput implements Output {
     @Override
     public String getKey() {
         return _key;
+    }
+
+    @Override
+    public String getName() {
+        return null;
+    }
+
+    @Override
+    public String getDescription() {
+        return null;
+    }
+
+    @Override
+    public Integer getNaaccrItem() {
+        return null;
+    }
+
+    @Override
+    public String getNaaccrXmlId() {
+        return null;
     }
 
     public void setKey(String key) {
@@ -61,4 +85,10 @@ public class BasicOutput implements Output {
     public void setDefault(String aDefault) {
         _default = aDefault;
     }
+
+    @Override
+    public Set<String> getMetadata() {
+        return null;
+    }
+
 }

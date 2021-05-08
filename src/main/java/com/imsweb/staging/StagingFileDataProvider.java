@@ -3,9 +3,13 @@
  */
 package com.imsweb.staging;
 
+import com.imsweb.decisionengine.Endpoint;
+import com.imsweb.decisionengine.TableRow;
 import com.imsweb.staging.entities.GlossaryDefinition;
+import com.imsweb.staging.entities.StagingEndpoint;
 import com.imsweb.staging.entities.StagingSchema;
 import com.imsweb.staging.entities.StagingTable;
+import com.imsweb.staging.entities.StagingTableRow;
 import org.ahocorasick.trie.Trie;
 import org.ahocorasick.trie.Trie.TrieBuilder;
 
@@ -35,8 +39,9 @@ public class StagingFileDataProvider extends StagingDataProvider {
 
     /**
      * Constructor loads all schemas and sets up table cache
+     *
      * @param algorithm algorithm
-     * @param version version
+     * @param version   version
      */
     protected StagingFileDataProvider(String algorithm, String version) {
         super();
@@ -137,6 +142,7 @@ public class StagingFileDataProvider extends StagingDataProvider {
 
     /**
      * Return the algorithm
+     *
      * @return the algorithm
      */
     @Override
@@ -146,6 +152,7 @@ public class StagingFileDataProvider extends StagingDataProvider {
 
     /**
      * Return the data version
+     *
      * @return a String representing the version
      */
     @Override
@@ -156,6 +163,16 @@ public class StagingFileDataProvider extends StagingDataProvider {
     @Override
     public StagingTable getTable(String id) {
         return _tables.get(id);
+    }
+
+    @Override
+    public Endpoint getEndpoint(Endpoint.EndpointType type, String value) {
+        return new StagingEndpoint(type, value);
+    }
+
+    @Override
+    public TableRow getTableRow() {
+        return new StagingTableRow();
     }
 
     @Override

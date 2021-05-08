@@ -3,14 +3,17 @@
  */
 package com.imsweb.decisionengine.basic;
 
+import com.imsweb.decisionengine.Input;
+import com.imsweb.decisionengine.Output;
+import com.imsweb.decisionengine.Schema;
+
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
-import com.imsweb.decisionengine.Schema;
 
 public class BasicSchema implements Schema {
 
@@ -33,6 +36,7 @@ public class BasicSchema implements Schema {
 
     /**
      * Construct with an indentifier
+     *
      * @param id a definition identifier
      */
     public BasicSchema(String id) {
@@ -42,6 +46,61 @@ public class BasicSchema implements Schema {
     @Override
     public String getId() {
         return _id;
+    }
+
+    @Override
+    public String getAlgorithm() {
+        return null;
+    }
+
+    @Override
+    public String getVersion() {
+        return null;
+    }
+
+    @Override
+    public String getName() {
+        return null;
+    }
+
+    @Override
+    public String getTitle() {
+        return null;
+    }
+
+    @Override
+    public String getDescription() {
+        return null;
+    }
+
+    @Override
+    public String getSubtitle() {
+        return null;
+    }
+
+    @Override
+    public String getNotes() {
+        return null;
+    }
+
+    @Override
+    public Date getLastModified() {
+        return null;
+    }
+
+    @Override
+    public Integer getSchemaNum() {
+        return null;
+    }
+
+    @Override
+    public String getSchemaSelectionTable() {
+        return null;
+    }
+
+    @Override
+    public Set<String> getSchemaDiscriminators() {
+        return null;
     }
 
     public void setId(String id) {
@@ -121,6 +180,11 @@ public class BasicSchema implements Schema {
     }
 
     @Override
+    public Set<String> getInvolvedTables() {
+        return null;
+    }
+
+    @Override
     public StagingInputErrorHandler getOnInvalidInput() {
         return _onInvalidInput;
     }
@@ -145,8 +209,10 @@ public class BasicSchema implements Schema {
         return _parsedInputMap;
     }
 
-    public void setInputMap(Map<String, BasicInput> parsedInputMap) {
-        _parsedInputMap = parsedInputMap;
+    @SuppressWarnings("unchecked")
+    @Override
+    public void setInputMap(Map<String, ? extends Input> parsedInputMap) {
+        _parsedInputMap = (Map<String, BasicInput>) parsedInputMap;
     }
 
     @Override
@@ -154,7 +220,9 @@ public class BasicSchema implements Schema {
         return _parsedOutputMap;
     }
 
-    public void setOutputMap(Map<String, BasicOutput> parsedOutputMap) {
-        _parsedOutputMap = parsedOutputMap;
+    @SuppressWarnings("unchecked")
+    @Override
+    public void setOutputMap(Map<String, ? extends Output> parsedOutputMap) {
+        _parsedOutputMap = (Map<String, BasicOutput>) parsedOutputMap;
     }
 }
