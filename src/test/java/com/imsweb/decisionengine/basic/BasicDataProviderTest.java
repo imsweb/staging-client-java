@@ -1,8 +1,7 @@
 package com.imsweb.decisionengine.basic;
 
-import org.junit.Test;
-
 import com.imsweb.decisionengine.Endpoint.EndpointType;
+import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
@@ -10,7 +9,7 @@ import static org.junit.Assert.assertNull;
 public class BasicDataProviderTest {
 
     @Test
-    public void testParseEndpoint() throws Exception {
+    public void testParseEndpoint() {
         BasicEndpoint endpoint;
         BasicDataProvider provider = new BasicDataProvider();
 

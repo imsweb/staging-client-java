@@ -22,7 +22,7 @@ public class BasicMapping implements Mapping {
     /**
      * Constructor
      *
-     * @param id
+     * @param id mapping indentifier
      */
     public BasicMapping(String id) {
         _id = id;

@@ -7,7 +7,6 @@ import com.imsweb.decisionengine.DataProvider;
 import com.imsweb.decisionengine.DecisionEngine;
 import com.imsweb.decisionengine.Endpoint.EndpointType;
 import com.imsweb.decisionengine.Range;
-import com.imsweb.staging.Staging;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,6 +14,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import static com.imsweb.staging.Staging.CONTEXT_KEYS;
 
 /**
  * In implementation of DataProvider which holds all data in memory
@@ -128,7 +129,7 @@ public class BasicDataProvider implements DataProvider {
         }
 
         // add extra inputs, if any; do not include context variables since they are not user input
-        extraInputs.removeAll(Staging.CONTEXT_KEYS);
+        CONTEXT_KEYS.forEach(extraInputs::remove);
         table.setExtraInput(extraInputs.isEmpty() ? null : extraInputs);
     }
 
