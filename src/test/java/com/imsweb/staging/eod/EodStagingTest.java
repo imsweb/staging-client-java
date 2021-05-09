@@ -40,9 +40,6 @@ import static com.imsweb.staging.eod.EodStagingData.EodStagingInputBuilder;
 import static com.imsweb.staging.eod.EodStagingData.Result;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.fail;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
 
 /**
  * Full test of a production algorithm loaded externally from a zip file
@@ -364,23 +361,23 @@ public class EodStagingTest {
         // perform the staging
         _STAGING.stage(data);
 
-        assertEquals(Result.STAGED, data.getResult());
-        assertEquals("colon_rectum", data.getSchemaId());
-        assertEquals(0, data.getErrors().size());
-        assertEquals(11, data.getPath().size());
+        assertThat(data.getResult()).isEqualTo(Result.STAGED);
+        assertThat(data.getSchemaId()).isEqualTo("colon_rectum");
+        assertThat(data.getErrors()).isEmpty();
+        assertThat(data.getPath()).hasSize(11);
 
         // before the bug fix, AJCC_VERSION_NUMBER was returning an empty string
-        assertEquals("08", data.getOutput(EodOutput.AJCC_VERSION_NUMBER));
+        assertThat(data.getOutput(EodOutput.AJCC_VERSION_NUMBER)).isEqualTo("08");
 
         // check other output
-        assertEquals("00200", data.getOutput(EodOutput.NAACCR_SCHEMA_ID));
-        assertEquals("4A", data.getOutput(EodOutput.EOD_2018_STAGE_GROUP));
-        assertEquals("2.0", data.getOutput(EodOutput.DERIVED_VERSION));
-        assertEquals("7", data.getOutput(EodOutput.SS_2018_DERIVED));
-        assertEquals("T4b", data.getOutput(EodOutput.EOD_2018_T));
-        assertEquals("N2b", data.getOutput(EodOutput.EOD_2018_N));
-        assertEquals("M1a", data.getOutput(EodOutput.EOD_2018_M));
-        assertEquals("20", data.getOutput(EodOutput.AJCC_ID));
+        assertThat(data.getOutput(EodOutput.NAACCR_SCHEMA_ID)).isEqualTo("00200");
+        assertThat(data.getOutput(EodOutput.EOD_2018_STAGE_GROUP)).isEqualTo("4A");
+        assertThat(data.getOutput(EodOutput.DERIVED_VERSION)).isEqualTo("2.0");
+        assertThat(data.getOutput(EodOutput.SS_2018_DERIVED)).isEqualTo("7");
+        assertThat(data.getOutput(EodOutput.EOD_2018_T)).isEqualTo("T4b");
+        assertThat(data.getOutput(EodOutput.EOD_2018_N)).isEqualTo("N2b");
+        assertThat(data.getOutput(EodOutput.EOD_2018_M)).isEqualTo("M1a");
+        assertThat(data.getOutput(EodOutput.AJCC_ID)).isEqualTo("20");
     }
 
     @Test
@@ -788,18 +785,18 @@ public class EodStagingTest {
 
     @Test
     public void testGlossary() {
-        assertEquals(15, _STAGING.getGlossaryTerms().size());
+        assertThat(_STAGING.getGlossaryTerms()).hasSize(15);
         GlossaryDefinition entry = _STAGING.getGlossaryDefinition("Medulla");
-        assertNotNull(entry);
-        assertEquals("Medulla", entry.getName());
-        assertTrue(entry.getDefinition().startsWith("The central portion of an organ, in contrast to the outer layer"));
-        assertEquals(Collections.singletonList("Medullary"), entry.getAlternateNames());
-        assertNotNull(entry.getLastModified());
+        assertThat(entry).isNotNull();
+        assertThat("Medulla").isEqualTo(entry.getName());
+        assertThat(entry.getDefinition().startsWith("The central portion of an organ, in contrast to the outer layer")).isTrue();
+        assertThat(Collections.singletonList("Medullary")).isEqualTo(entry.getAlternateNames());
+        assertThat(entry.getLastModified()).isNotNull();
 
         Set<String> hits = _STAGING.getSchemaGlossary("urethra");
-        assertEquals(1, hits.size());
+        assertThat(hits).hasSize(1);
         hits = _STAGING.getTableGlossary("extension_baj");
-        assertEquals(3, hits.size());
+        assertThat(hits).hasSize(3);
     }
 
 }
