@@ -3,6 +3,10 @@
  */
 package com.imsweb.staging;
 
+import com.imsweb.decisionengine.Endpoint;
+import com.imsweb.decisionengine.Schema;
+import com.imsweb.decisionengine.Table;
+import com.imsweb.decisionengine.TableRow;
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.StagingEndpoint;
 import com.imsweb.staging.entities.StagingSchema;
@@ -161,17 +165,17 @@ public class StagingFileDataProvider extends StagingDataProvider {
     }
 
     @Override
-    public StagingTable getTable(String id) {
+    public Table getTable(String id) {
         return _tables.get(id);
     }
 
     @Override
-    public StagingEndpoint getEndpoint(EndpointType type, String value) {
+    public Endpoint getEndpoint(EndpointType type, String value) {
         return new StagingEndpoint(type, value);
     }
 
     @Override
-    public StagingTableRow getTableRow() {
+    public TableRow getTableRow() {
         return new StagingTableRow();
     }
 
@@ -186,7 +190,7 @@ public class StagingFileDataProvider extends StagingDataProvider {
     }
 
     @Override
-    public StagingSchema getSchema(String id) {
+    public Schema getSchema(String id) {
         return _schemas.get(id);
     }
 

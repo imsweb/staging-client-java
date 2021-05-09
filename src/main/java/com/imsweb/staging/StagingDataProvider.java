@@ -78,6 +78,7 @@ public abstract class StagingDataProvider implements DataProvider {
 
     // lookup cache
     private final Cache<SchemaLookup, List<Schema>> _lookupCache;
+
     // site/hist cache
     private final Cache<String, Set<String>> _validValuesCache;
 

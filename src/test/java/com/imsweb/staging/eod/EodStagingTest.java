@@ -12,7 +12,6 @@ import com.imsweb.decisionengine.Table;
 import com.imsweb.staging.ExternalStagingFileDataProvider;
 import com.imsweb.staging.SchemaLookup;
 import com.imsweb.staging.Staging;
-import com.imsweb.staging.StagingData;
 import com.imsweb.staging.StagingDataProvider;
 import com.imsweb.staging.entities.GlossaryDefinition;
 import org.junit.BeforeClass;
@@ -679,11 +678,11 @@ public class EodStagingTest {
 
         // test valid year
         data.setInput(EodInput.DX_YEAR, "2018");
-        assertThat(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput())).isTrue();
+        assertThat(_STAGING.isContextValid("urethra", EodStagingData.YEAR_DX_KEY, data.getInput())).isTrue();
 
         // test invalid year
         data.setInput(EodInput.DX_YEAR, "2016");
-        assertThat(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput())).isFalse();
+        assertThat(_STAGING.isContextValid("urethra", EodStagingData.YEAR_DX_KEY, data.getInput())).isFalse();
     }
 
     @Test
