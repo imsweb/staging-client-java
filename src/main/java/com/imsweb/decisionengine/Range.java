@@ -67,6 +67,9 @@ public class Range {
      * floats (which will work for the `Integer` type fields as well).
      * <p>
      * - Otherwise it will be compared using String but the strings must be the same length otherwise consider different
+     * @param value text to search for
+     * @param context Map of context
+     * @return true if the value was found
      */
     public boolean contains(String value, Map<String, String> context) {
         if (matchesAll())
