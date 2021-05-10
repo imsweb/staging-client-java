@@ -3,11 +3,6 @@
  */
 package com.imsweb.decisionengine;
 
-import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
-import com.imsweb.decisionengine.Endpoint.EndpointType;
-import com.imsweb.decisionengine.Error.ErrorBuilder;
-import com.imsweb.decisionengine.Error.Type;
-
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -24,6 +19,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
+import com.imsweb.decisionengine.Endpoint.EndpointType;
+import com.imsweb.decisionengine.Error.ErrorBuilder;
+import com.imsweb.decisionengine.Error.Type;
+
 /**
  * An engine for processing declarative algorithms.
  */
@@ -36,7 +36,6 @@ public class DecisionEngine {
 
     /**
      * Construct the decision engine with the passed data provider
-     *
      * @param provider a DataProvider
      */
     public DecisionEngine(DataProvider provider) {
@@ -45,7 +44,6 @@ public class DecisionEngine {
 
     /**
      * Checked whether the value is a reference to another variable or context
-     *
      * @param value String value
      * @return true if the value is a reference to another variable or context
      */
@@ -55,7 +53,6 @@ public class DecisionEngine {
 
     /**
      * Takes a key reference, like {{key}} and returns just the key ("key" in this example)
-     *
      * @param value a key refrerence
      * @return the inner key
      */
@@ -68,8 +65,7 @@ public class DecisionEngine {
 
     /**
      * Return the list of endpoints for the matching row in the table; returns null if there is no match
-     *
-     * @param table   a Table
+     * @param table a Table
      * @param context a Map containing the context
      * @return returns a List of Endpoint entities from the matching row or null if no match
      */
@@ -79,9 +75,8 @@ public class DecisionEngine {
 
     /**
      * Return the list of endpoints for the matching row in the table; returns null if there is no match
-     *
-     * @param table       a Table
-     * @param context     a Map containing the context
+     * @param table a Table
+     * @param context a Map containing the context
      * @param keysToMatch if not null, only keys in this set will be matched against
      * @return returns a List of Endpoint entities from the matching row or null if no match
      */
@@ -97,8 +92,7 @@ public class DecisionEngine {
 
     /**
      * Return the matching table row index based on the passed context
-     *
-     * @param table   a Table
+     * @param table a Table
      * @param context a Map containing the context
      * @return the index of the matching table row or null if no match was found
      */
@@ -108,9 +102,8 @@ public class DecisionEngine {
 
     /**
      * Return the matching table row index based on the passed context
-     *
-     * @param table       a Table
-     * @param context     a Map containing the context
+     * @param table a Table
+     * @param context a Map containing the context
      * @param keysToMatch if not null, only keys in this set will be matched against
      * @return the index of the matching table row or null if no match was found
      */
@@ -142,9 +135,8 @@ public class DecisionEngine {
 
     /**
      * Tests that a value is contained in a list of ranges; if the list of ranges is missing or empty, then all values will match to it
-     *
-     * @param values  a List of Range objects
-     * @param value   a value to look for
+     * @param values a List of Range objects
+     * @param value a value to look for
      * @param context the context will be used to do key lookups when values are in the format of {{var}}
      * @return return true if the value is contained in the List of Range objects
      */
@@ -165,8 +157,7 @@ public class DecisionEngine {
     /**
      * Translates a value.  If it is a reference to a context, like {{var}} it will return the context value; otherwise
      * if will return the value unchanged.  If the context key does not exist in the context, blank will be returned
-     *
-     * @param value   String value
+     * @param value String value
      * @param context Context for handling variable references
      * @return the context value if a reference, otherwise the original value is returned
      */
@@ -184,8 +175,7 @@ public class DecisionEngine {
 
     /**
      * Return a comma-separated list of input values the table needs taken from the passed context.  Used for error message.
-     *
-     * @param table   a Table
+     * @param table a Table
      * @param context a Map of context
      * @return a String representing the input for the table
      */
@@ -204,7 +194,6 @@ public class DecisionEngine {
 
     /**
      * Returns the internal data provider
-     *
      * @return a DataProvider
      */
     public DataProvider getProvider() {
@@ -213,7 +202,6 @@ public class DecisionEngine {
 
     /**
      * Sets the provider and initiaizes all definitions and tables
-     *
      * @param provider a DataProvider
      */
     public void setProvider(DataProvider provider) {
@@ -222,7 +210,6 @@ public class DecisionEngine {
 
     /**
      * Given a mapping and a context, check the inclusion/exclusion tables to see if mapping should be processed
-     *
      * @param mapping a Mapping
      * @param context a Map containing the context
      * @return true if the mapping is involved
@@ -293,8 +280,7 @@ public class DecisionEngine {
     /**
      * Given a schema and context, return a list of mappings that match inclusion and exclusion criteria
      * Given a schema and context, return a list of mappings that match inclusion and exclusion criteria
-     *
-     * @param schema  a Schema
+     * @param schema a Schema
      * @param context a Map containing the context
      * @return a List of involved Mapping entities
      */
@@ -315,7 +301,6 @@ public class DecisionEngine {
 
     /**
      * Return a list of tables involved in a definition
-     *
      * @param definitionId an schema identifier
      * @return a set of table identifiers
      */
@@ -330,7 +315,6 @@ public class DecisionEngine {
 
     /**
      * Return a list of tables involved in an definition.  This includes not only the tables paths, but also tables references in the input section.
-     *
      * @param schema a schema
      * @return a set of table identifiers
      */
@@ -374,8 +358,7 @@ public class DecisionEngine {
 
     /**
      * Internal recursive helper function to find the tables that could be called from within a table, stepping through all JUMPs
-     *
-     * @param table  a Table
+     * @param table a Table
      * @param tables a Set of Strings representing the involved table identifiers
      * @return the same Set that was passed in, with possibly extra table identifiers added
      */
@@ -404,7 +387,6 @@ public class DecisionEngine {
      * Note that if an output key is added during the mapping and used as an input in one of the later tables, we do not want
      * to include it in the final list of inputs.  Order matters here since if the key was already used as an input before being
      * re-mapped, then it is still considered an input, otherwise if should be excluded.
-     *
      * @param path a TablePath
      * @return a Set of unique inputs
      */
@@ -417,8 +399,7 @@ public class DecisionEngine {
      * Note that if an output key is added during the mapping and used as an input in one of the later tables, we do not want
      * to include it in the final list of inputs.  Order matters here since if the key was already used as an input before being
      * re-mapped, then it is still considered an input, otherwise if should be excluded.
-     *
-     * @param path           a TablePath
+     * @param path a TablePath
      * @param excludedInputs a list of keys that should not be included in the inputs
      * @return a Set of unique inputs
      */
@@ -477,8 +458,7 @@ public class DecisionEngine {
     /**
      * Looks at all tables involved in the mapping and returns a list of inputs that are used.  This also includes the inputs
      * used in the inclusion and exclusion tables if any.
-     *
-     * @param mapping        a Mapping
+     * @param mapping a Mapping
      * @param excludedInputs a list of keys that should not be included in the inputs
      * @return a Set of unique inputs
      */
@@ -511,7 +491,6 @@ public class DecisionEngine {
 
     /**
      * Looks at all tables involved in all the mappings in the definition and returns a list of inputs that are used.  It will also deal with mapped inputs.
-     *
      * @param schema a schema
      * @return a Set of Strings containing the unique schema input keys
      */
@@ -528,7 +507,6 @@ public class DecisionEngine {
 
     /**
      * Return a list of outputs that are produced form the specified TablePath.  It will also handle mapped outputs.
-     *
      * @param path a TablePath
      * @return a Set of Strings containing the unique Mapping output keys
      */
@@ -559,7 +537,6 @@ public class DecisionEngine {
     /**
      * Looks at all tables involved in the mapping and returns a list of outputs that are produced.  It will also handle mapped outputs.  Since
      * inclusion/exclusion tables should not map any new values, they are not included in the calculation.
-     *
      * @param mapping a Mapping
      * @return a Set of Strings containing the unique Mapping output keys
      */
@@ -575,7 +552,6 @@ public class DecisionEngine {
 
     /**
      * Looks at all tables involved in all the mappings in the definition and returns a list of outputs produced.  It will also handle mapped outputs.
-     *
      * @param schema a schema
      * @return a Set of Strings containing the unique Mapping output keys
      */
@@ -591,9 +567,8 @@ public class DecisionEngine {
 
     /**
      * Using the supplied context, process an definition.  The results will be added to the context.
-     *
      * @param definitionId an schema identifier
-     * @param context      a Map containing the context
+     * @param context a Map containing the context
      * @return a Result
      */
     public Result process(String definitionId, Map<String, String> context) {
@@ -607,8 +582,7 @@ public class DecisionEngine {
 
     /**
      * Using the supplied context, process a definition.  The results will be added to the context.
-     *
-     * @param schema  a schema
+     * @param schema a schema
      * @param context a Map containing the context
      * @return a Result
      */
@@ -765,12 +739,11 @@ public class DecisionEngine {
 
     /**
      * Internal method to recursively process a table
-     *
      * @param mappingId a Mapping identifier
-     * @param tableId   a Table identifier
-     * @param path      a TablePath
-     * @param result    a Result
-     * @param stack     a stack which tracks the path and makes sure the path doesn't enter an infinite recusive state
+     * @param tableId a Table identifier
+     * @param path a TablePath
+     * @param result a Result
+     * @param stack a stack which tracks the path and makes sure the path doesn't enter an infinite recusive state
      * @return a boolean indicating whether processing should continue
      */
 

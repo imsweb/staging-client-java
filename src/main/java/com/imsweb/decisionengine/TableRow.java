@@ -12,7 +12,6 @@ public interface TableRow {
 
     /**
      * A list of values from the input column represented by the passed key
-     *
      * @param key the field name of the column
      * @return a List of Range objects
      */
@@ -20,7 +19,6 @@ public interface TableRow {
 
     /**
      * A list of endpoints on the row
-     *
      * @return a List of Endpoint objects
      */
     List<? extends Endpoint> getEndpoints();

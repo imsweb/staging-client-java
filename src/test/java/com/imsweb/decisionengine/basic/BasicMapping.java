@@ -3,12 +3,12 @@
  */
 package com.imsweb.decisionengine.basic;
 
-import com.imsweb.decisionengine.Mapping;
-
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+import com.imsweb.decisionengine.Mapping;
 
 public class BasicMapping implements Mapping {
 
@@ -21,7 +21,6 @@ public class BasicMapping implements Mapping {
 
     /**
      * Constructor
-     *
      * @param id mapping indentifier
      */
     public BasicMapping(String id) {
@@ -30,8 +29,7 @@ public class BasicMapping implements Mapping {
 
     /**
      * Contruct a BasicAlgorithm with an intial set of table paths
-     *
-     * @param id         String identifier
+     * @param id String identifier
      * @param tablePaths a List of BasicTablePath objects
      */
     public BasicMapping(String id, List<BasicTablePath> tablePaths) {
@@ -98,7 +96,6 @@ public class BasicMapping implements Mapping {
 
     /**
      * Set the table paths
-     *
      * @param tablePaths a List of BasicTablePath objects
      */
     public void setTablePaths(List<BasicTablePath> tablePaths) {
@@ -107,7 +104,6 @@ public class BasicMapping implements Mapping {
 
     /**
      * Add a new table path
-     *
      * @param path a BasicTablePath
      */
     public void addTablePath(BasicTablePath path) {

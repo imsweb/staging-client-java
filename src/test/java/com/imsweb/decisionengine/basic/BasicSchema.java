@@ -3,10 +3,6 @@
  */
 package com.imsweb.decisionengine.basic;
 
-import com.imsweb.decisionengine.Input;
-import com.imsweb.decisionengine.Output;
-import com.imsweb.decisionengine.Schema;
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -14,6 +10,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import com.imsweb.decisionengine.Input;
+import com.imsweb.decisionengine.Output;
+import com.imsweb.decisionengine.Schema;
 
 public class BasicSchema implements Schema {
 
@@ -36,7 +36,6 @@ public class BasicSchema implements Schema {
 
     /**
      * Construct with an indentifier
-     *
      * @param id a definition identifier
      */
     public BasicSchema(String id) {
@@ -212,7 +211,7 @@ public class BasicSchema implements Schema {
     @SuppressWarnings("unchecked")
     @Override
     public void setInputMap(Map<String, ? extends Input> parsedInputMap) {
-        _parsedInputMap = (Map<String, BasicInput>) parsedInputMap;
+        _parsedInputMap = (Map<String, BasicInput>)parsedInputMap;
     }
 
     @Override
@@ -223,6 +222,6 @@ public class BasicSchema implements Schema {
     @SuppressWarnings("unchecked")
     @Override
     public void setOutputMap(Map<String, ? extends Output> parsedOutputMap) {
-        _parsedOutputMap = (Map<String, BasicOutput>) parsedOutputMap;
+        _parsedOutputMap = (Map<String, BasicOutput>)parsedOutputMap;
     }
 }

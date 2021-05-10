@@ -3,20 +3,6 @@
  */
 package com.imsweb.staging.eod;
 
-import com.imsweb.decisionengine.ColumnDefinition;
-import com.imsweb.decisionengine.Input;
-import com.imsweb.decisionengine.Mapping;
-import com.imsweb.decisionengine.Output;
-import com.imsweb.decisionengine.Schema;
-import com.imsweb.decisionengine.Table;
-import com.imsweb.staging.ExternalStagingFileDataProvider;
-import com.imsweb.staging.SchemaLookup;
-import com.imsweb.staging.Staging;
-import com.imsweb.staging.StagingDataProvider;
-import com.imsweb.staging.entities.GlossaryDefinition;
-import org.junit.BeforeClass;
-import org.junit.Test;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
@@ -31,6 +17,21 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import com.imsweb.decisionengine.ColumnDefinition;
+import com.imsweb.decisionengine.Input;
+import com.imsweb.decisionengine.Mapping;
+import com.imsweb.decisionengine.Output;
+import com.imsweb.decisionengine.Schema;
+import com.imsweb.decisionengine.Table;
+import com.imsweb.staging.ExternalStagingFileDataProvider;
+import com.imsweb.staging.SchemaLookup;
+import com.imsweb.staging.Staging;
+import com.imsweb.staging.StagingDataProvider;
+import com.imsweb.staging.entities.GlossaryDefinition;
 
 import static com.imsweb.staging.StagingData.HISTOLOGY_KEY;
 import static com.imsweb.staging.StagingData.PRIMARY_SITE_KEY;
@@ -256,7 +257,7 @@ public class EodStagingTest {
             // build a list of input tables that should be excluded
             Set<String> ids = new HashSet<>();
 
-            List<Mapping> mappings = (List<Mapping>) schema.getMappings();
+            List<Mapping> mappings = (List<Mapping>)schema.getMappings();
             if (mappings != null)
                 for (Mapping mapping : mappings) {
                     if (ids.contains(mapping.getId()))

@@ -1,7 +1,8 @@
 package com.imsweb.decisionengine.basic;
 
-import com.imsweb.decisionengine.Endpoint.EndpointType;
 import org.junit.Test;
+
+import com.imsweb.decisionengine.Endpoint.EndpointType;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;

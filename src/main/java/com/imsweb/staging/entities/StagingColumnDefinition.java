@@ -3,11 +3,12 @@
  */
 package com.imsweb.staging.entities;
 
+import java.util.Objects;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.imsweb.decisionengine.ColumnDefinition;
 
-import java.util.Objects;
+import com.imsweb.decisionengine.ColumnDefinition;
 
 @JsonPropertyOrder({"key", "name", "type", "source"})
 public class StagingColumnDefinition implements ColumnDefinition {
@@ -25,8 +26,7 @@ public class StagingColumnDefinition implements ColumnDefinition {
 
     /**
      * Constructor
-     *
-     * @param key  input key
+     * @param key input key
      * @param name column name
      * @param type column type
      */
@@ -83,7 +83,7 @@ public class StagingColumnDefinition implements ColumnDefinition {
         if (o == null || getClass() != o.getClass())
             return false;
 
-        StagingColumnDefinition that = (StagingColumnDefinition) o;
+        StagingColumnDefinition that = (StagingColumnDefinition)o;
 
         return Objects.equals(_key, that._key) &&
                 Objects.equals(_name, that._name) &&

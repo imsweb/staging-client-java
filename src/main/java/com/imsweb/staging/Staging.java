@@ -3,6 +3,20 @@
  */
 package com.imsweb.staging;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 import com.imsweb.decisionengine.ColumnDefinition;
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.DecisionEngine;
@@ -17,20 +31,6 @@ import com.imsweb.decisionengine.Table;
 import com.imsweb.decisionengine.TablePath;
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.GlossaryHit;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 import static com.imsweb.decisionengine.ColumnDefinition.ColumnType.DESCRIPTION;
 
@@ -48,7 +48,6 @@ public final class Staging {
 
     /**
      * Private constructor
-     *
      * @param provider data provider
      */
     private Staging(StagingDataProvider provider) {
@@ -58,7 +57,6 @@ public final class Staging {
 
     /**
      * Create an instance of the Staging object with a pre-constructed provider
-     *
      * @param provider StagingDataProvider
      * @return a Staging instance
      */
@@ -68,7 +66,6 @@ public final class Staging {
 
     /**
      * Return the algorithm name
-     *
      * @return an Algorithm
      */
     public String getAlgorithm() {
@@ -77,7 +74,6 @@ public final class Staging {
 
     /**
      * Return the data version
-     *
      * @return a version string
      */
     public String getVersion() {
@@ -86,7 +82,6 @@ public final class Staging {
 
     /**
      * Return the list a schema ids
-     *
      * @return a Set of Strings of schema ids
      */
     public Set<String> getSchemaIds() {
@@ -95,7 +90,6 @@ public final class Staging {
 
     /**
      * Return a schema based on schema id
-     *
      * @param id Schema identifier
      * @return an Algorithm object
      */
@@ -105,7 +99,6 @@ public final class Staging {
 
     /**
      * Return a list of glossary matches for the specific schema
-     *
      * @param id Schema identifier
      * @return a set of glossary terms
      */
@@ -126,7 +119,6 @@ public final class Staging {
 
     /**
      * Return true if the site is valid
-     *
      * @param site primary site
      * @return true if the side is valid
      */
@@ -136,7 +128,6 @@ public final class Staging {
 
     /**
      * Return true if the histology is valid
-     *
      * @param histology histology
      * @return true if the histology is valid
      */
@@ -146,7 +137,6 @@ public final class Staging {
 
     /**
      * Look up a schema based on site, histology and an optional discriminator.
-     *
      * @param lookup schema lookup input
      * @return a list of StagingSchema objects
      */
@@ -156,7 +146,6 @@ public final class Staging {
 
     /**
      * Return a complete list of mapping table names
-     *
      * @return Set of String objects containing table names
      */
     public Set<String> getTableIds() {
@@ -165,7 +154,6 @@ public final class Staging {
 
     /**
      * Return a mapping table based on table name
-     *
      * @param id table identifier
      * @return Table object
      */
@@ -175,7 +163,6 @@ public final class Staging {
 
     /**
      * Return a list of glossary matches for the specific table
-     *
      * @param id Table identifier
      * @return a set of glossary terms
      */
@@ -209,10 +196,9 @@ public final class Staging {
 
     /**
      * Check the code validity of a single field in a schema.  If the schema or field do no exist, false will be returned.
-     *
      * @param schemaId schema identifier
-     * @param key      input key
-     * @param value    value to check validity
+     * @param key input key
+     * @param value value to check validity
      * @return a boolean indicating whether the code exists for the the passed schema field
      */
     public boolean isCodeValid(String schemaId, String key, String value) {
@@ -230,10 +216,9 @@ public final class Staging {
     /**
      * Check the validity of a single field of a schema based on the supplied context.  The value of this key should be in the context as well
      * as any other properties needed to evaluation validity.  If the schema or field do no exist, false will be returned.
-     *
      * @param schemaId schema identifier
-     * @param key      input key
-     * @param context  Map of keys/values to validate against
+     * @param key input key
+     * @param context Map of keys/values to validate against
      * @return a boolean indicating whether the code exists for the the passed schema field
      */
     public boolean isContextValid(String schemaId, String key, Map<String, String> context) {
@@ -269,10 +254,9 @@ public final class Staging {
     /**
      * For a given table, return the index of the row that matches the key/value combination.  If you need to match on more than
      * one input, see the other findMatchingTableRow.
-     *
      * @param tableId table identifier
-     * @param key     input key
-     * @param value   value
+     * @param key input key
+     * @param value value
      * @return the index of the matching table row or null if no match was found
      */
     public Integer findMatchingTableRow(String tableId, String key, String value) {
@@ -285,7 +269,6 @@ public final class Staging {
 
     /**
      * For a given table, return the index of the row that matches supplied context.
-     *
      * @param tableId table identifier
      * @param context context of input key/values to use to match
      * @return the index of the matching table row or null if no match was found
@@ -305,7 +288,6 @@ public final class Staging {
 
     /**
      * Return a list of tables identifiers involved in the specified schema
-     *
      * @param schemaId schema identifier
      * @return a Set of table identifiers; if the schema is not found the set will be empty
      */
@@ -321,7 +303,6 @@ public final class Staging {
 
     /**
      * Return a list of schema identifiers which the specified table is used in
-     *
      * @param tableId table identifier
      * @return a Set of schema identifiers
      */
@@ -333,7 +314,6 @@ public final class Staging {
     /**
      * Looks at all tables involved in the table path and returns a list of input keys that could be used.  This also includes the input keys
      * used in jumps tables.
-     *
      * @param path a StagingTablePath
      * @return a Set of unique input keys
      */
@@ -344,8 +324,7 @@ public final class Staging {
     /**
      * Looks at all tables involved in the table path and returns a list of input keys that could be used.  This also includes the input keys
      * used in jumps tables.
-     *
-     * @param path           a StagingTablePath
+     * @param path a StagingTablePath
      * @param excludedInputs a list of input keys to not consider as inputs
      * @return a Set of unique input keys
      */
@@ -364,7 +343,6 @@ public final class Staging {
     /**
      * Looks at all tables involved in the mapping and returns a list of input keys that could be used.  This also includes the input keys
      * used in the inclusion and exclusion tables if any.
-     *
      * @param mapping a StagingMapping
      * @return a Set of unique input keys
      */
@@ -376,9 +354,8 @@ public final class Staging {
      * Looks at all tables involved in the mapping and returns a list of input keys that could be used.  This always includes the input keys
      * used in the inclusion and exclusion tables if any.  The inputs from each table path will only be included if it passes the inclusion/exclusion
      * criteria based on the context.
-     *
-     * @param mapping        a StagingMapping
-     * @param context        a context of values used to to check mapping inclusion/exclusion
+     * @param mapping a StagingMapping
+     * @param context a context of values used to to check mapping inclusion/exclusion
      * @param excludedInputs a list of input keys to not consider as inputs
      * @return a Set of unique input keys
      */
@@ -411,7 +388,6 @@ public final class Staging {
      * inputs.  Note that if an input to a table was not a supplied input (i.e. it was created as an output of a previous table) it will not be included
      * in the list of inputs.  The inputs will also include any used in schema selection.  All inputs returned from this method should be in the schema input
      * list otherwise there is a problem with the schema.
-     *
      * @param schema a StagingSchema
      * @return a Set of unique input keys
      */
@@ -425,8 +401,7 @@ public final class Staging {
      * to a table was not a supplied input (i.e. it was created as an output of a previous table) it will not be included in the list of inputs.  The inputs will
      * also include any used in schema selection.  All inputs returned from this method should be in the schema input list otherwise there is a problem with the
      * schema.
-     *
-     * @param schema  a StagingSchema
+     * @param schema a StagingSchema
      * @param context a context of values used to to check mapping inclusion/exclusion
      * @return a Set of unique input keys
      */
@@ -459,7 +434,6 @@ public final class Staging {
 
     /**
      * Looks at a table path (and all jump tables within in) and returns a list of output keys that could be created.
-     *
      * @param path a StagingTablePath
      * @return a Set of unique output keys
      */
@@ -470,7 +444,6 @@ public final class Staging {
     /**
      * Looks at all tables involved in the mapping and returns a list of output keys that could be created.  This also includes the output keys
      * used in the inclusion and exclusion tables if any.
-     *
      * @param mapping a StagingMapping
      * @return a Set of unique output keys
      */
@@ -482,7 +455,6 @@ public final class Staging {
      * Looks at all tables involved in the mapping and returns a list of output keys that could be created.  This also includes the output keys
      * used in the inclusion and exclusion tables if any.  The outputs from each mapping will only be included if it passes the inclusion/exclusion
      * criteria based on the context.
-     *
      * @param mapping a StagingMapping
      * @param context a context of values used to to check mapping inclusion/exclusion
      * @return a Set of unique output keys
@@ -501,7 +473,6 @@ public final class Staging {
     /**
      * Looks at all tables involved in all the mappings in the definition and returns a list of output keys that could be created.  It will also deal with mapped
      * outputs.
-     *
      * @param schema a StagingSchema
      * @return a Set of unique output keys
      */
@@ -513,8 +484,7 @@ public final class Staging {
      * Looks at all tables involved in all the mappings in the definition and returns a list of output keys that will be created.  It will also deal with mapped
      * outputs.  The outputs from each mapping will only be included if it passes the inclusion/exclusion criteria based on the context.  If the schema has StagingOutputs
      * defined, then the calulated output list is exactly the same as the schema output list.
-     *
-     * @param schema  a StagingSchema
+     * @param schema a StagingSchema
      * @param context a context of values used to to check mapping inclusion/exclusion
      * @return a Set of unique output keys
      */
@@ -546,7 +516,6 @@ public final class Staging {
 
     /**
      * Stage the passed case.
-     *
      * @param data all input values are passed through this database
      * @return the same StagingData with output values filled in
      */
@@ -635,7 +604,6 @@ public final class Staging {
 
     /**
      * Return a list of all supported glossary terms
-     *
      * @return a set of terms
      */
     public Set<String> getGlossaryTerms() {
@@ -644,7 +612,6 @@ public final class Staging {
 
     /**
      * Return the definition of a glossary term
-     *
      * @param term glossery term
      * @return full glossary definition
      */
@@ -654,7 +621,6 @@ public final class Staging {
 
     /**
      * Return a list of glossary terms in the passed text
-     *
      * @param text text to match against
      * @return a list of glossary terms
      */
@@ -664,7 +630,6 @@ public final class Staging {
 
     /**
      * Add the context keys which are used in staging and other calls
-     *
      * @param context Map of context
      */
     private void addContextKeys(Map<String, String> context) {
@@ -678,7 +643,6 @@ public final class Staging {
 
     /**
      * Remove all context keys
-     *
      * @param context Map of context
      */
     private void removeContextKeys(Map<String, String> context) {

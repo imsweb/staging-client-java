@@ -3,18 +3,6 @@
  */
 package com.imsweb.staging;
 
-import com.imsweb.decisionengine.Endpoint;
-import com.imsweb.decisionengine.Schema;
-import com.imsweb.decisionengine.Table;
-import com.imsweb.decisionengine.TableRow;
-import com.imsweb.staging.entities.GlossaryDefinition;
-import com.imsweb.staging.entities.StagingEndpoint;
-import com.imsweb.staging.entities.StagingSchema;
-import com.imsweb.staging.entities.StagingTable;
-import com.imsweb.staging.entities.StagingTableRow;
-import org.ahocorasick.trie.Trie;
-import org.ahocorasick.trie.Trie.TrieBuilder;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -27,6 +15,19 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
+
+import org.ahocorasick.trie.Trie;
+import org.ahocorasick.trie.Trie.TrieBuilder;
+
+import com.imsweb.decisionengine.Endpoint;
+import com.imsweb.decisionengine.Schema;
+import com.imsweb.decisionengine.Table;
+import com.imsweb.decisionengine.TableRow;
+import com.imsweb.staging.entities.GlossaryDefinition;
+import com.imsweb.staging.entities.StagingEndpoint;
+import com.imsweb.staging.entities.StagingSchema;
+import com.imsweb.staging.entities.StagingTable;
+import com.imsweb.staging.entities.StagingTableRow;
 
 import static com.imsweb.decisionengine.Endpoint.EndpointType;
 
@@ -43,7 +44,6 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
 
     /**
      * Constructor loads all schemas and sets up table cache
-     *
      * @param is InputStream pointing the the zip file
      * @throws IOException exception for file operations
      */

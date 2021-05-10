@@ -3,17 +3,17 @@
  */
 package com.imsweb.decisionengine.basic;
 
-import com.imsweb.decisionengine.DataProvider;
-import com.imsweb.decisionengine.DecisionEngine;
-import com.imsweb.decisionengine.Endpoint.EndpointType;
-import com.imsweb.decisionengine.Range;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import com.imsweb.decisionengine.DataProvider;
+import com.imsweb.decisionengine.DecisionEngine;
+import com.imsweb.decisionengine.Endpoint.EndpointType;
+import com.imsweb.decisionengine.Range;
 
 import static com.imsweb.staging.Staging.CONTEXT_KEYS;
 
@@ -35,7 +35,6 @@ public class BasicDataProvider implements DataProvider {
 
     /**
      * Initialize a definition.
-     *
      * @param definition a BasicDefinition
      */
     public void initDefinition(BasicSchema definition) {
@@ -72,7 +71,6 @@ public class BasicDataProvider implements DataProvider {
 
     /**
      * Initialize a table.
-     *
      * @param table a BasicTable
      */
     public void initTable(BasicTable table) {
@@ -139,7 +137,6 @@ public class BasicDataProvider implements DataProvider {
      * ENDPOINT_TYPE
      * ENDPOINT_TYPE:PARAMETER
      * </p>
-     *
      * @param endpoint an endpoint
      * @return an BasicEndpoint object
      */
@@ -177,7 +174,6 @@ public class BasicDataProvider implements DataProvider {
      * 11,13-15,25-29,35
      * </p>
      * Note that all values (both low and high) must be the same length since they are evaluated using String comparison.
-     *
      * @param values a string of values
      * @return a List of Range objects
      */
@@ -227,7 +223,6 @@ public class BasicDataProvider implements DataProvider {
 
     /**
      * Add a table to the list
-     *
      * @param table a BasicTable
      */
     public void addTable(BasicTable table) {
@@ -241,7 +236,6 @@ public class BasicDataProvider implements DataProvider {
 
     /**
      * Add a starting point to the list
-     *
      * @param definition a BasicDefinition
      */
     public void addDefinition(BasicSchema definition) {

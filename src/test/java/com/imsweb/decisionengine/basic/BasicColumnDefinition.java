@@ -38,7 +38,6 @@ public class BasicColumnDefinition implements ColumnDefinition {
 
     /**
      * Set the column key
-     *
      * @param key a column key
      */
     public void setKey(String key) {
@@ -57,7 +56,6 @@ public class BasicColumnDefinition implements ColumnDefinition {
 
     /**
      * Set the column type
-     *
      * @param type a column type
      */
     public void setType(ColumnType type) {

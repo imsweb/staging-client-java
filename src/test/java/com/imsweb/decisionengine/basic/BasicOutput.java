@@ -3,9 +3,9 @@
  */
 package com.imsweb.decisionengine.basic;
 
-import com.imsweb.decisionengine.Output;
-
 import java.util.Set;
+
+import com.imsweb.decisionengine.Output;
 
 public class BasicOutput implements Output {
 
@@ -21,7 +21,6 @@ public class BasicOutput implements Output {
 
     /**
      * Construct with an input key
-     *
      * @param key input key
      */
     public BasicOutput(String key) {
@@ -30,8 +29,7 @@ public class BasicOutput implements Output {
 
     /**
      * Construct with an input key and table
-     *
-     * @param key   input key
+     * @param key input key
      * @param table table
      */
     public BasicOutput(String key, String table) {

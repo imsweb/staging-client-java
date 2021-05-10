@@ -3,9 +3,9 @@
  */
 package com.imsweb.decisionengine;
 
-import org.apache.commons.lang3.math.NumberUtils;
-
 import java.util.Map;
+
+import org.apache.commons.lang3.math.NumberUtils;
 
 /**
  * An interface representing a string range
@@ -23,8 +23,7 @@ public class Range {
 
     /**
      * Construct a string range with a low and high bound
-     *
-     * @param low  low value
+     * @param low low value
      * @param high high value
      */
     public Range(String low, String high) {
@@ -37,7 +36,6 @@ public class Range {
 
     /**
      * Return true if the string can converted into a number
-     *
      * @param value string value
      * @return true if string can be parsed to an integer
      */
@@ -55,7 +53,6 @@ public class Range {
 
     /**
      * If low and high are both null, then this range matches all strings
-     *
      * @return true if this range matches all strings
      */
     public boolean matchesAll() {

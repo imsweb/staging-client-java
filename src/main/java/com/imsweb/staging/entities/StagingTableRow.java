@@ -3,16 +3,17 @@
  */
 package com.imsweb.staging.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.imsweb.decisionengine.Endpoint;
-import com.imsweb.decisionengine.Range;
-import com.imsweb.decisionengine.TableRow;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import com.imsweb.decisionengine.Endpoint;
+import com.imsweb.decisionengine.Range;
+import com.imsweb.decisionengine.TableRow;
 
 public class StagingTableRow implements TableRow {
 
@@ -36,8 +37,7 @@ public class StagingTableRow implements TableRow {
 
     /**
      * Add a single columns input list
-     *
-     * @param key   key
+     * @param key key
      * @param range range
      */
     @Override
@@ -57,6 +57,6 @@ public class StagingTableRow implements TableRow {
 
     @Override
     public void addEndpoint(Endpoint endpoint) {
-        _endpoints.add((StagingEndpoint) endpoint);
+        _endpoints.add((StagingEndpoint)endpoint);
     }
 }

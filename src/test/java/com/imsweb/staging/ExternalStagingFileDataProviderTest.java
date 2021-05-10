@@ -1,18 +1,19 @@
 package com.imsweb.staging;
 
-import com.imsweb.decisionengine.Schema;
-import com.imsweb.decisionengine.Table;
-import com.imsweb.staging.StagingData.Result;
-import com.imsweb.staging.entities.GlossaryDefinition;
-import com.imsweb.staging.entities.GlossaryHit;
-import org.junit.BeforeClass;
-import org.junit.Test;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Set;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import com.imsweb.decisionengine.Schema;
+import com.imsweb.decisionengine.Table;
+import com.imsweb.staging.StagingData.Result;
+import com.imsweb.staging.entities.GlossaryDefinition;
+import com.imsweb.staging.entities.GlossaryHit;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

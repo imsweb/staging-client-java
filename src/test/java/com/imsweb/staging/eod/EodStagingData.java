@@ -16,7 +16,6 @@ public class EodStagingData extends StagingData {
 
     /**
      * Construct with site and histology
-     *
      * @param site primary site
      * @param hist histology
      */
@@ -26,9 +25,8 @@ public class EodStagingData extends StagingData {
 
     /**
      * Construct with site, histology and discriminators
-     *
-     * @param site           primary site
-     * @param hist           histology
+     * @param site primary site
+     * @param hist histology
      * @param discriminator1 first discriminator
      */
     public EodStagingData(String site, String hist, String discriminator1) {
@@ -39,9 +37,8 @@ public class EodStagingData extends StagingData {
 
     /**
      * Construct with site, histology and discriminators
-     *
-     * @param site           primary site
-     * @param hist           histology
+     * @param site primary site
+     * @param hist histology
      * @param discriminator1 first discriminator
      * @param discriminator2 second discriminator
      */
@@ -54,7 +51,6 @@ public class EodStagingData extends StagingData {
 
     /**
      * Return the specified input value
-     *
      * @param key input key
      * @return input
      */
@@ -64,8 +60,7 @@ public class EodStagingData extends StagingData {
 
     /**
      * Set the specified input value
-     *
-     * @param key   input key
+     * @param key input key
      * @param value value
      */
     public void setInput(EodInput key, String value) {
@@ -74,7 +69,6 @@ public class EodStagingData extends StagingData {
 
     /**
      * Return the specified output value
-     *
      * @param key output key
      * @return output
      */

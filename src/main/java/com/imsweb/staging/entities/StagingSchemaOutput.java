@@ -3,15 +3,16 @@
  */
 package com.imsweb.staging.entities;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.imsweb.decisionengine.Output;
-
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
+import com.imsweb.decisionengine.Output;
 
 @JsonPropertyOrder({"key", "name", "description", "naaccr_item", "naaccr_xml_id", "table", "default", "metadata"})
 public class StagingSchemaOutput implements Output {
@@ -44,7 +45,6 @@ public class StagingSchemaOutput implements Output {
 
     /**
      * Copy constructor
-     *
      * @param other other StagingSchemaInput
      */
     public StagingSchemaOutput(StagingSchemaOutput other) {
@@ -147,7 +147,7 @@ public class StagingSchemaOutput implements Output {
         if (o == null || getClass() != o.getClass())
             return false;
 
-        StagingSchemaOutput that = (StagingSchemaOutput) o;
+        StagingSchemaOutput that = (StagingSchemaOutput)o;
 
         // do not include _parsedValues
         return Objects.equals(_key, that._key) &&

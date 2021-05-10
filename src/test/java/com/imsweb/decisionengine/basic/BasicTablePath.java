@@ -3,10 +3,10 @@
  */
 package com.imsweb.decisionengine.basic;
 
-import com.imsweb.decisionengine.TablePath;
-
 import java.util.HashSet;
 import java.util.Set;
+
+import com.imsweb.decisionengine.TablePath;
 
 public class BasicTablePath implements TablePath {
 

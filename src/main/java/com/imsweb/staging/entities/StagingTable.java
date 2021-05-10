@@ -3,17 +3,18 @@
  */
 package com.imsweb.staging.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.imsweb.decisionengine.Table;
-import com.imsweb.decisionengine.TableRow;
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+import com.imsweb.decisionengine.Table;
+import com.imsweb.decisionengine.TableRow;
 
 @JsonPropertyOrder({"id", "algorithm", "version", "name", "title", "subtitle", "description", "notes", "footnotes", "last_modified", "definition", "extra_input", "rows"})
 public class StagingTable implements Table {
@@ -184,7 +185,7 @@ public class StagingTable implements Table {
 
     @Override
     public void addTableRow(TableRow row) {
-        getTableRows().add((StagingTableRow) row);
+        getTableRows().add((StagingTableRow)row);
     }
 
     @Override
@@ -199,7 +200,7 @@ public class StagingTable implements Table {
         if (o == null || getClass() != o.getClass())
             return false;
 
-        StagingTable table = (StagingTable) o;
+        StagingTable table = (StagingTable)o;
 
         // intentionally does not include _id, _lastModified, _parsedTableRows
         return Objects.equals(_displayId, table._displayId) &&

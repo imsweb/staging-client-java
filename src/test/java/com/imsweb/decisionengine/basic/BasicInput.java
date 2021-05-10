@@ -3,9 +3,9 @@
  */
 package com.imsweb.decisionengine.basic;
 
-import com.imsweb.decisionengine.Input;
-
 import java.util.Set;
+
+import com.imsweb.decisionengine.Input;
 
 public class BasicInput implements Input {
 
@@ -22,7 +22,6 @@ public class BasicInput implements Input {
 
     /**
      * Construct with an input key
-     *
      * @param key input key
      */
     public BasicInput(String key) {
@@ -31,8 +30,7 @@ public class BasicInput implements Input {
 
     /**
      * Construct with an input key and table
-     *
-     * @param key   input key
+     * @param key input key
      * @param table table
      */
     public BasicInput(String key, String table) {

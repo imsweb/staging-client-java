@@ -1,16 +1,17 @@
 package com.imsweb.staging;
 
-import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
-import com.imsweb.decisionengine.Range;
-import com.imsweb.staging.entities.StagingColumnDefinition;
-import com.imsweb.staging.entities.StagingTable;
-import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
+
+import org.junit.Test;
+
+import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
+import com.imsweb.decisionengine.Range;
+import com.imsweb.staging.entities.StagingColumnDefinition;
+import com.imsweb.staging.entities.StagingTable;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;

@@ -17,7 +17,6 @@ public interface DataProvider {
 
     /**
      * Get a schema by identifier
-     *
      * @param id the schema id
      * @return a Schema instance or null if identifier was not found
      */

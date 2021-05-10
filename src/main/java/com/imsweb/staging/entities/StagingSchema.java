@@ -3,14 +3,6 @@
  */
 package com.imsweb.staging.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.imsweb.decisionengine.Input;
-import com.imsweb.decisionengine.Output;
-import com.imsweb.decisionengine.Schema;
-
 import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashSet;
@@ -18,6 +10,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
+import com.imsweb.decisionengine.Input;
+import com.imsweb.decisionengine.Output;
+import com.imsweb.decisionengine.Schema;
 
 @JsonPropertyOrder({"id", "algorithm", "version", "name", "title", "subtitle", "description", "notes", "schema_num", "schema_selection_table",
         "schema_discriminators", "initial_context", "inputs", "outputs", "mappings", "involved_tables", "on_invalid_input", "last_modified"})
@@ -223,7 +224,7 @@ public class StagingSchema implements Schema {
     @SuppressWarnings("unchecked")
     @Override
     public void setInputMap(Map<String, ? extends Input> parsedInputMap) {
-        _parsedInputMap = (Map<String, StagingSchemaInput>) parsedInputMap;
+        _parsedInputMap = (Map<String, StagingSchemaInput>)parsedInputMap;
     }
 
     @Override
@@ -235,7 +236,7 @@ public class StagingSchema implements Schema {
     @SuppressWarnings("unchecked")
     @Override
     public void setOutputMap(Map<String, ? extends Output> parsedOutputMap) {
-        _parsedOutputMap = (Map<String, StagingSchemaOutput>) parsedOutputMap;
+        _parsedOutputMap = (Map<String, StagingSchemaOutput>)parsedOutputMap;
     }
 
     @Override
@@ -266,7 +267,7 @@ public class StagingSchema implements Schema {
         if (o == null || getClass() != o.getClass())
             return false;
 
-        StagingSchema schema = (StagingSchema) o;
+        StagingSchema schema = (StagingSchema)o;
 
         // do not include _id, _lastModified and _parsedInputMap
         return Objects.equals(_displayId, schema._displayId) &&

@@ -3,11 +3,28 @@
  */
 package com.imsweb.staging;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TimeZone;
+import java.util.stream.Collectors;
+
+import org.ahocorasick.trie.Trie;
+import org.cache2k.Cache;
+import org.cache2k.Cache2kBuilder;
+
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+
 import com.imsweb.decisionengine.ColumnDefinition;
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.DataProvider;
@@ -24,21 +41,6 @@ import com.imsweb.decisionengine.Table;
 import com.imsweb.decisionengine.TableRow;
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.GlossaryHit;
-import org.ahocorasick.trie.Trie;
-import org.cache2k.Cache;
-import org.cache2k.Cache2kBuilder;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TimeZone;
-import java.util.stream.Collectors;
 
 import static com.imsweb.staging.Staging.CONTEXT_KEYS;
 
@@ -104,7 +106,6 @@ public abstract class StagingDataProvider implements DataProvider {
 
     /**
      * Initialize a schema.
-     *
      * @param schema schema entity
      * @return initialized schema entity
      */
@@ -157,7 +158,6 @@ public abstract class StagingDataProvider implements DataProvider {
 
     /**
      * Initialize a table.
-     *
      * @param table table entity
      * @return initialized table entity
      */
@@ -227,7 +227,6 @@ public abstract class StagingDataProvider implements DataProvider {
 
     /**
      * Parse the string representation of an endpoint into a Endpoint object
-     *
      * @param endpoint endpoint String
      * @return an Endpoint object
      */
@@ -258,7 +257,6 @@ public abstract class StagingDataProvider implements DataProvider {
 
     /**
      * Parses a string in having lists of ranges into a List of Range objects
-     *
      * @param values String representing sets value ranges
      * @return a parsed list of string Range objects
      */
@@ -330,7 +328,6 @@ public abstract class StagingDataProvider implements DataProvider {
 
     /**
      * Return true if the site is valid
-     *
      * @param site primary site
      * @return true if the side is valid
      */
@@ -350,7 +347,6 @@ public abstract class StagingDataProvider implements DataProvider {
 
     /**
      * Return true if the histology is valid
-     *
      * @param histology histology
      * @return true if the histology is valid
      */
@@ -370,7 +366,6 @@ public abstract class StagingDataProvider implements DataProvider {
 
     /**
      * Return the ObjectMapper instance
-     *
      * @return ObjectMapper instance
      */
     public ObjectMapper getMapper() {
@@ -379,14 +374,12 @@ public abstract class StagingDataProvider implements DataProvider {
 
     /**
      * Return the algorithm associated with the provider
-     *
      * @return algorithm id
      */
     public abstract String getAlgorithm();
 
     /**
      * Return the version associated with the provider
-     *
      * @return version number
      */
     public abstract String getVersion();
@@ -403,28 +396,24 @@ public abstract class StagingDataProvider implements DataProvider {
 
     /**
      * Return a set of all schema identifiers
-     *
      * @return a Set of schema identifiers
      */
     public abstract Set<String> getSchemaIds();
 
     /**
      * Return a set of all the table names
-     *
      * @return a List of table identifier
      */
     public abstract Set<String> getTableIds();
 
     /**
      * Return a set of supported glossary terms
-     *
      * @return a Set of terms
      */
     public abstract Set<String> getGlossaryTerms();
 
     /**
      * Return a defitition of a glossary term
-     *
      * @param term glossary term
      * @return a glossary definiiion
      */
@@ -432,7 +421,6 @@ public abstract class StagingDataProvider implements DataProvider {
 
     /**
      * Return a list of all glossary matches in the supplied text
-     *
      * @param text text to match against
      * @return a List of glossary hits
      */
@@ -442,7 +430,6 @@ public abstract class StagingDataProvider implements DataProvider {
 
     /**
      * Return all the legal site values
-     *
      * @return a set of valid sites
      */
     public Set<String> getValidSites() {
@@ -451,7 +438,6 @@ public abstract class StagingDataProvider implements DataProvider {
 
     /**
      * Return all the legal histology values
-     *
      * @return a set of valid histologies
      */
     public Set<String> getValidHistologies() {
@@ -460,7 +446,6 @@ public abstract class StagingDataProvider implements DataProvider {
 
     /**
      * Look up a schema based on site, histology and an optional discriminator.
-     *
      * @param lookup schema lookup input
      * @return a list of StagingSchemaInfo objects
      */
@@ -475,7 +460,6 @@ public abstract class StagingDataProvider implements DataProvider {
 
     /**
      * Look up a schema based on site, histology and an optional discriminator.
-     *
      * @param lookup schema lookup input
      * @return a list of StagingSchemaInfo objects
      */
@@ -515,7 +499,6 @@ public abstract class StagingDataProvider implements DataProvider {
 
     /**
      * Given a table, return a Set of all the distinct input values.  This is for tables that have a single INPUT column.
-     *
      * @param tableId table identifier
      * @return A set of unique inputs
      */

@@ -3,13 +3,13 @@
  */
 package com.imsweb.staging.eod;
 
-import com.imsweb.staging.SchemaLookup;
-import com.imsweb.staging.eod.EodStagingData.EodInput;
-
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
+
+import com.imsweb.staging.SchemaLookup;
+import com.imsweb.staging.eod.EodStagingData.EodInput;
 
 public class EodSchemaLookup extends SchemaLookup {
 
@@ -23,8 +23,7 @@ public class EodSchemaLookup extends SchemaLookup {
 
     /**
      * Constructor
-     *
-     * @param site      primary site
+     * @param site primary site
      * @param histology histology
      */
     public EodSchemaLookup(String site, String histology) {

@@ -4,6 +4,18 @@
  */
 package com.imsweb.decisionengine;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
 import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
 import com.imsweb.decisionengine.Endpoint.EndpointType;
 import com.imsweb.decisionengine.Result.Type;
@@ -14,17 +26,6 @@ import com.imsweb.decisionengine.basic.BasicOutput;
 import com.imsweb.decisionengine.basic.BasicSchema;
 import com.imsweb.decisionengine.basic.BasicTable;
 import com.imsweb.decisionengine.basic.BasicTablePath;
-import org.junit.BeforeClass;
-import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
@@ -1254,7 +1255,6 @@ public class DecisionEngineTest {
 
     /**
      * Shortcut for constructing a Set using a List
-     *
      * @param values list of values
      * @return Set of values
      */

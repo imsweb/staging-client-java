@@ -3,15 +3,15 @@
  */
 package com.imsweb.decisionengine.basic;
 
-import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
-import com.imsweb.decisionengine.Table;
-import com.imsweb.decisionengine.TableRow;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
+
+import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
+import com.imsweb.decisionengine.Table;
+import com.imsweb.decisionengine.TableRow;
 
 public class BasicTable implements Table {
 
@@ -31,7 +31,6 @@ public class BasicTable implements Table {
 
     /**
      * Construct with a table name
-     *
      * @param name a table name
      */
     public BasicTable(String name) {
@@ -139,7 +138,7 @@ public class BasicTable implements Table {
 
     @Override
     public void addTableRow(TableRow row) {
-        getTableRows().add((BasicTableRow) row);
+        getTableRows().add((BasicTableRow)row);
 
     }
 

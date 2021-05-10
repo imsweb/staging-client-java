@@ -3,14 +3,14 @@
  */
 package com.imsweb.decisionengine.basic;
 
-import com.imsweb.decisionengine.Endpoint;
-import com.imsweb.decisionengine.Range;
-import com.imsweb.decisionengine.TableRow;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.imsweb.decisionengine.Endpoint;
+import com.imsweb.decisionengine.Range;
+import com.imsweb.decisionengine.TableRow;
 
 public class BasicTableRow implements TableRow {
 
@@ -33,8 +33,7 @@ public class BasicTableRow implements TableRow {
 
     /**
      * Add a single columns input list
-     *
-     * @param key   an input key
+     * @param key an input key
      * @param range a List of BasicRange objects
      */
     public void addInput(String key, List<Range> range) {
@@ -43,7 +42,7 @@ public class BasicTableRow implements TableRow {
 
     @Override
     public void addEndpoint(Endpoint endpoint) {
-        _endpoints.add((BasicEndpoint) endpoint);
+        _endpoints.add((BasicEndpoint)endpoint);
     }
 
     public String getDescription() {
