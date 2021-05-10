@@ -115,7 +115,7 @@ public abstract class StagingDataProvider implements DataProvider {
         if (schema.getSchemaSelectionTable() == null)
             throw new IllegalStateException("Schemas must have a schema selection table.");
 
-        // store the inputs in a Map that can searched more efficiently
+        // store the inputs in a Map that can be searched more efficiently
         if (schema.getInputs() != null) {
             Map<String, Input> parsedInputMap = new HashMap<>();
 
@@ -130,7 +130,7 @@ public abstract class StagingDataProvider implements DataProvider {
             schema.setInputMap(parsedInputMap);
         }
 
-        // store the outputs in a Map that can searched more efficiently
+        // store the outputs in a Map that can be searched more efficiently
         if (schema.getOutputs() != null) {
             Map<String, Output> parsedOutputMap = new HashMap<>();
 

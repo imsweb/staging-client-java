@@ -246,7 +246,6 @@ public class EodStagingTest {
         assertNoErrors(errors, "input values");
     }
 
-    @SuppressWarnings("unchecked")
     @Test
     public void testMappingIdUniqueness() {
         Set<String> errors = new HashSet<>();
@@ -257,9 +256,8 @@ public class EodStagingTest {
             // build a list of input tables that should be excluded
             Set<String> ids = new HashSet<>();
 
-            List<Mapping> mappings = (List<Mapping>)schema.getMappings();
-            if (mappings != null)
-                for (Mapping mapping : mappings) {
+            if (schema.getMappings() != null)
+                for (Mapping mapping : schema.getMappings()) {
                     if (ids.contains(mapping.getId()))
                         errors.add("The mapping id " + schemaId + ":" + mapping.getId() + " is duplicated.  This should never happen");
                     ids.add(mapping.getId());

@@ -123,7 +123,7 @@ Set<String> schemaIds = staging.getSchemaIds();
 To get a single schema by identifer,
 
 ```java
-Schema schema=staging.getSchema("prostate");
+Schema schema = staging.getSchema("prostate");
 ```
 
 ### Tables
@@ -154,7 +154,7 @@ Set<String> tableIds = staging.getInvolvedTables("prostate");
 To get a single table by identifer,
 
 ```java
-Table table=staging.getTable("ajcc7_stage");
+Table table = staging.getTable("ajcc7_stage");
 ```
 
 ### Lookup a schema
@@ -165,8 +165,8 @@ customized for the specific inputs needed to lookup a schema.
 For Collaborative Staging, use the `CsSchemaLookup` object.  Here is a lookup based on site and histology.
 
 ```java
-List<Schema> lookup=staging.lookupSchema(new CsSchemaLookup("C629","9231"));
-        assertEquals(1,lookup.size());
+List<Schema> lookup = staging.lookupSchema(new CsSchemaLookup("C629", "9231"));
+assertEquals(1, lookup.size());
 assertEquals("testis", lookup.get(0).getId());
 ```
 
@@ -176,10 +176,10 @@ sets of discriminators that can be determined based on the result.
 
 ```java
 // do not supply a discriminator
-List<Schema> lookup=staging.lookupSchema(new CsSchemaLookup("C111","8200"));
-        assertEquals(2,lookup.size());
-        for(Schema schema:lookup)
-        assertTrue(schema.getSchemaDiscriminators().contains(CsStagingData.SSF25_KEY));
+List<Schema> lookup = staging.lookupSchema(new CsSchemaLookup("C111", "8200"));
+assertEquals(2, lookup.size());
+for (Schema schema : lookup)
+    assertTrue(schema.getSchemaDiscriminators().contains(CsStagingData.SSF25_KEY));
 
 // supply a discriminator
 lookup = staging.lookupSchema(new CsSchemaLookup("C111", "8200", "010"));
