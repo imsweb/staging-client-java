@@ -8,10 +8,10 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
-import com.imsweb.decisionengine.Range;
-import com.imsweb.staging.entities.StagingColumnDefinition;
-import com.imsweb.staging.entities.StagingTable;
+import com.imsweb.staging.entities.ColumnDefinition.ColumnType;
+import com.imsweb.staging.entities.Range;
+import com.imsweb.staging.entities.impl.StagingColumnDefinition;
+import com.imsweb.staging.entities.impl.StagingTable;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;

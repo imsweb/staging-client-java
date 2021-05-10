@@ -25,22 +25,24 @@ import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
-import com.imsweb.decisionengine.ColumnDefinition;
-import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
-import com.imsweb.decisionengine.DataProvider;
-import com.imsweb.decisionengine.DecisionEngine;
-import com.imsweb.decisionengine.Endpoint;
-import com.imsweb.decisionengine.Endpoint.EndpointType;
-import com.imsweb.decisionengine.Input;
-import com.imsweb.decisionengine.KeyValue;
-import com.imsweb.decisionengine.Mapping;
-import com.imsweb.decisionengine.Output;
-import com.imsweb.decisionengine.Range;
-import com.imsweb.decisionengine.Schema;
-import com.imsweb.decisionengine.Table;
-import com.imsweb.decisionengine.TableRow;
+import com.imsweb.staging.engine.DecisionEngine;
+import com.imsweb.staging.entities.ColumnDefinition;
+import com.imsweb.staging.entities.ColumnDefinition.ColumnType;
+import com.imsweb.staging.entities.DataProvider;
+import com.imsweb.staging.entities.Endpoint;
+import com.imsweb.staging.entities.Endpoint.EndpointType;
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.GlossaryHit;
+import com.imsweb.staging.entities.Input;
+import com.imsweb.staging.entities.KeyValue;
+import com.imsweb.staging.entities.Mapping;
+import com.imsweb.staging.entities.Output;
+import com.imsweb.staging.entities.Range;
+import com.imsweb.staging.entities.Schema;
+import com.imsweb.staging.entities.SchemaLookup;
+import com.imsweb.staging.entities.StagingData;
+import com.imsweb.staging.entities.Table;
+import com.imsweb.staging.entities.TableRow;
 
 import static com.imsweb.staging.Staging.CONTEXT_KEYS;
 

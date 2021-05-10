@@ -9,11 +9,12 @@ import java.util.Set;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.imsweb.decisionengine.Schema;
-import com.imsweb.decisionengine.Table;
-import com.imsweb.staging.StagingData.Result;
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.GlossaryHit;
+import com.imsweb.staging.entities.Schema;
+import com.imsweb.staging.entities.StagingData;
+import com.imsweb.staging.entities.StagingData.Result;
+import com.imsweb.staging.entities.Table;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

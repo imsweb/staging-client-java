@@ -17,22 +17,24 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import com.imsweb.decisionengine.ColumnDefinition;
-import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
-import com.imsweb.decisionengine.DecisionEngine;
-import com.imsweb.decisionengine.Error;
-import com.imsweb.decisionengine.Input;
-import com.imsweb.decisionengine.Mapping;
-import com.imsweb.decisionengine.Output;
-import com.imsweb.decisionengine.Result;
-import com.imsweb.decisionengine.Result.Type;
-import com.imsweb.decisionengine.Schema;
-import com.imsweb.decisionengine.Table;
-import com.imsweb.decisionengine.TablePath;
+import com.imsweb.staging.engine.DecisionEngine;
+import com.imsweb.staging.entities.ColumnDefinition;
+import com.imsweb.staging.entities.ColumnDefinition.ColumnType;
+import com.imsweb.staging.entities.Error;
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.GlossaryHit;
+import com.imsweb.staging.entities.Input;
+import com.imsweb.staging.entities.Mapping;
+import com.imsweb.staging.entities.Output;
+import com.imsweb.staging.entities.Result;
+import com.imsweb.staging.entities.Result.Type;
+import com.imsweb.staging.entities.Schema;
+import com.imsweb.staging.entities.SchemaLookup;
+import com.imsweb.staging.entities.StagingData;
+import com.imsweb.staging.entities.Table;
+import com.imsweb.staging.entities.TablePath;
 
-import static com.imsweb.decisionengine.ColumnDefinition.ColumnType.DESCRIPTION;
+import static com.imsweb.staging.entities.ColumnDefinition.ColumnType.DESCRIPTION;
 
 public final class Staging {
 

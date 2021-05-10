@@ -3,7 +3,7 @@
  */
 package com.imsweb.staging.eod;
 
-import com.imsweb.staging.StagingData;
+import com.imsweb.staging.entities.StagingData;
 
 public class EodStagingData extends StagingData {
 

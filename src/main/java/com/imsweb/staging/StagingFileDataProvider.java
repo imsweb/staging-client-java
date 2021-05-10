@@ -17,17 +17,17 @@ import java.util.stream.Collectors;
 import org.ahocorasick.trie.Trie;
 import org.ahocorasick.trie.Trie.TrieBuilder;
 
-import com.imsweb.decisionengine.Endpoint;
-import com.imsweb.decisionengine.Schema;
-import com.imsweb.decisionengine.Table;
-import com.imsweb.decisionengine.TableRow;
+import com.imsweb.staging.entities.Endpoint;
 import com.imsweb.staging.entities.GlossaryDefinition;
-import com.imsweb.staging.entities.StagingEndpoint;
-import com.imsweb.staging.entities.StagingSchema;
-import com.imsweb.staging.entities.StagingTable;
-import com.imsweb.staging.entities.StagingTableRow;
+import com.imsweb.staging.entities.Schema;
+import com.imsweb.staging.entities.Table;
+import com.imsweb.staging.entities.TableRow;
+import com.imsweb.staging.entities.impl.StagingEndpoint;
+import com.imsweb.staging.entities.impl.StagingSchema;
+import com.imsweb.staging.entities.impl.StagingTable;
+import com.imsweb.staging.entities.impl.StagingTableRow;
 
-import static com.imsweb.decisionengine.Endpoint.EndpointType;
+import static com.imsweb.staging.entities.Endpoint.EndpointType;
 
 /**
  * Implementation of DataProvider which loads from internal directories and holds all data in memory

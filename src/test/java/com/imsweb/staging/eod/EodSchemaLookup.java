@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.imsweb.staging.SchemaLookup;
+import com.imsweb.staging.entities.SchemaLookup;
 import com.imsweb.staging.eod.EodStagingData.EodInput;
 
 public class EodSchemaLookup extends SchemaLookup {

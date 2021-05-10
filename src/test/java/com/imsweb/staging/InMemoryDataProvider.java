@@ -10,12 +10,12 @@ import java.util.Set;
 
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.GlossaryHit;
-import com.imsweb.staging.entities.StagingEndpoint;
-import com.imsweb.staging.entities.StagingSchema;
-import com.imsweb.staging.entities.StagingTable;
-import com.imsweb.staging.entities.StagingTableRow;
+import com.imsweb.staging.entities.impl.StagingEndpoint;
+import com.imsweb.staging.entities.impl.StagingSchema;
+import com.imsweb.staging.entities.impl.StagingTable;
+import com.imsweb.staging.entities.impl.StagingTableRow;
 
-import static com.imsweb.decisionengine.Endpoint.EndpointType;
+import static com.imsweb.staging.entities.Endpoint.EndpointType;
 
 /**
  * In implementation of DataProvider which holds all data in memory
