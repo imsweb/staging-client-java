@@ -26,6 +26,7 @@ public class StagingTableRow implements TableRow {
         return _inputs.get(key);
     }
 
+    @Override
     @JsonProperty("inputs")
     public Map<String, List<Range>> getInputs() {
         return _inputs;
