@@ -90,9 +90,6 @@ public class InMemoryDataProvider extends StagingDataProvider {
         return _schemas.keySet();
     }
 
-    /**
-     * Add a schema
-     */
     public void addSchema(StagingSchema schema) {
         initSchema(schema);
         _schemas.put(schema.getId(), schema);
