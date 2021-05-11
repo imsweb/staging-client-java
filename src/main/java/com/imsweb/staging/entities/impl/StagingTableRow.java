@@ -42,7 +42,7 @@ public class StagingTableRow implements TableRow {
      * @param range range
      */
     @Override
-    public void addInput(String key, List<Range> range) {
+    public void addInput(String key, List<? extends Range> range) {
         _inputs.put(key, range);
     }
 

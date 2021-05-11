@@ -37,7 +37,7 @@ public class BasicTableRow implements TableRow {
      * @param key an input key
      * @param range a List of BasicRange objects
      */
-    public void addInput(String key, List<Range> range) {
+    public void addInput(String key, List<? extends Range> range) {
         _inputs.put(key, range);
     }
 

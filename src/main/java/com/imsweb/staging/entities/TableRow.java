@@ -30,7 +30,7 @@ public interface TableRow {
      */
     List<? extends Endpoint> getEndpoints();
 
-    void addInput(String key, List<Range> range);
+    void addInput(String key, List<? extends Range> range);
 
     void addEndpoint(Endpoint endpoint);
 
