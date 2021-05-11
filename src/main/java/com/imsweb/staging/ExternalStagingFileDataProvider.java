@@ -21,10 +21,12 @@ import org.ahocorasick.trie.Trie.TrieBuilder;
 
 import com.imsweb.staging.entities.Endpoint;
 import com.imsweb.staging.entities.GlossaryDefinition;
+import com.imsweb.staging.entities.Range;
 import com.imsweb.staging.entities.Schema;
 import com.imsweb.staging.entities.Table;
 import com.imsweb.staging.entities.TableRow;
 import com.imsweb.staging.entities.impl.StagingEndpoint;
+import com.imsweb.staging.entities.impl.StagingRange;
 import com.imsweb.staging.entities.impl.StagingSchema;
 import com.imsweb.staging.entities.impl.StagingTable;
 import com.imsweb.staging.entities.impl.StagingTableRow;
@@ -156,6 +158,16 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
     @Override
     public TableRow getTableRow() {
         return new StagingTableRow();
+    }
+
+    @Override
+    public Range getMatchAllRange() {
+        return new StagingRange();
+    }
+
+    @Override
+    public Range getRange(String low, String high) {
+        return new StagingRange(low, high);
     }
 
     @Override

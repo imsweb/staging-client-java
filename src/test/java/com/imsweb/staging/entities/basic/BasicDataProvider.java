@@ -23,7 +23,7 @@ import static com.imsweb.staging.Staging.CONTEXT_KEYS;
 public class BasicDataProvider implements DataProvider {
 
     private static final String _MATCH_ALL_STRING = "*";
-    private static final Range _MATCH_ALL_ENDPOINT = new Range();
+    private static final Range _MATCH_ALL_ENDPOINT = new BasicRange();
     private final Map<String, BasicTable> _tables = new HashMap<>();
     private final Map<String, BasicSchema> _definitions = new HashMap<>();
 
@@ -195,15 +195,15 @@ public class BasicDataProvider implements DataProvider {
                     // may need to revisit this issue later.
                     String[] parts = range.split("-");
                     if (parts.length == 1)
-                        convertedRanges.add(new Range(parts[0].trim(), parts[0].trim()));
+                        convertedRanges.add(new BasicRange(parts[0].trim(), parts[0].trim()));
                     else if (parts.length == 2) {
                         if (parts[0].trim().length() != parts[1].trim().length())
-                            convertedRanges.add(new Range(range.trim(), range.trim()));
+                            convertedRanges.add(new BasicRange(range.trim(), range.trim()));
                         else
-                            convertedRanges.add(new Range(parts[0].trim(), parts[1].trim()));
+                            convertedRanges.add(new BasicRange(parts[0].trim(), parts[1].trim()));
                     }
                     else
-                        convertedRanges.add(new Range(range.trim(), range.trim()));
+                        convertedRanges.add(new BasicRange(range.trim(), range.trim()));
                 }
             }
         }

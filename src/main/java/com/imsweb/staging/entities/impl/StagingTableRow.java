@@ -17,22 +17,22 @@ import com.imsweb.staging.entities.TableRow;
 
 public class StagingTableRow implements TableRow {
 
-    private Map<String, List<Range>> _inputs = new HashMap<>();
+    private Map<String, List<? extends Range>> _inputs = new HashMap<>();
     private List<StagingEndpoint> _endpoints = new ArrayList<>();
 
     @Override
     @JsonIgnore
-    public List<Range> getColumnInput(String key) {
+    public List<? extends Range> getColumnInput(String key) {
         return _inputs.get(key);
     }
 
     @Override
     @JsonProperty("inputs")
-    public Map<String, List<Range>> getInputs() {
+    public Map<String, List<? extends Range>> getInputs() {
         return _inputs;
     }
 
-    public void setInputs(Map<String, List<Range>> inputs) {
+    public void setInputs(Map<String, List<? extends Range>> inputs) {
         _inputs = inputs;
     }
 

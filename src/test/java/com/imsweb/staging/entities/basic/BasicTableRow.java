@@ -14,21 +14,21 @@ import com.imsweb.staging.entities.TableRow;
 
 public class BasicTableRow implements TableRow {
 
-    private Map<String, List<Range>> _inputs = new HashMap<>();
+    private Map<String, List<? extends Range>> _inputs = new HashMap<>();
     private String _description;
     private List<BasicEndpoint> _endpoints = new ArrayList<>();
 
     @Override
-    public List<Range> getColumnInput(String key) {
+    public List<? extends Range> getColumnInput(String key) {
         return _inputs.get(key);
     }
 
     @Override
-    public Map<String, List<Range>> getInputs() {
+    public Map<String, List<? extends Range>> getInputs() {
         return _inputs;
     }
 
-    public void setInputs(Map<String, List<Range>> inputs) {
+    public void setInputs(Map<String, List<? extends Range>> inputs) {
         _inputs = inputs;
     }
 

@@ -16,6 +16,7 @@ import java.util.TimeZone;
 import java.util.stream.Collectors;
 
 import org.ahocorasick.trie.Trie;
+import org.apache.commons.lang3.math.NumberUtils;
 import org.cache2k.Cache;
 import org.cache2k.Cache2kBuilder;
 
@@ -61,7 +62,7 @@ public abstract class StagingDataProvider implements DataProvider {
 
     private static final ObjectMapper _MAPPER = new ObjectMapper();
 
-    private static final Range _MATCH_ALL_ENDPOINT = new Range();
+    private final Range _matchAllEndpoint = getMatchAllRange();
 
     protected Trie _trie;
 
@@ -262,13 +263,13 @@ public abstract class StagingDataProvider implements DataProvider {
      * @param values String representing sets value ranges
      * @return a parsed list of string Range objects
      */
-    public static List<Range> splitValues(String values) {
+    public List<Range> splitValues(String values) {
         List<Range> convertedRanges = new ArrayList<>();
 
         if (values != null) {
             // if the value of the string is "*", then consider it as matching anything
             if (values.equals("*"))
-                convertedRanges.add(_MATCH_ALL_ENDPOINT);
+                convertedRanges.add(_matchAllEndpoint);
             else {
                 // split the string; the "-1" makes sure to not discard empty strings
                 String[] ranges = values.split(",", -1);
@@ -285,22 +286,26 @@ public abstract class StagingDataProvider implements DataProvider {
                         String high = parts[1].trim();
 
                         // check if both sides of the range are numeric values; if so the length does not have to match
-                        boolean isNumericRange = Range.isNumeric(low) && Range.isNumeric(high);
+                        boolean isNumericRange = isNumeric(low) && isNumeric(high);
 
                         // if same length, a numeric range, or one of the parts is a context variable, use the low and high as range.  Otherwise consier
                         // a single value (i.e. low = high)
                         if (low.length() == high.length() || isNumericRange || DecisionEngine.isReferenceVariable(low) || DecisionEngine.isReferenceVariable(high))
-                            convertedRanges.add(new Range(low, high));
+                            convertedRanges.add(getRange(low, high));
                         else
-                            convertedRanges.add(new Range(range.trim(), range.trim()));
+                            convertedRanges.add(getRange(range.trim(), range.trim()));
                     }
                     else
-                        convertedRanges.add(new Range(range.trim(), range.trim()));
+                        convertedRanges.add(getRange(range.trim(), range.trim()));
                 }
             }
         }
 
         return convertedRanges;
+    }
+
+    public static boolean isNumeric(String value) {
+        return NumberUtils.isParsable(value);
     }
 
     /**
@@ -386,15 +391,49 @@ public abstract class StagingDataProvider implements DataProvider {
      */
     public abstract String getVersion();
 
+    /**
+     * Return a new table
+     * @param id the table id
+     * @return Table entity
+     */
     @Override
     public abstract Table getTable(String id);
 
+    /**
+     * Return a new schema
+     * @param id the schema id
+     * @return Schema entity
+     */
     @Override
     public abstract Schema getSchema(String id);
 
+    /**
+     * Return a new endpoint
+     * @param type type of endpoint
+     * @param value value of endpoint
+     * @return Endpoint entity
+     */
     public abstract Endpoint getEndpoint(EndpointType type, String value);
 
+    /**
+     * Return a new table row
+     * @return TableRow entity
+     */
     public abstract TableRow getTableRow();
+
+    /**
+     * Return a range representing "match all"
+     * @return a Range entity
+     */
+    public abstract Range getMatchAllRange();
+
+    /**
+     * Return a newly created range
+     * @param low low value
+     * @param high high value
+     * @return Range entity
+     */
+    public abstract Range getRange(String low, String high);
 
     /**
      * Return a set of all schema identifiers

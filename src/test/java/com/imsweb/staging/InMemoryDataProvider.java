@@ -10,7 +10,9 @@ import java.util.Set;
 
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.GlossaryHit;
+import com.imsweb.staging.entities.Range;
 import com.imsweb.staging.entities.impl.StagingEndpoint;
+import com.imsweb.staging.entities.impl.StagingRange;
 import com.imsweb.staging.entities.impl.StagingSchema;
 import com.imsweb.staging.entities.impl.StagingTable;
 import com.imsweb.staging.entities.impl.StagingTableRow;
@@ -59,6 +61,16 @@ public class InMemoryDataProvider extends StagingDataProvider {
     @Override
     public StagingTableRow getTableRow() {
         return new StagingTableRow();
+    }
+
+    @Override
+    public Range getMatchAllRange() {
+        return new StagingRange();
+    }
+
+    @Override
+    public Range getRange(String low, String high) {
+        return new StagingRange(low, high);
     }
 
     /**

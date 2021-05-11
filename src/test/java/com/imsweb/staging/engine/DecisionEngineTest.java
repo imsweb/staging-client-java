@@ -34,6 +34,7 @@ import com.imsweb.staging.entities.basic.BasicOutput;
 import com.imsweb.staging.entities.basic.BasicSchema;
 import com.imsweb.staging.entities.basic.BasicTable;
 import com.imsweb.staging.entities.basic.BasicTablePath;
+import com.imsweb.staging.entities.impl.StagingRange;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
@@ -300,15 +301,15 @@ public class DecisionEngineTest {
     @Test
     public void testMatch() {
         List<Range> range = new ArrayList<>();
-        range.add(new Range("1", "1"));
-        range.add(new Range("4", "4"));
-        range.add(new Range("9", "9"));
+        range.add(new StagingRange("1", "1"));
+        range.add(new StagingRange("4", "4"));
+        range.add(new StagingRange("9", "9"));
         assertTrue(DecisionEngine.testMatch(range, "9", new HashMap<>()));
         assertFalse(DecisionEngine.testMatch(range, "7", new HashMap<>()));
 
         range = new ArrayList<>();
-        range.add(new Range("11", "54"));
-        range.add(new Range("99", "99"));
+        range.add(new StagingRange("11", "54"));
+        range.add(new StagingRange("99", "99"));
         assertTrue(DecisionEngine.testMatch(range, "23", new HashMap<>()));
     }
 

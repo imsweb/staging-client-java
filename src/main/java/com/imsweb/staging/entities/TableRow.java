@@ -16,13 +16,13 @@ public interface TableRow {
      * @param key the field name of the column
      * @return a List of Range objects
      */
-    List<Range> getColumnInput(String key);
+    List<? extends Range> getColumnInput(String key);
 
     /**
      * Return the inputs
      * @return a Map of field name to list of Range objects
      */
-    Map<String, List<Range>> getInputs();
+    Map<String, List<? extends Range>> getInputs();
 
     /**
      * A list of endpoints on the row
