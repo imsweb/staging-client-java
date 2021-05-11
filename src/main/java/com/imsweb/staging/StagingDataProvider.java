@@ -187,7 +187,7 @@ public abstract class StagingDataProvider implements DataProvider {
                     switch (col.getType()) {
                         case INPUT:
                             // if there are no ranges in the list, that means the cell was "blank" and is not needed in the table row
-                            List<Range> ranges = splitValues(cellValue);
+                            List<? extends Range> ranges = splitValues(cellValue);
                             if (!ranges.isEmpty()) {
                                 tableRowEntity.addInput(col.getKey(), ranges);
 
@@ -263,7 +263,7 @@ public abstract class StagingDataProvider implements DataProvider {
      * @param values String representing sets value ranges
      * @return a parsed list of string Range objects
      */
-    public List<Range> splitValues(String values) {
+    public List<? extends Range> splitValues(String values) {
         List<Range> convertedRanges = new ArrayList<>();
 
         if (values != null) {

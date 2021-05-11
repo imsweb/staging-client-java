@@ -74,7 +74,7 @@ public class StagingDataProviderTest {
 
         assertEquals(10, provider.splitValues("A,B,C,D,E,F,G,H,I,J").size());
 
-        List<Range> ranges = provider.splitValues(",1,2,3,4");
+        List<? extends Range> ranges = provider.splitValues(",1,2,3,4");
         assertEquals(5, ranges.size());
         assertEquals("", ranges.get(0).getLow());
         assertEquals("", ranges.get(0).getHigh());
