@@ -30,4 +30,10 @@ public abstract class Range {
      */
     public abstract boolean contains(String value, Map<String, String> context);
 
+    /**
+     * Does this match all values (low and high are null)
+     * @return true if it matches all
+     */
+    public abstract boolean matchesAll();
+
 }
