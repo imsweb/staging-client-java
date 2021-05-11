@@ -3,6 +3,7 @@
  */
 package com.imsweb.staging.entities.impl;
 
+import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Objects;
@@ -30,14 +31,18 @@ public class StagingMapping implements Mapping {
     public StagingMapping() {
     }
 
-    /**
-     * Constructs with a name and title
-     * @param id identifier
-     * @param name name
-     */
+    public StagingMapping(String id) {
+        setId(id);
+    }
+
     public StagingMapping(String id, String name) {
         setId(id);
         setName(name);
+    }
+
+    public StagingMapping(String id, List<StagingTablePath> tablePaths) {
+        _id = id;
+        _tablePaths = tablePaths;
     }
 
     @Override
@@ -99,6 +104,13 @@ public class StagingMapping implements Mapping {
 
     public void setTablePaths(List<StagingTablePath> tablePaths) {
         _tablePaths = tablePaths;
+    }
+
+    public void addTablePath(StagingTablePath path) {
+        if (_tablePaths == null)
+            _tablePaths = new ArrayList<>();
+
+        _tablePaths.add(path);
     }
 
     @Override

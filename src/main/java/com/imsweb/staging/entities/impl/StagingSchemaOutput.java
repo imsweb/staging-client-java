@@ -32,6 +32,10 @@ public class StagingSchemaOutput implements Output {
     public StagingSchemaOutput() {
     }
 
+    public StagingSchemaOutput(String key) {
+        setKey(key);
+    }
+
     public StagingSchemaOutput(String key, String name) {
         setKey(key);
         setName(name);

@@ -3,6 +3,7 @@
  */
 package com.imsweb.staging.entities.impl;
 
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -53,6 +54,13 @@ public class StagingTablePath implements TablePath {
         _inputMapping = input;
     }
 
+    public void addInputMapping(String from, String to) {
+        if (_inputMapping == null)
+            _inputMapping = new HashSet<>();
+
+        _inputMapping.add(new StagingKeyMapping(from, to));
+    }
+
     @Override
     @JsonProperty("output_mapping")
     public Set<StagingKeyMapping> getOutputMapping() {
@@ -62,6 +70,13 @@ public class StagingTablePath implements TablePath {
     @JsonDeserialize(as = LinkedHashSet.class)
     public void setOutputMapping(Set<StagingKeyMapping> output) {
         _outputMapping = output;
+    }
+
+    public void addOutputMapping(String from, String to) {
+        if (_outputMapping == null)
+            _outputMapping = new HashSet<>();
+
+        _outputMapping.add(new StagingKeyMapping(from, to));
     }
 
     @Override

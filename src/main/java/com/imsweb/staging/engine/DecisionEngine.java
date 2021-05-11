@@ -314,21 +314,21 @@ public class DecisionEngine {
     }
 
     /**
-     * Return a list of tables involved in a definition
-     * @param definitionId an schema identifier
+     * Return a list of tables involved in a schema
+     * @param schemaId an schema identifier
      * @return a set of table identifiers
      */
-    public Set<String> getInvolvedTables(String definitionId) {
-        Schema schema = getProvider().getSchema(definitionId);
+    public Set<String> getInvolvedTables(String schemaId) {
+        Schema schema = getProvider().getSchema(schemaId);
 
         if (schema == null)
-            throw new IllegalStateException("Unknown starting table: '" + definitionId + "'");
+            throw new IllegalStateException("Unknown starting table: '" + schemaId + "'");
 
         return getInvolvedTables(schema);
     }
 
     /**
-     * Return a list of tables involved in an definition.  This includes not only the tables paths, but also tables references in the input section.
+     * Return a list of tables involved in an schema.  This includes not only the tables paths, but also tables references in the input section.
      * @param schema a schema
      * @return a set of table identifiers
      */
@@ -504,7 +504,7 @@ public class DecisionEngine {
     }
 
     /**
-     * Looks at all tables involved in all the mappings in the definition and returns a list of inputs that are used.  It will also deal with mapped inputs.
+     * Looks at all tables involved in all the mappings in the schema and returns a list of inputs that are used.  It will also deal with mapped inputs.
      * @param schema a schema
      * @return a Set of Strings containing the unique schema input keys
      */
@@ -565,7 +565,7 @@ public class DecisionEngine {
     }
 
     /**
-     * Looks at all tables involved in all the mappings in the definition and returns a list of outputs produced.  It will also handle mapped outputs.
+     * Looks at all tables involved in all the mappings in the schema and returns a list of outputs produced.  It will also handle mapped outputs.
      * @param schema a schema
      * @return a Set of Strings containing the unique Mapping output keys
      */
@@ -580,22 +580,22 @@ public class DecisionEngine {
     }
 
     /**
-     * Using the supplied context, process an definition.  The results will be added to the context.
-     * @param definitionId an schema identifier
+     * Using the supplied context, process an schema.  The results will be added to the context.
+     * @param schemaId an schema identifier
      * @param context a Map containing the context
      * @return a Result
      */
-    public Result process(String definitionId, Map<String, String> context) {
-        Schema start = getProvider().getSchema(definitionId);
+    public Result process(String schemaId, Map<String, String> context) {
+        Schema start = getProvider().getSchema(schemaId);
 
         if (start == null)
-            throw new IllegalStateException("Unknown definition: '" + definitionId + "'");
+            throw new IllegalStateException("Unknown schema: '" + schemaId + "'");
 
         return process(start, context);
     }
 
     /**
-     * Using the supplied context, process a definition.  The results will be added to the context.
+     * Using the supplied context, process a schema.  The results will be added to the context.
      * @param schema a schema
      * @param context a Map containing the context
      * @return a Result

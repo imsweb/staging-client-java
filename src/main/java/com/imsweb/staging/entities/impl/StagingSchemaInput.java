@@ -36,6 +36,10 @@ public class StagingSchemaInput implements Input {
     public StagingSchemaInput() {
     }
 
+    public StagingSchemaInput(String key) {
+        setKey(key);
+    }
+
     public StagingSchemaInput(String key, String name) {
         setKey(key);
         setName(name);

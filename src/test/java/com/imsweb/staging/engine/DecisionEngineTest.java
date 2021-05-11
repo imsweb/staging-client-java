@@ -16,6 +16,7 @@ import java.util.Set;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import com.imsweb.staging.InMemoryDataProvider;
 import com.imsweb.staging.entities.ColumnDefinition.ColumnType;
 import com.imsweb.staging.entities.DataProvider;
 import com.imsweb.staging.entities.Endpoint;
@@ -27,14 +28,14 @@ import com.imsweb.staging.entities.Result;
 import com.imsweb.staging.entities.Result.Type;
 import com.imsweb.staging.entities.Schema;
 import com.imsweb.staging.entities.Table;
-import com.imsweb.staging.entities.basic.BasicDataProvider;
-import com.imsweb.staging.entities.basic.BasicInput;
-import com.imsweb.staging.entities.basic.BasicMapping;
-import com.imsweb.staging.entities.basic.BasicOutput;
-import com.imsweb.staging.entities.basic.BasicSchema;
-import com.imsweb.staging.entities.basic.BasicTable;
-import com.imsweb.staging.entities.basic.BasicTablePath;
+import com.imsweb.staging.entities.impl.StagingColumnDefinition;
+import com.imsweb.staging.entities.impl.StagingMapping;
 import com.imsweb.staging.entities.impl.StagingRange;
+import com.imsweb.staging.entities.impl.StagingSchema;
+import com.imsweb.staging.entities.impl.StagingSchemaInput;
+import com.imsweb.staging.entities.impl.StagingSchemaOutput;
+import com.imsweb.staging.entities.impl.StagingTable;
+import com.imsweb.staging.entities.impl.StagingTablePath;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
@@ -53,9 +54,9 @@ public class DecisionEngineTest {
 
     @BeforeClass
     public static void init() {
-        BasicDataProvider provider = new BasicDataProvider();
+        InMemoryDataProvider provider = new InMemoryDataProvider("test", "1.0");
 
-        BasicTable table = new BasicTable("table_lookup_sample");
+        StagingTable table = new StagingTable("table_lookup_sample");
         table.addColumnDefinition("b", ColumnType.INPUT);
         table.addColumnDefinition("description", ColumnType.DESCRIPTION);
         table.addRawRow("00-09", "First 10");
@@ -66,7 +67,7 @@ public class DecisionEngineTest {
         table.addRawRow("", "blank");
         provider.addTable(table);
 
-        table = new BasicTable("table_jump_sample");
+        table = new StagingTable("table_jump_sample");
         table.addColumnDefinition("c", ColumnType.INPUT);
         table.addColumnDefinition("description", ColumnType.DESCRIPTION);
         table.addColumnDefinition("result", ColumnType.ENDPOINT);
@@ -76,7 +77,7 @@ public class DecisionEngineTest {
         table.addRawRow("Z", "Line4", "STOP");
         provider.addTable(table);
 
-        table = new BasicTable("table_sample_first");
+        table = new StagingTable("table_sample_first");
         table.addColumnDefinition("a", ColumnType.INPUT);
         table.addColumnDefinition("b", ColumnType.INPUT);
         table.addColumnDefinition("description", ColumnType.DESCRIPTION);
@@ -90,7 +91,7 @@ public class DecisionEngineTest {
         table.addRawRow("9", "99", "Line6", "ERROR:999");
         provider.addTable(table);
 
-        table = new BasicTable("table_multiple_inputs");
+        table = new StagingTable("table_multiple_inputs");
         table.addColumnDefinition("a", ColumnType.INPUT);
         table.addColumnDefinition("b", ColumnType.INPUT);
         table.addColumnDefinition("description", ColumnType.DESCRIPTION);
@@ -104,7 +105,7 @@ public class DecisionEngineTest {
         table.addRawRow("9", "99", "Line4", "ERROR:1_LINE4", "ERROR:2_LINE4", "ERROR:3_LINE4");
         provider.addTable(table);
 
-        table = new BasicTable("table_sample_second");
+        table = new StagingTable("table_sample_second");
         table.addColumnDefinition("e", ColumnType.INPUT);
         table.addColumnDefinition("description", ColumnType.DESCRIPTION);
         table.addColumnDefinition("shared_result", ColumnType.ENDPOINT);
@@ -113,7 +114,7 @@ public class DecisionEngineTest {
         table.addRawRow("Z", "Line3", "VALUE:LINE3");
         provider.addTable(table);
 
-        table = new BasicTable("table_recursion");
+        table = new StagingTable("table_recursion");
         table.addColumnDefinition("a", ColumnType.INPUT);
         table.addColumnDefinition("description", ColumnType.DESCRIPTION);
         table.addColumnDefinition("result", ColumnType.ENDPOINT);
@@ -121,27 +122,27 @@ public class DecisionEngineTest {
         table.addRawRow("3,4", "Line2", "JUMP:table_recursion");
         provider.addTable(table);
 
-        table = new BasicTable("table_inclusion1");
+        table = new StagingTable("table_inclusion1");
         table.addColumnDefinition("a", ColumnType.INPUT);
         table.addRawRow("0-3,5");
         provider.addTable(table);
 
-        table = new BasicTable("table_inclusion2");
+        table = new StagingTable("table_inclusion2");
         table.addColumnDefinition("a", ColumnType.INPUT);
         table.addRawRow("4,6-8");
         provider.addTable(table);
 
-        table = new BasicTable("table_inclusion3");
+        table = new StagingTable("table_inclusion3");
         table.addColumnDefinition("not_in_input_list", ColumnType.INPUT);
         table.addRawRow("4,6-8");
         provider.addTable(table);
 
-        table = new BasicTable("table_exclusion1");
+        table = new StagingTable("table_exclusion1");
         table.addColumnDefinition("a", ColumnType.INPUT);
         table.addRawRow("1");
         provider.addTable(table);
 
-        table = new BasicTable("table_part1");
+        table = new StagingTable("table_part1");
         table.addColumnDefinition("val", ColumnType.INPUT);
         table.addColumnDefinition("description", ColumnType.DESCRIPTION);
         table.addColumnDefinition("result", ColumnType.ENDPOINT);
@@ -150,26 +151,26 @@ public class DecisionEngineTest {
         table.addRawRow("3", "3", "VALUE:3");
         provider.addTable(table);
 
-        table = new BasicTable("table_part2");
+        table = new StagingTable("table_part2");
         table.addColumnDefinition("a", ColumnType.INPUT);
         table.addColumnDefinition("description", ColumnType.DESCRIPTION);
         table.addColumnDefinition("special", ColumnType.ENDPOINT);
         table.addRawRow("*", "", "VALUE:SUCCESS");
         provider.addTable(table);
 
-        table = new BasicTable("table_create_intermediate");
+        table = new StagingTable("table_create_intermediate");
         table.addColumnDefinition("main_input", ColumnType.INPUT);
         table.addColumnDefinition("intermediate_output", ColumnType.ENDPOINT);
         table.addRawRow("1", "VALUE:1");
         provider.addTable(table);
 
-        table = new BasicTable("table_use_intermediate");
+        table = new StagingTable("table_use_intermediate");
         table.addColumnDefinition("intermediate_output", ColumnType.INPUT);
         table.addColumnDefinition("final_output", ColumnType.ENDPOINT);
         table.addRawRow("1", "VALUE:1");
         provider.addTable(table);
 
-        table = new BasicTable("table_blank_matching");
+        table = new StagingTable("table_blank_matching");
         table.addColumnDefinition("a", ColumnType.INPUT);
         table.addColumnDefinition("b", ColumnType.INPUT);
         table.addColumnDefinition("b", ColumnType.ENDPOINT);
@@ -180,7 +181,7 @@ public class DecisionEngineTest {
         table.addRawRow("*", "*", "MATCH", "MATCH");
         provider.addTable(table);
 
-        table = new BasicTable("table_multiple_input");
+        table = new StagingTable("table_multiple_input");
         table.addColumnDefinition("a", ColumnType.INPUT);
         table.addColumnDefinition("b", ColumnType.INPUT);
         table.addColumnDefinition("result", ColumnType.ENDPOINT);
@@ -189,111 +190,128 @@ public class DecisionEngineTest {
         table.addRawRow("1", "1", "VALUE:LINE3");
         provider.addTable(table);
 
-        BasicSchema def = new BasicSchema("starting_sample");
-        def.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
-        def.addInput("a");
-        BasicInput input = new BasicInput("b", "table_lookup_sample");
-        def.addInput(input);
-        def.addInput("c");
-        def.addInitialContext("d", "HARD-CODE");
-        BasicMapping mapping = new BasicMapping("m1");
-        mapping.setTablePaths(Arrays.asList(new BasicTablePath("table_sample_first"), new BasicTablePath("table_sample_second")));
-        def.addMapping(mapping);
-        provider.addDefinition(def);
+        table = new StagingTable();
+        table.setId("table_selection");
+        table.setColumnDefinitions(Collections.singletonList(new StagingColumnDefinition("a", "a", ColumnType.INPUT)));
+        table.setRawRows(new ArrayList<>());
+        table.getRawRows().add(Collections.singletonList("*"));
+        provider.addTable(table);
 
-        def = new BasicSchema("starting_min");
-        def.addInitialContext("foo", "bar");
-        provider.addDefinition(def);
+        StagingSchema schema = new StagingSchema("starting_sample");
+        schema.setSchemaSelectionTable("table_selection");
+        schema.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
+        schema.addInput("a");
+        StagingSchemaInput input = new StagingSchemaInput("b", "b", "table_lookup_sample");
+        schema.addInput(input);
+        schema.addInput("c");
+        schema.addInitialContext("d", "HARD-CODE");
+        StagingMapping mapping = new StagingMapping("m1");
+        mapping.setTablePaths(Arrays.asList(new StagingTablePath("table_sample_first"), new StagingTablePath("table_sample_second")));
+        schema.addMapping(mapping);
+        provider.addSchema(schema);
 
-        def = new BasicSchema("starting_multiple_endpoints");
-        def.addInput("a");
-        def.addInput("b");
-        def.addInput("c");
-        def.addMapping(new BasicMapping("m1", Collections.singletonList(new BasicTablePath("table_multiple_inputs"))));
-        provider.addDefinition(def);
+        schema = new StagingSchema("starting_min");
+        schema.setSchemaSelectionTable("table_selection");
+        schema.addInitialContext("foo", "bar");
+        provider.addSchema(schema);
 
-        def = new BasicSchema("starting_recursion");
-        def.addInput("a");
-        def.addMapping(new BasicMapping("m1", Collections.singletonList(new BasicTablePath("table_recursion"))));
-        provider.addDefinition(def);
+        schema = new StagingSchema("starting_multiple_endpoints");
+        schema.setSchemaSelectionTable("table_selection");
+        schema.addInput("a");
+        schema.addInput("b");
+        schema.addInput("c");
+        schema.addMapping(new StagingMapping("m1", Collections.singletonList(new StagingTablePath("table_multiple_inputs"))));
+        provider.addSchema(schema);
 
-        def = new BasicSchema("starting_inclusions");
-        def.addInput("a");
-        def.addInput("b");
-        def.addInput("c");
-        mapping = new BasicMapping("m1");
-        mapping.setInclusionTables(Collections.singletonList(new BasicTablePath("table_inclusion1")));
-        BasicTablePath path = new BasicTablePath("table_part1");
+        schema = new StagingSchema("starting_recursion");
+        schema.setSchemaSelectionTable("table_selection");
+        schema.addInput("a");
+        schema.addMapping(new StagingMapping("m1", Collections.singletonList(new StagingTablePath("table_recursion"))));
+        provider.addSchema(schema);
+
+        schema = new StagingSchema("starting_inclusions");
+        schema.setSchemaSelectionTable("table_selection");
+        schema.addInput("a");
+        schema.addInput("b");
+        schema.addInput("c");
+        mapping = new StagingMapping("m1");
+        mapping.setInclusionTables(Collections.singletonList(new StagingTablePath("table_inclusion1")));
+        StagingTablePath path = new StagingTablePath("table_part1");
         path.addInputMapping("b", "val");
         mapping.addTablePath(path);
-        def.addMapping(mapping);
-        mapping = new BasicMapping("m2");
-        mapping.setInclusionTables(Collections.singletonList(new BasicTablePath("table_inclusion2")));
-        path = new BasicTablePath("table_part1");
+        schema.addMapping(mapping);
+        mapping = new StagingMapping("m2");
+        mapping.setInclusionTables(Collections.singletonList(new StagingTablePath("table_inclusion2")));
+        path = new StagingTablePath("table_part1");
         path.addInputMapping("c", "val");
         mapping.addTablePath(path);
-        def.addMapping(mapping);
-        mapping = new BasicMapping("m3");
-        mapping.setExclusionTables(Collections.singletonList(new BasicTablePath("table_exclusion1")));
-        path = new BasicTablePath("table_part2");
+        schema.addMapping(mapping);
+        mapping = new StagingMapping("m3");
+        mapping.setExclusionTables(Collections.singletonList(new StagingTablePath("table_exclusion1")));
+        path = new StagingTablePath("table_part2");
         mapping.addTablePath(path);
-        def.addMapping(mapping);
-        provider.addDefinition(def);
+        schema.addMapping(mapping);
+        provider.addSchema(schema);
 
-        def = new BasicSchema("starting_intermediate_values");
-        def.addInput("main_input");
-        mapping = new BasicMapping("m1");
-        mapping.addTablePath(new BasicTablePath("table_create_intermediate"));
-        mapping.addTablePath(new BasicTablePath("table_use_intermediate"));
-        def.addMapping(mapping);
-        provider.addDefinition(def);
+        schema = new StagingSchema("starting_intermediate_values");
+        schema.setSchemaSelectionTable("table_selection");
+        schema.addInput("main_input");
+        mapping = new StagingMapping("m1");
+        mapping.addTablePath(new StagingTablePath("table_create_intermediate"));
+        mapping.addTablePath(new StagingTablePath("table_use_intermediate"));
+        schema.addMapping(mapping);
+        provider.addSchema(schema);
 
-        def = new BasicSchema("starting_inclusions_extra_inputs");
-        def.addInput("a");
-        def.addInput("b");
-        def.addInput("c");
-        mapping = new BasicMapping("m1");
-        mapping.setInclusionTables(Collections.singletonList(new BasicTablePath("table_inclusion3")));
-        path = new BasicTablePath("table_part1");
+        schema = new StagingSchema("starting_inclusions_extra_inputs");
+        schema.setSchemaSelectionTable("table_selection");
+        schema.addInput("a");
+        schema.addInput("b");
+        schema.addInput("c");
+        mapping = new StagingMapping("m1");
+        mapping.setInclusionTables(Collections.singletonList(new StagingTablePath("table_inclusion3")));
+        path = new StagingTablePath("table_part1");
         path.addInputMapping("b", "val");
         path.addOutputMapping("result", "mapped_result");
         mapping.addTablePath(path);
-        def.addMapping(mapping);
-        provider.addDefinition(def);
+        schema.addMapping(mapping);
+        provider.addSchema(schema);
 
-        def = new BasicSchema("starting_blank");
-        def.addInput("a");
-        def.addInput("b");
-        mapping = new BasicMapping("m1");
-        path = new BasicTablePath("table_blank_matching");
+        schema = new StagingSchema("starting_blank");
+        schema.setSchemaSelectionTable("table_selection");
+        schema.addInput("a");
+        schema.addInput("b");
+        mapping = new StagingMapping("m1");
+        path = new StagingTablePath("table_blank_matching");
         path.addInputMapping("x", "a");
         path.addInputMapping("y", "b");
         path.addOutputMapping("b", "y");
         path.addOutputMapping("c", "z");
         mapping.addTablePath(path);
-        def.addMapping(mapping);
-        provider.addDefinition(def);
+        schema.addMapping(mapping);
+        provider.addSchema(schema);
 
-        def = new BasicSchema("starting_double_input");
-        def.addInput("x");
-        mapping = new BasicMapping("m1");
-        path = new BasicTablePath("table_multiple_input");
+        schema = new StagingSchema("starting_double_input");
+        schema.setSchemaSelectionTable("table_selection");
+        schema.addInput("x");
+        mapping = new StagingMapping("m1");
+        path = new StagingTablePath("table_multiple_input");
         path.addInputMapping("x", "a");
         path.addInputMapping("x", "b");
         mapping.addTablePath(path);
-        def.addMapping(mapping);
-        provider.addDefinition(def);
+        schema.addMapping(mapping);
+        provider.addSchema(schema);
 
-        def = new BasicSchema("starting_double_output");
-        def.addInput("a");
-        def.addInput("b");
-        mapping = new BasicMapping("m1");
-        path = new BasicTablePath("table_sample_first");
+        schema = new StagingSchema("starting_double_output");
+        schema.setSchemaSelectionTable("table_selection");
+        schema.addInput("a");
+        schema.addInput("b");
+        mapping = new StagingMapping("m1");
+        path = new StagingTablePath("table_sample_first");
         path.addOutputMapping("result", "output1");
         path.addOutputMapping("result", "output2");
         mapping.addTablePath(path);
-        def.addMapping(mapping);
-        provider.addDefinition(def);
+        schema.addMapping(mapping);
+        provider.addSchema(schema);
 
         _ENGINE = new DecisionEngine(provider);
     }
@@ -315,8 +333,8 @@ public class DecisionEngineTest {
 
     @Test
     public void testEmptyTable() {
-        BasicDataProvider provider = new BasicDataProvider();
-        BasicTable table = new BasicTable("basic_test_table");
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
+        StagingTable table = new StagingTable("basic_test_table");
         table.addColumnDefinition("size", ColumnType.INPUT);
         table.addColumnDefinition("description", ColumnType.DESCRIPTION);
         table.addColumnDefinition("size_result", ColumnType.ENDPOINT);
@@ -328,8 +346,8 @@ public class DecisionEngineTest {
 
     @Test
     public void testMatchTable() {
-        BasicDataProvider provider = new BasicDataProvider();
-        BasicTable table = new BasicTable("basic_test_table");
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
+        StagingTable table = new StagingTable("basic_test_table");
         table.addColumnDefinition("size", ColumnType.INPUT);
         table.addColumnDefinition("description", ColumnType.DESCRIPTION);
         table.addColumnDefinition("size_result", ColumnType.ENDPOINT);
@@ -372,8 +390,8 @@ public class DecisionEngineTest {
 
     @Test
     public void testMatchTableWithBlankOrMissingInput() {
-        BasicDataProvider provider = new BasicDataProvider();
-        BasicTable table = new BasicTable("basic_test_table");
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
+        StagingTable table = new StagingTable("basic_test_table");
         table.addColumnDefinition("size", ColumnType.INPUT);
         table.addColumnDefinition("description", ColumnType.DESCRIPTION);
         table.addColumnDefinition("result", ColumnType.ENDPOINT);
@@ -396,7 +414,7 @@ public class DecisionEngineTest {
         assertNotNull(DecisionEngine.matchTable(matchTable, input));
 
         // test matching on multiple mising values
-        table = new BasicTable("basic_test_table_multi");
+        table = new StagingTable("basic_test_table_multi");
         table.addColumnDefinition("a", ColumnType.INPUT);
         table.addColumnDefinition("b", ColumnType.INPUT);
         table.addColumnDefinition("c", ColumnType.INPUT);
@@ -418,8 +436,8 @@ public class DecisionEngineTest {
 
     @Test
     public void testMatchOnSpecificKeys() {
-        BasicDataProvider provider = new BasicDataProvider();
-        BasicTable table = new BasicTable("basic_test_table_keytest");
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
+        StagingTable table = new StagingTable("basic_test_table_keytest");
         table.addColumnDefinition("key1", ColumnType.INPUT);
         table.addColumnDefinition("key2", ColumnType.INPUT);
         table.addColumnDefinition("result", ColumnType.ENDPOINT);
@@ -471,8 +489,8 @@ public class DecisionEngineTest {
 
     @Test
     public void testMatchMissingVsAll() {
-        BasicDataProvider provider = new BasicDataProvider();
-        BasicTable table = new BasicTable("testMissingAndAll");
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
+        StagingTable table = new StagingTable("testMissingAndAll");
         table.addColumnDefinition("a", ColumnType.INPUT);
         table.addColumnDefinition("result", ColumnType.ENDPOINT);
         table.addRawRow("", "VALUE:missing");
@@ -498,8 +516,8 @@ public class DecisionEngineTest {
 
     @Test
     public void testValueKeyReferences() {
-        BasicDataProvider provider = new BasicDataProvider();
-        BasicTable table = new BasicTable("table_key_references");
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
+        StagingTable table = new StagingTable("table_key_references");
         table.addColumnDefinition("a", ColumnType.INPUT);
         table.addColumnDefinition("b", ColumnType.INPUT);
         table.addColumnDefinition("result", ColumnType.ENDPOINT);
@@ -510,11 +528,12 @@ public class DecisionEngineTest {
         table.addRawRow("10", "*", "VALUE:{{b}}");
         table.addRawRow("11", "*", "VALUE:{{bad_key}}");
         provider.addTable(table);
-        BasicSchema def = new BasicSchema("alg_key_references");
-        def.addInput("a");
-        def.addInput("b");
-        def.addMapping(new BasicMapping("m1", Collections.singletonList(new BasicTablePath("table_key_references"))));
-        provider.addDefinition(def);
+        StagingSchema schema = new StagingSchema("alg_key_references");
+        schema.setSchemaSelectionTable("table_selection");
+        schema.addInput("a");
+        schema.addInput("b");
+        schema.addMapping(new StagingMapping("m1", Collections.singletonList(new StagingTablePath("table_key_references"))));
+        provider.addSchema(schema);
         DecisionEngine engine = new DecisionEngine(provider);
 
         Map<String, String> input = new HashMap<>();
@@ -546,8 +565,8 @@ public class DecisionEngineTest {
 
     @Test
     public void testMatchTableMissingCell() {
-        BasicDataProvider provider = new BasicDataProvider();
-        BasicTable table = new BasicTable("table_sample_first");
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
+        StagingTable table = new StagingTable("table_sample_first");
         table.addColumnDefinition("a", ColumnType.INPUT);
         table.addColumnDefinition("b", ColumnType.INPUT);
         table.addColumnDefinition("description", ColumnType.DESCRIPTION);
@@ -581,8 +600,8 @@ public class DecisionEngineTest {
 
     @Test
     public void testBlankMatching() {
-        BasicDataProvider provider = new BasicDataProvider();
-        BasicTable table = new BasicTable("table_blank_matching");
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
+        StagingTable table = new StagingTable("table_blank_matching");
         table.addColumnDefinition("a", ColumnType.INPUT);
         table.addColumnDefinition("b", ColumnType.INPUT);
         table.addColumnDefinition("b", ColumnType.ENDPOINT);
@@ -612,8 +631,8 @@ public class DecisionEngineTest {
 
     @Test
     public void testLookupTable() {
-        BasicDataProvider provider = new BasicDataProvider();
-        BasicTable table = new BasicTable("site_table");
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
+        StagingTable table = new StagingTable("site_table");
         table.addColumnDefinition("site", ColumnType.INPUT);
         table.addColumnDefinition("description", ColumnType.DESCRIPTION);
         table.addRawRow("C000", "External upper lip");
@@ -641,8 +660,8 @@ public class DecisionEngineTest {
 
     @Test
     public void testAllValuesMatching() {
-        BasicDataProvider provider = new BasicDataProvider();
-        BasicTable table = new BasicTable("all_values_test");
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
+        StagingTable table = new StagingTable("all_values_test");
         table.addColumnDefinition("a", ColumnType.INPUT);
         table.addColumnDefinition("b", ColumnType.INPUT);
         table.addColumnDefinition("description", ColumnType.DESCRIPTION);
@@ -744,7 +763,7 @@ public class DecisionEngineTest {
 
         assertEquals(Type.FAILED_INPUT, result.getType());
 
-        // since input "b" is fail_on_invalud, table processing should not continue
+        // since input "b" is fail_on_invalid, table processing should not continue
         assertEquals(0, result.getPath().size());
 
         // one error for input, and one error each of the two tables because of no match
@@ -854,9 +873,9 @@ public class DecisionEngineTest {
 
     @Test
     public void testProcessWithNullValues() {
-        BasicDataProvider provider = new BasicDataProvider();
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
 
-        BasicTable table = new BasicTable("table_null_values");
+        StagingTable table = new StagingTable("table_null_values");
         table.addColumnDefinition("a", ColumnType.INPUT);
         table.addColumnDefinition("result", ColumnType.ENDPOINT);
         table.addRawRow("1", "VALUE:FOUND1");
@@ -865,13 +884,14 @@ public class DecisionEngineTest {
         table.addRawRow("*", "MATCH");
         provider.addTable(table);
 
-        BasicSchema def = new BasicSchema("starting_null_values");
-        BasicInput inputKey = new BasicInput("a");
+        StagingSchema schema = new StagingSchema("starting_null_values");
+        schema.setSchemaSelectionTable("table_selection");
+        StagingSchemaInput inputKey = new StagingSchemaInput("a");
         inputKey.setDefault("0");
-        def.addInput(inputKey);
-        def.addInitialContext("result", "0");
-        def.addMapping(new BasicMapping("m1", Collections.singletonList(new BasicTablePath("table_null_values"))));
-        provider.addDefinition(def);
+        schema.addInput(inputKey);
+        schema.addInitialContext("result", "0");
+        schema.addMapping(new StagingMapping("m1", Collections.singletonList(new StagingTablePath("table_null_values"))));
+        provider.addSchema(schema);
         DecisionEngine engine = new DecisionEngine(provider);
 
         Map<String, String> input = new HashMap<>();
@@ -1033,26 +1053,27 @@ public class DecisionEngineTest {
 
     @Test
     public void testInvolvedTablesWhenEmpty() {
-        BasicDataProvider provider = new BasicDataProvider();
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
 
         // add empty table
-        BasicTable table = new BasicTable("table1");
+        StagingTable table = new StagingTable("table1");
         table.addColumnDefinition("a", ColumnType.INPUT);
         provider.addTable(table);
 
         // add another empty table
-        table = new BasicTable("table2");
+        table = new StagingTable("table2");
         table.addColumnDefinition("b", ColumnType.INPUT);
         provider.addTable(table);
 
-        BasicSchema def = new BasicSchema("def1");
-        def.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
-        def.addInput("a");
-        def.addInput("b");
-        BasicMapping mapping = new BasicMapping("m1");
-        mapping.setTablePaths(Arrays.asList(new BasicTablePath("table1"), new BasicTablePath("table2")));
-        def.addMapping(mapping);
-        provider.addDefinition(def);
+        StagingSchema schema = new StagingSchema("def1");
+        schema.setSchemaSelectionTable("table_selection");
+        schema.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
+        schema.addInput("a");
+        schema.addInput("b");
+        StagingMapping mapping = new StagingMapping("m1");
+        mapping.setTablePaths(Arrays.asList(new StagingTablePath("table1"), new StagingTablePath("table2")));
+        schema.addMapping(mapping);
+        provider.addSchema(schema);
 
         DecisionEngine engine = new DecisionEngine(provider);
 
@@ -1166,10 +1187,10 @@ public class DecisionEngineTest {
 
     @Test
     public void testRowNotFoundWithMultipleOutputs() {
-        BasicDataProvider provider = new BasicDataProvider();
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
 
         // test a situation where a a row with mulitple inputs is not found
-        BasicTable table = new BasicTable("table_input");
+        StagingTable table = new StagingTable("table_input");
         table.addColumnDefinition("input1", ColumnType.INPUT);
         table.addColumnDefinition("output1", ColumnType.ENDPOINT);
         table.addColumnDefinition("output2", ColumnType.ENDPOINT);
@@ -1177,15 +1198,16 @@ public class DecisionEngineTest {
         table.addRawRow("001", "VALUE:001", "VALUE:001");
         provider.addTable(table);
 
-        BasicSchema def = new BasicSchema("sample_outputs");
-        def.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
-        def.addInput(new BasicInput("input1", "table_input"));
+        StagingSchema schema = new StagingSchema("sample_outputs");
+        schema.setSchemaSelectionTable("table_selection");
+        schema.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
+        schema.addInput(new StagingSchemaInput("input1", "input1", "table_input"));
 
-        BasicMapping mapping = new BasicMapping("mapping1");
-        BasicTablePath path = new BasicTablePath("table_input");
+        StagingMapping mapping = new StagingMapping("mapping1");
+        StagingTablePath path = new StagingTablePath("table_input");
         mapping.addTablePath(path);
-        def.addMapping(mapping);
-        provider.addDefinition(def);
+        schema.addMapping(mapping);
+        provider.addSchema(schema);
 
         DecisionEngine engine = new DecisionEngine(provider);
 
@@ -1255,11 +1277,11 @@ public class DecisionEngineTest {
 
     @Test(expected = IllegalStateException.class)
     public void testDuplicateAlgorithms() {
-        BasicDataProvider provider = new BasicDataProvider();
-        BasicSchema def = new BasicSchema();
-        def.setId("TEST1");
-        provider.addDefinition(def);
-        provider.addDefinition(def);
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
+        StagingSchema schema = new StagingSchema();
+        schema.setId("TEST1");
+        provider.addSchema(schema);
+        provider.addSchema(schema);
     }
 
     /**
@@ -1299,7 +1321,7 @@ public class DecisionEngineTest {
 
     @Test
     public void testGetTableInputsAsString() {
-        BasicTable table = new BasicTable("table_inputs");
+        StagingTable table = new StagingTable("table_inputs");
         table.addColumnDefinition("a", ColumnType.INPUT);
         table.addColumnDefinition("b", ColumnType.INPUT);
         table.addColumnDefinition("description", ColumnType.DESCRIPTION);
@@ -1325,16 +1347,16 @@ public class DecisionEngineTest {
         context.put("a", "7    ");
         assertEquals("7,25", DecisionEngine.getTableInputsAsString(table, context));
 
-        table = new BasicTable("table_empty");
+        table = new StagingTable("table_empty");
         context = new HashMap<>();
         assertEquals("", DecisionEngine.getTableInputsAsString(table, context));
     }
 
     @Test
     public void testOutputsAndDefaults() {
-        BasicDataProvider provider = new BasicDataProvider();
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
 
-        BasicTable table = new BasicTable("table_input");
+        StagingTable table = new StagingTable("table_input");
         table.addColumnDefinition("input1", ColumnType.INPUT);
         table.addColumnDefinition("description", ColumnType.DESCRIPTION);
         table.addRawRow("000", "Alpha");
@@ -1342,7 +1364,7 @@ public class DecisionEngineTest {
         table.addRawRow("002", "Gamma");
         provider.addTable(table);
 
-        table = new BasicTable("table_output");
+        table = new StagingTable("table_output");
         table.addColumnDefinition("output1", ColumnType.INPUT);
         table.addColumnDefinition("description", ColumnType.DESCRIPTION);
         table.addRawRow("A", "Alpha");
@@ -1350,20 +1372,21 @@ public class DecisionEngineTest {
         table.addRawRow("C", "Gamma");
         provider.addTable(table);
 
-        BasicSchema def = new BasicSchema("sample_outputs");
-        def.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
-        def.addInput(new BasicInput("input1", "table_input"));
+        StagingSchema schema = new StagingSchema("sample_outputs");
+        schema.setSchemaSelectionTable("table_selection");
+        schema.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
+        schema.addInput(new StagingSchemaInput("input1", "input1", "table_input"));
 
-        BasicOutput output = new BasicOutput("output1", "table_output");
+        StagingSchemaOutput output = new StagingSchemaOutput("output1", "output1", "table_output");
         output.setDefault("A");
-        def.addOutput(output);
+        schema.addOutput(output);
 
-        output = new BasicOutput("output2");
-        def.addOutput(output);
+        output = new StagingSchemaOutput("output2");
+        schema.addOutput(output);
 
-        BasicMapping mapping = new BasicMapping("mapping1");
-        def.addMapping(mapping);
-        provider.addDefinition(def);
+        StagingMapping mapping = new StagingMapping("mapping1");
+        schema.addMapping(mapping);
+        provider.addSchema(schema);
 
         DecisionEngine engine = new DecisionEngine(provider);
 
@@ -1380,11 +1403,11 @@ public class DecisionEngineTest {
 
         assertFalse(result.hasErrors());
 
-        assertEquals(new HashSet<>(Arrays.asList("table_input", "table_output")), engine.getInvolvedTables(def));
+        assertEquals(new HashSet<>(Arrays.asList("table_input", "table_output")), engine.getInvolvedTables(schema));
 
         // modify the definition to create a bad default value for output1
-        def.getOutputs().get(0).setDefault("BAD");
-        provider.initDefinition(def);
+        schema.getOutputs().get(0).setDefault("BAD");
+        provider.initSchema(schema);
         engine = new DecisionEngine(provider);
 
         input = new HashMap<>();
@@ -1405,17 +1428,18 @@ public class DecisionEngineTest {
 
     @Test
     public void testInitialContextReferences() {
-        BasicSchema def = new BasicSchema("test_initial_context");
-        def.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
+        StagingSchema schema = new StagingSchema("test_initial_context");
+        schema.setSchemaSelectionTable("table_selection");
+        schema.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
 
-        def.addInitialContext("a", "foo1");
-        def.addInitialContext("b", "{{foo1}}");
-        def.addInitialContext("c", "foo2");
-        def.addInitialContext("d", "{{foo2}}");
-        def.addInitialContext("e", "{{bad_key}}");
+        schema.addInitialContext("a", "foo1");
+        schema.addInitialContext("b", "{{foo1}}");
+        schema.addInitialContext("c", "foo2");
+        schema.addInitialContext("d", "{{foo2}}");
+        schema.addInitialContext("e", "{{bad_key}}");
 
-        BasicDataProvider provider = new BasicDataProvider();
-        provider.addDefinition(def);
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
+        provider.addSchema(schema);
         DecisionEngine engine = new DecisionEngine(provider);
 
         Map<String, String> context = new HashMap<>();
@@ -1434,41 +1458,42 @@ public class DecisionEngineTest {
 
     @Test
     public void testInputsOutputsDefaultContextReferences() {
-        BasicSchema def = new BasicSchema("test_context");
-        def.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
+        StagingSchema schema = new StagingSchema("test_context");
+        schema.setSchemaSelectionTable("dummy");
+        schema.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
 
         // add inputs
-        BasicInput input = new BasicInput("input1");
+        StagingSchemaInput input = new StagingSchemaInput("input1");
         input.setDefault("foo1");
-        def.addInput(input);
+        schema.addInput(input);
 
-        input = new BasicInput("input2");
+        input = new StagingSchemaInput("input2");
         input.setDefault("{{foo1}}");
-        def.addInput(input);
+        schema.addInput(input);
 
         // add outputs
-        BasicOutput output = new BasicOutput("output1");
+        StagingSchemaOutput output = new StagingSchemaOutput("output1");
         output.setDefault("foo2");
-        def.addOutput(output);
+        schema.addOutput(output);
 
-        output = new BasicOutput("output2");
+        output = new StagingSchemaOutput("output2");
         output.setDefault("{{foo2}}");
-        def.addOutput(output);
+        schema.addOutput(output);
 
-        output = new BasicOutput("output3");
+        output = new StagingSchemaOutput("output3");
         output.setDefault("{{bad_key}}");
-        def.addOutput(output);
+        schema.addOutput(output);
 
-        output = new BasicOutput("output4");
+        output = new StagingSchemaOutput("output4");
         output.setDefault("{{input1}}");
-        def.addOutput(output);
+        schema.addOutput(output);
 
-        output = new BasicOutput("output5");
+        output = new StagingSchemaOutput("output5");
         output.setDefault("{{input2}}");
-        def.addOutput(output);
+        schema.addOutput(output);
 
-        BasicDataProvider provider = new BasicDataProvider();
-        provider.addDefinition(def);
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
+        provider.addSchema(schema);
         DecisionEngine engine = new DecisionEngine(provider);
 
         Map<String, String> context = new HashMap<>();
@@ -1487,11 +1512,11 @@ public class DecisionEngineTest {
 
     @Test
     public void testMappingInputsWithReferenceInTable() {
-        BasicDataProvider provider = new BasicDataProvider();
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
 
         // test a situation where an input is also used as a reference in an endpoint; when the definition remaps that input it should not show up
         // as both values
-        BasicTable table = new BasicTable("table_input");
+        StagingTable table = new StagingTable("table_input");
         table.addColumnDefinition("input1", ColumnType.INPUT);
         table.addColumnDefinition("output1", ColumnType.ENDPOINT);
         table.addRawRow("000", "VALUE:001");
@@ -1499,20 +1524,21 @@ public class DecisionEngineTest {
         table.addRawRow("002", "VALUE:{{input1}}");
         provider.addTable(table);
 
-        BasicSchema def = new BasicSchema("sample_outputs");
-        def.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
-        def.addInput(new BasicInput("input1", "table_input"));
+        StagingSchema schema = new StagingSchema("sample_outputs");
+        schema.setSchemaSelectionTable("table_selection");
+        schema.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
+        schema.addInput(new StagingSchemaInput("input1", "input1", "table_input"));
 
-        BasicMapping mapping = new BasicMapping("mapping1");
-        BasicTablePath path = new BasicTablePath("table_input");
+        StagingMapping mapping = new StagingMapping("mapping1");
+        StagingTablePath path = new StagingTablePath("table_input");
         path.addInputMapping("remapped1", "input1");
         mapping.addTablePath(path);
-        def.addMapping(mapping);
-        provider.addDefinition(def);
+        schema.addMapping(mapping);
+        provider.addSchema(schema);
 
         DecisionEngine engine = new DecisionEngine(provider);
 
-        assertEquals(new HashSet<>(Collections.singletonList("remapped1")), engine.getInputs(def.getMappings().get(0).getTablePaths().get(0)));
+        assertEquals(new HashSet<>(Collections.singletonList("remapped1")), engine.getInputs(schema.getMappings().get(0).getTablePaths().get(0)));
     }
 
 }

@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2018 Information Management Services, Inc.
  */
-package com.imsweb.staging.entities.basic;
+package com.imsweb.staging.engine;
 
 import java.util.ArrayList;
 import java.util.Arrays;

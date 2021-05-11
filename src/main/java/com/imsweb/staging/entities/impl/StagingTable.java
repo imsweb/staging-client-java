@@ -4,6 +4,7 @@
 package com.imsweb.staging.entities.impl;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -13,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+import com.imsweb.staging.entities.ColumnDefinition.ColumnType;
 import com.imsweb.staging.entities.Table;
 import com.imsweb.staging.entities.TableRow;
 
@@ -40,6 +42,10 @@ public class StagingTable implements Table {
      * Morphia requires a default constructor
      */
     public StagingTable() {
+    }
+
+    public StagingTable(String id) {
+        setId(id);
     }
 
     @Override
@@ -152,6 +158,17 @@ public class StagingTable implements Table {
         _definition = definition;
     }
 
+    public void addColumnDefinition(String key, ColumnType type) {
+        if (_definition == null)
+            _definition = new ArrayList<>();
+
+        StagingColumnDefinition def = new StagingColumnDefinition();
+        def.setKey(key);
+        def.setType(type);
+
+        _definition.add(def);
+    }
+
     @Override
     @JsonProperty("extra_input")
     public Set<String> getExtraInput() {
@@ -171,6 +188,13 @@ public class StagingTable implements Table {
 
     public void setRawRows(List<List<String>> rows) {
         _rows = rows;
+    }
+
+    public void addRawRow(String... row) {
+        if (_rows == null)
+            _rows = new ArrayList<>();
+
+        _rows.add(Arrays.asList(row));
     }
 
     @Override

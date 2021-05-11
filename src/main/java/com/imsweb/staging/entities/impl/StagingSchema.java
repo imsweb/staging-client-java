@@ -3,8 +3,10 @@
  */
 package com.imsweb.staging.entities.impl;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
@@ -51,6 +53,10 @@ public class StagingSchema implements Schema {
      * Morphia requires a default constructor
      */
     public StagingSchema() {
+    }
+
+    public StagingSchema(String id) {
+        setId(id);
     }
 
     @Override
@@ -184,6 +190,20 @@ public class StagingSchema implements Schema {
         _inputs = inputs;
     }
 
+    public void addInput(String key) {
+        if (_inputs == null)
+            _inputs = new ArrayList<>();
+
+        _inputs.add(new StagingSchemaInput(key));
+    }
+
+    public void addInput(StagingSchemaInput input) {
+        if (_inputs == null)
+            _inputs = new ArrayList<>();
+
+        _inputs.add(input);
+    }
+
     @Override
     @JsonProperty("outputs")
     public List<StagingSchemaOutput> getOutputs() {
@@ -192,6 +212,13 @@ public class StagingSchema implements Schema {
 
     public void setOutputs(List<StagingSchemaOutput> outputs) {
         _outputs = outputs;
+    }
+
+    public void addOutput(StagingSchemaOutput output) {
+        if (_outputs == null)
+            _outputs = new ArrayList<>();
+
+        _outputs.add(output);
     }
 
     @Override
@@ -205,6 +232,13 @@ public class StagingSchema implements Schema {
         _initialContext = initialContext;
     }
 
+    public void addInitialContext(String key, String value) {
+        if (_initialContext == null)
+            _initialContext = new HashSet<>();
+
+        _initialContext.add(new StagingKeyValue(key, value));
+    }
+
     @Override
     @JsonProperty("mappings")
     public List<StagingMapping> getMappings() {
@@ -213,6 +247,13 @@ public class StagingSchema implements Schema {
 
     public void setMappings(List<StagingMapping> mapping) {
         _mappings = mapping;
+    }
+
+    public void addMapping(StagingMapping mapping) {
+        if (_mappings == null)
+            _mappings = new ArrayList<>();
+
+        _mappings.add(mapping);
     }
 
     @Override
