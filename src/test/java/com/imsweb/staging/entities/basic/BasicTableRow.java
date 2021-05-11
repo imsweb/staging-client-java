@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import com.imsweb.staging.entities.Endpoint;
 import com.imsweb.staging.entities.Range;
@@ -14,21 +15,21 @@ import com.imsweb.staging.entities.TableRow;
 
 public class BasicTableRow implements TableRow {
 
-    private Map<String, List<? extends Range>> _inputs = new HashMap<>();
+    private Map<String, List<BasicRange>> _inputs = new HashMap<>();
     private String _description;
     private List<BasicEndpoint> _endpoints = new ArrayList<>();
+
+    @Override
+    public Set<String> getColumns() {
+        return _inputs.keySet();
+    }
 
     @Override
     public List<? extends Range> getColumnInput(String key) {
         return _inputs.get(key);
     }
 
-    @Override
-    public Map<String, List<? extends Range>> getInputs() {
-        return _inputs;
-    }
-
-    public void setInputs(Map<String, List<? extends Range>> inputs) {
+    public void setInputs(Map<String, List<BasicRange>> inputs) {
         _inputs = inputs;
     }
 
@@ -37,8 +38,9 @@ public class BasicTableRow implements TableRow {
      * @param key an input key
      * @param range a List of BasicRange objects
      */
+    @SuppressWarnings("unchecked")
     public void addInput(String key, List<? extends Range> range) {
-        _inputs.put(key, range);
+        _inputs.put(key, (List<BasicRange>)range);
     }
 
     @Override

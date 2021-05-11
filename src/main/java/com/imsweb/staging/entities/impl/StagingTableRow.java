@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -17,8 +18,13 @@ import com.imsweb.staging.entities.TableRow;
 
 public class StagingTableRow implements TableRow {
 
-    private Map<String, List<? extends Range>> _inputs = new HashMap<>();
+    private Map<String, List<StagingRange>> _inputs = new HashMap<>();
     private List<StagingEndpoint> _endpoints = new ArrayList<>();
+
+    @Override
+    public Set<String> getColumns() {
+        return _inputs.keySet();
+    }
 
     @Override
     @JsonIgnore
@@ -26,13 +32,12 @@ public class StagingTableRow implements TableRow {
         return _inputs.get(key);
     }
 
-    @Override
     @JsonProperty("inputs")
-    public Map<String, List<? extends Range>> getInputs() {
+    public Map<String, List<StagingRange>> getInputs() {
         return _inputs;
     }
 
-    public void setInputs(Map<String, List<? extends Range>> inputs) {
+    public void setInputs(Map<String, List<StagingRange>> inputs) {
         _inputs = inputs;
     }
 
@@ -41,9 +46,10 @@ public class StagingTableRow implements TableRow {
      * @param key key
      * @param range range
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void addInput(String key, List<? extends Range> range) {
-        _inputs.put(key, range);
+        _inputs.put(key, (List<StagingRange>)range);
     }
 
     @Override
