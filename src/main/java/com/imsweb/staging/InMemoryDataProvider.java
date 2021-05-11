@@ -30,9 +30,6 @@ public class InMemoryDataProvider extends StagingDataProvider {
     private final Map<String, StagingTable> _tables = new HashMap<>();
     private final Map<String, StagingSchema> _schemas = new HashMap<>();
 
-    /**
-     * Constructor loads all schemas and sets up table cache
-     */
     public InMemoryDataProvider(String algorithm, String version) {
         _algorithm = algorithm;
         _version = version;
@@ -73,17 +70,11 @@ public class InMemoryDataProvider extends StagingDataProvider {
         return new StagingRange(low, high);
     }
 
-    /**
-     * Add a table
-     */
     public void addTable(StagingTable table) {
         initTable(table);
         _tables.put(table.getId(), table);
     }
 
-    /**
-     * Return a set of all the table names
-     */
     @Override
     public Set<String> getTableIds() {
         return _tables.keySet();
