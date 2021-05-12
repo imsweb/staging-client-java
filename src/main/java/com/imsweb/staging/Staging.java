@@ -17,24 +17,24 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
-import com.imsweb.decisionengine.DecisionEngine;
-import com.imsweb.decisionengine.Error;
-import com.imsweb.decisionengine.Output;
-import com.imsweb.decisionengine.Result;
-import com.imsweb.decisionengine.Result.Type;
-import com.imsweb.decisionengine.Table;
+import com.imsweb.staging.engine.DecisionEngine;
+import com.imsweb.staging.entities.ColumnDefinition;
+import com.imsweb.staging.entities.ColumnDefinition.ColumnType;
+import com.imsweb.staging.entities.Error;
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.GlossaryHit;
-import com.imsweb.staging.entities.StagingColumnDefinition;
-import com.imsweb.staging.entities.StagingMapping;
-import com.imsweb.staging.entities.StagingSchema;
-import com.imsweb.staging.entities.StagingSchemaInput;
-import com.imsweb.staging.entities.StagingSchemaOutput;
-import com.imsweb.staging.entities.StagingTable;
-import com.imsweb.staging.entities.StagingTablePath;
+import com.imsweb.staging.entities.Input;
+import com.imsweb.staging.entities.Mapping;
+import com.imsweb.staging.entities.Output;
+import com.imsweb.staging.entities.Result;
+import com.imsweb.staging.entities.Result.Type;
+import com.imsweb.staging.entities.Schema;
+import com.imsweb.staging.entities.SchemaLookup;
+import com.imsweb.staging.entities.StagingData;
+import com.imsweb.staging.entities.Table;
+import com.imsweb.staging.entities.TablePath;
 
-import static com.imsweb.decisionengine.ColumnDefinition.ColumnType.DESCRIPTION;
+import static com.imsweb.staging.entities.ColumnDefinition.ColumnType.DESCRIPTION;
 
 public final class Staging {
 
@@ -95,8 +95,8 @@ public final class Staging {
      * @param id Schema identifier
      * @return an Algorithm object
      */
-    public StagingSchema getSchema(String id) {
-        return _provider.getDefinition(id);
+    public Schema getSchema(String id) {
+        return _provider.getSchema(id);
     }
 
     /**
@@ -107,7 +107,7 @@ public final class Staging {
     public Set<String> getSchemaGlossary(String id) {
         Set<String> hits = new HashSet<>();
 
-        StagingSchema schema = getSchema(id);
+        Schema schema = getSchema(id);
         if (schema != null) {
             addGlossaryMatches(hits, schema.getName());
             addGlossaryMatches(hits, schema.getTitle());
@@ -142,7 +142,7 @@ public final class Staging {
      * @param lookup schema lookup input
      * @return a list of StagingSchema objects
      */
-    public List<StagingSchema> lookupSchema(SchemaLookup lookup) {
+    public List<Schema> lookupSchema(SchemaLookup lookup) {
         return _provider.lookupSchema(lookup);
     }
 
@@ -159,7 +159,7 @@ public final class Staging {
      * @param id table identifier
      * @return Table object
      */
-    public StagingTable getTable(String id) {
+    public Table getTable(String id) {
         return _provider.getTable(id);
     }
 
@@ -171,7 +171,7 @@ public final class Staging {
     public Set<String> getTableGlossary(String id) {
         Set<String> hits = new HashSet<>();
 
-        StagingTable table = getTable(id);
+        Table table = getTable(id);
         if (table != null) {
             // add all the String fields
             addGlossaryMatches(hits, table.getName());
@@ -225,12 +225,12 @@ public final class Staging {
      */
     public boolean isContextValid(String schemaId, String key, Map<String, String> context) {
         // first get the algorithm
-        StagingSchema schema = getSchema(schemaId);
+        Schema schema = getSchema(schemaId);
         if (schema == null)
             return false;
 
         // get the table id from the schema
-        StagingSchemaInput input = schema.getInputMap().get(key);
+        Input input = schema.getInputMap().get(key);
         if (input == null)
             return false;
 
@@ -296,7 +296,7 @@ public final class Staging {
     public Set<String> getInvolvedTables(String schemaId) {
         Set<String> tables = new HashSet<>();
 
-        StagingSchema schema = getSchema(schemaId);
+        Schema schema = getSchema(schemaId);
         if (schema != null && schema.getInvolvedTables() != null)
             tables = schema.getInvolvedTables();
 
@@ -319,7 +319,7 @@ public final class Staging {
      * @param path a StagingTablePath
      * @return a Set of unique input keys
      */
-    public Set<String> getInputs(StagingTablePath path) {
+    public Set<String> getInputs(TablePath path) {
         return getInputs(path, new HashSet<>());
     }
 
@@ -330,14 +330,14 @@ public final class Staging {
      * @param excludedInputs a list of input keys to not consider as inputs
      * @return a Set of unique input keys
      */
-    public Set<String> getInputs(StagingTablePath path, Set<String> excludedInputs) {
+    public Set<String> getInputs(TablePath path, Set<String> excludedInputs) {
         Set<String> inputs = new HashSet<>();
 
         if (path != null)
             inputs.addAll(_engine.getInputs(path, excludedInputs));
 
         // always remove all context variables since they are never needed to be supplied
-        inputs.removeAll(CONTEXT_KEYS);
+        CONTEXT_KEYS.forEach(inputs::remove);
 
         return inputs;
     }
@@ -348,7 +348,7 @@ public final class Staging {
      * @param mapping a StagingMapping
      * @return a Set of unique input keys
      */
-    public Set<String> getInputs(StagingMapping mapping) {
+    public Set<String> getInputs(Mapping mapping) {
         return getInputs(mapping, null, new HashSet<>());
     }
 
@@ -361,17 +361,17 @@ public final class Staging {
      * @param excludedInputs a list of input keys to not consider as inputs
      * @return a Set of unique input keys
      */
-    public Set<String> getInputs(StagingMapping mapping, Map<String, String> context, Set<String> excludedInputs) {
+    public Set<String> getInputs(Mapping mapping, Map<String, String> context, Set<String> excludedInputs) {
         Set<String> inputs = new HashSet<>();
 
         // the inclusion tables are always evaluated so any inputs there should be added always
         if (mapping.getInclusionTables() != null)
-            for (StagingTablePath path : mapping.getInclusionTables())
+            for (TablePath path : mapping.getInclusionTables())
                 inputs.addAll(getInputs(path, excludedInputs));
 
         // the exclusion tables are always evaluated so any inputs there should be added always
         if (mapping.getExclusionTables() != null)
-            for (StagingTablePath path : mapping.getExclusionTables())
+            for (TablePath path : mapping.getExclusionTables())
                 inputs.addAll(getInputs(path, excludedInputs));
 
         // if there are tables paths and if the mapping is involved, add the inputs
@@ -380,7 +380,7 @@ public final class Staging {
                 inputs.addAll(_engine.getInputs(mapping, excludedInputs));
 
         // always remove all context variables since they are never needed to be supplied
-        inputs.removeAll(CONTEXT_KEYS);
+        CONTEXT_KEYS.forEach(inputs::remove);
 
         return inputs;
     }
@@ -393,7 +393,7 @@ public final class Staging {
      * @param schema a StagingSchema
      * @return a Set of unique input keys
      */
-    public Set<String> getInputs(StagingSchema schema) {
+    public Set<String> getInputs(Schema schema) {
         return getInputs(schema, null);
     }
 
@@ -407,14 +407,14 @@ public final class Staging {
      * @param context a context of values used to to check mapping inclusion/exclusion
      * @return a Set of unique input keys
      */
-    public Set<String> getInputs(StagingSchema schema, Map<String, String> context) {
+    public Set<String> getInputs(Schema schema, Map<String, String> context) {
         Set<String> inputs = new HashSet<>();
 
         // add schema selection fields
         if (schema.getSchemaSelectionTable() != null) {
-            StagingTable table = getTable(schema.getSchemaSelectionTable());
+            Table table = getTable(schema.getSchemaSelectionTable());
             if (table != null) {
-                for (StagingColumnDefinition def : table.getColumnDefinitions())
+                for (ColumnDefinition def : table.getColumnDefinitions())
                     if (ColumnType.INPUT.equals(def.getType()))
                         inputs.add(def.getKey());
             }
@@ -424,12 +424,12 @@ public final class Staging {
         if (schema.getMappings() != null) {
             Set<String> excludedInputs = new HashSet<>();
 
-            for (StagingMapping mapping : schema.getMappings())
+            for (Mapping mapping : schema.getMappings())
                 inputs.addAll(getInputs(mapping, context, excludedInputs));
         }
 
         // always remove all context variables since they are never needed to be supplied
-        inputs.removeAll(CONTEXT_KEYS);
+        CONTEXT_KEYS.forEach(inputs::remove);
 
         return inputs;
     }
@@ -439,7 +439,7 @@ public final class Staging {
      * @param path a StagingTablePath
      * @return a Set of unique output keys
      */
-    public Set<String> getOutputs(StagingTablePath path) {
+    public Set<String> getOutputs(TablePath path) {
         return _engine.getOutputs(path);
     }
 
@@ -449,7 +449,7 @@ public final class Staging {
      * @param mapping a StagingMapping
      * @return a Set of unique output keys
      */
-    public Set<String> getOutputs(StagingMapping mapping) {
+    public Set<String> getOutputs(Mapping mapping) {
         return getOutputs(mapping, null);
     }
 
@@ -461,7 +461,7 @@ public final class Staging {
      * @param context a context of values used to to check mapping inclusion/exclusion
      * @return a Set of unique output keys
      */
-    public Set<String> getOutputs(StagingMapping mapping, Map<String, String> context) {
+    public Set<String> getOutputs(Mapping mapping, Map<String, String> context) {
         Set<String> outputs = new HashSet<>();
 
         if (mapping.getTablePaths() != null) {
@@ -478,7 +478,7 @@ public final class Staging {
      * @param schema a StagingSchema
      * @return a Set of unique output keys
      */
-    public Set<String> getOutputs(StagingSchema schema) {
+    public Set<String> getOutputs(Schema schema) {
         return getOutputs(schema, null);
     }
 
@@ -490,7 +490,7 @@ public final class Staging {
      * @param context a context of values used to to check mapping inclusion/exclusion
      * @return a Set of unique output keys
      */
-    public Set<String> getOutputs(StagingSchema schema, Map<String, String> context) {
+    public Set<String> getOutputs(Schema schema, Map<String, String> context) {
         Set<String> outputs = new HashSet<>();
 
         // if outputs are defined in the schema, then there is no reason to look any further into the mappings; the output defines exactly what keys will
@@ -505,7 +505,7 @@ public final class Staging {
         // if outputs were not defined, then the tables involved in the mappings will be used to determine the possible outputs
 
         if (schema.getMappings() != null)
-            for (StagingMapping mapping : schema.getMappings())
+            for (Mapping mapping : schema.getMappings())
                 outputs.addAll(getOutputs(mapping, context));
 
         // if valid outputs are defined on the schema level, only return outputs that defined; this removed "temporary" outputs that may be defined during the
@@ -535,7 +535,7 @@ public final class Staging {
         }
 
         // get the schema; if a single schema is not found, return right away with an error
-        List<StagingSchema> schemas = lookupSchema(new SchemaLookup(data.getInput()));
+        List<Schema> schemas = lookupSchema(new SchemaLookup(data.getInput()));
         if (schemas.size() != 1) {
             if (schemas.size() == 0)
                 data.setResult(StagingData.Result.FAILED_NO_MATCHING_SCHEMA);
@@ -544,7 +544,7 @@ public final class Staging {
             return data;
         }
 
-        StagingSchema schema = schemas.get(0);
+        Schema schema = schemas.get(0);
 
         // add schema id to result
         data.setSchemaId(schema.getId());
@@ -588,11 +588,11 @@ public final class Staging {
         // defined as input in the selected schema
         Set<String> definedOutputs = new HashSet<>();
         if (schema.getOutputs() != null)
-            definedOutputs = schema.getOutputs().stream().map(StagingSchemaOutput::getKey).collect(Collectors.toSet());
+            definedOutputs = schema.getOutputs().stream().map(Output::getKey).collect(Collectors.toSet());
         for (Entry<String, String> entry : data.getInput().entrySet())
             if (!definedOutputs.contains(entry.getKey()))
                 context.remove(entry.getKey());
-        for (StagingSchemaInput input : schema.getInputs())
+        for (Input input : schema.getInputs())
             if (!definedOutputs.contains(input.getKey()))
                 context.remove(input.getKey());
 

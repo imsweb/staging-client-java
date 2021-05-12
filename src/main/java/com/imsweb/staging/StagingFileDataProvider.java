@@ -17,9 +17,19 @@ import java.util.stream.Collectors;
 import org.ahocorasick.trie.Trie;
 import org.ahocorasick.trie.Trie.TrieBuilder;
 
+import com.imsweb.staging.entities.Endpoint;
 import com.imsweb.staging.entities.GlossaryDefinition;
-import com.imsweb.staging.entities.StagingSchema;
-import com.imsweb.staging.entities.StagingTable;
+import com.imsweb.staging.entities.Range;
+import com.imsweb.staging.entities.Schema;
+import com.imsweb.staging.entities.Table;
+import com.imsweb.staging.entities.TableRow;
+import com.imsweb.staging.entities.impl.StagingEndpoint;
+import com.imsweb.staging.entities.impl.StagingRange;
+import com.imsweb.staging.entities.impl.StagingSchema;
+import com.imsweb.staging.entities.impl.StagingTable;
+import com.imsweb.staging.entities.impl.StagingTableRow;
+
+import static com.imsweb.staging.entities.Endpoint.EndpointType;
 
 /**
  * Implementation of DataProvider which loads from internal directories and holds all data in memory
@@ -155,8 +165,28 @@ public class StagingFileDataProvider extends StagingDataProvider {
     }
 
     @Override
-    public StagingTable getTable(String id) {
+    public Table getTable(String id) {
         return _tables.get(id);
+    }
+
+    @Override
+    public Endpoint getEndpoint(EndpointType type, String value) {
+        return new StagingEndpoint(type, value);
+    }
+
+    @Override
+    public TableRow getTableRow() {
+        return new StagingTableRow();
+    }
+
+    @Override
+    public Range getMatchAllRange() {
+        return new StagingRange();
+    }
+
+    @Override
+    public Range getRange(String low, String high) {
+        return new StagingRange(low, high);
     }
 
     @Override
@@ -170,7 +200,7 @@ public class StagingFileDataProvider extends StagingDataProvider {
     }
 
     @Override
-    public StagingSchema getDefinition(String id) {
+    public Schema getSchema(String id) {
         return _schemas.get(id);
     }
 

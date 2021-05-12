@@ -16,6 +16,7 @@ import java.util.TimeZone;
 import java.util.stream.Collectors;
 
 import org.ahocorasick.trie.Trie;
+import org.apache.commons.lang3.math.NumberUtils;
 import org.cache2k.Cache;
 import org.cache2k.Cache2kBuilder;
 
@@ -25,22 +26,26 @@ import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
-import com.imsweb.decisionengine.ColumnDefinition.ColumnType;
-import com.imsweb.decisionengine.DataProvider;
-import com.imsweb.decisionengine.DecisionEngine;
-import com.imsweb.decisionengine.Endpoint.EndpointType;
+import com.imsweb.staging.engine.DecisionEngine;
+import com.imsweb.staging.entities.ColumnDefinition;
+import com.imsweb.staging.entities.ColumnDefinition.ColumnType;
+import com.imsweb.staging.entities.DataProvider;
+import com.imsweb.staging.entities.Endpoint;
+import com.imsweb.staging.entities.Endpoint.EndpointType;
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.GlossaryHit;
-import com.imsweb.staging.entities.StagingColumnDefinition;
-import com.imsweb.staging.entities.StagingEndpoint;
-import com.imsweb.staging.entities.StagingKeyValue;
-import com.imsweb.staging.entities.StagingMapping;
-import com.imsweb.staging.entities.StagingRange;
-import com.imsweb.staging.entities.StagingSchema;
-import com.imsweb.staging.entities.StagingSchemaInput;
-import com.imsweb.staging.entities.StagingSchemaOutput;
-import com.imsweb.staging.entities.StagingTable;
-import com.imsweb.staging.entities.StagingTableRow;
+import com.imsweb.staging.entities.Input;
+import com.imsweb.staging.entities.KeyValue;
+import com.imsweb.staging.entities.Mapping;
+import com.imsweb.staging.entities.Output;
+import com.imsweb.staging.entities.Range;
+import com.imsweb.staging.entities.Schema;
+import com.imsweb.staging.entities.SchemaLookup;
+import com.imsweb.staging.entities.StagingData;
+import com.imsweb.staging.entities.Table;
+import com.imsweb.staging.entities.TableRow;
+
+import static com.imsweb.staging.Staging.CONTEXT_KEYS;
 
 /**
  * An abstract implementation of DataProvider customized for handling staging schemas/tables
@@ -57,7 +62,7 @@ public abstract class StagingDataProvider implements DataProvider {
 
     private static final ObjectMapper _MAPPER = new ObjectMapper();
 
-    private static final StagingRange _MATCH_ALL_ENDPOINT = new StagingRange();
+    private final Range _matchAllEndpoint = getMatchAllRange();
 
     protected Trie _trie;
 
@@ -77,7 +82,8 @@ public abstract class StagingDataProvider implements DataProvider {
     }
 
     // lookup cache
-    private final Cache<SchemaLookup, List<StagingSchema>> _lookupCache;
+    private final Cache<SchemaLookup, List<Schema>> _lookupCache;
+
     // site/hist cache
     private final Cache<String, Set<String>> _validValuesCache;
 
@@ -86,14 +92,16 @@ public abstract class StagingDataProvider implements DataProvider {
      */
     protected StagingDataProvider() {
         // cache schema lookups
-        _lookupCache = new Cache2kBuilder<SchemaLookup, List<StagingSchema>>() {}
+        _lookupCache = new Cache2kBuilder<SchemaLookup, List<Schema>>() {
+        }
                 .entryCapacity(500)
                 .eternal(true)
                 .loader(this::getSchemas)
                 .build();
 
         // cache the valid values for certain tables including site and histology
-        _validValuesCache = new Cache2kBuilder<String, Set<String>>() {}
+        _validValuesCache = new Cache2kBuilder<String, Set<String>>() {
+        }
                 .eternal(true)
                 .loader(this::getAllInputValues)
                 .build();
@@ -105,16 +113,16 @@ public abstract class StagingDataProvider implements DataProvider {
      * @return initialized schema entity
      */
     @SuppressWarnings("UnusedReturnValue")
-    public static StagingSchema initSchema(StagingSchema schema) {
+    public Schema initSchema(Schema schema) {
         // parse the schema selection ranges
         if (schema.getSchemaSelectionTable() == null)
             throw new IllegalStateException("Schemas must have a schema selection table.");
 
-        // store the inputs in a Map that can searched more efficiently
+        // store the inputs in a Map that can be searched more efficiently
         if (schema.getInputs() != null) {
-            Map<String, StagingSchemaInput> parsedInputMap = new HashMap<>();
+            Map<String, Input> parsedInputMap = new HashMap<>();
 
-            for (StagingSchemaInput input : schema.getInputs()) {
+            for (Input input : schema.getInputs()) {
                 // verify that all inputs contain a key
                 if (input.getKey() == null)
                     throw new IllegalStateException("All input definitions must have a 'key' defined.");
@@ -125,11 +133,11 @@ public abstract class StagingDataProvider implements DataProvider {
             schema.setInputMap(parsedInputMap);
         }
 
-        // store the outputs in a Map that can searched more efficiently
+        // store the outputs in a Map that can be searched more efficiently
         if (schema.getOutputs() != null) {
-            Map<String, StagingSchemaOutput> parsedOutputMap = new HashMap<>();
+            Map<String, Output> parsedOutputMap = new HashMap<>();
 
-            for (StagingSchemaOutput output : schema.getOutputs()) {
+            for (Output output : schema.getOutputs()) {
                 // verify that all inputs contain a key
                 if (output.getKey() == null)
                     throw new IllegalStateException("All output definitions must have a 'key' defined.");
@@ -142,9 +150,9 @@ public abstract class StagingDataProvider implements DataProvider {
 
         // make sure that the mapping initial context does not set a value for an input field
         if (schema.getMappings() != null)
-            for (StagingMapping mapping : schema.getMappings())
+            for (Mapping mapping : schema.getMappings())
                 if (mapping.getInitialContext() != null)
-                    for (StagingKeyValue kv : mapping.getInitialContext())
+                    for (KeyValue kv : mapping.getInitialContext())
                         if (schema.getInputMap().containsKey(kv.getKey()))
                             throw new IllegalStateException("The key '" + kv.getKey() + "' is defined in an initial context, but that is not allowed since it is also defined as an input.");
 
@@ -157,15 +165,15 @@ public abstract class StagingDataProvider implements DataProvider {
      * @return initialized table entity
      */
     @SuppressWarnings("UnusedReturnValue")
-    public static StagingTable initTable(StagingTable table) {
+    public Table initTable(Table table) {
         Set<String> extraInputs = new HashSet<>();
 
         // empty out the parsed rows
-        table.setTableRows(new ArrayList<>());
+        table.clearTableRows();
 
         if (table.getRawRows() != null) {
             for (List<String> row : table.getRawRows()) {
-                StagingTableRow tableRowEntity = new StagingTableRow();
+                TableRow tableRowEntity = getTableRow();
 
                 // make sure the number of cells in the row matches the number of columns defined
                 if (table.getColumnDefinitions().size() != row.size())
@@ -173,18 +181,18 @@ public abstract class StagingDataProvider implements DataProvider {
 
                 // loop over the column definitions in order since the data needs to retrieved by array position
                 for (int i = 0; i < table.getColumnDefinitions().size(); i++) {
-                    StagingColumnDefinition col = table.getColumnDefinitions().get(i);
+                    ColumnDefinition col = table.getColumnDefinitions().get(i);
                     String cellValue = row.get(i);
 
                     switch (col.getType()) {
                         case INPUT:
                             // if there are no ranges in the list, that means the cell was "blank" and is not needed in the table row
-                            List<StagingRange> ranges = splitValues(cellValue);
+                            List<? extends Range> ranges = splitValues(cellValue);
                             if (!ranges.isEmpty()) {
                                 tableRowEntity.addInput(col.getKey(), ranges);
 
                                 // if there are key references used (values that reference other inputs) like {{key}}, then add them to the extra inputs list
-                                for (StagingRange range : ranges) {
+                                for (Range range : ranges) {
                                     if (DecisionEngine.isReferenceVariable(range.getLow()))
                                         extraInputs.add(DecisionEngine.trimBraces(range.getLow()));
                                     if (DecisionEngine.isReferenceVariable(range.getHigh()))
@@ -193,7 +201,7 @@ public abstract class StagingDataProvider implements DataProvider {
                             }
                             break;
                         case ENDPOINT:
-                            StagingEndpoint endpoint = parseEndpoint(cellValue);
+                            Endpoint endpoint = parseEndpoint(cellValue);
                             endpoint.setResultKey(col.getKey());
                             tableRowEntity.addEndpoint(endpoint);
 
@@ -209,12 +217,12 @@ public abstract class StagingDataProvider implements DataProvider {
                     }
                 }
 
-                table.getTableRows().add(tableRowEntity);
+                table.addTableRow(tableRowEntity);
             }
         }
 
         // add extra inputs, if any; do not include context variables since they are not user input
-        extraInputs.removeAll(Staging.CONTEXT_KEYS);
+        CONTEXT_KEYS.forEach(extraInputs::remove);
         table.setExtraInput(extraInputs.isEmpty() ? null : extraInputs);
 
         return table;
@@ -225,7 +233,7 @@ public abstract class StagingDataProvider implements DataProvider {
      * @param endpoint endpoint String
      * @return an Endpoint object
      */
-    public static StagingEndpoint parseEndpoint(String endpoint) {
+    public Endpoint parseEndpoint(String endpoint) {
         String[] parts = endpoint.split(":", 2);
 
         EndpointType type = null;
@@ -247,7 +255,7 @@ public abstract class StagingDataProvider implements DataProvider {
         if ((value == null || value.isEmpty()) && EndpointType.JUMP.equals(type))
             throw new IllegalStateException("JUMP endpoint types must have a value: '" + endpoint + "'");
 
-        return new StagingEndpoint(type, value);
+        return getEndpoint(type, value);
     }
 
     /**
@@ -255,13 +263,13 @@ public abstract class StagingDataProvider implements DataProvider {
      * @param values String representing sets value ranges
      * @return a parsed list of string Range objects
      */
-    public static List<StagingRange> splitValues(String values) {
-        List<StagingRange> convertedRanges = new ArrayList<>();
+    public List<? extends Range> splitValues(String values) {
+        List<Range> convertedRanges = new ArrayList<>();
 
         if (values != null) {
             // if the value of the string is "*", then consider it as matching anything
             if (values.equals("*"))
-                convertedRanges.add(_MATCH_ALL_ENDPOINT);
+                convertedRanges.add(_matchAllEndpoint);
             else {
                 // split the string; the "-1" makes sure to not discard empty strings
                 String[] ranges = values.split(",", -1);
@@ -278,22 +286,26 @@ public abstract class StagingDataProvider implements DataProvider {
                         String high = parts[1].trim();
 
                         // check if both sides of the range are numeric values; if so the length does not have to match
-                        boolean isNumericRange = StagingRange.isNumeric(low) && StagingRange.isNumeric(high);
+                        boolean isNumericRange = isNumeric(low) && isNumeric(high);
 
                         // if same length, a numeric range, or one of the parts is a context variable, use the low and high as range.  Otherwise consier
                         // a single value (i.e. low = high)
                         if (low.length() == high.length() || isNumericRange || DecisionEngine.isReferenceVariable(low) || DecisionEngine.isReferenceVariable(high))
-                            convertedRanges.add(new StagingRange(low, high));
+                            convertedRanges.add(getRange(low, high));
                         else
-                            convertedRanges.add(new StagingRange(range.trim(), range.trim()));
+                            convertedRanges.add(getRange(range.trim(), range.trim()));
                     }
                     else
-                        convertedRanges.add(new StagingRange(range.trim(), range.trim()));
+                        convertedRanges.add(getRange(range.trim(), range.trim()));
                 }
             }
         }
 
         return convertedRanges;
+    }
+
+    public static boolean isNumeric(String value) {
+        return NumberUtils.isParsable(value);
     }
 
     /**
@@ -330,7 +342,7 @@ public abstract class StagingDataProvider implements DataProvider {
         boolean valid = (site != null);
 
         if (valid) {
-            StagingTable table = getTable(PRIMARY_SITE_TABLE);
+            Table table = getTable(PRIMARY_SITE_TABLE);
             if (table == null)
                 throw new IllegalStateException("Unable to locate " + PRIMARY_SITE_TABLE + " table");
 
@@ -349,7 +361,7 @@ public abstract class StagingDataProvider implements DataProvider {
         boolean valid = (histology != null);
 
         if (valid) {
-            StagingTable table = getTable(HISTOLOGY_TABLE);
+            Table table = getTable(HISTOLOGY_TABLE);
             if (table == null)
                 throw new IllegalStateException("Unable to locate " + HISTOLOGY_TABLE + " table");
 
@@ -379,11 +391,49 @@ public abstract class StagingDataProvider implements DataProvider {
      */
     public abstract String getVersion();
 
+    /**
+     * Return a new table
+     * @param id the table id
+     * @return Table entity
+     */
     @Override
-    public abstract StagingTable getTable(String id);
+    public abstract Table getTable(String id);
 
+    /**
+     * Return a new schema
+     * @param id the schema id
+     * @return Schema entity
+     */
     @Override
-    public abstract StagingSchema getDefinition(String id);
+    public abstract Schema getSchema(String id);
+
+    /**
+     * Return a new endpoint
+     * @param type type of endpoint
+     * @param value value of endpoint
+     * @return Endpoint entity
+     */
+    public abstract Endpoint getEndpoint(EndpointType type, String value);
+
+    /**
+     * Return a new table row
+     * @return TableRow entity
+     */
+    public abstract TableRow getTableRow();
+
+    /**
+     * Return a range representing "match all"
+     * @return a Range entity
+     */
+    public abstract Range getMatchAllRange();
+
+    /**
+     * Return a newly created range
+     * @param low low value
+     * @param high high value
+     * @return Range entity
+     */
+    public abstract Range getRange(String low, String high);
 
     /**
      * Return a set of all schema identifiers
@@ -440,7 +490,7 @@ public abstract class StagingDataProvider implements DataProvider {
      * @param lookup schema lookup input
      * @return a list of StagingSchemaInfo objects
      */
-    public List<StagingSchema> lookupSchema(SchemaLookup lookup) {
+    public List<Schema> lookupSchema(SchemaLookup lookup) {
         // If doing a more broad lookup without giving both site and histology, do not use the cache.  I don't want to cache
         // since the results could include all the data
         if (lookup.getSite() == null || lookup.getHistology() == null)
@@ -454,8 +504,8 @@ public abstract class StagingDataProvider implements DataProvider {
      * @param lookup schema lookup input
      * @return a list of StagingSchemaInfo objects
      */
-    private List<StagingSchema> getSchemas(SchemaLookup lookup) {
-        List<StagingSchema> matchedSchemas = new ArrayList<>();
+    private List<Schema> getSchemas(SchemaLookup lookup) {
+        List<Schema> matchedSchemas = new ArrayList<>();
 
         String site = lookup.getInput(StagingData.PRIMARY_SITE_KEY);
         String histology = lookup.getInput(StagingData.HISTOLOGY_KEY);
@@ -475,10 +525,10 @@ public abstract class StagingDataProvider implements DataProvider {
         if (site != null || histology != null) {
             // loop over selection table and match using only the supplied keys
             for (String schemaId : getSchemaIds()) {
-                StagingSchema schema = getDefinition(schemaId);
+                Schema schema = getSchema(schemaId);
 
                 if (schema.getSchemaSelectionTable() != null) {
-                    StagingTable table = getTable(schema.getSchemaSelectionTable());
+                    Table table = getTable(schema.getSchemaSelectionTable());
                     if (table != null && DecisionEngine.matchTable(table, lookup.getInputs(), lookup.getKeys()) != null)
                         matchedSchemas.add(schema);
                 }
@@ -497,22 +547,22 @@ public abstract class StagingDataProvider implements DataProvider {
         Set<String> values = new HashSet<>();
 
         // if the table is not found, return right away with an empty list
-        StagingTable table = getTable(tableId);
+        Table table = getTable(tableId);
         if (table == null)
             return values;
 
         // find the input key
         Set<String> inputKeys = table.getColumnDefinitions().stream()
                 .filter(def -> ColumnType.INPUT.equals(def.getType()))
-                .map(StagingColumnDefinition::getKey)
+                .map(ColumnDefinition::getKey)
                 .collect(Collectors.toSet());
 
         if (inputKeys.size() != 1)
             throw new IllegalStateException("Table '" + table.getId() + "' must have one and only one INPUT column.");
 
         String inputKey = inputKeys.iterator().next();
-        for (StagingTableRow row : table.getTableRows()) {
-            for (StagingRange range : row.getColumnInput(inputKey)) {
+        for (TableRow row : table.getTableRows()) {
+            for (Range range : row.getColumnInput(inputKey)) {
                 if (range.getLow() != null) {
                     if (range.getLow().equals(range.getHigh()))
                         values.add(range.getLow());

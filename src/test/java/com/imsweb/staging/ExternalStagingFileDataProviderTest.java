@@ -9,11 +9,12 @@ import java.util.Set;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.imsweb.staging.StagingData.Result;
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.GlossaryHit;
-import com.imsweb.staging.entities.StagingSchema;
-import com.imsweb.staging.entities.StagingTable;
+import com.imsweb.staging.entities.Schema;
+import com.imsweb.staging.entities.StagingData;
+import com.imsweb.staging.entities.StagingData.Result;
+import com.imsweb.staging.entities.Table;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -37,12 +38,12 @@ public class ExternalStagingFileDataProviderTest {
         assertEquals(1, _STAGING.getSchemaIds().size());
         assertEquals(62, _STAGING.getTableIds().size());
 
-        StagingSchema schema = _STAGING.getSchema("urethra");
+        Schema schema = _STAGING.getSchema("urethra");
         assertNotNull(schema);
         assertEquals("testing", schema.getAlgorithm());
         assertEquals("99.99", schema.getVersion());
 
-        StagingTable table = _STAGING.getTable("ajcc_descriptor_codes");
+        Table table = _STAGING.getTable("ajcc_descriptor_codes");
         assertNotNull(table);
         assertEquals("testing", table.getAlgorithm());
         assertEquals("99.99", table.getVersion());

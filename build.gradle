@@ -11,7 +11,7 @@ plugins {
 }
 
 group = 'com.imsweb'
-version = '5.0.6'
+version = '6.0.9-SNAPSHOT'
 description = 'Java client library for staging calculations'
 
 // fail the build if there are compiler warnings
@@ -42,9 +42,6 @@ dependencies {
     api "com.fasterxml.jackson.core:jackson-core:2.12.3"
     api "com.fasterxml.jackson.core:jackson-annotations:2.12.3"
     api "com.fasterxml.jackson.core:jackson-databind:2.12.3"
-
-    // morphia annotations to make it easier to use in SEER*API
-    api 'dev.morphia.morphia:morphia-core:2.1.5'
 
     implementation "org.cache2k:cache2k-api:2.0.0.Final"
     runtimeOnly "org.cache2k:cache2k-core:2.0.0.Final"
@@ -196,6 +193,6 @@ nexusStaging {
 }
 
 wrapper {
-    gradleVersion = '7.0'
+    gradleVersion = '7.0.1'
     distributionType = Wrapper.DistributionType.ALL
 }
