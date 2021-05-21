@@ -46,6 +46,6 @@ public interface Input {
 
     Integer getDecimalPlaces();
 
-    Set<String> getMetadata();
+    Set<? extends Metadata> getMetadata();
 
 }

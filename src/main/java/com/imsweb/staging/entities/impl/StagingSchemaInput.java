@@ -28,7 +28,7 @@ public class StagingSchemaInput implements Input {
     private Boolean _usedForStaging;
     private String _unit;
     private Integer _decimalPlaces;
-    private Set<String> _metadata;
+    private Set<StagingMetadata> _metadata;
 
     /**
      * Morphia requires a default constructor
@@ -172,12 +172,12 @@ public class StagingSchemaInput implements Input {
 
     @Override
     @JsonProperty("metadata")
-    public Set<String> getMetadata() {
+    public Set<StagingMetadata> getMetadata() {
         return _metadata;
     }
 
     @JsonDeserialize(as = LinkedHashSet.class)
-    public void setMetadata(Set<String> metadata) {
+    public void setMetadata(Set<StagingMetadata> metadata) {
         _metadata = metadata;
     }
 

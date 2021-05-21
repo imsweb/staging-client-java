@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.Set;
 
 import org.junit.BeforeClass;
@@ -11,11 +12,14 @@ import org.junit.Test;
 
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.GlossaryHit;
+import com.imsweb.staging.entities.Input;
 import com.imsweb.staging.entities.Schema;
 import com.imsweb.staging.entities.StagingData;
 import com.imsweb.staging.entities.StagingData.Result;
 import com.imsweb.staging.entities.Table;
+import com.imsweb.staging.entities.impl.StagingMetadata;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -113,6 +117,31 @@ public class ExternalStagingFileDataProviderTest {
         assertEquals(1, glossary.size());
         glossary = _STAGING.getTableGlossary("ssf1_jpd");
         assertEquals(1, glossary.size());
+    }
+
+    @Test
+    public void testMetadata() {
+        // verify if reads metadata in old format (List<String>) and new format (List<Metadata>)
+
+        Schema urethra = _STAGING.getSchema("urethra");
+
+        assertThat(urethra).isNotNull();
+
+        // old structure
+        Input ssf1 = urethra.getInputMap().get("ssf1");
+        assertThat(ssf1.getMetadata()).extracting("name").containsExactlyInAnyOrder("CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT");
+
+        // new structure
+        Input ssf2 = urethra.getInputMap().get("ssf2");
+        assertThat(ssf2.getMetadata()).extracting("name").containsExactlyInAnyOrder("UNDEFINED_SSF");
+
+        Input ssf3 = urethra.getInputMap().get("ssf3");
+        assertThat(ssf3.getMetadata()).hasSize(2);
+
+        Set<StagingMetadata> expected = new HashSet<>();
+        expected.add(new StagingMetadata("FIRST_ITEM", 2017, 2020));
+        expected.add(new StagingMetadata("SECOND_ITEM", 2021));
+        assertThat(ssf3.getMetadata()).isEqualTo(expected);
     }
 
 }
