@@ -2,9 +2,10 @@ package com.imsweb.staging;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import org.junit.BeforeClass;
@@ -138,7 +139,7 @@ public class ExternalStagingFileDataProviderTest {
         Input ssf3 = urethra.getInputMap().get("ssf3");
         assertThat(ssf3.getMetadata()).hasSize(2);
 
-        Set<StagingMetadata> expected = new HashSet<>();
+        List<StagingMetadata> expected = new ArrayList<>();
         expected.add(new StagingMetadata("FIRST_ITEM", 2017, 2020));
         expected.add(new StagingMetadata("SECOND_ITEM", 2021));
         assertThat(ssf3.getMetadata()).isEqualTo(expected);

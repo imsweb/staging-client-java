@@ -3,7 +3,7 @@
  */
 package com.imsweb.staging.entities;
 
-import java.util.Set;
+import java.util.List;
 
 /**
  * An input field in the definition
@@ -46,6 +46,6 @@ public interface Input {
 
     Integer getDecimalPlaces();
 
-    Set<? extends Metadata> getMetadata();
+    List<? extends Metadata> getMetadata();
 
 }
