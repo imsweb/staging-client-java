@@ -24,7 +24,7 @@ public class StagingSchemaOutput implements Output {
     private String _naaccrXmlId;
     private String _table;
     private String _default;
-    private Set<String> _metadata;
+    private Set<StagingMetadata> _metadata;
 
     /**
      * Morphia requires a default constructor
@@ -135,12 +135,12 @@ public class StagingSchemaOutput implements Output {
 
     @Override
     @JsonProperty("metadata")
-    public Set<String> getMetadata() {
+    public Set<StagingMetadata> getMetadata() {
         return _metadata;
     }
 
     @JsonDeserialize(as = LinkedHashSet.class)
-    public void setMetadata(Set<String> metadata) {
+    public void setMetadata(Set<StagingMetadata> metadata) {
         _metadata = metadata;
     }
 

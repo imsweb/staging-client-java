@@ -24,15 +24,15 @@ public class StagingSchemaOutputTest {
         output1.setName("name");
         output1.setTable("table");
         output1.setNaaccrXmlId("test");
-        output1.setMetadata(new HashSet<>(Collections.singletonList("META1")));
+        output1.setMetadata(new HashSet<>(Collections.singletonList(new StagingMetadata("META1"))));
 
         output2 = new StagingSchemaOutput("key", "name", "table");
         output2.setNaaccrXmlId("test");
-        output2.setMetadata(new HashSet<>(Collections.singletonList("META1")));
+        output2.setMetadata(new HashSet<>(Collections.singletonList(new StagingMetadata("META1"))));
 
         assertEquals(output1, output2);
 
-        output2.setMetadata(new HashSet<>(Collections.singletonList("META2")));
+        output2.setMetadata(new HashSet<>(Collections.singletonList(new StagingMetadata("META2"))));
 
         assertNotEquals(output1, output2);
 
