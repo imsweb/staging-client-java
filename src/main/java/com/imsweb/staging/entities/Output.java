@@ -5,8 +5,6 @@ package com.imsweb.staging.entities;
 
 import java.util.Set;
 
-import com.imsweb.staging.entities.impl.StagingMetadata;
-
 /**
  * An output field in the definition
  */
@@ -38,6 +36,6 @@ public interface Output {
      */
     String getDefault();
 
-    Set<StagingMetadata> getMetadata();
+    Set<? extends Metadata> getMetadata();
 
 }
