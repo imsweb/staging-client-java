@@ -3,7 +3,7 @@
  */
 package com.imsweb.staging.entities;
 
-import java.util.Set;
+import java.util.List;
 
 /**
  * An output field in the definition
@@ -36,6 +36,6 @@ public interface Output {
      */
     String getDefault();
 
-    Set<String> getMetadata();
+    List<? extends Metadata> getMetadata();
 
 }

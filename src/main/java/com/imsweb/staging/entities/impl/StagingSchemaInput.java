@@ -3,14 +3,12 @@
  */
 package com.imsweb.staging.entities.impl;
 
-import java.util.HashSet;
-import java.util.LinkedHashSet;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import com.imsweb.staging.entities.Input;
 
@@ -28,7 +26,7 @@ public class StagingSchemaInput implements Input {
     private Boolean _usedForStaging;
     private String _unit;
     private Integer _decimalPlaces;
-    private Set<String> _metadata;
+    private List<StagingMetadata> _metadata;
 
     /**
      * Morphia requires a default constructor
@@ -64,7 +62,7 @@ public class StagingSchemaInput implements Input {
         setDefault(other.getDefault());
         setTable(other.getTable());
         if (other.getMetadata() != null)
-            setMetadata(new HashSet<>(other.getMetadata()));
+            setMetadata(new ArrayList<>(other.getMetadata()));
         setUsedForStaging(other.getUsedForStaging());
         setUnit(other.getUnit());
         setDecimalPlaces(other.getDecimalPlaces());
@@ -172,12 +170,11 @@ public class StagingSchemaInput implements Input {
 
     @Override
     @JsonProperty("metadata")
-    public Set<String> getMetadata() {
+    public List<StagingMetadata> getMetadata() {
         return _metadata;
     }
 
-    @JsonDeserialize(as = LinkedHashSet.class)
-    public void setMetadata(Set<String> metadata) {
+    public void setMetadata(List<StagingMetadata> metadata) {
         _metadata = metadata;
     }
 

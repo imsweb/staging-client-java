@@ -798,4 +798,14 @@ public class EodStagingTest {
         assertThat(hits).hasSize(3);
     }
 
+    @Test
+    public void testMetadata() {
+        Schema schema = _STAGING.getSchema("lymphoma_cll_sll");
+        assertThat(schema).isNotNull();
+
+        Input input = schema.getInputMap().get("grade_path");
+        assertThat(input).isNotNull();
+        assertThat(input.getMetadata()).extracting("name").containsExactlyInAnyOrder("COC_REQUIRED", "NPCR_REQUIRED", "SSDI", "CCCR_REQUIRED", "SEER_REQUIRED");
+    }
+
 }
