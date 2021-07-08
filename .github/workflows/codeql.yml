@@ -41,10 +41,10 @@ jobs:
         with:
           languages: java
 
-      - name: Build and test
+      - name: Compile source code
         run: |
           chmod +x gradlew
-          ./gradlew check --no-daemon
+          ./gradlew testCompile --no-daemon
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
