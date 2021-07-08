@@ -4,15 +4,7 @@ on:
   push:
   pull_request:
   schedule:
-    #        ┌───────────── minute (0 - 59)
-    #        │ ┌───────────── hour (0 - 23)
-    #        │ │ ┌───────────── day of the month (1 - 31)
-    #        │ │ │ ┌───────────── month (1 - 12 or JAN-DEC)
-    #        │ │ │ │ ┌───────────── day of the week (0 - 6 or SUN-SAT)
-    #        │ │ │ │ │
-    #        │ │ │ │ │
-    #        │ │ │ │ │
-    #        * * * * *
+    # every Sunday at 2AM
     - cron: '0 2 * * 0'
 
 jobs:
@@ -29,10 +21,30 @@ jobs:
         with:
           languages: java
 
-      # Autobuild attempts to build any compiled languages (C/C++, C#, or Java).
-      # If this step fails, then you should remove it and run the build manually.
-      - name: Autobuild
-        uses: github/codeql-action/autobuild@v1
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+
+      - name: Cache Gradle packages
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
+          restore-keys: ${{ runner.os }}-gradle
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v1
+        with:
+          languages: java
+
+      - name: Build and test
+        run: |
+          chmod +x gradlew
+          ./gradlew check --no-daemon
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
