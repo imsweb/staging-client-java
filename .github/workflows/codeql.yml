@@ -1,17 +1,25 @@
-# Build the project and run unit tests
+name: "CodeQL"
 
-name: integration
-
-on: [ push, pull_request ]
+on:
+  push:
+  pull_request:
+  schedule:
+    # every Sunday at 2AM
+    - cron: '0 2 * * 0'
 
 jobs:
-  build:
-
+  CodeQL-Build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v2
+
+      # Initializes the CodeQL tools for scanning.
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v1
+        with:
+          languages: java
 
       - name: Set up JDK
         uses: actions/setup-java@v2
@@ -28,8 +36,10 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
           restore-keys: ${{ runner.os }}-gradle
 
-      - name: Build and test
+      - name: Compile source code
         run: |
           chmod +x gradlew
-          ./gradlew check --no-daemon
+          ./gradlew testClasses --no-daemon
 
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v1
