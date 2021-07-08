@@ -39,7 +39,7 @@ jobs:
       - name: Compile source code
         run: |
           chmod +x gradlew
-          ./gradlew testCompile --no-daemon
+          ./gradlew testClasses --no-daemon
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
