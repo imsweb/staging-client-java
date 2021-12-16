@@ -8,6 +8,7 @@ plugins {
     id 'com.adarshr.test-logger' version '3.0.0'
     id "com.github.ben-manes.versions" version "0.39.0"
     id 'org.sonatype.gradle.plugins.scan' version '2.0.10'
+    id "org.sonarqube" version "3.3"
 }
 
 group = 'com.imsweb'
@@ -77,6 +78,14 @@ checkstyle {
 
 spotbugs {
     excludeFilter = file('config/spotbugs/spotbugs-exclude.xml')
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "imsweb_staging-client-java"
+        property "sonar.organization", "imsweb"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
 }
 
 def isNonStable = { String version ->
@@ -193,6 +202,6 @@ nexusStaging {
 }
 
 wrapper {
-    gradleVersion = '7.0.2'
+    gradleVersion = '7.3.2'
     distributionType = Wrapper.DistributionType.ALL
 }
