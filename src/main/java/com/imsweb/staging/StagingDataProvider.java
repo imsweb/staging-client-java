@@ -58,28 +58,13 @@ public abstract class StagingDataProvider implements DataProvider {
     public static final String HISTOLOGY_TABLE = "histology";
 
     // output all dates in ISO-8061 format and UTC time
-    private static final DateFormat _DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+    private final DateFormat _dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
 
-    private static final ObjectMapper _MAPPER = new ObjectMapper();
+    private final ObjectMapper _mapper = new ObjectMapper();
 
     private final Range _matchAllEndpoint = getMatchAllRange();
 
     protected Trie _trie;
-
-    static {
-        _DATE_FORMAT.setTimeZone(TimeZone.getTimeZone("UTC"));
-
-        // do not write null values
-        _MAPPER.configure(SerializationFeature.WRITE_NULL_MAP_VALUES, false);
-        _MAPPER.setSerializationInclusion(Include.NON_NULL);
-
-        // set Date objects to output in readable customized format
-        _MAPPER.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
-        _MAPPER.setDateFormat(_DATE_FORMAT);
-
-        _MAPPER.setVisibility(PropertyAccessor.ALL, Visibility.NONE);
-        _MAPPER.setVisibility(PropertyAccessor.GETTER, Visibility.ANY);
-    }
 
     // lookup cache
     private final Cache<SchemaLookup, List<Schema>> _lookupCache;
@@ -91,6 +76,19 @@ public abstract class StagingDataProvider implements DataProvider {
      * Constructor loads all schemas and sets up cache
      */
     protected StagingDataProvider() {
+        _dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+
+        // do not write null values
+        _mapper.configure(SerializationFeature.WRITE_NULL_MAP_VALUES, false);
+        _mapper.setSerializationInclusion(Include.NON_NULL);
+
+        // set Date objects to output in readable customized format
+        _mapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
+        _mapper.setDateFormat(_dateFormat);
+
+        _mapper.setVisibility(PropertyAccessor.ALL, Visibility.NONE);
+        _mapper.setVisibility(PropertyAccessor.GETTER, Visibility.ANY);
+
         // cache schema lookups
         _lookupCache = new Cache2kBuilder<SchemaLookup, List<Schema>>() {
         }
@@ -376,7 +374,7 @@ public abstract class StagingDataProvider implements DataProvider {
      * @return ObjectMapper instance
      */
     public ObjectMapper getMapper() {
-        return _MAPPER;
+        return _mapper;
     }
 
     /**
@@ -390,22 +388,6 @@ public abstract class StagingDataProvider implements DataProvider {
      * @return version number
      */
     public abstract String getVersion();
-
-    /**
-     * Return a new table
-     * @param id the table id
-     * @return Table entity
-     */
-    @Override
-    public abstract Table getTable(String id);
-
-    /**
-     * Return a new schema
-     * @param id the schema id
-     * @return Schema entity
-     */
-    @Override
-    public abstract Schema getSchema(String id);
 
     /**
      * Return a new endpoint
