@@ -57,11 +57,7 @@ public abstract class StagingDataProvider implements DataProvider {
     public static final String PRIMARY_SITE_TABLE = "primary_site";
     public static final String HISTOLOGY_TABLE = "histology";
 
-    // output all dates in ISO-8061 format and UTC time
-    private final DateFormat _dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-
     private final ObjectMapper _mapper = new ObjectMapper();
-
     private final Range _matchAllEndpoint = getMatchAllRange();
 
     protected Trie _trie;
@@ -76,7 +72,6 @@ public abstract class StagingDataProvider implements DataProvider {
      * Constructor loads all schemas and sets up cache
      */
     protected StagingDataProvider() {
-        _dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
 
         // do not write null values
         _mapper.configure(SerializationFeature.WRITE_NULL_MAP_VALUES, false);
@@ -84,7 +79,11 @@ public abstract class StagingDataProvider implements DataProvider {
 
         // set Date objects to output in readable customized format
         _mapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
-        _mapper.setDateFormat(_dateFormat);
+
+        // output all dates in ISO-8061 format and UTC time
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+        dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+        _mapper.setDateFormat(dateFormat);
 
         _mapper.setVisibility(PropertyAccessor.ALL, Visibility.NONE);
         _mapper.setVisibility(PropertyAccessor.GETTER, Visibility.ANY);

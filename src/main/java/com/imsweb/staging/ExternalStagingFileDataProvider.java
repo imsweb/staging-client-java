@@ -46,7 +46,7 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
 
     /**
      * Constructor loads all schemas and sets up table cache
-     * @param is InputStream pointing the the zip file
+     * @param is InputStream pointing the zip file
      * @throws IOException exception for file operations
      */
     public ExternalStagingFileDataProvider(InputStream is) throws IOException {
