@@ -375,9 +375,8 @@ public final class Staging {
                 inputs.addAll(getInputs(path, excludedInputs));
 
         // if there are tables paths and if the mapping is involved, add the inputs
-        if (mapping.getTablePaths() != null)
-            if (context == null || _engine.isMappingInvolved(mapping, context))
-                inputs.addAll(_engine.getInputs(mapping, excludedInputs));
+        if (mapping.getTablePaths() != null && (context == null || _engine.isMappingInvolved(mapping, context)))
+            inputs.addAll(_engine.getInputs(mapping, excludedInputs));
 
         // always remove all context variables since they are never needed to be supplied
         CONTEXT_KEYS.forEach(inputs::remove);
@@ -464,10 +463,8 @@ public final class Staging {
     public Set<String> getOutputs(Mapping mapping, Map<String, String> context) {
         Set<String> outputs = new HashSet<>();
 
-        if (mapping.getTablePaths() != null) {
-            if (context == null || _engine.isMappingInvolved(mapping, context))
-                outputs.addAll(_engine.getOutputs(mapping));
-        }
+        if (mapping.getTablePaths() != null && (context == null || _engine.isMappingInvolved(mapping, context)))
+            outputs.addAll(_engine.getOutputs(mapping));
 
         return outputs;
     }
@@ -537,7 +534,7 @@ public final class Staging {
         // get the schema; if a single schema is not found, return right away with an error
         List<Schema> schemas = lookupSchema(new SchemaLookup(data.getInput()));
         if (schemas.size() != 1) {
-            if (schemas.size() == 0)
+            if (schemas.isEmpty())
                 data.setResult(StagingData.Result.FAILED_NO_MATCHING_SCHEMA);
             else
                 data.setResult(StagingData.Result.FAILED_MULITPLE_MATCHING_SCHEMAS);
@@ -557,7 +554,7 @@ public final class Staging {
             if (!schema.getInputMap().containsKey(entry.getKey()))
                 data.addError(new Error.ErrorBuilder(Error.Type.UNKNOWN_INPUT).message("Unknown input key supplied: " + entry.getKey()).key(entry.getKey()).build());
 
-        if (data.getErrors().size() > 0) {
+        if (!data.getErrors().isEmpty()) {
             data.setResult(StagingData.Result.FAILED_INVALID_INPUT);
             return data;
         }
