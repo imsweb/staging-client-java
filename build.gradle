@@ -93,7 +93,7 @@ sonarqube {
         property "sonar.projectKey", "imsweb_staging-client-java"
         property "sonar.organization", "imsweb"
         property "sonar.host.url", "https://sonarcloud.io"
-        property "sonar.cpd.exclusions", "com.imsweb.staging.entities.impl/**"
+        property "sonar.cpd.exclusions", "**/com/imsweb/staging/entities/impl/**"
     }
 }
 
