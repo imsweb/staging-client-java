@@ -55,7 +55,7 @@ dependencies {
     updateSupportImplementation 'com.imsweb:seerapi-client-java:3.24'
 
     testImplementation 'junit:junit:4.13.2'
-    testImplementation 'org.assertj:assertj-core:3.19.0'
+    testImplementation 'org.assertj:assertj-core:3.21.0'
 }
 
 jar {
