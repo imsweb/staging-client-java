@@ -6,7 +6,6 @@ package com.imsweb.staging.entities.impl;
 import java.io.IOException;
 
 import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
@@ -22,7 +21,7 @@ public class StagingMetadataDeserializer extends StdDeserializer<StagingMetadata
     }
 
     @Override
-    public StagingMetadata deserialize(JsonParser jp, DeserializationContext ctxt) throws IOException, JsonProcessingException {
+    public StagingMetadata deserialize(JsonParser jp, DeserializationContext ctxt) throws IOException {
         JsonNode node = jp.getCodec().readTree(jp);
 
         if (node.isNull())
