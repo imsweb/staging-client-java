@@ -398,10 +398,10 @@ public class EodStagingTest {
     public void testSchemaSelection() {
         // test bad values
         List<Schema> lookup = _STAGING.lookupSchema(new SchemaLookup());
-        assertThat(lookup.size()).isEqualTo(0);
+        assertThat(lookup.size()).isZero();
 
         lookup = _STAGING.lookupSchema(new SchemaLookup("XXX", "YYY"));
-        assertThat(lookup.size()).isEqualTo(0);
+        assertThat(lookup.size()).isZero();
 
         // test valid combinations that do not require a discriminator
         SchemaLookup schemaLookup = new SchemaLookup("C629", "9231");
@@ -440,7 +440,7 @@ public class EodStagingTest {
         schemaLookup = new EodSchemaLookup("C111", "8200");
         schemaLookup.setInput(EodInput.DISCRIMINATOR_1.toString(), "X");
         lookup = _STAGING.lookupSchema(schemaLookup);
-        assertThat(lookup.size()).isEqualTo(0);
+        assertThat(lookup.size()).isZero();
 
         // test searching on only site
         lookup = _STAGING.lookupSchema(new EodSchemaLookup("C401", null));
@@ -454,15 +454,15 @@ public class EodStagingTest {
         schemaLookup = new EodSchemaLookup(null, null);
         schemaLookup.setInput(EodInput.DISCRIMINATOR_1.toString(), "1");
         lookup = _STAGING.lookupSchema(schemaLookup);
-        assertThat(lookup.size()).isEqualTo(0);
+        assertThat(lookup.size()).isZero();
         schemaLookup = new EodSchemaLookup("", null);
         schemaLookup.setInput(EodInput.DISCRIMINATOR_1.toString(), "1");
         lookup = _STAGING.lookupSchema(schemaLookup);
-        assertThat(lookup.size()).isEqualTo(0);
+        assertThat(lookup.size()).isZero();
         schemaLookup = new EodSchemaLookup(null, "");
         schemaLookup.setInput(EodInput.DISCRIMINATOR_1.toString(), "1");
         lookup = _STAGING.lookupSchema(schemaLookup);
-        assertThat(lookup.size()).isEqualTo(0);
+        assertThat(lookup.size()).isZero();
 
         // test lookups based on sex
         schemaLookup = new EodSchemaLookup("C481", "8720");
@@ -535,9 +535,9 @@ public class EodStagingTest {
 
         assertThat(data.getResult()).isEqualTo(Result.STAGED);
         assertThat(data.getSchemaId()).isEqualTo("pancreas");
-        assertThat(data.getErrors().size()).isEqualTo(0);
+        assertThat(data.getErrors().size()).isZero();
         assertThat(data.getPath().size()).isEqualTo(12);
-        assertThat(data.getOutput().size()).isEqualTo(9);
+        assertThat(data.getOutput()).hasSize(9);
 
         // check outputs
         assertThat(data.getOutput(EodOutput.DERIVED_VERSION)).isEqualTo("2.0");
@@ -577,9 +577,9 @@ public class EodStagingTest {
 
         assertThat(data.getResult()).isEqualTo(Result.STAGED);
         assertThat(data.getSchemaId()).isEqualTo("breast");
-        assertThat(data.getErrors().size()).isEqualTo(0);
+        assertThat(data.getErrors().size()).isZero();
         assertThat(data.getPath().size()).isEqualTo(16);
-        assertThat(data.getOutput().size()).isEqualTo(9);
+        assertThat(data.getOutput()).hasSize(9);
 
         // check outputs
         assertThat(data.getOutput(EodOutput.DERIVED_VERSION)).isEqualTo("2.0");
@@ -757,7 +757,7 @@ public class EodStagingTest {
         assertThat(data.getSchemaId()).isEqualTo("brain");
         assertThat(data.getErrors().size()).isEqualTo(5);
         assertThat(data.getPath().size()).isEqualTo(5);
-        assertThat(data.getOutput().size()).isEqualTo(9);
+        assertThat(data.getOutput()).hasSize(9);
         assertThat(data.getOutput().get(EodOutput.DERIVED_VERSION.toString())).isEqualTo("2.0");
     }
 
@@ -777,9 +777,9 @@ public class EodStagingTest {
 
         assertThat(data.getResult()).isEqualTo(Result.FAILED_INVALID_YEAR_DX);
         assertThat(data.getSchemaId()).isEqualTo("brain");
-        assertThat(data.getErrors().size()).isEqualTo(0);
-        assertThat(data.getPath().size()).isEqualTo(0);
-        assertThat(data.getOutput().size()).isEqualTo(0);
+        assertThat(data.getErrors().size()).isZero();
+        assertThat(data.getPath().size()).isZero();
+        assertThat(data.getOutput()).isEmpty();
     }
 
     @Test
@@ -787,9 +787,9 @@ public class EodStagingTest {
         assertThat(_STAGING.getGlossaryTerms()).hasSize(15);
         GlossaryDefinition entry = _STAGING.getGlossaryDefinition("Medulla");
         assertThat(entry).isNotNull();
-        assertThat("Medulla").isEqualTo(entry.getName());
-        assertThat(entry.getDefinition().startsWith("The central portion of an organ, in contrast to the outer layer")).isTrue();
-        assertThat(Collections.singletonList("Medullary")).isEqualTo(entry.getAlternateNames());
+        assertThat(entry.getName()).isEqualTo("Medulla");
+        assertThat(entry.getDefinition()).startsWith("The central portion of an organ, in contrast to the outer layer");
+        assertThat(entry.getAlternateNames()).isEqualTo(Collections.singletonList("Medullary"));
         assertThat(entry.getLastModified()).isNotNull();
 
         Set<String> hits = _STAGING.getSchemaGlossary("urethra");

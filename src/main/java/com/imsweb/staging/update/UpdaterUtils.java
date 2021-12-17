@@ -47,6 +47,13 @@ public final class UpdaterUtils {
 
     private static final Pattern _ID_CHARACTERS = Pattern.compile("[a-z0-9_]+");
 
+    /**
+     * Private constructor
+     */
+    private UpdaterUtils() {
+        throw new IllegalStateException("Utility class");
+    }
+
     @SuppressWarnings("ConstantConditions")
     public static void update(String algorithm, String version, String baseDirectory, Set<String> glossaryCategories) throws IOException {
         Stopwatch stopwatch = Stopwatch.create();

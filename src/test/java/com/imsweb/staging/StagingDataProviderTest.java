@@ -156,10 +156,10 @@ public class StagingDataProviderTest {
     public void testPadStart() {
         assertNull(StagingDataProvider.padStart(null, 1, '0'));
 
-        assertEquals(StagingDataProvider.padStart("123", 1, '0'), "123");
-        assertEquals(StagingDataProvider.padStart("123", 3, '0'), "123");
-        assertEquals(StagingDataProvider.padStart("123", 4, '0'), "0123");
-        assertEquals(StagingDataProvider.padStart("1", 5, '0'), "00001");
+        assertEquals("123", StagingDataProvider.padStart("123", 1, '0'));
+        assertEquals("123", StagingDataProvider.padStart("123", 3, '0'));
+        assertEquals("0123", StagingDataProvider.padStart("123", 4, '0'));
+        assertEquals("00001", StagingDataProvider.padStart("1", 5, '0'));
     }
 
     @Test
