@@ -2,6 +2,7 @@ plugins {
     id 'java-library'
     id 'checkstyle'
     id "com.github.spotbugs" version "4.7.1"
+    id 'jacoco'
     id 'maven-publish'
     id 'signing'
     id "io.codearte.nexus-staging" version "0.30.0"  // logs into Sonotype OSS and does a "Close" and "Release"
@@ -79,6 +80,13 @@ checkstyle {
 spotbugs {
     excludeFilter = file('config/spotbugs/spotbugs-exclude.xml')
 }
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+    }
+}
+test.finalizedBy jacocoTestReport
 
 sonarqube {
     properties {
