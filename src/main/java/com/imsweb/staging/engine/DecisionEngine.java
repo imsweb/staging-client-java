@@ -48,6 +48,8 @@ public class DecisionEngine {
     private static final Pattern _TEMPLATE_REFERENCE = Pattern.compile("\\{\\{(.*?)\\}\\}");
     private DataProvider _provider;
 
+    private static final String _CONTEXT_MISSING_MESSAGE = "Context must not be missing";
+
     /**
      * Construct the decision engine with the passed data provider
      * @param provider a DataProvider
@@ -125,7 +127,7 @@ public class DecisionEngine {
         Integer rowIndex = null;
 
         if (context == null)
-            throw new IllegalStateException("Context must not be missing");
+            throw new IllegalStateException(_CONTEXT_MISSING_MESSAGE);
 
         for (int i = 0; i < table.getTableRows().size(); i++) {
             boolean matchAll = true;
@@ -230,7 +232,7 @@ public class DecisionEngine {
      */
     public boolean isMappingInvolved(Mapping mapping, Map<String, String> context) {
         if (context == null)
-            throw new IllegalStateException("Context must not be missing");
+            throw new IllegalStateException(_CONTEXT_MISSING_MESSAGE);
 
         boolean matches = true;
 
@@ -302,7 +304,7 @@ public class DecisionEngine {
         List<Mapping> mappings = new ArrayList<>();
 
         if (context == null)
-            throw new IllegalStateException("Context must not be missing");
+            throw new IllegalStateException(_CONTEXT_MISSING_MESSAGE);
 
         if (schema.getMappings() != null) {
             for (Mapping mapping : schema.getMappings())

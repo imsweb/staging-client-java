@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import com.imsweb.staging.entities.impl.StagingRange;
 
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -50,9 +51,12 @@ public class StagingRangeTest {
         assertTrue(range.contains("2004", context));
     }
 
-    @Test(expected = IllegalStateException.class)
+    @Test
+    @SuppressWarnings("ConstantConditions")
     public void testNull() {
-        assertFalse(new StagingRange(null, null).contains("099", new HashMap<>()));
+        assertThatThrownBy(() -> new StagingRange(null, null))
+                .isInstanceOf(IllegalStateException.class)
+                .hasMessageContaining("Invalid range");
     }
 
     @Test
