@@ -78,7 +78,7 @@ public class SchemaLookup {
      * @param value value of input
      */
     public void setInput(String key, String value) {
-        if (getAllowedKeys() != null && !getAllowedKeys().contains(key))
+        if (getAllowedKeys() != null && !getAllowedKeys().isEmpty() && !getAllowedKeys().contains(key))
             throw new IllegalStateException("The input key " + key + " is not allowed for lookups");
 
         _inputs.put(key, value);
