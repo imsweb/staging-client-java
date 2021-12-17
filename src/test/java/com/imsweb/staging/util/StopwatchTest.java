@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class StopwatchTest {
 
@@ -23,6 +24,15 @@ public class StopwatchTest {
         sw = Stopwatch.create();
         assertThat(sw.elapsed(TimeUnit.NANOSECONDS)).isPositive();
         assertThat(sw.toString()).isNotEmpty();
+    }
+
+    @Test
+    public void testExceptions() {
+        final Stopwatch sw = Stopwatch.create();
+        assertThatThrownBy(sw::start).isInstanceOf(IllegalStateException.class).hasMessageContaining("This stopwatch is already running");
+
+        sw.stop();
+        assertThatThrownBy(sw::stop).isInstanceOf(IllegalStateException.class).hasMessageContaining("This stopwatch is already stopped");
     }
 
 }
