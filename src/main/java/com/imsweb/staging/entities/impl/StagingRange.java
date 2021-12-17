@@ -13,7 +13,7 @@ import com.imsweb.staging.entities.Range;
 /**
  * An interface representing a string range
  */
-public class StagingRange extends Range {
+public class StagingRange implements Range {
 
     private String _low;
     private String _high;
