@@ -97,16 +97,16 @@ public class InMemoryDataProvider extends StagingDataProvider {
 
     @Override
     public Set<String> getGlossaryTerms() {
-        throw new RuntimeException("Glossary not supported in this provider");
+        throw new IllegalStateException("Glossary not supported in this provider");
     }
 
     @Override
     public GlossaryDefinition getGlossaryDefinition(String term) {
-        throw new RuntimeException("Glossary not supported in this provider");
+        throw new IllegalStateException("Glossary not supported in this provider");
     }
 
     @Override
     public Collection<GlossaryHit> getGlossaryMatches(String text) {
-        throw new RuntimeException("Glossary not supported in this provider");
+        throw new IllegalStateException("Glossary not supported in this provider");
     }
 }

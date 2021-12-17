@@ -3,6 +3,7 @@
  */
 package com.imsweb.staging.entities;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -39,11 +40,11 @@ public class SchemaLookup {
     }
 
     /**
-     * Returns a list of allowable keys.  If null, all keys are allowed
+     * Returns a list of allowable keys.
      * @return a set of keys
      */
     public Set<String> getAllowedKeys() {
-        return null;
+        return Collections.emptySet();
     }
 
     /**
@@ -132,13 +133,12 @@ public class SchemaLookup {
         for (Entry<String, String> entry : _inputs.entrySet()) {
             String key = entry.getKey();
 
-            if (StagingData.STANDARD_LOOKUP_KEYS.contains(key))
-                continue;
-
-            String value = entry.getValue();
-            if (value != null && !value.isEmpty()) {
-                hasDiscriminator = true;
-                break;
+            if (!StagingData.STANDARD_LOOKUP_KEYS.contains(key)) {
+                String value = entry.getValue();
+                if (value != null && !value.isEmpty()) {
+                    hasDiscriminator = true;
+                    break;
+                }
             }
         }
 
