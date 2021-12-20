@@ -41,6 +41,7 @@ import com.imsweb.staging.entities.TableRow;
 /**
  * An engine for processing declarative algorithms.
  */
+@SuppressWarnings("java:S3776")
 public class DecisionEngine {
 
     // string to use for blank or null in error strings
@@ -419,6 +420,7 @@ public class DecisionEngine {
      * @param excludedInputs a list of keys that should not be included in the inputs
      * @return a Set of unique inputs
      */
+    @SuppressWarnings("java:S125")
     public Set<String> getInputs(TablePath path, Set<String> excludedInputs) {
         Set<String> inputs = new LinkedHashSet<>();
 

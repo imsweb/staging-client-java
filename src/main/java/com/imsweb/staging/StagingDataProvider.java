@@ -161,7 +161,7 @@ public abstract class StagingDataProvider implements DataProvider {
      * @param table table entity
      * @return initialized table entity
      */
-    @SuppressWarnings("UnusedReturnValue")
+    @SuppressWarnings({"UnusedReturnValue", "java:S3776"})
     public Table initTable(Table table) {
         Set<String> extraInputs = new HashSet<>();
 
