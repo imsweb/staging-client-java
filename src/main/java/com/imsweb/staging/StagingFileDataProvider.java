@@ -44,6 +44,9 @@ public class StagingFileDataProvider extends StagingDataProvider {
 
     private final Map<String, String> _glossaryTerms = new HashMap<>();
 
+    private static final String _ALGORITHM_BASE_DIR = "algorithms/";
+    private static final String _JSON_EXT = ".json";
+
     /**
      * Constructor loads all schemas and sets up table cache
      * @param algorithm algorithm
@@ -57,10 +60,10 @@ public class StagingFileDataProvider extends StagingDataProvider {
 
         // loop over all tables and load them into Map
         try {
-            String directory = "algorithms/" + algorithm.toLowerCase() + "/" + version + "/tables";
+            String directory = _ALGORITHM_BASE_DIR + algorithm.toLowerCase() + "/" + version + "/tables";
             for (String file : readLines(directory + "/ids.txt")) {
                 if (!file.isEmpty()) {
-                    StagingTable table = getMapper().reader().readValue(getMapper().getFactory().createParser(getStagingInputStream(directory + "/" + file + ".json")), StagingTable.class);
+                    StagingTable table = getMapper().reader().readValue(getMapper().getFactory().createParser(getStagingInputStream(directory + "/" + file + _JSON_EXT)), StagingTable.class);
 
                     initTable(table);
 
@@ -74,10 +77,10 @@ public class StagingFileDataProvider extends StagingDataProvider {
 
         // loop over all schemas and load them into Map
         try {
-            String directory = "algorithms/" + algorithm.toLowerCase() + "/" + version + "/schemas";
+            String directory = _ALGORITHM_BASE_DIR + algorithm.toLowerCase() + "/" + version + "/schemas";
             for (String file : readLines(directory + "/ids.txt")) {
                 if (!file.isEmpty()) {
-                    StagingSchema schema = getMapper().reader().readValue(getMapper().getFactory().createParser(getStagingInputStream(directory + "/" + file + ".json")), StagingSchema.class);
+                    StagingSchema schema = getMapper().reader().readValue(getMapper().getFactory().createParser(getStagingInputStream(directory + "/" + file + _JSON_EXT)), StagingSchema.class);
 
                     initSchema(schema);
 
@@ -91,7 +94,7 @@ public class StagingFileDataProvider extends StagingDataProvider {
 
         // load the glossary terms
         try {
-            String keywords = "algorithms/" + algorithm.toLowerCase() + "/" + version + "/glossary/terms.txt";
+            String keywords = _ALGORITHM_BASE_DIR + algorithm.toLowerCase() + "/" + version + "/glossary/terms.txt";
 
             // if the file is not found, that just means that there are no glossary terms
             InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream(keywords);
@@ -215,7 +218,7 @@ public class StagingFileDataProvider extends StagingDataProvider {
         if (id == null)
             return null;
 
-        String filename = "algorithms/" + getAlgorithm() + "/" + getVersion() + "/glossary/" + id + ".json";
+        String filename = _ALGORITHM_BASE_DIR + getAlgorithm() + "/" + getVersion() + "/glossary/" + id + _JSON_EXT;
         InputStream input = Thread.currentThread().getContextClassLoader().getResourceAsStream(filename);
         if (input == null)
             return null;
