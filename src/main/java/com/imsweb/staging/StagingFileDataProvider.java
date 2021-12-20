@@ -212,6 +212,7 @@ public class StagingFileDataProvider extends StagingDataProvider {
         return _glossaryTerms.keySet();
     }
 
+    @SuppressWarnings("java:S1075")
     @Override
     public GlossaryDefinition getGlossaryDefinition(String term) {
         String id = _glossaryTerms.get(term);
