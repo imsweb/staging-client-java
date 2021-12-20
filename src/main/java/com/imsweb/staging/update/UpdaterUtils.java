@@ -16,6 +16,9 @@ import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -43,8 +46,10 @@ import com.imsweb.staging.util.Stopwatch;
  * 6. Gets the schemas from the API, initializes them (including the involved tables), and saves them
  * 7. Saves the schema identifiers into the ids.txt in the schemas directory
  */
-@java.lang.SuppressWarnings({"java:S106", "java:S1192", "java:S2629", "java:S3457"})
+@SuppressWarnings({"java:S1192"})
 public final class UpdaterUtils {
+
+    private static final Logger _LOG = LoggerFactory.getLogger(UpdaterUtils.class);
 
     private static final Pattern _ID_CHARACTERS = Pattern.compile("[a-z0-9_]+");
 
@@ -62,7 +67,7 @@ public final class UpdaterUtils {
         // convert set of strings to set of Enums; we can't expose the optional dependency Category class in the method signature.
         Set<Category> categories = glossaryCategories.stream().map(Category::valueOf).collect(Collectors.toSet());
 
-        System.out.println("Updating " + algorithm + " version " + version + " from SEER*API");
+        _LOG.info("Updating {} version {} from SEER*API", algorithm, version);
 
         // create an object mapper used to output the entities
         ObjectMapper mapper = new ObjectMapper();
@@ -76,49 +81,49 @@ public final class UpdaterUtils {
         StagingService staging = new SeerApi.Builder().connect().staging();
 
         // first, get a list of unused tables so they can be ignored later
-        System.out.println("Getting list of unused table identifiers");
+        _LOG.info("Getting list of unused table identifiers");
         Set<String> unusedTableIds = new HashSet<>();
         for (StagingTable table : staging.tables(algorithm, version, null, true).execute().body())
             unusedTableIds.add(table.getId());
-        System.out.println(unusedTableIds.size() + " unused table identifiers found.");
+        _LOG.info("{} unused table identifiers found.", unusedTableIds.size());
 
-        System.out.println("Getting list of table identifiers");
+        _LOG.info("Getting list of table identifiers");
         List<String> tableIds = new ArrayList<>();
         for (StagingTable table : staging.tables(algorithm, version, null).execute().body()) {
             String id = table.getId();
 
             // if there are invalid table identifiers, just skip them
             if (!_ID_CHARACTERS.matcher(id).matches())
-                System.out.println(" **** skipping bad table identifier: '" + id + "' ****");
+                _LOG.info(" **** skipping bad table identifier: '{}' ****", id);
             else if (unusedTableIds.contains(id))
-                System.out.println(" **** skipping unused table identifier: '" + id + "' ****");
+                _LOG.info(" **** skipping unused table identifier: '{}' ****", id);
             else
                 tableIds.add(id);
         }
-        System.out.println(tableIds.size() + " valid table identifiers found.");
+        _LOG.info("{} valid table identifiers found.", tableIds.size());
 
-        System.out.println("Getting list of schema identifiers...");
+        _LOG.info("Getting list of schema identifiers...");
         List<String> schemaIds = new ArrayList<>();
         for (StagingSchemaInfo schema : staging.schemas(algorithm, version).execute().body()) {
             String id = schema.getId();
 
             // if there are invalid schema identifiers, just skip them
             if (!_ID_CHARACTERS.matcher(id).matches())
-                System.out.println(" **** skipping bad schema identifier: '" + id + "' ****");
+                _LOG.info(" **** skipping bad schema identifier: '{}' ****", id);
             else
                 schemaIds.add(id);
         }
-        System.out.println(schemaIds.size() + " valid schema idenfiers found.");
+        _LOG.info("{} valid schema idenfiers found.", schemaIds.size());
 
         String schemaDir = baseDirectory + "/" + algorithm + "/" + version + "/schemas";
-        System.out.print("Deleting all files from " + schemaDir + "...");
+        _LOG.info("Deleting all files from {}...", schemaDir);
         int count = purgeDirectory(new File(schemaDir));
-        System.out.println("removed " + count + " files");
+        _LOG.info("Removed {} files", count);
 
         String tableDir = baseDirectory + "/" + algorithm + "/" + version + "/tables";
-        System.out.print("Deleting all files from " + tableDir + "...");
+        _LOG.info("Deleting all files from {}...", tableDir);
         count = purgeDirectory(new File(tableDir));
-        System.out.println("removed " + count + " files");
+        _LOG.info("Removed {} files", count);
 
         // create map to hold all the relevant glossary entries
         Map<String, String> glossaryEntries = new HashMap<>();
@@ -129,7 +134,7 @@ public final class UpdaterUtils {
             String tableText = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(table);
 
             Files.write(Paths.get(tableDir + "/" + table.getId() + ".json"), tableText.getBytes(StandardCharsets.UTF_8));
-            System.out.println("Saved table: " + table.getId());
+            _LOG.info("Saved table: {}", table.getId());
 
             // collect the glossary hits
             Set<KeywordMatch> matches = staging.tableGlossary(algorithm, version, tableId, categories, true).execute().body();
@@ -139,7 +144,7 @@ public final class UpdaterUtils {
         // output the table ids.txt file
         tableIds.sort(String::compareTo);
         Files.write(Paths.get(tableDir + "/ids.txt"), tableIds, StandardCharsets.UTF_8);
-        System.out.println("Saved table IDs to " + tableDir + "/ids.txt");
+        _LOG.info("Saved table IDs to {}/ids.txt", tableDir);
 
         // output the schemas
         for (String schemaId : schemaIds) {
@@ -148,7 +153,7 @@ public final class UpdaterUtils {
             String schemaText = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(schema);
 
             Files.write(Paths.get(schemaDir + "/" + schema.getId() + ".json"), schemaText.getBytes(StandardCharsets.UTF_8));
-            System.out.println("Saved schema: " + schema.getId());
+            _LOG.info("Saved schema: {}", schema.getId());
 
             // collect the glossary hits
             Set<KeywordMatch> matches = staging.schemaGlossary(algorithm, version, schemaId, categories, true).execute().body();
@@ -158,12 +163,13 @@ public final class UpdaterUtils {
         // output the schema ids.txt file
         schemaIds.sort(String::compareTo);
         Files.write(Paths.get(schemaDir + "/ids.txt"), schemaIds, StandardCharsets.UTF_8);
-        System.out.println("Saved schema IDs to " + schemaDir + "/ids.txt");
+        _LOG.info("Saved schema IDs to {}/ids.txt", schemaDir);
 
         // build glossary
         String glossaryDir = baseDirectory + "/" + algorithm + "/" + version + "/glossary";
-        System.out.print("Deleting all files from " + glossaryDir + "...");
-        System.out.println("removed " + purgeDirectory(new File(glossaryDir)) + " files");
+        _LOG.info("Deleting all files from {}...", glossaryDir);
+        count = purgeDirectory(new File(glossaryDir));
+        _LOG.info("removed {} files", count);
 
         // write the individual glossary definitions
         GlossaryService glossary = new SeerApi.Builder().connect().glossary();
@@ -174,7 +180,7 @@ public final class UpdaterUtils {
                     new GlossaryDefinition(entry.getName(), entry.getDefinition(), entry.getAlternateName(), entry.getLastModified()));
 
             Files.write(Paths.get(glossaryDir + "/" + entry.getId() + ".json"), glossaryText.getBytes(StandardCharsets.UTF_8));
-            System.out.println("Saved glossary term: " + entry.getName());
+            _LOG.info("Saved glossary term: {}", entry.getName());
         }
 
         // write the keywords.txt file
@@ -183,10 +189,10 @@ public final class UpdaterUtils {
                 .map(e -> e.getKey() + "~" + e.getValue())
                 .collect(Collectors.toList());
         Files.write(Paths.get(glossaryDir + "/terms.txt"), keywords, StandardCharsets.UTF_8);
-        System.out.println("Saved glossary terms to " + schemaDir + "/terms.txt");
+        _LOG.info("Saved glossary terms to {}/terms.txt", schemaDir);
 
         stopwatch.stop();
-        System.out.println("Completed in " + stopwatch);
+        _LOG.info("Completed in {}", stopwatch);
     }
 
     @SuppressWarnings("java:S4042")

@@ -51,11 +51,14 @@ dependencies {
     implementation 'org.apache.commons:commons-lang3:3.12.0'
     implementation 'org.ahocorasick:ahocorasick:0.4.0'
 
+    implementation 'org.slf4j:slf4j-api:1.7.32'
+
     // split the seerapi-client-java dependency to an optional feature
     updateSupportImplementation 'com.imsweb:seerapi-client-java:3.24'
 
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'org.assertj:assertj-core:3.21.0'
+    testImplementation 'org.slf4j:slf4j-simple:1.7.32'
 }
 
 jar {
