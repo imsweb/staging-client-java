@@ -43,6 +43,7 @@ import com.imsweb.staging.util.Stopwatch;
  * 6. Gets the schemas from the API, initializes them (including the involved tables), and saves them
  * 7. Saves the schema identifiers into the ids.txt in the schemas directory
  */
+@java.lang.SuppressWarnings({"java:S106", "java:S1192", "java:S2629", "java:S3457"})
 public final class UpdaterUtils {
 
     private static final Pattern _ID_CHARACTERS = Pattern.compile("[a-z0-9_]+");
@@ -188,6 +189,7 @@ public final class UpdaterUtils {
         System.out.println("Completed in " + stopwatch);
     }
 
+    @SuppressWarnings("java:S4042")
     private static int purgeDirectory(File dir) {
         int count = 0;
 
