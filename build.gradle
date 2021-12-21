@@ -13,7 +13,7 @@ plugins {
 }
 
 group = 'com.imsweb'
-version = '6.2.1-SNAPSHOT'
+version = '6.2.0'
 description = 'Java client library for staging calculations'
 
 // fail the build if there are compiler warnings
