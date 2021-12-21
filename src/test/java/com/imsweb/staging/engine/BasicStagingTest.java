@@ -142,7 +142,7 @@ public class BasicStagingTest {
 
         Staging staging = Staging.getInstance(provider);
 
-        assertThat(staging.findMatchingTableRow("psa", "psa", "0.1")).isEqualTo(0);
+        assertThat(staging.findMatchingTableRow("psa", "psa", "0.1")).isZero();
         assertThat(staging.findMatchingTableRow("psa", "psa", "0.2")).isEqualTo(1);
         assertThat(staging.findMatchingTableRow("psa", "psa", "500")).isEqualTo(1);
         assertThat(staging.findMatchingTableRow("psa", "psa", "500.99")).isEqualTo(1);

@@ -1449,11 +1449,11 @@ public class DecisionEngineTest {
 
         assertEquals(Type.STAGED, result.getType());
 
-        assertEquals(context.get("a"), "foo1");
-        assertEquals(context.get("b"), "FIRST");
-        assertEquals(context.get("c"), "foo2");
-        assertEquals(context.get("d"), "SECOND");
-        assertEquals(context.get("e"), "");
+        assertEquals("foo1", context.get("a"));
+        assertEquals("FIRST", context.get("b"));
+        assertEquals("foo2", context.get("c"));
+        assertEquals("SECOND", context.get("d"));
+        assertEquals("", context.get("e"));
     }
 
     @Test
@@ -1503,11 +1503,11 @@ public class DecisionEngineTest {
 
         assertEquals(Type.STAGED, result.getType());
 
-        assertEquals(context.get("output1"), "foo2");
-        assertEquals(context.get("output2"), "SECOND");
-        assertEquals(context.get("output3"), "");
-        assertEquals(context.get("output4"), "foo1");
-        assertEquals(context.get("output5"), "FIRST");
+        assertEquals("foo2", context.get("output1"));
+        assertEquals("SECOND", context.get("output2"));
+        assertEquals("", context.get("output3"));
+        assertEquals("foo1", context.get("output4"));
+        assertEquals("FIRST", context.get("output5"));
     }
 
     @Test

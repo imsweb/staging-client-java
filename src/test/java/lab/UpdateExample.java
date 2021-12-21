@@ -9,7 +9,7 @@ import java.util.HashSet;
 
 import com.imsweb.staging.update.UpdaterUtils;
 
-public class UpdateTest {
+public class UpdateExample {
 
     /**
      * Run the update

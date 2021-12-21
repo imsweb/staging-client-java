@@ -30,6 +30,8 @@ public class InMemoryDataProvider extends StagingDataProvider {
     private final Map<String, StagingTable> _tables = new HashMap<>();
     private final Map<String, StagingSchema> _schemas = new HashMap<>();
 
+    private static final String _UNSUPPORTED_MESSAGE = "Glossary not supported in this provider";
+
     public InMemoryDataProvider(String algorithm, String version) {
         _algorithm = algorithm;
         _version = version;
@@ -97,16 +99,16 @@ public class InMemoryDataProvider extends StagingDataProvider {
 
     @Override
     public Set<String> getGlossaryTerms() {
-        throw new RuntimeException("Glossary not supported in this provider");
+        throw new IllegalStateException(_UNSUPPORTED_MESSAGE);
     }
 
     @Override
     public GlossaryDefinition getGlossaryDefinition(String term) {
-        throw new RuntimeException("Glossary not supported in this provider");
+        throw new IllegalStateException(_UNSUPPORTED_MESSAGE);
     }
 
     @Override
     public Collection<GlossaryHit> getGlossaryMatches(String text) {
-        throw new RuntimeException("Glossary not supported in this provider");
+        throw new IllegalStateException(_UNSUPPORTED_MESSAGE);
     }
 }
