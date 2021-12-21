@@ -72,7 +72,6 @@ public abstract class StagingDataProvider implements DataProvider {
      * Constructor loads all schemas and sets up cache
      */
     protected StagingDataProvider() {
-
         // do not write null values
         _mapper.configure(SerializationFeature.WRITE_NULL_MAP_VALUES, false);
         _mapper.setSerializationInclusion(Include.NON_NULL);
@@ -89,16 +88,14 @@ public abstract class StagingDataProvider implements DataProvider {
         _mapper.setVisibility(PropertyAccessor.GETTER, Visibility.ANY);
 
         // cache schema lookups
-        _lookupCache = new Cache2kBuilder<SchemaLookup, List<Schema>>() {
-        }
+        _lookupCache = new Cache2kBuilder<SchemaLookup, List<Schema>>() {}
                 .entryCapacity(500)
                 .eternal(true)
                 .loader(this::getSchemas)
                 .build();
 
         // cache the valid values for certain tables including site and histology
-        _validValuesCache = new Cache2kBuilder<String, Set<String>>() {
-        }
+        _validValuesCache = new Cache2kBuilder<String, Set<String>>() {}
                 .eternal(true)
                 .loader(this::getAllInputValues)
                 .build();
