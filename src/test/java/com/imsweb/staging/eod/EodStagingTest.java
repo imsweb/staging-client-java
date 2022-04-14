@@ -175,21 +175,21 @@ public class EodStagingTest {
         List<String> validSites = Arrays.asList("C000", "C809");
         List<String> invalidSites = Arrays.asList("C727", "C810");
         for (String site : validSites)
-            assertThat(_PROVIDER.getValidSites().contains(site)).isTrue();
+            assertThat(_PROVIDER.getValidSites()).contains(site);
         for (String site : invalidSites)
-            assertThat(_PROVIDER.getValidSites().contains(site)).isFalse();
+            assertThat(_PROVIDER.getValidSites()).doesNotContain(site);
 
         // hist tests
         List<String> validHist = Arrays.asList("8000", "8002", "8005", "8290", "9992", "9993");
         List<String> invalidHist = Arrays.asList("8006", "8444");
         for (String hist : validHist)
-            assertThat(_PROVIDER.getValidHistologies().contains(hist))
+            assertThat(_PROVIDER.getValidHistologies())
                     .withFailMessage("The histology '" + hist + "' is not in the valid histology list")
-                    .isTrue();
+                    .contains(hist);
         for (String hist : invalidHist)
-            assertThat(_PROVIDER.getValidHistologies().contains(hist))
+            assertThat(_PROVIDER.getValidHistologies())
                     .withFailMessage("The histology '" + hist + "' is not supposed to be in the valid histology list")
-                    .isFalse();
+                    .doesNotContain(hist);
     }
 
     @Test
@@ -381,8 +381,8 @@ public class EodStagingTest {
 
     @Test
     public void testBasicInitialization() {
-        assertThat(_STAGING.getSchemaIds().size()).isEqualTo(119);
-        assertThat(_STAGING.getTableIds().size() > 0).isTrue();
+        assertThat(_STAGING.getSchemaIds()).hasSize(119);
+        assertThat(_STAGING.getTableIds()).isNotEmpty();
 
         assertThat(_STAGING.getSchema("urethra")).isNotNull();
         assertThat(_STAGING.getTable("ss2018_urethra_14363")).isNotNull();
@@ -398,25 +398,25 @@ public class EodStagingTest {
     public void testSchemaSelection() {
         // test bad values
         List<Schema> lookup = _STAGING.lookupSchema(new SchemaLookup());
-        assertThat(lookup.size()).isZero();
+        assertThat(lookup).isEmpty();
 
         lookup = _STAGING.lookupSchema(new SchemaLookup("XXX", "YYY"));
-        assertThat(lookup.size()).isZero();
+        assertThat(lookup).isEmpty();
 
         // test valid combinations that do not require a discriminator
         SchemaLookup schemaLookup = new SchemaLookup("C629", "9231");
         schemaLookup.setInput(EodInput.DISCRIMINATOR_1.toString(), "");
         lookup = _STAGING.lookupSchema(schemaLookup);
-        assertThat(lookup.size()).isEqualTo(1);
+        assertThat(lookup).hasSize(1);
         assertThat(lookup.get(0).getId()).isEqualTo("soft_tissue_other");
         schemaLookup.setInput(EodInput.DISCRIMINATOR_1.toString(), null);
         lookup = _STAGING.lookupSchema(schemaLookup);
-        assertThat(lookup.size()).isEqualTo(1);
+        assertThat(lookup).hasSize(1);
         assertThat(lookup.get(0).getId()).isEqualTo("soft_tissue_other");
 
         // test valid combination that requires a discriminator but is not supplied one
         lookup = _STAGING.lookupSchema(new EodSchemaLookup("C111", "8200"));
-        assertThat(lookup.size()).isEqualTo(3);
+        assertThat(lookup).hasSize(3);
         assertThat(lookup.stream().map(Schema::getId).collect(Collectors.toSet())).isEqualTo(
                 new HashSet<>(Arrays.asList("oropharynx_hpv_mediated_p16_pos", "nasopharynx", "oropharynx_p16_neg")));
         assertThat(lookup.stream().flatMap(d -> d.getSchemaDiscriminators().stream()).collect(Collectors.toSet())).isEqualTo(new HashSet<>(Arrays.asList("discriminator_1", "discriminator_2")));
@@ -425,14 +425,14 @@ public class EodStagingTest {
         schemaLookup = new EodSchemaLookup("C111", "8200");
         schemaLookup.setInput(EodInput.DISCRIMINATOR_1.toString(), "1");
         lookup = _STAGING.lookupSchema(schemaLookup);
-        assertThat(lookup.size()).isEqualTo(1);
+        assertThat(lookup).hasSize(1);
         assertThat(lookup.stream().flatMap(d -> d.getSchemaDiscriminators().stream()).collect(Collectors.toSet())).isEqualTo(new HashSet<>(Collections.singletonList("discriminator_1")));
         assertThat(lookup.get(0).getId()).isEqualTo("nasopharynx");
 
         schemaLookup.setInput(EodInput.DISCRIMINATOR_1.toString(), "2");
         schemaLookup.setInput(EodInput.DISCRIMINATOR_2.toString(), "1");
         lookup = _STAGING.lookupSchema(schemaLookup);
-        assertThat(lookup.size()).isEqualTo(1);
+        assertThat(lookup).hasSize(1);
         assertThat(lookup.stream().flatMap(d -> d.getSchemaDiscriminators().stream()).collect(Collectors.toSet())).isEqualTo(new HashSet<>(Arrays.asList("discriminator_1", "discriminator_2")));
         assertThat(lookup.get(0).getId()).isEqualTo("oropharynx_p16_neg");
 
@@ -440,37 +440,37 @@ public class EodStagingTest {
         schemaLookup = new EodSchemaLookup("C111", "8200");
         schemaLookup.setInput(EodInput.DISCRIMINATOR_1.toString(), "X");
         lookup = _STAGING.lookupSchema(schemaLookup);
-        assertThat(lookup.size()).isZero();
+        assertThat(lookup).isEmpty();
 
         // test searching on only site
         lookup = _STAGING.lookupSchema(new EodSchemaLookup("C401", null));
-        assertThat(lookup.size()).isEqualTo(8);
+        assertThat(lookup).hasSize(8);
 
         // test searching on only hist
         lookup = _STAGING.lookupSchema(new EodSchemaLookup(null, "9702"));
-        assertThat(lookup.size()).isEqualTo(5);
+        assertThat(lookup).hasSize(5);
 
         // test that searching on only discriminator_1 returns no results
         schemaLookup = new EodSchemaLookup(null, null);
         schemaLookup.setInput(EodInput.DISCRIMINATOR_1.toString(), "1");
         lookup = _STAGING.lookupSchema(schemaLookup);
-        assertThat(lookup.size()).isZero();
+        assertThat(lookup).isEmpty();
         schemaLookup = new EodSchemaLookup("", null);
         schemaLookup.setInput(EodInput.DISCRIMINATOR_1.toString(), "1");
         lookup = _STAGING.lookupSchema(schemaLookup);
-        assertThat(lookup.size()).isZero();
+        assertThat(lookup).isEmpty();
         schemaLookup = new EodSchemaLookup(null, "");
         schemaLookup.setInput(EodInput.DISCRIMINATOR_1.toString(), "1");
         lookup = _STAGING.lookupSchema(schemaLookup);
-        assertThat(lookup.size()).isZero();
+        assertThat(lookup).isEmpty();
 
         // test lookups based on sex
         schemaLookup = new EodSchemaLookup("C481", "8720");
         lookup = _STAGING.lookupSchema(schemaLookup);
-        assertThat(lookup.size()).isEqualTo(2);
+        assertThat(lookup).hasSize(2);
         schemaLookup.setInput(EodInput.SEX.toString(), "1");
         lookup = _STAGING.lookupSchema(schemaLookup);
-        assertThat(lookup.size()).isEqualTo(1);
+        assertThat(lookup).hasSize(1);
         assertThat(lookup.get(0).getId()).isEqualTo("retroperitoneum");
     }
 
@@ -490,11 +490,11 @@ public class EodStagingTest {
     public void testLookupCache() {
         // do the same lookup twice
         List<Schema> lookup = _STAGING.lookupSchema(new EodSchemaLookup("C629", "9231"));
-        assertThat(lookup.size()).isEqualTo(1);
+        assertThat(lookup).hasSize(1);
         assertThat(lookup.get(0).getId()).isEqualTo("soft_tissue_other");
 
         lookup = _STAGING.lookupSchema(new EodSchemaLookup("C629", "9231"));
-        assertThat(lookup.size()).isEqualTo(1);
+        assertThat(lookup).hasSize(1);
         assertThat(lookup.get(0).getId()).isEqualTo("soft_tissue_other");
 
         // now invalidate the cache
@@ -502,7 +502,7 @@ public class EodStagingTest {
 
         // try the lookup again
         lookup = _STAGING.lookupSchema(new EodSchemaLookup("C629", "9231"));
-        assertThat(lookup.size()).isEqualTo(1);
+        assertThat(lookup).hasSize(1);
         assertThat(lookup.get(0).getId()).isEqualTo("soft_tissue_other");
     }
 
@@ -535,8 +535,8 @@ public class EodStagingTest {
 
         assertThat(data.getResult()).isEqualTo(Result.STAGED);
         assertThat(data.getSchemaId()).isEqualTo("pancreas");
-        assertThat(data.getErrors().size()).isZero();
-        assertThat(data.getPath().size()).isEqualTo(12);
+        assertThat(data.getErrors()).isEmpty();
+        assertThat(data.getPath()).hasSize(12);
         assertThat(data.getOutput()).hasSize(9);
 
         // check outputs
@@ -577,8 +577,8 @@ public class EodStagingTest {
 
         assertThat(data.getResult()).isEqualTo(Result.STAGED);
         assertThat(data.getSchemaId()).isEqualTo("breast");
-        assertThat(data.getErrors().size()).isZero();
-        assertThat(data.getPath().size()).isEqualTo(16);
+        assertThat(data.getErrors()).isEmpty();
+        assertThat(data.getPath()).hasSize(16);
         assertThat(data.getOutput()).hasSize(9);
 
         // check outputs
@@ -685,16 +685,14 @@ public class EodStagingTest {
     public void testGetSchemaIds() {
         Set<String> algorithms = _STAGING.getSchemaIds();
 
-        assertThat(algorithms.size() > 0).isTrue();
-        assertThat(algorithms.contains("testis")).isTrue();
+        assertThat(algorithms).isNotEmpty().contains("testis");
     }
 
     @Test
     public void testGetTableIds() {
         Set<String> tables = _STAGING.getTableIds();
 
-        assertThat(tables.size() > 0).isTrue();
-        assertThat(tables.contains("urethra_prostatic_urethra_30106")).isTrue();
+        assertThat(tables).isNotEmpty().contains("urethra_prostatic_urethra_30106");
     }
 
     @Test
@@ -708,7 +706,7 @@ public class EodStagingTest {
     public void testLookupOutputs() {
         EodSchemaLookup lookup = new EodSchemaLookup("C680", "8590");
         List<Schema> lookups = _STAGING.lookupSchema(lookup);
-        assertThat(lookups.size()).isEqualTo(2);
+        assertThat(lookups).hasSize(2);
 
         Schema schema = _STAGING.getSchema(lookups.get(0).getId());
         assertThat(schema.getId()).isEqualTo("urethra");
@@ -755,8 +753,8 @@ public class EodStagingTest {
 
         assertThat(data.getResult()).isEqualTo(Result.STAGED);
         assertThat(data.getSchemaId()).isEqualTo("brain");
-        assertThat(data.getErrors().size()).isEqualTo(5);
-        assertThat(data.getPath().size()).isEqualTo(5);
+        assertThat(data.getErrors()).hasSize(5);
+        assertThat(data.getPath()).hasSize(5);
         assertThat(data.getOutput()).hasSize(9);
         assertThat(data.getOutput()).containsEntry(EodOutput.DERIVED_VERSION.toString(), "2.0");
     }
@@ -777,8 +775,8 @@ public class EodStagingTest {
 
         assertThat(data.getResult()).isEqualTo(Result.FAILED_INVALID_YEAR_DX);
         assertThat(data.getSchemaId()).isEqualTo("brain");
-        assertThat(data.getErrors().size()).isZero();
-        assertThat(data.getPath().size()).isZero();
+        assertThat(data.getErrors()).isEmpty();
+        assertThat(data.getPath()).isEmpty();
         assertThat(data.getOutput()).isEmpty();
     }
 
