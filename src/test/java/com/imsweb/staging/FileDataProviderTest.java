@@ -22,6 +22,7 @@ import com.imsweb.staging.entities.impl.StagingMetadata;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 public abstract class FileDataProviderTest {
@@ -87,6 +88,7 @@ public abstract class FileDataProviderTest {
         assertEquals("7", data.getOutput("stor_ss2000"));
 
         // test glossary items
+        assertNull(getStaging().getGlossaryDefinition("MISSING_TERM"));
         assertEquals(13, getStaging().getGlossaryTerms().size());
         assertEquals(new HashSet<>(Arrays.asList("Adjacent structures", "Carcinoma", "Cortex", "Parenchyma", "Stroma", "Medulla", "Isolated tumor cells",
                         "Adjacent tissue(s), NOS", "Tumor deposits", "Postcricoid region", "Summary Stage", "Level V lymph nodes", "Masticator space")),
