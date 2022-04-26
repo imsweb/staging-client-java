@@ -100,10 +100,10 @@ public abstract class FileDataProviderTest {
         assertEquals(Collections.singletonList("Connective tissue"), entry.getAlternateNames());
         assertNotNull(entry.getLastModified());
 
-        Collection<GlossaryHit> hits = getStaging().getGlossaryMatches("Some text and Cortex should be only match.");
+        Collection<GlossaryHit> hits = getStaging().getGlossaryMatches("Some text and cortex should be only match.");
         assertEquals(1, hits.size());
         GlossaryHit hit = hits.iterator().next();
-        assertEquals("cortex", hit.getTerm());
+        assertEquals("Cortex", hit.getTerm());
         assertEquals(14, (long)hit.getBegin());
         assertEquals(19, (long)hit.getEnd());
         hits = getStaging().getGlossaryMatches("Cortex and stroma should be two matches.");

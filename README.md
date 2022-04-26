@@ -62,14 +62,14 @@ Download [the latest JAR][1] or grab via Maven:
 <dependency>
     <groupId>com.imsweb</groupId>
     <artifactId>staging-client-java</artifactId>
-    <version>6.2.0</version>
+    <version>6.3.0</version>
 </dependency>
 ```
 
 or via Gradle:
 
 ```groovy
-compile 'com.imsweb:staging-client-java:6.2.0'
+compile 'com.imsweb:staging-client-java:6.3.0'
 ```
 
 ## Usage
