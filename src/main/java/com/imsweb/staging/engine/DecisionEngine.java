@@ -637,7 +637,7 @@ public class DecisionEngine {
                 List<? extends Endpoint> endpoints = matchTable(lookup, context);
                 if (endpoints == null) {
                     result.addError(new ErrorBuilder(Boolean.TRUE.equals(input.getUsedForStaging()) ? Type.INVALID_REQUIRED_INPUT : Type.INVALID_NON_REQUIRED_INPUT).message(
-                            "Invalid '" + input.getKey() + "' value (" + (value.isEmpty() ? _BLANK_OUTPUT : value) + ")").key(input.getKey()).table(input.getTable()).build());
+                            "Invalid '" + input.getKey() + "' value (" + value + ")").key(input.getKey()).table(input.getTable()).build());
 
                     // if the schema error handling is set to FAIL or if the input is required for staging and the error handling is set to FAIL_WHEN_REQUIRED_FOR_STAGING,
                     // then stop processing and return a failure result
@@ -646,7 +646,6 @@ public class DecisionEngine {
                         stopForBadInput = true;
                 }
             }
-
         }
 
         // if an invalid input was flagged to stop processing, set result and exit
