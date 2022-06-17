@@ -8,8 +8,7 @@ A cancer staging client library for Java applications.
 
 ## Supported staging algorithms
 
-Starting with version 4.0, the library does not contain any algorithms.  The algorithms are maintained in separate repositories which are 
-described below.
+The algorithms are maintained in separate repositories which are described below.
 
 ### EOD ([view repository](https://github.com/imsweb/staging-algorithm-eod-public))
 
