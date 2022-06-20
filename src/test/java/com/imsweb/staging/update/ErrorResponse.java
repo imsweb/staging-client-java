@@ -10,12 +10,6 @@ public class ErrorResponse {
     protected String _message;
 
     /**
-     * Default constructor
-     */
-    public ErrorResponse() {
-    }
-
-    /**
      * Return the error identifier
      * @return an error identifier
      */
