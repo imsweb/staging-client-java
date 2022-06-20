@@ -1,0 +1,19 @@
+{
+  "id" : "grade_post_therapy_clin_60334",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Grade Post Therapy Clin (yc)",
+  "title" : "Grade Post Therapy Clin (yc)",
+  "notes" : "**Note 1:** Leave Grade Post Therapy Clin (yc) blank when \n* No neoadjuvant therapy\n* Clinical or pathological case only\n* Neoadjuvant therapy completed, no microscopic exam is done prior to surgery/resection of primary tumor\n* There is only one grade available and it cannot be determined if it is clinical, pathological, post therapy clinical or post therapy pathological\n\n**Note 2:** Assign the highest grade from the microscopically sampled specimen of the primary site following neoadjuvant therapy or primary systemic/radiation therapy.\n\n**Note 3:** If there are multiple tumors with different grades abstracted as one primary, code the highest grade. \n\n**Note 4:** G3 includes anaplastic. \n\n**Note 5:** Code 9 (unknown) when\n* Microscopic exam is done after neoadjuvant therapy and grade from the primary site is not documented\n* Microscopic exam is done after neoadjuvant therapy and there is no residual cancer\n* Grade checked “not applicable” on CAP Protocol (if available) and no other grade information is available",
+  "last_modified" : "2021-04-23T20:48:22.163Z",
+  "definition" : [ {
+    "key" : "grade_post_therapy_clin",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "G1: Well differentiated" ], [ "2", "G2: Moderately differentiated" ], [ "3", "G3: Poorly differentiated, undifferentiated" ], [ "9", "Grade cannot be assessed (GX); Unknown" ], [ "", "See Note 1" ] ]
+}

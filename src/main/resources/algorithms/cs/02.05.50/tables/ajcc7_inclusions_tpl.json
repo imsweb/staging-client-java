@@ -1,0 +1,14 @@
+{
+  "id" : "ajcc7_inclusions_tpl",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC7 Inclusions",
+  "title" : "Histology Inclusion Table AJCC 7th ed.",
+  "last_modified" : "2015-05-27T16:18:52.689Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  } ],
+  "rows" : [ [ "9590-9699" ], [ "9702-9738" ], [ "9811-9818" ], [ "9820-9837" ] ]
+}

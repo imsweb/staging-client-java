@@ -1,0 +1,26 @@
+{
+  "id" : "nodes_dna",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "EOD Regional Nodes",
+  "title" : "EOD Regional Nodes",
+  "last_modified" : "2021-04-08T19:00:58.989Z",
+  "definition" : [ {
+    "key" : "eod_regional_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_n",
+    "name" : "EOD 2018 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_n",
+    "name" : "SS2018 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "888", "Not applicable: Information not collected for this schema", "VALUE:88", "VALUE:U" ] ]
+}

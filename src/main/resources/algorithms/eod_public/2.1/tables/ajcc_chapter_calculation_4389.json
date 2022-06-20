@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc_chapter_calculation_4389",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2020-05-15T17:06:49.502Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "9590-9591,9596-9597", "VALUE:71", "Ocular Adnexal Lymphoma", "VALUE:08" ], [ "9671,9673,9680,9690-9691,9695,9698-9699", "VALUE:71", "Ocular Adnexal Lymphoma", "VALUE:08" ], [ "9702,9705,9709,9718,9734", "VALUE:71", "Ocular Adnexal Lymphoma", "VALUE:08" ], [ "9823,9930", "VALUE:71", "Ocular Adnexal Lymphoma", "VALUE:08" ], [ "9650-9663,9678-9679,9687-9689", "VALUE:XX", "Other Ocular Adnexal Lymphoma", "VALUE:88" ], [ "9708,9712,9714-9717,9719,9725-9726,9735-9738,9826-9827", "VALUE:XX", "Other Ocular Adnexal Lymphoma", "VALUE:88" ] ]
+}

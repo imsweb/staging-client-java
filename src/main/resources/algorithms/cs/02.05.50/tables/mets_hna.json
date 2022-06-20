@@ -1,0 +1,34 @@
+{
+  "id" : "mets_hna",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "last_modified" : "2015-05-27T16:19:30.866Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "88", "OBSOLETE DATA CONVERTED V0200 \nSee code 98  \n\nNot applicable for this site", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "98", "Not applicable: Information not collected for this schema", "VALUE:NA", "VALUE:NA", "VALUE:NA", "VALUE:NA" ] ]
+}

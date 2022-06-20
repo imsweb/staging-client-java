@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_melanoma_ciliary_body",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection MelanomaCiliaryBody",
+  "title" : "Schema selection for MelanomaCiliaryBody",
+  "last_modified" : "2020-10-28T16:50:29.045Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_1",
+    "name" : "Schema Discriminator 1",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C693", "8720-8790", " ", "MATCH" ], [ "C694", "8720-8790", "1", "MATCH" ] ]
+}

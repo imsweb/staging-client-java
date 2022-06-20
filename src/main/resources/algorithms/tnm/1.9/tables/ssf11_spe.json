@@ -1,0 +1,20 @@
+{
+  "id" : "ssf11_spe",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF11",
+  "title" : "Site-Specific Factor 11",
+  "subtitle" : "Measured Thickness (Depth)",
+  "notes" : "**Note 1:**  Code measured thickness (depth) of the invasive tumor only, not size, diameter, or any other measurement. Record the actual measurement in tenths of millimeters (mm) as stated on the pathology report.  Do not record the measurement from a radiographic report.\n\n**Note 2:**  Record the measurement labeled specifically as thickness or depth of tumor.  In the absence of a label, use the \"cut surface\" dimension, or the third dimension from a description of 3 dimensions (N1 x N2 x N3).  For example, for a tumor size recorded as 2 centimeters (cm) x 1cm x 0.5 cm, record 050.",
+  "last_modified" : "2018-05-14T21:29:03.676Z",
+  "definition" : [ {
+    "key" : "ssf11",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No mass/tumor found" ], [ "001-979", "00.1 - 97.9 millimeters (mm)\n(Exact thickness in tenths of mm)\n \nExamples: \n    001    0.1 mm \n    010    1 mm\n    042    4.2 mm \n    100    10 mm, 1 cm \n    103    10.3 mm" ], [ "980", "98.0 mm or larger" ], [ "987", "Not applicable:  In situ carcinoma" ], [ "988", "Not applicable: Information not collected for this case" ], [ "990", "Microinvasion \nMicroscopic focus or foci only and no depth given" ], [ "998", "No surgical specimen from primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

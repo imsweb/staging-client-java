@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_brain",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection Brain",
+  "title" : "Schema selection for Brain",
+  "last_modified" : "2021-04-28T14:58:33.748Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C700, C710-C719", "8000-8700, 8720-8790, 8802, 8810, 8815, 8850, 8890, 8900, 9064, 9070-9071, 9080, 9084-9085, 9100-9105, 9120, 9133, 9140, 9180, 9220, 9362, 9364, 9380-9540, 9680, 9699, 9702-9715, 9751-9759", "3", "MATCH" ], [ "C700, C710-C719", "8000-9993", "0, 1", "MATCH" ] ]
+}

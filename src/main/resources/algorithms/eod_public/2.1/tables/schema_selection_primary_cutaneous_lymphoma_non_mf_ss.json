@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_primary_cutaneous_lymphoma_non_mf_ss",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection Primary Cutaneous Lymphoma-non MF/SS",
+  "title" : "Schema selection for Primary Cutaneous Lymphoma-non MF/SS",
+  "last_modified" : "2020-10-28T17:14:09.425Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C440,C442-C449, C510, C609, C632", "9597, 9680, 9708-9709, 9712, 9718-9719, 9726", "MATCH" ] ]
+}

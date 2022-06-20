@@ -1,0 +1,23 @@
+{
+  "id" : "peritoneal_cytology_with_primary_tumor_for_ss2018_t_66387",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Peritoneal Cytology with Primary Tumor for SS2018 T",
+  "title" : "Peritoneal Cytology with EOD Primary Tumor for SS2018 T",
+  "notes" : "If EOD Primary Tumor = 100, 200, or 300, Peritoneal Cytology is necessary to determine the SS2018 T component.",
+  "last_modified" : "2020-06-03T18:21:56.809Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "EOD Primary Tumor",
+    "type" : "INPUT"
+  }, {
+    "key" : "peritoneal_cytology",
+    "name" : "Peritoneal Cytology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ss2018_t",
+    "name" : "SS2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100,200,300", "0", "VALUE:L" ], [ "100,200,300", "2", "VALUE:RE" ], [ "100,200,300", "1", "VALUE:L" ], [ "100,200,300", "3,7-9", "VALUE:L" ], [ "000,050,070,080,150,250,400,500,550,600,650,700,800,999", "*", "MATCH" ] ]
+}

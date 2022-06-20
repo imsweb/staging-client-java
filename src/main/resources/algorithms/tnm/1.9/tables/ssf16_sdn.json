@@ -1,0 +1,20 @@
+{
+  "id" : "ssf16_sdn",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF16",
+  "title" : "Site-Specific Factor 16",
+  "subtitle" : "Primary Tumor Location within Gallbladder",
+  "notes" : "**Note 1:**  There is no serosa on the gallbladder on the side attached to the liver; therefore, a simple cholecystectomy may not completely remove a T2 tumor, even though such tumors are usually confined to the gallbladder. It is important to know if the primary tumor was located on the free peritoneal or the hepatic side of the gallbladder at cholecystectomy.\n\n**Note 2:**  Record a statement of primary tumor location within the gallbladder recorded at the time of cholecystectomy.",
+  "last_modified" : "2018-05-14T21:29:02.692Z",
+  "definition" : [ {
+    "key" : "ssf16",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Tumor located on free peritoneal side of gallbladder" ], [ "020", "Tumor located on hepatic side of gallbladder" ], [ "030", "Tumor involves both sides of gallbladder" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "No primary tumor resected \nNo cholecystectomy performed" ], [ "999", "Unknown or no information\n Not documented in patient record" ] ]
+}

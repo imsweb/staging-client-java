@@ -1,0 +1,20 @@
+{
+  "id" : "ssf4_mpq",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF4",
+  "title" : "Site-Specific Factor 4",
+  "subtitle" : "Number of Examined Pelvic Nodes",
+  "notes" : "**Note:** Record the number of examined pelvic lymph nodes documented in the patient record. Apply the same instructions for coding Regional Nodes Examined to this data item.",
+  "last_modified" : "2018-05-14T21:29:01.062Z",
+  "definition" : [ {
+    "key" : "ssf4",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No pelvic lymph nodes examined" ], [ "001-089", "1 - 89 pelvic lymph nodes examined \n(Exact number of pelvic lymph nodes examined)" ], [ "090", "90 or more pelvic lymph nodes examined" ], [ "095", "No pelvic lymph nodes removed, but aspiration or core biopsy of pelvic lymph nodes performed" ], [ "096", "Pelvic lymph node removal documented as a sampling, but number of nodes unknown/not stated" ], [ "097", "Pelvic lymph node removal documented as a dissection, but number of nodes unknown/not stated" ], [ "098", "Pelvic lymph nodes surgically removed, but number of  nodes unknown/not stated and not documented as a sampling or dissection" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown if pelvic nodes examined; \nNot documented in patient record" ] ]
+}

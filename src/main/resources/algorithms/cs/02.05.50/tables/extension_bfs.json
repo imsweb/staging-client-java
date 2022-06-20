@@ -1,0 +1,35 @@
+{
+  "id" : "extension_bfs",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  Distal bile duct tumors arise between the junction of the cystic duct-bile duct and the ampulla of Vater.  The classification includes tumors developing in congenital choledochal cysts and tumors arising in the intrapancreatic portion of the common bile duct.\n\n**Note 2**:  Involvement within the  porta hepatis is coded according to the structures involved:  portal vein, common hepatic artery, and common hepatic duct.",
+  "last_modified" : "2015-05-27T16:19:13.750Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "VALUE:Tis", "VALUE:Tis", "VALUE:IS", "VALUE:IS" ], [ "100", "Invasive tumor of distal bile duct confined to:\n    Lamina propria\n    Mucosa, NOS\n    Submucosa (superficial invasion)", "VALUE:T1", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "200", "Muscularis propria", "VALUE:T1", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "300", "Localized, NOS", "VALUE:T1", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "350", "Stated as T1 with no other information on extension ", "VALUE:T1", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "400", "Beyond wall of bile duct\nPeriductal/fibromuscular connective tissue", "VALUE:T2", "VALUE:T2", "VALUE:RE", "VALUE:RE" ], [ "450", "Stated as T2 with no other information on extension", "VALUE:T2", "VALUE:T2", "VALUE:RE", "VALUE:RE" ], [ "600", "OBSOLETE DATA RETAINED V0200\nSee code 605\n\nGallbladder\nLiver, porta hepatis\nPancreas", "ERROR:", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "605", "OBSOLETE DATA REVIEWED V0203\nSee codes 608, 670\n\nGallbladder\nLiver, porta hepatis\nPancreas", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "608", "Common hepatic duct\nGallbladder\nLiver\nPancreas", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "610", "Unilateral branches of portal vein (right or left)\nUnilateral branches of hepatic artery (right or left)", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "620", "Duodenum", "VALUE:T3", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "630", "Stated as T3 with no other information on extension", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "650", "OBSOLETE DATA RETAINED V0200\nSee codes 620, 651 \n\nColon, NOS\n    Transverse including flexure\nDuodenum, NOS\nOmentum, NOS\n    Lesser\nStomach, distal", "ERROR:", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "651", "Colon, NOS\n    Transverse including flexure\nOmentum, NOS\n    Lesser\nStomach, distal", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "660", "OBSOLETE DATA RETAINED V0200\nSee code 670\n\nMain portal vein or its branches bilaterally\nCommon hepatic artery\nHepatic artery, NOS\nPortal vein, NOS", "ERROR:", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "670", "Main portal vein or its branches bilaterally\nCommon hepatic artery\nHepatic artery, NOS\nPortal vein, NOS", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "700", "Other parts of colon\nGreater omentum\nStomach, proximal", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "750", "OBSOLETE DATA RETAINED V0200\nSee code 760\n\nAbdominal wall", "ERROR:", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "760", "Abdominal wall", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "780", "Celiac axis\nSuperior mesenteric artery", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "800", "Further contiguous extension", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "850", "Stated as T4 with no other information on extension", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

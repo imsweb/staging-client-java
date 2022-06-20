@@ -1,0 +1,14 @@
+{
+  "id" : "tnm8_inclusions_thymus",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "TNM8 Inclusions (Thymus)",
+  "title" : "Inclusion Table TNM 8th ed. (Thymus)",
+  "last_modified" : "2019-04-05T16:52:36.313Z",
+  "definition" : [ {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "INPUT"
+  } ],
+  "rows" : [ [ "35" ] ]
+}

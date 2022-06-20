@@ -1,0 +1,19 @@
+{
+  "id" : "oncotype_less_than_11_10827",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "OncoType(c) Less Than 11",
+  "title" : "OncoType(c) Less Than 11",
+  "notes" : "If OncoType Recurrence Score-Invasive is greater than 11, is unknown, not done or results are not available, this will return No.",
+  "last_modified" : "2019-04-05T16:52:38.404Z",
+  "definition" : [ {
+    "key" : "oncotype_dx_score",
+    "name" : "Oncotype DX Recur Score",
+    "type" : "INPUT"
+  }, {
+    "key" : "oncotype11",
+    "name" : "OncoType11",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000-010", "VALUE:YES" ], [ "011-100", "VALUE:NO" ], [ "XX4", "VALUE:YES" ], [ "XX5", "VALUE:NO" ], [ "XX6,XX7,XX9", "VALUE:NO" ], [ "", "VALUE:NO" ] ]
+}

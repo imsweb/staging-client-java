@@ -1,0 +1,35 @@
+{
+  "id" : "ajcc_chapter_calculation_46197",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "description" : "While this has a chapter, T, N, M and Stage Group are not defined.",
+  "last_modified" : "2021-07-15T20:35:41.255Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "age_dx",
+    "name" : "Age at Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "9591,9724,9727,9801,9806-9809,9831,9833-9834,9940,9948", "C421", "*", "VALUE:83.0", "Leukemia: Unspecified or Other Type", "VALUE:08" ], [ "9591", "C000-C420,C422-C440,C442-C689,C691-C694,C698-C699,C739-C749,C760-C809", "*", "VALUE:XX", "Other HemeRetic", "VALUE:88" ], [ "9591", "C700-C729,C750-C759", "*", "VALUE:XX", "Other HemeRetic", "VALUE:88" ], [ "9724,9727,9801,9806-9809,9831,9833-9834,9940,9948", "C000-C420,C422-C809", "*", "VALUE:XX", "Other HemeRetic", "VALUE:88" ], [ "9840,9861,9865-9867,9869-9874,9891,9895-9898,9910-9911,9920,9930-9931", "C421", "*", "VALUE:83.1", "Leukemia: Acute Myeloid Leukemia", "VALUE:08" ], [ "9840,9861,9865-9867,9869-9874,9891,9895-9898,9910-9911,9920,9931", "C000-C420,C422-C809", "*", "VALUE:XX", "Other HemeRetic", "VALUE:88" ], [ "9930", "C000-C420,C422-C440,C442-C689,C691-C694,C698-C809", "*", "VALUE:XX", "Other HemeRetic", "VALUE:88" ], [ "9811-9818,9837", "C421", "0-9,00-19,000-019,999", "VALUE:83.2", "Leukemia: Acute Lymphoblastic Leukemia in children", "VALUE:08" ], [ "9811-9818,9837", "C421", "20-99,020-120", "VALUE:83.3", "Leukemia: Acute Lymphoblastic Leukemia in adults", "VALUE:08" ], [ "9811-9818,9837", "C000-C420,C422-C809", "*", "VALUE:XX", "Other HemeRetic", "VALUE:88" ], [ "9875,9876,9945", "C421", "*", "VALUE:83.4", "Leukemia: Chronic Myeloid Leukemia", "VALUE:08" ], [ "9875,9876,9945", "C000-C420,C422-C809", "*", "VALUE:XX", "Other HemeRetic", "VALUE:88" ], [ "9740-9742,9749,9762-9800,9819,9860,9863,9877-9879,9912,9946,9950-9993", "C000-C809", "*", "VALUE:XX", "Other HemeRetic", "VALUE:88" ], [ "9751,9755-9759", "C000-C699,C739-C750,C754-C809", "*", "VALUE:XX", "Other HemeRetic", "VALUE:88" ], [ "9820,9832", "C000-C809", "*", "VALUE:XX", "Other HemeRetic", "VALUE:88" ] ]
+}

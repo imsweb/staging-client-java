@@ -1,0 +1,76 @@
+{
+  "id" : "stop_if_no_clin_and_no_path_24035",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Stop if No Clin and No Path",
+  "title" : "Stop if neither Clin nor Path were Captured",
+  "notes" : "**Note:** We do not currently plan to accept records where Clin T, N, M, Stage Group, Path T, N M and Stage Group are all blank.   All Derived fields will be left blank.",
+  "last_modified" : "2018-05-14T21:29:06.671Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_stage_group_direct",
+    "name" : "Directly Assigned Clin Stage",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_m",
+    "name" : "Patholgic M",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_stage_group_direct",
+    "name" : "Directly Assigned Path Stage",
+    "type" : "INPUT"
+  }, {
+    "key" : "combined_t",
+    "name" : "Combined T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "source_t",
+    "name" : "Source of Combined T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "combined_n",
+    "name" : "Combined N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "source_n",
+    "name" : "Source of Combined N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "combined_m",
+    "name" : "Combined M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "source_m",
+    "name" : "Source of Combined M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "combined_stage_group",
+    "name" : "Combined Stage Group",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "tmp_continue",
+    "name" : "Continue?",
+    "type" : "ENDPOINT"
+  } ],
+  "extra_input" : [ "clin_stage_group_direct", "path_stage_group_direct" ],
+  "rows" : [ [ "", "", "", "", "", "", "", "", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "STOP" ], [ "", "", "", "*", "", "", "", "", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE: {{clin_stage_group_direct}}", "STOP" ], [ "", "", "", "", "", "", "", "*", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE: {{path_stage_group_direct}}", "STOP" ], [ "", "", "", "99", "", "", "", "*", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE: {{path_stage_group_direct}}", "STOP" ], [ "", "", "", "*", "", "", "", "99", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE: {{clin_stage_group_direct}}", "STOP" ], [ "", "", "", "*", "", "", "", "*", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE:", "VALUE: {{path_stage_group_direct}}", "STOP" ], [ "88", "88", "88", "88", "88", "88", "88", "88", "VALUE:88", "VALUE:9", "VALUE:88", "VALUE:9", "VALUE:88", "VALUE:9", "VALUE:88", "STOP" ], [ "*", "*", "*", "*", "*", "*", "*", "*", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH", "MATCH" ] ]
+}

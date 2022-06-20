@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_pharynx_other",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection PharynxOther",
+  "title" : "Schema selection for PharynxOther",
+  "last_modified" : "2021-04-29T15:08:25.469Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C140,C142,C148", "8000-8700", "MATCH" ] ]
+}

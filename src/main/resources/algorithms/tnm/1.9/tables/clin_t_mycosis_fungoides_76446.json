@@ -1,0 +1,28 @@
+{
+  "id" : "clin_t_mycosis_fungoides_76446",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin T Mycosis Fungoides",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:** Assign 88 for in situ cases (behavior code /2). EORTC does not include an in situ category for Mycosis Fungoides tumors.\n\n**Note 2:** For skin\n* Patch indicates any size skin lesion without significant elevation or induration\n* Plaque indicates any size skin lesion that is elevated or indurated\n* Tumor indicates at least one 1 centimeter (cm) diameter solid or nodular lesion with evidence of depth and/or vertical growth\n\n**Note 3:** Assign T1 when skin involvement is present but only a general location/site is mentioned (i.e., face, torso, arms, legs). \n\n**Note 4:** Assign T2 If a physician describes a skin lesion of less than 1 cm as a tumor.\n\n**Note 5:** Assign T3 if eythrodema is greater than 50%.\n* Ignore erythroderma if stated to involve less than 50% of the skin\n\n**Note 6:** Physicians use more than one method to estimate percentage of skin involvement by mycosis fungoides (MF). Code percent of skin involvement as stated by the physician.  \n* If no percentage is stated and no word such as localized or generalized is used and no stage is given, code as percent not stated",
+  "footnotes" : "\\# TX is not defined in AJCC 7th edition.\n\\## T0 is not defined in AJCC 7th edition.",
+  "last_modified" : "2018-05-14T21:29:02.845Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed#", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T \n    Extension cannot be determined\nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor##", "No evidence of any type of skin involvement, including plaques, papules, patches, or tumors" ], [ "c1", "cT1", "Limited patches, papules, and/or plaques covering <10% of skin surface", "Note: T1 has subcategories of T1a and T1b. Assign T1 only when there is no information available to assign one of the subcategories\n\nSkin involvement less than 10%, not stated whether plaques, papules or patches, no tumors \n    Limited plaques/patches\nPlaques, papules, or erythematous patches: % body surface not stated, no tumors\n\nSkin involvement, NOS:\n    Extent not stated, no tumors\n    Localized, NOS\n\nStated as T1 [NOS]" ], [ "c1A", "cT1a", "Patch only", "Patches only with less than 10% of skin surface involved\n\nStated as T1a" ], [ "c1B", "cT1b", "Plaque with or without patch", "Plaques or papules, WITH or WITHOUT patches, with less than 10% of skin surface involved, no tumors\n\nStated as T1b" ], [ "c2", "cT2", "Patches, papules or plaques covering >= 10% of the skin surface", "Note: T2 has subcategories of T2a and T2b. Assign T2 only when there is no information available to assign one of the subcategories\n\nSkin involvement 10% or more, not stated whether plaques, papules or patches, no tumors\nSkin lesion described as tumor less than 1 cm\nGeneralized plaques/patches\n\nStated as T2 [NOS]" ], [ "c2A", "cT2a", "Patch only", "Patches only with 10% or more of skin surface involved\n\nStated as T2a" ], [ "c2B", "cT2b", "Plaque with or without patch", "Plaques or papules, WITH or WITHOUT patches, with 10% or more of skin surface involved, no tumors\n\nStated as T2b" ], [ "c3", "cT3", "One or more tumors (>= 1 cm diameter)", "Cutaneous tumor, size not stated\nGeneralized erythroderma \n(Greater than 50% less than 80% body surface involved with diffuse redness)\n\nStated as T3" ], [ "c4", "cT4", "Confluence of erythema covering >=80% body surface area", "Generalized erythroderma\nEqual to or greater than or equal to 80% body surface involved with diffuse redness\n\nStated as T4" ], [ "88", "88", "Not applicable ", "In situ case but no pTis is defined by EORTC\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

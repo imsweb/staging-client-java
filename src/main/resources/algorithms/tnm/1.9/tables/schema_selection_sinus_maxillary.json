@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_sinus_maxillary",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Schema Selection SinusMaxillary",
+  "title" : "Schema selection for SinusMaxillary",
+  "last_modified" : "2018-05-14T21:29:00.142Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C310", "8000-8713,8800-9136,9141-9582,9700-9701", "MATCH" ] ]
+}

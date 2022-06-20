@@ -1,0 +1,20 @@
+{
+  "id" : "ssf4_mpf",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF4",
+  "title" : "Site-Specific Factor 4",
+  "subtitle" : "Pathologic M1: Source of Pathologic Metastatic Specimen",
+  "notes" : "**Note:**  Record only metastases present at the time of initial diagnosis and verified by pathologic examination of the metastatic site.  Record metastases determined by clinical examination only in code 998.  \n* Do not record metastases that represent progression of disease after diagnosis, whether determined clinically or pathologically",
+  "last_modified" : "2018-05-14T21:29:01.597Z",
+  "definition" : [ {
+    "key" : "ssf4",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No pathologic metastasis identified at diagnosis\nMicroscopic exam of distant specimen negative for metastasis " ], [ "010", "Liver metastasis on pathologic examination at diagnosis" ], [ "020", "Lung metastasis on pathologic examination at diagnosis" ], [ "030", "Brain metastasis on pathologic examination at diagnosis" ], [ "040", "Bone metastasis on pathologic examination at diagnosis" ], [ "050", "Other metastasis on pathologic examination at diagnosis" ], [ "060", "010-050\nMetastases from multiple sites in codes 010-050 on pathologic examination at diagnosis" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "No microscopic examination of metastatic site/no clinical evidence of metastasis and/or only clinical evidence of metastasis " ], [ "999", "Unknown or no information \nNot documented in patient record" ] ]
+}

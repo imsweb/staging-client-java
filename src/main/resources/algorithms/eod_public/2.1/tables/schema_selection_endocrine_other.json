@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_endocrine_other",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection EndocrineOther",
+  "title" : "Schema selection for EndocrineOther",
+  "last_modified" : "2021-04-29T13:03:56.842Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C754,C758-C759", "8000-8700, 8720-8790", "MATCH" ], [ "C755", "8000-8671, 8681-8683, 8691, 8720-8790", "MATCH" ] ]
+}

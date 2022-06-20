@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_placenta_62001",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin T Placenta",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:** FIGO nor TNM include an in situ category for tumors of the placenta. Assign pTis (behavior code /2) for in situ cases. \n\n**Note 2:**  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension information on the primary tumor are available, use the extension information to assign the T in preference to a statement of FIGO stage - see Registrar notes.\n* If the only information is Stage III [NOS], IIIA, IIIB, or IV [NOS], IVA, or IVB, leave T blank and see M\n\n**Note 3:** Genital metastasis (vagina, ovary, broad ligament, fallopian tube) is classified T2. Any involvement of non-genital structures, whether by direct invasion or metastasis is described using the M (distant metastasis) classification.\n\n**Note 4:** For T, substaging is determined by the values in **Site-Specific Factor 1, Prognostic Scoring Index**.",
+  "last_modified" : "2018-05-14T21:29:02.477Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done:\n     Physician unable to assess T\n     Extension cannot be determined OR\n Physician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor", "" ], [ "c1", "cT1", "Tumor confined to uterus", "Confined to:\n    Cervix\n    Corpus\n    Placenta\n\nLocalized, NOS\n\nFIGO Stage I [NOS], IA, or IB\n\nStated as T1" ], [ "c2", "cT2", "Tumor extends to other genital structures: \n    Vagina\n    Ovary\n    Broad ligament \n    Fallopian tube \nby metastasis or direct extension", "Adjacent connective tissue, NOS\n\nGenital structures, NOS by direct extension or \nmetastasis\n   \nFurther contiguous extension\n\nFIGO Stage II [NOS], IIA, or IIB\n\nStated as T2" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nIn situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Only information is Stage III [NOS], IIIA, IIIB, or IV [NOS], IVA, or IVB\n\nClinical classification not met\nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup" ] ]
+}

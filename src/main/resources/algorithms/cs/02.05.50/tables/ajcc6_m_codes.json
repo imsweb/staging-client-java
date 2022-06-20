@@ -1,0 +1,22 @@
+{
+  "id" : "ajcc6_m_codes",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC 6 M Codes",
+  "title" : "AJCC 6 M Allowable Codes",
+  "last_modified" : "2015-05-27T16:18:47.617Z",
+  "definition" : [ {
+    "key" : "ajcc6_m",
+    "name" : "Display String",
+    "type" : "INPUT"
+  }, {
+    "key" : "stor_ajcc6_m",
+    "name" : "AJCC6 Storage Code",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "comments",
+    "name" : "Comments",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "MX", "VALUE:99", "MX" ], [ "M0", "VALUE:00", "M0" ], [ "M0(i+)", "VALUE:  ", "M0(i+)" ], [ "M1", "VALUE:10", "M1" ], [ "M1a", "VALUE:11", "M1a" ], [ "M1b", "VALUE:12", "M1b" ], [ "M1c", "VALUE:13", "M1c" ], [ "M1d", "VALUE:  ", "M1d" ], [ "M1e", "VALUE:  ", "M1e" ], [ "M1NOS", "VALUE:19", "M1 NOS" ], [ "NA", "VALUE:88", "Not applicable" ], [ "*", "VALUE:  ", "Error" ] ]
+}

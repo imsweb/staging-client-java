@@ -1,0 +1,31 @@
+{
+  "id" : "stage_group_p_48023",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Stage Group (p)",
+  "title" : "TNM 7 Stage Group",
+  "notes" : "**Note 1:** SEER*RSA added additional information to UICC 7th edition stages with UICC approval. If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC 7th edition manual to ensure you are using the appropriate logic. \n* Stage Group III (as defined in the table)\n\n**Note 2:** TNM does not include an in situ category for this schema. Assign 88 to stage group for in situ cases.",
+  "last_modified" : "2018-05-14T21:29:00.653Z",
+  "definition" : [ {
+    "key" : "path_stage_group_direct",
+    "name" : "Stage",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_stage_group_direct_display",
+    "name" : "Stage Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "t",
+    "name" : "T",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1 ", "I   ", "T1a      ", "N0", "M0" ], [ "2A", "IIA ", "T1b-1d,2a", "N0", "M0" ], [ "2B", "IIB ", "T2b,3a   ", "N0", "M0" ], [ "3 ", "III ", "T4       ", "N0", "M0" ], [ "3A", "IIIA", "T2c,2d\nT3b,3c\nT4a", "N0\nN0\nN0", "M0\nM0\nM0" ], [ "3B", "IIIB", "T3d   \nT4b,4c", "N0\nN0", "M0\nM0" ], [ "3C", "IIIC", "T4d,4e", "N0", "M0" ], [ "4", "IV", "Any T\nAny T", "N1   \nAny N", "M0  \nM1,1a-1c" ], [ "99", "Unknown", "T0,1-3,X\nAny T", "N0\nNX", "M0\nM0" ], [ "88", "Not Applicable", "88", "88", "88" ] ]
+}

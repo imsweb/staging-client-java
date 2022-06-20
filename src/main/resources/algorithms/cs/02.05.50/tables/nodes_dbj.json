@@ -1,0 +1,36 @@
+{
+  "id" : "nodes_dbj",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in the field CS Mets at DX.",
+  "footnotes" : "- For CS Lymph nodes codes 100-270, 310-380, 500 and 505 ONLY, the N category for AJCC 7 staging is assigned based on the value of CS Site-Specific Factor 17, Extranodal Extension of Regional Lymph Nodes, as shown in the Lymph Node Extranodal Extension table for this schema.",
+  "last_modified" : "2015-05-27T16:19:33.412Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "100", "SINGLE regional lymph node:\n    Superficial inguinal (femoral) regional lymph node\n    Inguinal node, NOS (unknown if superficial or deep)\n\nStated as N1 with no other information on regional lymph nodes", "JUMP:lymph_node_extranodal_extension_xdn", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "200", "MULTIPLE or BILATERAL regional lymph nodes:\n    Superficial inguinal (femoral) regional lymph nodes\n    Inguinal nodes, NOS (unknown if superficial or deep)\n\nStated as N2 with no other information on regional lymph nodes", "JUMP:lymph_node_extranodal_extension_xdn", "VALUE:N2", "VALUE:RN", "VALUE:RN" ], [ "250", "Regional lymph nodes, not stated if single or multiple or bilateral:\n    Superficial inguinal (femoral) regional lymph nodes\n    Inguinal nodes, NOS (unknown if superficial or deep)", "JUMP:lymph_node_extranodal_extension_xdn", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "260", "SINGLE regional lymph nodes, NOS\nNot stated if inguinal or pelvic", "JUMP:lymph_node_extranodal_extension_xdn", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "270", "MULTIPLE or BILATERAL regional lymph nodes, NOS: \nNot stated if inguinal or pelvic", "JUMP:lymph_node_extranodal_extension_xdn", "VALUE:N2", "VALUE:RN", "VALUE:RN" ], [ "300", "OBSOLETE DATA RETAINED V0200\nDeep inguinal node(s) reclassified in AJCC 7th Edition, see codes 310 and 350\n\nRegional lymph node:\n    Deep inguinal, NOS:\n        Node of Cloquet or Rosenmuller (highest deep inguinal)", "ERROR:", "VALUE:N3", "VALUE:RN", "VALUE:RN" ], [ "310", "SINGLE regional node:\n   Deep inguinal, NOS:\n        Node of Cloquet or Rosenmuller (highest deep inguinal)", "JUMP:lymph_node_extranodal_extension_xdn", "VALUE:N3", "VALUE:RN", "VALUE:RN" ], [ "350", "MULTIPLE or BILATERAL regional nodes:\n   Deep inguinal, NOS:\n        Node of Cloquet or Rosenmuller (highest deep inguinal)", "JUMP:lymph_node_extranodal_extension_xdn", "VALUE:N3", "VALUE:RN", "VALUE:RN" ], [ "370", "OBSOLETE DATA REVIEWED V0203\nSee codes 250 and 380\n\nInguinal nodes, NOS (unknown if single, multiple, unilateral or bilateral)", "JUMP:lymph_node_extranodal_extension_xdn", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "380", "Regional lymph nodes, not stated if single, multiple or bilateral:\n    Deep inguinal, NOS:\n        Node of Cloquet or Rosenmuller (highest deep inguinal)", "JUMP:lymph_node_extranodal_extension_xdn", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "400", "Single, multiple, unilateral or bilateral regional nodes:\n    Pelvic lymph  nodes, NOS:\n        External iliac\n        Internal iliac (hypogastric)\n            Obturator", "VALUE:N3", "VALUE:N3", "VALUE:RN", "VALUE:RN" ], [ "450", "Stated as N3 with no other information on regional lymph nodes", "VALUE:N3", "VALUE:N3", "VALUE:RN", "VALUE:RN" ], [ "500", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 260, 270 and 505\n\nRegional lymph node(s), NOS", "JUMP:lymph_node_extranodal_extension_xdn", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "505", "Regional lymph node(s), NOS:\nNot stated if single or multiple \nAND not stated if inguinal or pelvic", "JUMP:lymph_node_extranodal_extension_xdn", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

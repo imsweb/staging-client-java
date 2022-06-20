@@ -1,0 +1,15 @@
+{
+  "id" : "age_at_diagnosis_validation_65093",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Age at Diagnosis Validation",
+  "title" : "Age at Diagnosis Validation",
+  "notes" : "See the [SEER Program Coding Manual](https://seer.cancer.gov/tools/codingmanuals/index.html) for coding instructions.",
+  "last_modified" : "2020-05-19T20:49:53.678Z",
+  "definition" : [ {
+    "key" : "age_dx",
+    "name" : "Age At Diagnosis",
+    "type" : "INPUT"
+  } ],
+  "rows" : [ [ "000-120,999" ], [ "0-9" ], [ "10-99" ] ]
+}

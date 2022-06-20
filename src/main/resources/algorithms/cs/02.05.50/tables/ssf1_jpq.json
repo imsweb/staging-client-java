@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_jpq",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF1",
+  "title" : "CS Site-Specific Factor 1",
+  "subtitle" : "OBSOLETE - Measured Thickness (Depth)",
+  "notes" : "**Note**:  This CS Site-Specific Factor is obsolete beginning with CS Version 2 (codes, codes descriptions, and notes).  Old data are retained during conversion, but new cases are not coded with 000-987 or 999.  Use code 988 for this field for all cases entered in CS Version 2.\n\n**OBSOLETE V0200 Note**:  Code MEASURED THICKNESS (Depth) of tumor (Breslow measurement), not size.  Record actual measurement in hundredths of millimeters from Pathology Department.",
+  "last_modified" : "2015-05-27T16:20:00.374Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "OBSOLETE DATA RETAINED V0200  \n\nNo  mass/tumor found" ], [ "001-979", "OBSOLETE DATA RETAINED V0200 \n\n0.01 - 9.79 millimeters\nCode exact measurement in HUNDREDTHS of millimeters.  \nExamples:\n    001    0.01 millimeter\n    002    0.02 millimeters\n    010    0.1 millimeter\n    074    0.74 millimeters\n    100    1 millimeters\n    105    1.05 millimeters\n    979    9.79 millimeters" ], [ "980", "OBSOLETE DATA RETAINED V0200\n\n9.80 millimeters or larger \n(Includes cases converted from codes 981-989 during conversion to V0200)" ], [ "981-987", "OBSOLETE DATA CONVERTED V0200\nSee code 980\n\n9.81-9.87 millimeters" ], [ "988", "CONVERTED AND CODE REUSED V0200\nPrior to V0200 code defined as \"988 millimeters\".  Cases converted to code 980 with V0200 and code 988 redefined as \"Not applicable: Information not collected for this schema\".\n\nNot applicable:  Information not collected for this schema " ], [ "989", "OBSOLETE DATA CONVERTED V0200 \nSee code 980  \n\n9.89 millimeters or larger" ], [ "990", "OBSOLETE DATA CONVERTED V0102\nSee code 999\n\nMicroinvasion; microscopic focus or foci only; no size given" ], [ "999", "OBSOLETE DATA RETAINED V0200\n\nMicroinvasion; microscopic focus or foci only; no size given\nNot documented in patient record\nUnknown; size not stated" ] ]
+}

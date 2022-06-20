@@ -1,0 +1,31 @@
+{
+  "id" : "ajcc_chapter_calculation_81470",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "description" : "While this has a chapter, T, N, M and Stage Group are not defined.",
+  "last_modified" : "2021-07-15T20:27:34.268Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C000-C148,C150,C153,C158,C300-C329,C470,C490,C739,C750,C754-C759", "8804-8806,8910,8920,8930-8931,8991,9020,9044,9120,9231,9581", "VALUE:45", "Soft Tissue Sarcoma - Unusual Histologies and Sites", "VALUE:08" ], [ "C151-C152,C154-C155,C159,C160-C269,C339-C388,C471-C472,C474,C476-C479,C491-C492,C496-C499,C500-C509,C529,C589-C689", "8804-8806,8930-8931,8991,9020,9044,9231,9581", "VALUE:45", "Soft Tissue Sarcoma - Unusual Histologies and Sites", "VALUE:08" ], [ "C473, C475, C493-C495", "8804-8806,8930-8931,8991,9020,9044,9231,9581", "VALUE:45", "Soft Tissue Sarcoma - Unusual Histologies and Sites", "VALUE:08" ], [ "C480-C488", "8804-8806,8930-8931,8991,9020,9044,9231,9581", "VALUE:45", "Soft Tissue Sarcoma - Unusual Histologies and Sites", "VALUE:08" ], [ "C510-C519", "8804-8806,8930-8931,8991,9044,9231,9581", "VALUE:45", "Soft Tissue Sarcoma - Unusual Histologies and Sites", "VALUE:08" ], [ "C530-C539", "8804,8806,8815,8859,8901,8912,8920,8930-8931,8991,9020,9044,9120,9133,9180,9222,9231,9366-9368,9581", "VALUE:45", "Soft Tissue Sarcoma - Unusual Histologies and Sites", "VALUE:08" ], [ "C569,C570", "8804-8805,8859,8901,8910-8920,8991,9020,9044,9120,9133,9180,9222,9231,9366-9368,9581", "VALUE:45", "Soft Tissue Sarcoma - Unusual Histologies and Sites", "VALUE:08" ], [ "C571-C579,C740-C749,C809", "8804-8806,8815,8859,8901,8910-8920,8930-8931,8991,9020,9044,9120,9133,9180,9222,9231,9366-9368,9581", "VALUE:45", "Soft Tissue Sarcoma - Unusual Histologies and Sites", "VALUE:08" ], [ "C690-C695,C699", "8859,8930-8931,8991,9020,9180,9222,9231,9366-9368", "VALUE:45", "Soft Tissue Sarcoma - Unusual Histologies and Sites", "VALUE:08" ], [ "C700-C721,C728-C729", "8804-8806,8859,8901,8910-8920,8930-8931,8991,9020,9044,9222,9231,9366-9368,9581", "VALUE:45", "Soft Tissue Sarcoma - Unusual Histologies and Sites", "VALUE:08" ], [ "C722,C724-C725,C751-C753", "8804-8806,8910,8920,8930-8931,8991,9020,9044,9231,9581", "VALUE:45", "Soft Tissue Sarcoma - Unusual Histologies and Sites", "VALUE:08" ], [ "C723", "8859,8930-8931,8991,9020,9222,9231,9366-9368", "VALUE:45", "Soft Tissue Sarcoma - Unusual Histologies and Sites", "VALUE:08" ] ]
+}

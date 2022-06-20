@@ -1,0 +1,35 @@
+{
+  "id" : "nodes_dbs",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Regional lymph nodes are defined as those in the vicinity of the primary tumor.\n\n**Note 3**:  Regional lymph node involvement is rare.  For this schema, if there is no mention of lymph node involvement clinically, assume that lymph nodes are negative.  Use code 999 (Unknown) only when there is no available information on the extent of the patient's disease, for example when a lab-only case is abstracted from a biopsy report and no clinical history is available.\n\n**Note 4**:  For head, neck, and trunk primaries only, regional lymph nodes include bilateral or contralateral nodes.",
+  "last_modified" : "2015-05-27T16:19:33.830Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "100", "Regional lymph nodes by primary site:\nAll Head and Neck Subsites:\n    Cervical\nLip:\n    Facial, NOS:\n        Buccinator (buccal)\n        Nasolabial\n        Mandibular\n        Submandibular (submaxillary)\n        Submental\n    Parotid, NOS:\n        Infra-auricular\n        Preauricular\nEyelid/canthus:\n    Facial, NOS:\n        Buccinator (buccal)\n        Nasolabial\n    Mandibular:\n        Submandibular (submaxillary)\n        Submental\n    Parotid, NOS:\n        Infra-auricular\nExternal ear and auditory canal:\n    Mastoid (posterior, retro-auricular) (occipital)\n    Preauricular\nFace, Other (cheek, chin, forehead, jaw, nose, and temple):\n    Facial, NOS:\n        Buccinator (buccal)\n        Nasolabial\n    Mandibular:\n        Submandibular (submaxillary)\n        Submental\n    Parotid, NOS:\n        Infra-auricular\n        Preauricular\nScalp:\n    Mastoid (posterior, retro-auricular) (occipital)\n    Parotid, NOS:\n        Infra-auricular\n        Preauricular\n    Spinal accessory (posterior cervical)\nNeck:\n    Axillary\n    Mastoid (posterior, retro-auricular) (occipital)\n    Mandibular\n    Parotid, NOS:\n        Infra-auricular\n        Preauricular\n    Spinal accessory (posterior cervical)\n    Supraclavicular (transverse cervical)\nArm/shoulder:\n    Axillary\n    Spinal accessory for shoulder\n    Epitrochlear for hand/forearm\nLeg/hip:\n    Femoral (superficial inguinal)\n    Popliteal for heel and calf\nThorax:\n    Hilar (bronchopulmonary) (proximal lobar) (pulmonary root)\n    Mediastinal\nAbdomen:\n    Celiac\n    Iliac\n    Para-aortic\nPelvis:\n    Deep inguinal, NOS:\n    Rosenmuller or Cloquet node\n     Superficial inguinal (femoral)\nUpper trunk:\n    Axillary\n    Cervical\n    Internal mammary\n    Supraclavicular (transverse cervical)\nLower trunk:\n    Superficial inguinal (femoral)\nAll sites:\n    Regional lymph node(s), NOS\n\nStated as N1 with no other information on regional lymph nodes", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "120", "Submental nodes for  neck primary only \n(Including bilateral or contralateral nodes)", "VALUE:N1", "VALUE:N1", "VALUE:D", "VALUE:RN" ], [ "150", "Neck primary only:\n    120 + 100", "VALUE:N1", "VALUE:N1", "VALUE:D", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record\n(See Note 3)", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

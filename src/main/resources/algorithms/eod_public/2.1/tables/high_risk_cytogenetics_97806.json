@@ -1,0 +1,19 @@
+{
+  "id" : "high_risk_cytogenetics_97806",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "High Risk Cytogenetics",
+  "title" : "High Risk Cytogenetics",
+  "notes" : "**Note 1:** Physician statement of presence or absence of high-risk cytogenetics can be used to code this data item.\n\n**Note 2:** Record this data item based on physician statement or FISH test interpretation performed at diagnosis (pre-treatment).\n\n**Note 3:** If the presence/absence of high-risk cytogenetics determined by available test results differs from the physician statement of presence/absence, the physician's statement takes precedence.\n\n**Note 4:** If there is no mention of high risk cytogenetics, code 9.\n\n**Note 5:** If Schema Discriminator 1: Plasma Cell Myeloma Terminology is coded to 1 or 9, code 5.",
+  "last_modified" : "2021-03-16T16:58:27.861Z",
+  "definition" : [ {
+    "key" : "high_risk_cytogenetics",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "High-risk cytogenetics not identified/not present" ], [ "1", "High-risk cytogenetics present" ], [ "5", "Schema Discriminator 1: Plasma Cell Myeloma Terminology coded to 1 or 9" ], [ "7", "Test ordered, results not in chart" ], [ "9", "Not documented in medical record\nHigh Risk Cytogenetics not assessed or unknown if assessed" ] ]
+}

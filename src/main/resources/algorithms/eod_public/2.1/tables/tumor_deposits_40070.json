@@ -1,0 +1,19 @@
+{
+  "id" : "tumor_deposits_40070",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Tumor Deposits",
+  "title" : "Tumor Deposits",
+  "notes" : "**Note 1:** Physician statement of Tumor Deposits can be used to code this data item when no other information is available.\n\n**Note 2:** Tumor deposits are defined as one or more satellite peritumoral nodules in the pericolorectal adipose tissue of a primary carcinoma without histologic evidence of residual lymph node in the nodule.\" \n* Tumor deposits may represent discontinuous spread, venous invasion with extravascular spread, or a totally replaced lymph node\n\n**Note 3:** Record the number of Tumor Deposits whether or not there are positive lymph nodes. \n\n**Note 4:** Code X9 if surgical resection of the primary site is performed, the pathology report is available, and tumor deposits are not mentioned.",
+  "last_modified" : "2019-04-05T16:52:38.154Z",
+  "definition" : [ {
+    "key" : "tumor_deposits",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "No tumor deposits" ], [ "01-99", "1-99 Tumor deposits (TD) \n(Exact number of TD)" ], [ "X1", "100 or more Tumor Deposits" ], [ "X2", "Tumor Deposits identified, number unknown" ], [ "X8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code X8 may result in an edit error.)" ], [ "X9", "Not documented in medical record\nCannot be determined by the pathologist\nPathology report does not mention tumor deposits\nNo surgical resection done\nTumor Deposits not assessed or unknown if assessed" ] ]
+}

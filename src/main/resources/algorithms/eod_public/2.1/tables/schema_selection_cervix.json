@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_cervix",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection Cervix",
+  "title" : "Schema selection for Cervix",
+  "last_modified" : "2021-06-04T19:20:33.603Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C530-C531,C538-C539", "8000-8700, 8720-8790, 8805, 8933, 8980, 9110, 9581", "2018-2020", "MATCH" ] ]
+}

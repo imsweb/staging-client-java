@@ -1,0 +1,34 @@
+{
+  "id" : "extension_bcm",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "last_modified" : "2015-05-27T16:19:09.311Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial,  noninvasive ", "VALUE:NA", "VALUE:NA", "VALUE:IS", "VALUE:IS" ], [ "100", "Confined to site of origin", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "300", "Localized, NOS", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "400", "Adjacent connective tissue\n(See definition of connective tissue in General Rules, Part I)", "VALUE:NA", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "600", "Adjacent organs/structures:\n    Female genital organs:\n        Adnexa\n        Broad ligament(s)\n        Cervix uteri\n        Corpus uteri\n        Fallopian tube(s)\n        Ovary(ies)\n        Parametrium\n        Round ligament(s)\n        Uterus, NOS\n        Vagina", "VALUE:NA", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "800", "Further contiguous extension:\n    Other organs of pelvis", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "950", "No evidence of primary tumor", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in patient record", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:U" ] ]
+}

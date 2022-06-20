@@ -1,0 +1,36 @@
+{
+  "id" : "mets_hcf",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note**:  With the implementation of AJCC 7 staging, mucinous tumors (morphology codes 8480, 8481, and 8490) with peritoneal involvement confined to the right lower quadrant (RLQ) are classified as T4a.  Therefore, such peritoneal metastases are coded in CS Extension.",
+  "footnotes" : "- For CS Mets at DX code 00 and 99, the M category for AJCC 6 staging is determined by the CS Extension code as shown in the Extension Mets AJCC 6 Table for this schema.",
+  "last_modified" : "2015-05-27T16:19:29.674Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "JUMP:extension_mets_ajcc6_xeh", "VALUE:NONE", "VALUE:NONE" ], [ "05", "For mucinous tumors only:\n    Intraperitoneal metastasis BEYOND the right lower quadrant, including pseudomyxoma peritonei\n\nStated as M1a with no other information on distant metastasis", "VALUE:M1a", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "07", "OBSOLETE DATA CONVERTED V0203\nSee code 23\n\nFor non-mucinous tumors:\n    Any intraperitoneal spread", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "08", "Superior mesenteric lymph nodes", "VALUE:M1b", "VALUE:M1", "VALUE:RN", "VALUE:D" ], [ "10", "Distant lymph node(s) other than those in code 08\n(Includes inferior mesenteric lymph node(s))\nDistant lymph node(s), NOS", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "20", "For mucinous tumors only:     (08 and/or 10) + 05 Distant lymph node(s) plus intraperitoneal metastasis BEYOND the right lower quadrant, including pseudomyxoma peritonei", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "23", "For non-mucinous tumors only:\n    Any intraperitoneal spread", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "25", "For non-mucinous tumors only:\n    23 + (08 and/or 10) \n\nIntraperitoneal spread plus distant lymph node(s)", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "40", "OBSOLETE DATA RETAINED V0200\nSee codes 45 and 60\n\nDistant metastases except distant lymph node(s) \nDistant metastasis, NOSCarcinomatosis", "ERROR:", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "45", "Distant metastasis except distant lymph node(s) and intraperitoneal spread\nNon-peritoneal metastasis\nCarcinomatosis", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "50", "45 + (10 and/or 08\n\nDistant metastasis plus distant lymph node(s)", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "55", "Stated as M1b with no other information on distant metastasis", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "60", "Distant metastasis, NOS\n\nStated as M1 [NOS] with no other information on distant metastasis", "VALUE:M1NOS", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "JUMP:extension_mets_ajcc6_xeh", "VALUE:U", "VALUE:U" ] ]
+}

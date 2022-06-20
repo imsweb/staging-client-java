@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_melanoma_iris",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection MelanomaIris",
+  "title" : "Schema selection for MelanomaIris",
+  "last_modified" : "2020-10-28T16:51:51.670Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_1",
+    "name" : "Schema Discriminator 1",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C694", "8720-8790", "2", "MATCH" ] ]
+}

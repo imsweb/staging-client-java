@@ -1,0 +1,20 @@
+{
+  "id" : "ssf7_seb",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF7",
+  "title" : "CS Site-Specific Factor 7",
+  "subtitle" : "Primary Tumor Mitotic Count/Rate",
+  "notes" : "**Note 1**:  According to AJCC, p. 329, \"Data from the AJCC Melanoma Staging Database demonstrated a highly significant correlation with increasing mitotic rate and declining survival rates, especially within thin melanoma subgroups.\"\n\n**Note 2**:  Mitotic rate/count is assessed on primary melanomas, based on the number of mitotic figures in one square millimeter (mm) surrounding either a \"hot spot\" with the most mitotic figures or a field with a representative mitosis.\n\n**Note 3**:  Record the mitotic rate/count as documented in the pathology report. If there is more than one pathology report for the same melanoma at initial diagnosis and different mitotic counts are documented, code the highest mitotic count from any of the pathology reports.  Use code 999 if there is no documentation or no mention of mitotic rate in any pathology report for the same melanoma.",
+  "last_modified" : "2015-05-27T16:20:10.202Z",
+  "definition" : [ {
+    "key" : "ssf7",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "0 mitoses per square millimeter (mm)\nMitoses absent\nNo mitoses present" ], [ "001-010", "1 - 10 mitoses/square mm\n(Exact measurement in mitoses/square mm) \n\nExamples:\n    001    1 mitosis per square mm\n    002    2 mitoses per square mm\n    010    10 mitoses per square mm" ], [ "011", "11 or more mitoses per square mm" ], [ "988", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 988 may result in an edit error.)" ], [ "990", "Stated as \"less than 1 mitosis/square mm\"\nStated as \"nonmitogenic\" " ], [ "991", "Stated as \"at least 1 mitosis/square mm\"\nStated as \"mitogenic\"" ], [ "996", "Mitotic rate described with denominator other than square millimeter (mm)" ], [ "997", "Test performed, results not in chart\nTest performed, quantitative results not stated" ], [ "998", "No histologic examination of primary site." ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

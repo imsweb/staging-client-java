@@ -1,0 +1,28 @@
+{
+  "id" : "path_n_dfo",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Path N Perihilar Bile Ducts",
+  "title" : "Pathologic N",
+  "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 15 or more lymph nodes. If the regional lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0. (1)\n\n**Note 2:**  Code only regional nodes and nodes, NOS, in this field. Distant nodes are coded in distant metastasis.\n\n**Note 3:** Periaortic, pericaval, superior mesenteric artery, and celiac artery lymph nodes are coded to N2.",
+  "footnotes" : "(1) International Union Against Cancer (UICC) *TNM Classification of Malignant Tumors,* 7th ed., Sobin, LH, Gospodarowicz, M, Wittekind, CH, eds. New York: Wiley, 2009, pg., 124\n\n\\* N2 is not defined by UICC in the 7th edition. Approval has been provided by UICC to use the definition from the AJCC 7th edition, which is documented in the registrar notes.",
+  "last_modified" : "2018-05-14T21:29:02.507Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathologic N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pNX", "Regional lymph nodes cannot be assessed", "Pathologic classification criteria met, evaluation done:\n    Physician unable to assess N\n    Surgical resection primary tumor, no regional lymph nodes removed\n    Involvement of regional lymph nodes not documented\nPhysician assigns pNX, no other information available to determine N" ], [ "p0", "pN0", "No regional lymph node metastasis", "" ], [ "p1", "pN1", "Regional lymph node metastasis including: nodes along the cystic duct common bile duct, common hepatic artery and portal vein", "Regional lymph nodes:\n    Cystic duct (node of the neck of the gallbladder) (Calot's node)\n    Hepatic\n    Hepatic artery\n    Hilar (in the hepatoduodenal ligament)\n    Node of the foramen of Winslow (omental) (epiploic)\n    Pancreaticoduodenal\n    Pericholedochal (node around common bile duct)\n    Periduodenal\n    Peripancreatic (near head of pancreas only)\n    Periportal\n    Porta hepatis (portal) (hilar) (in hilus of liver)\n    Portal vein\n    \nRegional lymph node(s), NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "p2", "pN2", "Not defined by UICC*", "Metastasis to periaortic, pericaval, superior mesenteric artery, and/or celiac artery lymph nodes\n\nStated as N2" ], [ "c0", "cN0", "Clinically: No regional lymph node metastasis", "Use only for TNM defined pTis cases where there is a resection of the primary and the nodes are not evaluated pathologically" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nNo surgical resection of primary tumor and there isn’t a positive biopsy of a structure in the highest T category and highest N category\nEvidence of metastatic disease (pM1), no other workup\nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

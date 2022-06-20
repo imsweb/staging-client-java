@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_jal",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF1",
+  "title" : "CS Site-Specific Factor 1",
+  "subtitle" : "OBSOLETE - Alpha Fetoprotein (AFP)",
+  "notes" : "**Note**:  This CS Site-Specific Factor is obsolete beginning with CS Version 2 (codes and descriptions).  Old data are retained, but new cases are not coded with this Site-Specific Factor.  Use code 988 for this field.",
+  "last_modified" : "2015-05-27T16:19:58.288Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "OBSOLETE DATA RETAINED V0200\n            \nTest not done (SX)" ], [ "020", "OBSOLETE DATA RETAINED V0200\n            \nWithin normal limits (S0)" ], [ "040", "OBSOLETE DATA RETAINED V0200\n            \nRange 1 (S1) less than 1,000 ng/ml" ], [ "050", "OBSOLETE DATA RETAINED V0200\n            \nRange 2 (S2) 1,000 -10,000 ng/ml" ], [ "060", "OBSOLETE DATA RETAINED V0200\n            \nRange 3 (S3)  greater than 10,000 ng/ml" ], [ "080", "OBSOLETE DATA RETAINED V0200\n            \nOrdered, but results not in chart" ], [ "988", "Not applicable:  Information not collected for this schema" ], [ "999", "OBSOLETE DATA RETAINED V0200 \n\nUnknown or no information\nNot documented in patient record" ] ]
+}

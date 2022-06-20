@@ -1,0 +1,19 @@
+{
+  "id" : "number_of_examined_pelvic_nodes_60771",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Number of Examined Pelvic Nodes",
+  "title" : "Number of Examined Pelvic Nodes",
+  "notes" : "**Note 1:** Physician statement of examined pelvic nodes can be used to code this data item when no other information is available.\n\n**Note 2:** The following are pelvic nodes\n* Iliac, NOS\n  + Common\n  + External\n  + Internal [hypogastric] [obturator]\n* Paracervical\n* Parametrial\n* Pelvic, NOS\n* Sacral, NOS\n  + Lateral [laterosacral] \n  + Middle [promontorial] [Gerota's node]\n  + Uterosacral\n\n**Note 3:** Record the number of examined pelvic lymph nodes documented in the medical record. \n\n**Note 4:** For the following\n* Code 00 when no lymph nodes are examined by FNA, core biopsy or removal of lymph node(s) (e.g., sentinel lymph node biopsy or lymph node dissection)\n* Code X6 If only a FNA or core biopsy is done\n* Code X9 if it’s unknown if lymph nodes were removed \n\n**Note 5:** The number of positive pelvic nodes is recorded in Number of Positive Pelvic Nodes [NAACCR Data Item #3902]",
+  "last_modified" : "2021-05-27T20:33:08.355Z",
+  "definition" : [ {
+    "key" : "num_exam_pelvic_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "No pelvic lymph nodes examined" ], [ "01-99", "1 - 99 pelvic lymph nodes examined \n(Exact number of pelvic lymph nodes examined)" ], [ "X1", "100 or more pelvic  nodes examined" ], [ "X2", "Pelvic nodes examined, number unknown" ], [ "X6", "No pelvic lymph nodes removed, but aspiration or core biopsy of pelvic node(s) only" ], [ "X8", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code X8 will result in an edit error.)" ], [ "X9", "Not documented in medical record\nCannot be determined, indeterminate if examined pelvic nodes present\nNo lymph node dissection performed\nPelvic lymph nodes not assessed or unknown if assessed" ] ]
+}

@@ -1,0 +1,28 @@
+{
+  "id" : "vulva_t_1223",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Path T Vulva",
+  "title" : "Pathologic T",
+  "notes" : "**Note 1:**   FIGO does not include an in situ category for tumors of the vulva, but TNM does. Assign pTis (behavior code /2) for in situ cases. \n\n**Note 2:**  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension information on the primary tumor are available, use the extension information to assign the T in preference to a statement of FIGO stage - see Registrar notes.\n* If the only information is (pathologic) FIGO III [NOS], IIIA, IIIB, IIIC, or IVA, assign the appropriate stage and leave pathologic T, N, and M blank. If the only information is (pathologic) FIGO stage IVB, leave pathologic T and N blank and see M\n\n**Note 3:**  FIGO Stage I, IA and IB are defined by the following\n* Size of tumor \n* Involvement of vulva OR vulva and perineum\n* Depth of stromal invasion\n\n**Note 4:**  The depth of invasion is defined as the measurement of the tumor from the epithelial-stromal junction of the adjacent most superficial dermal papilla to the deepest point of invasion. (1)\n\n**Note 5:** T3 is not used by FIGO. They label it T4. If you have a record which states T4, assign T3. (1)\n\n**Note 6:** FIGO Stage IVA is assigned based on tumor extension and/or regional lymph node involvement.",
+  "footnotes" : "(1) International Union Against Cancer (UICC) *TNM Classification of Malignant Tumors,* 7th ed., Sobin, LH, Gospodarowicz, M, Wittekind, CH, eds. New York: Wiley, 2009, pg., 198\n\n\\# T1 [NOS] is not defined in AJCC 7th edition.",
+  "last_modified" : "2018-05-14T21:29:01.575Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pTX", "Primary tumor cannot be assessed", "Pathologic classification criteria met, evaluation done:\n     Physician unable to assess T\n     Surgical resection of primary tumor, extension not stated\n Physician assigns cTX, no other information available to determine T" ], [ "p0", "pT0", "No evidence of primary tumor", "" ], [ "pIS", "pTis", "Carcinoma in situ (preinvasive carcinoma)\nIntraepithelial neoplasia Grade III (VIN III)", "Noninvasive\nBowen disease" ], [ "p1", "pT1", "Tumor confined to vulva or vulva and perineum#", "Note: T1 has subcategories of T1a and T1b. Assign T1 only when there is no information available to assign one of the subcategories\n\nVulva and perineum:  Stromal invasion but depth of invasion in millimeters not stated\n\nInvasive carcinoma confined to:\n    Musculature\n    Submucosa\n    Vulva including skin\n\nConfined to the vulva and perineum, size unknown\n\nLocalized, NOS\n\nFIGO Stage I [NOS]\n\nStated as T1 [NOS]" ], [ "p1A", "pT1a", "Tumor 2 cm or less in greatest dimension and with stromal invasion no greater than 1.0 mm", "Vulva and perineum: Stromal invasion less than or equal to 1 mm\n\nFIGO Stage IA\n\nStated as T1a" ], [ "p1B", "pT1b", "Tumor greater than 2 cm or with stromal invasion greater than 1 mm", "Vulva and perineum: Stromal invasion greater than 1 mm\n\nFIGO Stage IB\n\nStated as T1b" ], [ "p2", "pT2", "Tumor of any size with extension to adjacent perineal structures: \n    Anus\n    Lower third urethra \n    Lower third vagina", "Perianal skin\nUrethra, NOS \nVagina NOS\n\nFIGO Stage II\n\nStated as T2" ], [ "p3", "pT3", "Tumor of any size with extension to the following structures:\n    Bladder mucosa\n    Fixed to pelvic bone\n    Rectal mucosa\n    Upper 2/3 urethra\n    Upper 2/3 vagina", "Bladder wall or bladder, NOS (including mucosa)\nPerineal body\nRectal wall or rectum, NOS (including mucosa)\n\nFurther contiguous extension\n\nStated as T3 or T4" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Only information is FIGO Stage III [NOS], IIIA, IIIB, IIIC, IVA, or IVB\n\nPathologic classification not met\nPathologic classification criteria met, evaluation done:\n    Results not documented in patient record\n    No surgical resection of known primary tumor (not T0) OR\n    Resection insufficient for site-specific pathologic assessment\nNo surgical resection of primary tumor and there isn't a positive biopsy of a structure in the highest T category and highest N category\nEvidence of metastatic disease (pM1), no other workup" ] ]
+}

@@ -1,0 +1,20 @@
+{
+  "id" : "ssf6_oad",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF6",
+  "title" : "CS Site-Specific Factor 6",
+  "subtitle" : "OBSOLETE - Gleason's Score",
+  "notes" : "**Note**:  This CS Site-Specific Factor is obsolete beginning with CS Version 2 (codes, code descriptions, and notes).  Old data are retained during conversion, but new cases are not coded 000-010 or 999..  Use only code 988 for this field for all cases entered in CS Version 2.\n\n**OBSOLETE V0200 Note 1**:  Usually prostate cancers are graded using Gleason's score or pattern.  Gleason's grading for prostate primaries is based on a 5-component system (5 histologic patterns).  Prostatic cancer generally shows two main histologic patterns.  The primary pattern, that is, the pattern occupying greater than 50% of the cancer, is usually indicated by the first number of the Gleason's grade and the secondary pattern is usually indicated by the second number.  These two numbers are added together to create a pattern score, ranging from 2 to 10. \n\n* If only one number is given and it is less than or equal to 5, code the total score to 999, unknown or no information. \n* If only one number is given and it is greater than 5, assume that it is a score.  \n* If there are two numbers, assume that they refer to two patterns (the first number being the primary and the second number being the secondary) and sum them to obtain the score.  \n* If the pathology report specifies a specific number out of a total of 10, the first number given is the score.  Example:  The pathology report says \"Gleason's 3/10\".  The Gleason's score would be 3.\n\n**OBSOLETE V0200 Note 2**:  Record the Gleason's score based on the addition of the primary and secondary pattern.\n\n**OBSOLETE V0200 Note 3**:  Following AJCC guidelines for coding multiple Gleason's Scores in prostate cancer, if there is more than one primary and secondary pattern value, the value to be coded is the one based on the larger tumor specimen.  Please note that this rule is not the same as the rule for coding grade.",
+  "last_modified" : "2015-05-27T16:20:08.662Z",
+  "definition" : [ {
+    "key" : "ssf6",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "OBSOLETE DATA RETAINED V0200\n\nTest not done (test was not ordered and was not performed)" ], [ "002-010", "OBSOLETE DATA RETAINED V0200\n\nGleason's Score (See Notes 1, 2 and 3)" ], [ "988", "Not applicable:  Information not collected for this schema " ], [ "999", "OBSOLETE DATA RETAINED V0200\n \nUnknown or no information\nNot documented in patient record" ] ]
+}

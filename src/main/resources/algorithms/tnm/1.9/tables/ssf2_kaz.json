@@ -1,0 +1,20 @@
+{
+  "id" : "ssf2_kaz",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF2",
+  "title" : "Site-Specific Factor 2",
+  "subtitle" : "Clark Level",
+  "notes" : "**Note 1:**  Code the Clark level as documented in the pathology report.\n\n**Note 2:**  Record only for squamous cell carcinoma of skin of eyelid.  \n* For other histologies, use code 987, not applicable",
+  "last_modified" : "2018-05-14T21:29:01.449Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Clark level I\nIn situ, intraepidermal, intraepithelial, noninvasive \nBasement membrane of epidermis is intact" ], [ "020", "Clark level II\nPapillary dermis invaded" ], [ "030", "Clark level III\nPapillary-reticular dermal interface invaded" ], [ "040", "Clark level IV\nReticular dermis invaded" ], [ "050", "Clark level V\nSubcutaneous tissue invaded (through entire dermis)" ], [ "987", "Not applicable, not squamous cell carcinoma of skin of eyelid" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "No histologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

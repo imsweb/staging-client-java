@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_9_chapter_calculation_30451",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC 9 Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2021-04-27T14:09:27.906Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8000,8010,8013,8015,8020,8041,8045,8051-8052,8054,8070-8072,8076,8082-8083,8085-8086,8098", "3", "VALUE:52", "Cervix Uteri", "VALUE:09" ], [ "8120,8140,8144,8154", "3", "VALUE:52", "Cervix Uteri", "VALUE:09" ], [ "8240,8246,8249,8263", "3", "VALUE:52", "Cervix Uteri", "VALUE:09" ], [ "8310,8323,8380,8384", "3", "VALUE:52", "Cervix Uteri", "VALUE:09" ], [ "8430,8441,8480,8482-8484,8490", "3", "VALUE:52", "Cervix Uteri", "VALUE:09" ], [ "8560,8574", "3", "VALUE:52", "Cervix Uteri", "VALUE:09" ], [ "8980,9110", "3", "VALUE:52", "Cervix Uteri", "VALUE:09" ], [ "8000,8010,8013,8015,8020,8041,8045,8051-8052,8054,8070-8072,8076,8082-8083,8085-8086,8098", "2", "VALUE:XX", "Other Cervix Uteri", "VALUE:88" ], [ "8120,8140,8144,8154", "2", "VALUE:XX", "Other Cervix Uteri", "VALUE:88" ], [ "8240,8246,8249,8263", "2", "VALUE:XX", "Other Cervix Uteri", "VALUE:88" ], [ "8310,8323,8380,8384", "2", "VALUE:XX", "Other Cervix Uteri", "VALUE:88" ], [ "8430,8441,8480,8482-8484,8490", "2", "VALUE:XX", "Other Cervix Uteri", "VALUE:88" ], [ "8560,8574", "2", "VALUE:XX", "Other Cervix Uteri", "VALUE:88" ], [ "8980,9110", "2", "VALUE:XX", "Other Cervix Uteri", "VALUE:88" ], [ "8001-8005,8011-8012,8014,8021-8040,8042-8044,8046,8050,8053,8060,8073-8075,8077-8081,8084,8090-8097", "*", "VALUE:XX", "Other Cervix Uteri", "VALUE:88" ], [ "8100-8110,8121-8131,8141-8143,8145-8153,8155-8191", "*", "VALUE:XX", "Other Cervix Uteri", "VALUE:88" ], [ "8200-8231,8241-8245,8247-8248,8250-8262,8264-8300", "*", "VALUE:XX", "Other Cervix Uteri", "VALUE:88" ], [ "8311-8322,8324-8375,8381-8383,8390-8420", "*", "VALUE:XX", "Other Cervix Uteri", "VALUE:88" ], [ "8440,8442-8474,8481", "*", "VALUE:XX", "Other Cervix Uteri", "VALUE:88" ], [ "8500-8552,8561-8573,8575-8700,8720-8790", "*", "VALUE:XX", "Other Cervix Uteri", "VALUE:88" ] ]
+}

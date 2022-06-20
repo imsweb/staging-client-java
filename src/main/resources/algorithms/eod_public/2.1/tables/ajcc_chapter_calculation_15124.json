@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_chapter_calculation_15124",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2021-03-31T14:28:18.481Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C150-C155,C158-C159,C160", "8000,8010,8013", "VALUE:16.3", "Esophagus and Esophagogastric Junction: Other Histologies", "VALUE:08" ], [ "C150-C155,C158-C159,C160", "8020", "VALUE:16.2", "Esophagus and Esophagogastric Junction: Adenocarcinoma", "VALUE:08" ], [ "C150-C155,C158-C159,C160", "8041,8071", "VALUE:16.3", "Esophagus and Esophagogastric Junction: Other Histologies", "VALUE:08" ], [ "C150-C155,C158-C159,C160", "8140", "VALUE:16.2", "Esophagus and Esophagogastric Junction: Adenocarcinoma", "VALUE:08" ], [ "C150-C155,C158-C159,C160", "8145", "VALUE:16.3", "Esophagus and Esophagogastric Junction: Other Histologies", "VALUE:08" ], [ "C150-C155,C158-C159,C160", "8148", "VALUE:16.2", "Esophagus and Esophagogastric Junction: Adenocarcinoma", "VALUE:08" ], [ "C150-C155,C158-C159,C160", "8200", "VALUE:16.2", "Esophagus and Esophagogastric Junction: Adenocarcinoma", "VALUE:08" ], [ "C150-C155,C158-C159", "8240", "VALUE:16.3", "Esophagus and Esophagogastric Junction: Other Histologies", "VALUE:08" ], [ "C150-C155,C158-C159,C160", "8244", "VALUE:16.2", "Esophagus and Esophagogastric Junction: Adenocarcinoma", "VALUE:08" ], [ "C150-C155,C158-C159,C160", "8246", "VALUE:16.3", "Esophagus and Esophagogastric Junction: Other Histologies", "VALUE:08" ], [ "C150-C155,C158-C159", "8249", "VALUE:16.3", "Esophagus and Esophagogastric Junction: Other Histologies", "VALUE:08" ], [ "C150-C155,C158-C159,C160", "8255", "VALUE:16.3", "Esophagus and Esophagogastric Junction: Other Histologies", "VALUE:08" ], [ "C150-C155,C158-C159,C160", "8430", "VALUE:16.2", "Esophagus and Esophagogastric Junction: Adenocarcinoma", "VALUE:08" ], [ "C160", "8976", "VALUE:16.3", "Esophagus and Esophagogastric Junction: Other Histologies", "VALUE:08" ], [ "C150-C155,C158-C159,C160", "8001-8005,8011-8012,8014-8015,8021-8040,8042-8046", "VALUE:XX", "Other Esophagus and Esophagogastric Junction", "VALUE:88" ], [ "C150-C155,C158-C159,C160", "8060,8072-8073,8075-8076,8078-8082,8084-8131", "VALUE:XX", "Other Esophagus and Esophagogastric Junction", "VALUE:88" ], [ "C150-C155,C158-C159,C160", "8141-8144,8146-8147,8149", "VALUE:XX", "Other Esophagus and Esophagogastric Junction", "VALUE:88" ], [ "C150-C155,C158-C159", "8150-8153", "VALUE:XX", "Other Esophagus and Esophagogastric Junction", "VALUE:88" ], [ "C150-C155,C158-C159,C160", "8154", "VALUE:XX", "Other Esophagus and Esophagogastric Junction", "VALUE:88" ], [ "C150-C155,C158-C159", "8155-8156", "VALUE:XX", "Other Esophagus and Esophagogastric Junction", "VALUE:88" ], [ "C150-C155,C158-C159", "8158", "VALUE:XX", "Other Esophagus and Esophagogastric Junction", "VALUE:88" ], [ "C150-C155,C158-C159,C160", "8160-8191,8201-8231", "VALUE:XX", "Other Esophagus and Esophagogastric Junction", "VALUE:88" ], [ "C150-C155,C158-C159", "8241-8242", "VALUE:XX", "Other Esophagus and Esophagogastric Junction", "VALUE:88" ], [ "C150-C155,C158-C159,C160", "8243,8245,8247-8248,8250-8254,8256-8420", "VALUE:XX", "Other Esophagus and Esophagogastric Junction", "VALUE:88" ], [ "C150-C155,C158-C159,C160", "8440-8552,8561-8682", "VALUE:XX", "Other Esophagus and Esophagogastric Junction", "VALUE:88" ], [ "C150-C155,C158-C159", "8683", "VALUE:XX", "Other Esophagus and Esophagogastric Junction", "VALUE:88" ], [ "C150-C155,C158-C159,C160", "8690-8700,8720-8790", "VALUE:XX", "Other Esophagus and Esophagogastric Junction", "VALUE:88" ] ]
+}

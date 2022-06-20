@@ -1,0 +1,35 @@
+{
+  "id" : "stage_group_p_39380",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Stage Group (p)",
+  "title" : "TNM 7 Stage Group",
+  "notes" : "**Note 1:** SEER*RSA added additional information to UICC 7th edition stages with UICC approval. If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC 7th edition manual to ensure you are using the appropriate logic. \n* Stage Group IV (as defined below in the table)\n\n**Note 2:** The stage group below is valid in AJCC 7th edition, but not UICC. Approved by UICC.\n* Stage I - T1, N0, M0, Pap>=45, Med\n\n**Note 3:** The stage group below is valid in UICC 7th edition, but not AJCC 7th edition.\n* Stage Group IVA - T4a, N1, M0, Pap >=45, Med\n* Stage Group IVA - T4a, NX, M0, Med\n\n**Note 4:**  While the stage groups below are valid, the specified TNM combinations are only included in SEER*RSA.\n* Stage Group IVA - T0, N1b, M0, Pap>=45, Med -T0 is not included in the stage group definition\n* Stage Group IVA - T4a, NX, M0, Pap>=45 - NX is not included in the stage group definition \n\n**Note 5:** The Histopathologic Types are set as follows  \n* ANA: Anaplastic - 8020,8021,8030-8032 OR Grade = 4 with any Histology  \n* MED: Medullary - 8345-8347,8430,8510, 8512,8513; grade is not 4  \n* PAP<45: Papillary/Follicular, Age<45 - Any other histology, grade is not 4, Age at diagnosis 0-44  \n* PAP>=45: Papillary/Follicular, Age>=45 - Any other histology, grade is not 4, Age at diagnosis 45 or older  \n* PAP=999: Papillary/Follicular, Age Unknown - Any other histology, grade is not 4, Age at diagnosis is unknown\n\n**Note 6:** TNM does not include an in situ category for this schema. Assign 88 to stage group for in situ cases.",
+  "last_modified" : "2018-05-14T21:29:01.884Z",
+  "definition" : [ {
+    "key" : "path_stage_group_direct",
+    "name" : "Stage",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_stage_group_direct_display",
+    "name" : "Stage Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "t",
+    "name" : "T",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "hist_type",
+    "name" : "Histopathological Type",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "I", "Any T   \nT1,1a,1b", "Any N\nN0", "M0\nM0", "PAP<45\nPAP>=45, MED" ], [ "2", "II", "Any T\nT2   \nT2,3", "Any N\nN0   \nN0", "M1\nM0\nM0", "PAP<45\nPAP>=45\nMED" ], [ "3", "III", "T3          \nT1,1a,1b,2,3", "N0 \nN1a", "M0\nM0", "PAP>=45\nPAP>=45, MED" ], [ "4", "IV", "TX\nT4", "N1b  \nAny N", "M0\nM0", "PAP>=45, MED\nPAP>=45, MED, ANA" ], [ "4A", "IVA", "T0,1,1a,1b,2,3\nT4a", "N1b  \nAny N", "M0\nM0", "PAP>=45, MED\nPAP>=45, MED, ANA" ], [ "4B", "IVB", "T4b", "Any N", "M0", "PAP>=45, MED, ANA" ], [ "4C", "IVC", "Any T   \nT4,4a,4b", "Any N\nAny N", "M1\nM1", "PAP>=45, MED\nANA" ], [ "99", "Unknown", "Any T       \nT0\nT0          \nT1,1a,1b,2,3\nTX", "Any N  \nN0  \nN1,1a,X  \nN1,X     \nN0,1,1a,X", "Any M\nM0\nM0   \nM0   \nM0", "PAP=999\nPAP>=45, MED\nPAP>=45, MED\nPAP>=45, MED\nPAP>=45, MED" ], [ "88", "Not Applicable", "88", "88", "88", "Any" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "tumor_size_pair_ajcc6_xpl",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Tumor Size Pair AJCC6",
+  "title" : "Tumor Size Pair AJCC6 Table",
+  "notes" : "**Note**:  For CS Extension codes 150-180, 635, and 640, the T for AJCC 6 staging is assigned based on the values of tumor basal diameter, recorded in CS Site-Specific Factor 2, and thickness, recorded in CS Site-Specific Factor 3. Basal diameter and thickness are mapped to tumor size pairs as shown in this table, and the CS Extension codes and tumor size pairs are mapped to T in the Extension Size Pair AJCC 6 Table.",
+  "last_modified" : "2015-05-27T16:20:12.843Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "CS SSF2 Basal Diameter",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf3",
+    "name" : "CS SSF3 Thickness",
+    "type" : "INPUT"
+  }, {
+    "key" : "t_category",
+    "name" : "Tumor Size Pair",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "000-980,988,990-996,999", "ERROR:", "MATCH:" ], [ "001-100", "000", "ERROR:", "MATCH:" ], [ "001-100", "001-980", "VALUE:1", "JUMP:extension_size_pair_ajcc6_xpn" ], [ "001-100", "988", "ERROR:", "MATCH:" ], [ "001-100", "990-996,999", "VALUE:1", "JUMP:extension_size_pair_ajcc6_xpn" ], [ "101-160", "000", "ERROR:", "MATCH:" ], [ "101-160", "001-980", "VALUE:2", "JUMP:extension_size_pair_ajcc6_xpn" ], [ "101-160", "988", "ERROR:", "MATCH:" ], [ "101-160", "990-996,999", "VALUE:2", "JUMP:extension_size_pair_ajcc6_xpn" ], [ "161-980", "000", "ERROR:", "MATCH:" ], [ "161-980", "001-980", "VALUE:3", "JUMP:extension_size_pair_ajcc6_xpn" ], [ "161-980", "988", "ERROR:", "MATCH:" ], [ "161-980", "990-996,999", "VALUE:3", "JUMP:extension_size_pair_ajcc6_xpn" ], [ "988", "000", "ERROR:", "MATCH:" ], [ "988", "001-980,988,990-996,999", "ERROR:", "MATCH:" ], [ "991-993", "000", "ERROR:", "MATCH:" ], [ "991-993", "001-980", "VALUE:1", "JUMP:extension_size_pair_ajcc6_xpn" ], [ "991-993", "988", "ERROR:", "MATCH:" ], [ "991-993", "990-996,999", "VALUE:1", "JUMP:extension_size_pair_ajcc6_xpn" ], [ "994-995", "000", "ERROR:", "MATCH:" ], [ "994-995", "001-980", "VALUE:2", "JUMP:extension_size_pair_ajcc6_xpn" ], [ "994-995", "988", "ERROR:", "MATCH:" ], [ "994-995", "990-996,999", "VALUE:2", "JUMP:extension_size_pair_ajcc6_xpn" ], [ "996-997", "000", "ERROR:", "MATCH:" ], [ "996-997", "001-980", "VALUE:3", "JUMP:extension_size_pair_ajcc6_xpn" ], [ "996-997", "988", "ERROR:", "MATCH:" ], [ "996-997", "990-996,999", "VALUE:3", "JUMP:extension_size_pair_ajcc6_xpn" ], [ "999", "000", "ERROR:", "MATCH:" ], [ "999", "001-980", "VALUE:9", "JUMP:extension_size_pair_ajcc6_xpn" ], [ "999", "988", "ERROR:", "MATCH:" ], [ "999", "990-996,999", "VALUE:9", "JUMP:extension_size_pair_ajcc6_xpn" ] ]
+}

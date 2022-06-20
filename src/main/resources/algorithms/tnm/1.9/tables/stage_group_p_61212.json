@@ -1,0 +1,31 @@
+{
+  "id" : "stage_group_p_61212",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Stage Group (p)",
+  "title" : "TNM 7 Stage Group",
+  "notes" : "**Note 1:** SEER*RSA added additional information to UICC 7th edition stages with UICC approval. If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC 7th edition manual to ensure you are using the appropriate logic.\n* Stage Group IV (as defined in this table)\n\n**Note 2:** While the stage group below is valid, the specified TNM combination is only included in SEER*RSA.\n * Stage Group III - Tis, N1, M0 - Tis is not included in the stage group definition\n * Stage Group IVA - (T0,Tis), (N2 [NOS], N2a-N2c), M0 - Neither T0 nor Tis are included in the stage group definition",
+  "last_modified" : "2018-05-14T21:29:00.928Z",
+  "definition" : [ {
+    "key" : "path_stage_group_direct",
+    "name" : "Stage",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_stage_group_direct_display",
+    "name" : "Stage Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "t",
+    "name" : "T",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "0", "Tis     ", "N0,X", "M0" ], [ "1", "I", "T1,1a,1b", "N0", "M0" ], [ "2", "II", "T2      ", "N0", "M0" ], [ "3", "III", "T3\nTis,T1,1a,1b,2,3", "N0\nN1", "M0\nM0" ], [ "4", "IV", "T4,4a\nT4   \nTX", "NX           \nN0,1,2,2a-2c \nN2,2a-2c", "M0\nM0\nM0" ], [ "4A", "IVA", "Tis,T0,1,1a,1b,2,3\nT4a", "N2,2a-2c    \nN0,1,2,2a-2c", "M0\nM0" ], [ "4B", "IVB", "Any T\nT4b", "N3\nAny N", "M0\nM0" ], [ "4C", "IVC", "Any T", "Any N", "M1" ], [ "99", "Unknown", "T0            \nT1,1a,1b,2,3\nTX", "N0,1,X   \nNX   \nN0,1,X", "M0\nM0\nM0" ], [ "88", "Not Applicable", "88", "88", "88" ] ]
+}

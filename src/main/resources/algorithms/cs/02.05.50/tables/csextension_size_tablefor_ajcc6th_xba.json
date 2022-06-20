@@ -1,0 +1,23 @@
+{
+  "id" : "csextension_size_tablefor_ajcc6th_xba",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "CS Extension Size Table for AJCC 6th",
+  "title" : "CS Extension Size Table for AJCC 6th",
+  "notes" : "**Note**:  For CS Extension codes 200-310, and 380-390 ONLY, the T category for AJCC 6 staging is assigned based on CS Tumor Size as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:02.437Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "size",
+    "name" : "CS Tumor Size",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "200", "000", "ERROR:" ], [ "210", "000", "ERROR:" ], [ "220", "000", "ERROR:" ], [ "250", "000", "ERROR:" ], [ "300", "000", "ERROR:" ], [ "310", "000", "ERROR:" ], [ "380", "000", "ERROR:" ], [ "390", "000", "ERROR:" ], [ "200", "001-040", "VALUE:T1b1" ], [ "210", "001-040", "VALUE:T1b1" ], [ "220", "001-040", "VALUE:T1b1" ], [ "250", "001-040", "VALUE:T1b1" ], [ "300", "001-040", "VALUE:T1b1" ], [ "310", "001-040", "VALUE:T1b1" ], [ "380", "001-040", "VALUE:T1b1" ], [ "390", "001-040", "VALUE:T1b1" ], [ "200", "041-989", "VALUE:T1b2" ], [ "210", "041-989", "VALUE:T1b2" ], [ "220", "041-989", "VALUE:T1b2" ], [ "250", "041-989", "VALUE:T1b2" ], [ "300", "041-989", "VALUE:T1b2" ], [ "310", "041-989", "VALUE:T1b2" ], [ "380", "041-989", "VALUE:T1b2" ], [ "390", "041-989", "VALUE:T1b2" ], [ "200", "990-994", "VALUE:T1b1" ], [ "210", "990-994", "VALUE:T1b1" ], [ "220", "990-994", "VALUE:T1b1" ], [ "250", "990-994", "VALUE:T1b1" ], [ "300", "990-994", "VALUE:T1b1" ], [ "310", "990-994", "VALUE:T1b1" ], [ "380", "990-994", "VALUE:T1b1" ], [ "390", "990-994", "VALUE:T1b1" ], [ "200", "995", "VALUE:T1b2" ], [ "210", "995", "VALUE:T1b2" ], [ "220", "995", "VALUE:T1b2" ], [ "250", "995", "VALUE:T1b2" ], [ "300", "995", "VALUE:T1b2" ], [ "310", "995", "VALUE:T1b2" ], [ "380", "995", "VALUE:T1b2" ], [ "390", "995", "VALUE:T1b2" ], [ "200", "996-998", "ERROR:" ], [ "210", "996-998", "ERROR:" ], [ "220", "996-998", "ERROR:" ], [ "250", "996-998", "ERROR:" ], [ "300", "996-998", "ERROR:" ], [ "310", "996-998", "ERROR:" ], [ "380", "996-998", "ERROR:" ], [ "390", "996-998", "ERROR:" ], [ "200", "999", "VALUE:T1bNOS" ], [ "210", "999", "VALUE:T1b1" ], [ "220", "999", "VALUE:T1b2" ], [ "250", "999", "VALUE:T1bNOS" ], [ "300", "999", "VALUE:T1NOS" ], [ "310", "999", "VALUE:T1NOS" ], [ "380", "999", "VALUE:T1bNOS" ], [ "390", "999", "VALUE:T1bNOS" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "nodes_exam_dna_95635",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Nodes Exam DNA",
+  "title" : "Regional Nodes Examined",
+  "notes" : "See the [SEER Program Coding Manual](https://seer.cancer.gov/tools/codingmanuals/index.html) for coding instructions.",
+  "last_modified" : "2020-05-19T17:51:07.877Z",
+  "definition" : [ {
+    "key" : "nodes_exam",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "99", "Not applicable" ] ]
+}

@@ -1,0 +1,34 @@
+{
+  "id" : "ajcc_chapter_calculation_118",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2020-03-27T14:59:20.805Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C171-C172", "8240,8249", "3", "VALUE:31", "Neuroendocrine Tumors of the Jejunum and Ileum ", "VALUE:08" ], [ "C171-C172", "8240,8249", "2", "VALUE:XX", "Other Neuroendocrine Tumors of the Jejunum and Ileum", "VALUE:88" ], [ "C173,C178-C179", "8240,8249", "*", "VALUE:XX", "Other Neuroendocrine Tumors of the Jejunum and Ileum", "VALUE:88" ], [ "C171-C173,C178-C179", "8150-8153,8155-8156,8158", "*", "VALUE:XX", "Other Neuroendocrine Tumors of the Jejunum and Ileum", "VALUE:88" ], [ "C171-C173,C178-C179", "8241-8242,8683", "*", "VALUE:XX", "Other Neuroendocrine Tumors of the Jejunum and Ileum", "VALUE:88" ] ]
+}

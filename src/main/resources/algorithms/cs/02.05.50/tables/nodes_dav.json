@@ -1,0 +1,35 @@
+{
+  "id" : "nodes_dav",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**: Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**: Celiac and superior mesenteric nodes are classified as regional nodes for AJCC staging and are coded in CS Lymph Nodes.\n\n**Note 3**: Para-aortic and pericaval lymph nodes are classified as regional nodes for AJCC 7 staging and are now coded in CS Lymph Nodes.",
+  "last_modified" : "2015-05-27T16:19:32.634Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "100", "Regional lymph nodes:\n    Cystic duct (Calot's node)\n    Node of foramen of Winslow (omental) (epiploic)\n    Pericholedochal (common bile duct)", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "110", "Regional lymph nodes:\n    Porta hepatis (portal)(periportal) (hilar) (in hilus of liver)", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "120", "Regional lymph nodes:\n    Pancreaticoduodenal\n    Periduodenal\n    Peripancreatic (near head of pancreas only)", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "150", "Stated as N1 with no other information on regional lymph nodes", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "200", "OBSOLETE DATA CONVERTED V0203\nSee code 120\n\nRegional lymph node(s):\n    Pancreaticoduodenal", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "210", "OBSOLETE DATA CONVERTED V0203\nSee code 120\n\nRegional lymph node(s):\n    Periduodenal\n    Peripancreatic (near head of pancreas only)", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "250", "OBSOLETE DATA CONVERTED V0203\nSee code 120\n\n(110) + (200)", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "300", "Regional lymph node(s), NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "500", "Celiac lymph node(s)", "VALUE:N2", "VALUE:N1", "VALUE:D", "VALUE:RN" ], [ "600", "Superior mesenteric lymph node(s)", "VALUE:N2", "VALUE:N1", "VALUE:D", "VALUE:RN" ], [ "610", "(500 or 600) + 110", "VALUE:N2", "VALUE:N1", "VALUE:D", "VALUE:RN" ], [ "620", "Regional lymph nodes:\n     Para-aortic\n     Pericaval ", "VALUE:N2", "VALUE:N0", "VALUE:D", "VALUE:D" ], [ "630", "OBSOLETE DATA CONVERTED V0203\nSee code 635\n\n620 + any of 100, 110, 200, 210, 500 or 600\nAny regional lymph node(s) as listed in codes 100, 110, 200, 210, 500 or 600 + para-aortic and/or pericaval lymph node(s)", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "635", "620 + (100, 110, 120, 500, or 600)\n\nAny regional lymph node(s) listed in codes 100, 110, 120, 500, or 600 plus para-aortic and/or pericaval lymph node(s)", "VALUE:N2", "VALUE:N1", "VALUE:D", "VALUE:D" ], [ "650", "Stated as N2 with no other information on regional lymph nodes", "VALUE:N2", "VALUE:N1", "VALUE:D", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "ampulla_of_vater_t_63892",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin T Ampulla Vater",
+  "title" : "Clinical T",
+  "notes" : "**Note:** High grade dysplasia and severe dysplasia of the ampulla vater are generally not reportable in cancer registries.\n* Assign pTis if your registry collects these tumors",
+  "last_modified" : "2018-05-14T21:28:58.369Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T \n    Extension cannot be determined\nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor", "" ], [ "pIS", "pTis", "Carcinoma in situ", "Intraepithelial, noninvasive\n\nStated as Tis" ], [ "c1", "cT1", "Tumor limited to ampulla of Vater or sphincter of Oddi", "Invasive tumor confined/limited to ampulla of Vater\nInvasive tumor extending to sphincter of Oddi\n\nConfined to ampulla, NOS\nLocalized, NOS\n\nStated as T1" ], [ "c2", "cT2", "Tumor invades duodenal wall", "Stated as T2" ], [ "c3", "cT3", "Tumor invades pancreas", "Stated as T3" ], [ "c4", "cT4", "Tumor invades peripancreatic soft tissue, or other  adjacent organs or structures", "Common bile duct\n\nExtrahepatic bile duct(s) \n(Other than common bile duct and sphincter of Oddi)\n\nExtension to other adjacent organs or tissues:\n    Blood vessel(s) (major):\n        Hepatic artery\n        Portal vein\n    Gallbladder\n    Hepatic flexure of colon\n    Lesser omentum\n    Liver, including porta hepatis\n    Pericancreatic soft tissue\n    Stomach, NOS:\n        Distal\n        Proximal\n    Transverse colon\n\nFurther contiguous extension\n\nStated as T4" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

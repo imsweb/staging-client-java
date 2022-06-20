@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_cervix",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Schema Selection Cervix",
+  "title" : "Schema selection for Cervix",
+  "last_modified" : "2018-05-14T21:28:58.389Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C530-C531,C538-C539", "8000-9136,9141-9582,9700-9701", "MATCH" ] ]
+}

@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_lacrimal_gland",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection LacrimalGland",
+  "title" : "Schema selection for LacrimalGland",
+  "last_modified" : "2021-04-29T18:17:39.326Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_1",
+    "name" : "Schema Discriminator 1",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C695", "8000-8700, 8941, 8980, 8982", "1", "MATCH" ] ]
+}

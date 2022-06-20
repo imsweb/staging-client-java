@@ -1,0 +1,30 @@
+{
+  "id" : "schema_selection_heme_retic",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection HemeRetic",
+  "title" : "Schema selection for HemeRetic",
+  "last_modified" : "2021-04-26T19:35:50.940Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_1",
+    "name" : "Schema Discriminator 1",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C000-C440, C442-C689, C691-C694, C698-C699, C739-C749, C750, C754-C759, C760-C809", "9591", "*", "1,2", "MATCH" ], [ "C700-C729, C751-C753", "9591", "3", "1,2", "MATCH" ], [ "C000-C699, C739-C750, C754-C809", "9724, 9727, 9740-9742, 9749, 9762-9809, 9811-9820, 9831-9920, 9931-9993", "*", "*", "MATCH" ], [ "C700-C729, C751-C753", "9724, 9727, 9740-9742, 9749, 9762-9809, 9811-9820, 9831-9920, 9931-9993", "3", "*", "MATCH" ], [ "C000-C699, C739-C750, C754-C809", "9751, 9755-9759", "*", "*", "MATCH" ], [ "C000-C440, C442-C689, C691-C694, C698-C699, C739-C750, C754-C809", "9930", "*", "*", "MATCH" ], [ "C700-C729, C751-C753", "9930", "3", "*", "MATCH" ] ]
+}

@@ -1,0 +1,28 @@
+{
+  "id" : "extension_bbx",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "EOD Primary Tumor",
+  "title" : "EOD Primary Tumor",
+  "notes" : "**Note 1:** Code 500 describes locally advanced, but potentially resectable tumor.\n\n**Note 2:** Codes 600 and 700 describes locally advanced, technically unresectable tumor.",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017\n\n(5) Rusch, V.W., et al. **Malignant Plural Mesothelioma**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017",
+  "last_modified" : "2021-04-08T19:00:37.423Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_t",
+    "name" : "SS2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "Ipsilateral parietal pleura with/without involvement of   \n- Diaphragmatic pleura\n- Mediastinal pleura \n- Visceral pleura\n\nConfined to pleura (mesothelioma), NOS\nLocalized, NOS", "VALUE:T1", "VALUE:L" ], [ "300", "Ipsilateral pleural surfaces all involved \n- Diaphragmatic, parietal, mediastinal, and visceral\n\nWith involvement of at least one of the following \n- Confluent visceral pleural tumor (including any involvement of interlobar fissure) \n- Contiguous lung involvement, NOS\n- Diaphragm (Diaphragmatic muscle)\n- Lung parenchyma (direct extension)\n- Nodule(s) beneath visceral pleural surface (ipsilateral pleura)", "VALUE:T2", "VALUE:RE" ], [ "500", "Ipsilateral pleural surfaces all involved \n- Diaphragmatic, parietal, mediastinal, visceral\n\nWith involvement of at least one of the following \n- Adjacent (connective) tissue, NOS\n- Endothoracic fascia\n- Mediastinal fat (mediastinal tissues)\n- Pericardium, non-transmural or NOS\n- Solitary focus of tumor extending into the chest wall", "VALUE:T3", "VALUE:RE" ], [ "600", "Ipsilateral pleural surfaces all involved \n- Diaphragmatic, parietal, mediastinal, visceral\n\nWith involvement at least one of the following \n- Chest wall (diffuse extension or multifocal masses of tumor)\n  + WITH or WITHOUT associated rib destruction\n- Mediastinal organs (direct extension)\n- Pericardium (extension through to the internal surface without pericardial effusion)\n- Rib", "VALUE:T4", "VALUE:RE" ], [ "700", "Ipsilateral pleural surfaces all involved \n- Diaphragmatic, parietal, mediastinal, visceral\n\nWith involvement at least one of the following \n- Brachial plexus\n- Cervical (neck) tissues\n- Contralateral pleura (direct contiguous extension)\n- Heart muscle\n- Intra-abdominal organs\n- Myocardium\n- Pericardium (direct extension through to the internal surface with pericardial effusion)\n- Peritoneum (direct transdiaphragmatic extension of tumor)\n- Spine\n\nFurther contiguous extension", "VALUE:T4", "VALUE:D" ], [ "800", "No evidence of primary tumor", "VALUE:T0", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in medical record\n\nDeath Certificate Only", "VALUE:TX", "VALUE:U" ] ]
+}

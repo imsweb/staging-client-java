@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_conjunctiva",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection Conjunctiva",
+  "title" : "Schema selection for Conjunctiva",
+  "last_modified" : "2015-05-27T16:19:41.899Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C690", "8000-8713,8800-9136,9141-9508,9520-9582,9700-9701", "MATCH" ] ]
+}

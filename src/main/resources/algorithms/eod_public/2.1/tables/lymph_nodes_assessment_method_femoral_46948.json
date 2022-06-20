@@ -1,0 +1,19 @@
+{
+  "id" : "lymph_nodes_assessment_method_femoral_46948",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "LN Assessment Method Femoral-Inguinal",
+  "title" : "Lymph Nodes Assessment Method Femoral-Inguinal",
+  "notes" : "**Note 1:** Physician statement of femoral-inguinal assessment method can be used to code this data item when no other information is available.\n\n**Note 2:** The following are femoral-inguinal nodes\n* Femoral\n* Inguinal, NOS\n  + Inguinofemoral (groin)\n  + Node of Cloquet or Rosenmuller (highest deep inguinal)\n  + Superficial inguinal\n\n**Note 3:** Assign the highest applicable code (0-2) in the case of multiple assessments.\n\n**Note 4:** For this data item, do not include isolated tumor cells (ITCs).\n\n**Note 5:** If there is no mention of femoral-inguinal lymph node involvement in the workup, and the status data item: *LN Status: Femoral-Inguinal* does not indicate positive femoral-inguinal nodes, code 0.\n\n**Note 6:** The assessment results are recorded in LN Status: Femoral-Inguinal [NAACCR Data Item #3959].",
+  "last_modified" : "2021-06-09T12:31:40.281Z",
+  "definition" : [ {
+    "key" : "ln_assessment_femoral",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Radiography, imaging \n(Ultrasound (US), computed tomography scan (CT), magnetic resonance imaging (MRI), positron emission tomography scan (PET))\n\nPhysical exam only" ], [ "1", "Incisional biopsy; fine needle aspiration (FNA)" ], [ "2", "Lymphadenectomy\nSentinel node biopsy\nExcisional biopsy or resection with microscopic confirmation" ], [ "7", "Femoral-inguinal lymph node(s) assessed, unknown assessment method" ], [ "8", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nFemoral-inguinal lymph node(s) not assessed or unknown if assessed" ] ]
+}

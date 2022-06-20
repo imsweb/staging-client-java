@@ -1,0 +1,20 @@
+{
+  "id" : "ssf2_kbl",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF2",
+  "title" : "CS Site-Specific Factor 2",
+  "subtitle" : "CS Tumor Size - Third Largest Dimension",
+  "notes" : "**Note 1**:  According to AJCC tumor size is an important prognostic factor.  The three dimensions of tumor size (length, width and height) are also important to collect if documented in the patient record.  Record the largest dimension of tumor size CS Tumor Size.  Record the second largest dimension of tumor size in CS Site-Specific Factor 1 and the smallest dimension of tumor size in CS Site-Specific Factor 2.\n\n**Note 2**:  Tumor size expressed as 4.0 centimeter (cm) x 3.0 cm x 2.0 cm is recorded as follows:\n\n* CS Tumor Size:  040\n* CS Site-Specific Factor 1:  030\n* CS Site-Specific Factor 2: 020\n\nTumor size expressed as \"greater than 8 cm\" is recorded as follows:\n\n* CS Tumor Size :  997\n* CS Site-Specific Factor 1:  999\n* CS Site-Specific Factor 2:  999",
+  "last_modified" : "2015-05-27T16:20:03.450Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No mass/tumor found" ], [ "001-979", "001 - 979 millimeters (mm)\n(Exact size to nearest mm)" ], [ "980", "980 mm or larger" ], [ "988", "Not applicable:  Information not collected for this case\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.  If this item is required to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "990", "Microscopic focus or foci only and no size of focus given" ], [ "991", "Described as \"less than 1 centimeter (cm)\"" ], [ "992", "Described as \"less than 2 cm,\" or \"greater than 1 cm,\" or \"between 1 cm and 2 cm\"" ], [ "993", "Described as \"less than 3 cm,\" or \"greater than 2 cm,\" or \"between 2 cm and 3 cm\"" ], [ "994", "Described as \"less than 4 cm,\" or \"greater than 3 cm,\" or \"between 3 cm and 4 cm\"" ], [ "995", "Described as \"less than 5 cm,\" or \"greater than 4 cm,\" or \"between 4 cm and 5 cm\"" ], [ "996", "Described as \"less than 8cm\" or \"between 5cm and 8cm\"" ], [ "997", "Described as \"greater than 8cm\"" ], [ "998", "OBSOLETE DATA REVIEWED AND CHANGED V0204 \nTumor size may be based on clinical examination if histologic examination not performed.  Review and recode to codes 001-980, 990-997.  \n\nNo histologic examination of primary site" ], [ "999", "Unknown, third dimension of size not stated\nNot documented in patient record" ] ]
+}

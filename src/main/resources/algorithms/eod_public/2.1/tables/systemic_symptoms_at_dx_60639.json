@@ -1,0 +1,19 @@
+{
+  "id" : "systemic_symptoms_at_dx_60639",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "B Symptoms",
+  "title" : "B Symptoms",
+  "notes" : "**Note 1:** Physician statement of B Symptoms can be used to code this data item when no other information is available.\n\n**Note 2:** Each stage should be classified as either A or B according to the absence or presence of defined constitutional symptoms, such as:\n* Fevers: Unexplained fever with temperature above 38 degrees C;\n* Night sweats: Drenching sweats that require change of bedclothes;\n* Weight loss: Unexplained weight loss of more than 10% of the usual body weight in the six months prior to diagnosis.\n\n**Note 3:** Pruritus alone does not qualify for B classification, nor does alcohol intolerance, fatigue, or a short, febrile illness associated with suspected infections.\n\n**Note 4:** Code 9 if there is no mention of B symptoms.",
+  "last_modified" : "2019-04-05T16:52:37.100Z",
+  "definition" : [ {
+    "key" : "b_symptoms",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "No B symptoms (asymptomatic) \nClassified as \"A\" by physician when asymptomatic" ], [ "1", "Any B symptom(s)\nNight sweats (drenching)\nUnexplained fever (above 38 degrees C)\nUnexplained weight loss (generally greater than 10% of body weight\nin the six months before admission)\nB symptoms, NOS\n\nClassified as \"B\" by physician when symptomatic" ], [ "8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nB symptoms not assessed or unknown if assessed" ] ]
+}

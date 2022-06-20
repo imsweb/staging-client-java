@@ -1,0 +1,22 @@
+{
+  "id" : "determine_correct_table_for_ajcc6_stg_ns37",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Determine Correct Table for AJCC 6 Stage Group",
+  "title" : "Determining Which Calculation Table Applies for AJCC 6 Stage Group",
+  "last_modified" : "2015-05-27T16:19:03.443Z",
+  "definition" : [ {
+    "key" : "cs_input_version_original",
+    "name" : "CS Version Input Original",
+    "type" : "INPUT"
+  }, {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "010401,010400,010300,010200,010100,010005,010004,010003,010002,010000,000937", ",2004-2009", "JUMP:ajcctnm6_stage_csv1_xpz" ], [ "020500-999999,020440,020302,020200,020100,020001", ",2004-9999", "JUMP:ajcc6_stage_qpq" ], [ "000937-999999", "2010-9999", "JUMP:ajcc6_stage_qpq" ] ]
+}

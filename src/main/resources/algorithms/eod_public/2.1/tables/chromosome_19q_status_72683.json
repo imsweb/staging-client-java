@@ -1,0 +1,19 @@
+{
+  "id" : "chromosome_19q_status_72683",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Chromosome 19q Status",
+  "title" : "Chromosome 19q: Loss of Heterozygosity (LOH)",
+  "notes" : "**Note 1:** Physician statement of Chromosome 19q deletion/LOH can be used to code this data item.\n\n**Note 2:** This is a special molecular diagnostic test performed on tumor tissue to identify loss of genetic material normally found on the long arm of one of the patient's two copies of chromosome 19. A normal cell will contain two complete copies of each chromosome, one from each parent, and this normal state is termed heterozygous. Loss of heterozygosity (LOH) is an abnormal state reflecting loss of the whole arm of chromosome 19q following a chromosomal translocation event.\n\n**Note 3:** Other terms for LOH include whole arm loss, deletion and allelic loss.\n\n**Note 4:** Below is a list of histologies/terms for which the Chromosome 19q test is commonly done. If the test was done, record the results, regardless of the histology.\n\n* 9382/3: Oligoastrocytoma (anaplastic or NOS)\n* 9400/3: Diffuse astrocytoma (IDH mutant, IDH wild type or NOS)\n* 9401/3: Anaplastic astrocytoma (IDH mutant, IDH wild type or NOS)\n* 9411/3: Gemistocytic astrocytoma, IDH mutant\n* 9424/3: Anaplastic pleomorphic xanthoastrocytoma\n* 9430/3: Astroblastoma\n* 9440/3: Glioblastoma (epithelioid, IDH wild type or NOS)\n* 9441/3: Giant cell glioblastoma\n* 9442/3: Gliosarcoma\n* 9445/3: Glioblastoma, IDH mutant\n* 9450/3: Oligodendroglioma (IDH mutant and 1p/19q codeleted or NOS)\n* 9451/3: Anaplastic oligodendroglioma (IDH mutant and 1p/19q codeleted or NOS)\n* 9505/3: Anaplastic ganglioglioma\n* 9530/3: Anaplastic (malignant) meningioma \n\n**Note 5:** If the histology is not listed among those for which the Chromosome 19q test is commonly done, and the test result is not readily available, assume it was not done and code 9 for unknown.\n\n**Note 6:** For brain tumors, tests for LOH of chromosomes 1p and 19q may be performed at the same time and reported on a single report. See also Chromosome 1p: Loss of Heterozygosity (LOH) [NAACCR Data Item #3801].",
+  "last_modified" : "2021-04-08T15:02:00.197Z",
+  "definition" : [ {
+    "key" : "chrom_19q_status",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Chromosome 19q deletion/LOH not identified/not present" ], [ "1", "Chromosome 19q deletion/LOH present" ], [ "6", "Benign or borderline tumor" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nCannot be determined by the pathologist\nChromosome 19q: LOH not assessed or unknown if assessed" ] ]
+}

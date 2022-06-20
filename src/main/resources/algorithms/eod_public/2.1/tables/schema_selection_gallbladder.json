@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_gallbladder",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection Gallbladder",
+  "title" : "Schema selection for Gallbladder",
+  "last_modified" : "2021-04-29T15:33:44.360Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C239", "8000-8700, 8720-8790", "MATCH" ] ]
+}

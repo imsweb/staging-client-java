@@ -1,0 +1,18 @@
+{
+  "id" : "nodes_pos_fna",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes Pos",
+  "title" : "Regional Nodes Positive",
+  "last_modified" : "2015-05-27T16:19:40.020Z",
+  "definition" : [ {
+    "key" : "nodes_pos",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "99", "Not applicable" ] ]
+}

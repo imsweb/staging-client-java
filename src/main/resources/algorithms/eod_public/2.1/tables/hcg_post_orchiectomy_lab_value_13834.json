@@ -1,0 +1,19 @@
+{
+  "id" : "hcg_post_orchiectomy_lab_value_13834",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "hCG Post-Orchiectomy Lab Value",
+  "title" : "hCG (Human Chorionic Gonadotropin) Post-Orchiectomy Lab Value",
+  "notes" : "**Note 1:** Physician statement of the hCG (Human Chorionic Gonadotropin) Post-Orchiectomy Lab Value can be used to code this data item when no other information is available. \n\n**Note 2:** Record the value of the hCG test as documented in the medical record **after orchiectomy** but prior to adjuvant therapy. The lab value may be documented in a lab report, history and physical, or clinical statement in the pathology report.\n\n**Note 3:** If the initial post-orchiectomy hCG remains elevated, review subsequent tests and record the lowest hCG value (normalization or plateau) prior to adjuvant therapy or before the value rises again.\n\n**Note 4:** A lab value expressed in International Units/liter (IU/L) is equivalent to the same value expressed in milli-International Units/milliliter (mIU/mL).\n\n**Note 5:** If the pre-orchiectomy hCG was normal, a post-orchiectomy hCG may not be performed. In this case, code XXXXX.9 should be recorded.\n\n**Note 6:** If the only information available is a statement of elevated or normal, code XXXXX.9.\n\n**Note 7:** The same laboratory test should be used to record information in hCG Post-Orchiectomy Range [NAACCR Data Item #3847].",
+  "last_modified" : "2019-04-05T16:52:37.881Z",
+  "definition" : [ {
+    "key" : "hcg_post_orch_lab_value",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0", "0.0 milli-International Units/milliliter (mIU/mL)" ], [ "0.1-99999.9", "0.1 - 99,999.9 mIU/mL" ], [ "XXXXX.1", "100,000 mIU/mL or greater" ], [ "XXXXX.7", "Test ordered, results not in chart" ], [ "XXXXX.8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code XXXXX.8 may result in an edit error.)" ], [ "XXXXX.9", "Not documented in medical record\nNo orchiectomy performed\nhCG (Human Chorionic Gonadotropin) Post-Orchiectomy Lab Value not assessed or unknown if assessed" ] ]
+}

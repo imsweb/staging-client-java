@@ -1,0 +1,19 @@
+{
+  "id" : "kras_79447",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "KRAS",
+  "title" : "KRAS",
+  "notes" : "**Note 1:** Physician statement of KRAS can be used to code this data item when no other information is available. \n\n**Note 2:** KRAS is a gene which belongs to a class of genes known as oncogenes. When mutated, oncogenes have the potential to cause normal cells to become cancerous. Studies suggest that KRAS gene mutations are often present in colorectal cancer.\n\n**Note 3:** There are 4 KRAS codons that are commonly mutated in colorectal cancers.  This SSDI does not record the actual mutation, but instead records the codon or codon group that contains the mutation.  If a specific KRAS mutation is reported, its codon may be identified from the following list of common KRAS mutations grouped by codon.\n- Codon 12\n  + Gly12Asp (GGT>GAT)\n  + Gly12Val (GGT>GTT)\n  + Gly12Cys (GGT>TGT)\n   + Gly12Ser (GGT>AGT)\n   + Gly12Ala (GGT>GCT)\n   + Gly12 Arg (GGT>CGT)\n   + Codon 12 mutation, not otherwise specified\n- Codon 13\n  + Gly13Asp (GGC>GAC)\n  + Gly13Arg (GGC>CGC)\n  + Gly13Cys (GGC>TGC)\n  + Gly13Ala (GGC>GCC)\n  + Gly13Val (GGC>GTC)\n  + Codon 13 mutation, not otherwise specified\n- Codon 61\n  + Gln61Leu (CAA>CTA)\n  + Gln61His (CAA>CAC)\n  + Codon 61 mutation, not otherwise specified\n- Codon 146\n  + Ala146Thr (G436A) (GCA>ACA)\n  + Codon 146 mutation, not otherwise specified\n\n**Note 4:** KRAS analysis is commonly done for patients with metastatic disease.\n\n**Note 5:** Results from nodal or metastatic tissue may be used for KRAS.\n\n**Note 6:** Record the results of the KRAS from the initial workup (clinical and pathological workup).\n\n**Note 7:** If KRAS is positive and there is no mention of the mutated codon, or the mutated codon is not specified, code 4.\n\n**Note 8:** Code 9 when\n- Insufficient amount of tissue available to perform test\n- No microscopic confirmation of tumor\n- KRAS not ordered or not done, or unknown if ordered or done",
+  "last_modified" : "2019-11-21T17:08:01.199Z",
+  "definition" : [ {
+    "key" : "kras",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Normal \nKRAS negative, KRAS wild type\nNegative for (somatic) mutations, no alterations, no (somatic) mutations identified, not present, not detected" ], [ "1", "Abnormal (mutated) in codon(s) 12, 13 and/or 61" ], [ "2", "Abnormal (mutated) in codon 146 only" ], [ "3", "Abnormal (mutated), but not in codon(s) 12, 13, 61, or 146" ], [ "4", "Abnormal (mutated), NOS, codon(s) not specified" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nKRAS not assessed or unknown if assessed" ] ]
+}

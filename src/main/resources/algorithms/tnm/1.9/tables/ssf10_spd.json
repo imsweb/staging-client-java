@@ -1,0 +1,20 @@
+{
+  "id" : "ssf10_spd",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF10",
+  "title" : "Site-Specific Factor 10",
+  "subtitle" : "Human Papilloma Virus (HPV) Status",
+  "notes" : "**Note 1:**  There is evidence that human papilloma virus (HPV) plays a role in the pathogenesis of some cancers. HPV testing may be performed for prognostic purposes; testing may also be performed on metastatic sites to aid in determination of the primary site.\n\n**Note 2:**  Record the results of any HPV testing performed on pathologic specimens from the primary tumor or a metastatic site, including lymph nodes.  Do not record the results of blood tests or serology.\n\n**Note 3:**  HPVs are divided into high-risk and low-risk types. \n* The highest risk HPV types are types 16 and 18. Other high-risk types are 26, 31, 33, 35, 36, 45, 51, 52, 53, 56, 58, 59, 66, 67, 68, 69, 70, 73, 82, and 85. The HPV vaccine is designed to protect against types 16 and 18 (associated with cervical cancer) and types 6 and 11 (associated with genital warts) \n* Low-risk types are 6, 11, 32, 34, 40, 42, 44, 54, 61, 62, 64, 71, 72, 74, 81, 83, 84, 87, and 89\n\n**Note 4:**   High-risk may be abbreviated hrHPV or HR-HPV.\n\n**Note 5:**   Some tests for HPV, such as a hybrid capture test, may only report negative or positive results for high-risk HPV without identifying types. Use codes 000 or 060, respectively, to report those test results.\n\n**Note 6:**  Codes 010-050 are hierarchical; use the highest code that applies.",
+  "last_modified" : "2018-05-14T21:29:03.682Z",
+  "definition" : [ {
+    "key" : "ssf10",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Human papilloma virus (HPV) negative for high-risk and low-risk types\nHPV negative for high-risk types with no mention of low-risk types\nHPV Negative, NOS" ], [ "010", "HPV positive for low-risk types only " ], [ "020", "HPV positive for specified high risk type(s) other than types 16 or 18" ], [ "030", "HPV positive for high-risk type 16 \nWITHOUT positive results for high-risk type 18 or positivity of high-risk type 18 unknown" ], [ "040", "HPV positive for high-risk type 18 \nWITHOUT positive results for high-risk type 16 or positivity of high-risk type 16 unknown" ], [ "050", "HPV positive for high-risk types 16 AND 18" ], [ "060", "HPV positive for high-risk type(s), NOS, high-risk type(s) not stated" ], [ "070", "HPV positive, NOS, risk and type(s) not stated" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test was not ordered and was not performed), including no pathologic specimen available for HPV testing" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

@@ -1,0 +1,20 @@
+{
+  "id" : "ssf5_nbb",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF5",
+  "title" : "CS Site-Specific Factor 5",
+  "subtitle" : "Microsatellite Instability",
+  "notes" : "**Note**:  The microsatellite instability (MSI) test is a genetic test performed on tumor tissue to look for differences in length of certain non-functioning sections of deoxyribonucleic acid (DNA).  The differences are caused by problems with the genes that normally repair DNA.    A high-positive MSI (MSI-H) result may indicate that the gene repair problem is related to the development of the cancer, and that the patient may have hereditary nonpolyposis colorectal cancer (HNPCC), also known as Lynch syndrome.  A low-positive or stable MSI result (stable meaning that there are no differences in the lengths) means it is unlikely that the cancer is related to a hereditary condition.",
+  "last_modified" : "2015-05-27T16:20:08.124Z",
+  "definition" : [ {
+    "key" : "ssf5",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "020", "Microsatellite instability (MSI) stable; no MSI" ], [ "040", "MSI unstable low; positive, low" ], [ "050", "MSI unstable high; positive, high" ], [ "060", "MSI unstable, NOS; positive, NOS" ], [ "888", "OBSOLETE DATA CONVERTED V0200 \nSee code 988\n\nNot applicable for this site" ], [ "988", "Not applicable:  Information not collected for this case\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.  If this item is required to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

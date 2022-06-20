@@ -1,0 +1,20 @@
+{
+  "id" : "ssf3_lpl",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF3",
+  "title" : "Site-Specific Factor 3",
+  "subtitle" : "Number of Regional Lymph Nodes with Extracapsular Tumor",
+  "notes" : "**Note:**  Record the information from the pathology report. If no nodes are removed, code 998.  If the pathology report is unavailable, use code 997.",
+  "last_modified" : "2018-05-14T21:29:03.160Z",
+  "definition" : [ {
+    "key" : "ssf3",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "All nodes examined negative for cancer involvement\nAll nodes examined negative for extracapsular tumor" ], [ "001-089", "1 - 89 nodes  positive for extracapsular tumor \n(Exact number of nodes with extracapsular tumor.)" ], [ "090", "Nodes positive for extracapsular tumor, number unknown or not stated" ], [ "988", "Not applicable: Information not collected for this case" ], [ "990", "Positive nodes, not stated if extracapsular tumor present" ], [ "997", "Histopathologic examination of lymph nodes performed, results not available" ], [ "998", "No histopathologic examination of lymph nodes" ], [ "999", "Unknown if regional lymph node(s) involved pathologically \nNot documented in patient record" ] ]
+}

@@ -1,0 +1,28 @@
+{
+  "id" : "gist_small_intestine_n_18642",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Path N GIST Small Intestine",
+  "title" : "Pathologic N",
+  "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 6 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0. (1)\n\n**Note 2:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Note 3:**  Pericholedochal (common bile duct) lymph nodes are coded in N (regional lymph nodes) for primaries of the duodenum.  They are coded in M (distant metastasis) for primaries of other small intestine subsites.\n\n**Regional lymph nodes**\n\n**Duodenum primaries (C170)**\n\n    Duodenal\n    Gastroduodenal\n    Hepatic\n    Pancreaticoduodenal\n    Pericholodochal (common bile duct)\n    Pyloric: infrapyloric, subpyloric\n    Superior mesenteric\n       \n**Jejunum primaries (C171)**\n\n     Mesenteric, NOS\n     Superior mesenteric\n\n**Ileum primaries (C172)**\n\n     Cecal (anterior, posterior, retrocecal) \n     Ileocecal       \n     Mesenteric, NOS\n     Superior mesenteric",
+  "footnotes" : "(1) International Union Against Cancer (UICC) TNM Classification of Malignant Tumors, 7th ed., Sobin, LH, Gospodarowicz, M, Wittekind, CH, eds. New York: Wiley, 2009, pg., 84\n\n\\# NX is not defined in AJCC 7th edition.",
+  "last_modified" : "2018-05-14T21:29:00.344Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathologic N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pNX", "Regional lymph nodes cannot be assessed#", "Pathologic classification criteria met, evaluation done:\n    Physician unable to assess N\n    Surgical resection primary tumor, no regional lymph nodes removed\n    Involvement of regional lymph nodes not documented\nPhysician assigns pNX, no other information available to determine N" ], [ "p0", "pN0", "No regional lymph node metastasis", "" ], [ "p1", "pN1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "c0", "cN0", "Clinically: No regional lymph node metastasis", "Use only for TNM defined pTis cases where there is a resection of the primary and the nodes are not evaluated pathologically" ], [ "88", "88", "Not applicable", "In situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nNo surgical resection of primary tumor and there isn’t a positive biopsy of a structure in the highest T category and highest N category\nEvidence of metastatic disease (pM1), no other workup\nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

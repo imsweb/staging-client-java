@@ -1,0 +1,36 @@
+{
+  "id" : "nodes_dcj",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Distant lymph node involvement, considered N2 for AJCC 7 staging for retinoblastoma, is coded in CS Lymph Nodes.  Distant lymph node involvement was considered M1 for AJCC 6 staging, and was coded in CS Mets at DX in CS Version 1.\n\n**Note 2**: When coding Regional Nodes Positive and Regional Nodes Examined, only include regional nodes. Do not include distant nodes coded in CS Lymph Nodes. If the only information available is for lymph nodes, NOS, coded as 800 in CS Lymph Nodes, assume these are regional nodes for coding Regional Nodes Positive and Regional Nodes Examined.",
+  "footnotes" : "- For CS Lymph Nodes codes 200 and 250 ONLY, the N category and M categories for AJCC 6 staging are assigned based on the values of CS Lymph Nodes, CS Lymph Nodes Eval, CS Mets at DX, and CS Mets Eval as shown in the Lymph Nodes Mets at DX AJCC 6 Table for this schema.",
+  "last_modified" : "2015-05-27T16:19:34.546Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "100", "Regional lymph node(s):   \n    Cervical\n    Parotid (preauricular)\n    Submandibular\n    Regional lymph node(s),\nNOS\n\nStated as N1 with no other information on regional lymph nodes", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "200", "Distant lymph nodes\n\nStated as N2 with no other information on regional lymph nodes", "VALUE:N2", "JUMP:lymph_nodes_metsat_dxajcc6_xfh_n", "VALUE:D", "VALUE:D" ], [ "250", "200 + 100", "VALUE:N2", "JUMP:lymph_nodes_metsat_dxajcc6_xfh_n", "VALUE:D", "VALUE:D" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

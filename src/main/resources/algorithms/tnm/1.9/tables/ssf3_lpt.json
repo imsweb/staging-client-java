@@ -1,0 +1,21 @@
+{
+  "id" : "ssf3_lpt",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF3",
+  "title" : "Site-Specific Factor 3",
+  "subtitle" : "Residual Tumor Status and Size After Primary Cytoreduction Surgery",
+  "notes" : "**Note 1:**  The surgery to remove as much cancer in the pelvis and/or abdomen as possible, reducing the \"bulk\" of the cancer, is called \"debulking\" or \"cytoreductive\" surgery. It is performed when there is widespread evidence of advanced stage of ovarian cancer with obvious spread to other organs outside the ovary, typically in the upper abdomen, intestines, the omentum (the fat pad suspended from the transverse colon like an apron), the diaphragm, or liver. \n\n**Note 2:**  Optimal debulking is described as removal of all tumor except for residual nodules that measure no more than 1 centimeter (cm) in maximum diameter.\n\n**Note 3:**  According to the AJCC, \"In advanced disease, the most important prognostic factor is the residual disease after the initial surgical management.\"  Neoadjuvant chemotherapy may be given to obtain optimum cytoreduction with less aggressive surgery; recording whether the patient received chemotherapy prior to this procedure provides necessary data for treatment and survival analysis. (1)\n\n**Note 4:**  Record the largest residual tumor nodule(s) remaining after primary cytoreductive surgery, as described by the surgeon in the operative report.",
+  "footnotes" : "(1) American Joint Committee on Cancer., & Edge, S.B. (2010) AJCC Cancer Staging Manual (7th ed.). New York; London: Springer, pg. 420",
+  "last_modified" : "2018-05-14T21:29:01.270Z",
+  "definition" : [ {
+    "key" : "ssf3",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No gross residual tumor nodules" ], [ "010", "Residual tumor nodule(s) 1 centimeter (cm) or less\nAND neoadjuvant chemotherapy not given or unknown if given" ], [ "020", "Residual tumor nodule(s) 1 cm or less\nAND neoadjuvant chemotherapy given (before surgery)" ], [ "030", "Residual tumor nodule(s) greater than 1 cm\nAND neoadjuvant chemotherapy not given or unknown if given" ], [ "040", "Residual tumor nodule(s) greater than 1 cm\nAND neoadjuvant chemotherapy given (before surgery)" ], [ "988", "Not applicable: Information not collected for this case" ], [ "990", "Macroscopic residual tumor, size not stated\nAND neoadjuvant chemotherapy not given or unknown if given" ], [ "991", "Macroscopic residual tumor nodule(s), size not stated\nAND neoadjuvantchemotherapy given (before surgery)" ], [ "992", "Procedure described as optimal debulking and size of residual tumor nodule(s) not given \nAND neoadjuvant chemotherapy not given or unknown if given" ], [ "993", "Procedure described as optimal debulking and size of residual tumor nodule(s) not given \nAND neoadjuvant chemotherapy given (before surgery)" ], [ "998", "No cytoreductive surgery performed" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

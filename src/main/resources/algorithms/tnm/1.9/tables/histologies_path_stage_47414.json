@@ -1,0 +1,19 @@
+{
+  "id" : "histologies_path_stage_47414",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Histologies Path Stage",
+  "title" : "Histologies Path Stage Table",
+  "notes" : "**Note 1:**  The determination of TNM stage group from T, N, M, and grade for EsophagusGEJunction depends further on histologic type.  Since squamous cell carcinoma typically has a poorer prognosis than adenocarcinoma, a tumor of mixed histopathologic type (including a squamous component or NOS histology) or a type that is not otherwise specified should be staged as squamous cell carcinoma. \n\n**Note 2:**  This table shows the selection of the appropriate version of the Stage table based on histology.",
+  "last_modified" : "2018-05-14T21:29:01.228Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "ICD-O-3 Histology Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage_table",
+    "name" : "Stage Table",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8000-8046", "JUMP:tnm_7_path_stage_squamous_29624" ], [ "8050", "JUMP:tnm_7_path_stage_adenocarcinoma_41458" ], [ "8051-8131", "JUMP:tnm_7_path_stage_squamous_29624" ], [ "8140-8147", "JUMP:tnm_7_path_stage_adenocarcinoma_41458" ], [ "8148-8152", "JUMP:tnm_7_path_stage_squamous_29624" ], [ "8154-8157", "JUMP:tnm_7_path_stage_squamous_29624" ], [ "8160-8162", "JUMP:tnm_7_path_stage_adenocarcinoma_41458" ], [ "8170-8175", "JUMP:tnm_7_path_stage_squamous_29624" ], [ "8180-8221", "JUMP:tnm_7_path_stage_adenocarcinoma_41458" ], [ "8230-8231", "JUMP:tnm_7_path_stage_squamous_29624" ], [ "8243-8245", "JUMP:tnm_7_path_stage_squamous_29624" ], [ "8247-8248", "JUMP:tnm_7_path_stage_squamous_29624" ], [ "8250-8507", "JUMP:tnm_7_path_stage_adenocarcinoma_41458" ], [ "8508-8513", "JUMP:tnm_7_path_stage_squamous_29624" ], [ "8514-8551", "JUMP:tnm_7_path_stage_adenocarcinoma_41458" ], [ "8560-8570", "JUMP:tnm_7_path_stage_squamous_29624" ], [ "8571-8574", "JUMP:tnm_7_path_stage_adenocarcinoma_41458" ], [ "8575", "JUMP:tnm_7_path_stage_squamous_29624" ], [ "8576", "JUMP:tnm_7_path_stage_adenocarcinoma_41458" ], [ "8940-8941", "JUMP:tnm_7_path_stage_adenocarcinoma_41458" ], [ "8950", "JUMP:tnm_7_path_stage_squamous_29624" ], [ "8980-8981", "JUMP:tnm_7_path_stage_squamous_29624" ] ]
+}

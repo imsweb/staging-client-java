@@ -1,0 +1,35 @@
+{
+  "id" : "nodes_dbg",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in the field CS Mets at DX.\n\n**Note 2**:  Regional nodes include unilateral, bilateral or contralateral involvement of named node(s).",
+  "last_modified" : "2015-05-27T16:19:33.262Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "100", "SINGLE regional lymph node:\n    Aortic, NOS:\n        Lateral (lumbar)\n        Para-aortic\n        Periaortic\n        Preaortic\n        Retroaortic\n    Renal hilar\n    Retroperitoneal, NOS\n    Regional lymph node(s), NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "110", "SINGLE regional lymph node:\n     Interaortocaval    \n     Pericaval, NOS\n        Paracaval\n        Precaval\n        Retrocaval", "VALUE:N1", "VALUE:N1", "VALUE:D", "VALUE:RN" ], [ "150", "OBSOLETE DATA CONVERTED V0203\nSee code 210\n\n110 + 100\n\nSingle regional lymph node as specified in code 110 plus single regional lymph node as specified in code 100", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "200", "MULTIPLE regional lymph nodes listed in code 100", "VALUE:N1", "VALUE:N2", "VALUE:RN", "VALUE:RN" ], [ "210", "MULTIPLE regional nodes, any listed in code 110\nWITH or WITHOUT nodes listed in code 100", "VALUE:N1", "VALUE:N2", "VALUE:D", "VALUE:RN" ], [ "400", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 200 and 210\n\nMore than one regional lymph node other than as defined in code 150", "VALUE:N1", "VALUE:N2", "VALUE:D", "VALUE:RN" ], [ "700", "Regional lymph nodes, NOS  \nNot stated if single or multiple\n\nStated as N1 with no other information on regional lymph nodes", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

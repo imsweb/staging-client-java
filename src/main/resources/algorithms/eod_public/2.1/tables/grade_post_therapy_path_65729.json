@@ -1,0 +1,19 @@
+{
+  "id" : "grade_post_therapy_path_65729",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Grade Post Therapy Path (yp)",
+  "title" : "Grade Post Therapy Path (yp)",
+  "notes" : "**Note 1:** Leave Grade Post Therapy Path (yp) blank when\n* No neoadjuvant therapy\n* Clinical or pathological case only\n\n**Note 2:** Grade (cell indicator) is no longer applicable for this hematopoietic neoplasm.",
+  "last_modified" : "2020-03-18T18:51:13.820Z",
+  "definition" : [ {
+    "key" : "grade_post_therapy_path",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "8", "Not applicable" ], [ "", "See Note 1" ] ]
+}

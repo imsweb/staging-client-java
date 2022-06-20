@@ -1,0 +1,20 @@
+{
+  "id" : "ssf2_kad",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF2",
+  "title" : "CS Site-Specific Factor 2",
+  "subtitle" : "OBSOLETE - Human Chorionic Gonadotropin (hCG)",
+  "notes" : "**Note**:  This CS Site-Specific Factor is obsolete beginning with CS Version 2 (codes and descriptions).  Old data are retained, but new cases are not coded with this Factor.  Use code 988 for this field.",
+  "last_modified" : "2015-05-27T16:20:02.416Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "OBSOLETE DATA RETAINED V0200\n            \nTest not done (SX)" ], [ "020", "OBSOLETE DATA RETAINED V0200\n            \nWithin normal limits (S0)" ], [ "040", "OBSOLETE DATA RETAINED V0200\n            \nRange 1 (S1) less than 5,000 mIU/ml" ], [ "050", "OBSOLETE DATA RETAINED V0200\n            \nRange 2 (S2) 5,000 - 50,000 mIU/ml" ], [ "060", "OBSOLETE DATA RETAINED V0200\n            \nRange 3 (S3) greater than 50,000 mIU/ml" ], [ "080", "OBSOLETE DATA RETAINED V0200\n            \nOrdered, but results not in chart" ], [ "988", "Not applicable:  Information not collected for this schema" ], [ "999", "OBSOLETE DATA RETAINED V0200 \n\nUnknown or no information\nNot documented in patient record" ] ]
+}

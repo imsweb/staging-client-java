@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_corpus_sarcoma",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Schema Selection CorpusSarcoma",
+  "title" : "Schema selection for CorpusSarcoma",
+  "last_modified" : "2018-05-14T21:29:00.120Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C540-C543,C548-C549,C559", "8800-8932,8934-8941,8959-8974,8982-9136,9141-9582", "MATCH" ] ]
+}

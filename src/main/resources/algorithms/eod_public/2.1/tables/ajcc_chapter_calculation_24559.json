@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_chapter_calculation_24559",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2021-03-19T22:59:46.537Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8010,8046,8051-8052,8070-8074,8082-8084", "3", "VALUE:6", "Cervical Lymph Nodes and Unknown Primary Tumors of the Head and Neck", "VALUE:08" ], [ "8121,8140,8147", "3", "VALUE:6", "Cervical Lymph Nodes and Unknown Primary Tumors of the Head and Neck", "VALUE:08" ], [ "8200,8310", "3", "VALUE:6", "Cervical Lymph Nodes and Unknown Primary Tumors of the Head and Neck", "VALUE:08" ], [ "8430,8450,8480", "3", "VALUE:6", "Cervical Lymph Nodes and Unknown Primary Tumors of the Head and Neck", "VALUE:08" ], [ "8525,8550,8562", "3", "VALUE:6", "Cervical Lymph Nodes and Unknown Primary Tumors of the Head and Neck", "VALUE:08" ], [ "8941", "3", "VALUE:6", "Cervical Lymph Nodes and Unknown Primary Tumors of the Head and Neck", "VALUE:08" ], [ "8010,8046,8051-8052,8070-8074,8082-8084", "2", "ERROR:Behavior = 2. Schema Discriminator 1 should be set to 1 if Lymph Nodes are negative", "", "VALUE:" ], [ "8121,8140,8147", "2", "ERROR:Behavior = 2. Schema Discriminator 1 should be set to 1 if Lymph Nodes are negative", "", "VALUE:" ], [ "8200,8310", "2", "ERROR:Behavior = 2. Schema Discriminator 1 should be set to 1 if Lymph Nodes are negative", "", "VALUE:" ], [ "8430,8450,8480", "2", "ERROR:Behavior = 2. Schema Discriminator 1 should be set to 1 if Lymph Nodes are negative", "", "VALUE:" ], [ "8525,8550,8562", "2", "ERROR:Behavior = 2. Schema Discriminator 1 should be set to 1 if Lymph Nodes are negative", "", "VALUE:" ], [ "8941", "2", "ERROR:Behavior = 2. Schema Discriminator 1 should be set to 1 if Lymph Nodes are negative", "", "VALUE:" ] ]
+}

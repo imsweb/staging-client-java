@@ -1,0 +1,24 @@
+{
+  "id" : "discriminator_lacrimal",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF25",
+  "title" : "Site-Specific Factor 25",
+  "subtitle" : "Schema Discriminator: Lacrimal Gland/Lacrimal Sac",
+  "notes" : "**Note:**  For cases coded to primary site code C695 (lacrimal gland/lacrimal sac), code the site in which the tumor arose.",
+  "last_modified" : "2018-05-14T21:29:00.055Z",
+  "definition" : [ {
+    "key" : "ssf25",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "schema",
+    "name" : "Schema",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "015", "Lacrimal gland\nLacrimal, NOS", "VALUE:lacrimal_gland" ], [ "025", "Lacrimal sac\nLacrimal duct, NOS\n    Nasal lacrimal duct\n    Nasolacrimal duct", "VALUE:lacrimal_sac" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "ldh_level_12428",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "LDH Level",
+  "title" : "LDH Level",
+  "notes" : "**Note 1:** Use the reference ranges from your lab to determine if LDH is normal.\n\n**Note 2:** Record this data item based on a blood test performed at diagnosis. In the absence of the lab test, a physician's statement of the exact value or interpretation can be used. Use the highest value available.\n\n**Note 3:** If there is no mention of the LDH, code 9.\n\n**Note 4:** The same laboratory test should be used to record information in LDH Upper Limits of Normal [NAACCR Data Item #3870] and LDH Lab Value [NAACCR Data Item #3932]",
+  "last_modified" : "2020-03-02T14:35:29.998Z",
+  "definition" : [ {
+    "key" : "ldh_level",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Normal LDH level\nLow, below normal" ], [ "1", "Above normal LDH level; High" ], [ "7", "Test ordered, results not in chart" ], [ "9", "Not documented in medical record \nLDH Level not assessed or unknown if assessed" ] ]
+}

@@ -1,0 +1,20 @@
+{
+  "id" : "ssf4_maa",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF4",
+  "title" : "CS Site-Specific Factor 4",
+  "subtitle" : "Serum Lactate Dehydrogenase (LDH)",
+  "notes" : "**Note 1**:  Per AJCC, p. 334: \"To confirm the elevated serum [lactate dehydrogenase] LDH for staging purposes, it is recommended to obtain two or more determinations obtained more than 24 [hours] h apart, since an elevated serum LDH on a single determination can be falsely positive as a result of hemolysis or other factors unrelated to melanoma metastases.\"\n\n**Note 2**:  Positive results from two laboratory tests are required to code a positive value in this field. If the first test is positive and the second test is negative, code the results as negative or within normal limits, unless an additional test with positive results is performed.  If the first test is positive and there is no second test, record 998 if it is known that a second test was not performed; code 999 if there is no information about a second test. If the only test is negative or within normal limits, code the results from the single test.\n\n**Note 3**:  Record the range for the positive LDH value prior to treatment or within six weeks of diagnosis.  Give priority to the first positive test performed.  The information should be taken from the same test used to code CS Site-Specific Factor 5 and CS Site-Specific Factor 6.",
+  "last_modified" : "2015-05-27T16:20:06.211Z",
+  "definition" : [ {
+    "key" : "ssf4",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "CONVERTED AND CODE REUSED V0203\nPrior to V0203 code defined as \"Test not done, test was not ordered and was not performed\".  Cases converted to code 998 with V0203 and code 000 redefined as \"Within normal limits\".\n\nWithin normal limits" ], [ "002", "OBSOLETE DATA CONVERTED V0203\nSee code 000\n\nWithin normal limits" ], [ "004", "OBSOLETE DATA CONVERTED V0203\nSee code 010\n\nRange 1:  Less than 1.5 x upper limit of normal for lactate dehydrogenase (LDH) assay\n\nStated as elevated, NOS" ], [ "005", "OBSOLETE DATA CONVERTED V0203\nSee code 020\n\nRange 2:  1.5 - 10 x upper limit of normal for LDH assay" ], [ "006", "OBSOLETE DATA CONVERTED V0203\nSee code 030\n\nRange 3:  More than 10 x upper limit of normal for LDH assay" ], [ "008", "OBSOLETE DATA CONVERTED V0203\nSee code 997\n\nOrdered, but results not in chart" ], [ "010", "Range 1:  Less than 1.5 x upper limit of normal for lactate dehydrogenase (LDH) assay\n\nStated as elevated, NOS" ], [ "020", "Range 2:  1.5 - 10 x upper limit of normal for LDH assay" ], [ "030", "Range 3:  More than 10 x upper limit of normal for LDH assay" ], [ "988", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 988 will result in an edit error.)" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "extension_eval_cam",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension Eval",
+  "title" : "CS Tumor Size/Ext Eval",
+  "notes" : "**Note**:  The staging basis AJCC 7 for this schema is blank because AJCC stage is not applicable for this site and histology.  Data was collected in this item in CSv1 and is being retained.",
+  "last_modified" : "2015-05-27T16:19:15.353Z",
+  "definition" : [ {
+    "key" : "extension_eval",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "tdescriptor",
+    "name" : "Staging Basis 7",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "staging_basis_6",
+    "name" : "Staging Basis 6",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0", "OBSOLETE DATA RETAINED V0200\n\nNo surgical resection done.  Evaluation based on physical examination, imaging examination, or other non-invasive clinical evidence.  No autopsy evidence used.", "VALUE:", "VALUE:c" ], [ "1", "OBSOLETE DATA RETAINED V0200\n\nNo surgical resection done.  Evaluation based on endoscopic examination, diagnostic biopsy, including fine needle aspiration biopsy, or other invasive techniques including surgical observation without biopsy.  No autopsy evidence used.  \nDoes not meet criteria for AJCC pathologic T staging.", "VALUE:", "VALUE:c" ], [ "2", "OBSOLETE DATA RETAINED V0200\n\nNo surgical resection done, but evidence derived from autopsy (tumor was suspected or diagnosed prior to autopsy).", "VALUE:", "VALUE:p" ], [ "3", "OBSOLETE DATA RETAINED V0200\n\nSurgical resection performed WITHOUT pre-surgical systemic treatment or radiation  OR surgical resection performed, unknown if pre-surgical systemic treatment or radiation performed. Evidence acquired before treatment, supplemented or modified by the additional evidence acquired during and from surgery, particularly from pathologic examination of the resected specimen.  \nMeets criteria for AJCC pathologic T staging.", "VALUE:", "VALUE:p" ], [ "5", "OBSOLETE DATA RETAINED V0200\n\nSurgical resection performed WITH pre-surgical systemic treatment or radiation, BUT tumor size/extension based on clinical evidence.", "VALUE:", "VALUE:c" ], [ "6", "OBSOLETE DATA RETAINED V0200\n\nSurgical resection performed WITH pre-surgical systemic treatment or radiation; tumor size and/or extension based on pathologic evidence.", "VALUE:", "VALUE:yp" ], [ "8", "OBSOLETE DATA RETAINED V0200\n\nEvidence from autopsy only (tumor was unsuspected or undiagnosed prior to autopsy).", "VALUE:", "VALUE:a" ], [ "9", "Unknown if surgical resection done V01XX\nNot assessed; cannot be assessed V01XX\nUnknown if assessed V01XX\n\nNot applicable for this schema V0200", "VALUE:", "VALUE:c" ] ]
+}

@@ -1,0 +1,20 @@
+{
+  "id" : "ssf9_sas",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF9",
+  "title" : "Site-Specific Factor 9",
+  "subtitle" : "Other Connective Tissue Disease",
+  "notes" : "**Note:**   Code history of connective tissue disease other than rheumatoid arthritis, Sjogren syndrome, and sicca syndrome as documented by the physician or coded in the medical record.  Connective tissue diseases fall within **Chapter 13 of ICD-10-CM, \"Diseases of the musculoskeletal system and connective tissue (M00-M99), pgs. 574-771**\". \n* Examples include: systemic lupus erythematosus, scleroderma, dermatomyositis, and polymyositis",
+  "last_modified" : "2018-05-14T21:28:58.385Z",
+  "definition" : [ {
+    "key" : "ssf9",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No history of connective tissue disease" ], [ "010", "History of connective tissue disease" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

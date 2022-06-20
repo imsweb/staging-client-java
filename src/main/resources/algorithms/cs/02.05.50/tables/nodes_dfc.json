@@ -1,0 +1,36 @@
+{
+  "id" : "nodes_dfc",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes, and nodes, NOS, in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  One or more malignant satellite peritumoral nodules or tumor deposits (TD) in the periappendiceal adipose tissue of a primary carcinoma without histologic evidence of residual lymph node in the nodule may represent discontinuous spread, venous invasion with extravascular spread, or a totally replaced lymph node.    Replaced nodes are counted as positive nodes and coded in CS Lymph Nodes.  TD representing discontinuous spread or venous invasion are coded in CS Extension, and the number of TD representing discontinuous spread or venous invasion is coded in CS Site-Specific Factor 4.\n\n**Note 3**:  Superior and inferior mesenteric nodes are coded in CS Mets at DX.  Mesenteric nodes, NOS are coded in CS Lymph Nodes.\n\n**Note 4**:  The number of positive regional nodes is required to calculate the correct N category for this schema.  Use codes 400 and 450 a when the pathology report assigns an N1 or N2 category but the specific information about number of nodes involved is not available.  Use codes 100 - 300 rather than codes 400 or 450 when information about the number of positive nodes is available, or when nodes are clinically positive but not removed for examination.",
+  "footnotes" : "- For CS Lymph Nodes codes 050-300 ONLY, when CS Lymph Nodes Eval is 1 or 9, and CS Coding System Original is before CS V02.05, the N category is assigned from the Lymph Nodes Clinical Eval Prior to CS V02.05  AJCC 7 Table, using Regional Nodes Positive and CS Site-Specific Factor 2.  When CS Lymph Nodes Eval = 0,5 OR (CS Lymph Nodes Eval is 1,9 and CS Coding System Original is at least V02.05), the N category is assigned from Lymph Nodes Clinical Eval V02.05 AJCC 7 Table using CS Site-Specific Factor 2; when CS Lymph Nodes Eval is 2, 3, 6, 8, or not coded, the N category is determined from the Lymph Nodes Pathologic Evaluation AJCC 7 Table Also Used When CS Lymph Nodes Eval is Not Coded using Regional Nodes Positive.\n- For CS Lymph Nodes codes 100-300 ONLY, when CS Lymph Nodes Eval is 0, 1, 5, or 9, the N category is assigned from the Lymph Nodes Clinical Evaluation AJCC 6 Table, using Regional Nodes Positive and CS Site-Specific Factor 2; when CS Lymph Nodes Eval is 2, 3, 6, 8, or not coded, the N category is determined from the Lymph Nodes Pathologic Evaluation AJCC 6 Table Also Used When CS Reg Nodes Eval is Not Coded, using Regional Nodes Positive.",
+  "last_modified" : "2015-05-27T16:19:37.649Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "050", "OBSOLETE DATA REVIEWED AND CHANGED V0203\nSee codes 000 and 100, CS Extension codes 450 and 550 and CS Site-Specific Factor 4\n\nTumor deposit(s) in the subserosa, or non-peritonealized pericolic or perirectal tissues WITHOUT regional nodal metastasis", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "100", "Regional lymph nodes:\n    Colic (NOS)\n    Epicolic (adjacent to bowel wall)\n    Mesocolic (NOS)\n    Paracolic/pericolic\n    Nodule(s) or foci in pericolic fat/adjacent mesentery/mesocolic fat", "JUMP:determine_correct_table_for_ajcc7_n_ns2", "JUMP:determine_correct_table_for_ajcc6_n_ns1", "VALUE:RN", "VALUE:RN" ], [ "200", "Cecal:\n    Anterior (prececal)\n    Posterior (retrocecal)\nIleocolic\nRight colic", "JUMP:determine_correct_table_for_ajcc7_n_ns2", "JUMP:determine_correct_table_for_ajcc6_n_ns1", "VALUE:RN", "VALUE:RN" ], [ "300", "Mesenteric, NOS\nRegional lymph node(s), NOS", "JUMP:determine_correct_table_for_ajcc7_n_ns2", "JUMP:determine_correct_table_for_ajcc6_n_ns1", "VALUE:RN", "VALUE:RN" ], [ "400", "Stated as pathologic N1  with no other information on regional lymph nodes", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "450", "Stated as pathologic N2  with no other information on regional lymph nodes", "VALUE:N2", "VALUE:N2", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

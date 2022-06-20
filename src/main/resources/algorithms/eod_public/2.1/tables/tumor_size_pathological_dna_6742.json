@@ -1,0 +1,19 @@
+{
+  "id" : "tumor_size_pathological_dna_6742",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Tumor Size Pathological DNA",
+  "title" : "Tumor Size Pathological",
+  "notes" : "See the [SEER Program Coding Manual](https://seer.cancer.gov/tools/codingmanuals/index.html) for coding instructions.",
+  "last_modified" : "2020-05-19T20:50:30.301Z",
+  "definition" : [ {
+    "key" : "size_path",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Tumor Size Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "999", "Not applicable" ] ]
+}

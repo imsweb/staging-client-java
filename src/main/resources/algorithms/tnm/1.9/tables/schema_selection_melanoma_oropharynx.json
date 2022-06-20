@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_melanoma_oropharynx",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Schema Selection MelanomaOropharynx",
+  "title" : "Schema selection for MelanomaOropharynx",
+  "last_modified" : "2018-05-14T21:29:03.429Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C090-C091,C098-C099,C100,C102-C104,C108-C109", "8720-8790", "MATCH" ] ]
+}

@@ -1,0 +1,36 @@
+{
+  "id" : "extension_bdf",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  Tumors of the body of the pancreas arise between the left edge of the superior mesenteric-portal vein confluence and the left edge of the aorta.  Tumors of the tail of the pancreas arise to the left of the left edge of the aorta.\n\n**Note 2**:  Islets of Langerhans are distributed throughout the pancreas; an islet tumor is coded according to the subsite of the pancreas in which the tumor arises if the information is available.\n\n**Note 3**:  The assignment of T1 and T2 categories for tumors of the pancreas is based on tumor size.  A physician's statement of the T category may be used to code CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields.  However the two fields are coded independently: for example the record may document size but not extension, other than the physician's statement of the T category.  Use codes 150 and 200 as appropriate to code CS Extension based on a statement of T when no other extension information is available.",
+  "footnotes" : "- For CS Extension codes 100, 150, 200, and 300 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Tumor Size, as shown in the Extension Size Table for this schema.\n- For CS Extension codes 100, 150, 200, and 300 ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Tumor Size, as shown in the Extension Size Table for this schema.",
+  "last_modified" : "2015-05-27T16:19:10.277Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive \nPancreatic Intraepithelial Neoplasia III (PanInIII) ", "VALUE:Tis", "VALUE:Tis", "VALUE:IS", "VALUE:IS" ], [ "100", "Confined to pancreas", "JUMP:extension_size_xpe", "JUMP:extension_size_xpe", "VALUE:L", "VALUE:L" ], [ "150", "Stated as T1 with no other information on extension", "JUMP:extension_size_xpe", "JUMP:extension_size_xpe", "VALUE:L", "VALUE:L" ], [ "200", "Stated as T2 with no other information on extension", "JUMP:extension_size_xpe", "JUMP:extension_size_xpe", "VALUE:L", "VALUE:L" ], [ "300", "Localized, NOS", "JUMP:extension_size_xpe", "JUMP:extension_size_xpe", "VALUE:L", "VALUE:L" ], [ "400", "Extension to peripancreatic tissue, NOS\nFixation to adjacent structures, NOS", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "420", "OBSOLETE DATA CONVERTED V0203\nSee code 595\n\nStated as T3, NOS ", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "440", "Duodenum", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "480", "Ampulla of Vater\nExtrahepatic bile duct(s)", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "500", "Spleen", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "560", "Blood vessel(s):\n    Hepatic artery\n    Portal vein\n    Splenic artery/vein\n    Superior mesenteric vein\nSplenic flexure of colon", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "570", "Kidney, NOS\nLeft adrenal (suprarenal) gland\nLeft kidney\nLeft ureter", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:D" ], [ "580", "Mesenteric fat\nMesentery\nMesocolon\nPeritoneum", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:D" ], [ "590", "Retroperitoneal soft tissue (retroperitoneal space)", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:D" ], [ "595", "Stated as T3 with no other information on extension", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "600", "Tumor is inseparable from the celiac axis or superior mesenteric artery\nAorta\nCeliac artery\nSuperior mesenteric artery", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "620", "Stomach", "VALUE:T4", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "650", "620 + (570, 580, or 590)", "VALUE:T4", "VALUE:T3", "VALUE:RE", "VALUE:D" ], [ "670", "600 + (570, 580, or 590)", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:D" ], [ "700", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 650, 670\n\n[(600) or (620)] + [(570) or (580)]", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:D" ], [ "710", "Ileum\nJejunum", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:D" ], [ "730", "Gallbladder\nLiver (including porta hepatis)", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:D" ], [ "750", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 650, 670, 760\n\n(590) + any of [(600) or (620) or (710) or (730)]", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "760", "(710 or 730) + 590", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:D" ], [ "770", "Colon (other than splenic flexure)", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "780", "Diaphragm\nRight adrenal (suprarenal) gland\nRight kidney\nRight ureter", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "790", "OBSOLETE DATA CONVERTED V0203\nSee code 810\n\nStated as T4, NOS", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "800", "Further contiguous extension", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "810", "Stated as T4 with no other information on extension", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

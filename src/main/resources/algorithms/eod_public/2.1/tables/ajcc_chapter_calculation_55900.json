@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc_chapter_calculation_55900",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2021-03-30T23:03:21.027Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8800-8801,8804,8810,8815,8830,8850,8890", "VALUE:38.3", "Bone: Pelvis", "VALUE:08" ], [ "8900", "VALUE:38.3", "Bone: Pelvis", "VALUE:08" ], [ "9040", "VALUE:38.3", "Bone: Pelvis", "VALUE:08" ], [ "9120,9133,9180-9185,9187,9192-9194", "VALUE:38.3", "Bone: Pelvis", "VALUE:08" ], [ "9220-9221,9231,9240,9242-9243,9250,9261", "VALUE:38.3", "Bone: Pelvis", "VALUE:08" ], [ "9364,9366-9368,9370-9372", "VALUE:38.3", "Bone: Pelvis", "VALUE:08" ], [ "9540", "VALUE:38.3", "Bone: Pelvis", "VALUE:08" ], [ "8000-8790", "VALUE:XX", "Other Bone: Pelvis", "VALUE:88" ], [ "8802-8803,8805-8806,8811-8814,8816-8818,8820-8828,8831-8842,8851-8881,8891-8898", "VALUE:XX", "Other Bone: Pelvis", "VALUE:88" ], [ "8901-8934,8940-9030,9041-9111", "VALUE:XX", "Other Bone: Pelvis", "VALUE:88" ], [ "9121-9132,9135-9138,9141-9175,9186,9191,9195", "VALUE:XX", "Other Bone: Pelvis", "VALUE:88" ], [ "9200-9213,9222,9230,9241,9251-9260,9262-9363", "VALUE:XX", "Other Bone: Pelvis", "VALUE:88" ], [ "9365,9373-9539,9541-9582", "VALUE:XX", "Other Bone: Pelvis", "VALUE:88" ] ]
+}

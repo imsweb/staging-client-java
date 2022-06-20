@@ -1,0 +1,23 @@
+{
+  "id" : "histology_grade_extension_ssf1_ajcc7_xkv",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Histology Grade Extension SSF1 AJCC7",
+  "title" : "Histology Grade Extension SSF 1 AJCC 7 Table",
+  "notes" : "**Note**:  For CS Extension codes 000, 100-550, and 950-999 ONLY, where histology equals 8020, 8021, 8030, 8031, or 8032, or grade equals4, the T category for AJCC 7 staging is assigned based on the value of CS Extension and CS Site-Specific Factor 1 as shown here.",
+  "last_modified" : "2015-05-27T16:19:21.638Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "SSF1",
+    "type" : "INPUT"
+  }, {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "T Category",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "001, 002", "000", "ERROR:" ], [ "001, 002", "100", "ERROR:" ], [ "001, 002", "200", "ERROR:" ], [ "001, 002", "300", "ERROR:" ], [ "001, 002", "400", "ERROR:" ], [ "001, 002", "405", "ERROR:" ], [ "001, 002", "410", "ERROR:" ], [ "001, 002", "415", "ERROR:" ], [ "001, 002", "420", "ERROR:" ], [ "001, 002", "450", "ERROR:" ], [ "001, 002", "480", "ERROR:" ], [ "001, 002", "490", "ERROR:" ], [ "001, 002", "500", "ERROR:" ], [ "001, 002", "520", "ERROR:" ], [ "001, 002", "550", "ERROR:" ], [ "001, 002", "950", "ERROR:" ], [ "001, 002", "999", "ERROR:" ], [ "000, 988, 999", "000", "VALUE:T4NOS" ], [ "000, 988, 999", "100", "VALUE:T4a" ], [ "000, 988, 999", "200", "VALUE:T4a" ], [ "000, 988, 999", "300", "VALUE:T4a" ], [ "000, 988, 999", "400", "VALUE:T4a" ], [ "000, 988, 999", "405", "ERROR:" ], [ "000, 988, 999", "410", "ERROR:" ], [ "000, 988, 999", "415", "ERROR:" ], [ "000, 988, 999", "420", "ERROR:" ], [ "000, 988, 999", "450", "VALUE:T4b" ], [ "000, 988, 999", "480", "VALUE:T4b" ], [ "000, 988, 999", "490", "ERROR:" ], [ "000, 988, 999", "500", "VALUE:T4b" ], [ "000, 988, 999", "520", "VALUE:T4b" ], [ "000, 988, 999", "550", "VALUE:T4b" ], [ "000, 988, 999", "950", "VALUE:T4NOS" ], [ "000, 988, 999", "999", "VALUE:T4NOS" ], [ "010", "000", "VALUE:T4NOS(s)" ], [ "010", "100", "VALUE:T4a(s)" ], [ "010", "200", "VALUE:T4a(s)" ], [ "010", "300", "VALUE:T4a(s)" ], [ "010", "400", "VALUE:T4a(s)" ], [ "010", "405", "ERROR:" ], [ "010", "410", "ERROR:" ], [ "010", "415", "ERROR:" ], [ "010", "420", "ERROR:" ], [ "010", "450", "VALUE:T4b(s)" ], [ "010", "480", "VALUE:T4b(s)" ], [ "010", "490", "ERROR:" ], [ "010", "500", "VALUE:T4b(s)" ], [ "010", "520", "VALUE:T4b(s)" ], [ "010", "550", "VALUE:T4b(s)" ], [ "010", "950", "VALUE:T4NOS(s)" ], [ "010", "999", "VALUE:T4NOS(s)" ], [ "020", "000", "VALUE:T4NOS(m)" ], [ "020", "100", "VALUE:T4a(m)" ], [ "020", "200", "VALUE:T4a(m)" ], [ "020", "300", "VALUE:T4a(m)" ], [ "020", "400", "VALUE:T4a(m)" ], [ "020", "405", "ERROR:" ], [ "020", "410", "ERROR:" ], [ "020", "415", "ERROR:" ], [ "020", "420", "ERROR:" ], [ "020", "450", "VALUE:T4b(m)" ], [ "020", "480", "VALUE:T4b(m)" ], [ "020", "490", "ERROR:" ], [ "020", "500", "VALUE:T4b(m)" ], [ "020", "520", "VALUE:T4b(m)" ], [ "020", "550", "VALUE:T4b(m)" ], [ "020", "950", "VALUE:T4NOS(m)" ], [ "020", "999", "VALUE:T4NOS(m)" ] ]
+}

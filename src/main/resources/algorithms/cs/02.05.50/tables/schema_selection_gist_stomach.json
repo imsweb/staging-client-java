@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_gist_stomach",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection GISTStomach",
+  "title" : "Schema selection for GISTStomach",
+  "last_modified" : "2015-05-27T16:19:42.973Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C160-C166,C168-C169", "8935-8936", "MATCH" ] ]
+}

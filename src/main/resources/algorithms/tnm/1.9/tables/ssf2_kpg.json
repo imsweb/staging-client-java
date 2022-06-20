@@ -1,0 +1,24 @@
+{
+  "id" : "ssf2_kpg",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF2",
+  "title" : "Site-Specific Factor 2",
+  "subtitle" : "Systemic Symptoms at Diagnosis",
+  "notes" : "**Note 1:**  Each stage should be classified as either A or B according to the absence or presence of defined constitutional symptoms, such as\n\n* Fevers:  Unexplained fever with temperature above 38 degrees C\n* Night sweats:  Drenching sweats that require change of bedclothes \n* Weight loss: Unexplained weight loss of more than 10% of the usual body weight in the 6 months prior to diagnosis\n\n**Note 2:**  Pruritus alone does not qualify for B classification, nor does alcohol intolerance, fatigue, or a short, febrile illness associated with suspected infections.\n\n**Note 3:**  Use code 000 if the History and Physical, progress notes, or consultations make no mention of B symptoms.",
+  "last_modified" : "2018-05-14T21:29:00.020Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "stage_classification",
+    "name" : "Stage Classification",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No B symptoms (asymptomatic)", "A" ], [ "010", "Any B symptom(s):\n    Night sweats\n    Unexplained fever (above 38 degrees C)\n    Unexplained weight loss (generally  greater than 10% of body weight\n in the six months before admission)\nB symptoms, NOS", "B" ], [ "020", "Pruritis (recurrent and unexplained)", "A" ], [ "030", "020 + 010\n\nPruritis plus any B symptom(s)", "B" ], [ "988", "Not applicable: Information not collected for this case", "ERROR" ], [ "999", "Unknown or no information\nNot documented in patient record", "BLANK" ] ]
+}

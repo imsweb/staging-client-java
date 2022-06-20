@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_liver",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection Liver",
+  "title" : "Schema selection for Liver",
+  "last_modified" : "2021-04-29T15:30:49.904Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C220", "8000-8700, 8720-8790", "MATCH" ] ]
+}

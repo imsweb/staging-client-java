@@ -1,0 +1,32 @@
+{
+  "id" : "stage_group_p_45269",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Stage Group (p)",
+  "title" : "TNM 7 Stage Group",
+  "notes" : "**Note 1:** SEER*RSA added additional information to UICC 7th edition stages with UICC approval. If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC 7th edition manual to ensure you are using the appropriate logic. \n\n**Note 2:** The stage group below is valid in UICC 7th edition, but not AJCC 7th edition.\n* Stage Group III - (T3, T3a, T3b), NX, M0 \n\n**Note 3:**  While the stage group below is valid, the specified TNM combination is only included in SEER*RSA.\n* Stage Group III - T0, N1, M0 - T0 is not included in the stage group definition\n\n**Note 4:** TNM does not include an in situ category for this schema. Assign 88 to stage group for in situ cases.",
+  "footnotes" : "^ \"Any T, N2, M0\" removed from stage grouping table based  on [TNM Classification of Malignant Tumours, Seventh edition](http://www.wileyanduicc.com/pdf/Corrected_pages.pdf)",
+  "last_modified" : "2018-05-14T21:29:02.694Z",
+  "definition" : [ {
+    "key" : "path_stage_group_direct",
+    "name" : "Stage",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_stage_group_direct_display",
+    "name" : "Stage Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "t",
+    "name" : "T",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "I", "T1,1a,1b", "N0", "M0" ], [ "2", "II", "T2,2a,2b", "N0", "M0" ], [ "3", "III", "T3,3a-3c                  \nT0,1,1a,1b,2,2a,2b,3,3a-3c", "N0,X\nN1", "M0\nM0" ], [ "4", "IV", "T4\nAny T", "Any N\nAny N", "M0\nM1" ], [ "99", "Unknown", "T0\nT0,1,1a,1b,2,2a,2b \nTX", "N0\nNX\nAny N", "M0\nM0\nM0" ], [ "88", "Not Applicable", "88", "88", "88" ] ]
+}

@@ -1,0 +1,36 @@
+{
+  "id" : "extension_baa",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  High-grade squamous intraepithelial lesions (HSIL) and anal intraepithelial neoplasia (AIN) grade II III are not normally collected by cancer registries.  AIN II III or AIN III is reportable to standard-setters (except the Commission on Cancer).  If your registry collects any of these, use code 000.\n\n**Note 2**:  The assignment of T1, T2 , and T3 categories for tumors of the anus is based on tumor size.  A physician's statement of the T category may be used to code CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields.  However the two fields are coded independently: for example the record may document size but not extension, other than the physician's statement of the T category. Use code 310, 320, 330, or 850 as appropriate to code CS Extension based on a statement of T when no other extension information is available.\n\n**Note 3**:  Code incidental finding of malignancy in hemorrhoid according to greatest extension of tumor into wall of anus.  Code as Localized, NOS if extension not specified.\n\n**Note 4**:  Codes 400-750 are used for contiguous extension from the site of origin.  Discontinuous involvement is coded in CS Mets at DX.",
+  "footnotes" : "- For CS Extension codes 100-400 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Tumor Size, as shown in the Extension Size Table for this schema.\n- For CS Extension codes 100-400 ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Tumor Size, as shown in the Extension Size Table for this schema.",
+  "last_modified" : "2015-05-27T16:19:05.449Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive\nAIN  III\nBowen disease", "VALUE:Tis", "VALUE:Tis", "VALUE:IS", "VALUE:IS" ], [ "100", "Invasive tumor confined to mucosa, NOS (including intramucosal, NOS)", "JUMP:extension_size_xaa", "JUMP:extension_size_xaa", "VALUE:L", "VALUE:L" ], [ "110", "Invades lamina propria", "JUMP:extension_size_xaa", "JUMP:extension_size_xaa", "VALUE:L", "VALUE:L" ], [ "120", "Invades muscularis mucosae", "JUMP:extension_size_xaa", "JUMP:extension_size_xaa", "VALUE:L", "VALUE:L" ], [ "160", "Invades submucosa (superficial invasion)", "JUMP:extension_size_xaa", "JUMP:extension_size_xaa", "VALUE:L", "VALUE:L" ], [ "200", "Invades muscularis propria (internal sphincter)", "JUMP:extension_size_xaa", "JUMP:extension_size_xaa", "VALUE:L", "VALUE:L" ], [ "300", "Incidental finding of malignancy in hemorrhoid, NOS\nLocalized, NOS", "JUMP:extension_size_xaa", "JUMP:extension_size_xaa", "VALUE:L", "VALUE:L" ], [ "310", "Stated as T1 with no other information on extension", "JUMP:extension_size_xaa", "JUMP:extension_size_xaa", "VALUE:L", "VALUE:L" ], [ "320", "Stated as T2 with no other information on extension", "JUMP:extension_size_xaa", "JUMP:extension_size_xaa", "VALUE:L", "VALUE:L" ], [ "330", "Stated as T3 with no other information on extension", "JUMP:extension_size_xaa", "JUMP:extension_size_xaa", "VALUE:L", "VALUE:L" ], [ "400", "Ischiorectal fat/tissue\nPerianal skin\nPerirectal skin\nRectal mucosa or submucosa\nRectal wall\nSkeletal muscle(s):\n    Anal sphincter (external)\n    Levator ani\nSubcutaneous perianal tissue", "JUMP:extension_size_xaa", "JUMP:extension_size_xaa", "VALUE:RE", "VALUE:RE" ], [ "600", "Perineum\nVulva", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "700", "Bladder\nPelvic peritoneum\nUrethra\nVagina", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "750", "Broad ligament(s)\nCervix uteri\nCorpus uteri\nProstate", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "800", "Further contiguous extension", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "850", "Stated as T4 with no other information on extension", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

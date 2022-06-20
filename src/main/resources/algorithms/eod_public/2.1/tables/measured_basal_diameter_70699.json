@@ -1,0 +1,19 @@
+{
+  "id" : "measured_basal_diameter_70699",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Measured Basal Diameter",
+  "title" : "Measured Basal Diameter",
+  "notes" : "**Note 1:** Physician statement of measured basal diameter (not the same as tumor size) can be used to code this data item when no other information is available. \n\n**Note 2:** Code Measured Basal Diameter of tumor not size. Record actual measurement in millimeters (mm) to nearest tenth from clinical documentation, or from a pathology report if surgery performed.",
+  "last_modified" : "2019-04-05T16:52:37.880Z",
+  "definition" : [ {
+    "key" : "measured_basal_diameter",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0", "No mass/tumor found" ], [ "0.1-99.9", "0.1 - 99.9 millimeters (mm)\n(Exact measurement to nearest tenth of mm)" ], [ "XX.0", "100 millimeters (mm) or larger " ], [ "XX.1", "Described as \"less than 3 mm\"" ], [ "XX.2", "Described as \"at least\" 3 mm" ], [ "XX.3", "Described as \"at least\" 6 mm" ], [ "XX.4", "Described as \"at least\" 9 mm" ], [ "XX.5", "Described as \"at least\" 12 mm" ], [ "XX.6", "Described as \"at least\" 15 mm" ], [ "XX.7", "Described as \"at least\" 18 mm" ], [ "XX.8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code XX.8 may result in an edit error.)" ], [ "XX.9", "Not documented in medical record\nCannot be determined by pathologist\nMeasured Basal Diameter not assessed or unknown if assessed" ] ]
+}

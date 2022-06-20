@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_net_colon",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection NETColon",
+  "title" : "Schema selection for NETColon",
+  "last_modified" : "2015-05-27T16:19:46.399Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C180,C182-C189", "8153,8240-8242,8246,8249", "MATCH" ] ]
+}

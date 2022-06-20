@@ -1,0 +1,19 @@
+{
+  "id" : "lymph_nodes_distant_assessment_method_24499",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "LN Distant Assessment Method",
+  "title" : "Lymph Nodes Distant Assessment Method",
+  "notes" : "**Note 1:** Physician statement of Mediastinal and Scalene assessment method can be used to code this data item when no other information is available.\n\n**Note 2:** Assign the highest applicable code (0-2) in the case of multiple assessments.\n\n**Note 3:** The assessment results are recorded in LN Distant: Mediastinal, Scalene [NAACCR Data Item #3875].",
+  "last_modified" : "2021-04-08T13:34:31.072Z",
+  "definition" : [ {
+    "key" : "ln_distant_assessment",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Radiography, imaging \n(Ultrasound (US), computed tomography scan (CT), magnetic resonance imaging (MRI), positron emission tomography scan (PET))\n\nPhysical exam only" ], [ "1", "Incisional biopsy; fine needle aspiration (FNA)" ], [ "2", "Lymphadenectomy\nExcisional biopsy or resection with microscopic confirmation" ], [ "7", "Distant lymph node(s) assessed, unknown assessment method" ], [ "8", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nDistant lymph node(s) not assessed or unknown if assessed" ] ]
+}

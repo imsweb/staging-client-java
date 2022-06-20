@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_heart_mediastinum_11552",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin T Heart Mediastinum",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  For TNM staging, sarcomas of the heart and mediastinum are classified as deep tumors. Only T1b or T2b are available. \n\n**Note 2:** Tumor size must be known to assign T. You may use a physician’s statement of the T category if this is the only information in the medical record. \n* If no size or category is specified, assign TX\n\n**Note 3:** Assign the appropriate T category based on the tumor size for the following descriptions\n\n    Invasive tumor confined to site of origin\n    Adjacent connective tissue\n        For heart (C380)\n            Visceral pericardium (epicardium)\n    Adjacent organs/structures\n        For heart (C380)\n            Ascending aorta\n            Parietal pericardium\n            Vena cava\n        For mediastinum (C381-C383, C388)\n            Descending aorta\n            Esophagus\n            Large (named) artery(ies)\n            Large (named) vein(s)\n            Pericardium, NOS\n               Parietal\n               Visceral (epicardium)\n            Phrenic nerve(s)\n            Pleura, NOS\n            Parietal pleura\n            Visceral pleura of lung\n        Sternum\n        Sympathetic nerve trunk(s)\n        Thoracic duct\n        Thymus\n        Trachea, parietal pleura\n        Vertebra(e)\n\n    Further contiguous extension\n\n    Localized, NOS",
+  "last_modified" : "2018-05-14T21:29:03.417Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T\n    Extension cannot be determined \n    Tumor size (TS) unknown for T categories where TS  needed to determine T\nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor", "" ], [ "c1B", "cT1b", "Tumor 5 cm or less in greatest dimension\nDeep tumor", "Stated as T1b or T1 [NOS]" ], [ "c2B", "cT2b", "Tumor more than 5 cm in greatest dimension\nDeep tumor", "Stated as T2b or T2 [NOS]" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

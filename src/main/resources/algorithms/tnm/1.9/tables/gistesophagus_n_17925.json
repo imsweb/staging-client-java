@@ -1,0 +1,28 @@
+{
+  "id" : "gistesophagus_n_17925",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Path N GIST Esophagus",
+  "title" : "Pathologic N",
+  "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 6 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0. (1)\n\n**Note 2:** Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Note 3:**  Regional lymph nodes for any part of the esophagus fall in the range from periesophageal/cervical to the celiac region.  Contralateral and bilateral cervical, supraclavicular, and mediastinal lymph nodes are included.\n\n**Note 4:**  Celiac nodes are coded in N (regional lymph nodes) for lower thoracic (abdominal) esophagus; they are coded in M (distant metastasis) for cervical and intrathoracic (upper and middle) esophagus.  Cervical nodes, NOS are coded in N (regional lymph nodes) for cervical esophagus; they are coded in M (distant metastasis) for upper and lower thoracic (abdominal) esophagus.\n\n**Note 5:**  Lymph node stations/groups are listed in parentheses when applicable.  \n\n**Regional Lymph Nodes for Esophagus (including contralateral or bilateral)** \n\n**All esophagus subsites**\n\n    Anterior mediastinal (6)\n    Mediastinal, NOS\n    Peri-/paraesophageal (8L, 8M)\n\n**Cervical esophagus (C150)**\n\n    Anterior deep cervical (laterotracheal) (recurrent laryngeal)\n    Anterior mediastinal (6)\n    Aortopulmonary (5)\n    Cervical, NOS                    \n    Cervical (deep), NOS\n    Diaphragmatic (15)\n    Internal jugular, NOS\n    Jugulodigastric (subdigastric)\n    Mediastinal, NOS\n    Para-aortic (ascending aorta or phrenic)\n    Paratracheal (2R, 2L, 4R, 4L)\n    Posterior mediastinal  (3P)\n    Pulmonary ligament (9)\n    Scalene (inferior deep cervical) (1)\n    Subaortic\n    Supraclavicular (transverse cervical) (1)  \n    Superior mediastinal\n \n**Upper thoracic esophagus (C151, C153)**\n\n    Cervical lymph nodes\n\n**Lower thoracic (abdominal) esophagus (C152, C155)**\n\n    Aortopulmonary (5)\n    Diaphragmatic (15)\n    Celiac lymph nodes (20)\n    Left gastric (superior gastric) (17): cardiac (cardial), lesser curvature, perigastric, NOS\n    Para-aortic (ascending aorta or phrenic)\n    Paratracheal (2R, 2L, 4R, 4L)\n    Posterior mediastinal (3P) (tracheoesophageal)\n    Pulmonary ligament (9)\n    Subaortic \n    Superior mediastinal\n   \n**Intrathoracic esophagus, upper (C153) or middle (C154)**\n\n    Aortopulmonary (5)\n    Carinal (tracheobronchial) (10R,10L) (tracheal bifurcation)\n    Cervical: deep (NOS), lower (NOS), middle (NOS), upper (NOS)\n    Diaphragmatic (15)\n    Hilar (bronchopulmonary) (proximal lobar) (pulmonary root)\n    Internal jugular, NOS\n    Intrabronchial, NOS\n    Jugulo-omohyoid (supraomohyoid)\n    Jugulodigastric (subdigastric)\n    Left gastric (superior gastric) (17): cardiac (cardial), lesser curvature, perigastric (NOS)\n    Para-aortic (ascending aorta or phrenic)\n    Peritracheal\n    Posterior mediastinal (tracheoesophageal)        \n    Pulmonary ligament (9) \n    Superior mediastinal",
+  "footnotes" : "(1) International Union Against Cancer (UICC) TNM Classification of Malignant Tumors, 7th ed., Sobin, LH, Gospodarowicz, M, Wittekind, CH, eds. New York: Wiley, 2009, pg., 69\n\n\\# NX is not defined in AJCC 7th edition.",
+  "last_modified" : "2018-05-14T21:29:04.419Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathologic N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pNX", "Regional lymph nodes cannot be assessed#", "Pathologic classification criteria met, evaluation done:\n    Physician unable to assess N\n    Surgical resection primary tumor, no regional lymph nodes removed\n    Involvement of regional lymph nodes not documented\nPhysician assigns pNX, no other information available to determine N" ], [ "p0", "pN0", "No regional lymph node metastasis", "" ], [ "p1", "pN1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "c0", "cN0", "Clinically: No regional lymph node metastasis", "Use only for TNM defined pTis cases where there is a resection of the primary and the nodes are not evaluated pathologically" ], [ "88", "88", "Not applicable", "In situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nNo surgical resection of primary tumor and there isn’t a positive biopsy of a structure in the highest T category and highest N category\nEvidence of metastatic disease (pM1), no other workup\nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

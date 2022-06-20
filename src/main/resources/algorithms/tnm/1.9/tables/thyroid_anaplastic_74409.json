@@ -1,0 +1,26 @@
+{
+  "id" : "thyroid_anaplastic_74409",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Thyroid Anaplastic",
+  "title" : "Thyroid Anaplastic for the Default T determination",
+  "last_modified" : "2018-05-14T21:29:03.248Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "ICD-O-3 Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "grade",
+    "name" : "Grade",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Type",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "default_t_table",
+    "name" : "Default T Table",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8020,8021,8030,8031,8032", "1,2,3,4,9", "Anaplastic", "JUMP:determine_default_t_anaplastic_77806" ], [ "*", "4", "Anaplastic", "JUMP:determine_default_t_anaplastic_77806" ], [ "*", "*", "All others", "JUMP:determine_default_t" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "extension_bde",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "EOD Primary Tumor",
+  "title" : "EOD Primary Tumor",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017\n\n(5) Herman, J.M., Pawlik, T.M., Vauthey, J.N., et al. **Ampulla of Vater**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017",
+  "last_modified" : "2021-04-08T19:00:46.600Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_t",
+    "name" : "SS2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ: Noninvasive; intraepithelial", "VALUE:Tis", "VALUE:IS" ], [ "100", "Limited to\n- Ampulla of Vater\n- Sphincter of Oddi", "VALUE:T1a", "VALUE:L" ], [ "150", "Duodenal submucosa\nPerisphincteric invasion (invasion beyond sphincter of Oddi)", "VALUE:T1b", "VALUE:L" ], [ "200", "Confined to ampulla, NOS\n\nLocalized, NOS", "VALUE:T1", "VALUE:L" ], [ "250", "Muscularis propria of duodenum (duodenal wall) \n\nDuodenum, NOS", "VALUE:T2", "VALUE:RE" ], [ "300", "Pancreas (less than or equal to 0.5 cm)", "VALUE:T3a", "VALUE:RE" ], [ "400", "Pancreas (greater than 0.5 cm)\n\nDuodenal serosa", "VALUE:T3b", "VALUE:RE" ], [ "450", "Periduodenal soft tissue\nPeripancreatic soft tissue", "VALUE:T3b", "VALUE:D" ], [ "500", "Common bile duct\nExtrahepatic bile duct(s)\nGallbladder\nHepatic flexure of colon\nLesser omentum\nLiver (including porta hepatis)\nPancreas, NOS (depth of invasion not stated)\nStomach (distal, proximal, NOS)\nTransverse colon", "VALUE:T3", "VALUE:RE" ], [ "600", "Blood vessel(s) (major)\n- Common hepatic artery\n- Celiac (axis) artery\n- Superior mesenteric artery", "VALUE:T4", "VALUE:RE" ], [ "700", "Periduodenal or peripancreatic soft tissue with involvement of structures in codes 500 or 600 OR\n     \nFurther contiguous extension", "VALUE:T4", "VALUE:D" ], [ "800", "No evidence of primary tumor", "VALUE:T0", "VALUE:U" ], [ "999", "Unknown extension\nPrimary tumor cannot be assessed\nNot documented in medical record \n\nDeath Certificate Only", "VALUE:TX", "VALUE:U" ] ]
+}

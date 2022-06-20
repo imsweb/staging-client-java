@@ -1,0 +1,20 @@
+{
+  "id" : "ssf9_sph",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF9",
+  "title" : "CS Site-Specific Factor 9",
+  "subtitle" : "KRAS",
+  "notes" : "**Note**:  KRAS is a gene which belongs to a class of genes known as oncogenes. When mutated, oncogenes have the potential to cause normal cells to become cancerous. Studies suggest that KRAS gene mutations are often present in colorectal cancer.",
+  "last_modified" : "2015-05-27T16:20:12.097Z",
+  "definition" : [ {
+    "key" : "ssf9",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Abnormal (mutated)\nPositive for mutations" ], [ "020", "Normal (wild type)\nNegative for mutations" ], [ "988", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 988 may result in an edit error.)" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test was not ordered and was not performed)" ], [ "999", "Unknown\nNot documented in patient record" ] ]
+}

@@ -1,0 +1,20 @@
+{
+  "id" : "ssf2_kak",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF2",
+  "title" : "CS Site-Specific Factor 2",
+  "subtitle" : "Tumor Weight",
+  "notes" : "**Note 1**:  As stated in the College of American Pathologists (CAP) protocol for adrenal gland, \"Accurate weights of adrenal cortical neoplasms are important. Although tumor mass cannot be used as the sole criterion for malignancy, adrenal cortical neoplasms weighing less than 50 grams are almost always benign, whereas the weight of malignant tumors is usually greater than 100 grams. Weight is a reflection of gland weight rather than tumor weight because, in actuality, following surgical excision, the tumor is not dissected from the gland proper and weighed separately.\"\n\n**Note 2**:  Record the tumor weight (gland weight) to the nearest gram as documented in the pathology report.",
+  "last_modified" : "2015-05-27T16:20:02.525Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No mass/tumor found" ], [ "001-979", "1 - 979 grams \n(Exact tumor weight (gland weight) to nearest  gram)" ], [ "980", "980 grams or greater" ], [ "988", "Not applicable:  Information not collected for this case\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.  If this item is required to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "998", "No surgical resection of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

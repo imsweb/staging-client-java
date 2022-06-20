@@ -1,0 +1,20 @@
+{
+  "id" : "ssf13_sqg",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF13",
+  "title" : "CS Site-Specific Factor 13",
+  "subtitle" : "Carcinoembryonic Antigen (CEA)",
+  "notes" : "**Note 1**:  Record the interpretation of the highest Carcinoembryonic Antigen (CEA) test results documented in the medical record prior to treatment.  The interpretation should be for the same laboratory test recorded in CS Site-Specific Factor 14.\n\n**Note 2**:  If the test was done but the actual value is not stated, use code 997.",
+  "last_modified" : "2015-05-27T16:19:56.034Z",
+  "definition" : [ {
+    "key" : "ssf13",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "OBSOLETE DATA CONVERTED V0203\nSee code 998\n\nTest not done (test not ordered and not performed" ], [ "010", "Positive/elevated" ], [ "020", "Negative/normal; within normal limits" ], [ "030", "Borderline; undetermined whether positive or negative" ], [ "988", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 988 may result in an edit error.)" ], [ "997", "Test ordered, results not in chart" ], [ "998", "CONVERTED AND CODE REUSED V0203\nPrior to V0203 code defined as \"test ordered, results not in chart\".  ases converted to code 997 with V0203 and code 998 redefined as \"test not done (test not ordered and not performed)\".\n\nTest not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

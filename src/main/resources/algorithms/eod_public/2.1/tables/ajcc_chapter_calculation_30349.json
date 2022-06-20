@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_chapter_calculation_30349",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2020-07-02T17:55:22.827Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C384", "9050-9053", "VALUE:37", "Malignant Pleural Mesothelioma", "VALUE:08" ], [ "C340-C349", "9050-9053", "VALUE:XX", "Other Malignant Pleural Mesothelioma", "VALUE:88" ] ]
+}

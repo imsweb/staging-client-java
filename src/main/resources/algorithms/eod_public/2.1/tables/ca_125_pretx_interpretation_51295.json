@@ -1,0 +1,19 @@
+{
+  "id" : "ca_125_pretx_interpretation_51295",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "CA-125 PreTx Interpretation",
+  "title" : "CA-125 (Carbohydrate Antigen 125) Pretreatment Interpretation",
+  "notes" : "**Note 1:** Physician statement of CA-125/CA-125 II  pretreatment interpretation can be used to code this data item when no other information is available.\n\n**Note 2:** Carbohydrate Antigen 125 (CA-125)/CA-125 II, also known as cancer antigen 125, mucin 16, or MUC16, is a protein which in humans is encoded by the MUC16 gene. CA-125 is a tumor marker or biomarker that may be elevated in the blood of some patients with ovarian cancer. \n\n**Note 3:** Record only the blood or serum CA-125/CA-125 II interpretation for this data item. Do not record CA-125 test results based on fluid from the chest or abdominal cavity. \n\n**Note 4:** Record the CA-125/CA-125 II  status prior to treatment. \n\n**Note 5:** Normal values may vary with patient age and from lab to lab. The typical human reference ranges are 0 to less than or equal 35 units per milliliter (U/mL). This is equivalent to kU/L.\n\n**Note 6:** Code 9 if there is no statement that the CA-125/CA-125 II is positive/elevated, negative/normal, and the lab value with its normal range (from which you can determine interpretation) is not documented.",
+  "last_modified" : "2021-05-28T15:28:30.820Z",
+  "definition" : [ {
+    "key" : "ca125_pretx_interpretation",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Negative/normal; within normal limits" ], [ "1", "Positive/elevated" ], [ "2", "Stated as borderline; undetermined whether positive or negative" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error)" ], [ "9", "Not documented in medical record\nCA-125 not assessed or unknown if assessed" ] ]
+}

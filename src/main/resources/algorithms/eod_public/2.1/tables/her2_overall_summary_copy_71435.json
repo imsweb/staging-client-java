@@ -1,0 +1,19 @@
+{
+  "id" : "her2_overall_summary_copy_71435",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "HER2 Overall Summary",
+  "title" : "HER2 Overall Summary",
+  "notes" : "**Note 1:** This SSDI is effective for diagnosis years 2021+\n* For cases diagnosed 2018-2020, leave this SSDI blank\n\n**Note 2:** Physician statement of HER2 Overall Summary can be used to code this data item when no other information is available.\n\n**Note 3:** HER2 may be recorded for all histologies; however, it is primarily performed for adenocarcinomas. If information is not available, code 9. \n\n**Note 4:** The result of the HER2 test performed on the primary tissue is to be recorded in this data item.\n * Use the highest (positive versus negative) when there are multiple results\n\n**Note 5:** If neoadjuvant therapy is given, record the assay from tumor specimens prior to neoadjuvant therapy.\n * If neoadjuvant therapy is given and there are no HER2 results from pre-treatment specimens, report the findings from post-treatment specimens",
+  "last_modified" : "2021-04-01T18:09:17.920Z",
+  "definition" : [ {
+    "key" : "her2_summary",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "HER2 negative; equivocal" ], [ "1", "HER2 positive" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nCannot be determined (indeterminate)\nHER2 Overall Summary status not assessed or unknown if assessed" ], [ "", "N/A - Diagnosis year is prior to 2021" ] ]
+}

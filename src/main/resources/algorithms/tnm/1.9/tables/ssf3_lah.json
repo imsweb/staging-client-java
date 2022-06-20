@@ -1,0 +1,20 @@
+{
+  "id" : "ssf3_lah",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF3",
+  "title" : "Site-Specific Factor 3",
+  "subtitle" : "Ipsilateral Adrenal Gland Involvement",
+  "notes" : "**Note 1:**  Information about contiguous ipsilateral adrenal gland involvement is collected in T, and noncontiguous ipsilateral adrenal gland involvement is collected in mets (M), as elements in anatomic staging. This information is also collected in this field as it may have an independent effect on prognosis.\n\n**Note 2:**  Record ipsilateral adrenal gland involvement as documented in the pathology report.  \n* Assign code 000 if histologic examination of a specimen including tissue from the adrenal gland is performed, the pathology report is available for review, and involvement of the adrenal gland is not mentioned",
+  "last_modified" : "2018-05-14T21:29:00.350Z",
+  "definition" : [ {
+    "key" : "ssf3",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Ipsilateral adrenal gland involvement not present/not identified" ], [ "010", "Contiguous involvement of ipsilateral adrenal gland" ], [ "020", "Noncontiguous involvement of ipsilateral adrenal gland" ], [ "030", "020 + 010\n\nNoncontiguous plus contiguous involvement of ipsilateral adrenal gland" ], [ "040", "Involvement of ipsilateral adrenal gland, not stated whether contiguous or noncontiguous" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "No histologic examination to determine ipsilateral adrenal gland involvement" ], [ "999", "Unknown or no information \nNot documented in patient record" ] ]
+}

@@ -1,0 +1,20 @@
+{
+  "id" : "ssf12_sqf",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF12",
+  "title" : "CS Site-Specific Factor 12",
+  "subtitle" : "Carbohydrate Antigen 19-9 (CA 19-9) Lab Value",
+  "notes" : "**Note 1**:  Carbohydrate Antigen 19-9 (CA 19-9) is a tumor marker that has value in the management of certain malignancies.\n\n**Note 2**:  Record to the nearest tenth in Units/milliliter (U/ml) the highest CA 19-9 lab value documented in the medical record prior to treatment.  For example, a pretreatment CA 19-9 of 60  U/ml would be recorded as 600.\n\n**Note 3**:  Code 000 is reserved for exactly 0.0 U/ml (no measurable amount of CA 19 9).  Do not round tiny values down to 0.0 U/ml; any measured value less than or equal to 0.1 U/ml should be coded 001.  For code 001, also round 0.11-0.14 U/ml down to 0.1 U/ml.  For codes 002-980, round values to the nearest tenth of U/ml.\n\n**Note 4**:  For an uncertain value, record the stated closest value.  For example, code a value stated as \"less than 0.5 U/mL\" as 005.\n\n**Note 5**:  Use code 997 if there is no actual pre-treatment CA 19-9 lab value available but an interpretation of the test result is stated.",
+  "last_modified" : "2015-05-27T16:19:55.433Z",
+  "definition" : [ {
+    "key" : "ssf12",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "CONVERTED AND CODE REUSED V0203 \nPrior to V0203 code defined as \"Test not done (test not ordered and not performed)\".  Cases converted to code 998 with V0203 and code 000 redefined as \"0.0 Units/milliliter (U/ml) exactly\".  \n\n0.0 Units/milliliter (U/ml) exactly" ], [ "001", "0.1 or less U/ml Stated as less than 0.1 U/ml with no exact value" ], [ "002-979", "0.2-97.9 U/ml\n(Exact value to nearest tenth in U/ml)" ], [ "980", "98.0 or greater U/ml" ], [ "988", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 988 may result in an edit error.)" ], [ "997", "Test ordered, results not in chart" ], [ "998", "CONVERTED AND CODE REUSED V0203 \nPrior to V0203 code defined as \"ordered, results not in chart\". Cases converted to code 997 with V0203 and code 998 redefined as \"Test not done (test not ordered and not performed)\". \n\nTest not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

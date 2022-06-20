@@ -1,0 +1,23 @@
+{
+  "id" : "rn_positive_with_regional_nodes_for_ajcc_n_50297",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "RN Positive with Regional Nodes for N",
+  "title" : "Regional Nodes Positive with EOD Regional Nodes for N",
+  "notes" : "If the EOD Regional Nodes = 300, 400, 800, Regional Nodes Positive is necessary to determine the N value.",
+  "last_modified" : "2019-04-05T16:52:36.968Z",
+  "definition" : [ {
+    "key" : "eod_regional_nodes",
+    "name" : "EOD Regional Nodes",
+    "type" : "INPUT"
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "type" : "INPUT"
+  }, {
+    "key" : "eod_2018_n",
+    "name" : "EOD 2018 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "300,400,800", "00-02", "VALUE:N1" ], [ "300,400,800", "03-06", "VALUE:N2" ], [ "300,400,800", "07-15", "VALUE:N3a" ], [ "300,400,800", "16-90", "VALUE:N3b" ], [ "300,400,800", "95,97-99", "VALUE:NX" ], [ "000,999", "*", "MATCH" ] ]
+}

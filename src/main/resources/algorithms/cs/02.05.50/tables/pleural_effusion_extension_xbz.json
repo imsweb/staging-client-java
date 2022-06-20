@@ -1,0 +1,27 @@
+{
+  "id" : "pleural_effusion_extension_xbz",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Pleural Effusion Extension",
+  "title" : "Pleural Effusion Extension Table",
+  "notes" : "**Note**: For CS Extension codes 120-999, the assignment of Summary Stage 1977 and Summary Stage 2000 depends on the value of CS Site-Specific Factor 1, Pleural Effusion, as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:40.401Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf1",
+    "name" : "CS SSF1",
+    "type" : "INPUT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "120,140,160,170,200,300,305", "000", "VALUE:L", "VALUE:L" ], [ "420,500,510,520,610,620,630,650", "000", "VALUE:RE", "VALUE:RE" ], [ "690,780,800,850", "000", "VALUE:D", "VALUE:D" ], [ "950", "000", "VALUE:U", "VALUE:U" ], [ "999", "000", "VALUE:U", "VALUE:U" ], [ "120,140,160,170,200,300,305", "010", "VALUE:L", "VALUE:L" ], [ "420,500,510,520,610,620,630,650", "010", "VALUE:RE", "VALUE:RE" ], [ "690,780,800,850", "010", "VALUE:D", "VALUE:D" ], [ "950", "010", "VALUE:U", "VALUE:U" ], [ "999", "010", "VALUE:U", "VALUE:U" ], [ "120,140,160,170,200,300,305", "020", "VALUE:D", "VALUE:D" ], [ "420,500,510,520,610,620,630,650", "020", "VALUE:D", "VALUE:D" ], [ "690,780,800,850", "020", "VALUE:D", "VALUE:D" ], [ "950", "020", "VALUE:D", "VALUE:D" ], [ "999", "020", "VALUE:D", "VALUE:D" ], [ "120,140,160,170,200,300,305", "030", "VALUE:D", "VALUE:D" ], [ "420,500,510,520,610,620,630,650", "030", "VALUE:D", "VALUE:D" ], [ "690,780,800,850", "030", "VALUE:D", "VALUE:D" ], [ "950", "030", "VALUE:D", "VALUE:D" ], [ "999", "030", "VALUE:D", "VALUE:D" ], [ "120,140,160,170,200,300,305", "988", "ERROR:5", "ERROR:" ], [ "420,500,510,520,610,620,630,650", "988", "ERROR:0", "ERROR:" ], [ "690,780,800,850", "988", "ERROR:0", "ERROR:" ], [ "950", "988", "ERROR:", "ERROR:" ], [ "999", "988", "ERROR:", "ERROR:" ], [ "120,140,160,170,200,300,305", "999", "VALUE:L", "VALUE:L" ], [ "420,500,510,520,610,620,630,650", "999", "VALUE:RE", "VALUE:RE" ], [ "690,780,800,850", "999", "VALUE:D", "VALUE:D" ], [ "950", "999", "VALUE:U", "VALUE:U" ], [ "999", "999", "VALUE:U", "VALUE:U" ] ]
+}

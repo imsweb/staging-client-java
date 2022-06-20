@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_bladder",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection Bladder",
+  "title" : "Schema selection for Bladder",
+  "last_modified" : "2021-04-28T12:24:57.010Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C670-C679", "8000-8700, 8720-8790", "MATCH" ] ]
+}

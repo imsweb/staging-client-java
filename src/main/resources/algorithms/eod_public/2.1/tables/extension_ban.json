@@ -1,0 +1,28 @@
+{
+  "id" : "extension_ban",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "EOD Primary Tumor",
+  "title" : "EOD Primary Tumor",
+  "notes" : "**Note 1:** If there is a discrepancy between the Clark level and the pathological description of extent (invasion into the layers of the dermis), use the higher (more extensive) code.\n\n**Note 2:** Code the greatest extent of invasion from any procedure performed on the lesion, whether it is described as a biopsy or an excision.  For example, if a punch biopsy with involvement of Clark level IV is followed by a re-excision with residual tumor involving Clark level II, code 300 (Clark level IV).\n\n**Note 3:** Satellite lesions/nodules or in-transit metastases are coded in EOD Regional Nodes.\n\n**Note 4:** If a Breslow’s depth is given in the pathology report and there is **no other indication of involvement**, the following guidelines may be used (***Note:** If a physician documents a different Clark's Level then provided by these guidelines, go with the physician's Clark Level*)\n* Code 000: Level I (In situ)\n* Code 100: Level II (< 0.75 mm Breslow’s Depth)\n* Code 200: Level III (0.76 mm to 1.50 mm Breslow’s Depth)\n* Code 300: Level IV (> 1.50 mm Breslow’s Depth)\n\n**Note 5:** In addition to EOD Primary Tumor, the following data items are also collected to determine the extent of the primary tumor:\n- *Breslow's Thickness* [NAACCR Data Item #3817] and \n- *Ulceration* [NAACCR Data Item #3936]",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017\n\n(5) Gershenwald, J.E., Scolyer, R.A., et al. **Melanoma of the Skin**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017",
+  "last_modified" : "2021-04-08T19:00:22.860Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_t",
+    "name" : "SS2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepidermal, intraepithelial, noninvasive \n(Basement membrane of the epidermis is intact)\nClark level I", "VALUE:Tis", "VALUE:IS" ], [ "100", "Papillary dermis invaded\nClark level II", "JUMP:breslow_thickness_and_ulceration_with_primary_tumor_for_ajcc_t_56429", "VALUE:L" ], [ "200", "Papillary-reticular dermal interface invaded\nClark level III", "JUMP:breslow_thickness_and_ulceration_with_primary_tumor_for_ajcc_t_56429", "VALUE:L" ], [ "300", "Reticular dermis invaded\nClark level IV", "JUMP:breslow_thickness_and_ulceration_with_primary_tumor_for_ajcc_t_56429", "VALUE:L" ], [ "400", "Skin/dermis, NOS\nLocalized, NOS", "JUMP:breslow_thickness_and_ulceration_with_primary_tumor_for_ajcc_t_56429", "VALUE:L" ], [ "500", "Subcutaneous tissue (through entire dermis)\nClark level V", "JUMP:breslow_thickness_and_ulceration_with_primary_tumor_for_ajcc_t_56429", "VALUE:RE" ], [ "700", "Bone\nSkeletal muscle \nUnderlying cartilage\n\nFurther contiguous extension", "JUMP:breslow_thickness_and_ulceration_with_primary_tumor_for_ajcc_t_56429", "VALUE:D" ], [ "800", "No evidence of primary tumor\nRegressed melanoma (complete)", "VALUE:T0", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in medical record\n\nDeath Certificate Only", "VALUE:TX", "VALUE:U" ] ]
+}

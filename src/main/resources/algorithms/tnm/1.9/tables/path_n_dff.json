@@ -1,0 +1,28 @@
+{
+  "id" : "path_n_dff",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Path N NET Rectum",
+  "title" : "Pathologic N",
+  "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 12 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0. (1)\n\n**Note 2:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Regional lymph nodes**\n    \n**All sites** \n\n    Hemorrhoidal (middle, superior) \n    Inferior mesenteric \n    Mesenteric [NOS] \n    Perirectal \n    Rectal (middle) \n    Rectal [NOS] \n    Rectal (superior) \n    Rectosigmoid (paracolic/pericolic)\n    Sigmoidal (sigmoid mesenteric)\n\n    Regional lymph nodes, NOS\n    Lymph nodes, NOS\n\n**Rectosigmoid (C199)** \n\n    Colic, (NOS) \n    Left colic\n  \n**Rectum (C209)** \n\n    Hemorrhoidal (inferior) \n    Internal iliac (hypogastric)  \n    Lateral (laterosacral) \n    Middle (promontorial) (Gerota's node) \n    Obturator\n    Presacral\n    Rectal (inferior) \n    Sacral (NOS)\n    Sacral promontory",
+  "footnotes" : "(1) International Union Against Cancer (UICC) *TNM Classification of Malignant Tumors,* 7th ed., Sobin, LH, Gospodarowicz, M, Wittekind, CH, eds. New York: Wiley, 2009, pg., 104",
+  "last_modified" : "2018-05-14T21:29:02.653Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathologic N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pNX", "Regional lymph node(s) cannot be assessed", "Pathologic classification criteria met, evaluation done:\n    Physician unable to assess N\n    Surgical resection primary tumor, no regional lymph nodes removed\n    Involvement of regional lymph nodes not documented\nPhysician assigns pNX, no other information available to determine N" ], [ "p0", "pN0", "No regional lymph node metastasis", "" ], [ "p1", "pN1", "Regional lymph node metastasis", "Nodule(s) or foci in perirectal fat\n\nRegional lymph node(s), NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "c0", "cN0", "Clinically: No regional lymph node metastasis", "Use only for TNM defined pTis cases where there is a resection of the primary and the nodes are not evaluated pathologically" ], [ "88", "88", "Not applicable", "In situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nNo surgical resection of primary tumor and there isn’t a positive biopsy of a structure in the highest T category and highest N category\nEvidence of metastatic disease (pM1), no other workup\nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

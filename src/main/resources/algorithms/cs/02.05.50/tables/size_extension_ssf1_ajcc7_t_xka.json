@@ -1,0 +1,28 @@
+{
+  "id" : "size_extension_ssf1_ajcc7_t_xka",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Size Extension SSF1 AJCC7 T",
+  "title" : "Size Extension SSF1 AJCC 7 T Table",
+  "subtitle" : "CS SSF1 010-040 with CS Tumor Size and CS Extension",
+  "notes" : "**Note**:  When CS Site-Specific Factor 1 is coded 010, 020, 030, or 040 and CS Extension is 000-230, 300-440, 455-520, 540-600, 730, 950-980, 999, the value of T for AJCC 7 staging is determined on the basis of CS Tumor Size, CS Extension, and CS Site-Specific Factor 1 as shown in this table.  CS Site-Specific Factor 1 codes 010 and 040 indicate separate tumor nodules in same lobe or unknown if in same lobe, and map to T3, except for Tumor Size codes 997 and 998 which map to T4.  CS Site-Specific Factor codes 020 and 030 indicate separate tumor nodules in different lobe or same and different lobes and map to T4.",
+  "last_modified" : "2015-05-27T16:19:52.373Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "CS SSF 1",
+    "type" : "INPUT"
+  }, {
+    "key" : "size",
+    "name" : "CS Tumor Size",
+    "type" : "INPUT"
+  }, {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "010", "000-996, 999", "000,100,110,115,120,125,200,210,220,230,300,400,410,420,430,440,455,460,465,500,520,540,550,560,570,590,600,730,950,980,999", "VALUE:T3" ], [ "010", "997-998", "000,100,110,115,120,125,200,210,220,230,300,400,410,420,430,440,455,460,465,500,520,540,550,560,570,590,600,730,950,980,999", "VALUE:T4" ], [ "020,030", "000-999", "000,100,110,115,120,125,200,210,220,230,300,400,410,420,430,440,455,460,465,500,520,540,550,560,570,590,600,730,950,980,999", "VALUE:T4" ], [ "040", "000-996, 999", "000,100,110,115,120,125,200,210,220,230,300,400,410,420,430,440,455,460,465,500,520,540,550,560,570,590,600,730,950,980,999", "VALUE:T3" ], [ "040", "997-998", "000,100,110,115,120,125,200,210,220,230,300,400,410,420,430,440,455,460,465,500,520,540,550,560,570,590,600,730,950,980,999", "VALUE:T4" ] ]
+}

@@ -1,0 +1,20 @@
+{
+  "id" : "ssf7_sqn",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF7",
+  "title" : "Site-Specific Factor 7",
+  "subtitle" : "Percentage of Non-Endometrioid Cell Type in Mixed Histology Tumors",
+  "notes" : "**Note 1:**  Adenocarcinomas with mixed histology are graded according to the percentage of non-squamous or non-morular solid growth pattern.  Morular growth pattern refers to well-defined, circumscribed, solid round nests of cells that fill and expand endometrial glands.\n\n**Note 2:**  Code based on the percentage of non-endometrioid cell type as stated on the pathology report.  Only use a statement of Grade 1, Grade 2, or Grade 3 if it is based on the growth pattern.  \n* If grade based on growth pattern is not specified, use code 999",
+  "last_modified" : "2018-05-14T21:29:00.026Z",
+  "definition" : [ {
+    "key" : "ssf7",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "001", "5% or less of a non-squamous or non-morular solid growth pattern (Grade 1)" ], [ "002", "6% to 50% of a non-squamous or non-morular solid growth pattern (Grade 2)" ], [ "003", "More than 50% of a non-squamous or non-morular solid growth pattern (Grade 3)" ], [ "987", "Not applicable:  Not an adenocarcinoma morphology\n\nUse this code for CorpusSarcoma and CorpusAdenosarcoma schemas" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

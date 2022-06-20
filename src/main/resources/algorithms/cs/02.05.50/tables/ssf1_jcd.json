@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_jcd",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF1",
+  "title" : "CS Site-Specific Factor 1",
+  "subtitle" : "OBSOLETE - Carcinoembryonic Antigen (CEA)",
+  "notes" : "**Note**:  This CS Site-Specific Factor is obsolete beginning with CS Version 2 (codes, code descriptions, and notes).  Old data are retained during conversion, but new cases are not coded 000 080 or 999.  Use only code 988 for this field for all cases entered in CS Version 2.",
+  "last_modified" : "2015-05-27T16:19:59.526Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "OBSOLETE DATA RETAINED V0200\n\nTest not done" ], [ "010", "OBSOLETE DATA RETAINED V0200\n\nPositive/elevated" ], [ "020", "OBSOLETE DATA RETAINED V0200\n\nNegative/normal; within normal limits" ], [ "030", "OBSOLETE DATA RETAINED V0200\n\nBorderline; undetermined whether positive or negative" ], [ "080", "OBSOLETE DATA RETAINED V0200\n\nOrdered, but results not in chart" ], [ "988", "Not applicable:  Information not collected for this schema" ], [ "999", "OBSOLETE DATA RETAINED V0200\n\nUnknown or no information\nNot documented in patient record" ] ]
+}

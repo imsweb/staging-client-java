@@ -1,0 +1,20 @@
+{
+  "id" : "ssf22_san",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF22",
+  "title" : "CS Site-Specific Factor 22",
+  "subtitle" : "Multigene Signature Method",
+  "notes" : "**Note 1**:  Multigene signatures or classifiers are assays of a panel of genes from a tumor specimen, intended to provide a quantitative assessment of the likelihood of response to chemotherapy and to evaluate prognosis or distant recurrence.  Oncotype DX and MammaPrint (also called MammoPrint) are two commercially available genomic tests.\n\n**Note 2**:  Code the type of test performed.  The same test should be used to record information in CS Site-Specific Factors 22 and 23.\n\n**Note 3**:  This information may not be available at diagnosis and may require follow-up with the physician.",
+  "last_modified" : "2015-05-27T16:20:01.284Z",
+  "definition" : [ {
+    "key" : "ssf22",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Oncotype DX" ], [ "020", "MammaPrint (MammoPrint)" ], [ "030", "Other" ], [ "040", "Test performed, type of test unknown" ], [ "988", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 988 may result in an edit error.)" ], [ "997", "OBSOLETE DATA CONVERTED V0203\nSee code 040\n\nTest ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

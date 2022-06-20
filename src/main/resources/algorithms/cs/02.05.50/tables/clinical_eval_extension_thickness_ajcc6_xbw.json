@@ -1,0 +1,27 @@
+{
+  "id" : "clinical_eval_extension_thickness_ajcc6_xbw",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Clinical Eval Extension Thickness AJCC6",
+  "title" : "Clinical Eval Extension Thickness AJCC 6 Table",
+  "notes" : "**Note 1**:  When CS Tumor Size/Ext Eval is clinical (0, 1, 5, 9), for CS Extension codes 005, 300-335, 415, and 425-435 ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Extension as shown in this table.\n\n**Note 2**:  When CS Tumor Size/Ext Eval is blank and CS Site-Specific Factor 1 equals 998, the T category is assigned as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:02.284Z",
+  "definition" : [ {
+    "key" : "extension_eval",
+    "name" : "CS TS/Ext Eval",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf1",
+    "name" : "CS SSF1",
+    "type" : "INPUT"
+  }, {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0,1,5,9", "000-980, 991-999", "005", "VALUE:T2" ], [ "0,1,5,9", "000-980, 991-999", "300", "VALUE:T1" ], [ "0,1,5,9", "000-980, 991-999", "310", "VALUE:T1" ], [ "0,1,5,9", "000-980, 991-999", "315", "VALUE:T1" ], [ "0,1,5,9", "000-980, 991-999", "320", "VALUE:T1" ], [ "0,1,5,9", "000-980, 991-999", "325", "VALUE:T1" ], [ "0,1,5,9", "000-980, 991-999", "330", "VALUE:T1" ], [ "0,1,5,9", "000-980, 991-999", "335", "VALUE:T2" ], [ "0,1,5,9", "000-980, 991-999", "415", "VALUE:T1" ], [ "0,1,5,9", "000-980, 991-999", "425", "VALUE:T2" ], [ "0,1,5,9", "000-980, 991-999", "430", "VALUE:T1" ], [ "0,1,5,9", "000-980, 991-999", "435", "VALUE:T2" ], [ "0,1,5,9", "981-990", "005, 300-335, 415, 425-435", "ERROR:" ], [ " ", "998", "005", "VALUE:T2" ], [ " ", "998", "300", "VALUE:T1" ], [ " ", "998", "310", "VALUE:T1" ], [ " ", "998", "315", "VALUE:T1" ], [ " ", "998", "320", "VALUE:T1" ], [ " ", "998", "325", "VALUE:T1" ], [ " ", "998", "330", "VALUE:T1" ], [ " ", "998", "335", "VALUE:T2" ], [ " ", "998", "415", "VALUE:T1" ], [ " ", "998", "425", "VALUE:T2" ], [ " ", "998", "430", "VALUE:T1" ], [ " ", "998", "435", "VALUE:T2" ] ]
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_parathyroid",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection Parathyroid",
+  "title" : "Schema selection for Parathyroid",
+  "last_modified" : "2021-04-29T12:48:06.446Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C750", "8000-8700, 8720-8790", "MATCH" ] ]
+}

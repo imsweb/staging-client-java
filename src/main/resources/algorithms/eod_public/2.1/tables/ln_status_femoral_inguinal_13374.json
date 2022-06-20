@@ -1,0 +1,19 @@
+{
+  "id" : "ln_status_femoral_inguinal_13374",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "LN Status: Femoral-Inguinal",
+  "title" : "LN Status: Femoral-Inguinal",
+  "notes" : "**Note 1:** Physician statement of the femoral-inguinal status can be used to code this data item when no other information is available. \n\n**Note 2:** The following are femoral-inguinal nodes\n* Femoral\n* Inguinal, NOS\n  + Inguinofemoral (groin)\n  + Node of Cloquet or Rosenmuller (highest deep inguinal)\n  + Superficial inguinal\n\n**Note 3:** If there is no mention of femoral-inguinal lymph node involvement in the area being imaged, biopsied, or in the surgical field and there is no mention of involvement, then assume that the femoral-inguinal lymph nodes are negative.\n\n**Note 4:** For this data item, do not include isolated tumor cells (ITCs).\n\n**Note 5:** If there is no imaging, biopsy, or surgical work up, code 9.\n\n**Note 6:** The assessment method is recorded in LN Assessment Method Femoral-Inguinal [NAACCR Data Item #3871]",
+  "last_modified" : "2021-06-09T12:32:01.240Z",
+  "definition" : [ {
+    "key" : "ln_status_femoral_inguinal",
+    "name" : "LN Status Femoral-Inguinal",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Negative femoral-inguinal lymph nodes" ], [ "1", "Positive femoral-inguinal lymph nodes" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nFemoral-Inguinal lymph node(s) not assessed or unknown if assessed" ] ]
+}

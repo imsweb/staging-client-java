@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_thymus",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection Thymus",
+  "title" : "Schema selection for Thymus",
+  "last_modified" : "2021-04-29T16:18:31.815Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C379", "8000-8700, 8720-8790", "MATCH" ] ]
+}

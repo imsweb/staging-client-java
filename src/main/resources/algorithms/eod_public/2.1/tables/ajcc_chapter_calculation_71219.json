@@ -1,0 +1,34 @@
+{
+  "id" : "ajcc_chapter_calculation_71219",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2020-03-27T15:00:01.560Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C250-C252,C254,C257-C259", "8150-8153,8155-8156,8158", "3", "VALUE:34", "Neuroendocrine Tumors of the Pancreas", "VALUE:08" ], [ "C250-C252,C254,C257-C259", "8240,8249", "3", "VALUE:34", "Neuroendocrine Tumors of the Pancreas", "VALUE:08" ], [ "C250-C252,C254,C257-C259", "8150-8153,8155-8156,8158", "2", "VALUE:XX", "Other Neuroendocrine Tumors of the Pancreas", "VALUE:88" ], [ "C250-C252,C254,C257-C259", "8240,8249", "2", "VALUE:XX", "Other Neuroendocrine Tumors of the Pancreas", "VALUE:88" ], [ "C253", "8150-8153,8155-8156,8158", "*", "VALUE:XX", "Other Neuroendocrine Tumors of the Pancreas", "VALUE:88" ], [ "C253", "8240,8249", "*", "VALUE:XX", "Other Neuroendocrine Tumors of the Pancreas", "VALUE:88" ], [ "C250-C254,C257-C259", "8241-8242,8683", "*", "VALUE:XX", "Other Neuroendocrine Tumors of the Pancreas", "VALUE:88" ] ]
+}

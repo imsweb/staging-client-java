@@ -1,0 +1,36 @@
+{
+  "id" : "combined_grade_breast_8723",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Combined Grade Breast",
+  "title" : "Combined Grade Breast",
+  "notes" : "If a combined Grade is need for a calculation, this determines the best grade to use.  This table is specific to Breast cancer.",
+  "last_modified" : "2020-03-04T19:06:09.561Z",
+  "definition" : [ {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "grade_clin",
+    "name" : "Grade Clin",
+    "type" : "INPUT"
+  }, {
+    "key" : "grade_path",
+    "name" : "Grade Path",
+    "type" : "INPUT"
+  }, {
+    "key" : "grade_post_therapy_clin",
+    "name" : "Grade Post Therapy Clin",
+    "type" : "INPUT"
+  }, {
+    "key" : "grade_post_therapy_path",
+    "name" : "Grade Post Therapy Path",
+    "type" : "INPUT"
+  }, {
+    "key" : "grade_combined",
+    "name" : "Grade Combined",
+    "type" : "ENDPOINT"
+  } ],
+  "extra_input" : [ "grade_path", "grade_post_therapy_path", "grade_clin", "grade_post_therapy_clin" ],
+  "rows" : [ [ "2", "*", "L, M, H", "*", "*", "VALUE:{{grade_path}}" ], [ "2", "L, M, H", "1,2,3,A,B,C,D,9", "*", "*", "VALUE:{{grade_clin}}" ], [ "2", "1,2,3,A,B,C,D,9", "1,2,3,A,B,C,D,9", "*", "L, M, H", "VALUE:{{grade_post_therapy_path}}" ], [ "2", "1,2,3,A,B,C,D,9", "1,2,3,A,B,C,D,9", "L, M, H", ",1,2,3,A,B,C,D,9", "VALUE:{{grade_post_therapy_clin}}" ], [ "2", "1,2,3,A,B,C,D,9", "A,B,C,D", ",1,2,3,A,B,C,D,9", ",1,2,3,A,B,C,D,9", "VALUE:{{grade_path}}" ], [ "2", "A,B,C,D", "1,2,3,9", ",1,2,3,A,B,C,D,9", ",1,2,3,A,B,C,D,9", "VALUE:{{grade_clin}}" ], [ "2", "1,2,3,9", "1,2,3,9", ",1,2,3,A,B,C,D,9", "A,B,C,D", "VALUE:{{grade_post_therapy_path}}" ], [ "2", "1,2,3,9", "1,2,3,9", "A,B,C,D", ",1,2,3,9", "VALUE:{{grade_post_therapy_clin}}" ], [ "2", "1,2,3,9", "1,2,3,9", ",1,2,3,9", ",1,2,3,9", "VALUE:{{grade_path}}" ], [ "3", "*", "1,2,3", "*", "*", "VALUE:{{grade_path}}" ], [ "3", "1,2,3", "L, M, H, A,B,C,D,9", "*", "*", "VALUE:{{grade_clin}}" ], [ "3", "L, M, H, A,B,C,D,9", "L, M, H, A,B,C,D,9", "*", "1,2,3", "VALUE:{{grade_post_therapy_path}}" ], [ "3", "L, M, H, A,B,C,D,9", "L, M, H, A,B,C,D,9", "1,2,3", ",L,M,H,A,B,C,D,9", "VALUE:{{grade_post_therapy_clin}}" ], [ "3", "L, M, H, A,B,C,D,9", "A,B,C,D", ",L,M,H,A,B,C,D,9", ",L,M,H,A,B,C,D,9", "VALUE:{{grade_path}}" ], [ "3", "A,B,C,D", "L, M, H, 9", ",L,M,H,A,B,C,D,9", ",L,M,H,A,B,C,D,9", "VALUE:{{grade_clin}}" ], [ "3", "L, M, H, 9", "L, M, H, 9", ",L,M,H,A,B,C,D,9", "A,B,C,D", "VALUE:{{grade_post_therapy_path}}" ], [ "3", "L, M, H, 9", "L, M, H, 9", "A,B,C,D", ",L,M,H,9", "VALUE:{{grade_post_therapy_clin}}" ], [ "3", "L, M, H, 9", "L, M, H, 9", ",L,M,H,9", ",L,M,H,9", "VALUE:{{grade_path}}" ] ]
+}

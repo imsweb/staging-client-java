@@ -1,0 +1,34 @@
+{
+  "id" : "nodes_dna",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "last_modified" : "2015-05-27T16:19:38.796Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "888", "OBSOLETE DATA CONVERTED V0200\nSee code 988\n\nNot applicable for this site", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "988", "Not applicable: Information not collected for this schema", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:U" ] ]
+}

@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_chapter_calculation_82326",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2021-04-21T20:33:03.268Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C690-C696,C698-C699,C723", "8800-8802,8804-8806,8810-8811,8814-8815,8825,8830,8832,8840", "VALUE:70", "Orbital Sarcoma", "VALUE:08" ], [ "C690-C696,C698-C699,C723", "8850,8852-8854,8858,8890", "VALUE:70", "Orbital Sarcoma", "VALUE:08" ], [ "C690-C696,C698-C699,C723", "8900-8901,8910,8912,8920-8921,8940,8963", "VALUE:70", "Orbital Sarcoma", "VALUE:08" ], [ "C690-C696,C698-C699,C723", "9040,9044,9071", "VALUE:70", "Orbital Sarcoma", "VALUE:08" ], [ "C690-C696,C698-C699,C723", "9120,9133,9150", "VALUE:70", "Orbital Sarcoma", "VALUE:08" ], [ "C690-C696,C698-C699,C723", "9220,9240,9364", "VALUE:70", "Orbital Sarcoma", "VALUE:08" ], [ "C690-C696,C698-C699,C723", "9421,9473", "VALUE:70", "Orbital Sarcoma", "VALUE:08" ], [ "C690-C696,C698-C699,C723", "9500,9522,9530,9540,9580-9581", "VALUE:70", "Orbital Sarcoma", "VALUE:08" ], [ "C690-C696,C698-C699,C723", "8710-8714,8803,8812-8813,8816-8818,8820-8824,8826-8828,8831,8833-8836,8841-8842", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C696,C698-C699,C723", "8851,8855-8857,8860-8881,8891-8898", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C696,C698-C699,C723", "8902-8905,8932-8934", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C694,C696,C698-C699,C723", "8941", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C696,C698-C699,C723", "8950-8960,8964-8976", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C694,C696,C698-C699,C723", "8980", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C696,C698-C699,C723", "8981", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C694,C696,C698-C699,C723", "8982", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C696,C698-C699,C723", "8983-8990", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C696, C698-C699,C723", "9000-9016,9030,9041-9043,9045-9063", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C696, C698-C699", "9064", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C696, C698-C699,C723", "9065", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C696, C698-C699", "9070", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C696, C698-C699,C723", "9072-9073", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C696, C698-C699", "9080", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C696, C698-C699,C723", "9081-9083", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C696, C698-C699", "9084-9085", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C696, C698-C699,C723", "9086-9091", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C696, C698-C699", "9100", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C696, C698-C699,C723", "9101-9111,9121-9132,9135-9138,9141-9142,9160-9175", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C696,C698-C699,C723", "9181-9213,9221,9230,9241-9361", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C696, C698-C699", "9362", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C696, C698-C699,C723", "9363,9365,9370-9373", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C696, C698-C699", "9380-9420,9423-9472,9474-9493", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C696, C698-C699", "9501-9509,9520-9521,9523,9531-9539", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ], [ "C690-C696, C698-C699,C723", "9541-9571,9582", "VALUE:XX", "Other Orbital Sarcoma", "VALUE:88" ] ]
+}

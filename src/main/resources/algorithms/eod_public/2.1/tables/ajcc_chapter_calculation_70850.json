@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_chapter_calculation_70850",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2020-05-19T15:30:35.898Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C000-C002,C006,C440-C449,C510-C512,C518-C519,C600-C602,C608-C609,C632", "8720-8721,8723,8730,8742-8745,8761,8770-8772,8780", "VALUE:47", "Melanoma of the Skin", "VALUE:08" ], [ "C000-C002,C006,C440-C449,C510-C512,C518-C519,C600-C602,C608-C609,C632", "8722,8725-8728,8740-8741,8746-8760,8762,8773-8774,8790", "VALUE:XX", "Other Melanoma of the Skin", "VALUE:88" ], [ "C500", "8720-8790", "VALUE:XX", "Other Melanoma of the Skin", "VALUE:88" ] ]
+}

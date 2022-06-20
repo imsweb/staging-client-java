@@ -1,0 +1,34 @@
+{
+  "id" : "ajcc_chapter_calculation_46717",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2021-03-16T17:46:49.616Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_1",
+    "name" : "Thyroid Gland/Thyroglossal Duct",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8000,8010", "3", "1", "VALUE:73.1", "Thyroid: Differentiated", "VALUE:08" ], [ "8020-8021", "3", "1", "VALUE:73.2", "Thyroid: Anaplastic", "VALUE:08" ], [ "8050", "3", "1", "VALUE:73.1", "Thyroid: Differentiated", "VALUE:08" ], [ "8230,8260,8290", "3", "1", "VALUE:73.1", "Thyroid: Differentiated", "VALUE:08" ], [ "8330-8331,8335,8337,8339,8340-8344", "3", "1", "VALUE:73.1", "Thyroid: Differentiated", "VALUE:08" ], [ "8000,8010,8020-8021,8050", "2", "1", "VALUE:XX", "Other Thyroid", "VALUE:88" ], [ "8230,8260,8290", "2", "1", "VALUE:XX", "Other Thyroid", "VALUE:88" ], [ "8330-8331,8335,8337,8339,8340-8344", "2", "1", "VALUE:XX", "Other Thyroid", "VALUE:88" ], [ "8000,8010,8020-8021,8050", "*", "2", "VALUE:XX", "Other Thyroid", "VALUE:88" ], [ "8230,8260,8290", "*", "2", "VALUE:XX", "Other Thyroid", "VALUE:88" ], [ "8330-8331,8335,8337,8339,8340-8344", "*", "2", "VALUE:XX", "Other Thyroid", "VALUE:88" ], [ "8001-8005,8011-8015,8022-8046,8051-8221", "*", "*", "VALUE:XX", "Other Thyroid", "VALUE:88" ], [ "8231-8257,8261-8281", "*", "*", "VALUE:XX", "Other Thyroid", "VALUE:88" ], [ "8300-8325,8332-8334,8336", "*", "*", "VALUE:XX", "Other Thyroid", "VALUE:88" ], [ "8350-8420,8440-8509,8514-8700,8720-8790", "*", "*", "VALUE:XX", "Other Thyroid", "VALUE:88" ] ]
+}

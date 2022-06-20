@@ -1,0 +1,19 @@
+{
+  "id" : "behavior",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Behavior",
+  "title" : "Behavior ICD-O-3",
+  "notes" : "See the [SEER Program Coding Manual](https://seer.cancer.gov/tools/codingmanuals/index.html) for coding instructions.",
+  "last_modified" : "2020-05-19T17:09:34.235Z",
+  "definition" : [ {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "desc",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Benign" ], [ "1", "Uncertain Benign/Malig" ], [ "2", "In Situ" ], [ "3", "Malignant Primary" ] ]
+}

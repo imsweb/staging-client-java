@@ -1,0 +1,19 @@
+{
+  "id" : "ln_assessment_method_pelvic_vulva_10928",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "LN Assessment Method Pelvic Vulva",
+  "title" : "Lymph Nodes Assessment Method Pelvic",
+  "notes" : "**Note 1:** Physician statement of pelvic assessment method can be used to code this data item when no other information is available.\n\n**Note 2:** For Vulva, pelvic lymph nodes are distant\n\n**Note 3:** The following are pelvic nodes\n* Iliac, NOS\n  + Common\n  + External\n  + Internal (hypogastric) (obturator)\n* Paracervical\n* Parametrial\n* Pelvic, NOS\n* Sacral, NOS\n  + Lateral (laterosacral)\n  + Middle (promontorial) (Gerota's node)\n  + Uterosacral\n\n**Note 4:** Assign the highest applicable code (0-2) in the case of multiple assessments.\n\n**Note 5:** For this data item, do not include isolated tumor cells (ITCs).\n\t\n**Note 6:** If there is no mention of pelvic lymph node involvement in the workup, and the status data item: *LN Status: Pelvic* does not indicate positive pelvic nodes, code 0.\n\n**Note 7:** The assessment results are recorded in LN Status: Pelvic [NAACCR Data Item #3957].",
+  "last_modified" : "2021-06-08T21:15:55.057Z",
+  "definition" : [ {
+    "key" : "ln_assessment_pelvic",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Radiography, imaging \n(Ultrasound (US), computed tomography scan (CT), magnetic resonance imaging (MRI), positron emission tomography scan (PET))\n\nPhysical exam only" ], [ "1", "Incisional biopsy; fine needle aspiration (FNA)" ], [ "2", "Lymphadenectomy\nSentinel node biopsy\nExcisional biopsy or resection with microscopic confirmation" ], [ "7", "Pelvic lymph node(s) assessed, unknown assessment method" ], [ "8", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nPelvic lymph node(s) not assessed or unknown if assessed" ] ]
+}

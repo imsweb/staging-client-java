@@ -1,0 +1,23 @@
+{
+  "id" : "extension_mets_ajcc6_xeh",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension Mets AJCC6",
+  "title" : "Extension Mets AJCC 6 Table",
+  "notes" : "**Note**:  For CS Mets at DX codes 00 and 99, the M category for AJCC 6 staging is determined by the value of CS Extension as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:15.637Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "mets",
+    "name" : "CS Mets at DX",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000,050,100,110,120,130,140,150,160,170,200,300,400", "00", "VALUE:M0" ], [ "410,420", "00", "ERROR:" ], [ "450,458,460,470,500", "00", "VALUE:M0" ], [ "510-514", "00", "VALUE:M1" ], [ "550,560,565,570,600,650,660,665", "00", "VALUE:M0" ], [ "670,675,680,690", "00", "ERROR:" ], [ "700,750,800", "00", "VALUE:M0" ], [ "810", "00", "VALUE:M1" ], [ "850,900,950", "00", "VALUE:M0" ], [ "999", "00", "VALUE:MX" ], [ "000,050,100,110,120,130,140,150,160,170,200,300,400", "99", "VALUE:MX" ], [ "410,420", "99", "ERROR:" ], [ "450,458,460,470,500", "99", "VALUE:MX" ], [ "510-514", "99", "VALUE:M1" ], [ "550,560,565,570,600,650,660,665", "99", "VALUE:MX" ], [ "670,675,680,690", "99", "ERROR:" ], [ "700,750,800", "99", "VALUE:MX" ], [ "810", "99", "VALUE:M1" ], [ "850,900,950", "99", "VALUE:MX" ], [ "999", "99", "VALUE:MX" ] ]
+}

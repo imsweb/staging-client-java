@@ -1,0 +1,36 @@
+{
+  "id" : "extension_bah",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  Periosteum is a fibrous membrane that wraps the outer surface of bones. Mucoperiosteum is a compound structure of mucous membrane and periosteum. Cortical bone is the dense compact outer layer of bone.Trabecular, cancellous, or spongy bone (spongiosa) is a porous network of tissue filling the interior of bone, decreasing weight and allowing room for blood vessels and marrow.\n\n**Note 2**:  AJCC assigns the T category based on size when bone involvement is limited to the cortex.  Involvement through cortical bone is required for assignment of T4a.\n\n**Note 3**:  The assignment of T1, T2 , and T3 categories for tumors of the lip and oral cavity is based on tumor size.  A physician's statement of the T category may be used to code CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields.  However the two fields are coded independently: for example the record may document size but not extension, other than the physician's statement of the T category. Use codes 405, 410, 415, 775, 810, or 815 as appropriate to code CS Extension based on a statement of T when no other extension information is available.\n\n**Note 4**:  Use code 300 for localized tumor only if no information is available to assign code 100, 400, 405, 410, or 415.",
+  "footnotes" : "- For CS Extension codes 100-535  ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Tumor Size, as shown in the Extension Size Table for this schema.\n- For CS Extension codes 100-535  ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Tumor Size, as shown in the Extension Size Table for this schema.",
+  "last_modified" : "2015-05-27T16:19:05.866Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "VALUE:Tis", "VALUE:Tis", "VALUE:IS", "VALUE:IS" ], [ "100", "Invasive tumor on one side confined to mucoperiosteum (stroma)", "JUMP:extension_size_xae", "JUMP:extension_size_xae", "VALUE:L", "VALUE:L" ], [ "300", "Localized, NOS", "JUMP:extension_size_xae", "JUMP:extension_size_xae", "VALUE:L", "VALUE:L" ], [ "400", "Tumor crosses midline", "JUMP:extension_size_xae", "JUMP:extension_size_xae", "VALUE:L", "VALUE:L" ], [ "405", "Stated as T1 with no other information on extension", "JUMP:extension_size_xae", "JUMP:extension_size_xae", "VALUE:L", "VALUE:L" ], [ "410", "Stated as T2 with no other information on extension", "JUMP:extension_size_xae", "JUMP:extension_size_xae", "VALUE:L", "VALUE:L" ], [ "415", "Stated as T3 with no other information on extension", "JUMP:extension_size_xae", "JUMP:extension_size_xae", "VALUE:L", "VALUE:L" ], [ "500", "Buccal mucosa (inner cheek)\nGingiva, upper\nGlossopalatine arch\nPharyngopalatine arch\nSoft palate including uvula", "JUMP:extension_size_xae", "JUMP:extension_size_xae", "VALUE:RE", "VALUE:RE" ], [ "535", "Cortical bone of maxilla\nCortical palatine bone\nMaxilla, NOS\nPalatine bone, NOS\nCortical bone, NOS (not specified in higher codes)\nBone, NOS (not specified in higher codes)", "JUMP:extension_size_xae", "JUMP:extension_size_xae", "VALUE:RE", "VALUE:RE" ], [ "700", "OBSOLETE DATA REVIEWED AND CHANGED V0203\nCSv2 codes differentiate between involvement of cortical bone and trabecular bone.  All CSv1 cases should be reviewed and recoded to 535 or 725 as appropriate.\n\nMaxillary bone\nPalatine bone ", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "725", "Trabecular bone:\n    Maxilla\n    Palatine bone", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:RE" ], [ "740", "OBSOLETE DATA REVIEWED AND CHANGED V0203\nRecode involved structures to code 745, 750, 765, or 800 as appropriate.\n\nDeep muscle of tongue\nFloor of nose\nMaxillary sinus (antrum)\nNasal cavity\nNasopharynx\nSkin of face\nSphenoid bone", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "745", "Floor of nose\nMaxillary sinus (antrum)\nNasal cavity\nNasopharynx", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "750", "Deep (extrinsic) muscle of tongue:\n    Genioglossus  \n    Hyoglossus\n    Palatoglossus\n    Styloglossus", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "760", "OBSOLETE DATA CONVERTED V0200\nSee code 790\n\nPterygoid plates", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "765", "Skin of face", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "775", "Stated as T4a with no other information on extension", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:RE" ], [ "788", "Specified bone \n(Other than maxilla, palatine, and bones in codes 790 and 800)", "VALUE:T4b", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "790", "Masticator space\nPterygoid plates ", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "800", "Further contiguous extension: \n    Skull base including sphenoid bone other than pterygoid plates\n    Internal  carotid artery (encased)", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "810", "Stated as T4b with no other information on extension", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "815", "Stated as T4 [NOS] with no other information on extension", "VALUE:T4NOS", "VALUE:T4NOS", "VALUE:RE", "VALUE:RE" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown;  extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

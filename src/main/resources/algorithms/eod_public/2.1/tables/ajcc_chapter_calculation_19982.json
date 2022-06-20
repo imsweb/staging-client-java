@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_chapter_calculation_19982",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2021-03-31T13:26:06.422Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C210-C211,C218", "8000,8010,8013,8020,8033,8041,8051,8070-8072,8077,8083,8090", "VALUE:21", "Anus", "VALUE:08" ], [ "C210-C211,C218", "8123-8124,8140", "VALUE:21", "Anus", "VALUE:08" ], [ "C210-C211,C218", "8244,8246", "VALUE:21", "Anus", "VALUE:08" ], [ "C210-C211,C218", "8480,8542", "VALUE:21", "Anus", "VALUE:08" ], [ "C212", "8000,8010,8013,8020,8033,8041,8051,8070-8072,8077,8083,8090", "VALUE:XX", "Other Anus", "VALUE:88" ], [ "C212", "8123-8124,8140", "VALUE:XX", "Other Anus", "VALUE:88" ], [ "C212", "8244,8246", "VALUE:XX", "Other Anus", "VALUE:88" ], [ "C212", "8480,8542", "VALUE:XX", "Other Anus", "VALUE:88" ], [ "C210-C212, C218", "8001-8005,8011-8012,8014-8015,8021-8032,8034-8040,8042-8050", "VALUE:XX", "Other Anus", "VALUE:88" ], [ "C210-C212, C218", "8052-8060,8073-8076,8078-8082,8084-8086", "VALUE:XX", "Other Anus", "VALUE:88" ], [ "C210-C212, C218", "8091-8122,8130-8131,8141-8243", "VALUE:XX", "Other Anus", "VALUE:88" ], [ "C210-C212, C218", "8245,8247-8474,8481-8541,8543-8700", "VALUE:XX", "Other Anus", "VALUE:88" ], [ "C210-C212,C218", "8720-8790", "VALUE:XX", "Other Anus", "VALUE:88" ] ]
+}

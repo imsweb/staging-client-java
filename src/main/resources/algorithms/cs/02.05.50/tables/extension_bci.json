@@ -1,0 +1,35 @@
+{
+  "id" : "extension_bci",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**: Plasmacytomas (9731 and 9734) and Multiple Myeloma (9732) have been moved to the MyelomaPlasmaCellDisorder schema effective with CS version 2: 0203\n\n**Note 2**: For histologies listed in code 100 it is possible to have lymph node involvement; however, at this time, lymph node invovement for these histologies is not collected.",
+  "last_modified" : "2015-05-27T16:19:09.163Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "Localized disease: \n(Single/solitary/unifocal/isolated):\nMay be coded for:\n    Mast cell sarcoma (9740)\n    Malignant histiocytosis (9750)\n    Langerhans cell histiocytosis (9751)\n    Histiocytic sarcoma (9755)\n    Langerhans cell sarcoma (9756)\n    Dendritic cell sarcoma (9757, 9758)\n    Myeloid sarcoma (9930)", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "800", "Systemic disease\n\n(All histologies including those in 100)", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ] ]
+}

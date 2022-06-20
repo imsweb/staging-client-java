@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_merkel_cell_vulva",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection MerkelCellVulva",
+  "title" : "Schema selection for MerkelCellVulva",
+  "last_modified" : "2015-05-27T16:19:46.022Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C510-C512,C518-C519", "8247", "MATCH" ] ]
+}

@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_peritoneum",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection Peritoneum",
+  "title" : "Schema selection for Peritoneum",
+  "last_modified" : "2016-06-28T20:02:30.290Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf25",
+    "name" : "Schema Discriminator: Peritoneum/PeritoneumFemaleGen",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C481-C482,C488", "8000-8576,8590-8671,8930-8934,8940-9110", "001,003,004,009,100", "MATCH" ], [ "C481-C482,C488", "8580-8589,8680-8921,9120-9136,9141-9582,9700-9701", "*", "MATCH" ] ]
+}

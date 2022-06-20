@@ -1,0 +1,19 @@
+{
+  "id" : "fibrosis_score_38658",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Fibrosis Score",
+  "title" : "Fibrosis Score",
+  "notes" : "**Note 1:** Physician statement of fibrosis score can be used to code this data item when no other information is available. However, code 7 when the physician statement of fibrosis score is not based on histologic examination of the liver.\n\n**Note 2:** FIB-4 is NOT a pathological fibrosis score of 4. It is a scoring method using the patient's age and relevant lab values to calculate a score. The medical record may show something like \"FIB-4 = 3.52.\" Do not code FIB-4 values in this data item.\n\n**Note 3:** AJCC classifies Ishak fibrosis scores 0-4 (none to moderate fibrosis) as F0, and Ishak fibrosis scores 5-6 (cirrhosis/severe fibrosis) as F1. This is not the same as METAVIR score F0 or F1.\n\n**Note 4:** Record the results based on information collected during the initial work-up. If multiple biopsies are taken and have conflicting scores, use the results from the biopsy closest to the start of treatment. Information collected after the start of treatment may not be used to code this data item.\n\n**Note 5:** To use codes 0 and 1, you must have a histological (microscopic) confirmation of fibrosis/cirrhosis. Code the absence (code 0) or presence (code 1) of fibrosis as documented in the pathology report. \n\n**Note 6:** Use code 7 if there is a clinical diagnosis (no microscopic confirmation) of severe fibrosis or cirrhosis.\n\n**Note 7:** If no score is mentioned, descriptive terms may be used to assign codes 0 and 1 - see specific terms in the table below.  \n\n**Note 8:** If a fibrosis score is stated but the scoring system is not recorded, consult with the physician. If no further information is available, code 9.",
+  "last_modified" : "2019-06-27T15:53:09.387Z",
+  "definition" : [ {
+    "key" : "fibrosis_score",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Any of the following histologically confirmed \n\nNo to moderate fibrosis\n\nIshak fibrosis score 0-4\nMETAVIR score F0-F3\nBatt-Ludwig score 0-3" ], [ "1", "Any of the following histologically confirmed \n\nAdvanced/severe fibrosis\nDeveloping cirrhosis\nIncomplete cirrhosis\nTransition to cirrhosis\nCirrhosis, probable or definite\nCirrhosis, NOS\n\nIshak fibrosis score 5-6\nMETAVIR score F4\nBatt-Ludwig score 4" ], [ "7", "Clinical statement of advanced/severe fibrosis or cirrhosis, AND\nNot histologically confirmed or unknown if histologically confirmed" ], [ "8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nStated in medical record that patient does not have advanced cirrhosis/advanced fibrosis, not histologically confirmed or unknown if histologically confirmed\nFibrosis score stated but cannot be assigned to codes 0 or 1\nFibrosis score stated but scoring system not recorded\nFibrosis Score not assessed or unknown if assessed" ] ]
+}

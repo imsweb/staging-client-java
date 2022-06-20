@@ -1,0 +1,35 @@
+{
+  "id" : "extension_bbm",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension detail are available, record the code with extension detail in preference to a statement of FIGO stage.\n\n**Note 2**: According to AJCC, metastasis to genital structures for gestational trophoblastic tumors (GTT) is considered T2 and not M1.  Metastasis to genital structures is coded in CS Extension and not in CS Mets at DX.\n\n**Note 3**: For CS Extension codes 100-850, substaging is determined by the values in CS Site-Specific Factor 1,  Prognostic Scoring Index.",
+  "last_modified" : "2015-05-27T16:19:07.836Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "OBSOLETE DATA CONVERTED V0203\nSee code 999\n\nIn situ: noninvasive; intraepithelial", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "100", "Confined to placenta", "VALUE:T1", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "300", "Localized, NOS", "VALUE:T1", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "320", "Confined to uterus : cervix, corpus, and NOS", "VALUE:T1", "VALUE:T1", "VALUE:RE", "VALUE:RE" ], [ "330", "FIGO Stage IA", "VALUE:T1", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "340", "FIGO Stage IB", "VALUE:T1", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "350", "FIGO Stage I [NOS]", "VALUE:T1", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "400", "Adjacent connective tissue, NOS", "VALUE:T2", "VALUE:T2", "VALUE:RE", "VALUE:RE" ], [ "600", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 320, 620\n\nOther genital structures by direct extension or NOS:\n    Broad ligament\n    Cervix\n    Corpus uteri\n    Fallopian tube(s)\n    Genital structures, NOS\n    Ovary(ies)\n    Uterus, NOS \n    Vagina", "VALUE:T2", "VALUE:T2", "VALUE:RE", "VALUE:RE" ], [ "620", "Other genital structures by direction extension or NOS:\n    Broad ligament\n    Fallopian tube(s)\n    Genital structures, NOS\n    Ovary(ies)\n    Vagina", "VALUE:T2", "VALUE:T2", "VALUE:RE", "VALUE:RE" ], [ "700", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 320, 720\n\nOther genital structures, by metastasis:\n    Broad ligament\n    Cervix\n    Corpus uteri\n    Fallopian tube(s)\n    Genital structures, NOS\n    Ovary(ies)\n    Uterus, NOS \n    Vagina", "VALUE:T2", "VALUE:T2", "VALUE:D", "VALUE:D" ], [ "720", "Other genital structures by metastasis:\n    Broad ligament\n    Cervix\n    Fallopian tube(s)\n    Genital structures, NOS\n    Ovary(ies)\n    Vagina", "VALUE:T2", "VALUE:T2", "VALUE:D", "VALUE:D" ], [ "800", "Further contiguous extension", "VALUE:T2", "VALUE:T2", "VALUE:D", "VALUE:D" ], [ "810", "FIGO Stage IIA", "VALUE:T2", "VALUE:T2", "VALUE:RE", "VALUE:RE" ], [ "820", "FIGO Stage IIB", "VALUE:T2", "VALUE:T2", "VALUE:RE", "VALUE:RE" ], [ "850", "FIGO Stage II [NOS]", "VALUE:T2", "VALUE:T2", "VALUE:RE", "VALUE:RE" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

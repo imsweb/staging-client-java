@@ -1,0 +1,30 @@
+{
+  "id" : "schema_selection_gist_appendix",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection GISTAppendix",
+  "title" : "Schema selection for GISTAppendix",
+  "last_modified" : "2021-02-19T21:13:15.206Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C000-C529, C571-C699, C739-C750, C754-C809", "8935-8936", "*", "*", "MATCH" ], [ "C530-C539", "8935-8936", "*", "2018-2020", "MATCH" ], [ "C700-C729, C751-C753", "8935-8936", "3", "*", "MATCH" ] ]
+}

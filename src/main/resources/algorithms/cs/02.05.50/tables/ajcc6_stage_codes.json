@@ -1,0 +1,22 @@
+{
+  "id" : "ajcc6_stage_codes",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC 6 Stage Codes",
+  "title" : "AJCC 6 Stage Allowable Codes",
+  "last_modified" : "2015-05-27T16:18:47.725Z",
+  "definition" : [ {
+    "key" : "ajcc6_stage",
+    "name" : "Display String",
+    "type" : "INPUT"
+  }, {
+    "key" : "stor_ajcc6_stage",
+    "name" : "AJCC6 Storage Code",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "comments",
+    "name" : "Comments",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "VALUE:00", "Stage 0" ], [ "0a", "VALUE:01", "Stage 0a" ], [ "0is", "VALUE:02", "Stage 0is" ], [ "I", "VALUE:10", "Stage I" ], [ "INOS", "VALUE:11", "Stage I NOS" ], [ "IA", "VALUE:12", "Stage IA" ], [ "IA1", "VALUE:13", "Stage IA1" ], [ "IA2", "VALUE:14", "Stage IA2" ], [ "IANOS", "VALUE: ", "Stage IA NOS" ], [ "IB", "VALUE:15", "Stage IB" ], [ "IB1", "VALUE:16", "Stage IB1" ], [ "IB2", "VALUE:17", "Stage IB2" ], [ "IBNOS", "VALUE: ", "Stage IB NOS" ], [ "IC", "VALUE:18", "Stage IC" ], [ "IS", "VALUE:19", "Stage IS" ], [ "ISA", "VALUE:23", "Stage ISA (lymphoma only)" ], [ "ISB", "VALUE:24", "Stage ISB (lymphoma only)" ], [ "IEA", "VALUE:20", "Stage IEA (lymphoma only)" ], [ "IEB", "VALUE:21", "Stage IEB (lymphoma only)" ], [ "IE", "VALUE:22", "Stage IE (lymphoma only)" ], [ "II", "VALUE:30", "Stage II" ], [ "IINOS", "VALUE:31", "Stage II NOS" ], [ "IIA", "VALUE:32", "Stage IIA" ], [ "IIANOS", "VALUE: ", "Stage IIA NOS" ], [ "IIA1", "VALUE: ", "Stage IIA1" ], [ "IIA2", "VALUE: ", "Stage IIA2" ], [ "IIB", "VALUE:33", "Stage IIB" ], [ "IIC", "VALUE:34", "Stage IIC" ], [ "IIEA", "VALUE:35", "Stage IIEA (lymphoma only)" ], [ "IIEB", "VALUE:36", "Stage IIEB (lymphoma only)" ], [ "IIE", "VALUE:37", "Stage IIE (lymphoma only)" ], [ "IISA", "VALUE:38", "Stage IISA (lymphoma only)" ], [ "IISB", "VALUE:39", "Stage IISB (lymphoma only)" ], [ "IIS", "VALUE:40", "Stage IIS (lymphoma only)" ], [ "IIESA", "VALUE:41", "Stage IIESA (lymphoma only)" ], [ "IIESB", "VALUE:42", "Stage IIESB (lymphoma only)" ], [ "IIES", "VALUE:43", "Stage IIES (lymphoma only)" ], [ "III", "VALUE:50", "Stage III" ], [ "IIINOS", "VALUE:51", "Stage III NOS" ], [ "IIIA", "VALUE:52", "Stage IIIA" ], [ "IIIB", "VALUE:53", "Stage IIIB" ], [ "IIIC", "VALUE:54", "Stage IIIC" ], [ "IIIC1", "VALUE: ", "Stage IIIC1" ], [ "IIIC2", "VALUE: ", "Stage IIIC2" ], [ "IIIEA", "VALUE:55", "Stage IIIEA (lymphoma only)" ], [ "IIIEB", "VALUE:56", "Stage IIIEB (lymphoma only)" ], [ "IIIE", "VALUE:57", "Stage IIIE (lymphoma only)" ], [ "IIISA", "VALUE:58", "Stage IIISA (lymphoma only)" ], [ "IIISB", "VALUE:59", "Stage IIISB (lymphoma only)" ], [ "IIIS", "VALUE:60", "Stage IIIS (lymphoma only)" ], [ "IIIESA", "VALUE:61", "Stage IIIESA (lymphoma only)" ], [ "IIIESB", "VALUE:62", "Stage IIIESB (lymphoma only)" ], [ "IIIES", "VALUE:63", "Stage IIIES (lymphoma only)" ], [ "IV", "VALUE:70", "Stage IV" ], [ "IVNOS", "VALUE:71", "Stage IV NOS" ], [ "IVA", "VALUE:72", "Stage IVA" ], [ "IVA1", "VALUE: ", "Stage IVA1" ], [ "IVA2", "VALUE: ", "Stage IVA2" ], [ "IVB", "VALUE:73", "Stage IVB" ], [ "IVC", "VALUE:74", "Stage IVC" ], [ "NA", "VALUE:88", "Not applicable" ], [ "OCCULT", "VALUE:90", "Stage Occult" ], [ "UNK", "VALUE:99", "Stage Unknown" ], [ "*", "VALUE:  ", "Error" ] ]
+}

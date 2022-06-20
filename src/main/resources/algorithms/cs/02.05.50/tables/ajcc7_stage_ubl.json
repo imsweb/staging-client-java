@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc7_stage_ubl",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC7 Stage",
+  "title" : "AJCC TNM 7 Stage",
+  "last_modified" : "2015-05-27T16:18:56.853Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "T0", "N0", "M0", "ERROR:" ], [ "T0", "N1", "M0", "VALUE:IVA" ], [ "T0", "NX", "M0", "VALUE:UNK" ], [ "T1", "N0", "M0", "VALUE:I" ], [ "T1", "N1", "M0", "VALUE:IVA" ], [ "T1", "NX", "M0", "VALUE:UNK" ], [ "T2", "N0", "M0", "VALUE:II" ], [ "T2", "N1", "M0", "VALUE:IVA" ], [ "T2", "NX", "M0", "VALUE:UNK" ], [ "T3a", "N0", "M0", "VALUE:IIIA" ], [ "T3a", "N1", "M0", "VALUE:IVA" ], [ "T3a", "NX", "M0", "VALUE:UNK" ], [ "T3b", "N0", "M0", "VALUE:IIIB" ], [ "T3b", "N1", "M0", "VALUE:IVA" ], [ "T3b", "NX", "M0", "VALUE:UNK" ], [ "T3NOS", "N0", "M0", "VALUE:IIINOS" ], [ "T3NOS", "N1", "M0", "VALUE:IVA" ], [ "T3NOS", "NX", "M0", "VALUE:UNK" ], [ "T4", "N0", "M0", "VALUE:IIIC" ], [ "T4", "N1", "M0", "VALUE:IVA" ], [ "T4", "NX", "M0", "VALUE:UNK" ], [ "TX", "N0", "M0", "VALUE:UNK" ], [ "TX", "N1", "M0", "VALUE:IVA" ], [ "TX", "NX", "M0", "VALUE:UNK" ], [ "T0", "N0", "M1", "VALUE:IVB" ], [ "T0", "N1", "M1", "VALUE:IVB" ], [ "T0", "NX", "M1", "VALUE:IVB" ], [ "T1", "N0", "M1", "VALUE:IVB" ], [ "T1", "N1", "M1", "VALUE:IVB" ], [ "T1", "NX", "M1", "VALUE:IVB" ], [ "T2", "N0", "M1", "VALUE:IVB" ], [ "T2", "N1", "M1", "VALUE:IVB" ], [ "T2", "NX", "M1", "VALUE:IVB" ], [ "T3a", "N0", "M1", "VALUE:IVB" ], [ "T3a", "N1", "M1", "VALUE:IVB" ], [ "T3a", "NX", "M1", "VALUE:IVB" ], [ "T3b", "N0", "M1", "VALUE:IVB" ], [ "T3b", "N1", "M1", "VALUE:IVB" ], [ "T3b", "NX", "M1", "VALUE:IVB" ], [ "T3NOS", "N0", "M1", "VALUE:IVB" ], [ "T3NOS", "N1", "M1", "VALUE:IVB" ], [ "T3NOS", "NX", "M1", "VALUE:IVB" ], [ "T4", "N0", "M1", "VALUE:IVB" ], [ "T4", "N1", "M1", "VALUE:IVB" ], [ "T4", "NX", "M1", "VALUE:IVB" ], [ "TX", "N0", "M1", "VALUE:IVB" ], [ "TX", "N1", "M1", "VALUE:IVB" ], [ "TX", "NX", "M1", "VALUE:IVB" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "her2_ish_dual_probe_ration_4635",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "HER2 ISH DP Ratio",
+  "title" : "HER2 ISH Dual Probe Ratio",
+  "notes" : "**Note 1:** This SSDI is no longer required by any of the standard setters starting with 2021 diagnoses. \n* For cases diagnosed 2021+, this SSDI may be left blank\n\n**Note 2:** Physician statement of HER2 in situ hybridization (ISH) Dual Probe Ratio can be used to code this data item.\n\n**Note 3:** A dual probe test will report results for both HER2 and CEP17, the latter used as a control. The HER2/CEP17 ratio will be reported. Record the ratio in this data item. \n\n* ***Example:*** \n\n    SISH RESULTS: FINAL HER 2 IN SITU HYBRIDIZATION INTERPRETATION: EQUIVOCAL, INDETERMINATE. HER2 gene copy between 4 & 6 with HER2/CEP17 ratio <2. \n \n    HER2/CEP17 RATIO: 4.26 / 3.13 = 1.36\n \n    HER-2/neu SILVER IN SITU HYBRIDIZATION (SISH) \n    HER-2neu gene (Inform HER2 DNA probe) \n    Number of tumor cell nuclei counted: 120 \n    Number of Her-2/neu gene copies: 511\n    Mean HER-2/neu gene copy number: 4.26\n \n    CEP-17 SILVER IN SITU HYBRIDIZATION (SISH) \n    CEP-17 (Inform Chromosome 17 probe) \n    Number of cell nuclei counted: 60\n    Number of CEP-17 gene copies: 188\n    Mean CEP-17 gene copies/nucl: 3.13\n    Code Dual Probe HER2 Copy Number: 4.2\n\n    Code Dual Probe Ratio: 1.3\n\n**Note 4:** **Registrars are not to calculate the ratio.**\n\n**Note 5:** Following ASCO-CAP guidelines, a 2+ (equivocal) finding by immunohistochemistry (IHC) should result in additional testing with ISH to determine gene copy number. \n\n**Note 6:** Any type of ISH test (e.g., FISH, CISH, SISH) can be used to code this data item.  Code this data item using the same report used to record HER2 ISH Summary [NAACCR Data Item #3854].\n\n**Note 7:** A HER2 ISH test may be called \"ERBB2.\"  ERBB2 is the standard symbol for the gene 'erb-b2 receptor tyrosine kinase 2.' An IHC test identifies the protein expressed by the gene, and an ISH test identifies the gene itself.\n\n**Note 8:** If the test results are presented to the hundredth decimal, ignore the hundredth decimal. Do NOT round.\n\n* ***Example:*** \n    Reported as 1.99, code as 1.9",
+  "last_modified" : "2021-06-09T17:32:03.910Z",
+  "definition" : [ {
+    "key" : "her2_ish_dp_ratio",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0-99.9", "Ratio of 0.0 to 99.9 " ], [ "XX.2", "Less than 2.0" ], [ "XX.3", "Greater than or equal to 2.0" ], [ "XX.7", "Test ordered, results not in chart" ], [ "XX.8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code XX.8 will result in an edit error.)" ], [ "XX.9", "Not documented in medical record\nResults cannot be determined (indeterminate)\nDual probe test not done; only single probe test performed\nHER2 ISH dual probe ratio not assessed  or unknown if assessed" ], [ "", "N/A-Diagnosis year is after 2020" ] ]
+}

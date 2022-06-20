@@ -1,0 +1,35 @@
+{
+  "id" : "mets_hav",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note**: The term \"skip metastasis\" is not used with a consistent meaning in the literature.  In some cases, it refers to discontinuous metastasis in the same bone as the primary tumor, while in other cases it refers to discontinuous metastasis in an adjacent bone, usually in the same limb.  For AJCC staging, discontinuous metastasis in the same bone is classified as T3 (coded in CS Extension), and discontinuous metastasis in an adjacent bone is classified as M1b (coded in CS Mets at DX).  If a primary bone tumor is stated as having \"skip metastasis\" or \"skip lesions\" with no other information regarding the bone involved, use code 820 in CS Extension.",
+  "last_modified" : "2015-05-27T16:19:28.430Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "VALUE:M0", "VALUE:NONE", "VALUE:NONE" ], [ "10", "OBSOLETE DATA CONVERTED V0203\nSee code 35\n\nDistant lymph node(s)", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "30", "Distant metastasis to lung only\n\nStated as M1a with no other information on distant metastasis", "VALUE:M1a", "VALUE:M1a", "VALUE:D", "VALUE:D" ], [ "35", "Distant lymph node(s)", "VALUE:M1b", "VALUE:M1b", "VALUE:D", "VALUE:D" ], [ "40", "Distant metastasis except distant lymph node(s) or \"lung only\"\nDistant metastasis to lung plus other sites except distant lymph nodes.\nCarcinomatosis", "VALUE:M1b", "VALUE:M1b", "VALUE:D", "VALUE:D" ], [ "50", "(30 or 40) + 35\n\nDistant metastasis plus distant lymph nodes(s)", "VALUE:M1b", "VALUE:M1b", "VALUE:D", "VALUE:D" ], [ "53", "Stated as M1b with no other information on distant metastasis", "VALUE:M1b", "VALUE:M1b", "VALUE:D", "VALUE:D" ], [ "55", "OBSOLETE DATA CONVERTED V0200 \nSee code 60\n\nStated as M1 NOS", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "60", "Distant metastasis, NOS\n\nStated as M1[NOS] with no other information on distant metastasis", "VALUE:M1NOS", "VALUE:M1NOS", "VALUE:D", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "VALUE:MX", "VALUE:U", "VALUE:U" ] ]
+}

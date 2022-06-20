@@ -1,0 +1,23 @@
+{
+  "id" : "multiple_myeloma_terminology_20875",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Discriminator 1",
+  "title" : "Schema Discriminator 1: Multiple Myeloma Terminology",
+  "notes" : "**Note 1:** Several terms are used to characterize plasma cell myeloma at the time of diagnosis. All these terms are reportable according to the new Hematopoietic and Lymphoid Neoplasms rules effective for cases diagnosed January 1, 2010 and later. \n\n**Note 2:** Select the code based on the terminology specified by the physician in the record. Do not attempt to determine the correct terminology based on the diagnostic criteria in the AJCC 8th table 82.1. \n\n**Note 3:** Do not change the discriminator code if a term used later indicates progression to a more aggressive disease course.\n\n**Note 4:** If diagnosis is plasma cell leukemia variant and is diagnosed concomitant with plasma cell myeloma, code 0.",
+  "last_modified" : "2019-04-05T16:52:38.361Z",
+  "definition" : [ {
+    "key" : "discriminator_1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "stage_description",
+    "name" : "Staging",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Multiple myeloma\nMyeloma, NOS\nNon-secretory myeloma\nPlasma cell myeloma (PCM)\nUltra-High-Risk Smoldering MM (SMM)", "RISS Stage" ], [ "1", "Smoldering plasma cell myeloma (SPCM)\n    Asymptomatic plasma cell myeloma\n    Early myeloma\n    Evolving myeloma", "No RISS Stage" ], [ "9", "Other terminology describing myeloma\nUnknown terminology used", "No RISS Stage" ] ]
+}

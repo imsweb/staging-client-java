@@ -1,0 +1,20 @@
+{
+  "id" : "ssf3_lac",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF3",
+  "title" : "Site-Specific Factor 3",
+  "subtitle" : "Number of Positive Ipsilateral Level I-II Axillary Lymph Nodes",
+  "notes" : "**Note 1:**  Include only the number of positive ipsilateral level I and II axillary lymph nodes and intramammary lymph nodes in this field. \n* Intramammary nodes, located within the breast, are not the same as internal mammary nodes, located along the sternum\n\n**Note 2:**  Record this field even if there has been preoperative treatment.\n\n**Note 3:**  Lymph nodes with only isolated tumor cells (ITCs) are not counted as positive lymph nodes.  Only lymph nodes with metastases greater than 0.2 mm (micrometastases or larger) should be counted as positive.  \n* If the pathology report indicates that axillary nodes are positive but size of the metastases is not stated, assume the metastases are greater than 0.2 mm and code the lymph nodes as positive in this field\n\n**Note 4:**  This field is based on pathologic information only.  If no ipsilateral axillary nodes are removed for examination, or if an ipsilateral axillary lymph node drainage area is removed but no lymph nodes are found, code 098.\n\n**Note 5:**  Instructions for Regional Nodes Positive also apply to this field (although the codes in Regional Nodes Positive are 2 digits rather than 3).  When positive ipsilateral axillary lymph nodes are coded in this field, the number of positive ipsilateral axillary lymph nodes must be less than or equal to the number coded in Regional Nodes Positive (i.e., the number of positive ipsilateral axillary nodes will always be a subset of the number of positive regional nodes).",
+  "last_modified" : "2018-05-14T21:29:01.242Z",
+  "definition" : [ {
+    "key" : "ssf3",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "All ipsilateral axillary nodes examined negative" ], [ "001-089", "1 - 89 nodes positive \n(Exact number of nodes positive)" ], [ "090", "90 or more nodes positive" ], [ "095", "Positive aspiration of lymph node(s)" ], [ "097", "Positive nodes, number unspecified" ], [ "098", "No axillary nodes examined" ], [ "099", "Unknown if axillary nodes are positive\nNot documented in patient record" ], [ "988", "Not applicable: Information not collected for this case" ] ]
+}

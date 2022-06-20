@@ -1,0 +1,27 @@
+{
+  "id" : "path_m_hpg",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Path M Malignant Melanoma Uvea",
+  "title" : "Pathologic M",
+  "footnotes" : "\\* This subcategory of M1 is not defined in UICC 7th edition. Approval has been provided by UICC to use the definition from the AJCC 7th edition, which is documented in the registrar notes.",
+  "last_modified" : "2018-05-14T21:29:06.758Z",
+  "definition" : [ {
+    "key" : "path_m",
+    "name" : "Pathologic M",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_m_display",
+    "name" : "Pathologic M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis  cannot be assessed\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "CLINICAL assessment only:\nNote: M1 has subcategories of M1a, M1b and M1c. Assign M1 only when there is no information available to assign one of the subcategories.\n\nDistant lymph nodes, NOS\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nSize of metastasis not known or stated\n\nStated as M1 [NOS]" ], [ "c1A", "cM1a", "Not defined by UICC*", "CLINICAL assessment only:\nLargest diameter of the largest metastasis 3 cm or less\n\nStated as M1a" ], [ "c1B", "cM1b", "Not defined by UICC*", "CLINICAL assessment only:\nLargest diameter of the largest metastasis 3.1 - 8.0 cm\n\nStated as M1b" ], [ "c1C", "cM1c", "Not defined by UICC*", "CLINICAL assessment only:\nLargest diameter of the largest metastasis greater than 8 cm\n\nStated as M1c" ], [ "p1", "pM1", "Distant metastasis", "HISTOLOGICALLY confirmed:\nNote: M1 has subcategories of M1a, M1b and M1c. Assign M1 only when there is no information available to assign one of the subcategories.\n\nDistant lymph nodes, NOS\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nSize of metastasis not known or stated" ], [ "p1A", "pM1a", "Not defined by UICC*", "HISTOLOGICALLY confirmed:\nLargest diameter of the largest metastasis 3 cm or less" ], [ "p1B", "pM1b", "Not defined by UICC*", "HISTOLOGICALLY confirmed:\nLargest diameter of the largest metastasis 3.1 - 8.0 cm" ], [ "p1C", "pM1c", "Not defined by UICC*", "HISTOLOGICALLY confirmed:\nLargest diameter of the largest metastasis greater than 8 cm" ], [ "88", "88", "Not applicable", "In situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nNo pathologic workup for T and N categories and no pathologic evidence of metastasis \nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

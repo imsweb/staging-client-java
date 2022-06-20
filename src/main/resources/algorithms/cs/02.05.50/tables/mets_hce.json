@@ -1,0 +1,35 @@
+{
+  "id" : "mets_hce",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note 2**: When a patient has more than one area of GIST, it is important to try to distinguish between intra-abdominal metastasis and tumor multiplicity. Distant metastases are relatively rare in GISTs, but they are increasingly detected with sophisticated radiological studies. Intra-abdominal metastasis will present as tumor involvement in the abdominal cavity outside the main tumor mass, in the peritoneum, omentum, serosae of organs, and the cul-de-sac, among other areas. Code this form of metastasis in CS Mets at DX. \n\nTumor multiplicity, in contrast, will present with anatomically separate, multiple tumors of different sizes arising independently in the GI tract. This form of tumor multiplicity usually will be seen in patients with neurofibromatosis type 1 or familial GIST syndrome, but in rare instances may be seen in patients without these conditions. This form of multiplicity should not be coded as metastasis, but the presence of multiple tumors should be coded in CS Site-Specific Factor 10, Tumor Multiplicity.\n\nWhen a solitary omental or mesenteric tumor mass is found with a primary GIST elsewhere, do not code this as a metastasis. Code it as multiple tumors in CS Site-Specific Factor 10, Tumor Multiplicity.\n\nWhen multiple tumor areas are present and it is not stated whether these are metastases or independent tumors, consult with a physician if possible to determine how to code them. If a decision cannot be made, code as 99.",
+  "last_modified" : "2015-05-27T16:19:29.620Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "VALUE:NA", "VALUE:NONE", "VALUE:NONE" ], [ "10", "Distant lymph node(s):\n    Celiac lymph node(s)\n    Distant lymph node(s), NOS", "VALUE:M1", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "11", "For jejunum and ileum primaries only:\n    Pericholedochal\n(For duodenal primary, see CS Lymph Nodes field)", "VALUE:M1", "VALUE:NA", "VALUE:D", "VALUE:RN" ], [ "40", "Distant metastases except distant lymph node(s) \nCarcinomatosis", "VALUE:M1", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "50", "40 + (10and/or 11)\n\nDistant metastasis plus distant lymph node(s)", "VALUE:M1", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "60", "Distant metastasis, NOS\n\nStated as M1 with no other information on distant metastasis", "VALUE:M1", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "VALUE:NA", "VALUE:U", "VALUE:U" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "size_aba",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Size",
+  "title" : "CS Tumor Size",
+  "notes" : "**Note**:  Record the size of the largest tumor only.  For Mycosis Fungoides, a tumor is described as a solid or nodular lesion at least 1 cm in diameter with evidence of depth and/or vertical growth.  Do not record the size of individual patches, papules, or plaques. Use code 999 if it is unknown if tumors are present, or if the size of the largest tumor is unknown.",
+  "last_modified" : "2015-05-27T16:19:50.399Z",
+  "definition" : [ {
+    "key" : "size",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No mass/tumor found\nNo tumors present" ], [ "001-988", "001 - 988 millimeters (mm) \n(Exact size to nearest mm)" ], [ "989", "989 mm or larger" ], [ "990", "Microscopic focus or foci only and no size of focus given" ], [ "991", "Described as \"less than 1 centimeter (cm)\"" ], [ "992", "Described as \"less than 2 cm,\" or \"greater than 1 cm,\" or \"between 1 cm and 2 cm\"" ], [ "993", "Described as \"less than 3 cm,\" or \"greater than 2 cm,\" or \"between 2 cm and 3 cm\"" ], [ "994", "Described as \"less than 4 cm,\" or \"greater than 3 cm,\" or \"between 3 cm and 4 cm\"" ], [ "995", "Described as \"less than 5 cm,\" or \"greater than 4 cm,\" or \"between 4 cm and 5 cm\"" ], [ "999", "Unknown; size not stated\nSize of tumor cannot be assessed\nNot documented in patient record" ] ]
+}

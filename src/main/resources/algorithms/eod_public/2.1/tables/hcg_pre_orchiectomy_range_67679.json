@@ -1,0 +1,19 @@
+{
+  "id" : "hcg_pre_orchiectomy_range_67679",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "hCG Pre-Orchiectomy Range",
+  "title" : "hCG (Human Chorionic Gonadotropin) Pre-Orchiectomy Range",
+  "notes" : "**Note 1:** Physician statement of the hCG (Human Chorionic Gonadotropin) Pre-Orchiectomy Range can be used to code this data item when no other information is available. \n\n**Note 2:** Record the range of the highest hCG test result documented in the medical record **prior to orchiectomy** or prior to any systemic treatment. The lab value may be documented in a lab report, history and physical, or clinical statement in the pathology report.\n\n**Note 3:** A lab value expressed in International Units/liter (IU/L) is equivalent to the same value expressed in milli-International Units/milliliter (mIU/mL).\n\n**Note 4:** The same laboratory test should be used to record information in hCG Pre-orchiectomy Lab Value [NAACCR Data Item #3848].",
+  "last_modified" : "2019-04-05T16:52:38.171Z",
+  "definition" : [ {
+    "key" : "hcg_pre_orch_range",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Within normal limits" ], [ "1", "Above normal and less than 5,000 milli-International Units/milliliter (mIU/mL)" ], [ "2", "5,000 - 50,000 mIU/mL" ], [ "3", "Greater than 50,000 mIU/mL" ], [ "4", "Pre-orchiectomy human chorionic gonadotropin (hCG) stated to be elevated" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nhCG Pre-Orchiectomy range not assessed or unknown if assessed" ] ]
+}

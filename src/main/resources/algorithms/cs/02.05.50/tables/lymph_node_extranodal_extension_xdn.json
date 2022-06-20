@@ -1,0 +1,23 @@
+{
+  "id" : "lymph_node_extranodal_extension_xdn",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Lymph Node Extranodal Extension",
+  "title" : "Lymph Node Extranodal Extension Table",
+  "notes" : "**Note**:   For CS Lymph Nodes codes 100-270, 310-380, 500 and 505 ONLY, the N category for AJCC 7 staging is assigned based on the value of CS Site-Specific Factor 17, Extranodal Extension of Regional Lymph Nodes, as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:26.853Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "CS Lymph Nodes",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf17",
+    "name" : "SSF17",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "000", "ERROR:" ], [ "200", "000", "ERROR:" ], [ "250", "000", "ERROR:" ], [ "260", "000", "ERROR:" ], [ "270", "000", "ERROR:" ], [ "310", "000", "ERROR:" ], [ "350", "000", "ERROR:" ], [ "370", "000", "ERROR:" ], [ "380", "000", "ERROR:" ], [ "500", "000", "ERROR:" ], [ "505", "000", "ERROR:" ], [ "100", "010", "VALUE:N1" ], [ "200", "010", "VALUE:N2" ], [ "250", "010", "VALUE:N1" ], [ "260", "010", "VALUE:N1" ], [ "270", "010", "VALUE:N2" ], [ "310", "010", "VALUE:N1" ], [ "350", "010", "VALUE:N2" ], [ "370", "010", "VALUE:N1" ], [ "380", "010", "VALUE:N1" ], [ "500", "010", "VALUE:N1" ], [ "505", "010", "VALUE:N1" ], [ "100", "020", "VALUE:N3" ], [ "200", "020", "VALUE:N3" ], [ "250", "020", "VALUE:N3" ], [ "260", "020", "VALUE:N3" ], [ "270", "020", "VALUE:N3" ], [ "310", "020", "VALUE:N3" ], [ "350", "020", "VALUE:N3" ], [ "370", "020", "VALUE:N3" ], [ "380", "020", "VALUE:N3" ], [ "500", "020", "VALUE:N3" ], [ "505", "020", "VALUE:N3" ], [ "100", "030", "VALUE:N1" ], [ "200", "030", "VALUE:N2" ], [ "250", "030", "VALUE:N1" ], [ "260", "030", "VALUE:N1" ], [ "270", "030", "VALUE:N2" ], [ "310", "030", "VALUE:N1" ], [ "350", "030", "VALUE:N2" ], [ "370", "030", "VALUE:N1" ], [ "380", "030", "VALUE:N1" ], [ "500", "030", "VALUE:N1" ], [ "505", "030", "VALUE:N1" ], [ "100", "988,999", "VALUE:N1" ], [ "200", "988,999", "VALUE:N2" ], [ "250", "988,999", "VALUE:N1" ], [ "260", "988,999", "VALUE:N1" ], [ "270", "988,999", "VALUE:N2" ], [ "310", "988,999", "VALUE:N1" ], [ "350", "988,999", "VALUE:N2" ], [ "370", "988,999", "VALUE:N1" ], [ "380", "988,999", "VALUE:N1" ], [ "500", "988,999", "VALUE:N1" ], [ "505", "988,999", "VALUE:N1" ] ]
+}

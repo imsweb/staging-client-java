@@ -1,0 +1,35 @@
+{
+  "id" : "mets_hbb",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note**: Involvement of inguinal, pelvic, or external iliac lymph nodes (codes 11 and 12) with previous scrotal or inguinal surgery prior to presentation of the testis tumor is coded in CS Lymph Nodes as regional node involvement and not in CS Mets at DX.",
+  "last_modified" : "2015-05-27T16:19:28.735Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "VALUE:M0", "VALUE:NONE", "VALUE:NONE" ], [ "11", "Distant lymph node(s):\n    Pelvic, NOS\n    External iliac\nWITHOUT previous scrotal or inguinal surgery \nOr unknown if previous scrotal or inguinal surgery", "VALUE:M1a", "VALUE:M1a", "VALUE:RN", "VALUE:RN" ], [ "12", "Distant lymph node(s):\n    Inguinal nodes, NOS:\n        Deep, NOS\n        Node of Cloquet or Rosenmuller (highest deep inguinal)\n        Superficial (femoral)\nWITHOUT previous scrotal or inguinal surgery \nOr unknown if previous scrotal or inguinal surgery", "VALUE:M1a", "VALUE:M1a", "VALUE:D", "VALUE:D" ], [ "13", "Specified distant lymph nodes, other than code 11 or 12\nDistant lymph node(s), NOS", "VALUE:M1a", "VALUE:M1a", "VALUE:D", "VALUE:D" ], [ "20", "Distant metastasis to lung", "VALUE:M1a", "VALUE:M1a", "VALUE:D", "VALUE:D" ], [ "25", "20 + (11, 12, or 13) \n\nDistant metastasis to lung and lymph nodes as described in code 11, 12, or 13", "VALUE:M1a", "VALUE:M1a", "VALUE:D", "VALUE:D" ], [ "30", "Stated as M1a with no other information on metastasis", "VALUE:M1a", "VALUE:M1a", "VALUE:D", "VALUE:D" ], [ "40", "Metastasis to other distant sites \nWith or without metastasis to lung and/or distant lymph node(s)\nCarcinomatosis\n\nStated as M1b with no other information on metastases", "VALUE:M1b", "VALUE:M1b", "VALUE:D", "VALUE:D" ], [ "45", "OBSOLETE DATA CONVERTED V0200  \nSee code 60  \n\nDistant metastasis, NOS", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "60", "Distant metastasis, NOS \n\nStated as M1 [NOS] with no other information on metastases", "VALUE:M1NOS", "VALUE:M1NOS", "VALUE:D", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "VALUE:MX", "VALUE:U", "VALUE:U" ] ]
+}

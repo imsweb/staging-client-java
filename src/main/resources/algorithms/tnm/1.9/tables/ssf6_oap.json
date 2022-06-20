@@ -1,0 +1,20 @@
+{
+  "id" : "ssf6_oap",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF6",
+  "title" : "Site-Specific Factor 6",
+  "subtitle" : "Number of Positive Para-Aortic Nodes",
+  "notes" : "**Note:**  Record the number of positive para-aortic lymph nodes documented in the patient record.  Apply the same instructions for coding Regional Nodes Positive to this data item.",
+  "last_modified" : "2018-05-14T21:29:01.103Z",
+  "definition" : [ {
+    "key" : "ssf6",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "All para-aortic lymph nodes examined negative" ], [ "001-089", "1 - 89 para-aortic lymph nodes are positive. \n(Exact number of nodes positive)" ], [ "090", "90 or more para-aortic lymph nodes positive" ], [ "095", "Positive aspiration or core biopsy of para-aortic lymph node(s)" ], [ "097", "Positive para-aortic lymph nodes are documented, number not specified" ], [ "098", "No para-aortic lymph nodes examined" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown if para-aortic lymph nodes positive Not documented in patient record" ] ]
+}

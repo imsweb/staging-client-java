@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc_chapter_calculation_97562",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2021-03-16T16:45:18.767Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8000,8010,8013,8020,8023,8041,8051-8052,8070-8072,8074-8075,8082-8083", "VALUE:12.2", "Nasal Cavity and Ethmoid Sinus", "VALUE:08" ], [ "8140,8144", "VALUE:12.2", "Nasal Cavity and Ethmoid Sinus", "VALUE:08" ], [ "8200,8240,8249", "VALUE:12.2", "Nasal Cavity and Ethmoid Sinus", "VALUE:08" ], [ "8310,8430", "VALUE:12.2", "Nasal Cavity and Ethmoid Sinus", "VALUE:08" ], [ "8525,8560,8562", "VALUE:12.2", "Nasal Cavity and Ethmoid Sinus", "VALUE:08" ], [ "8941,8982", "VALUE:12.2", "Nasal Cavity and Ethmoid Sinus", "VALUE:08" ], [ "8001-8005,8011-8012,8014-8015,8021-8022,8030-8040,8042-8050,8053-8060,8073,8076-8081,8084-8131", "VALUE:XX", "Other Nasal Cavity and Ethmoid Sinus", "VALUE:88" ], [ "8141-8143,8145-8191", "VALUE:XX", "Other Nasal Cavity and Ethmoid Sinus", "VALUE:88" ], [ "8201-8231,8241-8248,8250-8300", "VALUE:XX", "Other Nasal Cavity and Ethmoid Sinus", "VALUE:88" ], [ "8311-8420,8440-8524", "VALUE:XX", "Other Nasal Cavity and Ethmoid Sinus", "VALUE:88" ], [ "8530-8552,8561,8563,8570-8700", "VALUE:XX", "Other Nasal Cavity and Ethmoid Sinus", "VALUE:88" ] ]
+}

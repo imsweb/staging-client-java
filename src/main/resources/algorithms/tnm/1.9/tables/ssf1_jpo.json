@@ -1,0 +1,21 @@
+{
+  "id" : "ssf1_jpo",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF1",
+  "title" : "Site-Specific Factor 1",
+  "subtitle" : "World Health Organization (WHO) Grade Classification",
+  "notes" : "**Note 1:**  The World Health Organization (WHO) classification system for tumors of the central nervous system combines tumor nomenclature with an associated grading system, so the actual histologic diagnosis directly correlates with the histologic grade of the tumor.  \n* The histologic grade used for staging purposes is not the same code that is assigned as the differentiation code in the sixth digit of the ICD-O morphology code and recorded in the traditional registry Grade field.\n\n**Note 2:**  Code the WHO grade classification as documented in the medical record. If a WHO grade is not documented, refer to the WHO grade instructions in Part I, Section II. For specific histologies, a WHO grade is automatically assigned. \n* See AJCC 7th edition Table 56.3 or MPH rules Brain Section Equivalent Terms and Definitions. (1), (2)\n\n**Note 3:**  A WHO grade can only be assigned from a pathology report.  \n* If the only diagnosis is clinical (imaging), code to 998 for no histologic examination of primary site done.",
+  "footnotes" : "(1) American Joint Committee on Cancer., & Edge, S.B. (2010) AJCC Cancer Staging Manual (7th ed.). New York; London: Springer, pg. 596\n\n(2) Johnson CH, Peace S, Adamo P, Fritz A, Percy-Laurry A, Edwards BK.  The 2007 Multiple Primary and Histology Coding Rules.  National Cancer Institute, Surveillance, Epidemiology and End Results Program.  Bethesda, MD, 2007, <http://seer.cancer.gov/tools/mphrules/2007_mphrules_manual_08242012.pdf>, pgs. 69-76",
+  "last_modified" : "2018-05-14T21:29:01.324Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Grade I" ], [ "020", "Grade II" ], [ "030", "Grade III" ], [ "040", "Grade IV" ], [ "988", "Not applicable: Information not collected for this case" ], [ "998", "No histologic examination of primary site" ], [ "999", "Not documented in medical record\nUnknown; WHO grade not stated" ] ]
+}

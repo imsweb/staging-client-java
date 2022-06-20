@@ -1,0 +1,23 @@
+{
+  "id" : "extension_cytology_summary_stage_xkl",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension Cytology Summary Stage",
+  "title" : "Extension Cytology Summary Stage Table",
+  "notes" : "**Note**: For CS Extension codes 100-110, 115-120, 125-130, 135-140, and 160-400 ONLY. The SS77 and SS2000 stages are assigned based on the value of CS Extension and peritoneal cytology status coded in CS Site Specific Factor 2 (SSF2) as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:14.710Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "CS SSF2",
+    "type" : "INPUT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "VALUE:L", "VALUE:L" ], [ "010", "VALUE:RE", "VALUE:RE" ], [ "020", "VALUE:L", "VALUE:L" ], [ "888", "ERROR:", "ERROR:" ], [ "988, 997-999", "VALUE:L", "VALUE:L" ] ]
+}

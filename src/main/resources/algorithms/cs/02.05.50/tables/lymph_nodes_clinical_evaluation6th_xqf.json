@@ -1,0 +1,23 @@
+{
+  "id" : "lymph_nodes_clinical_evaluation6th_xqf",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Lymph Nodes Clinical Evaluation 6th",
+  "title" : "Lymph Nodes Clinical Evaluation 6th Table",
+  "notes" : "**Note**:  When CS Lymph Nodes is 050-300 and CS Regional Nodes Eval is 0, 1, 5, or 9, the N category for AJCC 6 staging is assigned based on the value of CS Site-Specific Factor 2, Clinical Assessment of Regional Lymph Nodes, and the number of positive nodes coded in Regional Nodes Positive as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:23.301Z",
+  "definition" : [ {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf2",
+    "name" : "SSF2",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00-03", "000", "VALUE:N1" ], [ "04-90", "000", "VALUE:N2" ], [ "95,97-99", "000", "VALUE:N1" ], [ "00-03", "100", "VALUE:N1" ], [ "04-90", "100", "VALUE:N2" ], [ "95,97-99", "100", "VALUE:N1" ], [ "00-03", "200", "VALUE:N2" ], [ "04-90", "200", "VALUE:N2" ], [ "95,97-99", "200", "VALUE:N2" ], [ "00-03", "400", "VALUE:N1" ], [ "04-90", "400", "VALUE:N2" ], [ "95,97-99", "400", "VALUE:N1" ], [ "00-03", "888", "ERROR:" ], [ "04-90", "888", "ERROR:" ], [ "95,97-99", "888", "ERROR:" ], [ "00-03", "988,999", "VALUE:N1" ], [ "04-90", "988,999", "VALUE:N2" ], [ "95,97-99", "988,999", "VALUE:N1" ] ]
+}

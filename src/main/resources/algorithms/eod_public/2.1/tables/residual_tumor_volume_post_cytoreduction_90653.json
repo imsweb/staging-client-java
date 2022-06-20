@@ -1,0 +1,19 @@
+{
+  "id" : "residual_tumor_volume_post_cytoreduction_90653",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Residual Tumor Volume Post Cytoreduction",
+  "title" : "Residual Tumor Volume Post Cytoreduction",
+  "notes" : "**Note 1:** Physician statement of residual tumor status after primary cytoreduction surgery can be used to code this data item when no other information is available.\n\n**Note 2:** Information for this SSDI is found in the operative report, procedure report, or managing physician notes. \n\n**Note 3:** The surgery to remove as much cancer in the pelvis and/or abdomen as possible, reducing the \"bulk\" of the cancer, is called \"debulking\" or \"cytoreductive\" surgery. It is performed when there is widespread evidence of advanced stage of ovarian cancer with obvious spread to other organs outside the ovary, typically in the upper abdomen, intestines, the omentum (the fat pad suspended from the transverse colon like an apron), the diaphragm, or liver.  \n\n**Note 4:** Optimal debulking is described as removal of all tumor except for residual nodules that measure no more than 1 centimeter (cm) in maximum diameter.\n\n**Note 5:** Gross residual tumor after primary cytoreductive surgery is a prognostic factor that has been demonstrated in large studies. The best prognostic category after surgery includes those who are left with no gross residual tumor.\n* Physicians should record the presence or absence of residual disease, if residual disease is observed, the size of the largest visible lesion should be documented",
+  "last_modified" : "2021-06-05T13:27:36.448Z",
+  "definition" : [ {
+    "key" : "resid_tumor_vol_post_cyto",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "No gross residual tumor nodules" ], [ "50", "Residual tumor nodule(s) 1 centimeter (cm) or less" ], [ "60", "Residual tumor nodule(s) greater than 1 cm" ], [ "70", "Macroscopic residual tumor nodule(s), size not stated" ], [ "80", "Procedure described as optimal debulking and size of residual tumor nodule(s) not given" ], [ "97", "No cytoreductive surgery performed" ], [ "98", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 98 will result in an edit error.)" ], [ "99", "Not documented in medical record\nResidual tumor status after cytoreductive surgery not assessed or unknown if assessed" ] ]
+}

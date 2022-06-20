@@ -1,0 +1,19 @@
+{
+  "id" : "sarcomatoid_features_99558",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Sarcomatoid Features",
+  "title" : "Sarcomatoid Features",
+  "notes" : "**Note 1:** Physician statement of Sarcomatoid Features can be used to code this data item.\n\n**Note 2:** Sarcomatoid morphology may be manifested by any renal cell carcinoma. The presence of sarcomatoid component in a renal cell carcinoma may be prognostically important. \n\n**Note 3:** Sarcomatoid features is mostly seen with renal cell carcinoma (all variants); however, if it’s seen with other histologies, it can be coded.\n\n**Note 4:** Record the presence or absence of sarcomatoid features as documented anywhere in the pathology report. \n\n**Note 5:** Code XX5 when the only information available about Sarcomatoid features is from a metastatic site\n\n**Note 6:** Do not use imaging findings to code this data item. \n\n**Note 7:** Code XX9 if surgical resection of the primary site is performed and there is no mention of sarcomatoid features.",
+  "last_modified" : "2020-12-15T21:28:29.351Z",
+  "definition" : [ {
+    "key" : "sarcomatoid_features",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Sarcomatoid features not present/not identified " ], [ "001-100", "Sarcomatoid features 1-100%" ], [ "R01", "Sarcomatoid features stated as less than 10%" ], [ "R02", "Sarcomatoid features stated as range 10%-30% present" ], [ "R03", "Sarcomatoid features stated as a range 31% to 50% present" ], [ "R04", "Sarcomatoid features stated as a range 51% to 80% present" ], [ "R05", "Sarcomatoid features stated as greater than 80%" ], [ "XX5", "Sarcomatoid features present from metastatic site only AND\nSarcomatoid features not present, or unknown if present, in primary site" ], [ "XX6", "Sarcomatoid features present, percentage unknown" ], [ "XX7", "Not applicable: Not a renal cell carcinoma morphology" ], [ "XX8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code XX8 may result in an edit error.)" ], [ "XX9", "Not documented in medical record\nSarcomatoid features not assessed or unknown if assessed\nNo surgical resection of primary site is performed" ] ]
+}

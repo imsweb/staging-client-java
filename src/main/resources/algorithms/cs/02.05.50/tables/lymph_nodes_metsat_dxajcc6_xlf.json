@@ -1,0 +1,23 @@
+{
+  "id" : "lymph_nodes_metsat_dxajcc6_xlf",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Lymph Nodes Mets at DX AJCC6",
+  "title" : "Lymph Nodes Mets at DX AJCC 6 Table",
+  "notes" : "**Note**:  For CS Mets at DX codes 00 and 99, the M category for AJCC 6 staging is assigned as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:25.078Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "CS Lymph Nodes",
+    "type" : "INPUT"
+  }, {
+    "key" : "mets",
+    "name" : "CS Mets at DX",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "00", "VALUE:M0" ], [ "010", "00", "VALUE:M0" ], [ "100", "00", "VALUE:M0" ], [ "105", "00", "VALUE:M0" ], [ "106", "00", "VALUE:M1" ], [ "107", "00", "VALUE:M1" ], [ "108", "00", "VALUE:M1" ], [ "109", "00", "VALUE:M1" ], [ "110", "00", "ERROR:" ], [ "114", "00", "VALUE:M0" ], [ "115", "00", "VALUE:M0" ], [ "120", "00", "VALUE:M0" ], [ "125", "00", "VALUE:M0" ], [ "130", "00", "VALUE:M0" ], [ "500", "00", "VALUE:M0" ], [ "510", "00", "VALUE:M0" ], [ "520", "00", "VALUE:M0" ], [ "540", "00", "VALUE:M0" ], [ "550", "00", "VALUE:M1" ], [ "560", "00", "VALUE:M1" ], [ "570", "00", "VALUE:M1" ], [ "580", "00", "VALUE:M1" ], [ "600", "00", "VALUE:M0" ], [ "650", "00", "VALUE:M0" ], [ "700", "00", "VALUE:M0" ], [ "800", "00", "VALUE:M0" ], [ "999", "00", "VALUE:MX" ], [ "000", "99", "VALUE:MX" ], [ "010", "99", "VALUE:MX" ], [ "100", "99", "VALUE:MX" ], [ "105", "99", "VALUE:MX" ], [ "106", "99", "VALUE:M1" ], [ "107", "99", "VALUE:M1" ], [ "108", "99", "VALUE:M1" ], [ "109", "99", "VALUE:M1" ], [ "110", "99", "ERROR:" ], [ "114", "99", "VALUE:MX" ], [ "115", "99", "VALUE:MX" ], [ "120", "99", "VALUE:MX" ], [ "125", "99", "VALUE:MX" ], [ "130", "99", "VALUE:MX" ], [ "500", "99", "VALUE:MX" ], [ "510", "99", "VALUE:MX" ], [ "520", "99", "VALUE:MX" ], [ "540", "99", "VALUE:MX" ], [ "550", "99", "VALUE:M1" ], [ "560", "99", "VALUE:M1" ], [ "570", "99", "VALUE:M1" ], [ "580", "99", "VALUE:M1" ], [ "600", "99", "VALUE:MX" ], [ "650", "99", "VALUE:MX" ], [ "700", "99", "VALUE:MX" ], [ "800", "99", "VALUE:MX" ], [ "999", "99", "VALUE:MX" ] ]
+}

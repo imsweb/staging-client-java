@@ -1,0 +1,20 @@
+{
+  "id" : "ssf4_mpe",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF4",
+  "title" : "Site-Specific Factor 4",
+  "subtitle" : "Size of Largest Metastasis",
+  "notes" : "**Note 1:**  Record the size of the largest diameter of the largest metastasis in any site, including distant lymph node or distant organ.  \n* Do not record the size of the metastasis in a regional lymph node\n\n**Note 2:**  The metastasis may be measured either clinically or pathologically.",
+  "last_modified" : "2018-05-14T21:29:00.345Z",
+  "definition" : [ {
+    "key" : "ssf4",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No metastatic disease " ], [ "001-979", "001 - 979 millimeters (mm) (Exact size to nearest mm)" ], [ "980", "980 mm or larger" ], [ "988", "Not applicable: Information not collected for this case" ], [ "991", "Described as \"less than 3 cm\"" ], [ "992", "Described as \"less than 8 cm,\" or \"greater than 3 cm,\" or \"between 3 cm and 8 cm\"" ], [ "993", "Described as \"greater than 8 cm\" " ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

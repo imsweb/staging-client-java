@@ -1,0 +1,19 @@
+{
+  "id" : "egfr_mutational_analysis_51122",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "EGFR Mutational Analysis",
+  "title" : "EGFR Mutational Analysis",
+  "notes" : "**Note 1:** This SSDI is effective for diagnosis years 2021+\n* For cases diagnosed 2018-2020, leave this SSDI blank\n\n**Note 2:** Physician statement of EGFR can be used to code this data item when no other information is available.\n\n**Note 3:** EGFR may be recorded for all histologies and stages; however, it is primarily performed for advanced non-small cell carcinomas. If information is not available, code 9. \n\n**Note 4:** The most common EGFR mutations are \n * Exon 18 Gly719\n * Exon 19 deletion\n * Exon 20 insertion\n * Exon 20 Thr790Met\n * Exon 21 Leu858Arg\n\n**Note 5:** If EGFR is positive and there is no mention of the mutated codon, or the mutated codon is not specified, code 4.\n\n**Note 6:** If neoadjuvant therapy is given, record the assay from tumor specimens prior to neoadjuvant therapy.\n * If neoadjuvant therapy is given and there are no EGFR results from pre-treatment specimens, report the findings from post-treatment specimens\n\n**Note 7:** Code 9 when\n * Insufficient amount of tissue available to perform test\n * No microscopic confirmation of tumor \n * EGFR not ordered or not done, or unknown if ordered or done",
+  "last_modified" : "2021-04-01T17:38:19.334Z",
+  "definition" : [ {
+    "key" : "egfr_mutational_analysis",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Normal \nEGFR negative, EGFR wild type\nNegative for mutations, no alterations, no mutations (somatic) identified, not present, not detected" ], [ "1", "Abnormal (mutated)/detected in exon(s) 18, 19, 20, and/or 21 " ], [ "2", "Abnormal (mutated)/detected but not in exon(s) 18, 19, 20, and/or 21" ], [ "4", "Abnormal (mutated)/detected, NOS, exon(s) not specified" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nEGFR not assessed or unknown if assessed" ], [ "", "N/A - Diagnosis year is prior to 2021" ] ]
+}

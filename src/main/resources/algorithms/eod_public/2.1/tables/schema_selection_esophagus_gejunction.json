@@ -1,0 +1,30 @@
+{
+  "id" : "schema_selection_esophagus_gejunction",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection EsophagusGEJunction",
+  "title" : "Schema selection for EsophagusGEJunction",
+  "last_modified" : "2021-06-03T16:58:54.362Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_1",
+    "name" : "Schema Discriminator 1",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_2",
+    "name" : "Schema Discriminator 2",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C150-C155,C158-C159", "8000-8015, 8021-8046, 8060, 8071-8073, 8075-8076, 8078-8082, 8084-8552, 8561-8700, 8720-8790", " ", " ", "MATCH" ], [ "C160", "8000-8015, 8021-8046, 8060, 8071-8073, 8075-8076, 8078-8082, 8084-8149, 8154, 8160-8231, 8243-8248, 8250-8552, 8561-8682, 8690-8700, 8720-8790,8976", "2", " ", "MATCH" ], [ "C150-C155, C158-C159", "8020", " ", "2", "MATCH" ], [ "C160", "8020", "2", "2", "MATCH" ] ]
+}

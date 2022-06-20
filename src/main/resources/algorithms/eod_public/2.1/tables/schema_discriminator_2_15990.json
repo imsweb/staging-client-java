@@ -1,0 +1,23 @@
+{
+  "id" : "schema_discriminator_2_15990",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Discriminator 2",
+  "title" : "Schema Discriminator 2: Soft Tissue Trunk and Extremities/Soft Tissue Abdomen and Thoracic",
+  "notes" : "**Note 1:** A schema discriminator is used to discriminate for peripheral nerve tumors (C473, C475) and connective tissue tumors (C493, C494, C495) for the subsite in which the tumor arose. \n\n**Note 2:** Code 1 is used for external structures and is assigned to AJCC 8th edition Chapter 41: Soft Tissue Sarcoma of the Trunk and Extremities (Schema ID 00410: Soft Tissue Sarcoma of the Trunk and Extremities). \n* *Example:* Trapezius muscle (C493) is an external structure, on the outer layer or periphery of the body\n\n**Note 3:** Code 2 is used for internal structures and is assigned to AJCC 8th edition Chapter 42: Soft Tissue Sarcoma of the Abdomen and Thoracic Visceral Organs (Schema ID 00421: Soft Tissue Sarcoma of the Abdomen and Thoracic Visceral Organs).\n* *Example:* Aorta (C493) is an internal structure, in the inner parts of the body\n\n**Note 4:** Code 8 is only used for cases for 2018-2020 that have already been abstracted prior to the Version 2.0 update (2021 update). It can also be used for 2018-2020 cases that are abstracted after the 2021 updates. \n* For cases diagnosed 2021+, code 8 cannot be used\n\n**Note 5:** Code 9 is used for when there is not enough specific information to determine if the structure is external or internal and is assigned to AJCC 8 edition Chapter 45: Soft Tissue Sarcoma of Unusual Sites and Histologies (Schema ID 00450: Soft Tissue Other).\n* *Example:* Chest NOS (C493) does not provide enough information in order to determine if it is either an external structure, on the outer layer or periphery of the body, or an internal structure, in the inner parts of the body",
+  "last_modified" : "2020-05-04T19:25:02.246Z",
+  "definition" : [ {
+    "key" : "discriminator_2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "disease",
+    "name" : "Disease",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "External structures (sites), NOS\n\nExamples of terms include:\n\nPeripheral nerves and autonomic nervous system (C47)\n* Pelvis (C475)\n  - Buttock\n  - Gluteal region\n  - Groin\n  - Inguinal region\n  - Perineum\n  - Sacrococcygeal region (stated as external)\n* Thorax (C473)\n   - Axilla\n   - Chest wall\n   - Infraclavicular region\n   - Scapular region\n   - Thoracic wall\n\nConnective, subcutaneous and other soft tissues (C49)\n* Abdomen (C494)\n  - Abdominal wall\n  - Abdominal wall muscle\n  - Iliopsoas muscle\n  - Psoas muscle\n  - Rectus abdominis muscle\n  - Umbilicus\n* Pelvis (C495)\n   - Buttock\n   - Gluteal region\n   - Gluteus maximus muscle\n   - Groin\n   - Inguinal region\n   - Perineum\n   - Sacrococcygeal region\n* Thorax (C493)\n   - Axilla\n   - Chest wall\n   - Infraclavicular region\n   - Intracostal muscle\n   - Latissimus dorsi muscle\n   - Pectoralis major muscle\n   - Scapular region\n   - Thoracic wall\n   - Trapezius muscle", "41: Soft Tissue Trunk and Extremities" ], [ "2", "Internal structures and viscera (sites), NOS\n\nExamples of terms include\n\nPeripheral nerves and autonomic nervous system (C47)\n* Sacrococcygeal region (intrapelvic)\n\nConnective, subcutaneous and other soft tissues (C49)\n* Abdomen (C494)\n  - Abdominal aorta\n  - Abdominal vena cava\n  - Celiac artery\n  - Inferior vena cava\n  - Mesenteric artery\n  - Renal artery\n  - Vena cava\n* Pelvis (C495)\n   - Iliac artery\n   - Iliac vein\n* Thorax (C493)\n   - Aorta\n   - Axillary artery\n   - Diaphragm \n   - Internal mammary artery\n   - Subclavian artery\n   - Superior vena cava\n   - Thoracic duct", "42: Soft Tissue Abdomen and Thoracic Visceral Organs" ], [ "8", "Not applicable: Case abstracted prior to 2021 update", "42: Soft Tissue Abdomen and Thoracic Visceral Organs" ], [ "9", "Not specific enough to determine if external or internal\n\nExamples of terms include\n\nPeripheral nerves and autonomic nervous system (C47)\n* Pelvis (C475)\n  - Lumbosacral plexus\n  - Sacral nerve\n  - Sacral plexus\n* Thorax (C473)\n   - Chest\n   - Intercostal nerve\n\nConnective, subcutaneous and other soft tissues (C49)\n* Thorax (C493)\n   - Chest, NOS\n   - Thorax", "45: Soft Tissue Sarcoma of Unusual Sites and Histologies" ] ]
+}

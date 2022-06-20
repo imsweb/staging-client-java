@@ -1,0 +1,20 @@
+{
+  "id" : "ssf6_oae",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF6",
+  "title" : "CS Site-Specific Factor 6",
+  "subtitle" : "Adenoid Cystic Carcinoma - Presence of Basaloid Pattern",
+  "notes" : "**Note 1**:  Code only for cases diagnosed as adenoid cystic carcinoma, histology code 8200/3.  \n\n**Note 2**: Use code 987 for all other histologies. Use code 998 if no pathologic examination of primary site.",
+  "last_modified" : "2015-05-27T16:20:08.710Z",
+  "definition" : [ {
+    "key" : "ssf6",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Basaloid pattern not present in adenoid cystic carcinoma" ], [ "010", "Basaloid pattern present in adenoid cystic carcinoma" ], [ "020", "OBSOLETE DATA CONVERTED V0203\nSee code 000\n\nBasaloid pattern not present in adenoid cystic carcinoma" ], [ "888", "OBSOLETE DATA CONVERTED V0200\nSee code 988\n\nNot applicable for this site" ], [ "987", "Not applicable, histology not adenoid cystic carcinoma" ], [ "988", "Not applicable:  Information not collected for this case\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.  If this item is required to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "998", "No pathologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

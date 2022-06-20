@@ -1,0 +1,28 @@
+{
+  "id" : "nodes_dfn",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "EOD Regional Nodes",
+  "title" : "EOD Regional Nodes",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field. Distant nodes are coded in EOD Mets.\n\n**Note 2:** Code 800 if regional lymph nodes are involved, but there is no indication which ones are involved.",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017\n\n(5) Krasinskas, A., Pawlik, T.M., Vauthey, J.N., et al. **Distal Bile Duct**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017",
+  "last_modified" : "2021-06-02T19:54:42.830Z",
+  "definition" : [ {
+    "key" : "eod_regional_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_n",
+    "name" : "EOD 2018 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_n",
+    "name" : "SS2018 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:NONE" ], [ "300", "Cystic duct (node of neck of gallbladder) (Calot's node)\nHepatic artery (common, NOS)\nHilar (in hepatoduodenal ligament)\nNode of foramen of Winslow (omental) (epiploic)\nPancreaticoduodenal (anterior, posterior) \nPericholedochal (node along common bile duct)\nPeriduodenal\nPeripancreatic (near head of pancreas only)\nPeriportal\nPorta hepatis (portal) (hilar) (in hilus of liver)", "JUMP:rn_positive_with_regional_nodes_for_ajcc_n_62318", "VALUE:RN" ], [ "700", "Superior mesenteric artery\nSuperior mesenteric vein", "JUMP:rn_positive_with_regional_nodes_for_ajcc_n_62318", "VALUE:D" ], [ "800", "Regional lymph node(s), NOS\nLymph node(s), NOS", "JUMP:rn_positive_with_regional_nodes_for_ajcc_n_62318", "VALUE:RN" ], [ "999", "Unknown; regional lymph node(s) not stated\nRegional lymph node(s) cannot be assessed\nNot documented in medical record\n\nDeath Certificate Only", "VALUE:NX", "VALUE:U" ] ]
+}

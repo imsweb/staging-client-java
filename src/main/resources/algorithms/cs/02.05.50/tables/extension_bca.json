@@ -1,0 +1,36 @@
+{
+  "id" : "extension_bca",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  AJCC 7th Edition T1 and T2 categories are based on size and high risk features and not depth of invasion or extension. AJCC 7th Edition includes a T3 category for head and neck skin primaries only.\n\n**Note 2**:  In the case of multiple simultaneous tumors, code the tumor with the greatest extension.\n\n**Note 3**:  Skin ulceration does not alter the AJCC T category. \n\n**Note 4**:  The assignment of the T1 category for cutaneous squamous cell carcinomas with one or no high-risk features is based on tumor size.  A physician's statement of the T1 category may be used to code both CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields. However the two fields are coded independently; for example, the record may document size but not extension.  Use codes 510, 520, 600, and 810 as appropriate to code CS Extension based on a statement of T when no other extension information is available.\n\n**Note 5**:  Use code 400 (Localized, NOS) when no further information is available to assign code 100, 500, 510, or 520.",
+  "footnotes" : "- For CS Extension codes 100, 400, 500, 510, and 550 ONLY, the T category for AJCC 7 staging is assigned based on the values of CS Tumor Size and CS Site-Specific Factor 12, High Risk Features, as shown in the Extension Size High Risk Table for this schema.\n- For CS Extension codes 100, 400, 500 and 510 ONLY, the T category for AJCC 6th Edition is assigned based on value of CS Tumor Size as shown in the Extension Size AJCC 6 Table for this schema.",
+  "last_modified" : "2015-05-27T16:19:08.687Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepidermal, intraepithelial, noninvasive \nBowen disease", "VALUE:Tis", "VALUE:Tis", "VALUE:IS", "VALUE:IS" ], [ "100", "Lesion(s) confined to dermis", "JUMP:extension_size_high_risk_xfy", "JUMP:extension_size_ajcc6_xfw", "VALUE:L", "VALUE:L" ], [ "400", "Localized, NOS", "JUMP:extension_size_high_risk_xfy", "JUMP:extension_size_ajcc6_xfw", "VALUE:L", "VALUE:L" ], [ "500", "Subcutaneous tissue (through entire dermis)", "JUMP:extension_size_high_risk_xfy", "JUMP:extension_size_ajcc6_xfw", "VALUE:L", "VALUE:L" ], [ "510", "Stated as T1 with no other information on extension", "JUMP:extension_size_high_risk_xfy", "JUMP:extension_size_ajcc6_xfw", "VALUE:L", "VALUE:L" ], [ "520", "Stated as T2 with no other information on extension", "VALUE:T2", "VALUE:T2", "VALUE:L", "VALUE:L" ], [ "550", "Underlying cartilage and/or skeletal muscle", "JUMP:extension_size_high_risk_xfy", "VALUE:T4", "VALUE:D", "VALUE:RE" ], [ "600", "For skin of head and neck primaries only:\n     Maxilla\n     Mandible\n     Orbital bone\n     Temporal bone\n\nStated as T3 with no other information on extension", "VALUE:T3", "VALUE:T4", "VALUE:D", "VALUE:RE" ], [ "700", "OBSOLETE DATA RETAINED V0200\nInvasion of cartilage, bone, skeletal muscle reclassified in AJCC 7th Edition\nSee codes 550, 600, 710, and 750\n\nUnderlying cartilage, bone, skeletal muscle", "ERROR:", "VALUE:T4", "VALUE:D", "VALUE:RE" ], [ "710", "For skin of head and neck primaries only:\n     Direct or perineural invasion of skull base", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:RE" ], [ "750", "Bone (other than in code 600 or 710):\n    Axial or appendicular skeleton", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:RE" ], [ "800", "Further contiguous extension", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "810", "Stated as T4 with no other information on extension", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:RE" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

@@ -1,0 +1,31 @@
+{
+  "id" : "stage_group_p_82326",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Stage Group (p)",
+  "title" : "TNM 7 Stage Group",
+  "notes" : "**Note 1:** SEER*RSA added additional information to UICC 7th edition stages with UICC approval. If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC 7th edition manual to ensure you are using the appropriate logic. \n* T3 (Stage Group III is defined as T3, N0, M0)\n\n**Note 2:** The stage groups below are valid in AJCC 7th edition, but not UICC. Approved by UICC.\n* Stage Group 0  (as defined in the table)\n* Stage Group I  (as defined in the table)\n* Stage Group III  (as defined in the table)\n\n**Note 3:** While the stage groups below are valid, the specified TNM combinations are only included in SEER*RSA.\n* Stage Group III - (T3 [NOS], T3b), NX, M0 - NX is not included in the stage group definition\n* Stage Group IIIA - T3a, NX, M0 - NX is not included in the stage group definition\n* Stage Group IIIC1 - T0, N1, M0 - T0 is not included in the stage group definition\n* Stage Group IIIC2 - T0, N2, M0 - T0 is not included in the stage group definition",
+  "last_modified" : "2018-05-14T21:29:01.340Z",
+  "definition" : [ {
+    "key" : "path_stage_group_direct",
+    "name" : "Stage",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_stage_group_direct_display",
+    "name" : "Stage Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "t",
+    "name" : "T",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0 ", "0   ", "Tis  ", "N0,X", "M0" ], [ "1 ", "I   ", "T1   ", "N0  ", "M0" ], [ "1A", "IA  ", "T1a  ", "N0  ", "M0" ], [ "1B", "IB  ", "T1b  ", "N0  ", "M0" ], [ "2 ", "II  ", "T2   ", "N0  ", "M0" ], [ "3 ", "III ", "T3   \nT3,3b", "N0\nNX", "M0\nM0" ], [ "3A ", "IIIA   ", "T3a                 ", "N0,X  ", "M0" ], [ "3B ", "IIIB   ", "T3b                 ", "N0    ", "M0" ], [ "3C1", "IIIC1  ", "Tis,T0,1,1a,1b,2,3,3a,3b", "N1    ", "M0" ], [ "3C2", "IIIC2  ", "Tis,T0,1,1a,1b,2,3,3a,3b", "N2    ", "M0" ], [ "4A ", "IVA    ", "T4                  ", "Any N ", "M0" ], [ "4B ", "IVB    ", "Any T               ", "Any N ", "M1" ], [ "99 ", "Unknown", "T0\nT0,1,1a,1b,2 \nTX", "N0\nNX    \nAny N", "M0\nM0\nM0" ], [ "88", "Not Applicable", "88", "88", "88" ] ]
+}

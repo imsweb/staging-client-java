@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_jpr",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF1",
+  "title" : "Site-Specific Factor 1",
+  "subtitle" : "Carbohydrate Antigen 125 (CA-125)",
+  "notes" : "**Note 1:** Carbohydrate Antigen 125 (CA-125), also known as cancer antigen 125, mucin 16, or MUC16, is a protein which in humans is encoded by the MUC16 gene. CA-125 is a tumor marker or biomarker that may be elevated in the blood of some patients with primary peritoneal carcinoma.\n\n**Note 2:** Record only the blood or serum CA-125 value for this data item. Do not record CA-125 test results based on fluid from the chest or abdominal cavity.\n\n**Note 3:** Record the CA-125 status prior to treatment.\n\n**Note 4:** Normal values may vary with patient age and from lab to lab. The typical human reference ranges are 0 to 35 micrograms per milliliter (ug/ml).",
+  "last_modified" : "2018-05-14T21:29:01.276Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Positive/elevated" ], [ "020", "Negative/normal; within normal limits" ], [ "030", "Borderline; undetermined whether positive or negative" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

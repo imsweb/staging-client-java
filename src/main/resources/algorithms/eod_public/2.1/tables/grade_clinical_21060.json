@@ -1,0 +1,19 @@
+{
+  "id" : "grade_clinical_21060",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Grade Clinical GIST",
+  "title" : "Grade Clinical",
+  "notes" : "**Note 1:** Grade Clinical must not be blank.\n\n**Note 2:** Assign the highest grade from the primary tumor assessed during the clinical time frame. \n\n**Note 3:** If there are multiple tumors with different grades abstracted as one primary, code the highest grade.\n\n**Note 4:** Codes L and H take priority over A-D.\n\n**Note 5:** Record the mitotic rate as Low or High as indicated on the pathology report or CAP protocol. Assume the denominator is 5 square mm if not specified.\n* Low: 5 or fewer mitoses per 5 square mm (L)\n* High: Over 5 mitoses per 5 square mm (H)\n\n**Note 6:** Code 9 (unknown) when\n* Grade from primary site is not documented\n* Clinical workup is not done (for example, cancer is an incidental finding during surgery for another condition)\n* Grade checked \"not applicable\" on CAP Protocol (if available) and no other grade information is available\n\n**Note 7:** If there is only one grade available and it cannot be determined if it is clinical or pathological, assume it is a Grade Clinical and code appropriately per Grade Clinical categories for that site, and then code unknown (9) for Grade Pathological, and blank for Grade Post Therapy Clin (yc) and Grade Post Therapy Path (yp).\n\n**Note 8:** If you are assigning an AJCC 8th edition stage group\n* Grade is required to assign stage group\n* Codes A-D are treated as an unknown grade when assigning AJCC stage group \n* An unknown grade may result in an unknown stage group",
+  "last_modified" : "2020-05-29T11:42:18.922Z",
+  "definition" : [ {
+    "key" : "grade_clin",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "L", "Low: 5 or fewer mitoses per 5 square mm" ], [ "H", "High: Over 5 mitoses per 5 square mm" ], [ "A", "Well differentiated" ], [ "B", "Moderately differentiated" ], [ "C", "Poorly differentiated" ], [ "D", "Undifferentiated, anaplastic" ], [ "9", "Grade cannot be assessed; Unknown" ] ]
+}

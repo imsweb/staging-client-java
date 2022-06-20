@@ -1,0 +1,34 @@
+{
+  "id" : "mets_hcj",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "last_modified" : "2015-05-27T16:19:29.886Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "VALUE:M0", "VALUE:NONE", "VALUE:NONE" ], [ "08", "Distant lymph node(s):\n    For rectosigmoid:\n        Internal iliac (hypogastric):\n            Obturator", "VALUE:M1", "VALUE:M1", "VALUE:RN", "VALUE:D" ], [ "10", "OBSOLETE DATA CONVERTED V0203\nSee code 15\n\nDistant lymph node(s), NOS", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "11", "OBSOLETE DATA CONVERTED V0203\nSee code 08\n\nDistant lymph node(s):\n    Rectosigmoid:\n        Internal iliac (hypogastric)\n            Obturator", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "12", "Other distant lymph node(s), including:\n    External iliac or common iliac", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "15", "Distant lymph node(s), NOS", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "40", "Distant metastasis except distant lymph node(s) \nCarcinomatosis", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "50", "40 + any of (08  - 15)\n\nDistant metastasis plus distant lymph node(s)", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "60", "Distant metastasis, NOS\n\nStated as M1 with no other information on distant metastasis", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "VALUE:MX", "VALUE:U", "VALUE:U" ] ]
+}

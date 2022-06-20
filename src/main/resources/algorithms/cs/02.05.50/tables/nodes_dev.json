@@ -1,0 +1,36 @@
+{
+  "id" : "nodes_dev",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Peripheral nodes are located in the upper and lower limbs, including axillary and inguinal nodes.  Central lymph nodes are located in the trunk, including mediastinal, para-aortic, and mesenteric nodes.\n\n**Note 2**:  Involvement of peripheral and central lymph nodes, distant nodes for ocular adnexal lymphomas, is coded in CS Lymph Nodes and not in CS Mets at DX.\n\n**Note 3**: When coding Regional Nodes Positive and Regional Nodes Examined, only include regional nodes. Do not include distant nodes coded in CS Lymph Nodes. If the only information available is for Lymph Nodes, NOS, coded as 800 in CS Lymph Nodes, assume these are regional nodes for coding Regional Nodes Positive and Regional Nodes Examined.",
+  "footnotes" : "- Stage grouping for AJCC 6 staging of ocular adnexal lymphoma is derived from a combination of CS Extension, CS Lymph Nodes, and CS Mets at DX codes as shown in the AJCC TNM 6 Stage table.  A or B classification is appended to Stage I-IV based on coding of CS Site-Specific Factor 2,  Systemic Symptoms at Diagnosis.",
+  "last_modified" : "2015-05-27T16:19:37.282Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:NA", "VALUE:NONE", "VALUE:NONE" ], [ "100", "Ipsilateral regional lymph nodes:\n    Cervical, NOS:\n        Submandibular (submaxillary)\n    Parotid, NOS:\n        Preauricular\n    Regional lymph node(s), NOS\n\nStated as N1 with no other information on regional lymph nodes", "VALUE:N1", "VALUE:NA", "VALUE:RNOS", "VALUE:RNOS" ], [ "300", "Contralateral or bilateral regional nodes listed in code 100\n\nStated as N2 with no other information on regional lymph nodes", "VALUE:N2", "VALUE:NA", "VALUE:RNOS", "VALUE:RNOS" ], [ "600", "Peripheral lymph nodes not draining ocular adnexal region\n\nStated as N3 with no other information on regional lymph nodes", "VALUE:N3", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "700", "Central lymph nodes \n\n Stated as N4 with no other information on regional lymph nodes", "VALUE:N4", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:NA", "VALUE:RNOS", "VALUE:RNOS" ], [ "888", "OBSOLETE DATA CONVERTED V0200\nSee code 988\n \nNot applicable ", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "988", "OBSOLETE DATA RETAINED V0200\nNew schema for site, histology V0200\n\nNot applicable for this schema", "ERROR:", "VALUE:NA", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; regional and distant lymph nodes not stated\nRegional and distant lymph nodes cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NA", "VALUE:U", "VALUE:U" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "hcg_pre_orchiectomy_lab_value_55584",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "hCG Pre-Orchiectomy Lab Value",
+  "title" : "hCG (Human Chorionic Gonadotropin) Pre-Orchiectomy Lab Value",
+  "notes" : "**Note 1:** Physician statement of the hCG (Human Chorionic Gonadotropin) Pre-Orchiectomy Lab Value can be used to code this data item when no other information is available. \n\n**Note 2:** Record the lab value of the highest hCG test result documented in the medical record **prior to orchiectomy** or prior to any systemic treatment. The lab value may be documented in a lab report, history and physical, or clinical statement in the pathology report.\n\n**Note 3:** A lab value expressed in International Units/liter (IU/L) is equivalent to the same value expressed in milli-International Units/milliliter (mIU/mL).\n\n**Note 4:** The same laboratory test should be used to record information in hCG Pre-Orchiectomy Range [NAACCR Data Item #3849].",
+  "last_modified" : "2019-04-05T16:52:38.040Z",
+  "definition" : [ {
+    "key" : "hcg_pre_orch_lab_value",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0", "0.0 milli-International Units/milliliter (mIU/mL)" ], [ "0.1-99999.9", "0.1 - 99,999.9 mIU/mL" ], [ "XXXXX.1", "100,000 mIU/mL or greater" ], [ "XXXXX.7", "Test ordered, results not in chart" ], [ "XXXXX.8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code XXXXX.8 may result in an edit error.)" ], [ "XXXXX.9", "Not documented in medical record\nhCG (Human Chorionic Gonadotropin) Pre-Orchiectomy Lab Value not assessed or unknown if assessed" ] ]
+}

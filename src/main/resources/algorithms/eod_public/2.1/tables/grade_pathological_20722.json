@@ -1,0 +1,19 @@
+{
+  "id" : "grade_pathological_20722",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Grade Pathological",
+  "title" : "Grade Pathological",
+  "notes" : "**Note 1:** Grade Pathological must not be blank.\n\n**Note 2:** There is a preferred grading system for this schema. If the clinical grade given uses the preferred grading system and the pathological grade does not use the preferred grading system, do not record the Grade Clinical in the Grade Pathological field. Assign Grade Pathological using the applicable generic grade codes (A-D). \n* *Example:* Biopsy of kidney shows a renal cell carcinoma, G2. The surgical resection states a moderately differentiated renal cell carcinoma\n    - Code Grade Clinical as 2 since G2 is documented and this is the preferred grading system\n    - Code Grade Pathological as B (moderately differentiated), per the Coding Guidelines for Generic Grade Categories\n\n**Note 3:** Assign the highest grade from the primary tumor.  \n\n**Note 4:** If there are multiple tumors with different grades abstracted as one primary, code the highest grade.\n\n**Note 5:** Codes 1-4 take priority over codes A-D.\n\n**Note 6:** Use the grade from the **clinical work up** from the primary tumor in different scenarios based on behavior or surgical resection\n* **Behavior**\n  - Tumor behavior for the clinical and the pathological diagnoses are the same AND the clinical grade is the highest grade \n   - Tumor behavior for clinical diagnosis is invasive, and the tumor behavior for the pathological diagnosis is in situ\n* **Surgical Resection**\n   - Surgical resection is done of the primary tumor and there is no grade documented from the surgical resection\n    - Surgical resection is done of the primary tumor and there is no residual cancer\n* **No surgical resection**\n    - Surgical resection of the primary tumor has not been done, but there is positive microscopic confirmation of distant metastases during the clinical time frame\n\n**Note 7:** Code 9 (unknown) when \n* Grade from primary site is not documented\n* No resection of the primary site (see exception in Note 7, Surgical resection, last bullet)\n* Neo-adjuvant therapy is followed by a resection (see Grade Post Therapy Path (yp))\n* Grade checked “not applicable” on CAP Protocol (if available) and no other grade information is available\n* Clinical case only (see Grade Clinical)\n* There is only one grade available and it cannot be determined if it is clinical, pathological, post therapy clinical or post therapy pathological",
+  "last_modified" : "2021-04-24T11:20:06.632Z",
+  "definition" : [ {
+    "key" : "grade_path",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "G1: Nucleoli absent or inconspicuous and basophilic at 400x magnification\n\nStated as WHO/ISUP Grade 1" ], [ "2", "G2: Nucleoli conspicuous and eosinophilic at 400x magnification, visible but not prominent at 100x magnification\n\nStated as WHO/ISUP Grade 2" ], [ "3", "G3: Nucleoli conspicuous and eosinophilic at 100x magnification\n\nStated as WHO/ISUP Grade 3" ], [ "4", "G4: Marked nuclear pleomorphism and/or multinucleate giant cells and/or rhabdoid and/or sarcomatoid differentiation\n\nStated as WHO/ISUP Grade 4" ], [ "A", "Well differentiated" ], [ "B", "Moderately differentiated" ], [ "C", "Poorly differentiated" ], [ "D", "Undifferentiated, anaplastic" ], [ "9", "Grade cannot be assessed (GX); Unknown\n\nOnly Fuhrman grade documented" ] ]
+}

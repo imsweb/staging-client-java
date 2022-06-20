@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_plasmacytomas",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection Plasmacytomas",
+  "title" : "Schema selection for Plasmacytomas",
+  "last_modified" : "2020-10-28T17:13:01.908Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C000-C440, C442-C689, C691-C694, C698-C699, C739-C750, C754-C809", "9671,9734", "*", "MATCH" ], [ "C000-C699, C739-C750, C754-C809", "9731, 9761", "*", "MATCH" ], [ "C700-C729, C751-C753", "9671, 9731, 9734, 9761", "3", "MATCH" ] ]
+}

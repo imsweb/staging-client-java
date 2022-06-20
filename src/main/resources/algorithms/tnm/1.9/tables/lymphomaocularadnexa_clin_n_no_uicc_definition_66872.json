@@ -1,0 +1,19 @@
+{
+  "id" : "lymphomaocularadnexa_clin_n_no_uicc_definition_66872",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clinical N",
+  "title" : "LymphomaOcularAdnexa Clin N (no UICC definition)",
+  "notes" : "**Note 1:**  Peripheral nodes are located in the upper and lower limbs, including axillary and inguinal nodes.  Central lymph nodes are located in the trunk, including mediastinal, para-aortic, and mesenteric nodes.\n\n**Note 2:**  Involvement of peripheral and central lymph nodes, distant nodes for ocular adnexal lymphomas, is coded in Clinical N and not in Clinical M.\n\n**Note 3:**  When coding Regional Nodes Positive and Regional Nodes Examined, only include regional nodes. Do not include distant nodes coded in Clinical N. If the only information available is for Lymph Nodes, NOS, coded as NX in Clinical N, assume these are regional nodes for coding Regional Nodes Positive and Regional Nodes Examined.\n\n**Note 4:** UICC does not define Lymphoma Ocular Adnexa. A list of all possible Clinical N values is provided.",
+  "last_modified" : "2018-05-14T21:29:04.404Z",
+  "definition" : [ {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n_display",
+    "name" : "Clinical N Display",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cNX" ], [ "c0", "cN0" ], [ "c0I-", "cN0i-" ], [ "c0I+", "cN0i+" ], [ "c0M-", "cN0m-" ], [ "c0M+", "cN0m+" ], [ "c1MI", "cN1mi" ], [ "c0A", "cN0a" ], [ "c0B", "cN0b" ], [ "c1", "cN1" ], [ "c1A", "cN1a" ], [ "c1B", "cN1b" ], [ "c1C", "cN1c" ], [ "c2", "cN2" ], [ "c2A", "cN2a" ], [ "c2B", "cN2b" ], [ "c2C", "cN2c" ], [ "c3", "cN3" ], [ "c3A", "cN3a" ], [ "c3B", "cN3b" ], [ "c3C", "cN3c" ], [ "c4", "cN4" ], [ "88", "Not Applicable" ] ]
+}

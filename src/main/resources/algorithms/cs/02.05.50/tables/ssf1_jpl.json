@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_jpl",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF1",
+  "title" : "CS Site-Specific Factor 1",
+  "subtitle" : "Measured Thickness (Depth), Breslow Measurement",
+  "notes" : "**Note 1**:  Code MEASURED THICKNESS (Depth) of tumor (Breslow measurement), not size.  Record actual measurement in hundredths of millimeters from the pathology report.\n\n**Note 2**:  Code the greatest measured thickness from any procedure performed on the lesion, whether it is described as a biopsy or an excision.  For example, if a punch biopsy with a thickness of 0.50 mm is followed by a re-excision with a thickness of residual tumor of 0.20 mm, code 050.  Do not add measurements together from different procedures.",
+  "last_modified" : "2015-05-27T16:20:00.069Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No mass/tumor found" ], [ "001-979", "0.01 - 9.79 millimeters\n(Code exact measurement in HUNDREDTHS of millimeter)  \n\nExamples:\n    001    0.01 millimeter\n    002    0.02 millimeters\n    010    0.1 millimeter\n    074    0.74 millimeters\n    100    1 millimeter\n    105    1.05 millimeters\n    979    9.79 millimeters" ], [ "980", "9.80 millimeters or larger \n(Includes cases converted from codes 981-989 during conversion to V0200)" ], [ "981-987", "OBSOLETE DATA CONVERTED V0200\nData converted to 980\n\n9.81-9.87 millimeters" ], [ "988", "Not applicable:  Information not collected for this schema\n(If this item is required by your standard setter, use of code 988 will result in an edit error)\n(Cases with code 988 converted to 980 during conversion to V0200)" ], [ "989", "OBSOLETE DATA CONVERTED V0200\nData converted to 980\n\n9.89 millimeters or larger" ], [ "990", "OBSOLETE DATA CONVERTED V0102\nThis code was made obsolete in CS Version 1 and should no longer be used. Cases were converted to code 999.\n \nMicroinvasion; microscopic focus or foci only; no size given" ], [ "999", "Microinvasion; microscopic focus or foci only and no depth given\nNot documented in patient record\nUnknown; depth not stated" ] ]
+}

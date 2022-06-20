@@ -1,0 +1,15 @@
+{
+  "id" : "ajcc7_inclusions_tpz",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC7 Inclusions",
+  "title" : "Histology Inclusion Table AJCC 7th ed.",
+  "notes" : "**Note**: For Peritoneum, this table is for males only.  For females and site C481-C482, C488, the histologies are 8800-8820,8823-8921,9120-9136,9142-9582 because the other histologies are in PeritoneumFemaleGen.",
+  "last_modified" : "2015-05-27T16:18:53.298Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  } ],
+  "rows" : [ [ "8800-8820" ], [ "8823-8934" ], [ "8940-9136" ], [ "9142-9582" ] ]
+}

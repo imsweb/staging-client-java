@@ -1,0 +1,20 @@
+{
+  "id" : "ssf6_oas",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF6",
+  "title" : "Site-Specific Factor 6",
+  "subtitle" : "KIT Gene Immunohistochemistry (IHC)",
+  "notes" : "**Note 1:**  Most gastrointestinal stromal tumors (GISTs) have oncogenic mutations of the KIT gene, which is located on chromosome 4q.  KIT is a cytokine receptor which binds to stem cell factor, which causes certain types of cells to grow; altered forms of KIT may be associated with some types of cancer.  This test detects expression of the KIT gene in tumor tissue sections using immunohistochemical (IHC) stains.  Test results are available in the pathology report.  A positive test helps to establish the diagnosis of GIST and to identify patients for whom treatment with agents such as imatinib mesylate (Gleevec) or sunitinib malate (Sutent) is appropriate.  Do not record secondary or acquired mutations that may have developed because of long-term imatinib treatment.\n\n**Note 2:**  Another name for KIT is CD117.\n\n**Note 3:**  See **Site-Specific Factor 7, KIT Gene Mutations** for coding information about specific mutations of the KIT gene detectable with molecular testing.  See **Site-Specific Factor 8, PDGFRA Gene Mutation** for coding information about mutations of the PDGFRA gene.",
+  "last_modified" : "2018-05-14T21:29:01.305Z",
+  "definition" : [ {
+    "key" : "ssf6",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Positive/elevated" ], [ "020", "Negative/normal; within normal limits" ], [ "030", "Borderline; undetermined whether positive or negative" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Test ordered, results not in chart; results pending" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

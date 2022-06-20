@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_melanoma_floor_mouth",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Schema Selection MelanomaFloorMouth",
+  "title" : "Schema selection for MelanomaFloorMouth",
+  "last_modified" : "2018-05-14T21:29:03.533Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C040-C041,C048-C049", "8720-8790", "MATCH" ] ]
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "ajcc7_t_codes",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC 7 T Codes",
+  "title" : "AJCC 7 T Allowable Codes",
+  "last_modified" : "2015-05-27T16:19:00.607Z",
+  "definition" : [ {
+    "key" : "ajcc7_t",
+    "name" : "Display String",
+    "type" : "INPUT"
+  }, {
+    "key" : "stor_ajcc7_t",
+    "name" : "AJCC7 Storage Code",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "comments",
+    "name" : "Comments",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "TX", "VALUE:999", "TX" ], [ "T0", "VALUE:000", "T0" ], [ "Ta", "VALUE:010", "Ta" ], [ "Tis", "VALUE:050", "Tis" ], [ "Tispu", "VALUE:060", "Tispu (Urethra only)" ], [ "Tispd", "VALUE:070", "Tispd (Urethra only)" ], [ "T1", "VALUE:100", "T1" ], [ "T1mi", "VALUE:110", "T1mi" ], [ "T1NOS", "VALUE:199", "T1 NOS" ], [ "T1NOS(s)", "VALUE:191", "T1 NOS(s)" ], [ "T1NOS(m)", "VALUE:192", "T1 NOS(m)" ], [ "T1a", "VALUE:120", "T1a" ], [ "T1a(s)", "VALUE:121", "T1a(s)" ], [ "T1a(m)", "VALUE:122", "T1a(m)" ], [ "T1a1", "VALUE:130", "T1a1" ], [ "T1a2", "VALUE:140", "T1a2" ], [ "T1b", "VALUE:150", "T1b" ], [ "T1b(s)", "VALUE:151", "T1b(s)" ], [ "T1b(m)", "VALUE:152", "T1b(m)" ], [ "T1b1", "VALUE:160", "T1b1" ], [ "T1b2", "VALUE:170", "T1b2" ], [ "T1c", "VALUE:180", "T1c" ], [ "T1d", "VALUE:181", "T1d" ], [ "T2", "VALUE:200", "T2" ], [ "T2(s)", "VALUE:201", "T2(s)" ], [ "T2(m)", "VALUE:202", "T2(m)" ], [ "T2NOS", "VALUE:299", "T2 NOS" ], [ "T2a", "VALUE:210", "T2a" ], [ "T2a1", "VALUE:211", "T2a1" ], [ "T2a2", "VALUE:212", "T2a2" ], [ "T2aNOS", "VALUE:213", "T2a NOS" ], [ "T2b", "VALUE:220", "T2b" ], [ "T2c", "VALUE:230", "T2c" ], [ "T2d", "VALUE:240", "T2d" ], [ "T3", "VALUE:300", "T3" ], [ "T3(s)", "VALUE:301", "T3(s)" ], [ "T3(m)", "VALUE:302", "T3(m)" ], [ "T3NOS", "VALUE:399", "T3 NOS" ], [ "T3a", "VALUE:310", "T3a" ], [ "T3b", "VALUE:320", "T3b" ], [ "T3c", "VALUE:330", "T3c" ], [ "T3d", "VALUE:340", "T3d" ], [ "T4", "VALUE:400", "T4" ], [ "T4NOS", "VALUE:499", "T4 NOS" ], [ "T4NOS(s)", "VALUE:491", "T4 NOS(s)" ], [ "T4NOS(m)", "VALUE:492", "T4 NOS(m)" ], [ "T4a", "VALUE:410", "T4a" ], [ "T4a(s)", "VALUE:411", "T4a(s)" ], [ "T4a(m)", "VALUE:412", "T4a(m)" ], [ "T4b", "VALUE:420", "T4b" ], [ "T4b(s)", "VALUE:421", "T4b(s)" ], [ "T4b(m)", "VALUE:422", "T4b(m)" ], [ "T4c", "VALUE:430", "T4c" ], [ "T4d", "VALUE:440", "T4d" ], [ "T4e", "VALUE:450", "T4e" ], [ "T1aNOS", "VALUE:800", "T1a NOS" ], [ "T1bNOS", "VALUE:810", "T1b NOS" ], [ "NA", "VALUE:888", "Not applicable" ], [ "*", "VALUE:   ", "Error" ] ]
+}

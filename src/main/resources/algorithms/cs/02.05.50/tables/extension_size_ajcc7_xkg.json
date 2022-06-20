@@ -1,0 +1,23 @@
+{
+  "id" : "extension_size_ajcc7_xkg",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension Size AJCC7",
+  "title" : "Extension Size AJCC 7 Table",
+  "notes" : "**Note**: For CS Extension codes 100-190 and 300 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Tumor Size, as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:18.367Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "size",
+    "name" : "CS Tumor Size",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "000", "ERROR:" ], [ "110", "000", "ERROR:" ], [ "120", "000", "ERROR:" ], [ "130", "000", "ERROR:" ], [ "140", "000", "ERROR:" ], [ "150", "000", "ERROR:" ], [ "160", "000", "ERROR:" ], [ "170", "000", "ERROR:" ], [ "180", "000", "ERROR:" ], [ "190", "000", "ERROR:" ], [ "300", "000", "ERROR:" ], [ "100", "001-009", "VALUE:T1a" ], [ "110", "001-009", "VALUE:T1a" ], [ "120", "001-009", "VALUE:T1a" ], [ "130", "001-009", "VALUE:T1a" ], [ "140", "001-009", "VALUE:T1a" ], [ "150", "001-009", "VALUE:T1a" ], [ "160", "001-009", "VALUE:T1a" ], [ "170", "001-009", "VALUE:T1a" ], [ "180", "001-009", "VALUE:T1a" ], [ "190", "001-009", "VALUE:T1a" ], [ "300", "001-009", "VALUE:T1a" ], [ "100", "010-020", "VALUE:T1b" ], [ "110", "010-020", "VALUE:T1b" ], [ "120", "010-020", "VALUE:T1b" ], [ "130", "010-020", "VALUE:T1b" ], [ "140", "010-020", "VALUE:T1b" ], [ "150", "010-020", "VALUE:T1b" ], [ "160", "010-020", "VALUE:T1b" ], [ "170", "010-020", "VALUE:T1b" ], [ "180", "010-020", "VALUE:T1b" ], [ "190", "010-020", "VALUE:T1b" ], [ "300", "010-020", "VALUE:T1b" ], [ "100", "021-989", "VALUE:T2" ], [ "110", "021-989", "VALUE:T2" ], [ "120", "021-989", "VALUE:T2" ], [ "130", "021-989", "VALUE:T2" ], [ "140", "021-989", "VALUE:T2" ], [ "150", "021-989", "VALUE:T2" ], [ "160", "021-989", "VALUE:T2" ], [ "170", "021-989", "VALUE:T2" ], [ "180", "021-989", "VALUE:T2" ], [ "190", "021-989", "VALUE:T2" ], [ "300", "021-989", "VALUE:T2" ], [ "100", "990", "VALUE:T1a" ], [ "110", "990", "VALUE:T1a" ], [ "120", "990", "VALUE:T1a" ], [ "130", "990", "VALUE:T1a" ], [ "140", "990", "VALUE:T1a" ], [ "150", "990", "VALUE:T1a" ], [ "160", "990", "VALUE:T1a" ], [ "170", "990", "VALUE:T1a" ], [ "180", "990", "VALUE:T1a" ], [ "190", "990", "VALUE:T1a" ], [ "300", "990", "VALUE:T1a" ], [ "100", "991", "VALUE:T1a" ], [ "110", "991", "VALUE:T1a" ], [ "120", "991", "VALUE:T1a" ], [ "130", "991", "VALUE:T1a" ], [ "140", "991", "VALUE:T1a" ], [ "150", "991", "VALUE:T1a" ], [ "160", "991", "VALUE:T1a" ], [ "170", "991", "VALUE:T1a" ], [ "180", "991", "VALUE:T1b" ], [ "190", "991", "VALUE:T1NOS" ], [ "300", "991", "VALUE:T1a" ], [ "100", "992", "VALUE:T1NOS" ], [ "110", "992", "VALUE:T1NOS" ], [ "120", "992", "VALUE:T1NOS" ], [ "130", "992", "VALUE:T1NOS" ], [ "140", "992", "VALUE:T1NOS" ], [ "150", "992", "VALUE:T1NOS" ], [ "160", "992", "VALUE:T1NOS" ], [ "170", "992", "VALUE:T1a" ], [ "180", "992", "VALUE:T1b" ], [ "190", "992", "VALUE:T1NOS" ], [ "300", "992", "VALUE:T1NOS" ], [ "100", "993-995", "VALUE:T2" ], [ "110", "993-995", "VALUE:T2" ], [ "120", "993-995", "VALUE:T2" ], [ "130", "993-995", "VALUE:T2" ], [ "140", "993-995", "VALUE:T2" ], [ "150", "993-995", "VALUE:T2" ], [ "160", "993-995", "VALUE:T2" ], [ "170", "993-995", "VALUE:T2" ], [ "180", "993-995", "VALUE:T2" ], [ "190", "993-995", "VALUE:T2" ], [ "300", "993-995", "VALUE:T2" ], [ "100", "998", "ERROR:" ], [ "110", "998", "ERROR:" ], [ "120", "998", "ERROR:" ], [ "130", "998", "ERROR:" ], [ "140", "998", "ERROR:" ], [ "150", "998", "ERROR:" ], [ "160", "998", "ERROR:" ], [ "170", "998", "ERROR:" ], [ "180", "998", "ERROR:" ], [ "190", "998", "ERROR:" ], [ "300", "998", "ERROR:" ], [ "100", "999", "VALUE:TX" ], [ "110", "999", "VALUE:TX" ], [ "120", "999", "VALUE:TX" ], [ "130", "999", "VALUE:TX" ], [ "140", "999", "VALUE:TX" ], [ "150", "999", "VALUE:TX" ], [ "160", "999", "VALUE:TX" ], [ "170", "999", "VALUE:T1a" ], [ "180", "999", "VALUE:T1b" ], [ "190", "999", "VALUE:T1NOS" ], [ "300", "999", "VALUE:TX" ] ]
+}

@@ -1,0 +1,20 @@
+{
+  "id" : "ssf3_lpq",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF3",
+  "title" : "CS Site-Specific Factor 3",
+  "subtitle" : "Clinical Status of Lymph Node Mets",
+  "notes" : "**Note 1**:  AJCC defines microscopic lymph node metastases or \"micrometastases\" as those which are clinically inapparent by palpation and/or imaging but are pathologicaly positive.  Micrometastases are diagnosed after sentinel or other node biopsy or elective lymphadnectomy.  \"Macrometastases\" are clinically detectable nodal metastases confirmed by needle biopsy or therapeutic lymphadenectomy.\n\n**Note 2**:  Use code 005 if nodes are described as clinically negative.  Use code 010 if nodes are described as clinically negative but are positive on pathologic examination.\n\n**Note 3**:  Use code 020 if nodes are described as clinically positive.\n\n**Note 4**:  Use code 100 to code information about clinically apparent in transit metastasis with or without occult nodal metastasis.  Information about clinically inapparent in transit metastasis (\"occult\" metastasis found only on pathologic examination) is not collected in this site-specific factor.\n\n**Note 5**: Use code 150 to code information about nodal involvement with in transit satellite metastasis that are both clinically apparent.\n\n**Note 6**:  Codes 020 and 150 are appropriate for cases with neoadjuvant treatment, where nodes are described as clinically positive before treatment but are shown to be either negative or positive on pathologic examination after treatment. \n\n**Note 7**:  Use code 999 if no information is available about the clinical evaluation of lymph nodes or in transit metastasis.",
+  "last_modified" : "2015-05-27T16:20:05.935Z",
+  "definition" : [ {
+    "key" : "ssf3",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "OBSOLETE DATA RETAINED V0204\n\nNo lymph node metastases\nIn-transit metastases WITHOUT regional lymph node involvement" ], [ "005", "Clinically negative lymph node metastases\nAND\nNo pathologic examination performed\nOr unknown if pathologic examination performed\nor nodes negative on pathologic examination" ], [ "010", "Clinically occult lymph node metastases only (micrometastases) \nIsolated tumor cells (ITCs) only" ], [ "020", "Clinically apparent lymph node metastases (macrometastases)" ], [ "100", "Clinically apparent in transit metastasis\nWITH or WITHOUT occult nodal metastasis" ], [ "150", "Clinically apparent in transit metastasis and clinically apparent nodal metastasis" ], [ "888", "OBSOLETE DATA CONVERTED V0200\nSee code 988\n\nNot applicable for this site" ], [ "988", "Not applicable:  Information not collected for this case\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.   If this item is required to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "999", "Unknown clinically if regional lymph nodes involved\nUnknown or no information about clinical nodal involvement\nClinical nodal involvement not documented in patient record" ] ]
+}

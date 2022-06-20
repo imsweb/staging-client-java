@@ -1,0 +1,23 @@
+{
+  "id" : "occult_head_and_neck_lymph_nodes_10277",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Discriminator 1",
+  "title" : "Schema Discriminator 1: Occult Head and Neck Lymph Nodes",
+  "notes" : "**Note 1:** This schema discriminator is used to discriminate between head and neck tumors with unknown primary site coded as C760.  Some situations require that a more specific primary site be assigned.\n\t\n* **AJCC 8th edition Chapter 6: Cervical Lymph Nodes and Unknown Primary Tumors of the Head and Neck (Schema ID 00060: Cervical Lymph Nodes and Unknown Primary)**\n \n     Occult head and neck tumor with cervical metastasis in Levels I-VII, and other group lymph nodes without a p16 immunostain or with negative results and without an Epstein-Barr virus (EBV) encoded small RNAs (EBER) by in situ hybridization performed or with negative results are staged using Chapter 6. **Assign primary site C760; code the schema discriminator accordingly.**\n* **AJCC 8th edition Chapter 9: Nasopharynx (Schema ID 00090: Nasopharynx)**\n \n     Occult head and neck tumors with cervical metastasis in Levels I-VII, and other group lymph nodes that is positive for Epstein-Barr virus (EBV+) (regardless of p16 status) encoded small RNAs (EBER) identified by in situ hybridization are staged using Chapter 9. **Assign primary site C119; do NOT code this discriminator.**\n* **AJCC 8th edition Chapter 10: HPV-Mediated (p16+) Oropharyngeal Cancer**\n \n    Occult head and neck tumors with cervical metastasis in Levels I-VII, and other group lymph nodes, p16 positive with histology consistent with HPV-mediated oropharyngeal carcinoma (OPC), should be staged using Chapter 10. **Assign primary site C109; do NOT code this discriminator**\n* **Ill-Defined Other (Summary Stage only) (Schema ID 99999: Ill-Defined Other)**\n\n   If the tumor is not occult or does not have cervical metastasis in Levels I-VII, and other group lymph nodes, it is not included in Chapter 6 and will be classified as Ill-Defined Other for Summary Staging\n\n**Note 2:** If there is no evidence of the primary tumor, yet the physician \"suspects\" a specific head and neck subsite, do not assign that primary site, but code C760 (see exceptions for EBV positive or p16 positive cancers.)",
+  "last_modified" : "2019-04-05T16:52:38.539Z",
+  "definition" : [ {
+    "key" : "discriminator_1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "disease",
+    "name" : "Disease",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Not Occult", "EOD/SS schema (Ill-Defined, Other; Soft Tissue Other for 8941)" ], [ "1", "Occult, Negative cervical nodes (regional head and neck nodes)", "EOD/SS schema (Ill-Defined, Other; Soft Tissue Other for 8941)" ], [ "2", "Not tested for EBV or p16 in head and neck regional nodes  (EBV and p16 both unknown)", "6: Cervical Lymph Nodes and Unknown Primary Tumors of the Head and Neck" ], [ "3", "Unknown EBV, p16 negative in head and neck regional nodes", "6: Cervical Lymph Nodes and Unknown Primary Tumors of the Head and Neck" ], [ "4", "Unknown p16, EBV negative in head and neck regional nodes", "6: Cervical Lymph Nodes and Unknown Primary Tumors of the Head and Neck" ], [ "5", "Negative for both EBV and p16 in head and neck regional nodes", "6: Cervical Lymph Nodes and Unknown Primary Tumors of the Head and Neck" ], [ "", "Not C760, discriminator does not apply\n\nPositive p16 in head and neck regional nodes, EBV unknown or negative\nAssign primary site C109\n\nPositive EBV in head and neck regional nodes, p16 positive, negative, or unknown\nAssign primary site C119", "Various  \n\n10: HPV-Mediated (p16+) Oropharyngeal Cancer (C109) \n(Schema ID 00100: Oropharynx HPV-Mediated (p16+)) \n\n\n\n\n9: Nasopharynx (C119) (Schema ID 00090: Nasopharynx)" ] ]
+}

@@ -1,0 +1,23 @@
+{
+  "id" : "combined_serum_tumor_marker_svalue_tablefor_yearof_diagnosis_less_than2010_xiz",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Combined Serum Tumor Marker S Value Table for Year of Diagnosis Less Than 2010",
+  "title" : "Combined Serum Tumor Marker S Value Table for Year of Diagnosis Less Than 2010",
+  "notes" : "**Note**:  If the Year of Diagnosis is less than 2010 and the case is coded under CSv1 (CS Version Input Original less than 020000), then known information in CS Site-Specific Factors 13, 15, and 16 will take precedence.  If CS Site-Specific Factors 13, 15, or 16 yield an SX or ERROR from Post-orchiectomy Serum Tumor Marker S Value Table Based on CS SSF 13, 15, 16, then the S value will be based on CS Site-Specific Factors 1, 2, and 3.",
+  "last_modified" : "2015-05-27T16:19:02.384Z",
+  "definition" : [ {
+    "key" : "s_123",
+    "name" : "S value based on CS SSF 1-3",
+    "type" : "INPUT"
+  }, {
+    "key" : "s_131516",
+    "name" : "S value based on CS SSF 13, 15, 16",
+    "type" : "INPUT"
+  }, {
+    "key" : "s",
+    "name" : "S Value for Staging",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "S0", "S0", "VALUE:S0" ], [ "S1", "S0", "VALUE:S0" ], [ "S2", "S0", "VALUE:S0" ], [ "S3", "S0", "VALUE:S0" ], [ "SX", "S0", "VALUE:S0" ], [ "ERROR", "S0", "VALUE:S0" ], [ "S0", "S1", "VALUE:S1" ], [ "S1", "S1", "VALUE:S1" ], [ "S2", "S1", "VALUE:S1" ], [ "S3", "S1", "VALUE:S1" ], [ "SX", "S1", "VALUE:S1" ], [ "ERROR", "S1", "VALUE:S1" ], [ "S0", "S2", "VALUE:S2" ], [ "S1", "S2", "VALUE:S2" ], [ "S2", "S2", "VALUE:S2" ], [ "S3", "S2", "VALUE:S2" ], [ "SX", "S2", "VALUE:S2" ], [ "ERROR", "S2", "VALUE:S2" ], [ "S0", "S3", "VALUE:S3" ], [ "S1", "S3", "VALUE:S3" ], [ "S2", "S3", "VALUE:S3" ], [ "S3", "S3", "VALUE:S3" ], [ "SX", "S3", "VALUE:S3" ], [ "ERROR", "S3", "VALUE:S3" ], [ "S0", "SX", "VALUE:S0" ], [ "S1", "SX", "VALUE:S1" ], [ "S2", "SX", "VALUE:S2" ], [ "S3", "SX", "VALUE:S3" ], [ "SX", "SX", "VALUE:SX" ], [ "ERROR", "SX", "VALUE:SX" ], [ "S0", "ERROR", "VALUE:S0" ], [ "S1", "ERROR", "VALUE:S1" ], [ "S2", "ERROR", "VALUE:S2" ], [ "S3", "ERROR", "VALUE:S3" ], [ "SX", "ERROR", "VALUE:SX" ], [ "ERROR", "ERROR", "ERROR:" ] ]
+}

@@ -1,0 +1,36 @@
+{
+  "id" : "determine_default_t",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Determine Default T",
+  "title" : "Determine Default T for Calculations",
+  "description" : "Determine the default value for T to be used in calculations.  This is used when Clin T or Path T (or both) are blank, but other T, N and M information is present.   This will have no impact on the stored value and is solely a temporary state.",
+  "last_modified" : "2018-05-14T21:29:03.729Z",
+  "definition" : [ {
+    "key" : "clin_t_in",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_in",
+    "name" : "Pathologic T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_out",
+    "name" : "Clinical T with Defaults",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "path_t_out",
+    "name" : "Pathologic T with Defaults",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "combined_t_out",
+    "name" : "Combined T from Defaults",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "source_t_out",
+    "name" : "Source of Combined T",
+    "type" : "ENDPOINT"
+  } ],
+  "extra_input" : [ "path_t_in", "clin_t_in" ],
+  "rows" : [ [ "", "", "VALUE:X", "VALUE:X", "VALUE:X", "VALUE:1" ], [ "", "A, IS, ISPU, ISPD", "VALUE:{{path_t_in}}", "VALUE:{{path_t_in}}", "VALUE:{{path_t_in}}", "VALUE:2" ], [ "", "88,X,0,1,1MI,1A,1A1,1A2,1B,1B1,1B2,1C,1D,2,2A,2A1,2A2,2B,2C,2D,3,3A,3B,3C,3D,4,4A,4B,4C,4D,4E", "VALUE:X", "VALUE:{{path_t_in}}", "VALUE:{{path_t_in}}", "VALUE:2" ], [ "88,X,0,A,IS,ISPU,ISPD,1,1MI,1A,1A1,1A2,1B,1B1,1B2,1C,1D,2,2A,2A1,2A2,2B,2C,2D,3,3A,3B,3C,3D,4,4A,4B,4C,4D,4E", "", "VALUE:{{clin_t_in}}", "VALUE:X", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "88,X,0,A,IS,ISPU,ISPD,1,1MI,1A,1A1,1A2,1B,1B1,1B2,1C,1D,2,2A,2A1,2A2,2B,2C,2D,3,3A,3B,3C,3D,4,4A,4B,4C,4D,4E", "88,X,0,A,IS,ISPU,ISPD,1,1MI,1A,1A1,1A2,1B,1B1,1B2,1C,1D,2,2A,2A1,2A2,2B,2C,2D,3,3A,3B,3C,3D,4,4A,4B,4C,4D,4E", "VALUE:{{clin_t_in}}", "VALUE:{{path_t_in}}", "VALUE:", "VALUE:" ], [ "*", "*", "ERROR:Both Clin T and Path T values need to be valid for the schema.", "ERROR:(Clin T and/or Path T invalid)", "ERROR:(Clin T and/or Path T invalid)", "ERROR:(Clin T and/or Path T invalid)" ] ]
+}

@@ -1,0 +1,36 @@
+{
+  "id" : "extension_bcv",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  AJCC considers \"in situ carcinoma of salivary gland\" an impossible diagnosis.  Any case so coded will be mapped to an unknown AJCC stage, in situ Summary Stage.\n\n**Note 2**:  Periosteum is a fibrous membrane that wraps the outer surface of bones.  Mucoperiosteum is a compound structure of mucous membrane and periosteum.  Cortical bone is the dense compact outer layer of bone.\n\n**Note 3**:  The assignment of T1 and T2 categories for tumors of major salivary glands without extraparenchymal extension is based on tumor size.  A physician's statement of the T category may be used to code CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields.  However the two fields are coded independently: for example the record may document size but not extension, other than the physician's statement of the T category.  Use codes 305, 310, 410, 725, 810, or 815 as appropriate to code CS Extension based on a statement of T when no other extension information is available.\n\n**Note 4**:  Use code 300 for localized tumor only if no information is available to assign codes 100, 305, or 310.",
+  "footnotes" : "- For CS Extension codes 100-350 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Tumor Size as shown in the Extension Size Table for this schema.\n- For CS Extension codes 100-350 ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Tumor Size as shown in the Extension Size Table for this schema.",
+  "last_modified" : "2015-05-27T16:19:09.807Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "VALUE:TX", "VALUE:TX", "VALUE:IS", "VALUE:IS" ], [ "100", "Invasive tumor confined to gland/duct of origin\nMultiple foci confined to substance of parotid gland", "JUMP:extension_size_xpf", "JUMP:extension_size_xpf", "VALUE:L", "VALUE:L" ], [ "300", "Localized, NOS", "JUMP:extension_size_xpf", "JUMP:extension_size_xpf", "VALUE:L", "VALUE:L" ], [ "305", "Stated as T1 with no other information on extension", "JUMP:extension_size_xpf", "JUMP:extension_size_xpf", "VALUE:L", "VALUE:L" ], [ "310", "Stated as T2 with no other information on extension", "JUMP:extension_size_xpf", "JUMP:extension_size_xpf", "VALUE:L", "VALUE:L" ], [ "350", "Microscopic extraparenchymal extension ONLY to periglandular soft/connective tissue", "JUMP:extension_size_xpf", "JUMP:extension_size_xpf", "VALUE:RE", "VALUE:RE" ], [ "400", "Macroscopic extraparenchymal extension to:\n    Periglandular soft/connective tissue\n    Another major salivary gland (submaxillary, sublingual)\n    Pharyngeal mucosa\n    Skeletal muscle:\n        Digastric\n        Masseter\n        Pterygoid\n        Sternocleidomastoid\n        Stylohyoid", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "402", "Maxillary artery\nFacial artery or vein", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "405", "Spinal accessory nerve", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:D" ], [ "406", "405 + 402", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:D" ], [ "408", "Stated as T3 with no other information on extension", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "420", "External auditory meatus\nSkin overlying gland", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:RE" ], [ "450", "Periosteum of mandible", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:RE" ], [ "500", "Auricular nerve\nMandible\nMastoid process", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:RE" ], [ "505", "(420, 450, 500) +402", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:D" ], [ "510", "(420, 450, 500) + 405 \n\nAny structure in code 420, 450, or 500 plus spinal accessory nerve", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:D" ], [ "700", "Facial (7th) nerve", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:D" ], [ "705", "700 + 402", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:D" ], [ "708", "700 + 405", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:D" ], [ "720", "OBSOLETE DATA CONVERTED V0200\nSee code 405 \n\nSpinal accessory nerve", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "725", "Stated as T4a with no other information on extension", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:RE" ], [ "740", "Carotid artery (encased)\nJugular vein", "VALUE:T4b", "VALUE:T4b", "VALUE:RE", "VALUE:RE" ], [ "750", "OBSOLETE DATA REVIEWED AND CHANGED V0203\nRecode involved structures to 402, 406, 505, 705, 740, 755, 758 as appropriate.\n\nMajor blood vessel(s):\n    Carotid artery (encased)\n    Facial artery or vein    \n    Jugular vein\n    Maxillary artery", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "755", "740 + 405 \n\nAny structure in code 740 plus spinal accessory nerve", "VALUE:T4b", "VALUE:T4b", "VALUE:RE", "VALUE:D" ], [ "758", "740 + 700 \n\nAny structure in code 740 plus facial nerve", "VALUE:T4b", "VALUE:T4b", "VALUE:RE", "VALUE:D" ], [ "760", "Base of skull\nSkull, NOS", "VALUE:T4b", "VALUE:T4b", "VALUE:RE", "VALUE:D" ], [ "770", "Pterygoid plates", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "800", "Further contiguous extension", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "810", "Stated as T4b with no other information on extension", "VALUE:T4b", "VALUE:T4b", "VALUE:RE", "VALUE:RE" ], [ "815", "Stated as T4 [NOS] with no other information on extension", "VALUE:T4NOS", "VALUE:T4NOS", "VALUE:RE", "VALUE:RE" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "extravascular_matrix_patterns_1397",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Extravascular Matrix Patterns",
+  "title" : "Extravascular Matrix Patterns",
+  "notes" : "**Note 1:** Physician statement of extravascular matrix patterns can be used to code this data item when no other information is available.\n\n**Note 2:** The presence of certain types of extravascular matrix patterns is independently associated with the risk of metastasis. This is documented conclusively for individual loops and for loops forming networks consisting of at least three back-to-back loops. Absence of both loops and networks is associated with the longer survival and presence of loops forming networks is associated with the shortest survival time.",
+  "last_modified" : "2019-04-05T16:52:38.382Z",
+  "definition" : [ {
+    "key" : "extravascular_matrix_patterns",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Extravascular matrix patterns not present/not identified" ], [ "1", "Extravascular matrix patterns present/identified" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nExtravascular Matrix Patterns not assessed or unknown if assessed" ] ]
+}

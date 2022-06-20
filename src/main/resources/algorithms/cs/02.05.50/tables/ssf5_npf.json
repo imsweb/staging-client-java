@@ -1,0 +1,20 @@
+{
+  "id" : "ssf5_npf",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF5",
+  "title" : "CS Site-Specific Factor 5",
+  "subtitle" : "Chromosome 3 Status",
+  "notes" : "**Note**:  The loss of chromosome 3 (also termed loss of heterozygosity (LOH) in chromosome 3) is a common genetic abnormality in ocular melanoma. Monosomy 3 (i.e., only one copy of chromosome 3) has consistently been associated with death from metastasis in choroidal and ciliary body melanoma.",
+  "last_modified" : "2015-05-27T16:20:08.352Z",
+  "definition" : [ {
+    "key" : "ssf5",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No loss of chromosome 3" ], [ "010", "Partial loss of chromosome 3" ], [ "020", "Complete loss of chromosome 3" ], [ "030", "Loss of chromosome 3, NOS" ], [ "888", "OBSOLETE DATA CONVERTED V0200\nConverted to code 988\n\nNot applicable for this site" ], [ "988", "Not applicable:  Information not collected for this case\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.  If this item is required  to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "997", "Test ordered, results not available" ], [ "998", "Test not done (test not ordered  and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

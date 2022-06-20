@@ -1,0 +1,19 @@
+{
+  "id" : "bone_invasion_96628",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Bone Invasion",
+  "title" : "Bone Invasion",
+  "notes" : "**Note 1:** Physician statement of Bone Invasion can be used to code this data item when no other information is available.\n\n**Note 2:** Record bone invasion as determined by relevant imaging only for the primary tumor. Imaging methodologies include computed tomography (CT) scans and magnetic resonance imaging (MRI).\n\n**Note 3:** Code 0 if relevant imaging is performed and there is no mention of bone invasion.\n\n**Note 4:** Code 9 if there is no relevant imaging of the primary site.",
+  "last_modified" : "2021-04-08T17:08:36.464Z",
+  "definition" : [ {
+    "key" : "bone_invasion",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Bone invasion not present/not identified on imaging" ], [ "1", "Bone invasion present/identified on imaging" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nBone invasion not assessed or unknown if assessed" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "tumor_size_clinical_dna_64119",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Tumor Size Clinical DNA",
+  "title" : "Tumor Size Clinical",
+  "notes" : "See the [SEER Program Coding Manual](https://seer.cancer.gov/tools/codingmanuals/index.html) for coding instructions.",
+  "last_modified" : "2020-05-19T20:50:17.197Z",
+  "definition" : [ {
+    "key" : "size_clin",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Tumor Size Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "999", "Not applicable" ] ]
+}

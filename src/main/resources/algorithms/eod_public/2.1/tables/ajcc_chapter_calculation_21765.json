@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc_chapter_calculation_21765",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2021-03-31T13:28:07.944Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8000,8010,8013,8020,8033,8041,8070", "VALUE:20", "Colon and Rectum", "VALUE:08" ], [ "8140", "VALUE:20", "Colon and Rectum", "VALUE:08" ], [ "8213,8246,8262,8265", "VALUE:20", "Colon and Rectum", "VALUE:08" ], [ "8480-8481,8490", "VALUE:20", "Colon and Rectum", "VALUE:08" ], [ "8510,8560", "VALUE:20", "Colon and Rectum", "VALUE:08" ], [ "8001-8005,8011-8012,8014-8015,8021-8032,8034-8040,8042-8060,8071-8131", "VALUE:XX", "Other Colon and Rectum", "VALUE:88" ], [ "8141-8149,8154,8160-8212", "VALUE:XX", "Other Colon and Rectum", "VALUE:88" ], [ "8214-8231,8243-8245,8247-8248,8250-8261,8263-8264,8270-8474", "VALUE:XX", "Other Colon and Rectum", "VALUE:88" ], [ "8482-8484,8500-8509,8512-8552,8561-8682", "VALUE:XX", "Other Colon and Rectum", "VALUE:88" ], [ "8690-8700,8720-8790", "VALUE:XX", "Other Colon and Rectum", "VALUE:88" ] ]
+}

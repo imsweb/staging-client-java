@@ -1,0 +1,14 @@
+{
+  "id" : "tnm8_inclusions_net_pancreas",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "TNM8 Inclusions (NET Pancreas)",
+  "title" : "Inclusion Table TNM 8th ed. (NET Pancreas)",
+  "last_modified" : "2019-04-05T16:52:35.076Z",
+  "definition" : [ {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "INPUT"
+  } ],
+  "rows" : [ [ "34" ] ]
+}

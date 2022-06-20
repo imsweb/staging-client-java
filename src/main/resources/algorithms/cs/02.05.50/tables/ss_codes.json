@@ -1,0 +1,22 @@
+{
+  "id" : "ss_codes",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Summary Stage Codes",
+  "title" : "Summary Stage Allowable Codes",
+  "last_modified" : "2015-05-27T16:20:12.268Z",
+  "definition" : [ {
+    "key" : "ss",
+    "name" : "Display String",
+    "type" : "INPUT"
+  }, {
+    "key" : "stor_ss",
+    "name" : "Storage Code",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "comments",
+    "name" : "Comments",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "NONE", "VALUE: ", "(internal use only, no storage code needed)" ], [ "IS", "VALUE:0", "In situ" ], [ "L", "VALUE:1", "Localized" ], [ "RE", "VALUE:2", "Regional, direct extension" ], [ "RN", "VALUE:3", "Regional, lymph nodes only" ], [ "RE+RN", "VALUE:4", "Regional, extension and nodes" ], [ "RNOS", "VALUE:5", "Regional, NOS" ], [ "D", "VALUE:7", "Distant" ], [ "NA", "VALUE:8", "Not applicable" ], [ "U", "VALUE:9", "Unknown/Unstaged" ], [ "*", "VALUE: ", "Error" ] ]
+}

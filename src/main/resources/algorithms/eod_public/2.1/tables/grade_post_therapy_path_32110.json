@@ -1,0 +1,19 @@
+{
+  "id" : "grade_post_therapy_path_32110",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Grade Post Therapy Path (yp)",
+  "title" : "Grade Post Therapy Path (yp)",
+  "notes" : "**Note 1:** Leave Grade Post Therapy Path (yp) blank when \n* No neoadjuvant therapy\n* Clinical or pathological case only\n* Neoadjuvant therapy completed; surgical resection not done\n* There is only one grade available and it cannot be determined if it is clinical, pathological, post therapy clinical or post therapy pathological\n\n**Note 2:** Assign the highest grade from the resected primary tumor assessed after the completion of neoadjuvant therapy.\n\n**Note 3:** If there are multiple tumors with different grades abstracted as one primary, code the highest grade.\n\n**Note 4:** Use the grade from the post therapy **clinical work up** from the primary tumor in different scenarios based on behavior or surgical resection\n* **Behavior**\n  * Tumor behavior for the post therapy clinical and the post therapy pathological diagnoses are the same AND the post therapy clinical grade is the highest grade \n  * Tumor behavior for post therapy clinical diagnosis is invasive, and the tumor behavior for the post therapy pathological diagnosis is in situ\n* **Surgical Resection**\n  * Surgical resection is done of the primary tumor after neoadjuvant therapy is completed and there is no grade documented from the surgical resection\n  * Surgical resection is done of the primary tumor after neoadjuvant therapy is completed and there is no residual cancer\n\n**Note 5:** Code 9 (unknown) when  \n* Surgical resection is done after neoadjuvant therapy and grade from the primary site is not documented\n* Surgical resection is done after neoadjuvant therapy and there is no residual cancer\n* Grade checked \"not applicable\" on CAP Protocol (if available) and no other grade information is available",
+  "last_modified" : "2021-04-23T22:32:00.242Z",
+  "definition" : [ {
+    "key" : "grade_post_therapy_path",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "A", "Well differentiated" ], [ "B", "Moderately differentiated" ], [ "C", "Poorly differentiated" ], [ "D", "Undifferentiated, anaplastic" ], [ "9", "Grade cannot be assessed; Unknown" ], [ "", "See Note 1" ] ]
+}

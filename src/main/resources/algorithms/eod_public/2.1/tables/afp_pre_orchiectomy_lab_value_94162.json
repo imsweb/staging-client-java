@@ -1,0 +1,19 @@
+{
+  "id" : "afp_pre_orchiectomy_lab_value_94162",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AFP Pre-Orchiectomy Lab Value",
+  "title" : "AFP (Alpha Fetoprotein) Pre-Orchiectomy Lab Value",
+  "notes" : "**Note 1:** Physician statement of the AFP (Alpha Fetoprotein) Pre-Orchiectomy Lab Value can be used to code this data item when no other information is available. \n\n**Note 2:** Record the lab value of the highest AFP test result documented in the medical record **prior to orchiectomy** or prior to any systemic treatment. The lab value may be documented in a lab report, history and physical, or clinical statement in the pathology report.\n\n**Note 3:** A lab value expressed in micrograms/liter (ug/l) is equivalent to the same value expressed in ng/mL.\n\n**Note 4:** If the lab value is expressed in IU/ml, use the following conversion: 1 ng/mL = 0.83 IU/mL.\n* To calculate ng from IU/mL, divide the value for IU by 0.83.\n* *Example*: 10 IU/mL: 10/0.83 = 12.04 ng/mL; 5 IU/mL: 5/0.83= 6.02 ng/mL\n\n**Note 5:** The same laboratory test should be used to record information in AFP Pre-Orchiectomy Range [NAACCR Data Item #3808].",
+  "last_modified" : "2019-04-05T16:52:38.046Z",
+  "definition" : [ {
+    "key" : "afp_pre_orch_lab_value",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0", "0.0 nanograms/milliliter (ng/mL)" ], [ "0.1-99999.9", "0.1 - 99,999.9 ng/mL" ], [ "XXXXX.1", "100,000 ng/mL or greater" ], [ "XXXXX.7", "Test ordered, results not in chart" ], [ "XXXXX.8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code XXXXX.8 may result in an edit error.)" ], [ "XXXXX.9", "Not documented in medical record\nAFP (Alpha Fetoprotein) Pre-Orchiectomy Lab Value not assessed or unknown if assessed" ] ]
+}

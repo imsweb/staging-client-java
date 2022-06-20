@@ -1,0 +1,19 @@
+{
+  "id" : "figo_stage_cervix_46535",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "FIGO Stage",
+  "title" : "FIGO Stage Cervix",
+  "notes" : "**Note 1:** Take the highest Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage documented in the medical record. Do not attempt to code FIGO stage based only on T, N, and M.  If FIGO stage is not documented in the medical record, code 99. FIGO stage is not the same as FIGO grade. Only code FIGO stage in this field, do not code FIGO grade. \n\n**Note 2:** If a stage group is stated but it does not specify that it is a FIGO stage, assume that it is a FIGO stage and code it.\n\n**Note 3:** If there is more than one FIGO stage provided from the clinical and pathological work up, code the most extensive FIGO stage.\n\n**Note 4:** The FIGO stage definitions do not include Stage 0 (Tis). Code 97 for any case that is in situ (/2).",
+  "last_modified" : "2021-04-08T18:08:28.921Z",
+  "definition" : [ {
+    "key" : "figo",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "FIGO Stage I " ], [ "1A", "FIGO Stage IA " ], [ "1A1", "FIGO Stage IA1" ], [ "1A2", "FIGO Stage IA2" ], [ "1B", "FIGO Stage IB " ], [ "1B1", "FIGO Stage IB1" ], [ "1B2", "FIGO Stage IB2" ], [ "1B3", "FIGO Stage IB3" ], [ "2", "FIGO Stage II " ], [ "2A", "FIGO Stage IIA " ], [ "2A1", "FIGO Stage IIA1" ], [ "2A2", "FIGO Stage IIA2" ], [ "2B", "FIGO Stage IIB" ], [ "3", "FIGO Stage III" ], [ "3A", "FIGO Stage IIIA" ], [ "3B", "FIGO Stage IIIB" ], [ "3C", "FIGO Stage IIIC" ], [ "3C1", "FIGO Stage IIIC1" ], [ "3C2", "FIGO Stage IIIC2" ], [ "4", "FIGO Stage IV " ], [ "4A", "FIGO Stage IVA" ], [ "4B", "FIGO Stage IVB" ], [ "97", "Not applicable: Carcinoma in situ (intraepithelial, noninvasive, preinvasive)" ], [ "98", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 98 will result in an edit error.)" ], [ "99", "Not documented in medical record\nFIGO stage not assessed or unknown if assessed" ] ]
+}

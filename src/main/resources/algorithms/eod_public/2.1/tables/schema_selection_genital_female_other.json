@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_genital_female_other",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection GenitalFemaleOther",
+  "title" : "Schema selection for GenitalFemaleOther",
+  "last_modified" : "2021-04-29T17:29:59.945Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C577-C579", "8000-8700, 8720-8790", "MATCH" ] ]
+}

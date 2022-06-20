@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc_chapter_calculation_69125",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2021-03-16T17:01:50.483Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8000,8010,8020,8052,8070-8073,8083", "VALUE:9", "Nasopharynx", "VALUE:08" ], [ "8140,8200", "VALUE:9", "Nasopharynx", "VALUE:08" ], [ "8001-8005,8011-8015,8021-8051,8053-8060,8074-8082,8084-8131", "VALUE:XX", "Other Nasopharynx", "VALUE:88" ], [ "8141-8191,8201-8700", "VALUE:XX", "Other Nasopharynx", "VALUE:88" ] ]
+}

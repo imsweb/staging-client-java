@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_adrenal_gland",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection AdrenalGland",
+  "title" : "Schema selection for AdrenalGland",
+  "last_modified" : "2021-04-29T12:45:04.354Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C740-C741, C749", "8000-8671, 8681-8683, 8691, 8720-8790", "MATCH" ] ]
+}

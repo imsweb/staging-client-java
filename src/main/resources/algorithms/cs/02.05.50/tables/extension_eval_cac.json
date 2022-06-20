@@ -1,0 +1,23 @@
+{
+  "id" : "extension_eval_cac",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension Eval",
+  "title" : "CS Tumor Size/Ext Eval",
+  "notes" : "**Note**:  This item reflects the validity of the classification of CS Tumor Size and CS Extension based on the diagnostic methods employed.",
+  "last_modified" : "2015-05-27T16:19:15.022Z",
+  "definition" : [ {
+    "key" : "extension_eval",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_tdescriptor",
+    "name" : "Staging Basis 7",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0", "No surgical resection done.  Evaluation based on physical examination, imaging examination, or other non-invasive clinical evidence.  No autopsy evidence used.", "VALUE:c" ], [ "1", "No surgical resection done.  Evaluation based on endoscopic examination, diagnostic biopsy, including fine needle aspiration biopsy, or other invasive techniques including surgical observation without biopsy.  No autopsy evidence used.\n\nDoes not meet criteria for AJCC pathologic staging.", "VALUE:c" ], [ "2", "No surgical resection done, but evidence derived from autopsy (tumor was  suspected or diagnosed prior to autopsy).", "VALUE:p" ], [ "3", "Surgical resection performed WITHOUT pre-surgical systemic treatment or radiation  OR surgical resection performed, unknown if pre-surgical systemic treatment or radiation performed. Evidence acquired before treatment, supplemented or modified by the additional evidence acquired during and from surgery, particularly from pathologic examination of the resected specimen.\n  \nMeets criteria for AJCC pathologic staging.", "VALUE:p" ], [ "5", "Surgical resection performed WITH pre-surgical systemic treatment or radiation, BUT tumor size/extension based on clinical evidence.", "VALUE:c" ], [ "6", "Surgical resection performed WITH pre-surgical systemic treatment or radiation; tumor size and/or extension based on pathologic evidence.", "VALUE:yp" ], [ "8", "Evidence from autopsy only (tumor was unsuspected or undiagnosed prior to autopsy).", "VALUE:a" ], [ "9", "Unknown if surgical resection done\nNot assessed; cannot be assessed\nUnknown if assessed\nNot documented in patient record", "VALUE:c" ] ]
+}

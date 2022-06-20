@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_chapter_calculation_75770",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2021-02-03T15:11:20.326Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C000-C002,C006,C440,C442-C444", "8070,8090-8093", "VALUE:15", "Cutaneous Carcinoma of the Head and Neck", "VALUE:08" ], [ "C000-C002,C006,C440,C442-C444", "8103,8110", "VALUE:15", "Cutaneous Carcinoma of the Head and Neck", "VALUE:08" ], [ "C000-C002,C006,C440,C442-C444", "8200,8211", "VALUE:15", "Cutaneous Carcinoma of the Head and Neck", "VALUE:08" ], [ "C000-C002,C006,C440,C442-C444", "8401-8402,8403,8407-8410,8480", "VALUE:15", "Cutaneous Carcinoma of the Head and Neck", "VALUE:08" ], [ "C000-C002,C006,C440,C442-C444", "8940,8982", "VALUE:15", "Cutaneous Carcinoma of the Head and Neck", "VALUE:08" ], [ "C000-C002,C006,C440,C442-C444", "8000-8040,8042-8060,8071-8086,8094-8102,8104", "VALUE:XX", "Other Cutaneous Carcinoma of the Head and Neck", "VALUE:88" ], [ "C000-C002,C006,C440,C442-C444", "8120-8180,8191", "VALUE:XX", "Other Cutaneous Carcinoma of the Head and Neck", "VALUE:88" ], [ "C000-C002,C006,C440,C442-C444", "8201-8210,8212-8246,8248-8392", "VALUE:XX", "Other Cutaneous Carcinoma of the Head and Neck", "VALUE:88" ], [ "C000-C002,C006,C440,C442-C444", "8400,8404-8406,8413-8474,8481-8700", "VALUE:XX", "Other Cutaneous Carcinoma of the Head and Neck", "VALUE:88" ] ]
+}

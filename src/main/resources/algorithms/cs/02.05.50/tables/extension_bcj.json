@@ -1,0 +1,35 @@
+{
+  "id" : "extension_bcj",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**: In the United States and Canada, Kaposisarcoma is usually an illness related to Acquired Immunodeficiency Syndrome (AIDS) which affects primarily the skin; however, lesions may also form in the connective tissue, mucosa (e.g. oral cavity) or visceral organs (e.g. lungs).  For connective tissue tumors (C49._), use extension codes for skin.\n\n**Note 2**:  Choice of CS Extension codes for Kaposi sarcoma depends on number and location of lesions.  For example, use code 110 for a single lesion involving skin; use code 210 for multiple lesions involving skin.  Use code 250 for any number of lesions involving both skin and viscera.",
+  "last_modified" : "2015-05-27T16:19:09.207Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "110", "Single lesion:\n    Skin and/or connective tissue", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:L" ], [ "120", "Single lesion: \n    Mucosa (e.g., oral cavity, anus, rectum, vagina, vulva)", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:L" ], [ "130", "Single lesion:\n    Viscera (e.g., pulmonary, gastrointestinal tract, spleen, other)", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:L" ], [ "210", "Multiple lesions:\n    Skin and/or connective tissue", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:L" ], [ "220", "Multiple lesions:\n    Mucosa (e.g., oral cavity, anus, rectum, vagina, vulva)", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:L" ], [ "230", "Multiple lesions:\n    Viscera (e.g., pulmonary, gastrointestinal tract, spleen, other)", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:L" ], [ "240", "(120 or 220) + (110 or 210)\n\nMultiple lesions, mucosa plus skin and/or connective tissue", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:RE" ], [ "250", "(130 or 230) + (110 or 210)\n\nMultiple lesions, viscera plus skin and/or connective tissue", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:RE" ], [ "260", "(130 or 230) + (120 or 220)\n\nMultiple lesions, viscera plus mucosa", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:RE" ], [ "270", "(130 or 230) + (120 or 220) + (110 or 210)\n\nMultiple lesions, visceral plus mucosa plus skin and/or connective tissue", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:D" ], [ "290", "Multiple lesions, NOS", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:U" ], [ "950", "No evidence of primary tumor", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in patient record", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:U" ] ]
+}

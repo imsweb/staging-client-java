@@ -1,0 +1,36 @@
+{
+  "id" : "mets_haf",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note**:  Inferior phrenic nodes were reclassified from distant to regional nodes in AJCC 7th Edition.  They are now coded in CS Lymph Nodes.",
+  "footnotes" : "- For CS Mets at DX codes 00 and 99, the M category for AJCC 6 staging is assigned based on the coding of CS Lymph Nodes as shown in the Lymph Nodes Mets at DX AJCC 6 Table.",
+  "last_modified" : "2015-05-27T16:19:27.660Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "JUMP:lymph_nodes_metsat_dxajcc6_xew", "VALUE:NONE", "VALUE:NONE" ], [ "10", "Distant lymph node(s), NOS", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "11", "Distant lymph nodes:\n    Cardiac\n    Lateral (aortic) (lumbar)\n    Pericardial (pericardiac)\n    Posterior mediastinal (tracheoesophageal) including juxtaphrenic nodes\n    Retroperitoneal, NOS", "VALUE:M1", "VALUE:M1", "VALUE:RN", "VALUE:D" ], [ "12", "Distant lymph nodes:\n    Coronary artery\n    Renal artery", "VALUE:M1", "VALUE:M1", "VALUE:RN", "VALUE:D" ], [ "13", "Distant lymph node(s):\n    Aortic (para-, peri-)\n    Diaphragmatic, NOS\n    Peripancreatic (near head of pancreas only)", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "15", "OBSOLETE DATA RETAINED V0200\nInferior phrenic nodes reclassified from distant to regional nodes in AJCC 7th Edition \nSee code 16 or CS Lymph Node code 200\n\nDistant lymph node(s) other than codes 10-13, including inferior phrenic nodes", "ERROR:", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "16", "Distant lymph node(s) other than codes 10-13", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "40", "Distant metastasis except distant lymph node(s) (codes 10-16)\nCarcinomatosis", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "50", "OBSOLETE DATA RETAINED V0200\nInferior phrenic nodes reclassified from distant to regional nodes in AJCC 7th Edition \nSee code 51\n\n40 + any of  (10 or 11 or 15)\nDistant lymph node(s) plus other distant metastases", "ERROR:", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "51", "40 + (10,11, or 16)\n\nDistant metastasis plus distant lymph node(s) in codes 10, 11, or 16", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "52", "40 + (12 or 13)\n\nDistant metastasis plus distant lymph node(s) in codes 12 or 13", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "60", "Distant metastasis, NOS\n\nStated as M1 with no other information on distant metastasis", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "JUMP:lymph_nodes_metsat_dxajcc6_xew", "VALUE:U", "VALUE:U" ] ]
+}

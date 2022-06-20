@@ -1,0 +1,27 @@
+{
+  "id" : "lymph_nodes_clinical_eval_xgt",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Lymph Nodes Clinical Eval",
+  "title" : "Lymph Nodes Clinical Eval Table",
+  "notes" : "**Note**:  This table is used when CS Lymph Nodes Eval is coded 0 (c), 1(c), 5 (c), or 9 (c) and CS Lymph Nodes is coded 100-500 ONLY. The N category is assigned based on the value of CS Site-Specific Factor 5, Size of Metastasis in Lymph Nodes.",
+  "last_modified" : "2015-05-27T16:19:24.318Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "CS Lymph Nodes",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf5",
+    "name" : "CS SSF 5",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "000-003", "ERROR:", "ERROR:" ], [ "200", "000-003", "ERROR:", "ERROR:" ], [ "300", "000-003", "ERROR:", "ERROR:" ], [ "350", "000-003", "ERROR:", "ERROR:" ], [ "400", "000-003", "ERROR:", "ERROR:" ], [ "500", "000-003", "ERROR:", "ERROR:" ], [ "100", "010", "VALUE:N1", "VALUE:N1" ], [ "200", "010", "VALUE:N1", "VALUE:N1" ], [ "300", "010", "VALUE:N1", "VALUE:N1" ], [ "350", "010", "VALUE:N1", "VALUE:N1" ], [ "400", "010", "VALUE:N1", "VALUE:N1" ], [ "500", "010", "VALUE:N1", "VALUE:N1" ], [ "100", "020", "VALUE:N2", "VALUE:N2" ], [ "200", "020", "VALUE:N2", "VALUE:N2" ], [ "300", "020", "VALUE:N2", "VALUE:N2" ], [ "350", "020", "VALUE:N2", "VALUE:N2" ], [ "400", "020", "VALUE:N2", "VALUE:N2" ], [ "500", "020", "VALUE:N2", "VALUE:N2" ], [ "100", "030", "VALUE:N3", "VALUE:N3" ], [ "200", "030", "VALUE:N3", "VALUE:N3" ], [ "300", "030", "VALUE:N3", "VALUE:N3" ], [ "350", "030", "VALUE:N3", "VALUE:N3" ], [ "400", "030", "VALUE:N3", "VALUE:N3" ], [ "500", "030", "VALUE:N3", "VALUE:N3" ], [ "100", "988", "ERROR:", "ERROR:" ], [ "200", "988", "ERROR:", "ERROR:" ], [ "300", "988", "ERROR:", "ERROR:" ], [ "350", "988", "ERROR:", "ERROR:" ], [ "400", "988", "ERROR:", "ERROR:" ], [ "500", "988", "ERROR:", "ERROR:" ], [ "100", "998", "ERROR:", "ERROR:" ], [ "200", "998", "ERROR:", "ERROR:" ], [ "300", "998", "ERROR:", "ERROR:" ], [ "350", "998", "ERROR:", "ERROR:" ], [ "400", "998", "ERROR:", "ERROR:" ], [ "500", "998", "ERROR:", "ERROR:" ], [ "100", "999", "VALUE:N1", "VALUE:N1" ], [ "200", "999", "VALUE:N1", "VALUE:N1" ], [ "300", "999", "VALUE:N1", "VALUE:N1" ], [ "350", "999", "VALUE:N1", "VALUE:N1" ], [ "400", "999", "VALUE:N1", "VALUE:N1" ], [ "500", "999", "VALUE:N1", "VALUE:N1" ] ]
+}

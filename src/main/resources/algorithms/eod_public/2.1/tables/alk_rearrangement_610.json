@@ -1,0 +1,19 @@
+{
+  "id" : "alk_rearrangement_610",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "ALK Rearrangement",
+  "title" : "ALK Rearrangement",
+  "notes" : "**Note 1:** This SSDI is effective for diagnosis years 2021+\n* For cases diagnosed 2018-2020, leave this SSDI blank\n\n**Note 2:** Physician statement of ALK rearrangement for non-small cell carcinoma can be used to code this data item when no other information is available.\n\n**Note 3:** ALK may be recorded for all histologies and stages; however, it is primarily performed for advanced non-small cell carcinomas. If information is not available, code 9. \n\n**Note 4:** The absence or presence of ALK protein expression determines if the tumor will respond to treatment with a targeted inhibitor. ALK protein expression predicts the ALK rearrangement gene, which are more likely to respond to the targeted inhibitor treatment. The most common ALK rearrangements are \n * EML4-ALK\n * KIF5B-ALK\n * TFG-ALK\n * KLC1-ALK\n\n**Note 5:** If ALK Rearrangement is positive and there is no mention of the specific rearrangement, code 4.\n\n**Note 6:** If neoadjuvant therapy is given, record the assay from tumor specimens prior to neoadjuvant therapy.\n * If neoadjuvant therapy is given and there are no ALK results from pre-treatment specimens, report the findings from post-treatment specimens\n\n**Note 7:** Code 9 when\n * Insufficient amount of tissue available to perform test\n * Test done and documented to be equivocal\n * No microscopic confirmation of tumor \n * ALK Rearrangement not ordered or not done, or unknown if ordered or done",
+  "last_modified" : "2021-04-01T18:31:58.171Z",
+  "definition" : [ {
+    "key" : "alk_rearrangement",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Normal\nALK negative\nNegative for rearrangement, no rearrangement identified, no mutations (somatic) identified, not present, not detected" ], [ "1", "Abnormal Rearrangement identified/detected: EML4-ALK, KIF5B-ALK, TFG-ALK, and/or KLC1-ALK " ], [ "2", "Rearrangement identified/detected: Other ALK Rearrangement not listed in code 1" ], [ "4", "Rearrangement, NOS" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nALK Rearrangement not assessed or unknown if assessed" ], [ "", "N/A - Diagnosis year is prior to 2021" ] ]
+}

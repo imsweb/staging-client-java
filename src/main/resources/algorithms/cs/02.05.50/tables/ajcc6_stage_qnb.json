@@ -1,0 +1,27 @@
+{
+  "id" : "ajcc6_stage_qnb",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC6 Stage",
+  "title" : "AJCC TNM 6 Stage for sites with no stage groupings",
+  "notes" : "In the table below, \"ANY\" designates any valid (allowable) value.",
+  "last_modified" : "2015-05-27T16:18:50.828Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "", "*", "*", "VALUE:" ], [ "*", "", "*", "VALUE:" ], [ "*", "*", "", "VALUE:" ], [ "*", "*", "*", "VALUE:NA" ] ]
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_prostate",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection Prostate",
+  "title" : "Schema selection for Prostate",
+  "last_modified" : "2021-06-11T18:27:48.143Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C619", "8000-8700, 8720-8790", "MATCH" ] ]
+}

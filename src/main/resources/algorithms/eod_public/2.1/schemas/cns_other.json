@@ -1,0 +1,332 @@
+{
+  "id" : "cns_other",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "CNS Other",
+  "title" : "CNS Other",
+  "notes" : "C701, C709, C720-C721, C728-C729: 8000-8700, 8720-8790, 8802, 8810, 8815, 8850, 8890, 8900, 9064, 9070-9071, 9080, 9084-9085, 9100-9105, 9120, 9133, 9140, 9180, 9220,  9362, 9364, 9380-9540, 9680, 9699, 9702-9715, 9751-9759\n\nC722, C724-C725: 8000-8700, 8720-8790, 8900, 9064, 9070-9071, 9080, 9084-9085, 9100, 9120, 9140, 9220, 9362, 9380-9539, 9680, 9699, 9702-9715, 9751-9759\n\nC723: 8000-8700, 8720-8790, 9064, 9070, 9080, 9084-9085, 9100, 9140, 9180, 9362, 9380-9420, 9423-9472, 9474-9493, 9501-9521, 9523, 9531-9539, 9680, 9699, 9702-9715, 9751-9759\n\nC701  Spinal meninges\nC709  Meninges, NOS\nC720  Spinal cord\nC721  Cauda equina\nC722  Olfactory nerve \nC723  Optic nerve \nC724  Acoustic nerve \nC725  Cranial nerve, NOS\nC728  Overlapping lesion of brain and central nervous system\nC729  Nervous system, NOS\n\n**Note 1:** The following sources were used in the development of this schema\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)\n* SEER Summary Staging Manual-2000: Codes and Coding Instructions (https://seer.cancer.gov/tools/ssm/ssm2000/)\n* Collaborative Stage Data Collection System, version 02.05:  https://cancerstaging.org/cstage/Pages/default.aspx \n* Chapter 72 *Brain and Spinal Cord*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.\n\n**Note 2:** While all histologies with behavior /0 and /1 are captured in this schema/chapter, for behavior /3, see the following schemas for the listed histologies\n\n* C701, C709, C720-C721, C728-C729 (8710-8714, 8800-8801, 8803, 8811-8814, 8816-8818, 8820-8842, 8851-8858, 8860-8881, 8891-8898, 8902-8905, 8921, 8932-8934, 8940-8990, 8992, 9000-9016, 9030-9043, 9045-9063, 9065, 9072-9073, 9081-9083, 9086-9091, 9110-9111, 9121-9132, 9135-9138, 9141-9175, 9181-9213, 9221, 9230, 9240-9361, 9363, 9365, 9370-9373, 9541-9580, 9582): *Soft Tissue Other*\n* C701, C709, C720-C721, C728-C729: (8804-8806, 8859, 8901, 8910-8920, 8930-8931, 8991, 9020, 9044, 9222, 9231, 9366-9368, 9581): *Soft Tissue Rare*\n* C722, C724, C725 (8710-8714, 8800-8803, 8810-8898, 8901-8905, 8912, 8921, 8932-8934, 8940-8990, 9000-9016, 9030-9043, 9045-9063, 9065, 9072-9073, 9081-9083, 9086-9091, 9101-9111, 9121-9138, 9141-9213, 9221-9230, 9240-9361, 9363-9373, 9540-9580, 9582): *Soft Tissue Head and Neck*\n* C722, C724, C725 (8804-8806, 8910, 8920, 8930-8931, 8991, 9020, 9044, 9231, 9581): *Soft Tissue Rare*\n* C723 (8859, 8930-8931, 8991, 9020, 9222, 9231, 9366-9368): *Soft Tissue Rare*\n* C723 (8992): *Soft Tissue Other*\n* C723 (8710-8714, 8800-8858, 8860-8921, 8932-8934, 8940-8990, 9000-9016, 9030-9063, 9065, 9071-9073, 9081-9083, 9086-9091, 9101-9138, 9141-9175, 9181-9221, 9230, 9240-9361, 9363-9365, 9370-9373, 9421, 9473, 9500, 9522, 9530, 9540-9582): *Orbital Sarcoma*\n* 8935-8936: *GIST*\n* 9700-9701: *Mycosis Fungoides*\n\n**Note 3:** Summary Stage is the only applicable staging system for this site/histology/schema.",
+  "schema_selection_table" : "schema_selection_cns_other",
+  "schema_discriminators" : [ "behavior" ],
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "naaccr_xml_id" : "dateOfDiagnosis",
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "naaccr_xml_id" : "primarySite",
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "naaccr_xml_id" : "histologicTypeIcdO3",
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "naaccr_item" : 523,
+    "naaccr_xml_id" : "behaviorCodeIcdO3",
+    "table" : "behavior",
+    "used_for_staging" : true
+  }, {
+    "key" : "size_clin",
+    "name" : "Tumor Size Clinical",
+    "naaccr_item" : 752,
+    "naaccr_xml_id" : "tumorSizeClinical",
+    "table" : "tumor_size_clinical_60979",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_path",
+    "name" : "Tumor Size Pathological",
+    "naaccr_item" : 754,
+    "naaccr_xml_id" : "tumorSizePathologic",
+    "table" : "tumor_size_pathological_25597",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_summary",
+    "name" : "Tumor Size Summary",
+    "naaccr_item" : 756,
+    "naaccr_xml_id" : "tumorSizeSummary",
+    "default" : "999",
+    "table" : "tumor_size_summary_63115",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "naaccr_xml_id" : "regionalNodesPositive",
+    "default" : "99",
+    "table" : "nodes_pos_dna_91511",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_exam",
+    "name" : "Regional Nodes Examined",
+    "naaccr_item" : 830,
+    "naaccr_xml_id" : "regionalNodesExamined",
+    "default" : "99",
+    "table" : "nodes_exam_dna_95635",
+    "used_for_staging" : false
+  }, {
+    "key" : "lvi",
+    "name" : "LVI",
+    "naaccr_item" : 1182,
+    "naaccr_xml_id" : "lymphVascularInvasion",
+    "default" : "8",
+    "table" : "lvi_dna_56663",
+    "used_for_staging" : false
+  }, {
+    "key" : "eod_primary_tumor",
+    "name" : "EOD Primary Tumor",
+    "naaccr_item" : 772,
+    "naaccr_xml_id" : "eodPrimaryTumor",
+    "default" : "999",
+    "table" : "extension_bcd",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_regional_nodes",
+    "name" : "EOD Regional Nodes",
+    "naaccr_item" : 774,
+    "naaccr_xml_id" : "eodRegionalNodes",
+    "default" : "888",
+    "table" : "nodes_dna",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_mets",
+    "name" : "EOD Mets",
+    "naaccr_item" : 776,
+    "naaccr_xml_id" : "eodMets",
+    "default" : "00",
+    "table" : "eod_mets_35594",
+    "used_for_staging" : true
+  }, {
+    "key" : "ss2018",
+    "name" : "SS2018",
+    "naaccr_item" : 764,
+    "naaccr_xml_id" : "summaryStage2018",
+    "table" : "ss2018_cns_other_67712",
+    "used_for_staging" : false
+  }, {
+    "key" : "grade_clin",
+    "name" : "Grade Clinical",
+    "naaccr_item" : 3843,
+    "naaccr_xml_id" : "gradeClinical",
+    "default" : "9",
+    "table" : "grade_clinical_19997",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_path",
+    "name" : "Grade Pathological",
+    "naaccr_item" : 3844,
+    "naaccr_xml_id" : "gradePathological",
+    "default" : "9",
+    "table" : "grade_pathological_11803",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_post_therapy_clin",
+    "name" : "Grade Post Therapy Clin (yc)",
+    "naaccr_item" : 1068,
+    "naaccr_xml_id" : "gradePostTherapyClin",
+    "table" : "grade_post_therapy_clin_26948",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_post_therapy_path",
+    "name" : "Grade Post Therapy Path (yp)",
+    "naaccr_item" : 3845,
+    "naaccr_xml_id" : "gradePostTherapy",
+    "table" : "grade_post_therapy_path_86055",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "brain_molecular_markers",
+    "name" : "Brain Molecular Markers",
+    "naaccr_item" : 3816,
+    "naaccr_xml_id" : "brainMolecularMarkers",
+    "default" : "88",
+    "table" : "brain_molecular_markers_75370",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "chrom_1p_status",
+    "name" : "Chromosome 1p Status",
+    "naaccr_item" : 3801,
+    "naaccr_xml_id" : "chromosome1pLossHeterozygosity",
+    "default" : "8",
+    "table" : "chromosome_1p_status_40269",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "chrom_19q_status",
+    "name" : "Chromosome 19q Status",
+    "naaccr_item" : 3802,
+    "naaccr_xml_id" : "chromosome19qLossHeterozygosity",
+    "default" : "8",
+    "table" : "chromosome_19q_status_72683",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "mgmt",
+    "name" : "MGMT",
+    "naaccr_item" : 3889,
+    "naaccr_xml_id" : "methylationOfO6MGMT",
+    "default" : "8",
+    "table" : "mgmt_17454",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  } ],
+  "outputs" : [ {
+    "key" : "naaccr_schema_id",
+    "name" : "Schema ID",
+    "naaccr_item" : 3800,
+    "naaccr_xml_id" : "schemaId",
+    "default" : "00722"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "naaccr_item" : 995,
+    "naaccr_xml_id" : "ajccId",
+    "default" : "XX"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "naaccr_item" : 1060,
+    "naaccr_xml_id" : "tnmEditionNumber"
+  }, {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "Derived EOD 2018 T",
+    "naaccr_item" : 785,
+    "naaccr_xml_id" : "derivedEod2018T",
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_n",
+    "name" : "Derived EOD 2018 N",
+    "naaccr_item" : 815,
+    "naaccr_xml_id" : "derivedEod2018N",
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_m",
+    "name" : "Derived EOD 2018 M",
+    "naaccr_item" : 795,
+    "naaccr_xml_id" : "derivedEod2018M",
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_stage_group",
+    "name" : "Derived EOD 2018 Stage Group",
+    "naaccr_item" : 818,
+    "naaccr_xml_id" : "derivedEod2018StageGroup",
+    "default" : "88"
+  }, {
+    "key" : "ss2018_derived",
+    "name" : "Derived Summary Stage 2018",
+    "naaccr_item" : 762,
+    "naaccr_xml_id" : "derivedSummaryStage2018",
+    "default" : "9"
+  } ],
+  "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_81087",
+      "inputs" : [ "site", "hist", "behavior" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
+    "id" : "summary_stage_2018",
+    "name" : "Summary Stage 2018",
+    "tables" : [ {
+      "id" : "extension_bcd",
+      "inputs" : [ "eod_primary_tumor" ],
+      "outputs" : [ "eod_2018_t", "ss2018_t" ]
+    }, {
+      "id" : "nodes_dna",
+      "inputs" : [ "eod_regional_nodes" ],
+      "outputs" : [ "eod_2018_n", "ss2018_n" ]
+    }, {
+      "id" : "eod_mets_35594",
+      "inputs" : [ "eod_mets" ],
+      "outputs" : [ "eod_2018_m", "ss2018_m" ]
+    }, {
+      "id" : "summary_stage_benign_3306",
+      "inputs" : [ "ss2018_m", "ss2018_n", "ss2018_t" ],
+      "outputs" : [ "ss2018_derived" ]
+    } ]
+  } ],
+  "involved_tables" : [ "mgmt_17454", "grade_post_therapy_path_86055", "chromosome_1p_status_40269", "nodes_exam_dna_95635", "schema_selection_cns_other", "histology", "chromosome_19q_status_72683", "tumor_size_summary_63115", "behavior", "grade_clinical_19997", "nodes_dna", "summary_stage_benign_3306", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "grade_pathological_11803", "ajcc_chapter_calculation_81087", "extension_bcd", "ss2018_cns_other_67712", "primary_site", "grade_post_therapy_clin_26948", "year_dx_validation", "brain_molecular_markers_75370", "eod_mets_35594", "lvi_dna_56663", "nodes_pos_dna_91511" ],
+  "last_modified" : "2021-07-28T19:33:13.321Z",
+  "on_invalid_input" : "CONTINUE"
+}

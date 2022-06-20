@@ -1,0 +1,22 @@
+{
+  "id" : "ajcc_descriptor_codes",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC Descriptor Codes",
+  "title" : "AJCC Descriptor Allowable Codes",
+  "last_modified" : "2015-05-27T16:19:01.882Z",
+  "definition" : [ {
+    "key" : "descriptor",
+    "name" : "Display String",
+    "type" : "INPUT"
+  }, {
+    "key" : "stor_descriptor",
+    "name" : "Storage Code",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "comments",
+    "name" : "Comments",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "c", "VALUE:c", " " ], [ "p", "VALUE:p", " " ], [ "a", "VALUE:a", " " ], [ "yp", "VALUE:y", " " ], [ "", "VALUE:N", "Display String is blank" ], [ "*", "VALUE: ", "Error" ] ]
+}

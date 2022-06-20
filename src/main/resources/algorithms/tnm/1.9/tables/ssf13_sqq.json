@@ -1,0 +1,20 @@
+{
+  "id" : "ssf13_sqq",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF13",
+  "title" : "Site-Specific Factor 13",
+  "subtitle" : "Microvascular Density (MVD)",
+  "notes" : "**Note 1:**  Microvascular density (MVD) is the number of immunopositive elements labeled with markers for vascular endothelial cells in areas of densest vascularization.  The value is expressed as an integer, number of vessels per 0.3 square millimeter (mm).\n\n**Note 2:**  Record the results as expressed on the laboratory test.  Record the information based on quartiles for laboratory standards if this is the only expression of results.",
+  "last_modified" : "2018-05-14T21:28:59.997Z",
+  "definition" : [ {
+    "key" : "ssf13",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000-500", "Number of vessels per 0.3 square millimeter (mm)" ], [ "988", "Not applicable: Information not collected for this case" ], [ "991", "Lowest quartile for laboratory " ], [ "992", "Second quartile for laboratory" ], [ "993", "Third quartile for laboratory" ], [ "994", "Highest quartile for laboratory" ], [ "997", "Test performed, unknown results" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

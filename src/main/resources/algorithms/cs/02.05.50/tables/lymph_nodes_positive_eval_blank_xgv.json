@@ -1,0 +1,27 @@
+{
+  "id" : "lymph_nodes_positive_eval_blank_xgv",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Lymph Nodes Positive Eval Blank",
+  "title" : "Lymph Nodes Positive Eval Blank Table",
+  "notes" : "**Note**:  This table is used when CS Lymph Nodes Eval is not coded and CS Lymph Nodes is coded 100-500 ONLY. The N category is assigned based on the values of CS Site-Specific Factor 5, Size of Metastasis in Lymph Nodes, and Regional Nodes Positive. The N category is based on the clinical definition except when Regional Nodes Positive is greater than 05; then the N category is based on the pathologic definition.",
+  "last_modified" : "2015-05-27T16:19:25.774Z",
+  "definition" : [ {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf5",
+    "name" : "CS SSF 5",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "000-003", "ERROR:", "ERROR:" ], [ "01-05", "000-003", "ERROR:", "ERROR:" ], [ "06-90", "000-003", "ERROR:", "ERROR:" ], [ "95", "000-003", "ERROR:", "ERROR:" ], [ "97", "000-003", "ERROR:", "ERROR:" ], [ "98", "000-003", "ERROR:", "ERROR:" ], [ "99", "000-003", "ERROR:", "ERROR:" ], [ "00", "010", "VALUE:N1", "VALUE:N1" ], [ "01-05", "010", "VALUE:N1", "VALUE:N1" ], [ "06-90", "010", "VALUE:N2", "VALUE:N2" ], [ "95", "010", "VALUE:N1", "VALUE:N1" ], [ "97", "010", "VALUE:N1", "VALUE:N1" ], [ "98", "010", "VALUE:N1", "VALUE:N1" ], [ "99", "010", "VALUE:N1", "VALUE:N1" ], [ "00", "020", "VALUE:N2", "VALUE:N2" ], [ "01-05", "020", "VALUE:N2", "VALUE:N2" ], [ "06-90", "020", "VALUE:N2", "VALUE:N2" ], [ "95", "020", "VALUE:N2", "VALUE:N2" ], [ "97", "020", "VALUE:N2", "VALUE:N2" ], [ "98", "020", "VALUE:N2", "VALUE:N2" ], [ "99", "020", "VALUE:N2", "VALUE:N2" ], [ "00", "030", "VALUE:N3", "VALUE:N3" ], [ "01-05", "030", "VALUE:N3", "VALUE:N3" ], [ "06-90", "030", "VALUE:N3", "VALUE:N3" ], [ "95", "030", "VALUE:N3", "VALUE:N3" ], [ "97", "030", "VALUE:N3", "VALUE:N3" ], [ "98", "030", "VALUE:N3", "VALUE:N3" ], [ "99", "030", "VALUE:N3", "VALUE:N3" ], [ "00", "988", "ERROR:", "ERROR:" ], [ "01-05", "988", "ERROR:", "ERROR:" ], [ "06-90", "988", "ERROR:", "ERROR:" ], [ "95", "988", "ERROR:", "ERROR:" ], [ "97", "988", "ERROR:", "ERROR:" ], [ "98", "988", "ERROR:", "ERROR:" ], [ "99", "988", "ERROR:", "ERROR:" ], [ "00", "998", "ERROR:", "ERROR:" ], [ "01-05", "998", "ERROR:", "ERROR:" ], [ "06-90", "998", "ERROR:", "ERROR:" ], [ "95", "998", "ERROR:", "ERROR:" ], [ "97", "998", "ERROR:", "ERROR:" ], [ "98", "998", "ERROR:", "ERROR:" ], [ "99", "998", "ERROR:", "ERROR:" ], [ "00", "999", "VALUE:N1", "VALUE:N1" ], [ "01-05", "999", "VALUE:N1", "VALUE:N1" ], [ "06-90", "999", "VALUE:N2", "VALUE:N2" ], [ "95", "999", "VALUE:N1", "VALUE:N1" ], [ "97", "999", "VALUE:N1", "VALUE:N1" ], [ "98", "999", "VALUE:N1", "VALUE:N1" ], [ "99", "999", "VALUE:N1", "VALUE:N1" ] ]
+}

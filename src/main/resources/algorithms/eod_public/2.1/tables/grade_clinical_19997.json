@@ -1,0 +1,19 @@
+{
+  "id" : "grade_clinical_19997",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Grade Clinical",
+  "title" : "Grade Clinical",
+  "notes" : "**Note 1:** Grade Clinical must not be blank.\n\n**Note 2:** For the Brain, CNS Other and Intracranial Schemas **ONLY**, Grade Clinical may be assigned without histologic confirmation if the histology is documented based on imaging. \n\n**Note 3:** Assign the highest grade from the primary tumor assessed during the clinical time frame. \n\n**Note 4:** If there are multiple tumors with different grades abstracted as one primary, code the highest grade.\n\n**Note 5:** Codes 1-4 take priority over A-D, L and H.\n\n**Note 6:** CNS WHO classifications use a grading scheme that is a \"malignancy scale\" ranging across a wide variety of neoplasms rather than a strict histologic grading system that can be applied equally to all tumor types.  \n* Code the WHO grading system for selected tumors of the CNS as noted in the AJCC 8th edition Table 72.2 when WHO grade is not documented in the record\n   + A list of the histologies that have a default grade can also be found in the *Brain/Spinal Cord* CAP Protocol in Table 1: *WHO Grading System for Some of the More Common Tumors of the CNS*, Table 2: *WHO Grading System for Diffuse Infiltrating Astrocytomas and Table* 3: *WHO Grading Meningiomas* \nhttps://www.cap.org/protocols-and-guidelines/cancer-reporting-tools/cancer-protocol-templates\n* For **benign tumors ONLY (behavior 0),** code 1 can be automatically assigned for all histologies\n  + This was confirmed by the CAP Cancer Committee\n\n**Note 7:** Code 9 (unknown) when \n* Grade from primary site is not documented\n* Clinical workup is not done (for example, cancer is an incidental finding during surgery for another condition)\n* Grade checked \"not applicable\" on CAP Protocol (if available) and no other grade information is available\n\n**Note 8:** If there is only one grade available and it cannot be determined if it is clinical or pathological, assume it is a Grade Clinical and code appropriately per Grade Clinical categories for that site, and then code unknown (9) for Grade Pathological, and blank for Grade Post Therapy Clin (yc) and Grade Post Therapy Path (yp).",
+  "last_modified" : "2021-04-01T13:36:42.808Z",
+  "definition" : [ {
+    "key" : "grade_clin",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "WHO Grade I : Circumscribed tumors of low proliferative potential associated with the possibility of cure following resection" ], [ "2", "WHO Grade II: Infiltrative tumors with low proliferative potential with increased risk of recurrence" ], [ "3", "WHO Grade III: Tumors with histologic evidence of malignancy, including nuclear atypia and mitotic activity, associated with an aggressive clinical course" ], [ "4", "WHO Grade IV: Tumors that are cytologically malignant, mitotically active, and associated with rapid clinical progression and potential for dissemination" ], [ "L", "Stated as \"low grade\" NOS" ], [ "H", "Stated as \"high grade\" NOS" ], [ "A", "Well differentiated" ], [ "B", "Moderately differentiated" ], [ "C", "Poorly differentiated" ], [ "D", "Undifferentiated, anaplastic" ], [ "9", "Grade cannot be assessed (GX); Unknown" ] ]
+}

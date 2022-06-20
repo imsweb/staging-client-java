@@ -1,0 +1,19 @@
+{
+  "id" : "lymphocytosis_79150",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Lymphocytosis",
+  "title" : "Lymphocytosis",
+  "notes" : "**Note 1:** For cases diagnosed 1/1/2018 and later, all cases of CLL and SLL will require both the **Lugano classification, which is captured in the AJCC stage group data item, and the five components of the modified Rai staging system, which are captured in Site-Specific Data Items (adenopathy, anemia, lymphocytosis, organomegaly, and thrombocytopenia).**\n\nThe terms B-cell lymphocytic leukemia/chronic lymphocytic leukemia (CLL) and small lymphocytic lymphoma (SLL) are different clinical presentations of the same disease, with both terms coded 9823.  Traditionally the lymphoma diagnosis was staged with the Ann Arbor staging system and it is now staged with the Lugano classification.  In North America, CLL was staged with the Rai system. \n\n**Note 2:** Rai stage is only applicable for CLL, in which the bone marrow and/or peripheral blood are involved (primary site C421 for bone marrow, see Hematopoietic Manual, Module 3: PH 5, 6). \n* If primary site is not C421, code 5\n\n**Note 3:** Lymphocytosis (lymphocyte number) is defined by an absolute lymphocyte count (ALC) > 5,000 cells/μL and is part of the staging criteria. \n* Use the cut points listed in the table regardless of the lab's reference range\n* For cases that document lymphocyte count in SI (Systeme Internationale) units as any of 10*9/L, 10^9/L, or 10E9/L, the cut point of 5,000 cells/µL is equivalent to (5 cells x 10*9/L), (5 cells X 10^9/L), or (5 cells x10E9/L).\n\n**Note 4:** Record this data item based on a blood test (CBC and differential) performed at diagnosis (pre-treatment). In the absence of the lab test, a physician's statement can be used. \n\n**Note 5:** If there is no mention of lymphocytosis, or relevant lab results, code 9.\n\n**Note 6:** The physician's stated Rai stage always takes priority when there is conflicting information",
+  "last_modified" : "2021-04-05T14:14:35.274Z",
+  "definition" : [ {
+    "key" : "lymphocytosis",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Lymphocytosis not present\nAbsolute lymphocyte count <= 5,000 cells/μL" ], [ "1", "Lymphocytosis present \nAbsolute lymphocyte count > 5,000 cells/μL" ], [ "5", "Not applicable: Primary site is not C421" ], [ "6", "Lab value unknown, physician states lymphocytosis is present\n\nPhysician states Rai stage 0-IV" ], [ "7", "Test ordered, results not in chart" ], [ "9", "Not documented in medical record\nLymphocytosis not assessed or unknown if assessed\nNo Rai stage is documented in the record and there is no documentation of lymphocytosis" ] ]
+}

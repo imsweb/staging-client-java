@@ -1,0 +1,21 @@
+{
+  "id" : "ss2018_anus_55561",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "SS2018: Anus",
+  "title" : "Summary Stage 2018: Anus",
+  "subtitle" : "Summary Stage 2018",
+  "notes" : "**Anus and Anal Canal**\n\n8000-8700, 8720-8790\n\nC210-C212, C218\nC210 Anus, NOS (excluding skin of anus and perianal skin C445)\nC211 Anal canal\nC212 Cloacogenic zone\nC218 Overlapping lesion of rectum, anus and anal canal \n\n**Note 1:** The following sources were used in the development of this chapter\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)\n* SEER Summary Staging Manual-2000: Codes and Coding Instructions (https://seer.cancer.gov/tools/ssm/ssm2000/)\n* Collaborative Stage Data Collection System, version 02.05:  https://cancerstaging.org/cstage/Pages/default.aspx \n* Chapter 21 *Anus*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.\n\n**Note 2:** See the following chapters for the listed histologies \n* 8710-8714, 8800-8934, 8940-9138, 9141-9582: *Soft Tissue*\n* 8935-8936: *GIST*\n* 9140: *Kaposi Sarcoma*\n* 9700-9701: *Mycosis Fungoides*",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05.** American Joint Committee on Cancer (Chicago, IL)\n\n(4) Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017\n\n(5) Welton, M.L., Jessup, J.M., et al. **Anus**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017",
+  "last_modified" : "2021-03-15T18:42:02.775Z",
+  "definition" : [ {
+    "key" : "ss2018",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "In situ, intraepithelial, noninvasive\n- Anal intraepithelial neoplasia III \n- Bowen disease" ], [ "1", "Localized only (localized, NOS)\n- Confined to anus, NOS\n- Incidental finding of malignancy in hemorrhoid, NOS\n- Intramucosa\n- Lamina propria\n- Mucosa, NOS\n- Muscularis mucosae\n- Muscularis propria (internal sphincter)\n- Submucosa (superficial invasion)" ], [ "2", "Regional by direct extension only\n- Ischiorectal fat/tissue\n- Perianal skin\n- Perineum\n- Perirectal skin\n- Rectal mucosa or submucosa\n- Rectal wall\n- Skeletal muscle(s)\n    + Anal sphincter (external)\n    + Levator ani\n- Subcutaneous perianal tissue\n- Vulva" ], [ "3", "Regional lymph node(s) involved only\n- Anorectal\n- External iliac\n- Inferior hemorrhoidal\n- Inguinal (femoral) (deep, superficial)\n- Internal iliac (hypogastric)\n- Lateral sacral (laterosacral)\n- Mesorectal\n- Obturator\n- Perirectal\n- Superior rectal (hemorrhoidal) (femoral)\n- Regional lymph node(s), NOS\n  + Lymph node(s), NOS" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n- Codes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant site(s) (including further contiguous extension) \n  + Bladder\n  + Broad ligament(s)\n  + Cervix uteri\n  + Corpus uteri\n  + Pelvic peritoneum\n  + Prostate\n  + Urethra\n  + Vagina\n- Distant lymph node(s), NOS\n- Distant metastasis, NOS \n  + Carcinomatosis \n  + Distant metastases WITH or WITHOUT distant lymph node(s)" ], [ "9", "Unknown if extension or metastasis" ] ]
+}

@@ -1,0 +1,20 @@
+{
+  "id" : "ssf16_spt",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF16",
+  "title" : "Site-Specific Factor 16",
+  "subtitle" : "Serum Chromogranin A (CgA) Lab Value",
+  "notes" : "**Note 1:**  Chromoganins are a family of proteins in secretory granules found throughout the neuroendocrine system. Serum Chromogranin A (CgA) has been shown to be a useful marker for neuroendocrine tumors.\n\n**Note 2:**  Record to the nearest nanogram/milliliter (ng/ml) the highest CgA lab value documented in the medical record prior to treatment.  \n* For example, code a pretreatment CgA of 400 ng/ml as 400\n\n**Note 3:**  Code 000 is reserved for exactly 0.0 ng/ml (no measurable amount of CgA).  Do not round tiny values down to 0 ng/ml; any measured value less than or equal to 1 ng/ml should be coded 001.  \n* For code 001, also round 1.1 - 1.4 ng/ml down to 1 ng/ml\n* For codes 002-979, round values to the nearest ng/ml\n\n**Note 4:**  For an uncertain value, record the stated closest value.  \n* For example, code a value stated as \"less than 5 ng/ml\" as 005",
+  "last_modified" : "2018-05-14T21:29:02.697Z",
+  "definition" : [ {
+    "key" : "ssf16",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "0 nanogram/milliliter (ng/ml)" ], [ "001", "1 or less ng/ml" ], [ "002-979", "002-979 ng/ml" ], [ "980", "980 or greater ng/ml" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test was not ordered and was not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

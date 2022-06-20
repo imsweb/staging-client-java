@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_digestive_other",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection DigestiveOther",
+  "title" : "Schema selection for DigestiveOther",
+  "last_modified" : "2015-05-27T16:19:42.153Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C260,C268-C269", "8000-9136,9141-9582,9700-9701", "MATCH" ] ]
+}

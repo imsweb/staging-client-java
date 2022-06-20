@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_bone_70163",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin T Bone",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  The cortex of a bone is the dense outer shell that provides strength to the bone; the spongy center of a bone is the cancellous portion.  The periosteum of the bone is the fibrous membrane covering of a bone that contains the blood vessels and nerves; the periosteum is similar to the capsule on a visceral organ.\n\n**Note 2:**  Assign the appropriate T category (T1, T2) based on the tumor size for the following descriptions\n\n    Adjacent bone/cartilage\n    Invasive tumor confined to cortex of bone\n    Extension beyond cortex to periosteum (No break in periosteum)\n    Extension beyond periosteum to surrounding tissues, including adjacent skeletal muscle(s)\n    Skin\n\n    Further contiguous extension\n\n    Localized, NOS\n\n**Note 3:**  The term \"skip metastasis\" is not used with a consistent meaning in the literature.  In some cases, it refers to discontinuous metastasis in the same bone as the primary tumor, while in other cases it refers to discontinuous metastasis in an adjacent bone, usually in the same limb.  For TNM staging, discontinuous metastasis in the same bone is classified as T3, and discontinuous metastasis in an adjacent bone is classified as M1b (coded in distant metastasis).  \n* If a primary bone tumor is stated as having \"skip metastasis\" or \"skip lesions\" with no other information regarding the bone involved, assign T3",
+  "last_modified" : "2018-05-14T21:29:03.455Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T\n    Extension cannot be determined \n    Tumor size (TS) unknown for T categories where TS  needed to determine T\nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor", "" ], [ "c1", "cT1", "Tumor 8 cm or less in greatest dimension", "Stated as T1" ], [ "c2", "cT2", "Tumor more than 8 cm in greatest dimension", "Stated as T2" ], [ "c3", "cT3", "Discontinuous tumors in the primary bone site", "Stated as T3" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

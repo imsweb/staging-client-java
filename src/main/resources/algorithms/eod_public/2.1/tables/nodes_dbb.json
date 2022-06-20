@@ -1,0 +1,28 @@
+{
+  "id" : "nodes_dbb",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "EOD Regional Nodes",
+  "title" : "EOD Regional Nodes",
+  "notes" : "**Note 1:** Code only regional nodes and nodes, NOS, in this field. Distant nodes are coded in EOD Mets.\n\n**Note 2:** When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and lymph node detail are available, record the code with lymph node detail in preference to a statement of FIGO stage.\n\n**Note 3:** Isolated tumor cells (ITCs) are defined as single tumor cells or small clusters not greater than 0.2 mm, usually detected by immunohistochemical (IHC) or molecular methods. ITCs do not usually show evidence of malignant activity (e.g., proliferation or stromal reaction). Lymph nodes with ITCs only are not counted as positive nodes. \n* For positive ITCs with NO regional lymph node involvement, code 050\n\n**Note 4:** Regional lymph nodes include\n- Femoral\n- Inguinal, NOS\n  + Inguinofemoral (groin)\n  + Node of Cloquet or Rosenmuller (highest deep inguinal)\n  + Superficial inguinal\n\n**Note 5:** Code 800 if regional lymph nodes are involved, but there is no indication which ones are involved.",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017\n\n(5) **Introduction to Female Reproductive Organs**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017\n\n(6) Gibb, R.K., Olawaiye, A.B., Mutch, D.G., et al. **Vulva**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017",
+  "last_modified" : "2021-06-04T18:47:44.467Z",
+  "definition" : [ {
+    "key" : "eod_regional_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_n",
+    "name" : "EOD 2018 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_n",
+    "name" : "SS2018 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:NONE" ], [ "050", "Isolated tumor cells in regional lymph node(s) no greater than 0.2 mm", "VALUE:N0(i+)", "VALUE:NONE" ], [ "100", "1-2 regional lymph node(s) involved and size of metastasis in each node less than 5 mm\n\nFIGO Stage IIIA", "VALUE:N1a", "VALUE:RN" ], [ "200", "1 lymph node and size of metastasis equal to or greater than 5 mm", "VALUE:N1b", "VALUE:RN" ], [ "300", "1 or 2 regional lymph node(s) positive and size of metastasis not given\n\nFIGO Stage III", "VALUE:N1", "VALUE:RN" ], [ "400", "3 or more regional lymph node involved and size of metastasis in each less than 5 mm\n\nFIGO Stage IIIB", "VALUE:N2a", "VALUE:RN" ], [ "500", "At least 2 regional lymph node equal to or greater than 5 mm", "VALUE:N2b", "VALUE:RN" ], [ "600", "Regional lymph node(s) with extracapsular spread\n\nFIGO Stage IIIC", "VALUE:N2c", "VALUE:RN" ], [ "700", "3 or more regional lymph node(s) positive and size of metastasis not given", "VALUE:N2", "VALUE:RN" ], [ "750", "Fixed or ulcerated regional lymph nodes\nFIGO Stage IVA based on regional lymph node involvement", "VALUE:N3", "VALUE:RN" ], [ "800", "Regional lymph node(s), NOS\nLymph node(s), NOS\n\nFIGO Stage III [NOS]", "VALUE:N1", "VALUE:RN" ], [ "999", "Unknown; regional lymph node(s) not stated\nRegional lymph node(s) cannot be assessed\nNot documented in medical record\n\nDeath Certificate Only", "VALUE:NX", "VALUE:U" ] ]
+}

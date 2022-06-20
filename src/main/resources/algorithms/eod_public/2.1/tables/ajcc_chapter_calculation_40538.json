@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc_chapter_calculation_40538",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2021-03-16T16:30:47.830Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8000,8010,8020,8031,8041,8082", "VALUE:61.1", "Renal Pelvis and Ureter: Urothelial Carcinomas", "VALUE:08" ], [ "8120,8122,8130-8131", "VALUE:61.1", "Renal Pelvis and Ureter: Urothelial Carcinomas", "VALUE:08" ], [ "8070,8140", "VALUE:61.2", "Renal Pelvis and Ureter: Squamous Cell Carcinoma and Adenocarcinoma", "VALUE:08" ], [ "8001-8005,8011-8015,8021-8030,8032-8040,8042-8060,8071-8081,8083-8110", "VALUE:XX", "Other Kidney Renal Pelvis", "VALUE:88" ], [ "8121,8123-8124,8141-8700,8720-8790", "VALUE:XX", "Other Kidney Renal Pelvis", "VALUE:88" ] ]
+}

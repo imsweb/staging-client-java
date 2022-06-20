@@ -1,0 +1,20 @@
+{
+  "id" : "ssf7_sqk",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF7",
+  "title" : "Site-Specific Factor 7",
+  "subtitle" : "Surgical Resection",
+  "notes" : "**Note 1:**  Record the details of surgical resection here even if previously recorded within the abstract.\n\n**Note 2:**  If the case is clinically diagnosed and no surgical resection is performed, use code 000.\n\n**Note 3:**  Do not record stereotactic radiosurgery as tumor destruction. It should be recorded in the radiation treatment items.",
+  "last_modified" : "2018-05-14T21:29:01.292Z",
+  "definition" : [ {
+    "key" : "ssf7",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No surgery of primary site; autopsy only" ], [ "010", "Tumor destruction, NOS \nNo specimen sent to pathology" ], [ "020", "Local excision (biopsy) of tumor, lesion or mass\nSpecimen sent to pathology" ], [ "021", "Subtotal resection of tumor, lesion, or mass of brain\n(Less than half of lobe involved with tumor)\nSpecimen sent to pathology" ], [ "030", "Radical, total, gross resection of tumor, lesion or mass in brain\n(Less than half of lobe involved with tumor)" ], [ "040", "Partial resection of lobe of brain\n(Tumor involves more than half of lobe)" ], [ "055", "Gross total resection of lobe of brain (lobectomy) \n(Tumor involves more than half of lobe)" ], [ "090", "Surgery, NOS" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown if surgery performed; death certificate only\nNot documented in patient record" ] ]
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_melanoma_eye_other",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Schema Selection MelanomaEyeOther",
+  "title" : "Schema selection for MelanomaEyeOther",
+  "last_modified" : "2018-05-14T21:29:00.114Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C691,C692,C695,C698-C699", "8720-8790", "MATCH" ] ]
+}

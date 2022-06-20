@@ -1,0 +1,19 @@
+{
+  "id" : "systemic_surg_seq",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Systemic Surg Seq",
+  "title" : "RX Summ Systemic/Surgery Sequence",
+  "notes" : "See the [SEER Program Coding Manual](https://seer.cancer.gov/tools/codingmanuals/index.html) for coding instructions.",
+  "last_modified" : "2020-05-19T17:11:04.334Z",
+  "definition" : [ {
+    "key" : "systemic_surg_seq",
+    "name" : "RX Summ Systemic/Surgery Sequence",
+    "type" : "INPUT"
+  }, {
+    "key" : "desc",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "No systemic therapy and/or surgical procedures; unknown if surgery and/or systemic therapy given" ], [ "2", "Systemic therapy before surgery" ], [ "3", "Systemic therapy after surgery" ], [ "4", "Systemic therapy both before and after surgery" ], [ "5", "Intraoperative systemic therapy" ], [ "6", "Intraoperative systemic therapy with other therapy administered before and/or after surgery" ], [ "7", "Surgery both before and after systemic therapy" ], [ "9", "Sequence unknown, but both surgery and systemic therapy given" ] ]
+}

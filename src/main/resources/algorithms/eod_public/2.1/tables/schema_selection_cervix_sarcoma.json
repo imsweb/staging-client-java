@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_cervix_sarcoma",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection Cervix Sarcoma",
+  "title" : "Schema selection for Cervix Sarcoma",
+  "last_modified" : "2021-04-26T17:00:28.094Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C530, C531, C538, C539", "8710-8714, 8800-8803, 8805, 8810-8814, 8816-8858, 8860-8900, 8902-8910, 8921-8941, 8951-8976, 8981-8990, 8992-9016, 9030-9043, 9045-9105, 9111, 9121-9132, 9135-9138, 9141-9175, 9181-9221, 9230, 9240-9365, 9370-9580, 9582", "2021-9999", "MATCH" ] ]
+}

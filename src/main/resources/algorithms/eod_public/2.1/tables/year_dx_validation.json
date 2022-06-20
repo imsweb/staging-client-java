@@ -1,0 +1,19 @@
+{
+  "id" : "year_dx_validation",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Year DX Validation",
+  "title" : "Year of Diagnosis Validation",
+  "notes" : "See the [SEER Program Coding Manual](https://seer.cancer.gov/tools/codingmanuals/index.html) for coding instructions.",
+  "last_modified" : "2020-05-19T17:02:57.420Z",
+  "definition" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "2018-{{ctx_year_current}},9999", "MATCH" ] ]
+}

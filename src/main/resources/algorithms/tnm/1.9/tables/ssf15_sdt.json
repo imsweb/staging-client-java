@@ -1,0 +1,20 @@
+{
+  "id" : "ssf15_sdt",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF15",
+  "title" : "Site-Specific Factor 15",
+  "subtitle" : "Carbohydrate Antigen 19-9 (CA 19-9) Lab Value",
+  "notes" : "**Note 1:**  Carbohydrate Antigen 19-9 (CA 19-9) is a tumor marker that has value in the management of certain malignancies.\n\n**Note 2:**  Record, to the nearest tenth of in Unit/milliliter (U/ml), the highest CA 19-9 lab value recorded in the medical record prior to treatment.  \n* For example:  A pretreatment CA 19-9 of 60.0 U/mL would be recorded as 600\n\n**Note 3:**  Code 000 is reserved for exactly 0.0 U/mL (no measurable amount of CA 19 9).  Do not round tiny values down to 0.0 U/mL; any measured value less than or equal to 0.1 U/mL should be coded 001.  \n* For code 001, also round 0.11 - 0.14 U/mL down to 0.1 U/mL\n* For codes 002-980, round values to the nearest tenth of a U/ml\n\n**Note 4:**  Use code 997 if an interpretation is documented but the actual lab value is not available in the record.",
+  "last_modified" : "2018-05-14T21:29:03.113Z",
+  "definition" : [ {
+    "key" : "ssf15",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "0.0 Units/milliter (U/ml) exactly" ], [ "001", "0.1 or less U/mL\nStated as less than 1 U/ml with no exact value" ], [ "002-979", "0.2 - 97.9 U/mL\n(Exact value to nearest tenth in U/ml)" ], [ "980", "98.0 or greater U/ml" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

@@ -1,0 +1,35 @@
+{
+  "id" : "nodes_dfi",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in CS Mets at DX.  Regional nodes include bilateral and contralateral involvement of named nodes.\n\n**Note 2**:  When both FIGO stage and regional lymph node detail are available, record the code with regional lymph node detail in preference to a statement of FIGO stage.\n\n**Note 3**:  If either exploratory or definitive surgery is done with no mention of lymph nodes, assume nodes are negative.  If the clinician says \"adnexa palpated\" but does not mention lymph nodes, assume lymph nodes are not involved.",
+  "last_modified" : "2015-05-27T16:19:37.942Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "100", "Regional lymph node(s):\n    Iliac, NOS:\n        Common\n        External\n        Internal (hypogastric)\n            Obturator\n    Paracervical\n    Parametrial\n    Pelvic, NOS\n    Sacral, NOS:\n        Lateral (laterosacral)\n        Middle (promontorial) (Gerota's node)\n        Presacral\n        Uterosacral", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "200", "Regional lymph node(s):\n    Aortic, NOS:\n        Lateral (lumbar)\n        Para-aortic\n        Periaortic", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "500", "FIGO Stage IIIC", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "800", "Regional lymph node(s), NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

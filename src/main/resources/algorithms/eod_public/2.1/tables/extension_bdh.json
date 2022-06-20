@@ -1,0 +1,28 @@
+{
+  "id" : "extension_bdh",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "EOD Primary Tumor",
+  "title" : "EOD Primary Tumor",
+  "notes" : "**Note 1:** This schema has extension codes that are defined as “PATHOLOGICAL assessment only”  \n* PATHOLOGICAL assessment only codes (100, 150, 200, 300, 400, 500) are used when there is an orchiectomy\n\n**Note 2:** **Pure seminomas** are defined as 9061/3. (See codes 100 and 150)",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017\n\n(5) Brimo, F., Srigley, J.R., Lin, D.W., et al. **Testis**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017",
+  "last_modified" : "2021-04-08T19:01:03.854Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_t",
+    "name" : "SS2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive\nIntratubular germ cell neoplasia\nGerm cell neoplasia in situ", "VALUE:Tis", "VALUE:IS" ], [ "100", "PATHOLOGICAL assessment only\n\nFOR PURE SEMINOMAS ONLY (ICD-O-3 code 9061/3 only)\n- Tumor less than 3 cm, limited to the testis\n  + WITHOUT lymphovascular invasion or unknown if lymphovascular invasion", "VALUE:T1a", "VALUE:L" ], [ "150", "PATHOLOGICAL assessment only\n\nFOR PURE SEMINOMAS ONLY (ICD-O-3 code 9061/3 only)\n- Tumor greater than or equal to 3 cm, limited to the testis\n  + WITHOUT lymphovascular invasion or unknown if lymphovascular invasion", "VALUE:T1b", "VALUE:L" ], [ "200", "PATHOLOGICAL assessment only\n\nTumor limited to testis WITHOUT lymphovascular invasion or UNKNOWN if lymphovascular invasion\n- Body of testis\n- Rete testis\n- Surface implants (surface of tunica vaginalis)\n- Tunica albuginea\n- Tunica vaginalis involved\n- Tunica, NOS\n- Confined to testis, NOS    \n- Localized, NOS", "VALUE:T1", "VALUE:L" ], [ "300", "PATHOLOGICAL assessment only\n\nTumor limited to testis (including rete testis invasion) \n- WITH lymphovascular invasion", "VALUE:T2", "VALUE:L" ], [ "400", "PATHOLOGICAL assessment only\n\nEpididymis \nHilar soft tissue\nMediastinum (of testis)\nVisceral mesothelial layer", "VALUE:T2", "VALUE:RE" ], [ "500", "PATHOLOGICAL assessment only\n\nSpermatic cord, ipsilateral\nVas deferens", "VALUE:T3", "VALUE:RE" ], [ "600", "Dartos muscle, ipsilateral\nScrotum, ipsilateral", "VALUE:T4", "VALUE:RE" ], [ "700", "Penis\nScrotum, contralateral\nUlceration of scrotum\n\nFurther contiguous extension", "VALUE:T4", "VALUE:D" ], [ "800", "No evidence of primary tumor", "VALUE:T0", "VALUE:U" ], [ "999", "Unknown extension\nPrimary tumor cannot be assessed\nNot documented in medical record\n\nDeath Certificate Only", "VALUE:TX", "VALUE:U" ] ]
+}

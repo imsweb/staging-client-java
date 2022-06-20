@@ -1,0 +1,28 @@
+{
+  "id" : "clin_n_gist_rectum_58109",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin N GIST Rectum",
+  "title" : "Clinical N",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Note 2:**   Regional lymph node involvement is rare for GISTs, so that cases in which the nodal status is not associated clinically are classified as cN0 instead of cNX.\n\n**Regional lymph nodes**\n    \n**All sites**\n\n    Hemorrhoidal (middle, superior) \n    Inferior mesenteric \n    Mesenteric [NOS] \n    Perirectal \n    Rectal (middle) \n    Rectal [NOS] \n    Rectal (superior) \n    Rectosigmoid (paracolic/pericolic)\n    Sigmoidal (sigmoid mesenteric)\n\n**Rectosigmoid (C199)** \n\n    Colic, (NOS) \n    Left colic\n  \n**Rectum (C209)** \n\n    Hemorrhoidal (inferior) \n    Internal iliac (hypogastric)  \n    Lateral (laterosacral) \n    Middle (promontorial) (Gerota's node) \n    Obturator\n    Presacral\n    Rectal (inferior) \n    Sacral (NOS)\n    Sacral promontory",
+  "footnotes" : "\\# NX is not defined in AJCC 7th edition.",
+  "last_modified" : "2018-05-14T21:29:01.754Z",
+  "definition" : [ {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n_display",
+    "name" : "Clinical N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cNX", "Regional lymph nodes cannot be assessed#", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess N\n    Regional lymph node involvement cannot be determined or findings inconclusive\nPhysician assigns cNX, no other information available to determine N" ], [ "c0", "cN0", "No regional lymph node metastasis", "" ], [ "c1", "cN1", "Regional lymph node metastasis", "Nodule(s) or foci in perirectal fat\n\nRegional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "88", "88", "Not applicable", "In situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met\nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

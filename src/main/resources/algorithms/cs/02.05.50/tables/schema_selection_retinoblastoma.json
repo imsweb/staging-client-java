@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_retinoblastoma",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection Retinoblastoma",
+  "title" : "Schema selection for Retinoblastoma",
+  "last_modified" : "2015-05-27T16:19:48.028Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C690-C696,C698-C699", "9510-9514", "MATCH" ] ]
+}

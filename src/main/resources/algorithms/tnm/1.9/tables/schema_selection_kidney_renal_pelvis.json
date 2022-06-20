@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_kidney_renal_pelvis",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Schema Selection KidneyRenalPelvis",
+  "title" : "Schema selection for KidneyRenalPelvis",
+  "last_modified" : "2018-05-14T21:29:00.033Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C659,C669", "8000-9136,9141-9582,9700-9701", "MATCH" ] ]
+}

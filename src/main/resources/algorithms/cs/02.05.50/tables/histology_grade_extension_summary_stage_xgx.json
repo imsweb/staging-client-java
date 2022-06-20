@@ -1,0 +1,31 @@
+{
+  "id" : "histology_grade_extension_summary_stage_xgx",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Histology Grade Extension Summary Stage",
+  "title" : "Histology Grade Extension Summary Stage Table",
+  "notes" : "**Note**:  For CS Extension code 560 ONLY, \"Stated as T4a\", the value of Summary Stage 1977 and Summary Stage 2000 is assigned on the basis of histology and grade as shown here.",
+  "last_modified" : "2015-05-27T16:19:21.686Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "ICD-O-3 histology code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "grade",
+    "name" : "Grade",
+    "type" : "INPUT"
+  }, {
+    "key" : "t77",
+    "name" : "SS77 Map",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "SS2000 Map",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8020", "Carcinoma, undifferentiated, NOS", "1,2,3,9", "VALUE:L", "VALUE:L" ], [ "8021", "Carcinoma, anaplastic, NOS", "1,2,3,9", "VALUE:L", "VALUE:L" ], [ "8030", "Giant cell and spindle cell carcinoma", "1,2,3,9", "VALUE:L", "VALUE:L" ], [ "8031", "Giant cell carcinoma", "1,2,3,9", "VALUE:L", "VALUE:L" ], [ "8032", "Spindle cell carcinoma", "1,2,3,9", "VALUE:L", "VALUE:L" ], [ "8000-9992", "Any histology", "4", "VALUE:L", "VALUE:L" ], [ "8000-9992", "Any histology", "5-8", "ERROR:", "ERROR:" ], [ "8000-8015,8022,8033-9992", "All histologies except 8020, 8021, 8030, 8031, and 8032", "1,2,3,9", "VALUE:RE", "VALUE:RE" ] ]
+}

@@ -1,0 +1,24 @@
+{
+  "id" : "ssf10_sqj",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF10",
+  "title" : "Site-Specific Factor 10",
+  "subtitle" : "Location of Primary Tumor",
+  "notes" : "**Note:**  Since both omental and peritoneal gastrointestinal stromal tumors (GIST) are coded with the same ICD-O-3 topography code (C481), this Site-Specific Factor must be used to identify the appropriate TNM stage table.",
+  "last_modified" : "2018-05-14T21:29:01.297Z",
+  "definition" : [ {
+    "key" : "ssf10",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "stage_table",
+    "name" : "Stage Table",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Mesentery\nMesoappendix\nMesocolon", "GIST Small Intestine" ], [ "020", "Omentum", "GIST Stomach" ], [ "030", "Pelvic Peritoneum", "GIST Small Intestine" ], [ "040", "Rectouterine pouch\n     Cul de sac\n     Pouch of Douglas", "GIST Small Intestine" ], [ "988", "Not applicable: Information not collected for this case", "ERROR" ], [ "998", "Other specified peritoneal site", "GIST Small Intestine" ], [ "999", "Unknown or no information\nNot documented in patient record", "GIST Small Intestine" ] ]
+}

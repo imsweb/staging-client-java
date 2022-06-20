@@ -1,0 +1,24 @@
+{
+  "id" : "extension_sstg_bcu",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  For correct calculation of derived staging fields for this schema, CS Extension and CS Site-Specific Factor 1, Extension Evaluated at Enucleation, must both be coded, whether or not an enucleation was performed. Information from enucleation is excluded from CS Extension and coded only in CS Site-Specific Factor 1.\n\n**Note 2**:  If both eyes are involved, code the information for the most extensively involved eye in this field, and code the information for the second eye in CS Site-Specific Factor 6.\n\n**Note 3**:  The mapping values for AJCC T, SS77, and SS2000 and the associated c, p, y, or a indicator (staging basis) are assigned based on the values in CS Extension (clinical extension), CS Tumor Size/Ext Eval, and CS Site-Specific Factor 1 - Extension Evaluated at Enucleation.  Pathologic staging information from an enucleation always takes precedence over clinical staging, except in cases with neoadjuvant treatment where clinical disease is as extensive as or more extensive than disease at surgery.\n\n**Note 4**: This version of the table is only used to calculate Summary Stage T values.",
+  "footnotes" : "For this site, extension is coded in two CS Fields:  CS Extension (clinical extension) and CS Site-Specific Factor 1 - Extension Evaluated at Enucleation.  The mapping values for the T category for AJCC stage, SS77, and SS2000 and the associated c, p, y, or a indicator are assigned based on the values in CS Extension, CS Tumor Size/Ext Eval, and CS Site-Specific Factor 1 as shown in the Special Calculation Table for AJCC T and Special Calculation Table for SEER Summary Stage.",
+  "last_modified" : "2015-05-27T16:19:20.854Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "110", "VALUE:L", "VALUE:L" ], [ "120", "VALUE:L", "VALUE:L" ], [ "130", "VALUE:L", "VALUE:L" ], [ "140", "VALUE:L", "VALUE:L" ], [ "160", "VALUE:L", "VALUE:L" ], [ "180", "VALUE:L", "VALUE:L" ], [ "310", "VALUE:L", "VALUE:L" ], [ "410", "VALUE:L", "VALUE:L" ], [ "420", "VALUE:L", "VALUE:L" ], [ "430", "VALUE:L", "VALUE:L" ], [ "440", "VALUE:L", "VALUE:L" ], [ "450", "VALUE:L", "VALUE:L" ], [ "460", "VALUE:L", "VALUE:L" ], [ "470", "VALUE:L", "VALUE:L" ], [ "500", "VALUE:L", "VALUE:L" ], [ "520", "VALUE:L", "VALUE:L" ], [ "540", "VALUE:L", "VALUE:L" ], [ "590", "VALUE:RE", "VALUE:RE" ], [ "680", "VALUE:RE", "VALUE:RE" ], [ "700", "VALUE:RE", "VALUE:RE" ], [ "720", "VALUE:D", "VALUE:D" ], [ "740", "VALUE:D", "VALUE:D" ], [ "750", "VALUE:RE", "VALUE:RE" ], [ "760", "VALUE:RE", "VALUE:RE" ], [ "800", "VALUE:D", "VALUE:D" ], [ "950", "VALUE:U", "VALUE:U" ], [ "999", "VALUE:U", "VALUE:U" ] ]
+}

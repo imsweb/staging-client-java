@@ -1,0 +1,26 @@
+{
+  "id" : "summary_stage_lymphoma_25139",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Summary Stage - T only",
+  "title" : "Summary Stage - T only",
+  "last_modified" : "2019-04-05T16:52:38.371Z",
+  "definition" : [ {
+    "key" : "ss2018_t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "ss2018_n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "ss2018_m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "ss2018_derived",
+    "name" : "Summary Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "L", "U,NA", "NA", "VALUE:1" ], [ "RE", "U,NA", "NA", "VALUE:2" ], [ "D", "U,NA", "NA", "VALUE:7" ], [ "U", "U,NA", "NA", "VALUE:9" ] ]
+}

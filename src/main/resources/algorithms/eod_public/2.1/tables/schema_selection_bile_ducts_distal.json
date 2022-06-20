@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_bile_ducts_distal",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection BileDuctsDistal",
+  "title" : "Schema selection for BileDuctsDistal",
+  "last_modified" : "2021-04-28T12:16:27.231Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_1",
+    "name" : "Schema Discriminator 1",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C240", "8000-8700, 8720-8790", "4, 7", "MATCH" ] ]
+}

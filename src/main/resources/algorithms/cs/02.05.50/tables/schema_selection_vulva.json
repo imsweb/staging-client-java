@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_vulva",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection Vulva",
+  "title" : "Schema selection for Vulva",
+  "last_modified" : "2015-05-27T16:19:49.111Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C510-C512,C518-C519", "8000-8246,8248-8713,8800-9136,9141-9582", "MATCH" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "grade_post_therapy_path_76876",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Grade Post Therapy Path (yp)",
+  "title" : "Grade Post Therapy Path (yp)",
+  "notes" : "**Note 1:** Leave Grade Post Therapy Path (yp) blank when \n* No neoadjuvant therapy\n* Clinical or pathological case only\n* Neoadjuvant therapy completed; surgical resection not done\n* There is only one grade available and it cannot be determined if it is clinical, pathological, post therapy clinical or post therapy pathological\n\n**Note 2:** There is a preferred grading system for this schema. If the post therapy clinical grade given uses the preferred grading system and the post therapy pathological grade does not use the preferred grading system, do not record the Grade Post Therapy Clin (yc) in the Grade Post Therapy Path (yp) field. Assign Grade Post Therapy Path (yp) using the applicable generic grade codes (A-D). \n* *Example:* Neoadjuvant therapy completed. Neuroendocrine tumor, biopsy reports a clinical grade of G1 based on a mitotic count less than 2 and Ki-67 as 1.4%. The surgical resection states a well differentiated neuroendocrine tumor without further documentation regarding the mitotic count and Ki-67. Assign Grade Pathological using the applicable generic grade codes (A-D). \n  * Grade Post Therapy Clin (yc) would be coded as 1 (G1)since the preferred grading system is based on the mitotic count and Ki-67\n  * Grade Post Therapy Path (yp) would be coded as A for well differentiated, per the Coding Guidelines for Generic Grade Categories\n\n**Note 3:** Assign the highest grade from the resected primary tumor assessed after the completion of neoadjuvant therapy.\n\n**Note 4:** If there are multiple tumors with different grades abstracted as one primary, code the highest grade.\n\n**Note 5:** Codes 1-3 take priority over codes A-D.\n\n**Note 6:** Use the grade from the post therapy **clinical work up** from the primary tumor in different scenarios based on behavior or surgical resection\n* **Behavior**\n  * Tumor behavior for the post therapy clinical and the post therapy pathological diagnoses are the same AND the post therapy clinical grade is the highest grade \n  * Tumor behavior for post therapy clinical diagnosis is invasive, and the tumor behavior for the post therapy pathological diagnosis is in situ\n* **Surgical Resection**\n  * Surgical resection is done of the primary tumor after neoadjuvant therapy is completed and there is no grade documented from the surgical resection\n  * Surgical resection is done of the primary tumor after neoadjuvant therapy is completed and there is no residual cancer\n\n**Note 7:** Code 9 (unknown) when\n* Surgical resection is done after neoadjuvant therapy and grade from the primary site is not documented\n* Surgical resection is done after neoadjuvant therapy and there is no residual cancer\n* Grade checked \"not applicable\" on CAP Protocol (if available) and no other grade information is available",
+  "last_modified" : "2021-06-15T14:04:38.889Z",
+  "definition" : [ {
+    "key" : "grade_post_therapy_path",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "G1: Mitotic count (per 10 HPF or 2mm2) less than 2 AND \n        Ki-67 index (%) less than 3\n\nStated as WHO Grade 1" ], [ "2", "G2: Mitotic count (per 10 HPF or 2mm2) equal 2-20 OR\n        Ki-67 index (%) equal 3-20\n\nStated as WHO Grade 2" ], [ "3", "G3: Mitotic count (per 10 HPF or 2mm2) greater than 20 OR \n        Ki-67 index (%) greater than 20\n\nStated as WHO Grade 3" ], [ "A", "Well differentiated" ], [ "B", "Moderately differentiated" ], [ "C", "Poorly differentiated" ], [ "D", "Undifferentiated, anaplastic" ], [ "9", "Grade cannot be assessed (GX); Unknown" ], [ "", "See Note 1" ] ]
+}

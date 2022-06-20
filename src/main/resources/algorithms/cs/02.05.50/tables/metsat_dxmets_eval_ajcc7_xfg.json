@@ -1,0 +1,19 @@
+{
+  "id" : "metsat_dxmets_eval_ajcc7_xfg",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets at DX Mets Eval AJCC7",
+  "title" : "Mets at DX Mets Eval AJCC 7 Table",
+  "notes" : "**Note 1**:  For CS Mets at DX code 65 ONLY, the M category is assigned based on the value of CS Mets Eval, as shown in this table.\n\n**Note 2**:  Not all users of Collaborative Stage collect the evaluation fields.  For this schema, if CS Mets Eval is empty or invalid, the M category is calculated as if CS Mets Eval were '9'.",
+  "last_modified" : "2015-05-27T16:19:27.007Z",
+  "definition" : [ {
+    "key" : "mets_eval",
+    "name" : "CS Mets Eval",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "M Category",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0", "VALUE:M1c" ], [ "1", "VALUE:M1c" ], [ "2", "VALUE:M1d" ], [ "3", "VALUE:M1d" ], [ "5", "VALUE:M1c" ], [ "6", "VALUE:M1d" ], [ "8", "VALUE:M1d" ], [ "9", "VALUE:M1c" ], [ "", "VALUE:M1c" ], [ "4,7", "VALUE:M1c" ] ]
+}

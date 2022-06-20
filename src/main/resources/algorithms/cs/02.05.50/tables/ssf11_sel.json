@@ -1,0 +1,20 @@
+{
+  "id" : "ssf11_sel",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF11",
+  "title" : "CS Site-Specific Factor 11",
+  "subtitle" : "OBSOLETE - Persistence of Elevated Serum Tumor Markers",
+  "notes" : "**Note**:  This CS Site-Specific Factor is obsolete beginning with CS Version 0203 (codes, code descriptions, and notes). Old data are retained but the cases are reviewed and recoded in CS Site-Specific Factors 13, 15, and 16. Use code 988 for this field for all cases entered in version 0203.\n\n**OBSOLETE V0203 Note**:  The persistence of elevated serum tumor markers is required to determine AJCC stage group IS. Record the presence or absence of persistent elevated serum tumor markers POSTORCHIECTOMY as stated by the physician in the patient record. Do not attempt to interpret the lab tests to determine the persistence of elevation. If the serum tumor markers were normal prior to orchiectomy, code 000.",
+  "last_modified" : "2015-05-27T16:19:54.222Z",
+  "definition" : [ {
+    "key" : "ssf11",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "OBSOLETE DATA RETAINED V0203\nSee CS Site-Specific Factors 13, 15, and 16, codes 000, 992\n\nNo persistence of elevated serum tumor markers OR serum tumor markers prior to orchiectomy were normal\nSerum tumor markers returned to normal postorchiectomy" ], [ "010", "OBSOLETE DATA RETAINED V0203\nSee CS Site-Specific Factors 13, 15, and 16, codes 010, 020, 030, 991, 993\n\nPersistence of elevated serum tumor markers\nSerum tumor markers still elevated postorchiectomy\nStated as Stage IS" ], [ "988", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 988 may result in an edit error.)" ], [ "999", "OBSOLETE DATA RETAINED V0203\nSee CS Site-Specific Factors 13, 15, and 16, codes 990, 999\n\nUnknown if persistence of elevated serum tumor markers postorchiectomy \nNot documented in patient record" ] ]
+}

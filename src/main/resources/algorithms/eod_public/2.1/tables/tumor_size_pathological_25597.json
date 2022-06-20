@@ -1,0 +1,19 @@
+{
+  "id" : "tumor_size_pathological_25597",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Tumor Size Pathological",
+  "title" : "Tumor Size Pathological",
+  "notes" : "See the [SEER Program Coding Manual](https://seer.cancer.gov/tools/codingmanuals/index.html) for coding instructions.",
+  "last_modified" : "2021-04-08T20:05:08.762Z",
+  "definition" : [ {
+    "key" : "size_path",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Tumor Size Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No mass/tumor found" ], [ "001", "1 mm or described as less than 1 mm" ], [ "002-988", "Exact size in millimeters (2 mm to 988 mm)" ], [ "989", "989 millimeters or larger" ], [ "990", "Microscopic focus or foci only and no size of focus is given" ], [ "999", "Unknown\nSize not stated\nNot documented in medical record\nSize of tumor cannot be assessed\nNot applicable" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "nras_mutational_analysis_16621",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "NRAS Mutational Analysis",
+  "title" : "NRAS Mutational Analysis",
+  "notes" : "**Note 1:** This SSDI is effective for diagnosis years 2021+\n* For cases diagnosed 2018-2020, leave this SSDI blank\n\n**Note 2:** Physician statement of NRAS can be used to code this data item when no other information is available.\n\n**Note 3:** NRAS may be recorded for all stages; however, it is primarily performed for patients with metastatic disease. If information is not available, code 9.\n\n**Note 4:** NRAS is a gene which belongs to a class of genes known as oncogenes. When mutated, oncogenes have the potential to cause normal cells to become cancerous. Studies suggest that NRAS gene mutations are often present in colorectal cancer.\n\n**Note 5:** There are 3 NRAS codons that are commonly mutated in colorectal cancers.  This SSDI does not record the actual mutation, but instead records the codon or codon group that contains the mutation.  If a specific NRAS mutation is reported, its codon may be identified from the following list of common NRAS mutations grouped by codon.\n* Codon 12\n  + Gly12Asp (GGT>GAT)\n  + Gly12Val (GGT>GTT)\n  + Gly12Cys (GGT>TGT)\n  + Gly12Ser (GGT>AGT)\n  + Gly12Ala (GGT>GCT)\n  + Gly12Arg (GGT>CGT)\n  + Codon 12 mutation, not otherwise specified\n* Codon 13\n  + Codon 13 mutation, not otherwise specified\n* Codon 61\n  + Gln61Lys (CAA>AAA)\n  + Gln61Arg (CAA>CGA)\n  + Codon 61 mutation, not otherwise specified\n\n**Note 6:** Results from nodal or metastatic tissue may be used for NRAS.\n\n**Note 7:** If NRAS is positive and there is no mention of the mutated codon, or the mutated codon is not specified, code 4.\n\n**Note 8:** If neoadjuvant therapy is given, record the assay from tumor specimens prior to neoadjuvant therapy.\n* If neoadjuvant therapy is given and there are no NRAS results from pre-treatment specimens, report the findings from post-treatment specimens\n\n**Note 9:** Code 9 when\n* Insufficient amount of tissue available to perform test\n* No microscopic confirmation of tumor \n* NRAS not ordered or not done, or unknown if ordered or done",
+  "last_modified" : "2021-04-01T18:11:37.727Z",
+  "definition" : [ {
+    "key" : "nras_mutational_analysis",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Normal\nNRAS negative; NRAS wild type\nNegative for (somatic) mutations, no alterations, no (somatic) mutations identified, not present, not detected" ], [ "1", "Abnormal (mutated)/detected in codon(s) 12, 13, and/or 61" ], [ "2", "Abnormal (mutated)/detected, codon(s) specified but not in codon(s) 12, 13, or 61" ], [ "4", "Abnormal (mutated), NOS, codon(s) not specified" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nNRAS not assessed or unknown if assessed" ], [ "", "N/A - Diagnosis year is prior to 2021" ] ]
+}

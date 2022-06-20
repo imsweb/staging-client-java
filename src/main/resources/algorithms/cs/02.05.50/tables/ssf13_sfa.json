@@ -1,0 +1,20 @@
+{
+  "id" : "ssf13_sfa",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF13",
+  "title" : "CS Site-Specific Factor 13",
+  "subtitle" : "Assessment Method of Pelvic Nodal Status",
+  "notes" : "**Note 1**:  The assessment results are in recorded in CS Site-Specific Factor 12.\n\n**Note 2**:  Use the highest applicable code.",
+  "last_modified" : "2015-05-27T16:19:55.845Z",
+  "definition" : [ {
+    "key" : "ssf13",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "OBSOLETE DATA CONVERTED V0203 \nSee code 998\n\nLymph nodes were not assessed" ], [ "010", "Clinical assessment" ], [ "020", "Radiography, imaging \n(Ultrasound (US), CT Scan (CT), magnetic resonance imaging (MRI), PET Scan (PET))" ], [ "030", "Incisional biopsy; fine needle aspiration (FNA)" ], [ "040", "Lymphadenectomy\nExcisional biopsy or resection with microscopic confirmation" ], [ "988", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 988 may result in an edit error.)" ], [ "998", "Lymph nodes not assessed" ], [ "999", "Unknown or no information \nNot documented in patient record" ] ]
+}

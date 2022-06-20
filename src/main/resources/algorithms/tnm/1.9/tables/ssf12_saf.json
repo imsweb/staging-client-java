@@ -1,0 +1,20 @@
+{
+  "id" : "ssf12_saf",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF12",
+  "title" : "Site-Specific Factor 12",
+  "subtitle" : "HER2: Chromogenic In Situ Hybridization (CISH) Lab Value",
+  "notes" : "**Note 1:**  Record the results of only the Chromogenic In Situ Hybridization (CISH) test for Human Epidermal Growth Factor Receptor 2 (HER2) in this field.  The test determines whether there are additional copies of the HER2/neu gene in the tumor cells. The results are reported as the mean number of copies of the HER2/neu gene on either 30 or 60 tumor cells.\n\n**Note 2:**  Record the actual mean if given.  Enter the stated mean to two decimal places.  Use a trailing zero if needed.\n\n**Note 3:**  The same laboratory test should be used to record information in **Site-Specific Factor 12, HER2: Chromogenic In Situ Hybridization (CISH) Lab Value** and **Site-Specific Factor 13, HER2: Chromogenic In Situ Hybridization (CISH) Test Interpretation**.\n\n**Note 4:**  If the test is done but the actual mean is not stated, use code 997.\n\n**Note 5:**  If the test is not mentioned in the medical record, code to 999 unless there are circumstances under which the test isn't performed, for example, no histologic specimen.",
+  "last_modified" : "2018-05-14T21:29:01.205Z",
+  "definition" : [ {
+    "key" : "ssf12",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "100-979", "Mean of 1.00 - 9.79\n(Enter exact mean to two decimal places)\n\nExamples:\n    100    1.0\n    120    1.2\n    564    5.64" ], [ "980", "Mean of 9.80 or greater" ], [ "988", "Not applicable: Information not collected for this case" ], [ "991", "Mean of less than 1.00" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

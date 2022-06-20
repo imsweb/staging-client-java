@@ -1,0 +1,27 @@
+{
+  "id" : "extension_orchiectomy_lviajcc7_xgs",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension Orchiectomy LVI AJCC7",
+  "title" : "Extension Orchiectomy LVI AJCC 7 Table",
+  "notes" : "**Note**:  For CS Extension codes 160-330 and 460-550 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Site-Specific Factor 4, Radical Orchiectomy Performed, and Lymph-Vascular Invasion as follows:",
+  "last_modified" : "2015-05-27T16:19:16.106Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf4",
+    "name" : "CS SSF 4",
+    "type" : "INPUT"
+  }, {
+    "key" : "lvi",
+    "name" : "Lymph-vascular Invasion",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "VALUE:T Category",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "160-330, 460-550", "001", "0,1,8,9", "ERROR:" ], [ "160-330, 460-550", "988", "0,1,8,9", "ERROR:" ], [ "160", "000", "0", "VALUE:TX" ], [ "160", "000", "1", "VALUE:TX" ], [ "160", "000", "8-9", "VALUE:TX" ], [ "160", "010", "0", "VALUE:T1" ], [ "160", "010", "1", "VALUE:T2" ], [ "160", "010", "8-9", "VALUE:T1" ], [ "160", "999", "0", "VALUE:TX" ], [ "160", "999", "1", "VALUE:TX" ], [ "160", "999", "8-9", "VALUE:TX" ], [ "200", "000", "0", "VALUE:TX" ], [ "200", "000", "1", "VALUE:TX" ], [ "200", "000", "8-9", "VALUE:TX" ], [ "200", "010", "0", "VALUE:T2" ], [ "200", "010", "1", "VALUE:T2" ], [ "200", "010", "8-9", "VALUE:T2" ], [ "200", "999", "0", "VALUE:TX" ], [ "200", "999", "1", "VALUE:TX" ], [ "200", "999", "8-9", "VALUE:TX" ], [ "300", "000", "0", "VALUE:TX" ], [ "300", "000", "1", "VALUE:TX" ], [ "300", "000", "8-9", "VALUE:TX" ], [ "300", "010", "0", "VALUE:T1" ], [ "300", "010", "1", "VALUE:T2" ], [ "300", "010", "8-9", "VALUE:T1" ], [ "300", "999", "0", "VALUE:TX" ], [ "300", "999", "1", "VALUE:TX" ], [ "300", "999", "8-9", "VALUE:TX" ], [ "310", "000", "0", "VALUE:TX" ], [ "310", "000", "1", "VALUE:TX" ], [ "310", "000", "8-9", "VALUE:TX" ], [ "310", "010", "0", "VALUE:TX" ], [ "310", "010", "1", "VALUE:T2" ], [ "310", "010", "8-9", "VALUE:TX" ], [ "310", "999", "0", "VALUE:TX" ], [ "310", "999", "1", "VALUE:TX" ], [ "310", "999", "8-9", "VALUE:TX" ], [ "320", "000", "0", "VALUE:TX" ], [ "320", "000", "1", "VALUE:TX" ], [ "320", "000", "8-9", "VALUE:TX" ], [ "320", "010", "0", "VALUE:T1" ], [ "320", "010", "1", "VALUE:T2" ], [ "320", "010", "8-9", "VALUE:T1" ], [ "320", "999", "0", "VALUE:T1" ], [ "320", "999", "1", "VALUE:T2" ], [ "320", "999", "8-9", "VALUE:T1" ], [ "330", "000", "0", "VALUE:TX" ], [ "330", "000", "1", "VALUE:TX" ], [ "330", "000", "8-9", "VALUE:TX" ], [ "330", "010", "0", "VALUE:T2" ], [ "330", "010", "1", "VALUE:T2" ], [ "330", "010", "8-9", "VALUE:T2" ], [ "330", "999", "0", "VALUE:T2" ], [ "330", "999", "1", "VALUE:T2" ], [ "330", "999", "8-9", "VALUE:T2" ], [ "460", "000", "0", "VALUE:TX" ], [ "460", "000", "1", "VALUE:TX" ], [ "460", "000", "8-9", "VALUE:TX" ], [ "460", "010", "0", "VALUE:T1" ], [ "460", "010", "1", "VALUE:T2" ], [ "460", "010", "8-9", "VALUE:T1" ], [ "460", "999", "0", "VALUE:TX" ], [ "460", "999", "1", "VALUE:TX" ], [ "460", "999", "8-9", "VALUE:TX" ], [ "470", "000", "0", "VALUE:TX" ], [ "470", "000", "1", "VALUE:TX" ], [ "470", "000", "8-9", "VALUE:TX" ], [ "470", "010", "0", "VALUE:T2" ], [ "470", "010", "1", "VALUE:T2" ], [ "470", "010", "8-9", "VALUE:T2" ], [ "470", "999", "0", "VALUE:TX" ], [ "470", "999", "1", "VALUE:TX" ], [ "470", "999", "8-9", "VALUE:TX" ], [ "500", "000", "0", "VALUE:TX" ], [ "500", "000", "1", "VALUE:TX" ], [ "500", "000", "8-9", "VALUE:TX" ], [ "500", "010", "0", "VALUE:T3" ], [ "500", "010", "1", "VALUE:T3" ], [ "500", "010", "8-9", "VALUE:T3" ], [ "500", "999", "0", "VALUE:TX" ], [ "500", "999", "1", "VALUE:TX" ], [ "500", "999", "8-9", "VALUE:TX" ], [ "550", "000", "0", "VALUE:TX" ], [ "550", "000", "1", "VALUE:TX" ], [ "550", "000", "8-9", "VALUE:TX" ], [ "550", "010", "0", "VALUE:T3" ], [ "550", "010", "1", "VALUE:T3" ], [ "550", "010", "8-9", "VALUE:T3" ], [ "550", "999", "0", "VALUE:T3" ], [ "550", "999", "1", "VALUE:T3" ], [ "550", "999", "8-9", "VALUE:T3" ] ]
+}

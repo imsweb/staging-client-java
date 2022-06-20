@@ -1,0 +1,20 @@
+{
+  "id" : "ssf12_sez",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF12",
+  "title" : "CS Site-Specific Factor 12",
+  "subtitle" : "Pelvic Nodal Status",
+  "notes" : "**Note**:  The pelvic nodal status corresponds to the assessment method recorded in CS Site-Specific Factor 13.",
+  "last_modified" : "2015-05-27T16:19:55.197Z",
+  "definition" : [ {
+    "key" : "ssf12",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Negative pelvic lymph nodes" ], [ "010", "Positive pelvic lymph nodes" ], [ "988", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 988 may result in an edit error.)" ], [ "998", "Pelvic lymph nodes not assessed" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

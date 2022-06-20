@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_myeloma_plasma_cell_disorder",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection MyelomaPlasmaCellDisorder",
+  "title" : "Schema selection for MyelomaPlasmaCellDisorder",
+  "last_modified" : "2021-07-15T20:39:45.918Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C000-C699, C739-C750, C754-C809", "9732", "*", "MATCH" ], [ "C700-C729, C751-C753", "9732", "3", "MATCH" ] ]
+}

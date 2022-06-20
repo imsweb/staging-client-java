@@ -1,0 +1,35 @@
+{
+  "id" : "mets_haw",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note 1**:  According to AJCC, p. 594: \"Tumors affecting the central nervous system rarely develop extraneural metastases, probably because of inherent biologic characteristics of these tumors, and also because the brain does not have a well-developed drainage system. . . . Certain tumors do spread through cerebrospinal fluid (CSF) pathways, and such spread has a major impact on survival.\"",
+  "last_modified" : "2015-05-27T16:19:28.482Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:NA", "VALUE:NA", "VALUE:NONE", "VALUE:NONE" ], [ "10", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 20, 30, and 50\n\nDistant metastases", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "20", "Metastasis within CNS and CSF pathways\n\"Drop\" metastasis", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "30", "Metastasis outside the CNS\nExtra-neural metastasis", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "50", "30 + 20\n\nMetastasis within and outside CNS", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "85", "OBSOLETE DATA CONVERTED V0203\nSee code 20\n\n\"Drop\" metastases", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "99", "Unknown; distant metastasis not stated \nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:U" ] ]
+}

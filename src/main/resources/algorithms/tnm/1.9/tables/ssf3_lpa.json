@@ -1,0 +1,20 @@
+{
+  "id" : "ssf3_lpa",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF3",
+  "title" : "Site-Specific Factor 3",
+  "subtitle" : "Levels I-III, Lymph Nodes for Head and Neck",
+  "notes" : "**Note 1:**  **Site-Specific Factors 3-6** are used to code the presence or absence of lymph node involvement in each of 7 different levels and other groups defined by TNM.  The definitions of the levels are the same for all applicable head and neck sites.  One digit is used to represent lymph nodes of a single level, with the digits of **Site-Specific Factor 3** representing lymph nodes of Levels I-III; the digits of **Site-Specific Factor 4** representing lymph nodes of Levels IV and V and the retropharyngeal nodes; the digits of  **Site-Specific Factor 5** representing lymph nodes of Levels VI and VII and the facial nodes; and the digits of **Site-Specific Factor 6** representing the remaining Other groups as defined by TNM.  In each digit, a code 1 means yes, the nodes are involved.\n\n**Note 2:**  If involved regional node levels are documented as a range, or if the involved nodes overlap multiple levels, code all levels specified.\n\n**Note 3:**  If regional node(s) are known to be positive but the level of node(s) involved is unknown, use code 000.\n\n**Note 4:** Levels I - III are also referred to as\n   \n* Level I - Submental group (IA) & Submandibular group (IB)\n* Level II - Upper jugular group \n* Level III - Middle jugular group",
+  "last_modified" : "2018-05-14T21:29:03.718Z",
+  "definition" : [ {
+    "key" : "ssf3",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No involvement in Levels I, II, or III lymph nodes" ], [ "100", "Level I lymph node(s) involved" ], [ "010", "Level II lymph node(s) involved" ], [ "001", "Level III lymph node(s) involved" ], [ "110", "Levels I and II lymph nodes involved" ], [ "101", "Levels I and III lymph nodes involved" ], [ "011", "Levels II and III lymph nodes involved" ], [ "111", "Levels I, II and III lymph nodes involved" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown if regional lymph nodes  involved, not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record" ] ]
+}

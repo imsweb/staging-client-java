@@ -1,0 +1,35 @@
+{
+  "id" : "nodes_dfd",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Superior and inferior mesenteric nodes are coded in CS Mets at DX.  Mesenteric nodes, NOS are coded in CS Lymph Nodes.\n\n**Note 3**:  Nodal metastasis is very rare in gastrointestinal stromal tumors (GIST), and surgeons generally agree that nodal dissection is not indicated.  In the absence of information on regional lymph node status, N0 is appropriate; code 999 is mapped to N0 accordingly.",
+  "last_modified" : "2015-05-27T16:19:37.694Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:NA", "VALUE:NONE", "VALUE:NONE" ], [ "050", "Nodule(s) or foci in pericolic fat/adjacent mesentery/mesocolic fat", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "100", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 050 and 110\n\nRegional lymph nodes for all colon sites:\n    Colic (NOS)\n    Epicolic (adjacent to bowel wall)\n    Mesocolic (NOS)\n    Paracolic/pericolic\n    Nodule(s) or foci in pericolic fat/adjacent mesentery/mesocolic fat", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "110", "Colic, NOS\nEpicolic (adjacent to bowel wall)\nMesocolic, NOS\nParacolic/pericolic", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "200", "Cecal:\n    Anterior (prececal)\n    Cecal, NOS\n    Posterior (retrocecal)\nIleocolic\nRight colic", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "300", "Mesenteric, NOS\nRegional lymph node(s), NOS", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "400", "Stated as N1 with no other information on regional lymph nodes", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "450", "OBSOLETE DATA RETAINED V0200\n\nStated as N2 pathologic", "ERROR:", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "VALUE:N0", "VALUE:NA", "VALUE:U", "VALUE:U" ] ]
+}

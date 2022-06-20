@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_lacrimal_sac",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Schema Selection LacrimalSac",
+  "title" : "Schema selection for LacrimalSac",
+  "last_modified" : "2018-05-14T21:29:00.086Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf25",
+    "name" : "Schema Discriminator: Lacrimal Gland/Lacrimal Sac",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C695", "8000-8713,8800-9136,9141-9508,9520-9582,9700-9701", "025", "MATCH" ] ]
+}

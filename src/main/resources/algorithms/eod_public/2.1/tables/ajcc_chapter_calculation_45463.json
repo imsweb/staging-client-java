@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc_chapter_calculation_45463",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2021-03-30T23:33:28.885Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8711", "VALUE:44", "Soft Tissue Sarcoma of the Retroperitoneum", "VALUE:08" ], [ "8800-8802,8810-8811,8815,8825,8832-8833,8840", "VALUE:44", "Soft Tissue Sarcoma of the Retroperitoneum", "VALUE:08" ], [ "8850,8852,8854,8858,8859,8890", "VALUE:44", "Soft Tissue Sarcoma of the Retroperitoneum", "VALUE:08" ], [ "8901,8910,8912,8920", "VALUE:44", "Soft Tissue Sarcoma of the Retroperitoneum", "VALUE:08" ], [ "9040-9041,9043", "VALUE:44", "Soft Tissue Sarcoma of the Retroperitoneum", "VALUE:08" ], [ "9120,9133,9136,9180", "VALUE:44", "Soft Tissue Sarcoma of the Retroperitoneum", "VALUE:08" ], [ "9222,9251,9364,9366-9368", "VALUE:44", "Soft Tissue Sarcoma of the Retroperitoneum", "VALUE:08" ], [ "9540,9542,9561,9580", "VALUE:44", "Soft Tissue Sarcoma of the Retroperitoneum", "VALUE:08" ], [ "8000-8700,8710,8712-8714,8720-8790", "VALUE:XX", "Other Soft Tissue Sarcoma of the Retroperitoneum", "VALUE:88" ], [ "8803,8812-8814,8816-8818,8820-8824,8826-8831,8834-8836,8841-8842", "VALUE:XX", "Other Soft Tissue Sarcoma of the Retroperitoneum", "VALUE:88" ], [ "8851,8853,8855-8857,8860-8881,8891-8900", "VALUE:XX", "Other Soft Tissue Sarcoma of the Retroperitoneum", "VALUE:88" ], [ "8902-8905,8921,8932-8934,8940-8990", "VALUE:XX", "Other Soft Tissue Sarcoma of the Retroperitoneum", "VALUE:88" ], [ "9000-9016,9030,9042,9045-9111", "VALUE:XX", "Other Soft Tissue Sarcoma of the Retroperitoneum", "VALUE:88" ], [ "9121-9132,9135,9137-9138,9141-9175,9181-9221,9230", "VALUE:XX", "Other Soft Tissue Sarcoma of the Retroperitoneum", "VALUE:88" ], [ "9240-9250,9252-9363,9365,9370-9539,9541,9550-9560,9562-9571,9582", "VALUE:XX", "Other Soft Tissue Sarcoma of the Retroperitoneum", "VALUE:88" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "peritoneumfemalegen_t_87084",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Path T Peritoneum Female Gen",
+  "title" : "Pathologic T",
+  "notes" : "**Note 1:**  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and extension information on the primary tumor are available, use the extension information to assign the T in preference to a statement of FIGO stage - see Registrar notes.\n* If the only information is (pathologic) FIGO stage III [NOS] or IIIC, assign the appropriate stage and leave pathologic T, N, and M blank. If the only information is FIGO stage IV, leave T and N blank and see M\n\n**Note 2:** Primary peritoneal carcinomas may not involve the ovaries or only involve the ovaries \"with minimal surface implants. The clinical presentation, surgical therapy, chemotherapy, and prognosis of these peritoneal tumors mirror those of papillary serous carcinoma of the ovary. Patients who undergo prophylactic oophorectomy for a familial history of ovarian cancer appear to retain a 1 to 2% chance of developing peritoneal adenocarcinoma, which is histopathologically and clinically similar to primary ovarian cancer.",
+  "last_modified" : "2018-05-14T21:29:04.380Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pTX", "Primary tumor cannot be assessed", "Pathologic classification criteria met, evaluation done:\n     Physician unable to assess T\n     Surgical resection of primary tumor, extension not stated\n Physician assigns cTX, no other information available to determine T" ], [ "p0", "pT0", "No evidence of primary tumor", "" ], [ "p3", "pT3", "Tumor involves one or both ovaries \nWITH microscopically confirmed peritoneal metastasis outside the pelvis and/or regional lymph node metastasis", "Note: T3 has subcategories of T3a, T3b and T3c. Assign T3 only when there is no information available to assign one of the subcategories.\n\nPeritoneal implants, NOS\n\nStated as T3 [NOS]" ], [ "p3A", "pT3a", "Microscopic peritoneal metastasis beyond pelvis", "Microscopic peritoneal implants beyond pelvis including:\n    Liver capsule\n    Mesentery\n    Omentum\n    Pericolic gutter\n\nMicroscopic peritoneal implants beyond pelvis including peritoneal surface/capsule of:\n    Ascending colon\n    Descending colon\n    Diaphragm\n    Esophagus\n    Gallbladder \n    Transverse colon and flexures \n    Small intestine \n    Spleen \n    Stomach\nWITHOUT invasion of underlying structures\n\nFIGO Stage IIIA\n\nStated as T3a" ], [ "p3B", "pT3b", "Macroscopic peritoneal, metastasis beyond pelvis, 2 cm or less in greatest dimension", "Macroscopic peritoneal implants beyond pelvis less than or equal to 2 cm in diameter:\n    Ascending colon\n    Descending colon\n    Diaphragm\n    Esophagus\n    Gallbladder \n    Liver capsule\n    Mesentery\n    Omentum\n    Pericolic gutter\n    Transverse colon and flexures \n    Small intestine \n    Spleen \n    Stomach\nWITH or WITHOUT invasion of underlying structures\n\nFIGO Stage IIIB\n\nStated as T3b" ], [ "p3C", "pT3c", "Peritoneal metastasis beyond pelvis, more than 2 cm in greatest dimension and/or regional lymph node metastasis", "Macroscopic peritoneal implants beyond pelvis greater than 2cm in diameter:\n    Ascending colon\n    Descending colon\n    Diaphragm\n    Esophagus\n    Gallbladder \n    Transverse colon and flexures \n    Liver  \n    Small intestine \n    Spleen \n    Stomach\nWITH or WITHOUT invasion of underlying structures \n\nExtension to:\n    Bone\n    Cartilage\n\nFurther contiguous extension\n\nStated as T3c" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Only information is FIGO Stage III [NOS], IIIC, or IV\n\nPathologic classification not met\nPathologic classification criteria met, evaluation done:\n    Results not documented in patient record\n    No surgical resection of known primary tumor (not T0) OR\n    Resection insufficient for site-specific pathologic assessment\nNo surgical resection of primary tumor and there isn't a positive biopsy of a structure in the highest T category and highest N category\nEvidence of metastatic disease (pM1), no other workup" ] ]
+}

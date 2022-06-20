@@ -1,0 +1,27 @@
+{
+  "id" : "stomach_t_57787",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Path T Stomach",
+  "title" : "Pathologic T",
+  "notes" : "**Note 1:**  Intraluminal or intramural extension to esophagus and duodenum is classified by the depth of greatest invasion in any of these sites, including stomach.  \n* For extension to esophagus or duodenum via serosa, assign T4b\n\n**Note 2:**  Assign T2 If the diagnosis states linitis plastica and no other information regarding extension is available.  \n* Linitis plastica is defined as diffuse involvement of the entire thickness of the stomach wall\n\n**Note 3:**   Assign T4b for contiguous extension from the site of origin. Discontinuous involvement is coded in M (distant metastasis). \n* *Exception*: Assign T1 for implants within the stomach",
+  "last_modified" : "2018-05-14T21:29:04.328Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pTX", "Primary tumor cannot be assessed", "Pathologic classification criteria met, evaluation done: \n    Physician unable to assess T\n    Surgical resection of primary tumor, extension not stated \nPhysician assigns pTX, no other information available to determine T" ], [ "p0", "pT0", "No evidence of primary tumor", "" ], [ "pIS", "pTis", "Carcinoma in situ: intraepithelial tumor without invasion of the lamina propria\n\nHigh grade dysplasia", "Noninvasive\n(Adeno)carcinoma, noninvasive, in a polyp\n\nStated as Tis" ], [ "p1", "pT1", "Tumor invades lamina propria, muscularis mucosae, or submucosa", "Note: T1 has subcategories of T1a and T1b. Assign T1 only when there is no information available to assign one of the subcategories\n\nConfined to: \n    Head of polyp, NOS\n    Stalk of polyp, NOS\n\nInvasive tumor in polyp, NOS\n\nImplants inside stomach\n\nLocalized, NOS\n\nStated as T1 [NOS]" ], [ "p1A", "pT1a", "Tumor invades lamina propria or muscularis mucosae", "Invasive tumor confined to mucosa, NOS, including intramucosal, NOS\n\nMucosal tumor with intraluminal extension to esophagus or duodenum\n\nStated as T1a" ], [ "p1B", "pT1b", "Tumor invades submucosa", "Superficial invasion of submucosa\n\nSubmucosal tumor with intraluminal extension to esophagus or duodenum\n\nStated as T1b" ], [ "p2", "pT2", "Tumor invades muscularis propria", "Invades into but not through muscularis propria\n\nLinitis plastica and no other information regarding extension available  \n\nInvasion of muscularis propria with intraluminal extension to esophagus or duodenum\n\nStated as T2" ], [ "p3", "pT3", "Tumor invades subserosa", "Extension through wall, NOS\nInvasion through muscularis propria or muscularis, NOS\nPerimuscular tissue invaded\nSubserosal tissue/(sub)serosal fat invaded\n\nInvasion through muscularis propria with intraluminal extension to esophagus or duodenum\n\nExtension to adjacent (connective) tissue WITHOUT perforation of visceral peritoneum covering these structures:\n    Gastric artery\n    Ligaments:     \n        Gastrocolic\n        Gastrohepatic\n        Gastrosplenic\n    Omentum, NOS :\n        Greater\n        Lesser\n    Perigastric fat\n\nStated as T3" ], [ "p4", "pT4", "Tumor perforates serosa OR \n\nInvades adjacent structures", "Note: T4 has subcategories of T4a and T4b. Assign T4 only when there is no information available to assign one of the subcategories\n\nStated as T4 [NOS]" ], [ "p4A", "pT4a", "Tumor perforates serosa", "Invasion of/through serosa (mesothelium) (tunica serosa) (visceral peritoneum), including perforation of visceral  peritoneum covering the gastric ligaments or the omentum \n\nStated as T4a" ], [ "p4B", "pT4b", "Tumor invades adjacent structures", "Adjacent structures include:\n   Abdominal wall\n   Adrenal (suprarenal) gland\n   Aorta\n   Celiac axis\n   Diaphragm\n   Duodenum via serosa\n   Duodenum, NOS\n   Esophagus via serosa\n   Ileum\n   Jejunum\n   Kidney\n   Liver\n   Pancreas\n   Retroperitoneum\n   Small intestine, NOS\n   Spleen\n   Transverse colon/mesocolon  (including flexures)\n\nFurther contiguous extension\n\nStated as T4b" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nPathologic classification criteria met, evaluation done: \n    Results not documented in patient record \n    No surgical resection of  known primary tumor (not T0) \n    Resection insufficient for site-specific pathologic assessment\nNo surgical resection of primary tumor and there isn’t a positive biopsy of a structure in the highest T category and highest N category\nEvidence of metastatic disease (pM1), no other workup\nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

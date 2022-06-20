@@ -1,0 +1,35 @@
+{
+  "id" : "ajcc_chapter_calculation_81087",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "description" : "While this has a chapter, T, N, M and Stage Group are not defined.",
+  "last_modified" : "2021-07-15T20:27:20.240Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C701, C709, C720-C729", "8720, 8728", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C721, C728-C729", "8802, 8810, 8815, 8850, 8890", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C722, C724-C729", "8900", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C729", "9064, 9070", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C722, C724-C729", "9071", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C729", "9080, 9084-9085, 9100", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C722, C724-C729", "9120", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C721, C728-C729", "9133", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C729", "9140", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C721, C723, C728-C729", "9180", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C722, C724-C729", "9220", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C729", "9362", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C721, C728-C729", "9364", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C729", "9382, 9385, 9390-9393, 9395-9401", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C729", "9411, 9424-9430, 9440-9442, 9445-9451, 9470-9471", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C722, C724-C729", "9473", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C729", "9474-9478, 9490", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C722, C724-C729", "9500", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C729", "9501, 9505, 9508", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C722, C724-C729", "9530", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C729", "9538", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C721, C728-C729", "9540", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C729", "9680,9699,9702,9712,9714,9751,9755", "3", "VALUE:72", "Brain and Spinal Cord", "VALUE:08" ], [ "C701, C709, C720-C729", "8000-8700", "3", "VALUE:XX", "Other CNS Other", "VALUE:88" ], [ "C701, C709, C720-C729", "8721-8727,8730-8790", "3", "VALUE:XX", "Other CNS Other", "VALUE:88" ], [ "C701, C709, C720-C721, C728-C729", "9101-9105", "3", "VALUE:XX", "Other CNS Other", "VALUE:88" ], [ "C701, C709, C720-C729", "9380-9381, 9383-9384,9394", "3", "VALUE:XX", "Other CNS Other", "VALUE:88" ], [ "C701, C709, C720-C729", "9410, 9412-9420", "3", "VALUE:XX", "Other CNS Other", "VALUE:88" ], [ "C701, C709, C720-C722, C724-C729", "9421", "3", "VALUE:XX", "Other CNS Other", "VALUE:88" ], [ "C701, C709, C720-C729", "9423, 9431-9432, 9444, 9460, 9472, 9480, 9491-9493", "3", "VALUE:XX", "Other CNS Other", "VALUE:88" ], [ "C701, C709, C720-C729", "9502-9504, 9506-9507, 9509-9521", "3", "VALUE:XX", "Other CNS Other", "VALUE:88" ], [ "C701, C709, C720-C722, C724-C729", "9522", "3", "VALUE:XX", "Other CNS Other", "VALUE:88" ], [ "C701, C709, C720-C729", "9523, 9531-9537, 9539", "3", "VALUE:XX", "Other CNS Other", "VALUE:88" ], [ "C701, C709, C720-C729", "9705-9709,9715,9756-9759", "3", "VALUE:XX", "Other CNS Other", "VALUE:88" ], [ "C701, C709, C720-C729", "8000-9993", "0,1", "VALUE:XX", "Other CNS Other", "VALUE:88" ] ]
+}

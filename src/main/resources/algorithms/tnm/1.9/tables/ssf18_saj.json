@@ -1,0 +1,20 @@
+{
+  "id" : "ssf18_saj",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF18",
+  "title" : "Site-Specific Factor 18",
+  "subtitle" : "Disseminated Tumor Cells (DTC) and Method of Detection",
+  "notes" : "**Note 1:**  Disseminated tumor cells (DTCs) are isolated tumor cells (ITCs) (micrometastases less than or equal to 0.2 mm) found in the bone marrow or other nonregional nodal tissues or organs.\n\n**Note 2:**  Immunohistochemistry (IHC) with cytokeratin stains and Reverse Transcription Polymerase Chain Reaction (RT-PCR) are laboratory methods for identifying very small amounts of tumor cells in tissue. RT-PCR amplifies genetic material identified by probes for tumor genes to a detectable level.\n\n**Note 3:**  Any positive test takes precedence over a negative or borderline test.  Information about a known test takes precedence over no information about other tests.",
+  "last_modified" : "2018-05-14T21:29:01.198Z",
+  "definition" : [ {
+    "key" : "ssf18",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Positive, Reverse Transcriptase Polymerase Chain Reaction (RT-PCR) test" ], [ "020", "Positive, immunohistochemistry (IHC) test" ], [ "025", "Positive on RT-PCR and IHC" ], [ "030", "Positive, other test type" ], [ "040", "Positive, unknown test type" ], [ "110", "Negative/normal, RT-PCR test" ], [ "120", "Negative/normal IHC test" ], [ "130", "Negative/normal, other test type" ], [ "140", "Negative/normal, unknown test type" ], [ "210", "Borderline; equivocal; indeterminate; undetermined if positive or negative, RT-PCR test" ], [ "220", "Borderline; equivocal; indeterminate; undetermined if positive or negative,  IHC test" ], [ "230", "Borderline; equivocal; indeterminate; undetermined if positive or negative, other test type" ], [ "240", "Borderline; equivocal; indeterminate; undetermined if positive or negative, unknown test type" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

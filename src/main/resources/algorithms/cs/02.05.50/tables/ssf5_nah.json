@@ -1,0 +1,20 @@
+{
+  "id" : "ssf5_nah",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF5",
+  "title" : "CS Site-Specific Factor 5",
+  "subtitle" : "Carcinoma ex Pleomorphic Adenoma, Invasion Beyond Capsule",
+  "notes" : "**Note 1**:  Code only for cases described as arising from a benign pleomorphic adenoma.  The diagnosis may be stated as carcinoma ex pleomorphic adenoma or carcinoma arising from a mixed tumor or mixed tumor of salivary gland type.  The histology code assigned to the case may be 8941/3, or other codes for carcinoma.  Extent of invasion beyond capsule is a prognostic factor for these glandular tumors.  \n\n**Note 2**:  Use code 000 for no invasion beyond capsule.  Use codes 001-979 if specific measurement is given for invasion beyond capsule.  Use code 990 if invasion is only described as \"minimally invasive\" or \"less than 1.5mm\" or \"less than or equal to 1.5 mm\".\n\n**Note 3**:  Use code 987 for all cases with pathologic examination of primary site not described as arising from a benign adenoma.  Use code 998 if no pathologic examination of primary site.",
+  "last_modified" : "2015-05-27T16:20:07.663Z",
+  "definition" : [ {
+    "key" : "ssf5",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Noninvasive, confined within the capsule" ], [ "001", "CONVERTED AND CODE REUSED V0204\nPrior to V0204 code defined as \"Noninvasive, confined within the capsule\".  Cases converted to code 000 with V0204 and 001 redefined as \"00.1 millimeter (mm) of invasion beyond capsule of pleomorphic adenoma into adjacent tissue\"\nSee code 000\n\n00.1 millimeter (mm) of invasion beyond capsule of pleomorphic adenoma into adjacent tissue" ], [ "002", "CONVERTED AND CODE REUSED V0204\nPrior to V0204 code defined as \"Minimally invasive, less than 1.5 millimeters (mm) invasion beyond capsule of pelomorphic adenoma into adjacent tissue\".  Cases converted to code 990 with V0204 and code 002 redefined as \"00.2 mm of invasion beyond capsule of pleomorphic adenoma into adjacent tissue\"\n\n0.2 mm invasion beyond capsule of pleomorphic adenoma into adjacent tissue" ], [ "003-979", "0.3 - 97.9 mm of invasion beyond capsule of pleomorphic adenoma into adjacent tissue\n(Exact measurement to nearest tenth of mm) \n\nExamples:\n    015    1.5 mm\n    020    2.0 mm\n    100    10 mm\n    150    15 mm, 1.5 centimeters (cm)" ], [ "980", "98.0 mm or greater invasion beyond capsule" ], [ "987", "Not applicable:  Histology not carcinoma ex pleomorphic adenoma" ], [ "988", "Not applicable:  Information not collected for this case\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.  If this item is required to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "990", "Minimally invasive Stated as \"less than 1.5 mm invasion beyond capsule\" Stated as \"less than or equal to 1.5 mm invasion beyond capsule\"" ], [ "991", "Stated as \"greater than 1.5 mm invasion beyond capsule\"" ], [ "997", "OBSOLETE DATA CONVERTED V0203\nSee code 999\n\nPathologic examination of primary tumor, results not available" ], [ "998", "No pathologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_larynx_subglottic",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection LarynxSubglottic",
+  "title" : "Schema selection for LarynxSubglottic",
+  "last_modified" : "2021-04-29T14:06:25.010Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C322", "8000-8700", "MATCH" ] ]
+}

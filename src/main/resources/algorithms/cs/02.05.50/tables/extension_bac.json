@@ -1,0 +1,36 @@
+{
+  "id" : "extension_bac",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**: Periosteum is a fibrous membrane that wraps the outer surface of bones. Cortical bone is the dense compact outer layer of the bone. Trabecular, cancellous, or spongy bone (spongiosa) is a porous network of tissue filling the interior of bone, decreasing weight and allowing room for blood vessels and marrow.\n\n**Note 2**: AJCC assigns the T category based on size when bone involvement is limited to the cortex .  Involvement through cortical bone is required for assignment of T4a.\n\n**Note 3**:  The assignment of T1, T2 , and T3 categories for tumors of the lip and oral cavity is based on tumor size.  A physician's statement of the T category may be used to code CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields.  However the two fields are coded independently: for example the record may document size but not extension, other than the physician's statement of the T category. Use codes 405, 410, 415, 775, 810, or 815 as appropriate to code CS Extension based on a statement of T when no other extension information is available.\n\n**Note 4**: Use code 300 for localized tumor only if no information is available to assign codes 100, 200, 400, 405, 410, or 415.",
+  "footnotes" : "- For CS Extension codes 100-545 ONLY, the T category for AJCC 7 staging is based on the value of CS Tumor Size, as shown in the Extension Size Table for this schema.\n- For CS Extension codes 100-545  ONLY, the T category for AJCC 6 staging is based on the value of CS Tumor Size, as shown in the Extension Size Table for this schema.",
+  "last_modified" : "2015-05-27T16:19:05.560Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial,  noninvasive", "VALUE:Tis", "VALUE:Tis", "VALUE:IS", "VALUE:IS" ], [ "100", "Invasive tumor on one side confined to:\n    Lamina propria\n    Submucosa", "JUMP:extension_size_xab", "JUMP:extension_size_xab", "VALUE:L", "VALUE:L" ], [ "200", "Musculature of tongue, intrinsic or NOS", "JUMP:extension_size_xab", "JUMP:extension_size_xab", "VALUE:L", "VALUE:L" ], [ "300", "Localized, NOS\nMidline tumor", "JUMP:extension_size_xab", "JUMP:extension_size_xab", "VALUE:L", "VALUE:L" ], [ "400", "Tumor crosses midline", "JUMP:extension_size_xab", "JUMP:extension_size_xab", "VALUE:L", "VALUE:L" ], [ "405", "Stated as T1 with no other information on extension", "JUMP:extension_size_xab", "JUMP:extension_size_xab", "VALUE:L", "VALUE:L" ], [ "410", "Stated as T2 with no other information on extension", "JUMP:extension_size_xab", "JUMP:extension_size_xab", "VALUE:L", "VALUE:L" ], [ "415", "Stated as T3 with no other information on extension", "JUMP:extension_size_xab", "JUMP:extension_size_xab", "VALUE:L", "VALUE:L" ], [ "500", "Base of tongue\nFloor of mouth\nGingiva, lower\nRetromolar trigone", "JUMP:extension_size_xab", "JUMP:extension_size_xab", "VALUE:RE", "VALUE:RE" ], [ "530", "Sublingual gland", "JUMP:extension_size_xab", "JUMP:extension_size_xab", "VALUE:RE", "VALUE:RE" ], [ "535", "Cortical bone of mandible \nMandible, NOS\nCortical bone, NOS (not specified in higher codes)\nBone, NOS (not specified in higher codes)", "JUMP:extension_size_xab", "JUMP:extension_size_xab", "VALUE:RE", "VALUE:D" ], [ "545", "Cortical bone of maxilla\nMaxilla, NOS", "JUMP:extension_size_xab", "JUMP:extension_size_xab", "VALUE:D", "VALUE:D" ], [ "600", "Lateral pharyngeal wall\nSoft palate, inferior surface\nTonsillar pillars and fossae\nTonsils", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:RE" ], [ "675", "600 + (535 or 545)\n\nAny structure in code 600 plus any structure in code 535 or 545", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "700", "OBSOLETE DATA REVIEWED AND CHANGED V0203\nCSv2 codes differentiate between involvement of cortical bone and trabecular bone.  All CSv1 cases should be reviewed and recoded to 535, 675, 725 or 735 as appropriate.\n\nMandible ", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "720", "OBSOLETE DATA RETAINED V0200\n\n(600) + (700)", "ERROR:", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "725", "Trabecular bone of mandible", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:D" ], [ "735", "725 + (545 or 600)\n\nTrabecular bone of mandible plus any structure in code 545 or 600", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "740", "OBSOLETE DATA REVIEWED AND CHANGED V0203\nCSv2 codes differentiate between involvement of cortical bone and trabecular bone.  All CSv1 cases should be reviewed and recoded to 545, 675, 735, or 745 as appropriate.\n\nMaxilla\nMaxillary sinus ", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "745", "Trabecular bone of maxilla\nMaxillary sinus (antrum)", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "750", "Deep (extrinsic) muscle of tongue:    \n    Genioglossus\n    Geniohyoid\n    Hyoglossus\n    Mylohyoid\n    Palatoglossus\n    Styloglossus", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "760", "Skin of face", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "775", "Stated as T4a with no other information on extension", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:RE" ], [ "788", "Specified bone \n(Other than maxilla, mandible, and bones in codes 790 and 800)", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "790", "Masticator space\nPterygoid plates", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "800", "Further contiguous extension including:    \n    Skull base\n    Internal carotid artery (encased)", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "810", "Stated as T4b with no other information on extension", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "815", "Stated as T4 [NOS] with no other information on extension", "VALUE:T4NOS", "VALUE:T4NOS", "VALUE:RE", "VALUE:RE" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

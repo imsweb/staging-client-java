@@ -1,0 +1,23 @@
+{
+  "id" : "tumor_size_with_primary_tumor_for_ajcc_t_36016",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Tumor Size with Primary Tumor for T",
+  "title" : "Tumor Size Summary with EOD Primary Tumor for T",
+  "notes" : "If EOD Primary Tumor = 300,400,450,500, or 675, Tumor Size Summary is necessary to determine the T value.",
+  "last_modified" : "2019-04-05T16:52:37.649Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "EOD Primary Tumor",
+    "type" : "INPUT"
+  }, {
+    "key" : "size_summary",
+    "name" : "Tumor Size",
+    "type" : "INPUT"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "300", "000", "ERROR:Localized tumor - Tumor Size is in conflict" ], [ "300", "001-010", "VALUE:T1a" ], [ "300", "011-020", "VALUE:T1b" ], [ "300", "021-030", "VALUE:T1c" ], [ "300", "031-040", "VALUE:T2a" ], [ "300", "041-050", "VALUE:T2b" ], [ "300", "051-070", "VALUE:T3" ], [ "300", "071-989", "VALUE:T4" ], [ "300", "990", "VALUE:T1a" ], [ "300", "998", "VALUE:T4" ], [ "300", "999", "VALUE:TX" ], [ "400,450", "000", "ERROR:Localized tumor or tumor with extension - Tumor Size is in conflict" ], [ "400,450", "001-010", "VALUE:T2a" ], [ "400,450", "011-020", "VALUE:T2a" ], [ "400,450", "021-030", "VALUE:T2a" ], [ "400,450", "031-040", "VALUE:T2a" ], [ "400,450", "041-050", "VALUE:T2b" ], [ "400,450", "051-070", "VALUE:T3" ], [ "400,450", "071-989", "VALUE:T4" ], [ "400,450", "990", "VALUE:T2a" ], [ "400,450", "998", "VALUE:T4" ], [ "400,450", "999", "VALUE:T2a" ], [ "500,675", "000", "ERROR:Tumor with extension - Tumor Size is in conflict" ], [ "500,675", "001-010", "VALUE:T3" ], [ "500,675", "011-020", "VALUE:T3" ], [ "500,675", "021-030", "VALUE:T3" ], [ "500,675", "031-040", "VALUE:T3" ], [ "500,675", "041-050", "VALUE:T3" ], [ "500,675", "051-070", "VALUE:T3" ], [ "500,675", "071-989", "VALUE:T4" ], [ "500,675", "990", "VALUE:T3" ], [ "500,675", "998", "VALUE:T4" ], [ "500,675", "999", "VALUE:T3" ], [ "000,100,200,600,650,700,800,980,999", "*", "MATCH" ] ]
+}

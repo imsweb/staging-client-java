@@ -1,0 +1,40 @@
+{
+  "id" : "combined_t_colon",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Combined T Colon/Rectum",
+  "title" : "Combined T for Colon/Rectum",
+  "notes" : "For Colon and Rectum, using clinical and pathologic T, calculate Combined T and Summary Stage T. The Tis rules do not apply to Colon or Rectum.",
+  "last_modified" : "2018-05-14T21:29:03.216Z",
+  "definition" : [ {
+    "key" : "radiation_surg_seq",
+    "name" : "RX Summ Surgery/Radiation Sequence",
+    "type" : "INPUT"
+  }, {
+    "key" : "systemic_surg_seq",
+    "name" : "RX Summ Systemic/Surgery Sequence",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_in",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_in",
+    "name" : "Pathologic T",
+    "type" : "INPUT"
+  }, {
+    "key" : "combined_t_in",
+    "name" : "Combined T (input)",
+    "type" : "INPUT"
+  }, {
+    "key" : "combined_t_out",
+    "name" : "Combined T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "source_t_out",
+    "name" : "Combined T Source",
+    "type" : "ENDPOINT"
+  } ],
+  "extra_input" : [ "path_t_in", "combined_t_in", "clin_t_in" ],
+  "rows" : [ [ "*", "*", "*", "*", "0,IS,1,2,3,4,4A,4B,X,88", "VALUE:{{combined_t_in}}", "MATCH" ], [ "*", "*", "88", "88", "", "VALUE:88", "VALUE:9" ], [ "*", "*", "88", "*", "", "VALUE:{{path_t_in}}", "VALUE:2" ], [ "*", "*", "*", "88", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "*", "*", "X", "X", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "*", "*", "0", "0", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "*", "*", "X", "0", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "2, 4", "*", "0", "X", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "*", "2, 4", "0", "X", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "0,3,5,6,7,9", "0,3,5,6,7,9", "0", "X", "", "VALUE:{{path_t_in}}", "VALUE:2" ], [ "2, 4", "*", "X,0", "IS,1,2,3,4,4A,4B", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "2, 4", "*", "IS,1,2,3,4,4A,4B", "X,0", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "2, 4", "*", "IS,1,2,3,4,4A,4B", "IS", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "2, 4", "*", "IS", "1", "", "VALUE:{{path_t_in}}", "VALUE:2" ], [ "2, 4", "*", "1,2,3,4,4A,4B", "1", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "2, 4", "*", "IS,1", "2", "", "VALUE:{{path_t_in}}", "VALUE:2" ], [ "2, 4", "*", "2,3,4,4A,4B", "2", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "2, 4", "*", "IS,1,2", "3", "", "VALUE:{{path_t_in}}", "VALUE:2" ], [ "2, 4", "*", "3,4,4A,4B", "3", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "2, 4", "*", "IS,1,2,3", "4", "", "VALUE:{{path_t_in}}", "VALUE:2" ], [ "2, 4", "*", "4,4A,4B", "4", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "2, 4", "*", "IS,1,2,3,4", "4A", "", "VALUE:{{path_t_in}}", "VALUE:2" ], [ "2, 4", "*", "4A,4B", "4A", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "2, 4", "*", "IS,1,2,3,4,4A", "4B", "", "VALUE:{{path_t_in}}", "VALUE:2" ], [ "2, 4", "*", "4B", "4B", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "*", "2, 4", "X,0", "IS,1,2,3,4,4A,4B", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "*", "2, 4", "IS,1,2,3,4,4A,4B", "X,0", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "*", "2, 4", "IS,1,2,3,4,4A,4B", "IS", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "*", "2, 4", "IS", "1", "", "VALUE:{{path_t_in}}", "VALUE:2" ], [ "*", "2, 4", "1,2,3,4,4A,4B", "1", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "*", "2, 4", "IS,1", "2", "", "VALUE:{{path_t_in}}", "VALUE:2" ], [ "*", "2, 4", "2,3,4,4A,4B", "2", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "*", "2, 4", "IS,1,2", "3", "", "VALUE:{{path_t_in}}", "VALUE:2" ], [ "*", "2, 4", "3,4,4A,4B", "3", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "*", "2, 4", "IS,1,2,3", "4", "", "VALUE:{{path_t_in}}", "VALUE:2" ], [ "*", "2, 4", "4,4A,4B", "4", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "*", "2, 4", "IS,1,2,3,4", "4A", "", "VALUE:{{path_t_in}}", "VALUE:2" ], [ "*", "2, 4", "4A,4B", "4A", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "*", "2, 4", "IS,1,2,3,4,4A", "4B", "", "VALUE:{{path_t_in}}", "VALUE:2" ], [ "*", "2, 4", "4B", "4B", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "0,3,5,6,7,9", "0,3,5,6,7,9", "IS,1,2,3,4,4A,4B", "X,0", "", "VALUE:{{clin_t_in}}", "VALUE:1" ], [ "0,3,5,6,7,9", "0,3,5,6,7,9", "X,0", "IS,1,2,3,4,4A,4B", "", "VALUE:{{path_t_in}}", "VALUE:2" ], [ "0,3,5,6,7,9", "0,3,5,6,7,9", "IS,1,2,3,4,4A,4B", "IS,1,2,3,4,4A,4B", "", "VALUE:{{path_t_in}}", "VALUE:2" ] ]
+}

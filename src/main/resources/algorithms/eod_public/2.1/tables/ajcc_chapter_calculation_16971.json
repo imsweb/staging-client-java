@@ -1,0 +1,32 @@
+{
+  "id" : "ajcc_chapter_calculation_16971",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "description" : "While this has a chapter, T, N, M not defined. Clinical Stage Group using RISS stage. It does not apply to Path, yClin or yPath.",
+  "notes" : "This table determines the AJCC Chapter ID using histology",
+  "last_modified" : "2021-07-15T20:39:03.528Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_1",
+    "name" : "Discriminator 1",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C000-C301", "*", "VALUE:XX", "Other Plasma Cell Myeloma", "VALUE:88" ], [ "C310-C319", "0", "VALUE:82.1", "Plasma Cell Myeloma", "VALUE:08" ], [ "C310-C319", "1,9", "VALUE:XX", "Other Plasma Cell Myeloma", "VALUE:88" ], [ "C320-C399", "*", "VALUE:XX", "Other Plasma Cell Myeloma", "VALUE:88" ], [ "C400-C419", "0", "VALUE:82.1", "Plasma Cell Myeloma", "VALUE:08" ], [ "C400-C419", "1,9", "VALUE:XX", "Other Plasma Cell Myeloma", "VALUE:88" ], [ "C420", "*", "VALUE:XX", "Other Plasma Cell Myeloma", "VALUE:88" ], [ "C421", "0", "VALUE:82.1", "Plasma Cell Myeloma", "VALUE:08" ], [ "C421", "1,9", "VALUE:XX", "Other Plasma Cell Myeloma", "VALUE:88" ], [ "C422-C424", "*", "VALUE:XX", "Other Plasma Cell Myeloma", "VALUE:88" ], [ "C440", "0", "VALUE:82.1", "Plasma Cell Myeloma", "VALUE:08" ], [ "C440", "1,9", "VALUE:XX", "Other Plasma Cell Myeloma", "VALUE:88" ], [ "C441", "*", "VALUE:XX", "Other Plasma Cell Myeloma", "VALUE:88" ], [ "C442-C449", "0", "VALUE:82.1", "Plasma Cell Myeloma", "VALUE:08" ], [ "C442-C449", "1,9", "VALUE:XX", "Other Plasma Cell Myeloma", "VALUE:88" ], [ "C470-C499", "*", "VALUE:XX", "Other Plasma Cell Myeloma", "VALUE:88" ], [ "C500-C509", "*", "VALUE:XX", "Other Plasma Cell Myeloma", "VALUE:88" ], [ "C510-C519", "0", "VALUE:82.1", "Plasma Cell Myeloma", "VALUE:08" ], [ "C510-C519", "1,9", "VALUE:XX", "Other Plasma Cell Myeloma", "VALUE:88" ], [ "C529-C589", "*", "VALUE:XX", "Other Plasma Cell Myeloma", "VALUE:88" ], [ "C600-C609", "0", "VALUE:82.1", "Plasma Cell Myeloma", "VALUE:08" ], [ "C600-C609", "1,9", "VALUE:XX", "Other Plasma Cell Myeloma", "VALUE:88" ], [ "C619-C631", "*", "VALUE:XX", "Other Plasma Cell Myeloma", "VALUE:88" ], [ "C632", "0", "VALUE:82.1", "Plasma Cell Myeloma", "VALUE:08" ], [ "C632", "1,9", "VALUE:XX", "Other Plasma Cell Myeloma", "VALUE:88" ], [ "C637-C809", "*", "VALUE:XX", "Other Plasma Cell Myeloma", "VALUE:88" ] ]
+}

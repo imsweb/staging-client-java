@@ -1,0 +1,26 @@
+{
+  "id" : "tnm_8_combined_stage_group_49871",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "TNM 8 Combined Stage Group",
+  "title" : "TNM 8 Combined Stage Group",
+  "last_modified" : "2019-04-05T16:52:37.190Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0", "0", "0", "VALUE:99" ], [ "1", "0", "0", "VALUE:1" ], [ "1A ", "0", "0", "VALUE:1" ], [ "1B ", "0", "0", "VALUE:1" ], [ "2", "0", "0", "VALUE:1" ], [ "2A ", "0", "0", "VALUE:1" ], [ "2B ", "0", "0", "VALUE:1" ], [ "3", "0", "0", "VALUE:1" ], [ "3A ", "0", "0", "VALUE:1" ], [ "3B ", "0", "0", "VALUE:1" ], [ "3C ", "0", "0", "VALUE:1" ], [ "3D ", "0", "0", "VALUE:1" ], [ "3E ", "0", "0", "VALUE:1" ], [ "4", "0", "0", "VALUE:2" ], [ "4A ", "0", "0", "VALUE:2" ], [ "4B ", "0", "0", "VALUE:3" ], [ "X ", "0", "0", "VALUE:99" ], [ "*", "1", "0", "VALUE:3" ], [ "0", " X ", "0", "VALUE:99" ], [ "1", " X ", "0", "VALUE:99" ], [ "1A ", " X ", "0", "VALUE:99" ], [ "1B ", " X ", "0", "VALUE:99" ], [ "2", " X ", "0", "VALUE:99" ], [ "2A ", " X ", "0", "VALUE:99" ], [ "2B ", " X ", "0", "VALUE:99" ], [ "3", " X ", "0", "VALUE:99" ], [ "3A ", " X ", "0", "VALUE:99" ], [ "3B ", " X ", "0", "VALUE:99" ], [ "3C ", " X ", "0", "VALUE:99" ], [ "3D ", " X ", "0", "VALUE:99" ], [ "3E ", " X ", "0", "VALUE:99" ], [ "4", " X ", "0", "VALUE:99" ], [ "4A ", " X ", "0", "VALUE:99" ], [ "4B ", " X ", "0", "VALUE:3" ], [ "X ", " X ", "0", "VALUE:99" ], [ "*", "*", "1,1A,1B", "VALUE:4" ], [ "88", "88", "88", "VALUE:88" ] ]
+}

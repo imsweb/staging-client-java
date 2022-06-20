@@ -1,0 +1,28 @@
+{
+  "id" : "path_t_bcs",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Path T Melanoma Conjunctiva",
+  "title" : "Pathologic T",
+  "notes" : "**Note 1:**  The substantia propria is the stromal tissue of the conjunctiva underlying the epithelium.  The bulbar conjunctiva covers the eyeball, the palpebral conjunctiva lines the eyelids, and the forniceal conjunctiva covers the junction of the eyelid and eyeball. The caruncle is the fleshy prominence at the inner corner of the eye lined by conjunctival epithelium.\n\n**Note 2:**  Tumors confined to the epithelium are staged as Tis in TNM 7th Edition. Melanoma in situ (includes the term primary acquired melanosis) with atypia replacing greater than 75% of the normal epithelial thickness, with cytological features of epithelial cells, including abundant cytoplasm, vesicular nuclei, or prominent nucleoli, and/or presence of intraepithelial nests of atypical cells. (1)\n\n**Note 3:** Quadrants are defined by clock hour, starting at the limbus (e.g., 6, 9, 12, 3) extending from the central cornea, to and beyond the eyelid margins. This will bisect the carcuncle. Quadrants of involvement are coded in **Site-Specific Factor 2, Quadrants**.(1)",
+  "footnotes" : "(1) International Union Against Cancer (UICC) *TNM Classification of Malignant Tumors,* 7th ed., Sobin, LH, Gospodarowicz, M, Wittekind, CH, eds. New York: Wiley, 2009, pgs. 280, 281\n\n\\# pT1 not defined in AJCC 7th edition. \n\\## pT2 not defined in AJCC 7th edition.",
+  "last_modified" : "2018-05-14T21:29:01.515Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pTX", "Primary tumor cannot be assessed", "Pathologic classification criteria met, evaluation done: \n    Physician unable to assess T\n    Surgical resection of primary tumor, extension not stated \nPhysician assigns pTX, no other information available to determine T" ], [ "p0", "pT0", "No evidence of primary tumor", "" ], [ "pIS", "pTis", "Melanoma confined to the conjunctival epithelium (in situ)", "In situ, intraepithelial, noninvasive\nMelanoma confined to conjunctival epithelium WITH or WITHOUT corneal extension\n\nStated as Tis" ], [ "p1", "pT1", "Melanoma of the bulbar conjunctiva#", "Note: T1 has subcategories of T1a, T1b and T1c. Assign T1 only when there is no information available to assign one of the subcategories\n\nLocalized, NOS\n\nStated as T1 [NOS]" ], [ "p1A", "pT1a", "Tumor not more than 0.5 mm in thickness with invasion of the substantia propria", "Stated as T1a" ], [ "p1B", "pT1b", "Tumor more than 0.5 mm but not more than 1.5 mm in thickness with invasion of the substantia propria", "Stated as T1b" ], [ "p1C", "pT1c", "Tumor greater than 1.5 mm in thickness with invasion of the substantia propria", "Stated as T1c" ], [ "p2", "pT2", "Melanoma of the palpebral, forniceal, or caruncular conjunctiva##", "Note: T2 has subcategories of T2a, T2b and T2c. Assign T2 only when there is no information available to assign one of the subcategories\n\nStated as T2 [NOS]" ], [ "p2A", "pT2a", "Tumor not more than 0.5 mm in thickness with invasion of the substantia propria", "Stated as T2a" ], [ "p2B", "pT2b", "Tumor more than 0.5 mm but not greater than 1.5 mm in thickness \nWITH invasion of the substantia propria", "Stated as T2b" ], [ "p2C", "pT2c", "Tumor greatest than 1.5 mm in thickness with invasion of the substantia propria", "Stated as T2c" ], [ "p3", "pT3", "Melanoma invades the eye, eyelid, nasolacrimal system, sinuses, or orbit", "Conjunctival melanoma with local invasion NOS\n\nStated as T3" ], [ "p4", "pT4", "Melanoma invades CNS", "Stated as T4" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nPathologic classification criteria met, evaluation done: \n    Results not documented in patient record \n    No surgical resection of  known primary tumor (not T0) \n    Resection insufficient for site-specific pathologic assessment\nNo surgical resection of primary tumor and there isn’t a positive biopsy of a structure in the highest T category and highest N category\nEvidence of metastatic disease (pM1), no other workup\nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

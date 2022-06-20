@@ -1,0 +1,19 @@
+{
+  "id" : "mgmt_17454",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Methylation of O6-Methylguanine-Methyltransferase",
+  "title" : "Methylation of O6-Methylguanine-Methyltransferase (MGMT)",
+  "notes" : "**Note 1:** Physician statement of the methylation status of the MGMT, also termed MGMT promoter, gene can be used to code this data item.\n\n**Note 2:** O6-Methylguanine-Methyltransferase (MGMT) is an enzyme in cells that repairs DNA. DNA repair is undesirable in tumors, because it may enable them to overcome the DNA damage done by chemotherapy. With methylation, less MGMT enzyme is produced, which may lead to prolonged survival compared to unmethylated MGMT.\n\n**Note 3:** Below is a list of histologies/terms for which the MGMT test is commonly done. If the test was done, record the results, regardless of the histology.\n\n* 9382/3: Anaplastic oligoastrocytoma, NOS\n* 9382/3: Oligoastrocytoma, NOS\n* 9400/3: Diffuse astrocytoma (IDH mutant, IDH wild type, NOS)\n* 9401/3: Anaplastic astrocytoma (IDH mutant, IDH wild type, NOS)\n* 9411/3: Gemistocytic astrocytoma, IDH mutant\n* 9424/3: Anaplastic pleomorphic xanthoastrocytoma\n* 9440/3: Glioblastoma (epithelioid, IDH wild type, NOS)\n* 9441/3: Giant cell glioblastoma\n* 9442/3: Gliosarcoma\n* 9445/3: Glioblastoma, IDH mutant\n* 9450/3: Oligodendroglioma (IDH mutant and 1p/19q codeleted, NOS)\n* 9451/3: Anaplastic oligodendroglioma (IDH mutant and 1p/19 codeleted, NOS)\n* 9505/3: Anaplastic ganglioglioma\n* 9530/3: Anaplastic (malignant)meningioma\n\n**Note 4:** If the histology is not listed among those for which the MGMT test is commonly done, and the test result is not readily available, assume it was not done and code 9 for unknown.",
+  "last_modified" : "2021-04-08T15:02:20.136Z",
+  "definition" : [ {
+    "key" : "mgmt",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "MGMT methylation absent/not present, unmethylated MGMT" ], [ "1", "MGMT methylation present, low level\nHypomethylated\nPartial methylated" ], [ "2", "MGMT methylation present, high level\nHypermethylated" ], [ "3", "MGMT methylation present, level unspecified" ], [ "6", "Benign or borderline tumor" ], [ "7", "Test ordered, result not in chart" ], [ "8", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nCannot be determined by the pathologist\nMGMT not assessed or unknown if assessed" ] ]
+}
