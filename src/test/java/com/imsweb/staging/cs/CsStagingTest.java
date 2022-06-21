@@ -187,7 +187,7 @@ public class CsStagingTest extends StagingTest {
     public void testSchemaSelectionIntegration() throws IOException, InterruptedException {
         // test complete file of cases
         IntegrationResult result = IntegrationUtils.processSchemaSelection(_STAGING, "cs_schema_identification_unit_test.txt.gz",
-                new GZIPInputStream(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("test-data/cs/020550/cs_schema_identification_unit_test.txt.gz"))));
+                new GZIPInputStream(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("cs/test-data/020550/cs_schema_identification_unit_test.txt.gz"))));
         assertEquals(0, result.getNumFailures());
     }
 
@@ -810,9 +810,9 @@ public class CsStagingTest extends StagingTest {
     @Test
     public void testExpectedOutput() throws Exception {
         IntegrationResult ajcc6Result = IntegrationUtils.processSchema(_STAGING, "AJCC_6.V020550.10000.txt.gz",
-                new GZIPInputStream(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("test-data/cs/020550/AJCC_6.V020550.10000.txt.gz"))));
+                new GZIPInputStream(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("cs/test-data/020550/AJCC_6.V020550.10000.txt.gz"))));
         IntegrationResult ajcc7Result = IntegrationUtils.processSchema(_STAGING, "AJCC_7.V020550.10000.txt.gz",
-                new GZIPInputStream(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("test-data/cs/020550/AJCC_7.V020550.10000.txt.gz"))));
+                new GZIPInputStream(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("cs/test-data/020550/AJCC_7.V020550.10000.txt.gz"))));
 
         // make sure there were no errors returned
         assertEquals("There were failures in the AJCC6 tests", 0, ajcc6Result.getNumFailures());
@@ -821,7 +821,7 @@ public class CsStagingTest extends StagingTest {
 
     @Test
     public void testAllValidInputs() throws IOException {
-        GZIPInputStream is = new GZIPInputStream(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("test-data/cs/020550/valid_inputs.020550.txt.gz")));
+        GZIPInputStream is = new GZIPInputStream(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("cs/test-data/020550/valid_inputs.020550.txt.gz")));
         LineNumberReader reader = new LineNumberReader(new InputStreamReader(is, StandardCharsets.UTF_8));
 
         // cache a list of schemas by name

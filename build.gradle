@@ -130,6 +130,12 @@ ossIndexAudit {
 }
 check.dependsOn 'ossIndexAudit'
 
+// run the full CS integration test suite
+task csIntegrationTest(type: JavaExec) {
+    main = 'com.imsweb.staging.cs.CsIntegrationTest'
+    classpath = sourceSets.test.runtimeClasspath
+}
+
 // don't try to release a snapshot to a non-snapshot repository, that won't work anyway
 if (version.endsWith('-SNAPSHOT')) {
     gradle.startParameter.excludedTaskNames += 'signMavenJavaPublication'

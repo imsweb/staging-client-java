@@ -38,7 +38,7 @@ public class CsIntegrationTest {
         // only do schema selection test if running all schemas
         if (_SCHEMA_FILES.isEmpty()) {
             IntegrationUtils.processSchemaSelection(staging, "cs_schema_identification.txt.gz",
-                    new GZIPInputStream(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("integration/schema_selection/cs_schema_identification.txt.gz"))));
+                    new GZIPInputStream(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("cs/integration/schema_selection/cs_schema_identification.txt.gz"))));
 
             System.out.println("-----------------------------------------------");
         }
@@ -50,7 +50,7 @@ public class CsIntegrationTest {
         //       part of the repository and can be found at \\omni\btp\csb\Staging\CS
         List<String> schemaFiles;
         try (BufferedReader buffer = new BufferedReader(
-                new InputStreamReader(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("integration/schemas/index.txt")), StandardCharsets.UTF_8))) {
+                new InputStreamReader(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("cs/integration/schemas/index.txt")), StandardCharsets.UTF_8))) {
             schemaFiles = buffer.lines().collect(Collectors.toList());
         }
 
@@ -62,7 +62,7 @@ public class CsIntegrationTest {
             if (_SCHEMA_FILES.isEmpty() || _SCHEMA_FILES.contains(schemaFile)) {
                 totalFiles += 1;
                 IntegrationResult result = IntegrationUtils.processSchema(staging, schemaFile,
-                        new GZIPInputStream(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("integration/schemas/" + schemaFile))));
+                        new GZIPInputStream(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("cs/integration/schemas/" + schemaFile))));
                 totalCases += result.getNumCases();
                 totalFailures += result.getNumFailures();
             }
