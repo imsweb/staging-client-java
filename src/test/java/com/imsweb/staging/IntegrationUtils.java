@@ -24,6 +24,9 @@ import java.util.concurrent.ThreadPoolExecutor.CallerRunsPolicy;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.imsweb.staging.cs.CsStagingData;
 import com.imsweb.staging.cs.CsStagingData.CsInput;
 import com.imsweb.staging.cs.CsStagingData.CsOutput;
@@ -32,6 +35,8 @@ import com.imsweb.staging.entities.SchemaLookup;
 import com.imsweb.staging.util.Stopwatch;
 
 public final class IntegrationUtils {
+
+    private static final Logger _LOG = LoggerFactory.getLogger(IntegrationUtils.class);
 
     /**
      * Private constructor
@@ -48,8 +53,7 @@ public final class IntegrationUtils {
 
         AtomicInteger processedCases = new AtomicInteger(0);
         final AtomicInteger failedCases = new AtomicInteger(0);
-
-        System.out.println("Starting schema selection tests from " + fileName + " [" + n + " threads]");
+        _LOG.info("Starting schema selection tests from {} [{} threads]", fileName, n);
 
         LineNumberReader reader = new LineNumberReader(new InputStreamReader(is, StandardCharsets.UTF_8));
 
@@ -76,25 +80,24 @@ public final class IntegrationUtils {
                         List<Schema> lookups = staging.lookupSchema(lookup);
                         if (parts[3].length() == 0) {
                             if (lookups.size() == 1) {
-                                System.out.println("Line #" + lineNum + " [" + fullLine + "] --> The schema selection should not have found any schema but did: " + lookups.get(0).getId());
+                                _LOG.info("Line #{} [{}] --> The schema selection should not have found any schema but did: {}", lineNum, fullLine, lookups.get(0).getId());
                                 failedCases.getAndIncrement();
                             }
                         }
                         else {
                             if (lookups.size() != 1) {
-                                System.out.println("Line #" + lineNum + " [" + fullLine + "] --> The schema selection should have found a schema, " + parts[3] + ", but did not.");
+                                _LOG.info("Line #{} [{}] --> The schema selection should have found a schema, {}, but did not.", lineNum, fullLine, parts[3]);
                                 failedCases.getAndIncrement();
                             }
                             else if (!Objects.equals(lookups.get(0).getId(), parts[3])) {
-                                System.out.println(
-                                        "Line #" + lineNum + " [" + fullLine + "] --> The schema selection found schema " + lookups.get(0).getId() + " but it should have found " + parts[3] + ".");
+                                _LOG.info("Line #{} [{}] --> The schema selection found schema {} but it should have found {}.", lineNum, fullLine, lookups.get(0).getId(), parts[3]);
                                 failedCases.getAndIncrement();
                             }
                         }
                     }
                     catch (Throwable t) {
                         if (failedCases.get() == 0)
-                            System.out.println("Line #" + lineNum + " --> Exception processing schema selection: " + t.getMessage());
+                            _LOG.info("Line #{} --> Exception processing schema selection: {}", lineNum, t.getMessage());
                         failedCases.getAndIncrement();
                     }
 
@@ -110,11 +113,11 @@ public final class IntegrationUtils {
 
         stopwatch.stop();
         String perMs = String.format("%.3f", ((float)stopwatch.elapsed(TimeUnit.MILLISECONDS) / processedCases.get()));
-        System.out.print("Completed " + NumberFormat.getNumberInstance(Locale.US).format(processedCases.get()) + " cases in " + stopwatch + " (" + perMs + "ms/case).");
+        _LOG.info("Completed {} cases in {} ({}ms/case).", NumberFormat.getNumberInstance(Locale.US).format(processedCases.get()), stopwatch, perMs);
         if (failedCases.get() > 0)
-            System.out.println("There were " + NumberFormat.getNumberInstance(Locale.US).format(failedCases.get()) + " failures.");
+            _LOG.info("There were {} failures.", NumberFormat.getNumberInstance(Locale.US).format(failedCases.get()));
         else
-            System.out.println();
+            _LOG.info("");
 
         return new IntegrationResult(processedCases.get(), failedCases.get());
     }
@@ -191,9 +194,9 @@ public final class IntegrationUtils {
         Stopwatch stopwatch = Stopwatch.create();
 
         if (singleLineNumber != null)
-            System.out.println("Starting " + fileName + ", line # " + singleLineNumber + " [" + n + " threads]");
+            _LOG.info("Starting {}, line # {} [{} threads]", fileName, singleLineNumber, n);
         else
-            System.out.println("Starting " + fileName + " [" + n + " threads]");
+            _LOG.info("Starting {} [{} threads]", fileName, n);
 
         LineNumberReader reader = new LineNumberReader(new InputStreamReader(is, StandardCharsets.UTF_8));
 
@@ -211,7 +214,7 @@ public final class IntegrationUtils {
                 continue;
 
             if (values.length != 80)
-                System.out.println("Line " + lineNum + " has " + values.length + " cells; it should be 80.");
+                _LOG.info("Line {} has {} cells; it should be 80.", lineNum, values.length);
             else
                 pool.submit(() -> {
                     // load up inputs
@@ -296,16 +299,16 @@ public final class IntegrationUtils {
 
                         if (!mismatches.isEmpty()) {
                             if (failedCases.get() == 0) {
-                                System.out.println("   " + lineNum + " --> [" + data.getOutput().get("schema_id") + "] Mismatches in " + fileName);
+                                _LOG.error("   {} --> [{}] Mismatches in {}", lineNum, data.getOutput().get("schema_id"), fileName);
                                 for (String mismatch : mismatches)
-                                    System.out.println(mismatch);
-                                System.out.println("   " + lineNum + " *** RESULT: " + data.getResult());
-                                System.out.println("   " + lineNum + " --> " + convertInputMap(data.getInput()));
+                                    _LOG.error(mismatch);
+                                _LOG.error("   {} *** RESULT: {}", lineNum, data.getResult());
+                                _LOG.error("   {} --> {}", lineNum, convertInputMap(data.getInput()));
                                 if (data.getErrors().size() > 0) {
-                                    System.out.print("   " + lineNum + " --> ERRORS: ");
+                                    _LOG.error("   {} --> ERRORS: ", lineNum);
                                     for (com.imsweb.staging.entities.Error e : data.getErrors())
-                                        System.out.print("(" + e.getTable() + ": " + e.getMessage() + ") ");
-                                    System.out.println();
+                                        _LOG.error("({}: {}) ", e.getTable(), e.getMessage());
+                                    _LOG.error("");
                                 }
                             }
 
@@ -314,7 +317,7 @@ public final class IntegrationUtils {
                     }
                     catch (Throwable t) {
                         if (failedCases.get() == 0)
-                            System.out.println("   " + lineNum + " --> Exception processing " + fileName + " : " + t.getMessage());
+                            _LOG.error("   {} --> Exception processing {} : {}", lineNum, fileName, t.getMessage());
                         failedCases.getAndIncrement();
                     }
 
@@ -331,12 +334,12 @@ public final class IntegrationUtils {
 
         stopwatch.stop();
         String perMs = String.format("%.3f", ((float)stopwatch.elapsed(TimeUnit.MILLISECONDS) / processedCases.get()));
-        System.out.print("Completed " + NumberFormat.getNumberInstance(Locale.US).format(processedCases.get()) + " cases for " + fileName + " in " + stopwatch + " (" + perMs + "ms/case).");
+        _LOG.info("Completed {} cases for {} in {} ({}ms/case).", NumberFormat.getNumberInstance(Locale.US).format(processedCases.get()), fileName, stopwatch, perMs);
         if (failedCases.get() > 0)
-            System.out.println("  There were " + NumberFormat.getNumberInstance(Locale.US).format(failedCases) + " failures.");
+            _LOG.error("  There were {} failures.", NumberFormat.getNumberInstance(Locale.US).format(failedCases));
         else
-            System.out.println();
-        System.out.println("-----------------------------------------------");
+            _LOG.info("");
+        _LOG.info("-----------------------------------------------");
 
         reader.close();
         is.close();

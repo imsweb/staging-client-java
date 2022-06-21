@@ -21,6 +21,8 @@ import java.util.zip.GZIPInputStream;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.imsweb.staging.IntegrationUtils;
 import com.imsweb.staging.IntegrationUtils.IntegrationResult;
@@ -49,6 +51,8 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 public class CsStagingTest extends StagingTest {
+
+    private static final Logger _LOG = LoggerFactory.getLogger(StagingTest.class);
 
     @BeforeClass
     public static void init() {
@@ -842,7 +846,7 @@ public class CsStagingTest extends StagingTest {
             line = reader.readLine();
         }
 
-        System.out.println("Processed " + reader.getLineNumber() + " lines.");
+        _LOG.info("Processed {} lines.", reader.getLineNumber());
 
         reader.close();
     }

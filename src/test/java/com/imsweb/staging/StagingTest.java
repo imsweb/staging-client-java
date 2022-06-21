@@ -14,6 +14,8 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.imsweb.staging.entities.ColumnDefinition;
 import com.imsweb.staging.entities.Input;
@@ -34,6 +36,8 @@ import static org.junit.Assert.fail;
  * Base class for all algorithm-specific testing
  */
 public abstract class StagingTest {
+
+    private static final Logger _LOG = LoggerFactory.getLogger(StagingTest.class);
 
     protected static Staging _STAGING;
 
@@ -207,8 +211,8 @@ public abstract class StagingTest {
      */
     public void assertNoErrors(Collection<String> errors, String description) {
         if (!errors.isEmpty()) {
-            System.out.println("There were " + errors.size() + " issues with " + description + ".");
-            errors.forEach(System.out::println);
+            _LOG.error("There were {} issues with {}.", errors.size(), description);
+            errors.forEach(_LOG::error);
             fail();
         }
     }

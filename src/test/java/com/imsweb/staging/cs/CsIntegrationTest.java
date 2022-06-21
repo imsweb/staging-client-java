@@ -16,6 +16,9 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 import java.util.zip.GZIPInputStream;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.imsweb.staging.IntegrationUtils;
 import com.imsweb.staging.IntegrationUtils.IntegrationResult;
 import com.imsweb.staging.Staging;
@@ -24,6 +27,8 @@ import com.imsweb.staging.util.Stopwatch;
 
 @SuppressWarnings("java:S2187")
 public class CsIntegrationTest {
+
+    private static final Logger _LOG = LoggerFactory.getLogger(CsIntegrationTest.class);
 
     // set this to null to process all, or a list of schema filename to process
     private static final List<String> _SCHEMA_FILES = Collections.emptyList();
@@ -40,7 +45,7 @@ public class CsIntegrationTest {
             IntegrationUtils.processSchemaSelection(staging, "cs_schema_identification.txt.gz",
                     new GZIPInputStream(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("cs/integration/schema_selection/cs_schema_identification.txt.gz"))));
 
-            System.out.println("-----------------------------------------------");
+            _LOG.info("-----------------------------------------------");
         }
 
         Stopwatch stopwatch = Stopwatch.create();
@@ -71,10 +76,10 @@ public class CsIntegrationTest {
         stopwatch.stop();
 
         String perMs = String.format("%.3f", ((float)stopwatch.elapsed(TimeUnit.MILLISECONDS) / totalCases));
-        System.out.println();
-        System.out.println("Completed " + NumberFormat.getNumberInstance(Locale.US).format(totalCases) + " cases (" + totalFiles + " files) in " + stopwatch + " (" + perMs + "ms/case).");
+        _LOG.info("");
+        _LOG.info("Completed {}} cases ({} files) in {} ({}ms/case).", NumberFormat.getNumberInstance(Locale.US).format(totalCases), totalFiles, stopwatch, perMs);
         if (totalFailures > 0)
-            System.out.println("There were " + NumberFormat.getNumberInstance(Locale.US).format(totalFailures) + " failing cases.");
+            _LOG.error("There were {} failing cases.", NumberFormat.getNumberInstance(Locale.US).format(totalFailures));
     }
 
 }
