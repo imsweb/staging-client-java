@@ -30,7 +30,7 @@ formats and code structures specific to the data item.
 To get started using the EOD algorithm, instantiate a `Staging` instance:
 
 ```java
-Staging staging=Staging.getInstance(EodDataProvider.getInstance(EodVersion.LATEST));
+Staging staging = Staging.getInstance(EodDataProvider.getInstance(EodVersion.LATEST));
 ```
 
 ### TNM
@@ -52,7 +52,7 @@ Collaborative Stage, which would derive Summary Stage 2000.
 To get started using the TNM algorithm, instantiate a `Staging` instance:
 
 ```java
-Staging staging=Staging.getInstance(TnmDataProvider.getInstance(TnmVersion.LATEST));
+Staging staging = Staging.getInstance(TnmDataProvider.getInstance(TnmVersion.LATEST));
 ```
 
 ### Collaborative Staging
@@ -64,7 +64,7 @@ all cancer sites.
 To get started using the CS algorithm, instantiate a `Staging` instance:
 
 ```java
-Staging staging=Staging.getInstance(CsDataProvider.getInstance(CsVersion.LATEST));
+Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.LATEST));
 ```
 
 ## Download
@@ -100,7 +100,7 @@ object is thread safe and cached so subsequent calls to `Staging.getInstance()` 
 For example, for the Collaborative Staging algorithm, the call will look like this:
 
 ```java
-Staging staging=Staging.getInstance(CsDataProvider.getInstance(CsVersion.LATEST));
+Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.LATEST));
 ```
 
 There are some algorithms that are distributed outside of the library.  If you need to instantiate a `Staging` instance with an external algorithm use 
