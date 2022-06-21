@@ -80,11 +80,6 @@ checkstyle {
     configFile = file('config/checkstyle/checkstyle.xml')
 }
 
-// limit the Checkstyle logging
-[checkstyleMain, checkstyleTest].each { task ->
-    task.ant.lifecycleLogLevel = "ERROR"
-}
-
 spotbugs {
     excludeFilter = file('config/spotbugs/spotbugs-exclude.xml')
 }
