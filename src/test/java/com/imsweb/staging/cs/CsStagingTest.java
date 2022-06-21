@@ -812,7 +812,7 @@ public class CsStagingTest extends StagingTest {
     }
 
     @Test
-    public void testExpectedOutput() throws Exception {
+    public void testExpectedOutput() throws IOException, InterruptedException {
         IntegrationResult ajcc6Result = IntegrationUtils.processSchema(_STAGING, "AJCC_6.V020550.10000.txt.gz",
                 new GZIPInputStream(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("cs/test-data/020550/AJCC_6.V020550.10000.txt.gz"))));
         IntegrationResult ajcc7Result = IntegrationUtils.processSchema(_STAGING, "AJCC_7.V020550.10000.txt.gz",

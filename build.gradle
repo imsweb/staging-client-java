@@ -39,7 +39,7 @@ repositories {
 }
 
 dependencies {
-    spotbugs 'com.github.spotbugs:spotbugs:4.6.0'
+    spotbugs 'com.github.spotbugs:spotbugs:4.7.0'
 
     api "com.fasterxml.jackson.core:jackson-core:2.13.3"
     api "com.fasterxml.jackson.core:jackson-annotations:2.13.3"
