@@ -28,10 +28,6 @@ java {
 
     withJavadocJar()
     withSourcesJar()
-
-    registerFeature('updateSupport') {
-        usingSourceSet(sourceSets.main)
-    }
 }
 
 repositories {
