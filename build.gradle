@@ -53,12 +53,11 @@ dependencies {
 
     implementation 'org.slf4j:slf4j-api:1.7.36'
 
-    // split the seerapi-client-java dependency to an optional feature
-    updateSupportImplementation 'com.imsweb:seerapi-client-java:5.1'
-
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'org.assertj:assertj-core:3.23.1'
     testImplementation 'org.slf4j:slf4j-simple:1.7.36'
+    testImplementation 'com.imsweb:seerapi-client-java:5.1'
+
 }
 
 jar {
