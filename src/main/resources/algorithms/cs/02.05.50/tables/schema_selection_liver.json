@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_liver",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection Liver",
+  "title" : "Schema selection for Liver",
+  "last_modified" : "2015-05-27T16:19:44.102Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C220", "8000-8157,8162-8175,8190-9136,9141-9582,9700-9701", "MATCH" ], [ "C221", "8170-8175", "MATCH" ] ]
+}

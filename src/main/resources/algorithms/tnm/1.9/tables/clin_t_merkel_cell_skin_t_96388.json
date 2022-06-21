@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_merkel_cell_skin_t_96388",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin T Merkel Cell Skin T",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:** Code the tumor with the greatest extension when there are multiple simultaneous tumors.\n\n**Note 2:**  Skin ulceration does not alter the T category.\n\n**Note 3:**  In-transit metastasis is coded in N (regional lymph nodes).\n\n**Note 4:** Tumor size must be known to assign a value of T1, T2 or T3. You may use a physician’s statement of the T category if this is the only information in the medical record.\n* If the tumor appears to be in the T1, T2 or T3 categories, but no size or category is specified, assign TX\n\n**Note 5:** For the following descriptions, assign the appropriate T category (T1, T2 or T3) based on the tumor size.\n\n    Lesion(s) confirmed to dermis\n    Localized, NOS\n    Subcutaneous tissue (through entire dermis)",
+  "last_modified" : "2018-05-14T21:29:02.442Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T\n    Extension cannot be determined \n    Tumor size (TS) unknown for T categories where TS  needed to determine T\nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor", "" ], [ "pIS", "pTis", "Carcinoma in situ", "Intraepidermal, intraepithelial, noninvasive\n\nStated as Tis" ], [ "c1", "cT1", "Tumor 2 cm or less in greatest dimension", "Stated as T1" ], [ "c2", "cT2", "Tumor more than 2 cm but not more than 5 cm in greatest\ndimension", "Stated as T2" ], [ "c3", "cT3", "Tumor more than 5 cm in greatest dimension", "Stated as T3" ], [ "c4", "cT4", "Tumor invades deep extradermal structures, \ni.e., cartilage, skeletal muscle, fascia, or bone", "Fascia\n\nUnderlying cartilage, bone, skeletal muscle\n\nFurther contiguous extension\n\nStated as T4" ], [ "88", "88", "Not applicable", "Death certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

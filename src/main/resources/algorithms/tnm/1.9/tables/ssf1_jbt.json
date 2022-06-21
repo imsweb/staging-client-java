@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_jbt",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF1",
+  "title" : "Site-Specific Factor 1",
+  "subtitle" : "JAK2 (also known as Janus Kinase 2 and JAK2 Exon 12)",
+  "notes" : "**Note 1:**  Janus Kinase 2 (JAK2, JAK 2)is a gene mutation that increases susceptibility to several myeloproliferative neoplasms (MPNs). Testing for the JAK2 mutation is done on whole blood. Nearly all people with polycythemia vera and about half of those with essential thrombocythemia and primary myelofibrosis have the mutation.\n\n**Note 2:**  JAK2 is used primarily for the following histologies: Polycythemia Vera, Essential Thrombocytopenia, and Primary Myelofibrosis. Its usage continues to increase and may be used for other histologies in the future. Record JAK2 for any hematopoietic/reticuloendothelial disease even if it is not one of these three specific histologies.\n\n**Note 3:**  If JAK2 test result is positive, NOS, use code 850.",
+  "last_modified" : "2018-05-14T21:29:01.054Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "JAK-2 result stated as negative" ], [ "010", "JAK2 positive for mutation V617F in exon 14" ], [ "020", "JAK2 positive for mutation of exon 12" ], [ "800", "JAK2 positive for other specified mutation" ], [ "810", "JAK2 positive for more than one mutation" ], [ "850", "JAK2 positive NOS; specific mutation(s) not stated" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

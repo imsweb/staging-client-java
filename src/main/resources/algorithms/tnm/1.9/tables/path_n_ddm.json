@@ -1,0 +1,28 @@
+{
+  "id" : "path_n_ddm",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Path N Esophagus GE Junction",
+  "title" : "Pathologic N",
+  "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 6 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily examined is not met, classify as pN0. (1)\n\n**Note 2:**  Code only regional lymph nodes and lymph nodes, NOS in this field.  Distant lymph nodes are coded in M (distant metastasis).\n\n**Note 3:** Assign N1 if regional lymph nodes are involved but there is no indication of the number of nodes involved.\n\n**Note 4:**  Regional lymph nodes for any part of the esophagus fall in the range from periesophageal/cervical to the celiac region.  Contralateral and bilateral cervical, supraclavicular, and mediastinal lymph nodes are included.  However, some nodal chains in this large area are partially regional and partially distant because they include both nodes that are close to the esophagus toward the body's midline and nodes that run laterally away from the esophagus or perpendicular to it.  Regional nodes are those that lie in the bed of the esophagus. \n\n*Examples*\n\n    Regional supraclavicular nodes (level 1)\n    Regional pulmonary ligament nodes (level 9)\n    Regional hilar tracheobronchial nodes (level 10)\n    Regional diaphragmatic nodes (level 15)\n\n* These nodes are closest to the esophagus; nodes in these chains that are further from the esophagus are distant\n\n* Medical record terminology is unlikely to be so specific in describing involved node locations, so try to correlate involved node information with staging statements that indicate whether the nodes were classified as regional or distant by the physicians; lacking such physician guidance, presume regional nodes.  If the record just indicates involvement of supraclavicular nodes, for example, and there is no further information available, presume that the involved nodes were close to the esophagus and regional\n\n**Regional lymph nodes for EsophagusGEJunction**\n\n    Left gastric (superior gastric), NOS\n        Cardiac\n        Cardioesophageal\n        Gastric, left (17)\n        Gastropancreatic, left\n        Lesser curvature\n        Lesser omental\n        Pericardial (16)\n    Pancreaticosplenic (pancreaticolienal)\n    Pancreatoduodenal\n    Perigastric, NOS\n    Peripancreatic\n    Right gastric (inferior gastric), NOS\n        Gastrocolic\n        Gastroduodenal\n        Gastroepiploic (gastro-omental), right or NOS\n        Gastrohepatic\n        Greater curvature\n        Greater omental\n        Pyloric, NOS\n            Infrapyloric (subpyloric)\n            Suprapyloric\n    Splenic (lienal), NOS:\n        Gastroepiploic (gastro-omental), left\n        Splenic hilar\n    Nodule(s) in perigastric fat\n\n    Celiac \n       Hepatic and hepatoduodenal\n\n    Paraesophageal, NOS\n    Periesophageal, NOS, including:\n       Anterior mediastinal (6)\n       Aortopulmonary (5)\n       Diaphragmatic (15)\n       Paraesophageal, lower (8l)\n       Paraesophageal, middle (8m)\n       Paratracheal, lower (4L, 4R)\n       Paratracheal, upper (2L, 2R)\n       Posterior mediastinal (3p)\n       Pulmonary ligament (9)\n       Subcarinal (tracheal carina) (7)\n       Supraclavicular (1)\n       Tracheobronchial (hilar) (10L, 10R)\n\n    Regional lymph nodes, NOS\n    Lymph nodes, NOS",
+  "footnotes" : "(1) International Union Against Cancer (UICC) *TNM Classification of Malignant Tumors,* 7th ed., Sobin, LH, Gospodarowicz, M, Wittekind, CH, eds. New York: Wiley, 2009, pg., 69",
+  "last_modified" : "2018-05-14T21:29:01.197Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathologic N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pNX", "Regional lymph nodes cannot be assessed", "Pathologic classification criteria met, evaluation done:\n    Physician unable to assess N\n    Surgical resection primary tumor, no regional lymph nodes removed\n    Involvement of regional lymph nodes not documented\nPhysician assigns pNX, no other information available to determine N" ], [ "p0", "pN0", "No regional lymph node metastasis", "" ], [ "p1", "pN1", "Metastasis in 1-2 regional lymph nodes", "Stated as N1" ], [ "p2", "pN2", "Metastasis in 3-6 regional lymph nodes", "Stated as N2" ], [ "p3", "pN3", "Metastasis in 7 or more regional lymph nodes", "Stated as N3" ], [ "c0", "cN0", "Clinically: No regional lymph node metastasis", "Use only for TNM defined pTis cases where there is a resection of the primary and the nodes are not evaluated pathologically" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nNo surgical resection of primary tumor and there isn’t a positive biopsy of a structure in the highest T category and highest N category\nEvidence of metastatic disease (pM1), no other workup\nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

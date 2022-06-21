@@ -1,0 +1,19 @@
+{
+  "id" : "size_aal",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Size",
+  "title" : "CS Tumor Size",
+  "notes" : "**Note**:  The assignment of T1, T1a, and T1b categories for carcinoid tumors of the appendix is based on tumor size.  A physician's statement of the T category may be used to code CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields.  However the two fields are coded independently: for example the record may document size but not extension, other than the physician's statement of the T category.  Use codes 991 and 992 as appropriate to code CS Tumor Size based on a statement of T when no other size information is available.",
+  "last_modified" : "2015-05-27T16:19:49.725Z",
+  "definition" : [ {
+    "key" : "size",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No mass/tumor found" ], [ "001-988", "001 - 988 millimeters (mm) \n(Exact size  in mm)" ], [ "989", "989 mm or larger" ], [ "990", "Microscopic focus or foci only and no size of focus given" ], [ "991", "Described as \"less than 1 cm\"\n\nStated as T1 [NOS] or T1a with no other information on tumor size" ], [ "992", "Described as \"less than 2 cm,\" or \"greater than 1 cm,\" or \"between 1 cm and 2 cm\"\n\nStated as T1b with no other information on tumor size" ], [ "993", "Described as \"less than 3 cm,\" or \"greater than 2 cm,\" or \"between 2 cm and 3 cm\"" ], [ "994", "Described as \"less than 4 cm,\" or \"greater than 3 cm,\" or \"between 3 cm and 4 cm\"" ], [ "995", "Described as \"less than 5 cm,\" or \"greater than 4 cm,\" or \"between 4 cm and 5 cm\"" ], [ "998", "OBSOLETE DATA REVIEWED AND CHANGED V0203\n\nSize category not appropriate for carcinoid of appendix\nFamilial/multiple polyposis (M-8220/8221)" ], [ "999", "Unknown; size not stated\nSize of tumor cannot be assessed\nNot documented in patient record" ] ]
+}

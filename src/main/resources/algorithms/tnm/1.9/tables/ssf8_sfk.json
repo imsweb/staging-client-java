@@ -1,0 +1,20 @@
+{
+  "id" : "ssf8_sfk",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF8",
+  "title" : "Site-Specific Factor 8",
+  "subtitle" : "Orbital Bone",
+  "notes" : "**Note:**  Code removal of orbital bone during surgery of primary site.",
+  "last_modified" : "2018-05-14T21:29:00.041Z",
+  "definition" : [ {
+    "key" : "ssf8",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Orbital bone not removed in surgery of primary site" ], [ "010", "Orbital bone removed in surgery of primary site" ], [ "988", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 988 may result in an edit error.)" ], [ "990", "Surgery of primary site, unknown if orbital bone removed" ], [ "998", "No surgery of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

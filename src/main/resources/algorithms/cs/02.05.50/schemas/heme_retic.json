@@ -1,0 +1,1120 @@
+{
+  "id" : "heme_retic",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "HemeRetic",
+  "title" : "Hematopoietic, Reticuloendothelial, Immunoproliferative, and Myeloproliferative Neoplasms",
+  "notes" : "* M-See list of specific histologies below. All primary sites (C00.0-C80.9) are included unless otherwise specified.\n \n* Schema includes only preferred terms from ICD-O-3.\n\n* Plasmacytomas (9731 and 9734) and Multiple Myeloma (9732), except for cases with primary site C441, C690 and C695-C696, have been moved to the MyelomaPlasmaCellDisorder schema in V0203.\n9733 - Plasma cell leukemia [except C441, C690, C695-C696]\n9740 - Mast cell sarcoma\n9741 - Malignant mastocytosis\n9742 - Mast cell leukemia\n9750 - Malignant histiocytosis\n9752 - Langerhans cell histiocytosis, unifocal\\* (see new reportable code 9751/3)\n9753 - Langerhans cell histiocytosis, multifocal\\* (see new reportable code 9751/3)\n9754 - Langerhans cell histiocytosis disseminated\n9755 - Histiocytic sarcoma\n9756 - Langerhans cell sarcoma\n9757 - Interdigitating dendritic cell sarcoma\n9758 - Follicular dendritic cell sarcoma\n9760 - Immunoproliferative disease, NOS\n9761 - Waldenstrom macroglobulinemia\n9762 - Heavy chain disease, NOS\n9764 - Immunoproliferative small intestinal disease\n9765 - Monoclonal gammopathy of undetermined significance\\*\n9766 - Angiocentric immunoproliferative lesion\\*\n9767 - Angioimmunoblastic lymphadenopathy\\*\n9768 - T-gamma lymphoproliferative disease\\*\n9769 - Immunoglobulin deposition disease\\*\n9800 - Leukemia, NOS\n9801 - Acute leukemia, NOS\n9805 - Acute biphenotypic leukemia\n9820 - Lymphoid leukemia, NOS [except C441, C690, C695-C696]\n9823 - B-cell chronic lymphocytic leukemia/small lymphocytic lymphoma [C420, C421, or C424 ONLY]\n9826 - Burkitt cell leukemia leukemia [except C441, C690, C695-C696]\n9827 - Adult T-cell leukemia/lymphoma (HTLV-1 positive)[C420, C421, or C424 ONLY]\n9832 - Prolymphocytic leukemia, NOS [except C441, C690, C695-C696]\n9833 - Prolymphocytic leukemia, B-cell type [except C441, C690, C695-C696]\n9834 - Prolymphocytic leukemia, T-cell type [except C441, C690, C695-C696]\n9835 - Precursor cell lymphoblastic leukemia, NOS [except C441, C690, C695-C696]\n9836 - Precursor B-cell lymphoblastic leukemia [except C441, C690, C695-C696]\n9837 - Precursor T-cell lymphoblastic leukemia [see 9837 below, new definition]\n9840 - Acute myeloid leukemia, M6 type\n9860 - Myeloid leukemia, NOS\n9861 - Acute myeloid leukemia, NOS\n9863 - Chronic myeloid leukemia\n9866 - Acute promyelocytic leukemia\n9867 - Acute myelomonocytic leukemia\n9870 - Acute basophilic leukemia\n9871 - Acute myeloid leukemia with abnormal marrow, eosinophils\n9872 - Acute myeloid leukemia, minimal differentiation\n9873 - Acute myeloid leukemia without maturation\n9874 - Acute myeloid leukemia with maturation\n9875 - Chronic myelogenous leukemia, BCR/ABL positive\n9876 - Atypical chronic myeloid leukemia BCR/ABL negative\n9891 - Acute monocytic leukemia\n9895 - Acute myeloid leukemia with multilineage dysplasia\n9896 - Acute myeloid leukemia, t(8;21)(q22;q22)\n9897 - Acute myeloid leukemia, 11q23 abnormalities\n9910 - Acute megakaryoblastic leukemia\n9920 - Therapy-related acute myeloid leukemia, NOS\n9930 - Myeloid sarcoma\n9931 - Acute panmyelosis with myelofibrosis\n9940 - Hairy cell leukemia\n9945 - Chronic myelomonocytic leukemia, NOS\n9946 - Juvenile myelomonocytic leukemia\n9948 - Aggressive NK-cell leukemia\n9950 - Polycythemia (rubra) vera\n9960 - Chronic myeloproliferative disease, NOS\n9961 - Myelosclerosis with myeloid metaplasia\n9962 - Essential thrombocythemia\n9963 - Chronic neutrophilic leukemia\n9964 - Hypereosinophilic syndrome\n9970 - Lymphoproliferative disorder, NOS\\*\n9975 - Myeloproliferative disease, NOS\\*\n9980 - Refractory anemia, NOS\n9982 - Refractory anemia with sideroblasts\n9983 - Refractory anemia with excess blasts\n9984 - Refractory anemia with excess blasts in transformation\n9985 - Refractory cytopenia with multilineage dysplasia\n9986 - Myelodysplastic syndrome with 5q deletion (5q-) syndrome\n9987 - Therapy-related myelodysplastic syndrome, NOS\n9989 - Myelodysplastic syndrome, NOS\n\n\n* The following ICD-O codes were added to the reportable list for Hematopoietic diseases. These are from the \"WHO Classification of Tumours of Haematopoietic and Lymphoid Tissues, 3rd edition\" publication, which was released in 2008. These new codes have been incorporated into the new Hematopoietic and Lymphoid Neoplasm MP/H rules. Use these only for cases diagnosed on January 1, 2010 and forward.\n9751 - Langerhans cell histiocytosis, NOS\n9806 - Mixed phenotype acute leukemia with t(9;22(q34;q11.2); BCR-ABL1\n9807 - Mixed phenotype acute leukemia with t(v;11q23); MLL, rearranged\n9808 - Mixed phenotype acute leukemia, B/myeloid, NOS\n9809 - Mixed phenotype acute leukemia, T/myeloid, NOS\n9811 - B lymphoblastic leukemia/lymphoma, NOS [C420, C421, or C424 ONLY]\n9812 - B lymphoblastic leukemia/lymphoma with t(9;22))q34;q11.2); BCR-ABL1 [C420, C421, or C424 ONLY]\n9813 - B lymphoblastic leukemia/lymphoma with t(v;11q23); MLL rearranged [C420, C421, or C424 ONLY]\n9814 - B lymphoblastic leukemia/lymphoma with t(12;21)(p13;q22); TEL-AML1 (ETV6-RUNX1)  [C420, C421, or C424 ONLY]\n9815 - B lymphoblastic/lymphoma with hyperdiploidy[C420, C421, or C424 ONLY]\n9816 - B lymphoblastic/lymphoma with hypodiploidy (hypodiploid ALL)  [C420, C421, or C424 ONLY]\n9817 - B lymphoblastic/lymphoma with t(5;14)(q31;q32); IL3-IGH [C420, C421, or C424 ONLY]\n9818 - B lymphoblastic/lymphoma with t(1;19)(q23;p13.3); E2A PBX1 (TCF3 PBX1) [C420, C421, or C424 ONLY]\n9831 - T-cell large granular lymphocytic leukemia [except C441, C690, C695-C696]\n9837 - T lymphoblastic leukemia/lymphoma [C420, C421, or C424 ONLY]\n9865 - Acute myeloid leukemia with t(6;9)([23;q34) DEK-NUP214\n9869 - Acute myeloid leukemia with inv(3)(q21q26.2) or t(3;3)(q21;q26;2); RPN1EVI1\n9898 - Myeloid leukemia associated with Down Syndrome\n9911 - Acute myeloid leukemia (megakaryoblastic) with t(1;22)(p13;q13); RBM15-MKL1\n9965 - Myeloid and lymphoid neoplasms with PDGFRA rearrangement\n9966 - Myeloid neoplasm with PDGFRB rearrangement\n9967 - Myeloid and lymphoid neoplasm with FGFR1 abnormalities\n9971 - Polymorphic PTLD\n9975 - Myeloproliferative neoplasm, unclassifiable\n9991 - Refractory neutropenia\n9992 - Refractory thrombocytopenia\n\n\\*Usually considered of uncertain/borderline behavior\n\n**Note**:  AJCC does not define TNM staging for this site.",
+  "schema_num" : 151,
+  "schema_selection_table" : "schema_selection_heme_retic",
+  "inputs" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "description" : "Code for the primary site of the tumor being reported using either ICD-O-2 or ICD-O-3.",
+    "naaccr_item" : 400,
+    "naaccr_xml_id" : "primarySite",
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "description" : "Codes for the histologic type of the tumor being reported using ICD-O-3.",
+    "naaccr_item" : 522,
+    "naaccr_xml_id" : "histologicTypeIcdO3",
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "description" : "Date of initial diagnosis by a recognized medical practitioner for the tumor being reported whether clinically or microscopically confirmed.",
+    "naaccr_item" : 390,
+    "naaccr_xml_id" : "dateOfDiagnosis",
+    "table" : "cs_year_validation",
+    "used_for_staging" : true
+  }, {
+    "key" : "cs_input_version_original",
+    "name" : "CS Version Input Original",
+    "description" : "Collaborative Staging (CS) version number initially used to code CS fields.",
+    "naaccr_item" : 2935,
+    "naaccr_xml_id" : "csVersionInputOriginal",
+    "table" : "cs_input_version_original",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior ICD-O-3",
+    "description" : "Code for the behavior of the tumor being reported using ICD-O-3.",
+    "naaccr_item" : 523,
+    "naaccr_xml_id" : "behaviorCodeIcdO3",
+    "table" : "behavior",
+    "used_for_staging" : false
+  }, {
+    "key" : "grade",
+    "name" : "Grade",
+    "description" : "Code for the grade or degree of differentiation of the reportable tumor.",
+    "naaccr_item" : 440,
+    "naaccr_xml_id" : "grade",
+    "table" : "grade",
+    "used_for_staging" : false
+  }, {
+    "key" : "age_dx",
+    "name" : "Age at Diagnosis",
+    "description" : "Age of the patient at diagnosis in complete years.",
+    "naaccr_item" : 230,
+    "naaccr_xml_id" : "ageAtDiagnosis",
+    "used_for_staging" : false
+  }, {
+    "key" : "lvi",
+    "name" : "Lymph-vascular Invasion",
+    "description" : "Indicates whether lymphatic duct or blood vessel (LVI) is identified in the pathology report.",
+    "naaccr_item" : 1182,
+    "naaccr_xml_id" : "lymphVascularInvasion",
+    "default" : "8",
+    "table" : "lvi",
+    "used_for_staging" : false
+  }, {
+    "key" : "size",
+    "name" : "CS Tumor Size",
+    "description" : "Records the largest dimension or diameter of the primary tumor in millimeters.",
+    "naaccr_item" : 2800,
+    "naaccr_xml_id" : "csTumorSize",
+    "default" : "988",
+    "table" : "size_ana",
+    "used_for_staging" : false
+  }, {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "description" : "Identifies contiguous growth (extension) of the primary tumor within the organ of origin or its direct extension into neighboring organs. For certain sites such as ovary, discontinuous metastasis is coded in CS Extension.",
+    "naaccr_item" : 2810,
+    "naaccr_xml_id" : "csExtension",
+    "default" : "999",
+    "table" : "extension_bci",
+    "used_for_staging" : true
+  }, {
+    "key" : "extension_eval",
+    "name" : "CS Tumor Size/Ext Eval",
+    "description" : "Records how the codes for the two items CS Tumor Size and CS Extension were determined, based on the diagnostic methods employed.",
+    "naaccr_item" : 2820,
+    "naaccr_xml_id" : "csTumorSizeExtEval",
+    "default" : "9",
+    "table" : "extension_eval_cna",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes",
+    "name" : "CS Lymph Nodes",
+    "description" : "Identifies the regional lymph nodes involved with cancer at the time of diagnosis.",
+    "naaccr_item" : 2830,
+    "naaccr_xml_id" : "csLymphNodes",
+    "default" : "988",
+    "table" : "nodes_dna",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes_eval",
+    "name" : "CS Lymph Nodes Eval",
+    "description" : "Records how the code for CS Lymph Nodes was determined, based on the diagnosticmethods employed.",
+    "naaccr_item" : 2840,
+    "naaccr_xml_id" : "csLymphNodesEval",
+    "default" : "9",
+    "table" : "nodes_eval_ena",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "description" : "Records the exact number of regional nodes examined by the pathologist and found to contain metastases. ",
+    "naaccr_item" : 820,
+    "naaccr_xml_id" : "regionalNodesPositive",
+    "default" : "99",
+    "table" : "nodes_pos_fna",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_exam",
+    "name" : "Regional Nodes Examined",
+    "description" : "Records the total number of regional lymph nodes that were removed and examined by the pathologist. ",
+    "naaccr_item" : 830,
+    "naaccr_xml_id" : "regionalNodesExamined",
+    "default" : "99",
+    "table" : "nodes_exam_gna",
+    "used_for_staging" : false
+  }, {
+    "key" : "mets",
+    "name" : "CS Mets at DX",
+    "description" : "Identifies the distant site(s) of metastatic involvement at time of diagnosis.",
+    "naaccr_item" : 2850,
+    "naaccr_xml_id" : "csMetsAtDx",
+    "default" : "98",
+    "table" : "mets_hna",
+    "used_for_staging" : true
+  }, {
+    "key" : "mets_eval",
+    "name" : "CS Mets Eval",
+    "description" : "Records how the code for CS Mets at Dx was determined based on the diagnostic methods employed.",
+    "naaccr_item" : 2860,
+    "naaccr_xml_id" : "csMetsEval",
+    "default" : "9",
+    "table" : "mets_eval_ina",
+    "used_for_staging" : true
+  }, {
+    "key" : "ssf1",
+    "name" : "JAK2 (also known as Janus Kinase 2 and JAK2 Exon 12)",
+    "naaccr_item" : 2880,
+    "naaccr_xml_id" : "csSiteSpecificFactor1",
+    "default" : "999",
+    "table" : "ssf1_jbt",
+    "used_for_staging" : false,
+    "metadata" : [ "CCCR_IVA_COLLECT_IF_AVAILABLE_IN_PATH_REPORT", "COC_CLINICALLY_SIGNIFICANT", "SEER_CLINICALLY_SIGNIFICANT" ]
+  }, {
+    "key" : "ssf2",
+    "name" : "CS Site-Specific Factor 2",
+    "naaccr_item" : 2890,
+    "naaccr_xml_id" : "csSiteSpecificFactor2",
+    "default" : "988",
+    "table" : "ssf2_kna",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf3",
+    "name" : "CS Site-Specific Factor 3",
+    "naaccr_item" : 2900,
+    "naaccr_xml_id" : "csSiteSpecificFactor3",
+    "default" : "988",
+    "table" : "ssf3_lna",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf4",
+    "name" : "CS Site-Specific Factor 4",
+    "naaccr_item" : 2910,
+    "naaccr_xml_id" : "csSiteSpecificFactor4",
+    "default" : "988",
+    "table" : "ssf4_mna",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf5",
+    "name" : "CS Site-Specific Factor 5",
+    "naaccr_item" : 2920,
+    "naaccr_xml_id" : "csSiteSpecificFactor5",
+    "default" : "988",
+    "table" : "ssf5_nna",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf6",
+    "name" : "CS Site-Specific Factor 6",
+    "naaccr_item" : 2930,
+    "naaccr_xml_id" : "csSiteSpecificFactor6",
+    "default" : "988",
+    "table" : "ssf6_ona",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf7",
+    "name" : "CS Site-Specific Factor 7",
+    "naaccr_item" : 2861,
+    "naaccr_xml_id" : "csSiteSpecificFactor7",
+    "default" : "988",
+    "table" : "ssf7_snb",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf8",
+    "name" : "CS Site-Specific Factor 8",
+    "naaccr_item" : 2862,
+    "naaccr_xml_id" : "csSiteSpecificFactor8",
+    "default" : "988",
+    "table" : "ssf8_snc",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf9",
+    "name" : "CS Site-Specific Factor 9",
+    "naaccr_item" : 2863,
+    "naaccr_xml_id" : "csSiteSpecificFactor9",
+    "default" : "988",
+    "table" : "ssf9_snd",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf10",
+    "name" : "CS Site-Specific Factor 10",
+    "naaccr_item" : 2864,
+    "naaccr_xml_id" : "csSiteSpecificFactor10",
+    "default" : "988",
+    "table" : "ssf10_sne",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf11",
+    "name" : "CS Site-Specific Factor 11",
+    "naaccr_item" : 2865,
+    "naaccr_xml_id" : "csSiteSpecificFactor11",
+    "default" : "988",
+    "table" : "ssf11_snf",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf12",
+    "name" : "CS Site-Specific Factor 12",
+    "naaccr_item" : 2866,
+    "naaccr_xml_id" : "csSiteSpecificFactor12",
+    "default" : "988",
+    "table" : "ssf12_sng",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf13",
+    "name" : "CS Site-Specific Factor 13",
+    "naaccr_item" : 2867,
+    "naaccr_xml_id" : "csSiteSpecificFactor13",
+    "default" : "988",
+    "table" : "ssf13_snh",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf14",
+    "name" : "CS Site-Specific Factor 14",
+    "naaccr_item" : 2868,
+    "naaccr_xml_id" : "csSiteSpecificFactor14",
+    "default" : "988",
+    "table" : "ssf14_sni",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf15",
+    "name" : "CS Site-Specific Factor 15",
+    "naaccr_item" : 2869,
+    "naaccr_xml_id" : "csSiteSpecificFactor15",
+    "default" : "988",
+    "table" : "ssf15_snj",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf16",
+    "name" : "CS Site-Specific Factor 16",
+    "naaccr_item" : 2870,
+    "naaccr_xml_id" : "csSiteSpecificFactor16",
+    "default" : "988",
+    "table" : "ssf16_snk",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf17",
+    "name" : "CS Site-Specific Factor 17",
+    "naaccr_item" : 2871,
+    "naaccr_xml_id" : "csSiteSpecificFactor17",
+    "default" : "988",
+    "table" : "ssf17_snl",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf18",
+    "name" : "CS Site-Specific Factor 18",
+    "naaccr_item" : 2872,
+    "naaccr_xml_id" : "csSiteSpecificFactor18",
+    "default" : "988",
+    "table" : "ssf18_snm",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf19",
+    "name" : "CS Site-Specific Factor 19",
+    "naaccr_item" : 2873,
+    "naaccr_xml_id" : "csSiteSpecificFactor19",
+    "default" : "988",
+    "table" : "ssf19_snn",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf20",
+    "name" : "CS Site-Specific Factor 20",
+    "naaccr_item" : 2874,
+    "naaccr_xml_id" : "csSiteSpecificFactor20",
+    "default" : "988",
+    "table" : "ssf20_sno",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf21",
+    "name" : "CS Site-Specific Factor 21",
+    "naaccr_item" : 2875,
+    "naaccr_xml_id" : "csSiteSpecificFactor21",
+    "default" : "988",
+    "table" : "ssf21_snp",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf22",
+    "name" : "CS Site-Specific Factor 22",
+    "naaccr_item" : 2876,
+    "naaccr_xml_id" : "csSiteSpecificFactor22",
+    "default" : "988",
+    "table" : "ssf22_snq",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf23",
+    "name" : "CS Site-Specific Factor 23",
+    "naaccr_item" : 2877,
+    "naaccr_xml_id" : "csSiteSpecificFactor23",
+    "default" : "988",
+    "table" : "ssf23_snr",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf24",
+    "name" : "CS Site-Specific Factor 24",
+    "naaccr_item" : 2878,
+    "naaccr_xml_id" : "csSiteSpecificFactor24",
+    "default" : "988",
+    "table" : "ssf24_sns",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  }, {
+    "key" : "ssf25",
+    "name" : "CS Site-Specific Factor 25",
+    "naaccr_item" : 2879,
+    "naaccr_xml_id" : "csSiteSpecificFactor25",
+    "default" : "988",
+    "table" : "ssf25_snt",
+    "used_for_staging" : false,
+    "metadata" : [ "UNDEFINED_SSF" ]
+  } ],
+  "outputs" : [ {
+    "key" : "schema_number",
+    "name" : "Schema Number",
+    "description" : "CS assigned schema number.",
+    "default" : "151"
+  }, {
+    "key" : "csver_derived",
+    "name" : "CS Version Derived",
+    "description" : "Collaborative Staging (CS) version used to derive the CS output fields.",
+    "naaccr_item" : 2936,
+    "naaccr_xml_id" : "csVersionDerived",
+    "default" : "020550"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC6 T"
+  }, {
+    "key" : "ajcc6_tdescriptor",
+    "name" : "AJCC6 T Descriptor"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "AJCC6 N"
+  }, {
+    "key" : "ajcc6_ndescriptor",
+    "name" : "AJCC6 N Descriptor"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC6 M"
+  }, {
+    "key" : "ajcc6_mdescriptor",
+    "name" : "AJCC6 M Descriptor"
+  }, {
+    "key" : "ajcc6_stage",
+    "name" : "AJCC6 Stage Group"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC7 T"
+  }, {
+    "key" : "ajcc7_tdescriptor",
+    "name" : "AJCC7 T Descriptor"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC7 N"
+  }, {
+    "key" : "ajcc7_ndescriptor",
+    "name" : "AJCC7 N Descriptor"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC7 M"
+  }, {
+    "key" : "ajcc7_mdescriptor",
+    "name" : "AJCC7 M Descriptor"
+  }, {
+    "key" : "ajcc7_stage",
+    "name" : "AJCC7 Stage Group"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage T 1977"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage N 1977"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage M 1977"
+  }, {
+    "key" : "ss77",
+    "name" : "Summary Stage Group 1977"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage T 2000"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage N 2000"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage M 2000"
+  }, {
+    "key" : "ss2000",
+    "name" : "Summary Stage Group 2000"
+  }, {
+    "key" : "stor_ajcc6_t",
+    "name" : "AJCC6 T (Storage)",
+    "naaccr_item" : 2940,
+    "naaccr_xml_id" : "derivedAjcc6T"
+  }, {
+    "key" : "stor_ajcc6_tdescriptor",
+    "name" : "AJCC6 T Descriptor (Storage)",
+    "naaccr_item" : 2950,
+    "naaccr_xml_id" : "derivedAjcc6TDescript"
+  }, {
+    "key" : "stor_ajcc6_n",
+    "name" : "AJCC6 N (Storage)",
+    "naaccr_item" : 2960,
+    "naaccr_xml_id" : "derivedAjcc6N"
+  }, {
+    "key" : "stor_ajcc6_ndescriptor",
+    "name" : "AJCC6 N Descriptor (Storage)",
+    "naaccr_item" : 2970,
+    "naaccr_xml_id" : "derivedAjcc6NDescript"
+  }, {
+    "key" : "stor_ajcc6_m",
+    "name" : "AJCC6 M (Storage)",
+    "naaccr_item" : 2980,
+    "naaccr_xml_id" : "derivedAjcc6M"
+  }, {
+    "key" : "stor_ajcc6_mdescriptor",
+    "name" : "AJCC6 M Descriptor (Storage)",
+    "naaccr_item" : 2990,
+    "naaccr_xml_id" : "derivedAjcc6MDescript"
+  }, {
+    "key" : "stor_ajcc6_stage",
+    "name" : "AJCC6 Stage Group (Storage)",
+    "naaccr_item" : 3000,
+    "naaccr_xml_id" : "derivedAjcc6StageGrp"
+  }, {
+    "key" : "stor_ajcc7_t",
+    "name" : "AJCC7 T (Storage)",
+    "naaccr_item" : 3400,
+    "naaccr_xml_id" : "derivedAjcc7T"
+  }, {
+    "key" : "stor_ajcc7_tdescriptor",
+    "name" : "AJCC7 T Descriptor (Storage)",
+    "naaccr_item" : 3402,
+    "naaccr_xml_id" : "derivedAjcc7TDescript"
+  }, {
+    "key" : "stor_ajcc7_n",
+    "name" : "AJCC7 N (Storage)",
+    "naaccr_item" : 3410,
+    "naaccr_xml_id" : "derivedAjcc7N"
+  }, {
+    "key" : "stor_ajcc7_ndescriptor",
+    "name" : "AJCC7 N Descriptor (Storage)",
+    "naaccr_item" : 3412,
+    "naaccr_xml_id" : "derivedAjcc7NDescript"
+  }, {
+    "key" : "stor_ajcc7_m",
+    "name" : "AJCC7 M (Storage)",
+    "naaccr_item" : 3420,
+    "naaccr_xml_id" : "derivedAjcc7M"
+  }, {
+    "key" : "stor_ajcc7_mdescriptor",
+    "name" : "AJCC7 M Descriptor (Storage)",
+    "naaccr_item" : 3422,
+    "naaccr_xml_id" : "derivedAjcc7MDescript"
+  }, {
+    "key" : "stor_ajcc7_stage",
+    "name" : "AJCC7 Stage Group (Storage)",
+    "naaccr_item" : 3430,
+    "naaccr_xml_id" : "derivedAjcc7StageGrp"
+  }, {
+    "key" : "stor_ss77",
+    "name" : "Summary Stage Group 1977 (Storage)",
+    "naaccr_item" : 3010,
+    "naaccr_xml_id" : "derivedSs1977"
+  }, {
+    "key" : "stor_ss2000",
+    "name" : "Summary Stage Group 2000 (Storage)",
+    "naaccr_item" : 3020,
+    "naaccr_xml_id" : "derivedSs2000"
+  } ],
+  "mappings" : [ {
+    "id" : "mapping_t",
+    "name" : "T",
+    "initial_context" : [ {
+      "key" : "stor_ajcc6_tdescriptor"
+    }, {
+      "key" : "stor_ajcc7_tdescriptor"
+    }, {
+      "key" : "ajcc6_tdescriptor",
+      "value" : "ERROR"
+    }, {
+      "key" : "t2000"
+    }, {
+      "key" : "stor_ajcc7_t"
+    }, {
+      "key" : "t77"
+    }, {
+      "key" : "ajcc7_tdescriptor",
+      "value" : "ERROR"
+    }, {
+      "key" : "stor_ajcc6_t"
+    }, {
+      "key" : "ajcc6_t"
+    }, {
+      "key" : "ajcc7_t"
+    } ],
+    "tables" : [ {
+      "id" : "extension_bci",
+      "inputs" : [ "extension" ],
+      "outputs" : [ "t77", "t2000", "ajcc7_t", "ajcc6_t" ]
+    }, {
+      "id" : "extension_eval_cna",
+      "output_mapping" : [ {
+        "from" : "tdescriptor",
+        "to" : "ajcc7_tdescriptor"
+      } ],
+      "inputs" : [ "extension_eval" ],
+      "outputs" : [ "ajcc7_tdescriptor" ]
+    }, {
+      "id" : "ajcc_descriptor_codes",
+      "input_mapping" : [ {
+        "from" : "ajcc7_tdescriptor",
+        "to" : "descriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stor_descriptor",
+        "to" : "stor_ajcc7_tdescriptor"
+      } ],
+      "inputs" : [ "ajcc7_tdescriptor" ],
+      "outputs" : [ "stor_ajcc7_tdescriptor" ]
+    }, {
+      "id" : "ajcc_tdescriptor_cleanup",
+      "input_mapping" : [ {
+        "from" : "ajcc7_t",
+        "to" : "t"
+      }, {
+        "from" : "ajcc7_tdescriptor",
+        "to" : "tdescriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stor_tdescriptor",
+        "to" : "stor_ajcc7_tdescriptor"
+      }, {
+        "from" : "tdescriptor",
+        "to" : "ajcc7_tdescriptor"
+      } ],
+      "inputs" : [ "ajcc7_tdescriptor", "ajcc7_t" ],
+      "outputs" : [ "ajcc7_tdescriptor", "stor_ajcc7_tdescriptor" ]
+    }, {
+      "id" : "ajcc7_t_codes",
+      "inputs" : [ "ajcc7_t" ],
+      "outputs" : [ "stor_ajcc7_t" ]
+    }, {
+      "id" : "extension_eval_cna",
+      "output_mapping" : [ {
+        "from" : "tdescriptor",
+        "to" : "ajcc6_tdescriptor"
+      } ],
+      "inputs" : [ "extension_eval" ],
+      "outputs" : [ "ajcc6_tdescriptor" ]
+    }, {
+      "id" : "ajcc_descriptor_codes",
+      "input_mapping" : [ {
+        "from" : "ajcc6_tdescriptor",
+        "to" : "descriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stor_descriptor",
+        "to" : "stor_ajcc6_tdescriptor"
+      } ],
+      "inputs" : [ "ajcc6_tdescriptor" ],
+      "outputs" : [ "stor_ajcc6_tdescriptor" ]
+    }, {
+      "id" : "ajcc_tdescriptor_cleanup",
+      "input_mapping" : [ {
+        "from" : "ajcc6_t",
+        "to" : "t"
+      }, {
+        "from" : "ajcc6_tdescriptor",
+        "to" : "tdescriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "tdescriptor",
+        "to" : "ajcc6_tdescriptor"
+      }, {
+        "from" : "stor_tdescriptor",
+        "to" : "stor_ajcc6_tdescriptor"
+      } ],
+      "inputs" : [ "ajcc6_tdescriptor", "ajcc6_t" ],
+      "outputs" : [ "ajcc6_tdescriptor", "stor_ajcc6_tdescriptor" ]
+    }, {
+      "id" : "ajcc6_t_codes",
+      "inputs" : [ "ajcc6_t" ],
+      "outputs" : [ "stor_ajcc6_t" ]
+    } ]
+  }, {
+    "id" : "mapping_n",
+    "name" : "N",
+    "initial_context" : [ {
+      "key" : "stor_ajcc6_n"
+    }, {
+      "key" : "stor_ajcc6_ndescriptor"
+    }, {
+      "key" : "n77"
+    }, {
+      "key" : "ajcc6_n"
+    }, {
+      "key" : "ajcc7_n"
+    }, {
+      "key" : "n2000"
+    }, {
+      "key" : "ajcc6_ndescriptor",
+      "value" : "ERROR"
+    }, {
+      "key" : "stor_ajcc7_n"
+    }, {
+      "key" : "stor_ajcc7_ndescriptor"
+    }, {
+      "key" : "ajcc7_ndescriptor",
+      "value" : "ERROR"
+    } ],
+    "tables" : [ {
+      "id" : "nodes_dna",
+      "inputs" : [ "nodes" ],
+      "outputs" : [ "ajcc7_n", "ajcc6_n", "n2000", "n77" ]
+    }, {
+      "id" : "nodes_eval_ena",
+      "output_mapping" : [ {
+        "from" : "ndescriptor",
+        "to" : "ajcc7_ndescriptor"
+      } ],
+      "inputs" : [ "nodes_eval" ],
+      "outputs" : [ "ajcc7_ndescriptor" ]
+    }, {
+      "id" : "ajcc_descriptor_codes",
+      "input_mapping" : [ {
+        "from" : "ajcc7_ndescriptor",
+        "to" : "descriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stor_descriptor",
+        "to" : "stor_ajcc7_ndescriptor"
+      } ],
+      "inputs" : [ "ajcc7_ndescriptor" ],
+      "outputs" : [ "stor_ajcc7_ndescriptor" ]
+    }, {
+      "id" : "ajcc_ndescriptor_cleanup",
+      "input_mapping" : [ {
+        "from" : "ajcc7_n",
+        "to" : "n"
+      }, {
+        "from" : "ajcc7_ndescriptor",
+        "to" : "ndescriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stor_ndescriptor",
+        "to" : "stor_ajcc7_ndescriptor"
+      }, {
+        "from" : "ndescriptor",
+        "to" : "ajcc7_ndescriptor"
+      } ],
+      "inputs" : [ "ajcc7_n", "ajcc7_ndescriptor" ],
+      "outputs" : [ "ajcc7_ndescriptor", "stor_ajcc7_ndescriptor" ]
+    }, {
+      "id" : "ajcc7_n_codes",
+      "inputs" : [ "ajcc7_n" ],
+      "outputs" : [ "stor_ajcc7_n" ]
+    }, {
+      "id" : "nodes_eval_ena",
+      "output_mapping" : [ {
+        "from" : "ndescriptor",
+        "to" : "ajcc6_ndescriptor"
+      } ],
+      "inputs" : [ "nodes_eval" ],
+      "outputs" : [ "ajcc6_ndescriptor" ]
+    }, {
+      "id" : "ajcc_descriptor_codes",
+      "input_mapping" : [ {
+        "from" : "ajcc6_ndescriptor",
+        "to" : "descriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stor_descriptor",
+        "to" : "stor_ajcc6_ndescriptor"
+      } ],
+      "inputs" : [ "ajcc6_ndescriptor" ],
+      "outputs" : [ "stor_ajcc6_ndescriptor" ]
+    }, {
+      "id" : "ajcc_ndescriptor_cleanup",
+      "input_mapping" : [ {
+        "from" : "ajcc6_n",
+        "to" : "n"
+      }, {
+        "from" : "ajcc6_ndescriptor",
+        "to" : "ndescriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "ndescriptor",
+        "to" : "ajcc6_ndescriptor"
+      }, {
+        "from" : "stor_ndescriptor",
+        "to" : "stor_ajcc6_ndescriptor"
+      } ],
+      "inputs" : [ "ajcc6_ndescriptor", "ajcc6_n" ],
+      "outputs" : [ "ajcc6_ndescriptor", "stor_ajcc6_ndescriptor" ]
+    }, {
+      "id" : "ajcc6_n_codes",
+      "inputs" : [ "ajcc6_n" ],
+      "outputs" : [ "stor_ajcc6_n" ]
+    } ]
+  }, {
+    "id" : "mapping_m",
+    "name" : "M",
+    "initial_context" : [ {
+      "key" : "stor_ajcc6_m"
+    }, {
+      "key" : "stor_ajcc7_m"
+    }, {
+      "key" : "m2000"
+    }, {
+      "key" : "ajcc6_m"
+    }, {
+      "key" : "ajcc7_m"
+    }, {
+      "key" : "m77"
+    }, {
+      "key" : "ajcc6_mdescriptor",
+      "value" : "ERROR"
+    }, {
+      "key" : "stor_ajcc7_mdescriptor"
+    }, {
+      "key" : "stor_ajcc6_mdescriptor"
+    }, {
+      "key" : "ajcc7_mdescriptor",
+      "value" : "ERROR"
+    } ],
+    "tables" : [ {
+      "id" : "mets_hna",
+      "inputs" : [ "mets" ],
+      "outputs" : [ "ajcc7_m", "ajcc6_m", "m77", "m2000" ]
+    }, {
+      "id" : "mets_eval_ina",
+      "output_mapping" : [ {
+        "from" : "mdescriptor",
+        "to" : "ajcc7_mdescriptor"
+      } ],
+      "inputs" : [ "mets_eval" ],
+      "outputs" : [ "ajcc7_mdescriptor" ]
+    }, {
+      "id" : "ajcc_descriptor_codes",
+      "input_mapping" : [ {
+        "from" : "ajcc7_mdescriptor",
+        "to" : "descriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stor_descriptor",
+        "to" : "stor_ajcc7_mdescriptor"
+      } ],
+      "inputs" : [ "ajcc7_mdescriptor" ],
+      "outputs" : [ "stor_ajcc7_mdescriptor" ]
+    }, {
+      "id" : "ajcc_mdescriptor_cleanup",
+      "input_mapping" : [ {
+        "from" : "ajcc7_m",
+        "to" : "m"
+      }, {
+        "from" : "ajcc7_mdescriptor",
+        "to" : "mdescriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stor_mdescriptor",
+        "to" : "stor_ajcc7_mdescriptor"
+      }, {
+        "from" : "mdescriptor",
+        "to" : "ajcc7_mdescriptor"
+      } ],
+      "inputs" : [ "ajcc7_mdescriptor", "ajcc7_m" ],
+      "outputs" : [ "ajcc7_mdescriptor", "stor_ajcc7_mdescriptor" ]
+    }, {
+      "id" : "ajcc7_m_codes",
+      "inputs" : [ "ajcc7_m" ],
+      "outputs" : [ "stor_ajcc7_m" ]
+    }, {
+      "id" : "mets_eval_ina",
+      "output_mapping" : [ {
+        "from" : "mdescriptor",
+        "to" : "ajcc6_mdescriptor"
+      } ],
+      "inputs" : [ "mets_eval" ],
+      "outputs" : [ "ajcc6_mdescriptor" ]
+    }, {
+      "id" : "ajcc_descriptor_codes",
+      "input_mapping" : [ {
+        "from" : "ajcc6_mdescriptor",
+        "to" : "descriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stor_descriptor",
+        "to" : "stor_ajcc6_mdescriptor"
+      } ],
+      "inputs" : [ "ajcc6_mdescriptor" ],
+      "outputs" : [ "stor_ajcc6_mdescriptor" ]
+    }, {
+      "id" : "ajcc_mdescriptor_cleanup",
+      "input_mapping" : [ {
+        "from" : "ajcc6_m",
+        "to" : "m"
+      }, {
+        "from" : "ajcc6_mdescriptor",
+        "to" : "mdescriptor"
+      } ],
+      "output_mapping" : [ {
+        "from" : "mdescriptor",
+        "to" : "ajcc6_mdescriptor"
+      }, {
+        "from" : "stor_mdescriptor",
+        "to" : "stor_ajcc6_mdescriptor"
+      } ],
+      "inputs" : [ "ajcc6_m", "ajcc6_mdescriptor" ],
+      "outputs" : [ "stor_ajcc6_mdescriptor", "ajcc6_mdescriptor" ]
+    }, {
+      "id" : "ajcc6_m_codes",
+      "inputs" : [ "ajcc6_m" ],
+      "outputs" : [ "stor_ajcc6_m" ]
+    } ]
+  }, {
+    "id" : "mapping_ajcc7_excluded",
+    "name" : "AJCC 7 Excluded",
+    "initial_context" : [ {
+      "key" : "stor_ajcc7_tdescriptor",
+      "value" : "N"
+    }, {
+      "key" : "stor_ajcc7_mdescriptor",
+      "value" : "N"
+    }, {
+      "key" : "ajcc7_mdescriptor"
+    }, {
+      "key" : "stor_ajcc7_stage",
+      "value" : "888"
+    }, {
+      "key" : "stor_ajcc7_ndescriptor",
+      "value" : "N"
+    }, {
+      "key" : "ajcc7_t",
+      "value" : "NA"
+    }, {
+      "key" : "stor_ajcc7_t",
+      "value" : "888"
+    }, {
+      "key" : "ajcc7_n",
+      "value" : "NA"
+    }, {
+      "key" : "stor_ajcc7_n",
+      "value" : "888"
+    }, {
+      "key" : "ajcc7_tdescriptor"
+    }, {
+      "key" : "ajcc7_ndescriptor"
+    }, {
+      "key" : "stor_ajcc7_m",
+      "value" : "888"
+    }, {
+      "key" : "ajcc7_stage",
+      "value" : "NA"
+    }, {
+      "key" : "ajcc7_m",
+      "value" : "NA"
+    } ]
+  }, {
+    "id" : "mapping_ajcc6",
+    "name" : "AJCC 6",
+    "initial_context" : [ {
+      "key" : "ajcc6_stage"
+    }, {
+      "key" : "stor_ajcc6_stage"
+    } ],
+    "tables" : [ {
+      "id" : "ajcc6_stage_qna",
+      "input_mapping" : [ {
+        "from" : "ajcc6_t",
+        "to" : "t"
+      }, {
+        "from" : "ajcc6_n",
+        "to" : "n"
+      }, {
+        "from" : "ajcc6_m",
+        "to" : "m"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "ajcc6_stage"
+      } ],
+      "inputs" : [ "ajcc6_n", "ajcc6_m", "ajcc6_t" ],
+      "outputs" : [ "ajcc6_stage" ]
+    }, {
+      "id" : "ajcc6_stage_codes",
+      "inputs" : [ "ajcc6_stage" ],
+      "outputs" : [ "stor_ajcc6_stage" ]
+    } ]
+  }, {
+    "id" : "mapping_summary_stage",
+    "name" : "Summary Stage",
+    "tables" : [ {
+      "id" : "summary_stage_rpa",
+      "input_mapping" : [ {
+        "from" : "n77",
+        "to" : "n"
+      }, {
+        "from" : "m77",
+        "to" : "m"
+      }, {
+        "from" : "t77",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "ss77"
+      } ],
+      "inputs" : [ "t77", "m77", "n77" ],
+      "outputs" : [ "ss77" ]
+    }, {
+      "id" : "ss_codes",
+      "input_mapping" : [ {
+        "from" : "ss77",
+        "to" : "ss"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stor_ss",
+        "to" : "stor_ss77"
+      } ],
+      "inputs" : [ "ss77" ],
+      "outputs" : [ "stor_ss77" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "input_mapping" : [ {
+        "from" : "m2000",
+        "to" : "m"
+      }, {
+        "from" : "t2000",
+        "to" : "t"
+      }, {
+        "from" : "n2000",
+        "to" : "n"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "ss2000"
+      } ],
+      "inputs" : [ "t2000", "n2000", "m2000" ],
+      "outputs" : [ "ss2000" ]
+    }, {
+      "id" : "ss_codes",
+      "input_mapping" : [ {
+        "from" : "ss2000",
+        "to" : "ss"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stor_ss",
+        "to" : "stor_ss2000"
+      } ],
+      "inputs" : [ "ss2000" ],
+      "outputs" : [ "stor_ss2000" ]
+    } ]
+  }, {
+    "id" : "mapping_ajcc7_invalid_year",
+    "name" : "Validate AJCC7 Year",
+    "exclusion_tables" : [ {
+      "id" : "ajcc7_year_validation",
+      "inputs" : [ "year_dx", "cs_input_version_original" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "stor_ajcc7_m"
+    }, {
+      "key" : "stor_ajcc7_stage"
+    }, {
+      "key" : "ajcc7_m"
+    }, {
+      "key" : "ajcc7_n"
+    }, {
+      "key" : "ajcc7_mdescriptor"
+    }, {
+      "key" : "ajcc7_stage"
+    }, {
+      "key" : "stor_ajcc7_mdescriptor"
+    }, {
+      "key" : "stor_ajcc7_tdescriptor"
+    }, {
+      "key" : "ajcc7_tdescriptor"
+    }, {
+      "key" : "stor_ajcc7_t"
+    }, {
+      "key" : "ajcc7_ndescriptor"
+    }, {
+      "key" : "ajcc7_t"
+    }, {
+      "key" : "stor_ajcc7_n"
+    }, {
+      "key" : "stor_ajcc7_ndescriptor"
+    } ]
+  }, {
+    "id" : "mapping_ajcc6_invalid_year",
+    "name" : "Validate AJCC6 Year",
+    "exclusion_tables" : [ {
+      "id" : "ajcc6_year_validation",
+      "inputs" : [ "year_dx", "cs_input_version_original" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "stor_ajcc6_m"
+    }, {
+      "key" : "stor_ajcc6_ndescriptor"
+    }, {
+      "key" : "n77"
+    }, {
+      "key" : "stor_ajcc7_stage"
+    }, {
+      "key" : "ajcc6_m"
+    }, {
+      "key" : "t2000"
+    }, {
+      "key" : "ss77"
+    }, {
+      "key" : "stor_ss77"
+    }, {
+      "key" : "ajcc6_tdescriptor"
+    }, {
+      "key" : "t77"
+    }, {
+      "key" : "stor_ajcc6_stage"
+    }, {
+      "key" : "n2000"
+    }, {
+      "key" : "stor_ajcc6_t"
+    }, {
+      "key" : "ajcc6_t"
+    }, {
+      "key" : "stor_ajcc6_n"
+    }, {
+      "key" : "m2000"
+    }, {
+      "key" : "ss2000"
+    }, {
+      "key" : "ajcc6_ndescriptor"
+    }, {
+      "key" : "ajcc6_n"
+    }, {
+      "key" : "m77"
+    }, {
+      "key" : "ajcc6_stage"
+    }, {
+      "key" : "stor_ajcc6_mdescriptor"
+    }, {
+      "key" : "stor_ajcc6_tdescriptor"
+    }, {
+      "key" : "ajcc6_mdescriptor"
+    }, {
+      "key" : "stor_ss2000"
+    } ]
+  } ],
+  "involved_tables" : [ "ssf2_kna", "ssf25_snt", "ssf15_snj", "ajcc7_t_codes", "ssf23_snr", "histology", "size_ana", "cs_input_version_original", "nodes_exam_gna", "ssf22_snq", "lvi", "ssf14_sni", "mets_eval_ina", "ajcc_tdescriptor_cleanup", "ssf4_mna", "extension_eval_cna", "ajcc6_stage_qna", "ajcc7_year_validation", "ssf21_snp", "schema_selection_heme_retic", "ssf17_snl", "ajcc_descriptor_codes", "nodes_pos_fna", "grade", "summary_stage_rpa", "nodes_eval_ena", "ajcc7_m_codes", "ssf20_sno", "ajcc_ndescriptor_cleanup", "ssf16_snk", "ajcc6_t_codes", "ajcc_mdescriptor_cleanup", "ssf7_snb", "ssf11_snf", "ssf3_lna", "ss_codes", "ssf6_ona", "ajcc6_n_codes", "mets_hna", "behavior", "nodes_dna", "ssf10_sne", "ssf18_snm", "ajcc7_n_codes", "ajcc6_stage_codes", "ssf5_nna", "ssf1_jbt", "ssf19_snn", "ssf9_snd", "ssf13_snh", "primary_site", "ajcc6_year_validation", "ajcc6_m_codes", "cs_year_validation", "extension_bci", "ssf24_sns", "ssf8_snc", "ssf12_sng" ],
+  "last_modified" : "2020-06-30T19:47:17.210Z"
+}

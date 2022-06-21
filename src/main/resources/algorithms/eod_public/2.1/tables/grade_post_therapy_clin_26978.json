@@ -1,0 +1,19 @@
+{
+  "id" : "grade_post_therapy_clin_26978",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Grade Post Therapy Clin (yc)",
+  "title" : "Grade Post Therapy Clin (yc)",
+  "notes" : "**Note 1:** Leave Grade Post Therapy Clin (yc) blank when \n* No neoadjuvant therapy\n* Clinical or pathological case only\n* Neoadjuvant therapy completed, no microscopic exam is done prior to surgery/resection of primary tumor\n* There is only one grade available and it cannot be determined if it is clinical, pathological, post therapy clinical or post therapy pathological\n\n**Note 2:** Assign the highest grade from the microscopically sampled specimen of the primary site following neoadjuvant therapy or primary systemic/radiation therapy.\n\n**Note 3:** If there are multiple tumors with different grades abstracted as one primary, code the highest grade. \n\n**Note 4:** Codes 1-5 take priority over A-E. \n\n**Note 5:** For prostate, TURP or simple prostatectomy qualify for a clinical grade only.\n\n**Note 6:** Code 9 (unknown) when  \n* Microscopic exam is done after neoadjuvant therapy and grade from the primary site is not documented\n* Microscopic exam is done after neoadjuvant therapy and there is no residual cancer\n* Grade checked “not applicable” on CAP Protocol (if available) and no other grade information is available\n\n**Note 7:** If you are assigning an AJCC 8th edition stage group\n* Grade is required to assign stage group\n* Codes A-E are treated as an unknown grade when assigning AJCC stage group \n* An unknown grade may result in an unknown stage group",
+  "last_modified" : "2021-04-24T11:11:57.882Z",
+  "definition" : [ {
+    "key" : "grade_post_therapy_clin",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "Description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Grade Group 1: Gleason score less than or equal to 6" ], [ "2", "Grade Group 2: Gleason score 7\nGleason pattern 3+4" ], [ "3", "Grade Group 3: Gleason score 7\nGleason pattern 4+3" ], [ "4", "Grade Group 4: Gleason score 8" ], [ "5", "Grade Group 5: Gleason score 9 or 10" ], [ "A", "Well differentiated" ], [ "B", "Moderately differentiated" ], [ "C", "Poorly differentiated" ], [ "D", "Undifferentiated, anaplastic" ], [ "E", "Stated as \"Gleason score 7\" with no patterns documented or \nAny Gleason patterns combination equal to 7 not specified in 2 or 3" ], [ "9", "Grade cannot be assessed; Unknown" ], [ "", "See Note 1" ] ]
+}

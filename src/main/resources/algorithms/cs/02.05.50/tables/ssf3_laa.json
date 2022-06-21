@@ -1,0 +1,20 @@
+{
+  "id" : "ssf3_laa",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF3",
+  "title" : "CS Site-Specific Factor 3",
+  "subtitle" : "Clinical Status of Lymph Node Mets",
+  "notes" : "**Note 1**:  AJCC defines microscopic lymph node metastases or \"micrometastases\" as those which are clinically inapparent by palpation and/or imaging but are pathologically positive.  Micrometastases are diagnosed after sentinel or other node biopsy or elective lymphadenectomy.  \"Macrometastases\" are clinically detectable nodal metastases confirmed by therapeutic lymphadenectomy or when nodal metastasis exhibits gross extracapsular extension. \n\n**Note 2**:  Use code 005 if nodes are described as clinically negative and are also negative on pathologic examination, or no pathologic examination is performed.  Use code 010 if nodes are described as clinically negative but are positive on pathologic examination.\n\n**Note 3**:  Use codes 043-050 if nodes are described as clinically positive.\n\n**Note 4**:  Use code 100 to code information about clinically apparent in transit metastasis with or without occult nodal metastases.  Information about clinically inapparent in transit metastasis (\"occult\" metastasis found only on pathologic examination) is not collected in this site-specific factor.\n\n**Note 5**:  Use code 150 to code information about nodal involvement with in transit satellite metastases that are both clinically apparent.\n\n**Note 6**:  Use code 999 if no information is available about the clinical evaluation of lymph nodes or in transit metastasis.\n\n**Note 7**:  Codes 043-050 and 150 are appropriate for cases with neoadjuvant treatment, where nodes are described as clinically positive before treatment but are shown to be either negative or positive on pathologic examination after treatment.",
+  "last_modified" : "2015-05-27T16:20:04.593Z",
+  "definition" : [ {
+    "key" : "ssf3",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "OBSOLETE DATA RETAINED V0204\n\nNo lymph node metastasis" ], [ "001", "OBSOLETE DATA CONVERTED V0203\nSee code 010\n\nClinically occult (microscopic) lymph node metastases only" ], [ "002", "OBSOLETE DATA CONVERTED V0203\nSee code 020\n\nClinically apparent (macroscopic) lymph node metastases" ], [ "005", "Clinically negative lymph node metastasis\nAND \nNo pathologic examination performed\nOr unknown if pathologic examination performed\nOr nodes negative on pathologic examination" ], [ "010", "Clinically occult (microscopic) lymph node metastasis only\n(Nodes negative on clinical examination, positive on pathologic examination)" ], [ "020", "OBSOLETE DATA RETAINED V0204\nClinically apparent (macroscopic) lymph node metastasis" ], [ "043", "Clinically apparent nodal metastasis in 1 regional node" ], [ "045", "Clinically apparent nodal metastasis in 2-3 regional nodes" ], [ "048", "Clinically apparent nodal metastasis in 4+ regional nodes" ], [ "050", "Clinically apparent nodal metastasis in regional node(s) but number not specified" ], [ "100", "Clinically apparent in transit metastasis\nWITH or WITHOUT occult lymph node metastases" ], [ "150", "Clinically apparent in transit metastasis and clinically apparent nodal metastasis (at least one node)" ], [ "988", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 988 will result in an edit error.)" ], [ "999", "Unknown clinically if nodes are involved\nUnknown or no information about clinical nodal involvement\nClinical nodal involvement not documented in patient record" ] ]
+}

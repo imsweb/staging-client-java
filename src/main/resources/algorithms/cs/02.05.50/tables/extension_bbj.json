@@ -1,0 +1,36 @@
+{
+  "id" : "extension_bbj",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  Palpebral and tarsal conjunctiva line the eyelid, bulbar conjunctiva covers the eyeball, forniceal conjunctiva covers the space between the eyelid and the globe.  According to the AJCC, tumors are most likely to arise at the exposed site where the conjunctival epithelium merges with the corneal epithelium, particularly at the temporal limbus.\n\n**Note 2**:  Use code 140 or 150 if the physician's assignment of T category is the only information available about the extent of the tumor.\n\n**Note 3**:  The CS Tumor Size table for this schema is obsolete in CS Version 2, and the collection of tumor size value moved to CS Site-Specific Factor 1, Tumor Size.",
+  "footnotes" : "- For CS Extension codes 110-150, and 350 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Site-Specific Factor 1, Tumor Size, as shown in the Extension Size Table CSv2.\n- For CS Extension codes 110-150, and 350 ONLY, the T category for AJCC 6 staging collected in CSv2 is assigned based on the value of CS Site-Specific Factor 1, Tumor Size, as shown in the Extension Size Table CSv2.\n- For CS Extension codes 100 and 300 ONLY, the T category for AJCC 6 staging collected in CSv1 is assigned based on the value of CS Tumor Size as shown in the Extension Size Table CSv1.",
+  "last_modified" : "2015-05-27T16:19:07.634Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "VALUE:Tis", "VALUE:Tis", "VALUE:IS", "VALUE:IS" ], [ "100", "OBSOLETE DATA RETAINED V0200\n\nTumor confined to conjunctiva", "ERROR:", "JUMP:extension_size_table_csv1_xas", "VALUE:L", "VALUE:L" ], [ "110", "Tumor confined to one subsite of conjunctiva:\n    Bulbar conjunctiva\nTumor confined to one subsite of conjunctiva, NOS", "JUMP:extension_size_table_csv2_xez", "JUMP:extension_size_table_csv2_xez", "VALUE:L", "VALUE:L" ], [ "120", "Tumor confined to one subsite of conjunctiva:\n    Forniceal conjunctiva\n    Palpebral conjunctiva\n    Tarsal conjunctiva", "JUMP:extension_size_table_csv2_xez", "JUMP:extension_size_table_csv2_xez", "VALUE:L", "VALUE:L" ], [ "140", "Stated as T1 with no other information on extension", "JUMP:extension_size_table_csv2_xez", "JUMP:extension_size_table_csv2_xez", "VALUE:L", "VALUE:L" ], [ "150", "Stated as T2 with no other information on extension", "JUMP:extension_size_table_csv2_xez", "JUMP:extension_size_table_csv2_xez", "VALUE:L", "VALUE:L" ], [ "300", "OBSOLETE DATA RETAINED V0200\n\nLocalized, NOS", "ERROR:", "JUMP:extension_size_table_csv1_xas", "VALUE:L", "VALUE:L" ], [ "350", "Localized, NOS", "JUMP:extension_size_table_csv2_xez", "JUMP:extension_size_table_csv2_xez", "VALUE:L", "VALUE:L" ], [ "400", "Intraocular extension\n     Cornea \n     Intraocular compartments", "VALUE:T3", "VALUE:T3", "VALUE:L", "VALUE:L" ], [ "500", "OBSOLETE DATA RETAINED V0200\n\nAdjacent extraocular extension, excluding orbit\n    Eyelid", "ERROR:", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "510", "Tumor involving more than one subsite of conjunctiva:\n    Bulbar conjunctiva\n    Forniceal conjunctiva\n    Palpebral conjunctiva\n    Tarsal conjunctiva \nTumor involving more than one subsite of conjunctiva NOS", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "530", "Adjacent extraocular extension, excluding orbit:\n    Anterior eyelid lamella \n    Caruncle \n    Eyelid margin\n    Lacrimal punctum and canaliculi\n    Plica\n    Posterior eyelid lamella", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "550", "Stated as T3 with no other information on extension", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "700", "OBSOLETE DATA CONVERTED V0200\nSee code 730\n\nOrbit, NOS", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "710", "Orbital soft tissues without bone invasion\n\nStated as T4a with no other information on extension", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:RE" ], [ "720", "Bone of orbit\n\nStated as T4b with no other information on extension", "VALUE:T4b", "VALUE:T4b", "VALUE:RE", "VALUE:RE" ], [ "730", "Orbit, NOS", "VALUE:T4NOS", "VALUE:T4NOS", "VALUE:RE", "VALUE:RE" ], [ "780", "Adjacent paranasal sinuses\n\nStated as T4c with no other information on extension", "VALUE:T4c", "VALUE:T4c", "VALUE:RE", "VALUE:RE" ], [ "790", "Brain\n\nStated as T4d with no other information on extension", "VALUE:T4d", "VALUE:T4d", "VALUE:D", "VALUE:D" ], [ "800", "Further contiguous extension", "VALUE:T4d", "VALUE:T4d", "VALUE:D", "VALUE:D" ], [ "810", "Stated as T4 [NOS] with no other information on extension", "VALUE:T4NOS", "VALUE:T4NOS", "VALUE:RE", "VALUE:RE" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

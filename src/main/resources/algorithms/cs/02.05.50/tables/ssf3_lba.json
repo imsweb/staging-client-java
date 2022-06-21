@@ -1,0 +1,20 @@
+{
+  "id" : "ssf3_lba",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF3",
+  "title" : "CS Site-Specific Factor 3",
+  "subtitle" : "Clinical Evaluation of Lymph Nodes",
+  "notes" : "**Note 1**:  Code the method used to determine clinically positive regional lymph nodes.  Code the type of clinical assessment, whether pathologic assessment of nodes was performed with either negative or positive results.\n\n**Note 2**:  Use code 000 if physical or radiologic examination is documented with no statement of positive nodal involvement.  Use code 010 or 020 if the results of either physical or radiologic examination are positive, whether or not the results of the other examination are documented.  Use code 997 if documentation indicates either type of examination was performed but no results are available.  Use code 999 if no documentation of physical or radiologic examination is available in the medical record.",
+  "last_modified" : "2015-05-27T16:20:05.283Z",
+  "definition" : [ {
+    "key" : "ssf3",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No involvement of regional lymph nodes on physical and/or radiologic examination" ], [ "010", "Positive involvement of regional nodes on physical examination only" ], [ "020", "Positive involvement of regional nodes on radiologic examination only" ], [ "030", "Positive involvement of regional nodes on physical and radiologic examination" ], [ "888", "OBSOLETE DATA CONVERTED V0200\nSee code 988\n\nNot applicable for this site." ], [ "988", "Not applicable:  Information not collected for this case\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.  If this item is required to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "997", "Physical and/or radiologic examination performed, results not available" ], [ "998", "No clinical evaluation of nodal involvement" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

@@ -1,0 +1,463 @@
+{
+  "id" : "corpus_carcinoma",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Corpus Carcinoma and Carcinosarcoma",
+  "title" : "Corpus Uteri Carcinoma and Carcinosarcoma",
+  "notes" : "8000-8700, 8720-8790, 8950, 8980, 9111\n\nC540 Isthmus uteri\nC541 Endometrium\nC542 Myometrium\nC543 Fundus uteri\nC548 Overlapping lesion of corpus uteri\nC549 Corpus uteri\nC559 Uterus, NOS\n\n**Note 1:** The following sources were used in the development of this schema\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)\n* SEER Summary Staging Manual-2000: Codes and Coding Instructions (https://seer.cancer.gov/tools/ssm/ssm2000/)\n* Collaborative Stage Data Collection System, version 02.05:  https://cancerstaging.org/cstage/Pages/default.aspx \n* Chapter 53 *Corpus Uteri-Carcinoma and Adenocarcinoma*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.\n\n**Note 2:** See the following schemas for the listed histologies \n* 8710-8714, 8800-8932, 8934-8941, 8951-8975, 8981-9138, 9141-9582: *Corpus Sarcoma** 8933: *Corpus Adenosarcoma*\n* 9140: *Kaposi Sarcoma*\n* 9700-9701: *Mycosis Fungoides*",
+  "schema_selection_table" : "schema_selection_corpus_carcinoma",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "naaccr_xml_id" : "dateOfDiagnosis",
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "naaccr_xml_id" : "primarySite",
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "naaccr_xml_id" : "histologicTypeIcdO3",
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "naaccr_item" : 523,
+    "naaccr_xml_id" : "behaviorCodeIcdO3",
+    "table" : "behavior",
+    "used_for_staging" : true
+  }, {
+    "key" : "size_clin",
+    "name" : "Tumor Size Clinical",
+    "naaccr_item" : 752,
+    "naaccr_xml_id" : "tumorSizeClinical",
+    "table" : "tumor_size_clinical_60979",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_path",
+    "name" : "Tumor Size Pathological",
+    "naaccr_item" : 754,
+    "naaccr_xml_id" : "tumorSizePathologic",
+    "table" : "tumor_size_pathological_25597",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_summary",
+    "name" : "Tumor Size Summary",
+    "naaccr_item" : 756,
+    "naaccr_xml_id" : "tumorSizeSummary",
+    "default" : "999",
+    "table" : "tumor_size_summary_63115",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "naaccr_xml_id" : "regionalNodesPositive",
+    "default" : "99",
+    "table" : "nodes_pos_fpa",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_exam",
+    "name" : "Regional Nodes Examined",
+    "naaccr_item" : 830,
+    "naaccr_xml_id" : "regionalNodesExamined",
+    "default" : "99",
+    "table" : "nodes_exam_76029",
+    "used_for_staging" : false
+  }, {
+    "key" : "lvi",
+    "name" : "LVI",
+    "naaccr_item" : 1182,
+    "naaccr_xml_id" : "lymphVascularInvasion",
+    "default" : "9",
+    "table" : "lvi_full_56663",
+    "used_for_staging" : false
+  }, {
+    "key" : "radiation_surg_seq",
+    "name" : "RX Summ Surgery/Radiation Sequence",
+    "naaccr_item" : 1380,
+    "naaccr_xml_id" : "rxSummSurgRadSeq",
+    "table" : "radiation_surg_seq",
+    "used_for_staging" : false
+  }, {
+    "key" : "systemic_surg_seq",
+    "name" : "RX Summ Systemic/Surgery Sequence",
+    "naaccr_item" : 1639,
+    "naaccr_xml_id" : "rxSummSystemicSurSeq",
+    "table" : "systemic_surg_seq",
+    "used_for_staging" : false
+  }, {
+    "key" : "eod_primary_tumor",
+    "name" : "EOD Primary Tumor",
+    "naaccr_item" : 772,
+    "naaccr_xml_id" : "eodPrimaryTumor",
+    "default" : "999",
+    "table" : "extension_bbl",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_regional_nodes",
+    "name" : "EOD Regional Nodes",
+    "naaccr_item" : 774,
+    "naaccr_xml_id" : "eodRegionalNodes",
+    "default" : "999",
+    "table" : "nodes_dbd",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_mets",
+    "name" : "EOD Mets",
+    "naaccr_item" : 776,
+    "naaccr_xml_id" : "eodMets",
+    "default" : "00",
+    "table" : "eod_mets_30426",
+    "used_for_staging" : true
+  }, {
+    "key" : "ss2018",
+    "name" : "SS2018",
+    "naaccr_item" : 764,
+    "naaccr_xml_id" : "summaryStage2018",
+    "table" : "ss2018_corpus_carcinoma_and_carcinosarcoma_28794",
+    "used_for_staging" : false
+  }, {
+    "key" : "grade_clin",
+    "name" : "Grade Clinical",
+    "naaccr_item" : 3843,
+    "naaccr_xml_id" : "gradeClinical",
+    "default" : "9",
+    "table" : "grade_clinical_83264",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_path",
+    "name" : "Grade Pathological",
+    "naaccr_item" : 3844,
+    "naaccr_xml_id" : "gradePathological",
+    "default" : "9",
+    "table" : "grade_pathological_4783",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_post_therapy_clin",
+    "name" : "Grade Post Therapy Clin (yc)",
+    "naaccr_item" : 1068,
+    "naaccr_xml_id" : "gradePostTherapyClin",
+    "table" : "grade_post_therapy_clin_21162",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_post_therapy_path",
+    "name" : "Grade Post Therapy Path (yp)",
+    "naaccr_item" : 3845,
+    "naaccr_xml_id" : "gradePostTherapy",
+    "table" : "grade_post_therapy_path_87571",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "figo",
+    "name" : "FIGO Stage",
+    "naaccr_item" : 3836,
+    "naaccr_xml_id" : "figoStage",
+    "default" : "98",
+    "table" : "figo_stage_corpus_carcinoma_and_carcinosarcoma_69186",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "num_pos_pelvic_nodes",
+    "name" : "Number of Positive Pelvic Nodes",
+    "naaccr_item" : 3902,
+    "naaccr_xml_id" : "numberOfPositivePelvicNodes",
+    "default" : "X8",
+    "table" : "number_of_postive_pelvic_nodes_94512",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC"
+    } ]
+  }, {
+    "key" : "num_exam_pelvic_nodes",
+    "name" : "Number of Examined Pelvic Nodes",
+    "naaccr_item" : 3900,
+    "naaccr_xml_id" : "numberOfExaminedPelvicNodes",
+    "default" : "X8",
+    "table" : "number_of_examined_pelvic_nodes_60771",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC"
+    } ]
+  }, {
+    "key" : "num_pos_para_aortic_nodes",
+    "name" : "Number of Positive Para-aortic Nodes",
+    "naaccr_item" : 3901,
+    "naaccr_xml_id" : "numberOfPositiveParaAorticNodes",
+    "default" : "X8",
+    "table" : "number_of_positive_para_aortic_nodes_62533",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC"
+    } ]
+  }, {
+    "key" : "num_exam_para_aortic_nodes",
+    "name" : "Number of Examined Para-aortic Nodes",
+    "naaccr_item" : 3899,
+    "naaccr_xml_id" : "numberOfExaminedParaAorticNodes",
+    "default" : "X8",
+    "table" : "number_of_examined_para_aortic_nodes_38078",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC"
+    } ]
+  }, {
+    "key" : "peritoneal_cytology",
+    "name" : "Peritoneal Cytology",
+    "naaccr_item" : 3911,
+    "naaccr_xml_id" : "peritonealCytology",
+    "default" : "8",
+    "table" : "peritoneal_cytology_38674",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  } ],
+  "outputs" : [ {
+    "key" : "naaccr_schema_id",
+    "name" : "Schema ID",
+    "naaccr_item" : 3800,
+    "naaccr_xml_id" : "schemaId",
+    "default" : "00530"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "naaccr_item" : 995,
+    "naaccr_xml_id" : "ajccId",
+    "default" : "XX"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "naaccr_item" : 1060,
+    "naaccr_xml_id" : "tnmEditionNumber"
+  }, {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "Derived EOD 2018 T",
+    "naaccr_item" : 785,
+    "naaccr_xml_id" : "derivedEod2018T",
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_n",
+    "name" : "Derived EOD 2018 N",
+    "naaccr_item" : 815,
+    "naaccr_xml_id" : "derivedEod2018N",
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_m",
+    "name" : "Derived EOD 2018 M",
+    "naaccr_item" : 795,
+    "naaccr_xml_id" : "derivedEod2018M",
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_stage_group",
+    "name" : "Derived EOD 2018 Stage Group",
+    "naaccr_item" : 818,
+    "naaccr_xml_id" : "derivedEod2018StageGroup",
+    "default" : "88"
+  }, {
+    "key" : "ss2018_derived",
+    "name" : "Derived Summary Stage 2018",
+    "naaccr_item" : 762,
+    "naaccr_xml_id" : "derivedSummaryStage2018",
+    "default" : "9"
+  } ],
+  "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_28119",
+      "inputs" : [ "hist", "behavior" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
+    "id" : "summary_stage_2018",
+    "name" : "Summary Stage 2018",
+    "initial_context" : [ {
+      "key" : "eod_2018_t",
+      "value" : "90"
+    }, {
+      "key" : "eod_2018_n",
+      "value" : "90"
+    }, {
+      "key" : "eod_2018_m",
+      "value" : "90"
+    } ],
+    "tables" : [ {
+      "id" : "extension_bbl",
+      "inputs" : [ "peritoneal_cytology", "eod_primary_tumor" ],
+      "outputs" : [ "eod_2018_t", "ss2018_t" ]
+    }, {
+      "id" : "nodes_dbd",
+      "inputs" : [ "eod_regional_nodes" ],
+      "outputs" : [ "eod_2018_n", "ss2018_n" ]
+    }, {
+      "id" : "eod_mets_30426",
+      "inputs" : [ "eod_mets" ],
+      "outputs" : [ "eod_2018_m", "ss2018_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2018_m", "ss2018_n", "ss2018_t" ],
+      "outputs" : [ "ss2018_derived" ]
+    } ]
+  }, {
+    "id" : "eod_2018_stage_group",
+    "name" : "EOD 2018 Stage Group",
+    "inclusion_tables" : [ {
+      "id" : "tnm8_inclusions_tqg",
+      "inputs" : [ "ajcc_id" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "eod_2018_stage_group",
+      "value" : "90"
+    } ],
+    "tables" : [ {
+      "id" : "parse_t_2177",
+      "input_mapping" : [ {
+        "from" : "eod_2018_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_t",
+        "to" : "tmp_eod_t"
+      } ],
+      "inputs" : [ "eod_2018_t" ],
+      "outputs" : [ "t_prefix", "tmp_eod_t" ]
+    }, {
+      "id" : "parse_n_67182",
+      "input_mapping" : [ {
+        "from" : "eod_2018_n",
+        "to" : "n"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_n",
+        "to" : "tmp_eod_n"
+      } ],
+      "inputs" : [ "eod_2018_n" ],
+      "outputs" : [ "n_prefix", "tmp_eod_n" ]
+    }, {
+      "id" : "parse_m_47057",
+      "input_mapping" : [ {
+        "from" : "eod_2018_m",
+        "to" : "m"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_m",
+        "to" : "tmp_eod_m"
+      } ],
+      "inputs" : [ "eod_2018_m" ],
+      "outputs" : [ "m_prefix", "tmp_eod_m" ]
+    }, {
+      "id" : "tnm_8_path_stage_group_for_eod_7124",
+      "input_mapping" : [ {
+        "from" : "tmp_eod_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_eod_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_eod_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "eod_2018_stage_group"
+      } ],
+      "inputs" : [ "tmp_eod_n", "tmp_eod_m", "tmp_eod_t" ],
+      "outputs" : [ "eod_2018_stage_group" ]
+    } ]
+  }, {
+    "id" : "eod_tnm_cleanup",
+    "name" : "EOD TNM Cleanup",
+    "exclusion_tables" : [ {
+      "id" : "tnm8_inclusions_tqg",
+      "inputs" : [ "ajcc_id" ]
+    } ],
+    "tables" : [ {
+      "id" : "eod_tnm_component_cleanup_58170",
+      "inputs" : [ "ajcc_id" ],
+      "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
+    } ]
+  } ],
+  "involved_tables" : [ "ss2018_corpus_carcinoma_and_carcinosarcoma_28794", "radiation_surg_seq", "number_of_postive_pelvic_nodes_94512", "grade_clinical_83264", "nodes_pos_fpa", "parse_t_2177", "nodes_dbd", "schema_selection_corpus_carcinoma", "parse_n_67182", "tnm8_inclusions_tqg", "histology", "nodes_exam_76029", "lvi_full_56663", "tumor_size_summary_63115", "figo_stage_corpus_carcinoma_and_carcinosarcoma_69186", "behavior", "peritoneal_cytology_38674", "extension_bbl", "number_of_positive_para_aortic_nodes_62533", "peritoneal_cytology_with_primary_tumor_for_ss2018_t_66387", "grade_pathological_4783", "grade_post_therapy_path_87571", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "systemic_surg_seq", "ajcc_chapter_calculation_28119", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "number_of_examined_para_aortic_nodes_38078", "grade_post_therapy_clin_21162", "eod_mets_30426", "number_of_examined_pelvic_nodes_60771", "year_dx_validation", "summary_stage_rpa", "tnm_8_path_stage_group_for_eod_7124" ],
+  "last_modified" : "2021-07-28T19:33:13.820Z",
+  "on_invalid_input" : "CONTINUE"
+}

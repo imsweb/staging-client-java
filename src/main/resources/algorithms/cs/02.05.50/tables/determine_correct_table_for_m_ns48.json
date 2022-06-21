@@ -1,0 +1,22 @@
+{
+  "id" : "determine_correct_table_for_m_ns48",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Determine Correct Table for M",
+  "title" : "Determine Correct Table for M",
+  "last_modified" : "2015-05-27T16:19:04.963Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00,10,15-18,20,21,23-26,30,32,33,35-43,50-53,70,75,99", "Valid Codes", "JUMP:mets_hab" ], [ "01-09,11-14,19,22,27-29,31,34,44-49,54-69,71-74,76-98", "Invalid Codes. Some combinations of Stage under AJCC 6.", "JUMP:invalid_lung_m_values_ns49" ] ]
+}

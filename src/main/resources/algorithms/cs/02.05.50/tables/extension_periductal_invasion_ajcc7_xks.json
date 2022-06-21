@@ -1,0 +1,23 @@
+{
+  "id" : "extension_periductal_invasion_ajcc7_xks",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension Periductal Invasion AJCC7",
+  "title" : "Extension Periductal Invasion AJCC 7 Table",
+  "notes" : "**Note**:  For CS Extension codes 100-520, 580, 620, 631-650, 660-665, 675-755, 765-800 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Site-Specific Factor 10, as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:16.155Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf10",
+    "name" : "CS SSF 10",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100-170, 500-510", "000", "VALUE:T1" ], [ "200-270, 520, 631", "000", "VALUE:T2a" ], [ "300-475, 632, 650, 675", "000", "VALUE:T2b" ], [ "480", "000", "VALUE:T2NOS" ], [ "580, 620, 640-645, 660-665, 700-755, 765-800", "000", "VALUE:T3" ], [ "999", "000", "VALUE:TX" ], [ "100-170, 500-510", "010", "VALUE:T4" ], [ "200-270, 520, 631", "010", "VALUE:T4" ], [ "300-475, 632, 650, 675", "010", "VALUE:T4" ], [ "480", "010", "VALUE:T4" ], [ "580, 620, 640-645, 660-665, 700-755, 765-800", "010", "VALUE:T4 " ], [ "999", "010", "VALUE:T4" ], [ "100-170, 500-510", "988, 999", "VALUE:T1" ], [ "200-270, 520, 631", "988, 999", "VALUE:T2a" ], [ "300-475, 632, 650, 675", "988, 999", "VALUE:T2b" ], [ "480", "988, 999", "VALUE:T2NOS" ], [ "580, 620, 640-645, 660-665, 700-755, 765-800", "988, 999", "VALUE:T3" ], [ "999", "988, 999", "VALUE:TX" ] ]
+}

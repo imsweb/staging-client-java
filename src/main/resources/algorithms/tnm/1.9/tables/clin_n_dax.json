@@ -1,0 +1,28 @@
+{
+  "id" : "clin_n_dax",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin N Rectum",
+  "title" : "Clinical N",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS in this field.  Note 2 specifies when to code certain tumor deposits (TD) here.  Distant nodes are coded in M (distant metastasis).\n\n**Note 2:** Per UICC, \"Tumor deposits (satellites), i.e., macroscopic or microscopic nests or nodules, in the pericolorectal adipose tissue's lymph drainage area of a primary carcinoma without histological evidence of residual lymph node in the nodule, may represent discontinuous spread, venous invasion with extravascular spread (V1/2) or a totally replaced lymph node (N1/2). If such deposits are observed with lesions that would otherwise be classified as T1 or T2, then the T classification is not changed, but the nodule(s) is recorded as N1c. If a nodule is documented by the pathologist to be a totally replaced lymph node (generally having a smooth contour), it should be recorded as a positive lymph node and not as a satellite, and each nodule should be counted separately as a lymph node in the final pN determination.\" (1)\n\n**Note 3:**  Assign N1 if regional lymph nodes are involved but there is no indication of the number of nodes involved.\n\n**Regional lymph nodes**\n    \n**All sites** \n\n    Haemorrhoidal (hemorrhoidal) (middle, superior) \n    Inferior mesenteric \n    Mesenteric [NOS] \n    Perirectal \n    Rectal (middle) \n    Rectal [NOS] \n    Rectal (superior) \n    Rectosigmoid (paracolic/pericolic)\n    Sigmoidal (sigmoid mesenteric)\n\n    Regional lymph nodes, NOS\n    Lymph nodes, NOS\n\n**Rectosigmoid (C199)** \n\n    Colic, (NOS) \n    Left colic\n\n  **Rectum (C209)**\n\n    Hemorrhoidal (inferior) \n    Internal iliac (hypogastric)  \n    Lateral (laterosacral) \n    Middle (promontorial) (Gerota's node) \n    Obturator\n    Presacral\n    Rectal (inferior) \n    Sacral (NOS)\n    Sacral promontory",
+  "footnotes" : "(1) International Union Against Cancer (UICC) *TNM Classification of Malignant Tumors,* 7th ed., Sobin, LH, Gospodarowicz, M, Wittekind, CH, eds. New York: Wiley, 2009, pg., 103",
+  "last_modified" : "2018-05-14T21:29:00.796Z",
+  "definition" : [ {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n_display",
+    "name" : "Clinical N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cNX", "Regional lymph nodes cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess N\n    Regional lymph node involvement cannot be determined or findings inconclusive\nPhysician assigns cNX, no other information available to determine N" ], [ "c0", "cN0", "No regional lymph node metastasis", "" ], [ "c1", "cN1", "Metastasis in 1-3 regional lymph nodes", "Note: N1 has subcategories of N1a, N1b and N1c. Assign N1 only when there is no information available to assign one of the subcategories\n\nStated as N1 [NOS]" ], [ "c1A", "cN1a", "Metastasis in 1 regional lymph node", "Stated as N1a" ], [ "c1B", "cN1b", "Metastasis in 2-3 regional lymph nodes", "Stated as N1b" ], [ "c1C", "cN1c", "Tumor deposit(s), i.e., satellites, in the subserosa, or in non-peritonealized pericolic or perirectal soft tissue without regional lymph node metastasis", "Tumor deposits (TD) in the subserosa, mesentery, or nonperitonealized pericoic or perirectal tissues WITHOUT regional lymph node metastasis\n\nStated as N1c" ], [ "c2", "cN2", "Metastasis in 4 or more regional lymph nodes", "Note: N2 has subcategories of N2a and N2b. Assign N2 only when there is no information available to assign one of the subcategories\n\nStated as N2 [NOS]" ], [ "c2A", "cN2a", "Metastasis in 4-6 regional lymph nodes", "Stated as N2a" ], [ "c2B", "cN2b", "Metastasis in 7 or more regional lymph nodes", "Stated as N2b" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met\nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

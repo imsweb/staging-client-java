@@ -1,0 +1,19 @@
+{
+  "id" : "visceral_pleural_invasion_25940",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Visceral and Parietal Pleural Invasion",
+  "title" : "Visceral and Parietal Pleural Invasion",
+  "notes" : "**Note 1:** Physician statement of Visceral and Parietal Pleural Invasion can be used to code this data item when no other information is available.\n\n**Note 2:** Code 0 for in situ (behavior/2) tumors.\n\n**Note 3:** A surgical resection must be done to determine if the visceral and/or parietal pleural is involved. \n\n**Note 4:** Do not use imaging findings to code this data item\n\n**Note 5:** Code 9 when\n+ A FNA only is performed. A FNA is not adequate to assess pleural layer invasion \n + Surgical resection of the primary site is performed and there is no mention of visceral and/or parietal pleural invasion",
+  "last_modified" : "2020-05-17T14:53:05.051Z",
+  "definition" : [ {
+    "key" : "visceral_pleural_invasion",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "No evidence of visceral pleural invasion identified\nTumor does not completely traverse the elastic layer of the pleura\nStated as PL0" ], [ "4", "Invasion of visceral pleura present, NOS \nStated as PL1 or PL2" ], [ "5", "Tumor invades into or through the parietal pleura OR chest wall\nStated as PL3" ], [ "6", "Tumor extends to pleura, NOS; not stated if visceral or parietal" ], [ "8", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nNo surgical resection of primary site is performed\nVisceral Pleural Invasion not assessed or unknown if assessed or cannot be determined" ] ]
+}

@@ -1,0 +1,23 @@
+{
+  "id" : "peripheral_blood_involv_92357",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Peripheral Blood Involv",
+  "title" : "Peripheral Blood Involvement",
+  "notes" : "**Note 1:** The categories for peripheral blood involvement (B rating) are\n* B0: No significant blood involvement \n* B1: Low blood tumor burden \n* B2: High blood tumor burden\n\n**Note 2:** Physician statement of B rating can be used to code this data item.\n\n**Note 3:** If counts or percentages of neoplastic cells and clonality test results are available, but a B rating is not stated by the physician, the registrar can use the information and assign a B rating and code this data item accordingly. If this information is not available, code 9.",
+  "last_modified" : "2019-04-05T16:52:38.540Z",
+  "definition" : [ {
+    "key" : "peripheral_blood_involv",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "b_map",
+    "name" : "B Map",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0", "Absence of significant blood involvement\n5% or less of peripheral blood lymphocytes are atypical (Sezary) cells \nClone unknown\n\nStated as B0", "VALUE:B0" ], [ "1", "Absence of significant blood involvement\n5% or less of peripheral blood lymphocytes are atypical (Sezary) cells \nClone negative\n\nStated as B0a", "VALUE:B0a" ], [ "2", "Absence of significant blood involvement: \n5% or less of peripheral blood lymphocytes are atypical (Sezary) cells \nClone positive\n\nStated as B0b", "VALUE:B0b" ], [ "3", "Low blood tumor burden\nMore than 5% of peripheral blood lymphocytes are atypical (Sezary) cells but does not meet the criteria of B2 \nClone unknown\n\nStated as B1", "VALUE:B1" ], [ "4", "Low blood tumor burden\nMore than 5% of peripheral blood lymphocytes are atypical (Sezary) cells but does not meet the criteria of B2 \nClone negative\n\nStated as B1a", "VALUE:B1a" ], [ "5", "Low blood tumor burden\nMore than 5% of peripheral blood lymphocytes are atypical (Sezary) cells but does not meet the criteria of B2 \nClone positive\n\nStated as B1b", "VALUE:B1b" ], [ "6", "High blood tumor burden\nGreater than or equal to 1000 Sezary cells per microliter (uL) \nClone positive\n\nStated as B2", "VALUE:B2" ], [ "7", "Test ordered, results not in chart", "VALUE:BX" ], [ "9", "Not documented in medical record\nPeripheral Blood Involvement not assessed or unknown if assessed", "VALUE:BX" ], [ "", "Death Certificate Only, no value provided", "VALUE:BX" ] ]
+}

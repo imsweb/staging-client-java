@@ -1,0 +1,23 @@
+{
+  "id" : "combined_s_category_34866",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Combined S Category",
+  "title" : "Combined S Category",
+  "last_modified" : "2021-04-13T23:23:39.418Z",
+  "definition" : [ {
+    "key" : "s_category_clin",
+    "name" : "S Clin",
+    "type" : "INPUT"
+  }, {
+    "key" : "s_category_path",
+    "name" : "S Path",
+    "type" : "INPUT"
+  }, {
+    "key" : "s_category_combined",
+    "name" : "S Combined",
+    "type" : "ENDPOINT"
+  } ],
+  "extra_input" : [ "s_category_path", "s_category_clin" ],
+  "rows" : [ [ "0-3,9", "0-3", "VALUE:{{s_category_path}}" ], [ "0", "5", "VALUE:{{s_category_clin}}" ], [ "1-3,9", "5", "ERROR:If S Category Pathological is 5, S Category Clinical should be 0" ], [ "0-3", "9", "VALUE:{{s_category_clin}}" ], [ "9", "9", "VALUE:{{s_category_path}}" ], [ "", "", "VALUE:9" ] ]
+}

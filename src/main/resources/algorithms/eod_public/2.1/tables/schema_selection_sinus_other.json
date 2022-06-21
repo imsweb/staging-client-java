@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_sinus_other",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection SinusOther",
+  "title" : "Schema selection for SinusOther",
+  "last_modified" : "2021-04-29T15:47:27.169Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C312-C313,C318-C319", "8000-8700", "MATCH" ] ]
+}

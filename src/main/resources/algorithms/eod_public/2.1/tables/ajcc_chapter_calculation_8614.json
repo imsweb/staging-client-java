@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_chapter_calculation_8614",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2021-03-16T16:29:42.184Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8000,8010,8140", "3", "VALUE:60", "Kidney", "VALUE:08" ], [ "8255,8260", "3", "VALUE:60", "Kidney", "VALUE:08" ], [ "8310-8312,8316-8319,8323", "3", "VALUE:60", "Kidney", "VALUE:08" ], [ "8480,8510", "3", "VALUE:60", "Kidney", "VALUE:08" ], [ "8000,8010,8140", "2", "VALUE:XX", "Other Kidney", "VALUE:88" ], [ "8255,8260", "2", "VALUE:XX", "Other Kidney", "VALUE:88" ], [ "8310-8312,8316-8319,8323", "2", "VALUE:XX", "Other Kidney", "VALUE:88" ], [ "8480,8510", "2", "VALUE:XX", "Other Kidney", "VALUE:88" ], [ "8001-8005,8011-8131,8141-8254", "*", "VALUE:XX", "Other Kidney", "VALUE:88" ], [ "8256-8257,8261-8300", "*", "VALUE:XX", "Other Kidney", "VALUE:88" ], [ "8313-8315,8320-8322,8324-8474", "*", "VALUE:XX", "Other Kidney", "VALUE:88" ], [ "8481-8509,8512-8700,8720-8790", "*", "VALUE:XX", "Other Kidney", "VALUE:88" ] ]
+}

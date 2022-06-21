@@ -1,0 +1,26 @@
+{
+  "id" : "thyroid_ajcctnm7_stage_thyroid_anaplastic",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "TNM 7 Stage Thyroid Anaplastic",
+  "title" : "TNM 7 Stage-Thyroid: Anaplastic",
+  "last_modified" : "2018-05-14T21:29:00.362Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "4A", "0", "0", "VALUE:4A" ], [ "4A", "1A", "0", "VALUE:4A" ], [ "4A", "1B", "0", "VALUE:4A" ], [ "4A", "1", "0", "VALUE:4A" ], [ "4A", "X", "0", "VALUE:4A" ], [ "4B", "0", "0", "VALUE:4B" ], [ "4B", "1A", "0", "VALUE:4B" ], [ "4B", "1B", "0", "VALUE:4B" ], [ "4B", "1", "0", "VALUE:4B" ], [ "4B", "X", "0", "VALUE:4B" ], [ "4", "0", "0", "VALUE:4" ], [ "4", "1A", "0", "VALUE:4" ], [ "4", "1B", "0", "VALUE:4" ], [ "4", "1", "0", "VALUE:4" ], [ "4", "X", "0", "VALUE:4" ], [ "4A", "0", "1", "VALUE:4C" ], [ "4A", "1A", "1", "VALUE:4C" ], [ "4A", "1B", "1", "VALUE:4C" ], [ "4A", "1", "1", "VALUE:4C" ], [ "4A", "X", "1", "VALUE:4C" ], [ "4B", "0", "1", "VALUE:4C" ], [ "4B", "1A", "1", "VALUE:4C" ], [ "4B", "1B", "1", "VALUE:4C" ], [ "4B", "1", "1", "VALUE:4C" ], [ "4B", "X", "1", "VALUE:4C" ], [ "4", "0", "1", "VALUE:4C" ], [ "4", "1A", "1", "VALUE:4C" ], [ "4", "1B", "1", "VALUE:4C" ], [ "4", "1", "1", "VALUE:4C" ], [ "4", "X", "1", "VALUE:4C" ], [ "88", "88", "88", "VALUE:88" ] ]
+}

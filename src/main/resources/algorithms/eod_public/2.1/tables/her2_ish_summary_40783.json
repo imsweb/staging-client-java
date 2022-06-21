@@ -1,0 +1,19 @@
+{
+  "id" : "her2_ish_summary_40783",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "HER2 ISH Summary",
+  "title" : "HER2 ISH Summary",
+  "notes" : "**Note 1:** This SSDI is no longer required by any of the standard setters starting with 2021 diagnoses. \n* For cases diagnosed 2021+, this SSDI may be left blank\n\n**Note 2:** Physician statement of HER2 in situ hybridization (ISH) Summary can be used to code this data item when no other information is available.\n\n**Note 3:** The HER2 ISH test performed on the primary breast tissue is to be recorded in this data item. \n\n**Note 4:** Results from nodal or metastatic tissue may be used, **ONLY** when there is no evidence of primary tumor.\n\n**Note 5:** Any type of ISH test (e.g., FISH, CISH, SISH) can be used to code this data item. The same test should be used to code all the HER2 ISH data items.\n\n**Note 6:** In cases where there are invasive and in situ components and HER2 ISH is done on both, ignore the in situ results.\n* If HER2 ISH is positive on an in situ component and HER2 ISH is negative on all tested invasive components, code HER2 ISH as negative (code 0)\n* If in situ and invasive components present and HER2 ISH only done on the in situ component, code unknown (code 9)\n\n**Note 7:** In cases where there is a single tumor with multiple biopsies and/or surgical resection with different HER2 ISH results\n* Use the highest (positive versus negative).\n\n**Note 8:** In cases where there are multiple tumors with different HER2 ISH results, code the results from the largest tumor size (determined either clinically or pathologically) when multiple tumors are present. \n* Do not use specimen size to determine the largest tumor size\n\n**Note 9:** If neoadjuvant therapy is given, record the assay from tumor specimens prior to neoadjuvant therapy.\n* If neoadjuvant therapy is given and there are no HER2 ISH results from pre-treatment specimens, report the findings from post-treatment specimens\n\n**Note 10:** An immunohistochemistry (IHC) test identifies the protein expressed by the gene (ERBB2), and an ISH test identifies the number of copies of the gene (ERBB2) itself.\n\n**Note 11:** HER2 is not routinely done on pure in situ tumors (behavior /2); however, if you have an in situ tumor and there are HER2 results, go ahead and record it. Otherwise code 9.",
+  "last_modified" : "2021-06-09T17:31:44.815Z",
+  "definition" : [ {
+    "key" : "her2_ish_summary",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Negative  [not amplified]" ], [ "2", "Equivocal " ], [ "3", "Positive [amplified]" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nResults cannot be determined (indeterminate)\nBorderline\nHER2 ISH Summary not assessed or unknown if assessed" ], [ "", "N/A-Diagnosis year is after 2020" ] ]
+}

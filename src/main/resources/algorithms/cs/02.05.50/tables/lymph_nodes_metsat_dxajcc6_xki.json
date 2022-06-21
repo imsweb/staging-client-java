@@ -1,0 +1,22 @@
+{
+  "id" : "lymph_nodes_metsat_dxajcc6_xki",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Lymph Nodes Mets at DX AJCC6",
+  "title" : "Lymph Nodes Mets at DX AJCC 6 Table",
+  "last_modified" : "2015-05-27T16:19:25.029Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "CS Lymph Nodes",
+    "type" : "INPUT"
+  }, {
+    "key" : "mets",
+    "name" : "CS Mets at DX",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000,100,110,200,210", "00", "VALUE:M0" ], [ "220,230", "00", "VALUE:M1" ], [ "250,500,700,800,999", "00", "VALUE:M0" ], [ "000,100,110,200,210", "99", "VALUE:MX" ], [ "220,230", "99", "VALUE:M1" ], [ "250,500,700,800,999", "99", "VALUE:MX" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "anus_t_35615",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin T Anus",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  High-grade squamous intraepithelial lesions (HSIL) and anal intraepithelial neoplasia (AIN) grade II-III are not normally collected by cancer registries.  \n* AIN II-III or AIN III is reportable to standard-setters (except the Commission on Cancer)\n* Assign pTis if your registry collects these tumors\n\n**Note 2:** Tumor size must be known to assign a value of T1, T2 or T3. You may use a physician’s statement of the T category if this is the only information in the medical record. \n* If the tumor appears to be in the T1, T2 or T3 categories, but no size or category is specified, assign TX\n\n**Note 3:** Assign the appropriate T category (T1, T2, or T3) based on the tumor size for the following descriptions\n\n    Invasive tumor confined to mucosa, NOS (including intramucosal, NOS)\n\n    Invades\n       Lamina propria\n       Muscularis mucosae\n       Submucosa (superficial invasion)\n       Muscularis propria (internal sphincter)\n\n    Ischiorectal fat/tissue\n    Perianal skin\n    Perirectal skin\n    Rectal mucosa or submucosa\n    Rectal wall\n    Skeletal muscle(s)\n        Anal sphincter (external)\n        Levator ani\n    Subcutaneous perianal tissue\n\n    Confined to anus\n    Localized, NOS\n\n**Note 4:**  Code incidental finding of malignancy in hemorrhoid according to greatest extension of tumor into wall of anus. \n* Assign T1 for localized, NOS if extension not specified\n\n**Note 5:**  Assign T4 for contiguous extension from the site of origin. Discontinuous involvement is assigned in M (distant metastasis).",
+  "last_modified" : "2018-05-14T21:29:00.088Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T\n    Extension cannot be determined \n    Tumor size (TS) unknown for T categories where TS  needed to determine T\nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor", "" ], [ "pIS", "pTis", "Carcinoma in situ\nBowen disease\nHigh-grade Squamous Intraepithelial Lesion (HSIL)\nAnal Intraepithelial Neoplasia II-III (AIN II-III)", "Intraepithelial, noninvasive\n\nStated as Tis" ], [ "c1", "cT1", "Tumor 2 cm or less in greatest dimension", "Stated as T1" ], [ "c2", "cT2", "Tumor more than 2 cm but not more than 5 cm\nin greatest dimension", "Stated as T2" ], [ "c3", "cT3", "Tumor more than 5 cm in greatest dimension", "Stated as T3" ], [ "c4", "cT4", "Tumor of any size invades adjacent organ(s), \ne.g., vagina, urethra, bladder", "Adjacent organs: \n    Bladder\n    Broad ligament(s)\n    Cervix uteri\n    Corpus uteri\n    Pelvic peritoneum\n    Perineum\n    Prostate\n    Urethra\n    Vagina\n    Vulva\n\nFurther contiguous extension\n\nStated as T4" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

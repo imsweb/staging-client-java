@@ -1,0 +1,19 @@
+{
+  "id" : "ln_status_pelvic_31753",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "LN Status: Pelvic",
+  "title" : "LN Status: Pelvic",
+  "notes" : "**Note 1:** Physician statement of pelvic status can be used to code this data item when no other information is available. \n\n**Note 2:** The following are pelvic nodes\n* Iliac, NOS\n  + Common\n  + External\n  + Internal (hypogastric) (obturator)\n* Paracervical\n* Parametrial\n* Pelvic, NOS\n* Sacral, NOS\n  + Lateral (laterosacral)\n  + Middle (promontorial) (Gerota's node)\n  + Uterosacral\n\n**Note 3:** If there is no mention of pelvic lymph node involvement in the area being imaged, biopsied, or in the surgical field and there is no mention of involvement, then assume that the pelvic lymph nodes are negative.\n\n**Note 4:** For this data item, do not include isolated tumor cells (ITCs).\n\n**Note 5:** If there is no imaging, biopsy, or surgical work up, code 9.\n\n**Note 6:** The assessment method is recorded in LN Assessment Method Pelvic [NAACCR Data Item #3873]",
+  "last_modified" : "2021-05-27T21:29:09.960Z",
+  "definition" : [ {
+    "key" : "ln_status_pelvic",
+    "name" : "LN Status Pelvic",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Negative pelvic lymph nodes" ], [ "1", "Positive pelvic lymph nodes" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nPelvic lymph node(s) not assessed or unknown if assessed" ] ]
+}

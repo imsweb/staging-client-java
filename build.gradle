@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
     id 'checkstyle'
-    id "com.github.spotbugs" version "5.0.6"
+    id "com.github.spotbugs" version "5.0.8"
     id 'jacoco'
     id 'maven-publish'
     id 'signing'
@@ -13,7 +13,7 @@ plugins {
 }
 
 group = 'com.imsweb'
-version = '6.3.0'
+version = '7.0-SNAPSHOT'
 description = 'Java client library for staging calculations'
 
 // fail the build if there are compiler warnings
@@ -28,10 +28,6 @@ java {
 
     withJavadocJar()
     withSourcesJar()
-
-    registerFeature('updateSupport') {
-        usingSourceSet(sourceSets.main)
-    }
 }
 
 repositories {
@@ -39,7 +35,7 @@ repositories {
 }
 
 dependencies {
-    spotbugs 'com.github.spotbugs:spotbugs:4.6.0'
+    spotbugs 'com.github.spotbugs:spotbugs:4.7.0'
 
     api "com.fasterxml.jackson.core:jackson-core:2.13.3"
     api "com.fasterxml.jackson.core:jackson-annotations:2.13.3"
@@ -53,12 +49,11 @@ dependencies {
 
     implementation 'org.slf4j:slf4j-api:1.7.36'
 
-    // split the seerapi-client-java dependency to an optional feature
-    updateSupportImplementation 'com.imsweb:seerapi-client-java:5.1'
-
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'org.assertj:assertj-core:3.23.1'
     testImplementation 'org.slf4j:slf4j-simple:1.7.36'
+    testImplementation 'com.imsweb:seerapi-client-java:5.1'
+
 }
 
 jar {
@@ -86,7 +81,7 @@ spotbugs {
 
 jacocoTestReport {
     reports {
-        xml.enabled true
+        xml.required = true
     }
 }
 test.finalizedBy jacocoTestReport
@@ -129,6 +124,12 @@ ossIndexAudit {
     }
 }
 check.dependsOn 'ossIndexAudit'
+
+// run the full CS integration test suite
+task csIntegrationTest(type: JavaExec) {
+    mainClass.set('com.imsweb.staging.cs.CsIntegrationTest')
+    classpath = sourceSets.test.runtimeClasspath
+}
 
 // don't try to release a snapshot to a non-snapshot repository, that won't work anyway
 if (version.endsWith('-SNAPSHOT')) {

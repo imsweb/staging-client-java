@@ -1,0 +1,19 @@
+{
+  "id" : "grade_clinical_19087",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Grade Clinical",
+  "title" : "Grade Clinical",
+  "notes" : "**Note 1:** Grade is applicable for the follicular lymphomas only (9690/3, 9691/3, 9695/3, 9698/3).  For all other lymphoma histologies, code 9.\n\n**Note 2:** Grade Clinical must not be blank.\n\n**Note 3:** Assign the highest grade from the primary tumor assessed during the clinical time frame. \n\n**Note 4:** If there are multiple tumors with different grades abstracted as one primary, code the highest grade.\n\n**Note 5:** Follicular lymphoma grade is based on the absolute number of centroblasts per high-power (40 x objective, 0.159 square mm) microscopic field (HPF).\n\n**Note 6:** Code 9 (unknown) when \n* Grade from primary site is not documented\n* Clinical workup is not done (for example, cancer is an incidental finding during surgery for another condition)\n* Grade checked \"not applicable\" on CAP Protocol (if available) and no other grade information is available\n\n**Note 7:** If there is only one grade available and it cannot be determined if it is clinical or pathological, assume it is a Grade Clinical and code appropriately per Grade Clinical categories for that site, and then code unknown (9) for Grade Pathological, and blank for Grade Post Therapy Clin (yc) and Grade Post Therapy Path (yp).",
+  "last_modified" : "2021-03-03T19:13:23.530Z",
+  "definition" : [ {
+    "key" : "grade_clin",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "G1: 0-5 centroblasts per 10 HPF" ], [ "2", "G2: 6-15 centroblasts per 10 HPF" ], [ "3", "G3: More than 15 centroblasts per 10 HPF but with admixed centrocytes" ], [ "4", "G4: More than 15 centroblasts per 10 HPF but without centrocytes " ], [ "9", "Grade cannot be assessed (GX); Unknown \nNot a follicular histology (9690/3, 9691/3, 9695/3, 9698/3)" ] ]
+}

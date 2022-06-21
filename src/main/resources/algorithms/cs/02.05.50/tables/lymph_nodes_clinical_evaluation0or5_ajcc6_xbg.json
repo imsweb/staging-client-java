@@ -1,0 +1,19 @@
+{
+  "id" : "lymph_nodes_clinical_evaluation0or5_ajcc6_xbg",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Lymph Nodes Clinical Evaluation 0 or 5 AJCC6",
+  "title" : "Lymph Nodes Clinical Evaluation 0 or 5 AJCC 6 Table",
+  "notes" : "**Note**:  This table is used when CS Lymph Nodes is 100-500 and CS Lymph Nodes Eval is 0 or 5.  The N category is determined based on the value of CS Site-Specific Factor 1, Clinical Assessment of Regional Lymph Nodes.",
+  "last_modified" : "2015-05-27T16:19:23.204Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "CS SSF 1",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "ERROR:" ], [ "100", "VALUE:N1" ], [ "200", "VALUE:N2" ], [ "300", "VALUE:N3" ], [ "400", "VALUE:N1" ], [ "888", "ERROR:" ], [ "988", "VALUE:N1" ], [ "999", "VALUE:N1" ] ]
+}

@@ -1,0 +1,20 @@
+{
+  "id" : "ssf2_kph",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF2",
+  "title" : "CS Site-Specific Factor 2",
+  "subtitle" : "OBSOLETE - Clinical Assessment of Regional Lymph Nodes",
+  "notes" : "**Note**:  This CS Site-Specific Factor is obsolete beginning with CS Version 2 (codes, code descriptions, and notes).  Old data are retained during conversion, but new cases are not coded 000-888 or 999.  Use code 988 for this field.\n\n**OBSOLETE V0200 Note**:  In the rare instance that the number of clinically positive nodes is stated but a clinical N category is not stated, code 1-3 nodes as 100 (N1), and 4 or more nodes as 200 (N2).",
+  "last_modified" : "2015-05-27T16:20:04.014Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "OBSOLETE DATA RETAINED V0200\n\nNodes not clinically evident" ], [ "100", "OBSOLETE DATA RETAINED V0200\n\nClinically N1" ], [ "200", "OBSOLETE DATA RETAINED V0200\n\nClinically N2" ], [ "400", "OBSOLETE DATA RETAINED V0200\n\nClinically positive regional nodes, NOS" ], [ "888", "OBSOLETE DATA CONVERTED V0200\nSee code 988\n\nNot applicable" ], [ "988", "Not applicable:  Information not collected for this schema" ], [ "999", "OBSOLETE DATA RETAINED V0200\n\nUnknown if nodes are clinically evident" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "grade_clinical_25704",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Grade Clinical",
+  "title" : "Grade Clinical",
+  "notes" : "**Note 1:** Grade Clinical must not be blank.\n\n**Note 2:** Assign the highest grade from the primary tumor assessed during the clinical time frame. \n\n**Note 3:** If there are multiple tumors with different grades abstracted as one primary, code the highest grade.\n\n**Note 4:** Codes L and H take priority over A-D. \n\n**Note 5:** Code 9 (unknown) when \n* Grade from primary site is not documented\n* Clinical workup is not done (for example, cancer is an incidental finding during surgery for another condition)\n* Grade checked \"not applicable\" on CAP Protocol (if available) and no other grade information is available\n\n**Note 6:** If there is only one grade available and it cannot be determined if it is clinical or pathological, assume it is a Grade Clinical and code appropriately per Grade Clinical categories for that site, and then code unknown (9) for Grade Pathological, and blank for Grade Post Therapy Clin (yc) and Grade Post Therapy Path (yp).",
+  "last_modified" : "2020-05-29T14:00:49.405Z",
+  "definition" : [ {
+    "key" : "grade_clin",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "L", "LG: Low grade: round monomorphic nuclei with only mild to moderate nuclear size variation, indistinct nucleoli, and chromatin characteristics resembling those of normal parathyroid or of adenoma" ], [ "H", "HG: High grade: more pleomorphism, with a nuclear size variation greater than 4:1; prominent nuclear membrane irregularities; chromatin alterations, including hyperchromasia or margination of chromatin; and prominent nucleoli. High-grade tumors show several discrete confluent areas with nuclear changes" ], [ "A", "Well differentiated" ], [ "B", "Moderately differentiated" ], [ "C", "Poorly differentiated" ], [ "D", "Undifferentiated, anaplastic" ], [ "9", "Grade cannot be assessed (GX); Unknown" ] ]
+}

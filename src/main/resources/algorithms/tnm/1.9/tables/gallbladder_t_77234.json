@@ -1,0 +1,27 @@
+{
+  "id" : "gallbladder_t_77234",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Path T Gallbladder",
+  "title" : "Pathologic T",
+  "notes" : "**Note:** Ignore extension from gallbladder to cystic duct.  Ignore extension to extrahepatic bile ducts or ampulla of Vater (T3) when other structures in T4 are involved.",
+  "last_modified" : "2018-05-14T21:29:01.122Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pTX", "Primary tumor cannot be assessed", "Pathologic classification criteria met, evaluation done: \n    Physician unable to assess T\n    Surgical resection of primary tumor, extension not stated \nPhysician assigns pTX, no other information available to determine T" ], [ "p0", "pT0", "No evidence of primary tumor", "" ], [ "pIS", "pTis", "Carcinoma in situ", "Intraepithelial, noninvasive\n\nStated as Tis" ], [ "p1", "pT1", "Tumor invades lamina propria or muscular layer", "Note: T1 has subcategories of T1a and T1b. Assign T1 only when there is no information available to assign one of the subcategories\n\nConfined to gallbladder, NOS\nLocalized, NOS\n\nStated as T1 [NOS]" ], [ "p1A", "pT1a", "Tumor invades lamina propria", "Invasive tumor confined to:\n    Lamina propria\n    Mucosa, NOS\n    Submucosa (superficial invasion)\n\nStated as T1a" ], [ "p1B", "pT1b", "Tumor invades muscular layer", "Muscularis propria\n\nStated as T1b" ], [ "p2", "pT2", "Tumor invades perimuscular connective tissue; no extension beyond serosa or into liver", "Perimuscular connective tissue\n\nStated as T2" ], [ "p3", "pT3", "Tumor perforates the serosa (visceral peritoneum) and/or directly invades the liver and/or one other adjacent organ or structure, such as: \n    Stomach\n    Duodenum\n    Colon\n    Pancreas\n    Omentum\n    Extrahepatic bile ducts", "Invasion of/through serosa (visceral peritoneum)\n\nExtension to:   \n    Abdominal wall\n    Ampulla of Vater\n    Branch(es) of hepatic artery (right or left) but not into main portal vein or hepatic artery\n    Branch(es) of portal vein (right or left)\n    Cystic artery vein\n    Diaphragm\n    Small intestine\n\nExtension into:\n     Liver \n\nStated as T3" ], [ "p4", "pT4", "Tumor invades main portal vein or hepatic artery or invades two or more extrahepatic organs or structures", "Extension to:\n    Common hepatic artery\n    Main portal vein\n    Hepatic artery, NOS\n    Portal vein, NOS\n\nFurther contiguous extension\n\nStated as T4" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nPathologic classification criteria met, evaluation done: \n    Results not documented in patient record \n    No surgical resection of  known primary tumor (not T0) \n    Resection insufficient for site-specific pathologic assessment\nNo surgical resection of primary tumor and there isn’t a positive biopsy of a structure in the highest T category and highest N category\nEvidence of metastatic disease (pM1), no other workup\nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

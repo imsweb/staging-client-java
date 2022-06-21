@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_nasopharynx_40813",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin T Nasopharynx",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  Parapharyngeal involvement denotes postero-lateral infiltration of tumor beyond the pharyngobasilar fascia.  The pharyngobasilar fascia is the fibrous layer of the pharyngeal wall between the mucosa and the muscular layer, attached superiorly to the basilar part of the occipital bone and diminishing in thickness as it descends.\n\n**Note 2:**  The masticator space primarily consists of the muscles of mastication, the medial and lateral pterygoid, masseter, and temporalis muscles.  The space also includes the ramus of the mandible and the third division of cranial nerve V as it passes through the foramen ovale into the suprahyoid neck.",
+  "last_modified" : "2018-05-14T21:29:00.845Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T \n    Extension cannot be determined\nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor", "" ], [ "pIS", "pTis", "Carcinoma in situ", "Intraepithelial, noninvasive\n\nStated as Tis" ], [ "c1", "cT1", "Tumor confined to nasopharynx, OR \nextends to oropharynx and/or nasal cavity", "Invasive tumor confined to one of the following subsites:\n    Inferior wall (superior surface of soft palate)\n    One lateral wall\n    Posterior superior wall (vault)\n\nInvolvement of two or more subsites:\n    Lateral wall extending into eustachian \n    tube/middle ear\n    Posterior, inferior, or lateral wall(s)\n\nOropharynx\nSoft palate, inferior surface including uvula\nWITHOUT parapharyngeal extension\n\nNasal cavity WITHOUT parapharyngeal extension\n\nExtension to soft tissue, NOS (excluding soft tissue of neck)\n\nConfined to nasopharynx\nLocalized, NOS\n\nStated as T1" ], [ "c2", "cT2", "Tumor with parapharyngeal extension", "Involvement of any T1 tumor: \nWITH fixation or tumor described only as FIXED WITH parapharyngeal extension\n\nPterygopalatine fossa WITHOUT bone invasion\n\nStated as T2" ], [ "c3", "cT3", "Tumor invades bony structures of skull base and/or paranasal sinuses", "Bone, NOS\nBony structures of skull base\nCartilage, NOS\nFloor of orbit\nHard palate\nParanasal sinus\n\nStated as T3" ], [ "c4", "cT4", "Tumor with intracranial extension and/or involvement of: \n    Cranial nerves\n    Hypopharynx\n    Orbit \n\nOR with extension to the infratemporal fossa/masticator space", "Brain\nCranial nerve involvement\nHypopharynx\nInfratemporal fossa/masticator space\nIntracranial extension, NOS\nOrbit except bone of floor of orbit \n\nFurther contiguous extension including:\n    Soft tissues of neck\n\nStated as T4" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

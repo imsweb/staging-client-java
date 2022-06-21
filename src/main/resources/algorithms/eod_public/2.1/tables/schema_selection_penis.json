@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_penis",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection Penis",
+  "title" : "Schema selection for Penis",
+  "last_modified" : "2021-04-29T17:54:35.824Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C600-C602,C608-C609", "8000-8040, 8042-8180, 8191-8246, 8248-8700", "MATCH" ] ]
+}

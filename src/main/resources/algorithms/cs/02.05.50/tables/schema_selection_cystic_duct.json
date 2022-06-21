@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_cystic_duct",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection CysticDuct",
+  "title" : "Schema selection for CysticDuct",
+  "last_modified" : "2015-05-27T16:19:42.106Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf25",
+    "name" : "Schema Discriminator: BileDuctsDistal/BileDuctsPerihilar/CysticDuct",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C240", "8000-9136,9141-9582,9700-9701", "030", "MATCH" ] ]
+}

@@ -1,0 +1,20 @@
+{
+  "id" : "ssf5_nab",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF5",
+  "title" : "Site-Specific Factor 5",
+  "subtitle" : "Size of Metastasis in Lymph Nodes",
+  "notes" : "**Note 1:** If the only information on the size of the metastatic lymph node mass is the physician's assignment of the N category, assign code 010 for N1, 020 for N2, or 030 for N3.\n\n**Note 2:** If extranodal extension is not described on the pathology report or pathologic assessment of regional lymph nodes is not performed, assume extranodal extension is not present.\n\n**Note 3:** Do not code the size of any distant lymph node(s).",
+  "last_modified" : "2018-05-14T21:29:00.297Z",
+  "definition" : [ {
+    "key" : "ssf5",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No lymph node metastasis" ], [ "010", "Lymph node metastasis mass 2 centimeter (cm) or less in greatest dimension\nWITHOUT pathologic extranodal extension of tumor \n(See Note 2)\n\nStated as N1 with no other information on regional lymph nodes" ], [ "020", "Lymph node metastasis mass more than 2 cm but not more than 5 cm in greatest dimension\nOR pathologic extranodal extension of tumor\n\nStated as N2 with no other information on regional lymph nodes" ], [ "030", "Lymph node metastasis mass more than 5 cm in greatest dimension\n\nStated as N3 with no other information on regional lymph nodes" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Regional lymph nodes involved, size of lymph node mass not stated\nUnknown if regional nodes involved\nNot documented in patient record" ] ]
+}

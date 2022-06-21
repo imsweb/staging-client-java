@@ -1,0 +1,19 @@
+{
+  "id" : "ca_19_9_pretx_lab_value_17332",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "CA 19-9 PreTx Lab Value",
+  "title" : "Carbohydrate Antigen 19-9 Pretreatment Lab Value",
+  "notes" : "**Note 1:** This SSDI is effective for diagnosis years 2021+\n* For cases diagnosed 2018-2020, leave this SSDI blank\n\n**Note 2:** Physician statement of CA 19-9 (Carbohydrate Antigen 19-9) Pretreatment Lab Value can be used to code this data item when no other information is available.\n\n**Note 3:** Record the lab value of the highest CA 19-9 test result documented in the medical record prior to treatment. The lab value may be recorded in a lab report, history and physical, or clinical statement in the pathology report\n\n**Note 4:** A known lab value takes priority over codes XXXX.2 and XXXX.3\n* The lab value takes priority even if the physician documents the interpretation\n   * *Example:* Patient noted to have a CA 19-9 of 3,219. Physician notes that the value is elevated\n   * Code 3219.0 instead of XXXX.3 (elevated)\n\n**Note 5:** CA 19-9 is a tumor marker that has value in the management of certain malignancies.\n\n**Note 6:** Record to the nearest tenth in Units/milliliter (U/ml), the highest CA 19-9 lab value documented in the medical record prior to treatment. \n * Example 1: Code a pretreatment CA 19-9 of 7 U/ml as 7.0\n * Example 2: Code a pretreatment CA 19-9 of 1672.3 U/ml as 1672.3\n\n**Note 7:** Record 0.1 when the lab results are stated as less than 0.1 U/ml with no exact value.",
+  "last_modified" : "2021-04-01T17:59:44.537Z",
+  "definition" : [ {
+    "key" : "ca19_9_pretx_lab_value",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0", "0.0 Units/milliliter (U/ml) exactly" ], [ "0.1-9999.9", "0.1-9999.9 U/ml\n(Exact value to nearest tenth in U/ml)" ], [ "XXXX.1", "10,000 U/ml or greater" ], [ "XXXX.2", "Lab value not available, physician states CA 19-9 is negative/normal" ], [ "XXXX.3", "Lab value not available, physician states CA 19-9 is positive/elevated/high" ], [ "XXXX.7", "Test ordered, results not in chart  " ], [ "XXXX.8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code XXXX.8 may result in an edit error.)" ], [ "XXXX.9", "Not documented in medical record\nCA (Carbohydrate Antigen) 19-9 Pretreatment Lab Value not assessed or unknown if assessed" ], [ "", "N/A - Diagnosis year is prior to 2021" ] ]
+}

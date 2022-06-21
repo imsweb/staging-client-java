@@ -1,0 +1,28 @@
+{
+  "id" : "clin_t_bcs",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin T Melanoma Conjunctiva",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  The substantia propria is the stromal tissue of the conjunctiva underlying the epithelium.  The bulbar conjunctiva covers the eyeball, the palpebral conjunctiva lines the eyelids, and the forniceal conjunctiva covers the junction of the eyelid and eyeball. The caruncle is the fleshy prominence at the inner corner of the eye lined by conjunctival epithelium.\n\n**Note 2:**  Tumors confined to the epithelium are staged as Tis in TNM 7th Edition. Melanoma in situ (includes the term primary acquired melanosis) with atypia replacing greater than 75% of the normal epithelial thickness, with cytological features of epithelial cells, including abundant cytoplasm, vesicular nuclei, or prominent nucleoli, and/or presence of intraepithelial nests of atypical cells. (1)\n\n**Note 3:** Quadrants are defined by clock hour, starting at the limbus (e.g., 6, 9, 12, 3) extending from the central cornea, to and beyond the eyelid margins. This will bisect the carcuncle. Quadrants of involvement are coded in **Site-Specific Factor 2, Quadrants**. (1)",
+  "footnotes" : "(1) International Union Against Cancer (UICC) *TNM Classification of Malignant Tumors,* 7th ed., Sobin, LH, Gospodarowicz, M, Wittekind, CH, eds. New York: Wiley, 2009, pgs., 280, 281",
+  "last_modified" : "2018-05-14T21:29:01.513Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T \n    Extension cannot be determined\nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor", "" ], [ "pIS", "pTis", "Melanoma confined to the conjunctival epithelium (in situ)", "In situ, intraepithelial, noninvasive\nMelanoma confined to conjunctival epithelium WITH or WITHOUT corneal extension\n\nStated as Tis" ], [ "c1", "cT1", "Melanoma of the bulbar conjunctiva", "Note: T1 has subcategories of T1a, T1b, T1c and T1d. Assign T1 only when there is no information available to assign one of the subcategories\n\nTumor(s) of bulbar conjunctiva NOS\n\nLocalized, NOS\n\nStated as T1 [NOS]" ], [ "c1A", "cT1a", "Tumor involves not more than one quadrant", "Stated as T1a" ], [ "c1B", "cT1b", "Tumor involves more than one but not more than two quadrants", "Stated as T1b" ], [ "c1C", "cT1c", "Tumor involves more than two but not more than three quadrants", "Stated as T1c" ], [ "c1D", "cT1d", "Tumor involves more than three quadrants", "Stated as T1d" ], [ "c2", "cT2", "Malignant conjunctival melanoma of the non-bulbar conjunctiva involving: \n    Palpebral\n    Forniceal \n    Caruncular conjunctiva", "Note: T2 has subcategories of T2a, T2b, T2c and T2d. Assign T2 only when there is no information available to assign one of the subcategories\n\nTumor of non-bulbar conjunctiva, NOS\nTumor(s) of bulbar conjunctiva, NOS  WITH corneal extension\n\nTumor involves conjunctival fornix or palpebral conjunctiva WITH extension to cornea\nInvolvement of caruncle WITH extension to cornea\n\nStated as T2 [NOS]" ], [ "c2A", "cT2a", "Non-carcuncular tumor involves not more than one quadrant", "Stated as T2a" ], [ "c2B", "cT2b", "Non-caruncular tumor involves more than one quadrant", "Stated as T2b" ], [ "c2C", "cT2c", "Caruncular tumor involves not more than one quadrant of conjunctiva", "Stated as T2c" ], [ "c2D", "cT2d", "Caruncular tumor involves more than one quadrant of conjunctiva", "Stated as T2d" ], [ "c3", "cT3", "Tumor with local invasion", "Note: T3 has subcategories of T3a, T3b, T3c and T3d. Assign T3 only when there is no information available to assign one of the subcategories\n\nConjunctival melanoma with local invasion NOS\n\nStated as T3 [NOS]" ], [ "c3A", "cT3a", "Globe", "Stated as T3a" ], [ "c3B", "cT3b", "Eyelid", "Nasolacrimal system\n\nStated as T3b" ], [ "c3C", "cT3c", "Orbit", "Stated as T3c" ], [ "c3D", "cT3d", "Sinus", "Stated as T3d" ], [ "c4", "cT4", "Tumor invades central nervous system (CNS)", "Stated as T4" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

@@ -1,0 +1,35 @@
+{
+  "id" : "extension_bbe",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  The nonperitonealized perimuscular tissue is, for jejunum and ileum, part of the mesentery and, for duodenum in areas where serosa is lacking, part of the interface with the pancreas.\n\n**Note 2**:  Codes 100-200 take priority over code 300.  Code depth of invasion in preference to intraluminal spread or lateral extension to adjacent segment(s) of small intestine or cecum.\n\n**Note 3**:  High-grade dysplasia is not always collected by cancer registries but, if collected, it should be coded 000.",
+  "last_modified" : "2015-05-27T16:19:07.293Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "VALUE:Tis", "VALUE:Tis", "VALUE:IS", "VALUE:IS" ], [ "050", "(Adeno)carcinoma, noninvasive, in a polyp", "VALUE:Tis", "VALUE:Tis", "VALUE:IS", "VALUE:IS" ], [ "095", "OBSOLETE DATA CONVERTED V0203\nSee Code 155\n\nStated as T1a with no other information on extension", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "100", "Invasive tumor confined to mucosa, NOS, including intramucosal, NOS", "VALUE:T1a", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "110", "Invasion of lamina propria", "VALUE:T1a", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "120", "Invasion of muscularis mucosae", "VALUE:T1a", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "125", "OBSOLETE DATA CONVERTED V0203\nSee code 165\n\nStated as T1b with no other information on extension", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "130", "Invasive tumor confined to head of polyp", "VALUE:T1a", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "140", "Invasive tumor onfined to stalk of polyp", "VALUE:T1a", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "150", "Invasion of polyp, NOS", "VALUE:T1a", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "155", "Stated as T1a with no other information on extension", "VALUE:T1a", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "160", "Invasion of submucosa (superficial invasion)", "VALUE:T1b", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "165", "Stated as T1b with no other information on extension", "VALUE:T1b", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "170", "Stated as T1 [NOS] with no other information on extension", "VALUE:T1NOS", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "200", "Muscularis propria invaded \n\nStated as T2, NOS with no other information on extension", "VALUE:T2", "VALUE:T2", "VALUE:L", "VALUE:L" ], [ "300", "Intraluminal spread to other segments of small intestine or cecum\nLocalized, NOS", "VALUE:T1NOS", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "400", "Invasion through muscularis propria or muscularis, NOS\nExtension through wall, NOS\nSubserosal tissue/(sub)serosal  fat invaded\nTransmural, NOS \nWall, NOS\n\nStated as T3 with no other information on extension", "VALUE:T3", "VALUE:T3", "VALUE:L", "VALUE:L" ], [ "420", "OBSOLETE DATA CONVERTED V0203\nSee code 458\n\nFat, NOS", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "450", "Adjacent connective tissue\nAdjacent tissue(s), NOS\nMesentery, including mesenteric fat, invaded 2 centimeters (cm) or less in depth, or invaded, NOS (depth of invasion not specified)\nNonperitonealized perimuscular tissue invaded 2 cm or less in depth, or invaded, NOS (depth of invasion not specified)\nRetroperitoneum invaded 2 cm or less in depth, or invaded, NOS (depth of invasion not specified", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "458", "Fat, NOS", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "500", "Invasion of/through serosa (mesothelium) (tunica serosa) (visceral peritoneum)", "VALUE:T4", "VALUE:T4", "VALUE:L", "VALUE:RE" ], [ "550", "500 + (450 or 458)", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "600", "For duodenum primary only:\n    Ampulla of Vater\n    Diaphragm\n    Extrahepatic bile duct(s)\n    Gallbladder\n    Pancreas\n    Pancreatic duct", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "650", "For duodenum primary only:\n    Blood vessel(s), major:\n        Aorta\n        Gastroduodenal artery\n        Portal vein\n        Renal vein\n        Superior mesenteric artery or vein\n        Vena cava\n    Greater omentum\n    Hepatic flexure\n    Kidney, NOS\n    Kidney, right\n    Liver, NOS\n    Liver, quadrate lobe\n    Liver, right lobe\n    Omentum, NOS\n    Transverse colon\n    Ureter, right\nFor jejunum or ileum primary only:\n    Colon, including appendix", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "660", "For duodenum primary only:\n    Stomach", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "670", "For all small intestine sites:\n    Abdominal wall via serosa\n    Mesentery invaded greater than 2 cm in depth\n    Nonperitonealized  perimuscular tissue invaded \n    greater  than 2 cm in depth\n    Retroperitoneum invaded greater than 2 cm in depth", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "680", "For all small intestine sites:\n    Other segments of the small intestine via serosa", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "690", "OBSOLETE DATA CONVERTED V0203\nSee code 805\n\nStated as T4, NOS", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "700", "For jejunum or ileum primary only:\n    Bladder\n    Fallopian tube(s)\n    Ovary(ies)\n    Uterus", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "800", "Further contiguous extension", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "805", "Stated as T4 with no other information on extension", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

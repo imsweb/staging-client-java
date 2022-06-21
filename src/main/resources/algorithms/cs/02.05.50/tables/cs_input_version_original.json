@@ -1,0 +1,14 @@
+{
+  "id" : "cs_input_version_original",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "CS Version Original",
+  "title" : "Valid CS Versions",
+  "last_modified" : "2015-05-27T16:19:02.499Z",
+  "definition" : [ {
+    "key" : "cs_input_version_original",
+    "name" : "CS Version",
+    "type" : "INPUT"
+  } ],
+  "rows" : [ [ "020500-999999" ], [ "020440" ], [ "020302" ], [ "020200" ], [ "020100" ], [ "020001" ], [ "010401,010400" ], [ "010300" ], [ "010200" ], [ "010100,010005,010004,010003,010002,010000" ], [ "000937" ] ]
+}

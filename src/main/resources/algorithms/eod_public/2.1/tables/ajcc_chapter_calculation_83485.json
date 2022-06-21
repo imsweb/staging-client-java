@@ -1,0 +1,34 @@
+{
+  "id" : "ajcc_chapter_calculation_83485",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2021-03-15T23:18:11.857Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C740", "8010,8290,8370", "3", "VALUE:76", "Adrenal Cortical Carcinoma", "VALUE:08" ], [ "C740", "8010,8290,8370", "2", "VALUE:XX", "Other Adrenal Gland", "VALUE:88" ], [ "C741,C749", "8010,8290,8370", "*", "VALUE:XX", "Other Adrenal Gland", "VALUE:88" ], [ "C740-C741,C749", "8000-8005,8011-8281,8300-8361,8371-8671", "*", "VALUE:XX", "Other Adrenal Gland", "VALUE:88" ], [ "C740-C741,C749", "8681-8683,8691,8720-8790", "*", "VALUE:XX", "Other Adrenal Gland", "VALUE:88" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "clin_n_dfg",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin N NET Stomach",
+  "title" : "Clinical N",
+  "notes" : "**Note 1:** Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Note 2:**  Hepatoduodenal nodes are regional for primaries of the lesser curvature of the stomach.  They are coded in M (distant metastasis) for all other subsites in this schema.\n\n**Regional lymph nodes**\n\n    Celiac\n       Hepatic (excluding gastrohepatic) \n       Hepatoduodenal     \n    Left gastric (superior gastric), NOS:\n       Cardial\n       Cardioesophageal\n       Gastric, left\n       Gastropancreatic, left\n       Lesser curvature\n       Lesser omental\n       Paracardial\n    Hepatoduodenal (for lesser curvature)  \n    Nodule(s) in perigastric fat    \n    Pancreaticosplenic (pancreaticolienal)\n    Pancreaticoduodenal\n    Perigastric, NOS\n    Peripancreatic\n    Right gastric (inferior gastric), NOS\n       Gastrocolic\n       Gastroduodenal\n       Gastroepiploic (gastro-omental), right or NOS\n       Gastrohepatic\n       Greater curvature\n       Greater omental\n       Pyloric, NOS: infrapyloric, subpyloric, suprapyloric\n    Splenic (lienal), NOS:\n        Gastroepiploic (gastro-omental), left\n        Splenic hilar",
+  "last_modified" : "2018-05-14T21:29:02.965Z",
+  "definition" : [ {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n_display",
+    "name" : "Clinical N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cNX", "Regional lymph node(s) cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess N\n    Regional lymph node involvement cannot be determined or findings inconclusive\nPhysician assigns cNX, no other information available to determine N" ], [ "c0", "cN0", "No regional lymph node metastasis", "" ], [ "c1", "cN1", "Regional lymph node metastasis", "Nodule(s) in perigastric fat\n\nRegional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "88", "88", "Not applicable", "Death certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met\nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

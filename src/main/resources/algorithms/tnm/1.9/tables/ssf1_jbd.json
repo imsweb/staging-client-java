@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_jbd",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF1",
+  "title" : "Site-Specific Factor 1",
+  "subtitle" : "Invasion Beyond Capsule",
+  "notes" : "**Note 1:**  Information about invasion beyond the capsule is collected in T as an element in anatomic staging.  It is also collected in this field as it may have an independent effect on prognosis.\n\n**Note 2:**  Record the location of invasion beyond capsule as documented in the pathology report. \n* Assign code 000 if surgical resection of the primary site is performed, the pathology report is available for review, and invasion beyond capsule is not mentioned",
+  "last_modified" : "2018-05-14T21:29:00.328Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Invasion beyond capsule not present/not identified" ], [ "010", "Lateral invasion:         \n   Perinephric fat" ], [ "020", "Medial invasion:    \n   Renal sinus      \n   Perisinus fat" ], [ "030", "020 + 010\n \nMedial invasion plus lateral invasion \nRenal sinus/perisinus fat invasion plus perinephric fat invasion" ], [ "988", "Not applicable: Information not collected for this case" ], [ "991", "Invasion beyond capsule, NOS" ], [ "998", "No surgical resection of primary site" ], [ "999", "Unknown or no information \nNot documented in patient record" ] ]
+}

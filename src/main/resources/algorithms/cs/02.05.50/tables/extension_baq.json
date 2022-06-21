@@ -1,0 +1,36 @@
+{
+  "id" : "extension_baq",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  The assignment of T1 and T2 categories for tumors of the oropharynx is based on tumor size.  A physician's statement of the T category may be used to code CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields.  However the two fields are coded independently: for example the record may document size but not extension, other than the physician's statement of the T category. Use codes 405, 410, 645, 735, 810, or 815 as appropriate to code CS Extension based on a statement of T when no other extension information is available.\n\n**Note 2**:  Use code 300 for localized tumor ONLY if no information is available to assign code 100, 200, 400, 405, or 410.",
+  "footnotes" : "- For CSExtension codes 100-600  ONLY, the T category for AJCC staging is assigned based on the value of CS Tumor Size, as shown in the Extension Size AJCC 7 Table for this schema.\n- For CS Extension codes 100-645  ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Tumor Size, as shown in the Extension Size AJCC 6 Table for this schema.",
+  "last_modified" : "2015-05-27T16:19:06.382Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "VALUE:Tis", "VALUE:Tis", "VALUE:IS", "VALUE:IS" ], [ "100", "Invasive tumor on one side confined to:\n    Lamina propria\n    Submucosa", "JUMP:extension_size_ajcc7_xfc", "JUMP:extension_size_ajcc6_xav", "VALUE:L", "VALUE:L" ], [ "200", "Musculature invaded", "JUMP:extension_size_ajcc7_xfc", "JUMP:extension_size_ajcc6_xav", "VALUE:L", "VALUE:L" ], [ "300", "Localized, NOS", "JUMP:extension_size_ajcc7_xfc", "JUMP:extension_size_ajcc6_xav", "VALUE:L", "VALUE:L" ], [ "400", "Tumor crosses midline", "JUMP:extension_size_ajcc7_xfc", "JUMP:extension_size_ajcc6_xav", "VALUE:L", "VALUE:L" ], [ "405", "Stated as T1 with no other information on extension", "JUMP:extension_size_ajcc7_xfc", "JUMP:extension_size_ajcc6_xav", "VALUE:L", "VALUE:L" ], [ "410", "Stated as T2 with no other information on extension", "JUMP:extension_size_ajcc7_xfc", "JUMP:extension_size_ajcc6_xav", "VALUE:L", "VALUE:L" ], [ "500", "Buccal mucosa (inner cheek)\nGum (gingiva), upper", "JUMP:extension_size_ajcc7_xfc", "JUMP:extension_size_ajcc6_xav", "VALUE:RE", "VALUE:RE" ], [ "600", "Lateral pharyngeal wall\nTonsillar pillars and fossae\nTonsils", "JUMP:extension_size_ajcc7_xfc", "JUMP:extension_size_ajcc6_xav", "VALUE:RE", "VALUE:RE" ], [ "640", "Epiglottis, lingual surface", "VALUE:T3", "JUMP:extension_size_ajcc6_xav", "VALUE:D", "VALUE:D" ], [ "645", "Stated as T3 with no other information on  extension", "VALUE:T3", "JUMP:extension_size_ajcc6_xav", "VALUE:RE", "VALUE:RE" ], [ "650", "Hard palate", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:RE" ], [ "670", "Nasal cavity", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:D" ], [ "675", "(650 or 670) + 640\n\nHard palate or nasal cavity plus epiglottis, lingual surface", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "700", "Mandible\nMaxilla  \nPalatine bone (bone of hard palate)", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "710", "Pterygoid muscle, medial or NOS", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "720", "Tongue\nDeep (extrinsic) muscle of tongue:\n    Genioglossus\n    Geniohyoid\n    Hyoglossus\n    Mylohyoid\n    Palatoglossus\n    Styloglossus", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "730", "Larynx\nHypopharynx", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "733", "(700, 710, 720, or 730) + 670", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "735", "Stated as T4a with no other information on extension", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:RE" ], [ "740", "Maxillary sinus (antrum) \nNasopharynx, lateral or NOS", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "745", "740 + 670", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "770", "OBSOLETE DATA CONVERTED V0200\nSee code 670\n\nNasal cavity", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "780", "Pterygoid muscle, lateral\nPterygoid plates\n\nNote: For medial pterygoid muscle or pterygoid muscle, NOS, see code 710", "VALUE:T4b", "VALUE:T4b", "VALUE:RE", "VALUE:D" ], [ "790", "780 +  (640, 700 - 730, or 740) \n\nAny structure in 780 plus any structure in 640, 700 - 730, or 740", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "800", "Further contiguous extension including:\n    Carotid artery (encased)\n    Skull base", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "810", "Stated as T4b with no other information on extension", "VALUE:T4b", "VALUE:T4b", "VALUE:RE", "VALUE:D" ], [ "815", "Stated as T4 [NOS] with no other information on extension", "VALUE:T4NOS", "VALUE:T4NOS", "VALUE:RE", "VALUE:RE" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown;  extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

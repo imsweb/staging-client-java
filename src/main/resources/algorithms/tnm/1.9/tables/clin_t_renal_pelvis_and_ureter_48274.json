@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_renal_pelvis_and_ureter_48274",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin T Renal Pelvis and Ureter",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:** Assign pTa or pTis for in situ cases (behavior code /2).\n\n**Note 2:** In case of multifocal noninvasive Ta and Tis tumors, assign pTis.\n\n**Note 3:**  Tumor involving both renal pelvis and ureter (unifocal or multifocal) is classified by the depth of greatest invasion in either organ for TNM staging.  \n* Assign T1 for tumor involving the wall of both renal pelvis and ureter\n\n**Note 4:**  Direct invasion of the bladder by a ureteral tumor is classified by the depth of greatest invasion of the bladder or ureter for TNM staging.",
+  "last_modified" : "2018-05-14T21:29:02.465Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T \n    Extension cannot be determined\nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor", "" ], [ "pA", "pTa", "Non-invasive papillary carcinoma", "Noninvasive papillary carcinoma\n\nStated as Ta" ], [ "pIS", "pTis", "Carcinoma in situ", "Intraepithelial, noninvasive (flat, sessile)\n\nStated as Tis" ], [ "c1", "cT1", "Tumor invades subepithelial connective tissue", "Subepithelial connective tissue (lamina propria, submucosa) of renal pelvis only\nSubepithelial connective tissue (lamina propria, submucosa) of ureter only\n\nRenal pelvis and ureter (unifocal or multifocal):\n    Subepithelial connective tissue\n        Renal pelvis from ureter\n        Ureter from renal pelvis\n        Distal ureter from proximal ureter\n\nExtension to bladder from ureter:\n    Subepithelial connective tissue of distal ureter and/or bladder \n\nLocalized, NOS\n\nStated as T1" ], [ "c2", "cT2", "Tumor invades muscularis", "Muscularis of renal pelvis only\nMuscularis of ureter only\n\nRenal pelvis and ureter (unifocal or multifocal):\n    Muscularis\n        Renal pelvis from ureter\n        Ureter from renal pelvis\n        Distal ureter from proximal ureter\n\nExtension to bladder from ureter:\n    Muscularis of distal ureter and/or bladder \n\nStated as T2" ], [ "c3", "cT3", "(Renal pelvis) Tumor invades beyond muscularis into: \n     Peripelvic fat \n     Renal parenchyma\n\n(Ureter) Tumor invades beyond muscular into: \n     Periureteric fact", "Extension to adjacent (connective) tissue:\n    Peripelvic/periureteric tissue\n    Retroperitoneal soft/connective tissue\n\nFor renal pelvis only (C659):\n    Ipsilateral kidney parenchyma and kidney, NOS\n\nStated as T3" ], [ "c4", "cT4", "Tumor invades adjacent organs OR \nThrough the kidney into perinephric fat", "Extension to:\n    Ascending colon from right renal pelvis\n    Ascending colon from right ureter\n    Bladder (wall or mucosa) from renal pelvis\n    Colon, NOS\n    Descending colon from left renal pelvis\n    Descending colon from left ureter \n    Duodenum from right renal pelvis or right ureter\n    Ipsilateral adrenal (suprarenal) gland from renal pelvis\n    Ipsilateral kidney parenchyma from ureter\n    Liver\n    Pancreas\n    Perinephric fat via kidney\n    Psoas muscle from ureter\n    Spleen\n\nFor renal pelvis only (C659):\n    Extension to major blood vessel(s):\n        Aorta\n        Renal artery/vein\n        Vena cava (inferior)\n    Tumor thrombus in a renal vein, NOS\n\nFor ureter only (C669):\n    Extension to major blood vessel(s):\n        Aorta\n        Renal artery/vein\n        Vena cava (inferior)\n    Tumor thrombus in a renal vein, NOS\n\nFurther contiguous extension, including:\n    For ureter:\n        Prostate\n        Uterus\n\nStated as T4" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

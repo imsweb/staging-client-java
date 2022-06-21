@@ -1,0 +1,18 @@
+{
+  "id" : "determine_correct_table_for_t_ns28",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Determine Correct Table for T",
+  "title" : "Determining Which Extension Calculation Table Applies for the T values",
+  "last_modified" : "2015-05-27T16:19:05.226Z",
+  "definition" : [ {
+    "key" : "ssf3",
+    "name" : "Site Specific Factor 3",
+    "type" : "INPUT"
+  }, {
+    "key" : "temp_ajcc_t",
+    "name" : "T Table",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "JUMP:special_calculation_non_invasive_pathologic_extension_xdr_xdt_xdq" ], [ "020-023,030-034,040-043,045,048,050,052,060,070,095-099,200,210,220,230,300,320,330,340,350,400,402,404,406,410,415,420,430,480,482,483,485,490,495,500,510,520,600,700,750,950,960,970,980,985,990", "JUMP:special_calculation_invasive_unknown_pathologic_extension_xds_xdu_xdq" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "extranodal_extension_pathological_30739",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Extranodal Extension Pathological",
+  "title" : "Extranodal Extension Pathological",
+  "notes" : "**Note 1:** Physician statement of Extranodal Extension (ENE) Pathological or physician pathological staging can be used to code this data item when there is no other information available.\n\n**Note 2:** Extranodal extension is defined as \"the extension of a nodal metastasis through the lymph node capsule into adjacent tissue.\" ENE is the preferred terminology. Other names include: extranodal spread, extracapsular extension, or extracapsular spread.\"  \n* \"A regional node extending into a distant structure or organ is categorized as ENE and is not recorded as distant metastatic disease.\" \n\n**Note 3:** Be aware that the rules for coding ENE for head and neck sites compared to non-head and neck sites are different.\n\n**Note 4:** Code the status of extranodal extension assessed on the **surgical resection** specimen for the most involved regional lymph node(s). Do not code ENE for any distant nodes.\n* If codes 0, 1, or 7 are used, this indicates that the lymph nodes were surgically resected and Scope of Regional Lymph Node Surgery [NAACCR Data Item: 1292] must be 3-7",
+  "last_modified" : "2020-05-15T17:15:51.330Z",
+  "definition" : [ {
+    "key" : "extranodal_ext_path",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Regional lymph node(s) involved, ENE not present/not identified from surgical resection" ], [ "1", "Regional lymph node(s) involved, ENE present/identified from surgical resection" ], [ "7", "No lymph node involvement identified from surgical resection (pN0)" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error)" ], [ "9", "Not documented in medical record\nNo surgical resection of regional lymph node(s)\nCannot be determined\nPathological assessment of lymph node(s) not done, or unknown if done\nExtranodal Extension Pathological not assessed or unknown if assessed" ] ]
+}

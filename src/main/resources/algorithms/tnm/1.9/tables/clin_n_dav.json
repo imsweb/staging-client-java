@@ -1,0 +1,28 @@
+{
+  "id" : "clin_n_dav",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin N Gallbladder",
+  "title" : "Clinical N",
+  "notes" : "**Note 1:** Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Note 2:** Periaortic, pericaval, superior mesenteric artery, and celiac artery lymph nodes are coded to N2.",
+  "footnotes" : "\\* N2 is not defined by UICC in the 7th edition. Approval has been provided by UICC to use the definition from the AJCC 7th edition, which is documented in the registrar notes.",
+  "last_modified" : "2018-05-14T21:29:02.514Z",
+  "definition" : [ {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n_display",
+    "name" : "Clinical N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cNX", "Regional lymph node(s) cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess N\n    Regional lymph node involvement cannot be determined or findings inconclusive\nPhysician assigns cNX, no other information available to determine N" ], [ "c0", "cN0", "No regional lymph node metastasis", "" ], [ "c1", "cN1", "Regional lymph node metastasis (including nodes along the cystic duct, common bile duct, common hepatic artery, and portal vein)", "Regional lymph nodes:\n    Cystic duct (Calot's node)\n    Node of foramen of Winslow (omental) (epiploic)\n    Pancreaticoduodenal\n    Pericholedochal (common bile duct)\n    Periduodenal\n    Peripancreatic (near head of pancreas only)\n    Porta hepatis (portal)(periportal) (hilar) (in hilus of liver)\n\nRegional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "c2", "cN2", "Not defined by UICC*", "Metastasis to periaortic, pericaval, superior mesenteric artery, and/or celiac artery lymph nodes\n\nStated as N2" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met\nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

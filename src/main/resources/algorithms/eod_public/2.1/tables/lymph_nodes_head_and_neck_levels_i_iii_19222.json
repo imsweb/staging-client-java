@@ -1,0 +1,19 @@
+{
+  "id" : "lymph_nodes_head_and_neck_levels_i_iii_19222",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "LN Head and Neck Levels I-III",
+  "title" : "Lymph Nodes Head and Neck Levels I-III",
+  "notes" : "**Note 1:** Physician statement of Levels I-III lymph node involvement can be used to code this data item when no other information is available.\t\n\n**Note 2:** Head and Neck Lymph Node Involvement is coded in the following data items\n * LN Head and Neck Levels I-III (NAACCR Data Item #3876)\n* LN Head and Neck Levels IV-V (NAACCR Data Item #3877)\n* LN Head and Neck Levels VI-VII (NAACCR Data Item #3878)\n* LN Head and Neck Other (NAACCR Data Item #3879)\n\n**Note 3:** Code the presence or absence of lymph node involvement for Levels I-III.\n* For more information on Levels I-III lymph nodes, see AJCC 8th edition, Chapter 5: *Staging Head and Neck Cancers*, Table 5.1 \n\n**Note 4:** Pathological information takes priority over clinical.\n\n**Note 5:** If involved regional node levels are documented as a range, or if the involved nodes overlap multiple levels, code all levels specified. \n\n**Note 6:** If information is available on some nodes, but the others are unknown, code what is known.\n* ***Example:*** Multiple lymph nodes involved, level II documented, but the other levels not mentioned. Code 2 to indicate level II involvement.",
+  "last_modified" : "2021-04-08T18:12:29.261Z",
+  "definition" : [ {
+    "key" : "ln_hn_1_2_3",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "No involvement in Levels I, II, or III lymph nodes" ], [ "1", "Level I lymph node(s) involved" ], [ "2", "Level II lymph node(s) involved" ], [ "3", "Level III lymph node(s) involved" ], [ "4", "Levels I and II lymph nodes involved" ], [ "5", "Levels I and III lymph nodes involved" ], [ "6", "Levels II and III lymph nodes involved" ], [ "7", "Levels I, II and III lymph nodes involved" ], [ "8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error)" ], [ "9", "Not documented in medical record\nPositive nodes, but level of positive node(s) unknown\nLymph node levels I-III not assessed, or unknown if assessed" ] ]
+}

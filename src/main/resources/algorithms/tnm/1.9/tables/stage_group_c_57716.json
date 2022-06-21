@@ -1,0 +1,31 @@
+{
+  "id" : "stage_group_c_57716",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Stage Group (c)",
+  "title" : "TNM 7 Stage Group",
+  "notes" : "**Note:** SEER*RSA added additional information to UICC 7th edition stages with UICC approval. If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC 7th edition manual to ensure you are using the appropriate logic. \n* Stage Group I (as defined in the table)\n* Stage Group III (as defined in the table)",
+  "last_modified" : "2018-05-14T21:29:04.395Z",
+  "definition" : [ {
+    "key" : "clin_stage_group_direct",
+    "name" : "Stage",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_stage_group_direct_display",
+    "name" : "Stage Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "t",
+    "name" : "T",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "0", "Tis", "N0,X ", "M0" ], [ "1", "I", "T2                      ", "N0   ", "M0" ], [ "1A", "IA  ", "T1                      ", "N0   ", "M0" ], [ "1B", "IB  ", "T2a                     ", "N0   ", "M0" ], [ "1C", "IC  ", "T2b                     ", "N0   ", "M0" ], [ "2 ", "II  ", "T3a                     ", "N0   ", "M0" ], [ "3 ", "III ", "T3b                     ", "NX   ", "M0" ], [ "3A", "IIIA", "T3b                     ", "N0   ", "M0" ], [ "3B", "IIIB", "T0,1,2,2a,2b,3,3a,3b,X", "N1   ", "M0" ], [ "3C", "IIIC", "T4                      ", "Any N", "M0" ], [ "4", "IV", "T0,1,2,2a,2b,3,3a,3b,4,X", "Any N", "M1" ], [ "99", "Unknown", "T0,1,2,2a,2b,3,3a,X\nT3,X", "NX\nN0", "M0\nM0" ], [ "88", "Not Applicable", "88", "88", "88" ] ]
+}

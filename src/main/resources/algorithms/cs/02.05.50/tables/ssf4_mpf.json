@@ -1,0 +1,20 @@
+{
+  "id" : "ssf4_mpf",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF4",
+  "title" : "CS Site-Specific Factor 4",
+  "subtitle" : "Pathologic M1: Source of Pathologic Metastatic Specimen",
+  "notes" : "**Note**:  Record only metastases present at the time of initial diagnosis and verified by pathologic examination of the metastatic site.  Record metastases determined by clinical examination only in code 998.  Do not record metastases that represent progression of disease after diagnosis, whether determined clinically or pathologically.",
+  "last_modified" : "2015-05-27T16:20:07.193Z",
+  "definition" : [ {
+    "key" : "ssf4",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No pathologic metastasis identified at diagnosis\nMicroscopic exam of distant specimen negative for metastasis " ], [ "010", "Liver metastasis on pathologic examination at diagnosis" ], [ "020", "Lung metastasis on pathologic examination at diagnosis" ], [ "030", "Brain metastasis on pathologic examination at diagnosis" ], [ "040", "Bone metastasis on pathologic examination at diagnosis" ], [ "050", "Other metastasis on pathologic examination at diagnosis" ], [ "060", "010-050\nMetastases from multiple sites in codes 010-050 on pathologic examination at diagnosis" ], [ "888", "OBSOLETE DATA CONVERTED V0200\nSee code 988\n\nNot applicable for this schema" ], [ "988", "Not applicable:  Information not collected for this case\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.  If this item is required to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "998", "No microscopic examination of metastatic site/no clinical evidence of metastasis and/or only clinical evidence of metastasis " ], [ "999", "Unknown or no information \nNot documented in patient record" ] ]
+}

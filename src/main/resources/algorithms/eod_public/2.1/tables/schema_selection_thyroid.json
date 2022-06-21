@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_thyroid",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection Thyroid",
+  "title" : "Schema selection for Thyroid",
+  "last_modified" : "2021-04-29T13:36:42.512Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C739", "8000-8344, 8350-8420, 8440-8509, 8514-8700, 8720-8790", "MATCH" ] ]
+}

@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_jaw",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF1",
+  "title" : "CS Site-Specific Factor 1",
+  "subtitle" : "OBSOLETE - WHO Grade Classification",
+  "notes" : "**Note 1**:  This CS Site-Specific Factor is obsolete beginning with CS Version 2 (codes and notes).  Old data are retained, but new cases are not coded with this Factor.  Use code 988 for this field.\n\n**Note 2**:  WHO grade applies only to C75.1 pituitary gland, C75.2 craniopharyngeal duct, and C75.3 pineal gland. Assign code 999 for all other topographies in this schema.\n\n**Note 3**:  Code the WHO Grade Classification as documented in the medical record.",
+  "last_modified" : "2015-05-27T16:19:58.599Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "OBSOLETE DATA RETAINED V0200\n\nGrade I" ], [ "020", "OBSOLETE DATA RETAINED V0200\n\nGrade II" ], [ "030", "OBSOLETE DATA RETAINED V0200\n\nGrade III" ], [ "040", "OBSOLETE DATA RETAINED V0200\n\nGrade IV" ], [ "988", "Not applicable for this schema (CS Version 2)" ], [ "999", "OBSOLETE DATA RETAINED V0200\n\nClinically diagnosed/grade unknown\nDoes not apply\nNot documented in medical record\nGrade unknown, NOS" ] ]
+}

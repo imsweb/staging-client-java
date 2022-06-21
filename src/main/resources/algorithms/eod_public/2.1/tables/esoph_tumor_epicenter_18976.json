@@ -1,0 +1,19 @@
+{
+  "id" : "esoph_tumor_epicenter_18976",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Esophagus and EGJ Tumor Epicenter",
+  "title" : "Esophagus and EGJ, Squamous Cell (including adenosquamous), Tumor Location",
+  "notes" : "**Note 1:** This data item is used for pathological staging for squamous cell carcinoma of the esophagus and esophagogastric junction. If information is available for clinical staging, record it.\n\n**Note 2:** Location is defined by the position of the **epicenter** of the tumor in the esophagus. Information is most likely to be obtained from pathological exam, scopes, operative notes or CT scans. The epicenter of the lesion is used to describe location.   \n* ***Example:***  If the lesion was from 15-21 cm, this is a 6-cm lesion with **epicenter at 18 cm**.  It is the midpoint.\n\n**Note 3:** Clinician or pathologist statement of epicenter being the upper, middle, or lower takes priority over any individual results or measurements. If no statement of epicenter is provided indicating upper, middle, or lower is provided, the following measurements may be used. \n* 15-24 cm from incisors = upper\n* 25-29 cm from incisors = middle\n* 30-40/45 cm from incisors = lower\n\n**Note 4:** Additional information about the epicenter may be found in *Chapter 16, Esophagus and Esophagogastric Junction*, Table 16.1 and Figure 16.1.  \n\n**Note 5:** The ascertainment of the epicenter of the tumor is for staging purposes and is separate from the assignment of the ICD-O-3 topography code. If you have an overlapping tumor (C158), do not recode the topography based on the epicenter.\n\n**Note 6:** If primary site is C159 (Esophagus, NOS), code 9.",
+  "last_modified" : "2020-02-28T21:32:31.733Z",
+  "definition" : [ {
+    "key" : "esoph_tumor_epicenter",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "U:  Upper (Cervical/Proximal esophagus to lower border of azygos vein)" ], [ "1", "M: Middle (Lower border of azygos vein to lower border of inferior pulmonary vein)" ], [ "2", "L: Lower (Lower border of inferior pulmonary vein to stomach, including gastroesophageal junction)" ], [ "9", "X: Esophagus, NOS\nSpecific location of epicenter not documented in medical record\nSpecific location of epicenter not assessed or unknown if assessed" ] ]
+}

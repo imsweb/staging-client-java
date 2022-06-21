@@ -1,0 +1,26 @@
+{
+  "id" : "tnm8_path_stage_uab",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "TNM 8 Path Stage Group",
+  "title" : "TNM 8 Path Stage Group",
+  "last_modified" : "2019-04-05T16:52:37.292Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0", "0", "0", "VALUE:99" ], [ "0", "1", "0", "VALUE:3" ], [ "0", " 1A ", "0", "VALUE:3" ], [ "0", " 1B ", "0", "VALUE:3" ], [ "0", " 1C ", "0", "VALUE:3" ], [ "0", " X ", "0", "VALUE:99" ], [ "IS ", "0", "0", "VALUE:0" ], [ "IS ", "1", "0", "VALUE:99" ], [ "IS ", " 1A ", "0", "VALUE:99" ], [ "IS ", " 1B ", "0", "VALUE:99" ], [ "IS ", " 1C ", "0", "VALUE:99" ], [ "IS ", " X ", "0", "VALUE:99" ], [ "1", "0", "0", "VALUE:1" ], [ "1", "1", "0", "VALUE:3A" ], [ "1", " 1A ", "0", "VALUE:3A" ], [ "1", " 1B ", "0", "VALUE:3A" ], [ "1", " 1C ", "0", "VALUE:3A" ], [ "1", " X ", "0", "VALUE:99" ], [ "2", "0", "0", "VALUE:2A" ], [ "2", "1", "0", "VALUE:3A" ], [ "2", " 1A ", "0", "VALUE:3A" ], [ "2", " 1B ", "0", "VALUE:3A" ], [ "2", " 1C ", "0", "VALUE:3A" ], [ "2", " X ", "0", "VALUE:99" ], [ "3", "0", "0", "VALUE:2B" ], [ "3", "1", "0", "VALUE:3C" ], [ "3", " 1A ", "0", "VALUE:3C" ], [ "3", " 1B ", "0", "VALUE:3C" ], [ "3", " 1C ", "0", "VALUE:3C" ], [ "3", " X ", "0", "VALUE:99" ], [ "4", "0", "0", "VALUE:3B" ], [ "4", "1", "0", "VALUE:3C" ], [ "4", " 1A ", "0", "VALUE:3C" ], [ "4", " 1B ", "0", "VALUE:3C" ], [ "4", " 1C ", "0", "VALUE:3C" ], [ "4", " X ", "0", "VALUE:3" ], [ "X ", "0", "0", "VALUE:99" ], [ "X ", "1", "0", "VALUE:3" ], [ "X ", " 1A ", "0", "VALUE:3" ], [ "X ", " 1B ", "0", "VALUE:3" ], [ "X ", " 1C ", "0", "VALUE:3" ], [ "X ", " X ", "0", "VALUE:99" ], [ "0,1-4,X", "*", "1", "VALUE:4" ], [ "IS ", "*", "1", "VALUE:99" ], [ "88", "88", "88", "VALUE:88" ] ]
+}

@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc7_stage_uap",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC7 Stage",
+  "title" : "AJCC TNM 7 Stage",
+  "last_modified" : "2015-05-27T16:18:55.174Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "mitotic_rate",
+    "name" : "Mitotic Rate",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "T0", "N0", "M0", "High", "ERROR:" ], [ "T0", "N0", "M0", "Low", "ERROR:" ], [ "T0", "N0", "M0", "Unknown", "ERROR:" ], [ "T0", "N1", "M0", "High", "VALUE:IV" ], [ "T0", "N1", "M0", "Low", "VALUE:IV" ], [ "T0", "N1", "M0", "Unknown", "VALUE:IV" ], [ "T1", "N0", "M0", "High", "VALUE:II" ], [ "T1", "N0", "M0", "Low", "VALUE:IA" ], [ "T1", "N0", "M0", "Unknown", "VALUE:UNK" ], [ "T1", "N1", "M0", "High", "VALUE:IV" ], [ "T1", "N1", "M0", "Low", "VALUE:IV" ], [ "T1", "N1", "M0", "Unknown", "VALUE:IV" ], [ "T2", "N0", "M0", "High", "VALUE:II" ], [ "T2", "N0", "M0", "Low", "VALUE:IA" ], [ "T2", "N0", "M0", "Unknown", "VALUE:UNK" ], [ "T2", "N1", "M0", "High", "VALUE:IV" ], [ "T2", "N1", "M0", "Low", "VALUE:IV" ], [ "T2", "N1", "M0", "Unknown", "VALUE:IV" ], [ "T3", "N0", "M0", "High", "VALUE:IIIA" ], [ "T3", "N0", "M0", "Low", "VALUE:IB" ], [ "T3", "N0", "M0", "Unknown", "VALUE:UNK" ], [ "T3", "N1", "M0", "High", "VALUE:IV" ], [ "T3", "N1", "M0", "Low", "VALUE:IV" ], [ "T3", "N1", "M0", "Unknown", "VALUE:IV" ], [ "T4", "N0", "M0", "High", "VALUE:IIIB" ], [ "T4", "N0", "M0", "Low", "VALUE:II" ], [ "T4", "N0", "M0", "Unknown", "VALUE:UNK" ], [ "T4", "N1", "M0", "High", "VALUE:IV" ], [ "T4", "N1", "M0", "Low", "VALUE:IV" ], [ "T4", "N1", "M0", "Unknown", "VALUE:IV" ], [ "TX", "N0", "M0", "High", "VALUE:UNK" ], [ "TX", "N0", "M0", "Low", "VALUE:UNK" ], [ "TX", "N0", "M0", "Unknown", "VALUE:UNK" ], [ "TX", "N1", "M0", "High", "VALUE:IV" ], [ "TX", "N1", "M0", "Low", "VALUE:IV" ], [ "TX", "N1", "M0", "Unknown", "VALUE:IV" ], [ "T0", "N0", "M1", "High", "VALUE:IV" ], [ "T0", "N0", "M1", "Low", "VALUE:IV" ], [ "T0", "N0", "M1", "Unknown", "VALUE:IV" ], [ "T0", "N1", "M1", "High", "VALUE:IV" ], [ "T0", "N1", "M1", "Low", "VALUE:IV" ], [ "T0", "N1", "M1", "Unknown", "VALUE:IV" ], [ "T1", "N0", "M1", "High", "VALUE:IV" ], [ "T1", "N0", "M1", "Low", "VALUE:IV" ], [ "T1", "N0", "M1", "Unknown", "VALUE:IV" ], [ "T1", "N1", "M1", "High", "VALUE:IV" ], [ "T1", "N1", "M1", "Low", "VALUE:IV" ], [ "T1", "N1", "M1", "Unknown", "VALUE:IV" ], [ "T2", "N0", "M1", "High", "VALUE:IV" ], [ "T2", "N0", "M1", "Low", "VALUE:IV" ], [ "T2", "N0", "M1", "Unknown", "VALUE:IV" ], [ "T2", "N1", "M1", "High", "VALUE:IV" ], [ "T2", "N1", "M1", "Low", "VALUE:IV" ], [ "T2", "N1", "M1", "Unknown", "VALUE:IV" ], [ "T3", "N0", "M1", "High", "VALUE:IV" ], [ "T3", "N0", "M1", "Low", "VALUE:IV" ], [ "T3", "N0", "M1", "Unknown", "VALUE:IV" ], [ "T3", "N1", "M1", "High", "VALUE:IV" ], [ "T3", "N1", "M1", "Low", "VALUE:IV" ], [ "T3", "N1", "M1", "Unknown", "VALUE:IV" ], [ "T4", "N0", "M1", "High", "VALUE:IV" ], [ "T4", "N0", "M1", "Low", "VALUE:IV" ], [ "T4", "N0", "M1", "Unknown", "VALUE:IV" ], [ "T4", "N1", "M1", "High", "VALUE:IV" ], [ "T4", "N1", "M1", "Low", "VALUE:IV" ], [ "T4", "N1", "M1", "Unknown", "VALUE:IV" ], [ "TX", "N0", "M1", "High", "VALUE:IV" ], [ "TX", "N0", "M1", "Low", "VALUE:IV" ], [ "TX", "N0", "M1", "Unknown", "VALUE:IV" ], [ "TX", "N1", "M1", "High", "VALUE:IV" ], [ "TX", "N1", "M1", "Low", "VALUE:IV" ], [ "TX", "N1", "M1", "Unknown", "VALUE:IV" ] ]
+}

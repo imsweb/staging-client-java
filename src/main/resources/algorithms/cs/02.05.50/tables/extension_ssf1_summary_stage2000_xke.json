@@ -1,0 +1,24 @@
+{
+  "id" : "extension_ssf1_summary_stage2000_xke",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension SSF1 Summary Stage2000",
+  "title" : "Extension SSF1 Summary Stage 2000 Table",
+  "subtitle" : "Cases Coded in CSv2 (CS Version Input Original equals 02XXXX) or Year of Diagnosis is 2010 and After",
+  "notes" : "**Note**:  For CS Version 2 cases (CS Version Input Original equals 02XXXX) or Year of Diagnosis is 2010 and after, Summary Stage 2000 for CS Extension codes 000-700, 740, 950, 980 and 999 is based on CS Extension and CS Site-Specific Factor 1. CS Site-Specific Factor 1 codes 000 and 999 map according to the extension value. CS Site-Specific Factor 1 codes 010 and 040 indicate separate tumor nodules in same lobe or unknown if in same lobe, and map to Regional. CS Site-Specific Factor 1 codes 020 and 030, separate tumor nodules in different or separate tumor nodules in same and different lobe, map to Distant. CS Site-Specific Factor 1 codes 888 and 988 map to ERROR.",
+  "last_modified" : "2015-05-27T16:19:20.609Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "CS Extension Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf1",
+    "name" : "CS SSF1",
+    "type" : "INPUT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "000", "VALUE:IS" ], [ "100,110,115,120,125,200,210,220,230,300", "000", "VALUE:L" ], [ "250", "000", "ERROR:" ], [ "400,410,420,430,440,450,455,460,465,500,520,530,540,550,560,570,590,600,610,650,700", "000", "VALUE:RE" ], [ "680", "000", "VALUE:L" ], [ "740", "000", "VALUE:RE" ], [ "950,980,999", "000", "VALUE:U" ], [ "000", "010", "ERROR:" ], [ "100,110,115,120,125,200,210,220,230,300", "010", "VALUE:RE" ], [ "250", "010", "ERROR:" ], [ "400,410,420,430,440,450,455,460,465,500,520,530,540,550,560,570,590,600,610,650,700", "010", "VALUE:RE" ], [ "680", "010", "VALUE:RE" ], [ "740", "010", "VALUE:RE" ], [ "950,980,999", "010", "VALUE:RE" ], [ "000", "020", "ERROR:" ], [ "100,110,115,120,125,200,210,220,230,300", "020", "VALUE:D" ], [ "250", "020", "ERROR:" ], [ "400,410,420,430,440,450,455,460,465,500,520,530,540,550,560,570,590,600,610,650,700", "020", "VALUE:D" ], [ "680", "020", "VALUE:D" ], [ "740", "020", "VALUE:D" ], [ "950,980,999", "020", "VALUE:D" ], [ "000", "030", "ERROR:" ], [ "100,110,115,120,125,200,210,220,230,300", "030", "VALUE:D" ], [ "250", "030", "ERROR:" ], [ "400,410,420,430,440,450,455,460,465,500,520,530,540,550,560,570,590,600,610,650,700", "030", "VALUE:D" ], [ "680", "030", "VALUE:D" ], [ "740", "030", "VALUE:D" ], [ "950,980,999", "030", "VALUE:D" ], [ "000", "040", "ERROR:" ], [ "100,110,115,120,125,200,210,220,230,300", "040", "VALUE:RE" ], [ "250", "040", "ERROR:" ], [ "400,410,420,430,440,450,455,460,465,500,520,530,540,550,560,570,590,600,610,650,700", "040", "VALUE:RE" ], [ "680", "040", "VALUE:RE" ], [ "740", "040", "VALUE:RE" ], [ "950,980,999", "040", "VALUE:RE" ], [ "000", "888", "ERROR:" ], [ "100,110,115,120,125,200,210,220,230,300", "888", "ERROR:" ], [ "250", "888", "ERROR:" ], [ "400,410,420,430,440,450,455,460,465,500,520,530,540,550,560,570,590,600,610,650,700", "888", "ERROR:" ], [ "680", "888", "ERROR:" ], [ "740", "888", "ERROR:" ], [ "950,980,999", "888", "ERROR:" ], [ "000", "988", "ERROR:" ], [ "100,110,115,120,125,200,210,220,230,300", "988", "ERROR:" ], [ "250", "988", "ERROR:" ], [ "400,410,420,430,440,450,455,460,465,500,520,530,540,550,560,570,590,600,610,650,700", "988", "ERROR:" ], [ "680", "988", "ERROR:" ], [ "740", "988", "ERROR:" ], [ "950,980,999", "988", "ERROR:" ], [ "000", "999", "VALUE:IS" ], [ "100,110,115,120,125,200,210,220,230,300", "999", "VALUE:L" ], [ "250", "999", "ERROR:" ], [ "400,410,420,430,440,450,455,460,465,500,520,530,540,550,560,570,590,600,610,650,700", "999", "VALUE:RE" ], [ "680", "999", "VALUE:L" ], [ "740", "999", "VALUE:RE" ], [ "950,980,999", "999", "VALUE:U" ] ]
+}

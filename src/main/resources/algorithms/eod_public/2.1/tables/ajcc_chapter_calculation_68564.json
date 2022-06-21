@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_chapter_calculation_68564",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2021-03-16T16:37:25.111Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8170-8174", "3", "VALUE:22", "Liver", "VALUE:08" ], [ "8170-8174", "2", "VALUE:XX", "Other Liver", "VALUE:88" ], [ "8000-8163,8175-8700", "*", "VALUE:XX", "Other Liver", "VALUE:88" ], [ "8720-8790", "*", "VALUE:XX", "Other Liver", "VALUE:88" ] ]
+}

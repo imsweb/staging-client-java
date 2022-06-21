@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_ovary",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection Ovary",
+  "title" : "Schema selection for Ovary",
+  "last_modified" : "2015-05-27T16:19:46.959Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C569", "8000-9136,9141-9582,9700-9701", "MATCH" ] ]
+}

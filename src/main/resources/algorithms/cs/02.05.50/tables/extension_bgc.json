@@ -1,0 +1,35 @@
+{
+  "id" : "extension_bgc",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**: Osseous plasmacytomas are localized tumors occurring in the bone.  There may be soft tissue extension. \n\n**Note 2**: Extraosseous (extramedullary) plasmacytomas are plasma cell neoplasms that arise in tissues other than bone. The most common sites are the upper respiratory tract, the gastrointestinal tract, lymph nodes, bladder, central nervous system (CNS), breast, thyroid, testis and skin. \n\n**Note 3**: Criteria for the diagnosis of multiple myeloma include: presence of clonal bone marrow plasma cells or plasmacytoma, presence of an M-protein in serum and/or urine, and the presence of related organ or tissue impairment. Do not use this criteria to determine the diagnosis of multiple myeloma. Code according to histologic confirmation or physician statement according to the AJCC 7th edition. \n\n**Note 4**: Multiple myeloma or plasma cell myeloma is a widely disseminated plasma cell neoplasm, characterized by a single clone of plasma cells derived from B cells that grows in the bone marrow. It is always coded to 810 or 820 for systemic involvement.",
+  "last_modified" : "2015-05-27T16:19:14.290Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "OBSOLETE DATA RETAINED V0203\n\nLocalized disease (single/solitary/unifocal/isolated/mono-ostotic), may be coded for:\n    Plasmacytoma, NOS (M-9731/3)(solitary myeloma)\n    Plasmacytoma, extramedullary (M-9734/3) (not occurring in bone)", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "110", "Single plasmacytoma lesion \nWITHOUT soft tissue extension or unknown if soft tissue extension (9731)", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "200", "Single plasmacytoma lesion \nWITH soft tissue extension (9731)", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "300", "Single plasmacytoma lesion occurring in tissue other than bone (9734)", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "400", "Multiple osseous or multiple extraosseous plasmacytoma lesions  (9731, 9734)", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "500", "Plasmacytoma, NOS (9731)\nNot stated if single or multiple, not stated if osseous or extraosseous", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "800", "OBSOLETE DATA RETAINED V0203\n\nSystemic disease (poly-ostotic): \nAll histologies including those in 100", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "810", "Plasma cell myeloma/multiple myeloma/myelomatosis (9732)", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "820", "Myeloma, NOS\nExcludes plasma cell myeloma or multiple myeloma (see code 810)", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ] ]
+}

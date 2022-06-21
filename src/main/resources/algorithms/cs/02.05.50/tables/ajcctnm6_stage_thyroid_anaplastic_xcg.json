@@ -1,0 +1,26 @@
+{
+  "id" : "ajcctnm6_stage_thyroid_anaplastic_xcg",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC TNM 6 Stage Thyroid Anaplastic",
+  "title" : "AJCC TNM 6 Stage-Thyroid: Anaplastic",
+  "last_modified" : "2015-05-27T16:19:00.923Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_stage",
+    "name" : "Stage Table 6",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "T4a", "N0", "M0", "VALUE:IVA" ], [ "T4a", "N0", "M1", "VALUE:IVC" ], [ "T4a", "N0", "MX", "VALUE:IVNOS" ], [ "T4a", "N1a", "M0", "VALUE:IVA" ], [ "T4a", "N1a", "M1", "VALUE:IVC" ], [ "T4a", "N1a", "MX", "VALUE:IVNOS" ], [ "T4a", "N1b", "M0", "VALUE:IVA" ], [ "T4a", "N1b", "M1", "VALUE:IVC" ], [ "T4a", "N1b", "MX", "VALUE:IVNOS" ], [ "T4a", "N1NOS", "M0", "VALUE:IVA" ], [ "T4a", "N1NOS", "M1", "VALUE:IVC" ], [ "T4a", "N1NOS", "MX", "VALUE:IVNOS" ], [ "T4a", "NX", "M0", "VALUE:IVA" ], [ "T4a", "NX", "M1", "VALUE:IVC" ], [ "T4a", "NX", "MX", "VALUE:IVNOS" ], [ "T4b", "N0", "M0", "VALUE:IVB" ], [ "T4b", "N0", "M1", "VALUE:IVC" ], [ "T4b", "N0", "MX", "VALUE:IVNOS" ], [ "T4b", "N1a", "M0", "VALUE:IVB" ], [ "T4b", "N1a", "M1", "VALUE:IVC" ], [ "T4b", "N1a", "MX", "VALUE:IVNOS" ], [ "T4b", "N1b", "M0", "VALUE:IVB" ], [ "T4b", "N1b", "M1", "VALUE:IVC" ], [ "T4b", "N1b", "MX", "VALUE:IVNOS" ], [ "T4b", "N1NOS", "M0", "VALUE:IVB" ], [ "T4b", "N1NOS", "M1", "VALUE:IVC" ], [ "T4b", "N1NOS", "MX", "VALUE:IVNOS" ], [ "T4b", "NX", "M0", "VALUE:IVB" ], [ "T4b", "NX", "M1", "VALUE:IVC" ], [ "T4b", "NX", "MX", "VALUE:IVNOS" ], [ "T4NOS", "N0", "M0", "VALUE:IVNOS" ], [ "T4NOS", "N0", "M1", "VALUE:IVC" ], [ "T4NOS", "N0", "MX", "VALUE:IVNOS" ], [ "T4NOS", "N1a", "M0", "VALUE:IVNOS" ], [ "T4NOS", "N1a", "M1", "VALUE:IVC" ], [ "T4NOS", "N1a", "MX", "VALUE:IVNOS" ], [ "T4NOS", "N1b", "M0", "VALUE:IVNOS" ], [ "T4NOS", "N1b", "M1", "VALUE:IVC" ], [ "T4NOS", "N1b", "MX", "VALUE:IVNOS" ], [ "T4NOS", "N1NOS", "M0", "VALUE:IVNOS" ], [ "T4NOS", "N1NOS", "M1", "VALUE:IVC" ], [ "T4NOS", "N1NOS", "MX", "VALUE:IVNOS" ], [ "T4NOS", "NX", "M0", "VALUE:IVNOS" ], [ "T4NOS", "NX", "M1", "VALUE:IVC" ], [ "T4NOS", "NX", "MX", "VALUE:IVNOS" ] ]
+}

@@ -1,0 +1,36 @@
+{
+  "id" : "nodes_daz",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field.  Regional nodes include bilateral and contralateral involvement of named nodes.  Distant nodes, including presacral and lateral sacral (laterosacral) nodes, are coded in CS Mets at DX.\n\n**Note 2**:  The Federation Internationale de Gynecologie et d'Obstetrique (FIGO) Stage IIIC is assigned based on tumor extension and/or regional lymph node involvement.  Code CS Lymph Nodes based on a physician's statement of FIGO Stage IIIC  if  the stage value is assigned because of regional lymph node involvement or there is no indication of the basis.\n\n**Note 3**:  If either exploratory or definitive surgery is done with no mention of lymph nodes, assume nodes are negative.\n\n**Note 4**:  If the clinician says \"adnexa palpated\" but does not mention lymph nodes, assume lymph nodes are not involved.\n\n**Note 5**:  Determination of the N category for AJCC 6 is based on this field and CS Mets at DX for specific codes in CS Mets at DX.",
+  "footnotes" : "- For CS Lymph Nodes codes 000 and 999, the N category for AJCC 6 staging is based on the value of CS Mets at DX as shown in the Lymph Nodes Mets at DX AJCC 6 Table.",
+  "last_modified" : "2015-05-27T16:19:32.871Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "JUMP:lymph_nodes_metsat_dxajcc6_xfm", "VALUE:NONE", "VALUE:NONE" ], [ "100", "Regional lymph node(s):\n    Iliac, NOS:\n        Common\n        External\n        Internal (hypogastric)\n            Obturator\n    Pelvic, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "120", "OBSOLETE DATA RETAINED V0200\n\nRegional lymph node(s): \n    Lateral sacral (laterosacral)\n    Presacral", "ERROR:", "VALUE:N1", "VALUE:D", "VALUE:RN" ], [ "200", "Regional lymph node(s):\n    Aortic, NOS:\n        Lateral (lumbar)\n        Para-aortic\n        Periaortic\n    Retroperitoneal, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "220", "OBSOLETE DATA RETAINED V0200\n \n200 + 120", "ERROR:", "VALUE:N1", "VALUE:D", "VALUE:RN" ], [ "300", "Regional lymph node(s):\n    Inguinal", "VALUE:N1", "VALUE:N1", "VALUE:D", "VALUE:RN" ], [ "500", "Regional lymph node(s), NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "550", "FIGO Stage IIIC based on regional lymph node involvement", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "VALUE:NX", "JUMP:lymph_nodes_metsat_dxajcc6_xfm", "VALUE:U", "VALUE:U" ] ]
+}

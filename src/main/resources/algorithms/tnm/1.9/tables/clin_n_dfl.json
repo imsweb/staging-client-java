@@ -1,0 +1,27 @@
+{
+  "id" : "clin_n_dfl",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin N NET Small Intestine",
+  "title" : "Clinical N",
+  "notes" : "**Note:** Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Regional lymph nodes**\n\n**Duodenum primaries only (C170)**\n\n    Duodenal\n    Gastroduodenal\n    Hepatic\n    Pancreaticoduodenal\n    Pericholodochal (common bile duct)\n    Pyloric: infrapyloric, subpyloric\n    Superior mesenteric\n       \n**Jejunum primaries only (C171)**\n\n     Mesenteric, NOS\n     Superior mesenteric\n\n**Ileum primaries only (C172)**\n\n     Cecal (anterior, posterior, retrocecal) \n     Ileocecal       \n     Mesenteric, NOS\n     Superior mesenteric",
+  "last_modified" : "2018-05-14T21:29:03.554Z",
+  "definition" : [ {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n_display",
+    "name" : "Clinical N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cNX", "Regional lymph nodes cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess N\n    Regional lymph node involvement cannot be determined or findings inconclusive\nPhysician assigns cNX, no other information available to determine N" ], [ "c0", "cN0", "No regional lymph node metastasis", "" ], [ "c1", "cN1", "Regional lymph node metastasis", "Regional lymph node(s), NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "88", "88", "Not applicable", "In situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met\nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

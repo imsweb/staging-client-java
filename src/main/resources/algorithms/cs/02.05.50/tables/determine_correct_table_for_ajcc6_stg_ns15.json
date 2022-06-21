@@ -1,0 +1,18 @@
+{
+  "id" : "determine_correct_table_for_ajcc6_stg_ns15",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Determine Correct Table for AJCC 6 Stage Group",
+  "title" : "Determining Which AJCC 6 Stage Calculation Applies based on Extension",
+  "last_modified" : "2015-05-27T16:19:03.387Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "JUMP:ajcc_tnm6_stage_csv1_xie" ], [ "105", "JUMP:ajcc6_stage_qdy" ], [ "110", "JUMP:ajcc_tnm6_stage_csv1_xie" ], [ "115", "JUMP:ajcc6_stage_qdy" ], [ "120", "JUMP:ajcc_tnm6_stage_csv1_xie" ], [ "125, 150", "JUMP:ajcc6_stage_qdy" ], [ "200, 210, 220, 230, 300", "JUMP:ajcc_tnm6_stage_csv1_xie" ], [ "305", "JUMP:ajcc6_stage_qdy" ], [ "310", "JUMP:ajcc_tnm6_stage_csv1_xie" ], [ "315", "JUMP:ajcc6_stage_qdy" ], [ "320", "JUMP:ajcc_tnm6_stage_csv1_xie" ], [ "325", "JUMP:ajcc6_stage_qdy" ], [ "330", "JUMP:ajcc_tnm6_stage_csv1_xie" ], [ "335, 350, 500, 700, 710, 720, 730, 750", "JUMP:ajcc6_stage_qdy" ], [ "800", "JUMP:ajcc_tnm6_stage_csv1_xie" ], [ "805, 950, 989", "JUMP:ajcc6_stage_qdy" ], [ "999", "JUMP:ajcc_tnm6_stage_csv1_xie" ] ]
+}

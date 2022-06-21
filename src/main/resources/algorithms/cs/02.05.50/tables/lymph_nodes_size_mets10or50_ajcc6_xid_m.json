@@ -1,0 +1,27 @@
+{
+  "id" : "lymph_nodes_size_mets10or50_ajcc6_xid_m",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Lymph Nodes Size Mets 10 or 50 AJCC6 - For M",
+  "title" : "Lymph Nodes Size Mets 10 or 50 AJCC 6 Table - For M",
+  "notes" : "**Note**:  When CS Lymph Nodes is coded 150, 250, 350-450, or 505 and CS Mets at DX is coded 10 or 50, the AJCC 6 N and M categories are determined by the size of involved nodes as coded in CS Site-Specific Factor 2, Size of Metastasis in Lymph Nodes as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:26.240Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "CS Lymph Nodes",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf2",
+    "name" : "CS SSF 2",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "result_m",
+    "name" : "Result for M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "150", "000-980,988,990-997,999", "VALUE:", "ERROR:" ], [ "250", "000-980,988,990-997,999", "VALUE:", "ERROR:" ], [ "350", "000-980,988,990-997,999", "VALUE:", "ERROR:" ], [ "400", "000-980,988,990-997,999", "VALUE:", "ERROR:" ], [ "450", "000-980,988,990-997,999", "VALUE:", "ERROR:" ], [ "505", "000-980,988,990-997,999", "VALUE:", "ERROR:" ], [ "*", "981-987,989,998", "VALUE:", "ERROR:" ] ]
+}

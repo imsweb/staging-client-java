@@ -1,0 +1,20 @@
+{
+  "id" : "ssf9_sdq",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF9",
+  "title" : "Site-Specific Factor 9",
+  "subtitle" : "Tumor Multiplicity",
+  "notes" : "**Note:**  When a patient has more than one area of gastrointestinal stromal tumor (GIST), it is important to try to distinguish between intra-abdominal metastasis and tumor multiplicity. Distant metastases are relatively rare in GISTs, but they are increasingly detected with sophisticated radiological studies. Intra-abdominal metastasis will present as tumor involvement in the abdominal cavity outside the main tumor mass, in the peritoneum, omentum, serosae of organs, and the cul-de-sac, among other areas. Code this form of metastasis in mets (M).\n\nTumor multiplicity, in contrast, will present with anatomically separate, multiple tumors of different sizes arising independently in the GI tract. This form of tumor multiplicity usually will be seen in patients with neurofibromatosis type 1 or familial GIST syndrome, but in rare instances may be seen in patients without these conditions. This form of multiplicity should not be coded as metastasis, but the presence of multiple tumors should be coded in **Site-Specific Factor 9, Tumor Multiplicity.**\n\nWhen a solitary omental or mesenteric tumor mass is found with a primary GIST elsewhere, do not code this as a metastasis. Code it as multiple tumors in **Site-Specific Factor 9, Tumor Multiplicity.**\n\nWhen multiple tumor areas are present and it is not stated whether these are metastases or independent tumors, consult with a physician if possible to determine how to code them. If a decision cannot be made, code this site-specific factor as 010 (Multiple GIST tumors are present).",
+  "last_modified" : "2018-05-14T21:29:01.300Z",
+  "definition" : [ {
+    "key" : "ssf9",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Multiple gastrointestinal stromal tumors (GIST) not present in the surgical specimen; single GIST; unifocal GIST" ], [ "010", "Multiple GIST tumors present in the surgical specimen; multifocal GIST" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown if one tumor or multiple tumors \nNo information on tumor multiplicity\nNot documented in patient record" ] ]
+}

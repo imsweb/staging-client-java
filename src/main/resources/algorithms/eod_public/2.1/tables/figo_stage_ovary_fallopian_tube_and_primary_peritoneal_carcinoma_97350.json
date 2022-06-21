@@ -1,0 +1,19 @@
+{
+  "id" : "figo_stage_ovary_fallopian_tube_and_primary_peritoneal_carcinoma_97350",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "FIGO Stage",
+  "title" : "FIGO Stage  Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma",
+  "notes" : "**Note 1:** Take the highest Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage documented in the medical record. Do not attempt to code FIGO stage based only on T, N, and M.  If FIGO stage is not documented in the medical record, code 99. FIGO stage is not the same as FIGO grade. Only code FIGO stage in this field, do not code FIGO grade. \n\n**Note 2:** If a stage group is stated but it does not specify that it is a FIGO stage, assume that it is a FIGO stage and code it.\n\n**Note 3:** If there is more than one FIGO stage provided from the clinical and pathological work up, code the most extensive FIGO stage. \n\n**Note 4:** The FIGO stage definitions do not include Stage 0 (Tis). Code 97 for any case that is in situ (/2).\n\n**Note 5:** For High-grade (HGSC) serous tubal intraepithelial carcinoma (STIC) (8441/2), assign the FIGO stage based on the physician's documentation of FIGO I.\n- Do not code 97 (in situ) for high-grade serous tubal intraepithelial carcinoma since FIGO does not have a Stage 0\n- If diagnosis is low grade serous intraepithelial carcinoma (LGSC) (8441/2) or serous tubal intraepithelial carcinoma (no grade stated) (8441/2), code 97",
+  "last_modified" : "2021-04-08T18:15:46.275Z",
+  "definition" : [ {
+    "key" : "figo",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "FIGO Stage I " ], [ "1A", "FIGO Stage IA " ], [ "1B", "FIGO Stage IB " ], [ "1C", "FIGO Stage IC " ], [ "1C1", "FIGO Stage IC1" ], [ "1C2", "FIGO Stage IC2" ], [ "1C3", "FIGO Stage IC3" ], [ "2", "FIGO Stage II " ], [ "2A", "FIGO Stage IIA " ], [ "2B", "FIGO Stage IIB" ], [ "3", "FIGO Stage III" ], [ "3A", "FIGO Stage IIIA" ], [ "3A1", "FIGO Stage IIIA1" ], [ "3A11", "FIGO Stage IIIA1i" ], [ "3A12", "FIGO Stage IIIA1ii" ], [ "3A2", "FIGO Stage IIIA2" ], [ "3B", "FIGO Stage IIIB" ], [ "3C", "FIGO Stage IIIC" ], [ "4", "FIGO Stage IV " ], [ "4A", "FIGO Stage IVA" ], [ "4B", "FIGO Stage IVB" ], [ "97", "Carcinoma in situ (intraepithelial, noninvasive, preinvasive)" ], [ "98", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 98 will result in an edit error.)" ], [ "99", "Not documented in medical record\nFIGO stage not assessed or unknown if assessed" ] ]
+}

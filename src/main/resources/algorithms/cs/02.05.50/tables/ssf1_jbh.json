@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_jbh",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF1",
+  "title" : "CS Site-Specific Factor 1",
+  "subtitle" : "FIGO Stage",
+  "notes" : "**Note 1**:  The Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage definitions do not include Stage 0 (Tis). Use code 987 for any case where CS Extension is coded 000.\n\n**Note 2**:  Code the FIGO stage as stated in the medical record. When lymph node(s) is/are clinically or pathologically positive or metastasis is present, make sure that the FIGO stage reflects the combination of T, N, and M and NOT just the T. If a stage group is stated but it does not specify that it is a FIGO stage, assume that it is a FIGO stage and code it. Do not attempt to code FIGO stage based only on T, N, and M. If you cannot make a determination of stage based on the previous information, use code 999.",
+  "last_modified" : "2015-05-27T16:19:58.920Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "100", "FIGO Stage l [NOS]" ], [ "110", "FIGO Stage lA" ], [ "120", "FIGO Stage 1B" ], [ "200", "FIGO Stage ll [NOS]" ], [ "210", "FIGO Stage IIA" ], [ "220", "FIGO Stage IIB" ], [ "300", "FIGO Stage III [NOS]" ], [ "310", "FIGO Stage IIIA" ], [ "320", "FIGO Stage IIIB" ], [ "330", "FIGO Stage IIIC" ], [ "400", "OBSOLETE DATA CONVERTED V0203\nSee code 406\n\nFIGO Stage IVA" ], [ "402", "FIGO Stage IV [NOS]" ], [ "406", "FIGO Stage IVA" ], [ "410", "FIGO Stage IVB" ], [ "888", "OBSOLETE DATA CONVERTED V0200\nSee code 988\n\nNot applicable for this site" ], [ "987", "Carcinoma in situ (intraepithelial, noninvasive, preinvasive" ], [ "988", "Not applicable:  Information not collected for this case\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.  If this item is required to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "999", "FIGO stage unknown" ] ]
+}

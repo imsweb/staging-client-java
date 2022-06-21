@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_larynx_other",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection LarynxOther",
+  "title" : "Schema selection for LarynxOther",
+  "last_modified" : "2021-04-29T14:05:06.332Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C323,C328-C329", "8000-8700", "MATCH" ] ]
+}

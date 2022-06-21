@@ -1,0 +1,36 @@
+{
+  "id" : "mets_hbz",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note 1**: Inferior phrenic nodes are classified as regional nodes for AJCC 7 staging and coded in CS Lymph Nodes.\n\n**Note 2**:  Periduodenal and peripancreatic nodes are distant for tumors in the left liver, and gastrohepatic nodes are distant for tumors in the right liver. If both lobes of liver are involved, code involvement of periduodenal/peripancreatic and gastrohepatic nodes in CS Lymph Nodes.\n\n**Note 3**:  Caval nodes are classified as distant for AJCC 7 staging.",
+  "footnotes" : "- For CS Mets at DX codes 00-99, the N and M categories for AJCC 6 staging are assigned based on the coding of CS Lymph Nodes and CS Mets at DX as shown in the Lymph Nodes Mets at DX AJCC 6 Table for this schema.",
+  "last_modified" : "2015-05-27T16:19:29.351Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "JUMP:lymph_nodes_metsat_dxajcc6_xgq_m", "VALUE:NONE", "VALUE:NONE" ], [ "07", "Distant lymph nodes:\n    Caval (inferior vena cava)", "VALUE:M1", "JUMP:lymph_nodes_metsat_dxajcc6_xgq_m", "VALUE:RN", "VALUE:RN" ], [ "10", "Distant lymph node(s), NOS", "VALUE:M1", "JUMP:lymph_nodes_metsat_dxajcc6_xgq_m", "VALUE:D", "VALUE:D" ], [ "11", "Distant lymph nodes:\n    Cardiac\n    Lateral (aortic) (lumbar)\n    Pericardial (pericardiac)\n    Posterior mediastinal (tracheoesophageal) including juxtaphrenic nodes\n    Retroperitoneal, NOS", "VALUE:M1", "JUMP:lymph_nodes_metsat_dxajcc6_xgq_m", "VALUE:RN", "VALUE:D" ], [ "12", "Distant lymph nodes:\n    Coronary artery\n    Renal artery", "VALUE:M1", "JUMP:lymph_nodes_metsat_dxajcc6_xgq_m", "VALUE:RN", "VALUE:D" ], [ "13", "OBSOLETE DATA RETAINED AND REVIEWED V0203 \nPeripancreatic nodes for tumors of right liver classified as regional nodes in AJCC 7.  See codes 00, 17, and 20, and CS Lymph Nodes codes 130, 140, and 310.\n\nDistant lymph node(s):\n    Aortic (para-, peri-)\n    Diaphragmatic, NOS\n    Peripancreatic (near head of pancreas only)", "VALUE:M1", "JUMP:lymph_nodes_metsat_dxajcc6_xgq_m", "VALUE:D", "VALUE:D" ], [ "14", "(11, 12) + 07\n\nDistant nodes in codes 11 or 12 plus nodes in code 07", "VALUE:M1", "JUMP:lymph_nodes_metsat_dxajcc6_xgq_m", "VALUE:RN", "VALUE:D" ], [ "15", "OBSOLETE DATA RETAINED V0200\nInferior phrenic nodes reclassified from distant to regional nodes in AJCC 7th Edition; See Code 16 or CS Lymph Node code 200\n\nDistant lymph node(s) other than codes 10-13, including inferior phrenic nodes", "ERROR:", "JUMP:lymph_nodes_metsat_dxajcc6_xgq_m", "VALUE:D", "VALUE:D" ], [ "16", "OBSOLETE DATA REVIEWED V0203 \nPeriduodenal nodes for tumors of right liver classified as regional nodes in AJCC 7.  See codes 00, 17, 18, 20, 58; see CS Lymph Nodes codes 130, 140, 310.\n\nDistant lymph node(s) other than codes 10-13", "VALUE:M1", "JUMP:lymph_nodes_metsat_dxajcc6_xgq_m", "VALUE:D", "VALUE:D" ], [ "17", "Distant lymph node(s):\n    Aortic:\n        Para-aortic\n        Periaortic\n    Diaphragmatic, NOS\n    Left liver (segments 2-4):\n        Periduodenal\n        Peripancreatic \n    Right liver (segments 5-8):\n        Gastrohepatic", "VALUE:M1", "JUMP:lymph_nodes_metsat_dxajcc6_xgq_m", "VALUE:D", "VALUE:D" ], [ "18", "Distant lymph node(s) other than codes 07,11, 12, 17", "VALUE:M1", "JUMP:lymph_nodes_metsat_dxajcc6_xgq_m", "VALUE:D", "VALUE:D" ], [ "20", "(17, 18) + 07\n\nDistant lymph nodes in code 17 or 18 plus nodes in code 07", "VALUE:M1", "JUMP:lymph_nodes_metsat_dxajcc6_xgq_m", "VALUE:D", "VALUE:D" ], [ "40", "Distant metastasis except distant lymph node(s)\nCarcinomatosis", "VALUE:M1", "JUMP:lymph_nodes_metsat_dxajcc6_xgq_m", "VALUE:D", "VALUE:D" ], [ "50", "OBSOLETE DATA RETAINED V0200\nInferior phrenic nodes reclassified from distant to regional nodes in AJCC 7, see CS Lymph Nodes code 200; see code 51 for combinations involving other nodes\n\n40 + any of  (10 or 11 or 15)\nDistant lymph node(s) plus other distant metastases", "ERROR:", "JUMP:lymph_nodes_metsat_dxajcc6_xgq_m", "VALUE:D", "VALUE:D" ], [ "51", "OBSOLETE DATA REVIEWED V0203\nPeriduodenal nodes for tumors of right liver classified as regional nodes in AJCC 7. See codes 40, 55, and 58\n\n40 + (10 or 11 or 16)\n\nDistant lymph node(s) plus other distant metastases", "VALUE:M1", "JUMP:lymph_nodes_metsat_dxajcc6_xgq_m", "VALUE:D", "VALUE:D" ], [ "52", "OBSOLETE DATA RETAINED AND REVIEWED V0203 \nPeripancreatic nodes for tumors of right liver classified as regional nodes in AJCC 7. See codes 40, 55, and 58 \n\n40 + (12 or 13)\n\nDistant lymph node(s) plus other distant metastases", "VALUE:M1", "JUMP:lymph_nodes_metsat_dxajcc6_xgq_m", "VALUE:D", "VALUE:D" ], [ "55", "40 + 07\n\nDistant metastasis plus distant lymph nodes in code 07", "VALUE:M1", "JUMP:lymph_nodes_metsat_dxajcc6_xgq_m", "VALUE:D", "VALUE:D" ], [ "58", "40 + (10, 11, 12, 14, 17, 18)\n\nDistant metastasis plus distant lymph nodes in codes 10, 11, 12, 14, 17, or 18", "VALUE:M1", "JUMP:lymph_nodes_metsat_dxajcc6_xgq_m", "VALUE:D", "VALUE:D" ], [ "60", "Distant metastasis, NOS\n\nStated as M1 with no other information on distant metastasis", "VALUE:M1", "JUMP:lymph_nodes_metsat_dxajcc6_xgq_m", "VALUE:RN", "VALUE:RN" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "JUMP:lymph_nodes_metsat_dxajcc6_xgq_m", "VALUE:U", "VALUE:U" ] ]
+}

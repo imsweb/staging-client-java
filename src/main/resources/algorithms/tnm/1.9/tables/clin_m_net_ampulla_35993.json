@@ -1,0 +1,27 @@
+{
+  "id" : "clin_m_net_ampulla_35993",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin M NET Ampulla",
+  "title" : "Clinical M",
+  "notes" : "**Distant lymph nodes**\n\n    At tail of pancreas\n    Para-aortic\n    Splenic",
+  "last_modified" : "2018-05-14T21:29:01.678Z",
+  "definition" : [ {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_m_display",
+    "name" : "Clinical M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "CLINICAL assessment only:\nDistant lymph nodes, NOS\n\nCarcinomatosis, including: \n    Seeding of peritoneum, even if limited to the lesser sac region; positive peritoneal cytology\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated  as M1" ], [ "p1", "pM1", "Distant metastasis", "HISTOLOGICALLY confirmed:\nDistant lymph nodes, NOS\n\nCarcinomatosis, including: \n    Seeding of peritoneum, even if limited to the lesser sac region; positive peritoneal cytology\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS\n\nStated  as M1" ], [ "88", "88", "Not applicable", "In situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in patient record\nClinical evaluation of T and N not done, no evidence metastatic disease\nTumor first detected on surgical resection (no clinical workup)\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

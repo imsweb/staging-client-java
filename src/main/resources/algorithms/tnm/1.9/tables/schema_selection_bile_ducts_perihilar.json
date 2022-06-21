@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_bile_ducts_perihilar",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Schema Selection BileDuctsPerihilar",
+  "title" : "Schema selection for BileDuctsPerihilar",
+  "last_modified" : "2018-05-14T21:29:03.564Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf25",
+    "name" : "Schema Discriminator: BileDuctsDistal/BileDuctsPerihilar/CysticDuct",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C240", "8000-9136,9141-9582,9700-9701", "010,020,050,060,999", "MATCH" ] ]
+}

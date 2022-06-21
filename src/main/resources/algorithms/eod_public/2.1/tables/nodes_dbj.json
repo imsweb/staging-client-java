@@ -1,0 +1,28 @@
+{
+  "id" : "nodes_dbj",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "EOD Regional Nodes",
+  "title" : "EOD Regional Nodes",
+  "notes" : "**Note 1:** Code only regional nodes and nodes, NOS, in this field. Distant nodes are coded in EOD Mets.\n\n**Note 2:** This schema has lymph node codes that are defined as **CLINICAL** assessment only or **PATHOLOGICAL** assessment only.\n+ **CLINICAL** assessment only codes (100, 200, 300) are used when there is a clinical work up only and there is no surgical resection of the primary tumor or site. This includes FNA, core biopsy, sentinel node biopsy, or lymph node excision\n  - *Exception:* If patient has neoadjuvant therapy, and the clinical assessment is greater than the pathological assessment, then the clinical assessment code would take priority\n+ **PATHOLOGICAL** assessment only codes (400, 500) are used when \n   - Primary tumor or site surgically resected with\n     - Any microscopic examination of regional lymph nodes. Includes\n       - FNA, core biopsy, sentinel node biopsy or lymph node excision done during the clinical work up and/or\n       - Lymph node dissection performed\n\n+ Remaining codes (no designation of **CLINICAL** or **PATHOLOGICAL** only assessment) can be used based on clinical and/or pathological information\n\n**Note 3:** Regional lymph nodes include\n- Iliac, NOS\n    + External\n    + Internal (hypogastric, obturator)\n- Inguinal, NOS\n    + Node of Cloquet or Rosenmuller (highest deep inguinal)\n    + Superficial [femoral] \n- Pelvic, NOS\n\n**Note 4:** Code 800 if regional lymph nodes are involved, but there is no indication which ones are involved.",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017\n\n(5) Pettaway, C.A., Srigley, J.R., Amin, M.B., et al. **Penis**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017",
+  "last_modified" : "2021-06-04T18:34:02.351Z",
+  "definition" : [ {
+    "key" : "eod_regional_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_n",
+    "name" : "EOD 2018 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_n",
+    "name" : "SS2018 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:NONE" ], [ "100", "CLINICAL assessment only\n\nPalpable mobile unilateral inguinal lymph node", "VALUE:N1", "VALUE:RN" ], [ "200", "CLINICAL assessment only\n\nPalpable mobile greater than or equal to 2 unilateral inguinal nodes \nBilateral inguinal lymph nodes", "VALUE:N2", "VALUE:RN" ], [ "300", "CLINICAL assessment only\nPalpable fixed inguinal nodal mass\nPelvic lymphadenopathy (unilateral or bilateral)", "VALUE:N3", "VALUE:RN" ], [ "400", "PATHOLOGICAL assessment only\n\nPositive inguinal lymph nodes WITHOUT extranodal extension", "JUMP:rn_positive_with_regional_nodes_for_ajcc_n_88245", "VALUE:RN" ], [ "500", "PATHOLOGICAL assessment only\n\nExtranodal extension of any lymph nodes\nOR pelvic lymph node metastases", "VALUE:N3", "VALUE:RN" ], [ "800", "Regional lymph node(s), NOS\nLymph node(s), NOS", "VALUE:N1", "VALUE:RN" ], [ "999", "Unknown; regional lymph node(s) not stated\nRegional lymph node(s) cannot be assessed\nNot documented in medical record\n\nDeath Certificate Only", "VALUE:NX", "VALUE:U" ] ]
+}

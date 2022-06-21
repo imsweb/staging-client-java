@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_pleura",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection Pleura",
+  "title" : "Schema selection for Pleura",
+  "last_modified" : "2020-10-28T17:13:47.163Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C340-C349,C384", "9050-9053", "MATCH" ] ]
+}

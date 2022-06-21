@@ -1,0 +1,23 @@
+{
+  "id" : "tumor_size_with_primary_tumor_for_ajcc_t_15190",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Tumor Size with Primary Tumor for T",
+  "title" : "Tumor Size Summary with EOD Primary Tumor for T",
+  "notes" : "If EOD Primary Tumor = 100, Tumor Size Summary is necessary to determine the T value.",
+  "last_modified" : "2020-08-18T17:45:40.077Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "EOD Primary Tumor",
+    "type" : "INPUT"
+  }, {
+    "key" : "size_summary",
+    "name" : "Tumor Size",
+    "type" : "INPUT"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100,500,700", "000", "ERROR:Localized tumor or tumor with extension - Tumor Size is in conflict" ], [ "100,500,700", "001-005", "VALUE:T1a" ], [ "100,500,700", "006-010", "VALUE:T1b" ], [ "100,500,700", "011-020", "VALUE:T1c" ], [ "100,500,700", "021-040", "VALUE:T2" ], [ "100,500,700", "041-989", "VALUE:T3" ], [ "100,500,700", "990", "VALUE:T1a" ], [ "100,500,700", "998", "ERROR:Localized tumor or tumor with extension - Tumor Size is in conflict" ], [ "100,500,700", "999", "VALUE:TX" ], [ "000,600,800,999", "*", "MATCH" ] ]
+}

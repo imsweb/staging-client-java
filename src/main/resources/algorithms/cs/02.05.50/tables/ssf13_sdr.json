@@ -1,0 +1,20 @@
+{
+  "id" : "ssf13_sdr",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF13",
+  "title" : "CS Site-Specific Factor 13",
+  "subtitle" : "Carcinoembryonic Antigen (CEA)",
+  "notes" : "**Note**:  Record the interpretation of the highest CEA test results documented in the medical record prior to treatment.  The interpretation should be for the same laboratory test recorded in CS Site-Specific Factor 14.",
+  "last_modified" : "2015-05-27T16:19:55.752Z",
+  "definition" : [ {
+    "key" : "ssf13",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "OBSOLETE DATA CONVERTED V0203\nSee code 998 \n\nTest not done" ], [ "010", "Positive/elevated" ], [ "020", "Negative/normal; within normal limits" ], [ "030", "Borderline; undetermined whether positive or negative" ], [ "988", "Not applicable: Information not collected for this case (If this information is required by your standard setter, use of code 988 may result in an edit error.)" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

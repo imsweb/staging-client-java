@@ -1,0 +1,23 @@
+{
+  "id" : "parse_m_47057",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Parse M",
+  "title" : "Parse M",
+  "description" : "With the addition of the c and p prefixes to the existing codes, the prefix must be parsed from the main value during calculations.  It will be retained for the combined value.  This will have no impact on the stored value and is solely a temporary state.",
+  "last_modified" : "2018-05-14T21:29:02.816Z",
+  "definition" : [ {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "m_prefix",
+    "name" : "M Prefix",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "root_m",
+    "name" : "Root M value",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "c0", "VALUE:c", "VALUE:0" ], [ "c0I+", "VALUE:c", "VALUE:0I+" ], [ "c1", "VALUE:c", "VALUE:1" ], [ "c1A", "VALUE:c", "VALUE:1A" ], [ "c1B", "VALUE:c", "VALUE:1B" ], [ "c1C", "VALUE:c", "VALUE:1C" ], [ "c1D", "VALUE:c", "VALUE:1D" ], [ "c1E", "VALUE:c", "VALUE:1E" ], [ "p1", "VALUE:p", "VALUE:1" ], [ "p1A", "VALUE:p", "VALUE:1A" ], [ "p1B", "VALUE:p", "VALUE:1B" ], [ "p1C", "VALUE:p", "VALUE:1C" ], [ "p1D", "VALUE:p", "VALUE:1D" ], [ "p1E", "VALUE:p", "VALUE:1E" ], [ "X", "VALUE:", "VALUE:X" ], [ "0", "VALUE:", "VALUE:0" ], [ "0I+", "VALUE:", "VALUE:0I+" ], [ "1", "VALUE:", "VALUE:1" ], [ "1A", "VALUE:", "VALUE:1A" ], [ "1B", "VALUE:", "VALUE:1B" ], [ "1C", "VALUE:", "VALUE:1C" ], [ "1D", "VALUE:", "VALUE:1D" ], [ "1E", "VALUE:", "VALUE:1E" ], [ "88", "VALUE:", "VALUE:88" ], [ "", "VALUE:", "VALUE:" ] ]
+}

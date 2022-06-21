@@ -1,0 +1,20 @@
+{
+  "id" : "ssf15_sco",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF15",
+  "title" : "Site-Specific Factor 15",
+  "subtitle" : "Muir-Torre Syndrome",
+  "notes" : "**Note 1:**  Muir-Torre syndrome is a rare autosomal dominant condition in which multiple primary malignancies occur together with a sebaceous gland tumor.  It is defined by the combination of at least one sebaceous adenoma, epithelioma, or carcinoma, and at least one visceral carcinoma occurring in the same individual in the absence of other precipitating factors such as radiotherapy or Autoimmune Immunodeficiency Syndrome (AIDS).\n\n**Note 2:**  Code history of Muir-Torre Syndrome as documented by the physician in the medical record.",
+  "last_modified" : "2018-05-14T21:29:01.696Z",
+  "definition" : [ {
+    "key" : "ssf15",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No history of Muir-Torre Syndrome" ], [ "010", "History of Muir-Torre Syndrome" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

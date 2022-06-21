@@ -1,0 +1,36 @@
+{
+  "id" : "nodes_dbb",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  The regional nodes are inguinal or femoral:  inguinal, NOS; deep inguinal, NOS; Node of Cloquet or Rosenmuller (highest deep inguinal); and superficial inguinal (femoral) and regional lymph nodes [NOS].\n\n**Note 3**:  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and regional lymph node detail are available, record the code with regional lymph node detail in preference to a statement of FIGO stage. FIGO Stage IVA is assigned based on tumor extension and/or regional lymph node involvement.  Code CS Lymph Nodes based on a physician's statement of FIGO Stage IVA only if it is known that the stage value is assigned because of regional lymph node involvement.",
+  "footnotes" : "- CS Lymph Nodes codes 110-450 are used in conjunction with CS Site Specific Factor 11,Regional Lymph Node Laterality, to determine the N category for AJCC 6 staging as shown in the  Lymph Nodes SSF 11 AJCC 6 Table.",
+  "last_modified" : "2015-05-27T16:19:32.984Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "100", "OBSOLETE DATA RETAINED V0200\n\nUnilateral regional lymph nodes:\n    Inguinal, NOS:\n        Deep inguinal, NOS:\n            Node of Cloquet or Rosenmuller (highest deep inguinal)\n        Superficial inguinal (femoral)\nRegional lymph nodes, NOS (unilateral)\nFIGO Stage III", "ERROR:", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "110", "1 or 2 regional lymph node(s) positive and size of metastasis in each node less than 5 mm", "VALUE:N1a", "JUMP:lymph_nodes_ssf11_ajcc6_xqd", "VALUE:RN", "VALUE:RN" ], [ "120", "1 lymph node metastasis equal to or greater than 5 mm", "VALUE:N1b", "JUMP:lymph_nodes_ssf11_ajcc6_xqd", "VALUE:RN", "VALUE:RN" ], [ "130", " 1 or 2 regional lymph node(s) positive (or number positive unknown) and size of metastasis not given", "VALUE:N1NOS", "JUMP:lymph_nodes_ssf11_ajcc6_xqd", "VALUE:RN", "VALUE:RN" ], [ "150", "FIGO Stage IIIA", "VALUE:N1NOS", "JUMP:lymph_nodes_ssf11_ajcc6_xqd", "VALUE:RN", "VALUE:RN" ], [ "210", "3 or more regional lymph nodes positive and size of metastasis in each node less than 5 mm", "VALUE:N2a", "JUMP:lymph_nodes_ssf11_ajcc6_xqd", "VALUE:RN", "VALUE:RN" ], [ "220", "At least 2 lymph node metastases equal to or greater than 5 mm", "VALUE:N2b", "JUMP:lymph_nodes_ssf11_ajcc6_xqd", "VALUE:RN", "VALUE:RN" ], [ "230", "3 or more regional lymph node(s) positive and size of metastases not given", "VALUE:N2NOS", "JUMP:lymph_nodes_ssf11_ajcc6_xqd", "VALUE:RN", "VALUE:RN" ], [ "250", "FIGO Stage IIIB", "VALUE:N2NOS", "JUMP:lymph_nodes_ssf11_ajcc6_xqd", "VALUE:RN", "VALUE:RN" ], [ "300", "Regional lymph node(s) with extracapsular spread", "VALUE:N2c", "JUMP:lymph_nodes_ssf11_ajcc6_xqd", "VALUE:RN", "VALUE:RN" ], [ "350", "FIGO Stage IIIC", "VALUE:N2c", "JUMP:lymph_nodes_ssf11_ajcc6_xqd", "VALUE:RN", "VALUE:RN" ], [ "360", "FIGO Stage III [NOS]", "VALUE:N1NOS", "JUMP:lymph_nodes_ssf11_ajcc6_xqd", "VALUE:RN", "VALUE:RN" ], [ "400", "Fixed or ulcerated regional lymph nodes", "VALUE:N3", "JUMP:lymph_nodes_ssf11_ajcc6_xqd", "VALUE:RN", "VALUE:RN" ], [ "450", "FIGO Stage IVA based on regional lymph node involvement", "VALUE:N3", "JUMP:lymph_nodes_ssf11_ajcc6_xqd", "VALUE:RN", "VALUE:RN" ], [ "500", "OBSOLETE DATA RETAINED V0200\n\nBilateral or contralateral regional lymph nodes:\n    Inguinal, NOS:\n        Deep inguinal, NOS:\n            Node of Cloquet or Rosenmuller (highest deep inguinal)\n        Superficial inguinal (femoral)\nRegional lymph nodes, NOS (bilateral/contralateral)\nFIGO Stage IVA", "ERROR:", "VALUE:N2", "VALUE:RN", "VALUE:RN" ], [ "600", "Regional lymph node(s), NOS ", "VALUE:N1NOS", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1NOS", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

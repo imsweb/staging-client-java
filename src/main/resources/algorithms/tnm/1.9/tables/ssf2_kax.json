@@ -1,0 +1,20 @@
+{
+  "id" : "ssf2_kax",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF2",
+  "title" : "Site-Specific Factor 2",
+  "subtitle" : "Nuclear NM23 Staining",
+  "notes" : "**Note 1:**  The NM23 gene located on chromosome 17 encodes the protein nucleoside diphosphate kinase. The presence of nuclear NM23 protein may be a good marker for predicting the metastatic potential of certain tumors. The value is expressed as the percentage of carcinoma cells in the tissue sample with positive nuclear staining for the NM23 protein.\n\n**Note 2:**  Record whether nuclear NM23 staining is present as stated on the test report.",
+  "last_modified" : "2018-05-14T21:29:00.046Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Positive for NM23 staining" ], [ "020", "Negative for NM23 staining" ], [ "030", "Borderline; undetermined if positive or negative" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Test performed, results not available" ], [ "998", "Test not done (test not ordered and not performed) No histologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

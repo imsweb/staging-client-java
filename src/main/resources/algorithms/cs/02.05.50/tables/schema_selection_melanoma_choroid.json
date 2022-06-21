@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_melanoma_choroid",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection MelanomaChoroid",
+  "title" : "Schema selection for MelanomaChoroid",
+  "last_modified" : "2015-05-27T16:19:44.344Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C693", "8720-8790", "MATCH" ] ]
+}

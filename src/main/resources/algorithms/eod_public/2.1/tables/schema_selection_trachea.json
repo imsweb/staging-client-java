@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_trachea",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection Trachea",
+  "title" : "Schema selection for Trachea",
+  "last_modified" : "2021-04-29T16:14:44.634Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C339", "8000-8700, 8720-8790", "MATCH" ] ]
+}

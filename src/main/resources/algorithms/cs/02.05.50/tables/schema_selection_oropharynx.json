@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_oropharynx",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection Oropharynx",
+  "title" : "Schema selection for Oropharynx",
+  "last_modified" : "2015-05-27T16:19:46.824Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C090-C091,C098-C099,C100,C102-C104,C108-C109", "8000-8713,8800-9136,9141-9582,9700-9701", "MATCH" ] ]
+}

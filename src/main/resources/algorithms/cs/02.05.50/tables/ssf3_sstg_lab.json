@@ -1,0 +1,25 @@
+{
+  "id" : "ssf3_sstg_lab",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF3",
+  "title" : "CS Site-Specific Factor 3",
+  "subtitle" : "CS Extension - Pathologic Extension",
+  "notes" : "**Note 1**:  Include information from prostatectomy and autopsy in this field and not in CS Extension - Clinical Extension.  Only use histologic information from prostatectomy, including simple prostatectomy with negative margins, and autopsy in this field.  Information from biopsy of extraprostatic sites is coded in CS Extension - Clinical Extension; information from needle core biopsy of prostate is coded in CS Site-Specific Factor 14.\n\n**Note 2**:  Code 970 if there is no prostatectomy performed within the first course of treatment.\n\n**Note 3**:  Limit information in this field to first course of treatment in the absence of disease progression.\n\n**Note 4**:  AJCC considers \"in situ carcinoma of prostate gland\" an impossible diagnosis.  Any case so coded is mapped to TX for AJCC stage and in situ Summary Stage.\n\n**Note 5**:  When prostate cancer is an incidental finding during a prostatectomy for other reasons (for example, a cystoprostatectomy for bladder cancer), use the appropriate code for the extent of disease found (for example, involvement in one lobe, both lobes, or more).\n\n**Note 6**:  When the apical margin, distal urethral margin, bladder base margin, or bladder neck margin is involved and there is no extracapsular extension, use code 400.\n\n**Note 7**:  Involvement of the prostatic urethra does not alter the extension code.\n\n**Note 8**:  \"Frozen pelvis\" is a clinical term which means tumor extends to pelvic sidewall(s).  In the absence of a more detailed statement of involvement, assign this to code 600.\n\n**Note 9**:  For information regarding stage calculations, refer to CS Extension - Clinical Extension Note 8 and the Special Calculation extra tables.\n\n**Note 10**: This version of the table is only used to calculate Summary Stage T values.",
+  "footnotes" : "For this site, extension is coded in two CS fields: CS Extension - Clinical Extension and CS Site-Specific Factor 3 - Pathologic Extension. The mapping values for the T category for AJCC stage, SS77, and SS2000 and the associated c, p, yp, or a indicator are assigned based on the values in CS Extension - Clinical Extension, CS Tumor Size/Ext Eval, and CS Site-Specific Factor 3 - Pathologic Extension as shown in the Special Calculation Table for TNM 7 Invasive/Unknown Pathologic Extension Eval, Special Calculation Table for TNM 7 Non-Invasive Pathologic Extension, Special Calculation Table for TNM 6 Invasive/Unknown Pathologic Extension Eval, Special Calculation Table for TNM 6 Non-Invasive Pathologic Extension, and Special Calculation Table for SEER Summary Stage.",
+  "last_modified" : "2015-05-27T16:20:06.164Z",
+  "definition" : [ {
+    "key" : "ssf3",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "VALUE:IS", "VALUE:IS" ], [ "020", "ERROR:", "ERROR:" ], [ "021", "ERROR:", "ERROR:" ], [ "022", "ERROR:", "ERROR:" ], [ "023", "ERROR:", "ERROR:" ], [ "030", "ERROR:", "ERROR:" ], [ "031", "ERROR:", "ERROR:" ], [ "032", "ERROR:", "ERROR:" ], [ "033", "ERROR:", "ERROR:" ], [ "034", "ERROR:", "ERROR:" ], [ "040", "ERROR:", "ERROR:" ], [ "041", "ERROR:", "ERROR:" ], [ "042", "ERROR:", "ERROR:" ], [ "043", "ERROR:", "ERROR:" ], [ "045", "ERROR:", "ERROR:" ], [ "048", "ERROR:", "ERROR:" ], [ "050", "ERROR:", "ERROR:" ], [ "052", "ERROR:", "ERROR:" ], [ "060", "ERROR:", "ERROR:" ], [ "070", "ERROR:", "ERROR:" ], [ "095", "ERROR:", "ERROR:" ], [ "096", "ERROR:", "ERROR:" ], [ "097", "ERROR:", "ERROR:" ], [ "098", "ERROR:", "ERROR:" ], [ "099", "ERROR:", "ERROR:" ], [ "200", "VALUE:L", "VALUE:L" ], [ "210", "VALUE:L", "VALUE:L" ], [ "220", "VALUE:L", "VALUE:L" ], [ "230", "VALUE:L", "VALUE:L" ], [ "300", "VALUE:L", "VALUE:L" ], [ "320", "VALUE:L", "VALUE:L" ], [ "330", "VALUE:L", "VALUE:L" ], [ "340", "VALUE:L", "VALUE:L" ], [ "350", "VALUE:L", "VALUE:L" ], [ "400", "VALUE:L", "VALUE:RE" ], [ "402", "VALUE:L", "VALUE:RE" ], [ "404", "VALUE:L", "VALUE:RE" ], [ "406", "VALUE:L", "VALUE:RE" ], [ "410", "VALUE:RE", "VALUE:RE" ], [ "415", "VALUE:RE", "VALUE:RE" ], [ "420", "VALUE:RE", "VALUE:RE" ], [ "430", "VALUE:RE", "VALUE:RE" ], [ "480", "VALUE:RE", "VALUE:RE" ], [ "482", "VALUE:RE", "VALUE:RE" ], [ "483", "VALUE:RE", "VALUE:RE" ], [ "485", "VALUE:RE", "VALUE:RE" ], [ "490", "VALUE:RE", "VALUE:RE" ], [ "495", "VALUE:RE", "VALUE:RE" ], [ "500", "VALUE:RE", "VALUE:RE" ], [ "510", "VALUE:RE", "VALUE:RE" ], [ "520", "VALUE:D", "VALUE:RE" ], [ "600", "VALUE:D", "VALUE:D" ], [ "700", "VALUE:D", "VALUE:D" ], [ "750", "VALUE:D", "VALUE:D" ], [ "950", "VALUE:U", "VALUE:U" ], [ "960", "VALUE:U", "VALUE:U" ], [ "970", "VALUE:U", "VALUE:U" ], [ "980", "VALUE:U", "VALUE:U" ], [ "985", "VALUE:U", "VALUE:U" ], [ "990", "VALUE:U", "VALUE:U" ] ]
+}

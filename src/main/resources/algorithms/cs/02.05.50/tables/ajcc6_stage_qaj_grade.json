@@ -1,0 +1,19 @@
+{
+  "id" : "ajcc6_stage_qaj_grade",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC6 Stage - Footnote",
+  "title" : "AJCC TNM 6 Stage - Footnote: Stage Group determined by Grade",
+  "footnotes" : "- For T1a N0 M0, stage is based on grade as follows: if grade is 1, stage is I; if grade is 2, 3, or 4, stage is II; if grade is 9, stage is UNK.",
+  "last_modified" : "2015-05-27T16:18:48.314Z",
+  "definition" : [ {
+    "key" : "grade",
+    "name" : "Grade",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "1", "VALUE:I" ], [ "2,3,4", "VALUE:II" ], [ "9", "VALUE:UNK" ] ]
+}

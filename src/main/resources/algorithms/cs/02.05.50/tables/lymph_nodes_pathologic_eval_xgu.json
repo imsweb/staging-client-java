@@ -1,0 +1,27 @@
+{
+  "id" : "lymph_nodes_pathologic_eval_xgu",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Lymph Nodes Pathologic Eval",
+  "title" : "Lymph Nodes Pathologic Eval Table",
+  "notes" : "**Note**:  This table is used when CS Lymph Nodes Eval is coded 2 (p), 3 (p), 6 (yp), or 8 (a) and CS Lymph Nodes is coded 100-500 ONLY. The N category is assigned based on the values of CS Site-Specific Factor 5, Size of Metastasis in Lymph Nodes, and Regional Nodes Positive.",
+  "last_modified" : "2015-05-27T16:19:25.651Z",
+  "definition" : [ {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf5",
+    "name" : "CS SSF 5",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "000-003", "ERROR:", "ERROR:" ], [ "01-05", "000-003", "ERROR:", "ERROR:" ], [ "06-90", "000-003", "ERROR:", "ERROR:" ], [ "95", "000-003", "ERROR:", "ERROR:" ], [ "97", "000-003", "ERROR:", "ERROR:" ], [ "98", "000-003", "ERROR:", "ERROR:" ], [ "99", "000-003", "ERROR:", "ERROR:" ], [ "00", "010", "ERROR:", "ERROR:" ], [ "01-05", "010", "VALUE:N1", "VALUE:N1" ], [ "06-90", "010", "VALUE:N2", "VALUE:N2" ], [ "95", "010", "VALUE:N1", "VALUE:N1" ], [ "97", "010", "VALUE:N1", "VALUE:N1" ], [ "98", "010", "ERROR:", "ERROR:" ], [ "99", "010", "ERROR:", "ERROR:" ], [ "00", "020", "ERROR:", "ERROR:" ], [ "01-05", "020", "VALUE:N2", "VALUE:N2" ], [ "06-90", "020", "VALUE:N2", "VALUE:N2" ], [ "95", "020", "VALUE:N2", "VALUE:N2" ], [ "97", "020", "VALUE:N2", "VALUE:N2" ], [ "98", "020", "ERROR:", "ERROR:" ], [ "99", "020", "ERROR:", "ERROR:" ], [ "00", "030", "ERROR:", "ERROR:" ], [ "01-05", "030", "VALUE:N3", "VALUE:N3" ], [ "06-90", "030", "VALUE:N3", "VALUE:N3" ], [ "95", "030", "VALUE:N3", "VALUE:N3" ], [ "97", "030", "VALUE:N3", "VALUE:N3" ], [ "98", "030", "ERROR:", "ERROR:" ], [ "99", "030", "ERROR:", "ERROR:" ], [ "00", "988", "ERROR:", "ERROR:" ], [ "01-05", "988", "ERROR:", "ERROR:" ], [ "06-90", "988", "ERROR:", "ERROR:" ], [ "95", "988", "ERROR:", "ERROR:" ], [ "97", "988", "ERROR:", "ERROR:" ], [ "98", "988", "ERROR:", "ERROR:" ], [ "99", "988", "ERROR:", "ERROR:" ], [ "00", "998", "ERROR:", "ERROR:" ], [ "01-05", "998", "ERROR:", "ERROR:" ], [ "06-90", "998", "ERROR:", "ERROR:" ], [ "95", "998", "ERROR:", "ERROR:" ], [ "97", "998", "ERROR:", "ERROR:" ], [ "98", "998", "ERROR:", "ERROR:" ], [ "99", "998", "ERROR:", "ERROR:" ], [ "00", "999", "ERROR:", "ERROR:" ], [ "01-05", "999", "VALUE:N1", "VALUE:N1" ], [ "06-90", "999", "VALUE:N2", "VALUE:N2" ], [ "95", "999", "VALUE:N1", "VALUE:N1" ], [ "97", "999", "VALUE:N1", "VALUE:N1" ], [ "98", "999", "ERROR:", "ERROR:" ], [ "99", "999", "ERROR:", "ERROR:" ] ]
+}

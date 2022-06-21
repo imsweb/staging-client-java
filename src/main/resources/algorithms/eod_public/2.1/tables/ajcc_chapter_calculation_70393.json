@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_chapter_calculation_70393",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2021-03-16T17:27:45.707Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "9100,9104-9105", "3", "VALUE:56", "Gestational Trophoblastic Neoplasms", "VALUE:08" ], [ "9100,9104-9105", "2", "VALUE:XX", "Other Gestational Trophoblastic Neoplasms", "VALUE:88" ], [ "8000-8700,8720-8790,9101-9103", "*", "VALUE:XX", "Other Gestational Trophoblastic Neoplasms", "VALUE:88" ] ]
+}

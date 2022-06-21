@@ -1,0 +1,26 @@
+{
+  "id" : "mets_hna",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "EOD Mets",
+  "title" : "EOD Mets",
+  "last_modified" : "2021-04-08T19:00:59.117Z",
+  "definition" : [ {
+    "key" : "eod_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_m",
+    "name" : "EOD 2018 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_m",
+    "name" : "SS2018 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "88", "Not applicable: Information not collected for this schema", "VALUE:88", "VALUE:NA" ] ]
+}

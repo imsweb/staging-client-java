@@ -1,0 +1,20 @@
+{
+  "id" : "ssf10_sek",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF10",
+  "title" : "Site-Specific Factor 10",
+  "subtitle" : "Pre-Orchiectomy Lactate Dehydrogenase (LDH) Range",
+  "notes" : "**Note 1:**  Of the three tumor markers, lactate dehydrogenase (LDH) is the least specific for testicular cancer and is more of a determinant of bulky or disseminated disease. Although recommended to be tested, LDH may not be routinely performed, especially if the primary is localized.\n\n**Note 2:**  Record the range of the LDH test as documented in the patient record prior to orchiectomy and other treatment.  \n\n**Note 3:**  If the pre-orchiectomy LDH test is unavailable but a physician's statement of the result is documented, use codes 991-993.\n\n**Note 4:**  For rare cases that are treated prior to orchiectomy, use code 995 in this field and record the initial LDH range in **Site-Specific Factor 16, Post-Orchiectomy Lactate Dehydrogenase (LDH) Range**.\n\n**Note 5:**  For rare cases that an orchiectomy is not performed, use code 996 in this field and record the initial LDH range in **Site-Specific Factor 16, Post-Orchiectomy Lactate Dehydrogenase (LDH) Range**.",
+  "last_modified" : "2018-05-14T21:28:58.377Z",
+  "definition" : [ {
+    "key" : "ssf10",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Within normal limits (S0)" ], [ "010", "Range 1 (S1) less than 1.5 x N            \n(Less than 1.5 times the upper limit of normal for LDH)" ], [ "020", "Range 2 (S2) 1.5 to 10 x N            \n(Between 1.5 and 10 times the upper limit of normal for LDH)" ], [ "030", "Range 3 (S3) greater than 10 x N            \n(Greater than 10 times the upper limit of normal for LDH)" ], [ "988", "Not applicable: Information not collected for this case" ], [ "991", "Pre-orchiectomy LDH stated to be elevated" ], [ "992", "Pre-orchiectomy LDH unknown but preorchiectomy serum tumor markers NOS stated to be normal" ], [ "993", "Pre-orchiectomy LDH unknown but preorchiectomy serum tumor markers NOS stated to be elevated" ], [ "995", "Pretreated case, initial LDH range recorded in Site-Specific Factor 16" ], [ "996", "No orchiectomy performed, initial LDH range recorded in Site-Specific Factor 16" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot  documented in patient record" ] ]
+}

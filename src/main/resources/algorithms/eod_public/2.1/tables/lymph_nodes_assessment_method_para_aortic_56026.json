@@ -1,0 +1,19 @@
+{
+  "id" : "lymph_nodes_assessment_method_para_aortic_56026",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "LN Assessment Method Para-aortic",
+  "title" : "Lymph Nodes Assessment Method Para-aortic",
+  "notes" : "**Note 1:** Physician statement of para-aortic assessment of nodal status for para-aortic nodes can be used to code this data item when no other information is available.\n\n**Note 2:** The following are para-aortic nodes\n* Aortic\n* Lateral aortic/lumbar aortic\n* Para-aortic, NOS\n* Periaortic\n\n**Note 3:** Assign the highest applicable code (0-2) in the case of multiple assessments.\n\n**Note 4:** For this data item, do not include isolated tumor cells (ITCs).\n\n**Note 5:** If there is no mention of para-aortic lymph node involvement in the workup, and the status data item: *LN Status: Para-aortic* does not indicate positive para-aortic nodes, code 0.\n\n**Note 6:** The assessment results are recorded in LN Status: Para-aortic[NAACCR Data Item #3958].",
+  "last_modified" : "2021-06-09T12:41:36.472Z",
+  "definition" : [ {
+    "key" : "ln_assessment_para_aortic",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Radiography, imaging \n(Ultrasound (US), computed tomography scan (CT), magnetic resonance imaging (MRI), positron emission tomography scan (PET))\n\nPhysical exam only" ], [ "1", "Incisional biopsy; fine needle aspiration (FNA)" ], [ "2", "Lymphadenectomy\nSentinel node biopsy\nExcisional biopsy or resection with microscopic confirmation" ], [ "7", "Para-aortic lymph node(s) assessed, unknown assessment method" ], [ "8", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nPara-aortic lymph node(s) not assessed or unknown if assessed" ] ]
+}

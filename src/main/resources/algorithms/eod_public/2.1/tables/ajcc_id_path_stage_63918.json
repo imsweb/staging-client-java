@@ -1,0 +1,19 @@
+{
+  "id" : "ajcc_id_path_stage_63918",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC ID Path Stage",
+  "title" : "AJCC ID Path Stage Table",
+  "notes" : "**Note:** This table shows the selection of the appropriate version of the Stage table based on AJCC ID.Only adenocarcinoma have a stage group.  The remaining AJCC histologies have T, N and M, but no stage group.",
+  "last_modified" : "2019-04-05T16:52:38.096Z",
+  "definition" : [ {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "18.1", "JUMP:tnm8_path_stage_ual" ], [ "18.2", "JUMP:tnm8_stage_for_sites_with_no_stage_groupings_unb" ] ]
+}

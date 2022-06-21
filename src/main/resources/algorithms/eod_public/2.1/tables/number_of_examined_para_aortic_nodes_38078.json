@@ -1,0 +1,19 @@
+{
+  "id" : "number_of_examined_para_aortic_nodes_38078",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Number of Examined Para-Aortic Nodes",
+  "title" : "Number of Examined Para-Aortic Nodes",
+  "notes" : "**Note 1:** Physician statement of examined para-aortic nodes can be used to code this data item when no other information is available.\n\n**Note 2:** The following are para-aortic nodes\n* Aortic\n* Lateral aortic/lateral lumbar\n* Para-aortic, NOS\n* Periaortic\n\n**Note 3:** Record the number of examined para-aortic lymph nodes documented in the medical record. \n\n**Note 4:** For the following\n* Code 00 when no lymph nodes are examined by FNA, core biopsy or removal of lymph node(s) (e.g., sentinel lymph node biopsy or lymph node dissection)\n* Code X6 If only a FNA or core biopsy is done\n* Code X9 if it’s unknown if lymph nodes were removed \n\n**Note 5:** The number of para-aortic nodes positive is recorded in Number of Positive Para-aortic Nodes [NAACCR Data Item #3901].",
+  "last_modified" : "2021-05-28T12:30:34.977Z",
+  "definition" : [ {
+    "key" : "num_exam_para_aortic_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "No para-aortic nodes examined" ], [ "01-99", "1 - 99 para-aortic nodes examined \n(Exact number of para-aortic lymph nodes examined)" ], [ "X1", "100 or more para-aortic nodes examined" ], [ "X2", "Para-aortic nodes examined, number unknown" ], [ "X6", "No para-aortic lymph nodes removed, but aspiration or core biopsy of para-aortic node(s) only" ], [ "X8", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code X8 will result in an edit error.)" ], [ "X9", "Not documented in medical record\nCannot be determined, indeterminate if examined para-aortic nodes present\nNo lymph node dissection performed\nPara-aortic lymph nodes not assessed or unknown if assessed" ] ]
+}

@@ -1,0 +1,18 @@
+{
+  "id" : "ssf8_snc",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF8",
+  "title" : "CS Site-Specific Factor 8",
+  "last_modified" : "2015-05-27T16:20:11.227Z",
+  "definition" : [ {
+    "key" : "ssf8",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "988", "Not applicable:  Site-specific factor not defined" ] ]
+}

@@ -1,0 +1,35 @@
+{
+  "id" : "extension_bat",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  Impaired vocal cord mobility, also described as vocal cord paresis, may suggest invasion of intrinsic laryngeal muscle.  Fixation of the vocal cord may be described as immobility of the arytenoids noted on endoscopy, vocal cord paralysis, or deviation of larynx to fixed side.\n\n**Note 2**:  Use code 450 for localized tumor only if no information is available to assign codes 100 through 400.\n\n**Note 3**:  Use code 130, 375, 530, 775, 810, or 815 if the physician's assignment of T category is the only information available about the extent of the tumor.",
+  "last_modified" : "2015-05-27T16:19:06.541Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "VALUE:Tis", "VALUE:Tis", "VALUE:IS", "VALUE:IS" ], [ "100", "OBSOLETE DATA CONVERTED V0200\nSee code 130\n\nInvasive tumor with normal vocal cord mobility: \nConfined to glottis, NOS; Intrinsic larynx; laryngeal commissure(s) anterior, posterior; vocal cord(s), NOS, true vocal cord(s), true cord(s)", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "110", "One vocal cord with normal vocal cord mobility\n\nStated as T1a with no other information on extension", "VALUE:T1a", "VALUE:T1a", "VALUE:L", "VALUE:L" ], [ "120", "Both vocal cords with normal vocal cord mobility\n\nStated as T1b with no other information on extension", "VALUE:T1b", "VALUE:T1b", "VALUE:L", "VALUE:L" ], [ "130", "Invasive tumor with normal vocal cord mobility: \n    Confined to glottis, NOS:\n    Intrinsic larynx\n    Laryngeal  commissure(s):\n        Anterior\n        Posterior;    \n    Vocal cord(s), NOS:\n        True vocal cord(s)\n        True cord(s)\n\nStated as T1 [NOS] with no other information on extension", "VALUE:T1NOS", "VALUE:T1NOS", "VALUE:L", "VALUE:L" ], [ "300", "Tumor involves adjacent regions(s) of larynx:\n    Subglottis\n    Supraglottis:\n        Aryepiglottic fold\n        Arytenoid cartilage:\n            Corniculate tubercle\n            Cuneiform tubercle\n        Ventricular bands (false vocal cord(s))", "VALUE:T2", "VALUE:T2", "VALUE:L", "VALUE:L" ], [ "350", "Impaired vocal cord mobility", "VALUE:T2", "VALUE:T2", "VALUE:L", "VALUE:L" ], [ "375", "Stated as T2 with no other information on extension", "VALUE:T2", "VALUE:T2", "VALUE:L", "VALUE:L" ], [ "400", "Tumor limited to larynx \nWITH vocal cord fixation\nInvolvement of intrinsic muscle(s) of larynx:\n    Aryepiglottic\n    Arytenoid \n    Cricoarytenoid\n    Cricothyroid\n    Thyroarytenoid \n    Thyroepiglottic\n    Vocalis", "VALUE:T3", "VALUE:T3", "VALUE:L", "VALUE:L" ], [ "450", "Localized, NOS", "VALUE:T1NOS", "VALUE:T1NOS", "VALUE:L", "VALUE:L" ], [ "510", "Paraglottic space", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "520", "Inner cortex of thyroid cartilage (minor thyroid cartilage erosion)", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:D" ], [ "530", "Stated as T3 with no other information on extension", "VALUE:T3", "VALUE:T3", "VALUE:L", "VALUE:L" ], [ "600", "Base of tongue\nHypopharynx, NOS\nPre-epiglottic tissues\nPostcricoid area\nPyriform sinus\nVallecula", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:RE" ], [ "610", "600 + 520\n\nAny structure in code 600 plus inner cortex of thyroid cartilage", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:D" ], [ "680", "Extension to/through:\n    Cricoid cartilage\n    Outer cortex of thyroid cartilage\n(See code 520)", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:D" ], [ "700", "Extension to/through tissues beyond larynx:\n    Strap muscles:\n        Omohyoid\n        Sternohyoid\n        Sternothyroid\n        Thyrohyoid\n    Oropharynx\n    Skin\n    Soft tissue of neck\n    Thyroid gland\n    Trachea", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "710", "Cervical esophagus", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "730", "Deep extrinsic muscle(s) of tongue", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "775", "Stated as T4a with no other information on extension", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "800", "Further contiguous extension, including:\n    Mediastinal structures\n    Prevertebral space\n    Carotid artery (encased)", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "810", "Stated as T4b with no other information on extension", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "815", "Stated as T4 [NOS] with no other information on extension", "VALUE:T4NOS", "VALUE:T4NOS", "VALUE:RE", "VALUE:RE" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

@@ -1,0 +1,23 @@
+{
+  "id" : "derived_rai_stage_73218",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Derived Rai Stage",
+  "title" : "Derived Rai Stage",
+  "notes" : "This data item stores the Derived Rai stage value derived from the values coded in the following SSDIs.\n*  Lymphocytosis (NAACCR #3885)\n* Adenopathy (NAACCR #3804)\n* Organomegaly (NAACCR #3907)\n* Anemia (NAACCR #3811)\n* Thrombocytopenia (NAACCR #3933)\n\nThe Rai stage is only applicable for those cases where the primary site is bone marrow (C421). \n* For cases with a primary site other than bone marrow (C421), the derived Rai stage will be 88 and all the SSDIs will be coded to 5. \n\nDerivation will be run on all cases diagnosed 1/1/2018 and forward.",
+  "last_modified" : "2021-04-16T14:05:15.158Z",
+  "definition" : [ {
+    "key" : "derived_rai_stage",
+    "name" : "Rai Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "rai_display",
+    "name" : "Rai Stage",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "0", "Lymphocytosis" ], [ "1", "I", "Lymphocytosis and Adenopathy" ], [ "2", "II", "Lymphocytosis and Organomegaly\n(Adenopathy is any value other than 5)" ], [ "3", "III", "Lymphocytosis and Anemia\n(Adenopathy and Organomegaly are any value other than 5)" ], [ "4", "IV", "Lymphocytosis and Thrombocytopenia\n(Adenopathy, Organomegaly and Anemia are any value other than 5)" ], [ "8", "N/A", "Does not apply, Site is not C421 \n(All 5 SSDIs should be set to 5)" ], [ "9", "9", "Unknown\n\n(All 5 SSDIs are 9 or blank; at least one is set to 9 OR\nLymphocytosis is 0,7,9 OR\nLymphocytosis is blank and one of the other SSDIs is a value other than 5 or 9)" ] ]
+}

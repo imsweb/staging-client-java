@@ -1,0 +1,19 @@
+{
+  "id" : "nodes_pos_fpd",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes Pos",
+  "title" : "Regional Nodes Positive",
+  "notes" : "**Note 1**:  Record this field even if there has been preoperative treatment.\n\n**Note 2**:  Use code 99, not applicable, for the following sites: Pituitary gland (C75.1), Craniopharyngeal duct (C75.2), and Pineal gland (C75.3)",
+  "last_modified" : "2015-05-27T16:19:40.202Z",
+  "definition" : [ {
+    "key" : "nodes_pos",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "All nodes examined negative." ], [ "01-89", "1 - 89 nodes positive (code exact number of nodes positive)" ], [ "90", "90 or more nodes positive" ], [ "95", "Positive aspiration or core biopsy of lymph node(s)" ], [ "97", "Positive nodes - number unspecified" ], [ "98", "No nodes examined" ], [ "99", "Unknown if nodes are positive; not applicable\nNot documented in patient record" ] ]
+}

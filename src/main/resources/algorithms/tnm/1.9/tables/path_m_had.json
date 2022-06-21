@@ -1,0 +1,27 @@
+{
+  "id" : "path_m_had",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Path M Melanoma Skin",
+  "title" : "Pathologic M",
+  "footnotes" : "\\# M1 [NOS] is not defined in AJCC 7th edition",
+  "last_modified" : "2018-05-14T21:29:01.245Z",
+  "definition" : [ {
+    "key" : "path_m",
+    "name" : "Pathologic M",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_m_display",
+    "name" : "Pathologic M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis#", "CLINICAL assessment only:\nNote: M1 has subcategories of M1a, M1b and M1c. Assign M1 only when there is no information available to assign one of the subcategories\n\nDistant metastasis, NOS\n\nStated as M1 [NOS]" ], [ "c1A", "cM1a", "Skin, subcutaneous tissue or lymph node(s) beyond the regional lymph nodes", "CLINICAL assessment only:\nMetastasis to skin or subcutaneous tissue beyond nodes WITH or WITHOUT distant nodes\n\nMetastasis to underlying cartilage, bone, skeletal muscle (excluding direct extension) WITH or WITHOUT distant nodes\n\nDistant lymph nodes, NOS\n   Nodes in contiguous (secondary) and bidirectional (cephalad/caudal) primary nodal basins\n\nStated as M1a" ], [ "c1B", "cM1b", "Lung", "CLINICAL assessment only:\nMetastasis to lung WITH or WITHOUT distant nodes\n\nStated as M1b" ], [ "c1C", "cM1c", "Other sites, or any site with elevated serum lactic dehydrogenase (LDH)", "CLINICAL assessment only:\nMetastasis to all other visceral or distant sites WITH or WITHOUT metastasis to lungs\n\nMetastasis to all other visceral or distant sites plus distant nodes WITH or WITHOUT metastasis to lungs\n\nAny distant metastasis with elevated serum lactic dehydrogenases \n\nCarcinomatosis\n\nStated as M1c" ], [ "p1", "pM1", "Distant metastasis#", "HISTOLOGICALLY confirmed:\nNote: M1 has subcategories of M1a, M1b and M1c. Assign M1 only when there is no information available to assign one of the subcategories\n\nDistant metastasis, NOS" ], [ "p1A", "pM1a", "Skin, subcutaneous tissue or lymph node(s) beyond the regional lymph nodes", "HISTOLOGICALLY confirmed:\nMetastasis to skin or subcutaneous tissue beyond nodes WITH or WITHOUT distant nodes\n\nMetastasis to underlying cartilage, bone, skeletal muscle (excluding direct extension) WITH or WITHOUT distant nodes\n\nDistant lymph nodes, NOS\n   Nodes in contiguous (secondary) and bidirectional (cephalad/caudal) primary nodal basins" ], [ "p1B", "pM1b", "Lung", "HISTOLOGICALLY confirmed:\nMetastasis to lung WITH or WITHOUT distant nodes" ], [ "p1C", "pM1c", "Other sites, or any site with elevated serum lactic dehydrogenase (LDH)", "HISTOLOGICALLY confirmed:\nMetastasis to all other visceral or distant sites WITH or WITHOUT metastasis to lungs\n\nMetastasis to all other visceral or distant sites plus distant nodes WITH or WITHOUT metastasis to lungs\n\nAny distant metastasis with elevated serum lactic dehydrogenases \n\nCarcinomatosis" ], [ "88", "88", "Not applicable", "Death certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nNo pathologic workup for T and N categories and no pathologic evidence of metastasis \nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

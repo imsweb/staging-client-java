@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc6_stage_qea",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC6 Stage",
+  "title" : "AJCC TNM 6 Stage",
+  "last_modified" : "2015-05-27T16:18:50.721Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "T0", "N0", "M0", "ERROR:" ], [ "T0", "N1", "M0", "VALUE:IV" ], [ "T0", "NX", "M0", "VALUE:UNK" ], [ "T1a", "N0", "M0", "VALUE:I" ], [ "T1a", "N1", "M0", "VALUE:IV" ], [ "T1a", "NX", "M0", "VALUE:UNK" ], [ "T1b", "N0", "M0", "VALUE:I" ], [ "T1b", "N1", "M0", "VALUE:IV" ], [ "T1b", "NX", "M0", "VALUE:UNK" ], [ "T1c", "N0", "M0", "VALUE:I" ], [ "T1c", "N1", "M0", "VALUE:IV" ], [ "T1c", "NX", "M0", "VALUE:UNK" ], [ "T1NOS", "N0", "M0", "VALUE:I" ], [ "T1NOS", "N1", "M0", "VALUE:IV" ], [ "T1NOS", "NX", "M0", "VALUE:UNK" ], [ "T2a", "N0", "M0", "VALUE:II" ], [ "T2a", "N1", "M0", "VALUE:IV" ], [ "T2a", "NX", "M0", "VALUE:UNK" ], [ "T2b", "N0", "M0", "VALUE:II" ], [ "T2b", "N1", "M0", "VALUE:IV" ], [ "T2b", "NX", "M0", "VALUE:UNK" ], [ "T2c", "N0", "M0", "VALUE:II" ], [ "T2c", "N1", "M0", "VALUE:IV" ], [ "T2c", "NX", "M0", "VALUE:UNK" ], [ "T2NOS", "N0", "M0", "VALUE:II" ], [ "T2NOS", "N1", "M0", "VALUE:IV" ], [ "T2NOS", "NX", "M0", "VALUE:UNK" ], [ "T3a", "N0", "M0", "VALUE:III" ], [ "T3a", "N1", "M0", "VALUE:IV" ], [ "T3a", "NX", "M0", "VALUE:UNK" ], [ "T3NOS", "N0", "M0", "VALUE:III" ], [ "T3NOS", "N1", "M0", "VALUE:IV" ], [ "T3NOS", "NX", "M0", "VALUE:UNK" ], [ "T4", "N0", "M0", "VALUE:III" ], [ "T4", "N1", "M0", "VALUE:IV" ], [ "T4", "NX", "M0", "VALUE:UNK" ], [ "TX", "N0", "M0", "VALUE:UNK" ], [ "TX", "N1", "M0", "VALUE:IV" ], [ "TX", "NX", "M0", "VALUE:UNK" ], [ "T0", "N0", "M1", "VALUE:IV" ], [ "T0", "N1", "M1", "VALUE:IV" ], [ "T0", "NX", "M1", "VALUE:IV" ], [ "T1a", "N0", "M1", "VALUE:IV" ], [ "T1a", "N1", "M1", "VALUE:IV" ], [ "T1a", "NX", "M1", "VALUE:IV" ], [ "T1b", "N0", "M1", "VALUE:IV" ], [ "T1b", "N1", "M1", "VALUE:IV" ], [ "T1b", "NX", "M1", "VALUE:IV" ], [ "T1c", "N0", "M1", "VALUE:IV" ], [ "T1c", "N1", "M1", "VALUE:IV" ], [ "T1c", "NX", "M1", "VALUE:IV" ], [ "T1NOS", "N0", "M1", "VALUE:IV" ], [ "T1NOS", "N1", "M1", "VALUE:IV" ], [ "T1NOS", "NX", "M1", "VALUE:IV" ], [ "T2a", "N0", "M1", "VALUE:IV" ], [ "T2a", "N1", "M1", "VALUE:IV" ], [ "T2a", "NX", "M1", "VALUE:IV" ], [ "T2b", "N0", "M1", "VALUE:IV" ], [ "T2b", "N1", "M1", "VALUE:IV" ], [ "T2b", "NX", "M1", "VALUE:IV" ], [ "T2c", "N0", "M1", "VALUE:IV" ], [ "T2c", "N1", "M1", "VALUE:IV" ], [ "T2c", "NX", "M1", "VALUE:IV" ], [ "T2NOS", "N0", "M1", "VALUE:IV" ], [ "T2NOS", "N1", "M1", "VALUE:IV" ], [ "T2NOS", "NX", "M1", "VALUE:IV" ], [ "T3a", "N0", "M1", "VALUE:IV" ], [ "T3a", "N1", "M1", "VALUE:IV" ], [ "T3a", "NX", "M1", "VALUE:IV" ], [ "T3NOS", "N0", "M1", "VALUE:IV" ], [ "T3NOS", "N1", "M1", "VALUE:IV" ], [ "T3NOS", "NX", "M1", "VALUE:IV" ], [ "T4", "N0", "M1", "VALUE:IV" ], [ "T4", "N1", "M1", "VALUE:IV" ], [ "T4", "NX", "M1", "VALUE:IV" ], [ "TX", "N0", "M1", "VALUE:IV" ], [ "TX", "N1", "M1", "VALUE:IV" ], [ "TX", "NX", "M1", "VALUE:IV" ], [ "T0", "N0", "MX", "VALUE:UNK" ], [ "T0", "N1", "MX", "VALUE:IV" ], [ "T0", "NX", "MX", "VALUE:UNK" ], [ "T1a", "N0", "MX", "VALUE:UNK" ], [ "T1a", "N1", "MX", "VALUE:IV" ], [ "T1a", "NX", "MX", "VALUE:UNK" ], [ "T1b", "N0", "MX", "VALUE:UNK" ], [ "T1b", "N1", "MX", "VALUE:IV" ], [ "T1b", "NX", "MX", "VALUE:UNK" ], [ "T1c", "N0", "MX", "VALUE:UNK" ], [ "T1c", "N1", "MX", "VALUE:IV" ], [ "T1c", "NX", "MX", "VALUE:UNK" ], [ "T1NOS", "N0", "MX", "VALUE:UNK" ], [ "T1NOS", "N1", "MX", "VALUE:IV" ], [ "T1NOS", "NX", "MX", "VALUE:UNK" ], [ "T2a", "N0", "MX", "VALUE:UNK" ], [ "T2a", "N1", "MX", "VALUE:IV" ], [ "T2a", "NX", "MX", "VALUE:UNK" ], [ "T2b", "N0", "MX", "VALUE:UNK" ], [ "T2b", "N1", "MX", "VALUE:IV" ], [ "T2b", "NX", "MX", "VALUE:UNK" ], [ "T2c", "N0", "MX", "VALUE:UNK" ], [ "T2c", "N1", "MX", "VALUE:IV" ], [ "T2c", "NX", "MX", "VALUE:UNK" ], [ "T2NOS", "N0", "MX", "VALUE:UNK" ], [ "T2NOS", "N1", "MX", "VALUE:IV" ], [ "T2NOS", "NX", "MX", "VALUE:UNK" ], [ "T3a", "N0", "MX", "VALUE:UNK" ], [ "T3a", "N1", "MX", "VALUE:IV" ], [ "T3a", "NX", "MX", "VALUE:UNK" ], [ "T3NOS", "N0", "MX", "VALUE:UNK" ], [ "T3NOS", "N1", "MX", "VALUE:IV" ], [ "T3NOS", "NX", "MX", "VALUE:UNK" ], [ "T4", "N0", "MX", "VALUE:UNK" ], [ "T4", "N1", "MX", "VALUE:IV" ], [ "T4", "NX", "MX", "VALUE:UNK" ], [ "TX", "N0", "MX", "VALUE:UNK" ], [ "TX", "N1", "MX", "VALUE:IV" ], [ "TX", "NX", "MX", "VALUE:UNK" ] ]
+}

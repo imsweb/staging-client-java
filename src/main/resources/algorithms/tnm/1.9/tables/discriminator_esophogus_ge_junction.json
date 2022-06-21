@@ -1,0 +1,24 @@
+{
+  "id" : "discriminator_esophogus_ge_junction",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF25",
+  "title" : "Site-Specific Factor 25",
+  "subtitle" : "Schema Discriminator: EsophagusGEJunction (EGJ)/Stomach",
+  "notes" : "**Note 1:**  Since primary site codes C161 (fundus of stomach) and C162 (body of stomach) can be assigned to either the EsophagusGEJunction (EGJ) schema or the Stomach schema, this schema discriminator is needed to determine the schema to select only when the site is C161 or C162.  The discriminator is coded to 981 for records with primary sites C163-C166, C168, or C169.  The discriminator is coded to 982 for records with primary site C160.\n\n**Note 2:**  In the TNM 7th Edition, primaries of the EGJ (C160) and the proximal 5 cm of the stomach were moved from the Stomach chapter to the Esophagus chapter, which includes with Esophagogastric Junction.  Due to differences in the schemas for Esophagus and Stomach, a new schema was created to accomodate these changes. To determine whether a cancer in the fundus or body of the stomach should be coded according to the Esophagus/EGJunction or Stomach schema, it is necessary to identify the midpoint or epicenter of the tumor.  In the TNM 7th Edition, cancers whose midpoint is in the lower thoracic esophagus, EGJ, or within the proximal 5 cm of the stomach (cardia) and extending into the EGJ or esophagus, are stage-grouped similarly to adenocarcinoma of the esophagus.  All other cancers with a midpoint in the stomach greater than 5 cm distal to the EGJ, or those within 5 cm of the EGJ but not extending into the EGJ or esophagus, are stage-grouped using the gastric cancer staging system.\n\n**Note 3:**  For cases coded to primary site C161 or C162 and histology 8000-8152, 8154-8231, 8243-8245, 8247, 8248, 8250-8934, 8940-9136, 9141-9582, or 9700-9701, code whether or not the tumor extends to the esophagus (crosses the EGJ) and code the stated distance of the midpoint of the tumor from the EGJ.  This information will be used to determine whether the case has TNM and stage group assigned using definitions for esophagus or stomach cancers.\n\n**Note 4:**  If the primary site code is C161 or C162 and involvement of the EGJ and distance from EGJ is unknown but a physician stages the case using esophagus definitions, assign code 060.  The EsophagusGEJunction schema will be used to assign TNM stage.",
+  "last_modified" : "2018-05-14T21:29:01.172Z",
+  "definition" : [ {
+    "key" : "ssf25",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "schema",
+    "name" : "Schema",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No involvement of esophagus or gastroesophageal junction (EGJ)", "VALUE:stomach" ], [ "020", "Esophagus or EGJ involved AND distance of tumor midpoint from EGJ 5 cm or less", "VALUE:esophagus_gejunction" ], [ "030", "Esophagus or EGJ involved AND distance of tumor midpoint from EGJ more than 5 cm", "VALUE:stomach" ], [ "040", "Esophagus or EGJ involved AND distance of tumor midpoint from EGJ unknown", "VALUE:esophagus_gejunction" ], [ "060", "Esophagus/EGJ involved AND distance of tumor midpoint from EGJ more than 5 cm  from EGJ\nAND physician stages case using esophagus definitions\nOR\nEsophagus/EGJ involvement unknown\nAND distance of tumor midpoint from EGJ more than 5 cm or unknown\nAND physician stages case using esophagus definitions", "VALUE:esophagus_gejunction" ], [ "981", "Primary site coded to C163-C169\nMay include cases which were converted to this code from a blank", "VALUE:stomach" ], [ "982", "Primary site coded to C160\nMay include cases which were converted to this code from a blank", "VALUE:esophagus_gejunction" ], [ "999", "Involvement of esophagus/EGJ unknown, or no information\nNot documented in patient record", "VALUE:stomach" ] ]
+}

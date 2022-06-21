@@ -1,0 +1,28 @@
+{
+  "id" : "liver_t_55652",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Path T Liver",
+  "title" : "Pathologic T",
+  "notes" : "**Note 1:**  Assign 88 for in situ cases (behavior code /2). TNM does not include an in situ category for liver tumors.\n\n**Note 2:** Assign T2 or T3 based on the tumor size for the following descriptions\n\n    Multiple (satellite) nodules/tumors (one lobe) \n       WITH or WITHOUT intrahepatic vascular invasion, including vascular invasion not stated\n       WITH extension to gallbladder WITH or WITHOUT intrahepatic vascular invasion\n\n    Multiple (satellite) nodules/tumors in more than one lobe of liver or on surface of parenchyma \n\n    Satellite nodules, NOS\n\n**Note 3:**  Major vascular invasion (T3b) is defined as invasion of the branches of the main portal vein (right or left portal vein, not including sectoral or segmental branches) or as invasion of one or more of the three hepatic veins (right, middle, or left).  \n* Invasion of hepatic artery or vena cava is coded to T4",
+  "footnotes" : "\\# T3 [NOS] is not defined in AJCC 7th edition",
+  "last_modified" : "2018-05-14T21:29:04.439Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pTX", "Primary tumor cannot be assessed", "Pathologic classification criteria met, evaluation done: \n    Physician unable to assess T\n    Surgical resection of primary tumor, extension not stated \n    Tumor size (TS) unknown for T categories where TS  needed to determine T\nPhysician assigns pTX, no other information available to determine T" ], [ "p0", "pT0", "No evidence of primary tumor", "" ], [ "p1", "pT1", "Solitary tumor without vascular invasion", "Single lesion (one lobe)\nWITHOUT intrahepatic vascular invasion, including vascular invasion not stated\n\nMore than one lobe involved by contiguous growth (single lesion)\nWITHOUT intrahepatic vascular invasion, including vascular invasion not stated\n\nSingle lesion  \nWITH involvement of one or more lobes of liver or extension within liver not stated \nWITH extension to gallbladder\nWITHOUT vascular invasion, including vascular invasion not stated\n\nConfined to liver, NOS\nLocalized, NOS\n\nStated as T1" ], [ "p2", "pT2", "Solitary tumor with vascular invasion or multiple tumors, none more than\n5 cm in greatest dimension", "Single lesion (one lobe ) \nWITH intrahepatic vascular invasion\n\nMore than one lobe involved by contiguous growth (single lesion)\nWITH vascular invasion\n\nSingle lesion  \nWITH involvement of one or more lobes of liver or extension within liver not stated\nWITH extension to gallbladder\nWITH intrahepatic vascular invasion\n\nStated as T2" ], [ "p3", "pT3", "Multiple tumors any more than 5 cm or tumor involving a major branch of\nthe portal or hepatic vein(s)#", "Note: T3 has subcategories of T3a and T3b. Assign T3 only when there is no information available to assign one of the subcategories\n\nStated as T3 [NOS]" ], [ "p3A", "pT3a", "Multiple tumors any more than 5 cm", "Stated as T3a" ], [ "p3B", "pT3b", "Tumor involving a major branch of the portal or hepatic vein(s)", "Single tumor (confined to one lobe) or multiple tumor(s) (confined to one lobe and not on surface of liver) WITH major vascular invasion: major branch(es) of portal or hepatic vein(s)\n\nSingle or multiple tumor(s) with major vascular invasion: major branch(es) of portal or hepatic vein(s) plus multiple nodules/tumors in more than one lobe of liver or on surface of parenchyma\n\nStated as T3b" ], [ "p4", "pT4", "Tumor(s) with direct invasion of adjacent organs other then the gallbladder\nor with perforation of visceral peritoneum", "Direct extension/perforation of visceral peritoneum\n\nExtrahepatic bile ducts\n\nExtension to hepatic artery or vena cava\n\nDiaphragm\n\nLesser omentum\nLigament(s):\n    Coronary\n    Falciform\n    Hepatoduodenal\n    Hepatogastric\n    Round (of liver)\n    Triangular\nParietal peritoneum\n\nFurther contiguous extension:\n    Pancreas\n    Pleura\n    Stomach\nOther contiguous extension\n\nStated as T4" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined \nIn situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nPathologic classification criteria met, evaluation done: \n    Results not documented in patient record \n    No surgical resection of  known primary tumor (not T0) \n    Resection insufficient for site-specific pathologic assessment\nNo surgical resection of primary tumor and there isn’t a positive biopsy of a structure in the highest T category and highest N category\nEvidence of metastatic disease (pM1), no other workup\nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_breast",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection Breast",
+  "title" : "Schema selection for Breast",
+  "last_modified" : "2015-05-27T16:19:41.579Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C500-C506,C508-C509", "8000-9136,9141-9582,9700-9701", "MATCH" ] ]
+}

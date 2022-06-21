@@ -1,0 +1,18 @@
+{
+  "id" : "determine_correct_table_for_ajcc7_t_ns38",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Determine Correct Table for T",
+  "title" : "Determining Which Extension Calculation Table Applies for the AJCC 7 T",
+  "last_modified" : "2015-05-27T16:19:04.873Z",
+  "definition" : [ {
+    "key" : "ssf6",
+    "name" : "CS SSF6 Perineural Invasion",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000,997-999", "JUMP:extension_size_perineural_invasion_negativeor_unknown_ajcc7_xgj" ], [ "010", "JUMP:extension_size_perineural_invasion_positive_ajcc7_xgk" ], [ "888,988", "JUMP:extension_size_perineural_invasion888988_ajcc7_xic" ] ]
+}

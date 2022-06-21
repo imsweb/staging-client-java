@@ -1,0 +1,35 @@
+{
+  "id" : "mets_hak",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note 1**:  According to AJCC, metastasis to genital structures for gestational trophoblastic tumors (GTT) is considered T2 and not M1.  Metastasis to genital structures is coded in CS Extension.\n\n**Note 2**:  All lymph node involvement for GTT is considered M1b.  Lymph node involvement, whether of regional or distant nodes, is coded in CS Mets at DX.\n\n**Note 3**:  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and metastatic detail are available, record the code with metastatic detail in preference to a statement of FIGO stage.",
+  "last_modified" : "2015-05-27T16:19:27.918Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "VALUE:M0", "VALUE:NONE", "VALUE:NONE" ], [ "10", "Metastasis to lung(s) only, NOS", "VALUE:M1a", "VALUE:M1a", "VALUE:D", "VALUE:D" ], [ "12", "FIGO Stage IIIA", "VALUE:M1a", "VALUE:M1a", "VALUE:D", "VALUE:D" ], [ "13", "FIGO Stage IIIB", "VALUE:M1a", "VALUE:M1a", "VALUE:D", "VALUE:D" ], [ "15", "FIGO Stage III [NOS]", "VALUE:M1a", "VALUE:M1a", "VALUE:D", "VALUE:D" ], [ "20", "Regional lymph node(s): \n    Iliac, NOS:\n        Common\n        External\n        Internal (hypogastric):\n            Obturator\n    Parametrial\n    Pelvic, NOS\n    Sacral, NOS:\n        Lateral\n        Presacral\n        Middle (promontorial) (Gerota's node)\n        Uterosacral", "VALUE:M1b", "VALUE:M1b", "VALUE:RN", "VALUE:RN" ], [ "30", "Regional lymph node(s): \n    Aortic, NOS:\n        Lateral\n        Para-aortic\n        Periaortic", "VALUE:M1b", "VALUE:M1b", "VALUE:RN", "VALUE:RN" ], [ "33", "Regional lymph node(s), NOS", "VALUE:M1b", "VALUE:M1b", "VALUE:RN", "VALUE:RN" ], [ "35", "30 + 20", "VALUE:M1b", "VALUE:M1b", "VALUE:RN", "VALUE:RN" ], [ "37", "(20, 30, or 33) + (10)\n\nMetastasis to regional lymph node(s) plus lung", "VALUE:M1b", "VALUE:M1b", "VALUE:D", "VALUE:D" ], [ "40", "OBSOLETE DATA CONVERTED V0203\nSee code 33\n\nRegional lymph node(s), NOS", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "50", "OBSOLETE DATA CONVERTED V0203\nSee code 55\n\nDistant lymph node(s), NOS", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "51", "Distant lymph node(s): Superficial inguinal (femoral)", "VALUE:M1b", "VALUE:M1b", "VALUE:D", "VALUE:D" ], [ "52", "Specified distant lymph node(s) other than in code 51", "VALUE:M1b", "VALUE:M1b", "VALUE:D", "VALUE:D" ], [ "55", "Distant lymph node(s), NOS", "VALUE:M1b", "VALUE:M1b", "VALUE:D", "VALUE:D" ], [ "60", "Lymph nodes, NOS", "VALUE:M1b", "VALUE:M1b", "VALUE:RN", "VALUE:RN" ], [ "70", "Distant metastasis, other than lymph nodes or lung\nCarcinomatosis", "VALUE:M1b", "VALUE:M1b", "VALUE:D", "VALUE:D" ], [ "80", "70 + any of (10 to 60)\n\nDistant metastasis plus metastasis to lung and/or regional or distant lymph nodes", "VALUE:M1b", "VALUE:M1b", "VALUE:D", "VALUE:D" ], [ "81", "FIGO Stage IVA", "VALUE:M1b", "VALUE:M1b", "VALUE:D", "VALUE:D" ], [ "82", "OBSOLETE DATA CONVERTED V0203\nSee code 85\n\nDistant metastasis, NOS", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "83", "FIGO Stage IVB", "VALUE:M1b", "VALUE:M1b", "VALUE:D", "VALUE:D" ], [ "84", "FIGO Stage IV [NOS] with no other information on metastasis", "VALUE:M1b", "VALUE:M1b", "VALUE:D", "VALUE:D" ], [ "85", "Distant metastasis, NOS", "VALUE:M1NOS", "VALUE:M1NOS", "VALUE:RN", "VALUE:RN" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "VALUE:MX", "VALUE:U", "VALUE:U" ] ]
+}

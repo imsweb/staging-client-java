@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_ovary",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection Ovary",
+  "title" : "Schema selection for Ovary",
+  "last_modified" : "2021-04-29T13:42:33.516Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C569", "8000-8700, 8720-8790, 8806, 8810, 8815, 8822, 8825, 8890, 8930-8931,8933,8935-8936,8950,8960,8980,9000,9050,9052,9060,9070-9071,9073,9080,9085,9090-9091,9100,9110-9111", "MATCH" ] ]
+}

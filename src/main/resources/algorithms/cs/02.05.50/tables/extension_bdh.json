@@ -1,0 +1,36 @@
+{
+  "id" : "extension_bdh",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  According to AJCC, \"Except for pTis and pT4, extent of primary tumor for TNM is classified by radical orchiectomy.  TX is used for other categories in the absence of radical orchiectomy.\"  For Collaborative Stage, this means that the categories of T1, T2, and T3 are derived only when CS Site Specific Factor 4 indicates that a radical orchiectomy is performed.\n\n**Note 2**:  Involvement of para-testicular (hilar/mediastinal) soft tissues does not alter the extension code. Code the extension based on other criteria documented in the patient record.\n\n**Note 3**:  Use code 300 (Localized, NOS) only when no further information is available to assign code 160, 200, 310, 320, or 330.\n\n**Note 4**:  Use codes 320, 330, 550, or 810 if the only information regarding tumor extension is the physician's statement of the T category.",
+  "footnotes" : "- For CS Extension codes 160-330 and 460-550 ONLY, the T category for AJCC 7 staging is assigned based on the values of CS Extension, CS Site-Specific Factor 4, Radical Orchiectomy Performed, and Lymph-vascular Invasion, as shown in the Extension Orchiectomy LVI AJCC 7 Table.\n- For cases coded under CSv1 (CS Version Input Original less than 020000) and Year of Diagnosis less than 2010 with CS Extension codes 100-550, the T category for AJCC 6 staging is assigned based on the values of CS Extension, Lymph-vascular Invasion, and CS Site-Specific Factor 4, Radical Orchiectomy Performed, as shown in the Extension Orchiectomy LVI AJCC 6 Table CSv1. For cases coded under CSv2 (CS Version Input Original greater than 020000) or Year of Diagnosis greater than 2009 with CS Extension codes 100-550, the T category for AJCC 6 staging is assigned based on the values of CS Extension, CS Site-Specific Factor 4, Radical Orchiectomy Performed, and Lymph-vascular Invasion, as shown in the Extension Orchiectomy LVI AJCC 6 Table CSv2.",
+  "last_modified" : "2015-05-27T16:19:10.403Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive; \nIntratubular germ cell neoplasia", "VALUE:Tis", "VALUE:Tis", "VALUE:IS", "VALUE:IS" ], [ "100", "OBSOLETE DATA RETAINED V0200\nSee code 160\n\nInvasive tumor WITHOUT vascular/lymphatic invasion, or presence of vascular/lymphatic invasion not stated\n    Body of testis\n    Rete testis\n    Tunica albuginea", "ERROR:", "JUMP:determine_correct_table_for_ajcc6_t_ns34", "VALUE:L", "VALUE:L" ], [ "150", "OBSOLETE DATA RETAINED V0200\nSee code 160\n\nInvasive tumor WITH vascular/lymphatic invasion\n    Body of testis\n    Rete testis\n    Tunica albuginea", "ERROR:", "JUMP:determine_correct_table_for_ajcc6_t_ns34", "VALUE:L", "VALUE:L" ], [ "160", "Body of testis\nRete testis\nTunica albuginea", "JUMP:extension_orchiectomy_lviajcc7_xgs", "JUMP:determine_correct_table_for_ajcc6_t_ns34", "VALUE:L", "VALUE:L" ], [ "200", "Tunica vaginalis involved\nSurface implants (surface of tunica vaginalis)", "JUMP:extension_orchiectomy_lviajcc7_xgs", "JUMP:determine_correct_table_for_ajcc6_t_ns34", "VALUE:L", "VALUE:L" ], [ "300", "Localized, NOS", "JUMP:extension_orchiectomy_lviajcc7_xgs", "JUMP:determine_correct_table_for_ajcc6_t_ns34", "VALUE:L", "VALUE:L" ], [ "310", "Tunica, NOS", "JUMP:extension_orchiectomy_lviajcc7_xgs", "JUMP:determine_correct_table_for_ajcc6_t_ns34", "VALUE:L", "VALUE:L" ], [ "320", "Stated as T1 with no other information on extension", "JUMP:extension_orchiectomy_lviajcc7_xgs", "JUMP:determine_correct_table_for_ajcc6_t_ns34", "VALUE:L", "VALUE:L" ], [ "330", "Stated as T2 with no other information on extension", "JUMP:extension_orchiectomy_lviajcc7_xgs", "JUMP:determine_correct_table_for_ajcc6_t_ns34", "VALUE:L", "VALUE:L" ], [ "400", "OBSOLETE DATA RETAINED V0200\nSee code 460\n\nEpididymis involved WITHOUT vascular/lymphatic invasion, or presence of vascular/lymphatic invasion not stated", "ERROR:", "JUMP:determine_correct_table_for_ajcc6_t_ns34", "VALUE:RE", "VALUE:RE" ], [ "450", "OBSOLETE DATA RETAINED V0200\nSee code 460\n\nEpididymis involved WITH vascular/lymphatic invasion", "ERROR:", "JUMP:determine_correct_table_for_ajcc6_t_ns34", "VALUE:RE", "VALUE:RE" ], [ "460", "Epididymis", "JUMP:extension_orchiectomy_lviajcc7_xgs", "JUMP:determine_correct_table_for_ajcc6_t_ns34", "VALUE:RE", "VALUE:RE" ], [ "470", "460 + 200\n\nEpididymis plus tunica vaginalis or surface implants", "JUMP:extension_orchiectomy_lviajcc7_xgs", "JUMP:determine_correct_table_for_ajcc6_t_ns34", "VALUE:RE", "VALUE:RE" ], [ "500", "Spermatic cord, ipsilateral\nVas deferens", "JUMP:extension_orchiectomy_lviajcc7_xgs", "JUMP:determine_correct_table_for_ajcc6_t_ns34", "VALUE:RE", "VALUE:RE" ], [ "550", "Stated as T3 with no other information on extension", "JUMP:extension_orchiectomy_lviajcc7_xgs", "JUMP:determine_correct_table_for_ajcc6_t_ns34", "VALUE:RE", "VALUE:RE" ], [ "600", "Dartos muscle, ipsilateral\nScrotum, ipsilateral", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "700", "Extension to scrotum, contralateral\nUlceration of scrotum", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "750", "Penis", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "800", "Further contiguous extension", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "810", "Stated as T4 with no other information on extension", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown extension\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

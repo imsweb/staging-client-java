@@ -1,0 +1,35 @@
+{
+  "id" : "nodes_dfb",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Pericholedochal (common bile duct) lymph nodes are coded here for primaries of the duodenum.  They are coded in CS Mets at DX for primaries of other small intestine subsites.\n\n**Note 3**:  The assignment of T categories for gastrointestinal stromal tumors (GISTs) is based on tumor size.  A physician's statement of the T category may be used to code CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields.  However the two fields are coded independently: for example the record may document size but not extension, other than the physician's statement of the T category.  Use codes 170, 210, 250, and 270 as appropriate to code CS Extension based on a statement of T when no other extension information is available.\n\n**Note 4**:  Nodal metastasis is very rare in gastrointestinal stromal tumors and surgeons generally agree that nodal dissection is not indicated.  In the absence of information on regional lymph node status, N0 is appropriate; code 999 is mapped to N0 accordingly.",
+  "last_modified" : "2015-05-27T16:19:37.590Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:NA", "VALUE:NONE", "VALUE:NONE" ], [ "100", "Regional lymph node(s):\n    For duodenum primary only:\n        Duodenal\n        Gastroduodenal\n        Hepatic        \n        Pancreaticoduodenal\n        Pyloric:\n            Infrapyloric (subpyloric)\n    For jejunum or ileum primary only:\n            Mesenteric, NOS:\n            Superior mesenteric\n    For terminal ileum primary:\n        Cecal, posterior (retrocecal)\n        Ileocolic", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "200", "For duodenum primary only:\n    Pericholodochal (common bile duct)\n    Superior mesenteric", "VALUE:N1", "VALUE:NA", "VALUE:D", "VALUE:RN" ], [ "300", "Regional lymph node(s), NOS", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "400", "Stated as N1 with no other information on regional lymph nodes", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "VALUE:N0", "VALUE:NA", "VALUE:U", "VALUE:U" ] ]
+}

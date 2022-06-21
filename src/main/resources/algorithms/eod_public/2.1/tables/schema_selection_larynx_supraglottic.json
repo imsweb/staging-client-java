@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_larynx_supraglottic",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection LarynxSupraglottic",
+  "title" : "Schema selection for LarynxSupraglottic",
+  "last_modified" : "2021-04-29T14:07:00.602Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C101,C321", "8000-8700", "MATCH" ] ]
+}

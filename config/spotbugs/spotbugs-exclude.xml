@@ -10,6 +10,20 @@
         <Bug pattern="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE"/>
     </Match>
     <Match>
+        <Class name="com.imsweb.staging.IntegrationUtils"/>
+        <Bug pattern="THROWS_METHOD_THROWS_CLAUSE_BASIC_EXCEPTION"/>
+    </Match>
+    <Match>
+        <Class name="com.imsweb.staging.engine.BasicStagingTest"/>
+    </Match>
+    <Match>
+        <Class name="com.imsweb.staging.entities.StagingRangeTest"/>
+    </Match>
+    <Match>
+        <Class name="com.imsweb.staging.cs.CsStagingTest"/>
+        <Bug pattern="THROWS_METHOD_THROWS_CLAUSE_BASIC_EXCEPTION"/>
+    </Match>
+    <Match>
         <Bug pattern="EI_EXPOSE_REP"/>
     </Match>
     <Match>

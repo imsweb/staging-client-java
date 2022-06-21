@@ -1,0 +1,26 @@
+{
+  "id" : "path_m_hcu",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Path M Skin Eyelid",
+  "title" : "Pathologic M",
+  "last_modified" : "2018-05-14T21:29:01.757Z",
+  "definition" : [ {
+    "key" : "path_m",
+    "name" : "Pathologic M",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_m_display",
+    "name" : "Pathologic M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed \nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "CLINICAL assessment only:\nMetastatic skin lesions WITH or WITHOUT distant lymph nodes\n\nDistant lymph nodes, NOS\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph nodes and/or metastatic skin lesions\n\nDistant metastasis, NOS\n\nStated as M1" ], [ "p1", "pM1", "Distant metastasis", "HISTOLOGICALLY confirmed:\nMetastatic skin lesions WITH or WITHOUT distant lymph nodes\n\nDistant lymph nodes, NOS\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph nodes and/or metastatic skin lesions\n\nDistant metastasis, NOS" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nNo pathologic workup for T and N categories and no pathologic evidence of metastasis \nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

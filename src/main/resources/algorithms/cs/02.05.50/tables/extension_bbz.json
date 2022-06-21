@@ -1,0 +1,36 @@
+{
+  "id" : "extension_bbz",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  For AJCC TNM staging, Superficial lesions are located entirely in the subcutaneous tissues without any degree of extension through the muscular fascia or into underlying muscle. \n\n**Note 2**:  For AJCC TNM staging, Deep lesions are located partly or completely within one or more muscle groups within the extremity. Deep tumors may extend through the muscular fascia into the subcutaneous tissues or even to the skin but the critical criterion is location of any portion of the tumor within the muscular components of the extremity. \n\n**Note 3**:  For tumors of the extremities and trunk ONLY, superficial lesions are defined as those not involving the superficial muscular fascia.  Deep lesions are those that involve or are beneath the superficial fascia.\n\n**Note 4**:  According to AJCC, \"All intraperitoneal visceral lesions, retroperitoneal lesions, and intrathoracic lesions, and the majority of head and neck tumors are considered deep.\"  For coding extension of soft tissue tumors in these sites (C47.0, C47.3-5, C49.0, C49.3-5), use only codes 120, 312, 315, 320, 420, 620, 800, 950, or 990.\n\n**Note 5**:  Adjacent connective tissue is defined as the unnamed tissues that immediately surround an organ or structure containing a primary cancer. Use code 400 when a tumor has invaded past the outer border (capsule, serosa, or other edge) of the primary organ into the organ's surrounding supportive structures but has not invaded into larger structures or adjacent organs. Blood, cartilage, and bone are sometimes considered connective tissues, but they are coded separately.\n\n**Note 6**:  If a vessel has a name, for example brachial artery or recurrent laryngeal nerve, consider it a structure (code 600).\n\n**Note 7**:  The assignment of T1 and T2 categories for soft tissue sarcomas is based on tumor size.  A physician's statement of the T category may be used to code CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields.  However the two fields are coded independently: for example the record may document size but not extension, other than the physician's statement of the T category.  Use codes 302, 305, 312, 315, 322, and 325 as appropriate to code CS Extension based on a statement of T when no other extension information is available.",
+  "footnotes" : "- For CS Extension codes 100-800, the T category for AJCC 7 staging is assigned based on the value of CS Tumor Size as shown in the Extension Size Table for this schema.\n- For CS Extension codes 100-800 the T category for AJCC 6 staging is assigned based on the value of CS Tumor Size as shown in the Extension Size Table for this schema.",
+  "last_modified" : "2015-05-27T16:19:08.628Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "Invasive tumor confined to site/tissue of origin, NOS", "JUMP:extension_size_xfn", "JUMP:extension_size_xfn", "VALUE:L", "VALUE:L" ], [ "110", "Superficial invasive tumor confined to site/tissue of origin \n(Lesion does not involve superficial fascia)", "JUMP:extension_size_xfn", "JUMP:extension_size_xfn", "VALUE:L", "VALUE:L" ], [ "120", "Deep  tumor confined to site/tissue of origin", "JUMP:extension_size_xfn", "JUMP:extension_size_xfn", "VALUE:L", "VALUE:L" ], [ "300", "Localized, NOS", "JUMP:extension_size_xfn", "JUMP:extension_size_xfn", "VALUE:L", "VALUE:L" ], [ "302", "Stated as T1a with no other information on extension", "JUMP:extension_size_xfn", "JUMP:extension_size_xfn", "VALUE:L", "VALUE:L" ], [ "305", "Stated as T2a with no other information on extension", "JUMP:extension_size_xfn", "JUMP:extension_size_xfn", "VALUE:L", "VALUE:L" ], [ "310", "Superficial:   Localized tumor, NOS", "JUMP:extension_size_xfn", "JUMP:extension_size_xfn", "VALUE:L", "VALUE:L" ], [ "312", "Stated as T1b with no other information on extension", "JUMP:extension_size_xfn", "JUMP:extension_size_xfn", "VALUE:L", "VALUE:L" ], [ "315", "Stated as T2b with no other information on extension", "JUMP:extension_size_xfn", "JUMP:extension_size_xfn", "VALUE:L", "VALUE:L" ], [ "320", "Deep:  Localized tumor, NOS", "JUMP:extension_size_xfn", "JUMP:extension_size_xfn", "VALUE:L", "VALUE:L" ], [ "322", "Stated as T1 [NOS] with no other information on extension", "JUMP:extension_size_xfn", "JUMP:extension_size_xfn", "VALUE:L", "VALUE:L" ], [ "325", "Stated as T2 [NOS] with no other information on extension", "JUMP:extension_size_xfn", "JUMP:extension_size_xfn", "VALUE:L", "VALUE:L" ], [ "400", "Adjacent connective tissue (see Note 5)", "JUMP:extension_size_xfn", "JUMP:extension_size_xfn", "VALUE:RE", "VALUE:RE" ], [ "410", "Superficial tumor involving adjacent connective tissue", "JUMP:extension_size_xfn", "JUMP:extension_size_xfn", "VALUE:RE", "VALUE:RE" ], [ "420", "Deep  tumor involving adjacent connective tissue", "JUMP:extension_size_xfn", "JUMP:extension_size_xfn", "VALUE:RE", "VALUE:RE" ], [ "600", "Adjacent organs/structures including bone/cartilage\n(Including major vessel invasion) ", "JUMP:extension_size_xfn", "JUMP:extension_size_xfn", "VALUE:RE", "VALUE:RE" ], [ "610", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nTumors in adjacent organs/structures are deep; see Notes 1-6.  Recode involvement of superficial tumors to codes 110, 310, 410.  Recode involvement of deep tumors to 620.\n\nSuperficial tumor involving adjacent organs/structures including bone/cartilage (Including major vessel invasion) (see Note 5)", "JUMP:extension_size_xfn", "JUMP:extension_size_xfn", "VALUE:RE", "VALUE:RE" ], [ "620", "Deep tumor involving adjacent organs/structures including bone/cartilage\n(Including major vessel invasion) (see Note 5)", "JUMP:extension_size_xfn", "JUMP:extension_size_xfn", "VALUE:RE", "VALUE:RE" ], [ "800", "Further contiguous extension", "JUMP:extension_size_xfn", "JUMP:extension_size_xfn", "VALUE:D", "VALUE:D" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

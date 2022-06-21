@@ -1,0 +1,24 @@
+{
+  "id" : "discriminator_nasopharynx",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF25",
+  "title" : "Site-Specific Factor 25",
+  "subtitle" : "Schema Discriminator: Nasopharynx/PharyngealTonsil",
+  "notes" : "**Note:**  For cases coded to primary site code C111 (Posterior wall of nasopharynx), code the specific site in which the tumor arose.",
+  "last_modified" : "2018-05-14T21:29:03.442Z",
+  "definition" : [ {
+    "key" : "ssf25",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "schema",
+    "name" : "Schema",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "010", "Posterior wall of nasopharynx \nPosterior wall of nasopharynx, NOS", "VALUE:nasopharynx" ], [ "020", "Adenoid\nPharyngeal tonsil\nNasopharyngeal tonsil", "VALUE:pharyngeal_tonsil" ], [ "981", "Nasopharynx cases coded to C110, C112, C113, C118, C119\nNote: May include cases which were converted to this code from a blank", "VALUE:nasopharynx" ] ]
+}

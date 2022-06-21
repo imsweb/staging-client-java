@@ -1,0 +1,19 @@
+{
+  "id" : "mitotic_rate_calculation_xjm",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mitotic Rate Calculation",
+  "title" : "Mitotic Rate Calculation Table",
+  "notes" : "**Note**:  The Mitotic Count recorded in CS Site-Specific Factor 5 is used to determine the Mitotic Rate as shown in this table.  The Mitotic Rate from the Mitotic Rate Calculation Table, \"low\" or \"high\", is used in the calculation of the AJCC TNM 7 stage group as shown in the AJCC TNM 7 Stage tables.",
+  "last_modified" : "2015-05-27T16:19:31.349Z",
+  "definition" : [ {
+    "key" : "ssf5",
+    "name" : "CS SSF 5 Mitotic Count",
+    "type" : "INPUT"
+  }, {
+    "key" : "mitotic_rate",
+    "name" : "Mitotic Rate",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000-050", "VALUE:Low" ], [ "051-100", "VALUE:High" ], [ "110", "VALUE:High" ], [ "888", "ERROR:" ], [ "988", "VALUE:Low" ], [ "990", "VALUE:Low" ], [ "991", "VALUE:High" ], [ "995", "ERROR:" ], [ "996", "VALUE:Unknown" ], [ "998", "VALUE:Unknown" ], [ "999", "VALUE:Unknown" ] ]
+}

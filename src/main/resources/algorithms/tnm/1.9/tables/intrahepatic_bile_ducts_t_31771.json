@@ -1,0 +1,28 @@
+{
+  "id" : "intrahepatic_bile_ducts_t_31771",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin T Intrahepatic Bile Ducts",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  \"Multiple (satellite) nodules/tumors\" include satellitosis, multifocal tumors, and intrahepatic metastases.\n\n**Note 2:**  Major vascular invasion is defined as invasion of the branches of the main portal vein (right or left portal vein, not including sectoral or segmental branches) or as invasion of one or more of the three hepatic veins (right, middle, or left).  Invasion of the hepatic artery or vena cava is assigned T3.\n\n**Note 3:** Cholangiocarcinoma may be classified by growth pattern. The tumor growth patterns of intrahepatic cholangiocarcinoma include the mass forming type, the periductal infiltrating type, and a mixed type.  The periductal infiltrating type of cholangiocarcinoma demonstrates a diffuse longitudinal growth pattern along the bile duct.  Limited analyses suggest that the diffuse periductal infiltrating type is associated with a poor prognosis. The presence of periductal invasion is assigned T4.",
+  "footnotes" : "\\* T2 [NOS] is not defined by UICC in the 7th edition. Approval has been provided by UICC to use \"Multiple tumors or single tumor with vascular invasion\" as T2 [NOS].\n\\# T2 [NOS] is not defined in AJCC 7th edition",
+  "last_modified" : "2018-05-14T21:29:04.443Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T \n    Extension cannot be determined\nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor", "" ], [ "pIS", "pTis", "Carcinoma in situ (intraductal tumor)", "Intraepithelial, noninvasive \n\nStated as Tis" ], [ "c1", "cT1", "Solitary tumor without vascular invasion", "Single lesion in one lobe of liver WITHOUT intrahepatic vascular invasion OR vascular invasion not stated \n\nSingle lesion in more than one lobe of liver (contiguous growth) WITHOUT vascular invasion OR vascular invasion not stated\n\nExtension to gallbladder WITH or WITHOUT single lesion in one or more lobes of liver (contiguous growth) WITHOUT vascular invasion OR vascular invasion not stated\n\nConfined to liver, NOS\nLocalized, NOS\n\nStated as T1" ], [ "c2", "cT2", "Not defined by UICC*#", "Note: T2 has subcategories of T2a and T2b. Assign T2 only when there is no information available to assign one of the subcategories.\n\nMultiple tumors or single tumor with vascular invasion\n\nStated as T2[NOS]" ], [ "c2A", "cT2a", "Solitary tumor with vascular invasion", "Single lesion in one lobe of liver WITH intrahepatic vascular invasion\n\nSingle lesion in more than one lobe of liver (contiguous growth) WITH vascular invasion WITH or WITHOUT vascular invasion plus extension to gallbladder\n\nSingle tumor WITH major vascular invasion: major branch(es) of portal or hepatic vein(s) WITH or WITHOUT extension to gallbladder \n\nStated as T2a" ], [ "c2B", "cT2b", "Multiple tumors, with or without vascular invasion", "Multiple (satellite) nodules/tumors in one lobe of liver:\n   WITH or WITHOUT intrahepatic vascular invasion plus extension to gallbladder OR\n   WITH major vascular invasion: major branch(es) of portal or hepatic vein(s) OR\n   WITH major vascular invasion and extension to gallbladder \n\nMultiple (satellite) nodules/tumors in more than one lobe of liver\nSatellite nodules, NOS\n\nStated as T2b" ], [ "c3", "cT3", "Tumor perforates the visceral peritoneum OR \n\nDirectly invades adjacent extrahepatic structures", "Diaphragm\nDirect extension/perforation of visceral peritoneum\nExtension to hepatic artery or vena cava\nExtrahepatic bile ducts WITH or WITHOUT satellite nodules in more than one lobe or multiple tumors with major vascular invasion\n\nMultiple (satellite) nodules on surface of liver parenchyma\n\nLesser omentum Ligament(s):     \n    Coronary     \n    Falciform    \n    Hepatoduodenal     \n    Hepatogastric     \n    Round (of liver)     \n    Triangular \n    Parietal peritoneum\n\nFurther contiguous extension:\n    Pancreas\n    Pleura\n    Stomach\nOther contiguous extension\n\nStated as T3" ], [ "c4", "cT4", "Tumor with periductal invasion (periductal growth pattern)", "Stated as T4" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "extranodal_extension_head_and_neck_pathological_93423",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Extranodal Extension Head and Neck Pathological",
+  "title" : "Extranodal Extension Head and Neck Pathological",
+  "notes" : "**Note 1:** Physician statement of extranodal extension (ENE) pathologically during a lymph node dissection or physician pathological stage indicating the absence or presence of ENE can be used to code this data item when no other information is available.\n\n**Note 2:** Code the status of ENE assessed on histopathologic examination of **surgically resected** involved regional lymph node(s). Do not code ENE from a lymph node biopsy (FNA, core, incisional, excisional, sentinel). Do not code ENE for any distant lymph nodes. \n* If codes 0.0-0.9, X.1-X.7 are used, this indicates that the lymph nodes were surgically resected and Scope of Regional Lymph Node Surgery [NAACCR Data Item: 1292] must be 3-7\n\n**Note 3:** Be aware that the rules for coding ENE for head and neck sites compared to non-head and neck sites are different.\n\n**Note 4:** Definitions of ENE subtypes and rules:\n* Microscopic ENE [ENE (mi)] is defined as less than or equal to 2 mm.\n* Major ENE [ENE (ma)] is defined as greater than 2 mm.\n* Both ENE (mi) and ENE (ma) qualify as ENE (+) for definition of pN.\n\n**Note 5:** The measurement of ENE is the distance from the lymph node capsule in millimeters (mm).",
+  "last_modified" : "2020-01-08T20:12:44.581Z",
+  "definition" : [ {
+    "key" : "extranodal_ext_hn_path",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0", "Lymph nodes positive for cancer but ENE not identified or negative" ], [ "0.1-9.9", "ENE 0.1 to 9.9 mm" ], [ "X.1", "ENE 10 mm or greater" ], [ "X.2", "ENE microscopic, size unknown\nStated as ENE (mi)" ], [ "X.3", "ENE major, size unknown\nStated as ENE (ma)" ], [ "X.4", "ENE present, microscopic or major unknown, size unknown" ], [ "X.7", "Surgically resected regional lymph node(s) negative for cancer (pN0)" ], [ "X.8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code X.8 may result in an edit error)" ], [ "X.9", "Not documented in medical record\nNo surgical resection of regional lymph node(s)\nENE not assessed pathologically, or unknown if assessed\nPathological assessment of lymph node(s) not done, or unknown if done" ] ]
+}

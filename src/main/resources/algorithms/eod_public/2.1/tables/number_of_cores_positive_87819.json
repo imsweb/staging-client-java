@@ -1,0 +1,19 @@
+{
+  "id" : "number_of_cores_positive_87819",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Number of Cores Positive",
+  "title" : "Number of Cores Positive",
+  "notes" : "**Note 1:** Physician statement of Number of Cores Positive can be used to code this data item when there is no other information available.\n\n**Note 2:** Record the number of positive prostate core biopsies from the first prostate core biopsy diagnostic for cancer. If positive cores are identified and the number of  positive cores  not specifically documented, code X6. \n\n**Note 3:** If the pathology report contains a summary of the number of cores positive and examined, use the summary provided. If Summary Report is not available and multiple biopsy cores are obtained on the same day, the number of cores positive should be added.\n* Do not include cores of other area like seminal vesicles\n\n**Note 4:** Transperineal template-guided saturation biopsy (TTSB) is a stereotactic prostate biopsy technique that typically produces 30 to 80 core biopsies. This is an alternative biopsy technique used for some high-risk patients including men with persistently elevated PSA, those who have atypia on prior prostate biopsies, or men with biopsies showing high grade prostatic intraepithelial neoplasia (PIN).\n\n**Note 5:** The number of cores examined is recorded in Number of Cores Examined [NAACCR Data Item #3897].",
+  "last_modified" : "2019-07-29T16:10:57.994Z",
+  "definition" : [ {
+    "key" : "number_cores_pos",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "All examined cores negative" ], [ "01-99", "1 - 99 cores positive \n(Exact number of cores positive)" ], [ "X1", "100 or more cores positive" ], [ "X6", "Biopsy cores positive, number unknown" ], [ "X7", "No needle core biopsy performed " ], [ "X8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code X8 may result in an edit error.)" ], [ "X9", "Not documented in medical record\nNumber of cores positive not assessed or unknown if assessed" ] ]
+}

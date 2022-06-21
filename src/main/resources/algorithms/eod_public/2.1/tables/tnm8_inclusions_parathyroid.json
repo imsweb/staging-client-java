@@ -1,0 +1,14 @@
+{
+  "id" : "tnm8_inclusions_parathyroid",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "TNM8 Inclusions (Parathyroid)",
+  "title" : "Inclusion Table TNM 8th ed. (Parathyroid)",
+  "last_modified" : "2019-04-05T16:52:37.249Z",
+  "definition" : [ {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "INPUT"
+  } ],
+  "rows" : [ [ "75" ] ]
+}

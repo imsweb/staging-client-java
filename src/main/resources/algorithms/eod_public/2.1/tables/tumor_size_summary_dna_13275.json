@@ -1,0 +1,19 @@
+{
+  "id" : "tumor_size_summary_dna_13275",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Tumor Size Summary DNA",
+  "title" : "Tumor Size Summary",
+  "notes" : "See the [SEER Program Coding Manual](https://seer.cancer.gov/tools/codingmanuals/index.html) for coding instructions.",
+  "last_modified" : "2020-05-19T20:50:43.676Z",
+  "definition" : [ {
+    "key" : "size_summary",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Tumor Size Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "999", "Not applicable" ] ]
+}

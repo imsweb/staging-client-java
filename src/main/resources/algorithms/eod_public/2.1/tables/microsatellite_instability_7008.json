@@ -1,0 +1,19 @@
+{
+  "id" : "microsatellite_instability_7008",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Microsatellite Instability",
+  "title" : "Microsatellite Instability (MSI)",
+  "notes" : "**Note 1:** Physician statement of MSI can be used to code this data item when no other information is available.\n\n**Note 2:** The microsatellite instability (MSI) test is a genetic test performed on tumor tissue to look for differences in length of certain non-functioning sections of DNA. The differences are caused by problems with the genes that encode proteins that normally repair certain types of DNA damage. A high proportion of colon cancers arising in  patients with hereditary nonpolyposis colorectal cancer (HNPCC) (also known as Lynch syndrome) have high MSI and a smaller percentage of colon cancers not associated with Lynch syndrome have high MSI.   Patients with colon cancers with high MSI may be further tested to determine if they have HNPCC.  In addition, MSI is a useful prognostic marker in that patients with high MSI colon cancers have better response to surgery and survival.  \n\n**Note 3:** Results from nodal or metastatic tissue may be used for Microsatellite Instability.\n\n**Note 4:** Testing for MSI may be done by immunology or genetic testing. Only genetic testing results will specify whether the MSI is low or high.\n* MSI is looking at instability in informative markers\n* MSI results are recorded as\n  + MSS (Code 0)\n  + Stable (Code 0)\n  + Negative (Code 0)\n  + Low probability of MSI-H (Code 0)\n  + MSS/MSI-L (Code 0)\n  + MSI-L (Code 1)\n  + Unstable, high (Code 2)\n  + Unstable, NOS (no designation of high or low) (Code 2)\n   + MSI-H (Code 2)\n   + MSI-I (intermediate) (Code 9)\n\n**Note 5:** Testing for Mismatch Repair (MMR) is usually done by immunohistochemistry (IHC).\n* Most common markers are MLH1, MSH2, MSH6, PMS2\n* MMR results are recorded as\n  + No loss of nuclear expression (code 0)\n  + Mismatch repair (MMR) intact (code 0)\n  + MMR proficient (pMMR or MMR-P) (code 0)\n  + MMR normal (code 0)\n  + Loss of nuclear expression (code 2)\n   + MMR deficient (dMMR or MMR-D) (code 2)\n  + MMR abnormal (code 2)\n\n**Note 6:** If both tests are done and one or both are positive, code 2.\n\n**Note 7:** If all tests done are negative, code 0.",
+  "last_modified" : "2021-04-01T17:19:03.343Z",
+  "definition" : [ {
+    "key" : "msi",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Microsatellite instability (MSI) stable; microsatellite stable (MSS); negative, NOS\nAND/OR\nMismatch repair (MMR) intact, no loss of nuclear expression of MMR proteins\nMMR proficient (pMMR or MMR-P)" ], [ "1", "MSI unstable low (MSI-L)" ], [ "2", "MSI unstable high (MSI-H)\nAND/OR\nMMR deficient (dMMR or MMR-D) loss of nuclear expression of one or more MMR proteins, MMR protein deficient)" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nMSI-indeterminate \nMSI-equivocal\nMicrosatellite instability not assessed or unknown if assessed" ] ]
+}

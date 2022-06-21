@@ -1,0 +1,24 @@
+{
+  "id" : "extension_ssf1_summary_stage77_xkc",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension SSF1 Summary Stage77",
+  "title" : "Extension SSF1 Summary Stage 77 Table",
+  "subtitle" : "Cases Coded in CSv2 (CS Version Input Original equals 02XXXX) or Year of Diagnosis is 2010 and After",
+  "notes" : "**Note**:  For cases coded in CSv2 (CS Version Input Original equals 02XXXX) or Year of Diagnosis is 2010 and after, Stage 77 for CS Extension codes 000, 950, 980 and 999 is based on Extension and CS Site-Specific Factor 1. CS Site-Specific Factor 1 codes 000 and 999 map according to the extension value.",
+  "last_modified" : "2015-05-27T16:19:20.714Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "CS Extension Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf1",
+    "name" : "CS SSF1",
+    "type" : "INPUT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "000", "VALUE:IS" ], [ "950", "000", "VALUE:U" ], [ "980", "000", "VALUE:U" ], [ "999", "000", "VALUE:U" ], [ "000", "010", "ERROR:" ], [ "950", "010", "ERROR:" ], [ "980", "010", "ERROR:" ], [ "999", "010", "VALUE:L" ], [ "000", "020", "ERROR:" ], [ "950", "020", "ERROR:" ], [ "980", "020", "ERROR:" ], [ "999", "020", "VALUE:L" ], [ "000", "030", "ERROR:" ], [ "950", "030", "ERROR:" ], [ "980", "030", "ERROR:" ], [ "999", "030", "VALUE:L" ], [ "000", "040", "ERROR:" ], [ "950", "040", "ERROR:" ], [ "980", "040", "ERROR:" ], [ "999", "040", "VALUE:L" ], [ "000", "888", "ERROR:" ], [ "950", "888", "ERROR:" ], [ "980", "888", "ERROR:" ], [ "999", "888", "ERROR:" ], [ "000", "988", "ERROR:" ], [ "950", "988", "ERROR:" ], [ "980", "988", "ERROR:" ], [ "999", "988", "ERROR:" ], [ "000", "999", "VALUE:IS" ], [ "950", "999", "VALUE:U" ], [ "980", "999", "VALUE:U" ], [ "999", "999", "VALUE:U" ] ]
+}

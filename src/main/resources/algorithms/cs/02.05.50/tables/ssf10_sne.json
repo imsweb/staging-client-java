@@ -1,0 +1,18 @@
+{
+  "id" : "ssf10_sne",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF10",
+  "title" : "CS Site-Specific Factor 10",
+  "last_modified" : "2015-05-27T16:19:53.528Z",
+  "definition" : [ {
+    "key" : "ssf10",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "988", "Not applicable:  Site-specific factor not defined" ] ]
+}

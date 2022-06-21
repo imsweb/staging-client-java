@@ -1,0 +1,36 @@
+{
+  "id" : "mets_hbn",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note 1**:  Distant lymph node involvement is considered N2 for AJCC 7 staging for retinoblastoma and is coded in the CS Lymph Nodes field.  Distant lymph node involvement was considered M1 in AJCC 6 staging for retinoblastoma and was coded in CS Mets at DX in CS Version 1.\n\n**Note 2**:  Code single and multiple metastatic lesions in this field based on the presentation of metastases in all distant sites excluding distant lymph nodes.\n\n**Note 3**:  Consider metastasis to bone marrow as a single site of involvement.",
+  "footnotes" : "- For CS Mets at DX code 65 ONLY, the M category for AJCC 7 staging is assigned based on the values of CS Mets at DX and CS Mets Eval, as shown in the Mets at DX Mets Eval AJCC 7 Table for this schema.\n- For CS Mets at DX codes 00 through 99, when CS Lymph Nodes code is only 000, 100, 800, or 999, the M category for AJCC 6 staging is assigned based on the values of CS Mets at DX and CS Mets Eval, as shown in the Mets at DX Mets Eval AJCC 6 Table for this schema.  When the CS Lymph Nodes code is 200 or 250, the M category for AJCC 6 staging is assigned based on the value of CS Lymph Nodes and CS Nodes Eval as shown in the Lymph Nodes Mets at DX AJCC 6 Table for this schema.",
+  "last_modified" : "2015-05-27T16:19:29.051Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "JUMP:determine_correct_table_for_ajcc6_m_ns29", "VALUE:NONE", "VALUE:NONE" ], [ "10", "OBSOLETE DATA RETAINED V0200\nDistant lymph nodes coded in CS Lymph Nodes\n\nDistant lymph node(s)", "ERROR:", "JUMP:determine_correct_table_for_ajcc6_m_ns29", "VALUE:D", "VALUE:D" ], [ "20", "Single metastatic lesion only:\n    Distant metastasis to site other than bone marrow or CNS", "VALUE:M1a", "JUMP:determine_correct_table_for_ajcc6_m_ns29", "VALUE:D", "VALUE:D" ], [ "30", "Single metastatic lesion only:\n    Distant metastasis to bone marrow only", "VALUE:M1a", "JUMP:determine_correct_table_for_ajcc6_m_ns29", "VALUE:D", "VALUE:D" ], [ "35", "Distant metastasis to single lesion, NOS\n\nStated as M1a with no other information on metastasis", "VALUE:M1a", "JUMP:determine_correct_table_for_ajcc6_m_ns29", "VALUE:D", "VALUE:D" ], [ "40", "OBSOLETE DATA CONVERTED V0200\nSee code 80\n\nDistant metastasis except distant lymph node(s) (10) or bone marrow (30) \nDistant metastasis, NOS\nCarcinomatosis", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "45", "Multiple metastatic lesions involved\n    Distant metastasis to sites other than CNS WITH or WITHOUT  bone marrow involvement\n\nStated as M1b with no other information on metastasis", "VALUE:M1b", "JUMP:determine_correct_table_for_ajcc6_m_ns29", "VALUE:D", "VALUE:D" ], [ "50", "OBSOLETE DATA RETAINED V0200\nDistant lymph nodes coded in CS Lymph Nodes\n\n(10) + any of [(30) or (40)]\nDistant lymph node(s) plus other distant metastases", "ERROR:", "JUMP:determine_correct_table_for_ajcc6_m_ns29", "VALUE:D", "VALUE:D" ], [ "55", "OBSOLETE DATA CONVERTED V0200\nSee code 80\n\nStated as M1, NOS", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "60", "Metastasis to CNS:\n    Location not specified\n\nStated as M1c with no other information on metastasis", "VALUE:M1c", "JUMP:determine_correct_table_for_ajcc6_m_ns29", "VALUE:D", "VALUE:D" ], [ "65", "Metastasis to CNS:\n    Prechiasmatic lesions \n    WITHOUT leptomeningeal and/or CSF involvement", "JUMP:metsat_dxmets_eval_ajcc7_xfg", "JUMP:determine_correct_table_for_ajcc6_m_ns29", "VALUE:D", "VALUE:D" ], [ "70", "Metastasis to CNS:\n    Postchiasmatic lesions\n    WITHOUT leptomeningeal and/or CSF involvement\n\nStated as M1d with no other information on metastasis", "VALUE:M1d", "JUMP:determine_correct_table_for_ajcc6_m_ns29", "VALUE:D", "VALUE:D" ], [ "75", "Metastasis to CNS:\n     WITH Leptomeningeal and/or CSF involvement\n\nStated as M1e with no other information on metastasis", "VALUE:M1e", "JUMP:determine_correct_table_for_ajcc6_m_ns29", "VALUE:D", "VALUE:D" ], [ "80", "Distant metastasis, NOS\n \nStated as M1, NOS with no other information on distant metastasis", "VALUE:M1NOS", "JUMP:determine_correct_table_for_ajcc6_m_ns29", "VALUE:D", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "JUMP:determine_correct_table_for_ajcc6_m_ns29", "VALUE:U", "VALUE:U" ] ]
+}

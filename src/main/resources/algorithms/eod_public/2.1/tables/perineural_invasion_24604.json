@@ -1,0 +1,19 @@
+{
+  "id" : "perineural_invasion_24604",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Perineural Invasion",
+  "title" : "Perineural Invasion",
+  "notes" : "**Note 1:** Physician statement of microscopically confirmed perineural invasion can be used to code this data item when no other information is available.\n\n**Note 2:** Code the presence or absence of perineural invasion by the primary tumor as documented in the pathology report.\n\n**Note 3:** Information on **presence** of perineural invasion can be taken from either a biopsy or resection.  Absence of perineural invasion can only be taken from a surgical resection pathology report.\n\n**Note 4:** Code 9 if surgical resection of the primary site is performed and there is no mention of perineural invasion.",
+  "last_modified" : "2019-04-05T16:52:38.255Z",
+  "definition" : [ {
+    "key" : "perineural_invasion",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Perineural invasion not identified/not present" ], [ "1", "Perineural invasion identified/present" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nPathology report does not mention perineural invasion\nCannot be determined by the pathologist\nPerineural invasion not assessed or unknown if assessed" ] ]
+}

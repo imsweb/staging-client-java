@@ -1,0 +1,23 @@
+{
+  "id" : "combine_prostate_eod_extension_16771",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Combine Prostate EOD Extension",
+  "title" : "Combine Prostate EOD Extension",
+  "last_modified" : "2019-04-05T16:52:36.764Z",
+  "definition" : [ {
+    "key" : "clin_ss2018_t",
+    "name" : "Clin SS2018 T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_ss2018_t",
+    "name" : "Path SS2018 T",
+    "type" : "INPUT"
+  }, {
+    "key" : "ss2018_t",
+    "name" : "SS2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "extra_input" : [ "path_ss2018_t", "clin_ss2018_t" ],
+  "rows" : [ [ "IS,L,RE,D", "U", "VALUE:{{clin_ss2018_t}}" ], [ "U", "U", "VALUE:{{path_ss2018_t}}" ], [ "L,RE,D", "IS", "VALUE:{{clin_ss2018_t}}" ], [ "IS,U", "IS", "VALUE:{{path_ss2018_t}}" ], [ "RE,D", "L", "VALUE:{{clin_ss2018_t}}" ], [ "IS,L,U", "L", "VALUE:{{path_ss2018_t}}" ], [ "D", "RE", "VALUE:{{clin_ss2018_t}}" ], [ "IS,L,RE,U", "RE", "VALUE:{{path_ss2018_t}}" ], [ "IS,L,RE,D,U", "D", "VALUE:{{path_ss2018_t}}" ] ]
+}

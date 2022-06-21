@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_jcf",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF1",
+  "title" : "CS Site-Specific Factor 1",
+  "subtitle" : "Clinical Assessment of Regional Lymph Nodes",
+  "notes" : "**Note 1**:  Clinically evident regional lymph nodes are based on information from the diagnostic workup.  This might include:  physical examination, imaging, diagnostic lymph node biopsy and exploratory surgery (without a resection).\n\n**Note 2**:  In the rare instance that the number of clinically positive nodes is stated but a clinical N category is not stated, code 1-2 nodes as 100 (Clinically N1), 3-6 nodes as 200 (Clinically N2), and 7 or more nodes as 300 (Clinically N3).\n\n**Note 3**:  If there is no diagnostic workup to assess regional lymph nodes, use code 999.  Do not apply the inaccessible nodes rule that presumes unmentioned nodes to be negative.\n\n**Note 4**:  For legacy data coded in the Stomach schema in CS Version 1, N1 was assigned for 1-6 nodes positive, N2 for 7-15 nodes positive, and N3 for 16 and more nodes positive.\n\n**Note 5**:  For data coded in the EsophagusGEJunction schema in CS Version 2, when number of nodes involved is unknown, N1 and N2 are mapped to N1 for AJCC 6 staging, and N3 is mapped to N2 for AJCC 6 staging.",
+  "last_modified" : "2015-05-27T16:19:59.614Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Nodes not clinically evident; imaging of regional nodes performed and nodes not mentioned" ], [ "100", "Metastasis in 1-2 regional nodes, determined clinically\n\nStated as clinical N1" ], [ "200", "Metastasis in 3-6 regional nodes, determined clinically\n\nStated as clinical N2" ], [ "300", "Metastasis in 7 or more regional nodes, determined clinically\n\nStated as clinical N3" ], [ "400", "Clinically positive regional nodes, NOS" ], [ "888", "OBSOLETE DATA CONVERTED V0200\nSee code 988 \n\nNot applicable for this site" ], [ "988", "Not applicable:  Information not collected for this site-specific factor\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.  If this item is required to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "999", "Regional lymph nodes involved pathologically, clinical assessment not stated\nUnknown if regional lymph nodes clinically evident\nNot documented in patient record" ] ]
+}

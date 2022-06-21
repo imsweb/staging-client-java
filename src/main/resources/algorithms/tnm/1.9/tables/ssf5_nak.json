@@ -1,0 +1,20 @@
+{
+  "id" : "ssf5_nak",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF5",
+  "title" : "Site-Specific Factor 5",
+  "subtitle" : "Creatinine Unit of Measure",
+  "notes" : "**Note 1:**  There are two main methods of describing concentrations: by weight, and by molecular count. Weights are recorded in grams, and molecular counts are recorded in moles.  Milligrams/deciliter (mg/dl) is the unit of measure commonly used in the United States, and micromoles/liter (umol/l) is the designated Systeme Internationale (SI) unit of measure commonly used in Canada and Europe. 1 mg/dl of creatinine is 88.4 umol/l.\n\n**Note 2:**  The same laboratory test should be used to record information in **Site-Specific Factor 4, Creatinine Value** and **Site Specific Factor 5, Creatinine Unit of Measure**.",
+  "last_modified" : "2018-05-14T21:29:02.612Z",
+  "definition" : [ {
+    "key" : "ssf5",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Milligrams/deciliter (mg/dl)" ], [ "020", "Micromoles/liter (umol/l)" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Test ordered, results not in chart \nTest performed, unit of measure not specified\nTest performed, different unit of measure used or unit not specified" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

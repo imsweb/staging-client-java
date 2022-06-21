@@ -1,0 +1,20 @@
+{
+  "id" : "ssf11_sqa",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF11",
+  "title" : "Site-Specific Factor 11",
+  "subtitle" : "Extravascular Matrix Patterns, Loops",
+  "notes" : "**Note:**  Record results as reported on clinical examination with confocal indocyanine green angiography, or on pathologic examination of tissue if resection performed.",
+  "last_modified" : "2018-05-14T21:29:00.289Z",
+  "definition" : [ {
+    "key" : "ssf11",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Loops identified on clinical examination, no pathologic assessment " ], [ "020", "Loops not identified on clinical examination, no pathologic assessment" ], [ "030", "Loops not identified on clinical examination, identified on pathologic assessment" ], [ "040", "Loops not identified on clinical examination, not identified on pathologic assessment" ], [ "050", "Loops identified on pathologic assessment, no clinical examination" ], [ "060", "Loops not identified on pathologic assessment, no clinical examination" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Extravascular matrix patterns assessed, results not available" ], [ "998", "Extravascular matrix patterns not assessed clinically or pathologically" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

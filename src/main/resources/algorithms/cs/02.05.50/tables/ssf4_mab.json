@@ -1,0 +1,20 @@
+{
+  "id" : "ssf4_mab",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF4",
+  "title" : "CS Site-Specific Factor 4",
+  "subtitle" : "Immunohistochemistry (IHC) of Regional Lymph Nodes",
+  "notes" : "**Note 1**:  Isolated tumor cells (ITCs) are defined as single tumor cells or small clusters not greater than 0.2 millimeter (mm), usually detected by immunohistochemistry (IHC), hematoxylin and eosin stains (H and E) (see CS Lymph Nodes code 050), or molecular (MOL) methods (Reverse Transcription Polymerase Chain Reaction, RT-PCR) (see CS Site-Specific Factor 5).  ITCs do not usually show evidence of malignant activity (e.g., proliferation or stromal reaction.)\n\n**Note 2**:  When CS Lymph Nodes is coded 000, use codes 000-009 only to report results of IHC. Otherwise code 987 in this field.\n\n**Note 3**:  If it is unstated whether or not tests are done for IHC, assume they are not done.\n\n**Note 4**:  If the record states N0(i+) and no other information, code to 009.",
+  "last_modified" : "2015-05-27T16:20:06.259Z",
+  "definition" : [ {
+    "key" : "ssf4",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Regional lymph nodes negative on routine hematoxylin and eosin (H and E), no immunohistochemistry (IHC)  \nOR unknown if tested for isolated tumor cells (ITCs) by IHC studies \nNodes clinically negative, not examined pathologically" ], [ "001", "Regional lymph nodes negative on routine H and E, IHC studies done, negative for tumor" ], [ "002", "Regional lymph nodes negative on routine H and E, IHC studies done, positive for ITCs \n(Tumor cell clusters not greater than 0.2 millimeter (mm))" ], [ "009", "Regional lymph nodes negative on routine H and E, positive for tumor detected by IHC, size of tumor cell clusters or metastases not stated\n\nStated as N0(i+) with no further information on regional lymph nodes" ], [ "888", "OBSOLETE DATA CONVERTED V0200 \nSee code 987\n\nNot applicable: CS Lymph Nodes not coded 000" ], [ "987", "Not applicable: CS Lymph Nodes not coded 000" ], [ "988", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 988 will result in an edit error.)" ] ]
+}

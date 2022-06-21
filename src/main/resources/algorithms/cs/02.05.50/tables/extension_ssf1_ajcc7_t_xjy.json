@@ -1,0 +1,20 @@
+{
+  "id" : "extension_ssf1_ajcc7_t_xjy",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension SSF1 AJCC7 T",
+  "title" : "Extension SSF1 AJCC 7 T Table",
+  "subtitle" : "CS SSF1 888 or 988 with CS Extension",
+  "notes" : "**Note**:  When CS Site-Specific Factor 1 is coded 888 or 988 and CS Extension is coded 000-230, 300-440, 455-520, 540-600, 730, 950-980, 999, the T categories for AJCC 7 staging result in ERROR as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:20.559Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "T Category",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000,100,110,115,120,125,200,210,220,230,300,400,410,420,430,440,455,460,465,500,520,540,550,560,570,590,600,730,950,980,999", "ERROR:" ] ]
+}

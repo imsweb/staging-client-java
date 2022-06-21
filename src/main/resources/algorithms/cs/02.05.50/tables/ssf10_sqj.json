@@ -1,0 +1,24 @@
+{
+  "id" : "ssf10_sqj",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF10",
+  "title" : "CS Site-Specific Factor 10",
+  "subtitle" : "Location of Primary Tumor",
+  "notes" : "**Note**:  Since both omental and peritoneal gastrointestinal stromal tumors (GIST) are coded with the same ICD-O-3 topography code (C48.1), this Site-Specific Factor must be used to identify the appropriate AJCC stage table.",
+  "last_modified" : "2015-05-27T16:19:53.798Z",
+  "definition" : [ {
+    "key" : "ssf10",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "stage_table",
+    "name" : "Stage Table",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "010", "Mesentery\nMesoappendix\nMesocolon", "JUMP:ajcc7_stage_upy" ], [ "020", "Omentum", "JUMP:ajcctnm7_stage_giststomach_xit" ], [ "030", "Pelvic Peritoneum", "JUMP:ajcc7_stage_upy" ], [ "040", "Rectouterine pouch\n     Cul de sac\n     Pouch of Douglas", "JUMP:ajcc7_stage_upy" ], [ "988", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 988 may result in an edit error.)", "ERROR:" ], [ "998", "Other specified peritoneal site", "JUMP:ajcc7_stage_upy" ], [ "999", "Unknown or no information\nNot documented in patient record", "JUMP:ajcc7_stage_upy" ] ]
+}

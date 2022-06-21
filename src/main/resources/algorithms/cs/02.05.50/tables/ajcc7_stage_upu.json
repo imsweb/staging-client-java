@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc7_stage_upu",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC7 Stage",
+  "title" : "AJCC TNM 7 Stage",
+  "last_modified" : "2015-05-27T16:18:59.592Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "T3", "N0", "M0", "VALUE:III" ], [ "T3", "N1", "M0", "VALUE:IVA" ], [ "T3", "NX", "M0", "VALUE:UNK" ], [ "T4a", "N0", "M0", "VALUE:IVA" ], [ "T4a", "N1", "M0", "VALUE:IVA" ], [ "T4a", "NX", "M0", "VALUE:IVA" ], [ "T4b", "N0", "M0", "VALUE:IVB" ], [ "T4b", "N1", "M0", "VALUE:IVB" ], [ "T4b", "NX", "M0", "VALUE:IVB" ], [ "T4NOS", "N0", "M0", "VALUE:IVA" ], [ "T4NOS", "N1", "M0", "VALUE:IVA" ], [ "T4NOS", "NX", "M0", "VALUE:IVNOS" ], [ "NA", "N0", "M0", "VALUE:NA" ], [ "NA", "N1", "M0", "VALUE:NA" ], [ "NA", "NX", "M0", "VALUE:NA" ], [ "T3", "N0", "M1", "VALUE:IVC" ], [ "T3", "N1", "M1", "VALUE:IVC" ], [ "T3", "NX", "M1", "VALUE:IVC" ], [ "T4a", "N0", "M1", "VALUE:IVC" ], [ "T4a", "N1", "M1", "VALUE:IVC" ], [ "T4a", "NX", "M1", "VALUE:IVC" ], [ "T4b", "N0", "M1", "VALUE:IVC" ], [ "T4b", "N1", "M1", "VALUE:IVC" ], [ "T4b", "NX", "M1", "VALUE:IVC" ], [ "T4NOS", "N0", "M1", "VALUE:IVC" ], [ "T4NOS", "N1", "M1", "VALUE:IVC" ], [ "T4NOS", "NX", "M1", "VALUE:IVC" ], [ "NA", "N0", "M1", "VALUE:NA" ], [ "NA", "N1", "M1", "VALUE:NA" ], [ "NA", "NX", "M1", "VALUE:NA" ] ]
+}

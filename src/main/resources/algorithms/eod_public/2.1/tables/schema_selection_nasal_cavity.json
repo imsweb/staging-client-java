@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_nasal_cavity",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection NasalCavity",
+  "title" : "Schema selection for NasalCavity",
+  "last_modified" : "2021-04-29T15:45:11.670Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C300,C311", "8000-8700,8941,8982", "MATCH" ] ]
+}

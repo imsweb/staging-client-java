@@ -1,0 +1,39 @@
+{
+  "id" : "histologies_grade_stage_tnm_7_20594",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Histologies, Grade, Stage - TNM 7",
+  "title" : "Histology, Grade, Stage - TNM 7",
+  "notes" : "**Note 1:** Age at DX is described as both a three character value and a numeric value, so both 45 and 045 will work.  While the NAACCR field definition includes the leading zeros, this avoids problems with different methods of storing the information.\n\n**Note 2:** It is possible to have a clinical T other than T4-T4b for Anaplastic cases if the histology or grade was adjusted after pathology results are obtained.  In these cases, which should be rare, the Clinical Stage Group will follow the Papillary and Follicular rules.",
+  "last_modified" : "2018-05-14T21:29:00.870Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "ICD-O-3 Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "grade",
+    "name" : "Grade",
+    "type" : "INPUT"
+  }, {
+    "key" : "age_dx",
+    "name" : "Age at Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage_table_desc",
+    "name" : "Stage Table Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "stage_table",
+    "name" : "Stage Table",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8020", "Carcinoma, undifferentiated, NOS", "4,4A,4B", "1,2,3,4,9", "*", "Anaplastic", "JUMP:thyroid_ajcctnm7_stage_thyroid_anaplastic" ], [ "8021", "Carcinoma, anaplastic, NOS", "4,4A,4B", "1,2,3,4,9", "*", "Anaplastic", "JUMP:thyroid_ajcctnm7_stage_thyroid_anaplastic" ], [ "8030", "Giant cell and spindle cell carcinoma", "4,4A,4B", "1,2,3,4,9", "*", "Anaplastic", "JUMP:thyroid_ajcctnm7_stage_thyroid_anaplastic" ], [ "8031", "Giant cell carcinoma", "4,4A,4B", "1,2,3,4,9", "*", "Anaplastic", "JUMP:thyroid_ajcctnm7_stage_thyroid_anaplastic" ], [ "8032", "Spindle cell carcinoma", "4,4A,4B", "1,2,3,4,9", "*", "Anaplastic", "JUMP:thyroid_ajcctnm7_stage_thyroid_anaplastic" ], [ "8020,8021,8030-8032", "Anaplastic Histologies", "88,X,0,1,1A,1B,2,3", "1,2,3,4,9", "000-044,0-9,10-44", "Pap/Fol", "JUMP:thyroid_ajcctnm7_stage_thyroid_papillaryand_follicular_lessthan_45" ], [ "8020,8021,8030-8032", "Anaplastic Histologies", "88,X,0,1,1A,1B,2,3", "1,2,3,4,9", "045-120,45-99,100-120", "Pap/Fol", "JUMP:thyroid_ajcctnm7_stage_thyroid_papillaryand_follicular_age45and_older" ], [ "8345", "Medullary carcinoma with amyloid stroma (C739)", "*", "1,2,3,9", "*", "Med", "JUMP:thyroid_ajcctnm7_stage_thyroid_medullary" ], [ "8346", "Mixed medullary-follicular carcinoma (C739)", "*", "1,2,3,9", "*", "Med", "JUMP:thyroid_ajcctnm7_stage_thyroid_medullary" ], [ "8347", "Mixed medullary-papillary carcinoma (C739)", "*", "1,2,3,9", "*", "Med", "JUMP:thyroid_ajcctnm7_stage_thyroid_medullary" ], [ "8430", "Mucoepidermoid tumor [obs]", "*", "1,2,3,9", "*", "Med", "JUMP:thyroid_ajcctnm7_stage_thyroid_medullary" ], [ "8510", "Medullary carcinomas, NOS", "*", "1,2,3,9", "*", "Med", "JUMP:thyroid_ajcctnm7_stage_thyroid_medullary" ], [ "8512", "Medullary carcinoma with lymphoid stroma", "*", "1,2,3,9", "*", "Med", "JUMP:thyroid_ajcctnm7_stage_thyroid_medullary" ], [ "8513", "Atypical medullary carcinoma (C50_)", "*", "1,2,3,9", "*", "Med", "JUMP:thyroid_ajcctnm7_stage_thyroid_medullary" ], [ "*", "Any histology in inclusion table", "4,4A,4B", "4", "*", "Anaplastic", "JUMP:thyroid_ajcctnm7_stage_thyroid_anaplastic" ], [ "*", "Any histology in inclusion table", "88,X,0,1,1A,1B,2,3", "4", "000-044,0-9,10-44", "Pap/Fol", "JUMP:thyroid_ajcctnm7_stage_thyroid_papillaryand_follicular_lessthan_45" ], [ "*", "Any histology in inclusion table", "88,X,0,1,1A,1B,2,3", "4", "045-120,45-99,100-120", "Pap/Fol", "JUMP:thyroid_ajcctnm7_stage_thyroid_papillaryand_follicular_age45and_older" ], [ "*", "Any histology in inclusion table", "*", "5-8", "*", "ERROR", "ERROR:Invalid Grade" ], [ "*", "ALL OTHER HISTOLOGIES IN INCLUSION TABLE", "*", "1,2,3,9", "000-044,0-9,10-44", "Pap/Fol", "JUMP:thyroid_ajcctnm7_stage_thyroid_papillaryand_follicular_lessthan_45" ], [ "*", "ALL OTHER HISTOLOGIES IN INCLUSION TABLE", "*", "1,2,3,9", "045-120,45-99,100-120", "Pap/Fol", "JUMP:thyroid_ajcctnm7_stage_thyroid_papillaryand_follicular_age45and_older" ], [ "*", "ALL OTHER HISTOLOGIES IN INCLUSION TABLE", "*", "1,2,3,9", "999", "Pap/Fol", "VALUE:99" ] ]
+}

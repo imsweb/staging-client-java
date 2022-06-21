@@ -1,0 +1,20 @@
+{
+  "id" : "ssf2_kpo",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF2",
+  "title" : "CS Site-Specific Factor 2",
+  "subtitle" : "Peritoneal Cytology",
+  "notes" : "**Note**:  Cytologic examination for malignant cells may be performed on ascites (fluid that has accumulated in the peritoneal cavity in excess amount) or the fluid (saline) that is introduced into the peritoneal cavity, and then removed by suction. The introduction of fluid may be termedperitoneal washing or peritoneal lavage.",
+  "last_modified" : "2015-05-27T16:20:04.306Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Negative" ], [ "010", "Positive, malignant cells positive" ], [ "020", "Test done, results suspicious or undetermined if negative or positive" ], [ "888", "OBSOLETE DATA CONVERTED V0200\nSee code 988\n\nNot applicable for this site" ], [ "988", "Not applicable:  Information not collected for this case\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.  If this item is required to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "997", "Test ordered, results not in patient record" ], [ "998", "Test not done (test not ordered and not performed)\nNo pathologic specimen available" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

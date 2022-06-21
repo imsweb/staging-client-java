@@ -1,0 +1,19 @@
+{
+  "id" : "p16_19452",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "p16",
+  "title" : "p16",
+  "notes" : "**Note 1:** This SSDI is effective for diagnosis years 2021+\n* For cases diagnosed 2018-2020, leave this SSDI blank\n\n**Note 2:** Code 0 for p16 expression of weak intensity or limited distribution.\n\n**Note 3:** This data item must be based on testing results for p16 overexpression. \n* A statement of a patient being HPV positive or negative is not enough to code this data item\n* Testing for HPV by DNA, mRNA, antibody, or other methods should not be coded in this data item\n* Do not confuse p16 with HPV 16, which is a specific strain of virus",
+  "last_modified" : "2021-06-05T12:39:39.916Z",
+  "definition" : [ {
+    "key" : "p16",
+    "name" : "p16",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "p16 Negative; Nonreactive" ], [ "1", "p16 Positive; Diffuse, Strong reactivity" ], [ "8", "Not applicable: Information not collected for this case\n(If this time is required by your standard setter, use of code 8 will result in an edit error)" ], [ "9", "Not tested for p16; Unknown" ], [ "", "N/A - Diagnosis year is prior to 2021" ] ]
+}

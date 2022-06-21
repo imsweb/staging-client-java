@@ -1,0 +1,22 @@
+{
+  "id" : "determine_correct_table_for_ajcc6_t_ns16",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Determine Correct Table for AJCC 6 T",
+  "title" : "Determining Which Extension Calculation Table Applies for AJCC 6 T",
+  "last_modified" : "2015-05-27T16:19:03.606Z",
+  "definition" : [ {
+    "key" : "extension_eval",
+    "name" : "CS Tumor Size/Ext Eval",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf1",
+    "name" : "Site Specific Factor 1",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "2,3,6,8", "*", "JUMP:pathologic_eval_extension_thickness_ajcc6_xbt" ], [ "", "000-996, 999", "JUMP:pathologic_eval_extension_thickness_ajcc6_xbt" ], [ "0,1,5,9", "000-996, 998, 999", "JUMP:clinical_eval_extension_thickness_ajcc6_xbw" ], [ "", "998", "JUMP:clinical_eval_extension_thickness_ajcc6_xbw" ] ]
+}

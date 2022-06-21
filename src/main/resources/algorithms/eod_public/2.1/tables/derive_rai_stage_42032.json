@@ -1,0 +1,35 @@
+{
+  "id" : "derive_rai_stage_42032",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Calculate Derived Rai Stage",
+  "title" : "Calculate Derived Rai Stage",
+  "notes" : "This calculates the Derived Rai Stage based on Lymphocytosis [3885], \nAdenopathy [3804], Oranomegaly [3907], Anemia [3811], Thrombocytopenia [3933]",
+  "last_modified" : "2021-04-16T18:35:41.227Z",
+  "definition" : [ {
+    "key" : "lymphocytosis",
+    "name" : "Lymphocytosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "adenopathy",
+    "name" : "Adenopathy",
+    "type" : "INPUT"
+  }, {
+    "key" : "organomegaly",
+    "name" : "Organomegaly",
+    "type" : "INPUT"
+  }, {
+    "key" : "anemia",
+    "name" : "Anemia",
+    "type" : "INPUT"
+  }, {
+    "key" : "thrombocytopenia",
+    "name" : "Thrombocytopenia",
+    "type" : "INPUT"
+  }, {
+    "key" : "derived_rai_stage",
+    "name" : "Rai Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "", "", "", "", "", "VALUE:" ], [ "5", "5", "5", "5", "5", "VALUE:8" ], [ "5", "0,1,9,", "0,1,5,9,", "0,1,5,6,7,9,", "0,1,5,6,7,9,", "ERROR:If not C421, Lymphocytosis, Adenopathy, Organomegaly, Anemia and Thrombocytopenia should all be 5" ], [ "5", "5", "0,1,9,", "0,1,5,6,7,9,", "0,1,5,6,7,9,", "ERROR:If not C421, Lymphocytosis, Adenopathy, Organomegaly, Anemia and Thrombocytopenia should all be 5" ], [ "5", "5", "5", "0,1,6,7,9,", "0,1,5,6,7,9,", "ERROR:If not C421, Lymphocytosis, Adenopathy, Organomegaly, Anemia and Thrombocytopenia should all be 5" ], [ "5", "5", "5", "5", "0,1,6,7,9,", "ERROR:If not C421, Lymphocytosis, Adenopathy, Organomegaly, Anemia and Thrombocytopenia should all be 5" ], [ "0,1,6,7,9,", "5", "0,1,5,9,", "0,1,5,6,7,9,", "0,1,5,6,7,9,", "ERROR:If not C421, Lymphocytosis, Adenopathy, Organomegaly, Anemia and Thrombocytopenia should all be 5" ], [ "0,1,6,7,9,", "0,1,9,", "5", "0,1,5,6,7,9,", "0,1,5,6,7,9,", "ERROR:If not C421, Lymphocytosis, Adenopathy, Organomegaly, Anemia and Thrombocytopenia should all be 5" ], [ "0,1,6,7,9,", "0,1,9,", "0,1,9,", "5", "0,1,5,6,7,9,", "ERROR:If not C421, Lymphocytosis, Adenopathy, Organomegaly, Anemia and Thrombocytopenia should all be 5" ], [ "0,1,6,7,9,", "0,1,9,", "0,1,9,", "0,1,6,7,9,", "5", "ERROR:If not C421, Lymphocytosis, Adenopathy, Organomegaly, Anemia and Thrombocytopenia should all be 5" ], [ "9", "<BLANK>,9", "<BLANK>,9", "<BLANK>,9", "<BLANK>,9", "VALUE:9" ], [ "<BLANK>", "9", "<BLANK>,9", "<BLANK>,9", "<BLANK>,9", "VALUE:9" ], [ "<BLANK>", "<BLANK>", "9", "<BLANK>,9", "<BLANK>,9", "VALUE:9" ], [ "<BLANK>", "<BLANK>", "<BLANK>", "9", "<BLANK>,9", "VALUE:9" ], [ "<BLANK>", "<BLANK>", "<BLANK>", "<BLANK>", "9", "VALUE:9" ], [ "0,7", "0,1,9,", "0,1,9,", "0,1,6,7,9,", "0,1,6,7,9,", "VALUE:9" ], [ "9,", "0,1", "0,1,9,", "0,1,6,7,9,", "0,1,6,7,9,", "VALUE:9" ], [ "9,", "9,", "0,1", "0,1,6,7,9,", "0,1,6,7,9,", "VALUE:9" ], [ "9,", "9,", "9,", "0,1,6,7", "0,1,6,7,9,", "VALUE:9" ], [ "9,", "9,", "9,", "9,", "0,1,6,7", "VALUE:9" ], [ "1,6", "0,9,", "0,9,", "0,7,9,", "0,7,9,", "VALUE:0" ], [ "1,6", "1", "0,9,", "0,7,9,", "0,7,9,", "VALUE:1" ], [ "1,6", "0,1,9,", "1", "0,7,9,", "0,7,9,", "VALUE:2" ], [ "1,6", "0,1,9,", "0,1,9,", "1,6", "0,7,9,", "VALUE:3" ], [ "1,6", "0,1,9,", "0,1,9,", "0,1,6,7,9,", "1,6", "VALUE:4" ] ]
+}

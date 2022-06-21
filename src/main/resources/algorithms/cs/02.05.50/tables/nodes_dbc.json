@@ -1,0 +1,35 @@
+{
+  "id" : "nodes_dbc",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Federation Internationale de Gynecologie at d-Obstetrique (FIGO) Stage IIIB is assigned based on tumor extension and/or regional lymph node involvement.  Code CS Lymph Nodes based on a physician's statement of FIGO Stage IIIB if it is known that the stage value is assigned because of lymph node involvement, or if there is no statement that FIGO Stage IIIB is assigned based on extension or lymph node involvement. \n\n**Note 3**:  If either exploratory or definitive surgery is done with no mention of lymph nodes, assume nodes are negative.\n\n**Note 4**:  If the clinician says \"adnexa palpated\" but does not mention lymph nodes, assume lymph nodes are not involved.",
+  "last_modified" : "2015-05-27T16:19:33.043Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "100", "Regional lymph nodes:\n    Iliac, NOS:\n        Common\n        External\n        Internal (hypogastric)\n            Obturator\n    Paracervical\n    Parametrial\n    Pelvic, NOS\n    Sacral, NOS:\n        Lateral (laterosacral)\n        Middle (promontorial) (Gerota's node)\n        Presacral\n        Uterosacral\nRegional lymph node(s), NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "200", "FIGO Stage IIIB based on lymph node involvement", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "300", "FIGO Stage IIIB with no other information on extension or regional lymph nodes", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph node(s)  cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

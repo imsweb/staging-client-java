@@ -1,0 +1,31 @@
+{
+  "id" : "no_tnm_group_99227",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "No TNM Group (c)",
+  "title" : "No TNM Stage Group defined",
+  "notes" : "**Note:** Stage Group has not been defined for this schema.",
+  "last_modified" : "2018-05-14T21:29:00.126Z",
+  "definition" : [ {
+    "key" : "clin_stage_group_direct",
+    "name" : "Stage",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_stage_group_direct_display",
+    "name" : "Stage Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "t",
+    "name" : "T",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "88", "Not Applicable", "Any T", "Any N", "Any M" ] ]
+}

@@ -1,0 +1,26 @@
+{
+  "id" : "tnm_7_stage_ewing_17708",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "TNM 7 Stage Ewing",
+  "title" : "TNM 7 Stage Ewing",
+  "last_modified" : "2018-05-14T21:29:03.122Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0", "0", "0", "ERROR:Clinical T0N0M0 is not a valid combination." ], [ "0", "1", "0", "VALUE:4B" ], [ "0", "X", "0", "ERROR:Clinical T0NXM0 is not a valid combination." ], [ "1", "0", "0", "VALUE:2A" ], [ "1", "1", "0", "VALUE:4B" ], [ "1", "X", "0", "VALUE:2A" ], [ "2", "0", "0", "VALUE:2B" ], [ "2", "1", "0", "VALUE:4B" ], [ "2", "X", "0", "VALUE:2B" ], [ "3", "0", "0", "VALUE:3" ], [ "3", "1", "0", "VALUE:4B" ], [ "3", "X", "0", "VALUE:3" ], [ "X", "0", "0", "VALUE:99" ], [ "X", "1", "0", "VALUE:4B" ], [ "X", "X", "0", "VALUE:99" ], [ "0", "0", "1A", "VALUE:4A" ], [ "0", "1", "1A", "VALUE:4B" ], [ "0", "X", "1A", "VALUE:4A" ], [ "1", "0", "1A", "VALUE:4A" ], [ "1", "1", "1A", "VALUE:4B" ], [ "1", "X", "1A", "VALUE:4A" ], [ "2", "0", "1A", "VALUE:4A" ], [ "2", "1", "1A", "VALUE:4B" ], [ "2", "X", "1A", "VALUE:4A" ], [ "3", "0", "1A", "VALUE:4A" ], [ "3", "1", "1A", "VALUE:4B" ], [ "3", "X", "1A", "VALUE:4A" ], [ "X", "0", "1A", "VALUE:4A" ], [ "X", "1", "1A", "VALUE:4B" ], [ "X", "X", "1A", "VALUE:4A" ], [ "0", "0", "1B", "VALUE:4B" ], [ "0", "1", "1B", "VALUE:4B" ], [ "0", "X", "1B", "VALUE:4B" ], [ "1", "0", "1B", "VALUE:4B" ], [ "1", "1", "1B", "VALUE:4B" ], [ "1", "X", "1B", "VALUE:4B" ], [ "2", "0", "1B", "VALUE:4B" ], [ "2", "1", "1B", "VALUE:4B" ], [ "2", "X", "1B", "VALUE:4B" ], [ "3", "0", "1B", "VALUE:4B" ], [ "3", "1", "1B", "VALUE:4B" ], [ "3", "X", "1B", "VALUE:4B" ], [ "X", "0", "1B", "VALUE:4B" ], [ "X", "1", "1B", "VALUE:4B" ], [ "X", "X", "1B", "VALUE:4B" ], [ "0", "0", "1", "VALUE:4" ], [ "0", "1", "1", "VALUE:4B" ], [ "0", "X", "1", "VALUE:4" ], [ "1", "0", "1", "VALUE:4" ], [ "1", "1", "1", "VALUE:4B" ], [ "1", "X", "1", "VALUE:4" ], [ "2", "0", "1", "VALUE:4" ], [ "2", "1", "1", "VALUE:4B" ], [ "2", "X", "1", "VALUE:4" ], [ "3", "0", "1", "VALUE:4" ], [ "3", "1", "1", "VALUE:4B" ], [ "3", "X", "1", "VALUE:4" ], [ "X", "0", "1", "VALUE:4" ], [ "X", "1", "1", "VALUE:4B" ], [ "X", "X", "1", "VALUE:4" ], [ "88", "88", "88", "VALUE:88" ] ]
+}

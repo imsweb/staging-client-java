@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_adnexa_uterine_other",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection AdnexaUterineOther",
+  "title" : "Schema selection for AdnexaUterineOther",
+  "last_modified" : "2015-05-27T16:19:40.678Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C571-C574", "8000-9136,9141-9582,9700-9701", "MATCH" ] ]
+}

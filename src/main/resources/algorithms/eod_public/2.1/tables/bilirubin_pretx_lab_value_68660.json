@@ -1,0 +1,19 @@
+{
+  "id" : "bilirubin_pretx_lab_value_68660",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Bilirubin Pretreatment Total Lab Value",
+  "title" : "Bilirubin Pretreatment Total  Lab Value",
+  "notes" : "**Note 1:** Physician statement of Bilirubin Pretreatment Total Lab Value can be used to code this data item when no other information is available. \n\n**Note 2:** Record the lab value of the highest Bilirubin Total test results documented in the medical record **prior to treatment**. The lab value may be recorded in a lab report, history and physical, or clinical statement in the pathology report.\n\n**Note 3:** Assay of Bilirubin Pretreatment Total Lab Value includes conjugated (direct) and unconjugated (indirect) bilirubin and total bilirubin values. Record the **total bilirubin** value for this data item.\n\n**Note 4:** Record to the nearest tenth of mg/dL or umol/L the highest total bilirubin value prior to treatment. \n\n**Note 5:** The Model for End-Stage Liver Disease (MELD) is a numerical scale used to determine how urgently a patient with liver disease needs a liver transplant. Results from three routine lab tests are used to calculate the MELD score. Bilirubin, one of the tests, measures how effectively the liver excretes bile.\n\n**Note 6:** The same laboratory test should be used to record information in Bilirubin Pretreatment Unit of Measure [NAACCR Data Item #3814].",
+  "last_modified" : "2019-07-29T15:22:10.320Z",
+  "definition" : [ {
+    "key" : "bilirubin_pretx_lab_value",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0", "0.0 milligram/deciliter (mg/dL)\n0.0 micromole/liter (umol/L)" ], [ "0.1-999.9", "0.1-999.9 milligram/deciliter (mg/dL)\n0.1-999.9 micromole/liter (umol/L)" ], [ "XXX.1", "1000 milligram/deciliter (mg/dL) or greater\n1000 micromole/liter (umol/L) or greater" ], [ "XXX.7", "Test ordered, results not in chart" ], [ "XXX.8", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code XXX.8 will result in an edit error.)" ], [ "XXX.9", "Not documented in medical record\nBilirubin Pretreatment Total Lab Value not assessed or unknown if assessed" ] ]
+}

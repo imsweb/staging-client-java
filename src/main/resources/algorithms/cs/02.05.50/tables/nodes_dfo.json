@@ -1,0 +1,35 @@
+{
+  "id" : "nodes_dfo",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field. Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Para-aortic and pericaval lymph nodes are classified as regional nodes for AJCC 7 staging.  They are now coded in CS Lymph Nodes.",
+  "last_modified" : "2015-05-27T16:19:38.250Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "150", "Regional lymph nodes:\n    Cystic duct (node of the neck of the gallbladder) (Calot's node)\n    Hepatic\n    Hepatic artery\n    Hilar (in the hepatoduodenal ligament)\n    Node of the foramen of Winslow (omental) (epiploic)\n    Pancreaticoduodenal\n    Pericholedochal (node around common bile duct)\n    Periduodenal\n    Peripancreatic (near head of pancreas only)\n    Periportal\n    Porta hepatis (portal) (hilar) (in hilus of liver)\n    Portal vein\n    Regional lymph node(s), NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "200", "Stated as N1 with no other information on lymph nodes", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "350", "Regional lymph nodes:\n    Celiac artery\n    Superior mesenteric artery\n    Superior mesenteric vein", "VALUE:N2", "VALUE:N1", "VALUE:D", "VALUE:D" ], [ "400", "Regional lymph nodes:\n    Para-aortic\n    Pericaval ", "VALUE:N2", "VALUE:N0", "VALUE:D", "VALUE:D" ], [ "450", "400 + (150 and/or 350)\n\nAny regional lymph node(s) as listed in code 150 or 350 + para-aortic and/or pericaval lymph node(s)", "VALUE:N2", "VALUE:N1", "VALUE:D", "VALUE:D" ], [ "750", "Stated as N2 with no other information on lymph nodes", "VALUE:N2", "VALUE:N1", "VALUE:D", "VALUE:D" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

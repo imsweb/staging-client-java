@@ -8,9 +8,9 @@ A cancer staging client library for Java applications.
 
 ## Supported staging algorithms
 
-The algorithms are maintained in separate repositories which are described below.
+In prior versions of this library the algorithms were released in separate repositories.  They are all now included with this library.
 
-### EOD ([view repository](https://github.com/imsweb/staging-algorithm-eod-public))
+### EOD
 
 Extent of Disease (EOD) is a set of three data items that describe how far a cancer has spread at the time of diagnosis. EOD 2018 is effective for 
 cases diagnosed in 2018 and later.
@@ -23,33 +23,51 @@ In each EOD schema, valid values, definitions, and registrar notes are provided 
 - Summary Stage 2018
 - Site-Specific Data Items (SSDIs), including grade, pertinent to the schema
 
-For cancer cases diagnosed January 1, 2018 and later, the NCI SEER program will collect Extent of Disease (EOD) revised for 2018 and Summary Stage 2018. The schemas have been developed to be
-compatible with the AJCC 8th Edition chapter definitions.
+For cancer cases diagnosed January 1, 2018 and later, the NCI SEER program will collect Extent of Disease (EOD) revised for 2018 and Summary Stage 2018. The schemas have
+been developed to be compatible with the AJCC 8th Edition chapter definitions.
 
-All the standard setting organizations will collect the predictive and prognostic factors through Site Specific Data Items (SSDIs). Unlike the SSFs, these data items have formats and code structures
-specific to the data item.
+All the standard setting organizations will collect the predictive and prognostic factors through Site Specific Data Items (SSDIs). Unlike the SSFs, these data items have
+formats and code structures specific to the data item.
 
+To get started using the EOD algorithm, instantiate a `Staging` instance:
 
-### TNM ([view repository](https://github.com/imsweb/staging-algorithm-tnm))
+```java
+Staging staging = Staging.getInstance(EodDataProvider.getInstance(EodVersion.LATEST));
+```
 
-TNM is a widely accepted system of cancer staging. TNM stands for Tumor, Nodes, and Metastasis. T is assigned based on the extent of involvement at the 
-primary tumor site, N for the extent of involvement in regional lymph nodes, and M for distant spread. Clinical TNM is assigned prior to treatment and 
-pathologic TNM is assigned based on clinical information plus information from surgery. The clinical TNM and the pathologic TNM values are summarized 
+### TNM
+
+TNM is a widely accepted system of cancer staging. TNM stands for Tumor, Nodes, and Metastasis. T is assigned based on the extent of involvement at the
+primary tumor site, N for the extent of involvement in regional lymph nodes, and M for distant spread. Clinical TNM is assigned prior to treatment and
+pathologic TNM is assigned based on clinical information plus information from surgery. The clinical TNM and the pathologic TNM values are summarized
 as clinical stage group or pathologic stage group.
 
-For each cancer site, or schema, valid values, definitions, and registrar notes are provided for clinical TNM and stage group, pathologic TNM and stage 
+For each cancer site, or schema, valid values, definitions, and registrar notes are provided for clinical TNM and stage group, pathologic TNM and stage
 group, and relevant Site-Specific Factors (SSFs).
 
-TNM categories, stage groups, and definitions are based on the Union for International Cancer Control ([UICC](http://www.uicc.org/)) TNM 7th edition 
-classification.  UICC 7th edition and AJCC 7th edition TNM categories and stage groups are very similar; however, there are some differences.
+TNM categories, stage groups, and definitions are based on the Union for International Cancer Control ([UICC](http://www.uicc.org/)) TNM 7th edition
+classification. UICC 7th edition and AJCC 7th edition TNM categories and stage groups are very similar; however, there are some differences.
 
-For diagnosis years 2016-2017, SEER Summary Stage 2000 is required. SEER Summary Stage 2000 should be collected manually unless the registry is collecting 
+For diagnosis years 2016-2017, SEER Summary Stage 2000 is required. SEER Summary Stage 2000 should be collected manually unless the registry is collecting
 Collaborative Stage, which would derive Summary Stage 2000.
 
-### Collaborative Staging ([view repository](https://github.com/imsweb/staging-algorithm-cs))
+To get started using the TNM algorithm, instantiate a `Staging` instance:
 
-Collaborative Stage is a unified data collection system designed to provide a common data set to meet the needs of all three staging systems (TNM, SEER EOD, and SEER SS). It provides a comprehensive
-system to improve data quality by standardizing rules for timing, clinical and pathologic assessments, and compatibility across all the systems for all cancer sites.
+```java
+Staging staging = Staging.getInstance(TnmDataProvider.getInstance(TnmVersion.LATEST));
+```
+
+### Collaborative Staging
+
+Collaborative Stage is a unified data collection system designed to provide a common data set to meet the needs of all three staging systems (TNM, SEER EOD, and SEER SS). It
+provides a comprehensive system to improve data quality by standardizing rules for timing, clinical and pathologic assessments, and compatibility across all the systems for
+all cancer sites.
+
+To get started using the CS algorithm, instantiate a `Staging` instance:
+
+```java
+Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.LATEST));
+```
 
 ## Download
 
@@ -58,17 +76,18 @@ Java 8 is the minimum version required to use the library.
 Download [the latest JAR][1] or grab via Maven:
 
 ```xml
+
 <dependency>
     <groupId>com.imsweb</groupId>
     <artifactId>staging-client-java</artifactId>
-    <version>6.3.0</version>
+    <version>7.0</version>
 </dependency>
 ```
 
 or via Gradle:
 
 ```groovy
-compile 'com.imsweb:staging-client-java:6.3.0'
+compile 'com.imsweb:staging-client-java:7.0'
 ```
 
 ## Usage
@@ -77,13 +96,13 @@ More detailed documentation can be found in the [Wiki](https://github.com/imsweb
 
 ### Get a `Staging` instance
 
-Everything starts with getting an instance of the `Staging` object.  There are `DataProvider` objects for each staging algorithm and version.  The `Staging`
+Everything starts with getting an instance of the `Staging` object. There are `DataProvider` objects for each staging algorithm and version. The `Staging`
 object is thread safe and cached so subsequent calls to `Staging.getInstance()` will return the same object.
 
-For example, if you include the [collaborative staging](https://github.com/imsweb/staging-algorithm-cs) algorithm, the call will look like this:
+For example, for the Collaborative Staging algorithm, the call will look like this:
 
 ```java
-Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.v020550));
+Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.LATEST));
 ```
 
 There are some algorithms that are distributed outside of the library.  If you need to instantiate a `Staging` instance with an external algorithm use 
@@ -159,10 +178,10 @@ Table table = staging.getTable("ajcc7_stage");
 
 ### Lookup a schema
 
-A common operation is to look up a schema based on primary site, histology and optionally one or more discriminators.  Each staging algorithm has a `SchemaLookup` object
+A common operation is to look up a schema based on primary site, histology and optionally one or more discriminators. Each staging algorithm has a `SchemaLookup` object
 customized for the specific inputs needed to lookup a schema.
 
-For Collaborative Staging, use the `CsSchemaLookup` object.  Here is a lookup based on site and histology.
+For Collaborative Staging, use the `CsSchemaLookup` object (each algorithm has their own lookup class). Here is a lookup based on site and histology.
 
 ```java
 List<Schema> lookup = staging.lookupSchema(new CsSchemaLookup("C629", "9231"));
@@ -190,18 +209,18 @@ assertEquals(Integer.valueOf(34), lookup.get(0).getSchemaNum());
 
 ### Calculate stage
 
-Staging a case requires first knowing which schema you are working with.  Once you have the schema, you can tell which fields (keys) need to be collected and supplied
+Staging a case requires first knowing which schema you are working with. Once you have the schema, you can tell which fields (keys) need to be collected and supplied
 to the `stage` method call.
 
-A `StagingData` object is used to make staging calls.  All inputs to staging should be set on the `StagingData` object and the staging call will add the results.  The
+A `StagingData` object is used to make staging calls. All inputs to staging should be set on the `StagingData` object and the staging call will add the results. The
 results include:
 
 - output - all output values resulting from the calculation
 - errors - a list of errors and their descriptions
 - path - an ordered list of the tables that were used in the calculation
 
-Each algorithm has a specific `StagingData` entity which helps with preparing and evaluating staging calls.  For Collaborative Staging, use `CsStagingData`.  One
-difference between this library and the original Collaborative Stage library is that you do not have pass all 25 site-specific factors for every staging call. Only
+Each algorithm has a specific `StagingData` entity which helps with preparing and evaluating staging calls. For Collaborative Staging, use `CsStagingData`. One
+difference between this library and the original Collaborative Stage library is that you no longer have to pass all 25 site-specific factors for every staging call. Only
 include the ones that are used in the schema being staged.
 
 ```java

@@ -1,0 +1,28 @@
+{
+  "id" : "clin_t_parotid_gland_13635",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin T Parotid Gland",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:** Assign 88 for in situ cases (behavior code /2). TNM does not include an in situ category for parotid gland tumors.\n\n**Note 2:** Tumor size must be known to assign a value of T1, T2 or T3. You may use a physician’s statement of the T category if this is the only information in the medical record. \n* If the tumor appears to be in the T1, T2 or T3 categories, but no size or category is specified, assign TX\n\n**Note 3:** Assign the appropriate T category (T1, T2 or T3) based on the tumor size for the following descriptions\n\n    Invasive tumor confined to gland/duct of origin\n    Microscopic extraparenchymal extension ONLY to periglandular soft/connective tissue\n    Multiple foci confined to substance of parotid gland\n\n    Confined to parotid gland\n    Localized, NOS\n\n**Note 4:** Extraparenchymal extension is clinical or macroscopic evidence of invasion of soft tissues or nerve, except those listed under T4a and T4b. Microscopic evidence alone does not constitute extraparenchymal extension for classification purposes.\n\n**Note 5:**  Periosteum is a fibrous membrane that wraps the outer surface of bones.  Mucoperiosteum is a compound structure of mucous membrane and periosteum.  Cortical bone is the dense compact outer layer of bone.",
+  "footnotes" : "\\* T4 [NOS] is not defined by UICC in the 7th edition. Approval has been provided by UICC to use \"Tumor invades bone, nerve or extrinsic deep muscles\" as T4 [NOS].\n\\# T4 [NOS] is not defined in AJCC 7th edition.",
+  "last_modified" : "2018-05-14T21:29:03.158Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T\n    Extension cannot be determined \n    Tumor size (TS) unknown for T categories where TS  needed to determine T\nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor", "" ], [ "c1", "cT1", "Tumor 2 cm or less in greatest dimension \nWITHOUT extraparenchymal extension", "Stated as T1" ], [ "c2", "cT2", "Tumor more than 2 cm but not more than 4 cm in greatest dimension \nWITHOUT extraparenchymal extension", "Stated as T2" ], [ "c3", "cT3", "Tumor more than 4 cm and/or tumor \nWITH extraparenchymal extension", "Macroscopic extraparenchymal extension to:\n    Periglandular soft/connective tissue\n    Another major salivary gland (submaxillary, sublingual)\n    Pharyngeal mucosa\n    Skeletal muscle:\n        Digastric\n        Masseter\n        Pterygoid\n        Sternocleidomastoid\n        Stylohyoid\n\nOther extension:\n    Facial artery or vein    \n    Maxillary artery\n    Spinal accessory nerve\n\nStated as T3" ], [ "c4", "cT4", "Not defined by UICC*#", "Note: T4 has subcategories of T4a and T4b. Assign T4 only when there is no information available to assign one of the subcategories\n\nTumor invades bone, nerve or extrinsic deep muscles\n\nStated as T4[NOS]" ], [ "c4A", "cT4a", "Tumor invades: \n    Skin\n    Mandible\n    Ear canal\n    Facial nerve", "Auricular nerve\nExternal auditory meatus\nMastoid process\nPeriosteum of mandible\nSkin overlying gland\n\nStated as T4a" ], [ "c4B", "cT4b", "Tumor invades: \n    Base of skull\n    Pterygoid plates\n\nOR encases carotid artery", "Jugular vein\nSkull, NOS\n\nFurther contiguous extension\n\nStated as T4b" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined \nIn situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

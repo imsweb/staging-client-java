@@ -1,0 +1,35 @@
+{
+  "id" : "mets_hcm",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note 1**:  When both FIGO stage and metastatic detail are available, record the code with metastatic detail in preference to a statement of FIGO stage. \n\n**Note 2**:  FIGO Stage IV, NOS is assigned based on tumor extension and/or metastasis.  Code CS Mets at DX based on a physician's statement of FIGO Stage IV, NOS only if it is known that the stage value is assigned because of metastasis.",
+  "last_modified" : "2015-05-27T16:19:30.059Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "VALUE:M0", "VALUE:NONE", "VALUE:NONE" ], [ "11", "Distant lymph node(s):\n    Superficial inguinal", "VALUE:M1", "VALUE:M1", "VALUE:RN", "VALUE:D" ], [ "12", "Distant lymph node(s) other than code 11:\n    Deep inguinal, NOS:\n        Node of Cloquet or Rosenmuller (highest deep inguinal)\n    Distant lymph node(s), NOS\n(Excluding metastasis to pelvic or para-aortic lymph nodes)", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "40", "Distant metastases, except distant lymph node(s) \nCarcinomatosis\n(Excluding metastasis to adnexa and continuous extension to abdominal tissues)", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "50", "40 + (11 and/or 12)\n\nDistant metastasis plus distant lymph node(s)", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "55", "FIGO Stage IVB", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "60", "Distant metastasis NOS", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "70", "FIGO Stage IV [NOS] based on distant metastasis", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "VALUE:MX", "VALUE:U", "VALUE:U" ] ]
+}

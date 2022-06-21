@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_melanoma_gum_upper",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Schema Selection MelanomaGumUpper",
+  "title" : "Schema selection for MelanomaGumUpper",
+  "last_modified" : "2018-05-14T21:29:03.551Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C030", "8720-8790", "MATCH" ] ]
+}

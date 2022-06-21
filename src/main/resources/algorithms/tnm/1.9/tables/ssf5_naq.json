@@ -1,0 +1,20 @@
+{
+  "id" : "ssf5_naq",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF5",
+  "title" : "Site-Specific Factor 5",
+  "subtitle" : "Linear Choroidal Invasion",
+  "notes" : "**Note:**  Record the greatest linear extent of tumor involvement in the choroid in tenths of millimeters (mm).  Use code 030 if stated as 3 mm.  \n* Code information from clinical documentation in the medical record or from the pathology report, if resection of the primary tumor is performed",
+  "last_modified" : "2018-05-14T21:28:58.340Z",
+  "definition" : [ {
+    "key" : "ssf5",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No involvement of choroid" ], [ "001-979", "00.1 - 97.9 millimeters (mm) \n(Exact length of choroidal involvement to nearest tenth of mm)\n\nExamples:   \n    001    0.1 mm\n    010    1 mm\n    042    4.2 mm\n    100    10 mm OR 1 centimeter (cm)\n    103    10.3 mm" ], [ "980", "98.0 mm or larger" ], [ "988", "Not applicable: Information not collected for this case" ], [ "993", "Choroidal linear involvement stated as less than 3 mm" ], [ "994", "Choroidal linear involvement stated as greater than 3 mm" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

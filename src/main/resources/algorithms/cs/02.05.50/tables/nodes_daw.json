@@ -1,0 +1,36 @@
+{
+  "id" : "nodes_daw",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Pericholedochal nodes are coded in CS Mets at DX for jejunum and ileum primaries.\n\n**Note 3**:  The number of positive regional nodes is required to calculate the correct N category for this site.  If information about the number of positive nodes is available, use code 100, 200, or 300.  Use code 400 or 450 when the record identifies an N1 or N2 category but the specific information about the number of nodes involved is not available.",
+  "footnotes" : "- For CS Lymph Nodes codes 100-300 ONLY, when CS Lymph Nodes Eval is 1 or 9 and CS Coding System Original is before CS v02.05, the N category is assigned from the Lymph Nodes Clinical Eval Prior to V02.05 7th Table using Regional Nodes Positive and CS Site-Specific Factor 2.  When CS Lymph Nodes Eval = 0, 5, OR (CS Lymph Nodes Eval is 1,9 and CS Coding System Original is at least V02.05), the N category is assigned from Lymph Nodes Clinical Eval V02.05 AJCC 7 Table using CS Site-Specific Factor 2.  When CS Lymph Nodes Eval is 2, 3, 6, 8, or not coded, the N category for AJCC 7 staging is assigned as shown in the Lymph Nodes Pathologic Evaluation AJCC 7 Table Also Used When CS Lymph Nodes Eval is Not Coded using Regional Nodes Positive.",
+  "last_modified" : "2015-05-27T16:19:32.687Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "100", "Regional lymph node(s):\n   For duodenum primaries only:\n        Duodenal\n        Gastroduodenal\n        Hepatic\n        Pancreaticoduodenal\n        Pyloric:\n            Infrapyloric (subpyloric)\n    For jejunum or ileum primaries only:\n        Mesenteric, NOS:\n            Superior mesenteric\n     For ileum primary only: \n        Cecal (anterior, posterior or retrocecal)\n        Ileocecal", "JUMP:determine_correct_table_for_ajcc7_n_ns5", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "200", "Regional lymph node(s):\n    For duodenum primaries only:\n        Pericholodochal (common bile duct)\n        Superior mesenteric", "JUMP:determine_correct_table_for_ajcc7_n_ns5", "VALUE:N1", "VALUE:D", "VALUE:RN" ], [ "300", "Regional lymph node(s), NOS", "JUMP:determine_correct_table_for_ajcc7_n_ns5", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "400", "Stated as N1 pathologic with no other information on regional lymph nodes", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "450", "Stated as N2 pathologic with no other information on regional lymph nodes", "VALUE:N2", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

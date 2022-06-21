@@ -1,0 +1,35 @@
+{
+  "id" : "nodes_dbl",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note**: Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in CS Mets at DX.",
+  "last_modified" : "2015-05-27T16:19:33.509Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "100", "Regional lymph node(s):\n    Celiac\n    Hepatic\n    Infrapyloric (subpyloric)\n    Lateral aortic (lumbar)\n    Pancreaticosplenic (pancreaticolienal)\n    Peripancreatic, NOS:\n        Anterior, NOS:\n            Anterior pancreaticoduodenal\n            Anterior proximal mesenteric\n             Pyloric\n        Inferior to the head and body of pancreas\n        Posterior, NOS:\n            Pericholedochal (common bile duct)\n            Posterior pancreaticoduodenal\n            Posterior proximal mesentery\n        Superior to the head and body of pancreas \n    Retroperitoneal\n    Splenic (lienal), NOS\n        Gastroepiploic (gastro-omental), left\n        Splenic artery\n        Splenic hilum\n        Suprapancreatic\n    Superior mesenteric\n    Regional lymph node(s), NOS \n\n    Stated as N1 with no other information on regional lymph nodes", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "cea_pretx_interpretation_99474",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "CEA Pretreatment Interpretation",
+  "title" : "CEA (Carcinoembryonic Antigen) Pretreatment Interpretation",
+  "notes" : "**Note 1:** Physician statement of CEA (Carcinoembryonic Antigen) Pretreatment Interpretation\ncan be used to code this data item when no other information is available. \n\n**Note 2:** Record the interpretation of the highest CEA test result documented in the medical record **prior to treatment or polypectomy**.\n\n**Note 3:** Code 3 when a CEA value was documented in the record, but there is no statement that the CEA is positive/elevated, negative/normal, and the normal range (from which you can determine interpretation), is not documented.\n\n**Note 4:** The same laboratory test should be used to record information in CEA Pretreatment Lab Value [NAACCR Data Item #3820].",
+  "last_modified" : "2019-07-29T20:54:38.553Z",
+  "definition" : [ {
+    "key" : "cea_pretx_interpretation",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "CEA negative/normal; within normal limits" ], [ "1", "CEA positive/elevated" ], [ "2", "Borderline" ], [ "3", "Undetermined if positive or negative (normal values not available)\nAND no MD interpretation" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this data item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nCEA (Carcinoembryonic Antigen) Pretreatment Interpretation not assessed or unknown if assessed" ] ]
+}

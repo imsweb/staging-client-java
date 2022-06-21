@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_chapter_calculation_91940",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2020-03-27T17:38:42.180Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8000,8010,8013,8051,8070-8072,8076-8077,8083,8090,8097", "3", "VALUE:50", "Vulva", "VALUE:08" ], [ "8120,8140", "3", "VALUE:50", "Vulva", "VALUE:08" ], [ "8200", "3", "VALUE:50", "Vulva", "VALUE:08" ], [ "8500,8542,8560", "3", "VALUE:50", "Vulva", "VALUE:08" ], [ "9020,9071", "3", "VALUE:50", "Vulva", "VALUE:08" ], [ "8000,8010,8013,8051,8070-8072,8076-8077,8083,8090,8097", "2", "VALUE:XX", "Other Vulva", "VALUE:88" ], [ "8120,8140", "2", "VALUE:XX", "Other Vulva", "VALUE:88" ], [ "8200", "2", "VALUE:XX", "Other Vulva", "VALUE:88" ], [ "8500,8542,8560", "2", "VALUE:XX", "Other Vulva", "VALUE:88" ], [ "9020,9071", "2", "VALUE:XX", "Other Vulva", "VALUE:88" ], [ "8001-8005,8011-8012,8014-8040,8042-8050", "*", "VALUE:XX", "Other Vulva", "VALUE:88" ], [ "8052-8060,8073-8075,8078-8082,8084-8086,8091-8096,8098-8110", "*", "VALUE:XX", "Other Vulva", "VALUE:88" ], [ "8121-8131,8141-8180,8191,8201-8246,8248-8490", "*", "VALUE:XX", "Other Vulva", "VALUE:88" ], [ "8501-8541,8543-8552,8561-8700", "*", "VALUE:XX", "Other Vulva", "VALUE:88" ] ]
+}

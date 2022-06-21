@@ -1,0 +1,27 @@
+{
+  "id" : "clin_n_dbr",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin N Thyroid",
+  "title" : "Clinical N",
+  "notes" : "**Note 1:** Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Note 2:**  This field includes all lymph nodes defined as Levels I-VI, retropharyngeal or superior mediastinal lymph nodes (Level VII). \n\n**Note 3:**  Assignment of N value for thyroid does not depend on laterality.  All codes for nodal involvement include ipsilateral, bilateral, contralateral, and midline lymph nodes.\n\n**Note 4:**  The description of lymph nodes has been standardized across the head and neck schemas.  All lymph node levels and groups listed here are regional nodes for TNM staging.\n\n**Level I**\n \n    Level IA - Submental\n    Level IB - Submandibular (submaxillary), sublingual\n**Level II - Upper jugular** \n\n    Jugulodigastric (subdigastric)\n    Upper deep cervical        \n    Level IIA - Anterior\n    Level IIB - Posterior    \n**Level III - Middle jugular**\n\n    Middle deep cervical\n**Level IV - Lower jugular**\n\n    Jugulo-omohyoid (supraomohyoid)\n    Lower deep cervical        \n    Virchow node\n**Level V - Posterior triangle group**\n\n    Posterior cervical\n    Level VA - Spinal accessory        \n    Level VB - Transverse cervical, supraclavicular \n**Level VI - Anterior compartment group**\n\n    Laterotracheal\n    Paralaryngeal\n    Paratracheal - above suprasternal notch\n    Perithyroidal\n    Precricoid (Delphian)\n    Prelaryngeal\n    Pretracheal - above suprasternal notch\n    Recurrent laryngeal\n**Level VII - Superior mediastinal group (for other mediastinal nodes see M [distant metastasis])**\n\n    Esophageal groove\n    Paratracheal - below suprasternal notch\n    Pretracheal - below suprasternal notch    \n**Other groups**\n\n    Cervical, NOS\n    Deep cervical, NOS\n    Facial\n       Buccinator (buccal)\n       Mandibular\n       Nasolabial\n    Internal jugular, NOS\n    Parapharyngeal \n    Parotid\n       Infraauricular\n       Intraparotid\n       Periparotid\n       Preauricular\n    Retroauricular (mastoid)\n    Retropharyngeal\n    Suboccipital",
+  "last_modified" : "2018-05-14T21:29:03.161Z",
+  "definition" : [ {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n_display",
+    "name" : "Clinical N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cNX", "Regional lymph node(s) cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess N\n    Regional lymph node involvement cannot be determined or findings inconclusive\nPhysician assigns cNX, no other information available to determine N" ], [ "c0", "cN0", "No regional lymph node metastasis", "" ], [ "c1", "cN1", "Regional lymph node metastasis", "Note: N1 has subcategories of N1a and N1b. Assign N1 only when there is no information available\n to assign one of the subcategories\n\nRegional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1 [NOS]" ], [ "c1A", "cN1a", "Metastasis in Level VI \n    Pretracheal\n    Paratracheal\n    Prelaryngeal/Delphian lymph nodes", "Level VI nodes - Anterior compartment group:\n        \nStated as N1a" ], [ "c1B", "cN1b", "Metastasis in other unilateral, bilateral or contralateral cervical \n    Levels I, II, III, IV or V\n    Retropharyngeal \n    Superior mediastinal lymph nodes", "Other Groups of lymph nodes \n   \nStated as N1b" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined \nIn situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met\nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

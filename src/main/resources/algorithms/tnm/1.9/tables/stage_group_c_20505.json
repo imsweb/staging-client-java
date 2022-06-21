@@ -1,0 +1,31 @@
+{
+  "id" : "stage_group_c_20505",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Stage Group (c)",
+  "title" : "TNM 7 Stage Group",
+  "notes" : "**Note:** SEER*RSA added additional information to UICC 7th edition stages with UICC approval. If your registry submits the directly assigned Stage Groups to agencies other than SEER, please check the AJCC 7th edition manual to ensure you are using the appropriate logic.",
+  "last_modified" : "2018-05-14T21:29:00.134Z",
+  "definition" : [ {
+    "key" : "clin_stage_group_direct",
+    "name" : "Stage",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_stage_group_direct_display",
+    "name" : "Stage Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "t",
+    "name" : "T",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ssf1",
+    "name" : "Prognostic Scoring Index (SSF1)",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1  ", "I   ", "T1   ", "M0 ", "988,999" ], [ "1A ", "IA  ", "T1   ", "M0 ", "000-050,200" ], [ "1B ", "IB  ", "T1   ", "M0 ", "110,150" ], [ "2  ", "II  ", "T2   ", "M0 ", "988,999" ], [ "2A ", "IIA ", "T2   ", "M0 ", "000-050,200" ], [ "2B ", "IIB ", "T2   ", "M0 ", "110,150" ], [ "3  ", "III ", "Any T", "M1a", "988,999" ], [ "3A ", "IIIA", "Any T", "M1a", "000-050,200" ], [ "3B ", "IIIB", "Any T", "M1a", "110,150" ], [ "4  ", "IV  ", "Any T", "M1b", "988,999" ], [ "4A ", "IVA ", "Any T", "M1b", "000-050,200" ], [ "4B ", "IVB ", "Any T", "M1b", "110,150" ], [ "99", "Unknown", "TX   \nAny T", "M0\nM1", "Any\nAny" ], [ "88", "Not Applicable", "88", "88", "Any" ] ]
+}

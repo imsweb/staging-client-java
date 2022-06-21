@@ -1,0 +1,36 @@
+{
+  "id" : "extension_bgb",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  In the case of multiple simultaneous tumors, code the tumor with the greatest extension.\n\n**Note 2**:  Skin ulceration does not alter the AJCC T category.\n\n**Note 3**:  In-transit metastasis is coded in CS Lymph Nodes.\n\n**Note 4**:  The depth of stromal invasion is defined as the measurement of the tumor from the epithelial-stromal junction of the adjacent most superficial dermal papilla to the deepest point of invasion.\n\n**Note 5**:  Use codes 110-130 and 410-430 for tumors limited to the skin or subcutaneous/submucosal tissues of vulva and perineum only.  Use code 602 for tumors involving fascia or musculature of vulva and perineum.\n\n**Note 6**:  The assignment of the T1, T2, and T3 categories for Merkel cell carcinomas is based on tumor size.  A physician's statement of the T category may be used to code both CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields. However the two fields are coded independently; for example, the record may document size but not extension.  Use codes 450, 460, 470, and 810 as appropriate to code CS Extension based on a statement of T when no other extension information is available.",
+  "footnotes" : "- For CS Extension codes 105-470 ONLY the T category for AJCC 7 staging is assigned based on the value of CS Tumor Size and CS Extension as shown in the Extension Size AJCC 7 Table for this schema.\n- For CS Extension codes 100-510 ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Tumor Size and CS Extension, as shown in the Extension Size AJCC 6 Table for this schema.",
+  "last_modified" : "2015-05-27T16:19:14.240Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepidermal, intraepithelial, noninvasive", "VALUE:Tis", "VALUE:Tis", "VALUE:IS", "VALUE:IS" ], [ "100", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 150, 200, 500\n\nInvasive cancer (no stromal invasion) confined to:\n    Musculature\n    Submucosa\n    Vulva including skin", "VALUE:TX", "JUMP:extension_size_ajcc6_xjj", "VALUE:L", "VALUE:L" ], [ "105", "OBSOLETE DATA CONVERTED V0203\nSee code 130\n\nVulva only: Stromal invasion but level of invasion in mm not stated", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "110", "Vulva only: Stromal invasion less than or equal to 1 mm", "JUMP:extension_size_ajcc7_xio", "JUMP:extension_size_ajcc6_xjj", "VALUE:L", "VALUE:L" ], [ "120", "Vulva only: Stromal invasion greater than 1 mm", "JUMP:extension_size_ajcc7_xio", "JUMP:extension_size_ajcc6_xjj", "VALUE:L", "VALUE:L" ], [ "130", "Vulva only: Stromal invasion but level of invasion in mm not stated", "JUMP:extension_size_ajcc7_xio", "JUMP:extension_size_ajcc6_xjj", "VALUE:L", "VALUE:L" ], [ "150", "Submucosa", "JUMP:extension_size_ajcc7_xio", "JUMP:extension_size_ajcc6_xjj", "VALUE:L", "VALUE:L" ], [ "200", "Confined to vulva, NOS", "JUMP:extension_size_ajcc7_xio", "JUMP:extension_size_ajcc6_xjj", "VALUE:L", "VALUE:L" ], [ "300", "Localized, NOS", "JUMP:extension_size_ajcc7_xio", "JUMP:extension_size_ajcc6_xjj", "VALUE:L", "VALUE:L" ], [ "400", "OBSOLETE DATA CONVERTED V0203\nSee code 430\n\nVulva and perineum, level of invasion in mm not stated", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "410", "Vulva and perineum, stromal invasion less than or\nequal to 1 mm", "JUMP:extension_size_ajcc7_xio", "JUMP:extension_size_ajcc6_xjj", "VALUE:RE", "VALUE:RE" ], [ "420", "Vulva and perineum, stromal invasion greater than 1 mm", "JUMP:extension_size_ajcc7_xio", "JUMP:extension_size_ajcc6_xjj", "VALUE:RE", "VALUE:RE" ], [ "430", "Vulva and perineum, level of invasion in mm not stated", "JUMP:extension_size_ajcc7_xio", "JUMP:extension_size_ajcc6_xjj", "VALUE:RE", "VALUE:RE" ], [ "450", "Stated as T1 with no other information on extension", "JUMP:extension_size_ajcc7_xio", "JUMP:extension_size_ajcc6_xjj", "VALUE:L", "VALUE:L" ], [ "460", "Stated as T2 with no other information on extension", "JUMP:extension_size_ajcc7_xio", "JUMP:extension_size_ajcc6_xjj", "VALUE:L", "VALUE:L" ], [ "470", "Stated as T3 with no other information on extension", "JUMP:extension_size_ajcc7_xio", "JUMP:extension_size_ajcc6_xjj", "VALUE:L", "VALUE:L" ], [ "500", "Fascia\nMusculature, skeletal muscle", "VALUE:T4", "JUMP:extension_size_ajcc6_xjj", "VALUE:L", "VALUE:L" ], [ "510", "500 + (410, 420, 430)", "VALUE:T4", "JUMP:extension_size_ajcc6_xjj", "VALUE:RE", "VALUE:RE" ], [ "600", "OBSOLETE DATA RETAINED V0200\n\nAnus\nPerianal skin\nUrethra (See code 750 for upper urethral mucosa)\nVagina", "ERROR:", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "605", "Anus\nPerianal skin\nUrethra (lower/distal 1/3 urethra or not stated) \n(See code 750 for upper urethra)", "VALUE:T4", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "610", "Vagina (lower/distal 1/3 vagina)", "VALUE:T4", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "612", "Vagina NOS", "VALUE:T4", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "618", "Vagina (upper/proximal 2/3 vagina)", "VALUE:T4", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "620", "Bladder wall or bladder, NOS excluding mucosa\nRectal wall or rectum, NOS excluding mucosa", "VALUE:T4", "VALUE:T3", "VALUE:D", "VALUE:RE" ], [ "700", "Perineal body\nRectal mucosa", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "750", "OBSOLETE DATA RETAINED V0200\n\nBladder mucosa\nFixed to pubic bone\nUpper urethral mucosa", "ERROR:", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "760", "Bladder mucosa\nUrethra (upper/proximal 2/3 urethra)", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "765", "Extension to underlying cartilage, bone\nFixed to pubic bone", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "770", "OBSOLETE DATA REVIEWED AND CHANGED V0203\nSee codes 500, 510, 765, 775, 778\n\nFixed to pubic bone\nUnderlying cartilage, bone, skeletal muscle", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "775", "(605-700, 760) + 500", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "778", "765 + 500", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "800", "Further contiguous extension", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "810", "Stated as T4 with no other information on extension", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_merkel_cell_skin",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection MerkelCellSkin",
+  "title" : "Schema selection for MerkelCellSkin",
+  "last_modified" : "2015-05-27T16:19:45.979Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C440,C442-C449", "8247", "MATCH" ] ]
+}

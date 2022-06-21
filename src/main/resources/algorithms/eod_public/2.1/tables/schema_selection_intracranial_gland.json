@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_intracranial_gland",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection IntracranialGland",
+  "title" : "Schema selection for IntracranialGland",
+  "last_modified" : "2021-04-29T13:28:58.360Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C751, C752, C753", "8000-8700, 8720-8790, 8900, 9064, 9070-9071, 9080, 9084-9085, 9100, 9120, 9140, 9220, 9362, 9380-9539, 9680, 9699, 9702-9715, 9751-9759", "3", "MATCH" ], [ "C751, C752, C753", "8000-9993", "0, 1", "MATCH" ] ]
+}

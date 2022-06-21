@@ -1,0 +1,27 @@
+{
+  "id" : "path_m_hcp",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Path M NET Small Intestine",
+  "title" : "Pathologic M",
+  "notes" : "**Distant lymph nodes**\n\n    Celiac lymph nodes\n\n**Jejunum (C171) and ileum (C172) primaries**\n\n    Pericholedochal lymph node(s) (for duodenal primary [C170], see N [regional lymph nodes])",
+  "last_modified" : "2018-05-14T21:29:04.469Z",
+  "definition" : [ {
+    "key" : "path_m",
+    "name" : "Pathologic M",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_m_display",
+    "name" : "Pathologic M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "CLINICAL assessment only:\nDistant lymph nodes, NOS\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis, NOS \n\nStated as M1" ], [ "p1", "pM1", "Distant metastasis", "HISTOLOGICALLY confirmed:\nDistant lymph nodes, NOS\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s) \n\nDistant metastasis, NOS" ], [ "88", "88", "Not applicable", "In situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nNo pathologic workup for T and N categories and no pathologic evidence of metastasis \nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

@@ -1,0 +1,18 @@
+{
+  "id" : "size_ana",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Size",
+  "title" : "CS Tumor Size",
+  "last_modified" : "2015-05-27T16:19:50.461Z",
+  "definition" : [ {
+    "key" : "size",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "888", "OBSOLETE DATA CONVERTED V0200\nSee code 988\n\nNot applicable" ], [ "988", "Not applicable: Information not collected for this schema" ] ]
+}

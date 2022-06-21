@@ -1,0 +1,35 @@
+{
+  "id" : "nodes_dby",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  For this site, code ALL lymph node involvement in this field.\n\n**Note 2**:  When coding Regional Nodes Positive and Regional Nodes Examined, only include regional nodes. Do not include distant nodes coded in CS Lymph Nodes. If the only information available is for Lymph Nodes, NOS, coded as 300 in CS Lymph Nodes, assume these are regional nodes for coding Regional nodes Positive and Regional Nodes Examined.",
+  "last_modified" : "2015-05-27T16:19:34.126Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No lymph node involvement\n(No clinical adenopathy and either pathologically negative or no pathological statement)", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:NONE" ], [ "100", "Clinically enlarged palpable lymph node(s) (adenopathy),\nand either pathologically negative nodes or no pathological statement", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:RN" ], [ "200", "No clinically enlarged palpable lymph node(s) (adenopathy) but pathologically positive lymph node(s)", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:RN" ], [ "300", "Both clinically enlarged palpable lymph node(s) (adenopathy) and pathologically positive lymph nodes\nLymph nodes, NOS", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:RN" ], [ "999", "Unknown; not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:U" ] ]
+}

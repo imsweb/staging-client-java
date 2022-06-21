@@ -1,0 +1,18 @@
+{
+  "id" : "ssf24_sns",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF24",
+  "title" : "CS Site-Specific Factor 24",
+  "last_modified" : "2015-05-27T16:20:01.742Z",
+  "definition" : [ {
+    "key" : "ssf24",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "988", "Not applicable:  Site-specific factor not defined" ] ]
+}

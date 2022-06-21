@@ -1,0 +1,22 @@
+{
+  "id" : "mets_eval_iaa",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets Eval",
+  "title" : "CS Mets Eval",
+  "last_modified" : "2015-05-27T16:19:27.051Z",
+  "definition" : [ {
+    "key" : "mets_eval",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "mdescriptor",
+    "name" : "Staging Basis",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "9", "Not applicable for this site.", "VALUE:" ] ]
+}

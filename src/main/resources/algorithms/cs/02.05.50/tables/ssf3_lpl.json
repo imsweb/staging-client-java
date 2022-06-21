@@ -1,0 +1,20 @@
+{
+  "id" : "ssf3_lpl",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF3",
+  "title" : "CS Site-Specific Factor 3",
+  "subtitle" : "Number of Regional Lymph Nodes with Extracapsular Tumor",
+  "notes" : "**Note**:  Record the information from the pathology report. If no nodes are removed, code 998.  If the pathology report is unavailable, use code 997.",
+  "last_modified" : "2015-05-27T16:20:05.797Z",
+  "definition" : [ {
+    "key" : "ssf3",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "All nodes examined negative for cancer involvement\nAll nodes examined negative for extracapsular tumor" ], [ "001-089", "1 - 89 nodes  positive for extracapsular tumor \n(Exact number of nodes with extracapsular tumor.)" ], [ "090", "Nodes positive for extracapsular tumor, number unknown or not stated" ], [ "097", "OBSOLETE DATA CONVERTED V0203\nSee code 990\n\nPositive nodes, not stated if extracapsular tumor present" ], [ "098", "OBSOLETE DATA CONVERTED V0203\nSee code 998\n\nNo nodes examined" ], [ "888", "OBSOLETE DATA CONVERTED V0200\nSee code 988 \n\nNot applicable for this site" ], [ "988", "Not applicable:  Information not collected for this case\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.  If this item is required to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "990", "Positive nodes, not stated if extracapsular tumor present" ], [ "997", "Histopathologic examination of lymph nodes performed, results not available" ], [ "998", "No histopathologic examination of lymph nodes" ], [ "999", "Unknown if regional lymph node(s) involved pathologically \nNot documented in patient record" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "ki_67_67661",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Ki-67",
+  "title" : "Ki-67",
+  "notes" : "**Note 1:** This SSDI is effective for diagnosis years 2021+\n* For cases diagnosed 2018-2020, leave this SSDI blank\n\n**Note 2:** Physician statement of Ki-67 (MIB-1), also referred to as the “Proliferative Index” can be used to code this data item.\n\n**Note 3:** Ki-67 is a marker of cell proliferation. A high value indicates a tumor that is proliferating more rapidly.\n\n**Note 4:** Ki-67 results are reported as the percentage cell nuclei that stain positive. As of early 2017, there are no established standards for interpretation of results or for cutoffs for positive and negative.\n * Examples:\nKi-67 reported as 14%. Code 14.0\nKi-67 reported as 8.6%. Code 8.6\n\n**Note 5:** If neoadjuvant therapy is given, record the assay from tumor specimens prior to neoadjuvant therapy.\n * If neoadjuvant therapy is given and there are no Ki-67 results from pre-treatment specimens, report the findings from post-treatment specimens\n\n**Note 6:** A specific value (0.0-100.0) takes priority over XXX.4, XXX.5 or XXX.6. Only use these values when that is the only information available.\n * XXX.4, XXX.5 and XXX.6 were added since they are listed on the CAP protocol",
+  "last_modified" : "2021-04-08T14:59:02.472Z",
+  "definition" : [ {
+    "key" : "ki67",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0-100.0", "0.0 to 100.0 percent positive: enter percent positive" ], [ "XXX.4", "Ki-67 stated as less than 3%" ], [ "XXX.5", "Ki-67 stated as 3%-20%" ], [ "XXX.6", "Ki-67 stated as greater than 20%" ], [ "XXX.7", "Test done; actual percentage not stated" ], [ "XXX.8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code XXX.8 will result in an edit error.)" ], [ "XXX.9", "Not documented in medical record\nKi-67 (MIB-1) not assessed or unknown if assessed" ], [ "", "N/A - Diagnosis year is prior to 2021" ] ]
+}

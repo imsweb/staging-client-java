@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_palate_hard",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection PalateHard",
+  "title" : "Schema selection for PalateHard",
+  "last_modified" : "2021-04-29T14:43:58.839Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C050", "8000-8700,8982", "MATCH" ] ]
+}

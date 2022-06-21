@@ -1,0 +1,24 @@
+{
+  "id" : "extension_mets_ssf1_ajcc6_xjo_t",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension Mets SSF1 AJCC6 - T",
+  "title" : "Extension Mets SSF1 AJCC 6 Table - T",
+  "subtitle" : "CS SSF1 888 with CS Extension and CS Mets at DX",
+  "notes" : "**Note**:  When CS Site-Specific Factor 1 is coded 888, OBSOLETE not applicable code, the T and M categories for AJCC 6 staging result in ERROR as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:15.947Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "mets",
+    "name" : "CS Mets at DX",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000-999", "00-99", "ERROR:" ] ]
+}

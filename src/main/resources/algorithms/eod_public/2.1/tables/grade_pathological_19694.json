@@ -1,0 +1,19 @@
+{
+  "id" : "grade_pathological_19694",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Grade Pathological",
+  "title" : "Grade Pathological",
+  "notes" : "**Note 1:** Grade Pathological must not be blank.\n\n**Note 2:** There is a preferred grading system for this schema. If the clinical grade given uses the preferred grading system and the pathological grade does not use the preferred grading system, do not record the Grade Clinical in the Grade Pathological field. Assign Grade Pathological 9.\n* *Example:* Biopsy of esophageal tumor shows a moderately differentiated adenocarcinoma. The surgical resection states a high grade adenocarcinoma. \n    - Code Grade Clinical as 2 since Moderately differentiated (G2) is the preferred grading system\n     - Code Grade Pathological as 9 since the preferred grading system was not used and the Generic Grade Categories do not apply to this grade table\n\n**Note 3:** Assign the highest grade from the primary tumor.  \n\n**Note 4:** If there are multiple tumors with different grades abstracted as one primary, code the highest grade.\n\n**Note 5:** G3 includes anaplastic\n\n**Note 6:** Use the grade from the **clinical work up** from the primary tumor in different scenarios based on behavior or surgical resection\n* **Behavior**\n  - Tumor behavior for the clinical and the pathological diagnoses are the same AND the clinical grade is the highest grade \n   - Tumor behavior for clinical diagnosis is invasive, and the tumor behavior for the pathological diagnosis is in situ\n* **Surgical Resection**\n   - Surgical resection is done of the primary tumor and there is no grade documented from the surgical resection\n    - Surgical resection is done of the primary tumor and there is no residual cancer\n* **No surgical resection**\n    - Surgical resection of the primary tumor has not been done, but there is positive microscopic confirmation of distant metastases during the clinical time frame\n\n**Note 7:** Code 9 (unknown) when\n* Grade from primary site is not documented\n* No resection of the primary site (see exception in Note 6, Surgical resection, last bullet)\n* Neo-adjuvant therapy is followed by a resection (see Grade Post Therapy Path (yp))\n* Grade checked “not applicable” on CAP Protocol (if available) and no other grade information is available\n* Clinical case only (see Grade Clinical)\n* There is only one grade available and it cannot be determined if it is clinical, pathological, post therapy clinical or post therapy pathological\n\n**Note 8:** If you are assigning an AJCC 8th edition stage group\n* Grade is required to assign stage group\n* An unknown grade may result in an unknown stage group",
+  "last_modified" : "2021-04-23T20:43:08.127Z",
+  "definition" : [ {
+    "key" : "grade_path",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "G1: Well differentiated" ], [ "2", "G2: Moderately differentiated" ], [ "3", "G3: Poorly differentiated, undifferentiated " ], [ "9", "Grade cannot be assessed (GX); Unknown" ] ]
+}

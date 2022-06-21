@@ -1,0 +1,35 @@
+{
+  "id" : "extension_beq",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  AJCC does not include a Tis or TX category for melanoma of mucosa of head and neck sites. CS Extension codes of 000 and 999 are mapped to NA and AJCC stage group is derived as NA.\n\n**Note 2**:  AJCC does not include a T1 or T2 category for mucosal melanoma of head and neck sites.\n\n**Note 3**:  Use codes 400 and 400 for extension involving the mucosa only of adjacent sites.  Use higher codes for extension involving the deeper tissues of the primary of adjacent sites.\n\n**Note 4**:  Use code 300 for localized tumor only if no information is available to assign code 105, 470, or 510.\n\n**Note 5**:  Use code 470, 775, 810, or 815 if the physician's assignment of T category is the only information available about the extent of the tumor.",
+  "last_modified" : "2015-05-27T16:19:12.228Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intrapeithelial, noninvasive", "VALUE:NA", "VALUE:NA", "VALUE:IS", "VALUE:IS" ], [ "100", "OBSOLETE DATA RETAINED V0200\n\nInvasive tumor confined to lamina propria (mucoperiosteum) (stroma)", "ERROR:", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "105", "Tumor confined to mucosa of gum", "VALUE:T3", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "300", "Localized, NOS", "VALUE:T3", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "400", "Extension involving mucosa only:\n    Buccal mucosa (inner cheek)\n    Labial mucosa (inner lip), lip\n    Lateral pharyngeal wall\n    Soft palate including uvula\n    Tonsillar pillars\n    Tonsillar fossae\n    Tonsils", "VALUE:T3", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "440", "OBSOLETE DATA CONVERTED V0203\nSee code 400\n\nExtension via mucosa to upper lip (labial mucosa)", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "470", "Stated as T3 with no other information on extension", "VALUE:T3", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "500", "OBSOLETE DATA RETAINED V0200\n\nBuccal mucosa (inner cheek)\nLabial mucosa (inner lip), lip", "ERROR:", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "510", "Involvement of deep tissue or periosteum of gum", "VALUE:T4a", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "520", "510 + 400\n\nInvolvement of deep tissue of gum plus mucosal involvement of any structure in code 400", "VALUE:T4a", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "530", "Involvement of deep soft tissue or musculature of any structure in code 400", "VALUE:T4a", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "550", "Facial muscle, NOS\nSubcutaneous soft tissue of face", "VALUE:T4a", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "600", "OBSOLETE DATA RETAINED V0200\n\nLateral pharyngeal wall (tonsillar pillars and fossae, tonsils)", "ERROR:", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "700", "Cartilage of mandible or maxilla\nCortical bone of mandible or maxilla\nMandible, NOS\nMaxilla, NOS\nCartilage, NOS\nCortical bone, NOS\nBone, NOS except base of skull", "VALUE:T4a", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "720", "Extrinsic muscle of tongue:\n    Genioglossus\n    Hyoglossus\n    Palatoglossus\n    Styloglossus", "VALUE:T4a", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "760", "Skin of face", "VALUE:T4a", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "765", "Maxillary sinus (antrum)", "VALUE:T4a", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "770", "OBSOLETE DATA REVIEWED AND CHANGED V0203\nSee codes 700, 765\n\nCartilage of maxilla\nCortical bone of maxilla\nMaxilla NOS\nMaxillary sinus", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "775", "Stated as T4a with no other information on extension", "VALUE:T4a", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "790", "OBSOLETE DATA CONVERTED V0200\nSee Code 800\n\nSkull", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "800", "Contiguous extension:\n    Base of skull\n    Carotid artery (encased)\n    Masticator space\n    Pterygoid plates  ", "VALUE:T4b", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "801", "Further contiguous extension including:\n    Brain\n    Dura\n    Lower cranial nerves (IX, X, XI, XII)\n    Mediastinal structures\n    Prevertebral space\n    Mediastinal structures", "VALUE:T4b", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "810", "Stated as T4b with no other information on extension", "VALUE:T4b", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "815", "Stated as T4 [NOS] with no other information on extension", "VALUE:T4NOS", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "950", "OBSOLETE DATA RETAINED V0200\n\nNo evidence of primary tumor", "ERROR:", "VALUE:NA", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:U" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "extension_behavior_xci",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension Behavior",
+  "title" : "Extension Behavior Table",
+  "notes" : "**Note**: For CS Extension codes 050 and 070 ONLY, Summary Stage 1977 and Summary Stage 2000 are assigned based on the value of Behavior Code ICD-0-3, as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:11.689Z",
+  "definition" : [ {
+    "key" : "behavior",
+    "name" : "Behavior Code ICD-O-3",
+    "type" : "INPUT"
+  }, {
+    "key" : "t77",
+    "name" : "SS77",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "SS2000",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Comment",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "ERROR:", "ERROR:", "Behavior code of 0 should not be used with CS Extension code 050 or 070." ], [ "1", "ERROR:", "ERROR:", "Behavior code of 1 should not be used with CS Extension code 050 or 070." ], [ "2", "VALUE:IS", "VALUE:IS", "" ], [ "3", "VALUE:L", "VALUE:L", "" ] ]
+}

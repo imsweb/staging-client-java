@@ -1,0 +1,24 @@
+{
+  "id" : "size_extension_mets_ssf1_ajcc6_xju_t",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Size Extension Mets SSF1 AJCC6 - T",
+  "title" : "Size Extension Mets SSF1 AJCC 6 Table - T",
+  "subtitle" : "CS SSF1 000, 988, or 999, CS Mets at DX 17,21,25,32,33,42,43,52,53 with CS Tumor Size and CS Extension",
+  "notes" : "**Note**:  When CS Site-Specific Factor 1 is coded 000, 988, or 999, no separate tumor nodules in the primary site, unknown if separate nodules, or information not collected, and CS Mets at DX is coded 17, 21, 25, 32, 33, 42, 43, 52, or 53, metastatic involvement with pleural foci or pleural effusion involving the ipsilateral lung plus other distant involvement, the values of the T and M for AJCC 6 staging are assigned as shown in this table.  The CS Mets at DX codes map to both T4 and M1.",
+  "last_modified" : "2015-05-27T16:19:51.899Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "size",
+    "name" : "CS Tumor Size",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "000", "ERROR:" ], [ "100,110,115,120,125,200,210,220,230,300,400,410,420,430,440,450,455,460,465,500,520,530,540,550,560,570,590,600,610,650,680,700,705,710,720,730,740,745,748,750,760,770,780,785,790,800,810,980,999", "000", "ERROR:" ], [ "250, 795", "000", "ERROR:" ], [ "950", "000", "VALUE:T0" ], [ "000", "001-999", "ERROR:" ], [ "100,110,115,120,125,200,210,220,230,300,400,410,420,430,440,450,455,460,465,500,520,530,540,550,560,570,590,600,610,650,680,700,705,710,720,730,740,745,748,750,760,770,780,785,790,800,810,980,999", "001-999", "VALUE:T4" ], [ "250, 795", "001-999", "ERROR:" ], [ "950", "001-999", "ERROR:" ] ]
+}

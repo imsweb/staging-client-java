@@ -1,0 +1,27 @@
+{
+  "id" : "clin_n_dab",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin N Anus",
+  "title" : "Clinical N",
+  "notes" : "**Note:** Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).",
+  "last_modified" : "2018-05-14T21:29:02.644Z",
+  "definition" : [ {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n_display",
+    "name" : "Clinical N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cNX", "Regional lymph nodes cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess N\n    Regional lymph node involvement cannot be determined or findings inconclusive\nPhysician assigns cNX, no other information available to determine N" ], [ "c0", "cN0", "No regional lymph node metastasis", "" ], [ "c1", "cN1", "Metastasis in perirectal lymph node(s)", "Unilateral or bilateral:\n    Anorectal\n    Inferior hemorrhoidal\n    Lateral sacral (laterosacral)\n    Perirectal\n   \nRegional lymph node(s), NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "c2", "cN2", "Metastasis in unilateral internal iliac AND/OR\nUnilateral inguinal lymph node(s)", "Unilateral:\n       Internal iliac (hypogastric)\n       Obturator\n       Superficial inguinal (femoral)\n\nStated as N2" ], [ "c3", "cN3", "Metastasis in perirectal and inguinal lymph nodes AND/OR\nBilateral internal iliac AND/OR\nBilateral inguinal lymph nodes", "Bilateral:\n      Internal iliac (hypogastric)\n      Obturator\n     Superficial inguinal (femoral)\n\nStated as N3" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met\nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_melanoma_larynx_other",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Schema Selection MelanomaLarynxOther",
+  "title" : "Schema selection for MelanomaLarynxOther",
+  "last_modified" : "2018-05-14T21:29:02.838Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C323,C328-C329", "8720-8790", "MATCH" ] ]
+}

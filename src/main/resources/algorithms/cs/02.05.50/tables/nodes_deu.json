@@ -1,0 +1,35 @@
+{
+  "id" : "nodes_deu",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  For head and neck schemas, this field includes all lymph nodes defined as Levels I-VII and Other by AJCC.  The complete definitions are provided in the General Rules, Section 2.\n\n**Note 2**:  For head and neck schemas, additional information about lymph nodes (size of involved nodes, extracapsular extension, levels involved, and location of involved nodes above or below the lower border of the cricoid cartilage) is coded in CS Site-Specific Factors 1, 3-9.\n\n**Note 3**:  For head and neck cancers, if lymph nodes are described only as \"supraclavicular\", try to determine if they are in Level IV (deep to the sternocleidomastoid muscle, in the lower jugular chain) or Level V (in the posterior triangle, inferior to the transverse cervical artery) and code appropriately.  If the specific level cannot be determined, consider them as Level V nodes.\n\n**Note 4**:  The description of lymph nodes has been standardized across the head and neck schemas.  All lymph node levels and groups listed here are considered regional nodes for AJCC staging.  Summary Stage 1977 and Summary Stage 2000 divide these nodes into regional and distant groups.\n\n**Note 5**:  Levels III and IV nodes have been moved from code 100 in CS Version 1 to code 120.  Mandibuilar nodes are included with Facial nodes.",
+  "last_modified" : "2015-05-27T16:19:37.233Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:NA", "VALUE:NONE", "VALUE:NONE" ], [ "100", "Positive regional node(s):\n    Level I: \n        Level IA - Submental\n        Level IB - Submandibular (submaxillary), sublingual\n    Level II - Upper jugular:\n        Jugulodigastric (subdigastric)\n        Upper deep cervical\n        Level IIA-Anterior\n        Level IIB - Posterior\n    Retropharyngeal\n    Cervical, NOS\n    Deep cervical, NOS\n    Internal jugular, NOS\n    Regional lymph node(s), NOS", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "120", "Positive regional node(s):\n    Level III - Middle jugular:\n        Middle deep cervical\n    Level IV - Lower jugular:\n        Jugulo-omohyoid (supraomohyoid)\n        Lower deep cervical\n        Virchow node\n    Level V - Posterior triangle group:\n        Posterior cervical\n        Level VA - Spinal accessory\n        Level VB - Transverse cervical, supraclavicular (see Note 3)\n    Level VI - Anterior compartment group:\n        Laterotracheal\n        Paralaryngeal\n        Paratracheal - above suprasternal notch\n        Perithyroidal\n        Precricoid (Delphian)\n        Prelaryngeal\n        Pretracheal - above suprasternal notch\n        Recurrent laryngeal\n    Level VII - Superior mediastinal group  (for other mediastinal nodes see CS Mets at DX):\n        Esophageal groove\n        Paratracheal - below suprasternal notch\n        Pretracheal - below suprasternal notch\n    Other groups:\n        Facial:\n            Buccinator (buccal)\n            Mandibular\n            Nasolabial\n        Parotid:\n            Infraauricular\n            Intraparotid\n            Periparotid\n            Preparotid\n        Parapharyngeal\n        Retroauricular (mastoid)\n        Suboccipital\n", "VALUE:N1", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "180", "Stated as N1 with no other information on regional lymph nodes", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "190", "OBSOLETE DATA RETAINED V0200\n\nStated as N2a, no other information", "ERROR:", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "200", "OBSOLETE DATA RETAINED V0200\n\nMultiple positive ipsilateral nodes listed in code 100", "ERROR:", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "220", "OBSOLETE DATA RETAINED V0200\n\nMultiple positive ipsilateral nodes listed in code 120", "ERROR:", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "290", "OBSOLETE DATA RETAINED V0200\n\nStated as N2b, no other information", "ERROR:", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "300", "OBSOLETE DATA RETAINED V0200\n\nRegional lymph nodes as listed in code 100:\nPositive ipsilateral node(s), not stated if single or multiple", "ERROR:", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "320", "OBSOLETE DATA RETAINED V0200\n\nRegional lymph nodes as listed in code 120:\nPositive ipsilateral node(s), not stated if single or multiple", "ERROR:", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "400", "OBSOLETE DATA RETAINED V0200\n\nRegional lymph nodes as listed in code 100:\nPositive bilateral or contralateral nodes", "ERROR:", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "420", "OBSOLETE DATA RETAINED V0200\n\nRegional lymph nodes as listed in code 120:\nPositive bilateral or contralateral nodes", "ERROR:", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "490", "OBSOLETE DATA RETAINED V0200\n\nStated as N2c, no other information", "ERROR:", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "500", "OBSOLETE DATA RETAINED V0200\n\nRegional lymph nodes as listed in code 100:\nPositive node(s), not stated if ipsilateral, or bilateral, or contralateral,\nAND not stated if single or multiple", "ERROR:", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "520", "OBSOLETE DATA RETAINED V0200\n\nRegional lymph nodes as listed in code 120:\nPositive node(s), not stated if ipsilateral, or bilateral, or contralateral,\nAND not stated if single or multiple", "ERROR:", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "600", "OBSOLETE DATA RETAINED V0200\n\nStated as N2, NOS", "ERROR:", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "700", "OBSOLETE DATA RETAINED V0200\n\nStated as N3, no other information", "ERROR:", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NA", "VALUE:U", "VALUE:U" ] ]
+}

@@ -1,0 +1,35 @@
+{
+  "id" : "nodes_dfs",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Regional lymph nodes are defined as those in the vicinity of the primary tumor.  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Federation Internationale de Gynecologie at d-Obstetrique (FIGO) Stage IIIC is assigned based on tumor extension and/or regional lymph node involvement.  Code CS Lymph Nodes based on a physician's statement of FIGO Stage IIIC only if it is known that the stage value is assigned because of lymph node involvement. **Note 3**:  Regional lymph node involvement is rare.  For this schema, if there is no mention of lymph node involvement clinically, assume that lymph nodes are negative (code 000).  Use code 999 only when there is no available information on the extent of the patient's disease, for example, when a lab-only case is abstracted from a biopsy report and no clinical history is available.",
+  "last_modified" : "2015-05-27T16:19:38.458Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "100", "Regional lymph nodes:\n    Intra-abdominal\n    Para-aortic\n    Pelvic\n    Subdiaphragmatic\n    Iliac:\n        Common iliac\n        External iliac\n        Internal iliac (hypogastric):\n            Obturator     Inguinal\n    Retroperitoneal, NOS\n    Regional lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "150", "FIGO IIIC based on regional lymph node involvement", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated; Regional lymph nodes cannot be assessed; Not documented in patient record (See Note 2)", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

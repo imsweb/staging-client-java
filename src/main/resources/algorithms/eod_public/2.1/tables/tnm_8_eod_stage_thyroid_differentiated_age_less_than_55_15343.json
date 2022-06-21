@@ -1,0 +1,27 @@
+{
+  "id" : "tnm_8_eod_stage_thyroid_differentiated_age_less_than_55_15343",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "TNM 8 EOD Stage Thyroid Differentiated Age less than 55",
+  "title" : "TNM 8 EOD Stage Thyroid Differentiated Age less than 55",
+  "description" : "replaced Papillary and Follicular",
+  "last_modified" : "2019-04-05T16:52:38.360Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "88", "*", "*", "VALUE:88" ], [ "*", "*", "0", "VALUE:1" ], [ "*", "*", "1", "VALUE:2" ] ]
+}

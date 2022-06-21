@@ -1,0 +1,19 @@
+{
+  "id" : "number_of_postive_pelvic_nodes_94512",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Number of Positive Pelvic Nodes",
+  "title" : "Number of Positive Pelvic Nodes",
+  "notes" : "**Note 1:** Physician statement of positive pelvic nodes can be used to code this data item when no other information is available.\n\n**Note 2:** The following are pelvic nodes\n* Iliac, NOS\n  + Common\n  + External\n  + Internal [hypogastric] [obturator]\n* Paracervical\n* Parametrial\n* Pelvic, NOS\n* Sacral, NOS\n  + Lateral [laterosacral] \n  + Middle [promontorial] [Gerota's node]\n  + Uterosacral\n\n**Note 3:** Record the number of positive pelvic lymph nodes documented in the medical record. \n\n**Note 4:** For this data item, do not include isolated tumor cells (ITCs). \n\n**Note 5:** Micrometastasis and macrometastasis may be listed separately on the pathology report. Add these two together to get the total number of positive nodes. \n\n**Note 6:** Code X9 if no lymph node dissection is performed.\n* If only a FNA or core biopsy is done and it is positive, then code X6\n* If only a FNA or core biopsy is done and it is negative, then code X9\n* Code X9 when no lymph nodes are removed \n\n**Note 7:** The number of examined pelvic nodes is recorded in Number of Examined Pelvic Nodes [NAACCR Data Item #3900].",
+  "last_modified" : "2021-05-27T20:32:27.543Z",
+  "definition" : [ {
+    "key" : "num_pos_pelvic_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "All pelvic nodes examined negative" ], [ "01-99", "1 - 99 pelvic nodes positive \n(Exact number of nodes positive)" ], [ "X1", "100 or more pelvic  nodes positive" ], [ "X2", "Positive pelvic nodes identified, number unknown" ], [ "X6", "Positive aspiration or core biopsy of pelvic lymph node(s)" ], [ "X8", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code X8 will result in an edit error.)" ], [ "X9", "Not documented in medical record\nCannot be determined, indeterminate if positive pelvic nodes present\nNo lymph node dissection performed\nPelvic lymph nodes not assessed or unknown if assessed" ] ]
+}

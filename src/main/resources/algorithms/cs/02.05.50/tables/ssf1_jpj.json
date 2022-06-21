@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_jpj",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF1",
+  "title" : "CS Site-Specific Factor 1",
+  "subtitle" : "Associated with HIV/AIDS",
+  "notes" : "**Note 1**:  Autoimmune Deficiency Syndrome (AIDS) lymphomas are a late manifestation of Human Immunodeficiency Virus (HIV) infection and have unique clinical and pathologic features that differ from lymphomas in the general population.  They have a preponderance for extranodal involvement, with central nervous system being the most common site.\n\n**Note 2**:  HIV includes types I and II.  Older terminology includes Human T Lymphotropic Virus -3 (HTLV-3) and Lymphadenopathy Associated Virus (LAV).",
+  "last_modified" : "2015-05-27T16:20:00.023Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Not associated with Human Immunodeficiency Virus (HIV)/Autoimmune Disease (AIDS)\nHIV negative" ], [ "001", "OBSOLETE DATA CONVERTED V0203\nSee code 010\n\nYes/Present" ], [ "002", "OBSOLETE DATA CONVERTED V0203\nSee code 000\n\nNo/Not present" ], [ "010", "Associated with HIV/AIDS\nHIV positive" ], [ "988", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 988 will result in an edit error.)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

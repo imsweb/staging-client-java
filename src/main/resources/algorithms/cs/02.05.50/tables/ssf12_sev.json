@@ -1,0 +1,20 @@
+{
+  "id" : "ssf12_sev",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF12",
+  "title" : "CS Site-Specific Factor 12",
+  "subtitle" : "High Risk Features",
+  "notes" : "**Note 1**:  For AJCC 7 staging, the T category is not only dependent on tumor size but also on several high-risk features that can upgrade the T category.\n\n**Note 2**:  Based on the information in the medical record, the registrar is required to count and code the number of high risk features (each feature equals 1 risk factor). If specific information is available about some but not all of the high risk features, count the number of features documented in the record.\n\n* Poorly differentiated/Undifferentiated (grade 3 or 4)\n* Depth greater than 2 millimeters (mm)  thickness\n* Clark level IV or V\n* Perineural invasion\n\n**Note 3**:  Use codes 991, 992, and 993 only if no specific information is available about the high risk features, but the record contains a general statement about the presence of high risk features.   \n\n**Note 4**:  The definition of high risk features was changed with the release of CSv2:V0203:  Lymph-vascular invasion was removed as a high-risk feature, and tumor depth was changed from greater than or equal to 4 mm to greater than 2 mm.  All cases with codes 000-004 coded in or updated to CSv2:V0202 should be reviewed and the correct number of high-risk features determined and coded.",
+  "last_modified" : "2015-05-27T16:19:55.096Z",
+  "definition" : [ {
+    "key" : "ssf12",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No high risk features " ], [ "001", "1 high risk feature" ], [ "002", "2 high risk features" ], [ "003", "3 high risk features" ], [ "004", "4 high risk features" ], [ "005", "OBSOLETE DATA CONVERTED V0203\nThe list of high risk features in CS Version 2: V0201, V0202 included depth equal to or greater than 4 millimeters (mm) and lymph-vascular invasion.  Depth was changed to greater than 2 mm and lymph-vascular invasion removed in the final list of high risk features published by AJCC.  Cases coded 005 are converted to 004 in CS Version 2: V0203.\n\n5 high risk features" ], [ "988", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 988 may result in an edit error.)" ], [ "991", "Stated as less than 2 high risk features" ], [ "992", "Stated as 2 or more high risk features" ], [ "993", "Stated as high risk features, NOS" ], [ "998", "No histologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

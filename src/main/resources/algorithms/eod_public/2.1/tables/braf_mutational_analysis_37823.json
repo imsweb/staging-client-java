@@ -1,0 +1,19 @@
+{
+  "id" : "braf_mutational_analysis_37823",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "BRAF Mutational Analysis",
+  "title" : "BRAF Mutational Analysis",
+  "notes" : "**Note 1:** This SSDI is effective for diagnosis years 2021+\n* For cases diagnosed 2018-2020, leave this SSDI blank\n\n**Note 2:** Physician statement of BRAF can be used to code this data item when no other information is available.\n\n**Note 3:** BRAF may be recorded for all stages; however, it is primarily performed for patients with metastatic disease. If information is not available, code 9.\n\n**Note 4:** BRAF is a gene which belongs to a class of genes known as oncogenes. When mutated, oncogenes have the potential to cause normal cells to become cancerous. Studies suggest that BRAF gene mutations are often present in colorectal cancer. The most common BRAF mutations is\n* BRAF V600E (c.1799T>A) mutation\n\n**Note 5:** The most common testing methods for BRAF are\n* Direct Sanger sequencing\n* High-resolution melting analysis\n* Pyrosequencing\n* Real-time PCR\n\n**Note 6:** Results from nodal or metastatic tissue may be used for BRAF.\n\n**Note 7:** If BRAF is positive and there is no mention of the mutated codon, or the mutated codon is not specified, code 4.\n\n**Note 8:** If neoadjuvant therapy is given, record the assay from tumor specimens prior to neoadjuvant therapy.\n* If neoadjuvant therapy is given and there are no BRAF results from pre-treatment specimens, report the findings from post-treatment specimens\n\n**Note 9:** Code 9 when\n* Insufficient amount of tissue available to perform test\n* No microscopic confirmation of tumor \n* BRAF not ordered or not done, or unknown if ordered or done",
+  "last_modified" : "2021-04-01T18:04:24.204Z",
+  "definition" : [ {
+    "key" : "braf_mutational_analysis",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Normal\nBRAF negative, BRAF wild type\nNegative for (somatic) mutations, no alterations, no (somatic) mutations identified, not present, not detected" ], [ "1", "Abnormal (mutated)/detected: BRAF V600E (c.1799T>A) mutation" ], [ "2", "Abnormal (mutated)/detected, but not BRAF V600E (c.1799T>A) mutation" ], [ "4", "Abnormal (mutated), NOS" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nBRAF not assessed or unknown if assessed" ], [ "", "N/A - Diagnosis year is prior to 2021" ] ]
+}

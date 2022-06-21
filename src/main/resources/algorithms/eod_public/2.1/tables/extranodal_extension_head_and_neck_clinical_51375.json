@@ -1,0 +1,19 @@
+{
+  "id" : "extranodal_extension_head_and_neck_clinical_51375",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Extranodal Extension Head and Neck Clinical",
+  "title" : "Extranodal Extension Head and Neck Clinical",
+  "notes" : "**Note 1:** Physician statement of extranodal extension (ENE) clinically or physician clinical stage indicating the absence or presence of ENE can be used to code this data item when no other information is available. Physical exam alone is sufficient to determine Clinical ENE. \n\n**Note 2:** The assessment of ENE must be based on evidence acquired prior to definitive surgery of the primary site, chemotherapy, radiation or other type of treatment, i.e., the clinical time-frame for staging. \n* The assessment for ENE **in addition to physical examination** may include imaging, biopsy of the regional lymph node, and/or biopsy of tissues surrounding the regional lymph node. \n* Imaging **alone** is not enough to determine or exclude ENE.\n\n**Note 3:** Be aware that the rules for coding ENE for head and neck sites compared to non-head and neck sites are different.\n\n**Note 4:** Code 0 when lymph nodes are determined to be **clinically positive** and physical examination does not indicate any signs of extranodal extension.\n\n**Note 5:** Code 1 when \n* ENE is unquestionable as determined by physical examination \n   * Clinical ENE is described in the AJCC 8th edition as \"Unambiguous evidence of gross ENE on clinical examination (e.g., invasion of skin, infiltration of musculature, tethering to adjacent structures, or cranial nerve, brachial plexus, sympathetic trunk, or phrenic nerve invasion with dysfunction)\"\n* The terms 'fixed' or 'matted' are used to describe lymph nodes\n* Other terms for ENE include: 'extranodal spread', 'extracapsular extension', or 'extracapsular spread'\n\n**Note 6:** : Code 7 when\n* Lymph nodes are determined to be **clinically negative**\n* Behavior /2 (in situ)\n\n**Note 7:**  Code 9 when physical exam is not available AND at least one of the following\n* No additional information\n* Statement of lymph node involvement with no information on ENE\n* Lymph node biopsy (e.g., FNA, core, incisional, excisional, sentinel node) performed and is negative for ENE or not stated",
+  "last_modified" : "2020-01-08T19:41:29.271Z",
+  "definition" : [ {
+    "key" : "extranodal_ext_hn_clin",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Regional lymph node(s) involved, ENE not present/not identified during diagnostic workup" ], [ "1", "Regional lymph node(s) involved, ENE present/identified during diagnostic workup, \nbased on physical exam WITH or WITHOUT imaging" ], [ "2", "Regional lymph node(s) involved, ENE present/identified during diagnostic workup, \nbased on microscopic confirmation" ], [ "4", "Regional lymph nodes involved, ENE present/identified, unknown how identified" ], [ "7", "No lymph node involvement during diagnostic workup (cN0)" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit" ], [ "9", "Not documented in medical record\nENE not assessed during diagnostic workup, or unknown if assessed\nClinical assessment of lymph node(s) not done, or unknown if done" ] ]
+}

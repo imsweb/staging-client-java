@@ -1,0 +1,27 @@
+{
+  "id" : "path_t_bfi",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Path T NET Colon",
+  "title" : "Pathologic T",
+  "notes" : "**Note 1:** Assign 88 for in situ cases (behavior code /2). TNM does not include an in situ category for NET colon tumors.\n\n**Note 2:**  Ignore intraluminal extension to adjacent segment(s) of colon/rectum or to the ileum from the cecum; code depth of invasion or extracolonic spread as indicated.\n\n**Note 3:** Tumor size must be known to assign a value of T1 or T2. You may use a physician’s statement of the T (sub)category if this is the only information in the medical record.\n* If the tumor appears to be in the T1 or T2 (sub)categories, but no size or category is specified, assign TX\n\n**Note 4:** Assign the appropriate T (sub)category (T1, T2) based on the tumor size for the following descriptions:\n\n    Invasive tumor confined to mucosa, NOS including intramucosal, NOS\n    Invades lamina propria, including lamina propria in the stalk of a polyp\n    Invades submucosa (superficial invasion), including submucosa in the stalk of a polyp\n    Confined to and not through the muscularis mucosae, including muscularis mucosae in the stalk of a polyp\n\n    Confined to colon, NOS\n    Localized, NOS \n\n**Note 5:**  Assign T4 for tumor with macroscopic adhesions to other organs or structures and for pathologically confirmed tumor in adhesions.  \n* If no tumor is present in adhesions upon microscopic examination, assign the appropriate T category to describe the microscopically confirmed depth of tumor invasion for these cases",
+  "last_modified" : "2018-05-14T21:29:00.813Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pTX", "Primary tumor cannot be assessed", "Pathologic classification criteria met, evaluation done: \n    Physician unable to assess T\n    Surgical resection of primary tumor, extension not stated \n    Tumor size (TS) unknown for T categories where TS  needed to determine T\nPhysician assigns pTX, no other information available to determine T" ], [ "p0", "pT0", "No evidence of primary tumor", "" ], [ "p1", "pT1", "Tumor invades lamina propria or submucosa and is \nno greater than 2 cm in size", "Note: T1 has subcategories of T1a and T1b. Assign T1 only when there is no information available to assign one of the subcategories\n\nStated as T1 [NOS]" ], [ "p1A", "pT1a", "Tumor less than 1 cm in size", "Stated as T1a" ], [ "p1B", "pT1b", "Tumor 1-2 cm in size", "Stated as T1b" ], [ "p2", "pT2", "Tumor invades muscularis propria or is greater than\n2 cm in size", "Muscularis propria invaded\n\nStated as T2" ], [ "p3", "pT3", "Tumor invades subserosa, or non-peritonealized  \npericolic or perirectal tissues", "Extension through wall, NOS\nThrough muscularis propria or muscularis, NOS\nPerimuscular tissue invaded\nSubserosal tissue/(sub)serosal fat invaded\nTransmural, NOS\n\nExtension to:\n    All colon sites:\n        Adjacent tissue(s), NOS\n        Connective tissue\n        Mesenteric fat\n        Mesentery \n        Mesocolon\n        Pericolic fat\n\n    Ascending and descending colon:\n        Retroperitoneal fat \n\n    Transverse colon/flexures:\n        Gastrocolic ligament\n        Greater omentum\n\nFat, NOS\n\nStated as T3" ], [ "p4", "pT4", "Tumor perforates peritoneum or invades other organs", "Invasion of/through serosa (mesothelium) (visceral peritoneum)\n\nAdherent to other organs or structures, NOS\nAll colon sites:\n    Abdominal wall \n    Adrenal (suprarenal) gland\n    Bladder\n    Diaphragm\n    Fistula to skin\n    Gallbladder\n    Other segment(s) of colon via serosa\n    Small intestine\n    Retroperitoneum (excluding fat)\n\nCecum (C180):\n    Fallopian tube\n    Greater omentum\n    Kidney\n    Liver\n    Ovary\n    Ureter\n    Uterus\n\nAscending colon (C182):\n    Greater omentum\n    Liver, right lobe\n    Right kidney\n    Right ureter\n\nTransverse colon and flexures (C183, C184, C185):\n    Gallbladder/bile ducts\n    Kidney\n    Liver\n    Pancreas\n    Spleen\n    Stomach\n    Ureter\n\nDescending colon (C186):\n    Fallopian tube\n    Greater omentum\n    Left kidney\n    Left ureter\n    Ovary\n    Pelvic wall\n    Spleen\n    Uterus\n\nSigmoid colon (C187):\n    Cul de sac (rectouterine pouch)\n    Fallopian tube    \n    Greater omentum\n    Ovary\n    Pelvic wall\n    Uterus\n\nStated as T4" ], [ "88", "88", "Not applicable", "In situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nPathologic classification criteria met, evaluation done: \n    Results not documented in patient record \n    No surgical resection of  known primary tumor (not T0) \n    Resection insufficient for site-specific pathologic assessment\nNo surgical resection of primary tumor and there isn’t a positive biopsy of a structure in the highest T category and highest N category\nEvidence of metastatic disease (pM1), no other workup\nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

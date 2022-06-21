@@ -1,0 +1,26 @@
+{
+  "id" : "eod_tnm_component_cleanup_placenta_66040",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "EOD TNM Component Cleanup Placenta",
+  "title" : "EOD TNM Component Cleanup Placenta",
+  "last_modified" : "2019-04-05T16:52:34.432Z",
+  "definition" : [ {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "INPUT"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "eod_2018_m",
+    "name" : "EOD M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "eod_2018_stage_group",
+    "name" : "EOD Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "XX", "VALUE:88", "VALUE:88", "VALUE:88" ] ]
+}

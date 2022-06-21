@@ -1,0 +1,28 @@
+{
+  "id" : "extension_bfw",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "EOD Primary Tumor",
+  "title" : "EOD Primary Tumor",
+  "notes" : "**Note 1:** The cystic duct extends from the neck of the gallbladder to its junction with the common hepatic duct, to form the common bile duct.\n\n**Note 2:** Involvement within the porta hepatis is coded according to the structures involved: portal vein, common hepatic artery, and common hepatic duct.",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05.** American Joint Committee on Cancer (Chicago, IL)\n\n(4) Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging.** In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017\n\n(5) Zhu, A.X., Pawlik, T.M., Vauthey, J.N., et al. **Gallbladder**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017",
+  "last_modified" : "2021-04-08T19:00:49.880Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_t",
+    "name" : "SS2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "VALUE:Tis", "VALUE:IS" ], [ "100", "Invasive tumor confined to\n- Lamina propria\n- Mucosa, NOS\n- Submucosa (superficial invasion)", "VALUE:T1a", "VALUE:L" ], [ "150", "Code 100 plus any involvement of gallbladder", "VALUE:T1a", "VALUE:RE" ], [ "200", "Muscularis propria (layer)", "VALUE:T1b", "VALUE:L" ], [ "250", "Code 200 plus any involvement of gallbladder", "VALUE:T1b", "VALUE:RE" ], [ "300", "Confined to cystic duct, NOS\n\nLocalized, NOS", "VALUE:T1", "VALUE:L" ], [ "400", "Perimuscular connective tissue (peritoneal side)\n- WITHOUT involvement of serosa (visceral peritoneum)\n\nPeritoneal side of gallbladder", "VALUE:T2a", "VALUE:RE" ], [ "450", "Perimuscular connective tissue (hepatic side)\n- WITH no extension into liver\n\nHepatic side of gallbladder", "VALUE:T2b", "VALUE:RE" ], [ "500", "Beyond wall of cystic duct\nPerimuscular tissue, NOS\nUNKNOWN if gallbladder or liver involved", "VALUE:T2", "VALUE:RE" ], [ "550", "Extrahepatic bile ducts (including common bile duct)", "VALUE:T3", "VALUE:L" ], [ "600", "Extrahepatic bile ducts (including common bile duct) with extension to gallbladder or structures in codes 400-500 \nOR ONE of the following organs or structures \n+ Ampulla of Vater\n+ Colon\n+ Duodenum, NOS\n+ Invasion of/through serosa\n+ Liver \n+ Omentum, greater or lesser\n+ Pancreas\n+ Periductal/perimuscular connective tissue\n+ Serosa (visceral peritoneum) perforated\n+ Small intestine, NOS\n+ Stomach, distal or proximal\n+ Unilateral branches of hepatic artery (right or left)\n+ Unilateral branches of portal vein (right or left)", "VALUE:T3", "VALUE:RE" ], [ "650", "Two or more organs and/or structures listed in code 600\n\nHepatic artery (common, NOS)\nPortal vein (main, NOS)", "VALUE:T4", "VALUE:RE" ], [ "700", "Abdominal wall\n\nFurther contiguous extension", "VALUE:T4", "VALUE:D" ], [ "800", "No evidence of primary tumor", "VALUE:T0", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in medical record\n\nDeath Certificate Only", "VALUE:TX", "VALUE:U" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "ssf2_kal",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF2",
+  "title" : "Site-Specific Factor 2",
+  "subtitle" : "Specific Location of Tumor",
+  "last_modified" : "2018-05-14T21:29:03.116Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Fundus - Anterior Wall" ], [ "020", "Fundus - Posterior Wall" ], [ "030", "Fundus, NOS" ], [ "040", "Body - Anterior Wall" ], [ "050", "Body - Posterior Wall" ], [ "060", "Body - Lesser Curvature" ], [ "070", "Body - Greater Curvature" ], [ "080", "Body, NOS" ], [ "090", "Antrum - Anterior Wall" ], [ "100", "Antrum - Posterior Wall" ], [ "110", "Antrum - Lesser Curvature" ], [ "120", "Antrum - Greater Curvature" ], [ "130", "Antrum, NOS" ], [ "140", "Pylorus" ], [ "150", "Overlapping Lesion Anterior wall of stomach, NOS Posterior wall of stomach, NOS" ], [ "160", "Lesser curvature, NOS Medial curvature, NOS" ], [ "170", "Greater curvature, NOS Lateral curvature, NOS" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\n Stomach, NOS" ] ]
+}

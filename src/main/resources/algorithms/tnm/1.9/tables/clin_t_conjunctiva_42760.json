@@ -1,0 +1,28 @@
+{
+  "id" : "clin_t_conjunctiva_42760",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin T Conjunctiva",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  Palpebral and tarsal conjunctiva line the eyelid, bulbar conjunctiva covers the eyeball, forniceal conjunctiva covers the space between the eyelid and the globe.  According to TNM, tumors are most likely to arise at the exposed site where the conjunctival epithelium merges with the corneal epithelium, particularly at the temporal limbus. (1)\n\n**Note 2:** For the following descriptions, assign the appropriate T category based on the tumor size recorded in **Site-Specific Factor 1, Tumor Size**.\n\n    Tumor confined to one subsite of conjunctiva\n       Bulbar conjunctiva\n       Forniceal conjunctiva\n       Palpebral conjunctiva\n       Tarsal conjunctiva\n\n    Tumor confined to one subsite of conjunctiva, NOS\n\n    Localized, NOS",
+  "footnotes" : "(1) American Joint Committee on Cancer., & Edge, S.B. (2010) AJCC Cancer Staging Manual (7th ed.). New York; London: Springer, pgs. 531-537",
+  "last_modified" : "2018-05-14T21:28:58.500Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T\n    Extension cannot be determined \n    Tumor size (TS) unknown for T categories where TS  needed to determine T\nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor", "" ], [ "pIS", "pTis", "Carcinoma in situ", "Intraepithelial, noninvasive\n\nStated as Tis" ], [ "c1", "cT1", "Tumor 5 mm or less in greatest dimension", "Stated as T1" ], [ "c2", "cT2", "Tumor more than 5 mm in greatest dimension \nWITHOUT invasion of adjacent structures", "Stated as T2" ], [ "c3", "cT3", "Tumor invades adjacent structures", "Intraocular extension\n     Cornea (3, 6, 9, or 12 o'clock hours)\n     Intraocular compartments\n\nTumor involving more than one subsite of conjunctiva:\n    Bulbar conjunctiva\n    Forniceal conjunctiva (lower and/or upper)\n    Palpebral conjunctiva (lower and/or upper)\n    Tarsal conjunctiva (lower and/or upper) \n\nTumor involving more than one subsite of conjunctiva NOS\n\nAdjacent extraocular extension, excluding orbit:\n    Anterior eyelid lamella \n    Caruncle \n    Eyelid margin (lower and/or upper)\n    Lacrimal punctum and canaliculi (lower and/or upper)\n    Plica\n    Posterior eyelid lamella\n\nStated as T3" ], [ "c4", "cT4", "Tumor invades the orbit or beyond", "Note: T4 has subcategories of T4a, T4b, T4c and T4d. Assign T4 only when there is no information available to assign one of the subcategories\n\nStated as T4 [NOS]" ], [ "c4A", "cT4a", "Tumor invades orbital soft tissue \nWITHOUT bone invasion", "Orbital soft tissues without bone invasion\n\nStated as T4a" ], [ "c4B", "cT4b", "Tumor invades bone", "Bone of orbit\n\nStated as T4b" ], [ "c4C", "cT4c", "Tumor invades adjacent paranasal sinuses", "Adjacent paranasal sinuses\n\nStated as T4c" ], [ "c4D", "cT4d", "Tumor invades brain", "Further contiguous extension\n\nStated as T4d" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

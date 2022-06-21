@@ -1,0 +1,28 @@
+{
+  "id" : "path_n_net_ampulla_11118",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Path N NET Ampulla",
+  "title" : "Pathologic N",
+  "notes" : "**Note 1:** Histological examination of a regional lymphadenectomy specimen will ordinarily include 10 or more lymph nodes. If the lymph nodes are negative, but the number ordinarily is not met, classify as pN0. (1)\n\n**Note 2:** Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Regional lymph nodes**\n\n    Anterior to the ampulla of Vater\n    Inferior to the ampulla of Vater\n    Posterior to the ampulla of Vater\n    Superior to the ampulla of Vater\n    \n    Celiac\n    Hepatic \n    Hepatic artery\n    Infrapyloric (subpyloric)\n    Lateral aortic (lumbar)\n    Node of the foramen of Winslow (epiploic)(omental)\n    Pancreaticoduodenal\n    Peripancreatic (EXCEPT nodes at tail of pancreas)\n    Periportal (portal vein)\n    Proximal mesenteric\n    Retroperitoneal\n    Superior mesenteric",
+  "footnotes" : "(1) International Union Against Cancer (UICC) *TNM Classification of Malignant Tumors,* 7th ed., Sobin, LH, Gospodarowicz, M, Wittekind, CH, eds. New York: Wiley, 2009, pg., 130",
+  "last_modified" : "2018-05-14T21:29:03.555Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathologic N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pNX", "Regional lymph nodes cannot be assessed", "Pathologic classification criteria met, evaluation done:\n    Physician unable to assess N\n    Surgical resection primary tumor, no regional lymph nodes removed\n    Involvement of regional lymph nodes not documented\nPhysician assigns pNX, no other information available to determine N" ], [ "p0", "pN0", "No regional lymph node metastasis", "No regional lymph node involvement" ], [ "p1", "pN1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "c0", "cN0", "Clinically: No regional lymph node metastasis", "Use only for TNM defined pTis cases where there is a resection of the primary and the nodes are not evaluated pathologically" ], [ "88", "88", "Not applicable", "In situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nNo surgical resection of primary tumor and there isn’t a positive biopsy of a structure in the highest T category and highest N category\nEvidence of metastatic disease (pM1), no other workup\nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

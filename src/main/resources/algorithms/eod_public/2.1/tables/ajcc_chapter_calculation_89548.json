@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc_chapter_calculation_89548",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2020-03-27T15:22:05.333Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "9597,9680", "VALUE:81.2", "Primary Cutaneous Lymphomas: Primary Cutaneous B-Cell/T-cell Lymphoma (non-MF/SS) Lymphoma", "VALUE:08" ], [ "9708-9709,9712,9718-9719,9726", "VALUE:81.2", "Primary Cutaneous Lymphomas: Primary Cutaneous B-Cell/T-cell Lymphoma (non-MF/SS) Lymphoma", "VALUE:08" ] ]
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "determine_correct_table_for_s_ns36",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Determine Correct Table for S",
+  "title" : "Determining Which Calculation Table Applies for S Value",
+  "last_modified" : "2015-05-27T16:19:05.173Z",
+  "definition" : [ {
+    "key" : "cs_input_version_original",
+    "name" : "CS Version Input Original",
+    "type" : "INPUT"
+  }, {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "s",
+    "name" : "S Value",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "010401,010400,010300,010200,010100,010005,010004,010003,010002,010000,000937", ",2004-2009", "JUMP:combined_serum_tumor_marker_svalue_tablefor_yearof_diagnosis_less_than2010_xiz" ], [ "020500-999999,020440,020302,020200,020100,020001", ",2004-9999", "JUMP:combined_serum_tumor_marker_svalue_tablefor_yearof_diagnosis_greater_than2009_xiy" ], [ "000937-999999", "2010-9999", "JUMP:combined_serum_tumor_marker_svalue_tablefor_yearof_diagnosis_greater_than2009_xiy" ] ]
+}

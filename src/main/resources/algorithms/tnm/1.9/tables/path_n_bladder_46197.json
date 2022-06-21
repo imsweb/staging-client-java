@@ -1,0 +1,27 @@
+{
+  "id" : "path_n_bladder_46197",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Path N Bladder",
+  "title" : "Pathologic N",
+  "notes" : "**Note 1:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Note 2:** Regional lymph nodes for the bladder are the nodes of the true pelvis, which essentially are the pelvic nodes below the bifurcation of the common iliac arteries, but include the lymph nodes along the common iliac artery too. Laterality does not affect the N classification.\n\n**Regional lymph nodes**\n\n    N1 (single) or N2 (multiple): Lymph nodes in the true pelvis\n    Perivesical\n    Iliac\n       Internal (hypogastric)\n           Obturator\n       External\n       Iliac, NOS\n    Sacral (lateral, presacral, sacral promontory (Gerota's), or NOS)\n           Pelvic, NOS\n    \n    Regional lymph nodes, NOS\n    Lymph nodes, NOS\n\n    N3:Single or multiple\n       Common iliac lymph node(s)",
+  "last_modified" : "2018-05-14T21:29:03.461Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathologic N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pNX", "Regional lymph nodes cannot be assessed", "Pathologic classification criteria met, evaluation done:\n    Physician unable to assess N\n    Surgical resection primary tumor, no regional lymph nodes removed\n    Involvement of regional lymph nodes not documented\nPhysician assigns pNX, no other information available to determine N" ], [ "p0", "pN0", "No regional lymph node metastasis", "" ], [ "p1", "pN1", "Metastasis in a single lymph node in the true \npelvis:  \n    Hypogastric \n    Obturator \n    External iliac\n    Presacral", "Not stated if single or multiple\n\nStated as N1" ], [ "p2", "pN2", "Metastasis in multiple lymph nodes in the true pelvis:\n    Hypogastric \n    Obturator \n    External iliac\n    Presacral", "MULTIPLE regional lymph nodes\n  \nStated as N2" ], [ "p3", "pN3", "Metastasis in a common iliac lymph node(s)", "Common iliac lymph node(s)\n\nStated as N3" ], [ "c0", "cN0", "Clinically: No regional lymph node metastasis", "Use only for TNM defined pTis cases where there is a resection of the primary and the nodes are not evaluated pathologically" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nNo surgical resection of primary tumor and there isn’t a positive biopsy of a structure in the highest T category and highest N category\nEvidence of metastatic disease (pM1), no other workup\nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

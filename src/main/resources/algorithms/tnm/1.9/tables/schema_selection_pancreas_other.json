@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_pancreas_other",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Schema Selection PancreasOther",
+  "title" : "Schema selection for PancreasOther",
+  "last_modified" : "2018-05-14T21:28:58.481Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C253-C254,C257-C259", "8000-9136,9141-9582,9700-9701", "MATCH" ] ]
+}

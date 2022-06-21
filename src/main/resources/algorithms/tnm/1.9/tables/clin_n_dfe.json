@@ -1,0 +1,27 @@
+{
+  "id" : "clin_n_dfe",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin N NET Colon",
+  "title" : "Clinical N",
+  "notes" : "**Note:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Regional lymph nodes**\n \n**All colon sites** \n\n    Colic [NOS] \n    Epicolic (adjacent to bowel wall) \n    Mesocolic [NOS] \n    Mesenteric [NOS]\n    Paracolic/pericolic\n\n**Cecum (C180)** \n\n    Anterior (prececal) \n    Cecal [NOS]\n    Ileocolic\n    Periappendiceal\n    Posterior (retrocecal)\n    Right colic \n\n**Ascending colon (C182)** \n\n    Ileocolic\n    Middle colic\n    Right colic\n\n**Hepatic flexure (C183)** \n\n    Middle colic \n    Right colic\n\n**Transverse colon (C184)** \n\n    Inferior mesenteric \n    Left colic \n    Middle colic \n    Right colic\n\n**Splenic flexure (C185)** \n\n    Inferior mesenteric \n    Left colic \n    Middle colic\n\n**Descending colon (C186)** \n\n    Inferior mesenteric \n    Left colic \n    Sigmoid \n\n**Sigmoid colon (C187)** \n\n    Inferior mesenteric \n    Left colic \n    Rectosigmoid \n    Sigmoid \n    Sigmoidal (sigmoid mesenteric) \n    Superior hemorrhoidal \n    Superior rectal",
+  "last_modified" : "2018-05-14T21:29:02.711Z",
+  "definition" : [ {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n_display",
+    "name" : "Clinical N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cNX", "Regional lymph nodes cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess N\n    Regional lymph node involvement cannot be determined or findings inconclusive\nPhysician assigns cNX, no other information available to determine N" ], [ "c0", "cN0", "No regional lymph node metastasis", "" ], [ "c1", "cN1", "Regional lymph node metastasis", "Regional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "88", "88", "Not applicable", "In situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met\nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

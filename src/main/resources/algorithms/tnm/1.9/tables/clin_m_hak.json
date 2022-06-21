@@ -1,0 +1,27 @@
+{
+  "id" : "clin_m_hak",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin M Placenta",
+  "title" : "Clinical M",
+  "notes" : "**Note 1:** When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and metastatic detail are available, use the metastatic detail in preference to a statement of FIGO stage - see Registrar notes.\n\n**Note 2:** Genital metastasis (vagina, ovary, broad ligament, fallopian tube) are classified as T2. Any involvement of non-genital structures, whether by direct invasion or metastasis are assigned in M (distant metastasis).\n\n**Note 3:**  All lymph node involvement for GTT is coded as M1b.",
+  "last_modified" : "2018-05-14T21:29:00.014Z",
+  "definition" : [ {
+    "key" : "clin_m",
+    "name" : "Clinical M",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_m_display",
+    "name" : "Clinical M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Only information available is FIGO Stage I [NOS], IA, IB, II [NOS], IIA, IIB\n\nUnknown; distant metastasis not stated\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "CLINICAL assessment only:\nNote: M1 has subcategories of M1a and M1b. Assign M1 only when there is no information \navailable to assign one of the subcategories\n\nDistant metastasis, NOS\n\nStated as M1 [NOS]" ], [ "c1A", "cM1a", "Metastasis to lung(s)", "CLINICAL assessment only:\nFIGO Stage III [NOS], IIIA, or IIIB\n\nStated as M1a" ], [ "c1B", "cM1b", "Other disant metastasis", "CLINICAL assessment only:\nRegional lymph node(s): \n    Aortic, NOS:\n        Lateral\n        Para-aortic\n        Periaortic\n     Iliac, NOS:\n        Common\n        External\n        Internal (hypogastric):\n            Obturator\n    Parametrial\n    Pelvic, NOS\n    Sacral, NOS:\n        Lateral\n        Presacral\n        Middle (promontorial) (Gerota's node)\n        Uterosacral\n     Superficial inguinal (femoral)\n\nRegional lymph node(s), NOS\nLymph nodes, NOS\nDistant lymph nodes, NOS\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT lymph node(s)\n\nFIGO Stage IV [NOS], IVA, or IVB\n\nStated as M1b" ], [ "p1", "pM1", "Distant metastasis", "HISTOLOGICALLY confirmed:\nNote: M1 has subcategories of M1a and M1b. Assign M1 only when there is no information \navailable to assign one of the subcategories\n\nDistant metastasis, NOS" ], [ "p1A", "pM1a", "Metastasis to lung(s)", "HISTOLOGICALLY confirmed:\nFIGO Stage III [NOS], IIIA, or IIIB" ], [ "p1B", "pM1b", "Other disant metastasis", "HISTOLOGICALLY confirmed:\nRegional lymph node(s): \n    Aortic, NOS:\n        Lateral\n        Para-aortic\n        Periaortic\n     Iliac, NOS:\n        Common\n        External\n        Internal (hypogastric):\n            Obturator\n    Parametrial\n    Pelvic, NOS\n    Sacral, NOS:\n        Lateral\n        Presacral\n        Middle (promontorial) (Gerota's node)\n        Uterosacral\n     Superficial inguinal (femoral)\n\nRegional lymph node(s), NOS\nLymph nodes, NOS\nDistant lymph nodes, NOS\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT lymph node(s)\n\nFIGO Stage IV [NOS], IVA, or IVB" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nIn situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met\nClinical classification criteria met, evaluation done:\n     No information about diagnostic workup\n     Results not documented in patient record\nClinical evaluation of T and N not done, no evidence metastatic disease \nTumor first detected on surgical resection (no clinical workup)" ] ]
+}

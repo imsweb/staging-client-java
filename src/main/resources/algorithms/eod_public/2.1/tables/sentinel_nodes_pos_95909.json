@@ -1,0 +1,20 @@
+{
+  "id" : "sentinel_nodes_pos_95909",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Sentinel Nodes Pos",
+  "title" : "Sentinel Lymph Nodes Positive",
+  "description" : "Records the total number of lymph nodes sampled during the sentinel node biopsy and examined by the pathologist.",
+  "notes" : "**Note:** Record this field even if there has been preoperative treatment.",
+  "last_modified" : "2021-04-08T19:58:52.994Z",
+  "definition" : [ {
+    "key" : "sentinel_nodes_positive",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "All sentinel nodes examined are negative" ], [ "01-89", "1 - 89 Sentinel nodes are positive (code exact number of nodes positive)" ], [ "90", "90 or more Sentinel nodes are positive" ], [ "95", "Positive aspiration of sentinel lymph node(s) was performed" ], [ "97", "Positive sentinel nodes are documented, but the number is unspecified; For breast ONLY: SLN and RLND occurred during the same procedure" ], [ "98", "No sentinel nodes were biopsied" ], [ "99", "It is unknown whether sentinel nodes are positive\nNot applicable\nNot stated in medical record" ] ]
+}

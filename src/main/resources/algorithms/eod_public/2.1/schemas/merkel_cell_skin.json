@@ -1,0 +1,436 @@
+{
+  "id" : "merkel_cell_skin",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Merkel Cell Skin",
+  "title" : "Merkel Cell Skin",
+  "notes" : "8041, 8190, 8247 (C000-C006, C008-C009, C440-C449, C510-C512, C518-C519, C600-C602, C608-C609, C632)\n\n8190, 8247 (C809)\n\n**Note 1:** The following sources were used in the development of this schema\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)\n* SEER Summary Staging Manual-2000: Codes and Coding Instructions (https://seer.cancer.gov/tools/ssm/ssm2000/)\n* Collaborative Stage Data Collection System, version 02.05:  https://cancerstaging.org/cstage/Pages/default.aspx \n* Chapter 46 *Merkel Cell Carcinoma*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.\n\n**Note 2:** Merkel cell carcinoma presenting in nodal or visceral site with primary site unknown is coded to C449, Skin, NOS.",
+  "schema_selection_table" : "schema_selection_merkel_cell_skin",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "naaccr_xml_id" : "dateOfDiagnosis",
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "naaccr_xml_id" : "primarySite",
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "naaccr_xml_id" : "histologicTypeIcdO3",
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "naaccr_item" : 523,
+    "naaccr_xml_id" : "behaviorCodeIcdO3",
+    "table" : "behavior",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_clin",
+    "name" : "Tumor Size Clinical",
+    "naaccr_item" : 752,
+    "naaccr_xml_id" : "tumorSizeClinical",
+    "table" : "tumor_size_clinical_48894",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_path",
+    "name" : "Tumor Size Pathological",
+    "naaccr_item" : 754,
+    "naaccr_xml_id" : "tumorSizePathologic",
+    "table" : "tumor_size_pathological_43328",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_summary",
+    "name" : "Tumor Size Summary",
+    "naaccr_item" : 756,
+    "naaccr_xml_id" : "tumorSizeSummary",
+    "default" : "999",
+    "table" : "tumor_size_summary_47973",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "naaccr_xml_id" : "regionalNodesPositive",
+    "default" : "99",
+    "table" : "nodes_pos_fah",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_exam",
+    "name" : "Regional Nodes Examined",
+    "naaccr_item" : 830,
+    "naaccr_xml_id" : "regionalNodesExamined",
+    "default" : "99",
+    "table" : "nodes_exam_76029",
+    "used_for_staging" : false
+  }, {
+    "key" : "lvi",
+    "name" : "LVI",
+    "naaccr_item" : 1182,
+    "naaccr_xml_id" : "lymphVascularInvasion",
+    "default" : "9",
+    "table" : "lvi_full_56663",
+    "used_for_staging" : false
+  }, {
+    "key" : "radiation_surg_seq",
+    "name" : "RX Summ Surgery/Radiation Sequence",
+    "naaccr_item" : 1380,
+    "naaccr_xml_id" : "rxSummSurgRadSeq",
+    "table" : "radiation_surg_seq",
+    "used_for_staging" : false
+  }, {
+    "key" : "systemic_surg_seq",
+    "name" : "RX Summ Systemic/Surgery Sequence",
+    "naaccr_item" : 1639,
+    "naaccr_xml_id" : "rxSummSystemicSurSeq",
+    "table" : "systemic_surg_seq",
+    "used_for_staging" : false
+  }, {
+    "key" : "eod_primary_tumor",
+    "name" : "EOD Primary Tumor",
+    "naaccr_item" : 772,
+    "naaccr_xml_id" : "eodPrimaryTumor",
+    "default" : "999",
+    "table" : "extension_bds",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_regional_nodes",
+    "name" : "EOD Regional Nodes",
+    "naaccr_item" : 774,
+    "naaccr_xml_id" : "eodRegionalNodes",
+    "default" : "999",
+    "table" : "nodes_ddn",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_mets",
+    "name" : "EOD Mets",
+    "naaccr_item" : 776,
+    "naaccr_xml_id" : "eodMets",
+    "default" : "00",
+    "table" : "mets_hph",
+    "used_for_staging" : true
+  }, {
+    "key" : "ss2018",
+    "name" : "SS2018",
+    "naaccr_item" : 764,
+    "naaccr_xml_id" : "summaryStage2018",
+    "table" : "ss2018_merkel_cell_carcinoma_89481",
+    "used_for_staging" : false
+  }, {
+    "key" : "grade_clin",
+    "name" : "Grade Clinical",
+    "naaccr_item" : 3843,
+    "naaccr_xml_id" : "gradeClinical",
+    "default" : "9",
+    "table" : "grade_clinical_standard_94331",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_path",
+    "name" : "Grade Pathological",
+    "naaccr_item" : 3844,
+    "naaccr_xml_id" : "gradePathological",
+    "default" : "9",
+    "table" : "grade_pathological_standard_94268",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_post_therapy_clin",
+    "name" : "Grade Post Therapy Clin (yc)",
+    "naaccr_item" : 1068,
+    "naaccr_xml_id" : "gradePostTherapyClin",
+    "table" : "grade_post_therapy_clin_95734",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_post_therapy_path",
+    "name" : "Grade Post Therapy Path (yp)",
+    "naaccr_item" : 3845,
+    "naaccr_xml_id" : "gradePostTherapy",
+    "table" : "grade_post_therapy_path_32110",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "ln_itc",
+    "name" : "Lymph Nodes Isolated Tumor Cells",
+    "naaccr_item" : 3880,
+    "naaccr_xml_id" : "lnIsolatedTumorCells",
+    "default" : "8",
+    "table" : "lymph_nodes_isolated_tumor_cells_67876",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "profound_immune_suppression",
+    "name" : "Profound Immune Suppression",
+    "naaccr_item" : 3918,
+    "naaccr_xml_id" : "profoundImmuneSuppression",
+    "default" : "8",
+    "table" : "profound_immune_suppression_68178",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "extranodal_ext_clin",
+    "name" : "Extranodal Extension Clinical",
+    "naaccr_item" : 3830,
+    "naaccr_xml_id" : "extranodalExtensionClin",
+    "default" : "8",
+    "table" : "extranodal_extension_clinical_5022",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC"
+    } ]
+  }, {
+    "key" : "extranodal_ext_path",
+    "name" : "Extranodal Extension Pathological",
+    "naaccr_item" : 3833,
+    "naaccr_xml_id" : "extranodalExtensionPath",
+    "default" : "8",
+    "table" : "extranodal_extension_pathological_30739",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC"
+    } ]
+  } ],
+  "outputs" : [ {
+    "key" : "naaccr_schema_id",
+    "name" : "Schema ID",
+    "naaccr_item" : 3800,
+    "naaccr_xml_id" : "schemaId",
+    "default" : "00460"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "naaccr_item" : 995,
+    "naaccr_xml_id" : "ajccId",
+    "default" : "XX"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "naaccr_item" : 1060,
+    "naaccr_xml_id" : "tnmEditionNumber"
+  }, {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "Derived EOD 2018 T",
+    "naaccr_item" : 785,
+    "naaccr_xml_id" : "derivedEod2018T",
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_n",
+    "name" : "Derived EOD 2018 N",
+    "naaccr_item" : 815,
+    "naaccr_xml_id" : "derivedEod2018N",
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_m",
+    "name" : "Derived EOD 2018 M",
+    "naaccr_item" : 795,
+    "naaccr_xml_id" : "derivedEod2018M",
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_stage_group",
+    "name" : "Derived EOD 2018 Stage Group",
+    "naaccr_item" : 818,
+    "naaccr_xml_id" : "derivedEod2018StageGroup",
+    "default" : "88"
+  }, {
+    "key" : "ss2018_derived",
+    "name" : "Derived Summary Stage 2018",
+    "naaccr_item" : 762,
+    "naaccr_xml_id" : "derivedSummaryStage2018",
+    "default" : "9"
+  } ],
+  "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_17330",
+      "inputs" : [ "site", "hist" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
+    "id" : "summary_stage_2018",
+    "name" : "Summary Stage 2018",
+    "initial_context" : [ {
+      "key" : "eod_2018_t",
+      "value" : "90"
+    }, {
+      "key" : "eod_2018_n",
+      "value" : "90"
+    }, {
+      "key" : "eod_2018_m",
+      "value" : "90"
+    } ],
+    "tables" : [ {
+      "id" : "extension_bds",
+      "inputs" : [ "size_summary", "eod_primary_tumor" ],
+      "outputs" : [ "eod_2018_t", "ss2018_t" ]
+    }, {
+      "id" : "nodes_ddn",
+      "inputs" : [ "eod_regional_nodes" ],
+      "outputs" : [ "eod_2018_n", "ss2018_n", "stage_table_for_n" ]
+    }, {
+      "id" : "mets_hph",
+      "inputs" : [ "eod_mets" ],
+      "outputs" : [ "eod_2018_m", "ss2018_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2018_m", "ss2018_n", "ss2018_t" ],
+      "outputs" : [ "ss2018_derived" ]
+    } ]
+  }, {
+    "id" : "eod_2018_stage_group",
+    "name" : "EOD 2018 Stage Group",
+    "inclusion_tables" : [ {
+      "id" : "tnm8_inclusions_tqb",
+      "inputs" : [ "ajcc_id" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "eod_2018_stage_group",
+      "value" : "90"
+    } ],
+    "tables" : [ {
+      "id" : "parse_t_2177",
+      "input_mapping" : [ {
+        "from" : "eod_2018_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_t",
+        "to" : "tmp_eod_t"
+      } ],
+      "inputs" : [ "eod_2018_t" ],
+      "outputs" : [ "t_prefix", "tmp_eod_t" ]
+    }, {
+      "id" : "parse_n_67182",
+      "input_mapping" : [ {
+        "from" : "eod_2018_n",
+        "to" : "n"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_n",
+        "to" : "tmp_eod_n"
+      } ],
+      "inputs" : [ "eod_2018_n" ],
+      "outputs" : [ "n_prefix", "tmp_eod_n" ]
+    }, {
+      "id" : "parse_m_47057",
+      "input_mapping" : [ {
+        "from" : "eod_2018_m",
+        "to" : "m"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_m",
+        "to" : "tmp_eod_m"
+      } ],
+      "inputs" : [ "eod_2018_m" ],
+      "outputs" : [ "m_prefix", "tmp_eod_m" ]
+    }, {
+      "id" : "tnm_8_combined_stage_group_48585",
+      "input_mapping" : [ {
+        "from" : "tmp_eod_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_eod_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_eod_t",
+        "to" : "t"
+      }, {
+        "from" : "stage_table_for_n",
+        "to" : "prefix_n_in"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "eod_2018_stage_group"
+      } ],
+      "inputs" : [ "stage_table_for_n", "tmp_eod_n", "tmp_eod_m", "tmp_eod_t" ],
+      "outputs" : [ "eod_2018_stage_group" ]
+    } ]
+  }, {
+    "id" : "eod_tnm_cleanup",
+    "name" : "EOD TNM Cleanup",
+    "exclusion_tables" : [ {
+      "id" : "tnm8_inclusions_tqb",
+      "inputs" : [ "ajcc_id" ]
+    } ],
+    "tables" : [ {
+      "id" : "eod_tnm_component_cleanup_58170",
+      "inputs" : [ "ajcc_id" ],
+      "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
+    } ]
+  } ],
+  "involved_tables" : [ "nodes_pos_fah", "extranodal_extension_pathological_30739", "extension_bds", "tnm8_inclusions_tqb", "radiation_surg_seq", "tumor_size_pathological_43328", "extranodal_extension_clinical_5022", "parse_t_2177", "parse_n_67182", "schema_selection_merkel_cell_skin", "mets_hph", "histology", "nodes_exam_76029", "lvi_full_56663", "grade_post_therapy_clin_95734", "behavior", "tumor_size_with_primary_tumor_for_ajcc_t_41327", "lymph_nodes_isolated_tumor_cells_67876", "grade_clinical_standard_94331", "ss2018_merkel_cell_carcinoma_89481", "tumor_size_clinical_48894", "systemic_surg_seq", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "profound_immune_suppression_68178", "nodes_ddn", "year_dx_validation", "grade_pathological_standard_94268", "summary_stage_rpa", "grade_post_therapy_path_32110", "tumor_size_summary_47973", "ajcc_chapter_calculation_17330", "tnm_8_combined_stage_group_48585" ],
+  "last_modified" : "2021-07-28T19:33:16.666Z",
+  "on_invalid_input" : "CONTINUE"
+}

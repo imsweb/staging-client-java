@@ -1,0 +1,23 @@
+{
+  "id" : "mets_eval_ipa",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets Eval",
+  "title" : "CS Mets Eval",
+  "notes" : "**Note**:  This item reflects the validity of the classification of the item CS Mets at DX only according to the diagnostic methods employed.",
+  "last_modified" : "2015-05-27T16:19:27.329Z",
+  "definition" : [ {
+    "key" : "mets_eval",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "mdescriptor",
+    "name" : "Staging Basis",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0", "Does not meet criteria for AJCC pathologic staging of distant metastasis:\n            \n\nEvaluation of distant metastasis based on physical examination, imaging examination, and/or other non-invasive clinical evidence.  No pathologic examination of metastatic tissue performed or pathologic examination was negative.", "VALUE:c" ], [ "1", "Does not meet criteria for AJCC pathologic staging of distant metastasis:\n\nEvaluation of distant metastasis based on endoscopic examination or other invasive technique, including surgical observation without biopsy.  No pathologic examination of metastatic tissue performed or pathologic examination was negative.", "VALUE:c" ], [ "2", "Meets criteria for AJCC pathologic staging of distant metastasis:\n\nNo pathologic examination of metastatic specimen done prior to death, but positive metastatic evidence derived from autopsy (tumor was suspected or diagnosed prior to autopsy).", "VALUE:p" ], [ "3", "Meets criteria for AJCC pathologic staging of distant metastasis:\n\nSpecimen from metastatic site microscopically positive WITHOUT pre-surgical systemic treatment or radiation \nOR specimen from metastatic site microscopically positive, unknown if pre-surgical systemic treatment or radiation performed\nOR specimen from metastatic site microscopically positive prior to neoadjuvant treatment.", "VALUE:p" ], [ "5", "Does not meet criteria for AJCC y-pathologic (yp) staging of distant metastasis:\n\nSpecimen from metastatic site microscopically positive WITH pre-surgical systemic treatment or radiation, BUT metastasis based on clinical evidence.", "VALUE:c" ], [ "6", "Meets criteria for AJCC y-pathologic (yp) staging of distant metastasis:\nSpecimen from metastatic site microscopically positive WITH pre-surgical systemic treatment or radiation, BUT metastasis based on pathologic evidence.", "VALUE:yp" ], [ "8", "Meets criteria for AJCC autopsy (a) staging of distant metastasis:\n\nEvidence from autopsy based on examination of positive metastatic tissue AND tumor was unsuspected or undiagnosed prior to autopsy.", "VALUE:a" ], [ "9", "Not assessed; cannot be assessed\nUnknown if assessed\nNot documented in patient record", "VALUE:c" ] ]
+}

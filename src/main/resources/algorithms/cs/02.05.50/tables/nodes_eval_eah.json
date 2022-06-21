@@ -1,0 +1,27 @@
+{
+  "id" : "nodes_eval_eah",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes Eval",
+  "title" : "CS Lymph Nodes Eval",
+  "notes" : "**Note 1**:  This field is used primarily to derive the staging basis for the N category in the TNM system.  It records how the code for the item \"CS Lymph Nodes\" was determined based on the diagnostic methods employed and their intent.\n\n**Note 2**:  In the 7th edition of the AJCC manual, the clinical and pathologic classification rules for the N category were changed to reflect current medical practice.  The N is designated as clinical or pathologic based on the intent (workup versus treatment) matching with the assessment of the T classification. When the intent is workup, the staging basis is clinical, and when the intent is treatment, the staging basis is pathologic. \n    \n* A.  Microscopic assessment, including biopsy of regional nodes or sentinel nodes if being performed as part of the workup to choose the treatment plan, is therefore part of the clinical staging.  When it is part of the workup, the T category is clinical, and there has not been a resection of the primary site adequate for pathologic T classification (which would be part of the treatment).\n* B.  Microscopic assessment of regional nodes if being performed as part of the treatment is therefore part of the pathologic staging.  When it is part of the treatment, the T category is pathologic, and there has been a resection of the primary site adequate for pathologic T classification (all part of the treatment).\n\n**Note 3**:  Microscopic assessment of the highest N category is always pathologic (code 3).\n\n**Note 4**:  If lymph node dissection is not performed after neoadjuvant therapy, use code 0 or 1.\n\n**Note 5**:  Only codes 5 and 6 are used if the node assessment is performed after neoadjuvant therapy.\n\n**Note 6**:  The staging basis 6 for this schema is blank because AJCC stage is not applicable in the 6th Edition.",
+  "last_modified" : "2015-05-27T16:19:39.191Z",
+  "definition" : [ {
+    "key" : "nodes_eval",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ndescriptor",
+    "name" : "Staging Basis 7",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "staging_basis_6",
+    "name" : "Staging Basis 6",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0", "Does not meet criteria for AJCC pathologic staging:\n\nNo regional lymph nodes removed for examination. Evaluation based on physical examination, imaging examination, or other non-invasive clinical evidence.  No autopsy evidence used.", "VALUE:c", "VALUE:" ], [ "1", "Does not meet criteria for AJCC pathologic staging based on at least one of the following criteria:\n\nNo regional lymph nodes removed for examination. Evidence based on endoscopic examination, or other \ninvasive techniques including surgical observation without biopsy.  No autopsy evidence used.\nOR\nFine needle aspiration, incisional core needle biopsy, or excisional biopsy of regional lymph nodes or sentinel nodes as part of the diagnostic workup, WITHOUT removal of the primary site adequate for pathologic T classification (treatment).", "VALUE:c", "VALUE:" ], [ "2", "Meets criteria for AJCC pathologic staging:\n\nNo regional lymph nodes removed for examination, but evidence derived from autopsy (tumor was suspected or diagnosed prior to autopsy).", "VALUE:p", "VALUE:" ], [ "3", "Meets criteria for AJCC pathologic staging based on at least one of the following criteria:\n\nAny microscopic assessment of regional nodes (including FNA, incisional core needle bx, excisional bx, sentinel node bx or node resection), WITH removal of the primary site adequate for pathologic T classification (treatment) or biopsy assessment of the highest T category.\nOR\nAny microscopic assessment of a regional node in the highest N category, regardless of the T category information", "VALUE:p", "VALUE:" ], [ "5", "Does not meet criteria for AJCC y-pathologic (yp) staging:\n\nRegional lymph nodes removed for examination AFTER neoadjuvant therapy AND lymph node evaluation based on clinical evidence, unless the pathologic evidence at surgery (AFTER neoadjuvant treatment) is more extensive (see code 6).", "VALUE:c", "VALUE:" ], [ "6", "Meets criteria for AJCC y-pathologic (yp) staging:\n\nRegional lymph nodes removed for examination AFTER neoadjuvant therapy AND lymph node evaluation based on pathologic evidence, because the pathologic evidence at surgery is more extensive than clinical evidence before treatment.", "VALUE:yp", "VALUE:" ], [ "8", "Meets criteria for AJCC autopsy (a) staging:\n\nEvidence from autopsy only (tumor was unsuspected or undiagnosed prior to autopsy).", "VALUE:a", "VALUE:" ], [ "9", "Not applicable for this site (Version 1)\nUnknown if lymph nodes removed for examination\nNot assessed; cannot be assessed\nUnknown if assessed\nNot documented in patient record", "VALUE:c", "VALUE:" ] ]
+}

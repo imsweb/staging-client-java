@@ -1,0 +1,20 @@
+{
+  "id" : "ssf12_sev",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF12",
+  "title" : "Site-Specific Factor 12",
+  "subtitle" : "High Risk Features",
+  "notes" : "**Note 1:**  For TNM 7th staging, the T category is not only dependent on tumor size but also on several high-risk features that can upgrade the T category.\n\n**Note 2:**  Based on the information in the medical record, the registrar is required to count and code the number of high risk features (each feature equals 1 risk factor). If specific information is available about some but not all of the high risk features, count the number of features documented in the record.\n\n* Poorly differentiated/Undifferentiated (grade 3 or 4)\n* Depth greater than 2 millimeters (mm)  thickness\n* Clark level IV or V\n* Perineural invasion\n\n**Note 3:**  Use codes 991, 992, and 993 only if no specific information is available about the high risk features, but the record contains a general statement about the presence of high risk features.",
+  "last_modified" : "2018-05-14T21:29:00.027Z",
+  "definition" : [ {
+    "key" : "ssf12",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No high risk features " ], [ "001", "1 high risk feature" ], [ "002", "2 high risk features" ], [ "003", "3 high risk features" ], [ "004", "4 high risk features" ], [ "988", "Not applicable: Information not collected for this case" ], [ "991", "Stated as less than 2 high risk features" ], [ "992", "Stated as 2 or more high risk features" ], [ "993", "Stated as high risk features, NOS" ], [ "998", "No histologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_chronic_lymphocytic_leukemia_small_lymphocytic_lymphoma_cll_sll",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma (CLL/SLL)",
+  "title" : "Schema selection for Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma (CLL/SLL)",
+  "last_modified" : "2021-06-11T14:37:16.099Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C000-C440, C442-C689, C691-C694, C698-C699, C739-C750, C754-C809", "9823", "*", "MATCH" ], [ "C700-C729, C751-C753", "9823", "3", "MATCH" ] ]
+}

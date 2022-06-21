@@ -1,0 +1,775 @@
+{
+  "id" : "breast",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Breast",
+  "title" : "Breast",
+  "notes" : "8000-8700, 8720-8790 [except C500], 8982-8983\n\nC500 Nipple \nC501 Central portion of breast \nC502 Upper-inner quadrant of breast \nC503 Lower-inner quadrant of breast \nC504 Upper-outer quadrant of breast \nC505 Lower-outer quadrant of breast \nC506 Axillary Tail of breast \nC508 Overlapping lesion of breast \nC509 Breast, NOS \n\n**Note 1:** The following sources were used in the development of this schema\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)\n* SEER Summary Staging Manual-2000: Codes and Coding Instructions (https://seer.cancer.gov/tools/ssm/ssm2000/)\n* Collaborative Stage Data Collection System, version 02.05:  https://cancerstaging.org/cstage/Pages/default.aspx \n* Chapter 48 *Breast*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.\n\n**Note 2:** See the following schemas for the listed histologies \n* 8720-8790: *Melanoma Skin* (C500 only)\n* 8710-8714, 8800-8803, 8810-8921, 8932-8934, 8940-8981, 8990, 9000-9016, 9030-9043, 9045-9138, 9141-9230, 9240-9580, 9582: *Soft Tissue Trunk and Extremities*\n* 8804-8806, 8930-8931, 8991, 9020, 9044, 9231, 9581: *Soft Tissue Rare*\n* 8935-8936: *GIST*\n* 8992: *Soft Tissue Other*\n* 9140: *Kaposi Sarcoma*\n* 9700-9701: *Mycosis Fungoides*\n\n**Note 3:** In addition to coding *EOD Primary Tumor, EOD Regional Nodes* and *EOD Mets*, the following data items are also needed to assign a stage group for Breast.\n* ER Summary\n* PR Summary\n* HER2 Summary\n* Oncotype Dx Recurrence Score",
+  "schema_selection_table" : "schema_selection_breast",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "naaccr_xml_id" : "dateOfDiagnosis",
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "naaccr_xml_id" : "primarySite",
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "naaccr_xml_id" : "histologicTypeIcdO3",
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "naaccr_item" : 523,
+    "naaccr_xml_id" : "behaviorCodeIcdO3",
+    "table" : "behavior",
+    "used_for_staging" : true
+  }, {
+    "key" : "size_clin",
+    "name" : "Tumor Size Clinical",
+    "naaccr_item" : 752,
+    "naaccr_xml_id" : "tumorSizeClinical",
+    "table" : "tumor_size_clinical_breast_34385",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_path",
+    "name" : "Tumor Size Pathological",
+    "naaccr_item" : 754,
+    "naaccr_xml_id" : "tumorSizePathologic",
+    "table" : "tumor_size_pathological_breast_85445",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_summary",
+    "name" : "Tumor Size Summary",
+    "naaccr_item" : 756,
+    "naaccr_xml_id" : "tumorSizeSummary",
+    "default" : "999",
+    "table" : "tumor_size_summary_breast_14624",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "naaccr_xml_id" : "regionalNodesPositive",
+    "default" : "99",
+    "table" : "nodes_pos_fab",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_exam",
+    "name" : "Regional Nodes Examined",
+    "naaccr_item" : 830,
+    "naaccr_xml_id" : "regionalNodesExamined",
+    "default" : "99",
+    "table" : "nodes_exam_76029",
+    "used_for_staging" : false
+  }, {
+    "key" : "sentinel_nodes_positive",
+    "name" : "Sentinel Lymph Nodes Positive",
+    "naaccr_item" : 835,
+    "naaccr_xml_id" : "sentinelLymphNodesPositive",
+    "default" : "99",
+    "table" : "sentinel_nodes_pos_95909",
+    "used_for_staging" : false
+  }, {
+    "key" : "sentinel_nodes_examined",
+    "name" : "Sentinel Lymph Nodes Examined",
+    "naaccr_item" : 834,
+    "naaccr_xml_id" : "sentinelLymphNodesExamined",
+    "default" : "99",
+    "table" : "sentinel_nodes_exam_7235",
+    "used_for_staging" : false
+  }, {
+    "key" : "lvi",
+    "name" : "LVI",
+    "naaccr_item" : 1182,
+    "naaccr_xml_id" : "lymphVascularInvasion",
+    "default" : "9",
+    "table" : "lvi_full_56663",
+    "used_for_staging" : false
+  }, {
+    "key" : "radiation_surg_seq",
+    "name" : "RX Summ Surgery/Radiation Sequence",
+    "naaccr_item" : 1380,
+    "naaccr_xml_id" : "rxSummSurgRadSeq",
+    "table" : "radiation_surg_seq",
+    "used_for_staging" : false
+  }, {
+    "key" : "systemic_surg_seq",
+    "name" : "RX Summ Systemic/Surgery Sequence",
+    "naaccr_item" : 1639,
+    "naaccr_xml_id" : "rxSummSystemicSurSeq",
+    "table" : "systemic_surg_seq",
+    "used_for_staging" : false
+  }, {
+    "key" : "eod_primary_tumor",
+    "name" : "EOD Primary Tumor",
+    "naaccr_item" : 772,
+    "naaccr_xml_id" : "eodPrimaryTumor",
+    "default" : "999",
+    "table" : "extension_bak",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_regional_nodes",
+    "name" : "EOD Regional Nodes",
+    "naaccr_item" : 774,
+    "naaccr_xml_id" : "eodRegionalNodes",
+    "default" : "999",
+    "table" : "nodes_daj",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_mets",
+    "name" : "EOD Mets",
+    "naaccr_item" : 776,
+    "naaccr_xml_id" : "eodMets",
+    "default" : "00",
+    "table" : "mets_hau",
+    "used_for_staging" : true
+  }, {
+    "key" : "ss2018",
+    "name" : "SS2018",
+    "naaccr_item" : 764,
+    "naaccr_xml_id" : "summaryStage2018",
+    "table" : "ss2018_breast_69079",
+    "used_for_staging" : false
+  }, {
+    "key" : "grade_clin",
+    "name" : "Grade Clinical",
+    "naaccr_item" : 3843,
+    "naaccr_xml_id" : "gradeClinical",
+    "default" : "9",
+    "table" : "grade_clinical_91491",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_path",
+    "name" : "Grade Pathological",
+    "naaccr_item" : 3844,
+    "naaccr_xml_id" : "gradePathological",
+    "default" : "9",
+    "table" : "grade_pathological_47031",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_post_therapy_clin",
+    "name" : "Grade Post Therapy Clin (yc)",
+    "naaccr_item" : 1068,
+    "naaccr_xml_id" : "gradePostTherapyClin",
+    "table" : "grade_post_therapy_clin_88214",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_post_therapy_path",
+    "name" : "Grade Post Therapy Path (yp)",
+    "naaccr_item" : 3845,
+    "naaccr_xml_id" : "gradePostTherapy",
+    "table" : "grade_post_therapy_path_47044",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "ln_pos_axillary_level_1_2",
+    "name" : "Lymph Nodes Positive Axillary Level I-II",
+    "description" : "Number of Positive Ipsilateral Level I-II Axillary Lymph Nodes",
+    "naaccr_item" : 3882,
+    "naaccr_xml_id" : "lnPositiveAxillaryLevel1To2",
+    "default" : "X8",
+    "table" : "number_of_positive_ipsilateral_level_i_ii_axillary_lymph_nodes_79439",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "er",
+    "name" : "ER Summary",
+    "naaccr_item" : 3827,
+    "naaccr_xml_id" : "estrogenReceptorSummary",
+    "default" : "9",
+    "table" : "er_summary_44166",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "er_percent_positive",
+    "name" : "ER Percent Positive",
+    "naaccr_item" : 3826,
+    "naaccr_xml_id" : "estrogenReceptorPercntPosOrRange",
+    "default" : "XX8",
+    "table" : "er_percent_positive_61867",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC"
+    } ]
+  }, {
+    "key" : "er_allred_score",
+    "name" : "ER Allred Score",
+    "naaccr_item" : 3828,
+    "naaccr_xml_id" : "estrogenReceptorTotalAllredScore",
+    "default" : "X8",
+    "table" : "er_allred_score_36612",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC"
+    } ]
+  }, {
+    "key" : "pr",
+    "name" : "PR Summary",
+    "naaccr_item" : 3915,
+    "naaccr_xml_id" : "progesteroneRecepSummary",
+    "default" : "9",
+    "table" : "pr_summary_49534",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "pr_percent_positive",
+    "name" : "PR Percent Positive",
+    "naaccr_item" : 3914,
+    "naaccr_xml_id" : "progesteroneRecepPrcntPosOrRange",
+    "default" : "XX8",
+    "table" : "pr_percent_positive_94563",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC"
+    } ]
+  }, {
+    "key" : "pr_allred_score",
+    "name" : "PR Allred Score",
+    "naaccr_item" : 3916,
+    "naaccr_xml_id" : "progesteroneRecepTotalAllredScor",
+    "default" : "X8",
+    "table" : "pr_allred_score_83938",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC"
+    } ]
+  }, {
+    "key" : "her2_summary",
+    "name" : "HER2 Overall Summary",
+    "naaccr_item" : 3855,
+    "naaccr_xml_id" : "her2OverallSummary",
+    "default" : "9",
+    "table" : "her2_summary_30512",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "her2_ihc_summary",
+    "name" : "HER2 IHC Summary",
+    "naaccr_item" : 3850,
+    "naaccr_xml_id" : "her2IhcSummary",
+    "default" : "8",
+    "table" : "her2_ihc_summary_57693",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "COC_REQUIRED",
+      "start" : 2018,
+      "end" : 2020
+    }, {
+      "name" : "CCCR_REQUIRED",
+      "start" : 2018,
+      "end" : 2020
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
+      "start" : 2018,
+      "end" : 2020
+    } ]
+  }, {
+    "key" : "her2_ish_summary",
+    "name" : "HER2 ISH Summary",
+    "naaccr_item" : 3854,
+    "naaccr_xml_id" : "her2IshSummary",
+    "default" : "8",
+    "table" : "her2_ish_summary_40783",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "COC_REQUIRED",
+      "start" : 2018,
+      "end" : 2020
+    }, {
+      "name" : "CCCR_REQUIRED",
+      "start" : 2018,
+      "end" : 2020
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
+      "start" : 2018,
+      "end" : 2020
+    } ]
+  }, {
+    "key" : "her2_ish_dp_ratio",
+    "name" : "HER2 ISH DP Ratio",
+    "naaccr_item" : 3852,
+    "naaccr_xml_id" : "her2IshDualProbeRatio",
+    "default" : "XX.8",
+    "table" : "her2_ish_dual_probe_ration_4635",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "COC_REQUIRED",
+      "start" : 2018,
+      "end" : 2020
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
+      "start" : 2018,
+      "end" : 2020
+    } ]
+  }, {
+    "key" : "her2_ish_dp_copy_no",
+    "name" : "HER2 ISH DP Copy No",
+    "naaccr_item" : 3851,
+    "naaccr_xml_id" : "her2IshDualProbeCopyNumber",
+    "default" : "XX.8",
+    "table" : "her2_ish_dp_copy_no_89821",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "COC_REQUIRED",
+      "start" : 2018,
+      "end" : 2020
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
+      "start" : 2018,
+      "end" : 2020
+    } ]
+  }, {
+    "key" : "her2_ish_sp_copy_no",
+    "name" : "HER2 ISH SP Copy No",
+    "naaccr_item" : 3853,
+    "naaccr_xml_id" : "her2IshSingleProbeCopyNumber",
+    "default" : "XX.8",
+    "table" : "her2_ish_sp_copy_no_95955",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "COC_REQUIRED",
+      "start" : 2018,
+      "end" : 2020
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
+      "start" : 2018,
+      "end" : 2020
+    } ]
+  }, {
+    "key" : "ki67",
+    "name" : "Ki-67 (MIB-1)",
+    "naaccr_item" : 3863,
+    "naaccr_xml_id" : "ki67",
+    "default" : "XXX.8",
+    "table" : "ki67_8355",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC"
+    } ]
+  }, {
+    "key" : "oncotype_dx_score",
+    "name" : "Oncotype DX Recur Score - Invasive",
+    "naaccr_item" : 3904,
+    "naaccr_xml_id" : "oncotypeDxRecurrenceScoreInvasiv",
+    "default" : "XX9",
+    "table" : "oncotype_dx_recur_score_73667",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "oncotype_dx_risk_level",
+    "name" : "Oncotype Dx Risk Level - Invasive",
+    "naaccr_item" : 3906,
+    "naaccr_xml_id" : "oncotypeDxRiskLevelInvasive",
+    "default" : "8",
+    "table" : "oncotype_dx_risk_level_11033",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC"
+    } ]
+  }, {
+    "key" : "oncotype_dx_score_dcis",
+    "name" : "Oncotype DX Recur Score - DCIS",
+    "naaccr_item" : 3903,
+    "naaccr_xml_id" : "oncotypeDxRecurrenceScoreDcis",
+    "default" : "XX8",
+    "table" : "oncotype_dx_recurrence_score_dcis_70549",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC"
+    } ]
+  }, {
+    "key" : "oncotype_dx_risk_level_dcis",
+    "name" : "Oncotype Dx Risk Level - DCIS",
+    "naaccr_item" : 3905,
+    "naaccr_xml_id" : "oncotypeDxRiskLevelDcis",
+    "default" : "8",
+    "table" : "oncotype_dx_risk_level_dcis_53080",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC"
+    } ]
+  }, {
+    "key" : "multigene_signature_method",
+    "name" : "Multigene Signature Method",
+    "naaccr_item" : 3894,
+    "naaccr_xml_id" : "multigeneSignatureMethod",
+    "default" : "8",
+    "table" : "multigene_signature_method_85043",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "multigene_signature_result",
+    "name" : "Multigene Signature Result",
+    "naaccr_item" : 3895,
+    "naaccr_xml_id" : "multigeneSignatureResults",
+    "default" : "X8",
+    "table" : "multigene_signature_result_37000",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "response_neoadjuv_therapy",
+    "name" : "Response Neoadjuv Therapy",
+    "naaccr_item" : 3922,
+    "naaccr_xml_id" : "responseToNeoadjuvantTherapy",
+    "default" : "8",
+    "table" : "response_to_neoadjuvant_therapy_57695",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC"
+    } ]
+  } ],
+  "outputs" : [ {
+    "key" : "naaccr_schema_id",
+    "name" : "Schema ID",
+    "naaccr_item" : 3800,
+    "naaccr_xml_id" : "schemaId",
+    "default" : "00480"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "naaccr_item" : 995,
+    "naaccr_xml_id" : "ajccId",
+    "default" : "XX"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "naaccr_item" : 1060,
+    "naaccr_xml_id" : "tnmEditionNumber"
+  }, {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "Derived EOD 2018 T",
+    "naaccr_item" : 785,
+    "naaccr_xml_id" : "derivedEod2018T",
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_n",
+    "name" : "Derived EOD 2018 N",
+    "naaccr_item" : 815,
+    "naaccr_xml_id" : "derivedEod2018N",
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_m",
+    "name" : "Derived EOD 2018 M",
+    "naaccr_item" : 795,
+    "naaccr_xml_id" : "derivedEod2018M",
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_stage_group",
+    "name" : "Derived EOD 2018 Stage Group",
+    "naaccr_item" : 818,
+    "naaccr_xml_id" : "derivedEod2018StageGroup",
+    "default" : "88"
+  }, {
+    "key" : "ss2018_derived",
+    "name" : "Derived Summary Stage 2018",
+    "naaccr_item" : 762,
+    "naaccr_xml_id" : "derivedSummaryStage2018",
+    "default" : "9"
+  } ],
+  "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_15027",
+      "inputs" : [ "site", "hist", "behavior" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
+    "id" : "summary_stage_2018",
+    "name" : "Summary Stage 2018",
+    "initial_context" : [ {
+      "key" : "eod_2018_t",
+      "value" : "90"
+    }, {
+      "key" : "eod_2018_n",
+      "value" : "90"
+    }, {
+      "key" : "eod_2018_m",
+      "value" : "90"
+    } ],
+    "tables" : [ {
+      "id" : "extension_bak",
+      "inputs" : [ "hist", "size_summary", "eod_primary_tumor", "behavior" ],
+      "outputs" : [ "eod_2018_t", "ss2018_t" ]
+    }, {
+      "id" : "nodes_daj",
+      "inputs" : [ "ln_pos_axillary_level_1_2", "eod_regional_nodes" ],
+      "outputs" : [ "eod_2018_n", "ss2018_n", "stage_table_for_n" ]
+    }, {
+      "id" : "mets_hau",
+      "inputs" : [ "eod_mets" ],
+      "outputs" : [ "eod_2018_m", "ss2018_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2018_m", "ss2018_n", "ss2018_t" ],
+      "outputs" : [ "ss2018_derived" ]
+    } ]
+  }, {
+    "id" : "eod_2018_stage_group",
+    "name" : "EOD 2018 Stage Group",
+    "inclusion_tables" : [ {
+      "id" : "tnm8_inclusions_tpg",
+      "inputs" : [ "ajcc_id" ]
+    } ],
+    "initial_context" : [ {
+      "key" : "eod_2018_stage_group",
+      "value" : "90"
+    } ],
+    "tables" : [ {
+      "id" : "parse_t_2177",
+      "input_mapping" : [ {
+        "from" : "eod_2018_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_t",
+        "to" : "tmp_eod_t"
+      } ],
+      "inputs" : [ "eod_2018_t" ],
+      "outputs" : [ "t_prefix", "tmp_eod_t" ]
+    }, {
+      "id" : "parse_n_67182",
+      "input_mapping" : [ {
+        "from" : "eod_2018_n",
+        "to" : "n"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_n",
+        "to" : "tmp_eod_n"
+      } ],
+      "inputs" : [ "eod_2018_n" ],
+      "outputs" : [ "n_prefix", "tmp_eod_n" ]
+    }, {
+      "id" : "parse_m_47057",
+      "input_mapping" : [ {
+        "from" : "eod_2018_m",
+        "to" : "m"
+      } ],
+      "output_mapping" : [ {
+        "from" : "root_m",
+        "to" : "tmp_eod_m"
+      } ],
+      "inputs" : [ "eod_2018_m" ],
+      "outputs" : [ "m_prefix", "tmp_eod_m" ]
+    }, {
+      "id" : "oncotype_less_than_11_10827",
+      "inputs" : [ "oncotype_dx_score" ],
+      "outputs" : [ "oncotype11" ]
+    }, {
+      "id" : "combined_grade_breast_8723",
+      "inputs" : [ "grade_path", "grade_post_therapy_path", "behavior", "grade_clin", "grade_post_therapy_clin" ],
+      "outputs" : [ "grade_combined" ]
+    }, {
+      "id" : "temp_eod_prefixes_52976",
+      "input_mapping" : [ {
+        "from" : "stage_table_for_n",
+        "to" : "prefix_n_in"
+      } ],
+      "inputs" : [ "stage_table_for_n" ],
+      "outputs" : [ "eod_t_source", "eod_n_source", "eod_m_source" ]
+    }, {
+      "id" : "tnm_8_combined_group_breast_93916",
+      "input_mapping" : [ {
+        "from" : "eod_m_source",
+        "to" : "cmb_m_prefix"
+      }, {
+        "from" : "grade_combined",
+        "to" : "grade"
+      }, {
+        "from" : "eod_n_source",
+        "to" : "cmb_n_prefix"
+      }, {
+        "from" : "eod_t_source",
+        "to" : "cmb_t_prefix"
+      }, {
+        "from" : "tmp_eod_n",
+        "to" : "n"
+      }, {
+        "from" : "tmp_eod_m",
+        "to" : "m"
+      }, {
+        "from" : "tmp_eod_t",
+        "to" : "t"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "eod_2018_stage_group"
+      } ],
+      "inputs" : [ "pr", "oncotype11", "eod_t_source", "eod_n_source", "eod_m_source", "tmp_eod_n", "grade_combined", "her2_summary", "tmp_eod_m", "tmp_eod_t", "er" ],
+      "outputs" : [ "eod_2018_stage_group" ]
+    } ]
+  }, {
+    "id" : "eod_tnm_cleanup",
+    "name" : "EOD TNM Cleanup",
+    "exclusion_tables" : [ {
+      "id" : "tnm8_inclusions_tpg",
+      "inputs" : [ "ajcc_id" ]
+    } ],
+    "tables" : [ {
+      "id" : "eod_tnm_component_cleanup_58170",
+      "inputs" : [ "ajcc_id" ],
+      "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
+    } ]
+  } ],
+  "involved_tables" : [ "her2_ish_sp_copy_no_95955", "er_percent_positive_61867", "oncotype_dx_recur_score_73667", "grade_post_therapy_clin_88214", "her2_ish_summary_40783", "grade_pathological_47031", "parse_t_2177", "schema_selection_breast", "ss2018_breast_69079", "histology", "sentinel_nodes_pos_95909", "nodes_exam_76029", "nodes_pos_fab", "er_summary_44166", "her2_summary_30512", "temp_eod_prefixes_52976", "her2_ish_dp_copy_no_89821", "tumor_size_clinical_breast_34385", "combined_grade_breast_8723", "her2_ish_dual_probe_ration_4635", "oncotype_less_than_11_10827", "tnm_8_stage_group_breast_16868", "nodes_daj", "systemic_surg_seq", "tnm8_inclusions_tpg", "her2_ihc_summary_57693", "tnm_8_path_stage_group_breast_21522", "parse_m_47057", "pr_allred_score_83938", "morphology_with_primary_tumor_for_ajcc_t_82996", "sentinel_nodes_exam_7235", "summary_stage_rpa", "extension_bak", "tumor_size_pathological_breast_85445", "pr_summary_49534", "radiation_surg_seq", "ajcc_chapter_calculation_15027", "oncotype_dx_risk_level_11033", "multigene_signature_result_37000", "ki67_8355", "parse_n_67182", "oncotype_dx_recurrence_score_dcis_70549", "grade_post_therapy_path_47044", "tumor_size_with_primary_tumor_for_ajcc_t_16997", "response_to_neoadjuvant_therapy_57695", "er_allred_score_36612", "grade_clinical_91491", "pr_percent_positive_94563", "lvi_full_56663", "mets_hau", "behavior", "num_pos_aln_with_regional_nodes_for_ajcc_n_30002", "tnm_8_combined_group_breast_93916", "multigene_signature_method_85043", "behavior_with_primary_tumor_for_ss2018_t_69793", "primary_site", "eod_tnm_component_cleanup_58170", "number_of_positive_ipsilateral_level_i_ii_axillary_lymph_nodes_79439", "tumor_size_summary_breast_14624", "year_dx_validation", "oncotype_dx_risk_level_dcis_53080" ],
+  "last_modified" : "2021-07-28T19:33:22.851Z",
+  "on_invalid_input" : "CONTINUE"
+}

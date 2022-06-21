@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_chapter_calculation_21096",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2021-03-30T22:21:27.667Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8000,8010,8013,8020,8041,8051-8052,8070-8072,8083,8098", "3", "VALUE:51", "Vagina", "VALUE:08" ], [ "8140,8246,8260", "3", "VALUE:51", "Vagina", "VALUE:08" ], [ "8310,8380", "3", "VALUE:51", "Vagina", "VALUE:08" ], [ "8480,8483,8560,8693", "3", "VALUE:51", "Vagina", "VALUE:08" ], [ "8933,8980", "3", "VALUE:51", "Vagina", "VALUE:08" ], [ "9071,9110", "3", "VALUE:51", "Vagina", "VALUE:08" ], [ "8000,8010,8013,8020,8041,8051-8052,8070-8072,8083,8098", "2", "VALUE:XX", "Other Vagina", "VALUE:88" ], [ "8140,8246,8260", "2", "VALUE:XX", "Other Vagina", "VALUE:88" ], [ "8310,8380", "2", "VALUE:XX", "Other Vagina", "VALUE:88" ], [ "8480,8483,8560,8693", "2", "VALUE:XX", "Other Vagina", "VALUE:88" ], [ "8933,8980", "2", "VALUE:XX", "Other Vagina", "VALUE:88" ], [ "9071,9110", "2", "VALUE:XX", "Other Vagina", "VALUE:88" ], [ "8001-8005,8011-8012,8014-8015,8021-8040,8042-8050,8053-8060,8073-8082,8084-8097", "*", "VALUE:XX", "Other Vagina", "VALUE:88" ], [ "8100-8131,8141-8245,8247-8257,8261-8300", "*", "VALUE:XX", "Other Vagina", "VALUE:88" ], [ "8311-8375,8381-8474", "*", "VALUE:XX", "Other Vagina", "VALUE:88" ], [ "8481-8482,8484-8552,8561-8692", "*", "VALUE:XX", "Other Vagina", "VALUE:88" ], [ "8700,8720-8790", "*", "VALUE:XX", "Other Vagina", "VALUE:88" ] ]
+}

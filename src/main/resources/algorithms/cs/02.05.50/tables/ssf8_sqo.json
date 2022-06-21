@@ -1,0 +1,20 @@
+{
+  "id" : "ssf8_sqo",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF8",
+  "title" : "CS Site-Specific Factor 8",
+  "subtitle" : "Omentectomy",
+  "notes" : "**Note**: Record if an omentectomy was performed during the first course of treatment.  Use code 998 if patient had no surgical procedure as part of first course of treatment.",
+  "last_modified" : "2015-05-27T16:20:11.458Z",
+  "definition" : [ {
+    "key" : "ssf8",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Omentectomy not performed during first course surgery" ], [ "010", "Omentectomy performed during first course surgery" ], [ "988", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 988 may result in an edit error.)" ], [ "998", "No surgery performed as part of the first course of treatment\n" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

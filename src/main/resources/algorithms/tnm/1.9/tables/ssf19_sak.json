@@ -1,0 +1,20 @@
+{
+  "id" : "ssf19_sak",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF19",
+  "title" : "Site-Specific Factor 19",
+  "subtitle" : "Assessment of Positive Ipsilateral Axillary Lymph Nodes",
+  "notes" : "**Note:**  Code the assessment method used for the number of positive axillary and intramammary lymph nodes coded in **Site-Specific Factor 3, Number of Positive Ipsilateral Level I-II Axillary Lymph Nodes**.  \n* Do not code the assessment method used for Level III axillary nodes or internal mammary nodes",
+  "last_modified" : "2018-05-14T21:29:00.111Z",
+  "definition" : [ {
+    "key" : "ssf19",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No ipsilateral axillary lymph nodes positive" ], [ "010", "No nodes examined pathologically: positive nodes on clinical assessment only" ], [ "015", "No nodes examined pathologically: negative nodes on clinical assessment or no clinical assessment" ], [ "020", "Positive fine needle aspiration (FNA) only" ], [ "025", "Positive fine needle aspiration (FNA) \nAND negative lymph node dissection" ], [ "027", "Positive fine needle aspiration (FNA) \nAND positive lymph node dissection" ], [ "030", "Positive core biopsy, incisional only" ], [ "040", "Positive core biopsy, excisional only" ], [ "050", "Positive core biopsy, type not specified only" ], [ "060", "Positive core biopsy(ies) (incisional, excisional, NOS)\nAND negative lymph node dissection" ], [ "070", "Positive core biopsy(ies) (incisional, excisional, NOS)\nAND positive lymph node dissection" ], [ "100", "Positive sentinel lymph node biopsy(ies) only \n(no lymph node dissection)" ], [ "110", "Positive sentinel lymph node biopsy(ies)\nAND negative lymph node dissection" ], [ "120", "Positive sentinel lymph node biopsy(ies)\nAND positive lymph node dissection" ], [ "123", "Positive lymph node dissection only\n(No sentinel node biopsy or FNA or core biopsy)" ], [ "125", "Positive lymph node dissection\nAND negative FNA" ], [ "127", "Positive lymph node dissection\nAND negative core biopsy(ies) (incisional, excisional, NOS)" ], [ "130", "Positive lymph node dissection\nAND negative sentinel node biospsy(ies)" ], [ "150", "Nodes positive, but method of assessment unknown" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

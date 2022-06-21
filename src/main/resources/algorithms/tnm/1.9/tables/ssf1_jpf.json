@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_jpf",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF1",
+  "title" : "Site-Specific Factor 1",
+  "subtitle" : "Carcinoembryonic Antigen (CEA)",
+  "notes" : "**Note:**  Record the interpretation of the highest CEA test results documented in the medical record based on information prior to treatment. The interpretation should be for the same laboratory test recorded in **Site-Specific Factor 3, Carcinoembryonic Antigen (CEA) Lab Value**.",
+  "last_modified" : "2018-05-14T21:29:03.149Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Positive/elevated" ], [ "020", "Negative/normal; within normal limits" ], [ "030", "Borderline; undetermined if positive or negative" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

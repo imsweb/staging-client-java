@@ -1,0 +1,35 @@
+{
+  "id" : "extension_bal",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  Intraluminal or intramural extension to esophagus and duodenum is classified by the depth of greatest invasion in any of these sites, including stomach.  (For extension to esophagus or duodenum via serosa, see code 610).\n\n**Note 2**:  If the diagnosis states linitis plastica and no other information regarding extension is available, use code 350.  Linitis plastica is defined as diffuse involvement of the entire thickness of the stomach wall.\n\n**Note 3**:  Codes 610, 650, and 700 are for contiguous extension from the site of origin.  Discontinuous involvement is coded in CS Mets at DX, except for implants within the stomach (code 300).  Malignant (positive) peritoneal cytology is coded in CS Mets at DX.",
+  "last_modified" : "2015-05-27T16:19:06.091Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial,  noninvasive", "VALUE:Tis", "VALUE:Tis", "VALUE:IS", "VALUE:IS" ], [ "050", "(Adeno)carcinoma, noninvasive, in a polyp", "VALUE:Tis", "VALUE:Tis", "VALUE:IS", "VALUE:IS" ], [ "100", "Invasive tumor confined to mucosa, NOS, including intramucosal, NOS", "VALUE:T1a", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "110", "Invades lamina propria", "VALUE:T1a", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "120", "Invades muscularis mucosae", "VALUE:T1a", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "122", "Mucosal tumor with intraluminal extension to esophagus or duodenum", "VALUE:T1a", "VALUE:T1", "VALUE:RE", "VALUE:L" ], [ "125", "Stated as T1a with no other information on extension", "VALUE:T1a", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "130", "Confined to head of polyp\nExtension to stalk of polyp", "VALUE:T1NOS", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "140", "Confined to stalk of polyp", "VALUE:T1NOS", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "150", "Tumor in polyp, NOS", "VALUE:T1NOS", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "160", "Invades submucosa (superficial invasion)", "VALUE:T1b", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "165", "Submucosal tumor with intraluminal extension to esophagus or duodenum", "VALUE:T1b", "VALUE:T1", "VALUE:RE", "VALUE:L" ], [ "170", "Stated as T1b with no other information on extension", "VALUE:T1b", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "180", "Stated as T1 [NOS] with no other information on extension", "VALUE:T1NOS", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "200", "Invades into but not through muscularis propria", "VALUE:T2", "VALUE:T2a", "VALUE:L", "VALUE:L" ], [ "300", "Implants inside stomach\nLocalized, NOS", "VALUE:T1NOS", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "340", "OBSOLETE DATA CONVERTED V0203\nSee code 180\n\nStated as T1, NOS", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "350", "Linitis plastica  and no other information regarding extension available  \n(See Note 2)", "VALUE:T2", "VALUE:T2a", "VALUE:RE", "VALUE:L" ], [ "360", "Invasion of muscularis propria with intraluminal extension to esophagus or duodenum", "VALUE:T2", "VALUE:T2a", "VALUE:RE", "VALUE:L" ], [ "390", "Stated as T2 with no other information on extension", "VALUE:T2", "VALUE:T2NOS", "VALUE:L", "VALUE:L" ], [ "400", "Extension through wall, NOS\nInvasion through muscularis propria or muscularis, NOS\nPerimuscular tissue invaded\nSubserosal tissue/(sub)serosal fat invaded", "VALUE:T3", "VALUE:T2b", "VALUE:L", "VALUE:L" ], [ "415", "Invasion through muscularis propria with intraluminal extension to esophagus or duodenum", "VALUE:T3", "VALUE:T2b", "VALUE:RE", "VALUE:L" ], [ "450", "Extension to adjacent (connective) tissue \nWITHOUT perforation of visceral peritoneum covering these structures:\n    Gastric artery\n    Ligaments:     \n        Gastrocolic\n        Gastrohepatic\n        Gastrosplenic\n    Omentum, NOS :\n        Greater\n        Lesser\n    Perigastric fat", "VALUE:T3", "VALUE:T2b", "VALUE:RE", "VALUE:RE" ], [ "480", "Stated as T3 with no other information on extension", "VALUE:T3", "VALUE:T2b", "VALUE:L", "VALUE:L" ], [ "490", "OBSOLETE DATA CONVERTED V0203\nSee code 810\n\nStated as T4, NOS", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "500", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 505, 555\n\nInvasion of/through serosa (mesothelium) (tunica serosa) (visceral peritoneum), including perforation of visceral  peritoneum covering the gastric ligaments or the omentum \nWITHOUT invasion of adjacent structures\nStated as T4a, NOS", "VALUE:T4a", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "505", "Invasion of/through serosa (mesothelium) (tunica serosa) (visceral peritoneum), including perforation of visceral  peritoneum covering the gastric ligaments or the omentum \nWITHOUT invasion of adjacent structures listed in codes 610, 650, and 700", "VALUE:T4a", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "550", "OBSOLETE DATA CONVERTED V0203\nSee code 551\n\n(450) + (500)", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "551", "505 + 450", "VALUE:T4a", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "555", "Stated as T4a with no other information on extension", "VALUE:T4a", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "600", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 610, 650\n\nDiaphragm\nDuodenum via serosa or NOS \nEsophagus via serosa\nIleum\nJejunum\nLiver\nPancreas\nSmall intestine, NOS\nSpleen\nTransverse colon/mesocolon \n(including flexures)\nCeliac axis\nAorta", "VALUE:T4b", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "610", "Diaphragm\nDuodenum via serosa\nDuodenum, NOS\nEsophagus via serosa\nIleum\nJejunum\nLiver\nPancreas\nSmall intestine, NOS\nSpleen\nTransverse colon/mesocolon  (including flexures)", "VALUE:T4b", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "650", "Aorta\nCeliac axis", "VALUE:T4b", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "690", "OBSOLETE DATA CONVERTED V0203\nSee code 805\n\nStated as T4b, NOS", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "700", "Abdominal wall\nAdrenal (suprarenal) gland\nKidney\n\n Retroperitoneum", "VALUE:T4b", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "800", "Further contiguous extension", "VALUE:T4b", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "805", "Stated as T4b with no other information on extension", "VALUE:T4b", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "810", "Stated as T4 [NOS] with no other information on extension", "VALUE:T4NOS", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

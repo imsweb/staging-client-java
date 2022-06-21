@@ -1,0 +1,22 @@
+{
+  "id" : "ajcc7_m_codes",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC 7 M Codes",
+  "title" : "AJCC 7 M Allowable Codes",
+  "last_modified" : "2015-05-27T16:18:54.021Z",
+  "definition" : [ {
+    "key" : "ajcc7_m",
+    "name" : "Display String",
+    "type" : "INPUT"
+  }, {
+    "key" : "stor_ajcc7_m",
+    "name" : "AJCC7 Storage Code",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "comments",
+    "name" : "Comments",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "MX", "VALUE:999", "MX" ], [ "M0", "VALUE:000", "M0" ], [ "M0(i+)", "VALUE:010", "M0(i+)" ], [ "M1", "VALUE:100", "M1" ], [ "M1a", "VALUE:110", "M1a" ], [ "M1b", "VALUE:120", "M1b" ], [ "M1c", "VALUE:130", "M1c" ], [ "M1d", "VALUE:140", "M1d" ], [ "M1e", "VALUE:150", "M1e" ], [ "M1NOS", "VALUE:199", "M1 NOS" ], [ "NA", "VALUE:888", "Not applicable" ], [ "*", "VALUE:   ", "Error" ] ]
+}

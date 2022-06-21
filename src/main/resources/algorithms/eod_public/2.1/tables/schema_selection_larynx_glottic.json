@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_larynx_glottic",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection LarynxGlottic",
+  "title" : "Schema selection for LarynxGlottic",
+  "last_modified" : "2021-04-29T14:05:47.507Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C320", "8000-8700", "MATCH" ] ]
+}

@@ -1,0 +1,36 @@
+{
+  "id" : "nodes_ddp",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS , in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Superior and inferior mesenteric nodes are coded in CS Mets at DX.  Mesenteric nodes, NOS are coded in CS Lymph Nodes.",
+  "footnotes" : "- For CS Lymph Nodes codes 100-300 ONLY: when CS Lymph Nodes Eval is 0, 1, 5, or 9, the N category is assigned from the Lymph Nodes Clinical Evaluation AJCC 6 Table, using Regional Nodes Positive and CS Site-Specific Factor 2; when CS Lymph Nodes Eval is 2, 3, 6, 8, or not coded, the N category is determined from the Lymph Nodes Pathologic Evaluation 6 Table Also Used When CS Reg Nodes Eval is Not Coded using Regional Nodes Positive.",
+  "last_modified" : "2015-05-27T16:19:35.927Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "100", "Regional lymph nodes:\n    Colic, NOS\n    Epicolic (adjacent to bowel wall)\n    Mesocolic, NOS\n    Paracolic/pericolic", "VALUE:N1", "JUMP:determine_correct_table_for_ajcc6_n_ns8", "VALUE:RN", "VALUE:RN" ], [ "200", "Cecal:\n    Anterior (prececal)\n    Posterior (retrocecal)\n    Ileocolic\n    Right colic", "VALUE:N1", "JUMP:determine_correct_table_for_ajcc6_n_ns8", "VALUE:RN", "VALUE:RN" ], [ "300", "Mesenteric, NOS\nRegional lymph node(s), NOS", "VALUE:N1", "JUMP:determine_correct_table_for_ajcc6_n_ns8", "VALUE:RN", "VALUE:RN" ], [ "400", "Stated as N1 with no other information on regional lymph nodes", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "450", "OBSOLETE DATA RETAINED V0200\n\nStated as N2 pathologic", "ERROR:", "VALUE:N2", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

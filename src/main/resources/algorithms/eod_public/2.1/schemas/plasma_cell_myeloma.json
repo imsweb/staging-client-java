@@ -1,0 +1,361 @@
+{
+  "id" : "plasma_cell_myeloma",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Plasma Cell Myeloma",
+  "title" : "Plasma Cell Myeloma",
+  "notes" : "9732 Multiple myeloma \n\n**Note 1:** The following sources were used in the development of this schema\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)\n* SEER Summary Staging Manual-2000: Codes and Coding Instructions (https://seer.cancer.gov/tools/ssm/ssm2000/)\n* Collaborative Stage Data Collection System, version 02.05:  https://cancerstaging.org/cstage/Pages/default.aspx \n* Chapter 82 *Plasma Cell Myeloma and Plasma Cell Disorder*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.\n\n**Note 2:** TNM data elements are not defined for this schema. TNM Stage Group is defined for multiple myeloma only (see Note 3)  \n\n**Note 3:** The *Revised International Staging System (RISS)* is being used to stage plasma cell myeloma/multiple myeloma (9732). The following variables must be collected at the time of diagnosis for staging:\n* High Risk Cytogenetics [NAACCR Data Item #3857]\n* LDH Pretreatment Level [NAACCR Data Item #3932]\n* Serum Albumin Pretreatment Level [NAACCR Data Item #3930]\n* Serum Beta-2 Microglobulin Pretreatment Level [NAACCR Data Item #3931]",
+  "schema_selection_table" : "schema_selection_myeloma_plasma_cell_disorder",
+  "schema_discriminators" : [ "behavior" ],
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "naaccr_xml_id" : "dateOfDiagnosis",
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "naaccr_xml_id" : "primarySite",
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "naaccr_xml_id" : "histologicTypeIcdO3",
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "naaccr_item" : 523,
+    "naaccr_xml_id" : "behaviorCodeIcdO3",
+    "table" : "behavior",
+    "used_for_staging" : true
+  }, {
+    "key" : "discriminator_1",
+    "name" : "Schema Discriminator 1",
+    "naaccr_item" : 3926,
+    "naaccr_xml_id" : "schemaDiscriminator1",
+    "default" : "0",
+    "table" : "multiple_myeloma_terminology_20875",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "size_clin",
+    "name" : "Tumor Size Clinical",
+    "naaccr_item" : 752,
+    "naaccr_xml_id" : "tumorSizeClinical",
+    "default" : "999",
+    "table" : "tumor_size_clinical_dna_64119",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_path",
+    "name" : "Tumor Size Pathological",
+    "naaccr_item" : 754,
+    "naaccr_xml_id" : "tumorSizePathologic",
+    "default" : "999",
+    "table" : "tumor_size_pathological_dna_6742",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_summary",
+    "name" : "Tumor Size Summary",
+    "naaccr_item" : 756,
+    "naaccr_xml_id" : "tumorSizeSummary",
+    "default" : "999",
+    "table" : "tumor_size_summary_dna_13275",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "naaccr_xml_id" : "regionalNodesPositive",
+    "default" : "99",
+    "table" : "nodes_pos_dna_91511",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_exam",
+    "name" : "Regional Nodes Examined",
+    "naaccr_item" : 830,
+    "naaccr_xml_id" : "regionalNodesExamined",
+    "default" : "99",
+    "table" : "nodes_exam_dna_95635",
+    "used_for_staging" : false
+  }, {
+    "key" : "lvi",
+    "name" : "LVI",
+    "naaccr_item" : 1182,
+    "naaccr_xml_id" : "lymphVascularInvasion",
+    "default" : "8",
+    "table" : "lvi_dna_56663",
+    "used_for_staging" : false
+  }, {
+    "key" : "eod_primary_tumor",
+    "name" : "EOD Primary Tumor",
+    "naaccr_item" : 772,
+    "naaccr_xml_id" : "eodPrimaryTumor",
+    "default" : "999",
+    "table" : "extension_bgc",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_regional_nodes",
+    "name" : "EOD Regional Nodes",
+    "naaccr_item" : 774,
+    "naaccr_xml_id" : "eodRegionalNodes",
+    "default" : "888",
+    "table" : "nodes_dna",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_mets",
+    "name" : "EOD Mets",
+    "naaccr_item" : 776,
+    "naaccr_xml_id" : "eodMets",
+    "default" : "88",
+    "table" : "mets_hna",
+    "used_for_staging" : true
+  }, {
+    "key" : "ss2018",
+    "name" : "SS2018",
+    "naaccr_item" : 764,
+    "naaccr_xml_id" : "summaryStage2018",
+    "table" : "ss2018_44993",
+    "used_for_staging" : false
+  }, {
+    "key" : "grade_clin",
+    "name" : "Grade Clinical",
+    "naaccr_item" : 3843,
+    "naaccr_xml_id" : "gradeClinical",
+    "default" : "8",
+    "table" : "grade_clinical_18316",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_path",
+    "name" : "Grade Pathological",
+    "naaccr_item" : 3844,
+    "naaccr_xml_id" : "gradePathological",
+    "default" : "8",
+    "table" : "grade_pathological_73388",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_post_therapy_clin",
+    "name" : "Grade Post Therapy Clin (yc)",
+    "naaccr_item" : 1068,
+    "naaccr_xml_id" : "gradePostTherapyClin",
+    "table" : "grade_post_therapy_clin_74830",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_post_therapy_path",
+    "name" : "Grade Post Therapy Path (yp)",
+    "naaccr_item" : 3845,
+    "naaccr_xml_id" : "gradePostTherapy",
+    "table" : "grade_post_therapy_path_65729",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "b2_microglob_pretx_level",
+    "name" : "Serum Beta-2 Microglobulin Pretreatment Level",
+    "naaccr_item" : 3931,
+    "naaccr_xml_id" : "serumBeta2MicroglobulinPretxLvl",
+    "default" : "9",
+    "table" : "b2_microglob_pretx_level_83264",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "serum_alb_pretx_level",
+    "name" : "Serum Albumin Pretreatment Level",
+    "naaccr_item" : 3930,
+    "naaccr_xml_id" : "serumAlbuminPretreatmentLevel",
+    "default" : "9",
+    "table" : "serum_alb_pretx_level_58159",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "high_risk_cytogenetics",
+    "name" : "High Risk Cytogenetics",
+    "naaccr_item" : 3857,
+    "naaccr_xml_id" : "highRiskCytogenetics",
+    "default" : "9",
+    "table" : "high_risk_cytogenetics_97806",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "ldh_level",
+    "name" : "LDH Level",
+    "naaccr_item" : 3869,
+    "naaccr_xml_id" : "ldhPretreatmentLevel",
+    "default" : "9",
+    "table" : "ldh_pretreatment_level_82697",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  } ],
+  "outputs" : [ {
+    "key" : "naaccr_schema_id",
+    "name" : "Schema ID",
+    "naaccr_item" : 3800,
+    "naaccr_xml_id" : "schemaId",
+    "default" : "00821"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "naaccr_item" : 995,
+    "naaccr_xml_id" : "ajccId",
+    "default" : "XX"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "naaccr_item" : 1060,
+    "naaccr_xml_id" : "tnmEditionNumber"
+  }, {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "Derived EOD 2018 T",
+    "naaccr_item" : 785,
+    "naaccr_xml_id" : "derivedEod2018T",
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_n",
+    "name" : "Derived EOD 2018 N",
+    "naaccr_item" : 815,
+    "naaccr_xml_id" : "derivedEod2018N",
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_m",
+    "name" : "Derived EOD 2018 M",
+    "naaccr_item" : 795,
+    "naaccr_xml_id" : "derivedEod2018M",
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_stage_group",
+    "name" : "Derived EOD 2018 Stage Group",
+    "naaccr_item" : 818,
+    "naaccr_xml_id" : "derivedEod2018StageGroup",
+    "default" : "88"
+  }, {
+    "key" : "ss2018_derived",
+    "name" : "Derived Summary Stage 2018",
+    "naaccr_item" : 762,
+    "naaccr_xml_id" : "derivedSummaryStage2018",
+    "default" : "9"
+  } ],
+  "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_16971",
+      "inputs" : [ "site", "discriminator_1" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
+    "id" : "summary_stage_2018",
+    "name" : "Summary Stage 2018",
+    "tables" : [ {
+      "id" : "extension_bgc",
+      "inputs" : [ "eod_primary_tumor" ],
+      "outputs" : [ "eod_2018_t", "ss2018_t" ]
+    }, {
+      "id" : "nodes_dna",
+      "inputs" : [ "eod_regional_nodes" ],
+      "outputs" : [ "eod_2018_n", "ss2018_n" ]
+    }, {
+      "id" : "mets_hna",
+      "inputs" : [ "eod_mets" ],
+      "outputs" : [ "eod_2018_m", "ss2018_m" ]
+    }, {
+      "id" : "summary_stage_lymphoma_25139",
+      "inputs" : [ "ss2018_m", "ss2018_n", "ss2018_t" ],
+      "outputs" : [ "ss2018_derived" ]
+    } ]
+  } ],
+  "involved_tables" : [ "multiple_myeloma_terminology_20875", "tumor_size_clinical_dna_64119", "ajcc_chapter_calculation_16971", "b2_microglob_pretx_level_83264", "extension_bgc", "nodes_exam_dna_95635", "tumor_size_summary_dna_13275", "grade_post_therapy_clin_74830", "histology", "mets_hna", "behavior", "nodes_dna", "ss2018_44993", "tumor_size_pathological_dna_6742", "high_risk_cytogenetics_97806", "summary_stage_lymphoma_25139", "serum_alb_pretx_level_58159", "ldh_pretreatment_level_82697", "primary_site", "schema_selection_myeloma_plasma_cell_disorder", "year_dx_validation", "grade_post_therapy_path_65729", "lvi_dna_56663", "grade_clinical_18316", "grade_pathological_73388", "nodes_pos_dna_91511" ],
+  "last_modified" : "2021-07-28T19:33:21.603Z",
+  "on_invalid_input" : "CONTINUE"
+}

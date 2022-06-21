@@ -1,0 +1,19 @@
+{
+  "id" : "nodes_exam_17543",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Nodes Exam",
+  "title" : "Regional Nodes Examined",
+  "notes" : "**Note 1:** Extraosseous plasmacytomas (9734), especially those in the respiratory tract, may metastasize to regional lymph nodes. Record the number of examined nodes.\n\n**Note 2:** Code 99, not applicable, for the histology plasmacytoma, NOS (9731).\n\nSee the [SEER Program Coding Manual](https://seer.cancer.gov/tools/codingmanuals/index.html) for coding instructions.",
+  "last_modified" : "2021-04-08T20:04:25.831Z",
+  "definition" : [ {
+    "key" : "nodes_exam",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "No nodes examined" ], [ "01-89", "1 - 89 nodes examined (code exact number of regional lymph nodes examined)" ], [ "90", "90 or more nodes examined" ], [ "95", "No regional nodes removed, but aspiration or core biopsy of regional nodes performed" ], [ "96", "Regional lymph node removal documented as sampling and number of nodes unknown/not stated" ], [ "97", "Regional lymph node removal documented as dissection and number of nodes unknown/not stated" ], [ "98", "Regional lymph nodes surgically removed but number of lymph nodes unknown/not stated and not documented as sampling or dissection; nodes examined, but number unknown" ], [ "99", "Unknown if nodes are positive; not applicable\nNot documented in medical record\nUse for codes 9731 (plasmacytoma, NOS) and 9732 (multiple myeloma)" ] ]
+}

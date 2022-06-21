@@ -1,0 +1,19 @@
+{
+  "id" : "grade_pathological_standard_94268",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Grade Pathological - Standard",
+  "title" : "Grade Pathological - Standard",
+  "notes" : "**Note 1:** Grade Pathological must not be blank.\n\n**Note 2:** Assign the highest grade from the primary tumor.  \n\n**Note 3:** If there are multiple tumors with different grades abstracted as one primary, code the highest grade.\n\n**Note 4:** Use the grade from the **clinical work up** from the primary tumor in different scenarios based on behavior or surgical resection\n* **Behavior**\n  - Tumor behavior for the clinical and the pathological diagnoses are the same AND the clinical grade is the highest grade \n   - Tumor behavior for clinical diagnosis is invasive, and the tumor behavior for the pathological diagnosis is in situ\n* **Surgical Resection**\n   - Surgical resection is done of the primary tumor and there is no grade documented from the surgical resection\n    - Surgical resection is done of the primary tumor and there is no residual cancer\n* **No surgical resection**\n    - Surgical resection of the primary tumor has not been done, but there is positive microscopic confirmation of distant metastases during the clinical time frame\n\n**Note 5:** Code 9 (unknown) when \n* Grade from primary site is not documented\n* No resection of the primary site (see exception in Note 4, Surgical resection, last bullet)\n* Neo-adjuvant therapy is followed by a resection (see Grade Post Therapy Path (yp))\n* Grade checked “not applicable” on CAP Protocol (if available) and no other grade information is available\n* Clinical case only (see Grade Clinical)\n* There is only one grade available and it cannot be determined if it is clinical, pathological, post therapy clinical or post therapy pathological",
+  "last_modified" : "2021-04-23T22:29:41.756Z",
+  "definition" : [ {
+    "key" : "grade_path",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "A", "Well differentiated" ], [ "B", "Moderately differentiated" ], [ "C", "Poorly differentiated" ], [ "D", "Undifferentiated, anaplastic" ], [ "9", "Grade cannot be assessed; Unknown" ] ]
+}

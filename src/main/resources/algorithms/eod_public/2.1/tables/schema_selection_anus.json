@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_anus",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection Anus",
+  "title" : "Schema selection for Anus",
+  "last_modified" : "2021-04-28T11:44:32.763Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C210-C212,C218", "8000-8700, 8720-8790", "MATCH" ] ]
+}

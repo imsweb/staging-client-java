@@ -1,0 +1,28 @@
+{
+  "id" : "seer_primary_tumor_head_neck_melanoma_38698",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "EOD Primary Tumor",
+  "title" : "EOD Primary Tumor",
+  "notes" : "**Note 1:** Mucosal melanomas occur throughout the mucosa of the lip and oral cavity (C003-C005, C008-C069, C090-C148) and the nasal cavity and middle ear (C300-C301), accessory sinuses (C310-C319) and the larynx (C320-C329). For a more detailed description of anatomy, refer to the appropriate EOD schema based on the location of the mucosal melanoma. \n\n**Note 2:** Code 100 for localized tumors when no other information is available or for extension involving the mucosa only of adjacent sites.\n\n**Note 3:** Extension involving the deeper tissues of the primary or adjacent sites are recorded in codes 300, 500 or 600. Code 300 when the only information available is \"deep tissue involvement.\"\n\n**Note 4:** Code 700 (Moderately advanced disease, NOS) only when specific information about moderately advanced disease is not available (see codes 300 and 500).",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017\n\n(5) Lydiatt, W.M., Patel, S.G., Shah, J.P., et al.  **Staging Head and Neck Cancers**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017\n\n(6) Lydiatt, W.M., Brandwein-Gensler, M., Shah, J.P., et al. **Mucosal Melanoma of the Head and Neck**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017",
+  "last_modified" : "2021-04-08T19:00:23.751Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_t",
+    "name" : "SS2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ: noninvasive, intraepithelial", "VALUE:88", "VALUE:IS" ], [ "100", "Any size tumor or thickness\n- Mucosa WITH or WITHOUT soft tissue (immediately underlying)\n- Confined to site of origin, NOS\n- Localized, NOS", "VALUE:T3", "VALUE:L" ], [ "300", "Deep soft tissue involvement \nOverlying skin", "VALUE:T4a", "VALUE:RE" ], [ "500", "Extension to other regional sites/structures \nWITHOUT further extension to any sites/structures that are very advanced disease (see code 600)\n\nBone\nCartilage\nDeep extrinsic muscle of tongue\n- Genioglossus\n- Hyoglossus\n- Palatoglossus\n- Styloglossus", "VALUE:T4a", "VALUE:D" ], [ "600", "Brain\nCarotid artery\nDura\nLower cranial nerves (IX, X, XI, XII)\nMasticator space\nMediastinal structures\nPrevertebral space\nSkull base\n\nVery advanced disease, NOS\n\nFurther contiguous extension", "VALUE:T4b", "VALUE:D" ], [ "700", "Moderately advanced disease, NOS", "VALUE:T4", "VALUE:RE" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in medical record\n\nDeath Certificate Only", "VALUE:TX", "VALUE:U" ] ]
+}

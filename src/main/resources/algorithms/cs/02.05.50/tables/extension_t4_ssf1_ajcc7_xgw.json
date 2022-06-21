@@ -1,0 +1,23 @@
+{
+  "id" : "extension_t4_ssf1_ajcc7_xgw",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension T4 SSF1 AJCC7",
+  "title" : "Extension T4 SSF 1 AJCC 7 Table",
+  "notes" : "**Note**:  For CS Extension code(s) 560-700 and 730-815 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Extension and CS Site-Specific Factor 1 as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:20.903Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "SSF1",
+    "type" : "INPUT"
+  }, {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "T Category",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "001, 002", "560", "ERROR:" ], [ "001, 002", "600", "ERROR:" ], [ "001, 002", "620", "ERROR:" ], [ "001, 002", "650", "ERROR:" ], [ "001, 002", "700", "ERROR:" ], [ "001, 002", "720", "ERROR:" ], [ "001, 002", "730", "ERROR:" ], [ "001, 002", "800", "ERROR:" ], [ "001, 002", "810", "ERROR:" ], [ "001, 002", "815", "ERROR:" ], [ "000, 988, 999", "560", "VALUE:T4a" ], [ "000, 988, 999", "600", "VALUE:T4b" ], [ "000, 988, 999", "620", "VALUE:T4b" ], [ "000, 988, 999", "650", "VALUE:T4b" ], [ "000, 988, 999", "700", "VALUE:T4b" ], [ "000, 988, 999", "720", "ERROR:" ], [ "000, 988, 999", "730", "VALUE:T4b" ], [ "000, 988, 999", "800", "VALUE:T4b" ], [ "000, 988, 999", "810", "VALUE:T4b" ], [ "000, 988, 999", "815", "VALUE:T4NOS" ], [ "010", "560", "VALUE:T4a(s)" ], [ "010", "600", "VALUE:T4b(s)" ], [ "010", "620", "VALUE:T4b(s)" ], [ "010", "650", "VALUE:T4b(s)" ], [ "010", "700", "VALUE:T4b(s)" ], [ "010", "720", "ERROR:" ], [ "010", "730", "VALUE:T4b(s)" ], [ "010", "800", "VALUE:T4b(s)" ], [ "010", "810", "VALUE:T4b(s)" ], [ "010", "815", "VALUE:T4NOS(s)" ], [ "020", "560", "VALUE:T4a(m)" ], [ "020", "600", "VALUE:T4b(m)" ], [ "020", "620", "VALUE:T4b(m)" ], [ "020", "650", "VALUE:T4b(m)" ], [ "020", "700", "VALUE:T4b(m)" ], [ "020", "720", "ERROR:" ], [ "020", "730", "VALUE:T4b(m)" ], [ "020", "800", "VALUE:T4b(m)" ], [ "020", "810", "VALUE:T4b(m)" ], [ "020", "815", "VALUE:T4NOS(m)" ] ]
+}

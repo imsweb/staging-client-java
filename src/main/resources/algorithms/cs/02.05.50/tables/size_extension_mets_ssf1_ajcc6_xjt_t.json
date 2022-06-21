@@ -1,0 +1,24 @@
+{
+  "id" : "size_extension_mets_ssf1_ajcc6_xjt_t",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Size Extension Mets SSF1 AJCC6 - T",
+  "title" : "Size Extension Mets SSF1 AJCC 6 Table - T",
+  "subtitle" : "CS SSF1 000, 988, or 999, CS Mets at DX 15,18,20,24 with CS Tumor Size and CS Extension",
+  "notes" : "**Note**:  When CS Site-Specific Factor 1 is coded 000, 988, or 999, no separate tumor nodules in the primary site, unknown if separate nodules, or information not collected, and CS Mets at DX is coded 15, 18, 20, or 24, pleural effusion or pleural foci on one side or pericardial effusion, the values of T and M for AJCC 6 staging are assigned as shown in this table.  The CS Mets at DX codes map to T4.  The CS Site-Specific Factor 1 and CS Mets at DX codes map to M0.  CS Tumor Size code 998, diffuse involvement of the entire lung, maps to M1.",
+  "last_modified" : "2015-05-27T16:19:51.805Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "size",
+    "name" : "CS Tumor Size",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "000", "ERROR:" ], [ "100,110,115,120,125,200,210,220,230,300,400,410,420,430,440,450,455,460,465,500,520,530,540,550,560,570,590,600,610,650,680,700,705,710,720,730,740,745,748,750,760,770,780,785,790,800,810,980,999", "000", "ERROR:" ], [ "250, 795", "000", "ERROR:" ], [ "950", "000", "VALUE:T4" ], [ "000", "001-997", "ERROR:" ], [ "100,110,115,120,125,200,210,220,230,300,400,410,420,430,440,450,455,460,465,500,520,530,540,550,560,570,590,600,610,650,680,700,705,710,720,730,740,745,748,750,760,770,780,785,790,800,810,980,999", "001-997", "VALUE:T4" ], [ "250, 795", "001-997", "ERROR:" ], [ "950", "001-997", "ERROR:" ], [ "000", "998", "ERROR:" ], [ "100,110,115,120,125,200,210,220,230,300,400,410,420,430,440,450,455,460,465,500,520,530,540,550,560,570,590,600,610,650,680,700,705,710,720,730,740,745,748,750,760,770,780,785,790,800,810,980,999", "998", "VALUE:T4" ], [ "250, 795", "998", "ERROR:" ], [ "950", "998", "ERROR:" ], [ "000", "999", "ERROR:" ], [ "100,110,115,120,125,200,210,220,230,300,400,410,420,430,440,450,455,460,465,500,520,530,540,550,560,570,590,600,610,650,680,700,705,710,720,730,740,745,748,750,760,770,780,785,790,800,810,980,999", "999", "VALUE:T4" ], [ "250, 795", "999", "ERROR:" ], [ "950", "999", "ERROR:" ] ]
+}

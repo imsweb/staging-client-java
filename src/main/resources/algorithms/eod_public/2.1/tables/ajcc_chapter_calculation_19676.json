@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_chapter_calculation_19676",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2020-03-27T15:29:13.975Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C692", "9510-9513", "VALUE:68", "Retinoblastoma", "VALUE:08" ], [ "C690-C691,C693-C696,C698-C699", "9510-9513", "VALUE:XX", "Other Retinoblastoma", "VALUE:88" ], [ "C690-C696,C698-C699", "9514", "VALUE:XX", "Other Retinoblastoma", "VALUE:88" ] ]
+}

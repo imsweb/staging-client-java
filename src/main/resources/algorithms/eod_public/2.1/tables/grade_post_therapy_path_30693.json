@@ -1,0 +1,19 @@
+{
+  "id" : "grade_post_therapy_path_30693",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Grade Post Therapy Path (yp)",
+  "title" : "Grade Post Therapy Path (yp)",
+  "notes" : "**Note 1:** Leave Grade Post Therapy Path (yp) blank when \n* No neoadjuvant therapy\n* Clinical or pathological case only\n* Neoadjuvant therapy completed; surgical resection not done\n* There is only one grade available and it cannot be determined if it is clinical, pathological, post therapy clinical or post therapy pathological\n\n**Note 2:** There is a preferred grading system for this schema. If the post therapy clinical grade given uses the preferred grading system and the post therapy pathological grade does not use the preferred grading system, do not record the Grade Post Therapy Clin (yc) in the Grade Post Therapy Path (yp) field. Assign Grade Post Therapy Path (yp) using the applicable generic grade codes (A-D). \n* *Example:* Neoadjuvant therapy completed. Biopsy of parathyroid shows a low grade adenocarcinoma. The surgical resection states a moderately differentiated adenocarcinoma\n  * Code Grade Post Therapy Clin (yc) as L since low grade is the preferred grading system\n  * Code Grade Post Therapy Path (yp) as B (moderately differentiated), per the Coding Guidelines for Generic Grade Categories\n\n**Note 3:** Assign the highest grade from the resected primary tumor assessed after the completion of neoadjuvant therapy.\n\n**Note 4:** If there are multiple tumors with different grades abstracted as one primary, code the highest grade.\n\n**Note 5:** Codes L and H take priority over A-D.\n\n**Note 6:** Use the grade from the post therapy **clinical work up** from the primary tumor in different scenarios based on behavior or surgical resection\n* **Behavior**\n  * Tumor behavior for the post therapy clinical and the post therapy pathological diagnoses are the same AND the post therapy clinical grade is the highest grade \n  * Tumor behavior for post therapy clinical diagnosis is invasive, and the tumor behavior for the post therapy pathological diagnosis is in situ\n* **Surgical Resection**\n  * Surgical resection is done of the primary tumor after neoadjuvant therapy is completed and there is no grade documented from the surgical resection\n  * Surgical resection is done of the primary tumor after neoadjuvant therapy is completed and there is no residual cancer\n\n**Note 7:** Code 9 (unknown) when  \n* Surgical resection is done after neoadjuvant therapy and grade from the primary site is not documented\n* Surgical resection is done after neoadjuvant therapy and there is no residual cancer\n* Grade checked \"not applicable\" on CAP Protocol (if available) and no other grade information is available",
+  "last_modified" : "2021-04-24T11:59:43.246Z",
+  "definition" : [ {
+    "key" : "grade_post_therapy_path",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "L", "LG: Low grade: round monomorphic nuclei with only mild to moderate nuclear size variation, indistinct nucleoli, and chromatin characteristics resembling those of normal parathyroid or of adenoma" ], [ "H", "HG: High grade: more pleomorphism, with a nuclear size variation greater than 4:1; prominent nuclear membrane irregularities; chromatin alterations, including hyperchromasia or margination of chromatin; and prominent nucleoli. High-grade tumors show several discrete confluent areas with nuclear changes" ], [ "A", "Well differentiated" ], [ "B", "Moderately differentiated" ], [ "C", "Poorly differentiated" ], [ "D", "Undifferentiated, anaplastic" ], [ "9", "Grade cannot be assessed (GX); Unknown" ], [ "", "See Note 1" ] ]
+}

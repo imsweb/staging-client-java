@@ -1,0 +1,19 @@
+{
+  "id" : "lymph_nodes_pathologic_evaluation7th_table_also_used_when_csreg_nodes_evalis_not_coded_xft",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Lymph Nodes Pathologic Evaluation 7th Table Also Used When CS Reg Nodes Eval Is Not Coded",
+  "title" : "Lymph Nodes Pathologic Evaluation 7th Table Also Used When CS Reg Nodes Eval is Not Coded",
+  "notes" : "**Note**:  This table is used when CS Lymph Nodes is 100-400, 450, and 500 ONLY and CS Lymph Nodes Eval is 2, 3, 6, 8, or not coded.  The N category is determined based on the number of positive regional nodes in Regional Nodes Positive.",
+  "last_modified" : "2015-05-27T16:19:25.273Z",
+  "definition" : [ {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "N Category",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00-02", "VALUE:N1" ], [ "03-06", "VALUE:N2" ], [ "07-90", "VALUE:N3" ], [ "95,97-99", "VALUE:N1" ] ]
+}

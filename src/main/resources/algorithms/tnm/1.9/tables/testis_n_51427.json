@@ -1,0 +1,27 @@
+{
+  "id" : "testis_n_51427",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Path N Testis",
+  "title" : "Pathologic N",
+  "notes" : "**Note 1:**  Involvement of inguinal, pelvic, or external iliac lymph nodes  **WITHOUT** previous scrotal or inguinal surgery prior to presentation of the testis tumor is coded in M (distant metastasis), as distant lymph node involvement.\n\n**Note 2:** Size of the largest metastasis in a lymph node must be known to assign N. You may use a physician’s statement of the N category if this is the only information in the medical record. \n* If the size of the metastasis is not documented, determine the size of the largest involved lymph node as documented pathologically\n* If the size of the lymph node(s) cannot be determined, assign N1\n* Do **not** code the size of any node(s) assigned in M (distant metastasis)\n\n**Regional lymph nodes**\n     \n    Aortic, NOS\n       Lateral (lumbar)\n       Para-aortic\n       Periaortic\n       Preaortic \n       Retroaortic\n    Pericaval, NOS\n       Interaortocaval\n       Paracaval\n       Precaval\n       Retrocaval\n    Retroperitoneal, NOS\n    Spermatic vein\n\n    Regional lymph nodes, NOS\n    Lymph nodes, NOS\n     \n**Regional lymph nodes WITH previous scrotal or inguinal surgery** \n    \n    External iliac\n    Inguinal nodes, NOS\n       Deep, NOS\n       Node of Cloquet or Rosenmuller (highest deep inguinal)\n       Superficial (femoral)\n    Pelvic, NOS",
+  "last_modified" : "2018-05-14T21:29:01.333Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathologic N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pNX", "Regional lymph nodes cannot be assessed", "Pathologic classification criteria met, evaluation done:\n    Physician unable to assess N\n    Surgical resection primary tumor, no regional lymph nodes removed\n    Involvement of regional lymph nodes not documented\nPhysician assigns pNX, no other information available to determine N" ], [ "p0", "pN0", "No regional lymph node metastasis", "" ], [ "p1", "pN1", "Metastasis with a lymph node mass 2 or less in greatest dimension OR \n\n5 or fewer positive nodes, none more than 2 cm in greatest dimension", "Single or multiple nodes not stated, size not stated\n\nStated as N1" ], [ "p2", "pN2", "Metastasis with a lymph node mass more than 2 cm but not more than 5 cm in greatest dimension  OR \n\nMore than 5 nodes positive, none more than 5 cm in greatest dimension  OR\n\nEvidence of extranodal extension of tumor", "Single or multiple nodes not stated, size stated and greater than 2 cm but less than or equal to 5 cm\n\nStated as N2" ], [ "p3", "pN3", "Metastasis with a lymph node mass more than 5 cm in greatest dimension", "Stated as N3" ], [ "c0", "cN0", "Clinically: No regional lymph node metastasis", "Use only for TNM defined pTis cases where there is a resection of the primary and the nodes are not evaluated pathologically" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nNo surgical resection of primary tumor and there isn’t a positive biopsy of a structure in the highest T category and highest N category\nEvidence of metastatic disease (pM1), no other workup\nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

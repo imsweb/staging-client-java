@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_mycosis_fungoides",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection MycosisFungoides",
+  "title" : "Schema selection for MycosisFungoides",
+  "last_modified" : "2021-05-10T17:37:23.219Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C000-C699,C739-C750,C754-C809", "9700-9701", "*", "MATCH" ], [ "C700-C729,C751-C753", "9700-9701", "3", "MATCH" ] ]
+}

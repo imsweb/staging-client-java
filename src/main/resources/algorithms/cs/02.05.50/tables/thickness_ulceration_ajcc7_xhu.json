@@ -1,0 +1,24 @@
+{
+  "id" : "thickness_ulceration_ajcc7_xhu",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Thickness Ulceration AJCC7",
+  "title" : "Thickness Ulceration AJCC 7 Table",
+  "notes" : "**Note**:  For CS Extension codes 100-300, 400-800, and 999 ONLY, the T category for AJCC 7 staging is assigned based on thickness from CS Site-Specific Factor 1 and ulceration from CS Site-Specific Factor 2 as shown in this table.  For tumor thickness 0.01 - 1.00 millimeter (mm), ulceration and mitotic rate are used to assign staging to T1a and T1b as shown in the Mitotic Rate Ulceration T1 AJCC 7 Table.",
+  "footnotes" : "- For tumor thickness of 0.01-1.00 millimeter, the T category is assigned as shown in the Mitotic Rate Ulceration T1 AJCC 7 Table.",
+  "last_modified" : "2015-05-27T16:20:12.716Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "CS SSF 1 Thickness",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf2",
+    "name" : "CS SSF 2 Ulceration",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "000", "ERROR:" ], [ "001-100", "000", "JUMP:mitotic_rate_ulceration_t1_ajcc7_xgo" ], [ "101-200", "000", "VALUE:T2a" ], [ "201-400", "000", "VALUE:T3a" ], [ "401-980", "000", "VALUE:T4a" ], [ "981-987", "000", "ERROR:" ], [ "988", "000", "ERROR:" ], [ "989", "000", "ERROR:" ], [ "990", "000", "ERROR:" ], [ "999", "000", "VALUE:TX" ], [ "000", "001", "ERROR:" ], [ "001-100", "001", "ERROR:" ], [ "101-200", "001", "ERROR:" ], [ "201-400", "001", "ERROR:" ], [ "401-980", "001", "ERROR:" ], [ "981-987", "001", "ERROR:" ], [ "988", "001", "ERROR:" ], [ "989", "001", "ERROR:" ], [ "990", "001", "ERROR:" ], [ "999", "001", "ERROR:" ], [ "000", "010", "ERROR:" ], [ "001-100", "010", "JUMP:mitotic_rate_ulceration_t1_ajcc7_xgo" ], [ "101-200", "010", "VALUE:T2b" ], [ "201-400", "010", "VALUE:T3b" ], [ "401-980", "010", "VALUE:T4b" ], [ "981-987", "010", "ERROR:" ], [ "988", "010", "ERROR:" ], [ "989", "010", "ERROR:" ], [ "990", "010", "ERROR:" ], [ "999", "010", "VALUE:TX" ], [ "000", "988", "ERROR:" ], [ "001-100", "988", "JUMP:mitotic_rate_ulceration_t1_ajcc7_xgo" ], [ "101-200", "988", "ERROR:" ], [ "201-400", "988", "ERROR:" ], [ "401-980", "988", "ERROR:" ], [ "981-987", "988", "ERROR:" ], [ "988", "988", "ERROR:" ], [ "989", "988", "ERROR:" ], [ "990", "988", "ERROR:" ], [ "999", "988", "ERROR:" ], [ "000", "999", "ERROR:" ], [ "001-100", "999", "JUMP:mitotic_rate_ulceration_t1_ajcc7_xgo" ], [ "101-200", "999", "VALUE:T2NOS" ], [ "201-400", "999", "VALUE:T3NOS" ], [ "401-980", "999", "VALUE:T4NOS" ], [ "981-987", "999", "ERROR:" ], [ "988", "999", "ERROR:" ], [ "989", "999", "ERROR:" ], [ "990", "999", "ERROR:" ], [ "999", "999", "VALUE:TX" ] ]
+}

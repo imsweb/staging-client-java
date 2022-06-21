@@ -1,0 +1,28 @@
+{
+  "id" : "path_m_hbn",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Path M Retinoblastoma",
+  "title" : "Pathologic M",
+  "notes" : "**Note 1:**  Distant lymph node involvement is coded as N2 for TNM staging for retinoblastoma and is collected in M (distant metastasis). \n\n**Note 2:**  Code single and multiple metastatic lesions in this field based on the presentation of metastases in all distant sites excluding distant lymph nodes.\n\n**Note 3:**  Metastasis to bone marrow is a single site of involvement.",
+  "footnotes" : "\\* This subcategory of clinical M1 is not defined in UICC 7th edition. Approval has been provided by UICC to use the definition from the AJCC 7th edition, which is documented in the registrar notes.",
+  "last_modified" : "2018-05-14T21:29:00.015Z",
+  "definition" : [ {
+    "key" : "path_m",
+    "name" : "Pathologic M",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_m_display",
+    "name" : "Pathologic M Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "c0", "cM0", "No distant metastasis", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record" ], [ "c1", "cM1", "Distant metastasis", "CLINICAL assessment only:\nNote: M1 has subcategories of  M1a, M1b, M1c, M1d and M1e. Assign M1 only when there is no information available to assign one of the subcategories\n\nDistant metastasis WITH or WITHOUT distant lymph nodes\n\nDistant metastasis, NOS\n\nStated as M1[NOS]" ], [ "c1A", "cM1a", "Not defined by UICC*", "CLINICAL assessment only:\nSingle metastasis to sites other than CNS\n\nStated as M1a" ], [ "c1B", "cM1b", "Not defined by UICC*", "CLINICAL assessment only:\nMultiple metastasis to sites other than CNS\n\nStated as M1b" ], [ "c1C", "cM1c", "Not defined by UICC*", "CLINICAL assessment only:\nCNS metastasis\nCNS location not specified\n\nStated as M1c" ], [ "c1D", "cM1d", "Not defined by UICC*", "CLINICAL assessment only:\nDiscrete mass(es) with leptomeningeal and/or CSF involvement\nPostchiasmatic lesions\n\nStated as M1d" ], [ "c1E", "cM1e", "Not defined by UICC*", "CLINICAL assessment only:\nLeptomeningeal and/or Cerebral Spine Fluid (CSF) involvement\n\nStated as M1e" ], [ "p1", "pM1", "Distant metastasis", "HISTOLOGICALLY confirmed:\nNote: M1 has subcategories of  M1a, M1b, M1c, M1d and M1e. Assign M1 only when there is no information available to assign one of the subcategories\n\nDistant metastasis WITH or WITHOUT distant lymph nodes\n\nDistant metastasis, NOS" ], [ "p1A", "pM1a", "Single metastasis to sites other than CNS", "HISTOLOGICALLY confirmed" ], [ "p1B", "pM1b", "Multiple metastasis to sites other than CNS", "HISTOLOGICALLY confirmed" ], [ "p1C", "pM1c", "CNS metastasis", "HISTOLOGICALLY confirmed\nCNS location not specified" ], [ "p1D", "pM1d", "Discrete mass(es) without leptomeningeal and/or CSF involvement", "HISTOLOGICALLY confirmed:\nPostchiasmatic lesions" ], [ "p1E", "pM1e", "Leptomeningeal and/or Cerebral Spine Fluid (CSF) involvement", "HISTOLOGICALLY confirmed" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nNo pathologic workup for T and N categories and no pathologic evidence of metastasis \nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

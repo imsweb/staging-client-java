@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc7_stage_ubu",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC7 Stage",
+  "title" : "AJCC TNM 7 Stage",
+  "last_modified" : "2015-05-27T16:18:58.311Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "T0", "N0", "M0", "ERROR:" ], [ "T0", "N1", "M0", "VALUE:IIIC" ], [ "T0", "NX", "M0", "VALUE:UNK" ], [ "T1a", "N0", "M0", "VALUE:IA" ], [ "T1a", "N1", "M0", "VALUE:IIIC" ], [ "T1a", "NX", "M0", "VALUE:UNK" ], [ "T1b", "N0", "M0", "VALUE:IB" ], [ "T1b", "N1", "M0", "VALUE:IIIC" ], [ "T1b", "NX", "M0", "VALUE:UNK" ], [ "T1NOS", "N0", "M0", "VALUE:INOS" ], [ "T1NOS", "N1", "M0", "VALUE:IIIC" ], [ "T1NOS", "NX", "M0", "VALUE:UNK" ], [ "T2a", "N0", "M0", "VALUE:IIA" ], [ "T2a", "N1", "M0", "VALUE:IIIC" ], [ "T2a", "NX", "M0", "VALUE:UNK" ], [ "T2b", "N0", "M0", "VALUE:IIB" ], [ "T2b", "N1", "M0", "VALUE:IIIC" ], [ "T2b", "NX", "M0", "VALUE:UNK" ], [ "T2NOS", "N0", "M0", "VALUE:IINOS" ], [ "T2NOS", "N1", "M0", "VALUE:IIIC" ], [ "T2NOS", "NX", "M0", "VALUE:UNK" ], [ "T3a", "N0", "M0", "VALUE:IIIA" ], [ "T3a", "N1", "M0", "VALUE:IIIC" ], [ "T3a", "NX", "M0", "VALUE:IIINOS" ], [ "T3b", "N0", "M0", "VALUE:IIIB" ], [ "T3b", "N1", "M0", "VALUE:IIIC" ], [ "T3b", "NX", "M0", "VALUE:IIINOS" ], [ "T3NOS", "N0", "M0", "VALUE:IIINOS" ], [ "T3NOS", "N1", "M0", "VALUE:IIINOS" ], [ "T3NOS", "NX", "M0", "VALUE:IIINOS" ], [ "T4", "N0", "M0", "VALUE:IVA" ], [ "T4", "N1", "M0", "VALUE:IVA" ], [ "T4", "NX", "M0", "VALUE:IVA" ], [ "TX", "N0", "M0", "VALUE:UNK" ], [ "TX", "N1", "M0", "VALUE:UNK" ], [ "TX", "NX", "M0", "VALUE:UNK" ], [ "T0", "N0", "M1", "VALUE:IVB" ], [ "T0", "N1", "M1", "VALUE:IVB" ], [ "T0", "NX", "M1", "VALUE:IVB" ], [ "T1a", "N0", "M1", "VALUE:IVB" ], [ "T1a", "N1", "M1", "VALUE:IVB" ], [ "T1a", "NX", "M1", "VALUE:IVB" ], [ "T1b", "N0", "M1", "VALUE:IVB" ], [ "T1b", "N1", "M1", "VALUE:IVB" ], [ "T1b", "NX", "M1", "VALUE:IVB" ], [ "T1NOS", "N0", "M1", "VALUE:IVB" ], [ "T1NOS", "N1", "M1", "VALUE:IVB" ], [ "T1NOS", "NX", "M1", "VALUE:IVB" ], [ "T2a", "N0", "M1", "VALUE:IVB" ], [ "T2a", "N1", "M1", "VALUE:IVB" ], [ "T2a", "NX", "M1", "VALUE:IVB" ], [ "T2b", "N0", "M1", "VALUE:IVB" ], [ "T2b", "N1", "M1", "VALUE:IVB" ], [ "T2b", "NX", "M1", "VALUE:IVB" ], [ "T2NOS", "N0", "M1", "VALUE:IVB" ], [ "T2NOS", "N1", "M1", "VALUE:IVB" ], [ "T2NOS", "NX", "M1", "VALUE:IVB" ], [ "T3a", "N0", "M1", "VALUE:IVB" ], [ "T3a", "N1", "M1", "VALUE:IVB" ], [ "T3a", "NX", "M1", "VALUE:IVB" ], [ "T3b", "N0", "M1", "VALUE:IVB" ], [ "T3b", "N1", "M1", "VALUE:IVB" ], [ "T3b", "NX", "M1", "VALUE:IVB" ], [ "T3NOS", "N0", "M1", "VALUE:IVB" ], [ "T3NOS", "N1", "M1", "VALUE:IVB" ], [ "T3NOS", "NX", "M1", "VALUE:IVB" ], [ "T4", "N0", "M1", "VALUE:IVB" ], [ "T4", "N1", "M1", "VALUE:IVB" ], [ "T4", "NX", "M1", "VALUE:IVB" ], [ "TX", "N0", "M1", "VALUE:IVB" ], [ "TX", "N1", "M1", "VALUE:IVB" ], [ "TX", "NX", "M1", "VALUE:IVB" ] ]
+}

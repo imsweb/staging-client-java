@@ -1,0 +1,35 @@
+{
+  "id" : "extension_bft",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  Perihilar bile duct tumors arise at the confluence of the right and left hepatic ducts in the hilar area of the liver.\n\n**Note 2**:  The biliary radicals are the ducts or tubes that drain bile into the intestine as part of the digestive process.  The second-order biliary radicals are the next largest branches or ducts of the biliary system which join to form or empty into the main hepatic bile duct.\n\n**Note 3**:  For AJCC 7 staging, T3 and T4 are defined strictly in terms of invasion into specific large blood vessels and the biliary radicals within the liver.  Give priority to coding invasion into blood vessels and biliary radicals over the named structures in .  codes 605, 651, 700, 760, and 800.  Use combination codes 665, 720, and 815 when information is available regarding extension to the specified vessels and/or the biliary radicals within the liver plus involvement of other named organs.\n\n**Note 4**:  Involvement within the  porta hepatis is coded according to the structures involved: portal vein, common hepatic artery, and common hepatic duct.",
+  "last_modified" : "2015-05-27T16:19:13.799Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "VALUE:Tis", "VALUE:Tis", "VALUE:IS", "VALUE:IS" ], [ "100", "Invasive tumor of perihilar (proximal) bile duct(s) confined to:\n    Lamina propria\n    Mucosa, NOS\n    Submucosa (superficial invasion)", "VALUE:T1", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "200", "Muscularis propria", "VALUE:T1", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "300", "Localized, NOS", "VALUE:T1", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "350", "Stated as T1 with no other information on extension", "VALUE:T1", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "400", "Beyond wall of bile duct\nPeriductal/fibromuscular connective tissue", "VALUE:T2a", "VALUE:T2", "VALUE:RE", "VALUE:RE" ], [ "450", "Stated as T2a with no other information on extension", "VALUE:T2a", "VALUE:T2", "VALUE:RE", "VALUE:RE" ], [ "500", "Adjacent hepatic parenchyma", "VALUE:T2b", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "510", "Liver extension, NOS\nLiver, NOS", "VALUE:T2b", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "550", "Stated as T2b with no other information on extension", "VALUE:T2b", "VALUE:T2", "VALUE:RE", "VALUE:RE" ], [ "555", "Stated as T2 [NOS] with no other information on extension", "VALUE:T2NOS", "VALUE:T2", "VALUE:RE", "VALUE:RE" ], [ "560", "OBSOLETE DATA REVIEWED V0203\nSee codes 100, 510, 661, and 665\n\nLiver, porta hepatis ", "VALUE:T2b", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "600", "OBSOLETE DATA RETAINED V0200\nSee codes 560 and 605\n\nGallbladder\nLiver, porta hepatis\nPancreas", "ERROR:", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "605", "Gallbladder\nPancreas", "VALUE:TX", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "610", "Unilateral branches of portal vein (right or left)\nUnilateral branches of hepatic artery (right or left)", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "612", "610 + 605", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "615", "Stated as T3 with no other information on extension", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "650", "OBSOLETE DATA RETAINED V0200\nSee code 651 \n\nColon, NOS\n    Transverse including flexure\nDuodenum, NOS\nOmentum, NOS\n    Lesser\nStomach, distal", "ERROR:", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "651", "Colon, NOS:\n    Transverse including flexures\nDuodenum, NOS\nOmentum, NOS:\n    Lesser\nStomach, distal", "VALUE:TX", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "660", "OBSOLETE DATA RETAINED V0200\nSee code 661\n\nMain portal vein or its branches bilaterally\nCommon hepatic artery\nHepatic artery, NOS\nPortal vein, NOS", "ERROR:", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "661", "Main portal vein or its branches bilaterally\nCommon hepatic artery\nHepatic artery, NOS\nPortal vein, NOS", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "665", "661 + (605 and/or 651)", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "670", "Tumor invades second-order biliary radicals bilaterally\nOR\nTumor invades unilateral second-order biliary radicals with contralateral portal vein or hepatic artery involvement", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "700", "Other parts of colon\nGreater omentum\nStomach, proximal", "VALUE:TX", "VALUE:T4", "VALUE:D", "VALUE:RE" ], [ "720", "700 + (661, 665, or 670)", "VALUE:TX", "VALUE:T4", "VALUE:D", "VALUE:RE" ], [ "750", "OBSOLETE DATA RETAINED V0200\nSee code 760\n\nAbdominal wall", "ERROR:", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "760", "Abdominal wall", "VALUE:TX", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "800", "Further contiguous extension", "VALUE:TX", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "810", "800 + (700 or 760)", "VALUE:TX", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "815", "(760, 800, or 810) + (661 or 670)\n\nInvolvement of structures in 760, 800, or 810 plus involvement of blood vessels as described in 661 or blood vessels and biliary radicals as described in 670", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "820", "Stated as T4 with no other information on extension", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

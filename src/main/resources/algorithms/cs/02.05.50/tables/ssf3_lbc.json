@@ -1,0 +1,20 @@
+{
+  "id" : "ssf3_lbc",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF3",
+  "title" : "CS Site-Specific Factor 3",
+  "subtitle" : "International Prognostic Index (IPI)",
+  "notes" : "**Note 1**: The International Prognostic Index ( IPI) has been developed for lymphomas and predicts outcome based on the following adverse factors:\n\n* Age more than 60 years \n* Ann Arbor Stage III or IV\n* More than 1 extranodal site involved \n* Patient's performance status (Eastern Cooperative Oncology Group, ECOG) 2, 3, or 4\n* Elevated serum lactate dehydrogenase (LDH) level\n\n**Note 2**: Record the IPI as stated in the medical record. Do not calculate points or assign risk. Only record points or risk if a physician has documented them. Use points over risk if both are available.\n\n**Note 3**: There are now two indices/scores associated with lymphoma: The International Prognostic Index (IPI, CS Site-Specific Factor 3) and the Follicular Lymphoma International Prognostic Index (FLIPI, CS Site-Specific Factor 4).   Physicians may use these indices/scores interchangeably. For coding:\n\n* Score identified:  Value in appropriate CS SSF, 999 in other CS SSF\n* Score not identified, point value 5 or less:  999 in both CS SSF",
+  "last_modified" : "2015-05-27T16:20:05.372Z",
+  "definition" : [ {
+    "key" : "ssf3",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "0 points" ], [ "001", "1 point" ], [ "002", "2 points" ], [ "003", "3 points" ], [ "004", "4 points" ], [ "005", "5 points" ], [ "988", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 988 will result in an edit error.)" ], [ "990", "Stated as low risk (0-1 point)" ], [ "991", "Stated as low intermediate risk (2 points)" ], [ "992", "Stated as intermediate risk (3 points)" ], [ "993", "Stated as high risk (4-5 points)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

@@ -1,0 +1,24 @@
+{
+  "id" : "size_extension_mets_ssf1_ajcc6_xjp_t",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Size Extension Mets SSF1 AJCC6 - T",
+  "title" : "Size Extension Mets SSF1 AJCC 6 Table - T",
+  "subtitle" : "CS SSF1 010 or 040 with CS Mets at DX and CS Tumor Size",
+  "notes" : "**Note**:  When CS Site-Specific Factor 1 is coded 010 or 040, separate tumor nodules in same lobe or unknown if in same lobe, the values of T and M for AJCC 6 staging are assigned on the basis of CS Tumor Size and CS Mets at DX as shown in this table.  CS Site-Specific Factor 1 codes 010 and 040 map to T4 in AJCC 6 staging.  CS Tumor Size code 998 maps to M1.",
+  "last_modified" : "2015-05-27T16:19:51.364Z",
+  "definition" : [ {
+    "key" : "size",
+    "name" : "CS Tumor Size",
+    "type" : "INPUT"
+  }, {
+    "key" : "mets",
+    "name" : "CS Mets at DX",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000-997, 999", "00,15,18,20,24", "VALUE:T4" ], [ "998", "00,15,18,20,24", "VALUE:T4" ], [ "000-997, 999", "10,39", "VALUE:T4" ], [ "998", "10,39", "VALUE:T4" ], [ "000-997, 999", "16,17,21,23,25,26,30,32,33,35-38,40-43,50-53,70,75", "VALUE:T4" ], [ "998", "16,17,21,23,25,26,30,32,33,35-38,40-43,50-53,70,75", "VALUE:T4" ], [ "000-997, 999", "99", "VALUE:T4" ], [ "998", "99", "VALUE:T4" ] ]
+}

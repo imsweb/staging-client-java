@@ -1,0 +1,19 @@
+{
+  "id" : "grade_clinical_24620",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Grade Clinical",
+  "title" : "Grade Clinical",
+  "notes" : "**Note 1:** Grade Clinical must not be blank.\n\n**Note 2:** Assign the highest grade from the primary tumor assessed during the clinical time frame. \n\n**Note 3:** If there are multiple tumors with different grades abstracted as one primary, code the highest grade.\n\n**Note 4:** G3 includes anaplastic.\n\n**Note 5:** Sarcomatous overgrowth (S) takes priority over L and H\n* *Example*: Pathology report: Adenocarcinoma with sarcomatous overgrowth, high and low grade\n   - Code Grade to S for the sarcomatous overgrowth\n\n**Note 6:** Code 9 (unknown) when \n* Grade from primary site is not documented\n* Clinical workup is not done (for example, cancer is an incidental finding during surgery for another condition)\n* Grade checked \"not applicable\" on CAP Protocol (if available) and no other grade information is available\n\n**Note 7:** If there is only one grade available and it cannot be determined if it is clinical or pathological, assume it is a Grade Clinical and code appropriately per Grade Clinical categories for that site, and then code unknown (9) for Grade Pathological, and blank for Grade Post Therapy Clin (yc) and Grade Post Therapy Path (yp).",
+  "last_modified" : "2020-05-29T14:38:57.133Z",
+  "definition" : [ {
+    "key" : "grade_clin",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "G1: Well differentiated" ], [ "2", "G2: Moderately differentiated" ], [ "3", "G3: Poorly differentiated or undifferentiated" ], [ "L", "Low grade" ], [ "H", "High grade" ], [ "S", "Sarcomatous overgrowth " ], [ "9", "Grade cannot be assessed (GX); Unknown" ] ]
+}

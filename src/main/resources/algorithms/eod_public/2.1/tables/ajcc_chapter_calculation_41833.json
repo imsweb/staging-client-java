@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_chapter_calculation_41833",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2021-03-22T22:05:27.563Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8000,8010,8013,8041,8070", "3", "VALUE:58", "Prostate", "VALUE:08" ], [ "8120,8140,8147-8148", "3", "VALUE:58", "Prostate", "VALUE:08" ], [ "8201,8230,8240,8260", "3", "VALUE:58", "Prostate", "VALUE:08" ], [ "8480,8490", "3", "VALUE:58", "Prostate", "VALUE:08" ], [ "8500,8560,8572,8574", "3", "VALUE:58", "Prostate", "VALUE:08" ], [ "8000,8010,8013,8041,8070", "2", "VALUE:XX", "Other Prostate", "VALUE:88" ], [ "8120,8140,8147-8148", "2", "VALUE:XX", "Other Prostate", "VALUE:88" ], [ "8201,8230,8240,8260", "2", "VALUE:XX", "Other Prostate", "VALUE:88" ], [ "8480,8490", "2", "VALUE:XX", "Other Prostate", "VALUE:88" ], [ "8500,8560,8572,8574", "2", "VALUE:XX", "Other Prostate", "VALUE:88" ], [ "8001-8005,8011-8012,8014-8040,8042-8060,8071-8110", "*", "VALUE:XX", "Other Prostate", "VALUE:88" ], [ "8121-8131,8141-8146,8149-8200", "*", "VALUE:XX", "Other Prostate", "VALUE:88" ], [ "8202-8221,8231,8241-8257,8261-8474", "*", "VALUE:XX", "Other Prostate", "VALUE:88" ], [ "8481-8484,8501-8552,8561-8571,8573,8575-8700,8720-8790", "*", "VALUE:XX", "Other Prostate", "VALUE:88" ] ]
+}

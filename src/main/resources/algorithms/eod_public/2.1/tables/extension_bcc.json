@@ -1,0 +1,28 @@
+{
+  "id" : "extension_bcc",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "EOD Primary Tumor",
+  "title" : "EOD Primary Tumor",
+  "notes" : "**Note 1:**  The tentorium cerebelli is an extension of the dura mater that separates the cerebellum from the inferior portion of the occipital lobes.  The location of the tumor above or below the tentorium can help in determining the type of tumor; also most adult brain tumors are supratentorial, and most pediatric brain tumors are infratentorial.  In the following list, note that ICD-O-3 codes C71.0 and C71.9 include both supratentorial and infratentorial subsites.\n\n- The following subsites are **Infratentorial**\n  * All subsites for codes C716-C717 \n  * Hypothalamus (C710)\n   * Pallium (C710)\n   * Posterior cranial fossa (C719)\n   * Thalamus (C710)\n- The following subsites are **Supratentorial**\n  * All subsites for codes C711-C715\n  * Primary site C710 (excluding hypothalamus, pallium, thalamus)\n  * Anterior cranial fossa (C719)\n  * Corpus callosum (C718)\n  * Middle cranial fossa (C719)\n  * Tapetum (C718)\n  * Suprasellar (C719)\n\n**Note 2:** A midline shift is not the same thing as crossing the midline (code 500).\n* It must state tumor **crosses the midline**\n\n**Note 3:**  Discontiguous spread,  including circulating cells in cerebrospinal fluid (CSF), is coded in EOD Mets.",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) Laws, E.R., Curran, W.J., et al. **Brain and Spinal Cord**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017",
+  "last_modified" : "2021-04-08T19:00:19.538Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_t",
+    "name" : "SS2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "050", "Benign or borderline brain tumor", "VALUE:88", "VALUE:B" ], [ "100", "Infratentorial tumor confined to\n- Brain stem or meninges of brain stem (one side)\n    + Medulla oblongata\n    + Midbrain (mesencephalon)\n    + Pons\n- Cerebellum or meninges of cerebellum (one side or midline) \n     + Lateral lobes\n     + Median lobe of cerebellum\n     + Vermis\n- Hypothalamus\n- Thalamus\n\nInfratentorial tumor\n- Both cerebellum and brain stem involved with tumor on one side\n\nSupratentorial tumor confined to\n- Cerebral hemisphere (cerebrum) or meninges of cerebral hemisphere (one side)\n    + Frontal lobe\n    + Occipital lobe\n    + Parietal lobe\n    + Temporal lobe\n\nConfined to ventricles \nTumor invades or encroaches upon ventricular system\n\nConfined to brain, NOS\nConfined to meninges, NOS", "VALUE:88", "VALUE:L" ], [ "500", "Tumor crosses the midline\n\nTumor invades\n- Bone (skull)\n- Contralateral hemisphere\n- Corpus callosum (including splenium)\n- Major blood vessel(s)\n- Meninges (e.g., dura)\n- Nerves (cranial, NOS)\n- Spinal cord/canal\n\nSupratentorial tumor extends infratentorially to involve\n- Brain stem \n- Cerebellum\n- Hypothalamus\n- Pallium\n- Posterior cranial fossa\n- Thalamus\n\nInfratentorial tumor extends supratentorially to involve \n- Anterior cranial fossa\n- Cerebrum (cerebral hemisphere) (excluding hypothalamus, pallium, thalamus)\n- Middle cranial fossa\n- Suprasellar brain\n- Tapetum", "VALUE:88", "VALUE:RE" ], [ "700", "Circulating cells in cerebral spinal fluid (CSF)\n\nNasal cavity\nNasopharynx\nOther direct extension outside CNS\nPosterior pharynx\n\nFurther contiguous extension", "VALUE:88", "VALUE:D" ], [ "800", "No evidence of primary tumor", "VALUE:88", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in medical record\n\nDeath Certificate Only", "VALUE:88", "VALUE:U" ] ]
+}

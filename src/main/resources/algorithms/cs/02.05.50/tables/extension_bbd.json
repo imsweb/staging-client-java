@@ -1,0 +1,35 @@
+{
+  "id" : "extension_bbd",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note**: Ignore extension from gallbladder to cystic duct.  Ignore extension to extrahepatic bile ducts or ampulla of Vater (code 618) when other structures are involved with a code higher than 618.",
+  "last_modified" : "2015-05-27T16:19:07.222Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "VALUE:Tis", "VALUE:Tis", "VALUE:IS", "VALUE:IS" ], [ "100", "Invasive tumor confined to:\n    Lamina propria\n    Mucosa, NOS\n    Submucosa (superficial invasion)", "VALUE:T1a", "VALUE:T1a", "VALUE:L", "VALUE:L" ], [ "110", "Stated as T1a  with no other information on extension", "VALUE:T1a", "VALUE:T1a", "VALUE:L", "VALUE:L" ], [ "200", "Muscularis propria", "VALUE:T1b", "VALUE:T1b", "VALUE:L", "VALUE:L" ], [ "210", "Stated as T1b with no other information on extension", "VALUE:T1b", "VALUE:T1b", "VALUE:L", "VALUE:L" ], [ "300", "Localized, NOS", "VALUE:T1NOS", "VALUE:T1NOS", "VALUE:L", "VALUE:L" ], [ "350", "Stated as T1 [NOS] with no other information on extension", "VALUE:T1NOS", "VALUE:T1NOS", "VALUE:L", "VALUE:L" ], [ "400", "Perimuscular connective tissue", "VALUE:T2", "VALUE:T2", "VALUE:L", "VALUE:RE" ], [ "410", "Stated as T2 with no other information on extension", "VALUE:T2", "VALUE:T2", "VALUE:RE", "VALUE:RE" ], [ "500", "Invasion of/through serosa (visceral peritoneum)", "VALUE:T3", "VALUE:T3", "VALUE:L", "VALUE:RE" ], [ "550", "500 + 400", "VALUE:T3", "VALUE:T3", "VALUE:L", "VALUE:RE" ], [ "600", "Extension into liver, NOS", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "610", "Extension into liver less than or equal to 2 cm", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "615", "Extension to branch(es) of portal vein (right or left)\nExtension to branch(es) of hepatic artery (right or left) but not into main portal vein or hepatic artery", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "618", "Extension to:\n    Ampulla of Vater\n    Extrahepatic bile duct(s)", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "620", "OBSOLETE DATA RETAINED V0200\n(See codes 618 and 621)\n\nExtension to ONE of the following:\n    Ampulla of Vater\n    Duodenum\n    Extrahepatic bile duct(s)\n    Omentum, NOS\n        Greater\n        Lesser\n    Pancreas\n    Small intestine, NOS", "ERROR:", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "621", "Extension to ONE of the following:\n    Duodenum\n    Omentum, NOS:\n        Greater\n        Lesser\n    Pancreas\n    Small intestine, NOS", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "630", "Extension to cystic artery/vein\nWITHOUT extension to any structure in code 621 ", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:D" ], [ "650", "Extension to ONE of the following\nWITHOUT extension to any structure in codes 621-630:\n    Colon\n    Stomach", "VALUE:T3", "VALUE:T3", "VALUE:D", "VALUE:D" ], [ "655", "Extension to abdominal wall \nWITHOUT extension to any structures in codes 621-650", "VALUE:T3", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "657", "Extension to diaphragm \nWITHOUT extension to any structures in codes 621-650", "VALUE:T3", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "660", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 630 and 730\n\nExtension to cystic artery/vein\nWITHOUT extension to any structure in 621 to 650", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:D" ], [ "670", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 673, 685\n\nExtension to ONE structure in codes\n621 to 650 PLUS extension into liver (600 or 610)", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "673", "Extension to one structure in code 621 \nPLUS extension into liver 2 cm or less or NOS", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "680", "Extension to cystic artery/vein, code 630  PLUS extension into liver 2 cm or less or NOS", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:D" ], [ "685", "Extension to ONE structure in code 650-657  PLUS extension into liver 2 cm or less or NOS", "VALUE:T3", "VALUE:T3", "VALUE:D", "VALUE:D" ], [ "710", "Extension into liver greater than 2 cm\nWITHOUT extension to any structure in codes 621-657", "VALUE:T3", "VALUE:T3", "VALUE:D", "VALUE:D" ], [ "720", "Extension to ONE structure in codes 621-657 PLUS extension into liver greater than 2 cm", "VALUE:T3", "VALUE:T3", "VALUE:D", "VALUE:D" ], [ "725", "Stated as T3 with no other information on extension", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "730", "Extension to two or more structures in codes 621-657\nwith or without extension into liver of any depth", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "750", "Extension to:\n    Common hepatic artery\n    Main portal vein\n    Hepatic artery, NOS\n    Portal vein, NOS", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:D" ], [ "780", "750 + any of  (600 to 730)", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "800", "OBSOLETE DATA RETAINED V0200\nSee codes 655 and 805\n\nFurther contiguous extension, including:\n    Abdominal wall\n    Diaphragm", "ERROR:", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "805", "OBSOLETE DATA REVIEWED V0203\nSee codes 657, 685, 720, 730, 808\n\nFurther contiguous extension, including:    \n    Diaphragm", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "808", "Further contiguous extension", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "810", "Stated as T4 with no other information on extension", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:D" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

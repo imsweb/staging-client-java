@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_urethra_prostatic",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection Urethra-Prostatic",
+  "title" : "Schema selection for Urethra-Prostatic",
+  "last_modified" : "2021-04-29T18:06:31.862Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_1",
+    "name" : "Schema Discriminator 1",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C680", "8000-8700, 8720-8790", "2", "MATCH" ] ]
+}

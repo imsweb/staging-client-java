@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_net_adrenal_gland",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection NET Adrenal Gland",
+  "title" : "Schema selection for NET Adrenal Gland",
+  "last_modified" : "2020-10-28T17:02:24.567Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C740,C741,C749,C755", "8680,8690,8692-8693,8700", "MATCH" ] ]
+}

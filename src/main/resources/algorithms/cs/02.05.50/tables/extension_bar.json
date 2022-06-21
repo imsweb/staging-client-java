@@ -1,0 +1,36 @@
+{
+  "id" : "extension_bar",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  If there is fixation of hemilarynx or larynx, code to 550, not 420 or 450.\n\n**Note 2**:  Use code 300 for localized tumor only if no information is available to assign code 100, 200, or 305.\n\n**Note 3**:  Use code 305, 455, 565, 638, 810, or 815  if the physician's assignment of T category is the only information available about the extent of the tumor.",
+  "footnotes" : "- For CSExtension codes 100, 200, 300, 305, 400, 420, 450, and 500 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Tumor Size and CS Extension as shown in the Extension Size Table for this schema.\n- For CS Extension codes 100, 200, 300, 305, 400, 420, 450, and 500 ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Tumor Size and CS Extension as shown in the Extension Size Table for this schema.",
+  "last_modified" : "2015-05-27T16:19:06.431Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "VALUE:Tis", "VALUE:Tis", "VALUE:IS", "VALUE:IS" ], [ "100", "Invasive tumor confined to one of the following subsites:\n    Laryngopharynx\n    Postcricoid area\n    Posterior pharyngeal wall\n    Pyriform sinus", "JUMP:extension_size_xbq", "JUMP:extension_size_xbq", "VALUE:L", "VALUE:L" ], [ "150", "OBSOLETE DATA CONVERTED V0200\nSee code 420\n\nCode 100 with tumor fixation", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "200", "Tumor invades more than one subsite of hypopharynx (listed in code 100)\nWITHOUT fixation of hemilarynx", "JUMP:extension_size_xbq", "JUMP:extension_size_xbq", "VALUE:L", "VALUE:L" ], [ "300", "Localized, NOS", "JUMP:extension_size_xbq", "JUMP:extension_size_xbq", "VALUE:L", "VALUE:L" ], [ "305", "Stated as T1 with no other information on extension", "JUMP:extension_size_xbq", "JUMP:extension_size_xbq", "VALUE:L", "VALUE:L" ], [ "400", "Oropharynx", "JUMP:extension_size_xbq", "JUMP:extension_size_xbq", "VALUE:RE", "VALUE:RE" ], [ "420", "Code 100 with tumor fixation\nWITHOUT fixation of hemilarynx", "JUMP:extension_size_xbq", "JUMP:extension_size_xbq", "VALUE:RE", "VALUE:RE" ], [ "450", "Code 200, 300, or 400 with tumor fixation\nWITHOUT fixation of hemilarynx", "JUMP:extension_size_xbq", "JUMP:extension_size_xbq", "VALUE:RE", "VALUE:RE" ], [ "455", "Stated as T2 with no other information on extension", "JUMP:extension_size_xbq", "JUMP:extension_size_xbq", "VALUE:L", "VALUE:L" ], [ "500", "Larynx WITHOUT fixation", "JUMP:extension_size_xbq", "JUMP:extension_size_xbq", "VALUE:RE", "VALUE:RE" ], [ "510", "OBSOLETE DATA CONVERTED V0104\nSee code 450\n\nAny of codes 100-400 WITH fixation of tumor or fixation, NOS", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "550", "Fixation of hemilarynx or larynx", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "560", "Esophagus", "VALUE:T3", "VALUE:T4a", "VALUE:RE", "VALUE:RE" ], [ "565", "Stated as T3 with no other information on extension", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "600", "Central compartment soft tissues of neck including:\n    Prelaryngeal strap muscles\n    Subcutaneous fat", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:RE" ], [ "610", "OBSOLETE DATA CONVERTED V0200\nAssigned to T3 in AJCC7, see code 560\n\nEsophagus", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "620", "Thyroid gland", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:RE" ], [ "630", "Cricoid cartilage\nThyroid cartilage", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:RE" ], [ "635", "Hyoid bone", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "638", "Stated as T4a with no other information on extension", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:RE" ], [ "640", "Prevertebral fascia/muscle(s)", "VALUE:T4b", "VALUE:T4b", "VALUE:RE", "VALUE:RE" ], [ "645", "640 + 635\n\nPrevertebral fascia/muscles plus hyoid bone", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "650", "Carotid artery (encased)", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:RE" ], [ "655", "650 + 635\n\nCarotid aratery plus hyoid bone", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "660", "OBSOLETE DATA CONVERTED V0200\nSee code 635\n\nHyoid bone", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "700", "Mediastinal structures", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "760", "Base of tongue\nFloor of mouth\nNasopharynx", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "800", "Further contiguous extension", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "810", "Stated as T4b with no other information on extension", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "815", "Stated as T4 [NOS] with no other information on extension", "VALUE:T4NOS", "VALUE:T4NOS", "VALUE:RE", "VALUE:RE" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

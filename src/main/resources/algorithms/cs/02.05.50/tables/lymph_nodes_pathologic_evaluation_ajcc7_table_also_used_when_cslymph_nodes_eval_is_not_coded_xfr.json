@@ -1,0 +1,19 @@
+{
+  "id" : "lymph_nodes_pathologic_evaluation_ajcc7_table_also_used_when_cslymph_nodes_eval_is_not_coded_xfr",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Lymph Nodes Pathologic Evaluation AJCC7 Table Also Used When CS Lymph Nodes Eval Is Not Coded",
+  "title" : "Lymph Nodes Pathologic Evaluation AJCC 7 Table Also Used When CS Lymph Nodes Eval Is Not Coded",
+  "notes" : "**Note**:  This table is used when CS Lymph Nodes is 100-500 and CS Lymph Nodes Eval is 2, 3, 6, 8, or not coded.  The N category for AJCC 7 staging is determined based on the number of positive regional nodes in Regional Nodes Positive.",
+  "last_modified" : "2015-05-27T16:19:25.498Z",
+  "definition" : [ {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "N Category",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00-02", "VALUE:N1" ], [ "03-06", "VALUE:N2" ], [ "07-90", "VALUE:N3" ], [ "95,97-99", "VALUE:N1" ] ]
+}

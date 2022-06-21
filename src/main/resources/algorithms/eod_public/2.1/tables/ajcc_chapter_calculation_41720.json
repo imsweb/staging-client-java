@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc_chapter_calculation_41720",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2021-03-16T17:25:37.885Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8000-8001,8005,8010", "VALUE:75", "Parathyroid", "VALUE:08" ], [ "8140,8290", "VALUE:75", "Parathyroid", "VALUE:08" ], [ "8310,8322", "VALUE:75", "Parathyroid", "VALUE:08" ], [ "8002-8004,8011-8131", "VALUE:XX", "Other Parathyroid", "VALUE:88" ], [ "8141-8281", "VALUE:XX", "Other Parathyroid", "VALUE:88" ], [ "8300,8311-8321,8323-8700,8720-8790", "VALUE:XX", "Other Parathyroid", "VALUE:88" ] ]
+}

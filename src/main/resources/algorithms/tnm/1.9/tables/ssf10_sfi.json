@@ -1,0 +1,20 @@
+{
+  "id" : "ssf10_sfi",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF10",
+  "title" : "Site-Specific Factor 10",
+  "subtitle" : "Tumor Growth Pattern",
+  "notes" : "**Note 1:**  Cholangiocarcinoma may be classified by growth pattern. The tumor growth patterns of intrahepatic cholangiocarcinoma include the mass forming type, the periductal infiltrating type, and a mixed type.  The periductal infiltrating type of cholangiocarcinoma demonstrates a diffuse longitudinal growth pattern along the bile duct.  Limited analyses suggest that the diffuse periductal infiltrating type is associated with a poor prognosis.\n\n**Note 2:**  Record the presence or absence of an infiltrating periductal component.  This information may be obtained from radiology, surgery, or pathology reports. \n\n**Note 3:**  Only code absence of periductal component if a physician states that periductal component is not present or if the tumor is described as mass-forming only.  \n* If diagnostic and/or treatment records are not available, record 999 for unknown",
+  "last_modified" : "2018-05-14T21:29:02.681Z",
+  "definition" : [ {
+    "key" : "ssf10",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Absence of periductal component" ], [ "010", "Presence of periductal component" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

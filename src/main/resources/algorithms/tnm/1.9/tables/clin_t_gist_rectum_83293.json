@@ -1,0 +1,27 @@
+{
+  "id" : "clin_t_gist_rectum_83293",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin T GIST Rectum",
+  "title" : "Clinical T",
+  "notes" : "**Note 1:**  Assign 88 for in situ cases (behavior code /2). TNM does not include an in situ category for GIST rectum tumors.\n\n**Note 2:**  Ignore intraluminal extension to adjacent segment(s) of colon; code depth of invasion or extra-appendiceal spread as indicated.\n\n**Note 3:** Tumor size must be known to assign T. You may use a physician’s statement of the T category if this is the only information in the medical record.\n*    If no size or category is specified, assign TX\n\n**Note 4:** Assign the appropriate T category based on the tumor size for the following descriptions:\n\n**All sites**\n\n    Invasive tumor in polyp, NOS\n    Tumor confined to muscular wall\n    Tumor invades through submucosa and muscularis mucosae to involve mucosa\n\n    Extension through  wall, NOS\n    Intraluminal extension to rectosigmoid (rectum only)\n    Intraluminal extension to anus (rectum only)\n    Invasion through muscularis propria or muscularis, NOS\n    Invasion of/through serosa (mesothelium) (visceral peritoneum)\n    Invasion of/through serosa with invasion of/through mucosa\n    Non-peritonealized pericolic tissues invaded\n    Perimuscular tissue invaded\n    Subserosal tissue/(sub)serosal fat invaded\n    Transmural, NOS\n    Wall, NOS\n\n    Confined to rectosigmoid\n    Confined to rectum\n    Localized, NOS\n\n**All sites**\n\n    Adherent to liver capsule\n    Adherent to other organs or structures, NOS\n    Bladder\n    Cul de sac (rectouterine pouch)\n    Fat, NOS\n    Other segments of colon via serosa\n    Ovary(ies)\n    Pelvic wall    \n    Perirectal fat\n    Prostate\n    Skeletal muscles of pelvic floor\n    Uterus\n    Vagina\n      \n**Rectosigmoid (C199)**\n\n    Colon via serosa\n    Fallopian tube(s)\n    Mesentery (including mesenteric fat, mesocolon)\n    Pericolic fat\n    Pelvic plexuses\n    Small intestine\n    Ureter(s)\n    \n\n**Rectum (C209)**\n\n    Anus (excluding intraluminal extension)\n    Bone(s) of pelvis\n    Colon\n    Ductus deferens\n    Perineum, perianal skin\n    Rectovaginal septum\n    Rectovesical fascia for males only\n    Sacral plexus\n    Sacrum\n    Seminal vesicle(s)\n    Urethra",
+  "last_modified" : "2018-05-14T21:29:01.423Z",
+  "definition" : [ {
+    "key" : "clin_t",
+    "name" : "Clinical T",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_t_display",
+    "name" : "Clinical T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cTX", "Primary tumor cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess T\n    Extension cannot be determined \n    Tumor size (TS) unknown for T categories where TS  needed to determine T\nPhysician assigns cTX, no other information available to determine T" ], [ "c0", "cT0", "No evidence of primary tumor", "" ], [ "c1", "cT1", "Tumor 2 cm or less in greatest dimension", "Stated as T1" ], [ "c2", "cT2", "Tumor more than 2 cm but not more than 5 cm in greatest dimension", "Stated as T2" ], [ "c3", "cT3", "Tumor more than 5 cm but not more than 10 cm in greatest dimension", "Stated as T3" ], [ "c4", "cT4", "Tumor more than 10 cm in greatest dimension", "Stated as T4" ], [ "88", "88", "Not applicable", "In situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met \nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nClinical evaluation of primary tumor not done or unknown if done\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

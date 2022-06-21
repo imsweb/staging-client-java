@@ -1,0 +1,27 @@
+{
+  "id" : "extension_size_xaf",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension Size",
+  "title" : "Extension Size Table",
+  "notes" : "**Note**:  For CS Extension codes 100, 200, and 300 ONLY, the T category is assigned based on the value of CS Tumor Size and CS Extension as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:19.719Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "size",
+    "name" : "CS Tumor Size",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "000", "ERROR:", "ERROR:" ], [ "200", "000", "ERROR:", "ERROR:" ], [ "300", "000", "ERROR:", "ERROR:" ], [ "100", "001-015", "VALUE:T1", "VALUE:T1" ], [ "200", "001-015", "VALUE:T1", "VALUE:T1" ], [ "300", "001-015", "VALUE:T1", "VALUE:T1" ], [ "100", "016-989", "VALUE:T2", "VALUE:T2" ], [ "200", "016-989", "VALUE:T2", "VALUE:T2" ], [ "300", "016-989", "VALUE:T2", "VALUE:T2" ], [ "100", "990-991", "VALUE:T1", "VALUE:T1" ], [ "200", "990-991", "VALUE:T1", "VALUE:T1" ], [ "300", "990-991", "VALUE:T1", "VALUE:T1" ], [ "100", "992", "VALUE:T2", "VALUE:T2" ], [ "200", "992", "VALUE:T1", "VALUE:T1" ], [ "300", "992", "VALUE:T2", "VALUE:T2" ], [ "100", "993-995", "VALUE:T2", "VALUE:T2" ], [ "200", "993-995", "VALUE:T2", "VALUE:T2" ], [ "300", "993-995", "VALUE:T2", "VALUE:T2" ], [ "100", "996-998", "ERROR:", "ERROR:" ], [ "200", "996-998", "ERROR:", "ERROR:" ], [ "300", "996-998", "ERROR:", "ERROR:" ], [ "100", "999", "VALUE:TX", "VALUE:TX" ], [ "200", "999", "VALUE:T1", "VALUE:T1" ], [ "300", "999", "VALUE:T2", "VALUE:T2" ] ]
+}

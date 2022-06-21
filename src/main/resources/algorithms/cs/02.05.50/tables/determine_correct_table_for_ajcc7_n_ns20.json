@@ -1,0 +1,18 @@
+{
+  "id" : "determine_correct_table_for_ajcc7_n_ns20",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Determine Correct Table for AJCC 7 N",
+  "title" : "Determining Which Lymph Nodes Calculation Table Applies for AJCC 7",
+  "last_modified" : "2015-05-27T16:19:04.475Z",
+  "definition" : [ {
+    "key" : "nodes_eval",
+    "name" : "CS Lymph Nodes Eval",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0-3,5,6,8,9", "JUMP:lymph_nodeand_nodal_status_eval_ajcc7_xle" ], [ "", "JUMP:lymph_nodeand_nodal_status_eval_blank_ajcc7_xlp" ] ]
+}

@@ -1,0 +1,35 @@
+{
+  "id" : "mets_hae",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note**: For metastasis limited to a single distant lymph node chain, use code 08, 16 or 18.  For metastases involving multiple distant lymph node chains, use codes 31 or 33.",
+  "last_modified" : "2015-05-27T16:19:27.614Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "VALUE:M0", "VALUE:NONE", "VALUE:NONE" ], [ "08", "Metastasis limited to a single distant lymph node chain:\nFor cecum, ascending, hepatic flexure and transverse colon:\n    Superior mesenteric lymph nodes only", "VALUE:M1a", "VALUE:M1", "VALUE:RN", "VALUE:D" ], [ "10", "OBSOLETE DATA RETAINED V0200\nSee codes 15 and 25\n\nDistant lymph node(s) other than code 08\nFor all colon sites:\n    Common iliac\n    Distant lymph node(s), NOS\n    External iliac\n    Para-aortic\n    Retroperitoneal\nFor cecum, \nappendix, \nascending\ncolon, \ntransverse colon, \nand hepatic flexure;\n    Inferior mesenteric\nFor splenic flexure, \ndescending colon, and \nsigmoid colon:\n    Superior mesenteric", "ERROR:", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "15", "OBSOLETE DATA CONVERTED V0203\nSee code 16\n\nMetastasis to a single distant lymph node chain other than code 08\nFor all colon sites:\n    Common iliac\n    Distant lymph node(s), NOS\n    External iliac\n    Para-aortic\n    Retroperitoneal\nFor cecum, ascending colon, transverse colon, and hepatic flexure:\n    Inferior mesenteric\nFor splenic flexure, descending colon, and sigmoid colon:\n    Superior mesenteric", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "16", "Metastasis limited to a single distant lymph node chain:     For all colon sites:\n        Common iliac\n        Distant lymph node(s), NOS\n        External iliac\n        Para-aortic\n        Retroperitoneal\nFor cecum, ascending colon, transverse colon, and hepatic flexure:\n        Inferior mesenteric\nFor splenic flexure, descending colon, and sigmoid colon:\n        Superior mesenteric", "VALUE:M1a", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "18", "Metastasis limited to a single distant lymph node chain, NOS", "VALUE:M1a", "VALUE:M1", "VALUE:RN", "VALUE:D" ], [ "20", "OBSOLETE DATA CONVERTED V0203\nSee code 26\n\nMetastasis to a single distant organ", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "22", "OBSOLETE DATA CONVERTED V0203\nSee code 27\n\nStated as M1a with no other information on distant metastases", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "25", "OBSOLETE DATA CONVERTED V0203\nSee code 31\n\nMetastasis to more than one distant lymph node chain other than code 08\nFor all colon sites:\n    Common iliac\n    Distant lymph node(s), NOS\n    External iliac\n    Para-aortic\n    Retroperitoneal\nFor cecum, ascending colon, transverse colon, and hepatic flexure:\n    Inferior mesenteric\n   Superior mesenteric\nFor splenic flexure, descending colon, and sigmoid colon:\n    Superior mesenteric", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "26", "Metastasis limited to a single distant organ except peritoneum", "VALUE:M1a", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "27", "Stated as M1a with no other information on distant metastasis", "VALUE:M1a", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "29", "OBSOLETE DATA CONVERTED V0204\nSee code 08\n\nMetastases to multiple distant lymph node chains included in code 08 only", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "30", "OBSOLETE DATA CONVERTED V0203\nSee code 36\n\nMetastases to more than one distant organ\nMetastases to the peritoneum\nCarcinomatosis", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "31", "Metastases to a single distant lymph node chain listed in code 08 and to a single distant lymph node chain listed in code 16 OR Multiple distant lymph node chains listed in code 16, with or without distant lymph nodes listed in code 08", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "33", "Metastases to multiple distant lymph node chains, NOS", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "35", "OBSOLETE DATA CONVERTED V0203\nSee code 45\n\n(08 or 15 or 25) PLUS (20 or 30)\nDistant lymph nodes plus other distant metastases", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "36", "Metastases to more than one distant organ except distant lymph node(s)\nMetastasis to peritoneum\nCarcinomatosis", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "38", "OBSOLETE DATA CONVERTED V0203\nSee code 48\n\nStated as M1b with no other information on distant metastases", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "40", "OBSOLETE DATA RETAINED V0200\nSee codes 20, 30 and 60\n\nDistant metastases except distant lymph node(s)(codes 08-10)\nCarcinomatosis", "ERROR:", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "45", "(26 or 36) + any of (08, 16, 18, or 31)\n\nMetastases to distant organs plus distant nodes", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "48", "Stated as M1b with no other information on distant metastasis", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "50", "OBSOLETE DATA RETAINED V0200\nSee code 35\n\n(40) + ((08) or (10))\nDistant lymph node(s) plus other distant metastases", "ERROR:", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "60", "Distant metastasis, NOS\n\nStated as M1 [NOS] with no other information on distant metastases", "VALUE:M1NOS", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "VALUE:MX", "VALUE:U", "VALUE:U" ] ]
+}

@@ -1,0 +1,28 @@
+{
+  "id" : "eod_primary_tumor_3385",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "EOD Primary Tumor",
+  "title" : "EOD Primary Tumor",
+  "notes" : "**Note 1:** Osseous (medullary) plasmacytomas (9731) are localized tumors occurring in the bone. There may be soft tissue extension.\n\n**Note 2:** Extraosseous (extramedullary) plasmacytomas (9734) are plasma cell neoplasms that arise in tissues other than bone. The most common sites are the upper respiratory tract, the gastrointestinal tract, lymph nodes, bladder, central nervous system (CNS), breast, thyroid, testis and skin.\n\n**Note 3:** Lymphoplasmacytic lymphoma (9671) and Waldenstrom Macroglobulinemia (9761) are now collected with the plasma cell disorders. These are systemic diseases and should always be coded 700.\n\n**Note 4:** Per the 2016 WHO Hematopoietic and Lymphoid Neoplasms blue book, a plasmacytoma is defined as a single lesion. If there are multiple lesions/plasmacytomas, this is diagnostic of plasma cell myeloma (9732/3) and the Plasma Cell Myeloma Schema should be used to assign EOD.",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017\n\n(5) **Introduction to Hematologic Malignancies**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017\n\n(6) Bergsagel, P.L., Jaffe, E.S., Leonard, J.P., et al. **Plasma Cell Myeloma and Plasma Cell Disorders**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017",
+  "last_modified" : "2021-04-08T19:00:17.901Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_t",
+    "name" : "SS2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "Single plasmacytoma occurring in bone (osseous or medullary) (9731)\nSingle plasmacytoma, NOS (9731)\n\nWITH or WITHOUT soft tissue extension", "VALUE:88", "VALUE:L" ], [ "200", "Single plasmacytoma (9734)\nSingle plasmacytoma occurring outside of bone (extraosseous or extramedullary) (9734)", "VALUE:88", "VALUE:L" ], [ "700", "Lymphoplasmacytic lymphoma (9671)\nWaldenstrom Macroglobulinemia (9761)", "VALUE:88", "VALUE:D" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in medical record\n\nDeath Certificate Only", "VALUE:88", "VALUE:U" ] ]
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_testis",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Schema Selection Testis",
+  "title" : "Schema selection for Testis",
+  "last_modified" : "2018-05-14T21:28:58.497Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C620-C621,C629", "8000-9136,9141-9582,9700-9701", "MATCH" ] ]
+}

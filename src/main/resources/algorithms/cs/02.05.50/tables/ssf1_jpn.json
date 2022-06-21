@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_jpn",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF1",
+  "title" : "CS Site-Specific Factor 1",
+  "subtitle" : "Clinical Assessment of Regional Lymph Nodes",
+  "notes" : "**Note 1**:  Clinically evident regional lymph nodes are based on information from the diagnostic workup.  This might include:  physical examination, imaging, diagnostic lymph node biopsy and exploratory surgery (without a resection).\n\n**Note 2**:  In the rare instance that the number of clinically positive nodes is stated but a clinical N category is not stated, code 1-2 nodes as 100 (N1), 3-6 nodes as 200 (N2), and 7 or more nodes as 300 (N3).\n\n**Note 3**:  If there is no diagnostic workup to assess regional lymph nodes, use code 999.  Do not apply the inaccessible nodes rule that presumes unmentioned nodes to be negative.",
+  "last_modified" : "2015-05-27T16:20:00.180Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Nodes not clinically evident; imaging of regional nodes performed and nodes not mentioned" ], [ "100", "Metastasis in 1-2 regional nodes, determined clinically\n\nStated as clinical N1" ], [ "200", "Metastasis in 3-6 regional nodes, determined clinically\n\nStated as clinical N2" ], [ "300", "Metastasis in 7 or more regional nodes, determined clinically\n\nStated as clinical N3" ], [ "400", "Clinically positive regional node(s), NOS" ], [ "888", "OBSOLETE DATA CONVERTED V0200\nSee code 988 \n\nNot applicable for this site" ], [ "988", "Not applicable:  Information not collected for this case\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.  If this item is required to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "999", "Regional lymph node(s) involved pathologically, clinical assessment not stated\nUnknown if regional lymph nodes clinically evident\nNot documented in patient record" ] ]
+}

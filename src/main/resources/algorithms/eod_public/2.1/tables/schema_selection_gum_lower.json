@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_gum_lower",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection GumLower",
+  "title" : "Schema selection for GumLower",
+  "last_modified" : "2021-04-29T14:40:53.419Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C030, C031, C039,C062", "8000-8700,8982", "MATCH" ] ]
+}

@@ -1,0 +1,20 @@
+{
+  "id" : "ssf10_sfj",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF10",
+  "title" : "CS Site-Specific Factor 10",
+  "subtitle" : "Tumor Growth Pattern",
+  "notes" : "**Note 1**:  Cholangiocarcinoma may be classified by growth pattern. The tumor growth patterns of intrahepatic cholangiocarcinoma include the mass forming type, the periductal infiltrating type, and a mixed type.  The periductal infiltrating type of cholangiocarcinoma demonstrates a diffuse longitudinal growth pattern along the bile duct.  Limited analyses suggest that the diffuse periductal infiltrating type is associated with a poor prognosis.\n\n**Note 2**:  Record the presence or absence of an infiltrating periductal component.  This information may be obtained from radiology, surgery, or pathology reports. \n\n**Note 3**:  Only code absence of periductal component if a physician states that periductal component is not present or if the tumor is described as mass-forming only.  If diagnostic and/or treatment records are not available, record 999 for unknown. \n\n**Note 4**:  All tumors with a periductal infiltrating growth pattern are considered T4 by AJCC.  For tumors with periductal infiltrating growth pattern, code the most specific information available about the extent of the tumor in CS Extension, and code periductal infiltrating growth pattern here.  The algorithm will adjust the T category for tumors with periductal growth pattern.",
+  "last_modified" : "2015-05-27T16:19:53.397Z",
+  "definition" : [ {
+    "key" : "ssf10",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Absence of periductal component" ], [ "010", "Presence of periductal component" ], [ "988", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 988 may result in an edit error.)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

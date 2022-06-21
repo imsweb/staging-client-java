@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_bone",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection Bone",
+  "title" : "Schema selection for Bone",
+  "last_modified" : "2021-03-16T13:57:53.005Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C414", "8000-8934, 8940-9138,9141-9582", "MATCH" ] ]
+}

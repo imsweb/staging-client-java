@@ -1,0 +1,23 @@
+{
+  "id" : "combined_serum_tumor_marker_svalue_tablefor_yearof_diagnosis_greater_than2009_xiy",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Combined Serum Tumor Marker S Value Table for Year of Diagnosis Greater Than 2009",
+  "title" : "Combined Serum Tumor Marker S Value Table for Year of Diagnosis Greater Than 2009",
+  "notes" : "**Note**:  If the Year of Diagnosis is greater than 2009 or the case is coded under CSv2 (CS Version Input Original greater than 020000), then the S value will be based on CS Site-Specific Factors 13, 15, and 16.",
+  "last_modified" : "2015-05-27T16:19:02.333Z",
+  "definition" : [ {
+    "key" : "s_123",
+    "name" : "S value based on CS SSF 1-3",
+    "type" : "INPUT"
+  }, {
+    "key" : "s_131516",
+    "name" : "S value based on CS SSF 13, 15, 16",
+    "type" : "INPUT"
+  }, {
+    "key" : "s",
+    "name" : "S Value for Staging",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "S0", "S0", "VALUE:S0" ], [ "S1", "S0", "VALUE:S0" ], [ "S2", "S0", "VALUE:S0" ], [ "S3", "S0", "VALUE:S0" ], [ "SX", "S0", "VALUE:S0" ], [ "ERROR", "S0", "VALUE:S0" ], [ "S0", "S1", "VALUE:S1" ], [ "S1", "S1", "VALUE:S1" ], [ "S2", "S1", "VALUE:S1" ], [ "S3", "S1", "VALUE:S1" ], [ "SX", "S1", "VALUE:S1" ], [ "ERROR", "S1", "VALUE:S1" ], [ "S0", "S2", "VALUE:S2" ], [ "S1", "S2", "VALUE:S2" ], [ "S2", "S2", "VALUE:S2" ], [ "S3", "S2", "VALUE:S2" ], [ "SX", "S2", "VALUE:S2" ], [ "ERROR", "S2", "VALUE:S2" ], [ "S0", "S3", "VALUE:S3" ], [ "S1", "S3", "VALUE:S3" ], [ "S2", "S3", "VALUE:S3" ], [ "S3", "S3", "VALUE:S3" ], [ "SX", "S3", "VALUE:S3" ], [ "ERROR", "S3", "VALUE:S3" ], [ "S0", "SX", "VALUE:SX" ], [ "S1", "SX", "VALUE:SX" ], [ "S2", "SX", "VALUE:SX" ], [ "S3", "SX", "VALUE:SX" ], [ "SX", "SX", "VALUE:SX" ], [ "ERROR", "SX", "VALUE:SX" ], [ "S0", "ERROR", "ERROR:" ], [ "S1", "ERROR", "ERROR:" ], [ "S2", "ERROR", "ERROR:" ], [ "S3", "ERROR", "ERROR:" ], [ "SX", "ERROR", "ERROR:" ], [ "ERROR", "ERROR", "ERROR:" ] ]
+}

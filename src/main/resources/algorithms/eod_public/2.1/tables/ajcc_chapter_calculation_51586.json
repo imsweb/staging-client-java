@@ -1,0 +1,34 @@
+{
+  "id" : "ajcc_chapter_calculation_51586",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2020-04-02T16:04:32.546Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_1",
+    "name" : "Thyroid Gland/Thyroglossal Duct",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8345-8347", "3", "1", "VALUE:74", "Thyroid: Medullary", "VALUE:08" ], [ "8345-8347", "2", "1", "VALUE:XX", "Other Thyroid: Medullary", "VALUE:88" ], [ "8345-8347", "*", "2", "VALUE:XX", "Other Thyroid: Medullary", "VALUE:88" ], [ "8348-8349,8430,8510,8512-8513", "*", "*", "VALUE:XX", "Other Thyroid: Medullary", "VALUE:88" ] ]
+}

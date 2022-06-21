@@ -1,0 +1,19 @@
+{
+  "id" : "grade_post_therapy_clin_43459",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Grade Post Therapy Clin (yc)",
+  "title" : "Grade Post Therapy Clin (yc)",
+  "notes" : "**Note 1:** Leave Grade Post Therapy Clin (yc) blank when\n* No neoadjuvant therapy\n* Clinical or pathological case only\n* Neoadjuvant therapy completed, no microscopic exam is done prior to surgery/resection of primary tumor\n* There is only one grade available and it cannot be determined if it is clinical, pathological, post therapy clinical or post therapy pathological\n\n**Note 2:** Grade is applicable for the follicular lymphomas only (9690/3, 9691/3, 9695/3, 9698/3).  For all other lymphoma histologies, code 9.\n\n**Note 3:** Assign the highest grade from the microscopically sampled specimen of the primary site following neoadjuvant therapy or primary systemic/radiation therapy. \n\n**Note 4:** If there are multiple tumors with different grades abstracted as one primary, code the highest grade.\n\n**Note 5:** Follicular lymphoma grade is based on the absolute number of centroblasts per high-power (40 x objective, 0.159 square mm) microscopic field (HPF).\n\n**Note 6:** Code 9 (unknown) when \n* Microscopic exam is done after neoadjuvant therapy and grade from the primary site is not documented\n* Microscopic exam is done after neoadjuvant therapy and there is no residual cancer\n* Grade checked “not applicable” on CAP Protocol (if available) and no other grade information is available",
+  "last_modified" : "2021-04-24T11:50:27.575Z",
+  "definition" : [ {
+    "key" : "grade_post_therapy_clin",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "G1: 0-5 centroblasts per 10 HPF" ], [ "2", "G2: 6-15 centroblasts per 10 HPF" ], [ "3", "G3: More than 15 centroblasts per 10 HPF but with admixed centrocytes" ], [ "4", "G4: More than 15 centroblasts per 10 HPF but without centrocytes " ], [ "9", "Grade cannot be assessed (GX); Unknown \nNot a follicular histology (9690/3, 9691/3, 9695/3, 9698/3)" ], [ "", "See Note 1" ] ]
+}

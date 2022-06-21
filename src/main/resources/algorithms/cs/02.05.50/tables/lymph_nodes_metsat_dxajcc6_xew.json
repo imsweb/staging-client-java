@@ -1,0 +1,23 @@
+{
+  "id" : "lymph_nodes_metsat_dxajcc6_xew",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Lymph Nodes Mets at DX AJCC6",
+  "title" : "Lymph Nodes Mets at DX AJCC 6 Table",
+  "notes" : "**Note**:  For CS Mets at DX codes 00 and 99, the M category for AJCC 6 staging is assigned as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:24.367Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "CS Lymph Nodes",
+    "type" : "INPUT"
+  }, {
+    "key" : "mets",
+    "name" : "CS Mets at DX",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000,100", "00", "VALUE:M0" ], [ "200,300", "00", "VALUE:M1" ], [ "350,800,805,999", "00", "VALUE:M0" ], [ "000,100", "99", "VALUE:MX" ], [ "200,300", "99", "VALUE:M1" ], [ "350,800,805,999", "99", "VALUE:MX" ] ]
+}

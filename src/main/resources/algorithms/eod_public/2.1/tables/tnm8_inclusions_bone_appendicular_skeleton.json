@@ -1,0 +1,14 @@
+{
+  "id" : "tnm8_inclusions_bone_appendicular_skeleton",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "TNM8 Inclusions (Bone Appendicular Skeleton)",
+  "title" : "Inclusion Table TNM 8th ed. (Bone Appendicular Skeleton)",
+  "last_modified" : "2019-04-05T16:52:34.260Z",
+  "definition" : [ {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "INPUT"
+  } ],
+  "rows" : [ [ "38.1" ] ]
+}

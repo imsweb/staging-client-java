@@ -1,0 +1,19 @@
+{
+  "id" : "size_aax",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Size",
+  "title" : "CS Tumor Size",
+  "notes" : "**Note 1**:  Code exact tumor measurements when available.  Use codes 990-997 only if a specific measurement is not available.\n\n**Note 2**:  The assignment of T categories for gastrointestinal stromal tumors (GIST) is based on tumor size.  A physician's statement of the T category may be used to code CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields.  However the two fields are coded independently: for example the record may document size but not extension, other than the physician's statement of the T category.  Use codes 992, 995, 996, and 997 as appropriate to code CS Tumor Size based on a statement of T when no other size information is available.\n\n**Note 3**:  Codes 992-995 were obsolete in CS Version 2, V0201 and V0202.  They are made active in V0203.  Codes 996-997 are new for V0203.  Tumors that now fall into one of these categories would have been coded as 011, 021, 051, 101, or 999 in V0201/V0202.",
+  "last_modified" : "2015-05-27T16:19:50.225Z",
+  "definition" : [ {
+    "key" : "size",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No mass/tumor found" ], [ "001-988", "001 - 988 millimeters (mm) \n(Exact size to nearest mm)" ], [ "989", "989 mm or larger" ], [ "990", "Microscopic focus or foci only and no size of focus given" ], [ "991", "Described as \"less than 1 centimeter (cm)\"" ], [ "992", "Described as \"less than 2 cm,\" or \"greater than 1 cm,\" or \"between 1 cm and 2 cm\"\n\nStated as T1 with no other information on tumor size" ], [ "993", "Described as \"less than 3 cm,\" or \"greater than 2 cm,\" or \"between 2 cm and 3 cm\"" ], [ "994", "Described as \"less than 4 cm,\" or \"greater than 3 cm,\" or \"between 3 cm and 4 cm\"" ], [ "995", "Described as \"less than 5 cm,\" or \"greater than 4 cm,\" or \"between 4 cm and 5 cm\"\n\nStated as T2 with no other information on tumor size\n\nNote:  \"Stated as T2 with no other information on size\" moved from code 993 to code 995 in V0204" ], [ "996", "Described as \"less than 10 cm,\" or \"greater than 5 cm\" or \"between 5 cm and 10 cm\" \n\nStated as T3 with no other information on tumor size" ], [ "997", "Described as \"greater than 10 cm\" \n\nStated as T4 with no other information on tumor size" ], [ "998", "OBSOLETE DATA RETAINED V0200\n\nDiffuse; widespread; 3/4s or more; linitis plastica" ], [ "999", "Unknown; size not stated\nSize of tumor cannot be assessed\nNot documented in patient record" ] ]
+}

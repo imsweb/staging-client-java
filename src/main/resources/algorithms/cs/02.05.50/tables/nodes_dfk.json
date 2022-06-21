@@ -1,0 +1,35 @@
+{
+  "id" : "nodes_dfk",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Splenic lymph nodes and those located at the tail of the pancreas are not considered regional and should be coded under CS Mets at DX.",
+  "last_modified" : "2015-05-27T16:19:38.045Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "100", "Regional lymph nodes:\n    Hepatic\n    Hepatic artery\n    Node of the foramen of Winslow (epiploic) (omental)\n    Pancreaticoduodenal\n    Peripancreatic (except at tail of pancreas, see CS Mets at DX)\n    Periportal\n    Lymph nodes:\n        Anterior to the ampulla of Vater\n        Inferior to the ampulla of Vater\n        Posterior to the ampulla of Vater\n        Superior to the ampulla of Vater\n    Regional lymph node(s), NOS\n\nStated as N1 with no other information on regional lymph nodes", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "110", "Regional lymph nodes:\n    Celiac\n    Infrapyloric (subpyloric)\n    Lateral aortic (lumbar)\n    Proximal mesenteric\n    Retroperitoneal\n    Superior mesenteric", "VALUE:N1", "VALUE:N1", "VALUE:D", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

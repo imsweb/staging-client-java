@@ -1,0 +1,19 @@
+{
+  "id" : "grade_post_therapy_path_67342",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Grade Post Therapy Path (yp)",
+  "title" : "Grade Post Therapy Path (yp)",
+  "notes" : "**Note 1:** Leave Grade Post Therapy Path (yp) blank when \n* No neoadjuvant therapy\n* Clinical or pathological case only\n* Neoadjuvant therapy completed; surgical resection not done\n* There is only one grade available and it cannot be determined if it is clinical, pathological, post therapy clinical or post therapy pathological\n\n**Note 2:** Grade is applicable for the follicular lymphomas only (9690/3, 9691/3, 9695/3, 9698/3).  For all other lymphoma histologies, code 9.\n\n**Note 3:** There is a preferred grading system for this schema. If the post therapy clinical grade given uses the preferred grading system and the post therapy pathological grade does not use the preferred grading system, do not record the Grade Post Therapy Clin (yc) in the Grade Post Therapy Path (yp) field. Assign Grade Post Therapy Path (yp) 9.\n* *Example:* Neoadjuvant therapy completed. Biopsy of eye shows a follicular lymphoma, G3. The surgical resection states a low grade follicular lymphoma\n  * Code Grade Post Therapy Clin (yc) as 3 since G3 is the preferred grading system\n  * Code Grade Post Therapy Path (yp) as 9 since the preferred grading system was not used and the Generic Grade Categories do not apply to this grade table\n\n**Note 4:** Assign the highest grade from the resected primary tumor assessed after the completion of neoadjuvant therapy.\n\n**Note 5:** If there are multiple tumors with different grades abstracted as one primary, code the highest grade.\n\n**Note 6:** Follicular lymphoma grade is based on the absolute number of centroblasts per high-power (40 x objective, 0.159 square mm) microscopic field (HPF).\n\n**Note 7:** Use the grade from the post therapy **clinical work up** from the primary tumor in different scenarios based on behavior or surgical resection\n* **Behavior**\n  * Tumor behavior for the post therapy clinical and the post therapy pathological diagnoses are the same AND the post therapy clinical grade is the highest grade \n  * Tumor behavior for post therapy clinical diagnosis is invasive, and the tumor behavior for the post therapy pathological diagnosis is in situ\n* **Surgical Resection**\n  * Surgical resection is done of the primary tumor after neoadjuvant therapy is completed and there is no grade documented from the surgical resection\n  * Surgical resection is done of the primary tumor after neoadjuvant therapy is completed and there is no residual cancer\n\n\n**Note 8:** Code 9 (unknown) when \n* Surgical resection is done after neoadjuvant therapy and grade from the primary site is not documented\n* Surgical resection is done after neoadjuvant therapy and there is no residual cancer\n* Grade checked \"not applicable\" on CAP Protocol (if available) and no other grade information is available",
+  "last_modified" : "2021-04-24T11:52:32.859Z",
+  "definition" : [ {
+    "key" : "grade_post_therapy_path",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "G1: 0-5 centroblasts per 10 HPF" ], [ "2", "G2: 6-15 centroblasts per 10 HPF" ], [ "3", "G3: More than 15 centroblasts per 10 HPF but with admixed centrocytes" ], [ "4", "G4: More than 15 centroblasts per 10 HPF but without centrocytes " ], [ "9", "Grade cannot be assessed (GX); Unknown \nNot a follicular histology (9690/3, 9691/3, 9695/3, 9698/3)" ], [ "", "See Note 1" ] ]
+}

@@ -1,0 +1,38 @@
+{
+  "id" : "ajcc_chapter_calculation_33543",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2020-03-26T21:09:53.568Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_1",
+    "name" : "Discriminator 1",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C150-C159", "8936", "0,1,3", "", "VALUE:43.2", "Gastrointestinal Stromal Tumor: Small Intestinal, Esophageal, Colorectal, Mesenteric, and Peritoneal", "VALUE:08" ], [ "C160-C169", "8936", "0,1,3", "", "VALUE:43.1", "Gastrointestinal Stromal Tumor: Gastric and Omental ", "VALUE:08" ], [ "C170-C172,C178-C209", "8936", "0,1,3", "", "VALUE:43.2", "Gastrointestinal Stromal Tumor: Small Intestinal, Esophageal, Colorectal, Mesenteric, and Peritoneal", "VALUE:08" ], [ "C173", "8936", "0,1,3", "", "VALUE:XX", "Other Gastrointestinal Stromal Tumors", "VALUE:88" ], [ "C480", "8936", "0,1,3", "", "VALUE:43.2", "Gastrointestinal Stromal Tumor: Small Intestinal, Esophageal, Colorectal, Mesenteric, and Peritoneal", "VALUE:08" ], [ "C481", "8936", "0,1,3", "2", "VALUE:43.1", "Gastrointestinal Stromal Tumor: Gastric and Omental ", "VALUE:08" ], [ "C481", "8936", "0,1,3", "1,9", "VALUE:43.2", "Gastrointestinal Stromal Tumor: Small Intestinal, Esophageal, Colorectal, Mesenteric, and Peritoneal", "VALUE:08" ], [ "C482,C488", "8936", "0,1,3", "", "VALUE:43.2", "Gastrointestinal Stromal Tumor: Small Intestinal, Esophageal, Colorectal, Mesenteric, and Peritoneal", "VALUE:08" ], [ "C150-C159", "8936", "2", "", "VALUE:XX", "Other Gastrointestinal Stromal Tumors", "VALUE:88" ], [ "C160-C169", "8936", "2", "", "VALUE:XX", "Other Gastrointestinal Stromal Tumors", "VALUE:88" ], [ "C170-C172,C178-C209", "8936", "2", "", "VALUE:XX", "Other Gastrointestinal Stromal Tumors", "VALUE:88" ], [ "C173", "8936", "2", "", "VALUE:XX", "Other Gastrointestinal Stromal Tumors", "VALUE:88" ], [ "C480", "8936", "2", "", "VALUE:XX", "Other Gastrointestinal Stromal Tumors", "VALUE:88" ], [ "C481", "8936", "2", "2", "VALUE:XX", "Other Gastrointestinal Stromal Tumors", "VALUE:88" ], [ "C481", "8936", "2", "1,9", "VALUE:XX", "Other Gastrointestinal Stromal Tumors", "VALUE:88" ], [ "C482,C488", "8936", "2", "", "VALUE:XX", "Other Gastrointestinal Stromal Tumors", "VALUE:88" ], [ "C150-C209", "8935", "*", "", "VALUE:XX", "Other Gastrointestinal Stromal Tumors", "VALUE:88" ], [ "C480-C482,C488", "8935", "*", "", "VALUE:XX", "Other Gastrointestinal Stromal Tumors", "VALUE:88" ], [ "C481", "8935", "*", "1,2,9", "VALUE:XX", "Other Gastrointestinal Stromal Tumors", "VALUE:88" ], [ "C000-C148", "8935,8936", "*", "", "VALUE:XX", "Other Gastrointestinal Stromal Tumors", "VALUE:88" ], [ "C210-C479", "8935,8936", "*", "", "VALUE:XX", "Other Gastrointestinal Stromal Tumors", "VALUE:88" ], [ "C490-C539", "8935,8936", "*", "", "VALUE:XX", "Other Gastrointestinal Stromal Tumors", "VALUE:88" ], [ "C571-C699,C739-C750,C754-C809", "8935,8936", "*", "", "VALUE:XX", "Other Gastrointestinal Stromal Tumors", "VALUE:88" ], [ "C700-C729,C751-C753", "8935,8936", "3", "", "VALUE:XX", "Other Gastrointestinal Stromal Tumors", "VALUE:88" ], [ "C000-C480,C482-C539,C571-C699,C739-C750,C754-C809", "8935,8936", "*", "1,2,9", "ERROR:Site is not C481, Schema Discriminator 1 should be blank", "", "VALUE:" ], [ "C700-C729,C751-C753", "8935,8936", "3", "1,2,9", "ERROR:Site is not C481, Schema Discriminator 1 should be blank", "", "VALUE:" ] ]
+}

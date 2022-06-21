@@ -1,0 +1,19 @@
+{
+  "id" : "ldh_pretreatment_level_82697",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "LDH Level",
+  "title" : "LDH Level",
+  "notes" : "**Note 1:** Use the reference ranges from your lab to determine if LDH is normal.\n\n**Note 2:** Record this data item based on a blood test performed at diagnosis. In the absence of the lab test, a physician's statement of the exact value or interpretation can be used. Use the highest value available.\n\n**Note 3:** If there is no mention of the LDH, code 9.\n\n**Note 4:** If Schema Discriminator 1: Plasma Cell Myeloma Terminology is coded to 1 or 9, code 5",
+  "last_modified" : "2021-03-16T16:56:01.679Z",
+  "definition" : [ {
+    "key" : "ldh_level",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Normal LDH level\nLow, below normal" ], [ "1", "Above normal LDH level; High" ], [ "5", "Schema Discriminator 1: Plasma Cell Myeloma Terminology coded to 1 or 9" ], [ "7", "Test ordered, results not in chart" ], [ "9", "Not documented in medical record \nLDH (Lactate Dehydrogenase) Level not assessed or unknown if assessed" ] ]
+}

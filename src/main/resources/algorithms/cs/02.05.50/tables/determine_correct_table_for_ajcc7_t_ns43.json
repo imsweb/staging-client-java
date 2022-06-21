@@ -1,0 +1,18 @@
+{
+  "id" : "determine_correct_table_for_ajcc7_t_ns43",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Determine Correct Table for AJCC 7 T",
+  "title" : "Determining Which Extension Calculation Table Applies for AJCC 7 T",
+  "last_modified" : "2015-05-27T16:19:04.918Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Site Specific Factor 1",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000, 999", "JUMP:size_extension_ssf1_ajcc7_t_xjz" ], [ "010,020,030,040", "JUMP:size_extension_ssf1_ajcc7_t_xka" ], [ "888, 988", "JUMP:extension_ssf1_ajcc7_t_xjy" ] ]
+}

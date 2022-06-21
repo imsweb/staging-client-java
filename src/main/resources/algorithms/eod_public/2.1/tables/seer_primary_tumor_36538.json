@@ -1,0 +1,28 @@
+{
+  "id" : "seer_primary_tumor_36538",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "EOD Primary Tumor",
+  "title" : "EOD Primary Tumor",
+  "notes" : "**Note:** Extrathyroidal extension includes minor (microscopic) extension through the thyroid capsule which is identified only on microscopic examination (see code 200) to gross (macroscopic) extrathyroidal extension, which is documented in the operative report and involves major structures (see codes 300, 400, 600, and 700). \n* If the only information available is \"extrathyroidal extension\" and cannot determine whether it is microscopic or gross, code 200.\n* If the only information is \"gross extrathyroidal extension\" and the involvement of major structures cannot be determined, code 750.",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) Gress, D.M., Edge, S.B., Gershenwald, J.E., et al. **Principles of Cancer Staging**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017\n\n(5) Rosen, J.E., Lloyd, R.V., Perrier, N.D., et al. **Thyroid - Medullary**. In: Amin, M.B., Edge, S.B., Greene, F.L., et al. (Eds.) AJCC Cancer Staging Manual. 8th Ed. New York: Springer; 2017",
+  "last_modified" : "2021-04-08T19:00:30.749Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_t",
+    "name" : "SS2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "VALUE:88", "VALUE:IS" ], [ "100", "Single invasive tumor confined/limited to thyroid\nMultiple foci confined/limited to thyroid\n\nInto thyroid capsule, but not beyond\n\nConfined/limited to thyroid, NOS\nLocalized, NOS", "JUMP:tumor_size_with_primary_tumor_for_ajcc_t_19033", "VALUE:L" ], [ "200", "Microscopic extrathyroidal extension\n\nExtrathyroidal extension, NOS", "JUMP:tumor_size_with_primary_tumor_for_ajcc_t_19033", "VALUE:RE" ], [ "300", "Gross extrathyroidal extension invading\n- Pericapsular soft tissue/connective tissue\n- Strap muscle(s)\n    + Omohyoid\n    + Sternohyoid\n    + Sternothyroid\n    + Thyrohyoid", "VALUE:T3b", "VALUE:RE" ], [ "400", "Moderately advanced disease WITH gross extrathyroidal extension invading\n- Cricoid cartilage\n- Esophagus\n- Larynx\n- Parathyroid\n- Recurrent laryngeal nerve\n- Sternocleidomastoid muscle\n- Subcutaneous soft tissues\n- Trachea \n- Vagus nerve\n\nModerately advanced disease, NOS", "VALUE:T4a", "VALUE:RE" ], [ "600", "Very advanced disease invading\n- Blood vessel(s) (major)\n    + Carotid artery (encased)\n    + Jugular vein\n    + Thyroid artery or vein\n- Thyroid cartilage\n- Tumor described as \"FIXED to adjacent tissues\"\n\nVery advanced disease, NOS", "VALUE:T4b", "VALUE:RE" ], [ "700", "Very advanced disease invading\n- Bone\n- Mediastinal tissues\n- Prevertebral fascia\n- Skeletal muscle, other than strap or sternocleidomastoid muscle\n\nFurther contiguous extension", "VALUE:T4b", "VALUE:D" ], [ "750", "Advanced disease, NOS\nGross extrathyroidal extension, NOS", "VALUE:T4", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "VALUE:T0", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in medical record\n\nDeath Certificate Only", "VALUE:TX", "VALUE:U" ] ]
+}

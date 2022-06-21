@@ -1,0 +1,20 @@
+{
+  "id" : "ssf23_sao",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF23",
+  "title" : "CS Site-Specific Factor 23",
+  "subtitle" : "Multigene Signature Results",
+  "notes" : "**Note 1**:  The results for the Oncotype DX test are expressed as a percentage Recurrence Score ranging from 0 to 100, with risk assessment in the categories of low, intermediate, and high.  Record the score which can be found in the orange circle.\n\n**Note 2**:  The results for the MammaPrint test are expressed as low risk for distant recurrence and high risk for distant recurrence.\n\n**Note 3**: Code the score or results of the multigene signature assay recorded in CS Site-Specific Factor 22.  Code the percentage score for Oncotype DX if available in preference to the risk assessment.  Code the risk assessment for MammaPrint.\n\n**Note 4**:  This information may not be available at diagnosis and may require follow-up with the physician.",
+  "last_modified" : "2015-05-27T16:20:01.578Z",
+  "definition" : [ {
+    "key" : "ssf23",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000-100", "Score of 000 - 100\n(Actual score with leading zeroes to nearest whole percentage)" ], [ "200", "Low risk of recurrence (good prognosis)" ], [ "205", "OBSOLETE DATA CONVERTED V0203\nSee code 400\n\nHigh risk of recurrence (poor prognosis)" ], [ "300", "Intermediate risk of recurrence" ], [ "400", "High risk of recurrence (poor prognosis)" ], [ "988", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 988 may result in an edit error.)" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

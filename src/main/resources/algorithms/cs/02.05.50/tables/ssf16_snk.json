@@ -1,0 +1,18 @@
+{
+  "id" : "ssf16_snk",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF16",
+  "title" : "CS Site-Specific Factor 16",
+  "last_modified" : "2015-05-27T16:19:57.357Z",
+  "definition" : [ {
+    "key" : "ssf16",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "988", "Not applicable:  Site-specific factor not defined" ] ]
+}

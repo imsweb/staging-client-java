@@ -1,0 +1,19 @@
+{
+  "id" : "ldh_lab_value_85652",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "LDH Lab Value",
+  "title" : "LDH Lab Value",
+  "notes" : "**Note 1:** Physician statement of LDH Lab Value can be used to code this data item when no other information is available. \n\n**Note 2:** LDH is important in melanoma staging in the setting of DISTANT metastasis.  LDH level might only be ordered after re-excision/wide excision and/or nodal evaluation indicates a higher risk of distant metastasis.  Imaging may then be performed and if distant metastasis are identified, LDH is ordered. \n\n**Note 3:** Record the lab value of the highest serum LDH test results documented in the medical record either before or after surgical resection of the primary tumor with or without regional lymph node dissection. The LDH must be taken prior to systemic (chemo, immunotherapy, hormone), radiation therapy or surgery to a metastatic site. The lab value may be recorded in a lab report, history and physical, or clinical statement in the pathology report.\n\n**Note 4:** The same laboratory test should be used to record information in LDH Level [NAACCR Data Item #3869] and LDH Upper Limits of Normal [NAACCR Data Item #3870]",
+  "last_modified" : "2020-05-08T13:19:31.155Z",
+  "definition" : [ {
+    "key" : "ldh_lab_value",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0", "0.0 (U/L)" ], [ "0.1-99999.9", "0.1 - 99,999.9 U/L" ], [ "XXXXX.1", "100,000 U/L or greater" ], [ "XXXXX.7", "Test ordered, results not in chart" ], [ "XXXXX.8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code XXXXX.8 will result in an edit error.)" ], [ "XXXXX.9", "Not documented in medical record\nLDH Lab Value not assessed or unknown if assessed" ] ]
+}

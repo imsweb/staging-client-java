@@ -1,0 +1,19 @@
+{
+  "id" : "ulceration_5718",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Ulceration",
+  "title" : "Ulceration",
+  "notes" : "**Note 1:** Physician statement of microscopically confirmed ulceration (e.g., based on biopsy or surgical resection) can be used to code this data item. \n\n**Note 2:** Ulceration can only be confirmed by microscopic examination. Do not use findings from physical exam. \n* It is possible for a patient to present with an ulcerated lesion noted on physical exam, but this is not the same thing as ulceration seen on a microscopic exam\n\n**Note 3:** Melanoma ulceration is the absence of an intact epidermis overlying the primary melanoma based upon microscopic (histopathological) examination.\n\n* Code 1 if any biopsy (punch, shave, excisional, etc.) or wide excision is positive for ulceration in the presence of an underlying melanoma\n* Code 0 if all specimens are negative OR one specimen is negative and the other is unknown\n* Ulceration must be caused by an underlying melanoma. Ulceration caused by trauma from a previous procedure should not be coded as positive for this SSDI \n\n**Note 4:** Code 9 if there is microscopic examination and there is no mention of ulceration.\n* This instruction **does** apply to in situ tumors",
+  "last_modified" : "2020-12-09T18:45:35.705Z",
+  "definition" : [ {
+    "key" : "ulceration",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Ulceration not identified/not present" ], [ "1", "Ulceration present" ], [ "8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nCannot be determined by the pathologist\nPathology report does not mention ulceration\nUlceration not assessed or unknown if assessed" ] ]
+}

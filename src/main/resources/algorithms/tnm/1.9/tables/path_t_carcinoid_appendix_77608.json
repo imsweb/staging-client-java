@@ -1,0 +1,27 @@
+{
+  "id" : "path_t_carcinoid_appendix_77608",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Path T Carcinoid Appendix",
+  "title" : "Pathologic T",
+  "notes" : "**Note 1:**  Assign 88 for in situ cases (behavior code /2). TNM does not include an in situ category for carcinoid appendix tumors.\n\n**Note 2:** Tumor size must be known to assign a value of T1, T2 or T3. You may use a physician’s statement of the T (sub)category if this is the only information in the medical record. \n* If the tumor appears to be in the T1, T2 or T3 (sub)categories, but no size or (sub)category is specified, assign TX\n\n**Note 3:**   Assign the appropriate T (sub) category (T1-T3) based on the tumor size for the following descriptions\n\n    Invasive tumor confined to\n        Lamina propria\n        Mucosa, NOS (including intramucosal, NOS)\n        Muscularis mucosae\n        Muscularis propria \n        Submucosa (superficial invasion)\n\n    Extension through wall, NOS\n    Invasion through muscularis propria or muscularis, NOS\n    Non-peritonealized pericolic tissues invaded\n    Perimuscular tissue invaded\n    Subserosal tissue/(sub)serosal fat invaded\n    Transmural, NOS\n\n    Extension to\n        Adjacent tissue(s), NOS\n        Connective tissue\n\n    Confined to appendix\n    Localized, NOS\n\n**Note 4:**  Assign T3 or T4 as appropriate for contiguous extension from the site of origin. Discontinuous involvement is assigned in distant metastasis. \n\n**Note 5:**  Tumor that is adherent to other organs or structures, macroscopically, is classified T4b. However, if no tumor is present in the adhesion, microscopically, the classification should be pT1, pT2 or pT3.",
+  "last_modified" : "2018-05-14T21:29:03.268Z",
+  "definition" : [ {
+    "key" : "path_t",
+    "name" : "Pathologic T",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_t_display",
+    "name" : "Pathologic T Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pTX", "Primary tumor cannot be assessed", "Pathologic classification criteria met, evaluation done: \n    Physician unable to assess T\n    Surgical resection of primary tumor, extension not stated \n    Tumor size (TS) unknown for T categories where TS  needed to determine T\nPhysician assigns pTX, no other information available to determine T" ], [ "p0", "pT0", "No evidence of primary tumor", "" ], [ "p1", "pT1", "Tumor 2 cm or less in greatest dimension", "Note: T1 has subcategories of T1a and T1b. Assign T1 only when there is no \ninformation available to assign one of the subcategories.\n\nStated as T1 [NOS]" ], [ "p1A", "pT1a", "Tumor 1 cm or less in greatest dimension", "Stated as T1a" ], [ "p1B", "pT1b", "Tumor more than 1 cm but not more than 2 cm", "Stated as T1b" ], [ "p2", "pT2", "Tumor more than 2 cm but not more than 4 cm OR \nWITH extension to the cecum", "Stated as T2" ], [ "p3", "pT3", "Tumor more than 4 cm or with extension to the ileum", "Stated as T3" ], [ "p4", "pT4", "Tumor perforates peritoneum or invades other adjacent\norgans or structures, e.g.\n    Abdominal wall\n    Skeletal muscle", "Adherent to other organs or structures clinically with no microscopic examination\n\nTumor found in adhesion(s) if microscopic examination performed\n\nAdherent to other organs or structures: \n    Adrenal (suprarenal) gland\n    Bladder\n    Diaphragm\n    Fistula to skin\n    Gallbladder\n    Greater omentum\n    Kidney\n    Liver\n    Other segment(s) of colon via serosa\n    Pelvic peritoneum\n    Retroperitoneum (excluding fat)\n    Small intestine\n    Ureter\n    Urethra\n    Vagina\n\nOther contiguous extension\n\nStated as T4" ], [ "88", "88", "Not applicable", "In situ case but no pTis is defined by TNM\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nPathologic classification criteria met, evaluation done: \n    Results not documented in patient record \n    No surgical resection of  known primary tumor (not T0) \n    Resection insufficient for site-specific pathologic assessment\nNo surgical resection of primary tumor and there isn’t a positive biopsy of a structure in the highest T category and highest N category\nEvidence of metastatic disease (pM1), no other workup\nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

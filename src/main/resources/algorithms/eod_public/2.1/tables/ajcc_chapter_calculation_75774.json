@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc_chapter_calculation_75774",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2021-03-16T17:50:55.670Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8000,8010,8020,8031,8041", "VALUE:63.3", "Prostatic Urethra: Urothelial Carcinomas", "VALUE:08" ], [ "8070-8072", "VALUE:63.4", "Prostatic Urethra: Squamous Cell Carcinoma and Adenocarcinoma", "VALUE:08" ], [ "8082,8120,8122,8130-8131", "VALUE:63.3", "Prostatic Urethra: Urothelial Carcinomas", "VALUE:08" ], [ "8140", "VALUE:63.4", "Prostatic Urethra: Squamous Cell Carcinoma and Adenocarcinoma", "VALUE:08" ], [ "8310", "VALUE:63.3", "Prostatic Urethra: Urothelial Carcinomas", "VALUE:08" ], [ "8001-8005,8011-8015,8021-8030,8032-8040,8042-8060", "VALUE:XX", "Other Prostatic Urethra", "VALUE:88" ], [ "8073-8081,8083-8110,8121,8123-8124", "VALUE:XX", "Other Prostatic Urethra", "VALUE:88" ], [ "8141-8300,8311-8700,8720-8790", "VALUE:XX", "Other Prostatic Urethra", "VALUE:88" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "clin_n_dbj",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Clin N Penis",
+  "title" : "Clinical N",
+  "notes" : "**Note:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Regional lymph nodes**\n\n    Inguinal\n        Deep inguinal, NOS\n           Node of Cloquet or Rosenmuller (highest deep inguinal)\n        Superficial inguinal (femoral) \n        Inguinal node, NOS (unknown if superficial or deep)\n\n    Pelvic lymph  nodes, NOS\n        External iliac\n        Internal iliac (hypogastric)\n            Obturator",
+  "last_modified" : "2018-05-14T21:29:00.815Z",
+  "definition" : [ {
+    "key" : "clin_n",
+    "name" : "Clinical N",
+    "type" : "INPUT"
+  }, {
+    "key" : "clin_n_display",
+    "name" : "Clinical N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "cX", "cNX", "Regional lymph nodes cannot be assessed", "Clinical classification criteria met, evaluation done: \n    Physician unable to assess N\n    Regional lymph node involvement cannot be determined or findings inconclusive\nPhysician assigns cNX, no other information available to determine N" ], [ "c0", "cN0", "No palpable or visibly enlarged inguinal lymph nodes", "No regional lymph node involvement" ], [ "c1", "cN1", "Palpable mobile unilateral inguinal lymph node", "Regional lymph nodes, not stated if single, multiple or bilateral:\n \nSINGLE regional lymph node, NOS\nNot stated if single or multiple lymph nodes \n\nRegional lymph nodes, NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "c2", "cN2", "Palpable mobile multiple OR  \n\nBilateral inguinal lymph nodes", "MULTIPLE or BILATERAL regional lymph nodes:\n    \nStated as N2" ], [ "c3", "cN3", "Fixed inguinal nodal mass OR \n\nPelvic lymphadenopathy unilateral or bilateral", "Stated as N3" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Clinical classification criteria not met\nClinical classification criteria met, evaluation done:\n    No information about diagnostic workup\n    Results not documented in record\nTumor first detected on surgical resection (no clinical workup)\nEvidence of metastatic disease [(cM1) or (pM1)], no other workup\nOnly Clinical Stage Group documented (no T, N, or M information available)" ] ]
+}

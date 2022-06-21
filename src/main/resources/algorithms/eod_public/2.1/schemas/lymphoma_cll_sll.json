@@ -1,0 +1,457 @@
+{
+  "id" : "lymphoma_cll_sll",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Lymphoma-CLL/SLL",
+  "title" : "Lymphoma-CLL/SLL",
+  "notes" : "9823 (EXCEPT C441, C690, C695-C696)\n\n**Note 1:** The following sources were used in the development of this schema\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)\n* SEER Summary Staging Manual-2000: Codes and Coding Instructions (https://seer.cancer.gov/tools/ssm/ssm2000/)\n* Collaborative Stage Data Collection System, version 02.05:  https://cancerstaging.org/cstage/Pages/default.aspx \n* Chapter 79 *Hodgkin and Non-Hodgkin Lymphomas*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.\n* Chapter 80 *Pediatric Hodgkin and Non-Hodgkin Lymphomas*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.\n\n**Note 2:** See the following schema for the listed primary sites\n* C441, C690, C695-C696 (9823): *Lymphoma Ocular Adnexa*\n\n**Note 3:**  Chronic lymphocytic leukemia/Small lymphocytic lymphoma (CLL/SLL) is always staged as a lymphoma.\n\n**Note 4:** The Cotswold modification of the Ann Arbor staging system (used in AJCC 6th and 7th editions) has been updated to the *Lugano classification*. The *Lugano classification* includes an E suffix for lymphoma with either localized extralymphatic presentations (Stage IE) or by contiguous spread from nodal disease (Stage IIE). A change from the Cotswold modification of the Ann Arbor Staging System, E lesions do not apply to patients with Stage III nodal disease; or any patient with nodal disease above and below the diaphragm with concurrent contiguous extralymphatic involvement (Stage IV), which was previously Stage IIIE.\n\n**Note 5:** In addition to coding EOD Primary Tumor, the following data items are also needed to assign a stage group for CLL/SLL.\n* Lymphocytosis\n* Adenopathy\n* Organomegaly\n* Anemia\n* Thrombocytopenia",
+  "schema_selection_table" : "schema_selection_chronic_lymphocytic_leukemia_small_lymphocytic_lymphoma_cll_sll",
+  "schema_discriminators" : [ "behavior" ],
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "naaccr_xml_id" : "dateOfDiagnosis",
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "naaccr_xml_id" : "primarySite",
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "naaccr_xml_id" : "histologicTypeIcdO3",
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "naaccr_item" : 523,
+    "naaccr_xml_id" : "behaviorCodeIcdO3",
+    "table" : "behavior",
+    "used_for_staging" : true
+  }, {
+    "key" : "size_clin",
+    "name" : "Tumor Size Clinical",
+    "naaccr_item" : 752,
+    "naaccr_xml_id" : "tumorSizeClinical",
+    "default" : "999",
+    "table" : "tumor_size_clinical_dna_64119",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_path",
+    "name" : "Tumor Size Pathological",
+    "naaccr_item" : 754,
+    "naaccr_xml_id" : "tumorSizePathologic",
+    "default" : "999",
+    "table" : "tumor_size_pathological_dna_6742",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_summary",
+    "name" : "Tumor Size Summary",
+    "naaccr_item" : 756,
+    "naaccr_xml_id" : "tumorSizeSummary",
+    "default" : "999",
+    "table" : "tumor_size_summary_dna_13275",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "naaccr_xml_id" : "regionalNodesPositive",
+    "default" : "99",
+    "table" : "nodes_pos_dna_91511",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_exam",
+    "name" : "Regional Nodes Examined",
+    "naaccr_item" : 830,
+    "naaccr_xml_id" : "regionalNodesExamined",
+    "default" : "99",
+    "table" : "nodes_exam_dna_95635",
+    "used_for_staging" : false
+  }, {
+    "key" : "lvi",
+    "name" : "LVI",
+    "naaccr_item" : 1182,
+    "naaccr_xml_id" : "lymphVascularInvasion",
+    "default" : "8",
+    "table" : "lvi_dna_56663",
+    "used_for_staging" : false
+  }, {
+    "key" : "eod_primary_tumor",
+    "name" : "EOD Primary Tumor",
+    "naaccr_item" : 772,
+    "naaccr_xml_id" : "eodPrimaryTumor",
+    "default" : "999",
+    "table" : "eod_primary_tumor_copy_25294",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_regional_nodes",
+    "name" : "EOD Regional Nodes",
+    "naaccr_item" : 774,
+    "naaccr_xml_id" : "eodRegionalNodes",
+    "default" : "888",
+    "table" : "nodes_dna",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_mets",
+    "name" : "EOD Mets",
+    "naaccr_item" : 776,
+    "naaccr_xml_id" : "eodMets",
+    "default" : "88",
+    "table" : "mets_hna",
+    "used_for_staging" : true
+  }, {
+    "key" : "ss2018",
+    "name" : "SS2018",
+    "naaccr_item" : 764,
+    "naaccr_xml_id" : "summaryStage2018",
+    "table" : "ss2018_lymphoma_27031",
+    "used_for_staging" : false
+  }, {
+    "key" : "grade_clin",
+    "name" : "Grade Clinical",
+    "naaccr_item" : 3843,
+    "naaccr_xml_id" : "gradeClinical",
+    "default" : "8",
+    "table" : "grade_clinical_18316",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_path",
+    "name" : "Grade Pathological",
+    "naaccr_item" : 3844,
+    "naaccr_xml_id" : "gradePathological",
+    "default" : "8",
+    "table" : "grade_pathological_73388",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_post_therapy_clin",
+    "name" : "Grade Post Therapy Clin (yc)",
+    "naaccr_item" : 1068,
+    "naaccr_xml_id" : "gradePostTherapyClin",
+    "table" : "grade_post_therapy_clin_74830",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_post_therapy_path",
+    "name" : "Grade Post Therapy Path (yp)",
+    "naaccr_item" : 3845,
+    "naaccr_xml_id" : "gradePostTherapy",
+    "table" : "grade_post_therapy_path_65729",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "b_symptoms",
+    "name" : "B Symptoms",
+    "naaccr_item" : 3812,
+    "naaccr_xml_id" : "bSymptoms",
+    "default" : "8",
+    "table" : "systemic_symptoms_at_dx_60639",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "hiv",
+    "name" : "HIV Status",
+    "naaccr_item" : 3859,
+    "naaccr_xml_id" : "hivStatus",
+    "default" : "8",
+    "table" : "hiv_status_12569",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    }, {
+      "name" : "COC_REQUIRED",
+      "start" : 2018,
+      "end" : 2020
+    } ]
+  }, {
+    "key" : "intern_prog_index",
+    "name" : "NCCN International Prognostic Index (IPI)",
+    "naaccr_item" : 3896,
+    "naaccr_xml_id" : "nccnInternationalPrognosticIndex",
+    "default" : "X8",
+    "table" : "intern_prognostic_index_90310",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "lymphocytosis",
+    "name" : "Lymphocytosis",
+    "naaccr_item" : 3885,
+    "naaccr_xml_id" : "lymphocytosis",
+    "default" : "9",
+    "table" : "lymphocytosis_79150",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "adenopathy",
+    "name" : "Adenopathy",
+    "naaccr_item" : 3804,
+    "naaccr_xml_id" : "adenopathy",
+    "default" : "9",
+    "table" : "adenopathy_40816",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "organomegaly",
+    "name" : "Organomegaly",
+    "naaccr_item" : 3907,
+    "naaccr_xml_id" : "organomegaly",
+    "default" : "9",
+    "table" : "organomegaly_16131",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "anemia",
+    "name" : "Anemia",
+    "naaccr_item" : 3811,
+    "naaccr_xml_id" : "anemia",
+    "default" : "9",
+    "table" : "anemia_15893",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "thrombocytopenia",
+    "name" : "Thrombocytopenia",
+    "naaccr_item" : 3933,
+    "naaccr_xml_id" : "thrombocytopenia",
+    "default" : "9",
+    "table" : "thrombocytopenia_8479",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  } ],
+  "outputs" : [ {
+    "key" : "naaccr_schema_id",
+    "name" : "Schema ID",
+    "naaccr_item" : 3800,
+    "naaccr_xml_id" : "schemaId",
+    "default" : "00795"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "naaccr_item" : 995,
+    "naaccr_xml_id" : "ajccId",
+    "default" : "XX"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "naaccr_item" : 1060,
+    "naaccr_xml_id" : "tnmEditionNumber"
+  }, {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "Derived EOD 2018 T",
+    "naaccr_item" : 785,
+    "naaccr_xml_id" : "derivedEod2018T",
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_n",
+    "name" : "Derived EOD 2018 N",
+    "naaccr_item" : 815,
+    "naaccr_xml_id" : "derivedEod2018N",
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_m",
+    "name" : "Derived EOD 2018 M",
+    "naaccr_item" : 795,
+    "naaccr_xml_id" : "derivedEod2018M",
+    "default" : "88"
+  }, {
+    "key" : "eod_2018_stage_group",
+    "name" : "Derived EOD 2018 Stage Group",
+    "naaccr_item" : 818,
+    "naaccr_xml_id" : "derivedEod2018StageGroup",
+    "default" : "88"
+  }, {
+    "key" : "ss2018_derived",
+    "name" : "Derived Summary Stage 2018",
+    "naaccr_item" : 762,
+    "naaccr_xml_id" : "derivedSummaryStage2018",
+    "default" : "9"
+  }, {
+    "key" : "derived_rai_stage",
+    "name" : "Derived Rai Stage",
+    "naaccr_item" : 3955,
+    "naaccr_xml_id" : "derivedRaiStage",
+    "table" : "derived_rai_stage_73218",
+    "metadata" : [ {
+      "name" : "SSDI"
+    } ]
+  } ],
+  "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_38461",
+      "inputs" : [ "site" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
+    "id" : "summary_stage_2018",
+    "name" : "Summary Stage 2018",
+    "initial_context" : [ {
+      "key" : "eod_2018_stage_group",
+      "value" : "90"
+    } ],
+    "tables" : [ {
+      "id" : "eod_primary_tumor_copy_25294",
+      "inputs" : [ "eod_primary_tumor" ],
+      "outputs" : [ "eod_2018_t", "ss2018_t", "eod_2018_stage_group" ]
+    }, {
+      "id" : "nodes_dna",
+      "inputs" : [ "eod_regional_nodes" ],
+      "outputs" : [ "eod_2018_n", "ss2018_n" ]
+    }, {
+      "id" : "mets_hna",
+      "inputs" : [ "eod_mets" ],
+      "outputs" : [ "eod_2018_m", "ss2018_m" ]
+    }, {
+      "id" : "summary_stage_lymphoma_25139",
+      "inputs" : [ "ss2018_m", "ss2018_n", "ss2018_t" ],
+      "outputs" : [ "ss2018_derived" ]
+    }, {
+      "id" : "derive_rai_stage_42032",
+      "inputs" : [ "organomegaly", "adenopathy", "thrombocytopenia", "lymphocytosis", "anemia" ],
+      "outputs" : [ "derived_rai_stage" ]
+    } ]
+  }, {
+    "id" : "eod_2018_stage_group",
+    "name" : "EOD 2018 Stage Group",
+    "inclusion_tables" : [ {
+      "id" : "tnm8_inclusions_80045",
+      "inputs" : [ "ajcc_id" ]
+    } ],
+    "tables" : [ {
+      "id" : "lymphoma_stage_group_18599",
+      "input_mapping" : [ {
+        "from" : "eod_2018_stage_group",
+        "to" : "stage_group_in"
+      } ],
+      "output_mapping" : [ {
+        "from" : "stage",
+        "to" : "eod_2018_stage_group"
+      } ],
+      "inputs" : [ "eod_2018_stage_group" ],
+      "outputs" : [ "eod_2018_stage_group" ]
+    } ]
+  }, {
+    "id" : "eod_tnm_cleanup",
+    "name" : "EOD TNM Cleanup",
+    "exclusion_tables" : [ {
+      "id" : "tnm8_inclusions_80045",
+      "inputs" : [ "ajcc_id" ]
+    } ],
+    "tables" : [ {
+      "id" : "eod_tnm_component_cleanup_58170",
+      "inputs" : [ "ajcc_id" ],
+      "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
+    } ]
+  } ],
+  "involved_tables" : [ "tumor_size_clinical_dna_64119", "thrombocytopenia_8479", "ss2018_lymphoma_27031", "tnm8_inclusions_80045", "lymphocytosis_79150", "hiv_status_12569", "derived_rai_stage_73218", "nodes_exam_dna_95635", "tumor_size_summary_dna_13275", "grade_post_therapy_clin_74830", "histology", "derive_rai_stage_42032", "intern_prognostic_index_90310", "mets_hna", "behavior", "adenopathy_40816", "nodes_dna", "ajcc_chapter_calculation_38461", "eod_primary_tumor_copy_25294", "tumor_size_pathological_dna_6742", "summary_stage_lymphoma_25139", "anemia_15893", "organomegaly_16131", "lymphoma_stage_group_18599", "primary_site", "eod_tnm_component_cleanup_58170", "schema_selection_chronic_lymphocytic_leukemia_small_lymphocytic_lymphoma_cll_sll", "year_dx_validation", "systemic_symptoms_at_dx_60639", "grade_post_therapy_path_65729", "lvi_dna_56663", "grade_clinical_18316", "grade_pathological_73388", "nodes_pos_dna_91511" ],
+  "last_modified" : "2021-07-28T19:33:14.567Z",
+  "on_invalid_input" : "CONTINUE"
+}

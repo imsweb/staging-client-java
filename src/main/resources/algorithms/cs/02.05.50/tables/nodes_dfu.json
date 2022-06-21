@@ -1,0 +1,35 @@
+{
+  "id" : "nodes_dfu",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note**: Regional lymph node involvement is not applicable for cases coded with this schema beginning with CS Version 2.  Old data are retained, and new cases are coded 988.",
+  "last_modified" : "2015-05-27T16:19:38.555Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "OBSOLETE DATA RETAINED V0200\n\nNone; no regional lymph node involvement", "ERROR:", "VALUE:NA", "VALUE:NONE", "VALUE:NONE" ], [ "100", "OBSOLETE DATA RETAINED V0200\n\nRegional lymph nodes\n    Cervical for carotid body and parathyroid only\n    Mediastinal for aortic body and thymus only", "ERROR:", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "800", "OBSOLETE DATA RETAINED V0200\n\nLymph nodes, NOS", "ERROR:", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "988", "Not applicable for this schema", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:U" ], [ "999", "OBSOLETE DATA RETAINED V0200 \n\nUnknown; not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "ERROR:", "VALUE:NA", "VALUE:U", "VALUE:U" ] ]
+}

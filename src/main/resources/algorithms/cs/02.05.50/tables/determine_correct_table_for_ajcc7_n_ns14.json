@@ -1,0 +1,22 @@
+{
+  "id" : "determine_correct_table_for_ajcc7_n_ns14",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Determine Correct Table for AJCC 7 N",
+  "title" : "Determining Which Lymph Nodes Calculation Table Applies for AJCC 7",
+  "last_modified" : "2015-05-27T16:19:04.032Z",
+  "definition" : [ {
+    "key" : "nodes_eval",
+    "name" : "CS Lymph Nodes Eval",
+    "type" : "INPUT"
+  }, {
+    "key" : "cs_input_version_original",
+    "name" : "CS Version Input Original",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "1,9", "020440,020302,020200,020100,020001,010401,010400,010300,010200,010100,010005,010004,010003,010002,010000,000937", "JUMP:lymph_nodes_clinical_eval_priorto_v0205_ajcc7_xfs" ], [ "1,9", "020500-999999", "JUMP:lymph_nodes_clinical_eval_v0205_ajcc7_xax" ], [ "0,5", "000937-999999", "JUMP:lymph_nodes_clinical_eval_v0205_ajcc7_xax" ], [ "2,3,6,8", "*", "JUMP:lymph_nodes_pathologic_evaluation7th_table_also_used_when_csreg_nodes_evalis_not_coded_xft" ], [ "", "*", "JUMP:lymph_nodes_pathologic_evaluation7th_table_also_used_when_csreg_nodes_evalis_not_coded_xft" ] ]
+}

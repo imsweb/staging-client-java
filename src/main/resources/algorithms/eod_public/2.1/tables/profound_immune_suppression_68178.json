@@ -1,0 +1,19 @@
+{
+  "id" : "profound_immune_suppression_68178",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Profound Immune Suppression",
+  "title" : "Profound Immune Suppression",
+  "notes" : "**Note 1:** Physician statement of Profound Immune Suppression must be used to code this data item. Do not assume that a patient is immune suppressed just because the patient has one of the conditions listed below in the table. Per AJCC experts, the following terms can also be used to describe \"profound immune suppression.\" \n* Immunocompromised\n* Immunosuppressed\n* Suppressed immune status\n\n**Note 2:** Per AJCC experts, this data item is limited to the conditions in the table below occurring within two years of the diagnosis of Merkel cell carcinoma. \n\n**Note 3:** Code 9 if conditions in the table below were not active within 2 years of (or resolved more than 2 years prior to) diagnosis, or if it is unknown when they existed. \n\n**Note 4:** If more than one condition is documented, code 5. Document the specific conditions in the text field.",
+  "last_modified" : "2021-04-08T18:14:35.191Z",
+  "definition" : [ {
+    "key" : "profound_immune_suppression",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "No immune suppression condition(s) identified/not present" ], [ "1", "Human Immunodeficiency Virus (HIV)/Acquired Immunodeficiency Syndrome (AIDS)" ], [ "2", "Solid organ transplant recipient" ], [ "3", "Chronic lymphocytic leukemia" ], [ "4", "Non-Hodgkin lymphoma" ], [ "5", "Multiple immune suppression conditions" ], [ "6", "Profound immune suppression present" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nProfound immune suppression not assessed or unknown if assessed" ] ]
+}

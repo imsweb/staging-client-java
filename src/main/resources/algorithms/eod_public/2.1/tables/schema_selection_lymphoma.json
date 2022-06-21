@@ -1,0 +1,30 @@
+{
+  "id" : "schema_selection_lymphoma",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection Lymphoma",
+  "title" : "Schema selection for Lymphoma",
+  "last_modified" : "2021-07-12T14:20:39.906Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_1",
+    "name" : "Schema Discriminator 1",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C000-C424,C470-C509,C511-C608,C619-C631,C637-C689, C691-C694, C698-C699, C739-C749, C760-C809", "9590,9596-9663,9673-9699,9702-9719,9725-9726,9735,9737-9738", "*", " ", "MATCH" ], [ "C440, C442-C449, C510, C609, C632", "9590,9596,9650-9663,9673-9679,9687-9699, 9702-9705,9714-9717,9725, 9735, 9737-9738", "*", " ", "MATCH" ], [ "C700-C729, C751-C753", "9590,9596-9663,9673-9679,9687-9698,9716-9719,9725-9726,9735,9737-9738", "3", " ", "MATCH" ], [ "C750, C754-C759", "9590, 9596-9663, 9673-9699, 9702-9719, 9725-9726, 9735, 9737-9738", "*", "*", "MATCH" ], [ "C000-C440, C442-C689, C691-C694, C698-C699, C739-C749, C750, C754-C759, C760-C809", "9591", "*", "3,9", "MATCH" ], [ "C700-C729, C751-C753", "9591", "3", "3,9", "MATCH" ], [ "C000-C440, C442-C689, C691-C694, C698-C699, C739-C749, C750, C754-C759, C760-C809", "9826-9827", "*", "*", "MATCH" ], [ "C700-C729, C751-C753", "9826-9827", "3", "*", "MATCH" ] ]
+}

@@ -1,0 +1,23 @@
+{
+  "id" : "extension_eval_cna",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension Eval",
+  "title" : "CS Tumor Size/Ext Eval",
+  "notes" : "**Note**: The staging basis for this schema is blank because AJCC stage is not applicable.",
+  "last_modified" : "2015-05-27T16:19:15.399Z",
+  "definition" : [ {
+    "key" : "extension_eval",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "tdescriptor",
+    "name" : "Staging Basis",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "9", "Not applicable for this schema", "VALUE:" ] ]
+}

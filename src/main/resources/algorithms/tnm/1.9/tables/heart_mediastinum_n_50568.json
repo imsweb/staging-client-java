@@ -1,0 +1,27 @@
+{
+  "id" : "heart_mediastinum_n_50568",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "Path N Heart Mediastinum",
+  "title" : "Pathologic N",
+  "notes" : "**Note:**  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in M (distant metastasis).\n\n**Regional lymph nodes**\n\n    Aortic (above diaphragm), NOS\n        Peri/para-aortic, NOS\n            Ascending aorta (phrenic)\n        Subaortic (aortico-pulmonary window)\n    Carinal (tracheobronchial) (tracheal bifurcation)\n    Mediastinal, NOS\n        Anterior\n        Posterior (tracheoesophageal)\n    Pericardial\n    Peri/paraesophageal\n    Peri/paratracheal, NOS\n        Azygos (lower peritracheal)\n    Pre- and retrotracheal, NOS\n        Precarinal\n    Pulmonary ligament\n    Subcarinal",
+  "last_modified" : "2018-05-14T21:29:04.408Z",
+  "definition" : [ {
+    "key" : "path_n",
+    "name" : "Pathologic N",
+    "type" : "INPUT"
+  }, {
+    "key" : "path_n_display",
+    "name" : "Pathologic N Display",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "notes",
+    "name" : "Registrar Notes",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "pX", "pNX", "Regional lymph nodes cannot be assessed", "Pathologic classification criteria met, evaluation done:\n    Physician unable to assess N\n    Surgical resection primary tumor, no regional lymph nodes removed\n    Involvement of regional lymph nodes not documented\nPhysician assigns pNX, no other information available to determine N" ], [ "p0", "pN0", "No regional lymph node metastasis", "" ], [ "p1", "pN1", "Regional lymph node metastasis", "Regional lymph node(s), NOS\nLymph nodes, NOS\n\nStated as N1" ], [ "c0", "cN0", "Clinically: No regional lymph node metastasis", "Use only for TNM defined pTis cases where there is a resection of the primary and the nodes are not evaluated pathologically" ], [ "88", "88", "Not applicable", "Primary site/histology not TNM defined\nDeath certificate only (DCO) case" ], [ "", "BLANK", "See Registrar Notes", "Pathologic classification criteria not met \nNo surgical resection of primary tumor and there isn’t a positive biopsy of a structure in the highest T category and highest N category\nEvidence of metastatic disease (pM1), no other workup\nOnly Pathologic Stage Group documented (no T, N, or M information available)" ] ]
+}

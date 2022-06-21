@@ -1,0 +1,23 @@
+{
+  "id" : "size_metastasis_ajcc7_xpx",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Size Metastasis AJCC7",
+  "title" : "Size Metastasis AJCC 7 Table",
+  "notes" : "**Note**: For CS Mets at DX codes 10-60, the M category for AJCC 7 staging is assigned based on the value of size of largest metastasis, recorded in CS Site-Specific Factor 4.",
+  "last_modified" : "2015-05-27T16:19:52.416Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "CS Mets at DX",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf4",
+    "name" : "CS SSF 4 Size of Metastasis",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "10", "000", "ERROR:" ], [ "40", "000", "ERROR:" ], [ "50", "000", "ERROR:" ], [ "52", "000", "ERROR:" ], [ "54", "000", "ERROR:" ], [ "56", "000", "ERROR:" ], [ "60", "000", "ERROR:" ], [ "10", "001-030", "VALUE:M1a" ], [ "40", "001-030", "VALUE:M1a" ], [ "50", "001-030", "VALUE:M1a" ], [ "52", "001-030", "VALUE:M1a" ], [ "54", "001-030", "VALUE:M1a" ], [ "56", "001-030", "VALUE:M1a" ], [ "60", "001-030", "VALUE:M1a" ], [ "10", "031-080", "VALUE:M1b" ], [ "40", "031-080", "VALUE:M1b" ], [ "50", "031-080", "VALUE:M1b" ], [ "52", "031-080", "VALUE:M1b" ], [ "54", "031-080", "VALUE:M1b" ], [ "56", "031-080", "VALUE:M1b" ], [ "60", "031-080", "VALUE:M1b" ], [ "10", "081-980", "VALUE:M1c" ], [ "40", "081-980", "VALUE:M1c" ], [ "50", "081-980", "VALUE:M1c" ], [ "52", "081-980", "VALUE:M1c" ], [ "54", "081-980", "VALUE:M1c" ], [ "56", "081-980", "VALUE:M1c" ], [ "60", "081-980", "VALUE:M1c" ], [ "10", "988", "ERROR:" ], [ "40", "988", "ERROR:" ], [ "50", "988", "ERROR:" ], [ "52", "988", "VALUE:M1a" ], [ "54", "988", "VALUE:M1b" ], [ "56", "988", "VALUE:M1c" ], [ "60", "988", "ERROR:" ], [ "10", "991", "VALUE:M1a" ], [ "40", "991", "VALUE:M1a" ], [ "50", "991", "VALUE:M1a" ], [ "52", "991", "VALUE:M1a" ], [ "54", "991", "VALUE:M1a" ], [ "56", "991", "VALUE:M1a" ], [ "60", "991", "VALUE:M1a" ], [ "10", "992", "VALUE:M1b" ], [ "40", "992", "VALUE:M1b" ], [ "50", "992", "VALUE:M1b" ], [ "52", "992", "VALUE:M1b" ], [ "54", "992", "VALUE:M1b" ], [ "56", "992", "VALUE:M1b" ], [ "60", "992", "VALUE:M1b" ], [ "10", "993", "VALUE:M1c" ], [ "40", "993", "VALUE:M1c" ], [ "50", "993", "VALUE:M1c" ], [ "52", "993", "VALUE:M1c" ], [ "54", "993", "VALUE:M1c" ], [ "56", "993", "VALUE:M1c" ], [ "60", "993", "VALUE:M1c" ], [ "10", "999", "VALUE:M1NOS" ], [ "40", "999", "VALUE:M1NOS" ], [ "50", "999", "VALUE:M1NOS" ], [ "52", "999", "VALUE:M1a" ], [ "54", "999", "VALUE:M1b" ], [ "56", "999", "VALUE:M1c" ], [ "60", "999", "VALUE:M1NOS" ] ]
+}

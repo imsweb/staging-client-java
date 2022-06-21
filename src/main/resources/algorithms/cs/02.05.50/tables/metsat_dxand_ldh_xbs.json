@@ -1,0 +1,27 @@
+{
+  "id" : "metsat_dxand_ldh_xbs",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets at DX and LDH",
+  "title" : "Mets at DX and LDH Table",
+  "notes" : "**Note**:  For CS Mets at DX codes 05, 10, 42, 43, 52, 53, 55, 56, and 60, the M category is determined by the status of serum LDH as coded in Cs Siute-Specific Factor 4, as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:26.899Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "CS Mets at DX",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf4",
+    "name" : "CS SSF 4 LDH",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "05", "000", "VALUE:M1a", "VALUE:M1a" ], [ "10", "000", "VALUE:M1a", "VALUE:M1a" ], [ "42", "000", "VALUE:M1a", "VALUE:M1a" ], [ "43", "000", "VALUE:M1b", "VALUE:M1b" ], [ "52", "000", "VALUE:M1a", "VALUE:M1a" ], [ "53", "000", "VALUE:M1b", "VALUE:M1b" ], [ "55", "000", "VALUE:M1a", "VALUE:M1a" ], [ "56", "000", "VALUE:M1b", "VALUE:M1b" ], [ "60", "000", "VALUE:M1NOS", "VALUE:M1NOS" ], [ "05", "002, 004-006,008", "ERROR:", "ERROR:" ], [ "10", "002, 004-006,008", "ERROR:", "ERROR:" ], [ "42", "002, 004-006,008", "ERROR:", "ERROR:" ], [ "43", "002, 004-006,008", "ERROR:", "ERROR:" ], [ "52", "002, 004-006,008", "ERROR:", "ERROR:" ], [ "53", "002, 004-006,008", "ERROR:", "ERROR:" ], [ "55", "002, 004-006,008", "ERROR:", "ERROR:" ], [ "56", "002, 004-006,008", "ERROR:", "ERROR:" ], [ "60", "002, 004-006,008", "ERROR:", "ERROR:" ], [ "05", "010,020,030", "VALUE:M1c", "VALUE:M1c" ], [ "10", "010,020,030", "VALUE:M1c", "VALUE:M1c" ], [ "42", "010,020,030", "VALUE:M1c", "VALUE:M1c" ], [ "43", "010,020,030", "VALUE:M1c", "VALUE:M1c" ], [ "52", "010,020,030", "VALUE:M1c", "VALUE:M1c" ], [ "53", "010,020,030", "VALUE:M1c", "VALUE:M1c" ], [ "55", "010,020,030", "VALUE:M1c", "VALUE:M1c" ], [ "56", "010,020,030", "VALUE:M1c", "VALUE:M1c" ], [ "60", "010,020,030", "VALUE:M1c", "VALUE:M1c" ], [ "05", "988", "ERROR:", "ERROR:" ], [ "10", "988", "ERROR:", "ERROR:" ], [ "42", "988", "ERROR:", "ERROR:" ], [ "43", "988", "ERROR:", "ERROR:" ], [ "52", "988", "ERROR:", "ERROR:" ], [ "53", "988", "ERROR:", "ERROR:" ], [ "55", "988", "ERROR:", "ERROR:" ], [ "56", "988", "ERROR:", "ERROR:" ], [ "60", "988", "ERROR:", "ERROR:" ], [ "05", "997-999", "VALUE:M1a", "VALUE:M1a" ], [ "10", "997-999", "VALUE:M1a", "VALUE:M1a" ], [ "42", "997-999", "VALUE:M1a", "VALUE:M1a" ], [ "43", "997-999", "VALUE:M1b", "VALUE:M1b" ], [ "52", "997-999", "VALUE:M1a", "VALUE:M1a" ], [ "53", "997-999", "VALUE:M1b", "VALUE:M1b" ], [ "55", "997-999", "VALUE:M1a", "VALUE:M1a" ], [ "56", "997-999", "VALUE:M1b", "VALUE:M1b" ], [ "60", "997-999", "VALUE:M1NOS", "VALUE:M1NOS" ] ]
+}

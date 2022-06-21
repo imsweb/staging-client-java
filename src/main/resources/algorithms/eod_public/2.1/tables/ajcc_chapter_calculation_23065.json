@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_chapter_calculation_23065",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2021-03-31T13:02:34.793Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C250-C253,C257-C259", "8000,8010,8013,8020,8035,8041", "VALUE:28", "Exocrine Pancreas", "VALUE:08" ], [ "C250-C253,C257-C259", "8140,8148,8154", "VALUE:28", "Exocrine Pancreas", "VALUE:08" ], [ "C250-C253,C257-C259", "8246", "VALUE:28", "Exocrine Pancreas", "VALUE:08" ], [ "C250-C253,C257-C259", "8441,8452-8453,8455,8470,8480-8481,8490", "VALUE:28", "Exocrine Pancreas", "VALUE:08" ], [ "C250-C253,C257-C259", "8500,8503,8510,8550-8552,8560,8576", "VALUE:28", "Exocrine Pancreas", "VALUE:08" ], [ "C250-C253,C257-C259", "8971", "VALUE:28", "Exocrine Pancreas", "VALUE:08" ], [ "C254", "8000,8010,8013,8020,8035,8041", "VALUE:XX", "Other Exocrine Pancreas", "VALUE:88" ], [ "C254", "8140,8148,8154", "VALUE:XX", "Other Exocrine Pancreas", "VALUE:88" ], [ "C254", "8246", "VALUE:XX", "Other Exocrine Pancreas", "VALUE:88" ], [ "C254", "8441,8452-8453,8455,8470,8480-8481,8490", "VALUE:XX", "Other Exocrine Pancreas", "VALUE:88" ], [ "C254", "8500,8503,8510,8550-8552,8560,8576", "VALUE:XX", "Other Exocrine Pancreas", "VALUE:88" ], [ "C254", "8971", "VALUE:XX", "Other Exocrine Pancreas", "VALUE:88" ], [ "C250-C254,C257-C259", "8001-8005,8011-8012,8014-8015,8021-8034,8040,8042-8131", "VALUE:XX", "Other Exocrine Pancreas", "VALUE:88" ], [ "C250-C254,C257-C259", "8141-8147,8149,8160-8231", "VALUE:XX", "Other Exocrine Pancreas", "VALUE:88" ], [ "C250-C254,C257-C259", "8243-8245,8247-8248,8250-8440", "VALUE:XX", "Other Exocrine Pancreas", "VALUE:88" ], [ "C250-C254,C257-C259", "8442-8451,8454,8460-8463,8471-8474,8482-8484", "VALUE:XX", "Other Exocrine Pancreas", "VALUE:88" ], [ "C250-C254,C257-C259", "8501-8502,8504-8509,8512-8543,8561-8575,8580-8682", "VALUE:XX", "Other Exocrine Pancreas", "VALUE:88" ], [ "C250-C254,C257-C259", "8690-8700,8720-8790", "VALUE:XX", "Other Exocrine Pancreas", "VALUE:88" ] ]
+}

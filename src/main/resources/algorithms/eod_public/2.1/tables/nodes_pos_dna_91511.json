@@ -1,0 +1,19 @@
+{
+  "id" : "nodes_pos_dna_91511",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Nodes Pos DNA",
+  "title" : "Regional Nodes Positive",
+  "notes" : "See the [SEER Program Coding Manual](https://seer.cancer.gov/tools/codingmanuals/index.html) for coding instructions.",
+  "last_modified" : "2020-05-19T17:50:33.819Z",
+  "definition" : [ {
+    "key" : "nodes_pos",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "99", "Not applicable" ] ]
+}

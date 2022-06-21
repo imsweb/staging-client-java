@@ -1,0 +1,19 @@
+{
+  "id" : "ssf5_nar",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF5",
+  "title" : "Site-Specific Factor 5",
+  "subtitle" : "Sentinel Lymph Node Biopsy",
+  "last_modified" : "2018-05-14T21:29:01.748Z",
+  "definition" : [ {
+    "key" : "ssf5",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Negative sentinel lymph node biopsy" ], [ "010", "Positive sentinel lymph node biopsy" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Sentinel node biopsy performed, unknown results" ], [ "998", "No sentinel node biopsy performed" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

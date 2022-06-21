@@ -1,0 +1,27 @@
+{
+  "id" : "extension_grade_lvi_xdm",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension Grade LVI",
+  "title" : "Extension Grade LVI Table",
+  "notes" : "**Note**:  For CS Extension codes 100, 300, 310, 320 and 500 ONLY, the AJCC 7th Edition T category is assigned based on the value of Grade and Lymph-vascular Invasion as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:15.587Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "grade",
+    "name" : "Grade",
+    "type" : "INPUT"
+  }, {
+    "key" : "lvi",
+    "name" : "Lymph-vascular Invasion",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "T Category",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "1-2", "0", "VALUE:T1a" ], [ "100", "1-2", "1", "VALUE:T1b" ], [ "100", "1-2", "8-9", "VALUE:T1NOS" ], [ "100", "3-4", "0", "VALUE:T1b" ], [ "100", "3-4", "1", "VALUE:T1b" ], [ "100", "3-4", "8-9", "VALUE:T1b" ], [ "100", "9", "0", "VALUE:T1NOS" ], [ "100", "9", "1", "VALUE:T1b" ], [ "100", "9", "8-9", "VALUE:T1NOS" ], [ "300", "1-2", "0", "VALUE:T1a" ], [ "300", "1-2", "1", "VALUE:T1b" ], [ "300", "1-2", "8-9", "VALUE:T1NOS" ], [ "300", "3-4", "0", "VALUE:T1b" ], [ "300", "3-4", "1", "VALUE:T1b" ], [ "300", "3-4", "8-9", "VALUE:T1b" ], [ "300", "9", "0", "VALUE:T1NOS" ], [ "300", "9", "1", "VALUE:T1b" ], [ "300", "9", "8-9", "VALUE:T1NOS" ], [ "305", "1-2", "0", "VALUE:T1a" ], [ "305", "1-2", "1", "VALUE:T1b" ], [ "305", "1-2", "8-9", "VALUE:T1NOS" ], [ "305", "3-4", "0", "VALUE:T1b" ], [ "305", "3-4", "1", "VALUE:T1b" ], [ "305", "3-4", "8-9", "VALUE:T1b" ], [ "305", "9", "0", "VALUE:T1NOS" ], [ "305", "9", "1", "VALUE:T1b" ], [ "305", "9", "8-9", "VALUE:T1NOS" ], [ "310", "1-2", "0", "VALUE:T1a" ], [ "310", "1-2", "1", "VALUE:T1b" ], [ "310", "1-2", "8-9", "VALUE:T1a" ], [ "310", "3-4", "0", "VALUE:T1b" ], [ "310", "3-4", "1", "VALUE:T1b" ], [ "310", "3-4", "8-9", "VALUE:T1b" ], [ "310", "9", "0", "VALUE:T1a" ], [ "310", "9", "1", "VALUE:T1b" ], [ "310", "9", "8-9", "VALUE:T1a" ], [ "320", "1-2", "0", "VALUE:T1a" ], [ "320", "1-2", "1", "VALUE:T1b" ], [ "320", "1-2", "8-9", "VALUE:T1b" ], [ "320", "3-4", "0", "VALUE:T1b" ], [ "320", "3-4", "1", "VALUE:T1b" ], [ "320", "3-4", "8-9", "VALUE:T1b" ], [ "320", "9", "0", "VALUE:T1b" ], [ "320", "9", "1", "VALUE:T1b" ], [ "320", "9", "8-9", "VALUE:T1b" ] ]
+}

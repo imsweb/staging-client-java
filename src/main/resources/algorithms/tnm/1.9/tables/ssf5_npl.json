@@ -1,0 +1,20 @@
+{
+  "id" : "ssf5_npl",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF5",
+  "title" : "Site-Specific Factor 5",
+  "subtitle" : "Malignant Ascites",
+  "notes" : "**Note 1:**  Record the volume of malignant ascites in milliliters (ml).\n\n**Note 2:**  For an estimated volume, record the estimated value. For an uncertain volume, record the approximate value. \n* For example, volume of malignant ascites is less than 500 ml, record as 500 ml",
+  "last_modified" : "2018-05-14T21:29:01.269Z",
+  "definition" : [ {
+    "key" : "ssf5",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "001-979", "1-979 milliliters (ml)\n(Exact volume in ml)" ], [ "980", "980 ml or greater" ], [ "988", "Not applicable: Information not collected for this case" ], [ "990", "Malignant ascites present, volume not stated" ], [ "991", "Ascites present, determined to be non-malignant" ], [ "992", "Ascites present, no information whether malignant or non-malignant" ], [ "995", "No ascites present" ], [ "998", "Ascites not assessed" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

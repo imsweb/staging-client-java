@@ -1,0 +1,36 @@
+{
+  "id" : "nodes_ddf",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:    Regional nodes in codes 100-300 include contralateral and bilateral nodes.\n\n**Note 2**:    Involvement of inguinal, pelvic, or external iliac lymph nodes (codes 300 and 400) WITHOUT previous scrotal or inguinal surgery prior to presentation of the testis tumor is coded in CS Mets at DX, as distant lymph node involvement.",
+  "footnotes" : "- For CS Lymph Nodes codes 100-500 ONLY, the N category for AJCC 7 staging is assigned based on the values of CS Site-Specific Factor 5, Size of Metastasis in Lymph Nodes, Regional Nodes Positive, and CS Lymph Nodes Eval. If the CS Lymph Nodes Eval code is 2 (p), 3 (p), 6 (yp), or 8 (a), the N category is determined by using the Lymph Nodes Pathologic Evaluation Table. If the CS Lymph Nodes Eval code is 0 (c), 1 (c), 5 (c), or 9 (c), the N category is determined by using the Lymph Nodes Clinical Evaluation Table. If the CS Lymph Nodes Eval field is not coded, the N category is determined by using the Lymph Nodes Positive Eval Blank Table.\n- For CS Lymph Nodes codes 100-500 ONLY, the N category for AJCC 6 staging is assigned based on the values of CS Site Specific Factor 5, Size of Metastasis in Lymph Nodes, Regional Nodes Positive and CS Lymph Nodes Eval. If the CS Lymph Nodes Eval code is 2 (p), 3 (p), 6 (yp), or 8 (a), the N category is determined by using the Lymph Nodes Pathologic Evaluation Table. If the CS Lymph Nodes Eval code is 0 (c), 1 (c), 5 (c), or 9 (c), the N category is determined by using the Lymph Nodes Clinical Evaluation Table. If the CS Lymph Nodes Eval field is not coded, the N category is determined by using the Lymph Nodes Positive Eval Blank Table.",
+  "last_modified" : "2015-05-27T16:19:35.502Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "100", "Regional lymph node(s):\n    Aortic, NOS:\n        Lateral (lumbar)\n        Para-aortic\n        Periaortic\n        Preaortic \n        Retroaortic\n    Retroperitoneal, NOS\n    Spermatic vein", "JUMP:determine_correct_table_for_n_ns35", "JUMP:determine_correct_table_for_n_ns35", "VALUE:RN", "VALUE:RN" ], [ "200", "Regional lymph node(s):\n    Pericaval, NOS:\n        Interaortocaval\n        Paracaval\n        Precaval\n        Retrocaval", "JUMP:determine_correct_table_for_n_ns35", "JUMP:determine_correct_table_for_n_ns35", "VALUE:D", "VALUE:RN" ], [ "300", "Regional lymph node(s):\n    Pelvic, NOS\n    External iliac\nWITH previous scrotal or inguinal surgery", "JUMP:determine_correct_table_for_n_ns35", "JUMP:determine_correct_table_for_n_ns35", "VALUE:RN", "VALUE:RN" ], [ "350", "300 + 200\n\nPelvic/external iliac nodes WITH previous scrotal or inguinal surgery plus pericaval nodes", "JUMP:determine_correct_table_for_n_ns35", "JUMP:determine_correct_table_for_n_ns35", "VALUE:D", "VALUE:RN" ], [ "400", "Inguinal nodes, NOS:\n    Deep, NOS\n    Node of Cloquet or Rosenmuller (highest deep inguinal)\n    Superficial (femoral)\nWITH previous scrotal or inguinal surgery", "JUMP:determine_correct_table_for_n_ns35", "JUMP:determine_correct_table_for_n_ns35", "VALUE:D", "VALUE:D" ], [ "500", "Regional lymph node(s), NOS", "JUMP:determine_correct_table_for_n_ns35", "JUMP:determine_correct_table_for_n_ns35", "VALUE:RN", "VALUE:RN" ], [ "510", "Stated as N1 with no other information on regional lymph nodes", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "520", "Stated as N2 with no other information on regional lymph nodes", "VALUE:N2", "VALUE:N2", "VALUE:RN", "VALUE:RN" ], [ "530", "Stated as N3 with no other information on regional lymph nodes", "VALUE:N3", "VALUE:N3", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

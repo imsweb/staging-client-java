@@ -26,7 +26,7 @@ import com.imsweb.staging.entities.impl.StagingSchemaOutput;
 import com.imsweb.staging.entities.impl.StagingTable;
 import com.imsweb.staging.entities.impl.StagingTablePath;
 
-import static org.assertj.core.api.Assertions.catchThrowable;
+import static org.assertj.core.api.Assertions.catchRuntimeException;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class BasicStagingTest {
@@ -296,7 +296,7 @@ public class BasicStagingTest {
         schema.setMappings(Collections.singletonList(mapping));
 
         // initializing should throw an exception since the initial context maps a real input variable
-        Throwable thrown = catchThrowable(() -> provider.addSchema(schema));
+        Throwable thrown = catchRuntimeException(() -> provider.addSchema(schema));
 
         assertThat(thrown).isInstanceOf(IllegalStateException.class).hasNoCause().hasMessageContaining("not allowed since it is also defined as an input");
     }

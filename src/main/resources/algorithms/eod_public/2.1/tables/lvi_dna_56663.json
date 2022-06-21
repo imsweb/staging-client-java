@@ -1,0 +1,19 @@
+{
+  "id" : "lvi_dna_56663",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "LVI DNA",
+  "title" : "Lymphvascular Invasion",
+  "notes" : "Lymphovascular invasion (LVI) indicates the presence or absence of tumor cells in lymphatic channels (not lymph nodes) or blood vessels within the primary tumor as noted microscopically by the pathologist. LVI includes lymphatic invasion, vascular invasion, and lymphovascular invasion.\n\nSee the [SEER Program Coding Manual](https://seer.cancer.gov/tools/codingmanuals/index.html) for coding instructions.",
+  "last_modified" : "2020-05-19T17:07:46.929Z",
+  "definition" : [ {
+    "key" : "lvi",
+    "name" : "LVI",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "8", "Not Applicable" ] ]
+}

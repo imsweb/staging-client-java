@@ -1,0 +1,20 @@
+{
+  "id" : "ssf5_nav",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF5",
+  "title" : "Site-Specific Factor 5",
+  "subtitle" : "Mitotic Count",
+  "notes" : "**Note 1:**  The mitotic rate, the count of mitoses (also termed \"mitotic figures\") per 50 high-power fields (HPF), reflects the potential aggressiveness or prognosis of gastrointestinal stromal tumors (GIST) and is used alone to determine their histologic grade (low or high).  The mitotic rate is also a factor in assigning the AJCC 7 anatomic stage/prognostic group.  This site-specific factor presumes the denominator of 50 HPF or its equivalent, so just the numerator (the mitotic count) is coded here.  For other schemas in which mitotic count is collected, the denominator may vary. (1)\n\n**Note 2:**  A HPF usually has a magnification objective of 40 (a 40x field).  As described in the AJCC chapter on GIST, 50 HPF are equivalent to viewing a total area of 5 square millimeters (mm) at 40x magnification. (1)\n\n**Note 3:**  Record mitotic count, to the nearest tenth of a mitosis, as documented in the pathology report.  For example, a mitotic count of 6/50 HPF, or 6 per 5 square mm, would be coded 060.\n\n**Note 4:**  Code the specific mitotic count only per 50 HPF or 5 square mm; assume the denominator is 50 HPF or 5 square mm if not specified.  \n\n**Note 5:**  Use code 996 for a description of mitoses, NOS, or if the mitotic count is expressed with a specific denominator other than 50 HPF or 5 square mm.",
+  "last_modified" : "2018-05-14T21:29:01.312Z",
+  "definition" : [ {
+    "key" : "ssf5",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "0.0 mitoses per 50 HPF (40x fields)\n0.0 mitoses per 5 square mm\nMitoses absent\nNo mitoses present" ], [ "001-008", "0.1 - 0.8 mitoses per 50 HPF (40x fields)\n0.1 - 0.8 mitoses per 5 square mm" ], [ "009", "0.9 mitoses per 50 HPF (40x fields)\n0.9 mitoses per 5 square mm\n\nStated as less than 1 mitosis per 50 HPF (40x fields)\nStated as less than 1 mitosis per 5 square mm" ], [ "010-100", "1 - 10 mitoses per 50 HPF (40x fields)\n1 - 10 mitoses per 5 square mm" ], [ "110", "11 or more mitoses per 50 HPF (40x fields)\n11 or more mitoses per 5 square mm" ], [ "988", "Not applicable: Information not collected for this case" ], [ "990", "Specific number not stated, described less than or equal to 5 mitoses per 50 high-power fields (40x field)\nSpecific number not stated, described less than or equal to 5 mitoses per 5 square millimeters" ], [ "991", "Specific number not stated, described as more than 5 mitoses per 50 HPF (40x fields)\nSpecific number not stated, described as more than 5 mitoses per 5 square mm\n\nStated as high mitotic count or rate with no specific number" ], [ "996", "Mitotic count described with denominator other than 50 HPF (40x field)/5 square mm\nMitoses present, NOS" ], [ "998", "No histologic specimen from primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

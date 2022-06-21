@@ -1,0 +1,19 @@
+{
+  "id" : "er_summary_44166",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Estrogen Receptor Summary",
+  "title" : "ER (Estrogen Receptor) Summary",
+  "notes" : "**Note 1:** Physician statement of ER (Estrogen Receptor) Summary status can be used to code this data item when no other information is available.\n\n**Note 2:** The result of the ER test performed on the primary breast tissue is to be recorded in this data item.\n\n**Note 3:** Results from nodal or metastatic tissue may be used **ONLY** when there is no evidence of in situ or invasive carcinoma in the primary tumor.\n\n**Note 4:** In cases where there are invasive and in situ components in the primary tumor and ER is done on both, ignore the in situ results.\n* If ER is positive on an in situ component and ER is negative on all tested invasive components in the primary tumor, code ER as negative (code 0)\n* If in situ and invasive components present and ER only done on the in situ component in the primary tumor, code unknown (code 9)\n\n**Note 5:** In cases where there is a single tumor with multiple biopsies and/or surgical resection with different ER results.\n* Use the highest (positive versus negative)\n\n**Note 6:** In cases where there are multiple tumors with different ER results, code the results from the largest tumor size (determined either clinically or pathologically) when multiple tumors are present. \n* Do not use specimen size to determine the largest tumor size\n\n**Note 7:** If neoadjuvant therapy is given, record the assay from tumor specimens prior to neoadjuvant therapy. If neoadjuvant therapy is given and there are no ER results from pre-treatment specimens, report the findings from post-treatment specimens.\n\n**Note 8:** If the patient is ER positive and node negative, a multigene test such as Oncotype Dx may be performed, in which case another ER test will be performed.  Do not record the results of that test in this field.\n* Record only the results of the test which made the patient eligible to be given the multigene test",
+  "last_modified" : "2021-04-08T12:31:34.222Z",
+  "definition" : [ {
+    "key" : "er",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "ER negative (0.0% or less than 1%)" ], [ "1", "ER positive" ], [ "7", "Test ordered, results not in chart" ], [ "9", "Not documented in medical record\nCannot be determined (indeterminate)\nER (Estrogen Receptor) Summary status not assessed or unknown if assessed" ] ]
+}

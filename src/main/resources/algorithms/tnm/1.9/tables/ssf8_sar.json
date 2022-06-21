@@ -1,0 +1,20 @@
+{
+  "id" : "ssf8_sar",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF8",
+  "title" : "Site-Specific Factor 8",
+  "subtitle" : "Sjogren Syndrome",
+  "notes" : "**Note:**  Code history of Sjogren syndrome as documented by the physician or coded in the medical record. Sjogren syndrome is an autoimmune inflammatory disorder of lacrimal and salivary exocrine glands. The syndrome may be associated with another connective tissue disorder such as systemic lupus erythematosus or rheumatoid arthritis.",
+  "last_modified" : "2018-05-14T21:28:58.342Z",
+  "definition" : [ {
+    "key" : "ssf8",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No history of Sjogren syndrome" ], [ "010", "History of Sjogren syndrome" ], [ "988", "Not applicable: Information not collected for this case" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

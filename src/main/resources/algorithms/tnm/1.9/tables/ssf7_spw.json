@@ -1,0 +1,20 @@
+{
+  "id" : "ssf7_spw",
+  "algorithm" : "tnm",
+  "version" : "1.9",
+  "name" : "SSF7",
+  "title" : "Site-Specific Factor 7",
+  "subtitle" : "Chromosome 8q Status",
+  "notes" : "**Note 1:**  Genetic abnormalities in the long arm of chromosome 8 (8q) are associated with ocular melanomas.\n\n**Note 2:**  A gain in chromosomes may also be termed \"multiple copies\" or \"greater than normal.\"",
+  "last_modified" : "2018-05-14T21:28:58.374Z",
+  "definition" : [ {
+    "key" : "ssf7",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No gain in chromosome 8q" ], [ "010", "Gain in chromosome 8q" ], [ "988", "Not applicable: Information not collected for this case" ], [ "997", "Test ordered, results not available" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

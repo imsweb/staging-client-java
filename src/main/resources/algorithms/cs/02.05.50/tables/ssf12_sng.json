@@ -1,0 +1,18 @@
+{
+  "id" : "ssf12_sng",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF12",
+  "title" : "CS Site-Specific Factor 12",
+  "last_modified" : "2015-05-27T16:19:55.289Z",
+  "definition" : [ {
+    "key" : "ssf12",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "988", "Not applicable:  Site-specific factor not defined" ] ]
+}

@@ -1,0 +1,36 @@
+{
+  "id" : "nodes_dak",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Metastatic nodules in the fat adjacent to a gastric carcinoma, without evidence of residual lymph node tissue, are considered regional node metastases, but nodules implanted on peritoneal surfaces are considered distant metastases.\n\n**Note 3**:  Hepatoduodenal nodes are regional for primaries of the lesser curvature of the stomach.  They are coded in CS Mets at DX for all other subsites in this schema.\n\n**Note 4**:  The number of positive regional nodes is required to calculate the correct N category for this schema.  Use codes 610-750 when the pathology report assigns an N1, N2, or N3 category but does not specify the number of nodes involved, or the record identifies an N1, N2, or N3 category but the specific information about number of nodes involved is not available.  Use codes 110-500 when information about the number of positive nodes is available, or when nodes are clinically positive but not removed for examination.",
+  "footnotes" : "- For CS Lymph Nodes codes 100-500, when CS Lymph Nodes Eval is 1or 9 and CS Coding System Original is before CS v02.05, the N category is assigned from the Lymph Nodes Clinical Eval Prior to V02.05 7th Table using Regional Nodes Positive and CS Site-Specific Factor 1.  When CS Lymph Nodes Eval = 0, 5 OR (CS Lymph Nodes Eval is 1,9 and CS Coding System Original is at least V02.05), the N category is assigned from Lymph Nodes Clinical Eval V02.05 AJCC 7 Table using CS Site-Specific Factor 1.  When CS Lymph Nodes Eval is 2, 3, 6, 8, or not coded, the N category is determined from the Lymph Nodes Pathologic Evaluation AJCC 7 Table Also Used When CS Reg Nodes Eval Is Not Coded using Regional Nodes Positive.\n- For CS Lymph Nodes codes 100-500, when CS Lymph Nodes Eval is 0, 1, 5 or 9, the N category is assigned from the Lymph Nodes Clinical Evaluation AJCC 6 Table using Regional Nodes Positive and CS Site-Specific Factor 1; when CS Lymph Nodes Eval is 2, 3, 6, 8, or not coded, the N category is determined from the Lymph Nodes Pathologic Evaluation AJCC 6 Table Also Used When CS Reg Nodes Eval Is Not Coded using Regional Nodes Positive.",
+  "last_modified" : "2015-05-27T16:19:31.923Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "100", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 000, 110, CS Mets at DX codes 10, 50\n\nRegional lymph nodes:\n    Left gastric (superior gastric), NOS:\n        Cardial\n        Cardioesophageal\n        Gastric, left\n        Gastropancreatic, left\n        Lesser curvature\n        Lesser omental\n        Paracardial\n    Pancreaticosplenic (pancreaticolienal)\n    Pancreatoduodenal\n    Perigastric, NOS\n    Peripancreatic\n    Right gastric (inferior gastric), NOS:\n        Gastrocolic\n        Gastroduodenal\n        Gastroepiploic (gastro-omental), right or NOS\n        Gastrohepatic\n        Greater curvature\n        Greater omental\n        Pyloric, NOS\n            Infrapyloric (subpyloric)\n            Suprapyloric\n    Splenic (lienal), NOS:\n        Gastroepiploic (gastro-omental), left\n        Splenic hilar\n    Superior mesenteric \n    Nodule(s) in perigastric fat", "JUMP:determine_correct_table_for_ajcc7_n_ns27", "JUMP:determine_correct_table_for_ajcc6_n_ns26", "VALUE:RN", "VALUE:RN" ], [ "110", "Regional lymph nodes:\n    Left gastric (superior gastric), NOS:\n        Cardial\n        Cardioesophageal\n        Gastric, left\n        Gastropancreatic, left\n        Lesser curvature\n        Lesser omental\n        Paracardial\n    Pancreaticosplenic (pancreaticolienal)\n    Pancreaticoduodenal\n    Perigastric, NOS\n    Peripancreatic\n    Right gastric (inferior gastric), NOS:\n        Gastrocolic\n        Gastroduodenal\n        Gastroepiploic (gastro-omental), right or NOS\n        Gastrohepatic\n        Greater curvature\n        Greater omental\n        Pyloric, NOS\n            Infrapyloric (subpyloric)\n            Suprapyloric\n    Splenic (lienal), NOS:\n        Gastroepiploic (gastro-omental), left\n        Splenic hilar\n Nodule(s) in perigastric fat", "JUMP:determine_correct_table_for_ajcc7_n_ns27", "JUMP:determine_correct_table_for_ajcc6_n_ns26", "VALUE:RN", "VALUE:RN" ], [ "400", "Celiac\nHepatic [excluding gastrohepatic (see code 110), and  hepatoduodenal (see code 420)]", "JUMP:determine_correct_table_for_ajcc7_n_ns27", "JUMP:determine_correct_table_for_ajcc6_n_ns26", "VALUE:D", "VALUE:RN" ], [ "420", "For lesser curvature:\n    Hepatoduodenal", "JUMP:determine_correct_table_for_ajcc7_n_ns27", "JUMP:determine_correct_table_for_ajcc6_n_ns26", "VALUE:D", "VALUE:D" ], [ "500", "Regional lymph node(s), NOS", "JUMP:determine_correct_table_for_ajcc7_n_ns27", "JUMP:determine_correct_table_for_ajcc6_n_ns26", "VALUE:RN", "VALUE:RN" ], [ "600", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 500,  610, CS Site-Specific Factor 1 code 100\n\nStated as N1 with no other information on regional lymph nodes", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "610", "Stated as pathologic N1 with no other information on regional lymph nodes", "VALUE:N1", "VALUE:N1", "VALUE:D", "VALUE:RN" ], [ "650", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 500, 660, CS Site-Specific Factor 1 code 200\n\nStated as N2 with no other information on regional lymph nodes", "VALUE:N2", "VALUE:N2", "VALUE:RN", "VALUE:RN" ], [ "660", "Stated as pathologic N2 with no other information on regional lymph nodes", "VALUE:N2", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "700", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 500, 750, CS Site-Specific Factor 1 code 300\n\nStated as N3 [NOS] with no other information on regional lymph nodes", "VALUE:N3NOS", "VALUE:N2", "VALUE:RN", "VALUE:RN" ], [ "710", "Stated as pathologic N3a with no other information on regional lymph nodes", "VALUE:N3a", "VALUE:N2", "VALUE:RN", "VALUE:RN" ], [ "720", "Stated as pathologic N3b with no other information on regional lymph nodes", "VALUE:N3b", "VALUE:N3", "VALUE:RN", "VALUE:RN" ], [ "750", "Stated as pathologic N3 [NOS] with no other information on regional lymph nodes", "VALUE:N3NOS", "VALUE:N2", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

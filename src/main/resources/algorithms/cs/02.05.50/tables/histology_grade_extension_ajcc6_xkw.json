@@ -1,0 +1,19 @@
+{
+  "id" : "histology_grade_extension_ajcc6_xkw",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Histology Grade Extension AJCC6",
+  "title" : "Histology Grade Extension AJCC 6 Table",
+  "notes" : "**Note**:  For CS Extension codes 000, 100-550, and 950-999 ONLY, where histology equals 8020, 8021, 8030, 8031, or 8032, or grade equals 4, the T category is assigned based on the value of CS Extension as shown here.",
+  "last_modified" : "2015-05-27T16:19:21.589Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "T Category",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "VALUE:T4NOS" ], [ "100", "VALUE:T4a" ], [ "200", "VALUE:T4a" ], [ "300", "VALUE:T4a" ], [ "400", "VALUE:T4a" ], [ "405", "ERROR:" ], [ "410", "ERROR:" ], [ "415", "ERROR:" ], [ "420", "ERROR:" ], [ "450", "VALUE:T4b" ], [ "480", "VALUE:T4b" ], [ "490", "ERROR:" ], [ "500", "VALUE:T4b" ], [ "520", "VALUE:T4b" ], [ "550", "VALUE:T4b" ], [ "950", "VALUE:T4NOS" ], [ "999", "VALUE:T4NOS" ] ]
+}

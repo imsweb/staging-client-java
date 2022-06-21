@@ -1,0 +1,26 @@
+{
+  "id" : "summary_stage_raa",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Summary Stage",
+  "title" : "Summary Stage",
+  "last_modified" : "2019-04-05T16:52:38.292Z",
+  "definition" : [ {
+    "key" : "ss2018_t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "ss2018_n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "ss2018_m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "ss2018_derived",
+    "name" : "Summary Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "L", "NONE,U", "NONE,U", "VALUE:1" ], [ "L,U", "RN", "NONE,U", "VALUE:3" ], [ "D", "*", "*", "VALUE:7" ], [ "L,U", "D", "*", "VALUE:7" ], [ "L,U", "NONE,RN,U", "D", "VALUE:7" ], [ "U", "NONE,U", "NONE,U", "VALUE:9" ] ]
+}

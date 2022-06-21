@@ -1,0 +1,19 @@
+{
+  "id" : "pleural_effusion_40041",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Pleural Effusion",
+  "title" : "Pleural Effusion",
+  "notes" : "**Note 1:** One of the most common symptoms of mesothelioma is a pleural effusion, or an accumulation of fluid between the parietal pleura (the pleura covering the chest wall and diaphragm) and the visceral pleura (the pleura covering the lungs). Record the absence or presence of pleural effusion and specifically, if present, whether the pleural effusion is non-malignant, malignant, atypical or NOS.\n\n**Note 2:** A physician’s statement of positive (malignant) pleural effusion or a positive cytology confirming a malignant pleural effusion must be used to code this data item.\n* Code 2 when \n   * There is a positive malignant pleural effusion confirmed by cytology \n   * Pleural fluid cytology is described as suspicious/suspicious for mesothelioma \n* Code 3 when cytology is described as atypical/atypical mesothelial cells\n\n**Note 3:** The presence of a pleural effusion on imaging alone (i.e., a pleural effusion, NOS) is not equivalent to a malignant pleural effusion.\n* Code 1 if imaging indicates a pleural effusion but pleural cytology is described as negative for malignant cells\n* Code 4 if imaging indicates a pleural effusion and there is no further information on whether it is positive or negative or cytology not done",
+  "last_modified" : "2021-04-08T14:59:45.991Z",
+  "definition" : [ {
+    "key" : "pleural_effusion",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Pleural effusion not identified/not present" ], [ "1", "Pleural effusion present, non-malignant (negative)" ], [ "2", "Pleural effusion present, malignant (positive)\nPhysician states pleural effusion is malignant in the absence of positive cytology" ], [ "3", "Pleural effusion, atypical/atypical mesothelial cells" ], [ "4", "Pleural effusion, NOS" ], [ "8", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nPleural effusion not assessed or unknown if assessed" ] ]
+}

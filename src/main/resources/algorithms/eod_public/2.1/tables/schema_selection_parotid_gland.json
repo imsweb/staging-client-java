@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_parotid_gland",
+  "algorithm" : "eod_public",
+  "version" : "2.1",
+  "name" : "Schema Selection ParotidGland",
+  "title" : "Schema selection for ParotidGland",
+  "last_modified" : "2021-03-16T16:40:22.856Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C079, C080-C081, C088-C089", "8000-8700, 8720-8790, 8941,8974,8980, 8982", "MATCH" ] ]
+}

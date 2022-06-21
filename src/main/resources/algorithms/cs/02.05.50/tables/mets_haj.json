@@ -1,0 +1,35 @@
+{
+  "id" : "mets_haj",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note**:  When both the Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stage and metastatic detail are available, record the code with metastatic detail in preference to a statement of FIGO stage.",
+  "last_modified" : "2015-05-27T16:19:27.859Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "VALUE:M0", "VALUE:NONE", "VALUE:NONE" ], [ "10", "Distant lymph node(s), NOS", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "11", "OBSOLETE DATA RETAINED V0200 \nDistant lymph nodes:\n    Aortic, NOS:\n        Lateral (lumbar)\n        Para-aortic\n        Periaortic\n    Inguinal (for primary in upper two-thirds of vagina only)\n    Retroperitoneal, NOS", "ERROR:", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "12", "OBSOLETE DATA RETAINED V0200\n \nDistant lymph node(s) other than code 11", "ERROR:", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "20", "Distant lymph nodes (for primary in lower third of vagina):\n    Pelvic lymph nodes:\n        Iliac, NOS:\n            Common\n            External\n            Internal (hypogastric)\n                Obturator\n                Middle sacral (promontorial) (Gerota's node)", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "22", "Distant lymph nodes (for primary in lower third of vagina):\n   Pelvic lymph nodes, NOS ", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "25", "OBSOLETE DATA CONVERTED V0204\nSee code 11\nThis is a duplicate of code 11. Starting from V0204, it should not have any data under this code\n\nOBSOLETE DATA RETAINED V0200\n\nDistant lymph nodes:\n    Aortic, NOS:\n        Lateral (lumbar)\n        Para-aortic\n        Periaortic\n    Inguinal (for primary in upper two-thirds of vagina only)\n    Retroperitoneal, NOS", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "27", "Distant lymph nodes (for primary in upper two-thirds of vagina):\n       Inguinal, NOS:\n        Superficial inguinal (femoral)", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "30", "Distant lymph nodes:\n    Aortic, NOS:\n        Lateral (lumbar)\n        Para-aortic\n        Periaortic\n   Retroperitoneal, NOS", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "35", "Distant lymph node(s) other than code 20-30", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "40", "Distant metastasis except distant lymph nodes \nCarcinomatosis", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "50", "OBSOLETE DATA RETAINED V0200\n \n(40) + any of [(10) to (12)]\nDistant lymph node(s) plus other distant metastases", "ERROR:", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "55", "40+ any of ( 20, 22, 27, 30, 35)\n\nDistant metastasis plus distant lymph node(s) ", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "58", "FIGO Stage IVB", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "60", "Distant metastasis, NOS", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "70", "FIGO Stage IV [NOS] based on distant metastasis", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "VALUE:MX", "VALUE:U", "VALUE:U" ] ]
+}

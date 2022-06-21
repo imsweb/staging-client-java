@@ -1,0 +1,22 @@
+{
+  "id" : "determine_correct_table_for_ajcc6_meval_ns30",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Determine Correct Table for AJCC 6 M EvaL",
+  "title" : "Determining Whether M Eval has already been set for AJCC 6",
+  "last_modified" : "2015-05-27T16:19:02.608Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "CS Lymph Nodes",
+    "type" : "INPUT"
+  }, {
+    "key" : "mets",
+    "name" : "CS Mets at DX",
+    "type" : "INPUT"
+  }, {
+    "key" : "mdescriptor",
+    "name" : "Staging Basis",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "200, 250", "00,10,20,30,35,40,45,50,55,60,65,70,75,80,99", "MATCH:" ], [ "000,100,800,999", "*", "JUMP:mets_eval_ipa" ] ]
+}
