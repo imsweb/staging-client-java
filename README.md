@@ -8,6 +8,8 @@ A cancer staging client library for Java applications.
 
 ## Supported staging algorithms
 
+In prior versions of this library the algorithms were released in separate repositories.  They are all now included with this library.
+
 ### EOD
 
 Extent of Disease (EOD) is a set of three data items that describe how far a cancer has spread at the time of diagnosis. EOD 2018 is effective for 
