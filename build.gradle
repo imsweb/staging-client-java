@@ -81,9 +81,9 @@ checkstyle {
 }
 
 // limit the Checkstyle logging
-//[checkstyleMain, checkstyleTest].each { task ->
-//    task.logging.setLevel(LogLevel.LIFECYCLE)
-//}
+[checkstyleMain, checkstyleTest].each { task ->
+    task.ant.lifecycleLogLevel = "ERROR"
+}
 
 spotbugs {
     excludeFilter = file('config/spotbugs/spotbugs-exclude.xml')
