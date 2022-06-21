@@ -132,7 +132,7 @@ check.dependsOn 'ossIndexAudit'
 
 // run the full CS integration test suite
 task csIntegrationTest(type: JavaExec) {
-    main = 'com.imsweb.staging.cs.CsIntegrationTest'
+    mainClass.set('com.imsweb.staging.cs.CsIntegrationTest')
     classpath = sourceSets.test.runtimeClasspath
 }
 
