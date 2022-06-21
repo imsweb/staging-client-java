@@ -80,6 +80,11 @@ checkstyle {
     configFile = file('config/checkstyle/checkstyle.xml')
 }
 
+// limit the Checkstyle logging
+//[checkstyleMain, checkstyleTest].each { task ->
+//    task.logging.setLevel(LogLevel.LIFECYCLE)
+//}
+
 spotbugs {
     excludeFilter = file('config/spotbugs/spotbugs-exclude.xml')
 }
