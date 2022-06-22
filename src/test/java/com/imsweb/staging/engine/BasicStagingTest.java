@@ -26,8 +26,8 @@ import com.imsweb.staging.entities.impl.StagingSchemaOutput;
 import com.imsweb.staging.entities.impl.StagingTable;
 import com.imsweb.staging.entities.impl.StagingTablePath;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.catchRuntimeException;
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class BasicStagingTest {
 
@@ -96,6 +96,7 @@ public class BasicStagingTest {
         Staging staging = Staging.getInstance(provider);
 
         assertThat(staging.getSchema("schema_test").getId()).isEqualTo("schema_test");
+        assertThat(staging.getTableIds()).hasSameElementsAs(Arrays.asList("table_input1", "table_input2", "table_selection", "primary_site", "histology", "table_year_dx"));
 
         // check case where required input field not supplied (i.e. no default); since there are is no workflow defined, this should
         // not cause an error
