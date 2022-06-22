@@ -70,6 +70,7 @@ public class GlossaryDefinition {
             return true;
         if (!(o instanceof GlossaryDefinition))
             return false;
+
         GlossaryDefinition that = (GlossaryDefinition)o;
         return Objects.equals(_name, that._name) &&
                 Objects.equals(_definition, that._definition) &&
