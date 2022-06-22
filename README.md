@@ -10,7 +10,7 @@ A cancer staging client library for Java applications.
 
 In prior versions of this library the algorithms were released in separate repositories.  They are all now included with this library.
 
-### EOD
+### EOD 2.1
 
 Extent of Disease (EOD) is a set of three data items that describe how far a cancer has spread at the time of diagnosis. EOD 2018 is effective for 
 cases diagnosed in 2018 and later.
@@ -35,7 +35,7 @@ To get started using the EOD algorithm, instantiate a `Staging` instance:
 Staging staging = Staging.getInstance(EodDataProvider.getInstance(EodVersion.LATEST));
 ```
 
-### TNM
+### TNM 1.9
 
 TNM is a widely accepted system of cancer staging. TNM stands for Tumor, Nodes, and Metastasis. T is assigned based on the extent of involvement at the
 primary tumor site, N for the extent of involvement in regional lymph nodes, and M for distant spread. Clinical TNM is assigned prior to treatment and
@@ -57,7 +57,7 @@ To get started using the TNM algorithm, instantiate a `Staging` instance:
 Staging staging = Staging.getInstance(TnmDataProvider.getInstance(TnmVersion.LATEST));
 ```
 
-### Collaborative Staging
+### Collaborative Staging 02.05.50
 
 Collaborative Stage is a unified data collection system designed to provide a common data set to meet the needs of all three staging systems (TNM, SEER EOD, and SEER SS). It
 provides a comprehensive system to improve data quality by standardizing rules for timing, clinical and pathologic assessments, and compatibility across all the systems for
