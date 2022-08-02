@@ -1,0 +1,548 @@
+/*
+ * Copyright (C) 2015 Information Management Services, Inc.
+ */
+package com.imsweb.staging.toronto;
+
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import com.imsweb.staging.Staging;
+import com.imsweb.staging.StagingDataProvider;
+import com.imsweb.staging.StagingFileDataProvider;
+import com.imsweb.staging.StagingTest;
+import com.imsweb.staging.toronto.TorontoDataProvider.TorontoVersion;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+public class TorontoStagingTest extends StagingTest {
+
+    @BeforeClass
+    public static void init() {
+        _STAGING = Staging.getInstance(TorontoDataProvider.getInstance(TorontoVersion.V0_1));
+    }
+
+    @Override
+    public String getAlgorithm() {
+        return "toronto";
+    }
+
+    @Override
+    public String getVersion() {
+        return TorontoVersion.V0_1.getVersion();
+    }
+
+    @Override
+    public StagingFileDataProvider getProvider() {
+        return TorontoDataProvider.getInstance(TorontoVersion.LATEST);
+    }
+
+    @Test
+    public void testBasicInitialization() {
+        assertThat(_STAGING.getSchemaIds()).hasSize(35);
+        assertThat(_STAGING.getTableIds().size() > 0).isTrue();
+
+        assertThat(_STAGING.getSchema("ependymoma")).isNotNull();
+        assertThat(_STAGING.getTable("st_jude_murphy_staging_system_35179")).isNotNull();
+    }
+
+    @Test
+    public void testVersionInitializationTypes() {
+        Staging staging10 = Staging.getInstance(TorontoDataProvider.getInstance(TorontoVersion.V0_1));
+        assertThat(staging10.getVersion()).isEqualTo(TorontoVersion.LATEST.getVersion());
+
+        Staging stagingLatest = Staging.getInstance(TorontoDataProvider.getInstance());
+        assertThat(stagingLatest.getVersion()).isEqualTo(TorontoVersion.LATEST.getVersion());
+    }
+
+    @Test
+    public void testDescriminatorKeys() {
+        assertThat(_STAGING.getSchema("acute_myeloid_leukemia").getSchemaDiscriminators()).containsOnly("age_dx");
+        assertThat(_STAGING.getSchema("ovarian").getSchemaDiscriminators()).containsOnly("age_dx", "behavior");
+
+        // check all schema discriminators
+        Set<String> allDiscriminators = _STAGING.getSchemaIds().stream()
+                .map(schemaId -> _STAGING.getSchema(schemaId).getSchemaDiscriminators())
+                .filter(Objects::nonNull)
+                .flatMap(Collection::stream)
+                .collect(Collectors.toSet());
+        assertThat(allDiscriminators).containsOnly("age_dx", "behavior");
+    }
+
+    @Override
+    @Test
+    public void testValidCode() {
+        Map<String, String> context = new HashMap<>();
+        context.put("hist", "7000");
+        assertFalse(_STAGING.isContextValid("ovarian", "hist", context));
+        context.put("hist", "8000");
+        assertTrue(_STAGING.isContextValid("ovarian", "hist", context));
+        context.put("hist", "8542");
+        assertTrue(_STAGING.isContextValid("ovarian", "hist", context));
+
+        // make sure null is handled
+        context.put("hist", null);
+        assertFalse(_STAGING.isContextValid("ovarian", "hist", context));
+
+        // make sure blank is handled
+        context.put("hist", "");
+        assertFalse(_STAGING.isContextValid("ovarian", "hist", context));
+    }
+
+    //    @Test
+    //    public void testSchemaSelection() {
+    //        // test bad values
+    //        List<Schema> lookup = _STAGING.lookupSchema(new SchemaLookup());
+    //        assertThat(lookup).isEmpty();
+    //
+    //        lookup = _STAGING.lookupSchema(new TorontoSchemaLookup("XXX", "YYY"));
+    //        assertThat(lookup).isEmpty();
+    //
+    //        // test valid combinations that do not require a discriminator
+    //        TorontoSchemaLookup schemaLookup = new TorontoSchemaLookup("C629", "9231");
+    //        schemaLookup.setInput(TorontoInput.DISCRIMINATOR_1.toString(), "");
+    //        lookup = _STAGING.lookupSchema(schemaLookup);
+    //        assertThat(lookup).hasSize(1);
+    //        assertThat(lookup.get(0).getId()).isEqualTo("soft_tissue_rare");
+    //        schemaLookup.setInput(TorontoInput.DISCRIMINATOR_1.toString(), null);
+    //        lookup = _STAGING.lookupSchema(schemaLookup);
+    //        assertThat(lookup).hasSize(1);
+    //        assertThat(lookup.get(0).getId()).isEqualTo("soft_tissue_rare");
+    //
+    //        // test valid combination that requires a discriminator but is not supplied one
+    //        lookup = _STAGING.lookupSchema(new TorontoSchemaLookup("C111", "8200"));
+    //        assertThat(lookup).hasSize(3);
+    //        assertThat(lookup.stream().map(Schema::getId).collect(Collectors.toSet())).isEqualTo(
+    //                new HashSet<>(Arrays.asList("oropharynx_hpv_mediated_p16_pos", "nasopharynx", "oropharynx_p16_neg")));
+    //        assertThat(lookup.stream().flatMap(d -> d.getSchemaDiscriminators().stream()).collect(Collectors.toSet())).isEqualTo(new HashSet<>(Arrays.asList("discriminator_1", "discriminator_2")));
+    //
+    //        // test valid combination that requires discriminator and a good discriminator is supplied
+    //        schemaLookup = new TorontoSchemaLookup("C111", "8200");
+    //        schemaLookup.setInput(TorontoInput.DISCRIMINATOR_1.toString(), "1");
+    //        lookup = _STAGING.lookupSchema(schemaLookup);
+    //        assertThat(lookup).hasSize(1);
+    //        assertThat(lookup.stream().flatMap(d -> d.getSchemaDiscriminators().stream()).collect(Collectors.toSet())).isEqualTo(new HashSet<>(Collections.singletonList("discriminator_1")));
+    //        assertThat(lookup.get(0).getId()).isEqualTo("nasopharynx");
+    //
+    //        schemaLookup.setInput(TorontoInput.DISCRIMINATOR_1.toString(), "2");
+    //        schemaLookup.setInput(TorontoInput.DISCRIMINATOR_2.toString(), "1");
+    //        lookup = _STAGING.lookupSchema(schemaLookup);
+    //        assertThat(lookup).hasSize(1);
+    //        assertThat(lookup.stream().flatMap(d -> d.getSchemaDiscriminators().stream()).collect(Collectors.toSet())).isEqualTo(new HashSet<>(Arrays.asList("discriminator_1", "discriminator_2")));
+    //        assertThat(lookup.get(0).getId()).isEqualTo("oropharynx_p16_neg");
+    //
+    //        // test valid combination that requires a discriminator but is supplied a bad disciminator value
+    //        schemaLookup = new TorontoSchemaLookup("C111", "8200");
+    //        schemaLookup.setInput(TorontoInput.DISCRIMINATOR_1.toString(), "X");
+    //        lookup = _STAGING.lookupSchema(schemaLookup);
+    //        assertThat(lookup).isEmpty();
+    //
+    //        // test searching on only site
+    //        lookup = _STAGING.lookupSchema(new TorontoSchemaLookup("C401", null));
+    //        assertThat(lookup).hasSize(9);
+    //
+    //        // test searching on only hist
+    //        lookup = _STAGING.lookupSchema(new TorontoSchemaLookup(null, "9702"));
+    //        assertThat(lookup).hasSize(5);
+    //
+    //        // test that searching on only discriminator_1 returns no results
+    //        schemaLookup = new TorontoSchemaLookup(null, null);
+    //        schemaLookup.setInput(TorontoInput.DISCRIMINATOR_1.toString(), "1");
+    //        lookup = _STAGING.lookupSchema(schemaLookup);
+    //        assertThat(lookup).isEmpty();
+    //        schemaLookup = new TorontoSchemaLookup("", null);
+    //        schemaLookup.setInput(TorontoInput.DISCRIMINATOR_1.toString(), "1");
+    //        lookup = _STAGING.lookupSchema(schemaLookup);
+    //        assertThat(lookup).isEmpty();
+    //        schemaLookup = new TorontoSchemaLookup(null, "");
+    //        schemaLookup.setInput(TorontoInput.DISCRIMINATOR_1.toString(), "1");
+    //        lookup = _STAGING.lookupSchema(schemaLookup);
+    //        assertThat(lookup).isEmpty();
+    //
+    //        // test lookups based on sex
+    //        schemaLookup = new TorontoSchemaLookup("C481", "8720");
+    //        lookup = _STAGING.lookupSchema(schemaLookup);
+    //        assertThat(lookup).hasSize(2);
+    //        schemaLookup.setInput(TorontoInput.SEX.toString(), "1");
+    //        lookup = _STAGING.lookupSchema(schemaLookup);
+    //        assertThat(lookup).hasSize(1);
+    //        assertThat(lookup.get(0).getId()).isEqualTo("retroperitoneum");
+    //    }
+    //
+    //    @Test
+    //    public void testDiscriminatorInputs() {
+    //        Set<String> discriminators = new HashSet<>();
+    //        _STAGING.getSchemaIds().stream()
+    //                .map(schemaId -> _STAGING.getSchema(schemaId))
+    //                .map(Schema::getSchemaDiscriminators)
+    //                .filter(Objects::nonNull)
+    //                .forEach(discriminators::addAll);
+    //
+    //        assertThat(discriminators).containsOnly("year_dx", "sex", "behavior", "discriminator_1", "discriminator_2");
+    //    }
+    //
+    //    @Test
+    //    public void testLookupCache() {
+    //        // do the same lookup twice
+    //        List<Schema> lookup = _STAGING.lookupSchema(new TorontoSchemaLookup("C629", "9231"));
+    //        assertThat(lookup).hasSize(1);
+    //        assertThat(lookup.get(0).getId()).isEqualTo("soft_tissue_rare");
+    //
+    //        lookup = _STAGING.lookupSchema(new TorontoSchemaLookup("C629", "9231"));
+    //        assertThat(lookup).hasSize(1);
+    //        assertThat(lookup.get(0).getId()).isEqualTo("soft_tissue_rare");
+    //
+    //        // now invalidate the cache
+    //        TorontoDataProvider.getInstance(TorontoVersion.V0_1).invalidateCache();
+    //
+    //        // try the lookup again
+    //        lookup = _STAGING.lookupSchema(new TorontoSchemaLookup("C629", "9231"));
+    //        assertThat(lookup).hasSize(1);
+    //        assertThat(lookup.get(0).getId()).isEqualTo("soft_tissue_rare");
+    //    }
+    //
+    //    @Test
+    //    public void testFindTableRow() {
+    //        assertThat(_STAGING.findMatchingTableRow("tumor_size_clinical_60979", "size_clin", "00X")).isNull();
+    //
+    //        // null maps to blank
+    //        assertThat(_STAGING.findMatchingTableRow("tumor_size_clinical_60979", "size_clin", "000")).isEqualTo(Integer.valueOf(0));
+    //        assertThat(_STAGING.findMatchingTableRow("tumor_size_clinical_60979", "size_clin", "002")).isEqualTo(Integer.valueOf(2));
+    //        assertThat(_STAGING.findMatchingTableRow("tumor_size_clinical_60979", "size_clin", "100")).isEqualTo(Integer.valueOf(2));
+    //        assertThat(_STAGING.findMatchingTableRow("tumor_size_clinical_60979", "size_clin", "988")).isEqualTo(Integer.valueOf(2));
+    //        assertThat(_STAGING.findMatchingTableRow("tumor_size_clinical_60979", "size_clin", "999")).isEqualTo(Integer.valueOf(5));
+    //    }
+    //
+    //    @Test
+    //    public void testStageUrethra() {
+    //        TorontoStagingData data = new TorontoStagingInputBuilder()
+    //                .withInput(TorontoInput.PRIMARY_SITE, "C250")
+    //                .withInput(TorontoInput.HISTOLOGY, "8154")
+    //                .withInput(TorontoInput.DX_YEAR, "2018")
+    //                .withInput(TorontoInput.TUMOR_SIZE_SUMMARY, "004")
+    //                .withInput(TorontoInput.NODES_POS, "03")
+    //                .withInput(TorontoInput.EOD_PRIMARY_TUMOR, "500")
+    //                .withInput(TorontoInput.EOD_REGIONAL_NODES, "300")
+    //                .withInput(TorontoInput.EOD_METS, "10").build();
+    //
+    //        // perform the staging
+    //        _STAGING.stage(data);
+    //
+    //        assertThat(data.getResult()).isEqualTo(Result.STAGED);
+    //        assertThat(data.getSchemaId()).isEqualTo("pancreas");
+    //        assertThat(data.getErrors()).isEmpty();
+    //        assertThat(data.getPath()).hasSize(12);
+    //        assertThat(data.getOutput()).hasSize(9);
+    //
+    //        // check outputs
+    //        assertThat(data.getOutput(TorontoOutput.DERIVED_VERSION)).isEqualTo(TorontoVersion.LATEST.getVersion());
+    //        assertThat(data.getOutput(TorontoOutput.SS_2018_DERIVED)).isEqualTo("7");
+    //        assertThat(data.getOutput(TorontoOutput.NAACCR_SCHEMA_ID)).isEqualTo("00280");
+    //        assertThat(data.getOutput(TorontoOutput.EOD_2018_STAGE_GROUP)).isEqualTo("4");
+    //        assertThat(data.getOutput(TorontoOutput.EOD_2018_T)).isEqualTo("T1a");
+    //        assertThat(data.getOutput(TorontoOutput.EOD_2018_N)).isEqualTo("N1");
+    //        assertThat(data.getOutput(TorontoOutput.EOD_2018_M)).isEqualTo("M1");
+    //        assertThat(data.getOutput(TorontoOutput.AJCC_ID)).isEqualTo("28");
+    //    }
+    //
+    //    @Test
+    //    public void testStageDefaultSsdi() {
+    //        TorontoStagingData data = new TorontoStagingInputBuilder()
+    //                .withInput(TorontoInput.PRIMARY_SITE, "C502")
+    //                .withInput(TorontoInput.HISTOLOGY, "8500")
+    //                .withInput(TorontoInput.BEHAVIOR, "3")
+    //                .withInput(TorontoInput.DX_YEAR, "2020")
+    //                .withInput(TorontoInput.TUMOR_SIZE_SUMMARY, "025")
+    //                .withInput(TorontoInput.EOD_PRIMARY_TUMOR, "100")
+    //                .withInput(TorontoInput.EOD_REGIONAL_NODES, "200")
+    //                .withInput(TorontoInput.EOD_METS, "00")
+    //                .withInput(TorontoInput.GRADE_CLIN, "1")
+    //                .withInput(TorontoInput.GRADE_PATH, "1")
+    //                .build();
+    //
+    //        // add SSDIs
+    //        // - Lymph Nodes Pos Axillary Level I-II: leave blank, should default to X8)
+    //        // - Oncotype DX Recur Score: leave blank, should default to XX9
+    //        data.setInput("er", "1");
+    //        data.setInput("pr", "0");
+    //        data.setInput("her2_summary", "0");
+    //
+    //        // perform the staging
+    //        _STAGING.stage(data);
+    //
+    //        assertThat(data.getResult()).isEqualTo(Result.STAGED);
+    //        assertThat(data.getSchemaId()).isEqualTo("breast");
+    //        assertThat(data.getErrors()).isEmpty();
+    //        assertThat(data.getPath()).hasSize(16);
+    //        assertThat(data.getOutput()).hasSize(9);
+    //
+    //        // check outputs
+    //        assertThat(data.getOutput(TorontoOutput.DERIVED_VERSION)).isEqualTo(TorontoVersion.LATEST.getVersion());
+    //        assertThat(data.getOutput(TorontoOutput.SS_2018_DERIVED)).isEqualTo("3");
+    //        assertThat(data.getOutput(TorontoOutput.NAACCR_SCHEMA_ID)).isEqualTo("00480");
+    //        assertThat(data.getOutput(TorontoOutput.EOD_2018_STAGE_GROUP)).isEqualTo("2B");
+    //        assertThat(data.getOutput(TorontoOutput.EOD_2018_T)).isEqualTo("T2");
+    //        assertThat(data.getOutput(TorontoOutput.EOD_2018_N)).isEqualTo("N1");
+    //        assertThat(data.getOutput(TorontoOutput.EOD_2018_M)).isEqualTo("M0");
+    //        assertThat(data.getOutput(TorontoOutput.AJCC_ID)).isEqualTo("48.2");
+    //    }
+    //
+    //    @Test
+    //    public void testBadLookupInStage() {
+    //        TorontoStagingData data = new TorontoStagingData();
+    //
+    //        // if site/hist are not supplied, no lookup
+    //        _STAGING.stage(data);
+    //        assertThat(data.getResult()).isEqualTo(Result.FAILED_MISSING_SITE_OR_HISTOLOGY);
+    //
+    //        // add hist only and it should fail with same result
+    //        data.setInput(TorontoInput.PRIMARY_SITE, "C489");
+    //        _STAGING.stage(data);
+    //        assertThat(data.getResult()).isEqualTo(Result.FAILED_MISSING_SITE_OR_HISTOLOGY);
+    //
+    //        // put a site/hist combo that doesn't match a schema
+    //        data.setInput(TorontoInput.HISTOLOGY, "9898");
+    //        _STAGING.stage(data);
+    //        assertThat(data.getResult()).isEqualTo(Result.FAILED_NO_MATCHING_SCHEMA);
+    //
+    //        // now a site/hist that returns multiple results
+    //        data.setInput(TorontoInput.PRIMARY_SITE, "C111");
+    //        data.setInput(TorontoInput.HISTOLOGY, "8200");
+    //        _STAGING.stage(data);
+    //        assertThat(data.getResult()).isEqualTo(Result.FAILED_MULITPLE_MATCHING_SCHEMAS);
+    //    }
+    //
+    //    @Test
+    //    public void testInvolvedTables() {
+    //        Set<String> tables = _STAGING.getInvolvedTables("adnexa_uterine_other");
+    //
+    //        assertThat(tables).containsOnly("seer_mets_48348", "nodes_dcc", "grade_clinical_standard_non_ajcc_32473", "grade_pathological_standard_non_ajcc_5627",
+    //                "adnexa_uterine_other_97891", "nodes_pos_fpa", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "primary_site", "histology",
+    //                "nodes_exam_76029", "grade_post_therapy_clin_69737", "grade_post_therapy_path_75348", "schema_selection_adnexa_uterine_other",
+    //                "year_dx_validation", "summary_stage_rpa", "lvi_dna_56663", "tumor_size_summary_63115", "extension_bcn");
+    //    }
+    //
+    //    @Test
+    //    public void testInvolvedSchemas() {
+    //        Set<String> schemas = _STAGING.getInvolvedSchemas("her2_summary_30512");
+    //
+    //        assertThat(schemas).isEqualTo(new HashSet<>(Collections.singletonList("breast")));
+    //    }
+    //
+    //    @Test
+    //    public void testGetInputs() {
+    //        assertThat(_STAGING.getInputs(_STAGING.getSchema("adnexa_uterine_other"))).containsOnly("eod_mets", "site", "hist", "eod_primary_tumor", "eod_regional_nodes");
+    //        assertThat(_STAGING.getInputs(_STAGING.getSchema("testis"))).containsOnly("eod_mets", "site", "hist", "nodes_pos", "s_category_path",
+    //                "eod_primary_tumor", "s_category_clin", "eod_regional_nodes");
+    //    }
+    //
+    //    @Test
+    //    public void testIsCodeValid() {
+    //        // test bad parameters for schema or field
+    //        assertThat(_STAGING.isCodeValid("bad_schema_name", "site", "C509")).isFalse();
+    //        assertThat(_STAGING.isCodeValid("testis", "bad_field_name", "C509")).isFalse();
+    //
+    //        // test null values
+    //        assertThat(_STAGING.isCodeValid(null, null, null)).isFalse();
+    //        assertThat(_STAGING.isCodeValid("urethra", null, null)).isFalse();
+    //        assertThat(_STAGING.isCodeValid("urethra", "site", null)).isFalse();
+    //
+    //        // test fields that have a "value" specified
+    //        assertThat(_STAGING.isCodeValid("urethra", "year_dx", null)).isFalse();
+    //        assertThat(_STAGING.isCodeValid("urethra", "year_dx", "200")).isFalse();
+    //        assertThat(_STAGING.isCodeValid("urethra", "year_dx", "2003")).isFalse();
+    //        assertThat(_STAGING.isCodeValid("urethra", "year_dx", "2145")).isFalse();
+    //        assertThat(_STAGING.isCodeValid("urethra", "year_dx", "2018")).isTrue();
+    //
+    //        // test valid and invalid fields
+    //        assertThat(_STAGING.isCodeValid("urethra", "eod_primary_tumor", "000")).isTrue();
+    //        assertThat(_STAGING.isCodeValid("urethra", "eod_primary_tumor", "001")).isFalse();
+    //        assertThat(_STAGING.isCodeValid("urethra", "discriminator_1", "1")).isTrue();
+    //        assertThat(_STAGING.isCodeValid("urethra", "discriminator_1", "9")).isFalse();
+    //    }
+    //
+    //    @Test
+    //    public void testIsContextValid() {
+    //        TorontoStagingData data = new TorontoStagingData();
+    //
+    //        data.setInput(Staging.CTX_YEAR_CURRENT, "2018");
+    //
+    //        // test valid year
+    //        data.setInput(TorontoInput.DX_YEAR, "2018");
+    //        assertThat(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput())).isTrue();
+    //
+    //        // test invalid year
+    //        data.setInput(TorontoInput.DX_YEAR, "2016");
+    //        assertThat(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput())).isFalse();
+    //    }
+    //
+    //    @Test
+    //    public void testGetSchemaIds() {
+    //        Set<String> algorithms = _STAGING.getSchemaIds();
+    //
+    //        assertThat(algorithms.size() > 0).isTrue();
+    //        assertThat(algorithms).contains("testis");
+    //    }
+    //
+    //    @Test
+    //    public void testGetTableIds() {
+    //        Set<String> tables = _STAGING.getTableIds();
+    //
+    //        assertThat(tables.size() > 0).isTrue();
+    //        assertThat(tables).contains("urethra_prostatic_urethra_30106");
+    //    }
+    //
+    //    @Test
+    //    public void testGetSchema() {
+    //        assertThat(_STAGING.getSchema("bad_schema_name")).isNull();
+    //        assertThat(_STAGING.getSchema("brain")).isNotNull();
+    //        assertThat(_STAGING.getSchema("brain").getName()).isEqualTo("Brain");
+    //    }
+    //
+    //    @Test
+    //    public void testLookupOutputs() {
+    //        TorontoSchemaLookup lookup = new TorontoSchemaLookup("C680", "8590");
+    //        List<Schema> lookups = _STAGING.lookupSchema(lookup);
+    //        assertThat(lookups).hasSize(2);
+    //
+    //        Schema schema = _STAGING.getSchema(lookups.get(0).getId());
+    //        assertThat(schema.getId()).isEqualTo("urethra");
+    //
+    //        // build list of output keys
+    //        Set<String> definedOutputs = schema.getOutputs().stream().map(Output::getKey).collect(Collectors.toSet());
+    //
+    //        // test without context
+    //        assertThat(_STAGING.getOutputs(schema)).isEqualTo(definedOutputs);
+    //
+    //        // test with context
+    //        assertThat(_STAGING.getOutputs(schema, lookup.getInputs())).isEqualTo(definedOutputs);
+    //    }
+    //
+    //    @Test
+    //    public void testEncoding() {
+    //        Table table = _STAGING.getTable("serum_alb_pretx_level_58159");
+    //
+    //        assertThat(table).isNotNull();
+    //
+    //        // the notes of this table contain UTF-8 characters, specifically the symbol: ≥
+    //
+    //        // converting to UTF-8 should change nothing
+    //        assertThat(new String(table.getNotes().getBytes(StandardCharsets.UTF_8), StandardCharsets.UTF_8)).isEqualTo(table.getNotes());
+    //
+    //        // converting to other encoding should change the text
+    //        assertThat(new String(table.getNotes().getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.ISO_8859_1)).isNotEqualTo(table.getNotes());
+    //        assertThat(new String(table.getNotes().getBytes(StandardCharsets.US_ASCII), StandardCharsets.US_ASCII)).isNotEqualTo(table.getNotes());
+    //    }
+    //
+    //    @Test
+    //    public void testContentReturnedForInvalidInput() {
+    //        TorontoStagingData data = new TorontoStagingInputBuilder()
+    //                .withInput(TorontoInput.PRIMARY_SITE, "C713")
+    //                .withInput(TorontoInput.HISTOLOGY, "8020")
+    //                .withInput(TorontoInput.BEHAVIOR, "3")
+    //                .withInput(TorontoInput.DX_YEAR, "2018")
+    //                .withInput(TorontoInput.EOD_PRIMARY_TUMOR, "200")
+    //                .withInput(TorontoInput.EOD_REGIONAL_NODES, "300")
+    //                .withInput(TorontoInput.EOD_METS, "00").build();
+    //
+    //        // perform the staging
+    //        _STAGING.stage(data);
+    //
+    //        assertThat(data.getResult()).isEqualTo(Result.STAGED);
+    //        assertThat(data.getSchemaId()).isEqualTo("brain");
+    //        assertThat(data.getErrors()).hasSize(5);
+    //        assertThat(data.getPath()).hasSize(5);
+    //        assertThat(data.getOutput()).hasSize(9);
+    //        assertThat(data.getOutput()).containsEntry(TorontoOutput.DERIVED_VERSION.toString(), "2.1");
+    //    }
+    //
+    //    @Test
+    //    public void testContentNotReturnedForInvalidYear() {
+    //        TorontoStagingData data = new TorontoStagingInputBuilder()
+    //                .withInput(TorontoInput.PRIMARY_SITE, "C713")
+    //                .withInput(TorontoInput.HISTOLOGY, "8020")
+    //                .withInput(TorontoInput.BEHAVIOR, "3")
+    //                .withInput(TorontoInput.DX_YEAR, "2010")
+    //                .withInput(TorontoInput.EOD_PRIMARY_TUMOR, "200")
+    //                .withInput(TorontoInput.EOD_REGIONAL_NODES, "300")
+    //                .withInput(TorontoInput.EOD_METS, "00").build();
+    //
+    //        // perform the staging
+    //        _STAGING.stage(data);
+    //
+    //        assertThat(data.getResult()).isEqualTo(Result.FAILED_INVALID_YEAR_DX);
+    //        assertThat(data.getSchemaId()).isEqualTo("brain");
+    //        assertThat(data.getErrors()).isEmpty();
+    //        assertThat(data.getPath()).isEmpty();
+    //        assertThat(data.getOutput()).isEmpty();
+    //    }
+    //
+    //    @Test
+    //    public void testGlossary() {
+    //        assertEquals(23, _STAGING.getGlossaryTerms().size());
+    //        GlossaryDefinition entry = _STAGING.getGlossaryDefinition("Medulla");
+    //        assertNotNull(entry);
+    //        assertEquals("Medulla", entry.getName());
+    //        assertTrue(entry.getDefinition().startsWith("The central portion of an organ, in contrast to the outer layer"));
+    //        assertEquals(Collections.singletonList("Medullary"), entry.getAlternateNames());
+    //        assertNotNull(entry.getLastModified());
+    //
+    //        Set<String> hits = _STAGING.getSchemaGlossary("urethra");
+    //        assertEquals(1, hits.size());
+    //        hits = _STAGING.getTableGlossary("extension_baj");
+    //        assertEquals(3, hits.size());
+    //    }
+    //
+    //    @Test
+    //    public void testMetadata() {
+    //        Schema urethra = _STAGING.getSchema("urethra");
+    //        assertNotNull(urethra);
+    //
+    //        Input gradeClin = urethra.getInputMap().get("grade_clin");
+    //        assertNotNull(gradeClin);
+    //
+    //        assertEquals(5, gradeClin.getMetadata().size());
+    //        assertTrue(gradeClin.getMetadata().contains(new StagingMetadata("COC_REQUIRED")));
+    //        assertTrue(gradeClin.getMetadata().contains(new StagingMetadata("CCCR_REQUIRED")));
+    //        assertTrue(gradeClin.getMetadata().contains(new StagingMetadata("SEER_REQUIRED")));
+    //        assertTrue(gradeClin.getMetadata().contains(new StagingMetadata("NPCR_REQUIRED")));
+    //        assertTrue(gradeClin.getMetadata().contains(new StagingMetadata("SSDI")));
+    //    }
+    //
+    @Test
+    public void testCachedSiteAndHistology() {
+        StagingDataProvider provider = getProvider();
+        assertThat(provider.getValidSites().size() > 0).isTrue();
+        assertThat(provider.getValidHistologies().size() > 0).isTrue();
+
+        // site tests
+        List<String> validSites = Arrays.asList("C000", "C809");
+        List<String> invalidSites = Arrays.asList("C727", "C810");
+        for (String site : validSites)
+            assertThat(provider.getValidSites()).contains(site);
+        for (String site : invalidSites)
+            assertThat(provider.getValidSites()).doesNotContain(site);
+
+        // hist tests
+        List<String> validHist = Arrays.asList("8000", "8002", "8005", "8290", "9992", "9993");
+        List<String> invalidHist = Arrays.asList("8006", "9990");
+        for (String hist : validHist)
+            assertThat(provider.getValidHistologies())
+                    .withFailMessage("The histology '" + hist + "' is not in the valid histology list")
+                    .contains(hist);
+        for (String hist : invalidHist)
+            assertThat(provider.getValidHistologies())
+                    .withFailMessage("The histology '" + hist + "' is not supposed to be in the valid histology list")
+                    .doesNotContain(hist);
+    }
+}

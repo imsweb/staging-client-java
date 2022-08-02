@@ -10,6 +10,10 @@ A cancer staging client library for Java applications.
 
 In prior versions of this library the algorithms were released in separate repositories.  They are all now included with this library.
 
+### Toronto Pedatric Staging
+
+TODO
+
 ### EOD 2.1
 
 Extent of Disease (EOD) is a set of three data items that describe how far a cancer has spread at the time of diagnosis. EOD 2018 is effective for 
@@ -80,14 +84,14 @@ Download [the latest JAR][1] or grab via Maven:
 <dependency>
     <groupId>com.imsweb</groupId>
     <artifactId>staging-client-java</artifactId>
-    <version>7.0</version>
+    <version>8.0-SNAPSHOT</version>
 </dependency>
 ```
 
 or via Gradle:
 
 ```groovy
-compile 'com.imsweb:staging-client-java:7.0'
+compile 'com.imsweb:staging-client-java:8.0-SNAPSHOT'
 ```
 
 ## Usage

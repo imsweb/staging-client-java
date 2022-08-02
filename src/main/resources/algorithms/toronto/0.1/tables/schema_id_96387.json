@@ -1,0 +1,15 @@
+{
+  "id" : "schema_id_96387",
+  "algorithm" : "toronto",
+  "version" : "0.1",
+  "name" : "Schema ID",
+  "title" : "Schema ID",
+  "notes" : "NOT a lookup (code/meaning); merely an expected value list\n\n00551: Ovary\n00459: Soft Tissue Other",
+  "last_modified" : "2022-07-14T21:21:51.562Z",
+  "definition" : [ {
+    "key" : "schema_id",
+    "name" : "Schema ID",
+    "type" : "INPUT"
+  } ],
+  "rows" : [ [ "00459" ], [ "00551" ] ]
+}

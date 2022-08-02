@@ -1,0 +1,101 @@
+{
+  "id" : "astrocytoma",
+  "algorithm" : "toronto",
+  "version" : "0.1",
+  "name" : "Astrocytoma",
+  "title" : "Astrocytoma",
+  "description" : "JENNIFER: notes have to be cleaned up, just left them here as a reminder of the pattern in EOD\n - should BRAF mention Colorectal (given this is C723) in note 4",
+  "notes" : "9380, 9384, 9400-9411, 9420-9424, 9440-9442: C723 (ages 0-19)\n\n**Note 1:** The following sources were used in the development of this schema\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)",
+  "schema_selection_table" : "schema_selection_astrocytoma",
+  "schema_discriminators" : [ "age_dx" ],
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "naaccr_xml_id" : "dateOfDiagnosis",
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "naaccr_xml_id" : "primarySite",
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "naaccr_xml_id" : "histologicTypeIcdO3",
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_mets",
+    "name" : "EOD Mets",
+    "naaccr_item" : 776,
+    "naaccr_xml_id" : "eodMets",
+    "default" : "00",
+    "table" : "eod_mets_22959",
+    "used_for_staging" : true
+  }, {
+    "key" : "age_dx",
+    "name" : "Age at Diagnosis",
+    "naaccr_item" : 230,
+    "naaccr_xml_id" : "ageAtDiagnosis",
+    "table" : "age_at_diagnosis_validation_3881",
+    "used_for_staging" : true
+  }, {
+    "key" : "braf_mutational_analysis",
+    "name" : "BRAF Mutational Analysis",
+    "naaccr_item" : 3940,
+    "naaccr_xml_id" : "brafMutationalAnalysis",
+    "table" : "braf_mutational_analysis_80064",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  } ],
+  "outputs" : [ {
+    "key" : "toronto_id",
+    "name" : "Toronto ID",
+    "default" : "3b"
+  }, {
+    "key" : "toronto_version_number",
+    "name" : "Toronto Version Number",
+    "default" : "1"
+  }, {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "toronto_t",
+    "name" : "Derived Toronto T"
+  }, {
+    "key" : "toronto_n",
+    "name" : "Derived Toronto N"
+  }, {
+    "key" : "toronto_m",
+    "name" : "Derived Toronto M"
+  }, {
+    "key" : "toronto_group",
+    "name" : "Derived Toronto Stage Group"
+  } ],
+  "mappings" : [ {
+    "id" : "toronto_stage",
+    "name" : "Toronto Stage",
+    "initial_context" : [ {
+      "key" : "toronto_group",
+      "value" : "90"
+    } ],
+    "tables" : [ {
+      "id" : "toronto_stage_52481",
+      "inputs" : [ "eod_mets" ],
+      "outputs" : [ "toronto_group" ]
+    } ]
+  } ],
+  "involved_tables" : [ "primary_site", "histology", "age_at_diagnosis_validation_3881", "year_dx_validation", "toronto_stage_52481", "eod_mets_22959", "schema_selection_astrocytoma", "braf_mutational_analysis_80064" ],
+  "last_modified" : "2022-07-14T16:35:06.016Z",
+  "on_invalid_input" : "CONTINUE"
+}

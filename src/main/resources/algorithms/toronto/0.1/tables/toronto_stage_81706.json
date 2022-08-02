@@ -1,0 +1,30 @@
+{
+  "id" : "toronto_stage_81706",
+  "algorithm" : "toronto",
+  "version" : "0.1",
+  "name" : "Toronto Stage",
+  "title" : "Toronto Stage",
+  "last_modified" : "2022-06-24T18:35:46.147Z",
+  "definition" : [ {
+    "key" : "toronto_t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "toronto_n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "toronto_m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "s_category_combined",
+    "name" : "S Category",
+    "type" : "INPUT"
+  }, {
+    "key" : "toronto_group",
+    "name" : "Toronto Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "T1,T2,T3,T4", "N0", "M0", "9", "VALUE:1" ], [ "T1", "N0", "M0", "0", "VALUE:1A" ], [ "T2,T3,T4", "N0", "M0", "0", "VALUE:1B" ], [ "*", "N0", "M0", "1,2,3", "VALUE:1S" ], [ "*", "N1,N2,N3", "M0", "9", "VALUE:2" ], [ "*", "N1", "M0", "0,1", "VALUE:2A" ], [ "*", "N2", "M0", "0,1", "VALUE:2B" ], [ "*", "N3", "M0", "0,1", "VALUE:2C" ], [ "*", "*", "M1", "9", "VALUE:3" ], [ "*", "*", "M1", "0,1", "VALUE:3A" ], [ "*", "N1,N2,N3", "M0", "2", "VALUE:3B" ], [ "*", "*", "M1", "2", "VALUE:3B" ], [ "*", "N1,N2,N3", "M0", "3", "VALUE:3C" ], [ "*", "*", "M1", "3", "VALUE:3C" ], [ "Tis,T0,TX", "N0", "M0", "0,9", "VALUE:99" ], [ "*", "NX", "M0", "*", "VALUE:99" ] ]
+}

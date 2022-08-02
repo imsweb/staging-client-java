@@ -1,0 +1,19 @@
+{
+  "id" : "wilms_tumor_staging_system_11570",
+  "algorithm" : "toronto",
+  "version" : "0.1",
+  "name" : "Wilms Tumor Staging System",
+  "title" : "Wilms Tumor Staging System",
+  "notes" : "**Note 1:** **Collect for all years at this time** This SSDI is effective for diagnosis years xxxx    \n* For cases diagnosed xxxx-xxxx, leave this SSDI blank\n\n**Note 2:** This staging system is based on results from the surgical resection\n* Code 99 if there is no surgical resection (except for patients with Stage IV disease) (code 40)\n\n**Note 3:** Codes are based on whether patient had chemotherapy prior to surgery or not\n* If patient did not receive chemotherapy (or unknown) prior to surgery, see codes 10, 20, 30\n* If patient did receive chemotherapy prior to surgery, see codes 11, 21, 31\n* Code 40 is applicable for all cases",
+  "last_modified" : "2022-06-30T17:55:25.575Z",
+  "definition" : [ {
+    "key" : "wilms_tumor_staging",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "10", "No chemotherapy prior to surgery\n* Tumor limited to kidney and completely excised\n   - Renal capsule intact, not penetrated by tumor\n   - No tumor invasion of veins or lymphatics of renal sinus\n   - No nodal or hematogenous metastases\n   - No prior biopsy\n   - Negative margins\n* Localized, NOS\n\nPhysician documents Stage I" ], [ "11", "Chemotherapy prior to surgery\n* Tumor limited to kidney and completely resected\n   - Renal capsule may be infiltrated by tumor, but tumor does not reach the outer surface\n   - Tumor may protrude or bulge into the pelvic system or ureter, but does not infiltrate\n   - Vessels of renal sinus not involved\n\nPhysician documents Stage y-I" ], [ "20", "No chemotherapy prior to surgery\n* Tumor extends beyond kidney but completely resected\n   - Tumor penetrates renal capsule\n   - Tumor in lymphatics or veins of renal sinus\n   - Tumor in renal vein with margin not involved\n\nPhysician documents Stage II" ], [ "21", "Chemotherapy prior to surgery\n\n* Tumor extends beyond kidney but completely resected\n   - Tumor penetrates renal capsule into perirenal fat\n   - Tumor infiltrates the renal sinus and/or invades blood and lymphatic vessels outside renal parenchyma but is completely resected\n   - Tumor infiltrates adjacent organs or vena cava but is completely resected\n\nPhysician documents Stage y-II" ], [ "30", "No chemotherapy prior to surgery\n\n* Residual tumor or nonhaematogenous metastases confined to abdomen\n   - Involved abdominal nodes\n   - Peritoneal contamination or tumor implant\n   - Tumor spillage of any degree occurring before or during surgery\n   - Gross residual tumor in abdomen\n   - Biopsy of tumor (including fine-needle aspiration) prior to removal of kidney\n   - Resection margins involved by tumor\n\nPhysician documents Stage III" ], [ "31", "Chemotherapy prior to surgery\n\n* Incomplete excision of the tumor (gross or microscopic extension beyond the resection margins)\n   - Involved abdominal lymph nodes, including necrotic tumor or chemotherapy-induced changes\n   - Tumor rupture before or intraoperatively\n   - Tumor has penetrated the peritoneal surface\n   - Tumor thrombi present at resection margins\n   - Surgical biopsy prior to resection (does not include needle biopsy\n\nPhysician documents Stage y-III" ], [ "40", "Stage IV\n\n* Hematogenous metastases or spread beyond abdomen at diagnosis" ], [ "88", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 88 may result in an edit error.)" ], [ "99", "Not documented in medical record\nNo surgical resection performed and patient has no metastatic disease\nNational Wilms Tumor Study Group (NWTSG) staging not stated" ], [ "", "N/A - Diagnosis year is prior to xxxx" ] ]
+}

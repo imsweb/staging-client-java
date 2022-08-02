@@ -13,7 +13,7 @@ plugins {
 }
 
 group = 'com.imsweb'
-version = '7.0'
+version = '8.0-SNAPSHOT'
 description = 'Java client library for staging calculations'
 
 // fail the build if there are compiler warnings
@@ -52,8 +52,8 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'org.assertj:assertj-core:3.23.1'
     testImplementation 'org.slf4j:slf4j-simple:1.7.36'
-    testImplementation 'com.google.code.bean-matchers:bean-matchers:0.13'
-    testImplementation 'com.imsweb:seerapi-client-java:5.1'
+    testImplementation 'com.google.code.bean-matchers:bean-matchers:0.14'
+    testImplementation 'com.imsweb:seerapi-client-java:5.3'
 
 }
 
@@ -218,6 +218,6 @@ nexusStaging {
 }
 
 wrapper {
-    gradleVersion = '7.4.2'
+    gradleVersion = '7.5'
     distributionType = Wrapper.DistributionType.ALL
 }

@@ -1,0 +1,15 @@
+{
+  "id" : "eod_mets_22959",
+  "algorithm" : "toronto",
+  "version" : "0.1",
+  "name" : "EOD Mets",
+  "title" : "EOD Mets",
+  "notes" : "NOT a lookup (code/meaning); merely an expected value list\n\n00721: Brain\n00722: CNS Other\n00723: Intracranial Gland\n\nincludes 00700: Orbital Sarcoma",
+  "last_modified" : "2022-06-24T21:18:00.358Z",
+  "definition" : [ {
+    "key" : "eod_mets",
+    "name" : "EOD M Code",
+    "type" : "INPUT"
+  } ],
+  "rows" : [ [ "00" ], [ "10" ], [ "70" ], [ "99" ] ]
+}

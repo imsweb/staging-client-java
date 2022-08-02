@@ -1,0 +1,35 @@
+{
+  "id" : "derived_risk_level_56526",
+  "algorithm" : "toronto",
+  "version" : "0.1",
+  "name" : "Derived Risk Level",
+  "title" : "Derived Risk Level",
+  "notes" : "**FIRST DRAFT**\n* Age is not correct, this should be months.\n   - 0-12 which is represented by 0 years\n   - 12-18 which is represented by 1 year\n   - 18+ which is represented by 2-120, 999\n* Only HIGH risk was defined\n* Not clear what to do with 7, 8, 9 or blank.  Currently treated the same as (negative, favorable, hyperdiploid)",
+  "last_modified" : "2022-07-08T15:00:19.115Z",
+  "definition" : [ {
+    "key" : "ingrss",
+    "name" : "INGRSS",
+    "type" : "INPUT"
+  }, {
+    "key" : "n_myc_amplification",
+    "name" : "n-MYC",
+    "type" : "INPUT"
+  }, {
+    "key" : "shimada_classification",
+    "name" : "Shimada",
+    "type" : "INPUT"
+  }, {
+    "key" : "dna_ploidy",
+    "name" : "DNA Ploidy",
+    "type" : "INPUT"
+  }, {
+    "key" : "age_dx",
+    "name" : "Age DX",
+    "type" : "INPUT"
+  }, {
+    "key" : "derived_risk_level",
+    "name" : "Derived Risk Level",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "1", "0", "*", "*", "*", "VALUE:VERY LOW" ], [ "1", "1", "*", "*", "*", "VALUE:HIGH" ], [ "1", "7,8,9,", "*", "*", "*", "VALUE:VERY LOW" ], [ "2", "0", "*", "*", "0,1", "VALUE:VERY LOW" ], [ "2", "0", "0", "*", "2-120,999", "VALUE:HIGH" ], [ "2", "0", "1", "*", "2-120,999", "VALUE:VERY LOW" ], [ "2", "0", "7,8,9,", "*", "2-120,999", "VALUE:VERY LOW" ], [ "2", "1", "*", "*", "*", "VALUE:HIGH" ], [ "2", "7,8,9,", "*", "*", "*", "VALUE:VERY LOW" ], [ "2", "7,8,9,", "*", "*", "*", "VALUE:VERY LOW" ], [ "3", "0", "*", "*", "0", "VALUE:LOW" ], [ "3", "1", "*", "*", "0", "VALUE:HIGH" ], [ "3", "7,8,9,", "*", "*", "0", "VALUE:LOW" ], [ "3", "0", "0", "*", "1", "VALUE:HIGH" ], [ "3", "0", "1", "0", "1", "VALUE:HIGH" ], [ "3", "0", "1", "1", "1", "VALUE:LOW" ], [ "3", "0", "1", "7,8,9,", "1", "VALUE:LOW" ], [ "3", "0", "7,8,9,", "0", "1", "VALUE:HIGH" ], [ "3", "0", "7,8,9,", "1", "1", "VALUE:LOW" ], [ "3", "0", "7,8,9,", "7,8,9,", "1", "VALUE:LOW" ], [ "3", "1", "*", "*", "1", "VALUE:HIGH" ], [ "3", "7,8,9,", "0", "*", "1", "VALUE:HIGH" ], [ "3", "7,8,9,", "1", "0", "1", "VALUE:HIGH" ], [ "3", "7,8,9,", "1", "1", "1", "VALUE:LOW" ], [ "3", "7,8,9,", "1", "7,8,9,", "1", "VALUE:LOW" ], [ "3", "7,8,9,", "7,8,9,", "0", "1", "VALUE:HIGH" ], [ "3", "7,8,9,", "7,8,9,", "1", "1", "VALUE:LOW" ], [ "3", "7,8,9,", "7,8,9,", "7,8,9,", "1", "VALUE:LOW" ], [ "3", "*", "*", "*", "2-120,999", "VALUE:HIGH" ], [ "4", "0", "*", "*", "*", "VALUE:INTERMEDIATE" ], [ "4", "1", "*", "*", "*", "VALUE:HIGH" ], [ "4", "7,8,9,", "*", "*", "*", "VALUE:INTERMEDIATE" ], [ "8,9,", "*", "*", "*", "*", "VALUE:UNKNOW" ] ]
+}

@@ -1,0 +1,70 @@
+{
+  "id" : "medulloblastoma",
+  "algorithm" : "toronto",
+  "version" : "0.1",
+  "name" : "Medulloblastoma",
+  "title" : "Medulloblastoma and Other CNS embryonal tumors: Medulloblastomas",
+  "description" : "JENNIFER: notes have to be cleaned up, just left them here as a reminder of the pattern in EOD",
+  "notes" : "9470-9472, 9474-9478, 9480: C700-C729 (all ages)\n\n**Note 1:** The following sources were used in the development of this schema\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)",
+  "schema_selection_table" : "schema_selection_medulloblastoma",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "naaccr_xml_id" : "dateOfDiagnosis",
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "naaccr_xml_id" : "primarySite",
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "naaccr_xml_id" : "histologicTypeIcdO3",
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "m_category",
+    "name" : "M Category",
+    "table" : "m_category_82562",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  } ],
+  "outputs" : [ {
+    "key" : "toronto_id",
+    "name" : "Toronto ID",
+    "default" : "3c1"
+  }, {
+    "key" : "toronto_version_number",
+    "name" : "Toronto Version Number",
+    "default" : "1"
+  }, {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "toronto_t",
+    "name" : "Derived Toronto T"
+  }, {
+    "key" : "toronto_n",
+    "name" : "Derived Toronto N"
+  }, {
+    "key" : "toronto_m",
+    "name" : "Derived Toronto M"
+  }, {
+    "key" : "toronto_group",
+    "name" : "Derived Toronto Stage Group"
+  } ],
+  "involved_tables" : [ "primary_site", "histology", "year_dx_validation", "schema_selection_medulloblastoma", "m_category_82562" ],
+  "last_modified" : "2022-07-12T18:06:24.041Z",
+  "on_invalid_input" : "CONTINUE"
+}

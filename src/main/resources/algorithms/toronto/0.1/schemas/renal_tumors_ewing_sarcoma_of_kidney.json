@@ -1,0 +1,123 @@
+{
+  "id" : "renal_tumors_ewing_sarcoma_of_kidney",
+  "algorithm" : "toronto",
+  "version" : "0.1",
+  "name" : "Renal Tumors: Ewing Sarcoma of Kidney",
+  "title" : "Renal Tumors: Ewing Sarcoma of Kidney",
+  "description" : "JENNIFER: notes have to be cleaned up, just left them here as a reminder of the pattern in EOD\n- Chrom 1q GOH synonyms in Note 4 to be fixed or removed",
+  "notes" : "9364: C649 (all ages)\n\n**Note 1:** The following sources were used in the development of this schema\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)",
+  "schema_selection_table" : "schema_selection_renal_tumors_ewing_sarcoma_of_kidney",
+  "schema_discriminators" : [ "behavior" ],
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "naaccr_xml_id" : "dateOfDiagnosis",
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "naaccr_xml_id" : "primarySite",
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "naaccr_xml_id" : "histologicTypeIcdO3",
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "naaccr_item" : 523,
+    "naaccr_xml_id" : "behaviorCodeIcdO3",
+    "table" : "behavior",
+    "used_for_staging" : true
+  }, {
+    "key" : "wilms_tumor_staging",
+    "name" : "Wilms Tumor Staging System",
+    "default" : "99",
+    "table" : "wilms_tumor_staging_system_11570",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "chrom_1p_status",
+    "name" : "Chromosome 1p Status",
+    "naaccr_item" : 3801,
+    "naaccr_xml_id" : "chromosome1pLossHeterozygosity",
+    "table" : "chromosome_1p_status_97190",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "chrom_1q_status",
+    "name" : "Chromosome 1q Status",
+    "table" : "chromosome_1q_status_14467",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "chrom_19q_status",
+    "name" : "Chromosome 19q Status",
+    "naaccr_item" : 3802,
+    "naaccr_xml_id" : "chromosome19qLossHeterozygosity",
+    "table" : "chromosome_19q_status_19104",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "ews_fli1_fusion",
+    "name" : "EWS-FLI1 fusion",
+    "table" : "ews_fli1_fusion_45751",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  } ],
+  "outputs" : [ {
+    "key" : "toronto_id",
+    "name" : "Toronto ID",
+    "default" : "6a4"
+  }, {
+    "key" : "toronto_version_number",
+    "name" : "Toronto Version Number",
+    "default" : "1"
+  }, {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "toronto_t",
+    "name" : "Derived Toronto T"
+  }, {
+    "key" : "toronto_n",
+    "name" : "Derived Toronto N"
+  }, {
+    "key" : "toronto_m",
+    "name" : "Derived Toronto M"
+  }, {
+    "key" : "toronto_group",
+    "name" : "Derived Toronto Stage Group"
+  } ],
+  "involved_tables" : [ "chromosome_1q_status_14467", "primary_site", "ews_fli1_fusion_45751", "chromosome_1p_status_97190", "histology", "year_dx_validation", "chromosome_19q_status_19104", "behavior", "schema_selection_renal_tumors_ewing_sarcoma_of_kidney", "wilms_tumor_staging_system_11570" ],
+  "last_modified" : "2022-07-12T19:48:35.961Z",
+  "on_invalid_input" : "CONTINUE"
+}

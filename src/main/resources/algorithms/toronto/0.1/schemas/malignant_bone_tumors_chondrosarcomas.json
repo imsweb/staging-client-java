@@ -1,0 +1,89 @@
+{
+  "id" : "malignant_bone_tumors_chondrosarcomas",
+  "algorithm" : "toronto",
+  "version" : "0.1",
+  "name" : "Malignant Bone Tumors: Chondrosarcomas",
+  "title" : "Malignant Bone Tumors: Chondrosarcomas",
+  "description" : "JENNIFER: notes have to be cleaned up, just left them here as a reminder of the pattern in EOD",
+  "notes" : "9210, 9220-9221, 9230, 9240-9243: C400-C419, C760-C768, C809 (ages 0-19)\n\n**Note 1:** The following sources were used in the development of this schema\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)",
+  "schema_selection_table" : "schema_selection_malignant_bone_tumors_chondrosarcomas",
+  "schema_discriminators" : [ "age_dx" ],
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "naaccr_xml_id" : "dateOfDiagnosis",
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "naaccr_xml_id" : "primarySite",
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "naaccr_xml_id" : "histologicTypeIcdO3",
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_mets",
+    "name" : "EOD Mets",
+    "naaccr_item" : 776,
+    "naaccr_xml_id" : "eodMets",
+    "default" : "00",
+    "table" : "eod_mets_96483",
+    "used_for_staging" : true
+  }, {
+    "key" : "age_dx",
+    "name" : "Age at Diagnosis",
+    "naaccr_item" : 230,
+    "naaccr_xml_id" : "ageAtDiagnosis",
+    "table" : "age_at_diagnosis_validation_3881",
+    "used_for_staging" : true
+  } ],
+  "outputs" : [ {
+    "key" : "toronto_id",
+    "name" : "Toronto ID",
+    "default" : "8b"
+  }, {
+    "key" : "toronto_version_number",
+    "name" : "Toronto Version Number",
+    "default" : "1"
+  }, {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "toronto_t",
+    "name" : "Derived Toronto T"
+  }, {
+    "key" : "toronto_n",
+    "name" : "Derived Toronto N"
+  }, {
+    "key" : "toronto_m",
+    "name" : "Derived Toronto M"
+  }, {
+    "key" : "toronto_group",
+    "name" : "Derived Toronto Stage Group"
+  } ],
+  "mappings" : [ {
+    "id" : "toronto_stage",
+    "name" : "Toronto Stage",
+    "initial_context" : [ {
+      "key" : "toronto_group",
+      "value" : "90"
+    } ],
+    "tables" : [ {
+      "id" : "toronto_stage_22694",
+      "inputs" : [ "eod_mets" ],
+      "outputs" : [ "toronto_group" ]
+    } ]
+  } ],
+  "involved_tables" : [ "schema_selection_malignant_bone_tumors_chondrosarcomas", "primary_site", "toronto_stage_22694", "histology", "age_at_diagnosis_validation_3881", "year_dx_validation", "eod_mets_96483" ],
+  "last_modified" : "2022-07-14T16:28:46.611Z",
+  "on_invalid_input" : "CONTINUE"
+}

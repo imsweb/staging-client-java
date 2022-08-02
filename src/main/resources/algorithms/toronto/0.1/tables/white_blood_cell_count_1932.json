@@ -1,0 +1,19 @@
+{
+  "id" : "white_blood_cell_count_1932",
+  "algorithm" : "toronto",
+  "version" : "0.1",
+  "name" : "White Blood Cell Count",
+  "title" : "White Blood Cell Count",
+  "notes" : "**Note 1:** **Collect for all years at this time** This SSDI is effective for diagnosis years xxxx    \n* For cases diagnosed xxxx-xxxx, leave this SSDI blank\n\n**Note 2:** Physician statement of WBC (White Blood Cell Count) Pretreatment Lab Value can be used to code this data item when no other information is available\n\n**Note 3:** Record the lab value of the highest WBC test result documented in the medical record **prior to treatment**. The lab value may be recorded in a lab report, history and physical, or clinical statement in the pathology report\n\n**Note 4:** Record to the nearest microliter (cells/mcL) the highest WBC lab value documented in the medical record **prior to treatment**.",
+  "last_modified" : "2022-07-06T17:33:16.817Z",
+  "definition" : [ {
+    "key" : "white_blood_cell_count",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0-9999.9", "0.0-9999.9 microliter (cells/mcL)\n(Exact value to nearest tenth in cells/mcL)" ], [ "XXXX.1", "100,000 or greater" ], [ "XXXX.2", "Lab value not available, physician states WBC is normal" ], [ "XXXX.3", "Lab value not available, physician states WBC is elevated/high" ], [ "XXXX.7", "Test ordered, results not in chart" ], [ "XXXX.8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code XXXX.8 may result in an edit error)" ], [ "XXXX.9", "Not documented in medical record\nWBC (White Blood Cell Count) Pretreatment Lab Value not assessed or unknown if assessed" ], [ "<BLANK>", "N/A - Diagnosis year is prior to xxxx" ] ]
+}
