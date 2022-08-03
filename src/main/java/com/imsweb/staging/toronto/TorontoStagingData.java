@@ -32,7 +32,7 @@ public class TorontoStagingData extends StagingData {
     public TorontoStagingData(String site, String hist, String ageAtDx) {
         super(site, hist);
 
-        setInput(TorontoInput.AGE_AT_DX, ageAtDx);
+        setInput(TorontoInput.AGE_DX, ageAtDx);
     }
 
     /**
@@ -67,46 +67,25 @@ public class TorontoStagingData extends StagingData {
         PRIMARY_SITE("site"),
         HISTOLOGY("hist"),
         BEHAVIOR("behavior"),
-        SEX("sex"),
-        AGE_AT_DX("age_dx"),
-        DISCRIMINATOR_1("discriminator_1"),
-        DISCRIMINATOR_2("discriminator_2"),
-        NODES_POS("nodes_pos"),
+        AGE_DX("age_dx"),
+        YEAR_DX("year_dx"),
         EOD_PRIMARY_TUMOR("eod_primary_tumor"),
         EOD_REGIONAL_NODES("eod_regional_nodes"),
         EOD_METS("eod_mets"),
-        GRADE_CLIN("grade_clin"),
+        NODES_POS("nodes_pos"),
         GRADE_PATH("grade_path"),
+        GRADE_CLIN("grade_clin"),
         GRADE_POST_THERAPY_CLIN("grade_post_therapy_clin"),
         GRADE_POST_THERAPY_PATH("grade_post_therapy_path"),
-        DX_YEAR("year_dx"),
-        TUMOR_SIZE_SUMMARY("size_summary"),
-        RADIATION_SURG_SEQ("radiation_surg_seq"),
-        SYSTEMIC_SURG_SEQ("systemic_surg_seq"),
-        BRESLOW_THINKNESS("breslow_thickness"),
-        EOD_PROSTATE_PATH_EXTENSION("eod_prostate_path_extension"),
-        ER("er"),
-        ESOPH_TUMOR_EPICENTER("esoph_tumor_epicenter"),
-        GESTATIONAL_PROG_INDEX("gestational_prog_index"),
-        HER2_SUMMARY("her2_summary"),
-        LDH_LEVEL("ldh_level"),
-        LN_POS_AXILLARY_LEVEL_1_2("ln_pos_axillary_level_1_2"),
-        LN_SIZE_OF_METS("ln_size_of_mets"),
-        MEASURED_BASAL_DIAMETER("measured_basal_diameter"),
-        MEASURED_THICKNESS("measured_thickness"),
-        ONCOTYPE_DX_SCORE("oncotype_dx_score"),
-        PERIPHERAL_BLOOD_INVOLV("peripheral_blood_involv"),
-        PERITONEAL_CYTOLOGY("peritoneal_cytology"),
-        PR("pr"),
-        PSA("psa"),
+        SCHEMA_ID("schema_id"),
+        SHIMADA_CLASSIFICATION("shimada_classification"),
         S_CATEGORY_CLIN("s_category_clin"),
+        DNA_PLOIDY("dna_ploidy"),
+        N_MYC_APMLIFICATION("n_myc_amplification"),
         S_CATEGORY_PATH("s_category_path"),
-        ULCERATION("ulceration"),
-        THROMBOCYTOPENIA("thrombocytopenia"),
-        ORGANOMEGALY("organomegaly"),
-        ADENOPATHY("adenopathy"),
-        ANEMIA("anemia"),
-        LYMPHOCYTOSIS("lymphocytosis");
+        SIZE_SUMMARY("size_summary"),
+        INGRSS("ingrss"),
+        B_SYMPTOMS("b_symptoms");
 
         private final String _name;
 
@@ -122,16 +101,15 @@ public class TorontoStagingData extends StagingData {
 
     // output key definitions
     public enum TorontoOutput {
-        NAACCR_SCHEMA_ID("naaccr_schema_id"),
-        AJCC_ID("ajcc_id"),
-        AJCC_VERSION_NUMBER("ajcc_version_number"),
+        TORONTO_ID("toronto_id"),
+        TORONTO_VERSION_NUMBER("toronto_version_number"),
+        TORONTO_T("toronto_t"),
+        TORONTO_N("toronto_n"),
+        TORONTO_M("toronto_m"),
+        TORONTO_GROUP("toronto_group"),
         DERIVED_VERSION("derived_version"),
-        EOD_2018_T("eod_2018_t"),
-        EOD_2018_N("eod_2018_n"),
-        EOD_2018_M("eod_2018_m"),
-        EOD_2018_STAGE_GROUP("eod_2018_stage_group"),
-        SS_2018_DERIVED("ss2018_derived"),
-        DERIVED_RAI_STAGE("derived_rai_stage");
+        DERIVED_RISK_LEVEL("derived_risk_level"),
+        DERIVED_ANN_ARBOR_STAGE("derived_ann_arbor_stage");
 
         private final String _name;
 
