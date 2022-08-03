@@ -287,6 +287,19 @@ public class TorontoStagingTest extends StagingTest {
         data.setInput(TorontoInput.HISTOLOGY, "9500");
         _STAGING.stage(data);
         assertThat(data.getResult()).isEqualTo(Result.FAILED_MULITPLE_MATCHING_SCHEMAS);
+
+        // test other constructors
+        _STAGING.stage(new TorontoStagingData("C699", "9500", "15"));
+        assertThat(data.getResult()).isEqualTo(Result.FAILED_MULITPLE_MATCHING_SCHEMAS);
+
+        data = new TorontoStagingData("C699", "9500");
+        data.setInput(TorontoInput.AGE_DX, "15");
+        _STAGING.stage(data);
+        assertThat(data.getResult()).isEqualTo(Result.FAILED_MULITPLE_MATCHING_SCHEMAS);
+
+        assertThat(data.getInput(TorontoInput.PRIMARY_SITE)).isEqualTo("C699");
+        assertThat(data.getInput(TorontoInput.HISTOLOGY)).isEqualTo("9500");
+        assertThat(data.getInput(TorontoInput.AGE_DX)).isEqualTo("15");
     }
 
     @Test
