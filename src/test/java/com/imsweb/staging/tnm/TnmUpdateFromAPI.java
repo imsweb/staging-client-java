@@ -15,7 +15,7 @@ public class TnmUpdateFromAPI {
     private static final String _VERSION = "1.9";
 
     public static void main(String[] args) throws IOException {
-        UpdaterUtils.update(_ALGORITHM, _VERSION, "c:/tmp/algorithms", new HashSet<>(Collections.singletonList("STAGING")));
+        UpdaterUtils.update(_ALGORITHM, _VERSION, new HashSet<>(Collections.singletonList("STAGING")));
     }
 
 }

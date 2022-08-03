@@ -14,7 +14,7 @@ public class TorontoUpdateFromAPI {
     private static final String _ALGORITHM = "toronto";
 
     public static void main(String[] args) throws IOException {
-        UpdaterUtils.update(_ALGORITHM, "0.1", "c:/tmp/algorithms", new HashSet<>(Collections.singletonList("STAGING")));
+        UpdaterUtils.update(_ALGORITHM, "0.1", new HashSet<>(Collections.singletonList("STAGING")));
     }
 
 }
