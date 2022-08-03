@@ -246,7 +246,12 @@ public class TorontoStagingTest extends StagingTest {
         assertThat(data.getResult()).isEqualTo(Result.STAGED);
         assertThat(data.getSchemaId()).isEqualTo("ovarian");
         assertThat(data.getErrors()).isEmpty();
-        assertThat(data.getPath()).hasSize(4);
+        assertThat(data.getPath()).containsExactlyInAnyOrder(
+                "toronto_stage.toronto_t_78796",
+                "toronto_stage.toronto_n_26872",
+                "toronto_stage.toronto_m_81745",
+                "toronto_stage.toronto_stage_43114"
+        );
         assertThat(data.getOutput()).hasSize(7);
 
         // check outputs
