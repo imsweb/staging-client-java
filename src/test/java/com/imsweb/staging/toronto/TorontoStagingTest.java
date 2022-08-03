@@ -121,6 +121,9 @@ public class TorontoStagingTest extends StagingTest {
                     outputs.addAll(_STAGING.getOutputs(schema));
                 });
 
+        // note that while year_dx is not "used for staging" it is validated at the start of the process so it kind of is
+        inputs.add("year_dx");
+
         // this verified that the inputs/outputs are an exact match to the Input and Output enums
         assertThat(inputs).containsExactlyInAnyOrderElementsOf(Stream.of(TorontoInput.values()).map(TorontoInput::toString).collect(Collectors.toSet()));
         assertThat(outputs).containsExactlyInAnyOrderElementsOf(Stream.of(TorontoOutput.values()).map(TorontoOutput::toString).collect(Collectors.toSet()));
