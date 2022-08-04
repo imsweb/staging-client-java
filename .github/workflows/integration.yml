@@ -45,8 +45,8 @@ jobs:
           chmod +x gradlew
           ./gradlew build sonarqube
 
-      - name: Verify algorithm zip
-        run: ls build/algorithms
+      - name: Create algorithm zips
+        run: ./gradlew zipAlgorithms
 
       - name: Upload binaries (release only)
         uses: softprops/action-gh-release@v1
