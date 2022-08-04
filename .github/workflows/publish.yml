@@ -6,7 +6,7 @@ on:
   repository_dispatch:
     types: manual-publish
   release:
-    types: [created]
+    types: [ created ]
 
 jobs:
   publish:
@@ -16,11 +16,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
           distribution: 'adopt'
           java-version: '17'
+
       - name: Publish
         run: |
           chmod +x gradlew
