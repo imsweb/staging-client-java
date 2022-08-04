@@ -6,13 +6,17 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import com.imsweb.staging.entities.ColumnDefinition.ColumnType;
 import com.imsweb.staging.entities.Range;
 import com.imsweb.staging.entities.impl.StagingColumnDefinition;
 import com.imsweb.staging.entities.impl.StagingTable;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class StagingDataProviderTest {
 
@@ -43,91 +47,91 @@ class StagingDataProviderTest {
         provider.initTable(table);
 
         // since context variables are not user-supplied, they should not be included in the extra input
-        Assertions.assertEquals(new HashSet<>(Arrays.asList("extra1", "extra2")), table.getExtraInput());
+        assertEquals(new HashSet<>(Arrays.asList("extra1", "extra2")), table.getExtraInput());
 
         table.setRawRows(new ArrayList<>());
         table.getRawRows().add(Arrays.asList("{{ctx_year_current}}", "MATCH"));
 
         provider.initTable(table);
 
-        Assertions.assertNull(table.getExtraInput());
+        assertNull(table.getExtraInput());
     }
 
     @Test
     void testSplitValues() {
         StagingDataProvider provider = new InMemoryDataProvider("algorithm", "verison");
 
-        Assertions.assertEquals(0, provider.splitValues(null).size());
+        assertEquals(0, provider.splitValues(null).size());
 
-        Assertions.assertEquals(1, provider.splitValues("").size());
-        Assertions.assertEquals(1, provider.splitValues("*").size());
-        Assertions.assertEquals(1, provider.splitValues("1 2 3").size());
-        Assertions.assertEquals(1, provider.splitValues("23589258625086").size());
+        assertEquals(1, provider.splitValues("").size());
+        assertEquals(1, provider.splitValues("*").size());
+        assertEquals(1, provider.splitValues("1 2 3").size());
+        assertEquals(1, provider.splitValues("23589258625086").size());
 
-        Assertions.assertEquals(2, provider.splitValues("A,B").size());
-        Assertions.assertEquals(2, provider.splitValues(" A , B ").size());
-        Assertions.assertEquals(2, provider.splitValues("A , B").size());
+        assertEquals(2, provider.splitValues("A,B").size());
+        assertEquals(2, provider.splitValues(" A , B ").size());
+        assertEquals(2, provider.splitValues("A , B").size());
 
-        Assertions.assertEquals(10, provider.splitValues("A,B,C,D,E,F,G,H,I,J").size());
+        assertEquals(10, provider.splitValues("A,B,C,D,E,F,G,H,I,J").size());
 
         List<? extends Range> ranges = provider.splitValues(",1,2,3,4");
-        Assertions.assertEquals(5, ranges.size());
-        Assertions.assertEquals("", ranges.get(0).getLow());
-        Assertions.assertEquals("", ranges.get(0).getHigh());
+        assertEquals(5, ranges.size());
+        assertEquals("", ranges.get(0).getLow());
+        assertEquals("", ranges.get(0).getHigh());
 
         ranges = provider.splitValues("     ,1,2,3,4");
-        Assertions.assertEquals(5, ranges.size());
-        Assertions.assertEquals("", ranges.get(0).getLow());
-        Assertions.assertEquals("", ranges.get(0).getHigh());
+        assertEquals(5, ranges.size());
+        assertEquals("", ranges.get(0).getLow());
+        assertEquals("", ranges.get(0).getHigh());
 
         ranges = provider.splitValues("1,2,3,4,");
-        Assertions.assertEquals(5, ranges.size());
-        Assertions.assertEquals("", ranges.get(4).getLow());
-        Assertions.assertEquals("", ranges.get(4).getHigh());
+        assertEquals(5, ranges.size());
+        assertEquals("", ranges.get(4).getLow());
+        assertEquals("", ranges.get(4).getHigh());
 
         ranges = provider.splitValues("1,2,3,4,    ");
-        Assertions.assertEquals(5, ranges.size());
-        Assertions.assertEquals("", ranges.get(4).getLow());
-        Assertions.assertEquals("", ranges.get(4).getHigh());
+        assertEquals(5, ranges.size());
+        assertEquals("", ranges.get(4).getLow());
+        assertEquals("", ranges.get(4).getHigh());
 
         ranges = provider.splitValues("1,11,111-222");
-        Assertions.assertEquals(3, ranges.size());
-        Assertions.assertEquals("1", ranges.get(0).getLow());
-        Assertions.assertEquals("1", ranges.get(0).getHigh());
-        Assertions.assertEquals("11", ranges.get(1).getLow());
-        Assertions.assertEquals("11", ranges.get(1).getHigh());
-        Assertions.assertEquals("111", ranges.get(2).getLow());
-        Assertions.assertEquals("222", ranges.get(2).getHigh());
+        assertEquals(3, ranges.size());
+        assertEquals("1", ranges.get(0).getLow());
+        assertEquals("1", ranges.get(0).getHigh());
+        assertEquals("11", ranges.get(1).getLow());
+        assertEquals("11", ranges.get(1).getHigh());
+        assertEquals("111", ranges.get(2).getLow());
+        assertEquals("222", ranges.get(2).getHigh());
 
         ranges = provider.splitValues("88,90-95,99");
-        Assertions.assertEquals(3, ranges.size());
-        Assertions.assertEquals("88", ranges.get(0).getLow());
-        Assertions.assertEquals("88", ranges.get(0).getHigh());
-        Assertions.assertEquals("90", ranges.get(1).getLow());
-        Assertions.assertEquals("95", ranges.get(1).getHigh());
-        Assertions.assertEquals("99", ranges.get(2).getLow());
-        Assertions.assertEquals("99", ranges.get(2).getHigh());
+        assertEquals(3, ranges.size());
+        assertEquals("88", ranges.get(0).getLow());
+        assertEquals("88", ranges.get(0).getHigh());
+        assertEquals("90", ranges.get(1).getLow());
+        assertEquals("95", ranges.get(1).getHigh());
+        assertEquals("99", ranges.get(2).getLow());
+        assertEquals("99", ranges.get(2).getHigh());
 
         ranges = provider.splitValues("p0I-");
-        Assertions.assertEquals(1, ranges.size());
-        Assertions.assertEquals("p0I-", ranges.get(0).getLow());
-        Assertions.assertEquals("p0I-", ranges.get(0).getHigh());
+        assertEquals(1, ranges.size());
+        assertEquals("p0I-", ranges.get(0).getLow());
+        assertEquals("p0I-", ranges.get(0).getHigh());
 
         ranges = provider.splitValues("N0(mol-)");
-        Assertions.assertEquals(1, ranges.size());
-        Assertions.assertEquals("N0(mol-)", ranges.get(0).getLow());
-        Assertions.assertEquals("N0(mol-)", ranges.get(0).getHigh());
+        assertEquals(1, ranges.size());
+        assertEquals("N0(mol-)", ranges.get(0).getLow());
+        assertEquals("N0(mol-)", ranges.get(0).getHigh());
 
         // test numeric ranges
         ranges = provider.splitValues("1-21");
-        Assertions.assertEquals(1, ranges.size());
-        Assertions.assertEquals("1", ranges.get(0).getLow());
-        Assertions.assertEquals("21", ranges.get(0).getHigh());
+        assertEquals(1, ranges.size());
+        assertEquals("1", ranges.get(0).getLow());
+        assertEquals("21", ranges.get(0).getHigh());
 
         ranges = provider.splitValues("21-111");
-        Assertions.assertEquals(1, ranges.size());
-        Assertions.assertEquals("21", ranges.get(0).getLow());
-        Assertions.assertEquals("111", ranges.get(0).getHigh());
+        assertEquals(1, ranges.size());
+        assertEquals("21", ranges.get(0).getLow());
+        assertEquals("111", ranges.get(0).getHigh());
     }
 
     @Test
@@ -143,31 +147,31 @@ class StagingDataProviderTest {
 
         provider.initTable(table);
 
-        Assertions.assertEquals(2, table.getTableRows().size());
-        Assertions.assertEquals(4, table.getTableRows().get(0).getInputs().get("key1").size());
-        Assertions.assertEquals(4, table.getTableRows().get(1).getInputs().get("key1").size());
+        assertEquals(2, table.getTableRows().size());
+        assertEquals(4, table.getTableRows().get(0).getInputs().get("key1").size());
+        assertEquals(4, table.getTableRows().get(1).getInputs().get("key1").size());
     }
 
     @Test
     void testPadStart() {
-        Assertions.assertNull(StagingDataProvider.padStart(null, 1, '0'));
+        assertNull(StagingDataProvider.padStart(null, 1, '0'));
 
-        Assertions.assertEquals("123", StagingDataProvider.padStart("123", 1, '0'));
-        Assertions.assertEquals("123", StagingDataProvider.padStart("123", 3, '0'));
-        Assertions.assertEquals("0123", StagingDataProvider.padStart("123", 4, '0'));
-        Assertions.assertEquals("00001", StagingDataProvider.padStart("1", 5, '0'));
+        assertEquals("123", StagingDataProvider.padStart("123", 1, '0'));
+        assertEquals("123", StagingDataProvider.padStart("123", 3, '0'));
+        assertEquals("0123", StagingDataProvider.padStart("123", 4, '0'));
+        assertEquals("00001", StagingDataProvider.padStart("1", 5, '0'));
     }
 
     @Test
     void testIsNumeric() {
-        Assertions.assertTrue(StagingDataProvider.isNumeric("0"));
-        Assertions.assertTrue(StagingDataProvider.isNumeric("1"));
-        Assertions.assertTrue(StagingDataProvider.isNumeric("-1"));
-        Assertions.assertTrue(StagingDataProvider.isNumeric("1.1"));
+        assertTrue(StagingDataProvider.isNumeric("0"));
+        assertTrue(StagingDataProvider.isNumeric("1"));
+        assertTrue(StagingDataProvider.isNumeric("-1"));
+        assertTrue(StagingDataProvider.isNumeric("1.1"));
 
-        Assertions.assertFalse(StagingDataProvider.isNumeric(null));
-        Assertions.assertFalse(StagingDataProvider.isNumeric(""));
-        Assertions.assertFalse(StagingDataProvider.isNumeric("1.1.1"));
-        Assertions.assertFalse(StagingDataProvider.isNumeric("NAN"));
+        assertFalse(StagingDataProvider.isNumeric(null));
+        assertFalse(StagingDataProvider.isNumeric(""));
+        assertFalse(StagingDataProvider.isNumeric("1.1.1"));
+        assertFalse(StagingDataProvider.isNumeric("NAN"));
     }
 }

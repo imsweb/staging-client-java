@@ -98,7 +98,7 @@ class BasicStagingTest {
         assertThat(staging.getSchema("schema_test").getId()).isEqualTo("schema_test");
         assertThat(staging.getTableIds()).hasSameElementsAs(Arrays.asList("table_input1", "table_input2", "table_selection", "primary_site", "histology", "table_year_dx"));
 
-        // check case where required input field not supplied (i.e. no default); since there are is no workflow defined, this should
+        // check case where required to be input field not supplied (i.e. no default); since there are is no workflow defined, this should
         // not cause an error
 
         StagingData data = new StagingData("C509", "8000");

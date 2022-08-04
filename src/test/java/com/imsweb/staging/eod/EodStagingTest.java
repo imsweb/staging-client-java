@@ -12,7 +12,6 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -35,6 +34,9 @@ import com.imsweb.staging.eod.EodStagingData.EodOutput;
 import com.imsweb.staging.eod.EodStagingData.EodStagingInputBuilder;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class EodStagingTest extends StagingTest {
 
@@ -472,34 +474,34 @@ class EodStagingTest extends StagingTest {
 
     @Test
     void testGlossary() {
-        Assertions.assertEquals(23, _STAGING.getGlossaryTerms().size());
+        assertEquals(23, _STAGING.getGlossaryTerms().size());
         GlossaryDefinition entry = _STAGING.getGlossaryDefinition("Medulla");
-        Assertions.assertNotNull(entry);
-        Assertions.assertEquals("Medulla", entry.getName());
-        Assertions.assertTrue(entry.getDefinition().startsWith("The central portion of an organ, in contrast to the outer layer"));
-        Assertions.assertEquals(Collections.singletonList("Medullary"), entry.getAlternateNames());
-        Assertions.assertNotNull(entry.getLastModified());
+        assertNotNull(entry);
+        assertEquals("Medulla", entry.getName());
+        assertTrue(entry.getDefinition().startsWith("The central portion of an organ, in contrast to the outer layer"));
+        assertEquals(Collections.singletonList("Medullary"), entry.getAlternateNames());
+        assertNotNull(entry.getLastModified());
 
         Set<String> hits = _STAGING.getSchemaGlossary("urethra");
-        Assertions.assertEquals(1, hits.size());
+        assertEquals(1, hits.size());
         hits = _STAGING.getTableGlossary("extension_baj");
-        Assertions.assertEquals(3, hits.size());
+        assertEquals(3, hits.size());
     }
 
     @Test
     void testMetadata() {
         Schema urethra = _STAGING.getSchema("urethra");
-        Assertions.assertNotNull(urethra);
+        assertNotNull(urethra);
 
         Input gradeClin = urethra.getInputMap().get("grade_clin");
-        Assertions.assertNotNull(gradeClin);
+        assertNotNull(gradeClin);
 
-        Assertions.assertEquals(5, gradeClin.getMetadata().size());
-        Assertions.assertTrue(gradeClin.getMetadata().contains(new StagingMetadata("COC_REQUIRED")));
-        Assertions.assertTrue(gradeClin.getMetadata().contains(new StagingMetadata("CCCR_REQUIRED")));
-        Assertions.assertTrue(gradeClin.getMetadata().contains(new StagingMetadata("SEER_REQUIRED")));
-        Assertions.assertTrue(gradeClin.getMetadata().contains(new StagingMetadata("NPCR_REQUIRED")));
-        Assertions.assertTrue(gradeClin.getMetadata().contains(new StagingMetadata("SSDI")));
+        assertEquals(5, gradeClin.getMetadata().size());
+        assertTrue(gradeClin.getMetadata().contains(new StagingMetadata("COC_REQUIRED")));
+        assertTrue(gradeClin.getMetadata().contains(new StagingMetadata("CCCR_REQUIRED")));
+        assertTrue(gradeClin.getMetadata().contains(new StagingMetadata("SEER_REQUIRED")));
+        assertTrue(gradeClin.getMetadata().contains(new StagingMetadata("NPCR_REQUIRED")));
+        assertTrue(gradeClin.getMetadata().contains(new StagingMetadata("SSDI")));
     }
 
     @Test

@@ -19,7 +19,6 @@ import java.util.Set;
 import java.util.stream.IntStream;
 import java.util.zip.GZIPInputStream;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -43,6 +42,13 @@ import com.imsweb.staging.entities.StagingData.Result;
 import com.imsweb.staging.entities.Table;
 import com.imsweb.staging.entities.TableRow;
 import com.imsweb.staging.entities.impl.StagingMetadata;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 public class CsStagingTest extends StagingTest {
 
@@ -70,115 +76,115 @@ public class CsStagingTest extends StagingTest {
 
     @Test
     void testBasicInitialization() {
-        Assertions.assertEquals(153, _STAGING.getSchemaIds().size());
-        Assertions.assertTrue(_STAGING.getTableIds().size() > 0);
+        assertEquals(153, _STAGING.getSchemaIds().size());
+        assertTrue(_STAGING.getTableIds().size() > 0);
 
-        Assertions.assertNotNull(_STAGING.getSchema("urethra"));
-        Assertions.assertNotNull(_STAGING.getTable("extension_bdi"));
+        assertNotNull(_STAGING.getSchema("urethra"));
+        assertNotNull(_STAGING.getTable("extension_bdi"));
     }
 
     @Test
     void testVersionInitializationTypes() {
         Staging staging020550 = Staging.getInstance(CsDataProvider.getInstance(CsVersion.V020550));
-        Assertions.assertEquals("02.05.50", staging020550.getVersion());
+        assertEquals("02.05.50", staging020550.getVersion());
 
         Staging stagingLatest = Staging.getInstance(CsDataProvider.getInstance());
-        Assertions.assertEquals("02.05.50", stagingLatest.getVersion());
+        assertEquals("02.05.50", stagingLatest.getVersion());
     }
 
     @Test
     void testDescriminatorKeys() {
-        Assertions.assertEquals(new HashSet<>(Collections.singletonList("ssf25")), _STAGING.getSchema("nasopharynx").getSchemaDiscriminators());
-        Assertions.assertEquals(new HashSet<>(Collections.singletonList("ssf25")), _STAGING.getSchema("peritoneum_female_gen").getSchemaDiscriminators());
+        assertEquals(new HashSet<>(Collections.singletonList("ssf25")), _STAGING.getSchema("nasopharynx").getSchemaDiscriminators());
+        assertEquals(new HashSet<>(Collections.singletonList("ssf25")), _STAGING.getSchema("peritoneum_female_gen").getSchemaDiscriminators());
     }
 
     @Test
     void testSchemaSelection() {
         // test bad values
         List<Schema> lookup = _STAGING.lookupSchema(new SchemaLookup());
-        Assertions.assertEquals(0, lookup.size());
+        assertEquals(0, lookup.size());
 
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("XXX", "YYY"));
-        Assertions.assertEquals(0, lookup.size());
+        assertEquals(0, lookup.size());
 
         // test valid combinations that do not require a discriminator
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("C629", "9231", ""));
-        Assertions.assertEquals(1, lookup.size());
-        Assertions.assertEquals("testis", lookup.get(0).getId());
-        Assertions.assertEquals(Integer.valueOf(122), lookup.get(0).getSchemaNum());
+        assertEquals(1, lookup.size());
+        assertEquals("testis", lookup.get(0).getId());
+        assertEquals(Integer.valueOf(122), lookup.get(0).getSchemaNum());
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("C629", "9231", null));
-        Assertions.assertEquals(1, lookup.size());
-        Assertions.assertEquals("testis", lookup.get(0).getId());
-        Assertions.assertEquals(Integer.valueOf(122), lookup.get(0).getSchemaNum());
+        assertEquals(1, lookup.size());
+        assertEquals("testis", lookup.get(0).getId());
+        assertEquals(Integer.valueOf(122), lookup.get(0).getSchemaNum());
 
         // now test one that does do AJCC7
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("C629", "9100", ""));
-        Assertions.assertEquals(1, lookup.size());
+        assertEquals(1, lookup.size());
 
         // test value combinations that do not require a discriminator and are supplied 988
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("C629", "9231", "988"));
-        Assertions.assertEquals(1, lookup.size());
-        Assertions.assertEquals("testis", lookup.get(0).getId());
+        assertEquals(1, lookup.size());
+        assertEquals("testis", lookup.get(0).getId());
 
         // test valid combination that requires a discriminator but is not supplied one
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("C111", "8200"));
-        Assertions.assertEquals(2, lookup.size());
+        assertEquals(2, lookup.size());
         for (Schema schema : lookup)
-            Assertions.assertEquals(new HashSet<>(Collections.singletonList("ssf25")), schema.getSchemaDiscriminators());
+            assertEquals(new HashSet<>(Collections.singletonList("ssf25")), schema.getSchemaDiscriminators());
 
         // test valid combination that requires discriminator and a good discriminator is supplied
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("C111", "8200", "010"));
-        Assertions.assertEquals(1, lookup.size());
+        assertEquals(1, lookup.size());
         for (Schema schema : lookup)
-            Assertions.assertEquals(new HashSet<>(Collections.singletonList("ssf25")), schema.getSchemaDiscriminators());
-        Assertions.assertEquals("nasopharynx", lookup.get(0).getId());
-        Assertions.assertEquals(Integer.valueOf(34), lookup.get(0).getSchemaNum());
+            assertEquals(new HashSet<>(Collections.singletonList("ssf25")), schema.getSchemaDiscriminators());
+        assertEquals("nasopharynx", lookup.get(0).getId());
+        assertEquals(Integer.valueOf(34), lookup.get(0).getSchemaNum());
 
         // test valid combination that requires a discriminator but is supplied a bad disciminator value
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("C111", "8200", "999"));
-        Assertions.assertEquals(0, lookup.size());
+        assertEquals(0, lookup.size());
 
         // test specific failure case:  Line #1995826 [C695,9701,100,lacrimal_gland] --> The schema selection should have found a schema, lacrimal_gland, but did not.
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("C695", "9701", "100"));
-        Assertions.assertEquals(1, lookup.size());
-        Assertions.assertEquals("lacrimal_gland", lookup.get(0).getId());
-        Assertions.assertEquals(Integer.valueOf(138), lookup.get(0).getSchemaNum());
+        assertEquals(1, lookup.size());
+        assertEquals("lacrimal_gland", lookup.get(0).getId());
+        assertEquals(Integer.valueOf(138), lookup.get(0).getSchemaNum());
 
         // test searching on only site
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("C401", null));
-        Assertions.assertEquals(5, lookup.size());
+        assertEquals(5, lookup.size());
 
         // test searching on only hist
         lookup = _STAGING.lookupSchema(new CsSchemaLookup(null, "9702"));
-        Assertions.assertEquals(2, lookup.size());
+        assertEquals(2, lookup.size());
 
         // test that searching on only ssf25 returns no results
         lookup = _STAGING.lookupSchema(new CsSchemaLookup(null, null, "001"));
-        Assertions.assertEquals(0, lookup.size());
+        assertEquals(0, lookup.size());
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("", null, "001"));
-        Assertions.assertEquals(0, lookup.size());
+        assertEquals(0, lookup.size());
         lookup = _STAGING.lookupSchema(new CsSchemaLookup(null, "", "001"));
-        Assertions.assertEquals(0, lookup.size());
+        assertEquals(0, lookup.size());
     }
 
     @Test
     void testLookupCache() {
         // do the same lookup twice
         List<Schema> lookup = _STAGING.lookupSchema(new CsSchemaLookup("C629", "9231", ""));
-        Assertions.assertEquals(1, lookup.size());
-        Assertions.assertEquals("testis", lookup.get(0).getId());
+        assertEquals(1, lookup.size());
+        assertEquals("testis", lookup.get(0).getId());
 
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("C629", "9231", ""));
-        Assertions.assertEquals(1, lookup.size());
-        Assertions.assertEquals("testis", lookup.get(0).getId());
+        assertEquals(1, lookup.size());
+        assertEquals("testis", lookup.get(0).getId());
 
         // now invalidate the cache
         getProvider().invalidateCache();
 
         // try the lookup again
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("C629", "9231", ""));
-        Assertions.assertEquals(1, lookup.size());
-        Assertions.assertEquals("testis", lookup.get(0).getId());
+        assertEquals(1, lookup.size());
+        assertEquals("testis", lookup.get(0).getId());
     }
 
     @Test
@@ -186,7 +192,7 @@ public class CsStagingTest extends StagingTest {
         // test complete file of cases
         IntegrationResult result = IntegrationUtils.processSchemaSelection(_STAGING, "cs_schema_identification_unit_test.txt.gz",
                 new GZIPInputStream(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("cs/test-data/020550/cs_schema_identification_unit_test.txt.gz"))));
-        Assertions.assertEquals(0, result.getNumFailures());
+        assertEquals(0, result.getNumFailures());
     }
 
     @Test
@@ -210,32 +216,32 @@ public class CsStagingTest extends StagingTest {
         for (String id : _STAGING.getSchemaIds()) {
             Schema schema = _STAGING.getSchema(id);
             if (!oldNames.contains(schema.getName()))
-                Assertions.fail("The schema name " + schema.getName() + " is not one of the original names.");
+                fail("The schema name " + schema.getName() + " is not one of the original names.");
         }
     }
 
     @Test
     void testFindTableRow() {
-        Assertions.assertNull(_STAGING.findMatchingTableRow("size_apa", "size", null));
-        Assertions.assertNull(_STAGING.findMatchingTableRow("size_apa", "size", "X"));
-        Assertions.assertNull(_STAGING.findMatchingTableRow("size_apa", "size", "996"));
+        assertNull(_STAGING.findMatchingTableRow("size_apa", "size", null));
+        assertNull(_STAGING.findMatchingTableRow("size_apa", "size", "X"));
+        assertNull(_STAGING.findMatchingTableRow("size_apa", "size", "996"));
 
-        Assertions.assertEquals(Integer.valueOf(0), _STAGING.findMatchingTableRow("size_apa", "size", "000"));
-        Assertions.assertEquals(Integer.valueOf(1), _STAGING.findMatchingTableRow("size_apa", "size", "055"));
-        Assertions.assertEquals(Integer.valueOf(1), _STAGING.findMatchingTableRow("size_apa", "size", "988"));
-        Assertions.assertEquals(Integer.valueOf(2), _STAGING.findMatchingTableRow("size_apa", "size", "989"));
-        Assertions.assertEquals(Integer.valueOf(9), _STAGING.findMatchingTableRow("size_apa", "size", "999"));
+        assertEquals(Integer.valueOf(0), _STAGING.findMatchingTableRow("size_apa", "size", "000"));
+        assertEquals(Integer.valueOf(1), _STAGING.findMatchingTableRow("size_apa", "size", "055"));
+        assertEquals(Integer.valueOf(1), _STAGING.findMatchingTableRow("size_apa", "size", "988"));
+        assertEquals(Integer.valueOf(2), _STAGING.findMatchingTableRow("size_apa", "size", "989"));
+        assertEquals(Integer.valueOf(9), _STAGING.findMatchingTableRow("size_apa", "size", "999"));
 
         Map<String, String> context = new HashMap<>();
         context.put("size", "992");
-        Assertions.assertEquals(Integer.valueOf(5), _STAGING.findMatchingTableRow("size_apa", context));
+        assertEquals(Integer.valueOf(5), _STAGING.findMatchingTableRow("size_apa", context));
 
         // test a table that has multiple inputs
         context = new HashMap<>();
         context.put("t", "RE");
         context.put("n", "U");
         context.put("m", "U");
-        Assertions.assertEquals(Integer.valueOf(167), _STAGING.findMatchingTableRow("summary_stage_rpa", context));
+        assertEquals(Integer.valueOf(167), _STAGING.findMatchingTableRow("summary_stage_rpa", context));
     }
 
     @Test
@@ -267,7 +273,7 @@ public class CsStagingTest extends StagingTest {
                 CsStagingData.CsInput.REGIONAL_NODES_EXAMINED, "99").withInput(CsStagingData.CsInput.METS_AT_DX, "10").withInput(CsStagingData.CsInput.METS_EVAL, "9").withInput(
                 CsStagingData.CsInput.LVI, "9").withInput(CsStagingData.CsInput.AGE_AT_DX, "060").withSsf(1, "020").build();
 
-        Assertions.assertEquals(data1.getInput(), data2.getInput());
+        assertEquals(data1.getInput(), data2.getInput());
     }
 
     @Test
@@ -302,9 +308,9 @@ public class CsStagingTest extends StagingTest {
         // perform the staging
         _STAGING.stage(data);
 
-        Assertions.assertEquals(Result.STAGED, data.getResult());
-        Assertions.assertEquals("brain", data.getSchemaId());
-        Assertions.assertEquals(0, data.getErrors().size());
+        assertEquals(Result.STAGED, data.getResult());
+        assertEquals("brain", data.getSchemaId());
+        assertEquals(0, data.getErrors().size());
 
         // now change SSF4 to blank; blank values are not validated and since this is not used in staging there should be no errors
         data.setSsf(4, "");
@@ -312,9 +318,9 @@ public class CsStagingTest extends StagingTest {
         // perform the staging
         _STAGING.stage(data);
 
-        Assertions.assertEquals(Result.STAGED, data.getResult());
-        Assertions.assertEquals("brain", data.getSchemaId());
-        Assertions.assertEquals(0, data.getErrors().size());
+        assertEquals(Result.STAGED, data.getResult());
+        assertEquals("brain", data.getSchemaId());
+        assertEquals(0, data.getErrors().size());
 
         // now change extension to blank; the only errors we get should be of type MATCH_NOT_FOUND
         data.setInput(CsStagingData.CsInput.EXTENSION, "");
@@ -322,10 +328,10 @@ public class CsStagingTest extends StagingTest {
         // perform the staging
         _STAGING.stage(data);
 
-        Assertions.assertEquals(Result.STAGED, data.getResult());
-        Assertions.assertEquals("brain", data.getSchemaId());
+        assertEquals(Result.STAGED, data.getResult());
+        assertEquals("brain", data.getSchemaId());
         for (com.imsweb.staging.entities.Error error : data.getErrors())
-            Assertions.assertEquals(Type.MATCH_NOT_FOUND, error.getType());
+            assertEquals(Type.MATCH_NOT_FOUND, error.getType());
     }
 
     @Test
@@ -362,12 +368,12 @@ public class CsStagingTest extends StagingTest {
         // perform the staging
         _STAGING.stage(data);
 
-        Assertions.assertEquals(Result.STAGED, data.getResult());
-        Assertions.assertEquals(4, data.getErrors().size());
+        assertEquals(Result.STAGED, data.getResult());
+        assertEquals(4, data.getErrors().size());
         com.imsweb.staging.entities.Error error = data.getErrors().get(0);
-        Assertions.assertEquals("lymph_nodes_clinical_eval_v0205_ajcc7_xch", error.getTable());
-        Assertions.assertEquals(Collections.singletonList("ajcc7_n"), error.getColumns());
-        Assertions.assertEquals("Matching resulted in an error in table 'lymph_nodes_clinical_eval_v0205_ajcc7_xch' for column 'ajcc7_n' (000)", error.getMessage());
+        assertEquals("lymph_nodes_clinical_eval_v0205_ajcc7_xch", error.getTable());
+        assertEquals(Collections.singletonList("ajcc7_n"), error.getColumns());
+        assertEquals("Matching resulted in an error in table 'lymph_nodes_clinical_eval_v0205_ajcc7_xch' for column 'ajcc7_n' (000)", error.getMessage());
     }
 
     @Test
@@ -397,139 +403,139 @@ public class CsStagingTest extends StagingTest {
         // perform the staging
         _STAGING.stage(data);
 
-        Assertions.assertEquals(Result.STAGED, data.getResult());
-        Assertions.assertEquals("urethra", data.getSchemaId());
-        Assertions.assertEquals(0, data.getErrors().size());
-        Assertions.assertEquals(37, data.getPath().size());
+        assertEquals(Result.STAGED, data.getResult());
+        assertEquals("urethra", data.getSchemaId());
+        assertEquals(0, data.getErrors().size());
+        assertEquals(37, data.getPath().size());
 
         // check output
-        Assertions.assertEquals("129", data.getOutput(CsOutput.SCHEMA_NUMBER));
-        Assertions.assertEquals("020550", data.getOutput(CsOutput.CSVER_DERIVED));
+        assertEquals("129", data.getOutput(CsOutput.SCHEMA_NUMBER));
+        assertEquals("020550", data.getOutput(CsOutput.CSVER_DERIVED));
 
         // AJCC 6
-        Assertions.assertEquals("T1", data.getOutput(CsOutput.AJCC6_T));
-        Assertions.assertEquals("c", data.getOutput(CsOutput.AJCC6_TDESCRIPTOR));
-        Assertions.assertEquals("N1", data.getOutput(CsOutput.AJCC6_N));
-        Assertions.assertEquals("c", data.getOutput(CsOutput.AJCC6_NDESCRIPTOR));
-        Assertions.assertEquals("M1", data.getOutput(CsOutput.AJCC6_M));
-        Assertions.assertEquals("c", data.getOutput(CsOutput.AJCC6_MDESCRIPTOR));
-        Assertions.assertEquals("IV", data.getOutput(CsOutput.AJCC6_STAGE));
-        Assertions.assertEquals("10", data.getOutput(CsOutput.STOR_AJCC6_T));
-        Assertions.assertEquals("c", data.getOutput(CsOutput.STOR_AJCC6_TDESCRIPTOR));
-        Assertions.assertEquals("10", data.getOutput(CsOutput.STOR_AJCC6_N));
-        Assertions.assertEquals("c", data.getOutput(CsOutput.STOR_AJCC6_NDESCRIPTOR));
-        Assertions.assertEquals("10", data.getOutput(CsOutput.STOR_AJCC6_M));
-        Assertions.assertEquals("c", data.getOutput(CsOutput.STOR_AJCC6_MDESCRIPTOR));
-        Assertions.assertEquals("70", data.getOutput(CsOutput.STOR_AJCC6_STAGE));
+        assertEquals("T1", data.getOutput(CsOutput.AJCC6_T));
+        assertEquals("c", data.getOutput(CsOutput.AJCC6_TDESCRIPTOR));
+        assertEquals("N1", data.getOutput(CsOutput.AJCC6_N));
+        assertEquals("c", data.getOutput(CsOutput.AJCC6_NDESCRIPTOR));
+        assertEquals("M1", data.getOutput(CsOutput.AJCC6_M));
+        assertEquals("c", data.getOutput(CsOutput.AJCC6_MDESCRIPTOR));
+        assertEquals("IV", data.getOutput(CsOutput.AJCC6_STAGE));
+        assertEquals("10", data.getOutput(CsOutput.STOR_AJCC6_T));
+        assertEquals("c", data.getOutput(CsOutput.STOR_AJCC6_TDESCRIPTOR));
+        assertEquals("10", data.getOutput(CsOutput.STOR_AJCC6_N));
+        assertEquals("c", data.getOutput(CsOutput.STOR_AJCC6_NDESCRIPTOR));
+        assertEquals("10", data.getOutput(CsOutput.STOR_AJCC6_M));
+        assertEquals("c", data.getOutput(CsOutput.STOR_AJCC6_MDESCRIPTOR));
+        assertEquals("70", data.getOutput(CsOutput.STOR_AJCC6_STAGE));
 
         // AJCC 7
-        Assertions.assertEquals("T1", data.getOutput(CsOutput.AJCC7_T));
-        Assertions.assertEquals("c", data.getOutput(CsOutput.AJCC7_TDESCRIPTOR));
-        Assertions.assertEquals("N1", data.getOutput(CsOutput.AJCC7_N));
-        Assertions.assertEquals("c", data.getOutput(CsOutput.AJCC7_NDESCRIPTOR));
-        Assertions.assertEquals("M1", data.getOutput(CsOutput.AJCC7_M));
-        Assertions.assertEquals("c", data.getOutput(CsOutput.AJCC7_MDESCRIPTOR));
-        Assertions.assertEquals("IV", data.getOutput(CsOutput.AJCC7_STAGE));
-        Assertions.assertEquals("100", data.getOutput(CsOutput.STOR_AJCC7_T));
-        Assertions.assertEquals("c", data.getOutput(CsOutput.STOR_AJCC6_TDESCRIPTOR));
-        Assertions.assertEquals("100", data.getOutput(CsOutput.STOR_AJCC7_N));
-        Assertions.assertEquals("c", data.getOutput(CsOutput.STOR_AJCC7_NDESCRIPTOR));
-        Assertions.assertEquals("100", data.getOutput(CsOutput.STOR_AJCC7_M));
-        Assertions.assertEquals("c", data.getOutput(CsOutput.STOR_AJCC7_MDESCRIPTOR));
-        Assertions.assertEquals("700", data.getOutput(CsOutput.STOR_AJCC7_STAGE));
+        assertEquals("T1", data.getOutput(CsOutput.AJCC7_T));
+        assertEquals("c", data.getOutput(CsOutput.AJCC7_TDESCRIPTOR));
+        assertEquals("N1", data.getOutput(CsOutput.AJCC7_N));
+        assertEquals("c", data.getOutput(CsOutput.AJCC7_NDESCRIPTOR));
+        assertEquals("M1", data.getOutput(CsOutput.AJCC7_M));
+        assertEquals("c", data.getOutput(CsOutput.AJCC7_MDESCRIPTOR));
+        assertEquals("IV", data.getOutput(CsOutput.AJCC7_STAGE));
+        assertEquals("100", data.getOutput(CsOutput.STOR_AJCC7_T));
+        assertEquals("c", data.getOutput(CsOutput.STOR_AJCC6_TDESCRIPTOR));
+        assertEquals("100", data.getOutput(CsOutput.STOR_AJCC7_N));
+        assertEquals("c", data.getOutput(CsOutput.STOR_AJCC7_NDESCRIPTOR));
+        assertEquals("100", data.getOutput(CsOutput.STOR_AJCC7_M));
+        assertEquals("c", data.getOutput(CsOutput.STOR_AJCC7_MDESCRIPTOR));
+        assertEquals("700", data.getOutput(CsOutput.STOR_AJCC7_STAGE));
 
         // Summary Stage
-        Assertions.assertEquals("L", data.getOutput(CsOutput.SS1977_T));
-        Assertions.assertEquals("RN", data.getOutput(CsOutput.SS1977_N));
-        Assertions.assertEquals("D", data.getOutput(CsOutput.SS1977_M));
-        Assertions.assertEquals("D", data.getOutput(CsOutput.SS1977_STAGE));
-        Assertions.assertEquals("L", data.getOutput(CsOutput.SS2000_T));
-        Assertions.assertEquals("RN", data.getOutput(CsOutput.SS2000_N));
-        Assertions.assertEquals("D", data.getOutput(CsOutput.SS2000_M));
-        Assertions.assertEquals("D", data.getOutput(CsOutput.SS2000_STAGE));
-        Assertions.assertEquals("7", data.getOutput(CsOutput.STOR_SS1977_STAGE));
-        Assertions.assertEquals("7", data.getOutput(CsOutput.STOR_SS2000_STAGE));
+        assertEquals("L", data.getOutput(CsOutput.SS1977_T));
+        assertEquals("RN", data.getOutput(CsOutput.SS1977_N));
+        assertEquals("D", data.getOutput(CsOutput.SS1977_M));
+        assertEquals("D", data.getOutput(CsOutput.SS1977_STAGE));
+        assertEquals("L", data.getOutput(CsOutput.SS2000_T));
+        assertEquals("RN", data.getOutput(CsOutput.SS2000_N));
+        assertEquals("D", data.getOutput(CsOutput.SS2000_M));
+        assertEquals("D", data.getOutput(CsOutput.SS2000_STAGE));
+        assertEquals("7", data.getOutput(CsOutput.STOR_SS1977_STAGE));
+        assertEquals("7", data.getOutput(CsOutput.STOR_SS2000_STAGE));
 
         // make sure defaulted inputs are not in the output
         Set<String> outputKeys = data.getOutput().keySet();
         for (CsOutput output : CsOutput.values())
             outputKeys.remove(output.toString());
-        Assertions.assertTrue(outputKeys.isEmpty(), "The keys " + outputKeys + " were in the output but are not CS output fields.");
+        assertTrue(outputKeys.isEmpty(), "The keys " + outputKeys + " were in the output but are not CS output fields.");
 
         // test case with valid year_dx and invalid version original
         data.setInput(CsStagingData.CsInput.DX_YEAR, "2013");
         data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "1111");
         _STAGING.stage(data);
-        Assertions.assertEquals(Result.STAGED, data.getResult());
-        Assertions.assertEquals("urethra", data.getSchemaId());
-        Assertions.assertEquals(1, data.getErrors().size());
-        Assertions.assertEquals(Type.INVALID_REQUIRED_INPUT, data.getErrors().get(0).getType());
+        assertEquals(Result.STAGED, data.getResult());
+        assertEquals("urethra", data.getSchemaId());
+        assertEquals(1, data.getErrors().size());
+        assertEquals(Type.INVALID_REQUIRED_INPUT, data.getErrors().get(0).getType());
 
         // test case with missing year_dx and valid version original
         data.setInput(CsStagingData.CsInput.DX_YEAR, "");
         data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "020550");
         _STAGING.stage(data);
-        Assertions.assertEquals(Result.STAGED, data.getResult());
-        Assertions.assertEquals("urethra", data.getSchemaId());
-        Assertions.assertEquals(0, data.getErrors().size());
+        assertEquals(Result.STAGED, data.getResult());
+        assertEquals("urethra", data.getSchemaId());
+        assertEquals(0, data.getErrors().size());
 
         // test case with missing year_dx and valid version original
         data.setInput(CsStagingData.CsInput.DX_YEAR, "");
         data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "020001");
         _STAGING.stage(data);
-        Assertions.assertEquals(Result.STAGED, data.getResult());
-        Assertions.assertEquals("urethra", data.getSchemaId());
-        Assertions.assertEquals(0, data.getErrors().size());
+        assertEquals(Result.STAGED, data.getResult());
+        assertEquals("urethra", data.getSchemaId());
+        assertEquals(0, data.getErrors().size());
 
         // test case with space-filled year_dx and valid version original
         data.setInput(CsStagingData.CsInput.DX_YEAR, "    ");
         data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "020001");
         _STAGING.stage(data);
-        Assertions.assertEquals(Result.STAGED, data.getResult());
-        Assertions.assertEquals("urethra", data.getSchemaId());
-        Assertions.assertEquals(0, data.getErrors().size());
+        assertEquals(Result.STAGED, data.getResult());
+        assertEquals("urethra", data.getSchemaId());
+        assertEquals(0, data.getErrors().size());
 
         // test case with missing year_dx and invalid version original
         data.setInput(CsStagingData.CsInput.DX_YEAR, "");
         data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "012345");
         _STAGING.stage(data);
-        Assertions.assertEquals(Result.FAILED_INVALID_YEAR_DX, data.getResult());
-        Assertions.assertEquals("urethra", data.getSchemaId());
-        Assertions.assertEquals(0, data.getErrors().size());
+        assertEquals(Result.FAILED_INVALID_YEAR_DX, data.getResult());
+        assertEquals("urethra", data.getSchemaId());
+        assertEquals(0, data.getErrors().size());
 
         // test case with missing year_dx and invalid version original
         data.setInput(CsStagingData.CsInput.DX_YEAR, "");
         data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "1");
         _STAGING.stage(data);
-        Assertions.assertEquals(Result.FAILED_INVALID_YEAR_DX, data.getResult());
-        Assertions.assertEquals("urethra", data.getSchemaId());
-        Assertions.assertEquals(0, data.getErrors().size());
+        assertEquals(Result.FAILED_INVALID_YEAR_DX, data.getResult());
+        assertEquals("urethra", data.getSchemaId());
+        assertEquals(0, data.getErrors().size());
 
         // test case with space-filled year_dx and invalid version original
         data.setInput(CsStagingData.CsInput.DX_YEAR, "    ");
         data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "012345");
         _STAGING.stage(data);
-        Assertions.assertEquals(Result.FAILED_INVALID_YEAR_DX, data.getResult());
-        Assertions.assertEquals("urethra", data.getSchemaId());
-        Assertions.assertEquals(0, data.getErrors().size());
+        assertEquals(Result.FAILED_INVALID_YEAR_DX, data.getResult());
+        assertEquals("urethra", data.getSchemaId());
+        assertEquals(0, data.getErrors().size());
 
         data.setInput(CsStagingData.CsInput.DX_YEAR, "2003");
         data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "020550");
         _STAGING.stage(data);
-        Assertions.assertEquals(Result.FAILED_INVALID_YEAR_DX, data.getResult());
-        Assertions.assertEquals("urethra", data.getSchemaId());
-        Assertions.assertEquals(0, data.getOutput().size());
-        Assertions.assertEquals(0, data.getErrors().size());
-        Assertions.assertEquals(0, data.getPath().size());
+        assertEquals(Result.FAILED_INVALID_YEAR_DX, data.getResult());
+        assertEquals("urethra", data.getSchemaId());
+        assertEquals(0, data.getOutput().size());
+        assertEquals(0, data.getErrors().size());
+        assertEquals(0, data.getPath().size());
 
         data.setInput(CsStagingData.CsInput.DX_YEAR, "2050");
         data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "020550");
         _STAGING.stage(data);
-        Assertions.assertEquals(Result.FAILED_INVALID_YEAR_DX, data.getResult());
-        Assertions.assertEquals("urethra", data.getSchemaId());
-        Assertions.assertEquals(0, data.getOutput().size());
-        Assertions.assertEquals(0, data.getErrors().size());
-        Assertions.assertEquals(0, data.getPath().size());
+        assertEquals(Result.FAILED_INVALID_YEAR_DX, data.getResult());
+        assertEquals("urethra", data.getSchemaId());
+        assertEquals(0, data.getOutput().size());
+        assertEquals(0, data.getErrors().size());
+        assertEquals(0, data.getPath().size());
     }
 
     @Test
@@ -570,9 +576,9 @@ public class CsStagingTest extends StagingTest {
         // verify the AJCC7 values should be null
         data.getOutput().forEach((k, v) -> {
             if (k.contains("ajcc7"))
-                Assertions.assertNull(v, "AJCC7 Key '" + k + " should be null");
+                assertNull(v, "AJCC7 Key '" + k + " should be null");
             else
-                Assertions.assertNotNull(v, "Key '" + k + " should not be null");
+                assertNotNull(v, "Key '" + k + " should not be null");
         });
     }
 
@@ -582,30 +588,30 @@ public class CsStagingTest extends StagingTest {
 
         // if site/hist are not supplied, no lookup
         _STAGING.stage(data);
-        Assertions.assertEquals(Result.FAILED_MISSING_SITE_OR_HISTOLOGY, data.getResult());
+        assertEquals(Result.FAILED_MISSING_SITE_OR_HISTOLOGY, data.getResult());
 
         // add hist only and it should fail with same result
         data.setInput(CsStagingData.CsInput.PRIMARY_SITE, "C489");
         _STAGING.stage(data);
-        Assertions.assertEquals(Result.FAILED_MISSING_SITE_OR_HISTOLOGY, data.getResult());
+        assertEquals(Result.FAILED_MISSING_SITE_OR_HISTOLOGY, data.getResult());
 
         // put a site/hist combo that doesn't match a schema
         data.setInput(CsStagingData.CsInput.HISTOLOGY, "9898");
         _STAGING.stage(data);
-        Assertions.assertEquals(Result.FAILED_NO_MATCHING_SCHEMA, data.getResult());
+        assertEquals(Result.FAILED_NO_MATCHING_SCHEMA, data.getResult());
 
         // now a site/hist that returns multiple results
         data.setInput(CsStagingData.CsInput.PRIMARY_SITE, "C111");
         data.setInput(CsStagingData.CsInput.HISTOLOGY, "8200");
         _STAGING.stage(data);
-        Assertions.assertEquals(Result.FAILED_MULITPLE_MATCHING_SCHEMAS, data.getResult());
+        assertEquals(Result.FAILED_MULITPLE_MATCHING_SCHEMAS, data.getResult());
     }
 
     @Test
     void testInvolvedTables() {
         Set<String> tables = _STAGING.getInvolvedTables("brain");
 
-        Assertions.assertEquals(new HashSet<>(
+        assertEquals(new HashSet<>(
                 Arrays.asList("cs_year_validation", "schema_selection_brain", "ajcc6_m_codes", "ajcc7_m_codes", "ssf22_snq", "nodes_exam_gna", "ssf13_snh",
                         "ssf7_sqk", "lvi", "ajcc6_n_codes", "ssf18_snm", "ssf15_snj", "ssf20_sno", "ssf10_sne", "ssf17_snl", "ssf6_opf", "summary_stage_rpa",
                         "histology", "ss_codes", "mets_haw", "nodes_pos_fna", "ajcc7_stage_una", "ajcc7_year_validation", "ssf4_mpn", "mets_eval_ina", "ssf3_lpm",
@@ -620,15 +626,15 @@ public class CsStagingTest extends StagingTest {
     void testInvolvedSchemas() {
         Set<String> schemas = _STAGING.getInvolvedSchemas("ssf1_jpd");
 
-        Assertions.assertEquals(new HashSet<>(Arrays.asList("kidney_renal_pelvis", "bladder", "urethra")), schemas);
+        assertEquals(new HashSet<>(Arrays.asList("kidney_renal_pelvis", "bladder", "urethra")), schemas);
     }
 
     @Test
     void testGetInputs() {
-        Assertions.assertEquals(new HashSet<>(Arrays.asList("extension", "site", "extension_eval", "mets_eval", "nodes_eval", "nodes", "hist", "year_dx", "cs_input_version_original",
+        assertEquals(new HashSet<>(Arrays.asList("extension", "site", "extension_eval", "mets_eval", "nodes_eval", "nodes", "hist", "year_dx", "cs_input_version_original",
                 "mets")), _STAGING.getInputs(_STAGING.getSchema("adnexa_uterine_other")));
 
-        Assertions.assertEquals(new HashSet<>(Arrays.asList("site", "nodes_pos", "mets_eval", "nodes_eval", "ssf16", "ssf15", "ssf13", "cs_input_version_original", "lvi", "extension",
+        assertEquals(new HashSet<>(Arrays.asList("site", "nodes_pos", "mets_eval", "nodes_eval", "ssf16", "ssf15", "ssf13", "cs_input_version_original", "lvi", "extension",
                 "extension_eval", "ssf1", "ssf2", "ssf3", "hist", "ssf4", "nodes", "ssf5", "year_dx", "mets")), _STAGING.getInputs(_STAGING.getSchema("testis")));
 
         // test with context
@@ -638,38 +644,38 @@ public class CsStagingTest extends StagingTest {
         context.put(StagingData.YEAR_DX_KEY, "2004");
 
         // for that context, neither AJCC6 or 7 should be calculated so "grade" and "ssf1" should not be list of inputs
-        Assertions.assertEquals(new HashSet<>(Arrays.asList("site", "nodes_eval", "mets_eval", "ssf10", "cs_input_version_original", "ssf8", "extension", "extension_eval",
+        assertEquals(new HashSet<>(Arrays.asList("site", "nodes_eval", "mets_eval", "ssf10", "cs_input_version_original", "ssf8", "extension", "extension_eval",
                 "ssf3", "hist", "nodes", "year_dx", "mets")), _STAGING.getInputs(_STAGING.getSchema("prostate"), context));
 
         // test without context
-        Assertions.assertEquals(new HashSet<>(Arrays.asList("site", "nodes_eval", "mets_eval", "ssf10", "cs_input_version_original", "ssf8", "extension", "extension_eval", "ssf1",
+        assertEquals(new HashSet<>(Arrays.asList("site", "nodes_eval", "mets_eval", "ssf10", "cs_input_version_original", "ssf8", "extension", "extension_eval", "ssf1",
                 "ssf3", "hist", "nodes", "year_dx", "grade", "mets")), _STAGING.getInputs(_STAGING.getSchema("prostate")));
     }
 
     @Test
     void testIsCodeValid() {
         // test bad parameters for schema or field
-        Assertions.assertFalse(_STAGING.isCodeValid("bad_schema_name", "site", "C509"));
-        Assertions.assertFalse(_STAGING.isCodeValid("testis", "bad_field_name", "C509"));
+        assertFalse(_STAGING.isCodeValid("bad_schema_name", "site", "C509"));
+        assertFalse(_STAGING.isCodeValid("testis", "bad_field_name", "C509"));
 
         // test null values
-        Assertions.assertFalse(_STAGING.isCodeValid(null, null, null));
-        Assertions.assertFalse(_STAGING.isCodeValid("urethra", null, null));
-        Assertions.assertFalse(_STAGING.isCodeValid("urethra", "site", null));
+        assertFalse(_STAGING.isCodeValid(null, null, null));
+        assertFalse(_STAGING.isCodeValid("urethra", null, null));
+        assertFalse(_STAGING.isCodeValid("urethra", "site", null));
 
         // test fields that have a "value" specified
-        Assertions.assertFalse(_STAGING.isCodeValid("urethra", "year_dx", null));
-        Assertions.assertFalse(_STAGING.isCodeValid("urethra", "year_dx", "200"));
-        Assertions.assertFalse(_STAGING.isCodeValid("urethra", "year_dx", "2003"));
-        Assertions.assertFalse(_STAGING.isCodeValid("urethra", "year_dx", "2145"));
-        Assertions.assertTrue(_STAGING.isCodeValid("urethra", "year_dx", "2004"));
-        Assertions.assertTrue(_STAGING.isCodeValid("urethra", "year_dx", "2015"));
+        assertFalse(_STAGING.isCodeValid("urethra", "year_dx", null));
+        assertFalse(_STAGING.isCodeValid("urethra", "year_dx", "200"));
+        assertFalse(_STAGING.isCodeValid("urethra", "year_dx", "2003"));
+        assertFalse(_STAGING.isCodeValid("urethra", "year_dx", "2145"));
+        assertTrue(_STAGING.isCodeValid("urethra", "year_dx", "2004"));
+        assertTrue(_STAGING.isCodeValid("urethra", "year_dx", "2015"));
 
         // test valid and invalid fields
-        Assertions.assertTrue(_STAGING.isCodeValid("urethra", "extension", "050"));
-        Assertions.assertFalse(_STAGING.isCodeValid("urethra", "extension", "025"));
-        Assertions.assertTrue(_STAGING.isCodeValid("urethra", "ssf1", "020"));
-        Assertions.assertFalse(_STAGING.isCodeValid("urethra", "ssf1", "030"));
+        assertTrue(_STAGING.isCodeValid("urethra", "extension", "050"));
+        assertFalse(_STAGING.isCodeValid("urethra", "extension", "025"));
+        assertTrue(_STAGING.isCodeValid("urethra", "ssf1", "020"));
+        assertFalse(_STAGING.isCodeValid("urethra", "ssf1", "030"));
     }
 
     @Test
@@ -681,88 +687,88 @@ public class CsStagingTest extends StagingTest {
         // test valid year
         data.setInput(CsStagingData.CsInput.DX_YEAR, "2004");
         data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "020001");
-        Assertions.assertTrue(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
+        assertTrue(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
 
         // test invalid year
         data.setInput(CsStagingData.CsInput.DX_YEAR, "2003");
-        Assertions.assertFalse(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
+        assertFalse(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
 
         // test blank year with valid version
         data.setInput(CsStagingData.CsInput.DX_YEAR, "");
         data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "020001");
-        Assertions.assertTrue(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
+        assertTrue(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
 
         // test space-filled year with valid version
         data.setInput(CsStagingData.CsInput.DX_YEAR, "    ");
         data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "020001");
-        Assertions.assertTrue(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
+        assertTrue(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
 
         // test blank year with invalid version
         data.setInput(CsStagingData.CsInput.DX_YEAR, "");
         data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "000000");
-        Assertions.assertFalse(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
+        assertFalse(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
 
         // test blank year with invalid version of wrong length
         data.setInput(CsStagingData.CsInput.DX_YEAR, "");
         data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "1");
-        Assertions.assertFalse(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
+        assertFalse(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
 
         // test space-filled year with invalid version
         data.setInput(CsStagingData.CsInput.DX_YEAR, "    ");
         data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "000000");
-        Assertions.assertFalse(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
+        assertFalse(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
 
         // test space-filled year with invalid version of wrong length
         data.setInput(CsStagingData.CsInput.DX_YEAR, "    ");
         data.setInput(CsStagingData.CsInput.CS_VERSION_ORIGINAL, "1");
-        Assertions.assertFalse(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
+        assertFalse(_STAGING.isContextValid("urethra", StagingData.YEAR_DX_KEY, data.getInput()));
     }
 
     @Test
     void testGetSchemaIds() {
         Set<String> algorithms = _STAGING.getSchemaIds();
 
-        Assertions.assertTrue(algorithms.size() > 0);
-        Assertions.assertTrue(algorithms.contains("testis"));
+        assertTrue(algorithms.size() > 0);
+        assertTrue(algorithms.contains("testis"));
     }
 
     @Test
     void testGetTableIds() {
         Set<String> tables = _STAGING.getTableIds();
 
-        Assertions.assertTrue(tables.size() > 0);
-        Assertions.assertTrue(tables.contains("ajcc7_stage_uaz"));
+        assertTrue(tables.size() > 0);
+        assertTrue(tables.contains("ajcc7_stage_uaz"));
     }
 
     @Test
     void testGetSchema() {
-        Assertions.assertNull(_STAGING.getSchema("bad_schema_name"));
-        Assertions.assertNotNull(_STAGING.getSchema("brain"));
-        Assertions.assertEquals(Integer.valueOf(143), _STAGING.getSchema("brain").getSchemaNum());
+        assertNull(_STAGING.getSchema("bad_schema_name"));
+        assertNotNull(_STAGING.getSchema("brain"));
+        assertEquals(Integer.valueOf(143), _STAGING.getSchema("brain").getSchemaNum());
     }
 
     @Test
     void testStagingInputsAndOutputs() {
         Schema schema = _STAGING.getSchema("testis");
 
-        Assertions.assertEquals(new HashSet<>(Arrays.asList("cs_input_version_original", "extension", "extension_eval", "site", "hist", "lvi", "mets_eval", "mets", "nodes",
+        assertEquals(new HashSet<>(Arrays.asList("cs_input_version_original", "extension", "extension_eval", "site", "hist", "lvi", "mets_eval", "mets", "nodes",
                 "nodes_eval", "nodes_pos", "ssf1", "ssf2", "ssf3", "ssf4", "ssf5", "ssf13", "ssf15", "ssf16", "year_dx")), _STAGING.getInputs(schema), "Inputs do not match");
 
         // note that outputs should NOT include values produced by staging that are not in the defined output list (if an output list exists on the schema)
-        Assertions.assertEquals(new HashSet<>(Arrays.asList("schema_number", "csver_derived", "ss77", "stor_ajcc7_m", "t2000", "stor_ajcc7_n", "stor_ajcc6_tdescriptor", "ajcc7_stage",
+        assertEquals(new HashSet<>(Arrays.asList("schema_number", "csver_derived", "ss77", "stor_ajcc7_m", "t2000", "stor_ajcc7_n", "stor_ajcc6_tdescriptor", "ajcc7_stage",
                 "stor_ajcc6_mdescriptor", "stor_ss2000", "ajcc6_tdescriptor", "stor_ajcc7_t", "ajcc6_stage", "n2000", "ajcc7_ndescriptor", "ajcc6_ndescriptor",
                 "ajcc7_mdescriptor", "ajcc6_mdescriptor", "stor_ajcc7_stage", "m77", "ajcc6_m", "ss2000", "stor_ajcc7_ndescriptor", "ajcc7_m", "ajcc7_n",
                 "stor_ajcc7_mdescriptor", "t77", "ajcc6_n", "stor_ss77", "ajcc6_t", "stor_ajcc6_ndescriptor", "stor_ajcc6_stage", "m2000", "ajcc7_t", "n77",
                 "ajcc7_tdescriptor", "stor_ajcc6_m", "stor_ajcc6_n", "stor_ajcc6_t", "stor_ajcc7_tdescriptor")), _STAGING.getOutputs(schema), "Outputs do not match");
 
         // test used for staging
-        Assertions.assertFalse(schema.getInputMap().get("ssf14").getUsedForStaging());
-        Assertions.assertTrue(schema.getInputMap().get("ssf15").getUsedForStaging());
+        assertFalse(schema.getInputMap().get("ssf14").getUsedForStaging());
+        assertTrue(schema.getInputMap().get("ssf15").getUsedForStaging());
 
         // test metadata
-        Assertions.assertNull(schema.getInputMap().get("ssf11").getMetadata());
-        Assertions.assertTrue(schema.getInputMap().get("ssf17").getMetadata().contains(new StagingMetadata("UNDEFINED_SSF")));
-        Assertions.assertTrue(schema.getInputMap().get("ssf7").getMetadata().contains(new StagingMetadata("SEER_CLINICALLY_SIGNIFICANT")));
+        assertNull(schema.getInputMap().get("ssf11").getMetadata());
+        assertTrue(schema.getInputMap().get("ssf17").getMetadata().contains(new StagingMetadata("UNDEFINED_SSF")));
+        assertTrue(schema.getInputMap().get("ssf7").getMetadata().contains(new StagingMetadata("SEER_CLINICALLY_SIGNIFICANT")));
 
         Map<String, String> context = new HashMap<>();
         context.put(StagingData.PRIMARY_SITE_KEY, "C629");
@@ -771,33 +777,33 @@ public class CsStagingTest extends StagingTest {
 
         // this is a case that summary stages only.  Testing to make sure "hist", which is used in the inclusion/exclusion criteria
         // is included in the list even though the mappings for AJCC6 and 7 are not included
-        Assertions.assertTrue(inputs.contains("hist"), "Inclusion/exclusion input is not included");
+        assertTrue(inputs.contains("hist"), "Inclusion/exclusion input is not included");
 
-        Assertions.assertTrue(inputs.contains("mets"));
+        assertTrue(inputs.contains("mets"));
 
         // these are no used when only doing summary stage
-        Assertions.assertFalse(inputs.contains("ssf1"));
-        Assertions.assertFalse(inputs.contains("ssf2"));
-        Assertions.assertFalse(inputs.contains("ssf3"));
-        Assertions.assertFalse(inputs.contains("ssf13"));
-        Assertions.assertFalse(inputs.contains("ssf15"));
-        Assertions.assertFalse(inputs.contains("ssf16"));
+        assertFalse(inputs.contains("ssf1"));
+        assertFalse(inputs.contains("ssf2"));
+        assertFalse(inputs.contains("ssf3"));
+        assertFalse(inputs.contains("ssf13"));
+        assertFalse(inputs.contains("ssf15"));
+        assertFalse(inputs.contains("ssf16"));
 
         // now test one that does do AJCC7 (inputs should include extra SSFs used in AJCC calculations)
         context.put(StagingData.HISTOLOGY_KEY, "9100");
         inputs = _STAGING.getInputs(schema, context);
-        Assertions.assertTrue(inputs.contains("hist"));
-        Assertions.assertTrue(inputs.contains("ssf1"));
-        Assertions.assertTrue(inputs.contains("ssf2"));
-        Assertions.assertTrue(inputs.contains("ssf3"));
-        Assertions.assertTrue(inputs.contains("ssf13"));
-        Assertions.assertTrue(inputs.contains("ssf15"));
-        Assertions.assertTrue(inputs.contains("ssf16"));
+        assertTrue(inputs.contains("hist"));
+        assertTrue(inputs.contains("ssf1"));
+        assertTrue(inputs.contains("ssf2"));
+        assertTrue(inputs.contains("ssf3"));
+        assertTrue(inputs.contains("ssf13"));
+        assertTrue(inputs.contains("ssf15"));
+        assertTrue(inputs.contains("ssf16"));
 
         // the prostate schema tables use a reference to {{ssf8}} and {{ssf10}}; make sure they are picked up in the list of required inputs
         inputs = _STAGING.getInputs(_STAGING.getSchema("prostate"));
-        Assertions.assertTrue(inputs.contains("ssf8"));
-        Assertions.assertTrue(inputs.contains("ssf10"));
+        assertTrue(inputs.contains("ssf8"));
+        assertTrue(inputs.contains("ssf10"));
     }
 
     @Test
@@ -808,8 +814,8 @@ public class CsStagingTest extends StagingTest {
                 new GZIPInputStream(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("cs/test-data/020550/AJCC_7.V020550.10000.txt.gz"))));
 
         // make sure there were no errors returned
-        Assertions.assertEquals(0, ajcc6Result.getNumFailures(), "There were failures in the AJCC6 tests");
-        Assertions.assertEquals(0, ajcc7Result.getNumFailures(), "There were failures in the AJCC7 tests");
+        assertEquals(0, ajcc6Result.getNumFailures(), "There were failures in the AJCC6 tests");
+        assertEquals(0, ajcc7Result.getNumFailures(), "There were failures in the AJCC7 tests");
     }
 
     @Test
@@ -826,11 +832,11 @@ public class CsStagingTest extends StagingTest {
         while (line != null) {
             // split the CSV record
             String[] values = line.split("\\|");
-            Assertions.assertEquals(3, values.length);
+            assertEquals(3, values.length);
 
             // get schema by schema name
             Schema schema = _STAGING.getSchema(nameMap.get(values[0]));
-            Assertions.assertTrue(_STAGING.isCodeValid(schema.getId(), values[1], values[2]),
+            assertTrue(_STAGING.isCodeValid(schema.getId(), values[1], values[2]),
                     "The value '" + values[2] + "' is not valid for table '" + values[1] + "' and schema '" + values[0] + "'");
 
             line = reader.readLine();

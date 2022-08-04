@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -40,6 +39,12 @@ import com.imsweb.staging.entities.impl.StagingTablePath;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * Test class for DecisionEngine
@@ -318,13 +323,13 @@ public class DecisionEngineTest {
         range.add(new StagingRange("1", "1"));
         range.add(new StagingRange("4", "4"));
         range.add(new StagingRange("9", "9"));
-        Assertions.assertTrue(DecisionEngine.testMatch(range, "9", new HashMap<>()));
-        Assertions.assertFalse(DecisionEngine.testMatch(range, "7", new HashMap<>()));
+        assertTrue(DecisionEngine.testMatch(range, "9", new HashMap<>()));
+        assertFalse(DecisionEngine.testMatch(range, "7", new HashMap<>()));
 
         range = new ArrayList<>();
         range.add(new StagingRange("11", "54"));
         range.add(new StagingRange("99", "99"));
-        Assertions.assertTrue(DecisionEngine.testMatch(range, "23", new HashMap<>()));
+        assertTrue(DecisionEngine.testMatch(range, "23", new HashMap<>()));
     }
 
     @Test
@@ -336,8 +341,8 @@ public class DecisionEngineTest {
         table.addColumnDefinition("size_result", ColumnType.ENDPOINT);
         provider.addTable(table);
 
-        Assertions.assertTrue(provider.getTable("basic_test_table").getRawRows().isEmpty());
-        Assertions.assertTrue(provider.getTable("basic_test_table").getTableRows().isEmpty());
+        assertTrue(provider.getTable("basic_test_table").getRawRows().isEmpty());
+        assertTrue(provider.getTable("basic_test_table").getTableRows().isEmpty());
     }
 
     @Test
@@ -354,13 +359,13 @@ public class DecisionEngineTest {
         provider.addTable(table);
 
         Table matchTable = provider.getTable("basic_test_table");
-        Assertions.assertNotNull(matchTable);
+        assertNotNull(matchTable);
 
         // create context of input fields
         Map<String, String> input = new HashMap<>();
 
         // first try it with missing input
-        Assertions.assertNull(DecisionEngine.matchTable(matchTable, input));
+        assertNull(DecisionEngine.matchTable(matchTable, input));
 
         input.put("size", "003");
         assertThat(DecisionEngine.matchTable(matchTable, input))
@@ -369,10 +374,10 @@ public class DecisionEngineTest {
 
         input.put("size", "014");
         List<? extends Endpoint> results = DecisionEngine.matchTable(matchTable, input);
-        Assertions.assertEquals(1, results.size());
-        Assertions.assertEquals(EndpointType.VALUE, results.get(0).getType());
-        Assertions.assertEquals("medium_stuff", results.get(0).getValue());
-        Assertions.assertEquals("size_result", results.get(0).getResultKey());
+        assertEquals(1, results.size());
+        assertEquals(EndpointType.VALUE, results.get(0).getType());
+        assertEquals("medium_stuff", results.get(0).getValue());
+        assertEquals("size_result", results.get(0).getResultKey());
 
         input.put("size", "086");
         assertThat(DecisionEngine.matchTable(matchTable, input))
@@ -381,7 +386,7 @@ public class DecisionEngineTest {
 
         // try with a value not in the table
         input.put("size", "021");
-        Assertions.assertNull(DecisionEngine.matchTable(matchTable, input));
+        assertNull(DecisionEngine.matchTable(matchTable, input));
     }
 
     @Test
@@ -397,17 +402,17 @@ public class DecisionEngineTest {
         provider.addTable(table);
 
         Table matchTable = provider.getTable("basic_test_table");
-        Assertions.assertNotNull(matchTable);
+        assertNotNull(matchTable);
 
         // create context of input fields
         Map<String, String> input = new HashMap<>();
 
         // first try it with missing input (null should match just like blank)
-        Assertions.assertNotNull(DecisionEngine.matchTable(matchTable, input));
+        assertNotNull(DecisionEngine.matchTable(matchTable, input));
 
         // now add blank input
         input.put("size", "");
-        Assertions.assertNotNull(DecisionEngine.matchTable(matchTable, input));
+        assertNotNull(DecisionEngine.matchTable(matchTable, input));
 
         // test matching on multiple mising values
         table = new StagingTable("basic_test_table_multi");
@@ -421,13 +426,13 @@ public class DecisionEngineTest {
         provider.addTable(table);
 
         matchTable = provider.getTable("basic_test_table_multi");
-        Assertions.assertNotNull(matchTable);
+        assertNotNull(matchTable);
 
         // first try it with missing input (null should match just like blank)
-        Assertions.assertNull(DecisionEngine.matchTable(matchTable, new HashMap<>()));
+        assertNull(DecisionEngine.matchTable(matchTable, new HashMap<>()));
 
         input.put("a", "2");
-        Assertions.assertNotNull(DecisionEngine.matchTable(matchTable, input));
+        assertNotNull(DecisionEngine.matchTable(matchTable, input));
     }
 
     @Test
@@ -443,17 +448,17 @@ public class DecisionEngineTest {
         provider.addTable(table);
 
         Table matchTable = provider.getTable("basic_test_table_keytest");
-        Assertions.assertNotNull(matchTable);
+        assertNotNull(matchTable);
 
         // create context of input fields
         Map<String, String> input = new HashMap<>();
 
         // first try it with missing input
-        Assertions.assertNull(DecisionEngine.matchTable(matchTable, input));
+        assertNull(DecisionEngine.matchTable(matchTable, input));
 
         // if searching all keys and only supplying key1, not match will be found
         input.put("key1", "050");
-        Assertions.assertNull(DecisionEngine.matchTable(matchTable, input));
+        assertNull(DecisionEngine.matchTable(matchTable, input));
 
         // specify to only match on key1, there should be a match to the first line
         assertThat(DecisionEngine.matchTable(matchTable, input, new HashSet<>(Collections.singletonList("key1"))))
@@ -499,15 +504,15 @@ public class DecisionEngineTest {
         Map<String, String> input = new HashMap<>();
         input.put("a", "");
         endpoints = DecisionEngine.matchTable(tableMissing, input);
-        Assertions.assertEquals(1, endpoints.size());
-        Assertions.assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
-        Assertions.assertEquals("missing", endpoints.get(0).getValue());
+        assertEquals(1, endpoints.size());
+        assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
+        assertEquals("missing", endpoints.get(0).getValue());
 
         input.put("a", "1");
         endpoints = DecisionEngine.matchTable(tableMissing, input);
-        Assertions.assertEquals(1, endpoints.size());
-        Assertions.assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
-        Assertions.assertEquals("all", endpoints.get(0).getValue());
+        assertEquals(1, endpoints.size());
+        assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
+        assertEquals("all", endpoints.get(0).getValue());
     }
 
     @Test
@@ -535,28 +540,28 @@ public class DecisionEngineTest {
         Map<String, String> input = new HashMap<>();
         input.put("a", "1");
         input.put("b", "B VALUE");
-        Assertions.assertFalse(engine.process("alg_key_references", input).hasErrors());
-        Assertions.assertEquals("b", input.get("result"));
+        assertFalse(engine.process("alg_key_references", input).hasErrors());
+        assertEquals("b", input.get("result"));
 
         input.put("a", "2");
-        Assertions.assertFalse(engine.process("alg_key_references", input).hasErrors());
-        Assertions.assertEquals("{b}", input.get("result"));
+        assertFalse(engine.process("alg_key_references", input).hasErrors());
+        assertEquals("{b}", input.get("result"));
 
         input.put("a", "3");
-        Assertions.assertFalse(engine.process("alg_key_references", input).hasErrors());
-        Assertions.assertEquals("{{b", input.get("result"));
+        assertFalse(engine.process("alg_key_references", input).hasErrors());
+        assertEquals("{{b", input.get("result"));
 
         input.put("a", "4");
-        Assertions.assertFalse(engine.process("alg_key_references", input).hasErrors());
-        Assertions.assertEquals("b}}", input.get("result"));
+        assertFalse(engine.process("alg_key_references", input).hasErrors());
+        assertEquals("b}}", input.get("result"));
 
         input.put("a", "10");
-        Assertions.assertFalse(engine.process("alg_key_references", input).hasErrors());
-        Assertions.assertEquals("B VALUE", input.get("result"));
+        assertFalse(engine.process("alg_key_references", input).hasErrors());
+        assertEquals("B VALUE", input.get("result"));
 
         input.put("a", "11");
-        Assertions.assertFalse(engine.process("alg_key_references", input).hasErrors());
-        Assertions.assertEquals("", input.get("result"));
+        assertFalse(engine.process("alg_key_references", input).hasErrors());
+        assertEquals("", input.get("result"));
     }
 
     @Test
@@ -576,22 +581,22 @@ public class DecisionEngineTest {
         provider.addTable(table);
 
         Table tableSample = provider.getTable("table_sample_first");
-        Assertions.assertNotNull(tableSample);
+        assertNotNull(tableSample);
 
         // first test with no "a"
         Map<String, String> input = new HashMap<>();
         input.put("b", "55");
         List<? extends Endpoint> endpoints = DecisionEngine.matchTable(tableSample, input);
-        Assertions.assertEquals(1, endpoints.size());
-        Assertions.assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
-        Assertions.assertEquals("LINE5", endpoints.get(0).getValue());
+        assertEquals(1, endpoints.size());
+        assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
+        assertEquals("LINE5", endpoints.get(0).getValue());
 
         // then test with a random "a"
         input.put("a", "982");
         endpoints = DecisionEngine.matchTable(tableSample, input);
-        Assertions.assertEquals(1, endpoints.size());
-        Assertions.assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
-        Assertions.assertEquals("LINE5", endpoints.get(0).getValue());
+        assertEquals(1, endpoints.size());
+        assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
+        assertEquals("LINE5", endpoints.get(0).getValue());
     }
 
     @Test
@@ -612,17 +617,17 @@ public class DecisionEngineTest {
         input.put("a", "X");
         input.put("b", "");
         List<? extends Endpoint> endpoints = DecisionEngine.matchTable(table, input);
-        Assertions.assertEquals(2, endpoints.size());
-        Assertions.assertEquals("LINE1", endpoints.get(0).getValue());
-        Assertions.assertEquals("LINE1", endpoints.get(1).getValue());
+        assertEquals(2, endpoints.size());
+        assertEquals("LINE1", endpoints.get(0).getValue());
+        assertEquals("LINE1", endpoints.get(1).getValue());
 
         input.clear();
         input.put("a", "NA");
         input.put("b", "99");
         endpoints = DecisionEngine.matchTable(table, input);
-        Assertions.assertEquals(2, endpoints.size());
-        Assertions.assertEquals("LINE2", endpoints.get(0).getValue());
-        Assertions.assertEquals("LINE2", endpoints.get(1).getValue());
+        assertEquals(2, endpoints.size());
+        assertEquals("LINE2", endpoints.get(0).getValue());
+        assertEquals("LINE2", endpoints.get(1).getValue());
     }
 
     @Test
@@ -644,14 +649,14 @@ public class DecisionEngineTest {
         provider.addTable(table);
 
         Table siteTable = provider.getTable("site_table");
-        Assertions.assertNotNull(siteTable);
+        assertNotNull(siteTable);
 
         Map<String, String> input = new HashMap<>();
         input.put("site", "C809");
 
         // a lookup table in this case has no ENDPOINT column.  In those cases, an endpoint type of MATCH should be returned
         List<? extends Endpoint> endpoints = DecisionEngine.matchTable(siteTable, input);
-        Assertions.assertEquals(0, endpoints.size());
+        assertEquals(0, endpoints.size());
     }
 
     @Test
@@ -674,66 +679,66 @@ public class DecisionEngineTest {
         provider.addTable(table);
 
         Table allValuesTable = provider.getTable("all_values_test");
-        Assertions.assertNotNull(table);
+        assertNotNull(table);
 
         Map<String, String> input = new HashMap<>();
         input.put("a", "1");
         input.put("b", "3");
         List<? extends Endpoint> endpoints = DecisionEngine.matchTable(allValuesTable, input);
-        Assertions.assertEquals(1, endpoints.size());
-        Assertions.assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
-        Assertions.assertEquals("RESULT2", endpoints.get(0).getValue());
+        assertEquals(1, endpoints.size());
+        assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
+        assertEquals("RESULT2", endpoints.get(0).getValue());
 
         input = new HashMap<>();
         input.put("a", "3");
         endpoints = DecisionEngine.matchTable(allValuesTable, input);
-        Assertions.assertEquals(1, endpoints.size());
-        Assertions.assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
-        Assertions.assertEquals("3A,ANY B", endpoints.get(0).getValue());
+        assertEquals(1, endpoints.size());
+        assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
+        assertEquals("3A,ANY B", endpoints.get(0).getValue());
 
         input = new HashMap<>();
         input.put("a", "3");
         input.put("b", "9");
         endpoints = DecisionEngine.matchTable(allValuesTable, input);
-        Assertions.assertEquals(1, endpoints.size());
-        Assertions.assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
-        Assertions.assertEquals("3A,ANY B", endpoints.get(0).getValue());
+        assertEquals(1, endpoints.size());
+        assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
+        assertEquals("3A,ANY B", endpoints.get(0).getValue());
 
         input = new HashMap<>();
         input.put("a", "6");
         input.put("b", "4");
         endpoints = DecisionEngine.matchTable(allValuesTable, input);
-        Assertions.assertEquals(1, endpoints.size());
-        Assertions.assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
-        Assertions.assertEquals("ANY A,4B", endpoints.get(0).getValue());
+        assertEquals(1, endpoints.size());
+        assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
+        assertEquals("ANY A,4B", endpoints.get(0).getValue());
 
         input = new HashMap<>();
-        Assertions.assertEquals(1, endpoints.size());
+        assertEquals(1, endpoints.size());
         endpoints = DecisionEngine.matchTable(allValuesTable, input);
-        Assertions.assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
-        Assertions.assertEquals("CATCHALL", endpoints.get(0).getValue());
+        assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
+        assertEquals("CATCHALL", endpoints.get(0).getValue());
     }
 
     @Test
     void testMinimumAlgorithm() {
         Schema minSchema = _ENGINE.getProvider().getSchema("starting_min");
-        Assertions.assertNotNull(minSchema);
-        Assertions.assertEquals("starting_min", minSchema.getId());
-        Assertions.assertNotNull(minSchema.getInitialContext());
+        assertNotNull(minSchema);
+        assertEquals("starting_min", minSchema.getId());
+        assertNotNull(minSchema.getInitialContext());
 
         Map<String, String> input = new HashMap<>();
         Result result = _ENGINE.process(minSchema, input);
 
-        Assertions.assertFalse(result.hasErrors());
-        Assertions.assertEquals("bar", input.get("foo"));
+        assertFalse(result.hasErrors());
+        assertEquals("bar", input.get("foo"));
     }
 
     @Test
     void testAlgorithm() {
         Schema starting = _ENGINE.getProvider().getSchema("starting_sample");
-        Assertions.assertNotNull(starting);
-        Assertions.assertEquals("starting_sample", starting.getId());
-        Assertions.assertNotNull(starting.getInitialContext());
+        assertNotNull(starting);
+        assertEquals("starting_sample", starting.getId());
+        assertNotNull(starting.getInitialContext());
     }
 
     @Test
@@ -741,12 +746,12 @@ public class DecisionEngineTest {
         Map<String, String> input = new HashMap<>();
         Result result = _ENGINE.process("starting_sample", input);
 
-        Assertions.assertTrue(result.hasErrors());
+        assertTrue(result.hasErrors());
 
         // even though there were no inputs, both tables were still processed
-        Assertions.assertEquals(2, result.getPath().size());
-        Assertions.assertEquals("m1.table_sample_first", result.getPath().get(0));
-        Assertions.assertEquals("m1.table_sample_second", result.getPath().get(1));
+        assertEquals(2, result.getPath().size());
+        assertEquals("m1.table_sample_first", result.getPath().get(0));
+        assertEquals("m1.table_sample_second", result.getPath().get(1));
     }
 
     @Test
@@ -757,23 +762,23 @@ public class DecisionEngineTest {
 
         Result result = _ENGINE.process("starting_sample", input);
 
-        Assertions.assertEquals(Type.FAILED_INPUT, result.getType());
+        assertEquals(Type.FAILED_INPUT, result.getType());
 
         // since input "b" is fail_on_invalid, table processing should not continue
-        Assertions.assertEquals(0, result.getPath().size());
+        assertEquals(0, result.getPath().size());
 
         // one error for input, and one error each of the two tables because of no match
-        Assertions.assertEquals(1, result.getErrors().size());
+        assertEquals(1, result.getErrors().size());
 
         // make "b" a valid value
         input.put("b", "30");
 
         result = _ENGINE.process("starting_sample", input);
 
-        Assertions.assertEquals(Type.STAGED, result.getType());
+        assertEquals(Type.STAGED, result.getType());
 
         // one error for input, and one error each of the two tables because of no match
-        Assertions.assertEquals(2, result.getErrors().size());
+        assertEquals(2, result.getErrors().size());
     }
 
     @Test
@@ -784,11 +789,11 @@ public class DecisionEngineTest {
         input.put("e", "X");
         Result result = _ENGINE.process("starting_sample", input);
 
-        Assertions.assertFalse(result.hasErrors());
-        Assertions.assertEquals(2, result.getPath().size());
+        assertFalse(result.hasErrors());
+        assertEquals(2, result.getPath().size());
 
-        Assertions.assertEquals("LINE1", input.get("result"));
-        Assertions.assertEquals("HARD-CODE", input.get("d"));
+        assertEquals("LINE1", input.get("result"));
+        assertEquals("HARD-CODE", input.get("d"));
     }
 
     @Test
@@ -800,10 +805,10 @@ public class DecisionEngineTest {
         input.put("e", "X");
         Result result = _ENGINE.process("starting_sample", input);
 
-        Assertions.assertFalse(result.hasErrors());
-        Assertions.assertEquals(3, result.getPath().size());
+        assertFalse(result.hasErrors());
+        assertEquals(3, result.getPath().size());
 
-        Assertions.assertEquals("A", input.get("result"));
+        assertEquals("A", input.get("result"));
 
         // now test an error line in the jump table
         input = new HashMap<>();
@@ -814,12 +819,12 @@ public class DecisionEngineTest {
 
         result = _ENGINE.process("starting_sample", input);
 
-        Assertions.assertTrue(result.hasErrors());
-        Assertions.assertEquals(3, result.getPath().size());
-        Assertions.assertEquals(1, result.getErrors().size());
-        Assertions.assertEquals("Bad C value", result.getErrors().get(0).getMessage());
-        Assertions.assertNull(result.getErrors().get(0).getKey());
-        Assertions.assertEquals("table_jump_sample", result.getErrors().get(0).getTable());
+        assertTrue(result.hasErrors());
+        assertEquals(3, result.getPath().size());
+        assertEquals(1, result.getErrors().size());
+        assertEquals("Bad C value", result.getErrors().get(0).getMessage());
+        assertNull(result.getErrors().get(0).getKey());
+        assertEquals("table_jump_sample", result.getErrors().get(0).getTable());
 
         // finally test that no match is found in the jump table
         input = new HashMap<>();
@@ -830,12 +835,12 @@ public class DecisionEngineTest {
 
         result = _ENGINE.process("starting_sample", input);
 
-        Assertions.assertTrue(result.hasErrors());
-        Assertions.assertEquals(3, result.getPath().size());
-        Assertions.assertEquals(1, result.getErrors().size());
-        Assertions.assertTrue(result.getErrors().get(0).getMessage().startsWith("Match not found"));
-        Assertions.assertNull(result.getErrors().get(0).getKey());
-        Assertions.assertEquals("table_jump_sample", result.getErrors().get(0).getTable());
+        assertTrue(result.hasErrors());
+        assertEquals(3, result.getPath().size());
+        assertEquals(1, result.getErrors().size());
+        assertTrue(result.getErrors().get(0).getMessage().startsWith("Match not found"));
+        assertNull(result.getErrors().get(0).getKey());
+        assertEquals("table_jump_sample", result.getErrors().get(0).getTable());
     }
 
     @Test
@@ -846,25 +851,25 @@ public class DecisionEngineTest {
         input.put("e", "X");
         Result result = _ENGINE.process("starting_sample", input);
 
-        Assertions.assertTrue(result.hasErrors());
-        Assertions.assertEquals(1, result.getErrors().size());
-        Assertions.assertEquals(2, result.getPath().size());
-        Assertions.assertEquals("999", result.getErrors().get(0).getMessage());
-        Assertions.assertNull(result.getErrors().get(0).getKey());
-        Assertions.assertEquals("table_sample_first", result.getErrors().get(0).getTable());
-        Assertions.assertEquals(Collections.singletonList("result"), result.getErrors().get(0).getColumns());
+        assertTrue(result.hasErrors());
+        assertEquals(1, result.getErrors().size());
+        assertEquals(2, result.getPath().size());
+        assertEquals("999", result.getErrors().get(0).getMessage());
+        assertNull(result.getErrors().get(0).getKey());
+        assertEquals("table_sample_first", result.getErrors().get(0).getTable());
+        assertEquals(Collections.singletonList("result"), result.getErrors().get(0).getColumns());
 
         // test case with generated error message (i.e. the column is "ERROR:" without a message
         input.put("a", "8");
         input.put("b", "99");
         input.put("e", "X");
         result = _ENGINE.process("starting_sample", input);
-        Assertions.assertEquals(1, result.getErrors().size());
-        Assertions.assertEquals(2, result.getPath().size());
-        Assertions.assertEquals("Matching resulted in an error in table 'table_sample_first' for column 'result' (8,99)", result.getErrors().get(0).getMessage());
-        Assertions.assertNull(result.getErrors().get(0).getKey());
-        Assertions.assertEquals("table_sample_first", result.getErrors().get(0).getTable());
-        Assertions.assertEquals(Collections.singletonList("result"), result.getErrors().get(0).getColumns());
+        assertEquals(1, result.getErrors().size());
+        assertEquals(2, result.getPath().size());
+        assertEquals("Matching resulted in an error in table 'table_sample_first' for column 'result' (8,99)", result.getErrors().get(0).getMessage());
+        assertNull(result.getErrors().get(0).getKey());
+        assertEquals("table_sample_first", result.getErrors().get(0).getTable());
+        assertEquals(Collections.singletonList("result"), result.getErrors().get(0).getColumns());
     }
 
     @Test
@@ -893,26 +898,26 @@ public class DecisionEngineTest {
         Map<String, String> input = new HashMap<>();
         Result result = engine.process("starting_null_values", input);
 
-        Assertions.assertFalse(result.hasErrors());
-        Assertions.assertEquals("0", input.get("result"));
+        assertFalse(result.hasErrors());
+        assertEquals("0", input.get("result"));
 
         input.clear();
         input.put("a", "1");
         result = engine.process("starting_null_values", input);
-        Assertions.assertFalse(result.hasErrors());
-        Assertions.assertEquals("FOUND1", input.get("result"));
+        assertFalse(result.hasErrors());
+        assertEquals("FOUND1", input.get("result"));
 
         input.clear();
         input.put("a", "2");
         result = engine.process("starting_null_values", input);
-        Assertions.assertFalse(result.hasErrors());
-        Assertions.assertFalse(input.containsKey("result"));
+        assertFalse(result.hasErrors());
+        assertFalse(input.containsKey("result"));
 
         input.clear();
         input.put("a", "3");
         result = engine.process("starting_null_values", input);
-        Assertions.assertFalse(result.hasErrors());
-        Assertions.assertEquals("", input.get("result"));
+        assertFalse(result.hasErrors());
+        assertEquals("", input.get("result"));
     }
 
     @Test
@@ -925,11 +930,11 @@ public class DecisionEngineTest {
         input.put("e", "X");
         Result result = _ENGINE.process("starting_sample", input);
 
-        Assertions.assertFalse(result.hasErrors());
-        Assertions.assertEquals(3, result.getPath().size());
+        assertFalse(result.hasErrors());
+        assertEquals(3, result.getPath().size());
 
-        Assertions.assertEquals("A", input.get("result"));
-        Assertions.assertEquals("LINE1", input.get("shared_result"));
+        assertEquals("A", input.get("result"));
+        assertEquals("LINE1", input.get("shared_result"));
 
         // next text then when STOP is encountered, the second table is not processed
         input.clear();
@@ -939,11 +944,11 @@ public class DecisionEngineTest {
         input.put("e", "X");
         result = _ENGINE.process("starting_sample", input);
 
-        Assertions.assertFalse(result.hasErrors());
-        Assertions.assertEquals(2, result.getPath().size());
+        assertFalse(result.hasErrors());
+        assertEquals(2, result.getPath().size());
 
-        Assertions.assertFalse(input.containsKey("result"));
-        Assertions.assertFalse(input.containsKey("shared_result"));
+        assertFalse(input.containsKey("result"));
+        assertFalse(input.containsKey("shared_result"));
     }
 
     @Test
@@ -953,22 +958,22 @@ public class DecisionEngineTest {
         input.put("y", "");
         Result result = _ENGINE.process("starting_blank", input);
 
-        Assertions.assertFalse(result.hasErrors());
-        Assertions.assertEquals(1, result.getPath().size());
+        assertFalse(result.hasErrors());
+        assertEquals(1, result.getPath().size());
 
-        Assertions.assertEquals("LINE1", input.get("y"));
-        Assertions.assertEquals("LINE1", input.get("z"));
+        assertEquals("LINE1", input.get("y"));
+        assertEquals("LINE1", input.get("z"));
 
         // verify that context blanks are trimmed
         input.put("x", "1");
         input.put("y", "  ");
         result = _ENGINE.process("starting_blank", input);
 
-        Assertions.assertFalse(result.hasErrors());
-        Assertions.assertEquals(1, result.getPath().size());
+        assertFalse(result.hasErrors());
+        assertEquals(1, result.getPath().size());
 
-        Assertions.assertEquals("LINE1", input.get("y"));
-        Assertions.assertEquals("LINE1", input.get("z"));
+        assertEquals("LINE1", input.get("y"));
+        assertEquals("LINE1", input.get("z"));
     }
 
     @Test
@@ -977,10 +982,10 @@ public class DecisionEngineTest {
         input.put("x", "1");
         Result result = _ENGINE.process("starting_double_input", input);
 
-        Assertions.assertFalse(result.hasErrors());
-        Assertions.assertEquals(1, result.getPath().size());
+        assertFalse(result.hasErrors());
+        assertEquals(1, result.getPath().size());
 
-        Assertions.assertEquals("LINE3", input.get("result"));
+        assertEquals("LINE3", input.get("result"));
     }
 
     @Test
@@ -990,12 +995,12 @@ public class DecisionEngineTest {
         input.put("b", "00");
         Result result = _ENGINE.process("starting_double_output", input);
 
-        Assertions.assertFalse(result.hasErrors());
-        Assertions.assertEquals(1, result.getPath().size());
+        assertFalse(result.hasErrors());
+        assertEquals(1, result.getPath().size());
 
-        Assertions.assertNull(input.get("result"));
-        Assertions.assertEquals("LINE1", input.get("output1"));
-        Assertions.assertEquals("LINE1", input.get("output2"));
+        assertNull(input.get("result"));
+        assertEquals("LINE1", input.get("output1"));
+        assertEquals("LINE1", input.get("output2"));
     }
 
     @Test
@@ -1005,20 +1010,20 @@ public class DecisionEngineTest {
 
         Schema schema = _ENGINE.getProvider().getSchema("starting_min");
         mappings = _ENGINE.getInvolvedMappings(schema, context);
-        Assertions.assertEquals(0, mappings.size());
+        assertEquals(0, mappings.size());
 
         schema = _ENGINE.getProvider().getSchema("starting_inclusions");
 
         mappings = _ENGINE.getInvolvedMappings(schema, context);
-        Assertions.assertEquals(1, mappings.size());
+        assertEquals(1, mappings.size());
 
         context.put("a", "1");
         mappings = _ENGINE.getInvolvedMappings(schema, context);
-        Assertions.assertEquals(1, mappings.size());
+        assertEquals(1, mappings.size());
 
         context.put("a", "2");
         mappings = _ENGINE.getInvolvedMappings(schema, context);
-        Assertions.assertEquals(2, mappings.size());
+        assertEquals(2, mappings.size());
     }
 
     @Test
@@ -1027,24 +1032,24 @@ public class DecisionEngineTest {
 
         // test a case with no involved tables
         tables = _ENGINE.getInvolvedTables("starting_min");
-        Assertions.assertEquals(0, tables.size());
+        assertEquals(0, tables.size());
 
         // test a case with a single table with one jump
         tables = _ENGINE.getInvolvedTables("starting_sample");
-        Assertions.assertEquals(4, tables.size());
-        Assertions.assertTrue(tables.contains("table_lookup_sample"));
-        Assertions.assertTrue(tables.contains("table_sample_first"));
-        Assertions.assertTrue(tables.contains("table_sample_second"));
-        Assertions.assertTrue(tables.contains("table_jump_sample"));
+        assertEquals(4, tables.size());
+        assertTrue(tables.contains("table_lookup_sample"));
+        assertTrue(tables.contains("table_sample_first"));
+        assertTrue(tables.contains("table_sample_second"));
+        assertTrue(tables.contains("table_jump_sample"));
 
         // test a case with inclusion/exclusion tables
         tables = _ENGINE.getInvolvedTables("starting_inclusions");
-        Assertions.assertEquals(5, tables.size());
-        Assertions.assertTrue(tables.contains("table_part1"));
-        Assertions.assertTrue(tables.contains("table_part2"));
-        Assertions.assertTrue(tables.contains("table_inclusion1"));
-        Assertions.assertTrue(tables.contains("table_inclusion2"));
-        Assertions.assertTrue(tables.contains("table_exclusion1"));
+        assertEquals(5, tables.size());
+        assertTrue(tables.contains("table_part1"));
+        assertTrue(tables.contains("table_part2"));
+        assertTrue(tables.contains("table_inclusion1"));
+        assertTrue(tables.contains("table_inclusion2"));
+        assertTrue(tables.contains("table_exclusion1"));
     }
 
     @Test
@@ -1074,17 +1079,17 @@ public class DecisionEngineTest {
         DecisionEngine engine = new DecisionEngine(provider);
 
         Set<String> tables = engine.getInvolvedTables("def1");
-        Assertions.assertEquals(2, tables.size());
-        Assertions.assertTrue(tables.contains("table1"));
-        Assertions.assertTrue(tables.contains("table2"));
+        assertEquals(2, tables.size());
+        assertTrue(tables.contains("table1"));
+        assertTrue(tables.contains("table2"));
     }
 
     @Test
     void testInvolvedTableRecursion() {
         Set<String> tables = _ENGINE.getInvolvedTables("starting_recursion");
 
-        Assertions.assertEquals(1, tables.size());
-        Assertions.assertTrue(tables.contains("table_recursion"));
+        assertEquals(1, tables.size());
+        assertTrue(tables.contains("table_recursion"));
     }
 
     @Test
@@ -1093,12 +1098,12 @@ public class DecisionEngineTest {
         input.put("a", "4");
         Result result = _ENGINE.process("starting_recursion", input);
 
-        Assertions.assertEquals(Type.STAGED, result.getType());
-        Assertions.assertTrue(result.hasErrors());
-        Assertions.assertEquals(1, result.getErrors().size());
-        Assertions.assertEquals(1, result.getPath().size());
-        Assertions.assertEquals("table_recursion", result.getErrors().get(0).getTable());
-        Assertions.assertNull(result.getErrors().get(0).getColumns());
+        assertEquals(Type.STAGED, result.getType());
+        assertTrue(result.hasErrors());
+        assertEquals(1, result.getErrors().size());
+        assertEquals(1, result.getPath().size());
+        assertEquals("table_recursion", result.getErrors().get(0).getTable());
+        assertNull(result.getErrors().get(0).getColumns());
     }
 
     @Test
@@ -1109,30 +1114,30 @@ public class DecisionEngineTest {
         input.put("b", "12");
         Result result = _ENGINE.process("starting_multiple_endpoints", input);
 
-        Assertions.assertFalse(result.hasErrors());
-        Assertions.assertEquals(Type.STAGED, result.getType());
-        Assertions.assertEquals(1, result.getPath().size());
+        assertFalse(result.hasErrors());
+        assertEquals(Type.STAGED, result.getType());
+        assertEquals(1, result.getPath().size());
 
-        Assertions.assertEquals("1_LINE1", input.get("r1"));
-        Assertions.assertEquals("2_LINE1", input.get("r2"));
-        Assertions.assertEquals("3_LINE1", input.get("r3"));
+        assertEquals("1_LINE1", input.get("r1"));
+        assertEquals("2_LINE1", input.get("r2"));
+        assertEquals("3_LINE1", input.get("r3"));
 
         // test 2 VALUEs and an ERROR
         input.clear();
         input.put("a", "0");
         input.put("b", "25");
         result = _ENGINE.process("starting_multiple_endpoints", input);
-        Assertions.assertEquals(Type.STAGED, result.getType());
-        Assertions.assertTrue(result.hasErrors());
-        Assertions.assertEquals(1, result.getErrors().size());
-        Assertions.assertEquals("table_multiple_inputs", result.getErrors().get(0).getTable());
-        Assertions.assertEquals(Collections.singletonList("r2"), result.getErrors().get(0).getColumns());
-        Assertions.assertEquals("2_LINE2", result.getErrors().get(0).getMessage());
-        Assertions.assertEquals(1, result.getPath().size());
+        assertEquals(Type.STAGED, result.getType());
+        assertTrue(result.hasErrors());
+        assertEquals(1, result.getErrors().size());
+        assertEquals("table_multiple_inputs", result.getErrors().get(0).getTable());
+        assertEquals(Collections.singletonList("r2"), result.getErrors().get(0).getColumns());
+        assertEquals("2_LINE2", result.getErrors().get(0).getMessage());
+        assertEquals(1, result.getPath().size());
 
-        Assertions.assertEquals("1_LINE2", input.get("r1"));
-        Assertions.assertFalse(input.containsKey("r2"));
-        Assertions.assertEquals("3_LINE2", input.get("r3"));
+        assertEquals("1_LINE2", input.get("r1"));
+        assertFalse(input.containsKey("r2"));
+        assertEquals("3_LINE2", input.get("r3"));
 
         // test 2 JUMPs and one VALUE and a missing jump table value
         input.clear();
@@ -1140,12 +1145,12 @@ public class DecisionEngineTest {
         input.put("b", "20");
         result = _ENGINE.process("starting_multiple_endpoints", input);
 
-        Assertions.assertEquals(Type.STAGED, result.getType());
-        Assertions.assertTrue(result.hasErrors());
-        Assertions.assertTrue(result.getErrors().get(0).getMessage().startsWith("Match not found"));
-        Assertions.assertNull(result.getErrors().get(0).getKey());
-        Assertions.assertEquals("table_jump_sample", result.getErrors().get(0).getTable());
-        Assertions.assertEquals(Collections.singletonList("result"), result.getErrors().get(0).getColumns());
+        assertEquals(Type.STAGED, result.getType());
+        assertTrue(result.hasErrors());
+        assertTrue(result.getErrors().get(0).getMessage().startsWith("Match not found"));
+        assertNull(result.getErrors().get(0).getKey());
+        assertEquals("table_jump_sample", result.getErrors().get(0).getTable());
+        assertEquals(Collections.singletonList("result"), result.getErrors().get(0).getColumns());
 
         // test 1 JUMP and 2 VALUEs
         input.clear();
@@ -1154,12 +1159,12 @@ public class DecisionEngineTest {
         input.put("c", "A");
         result = _ENGINE.process("starting_multiple_endpoints", input);
 
-        Assertions.assertEquals(Type.STAGED, result.getType());
-        Assertions.assertFalse(result.hasErrors());
-        Assertions.assertFalse(input.containsKey("r1"));
-        Assertions.assertEquals("A", input.get("result"));
-        Assertions.assertEquals("2_LINE3", input.get("r2"));
-        Assertions.assertEquals("3_LINE3", input.get("r3"));
+        assertEquals(Type.STAGED, result.getType());
+        assertFalse(result.hasErrors());
+        assertFalse(input.containsKey("r1"));
+        assertEquals("A", input.get("result"));
+        assertEquals("2_LINE3", input.get("r2"));
+        assertEquals("3_LINE3", input.get("r3"));
 
         // test 3 ERRORs
         input.clear();
@@ -1167,18 +1172,18 @@ public class DecisionEngineTest {
         input.put("b", "99");
         result = _ENGINE.process("starting_multiple_endpoints", input);
 
-        Assertions.assertEquals(Type.STAGED, result.getType());
-        Assertions.assertTrue(result.hasErrors());
-        Assertions.assertEquals(3, result.getErrors().size());
-        Assertions.assertEquals("1_LINE4", result.getErrors().get(0).getMessage());
-        Assertions.assertNull(result.getErrors().get(0).getKey());
-        Assertions.assertEquals("2_LINE4", result.getErrors().get(1).getMessage());
-        Assertions.assertNull(result.getErrors().get(1).getKey());
-        Assertions.assertEquals("3_LINE4", result.getErrors().get(2).getMessage());
-        Assertions.assertNull(result.getErrors().get(2).getKey());
-        Assertions.assertFalse(input.containsKey("r1"));
-        Assertions.assertFalse(input.containsKey("r2"));
-        Assertions.assertFalse(input.containsKey("r3"));
+        assertEquals(Type.STAGED, result.getType());
+        assertTrue(result.hasErrors());
+        assertEquals(3, result.getErrors().size());
+        assertEquals("1_LINE4", result.getErrors().get(0).getMessage());
+        assertNull(result.getErrors().get(0).getKey());
+        assertEquals("2_LINE4", result.getErrors().get(1).getMessage());
+        assertNull(result.getErrors().get(1).getKey());
+        assertEquals("3_LINE4", result.getErrors().get(2).getMessage());
+        assertNull(result.getErrors().get(2).getKey());
+        assertFalse(input.containsKey("r1"));
+        assertFalse(input.containsKey("r2"));
+        assertFalse(input.containsKey("r3"));
     }
 
     @Test
@@ -1212,10 +1217,10 @@ public class DecisionEngineTest {
         input.put("a", "4");
         input.put("b", "55");
         Result result = engine.process("sample_outputs", input);
-        Assertions.assertTrue(result.hasErrors());
-        Assertions.assertEquals(1, result.getErrors().size());
-        Assertions.assertEquals("table_input", result.getErrors().get(0).getTable());
-        Assertions.assertEquals(Arrays.asList("output1", "output2"), result.getErrors().get(0).getColumns());
+        assertTrue(result.hasErrors());
+        assertEquals(1, result.getErrors().size());
+        assertEquals("table_input", result.getErrors().get(0).getTable());
+        assertEquals(Arrays.asList("output1", "output2"), result.getErrors().get(0).getColumns());
     }
 
     @Test
@@ -1227,12 +1232,12 @@ public class DecisionEngineTest {
         input.put("c", "A");
         Result result = _ENGINE.process("starting_multiple_endpoints", input);
 
-        Assertions.assertEquals(Type.STAGED, result.getType());
-        Assertions.assertFalse(result.hasErrors());
-        Assertions.assertFalse(input.containsKey("r1"));
-        Assertions.assertFalse(input.containsKey("r3"));
-        Assertions.assertEquals("A", input.get("result"));
-        Assertions.assertEquals("2_LINE5", input.get("r2"));
+        assertEquals(Type.STAGED, result.getType());
+        assertFalse(result.hasErrors());
+        assertFalse(input.containsKey("r1"));
+        assertFalse(input.containsKey("r3"));
+        assertEquals("A", input.get("result"));
+        assertEquals("2_LINE5", input.get("r2"));
     }
 
     @Test
@@ -1243,10 +1248,10 @@ public class DecisionEngineTest {
         input.put("c", "3");
         Result result = _ENGINE.process("starting_inclusions", input);
 
-        Assertions.assertEquals(Type.STAGED, result.getType());
-        Assertions.assertFalse(result.hasErrors());
-        Assertions.assertEquals("2", input.get("result"));
-        Assertions.assertFalse(input.containsKey("special"));
+        assertEquals(Type.STAGED, result.getType());
+        assertFalse(result.hasErrors());
+        assertEquals("2", input.get("result"));
+        assertFalse(input.containsKey("special"));
 
         input.clear();
         input.put("a", "8");
@@ -1254,10 +1259,10 @@ public class DecisionEngineTest {
         input.put("c", "3");
         result = _ENGINE.process("starting_inclusions", input);
 
-        Assertions.assertEquals(Type.STAGED, result.getType());
-        Assertions.assertFalse(result.hasErrors());
-        Assertions.assertEquals("3", input.get("result"));
-        Assertions.assertEquals("SUCCESS", input.get("special"));
+        assertEquals(Type.STAGED, result.getType());
+        assertFalse(result.hasErrors());
+        assertEquals("3", input.get("result"));
+        assertEquals("SUCCESS", input.get("special"));
 
         input.clear();
         input.put("a", "9");
@@ -1265,10 +1270,10 @@ public class DecisionEngineTest {
         input.put("c", "3");
         result = _ENGINE.process("starting_inclusions", input);
 
-        Assertions.assertEquals(Type.STAGED, result.getType());
-        Assertions.assertFalse(result.hasErrors());
-        Assertions.assertFalse(input.containsKey("result"));
-        Assertions.assertEquals("SUCCESS", input.get("special"));
+        assertEquals(Type.STAGED, result.getType());
+        assertFalse(result.hasErrors());
+        assertFalse(input.containsKey("result"));
+        assertEquals("SUCCESS", input.get("special"));
     }
 
     @Test
@@ -1276,7 +1281,7 @@ public class DecisionEngineTest {
         InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
         StagingSchema schema = new StagingSchema();
         schema.setId("TEST1");
-        Assertions.assertThrows(IllegalStateException.class, () -> provider.addSchema(schema));
+        assertThrows(IllegalStateException.class, () -> provider.addSchema(schema));
     }
 
     /**
@@ -1292,26 +1297,26 @@ public class DecisionEngineTest {
     void testSchemaInputs() {
         DataProvider provider = _ENGINE.getProvider();
 
-        Assertions.assertEquals(asSet(), _ENGINE.getInputs(provider.getSchema("starting_min")));
-        Assertions.assertEquals(asSet("a", "b", "c", "e"), _ENGINE.getInputs(provider.getSchema("starting_sample")));
-        Assertions.assertEquals(asSet("a", "b", "c"), _ENGINE.getInputs(provider.getSchema("starting_inclusions")));
-        Assertions.assertEquals(asSet("a"), _ENGINE.getInputs(provider.getSchema("starting_recursion")));
-        Assertions.assertEquals(asSet("a", "b", "c"), _ENGINE.getInputs(provider.getSchema("starting_multiple_endpoints")));
-        Assertions.assertEquals(asSet("b", "not_in_input_list"), _ENGINE.getInputs(provider.getSchema("starting_inclusions_extra_inputs")));
-        Assertions.assertEquals(asSet("main_input"), _ENGINE.getInputs(provider.getSchema("starting_intermediate_values")));
+        assertEquals(asSet(), _ENGINE.getInputs(provider.getSchema("starting_min")));
+        assertEquals(asSet("a", "b", "c", "e"), _ENGINE.getInputs(provider.getSchema("starting_sample")));
+        assertEquals(asSet("a", "b", "c"), _ENGINE.getInputs(provider.getSchema("starting_inclusions")));
+        assertEquals(asSet("a"), _ENGINE.getInputs(provider.getSchema("starting_recursion")));
+        assertEquals(asSet("a", "b", "c"), _ENGINE.getInputs(provider.getSchema("starting_multiple_endpoints")));
+        assertEquals(asSet("b", "not_in_input_list"), _ENGINE.getInputs(provider.getSchema("starting_inclusions_extra_inputs")));
+        assertEquals(asSet("main_input"), _ENGINE.getInputs(provider.getSchema("starting_intermediate_values")));
     }
 
     @Test
     void testGetSchemaOutputs() {
         DataProvider provider = _ENGINE.getProvider();
 
-        Assertions.assertEquals(asSet(), _ENGINE.getOutputs(provider.getSchema("starting_min")));
-        Assertions.assertEquals(asSet("result", "shared_result"), _ENGINE.getOutputs(provider.getSchema("starting_sample")));
-        Assertions.assertEquals(asSet("result", "special"), _ENGINE.getOutputs(provider.getSchema("starting_inclusions")));
-        Assertions.assertEquals(asSet("result"), _ENGINE.getOutputs(provider.getSchema("starting_recursion")));
-        Assertions.assertEquals(asSet("result", "r1", "r2", "r3"), _ENGINE.getOutputs(provider.getSchema("starting_multiple_endpoints")));
-        Assertions.assertEquals(asSet("mapped_result"), _ENGINE.getOutputs(provider.getSchema("starting_inclusions_extra_inputs")));
-        Assertions.assertEquals(asSet("intermediate_output", "final_output"), _ENGINE.getOutputs(provider.getSchema("starting_intermediate_values")));
+        assertEquals(asSet(), _ENGINE.getOutputs(provider.getSchema("starting_min")));
+        assertEquals(asSet("result", "shared_result"), _ENGINE.getOutputs(provider.getSchema("starting_sample")));
+        assertEquals(asSet("result", "special"), _ENGINE.getOutputs(provider.getSchema("starting_inclusions")));
+        assertEquals(asSet("result"), _ENGINE.getOutputs(provider.getSchema("starting_recursion")));
+        assertEquals(asSet("result", "r1", "r2", "r3"), _ENGINE.getOutputs(provider.getSchema("starting_multiple_endpoints")));
+        assertEquals(asSet("mapped_result"), _ENGINE.getOutputs(provider.getSchema("starting_inclusions_extra_inputs")));
+        assertEquals(asSet("intermediate_output", "final_output"), _ENGINE.getOutputs(provider.getSchema("starting_intermediate_values")));
     }
 
     @Test
@@ -1330,21 +1335,21 @@ public class DecisionEngineTest {
 
         Map<String, String> context = new HashMap<>();
 
-        Assertions.assertEquals(DecisionEngine._BLANK_OUTPUT + "," + DecisionEngine._BLANK_OUTPUT, DecisionEngine.getTableInputsAsString(table, context));
+        assertEquals(DecisionEngine._BLANK_OUTPUT + "," + DecisionEngine._BLANK_OUTPUT, DecisionEngine.getTableInputsAsString(table, context));
 
         context.put("b", "25");
-        Assertions.assertEquals(DecisionEngine._BLANK_OUTPUT + ",25", DecisionEngine.getTableInputsAsString(table, context));
+        assertEquals(DecisionEngine._BLANK_OUTPUT + ",25", DecisionEngine.getTableInputsAsString(table, context));
 
         context.put("a", "7");
-        Assertions.assertEquals("7,25", DecisionEngine.getTableInputsAsString(table, context));
+        assertEquals("7,25", DecisionEngine.getTableInputsAsString(table, context));
         context.put("a", "    7");
-        Assertions.assertEquals("7,25", DecisionEngine.getTableInputsAsString(table, context));
+        assertEquals("7,25", DecisionEngine.getTableInputsAsString(table, context));
         context.put("a", "7    ");
-        Assertions.assertEquals("7,25", DecisionEngine.getTableInputsAsString(table, context));
+        assertEquals("7,25", DecisionEngine.getTableInputsAsString(table, context));
 
         table = new StagingTable("table_empty");
         context = new HashMap<>();
-        Assertions.assertEquals("", DecisionEngine.getTableInputsAsString(table, context));
+        assertEquals("", DecisionEngine.getTableInputsAsString(table, context));
     }
 
     @Test
@@ -1389,16 +1394,16 @@ public class DecisionEngineTest {
         input.put("input1", "000");
         Result result = engine.process("sample_outputs", input);
 
-        Assertions.assertEquals(Type.STAGED, result.getType());
+        assertEquals(Type.STAGED, result.getType());
 
         // default value should be set
-        Assertions.assertEquals("A", input.get("output1"));
+        assertEquals("A", input.get("output1"));
         // no default value so it should be blank
-        Assertions.assertEquals("", input.get("output2"));
+        assertEquals("", input.get("output2"));
 
-        Assertions.assertFalse(result.hasErrors());
+        assertFalse(result.hasErrors());
 
-        Assertions.assertEquals(new HashSet<>(Arrays.asList("table_input", "table_output")), engine.getInvolvedTables(schema));
+        assertEquals(new HashSet<>(Arrays.asList("table_input", "table_output")), engine.getInvolvedTables(schema));
 
         // modify the definition to create a bad default value for output1
         schema.getOutputs().get(0).setDefault("BAD");
@@ -1409,16 +1414,16 @@ public class DecisionEngineTest {
         input.put("input1", "000");
         result = engine.process("sample_outputs", input);
 
-        Assertions.assertEquals(Type.STAGED, result.getType());
-        Assertions.assertTrue(result.hasErrors());
-        Assertions.assertEquals(Error.Type.INVALID_OUTPUT, result.getErrors().get(0).getType());
-        Assertions.assertEquals("table_output", result.getErrors().get(0).getTable());
-        Assertions.assertEquals("output1", result.getErrors().get(0).getKey());
+        assertEquals(Type.STAGED, result.getType());
+        assertTrue(result.hasErrors());
+        assertEquals(Error.Type.INVALID_OUTPUT, result.getErrors().get(0).getType());
+        assertEquals("table_output", result.getErrors().get(0).getTable());
+        assertEquals("output1", result.getErrors().get(0).getKey());
 
         // default value should be set
-        Assertions.assertEquals("BAD", input.get("output1"));
+        assertEquals("BAD", input.get("output1"));
         // no default value so it should be blank
-        Assertions.assertEquals("", input.get("output2"));
+        assertEquals("", input.get("output2"));
     }
 
     @Test
@@ -1442,13 +1447,13 @@ public class DecisionEngineTest {
         context.put("foo2", "SECOND");
         Result result = engine.process("test_initial_context", context);
 
-        Assertions.assertEquals(Type.STAGED, result.getType());
+        assertEquals(Type.STAGED, result.getType());
 
-        Assertions.assertEquals("foo1", context.get("a"));
-        Assertions.assertEquals("FIRST", context.get("b"));
-        Assertions.assertEquals("foo2", context.get("c"));
-        Assertions.assertEquals("SECOND", context.get("d"));
-        Assertions.assertEquals("", context.get("e"));
+        assertEquals("foo1", context.get("a"));
+        assertEquals("FIRST", context.get("b"));
+        assertEquals("foo2", context.get("c"));
+        assertEquals("SECOND", context.get("d"));
+        assertEquals("", context.get("e"));
     }
 
     @Test
@@ -1496,13 +1501,13 @@ public class DecisionEngineTest {
         context.put("foo2", "SECOND");
         Result result = engine.process("test_context", context);
 
-        Assertions.assertEquals(Type.STAGED, result.getType());
+        assertEquals(Type.STAGED, result.getType());
 
-        Assertions.assertEquals("foo2", context.get("output1"));
-        Assertions.assertEquals("SECOND", context.get("output2"));
-        Assertions.assertEquals("", context.get("output3"));
-        Assertions.assertEquals("foo1", context.get("output4"));
-        Assertions.assertEquals("FIRST", context.get("output5"));
+        assertEquals("foo2", context.get("output1"));
+        assertEquals("SECOND", context.get("output2"));
+        assertEquals("", context.get("output3"));
+        assertEquals("foo1", context.get("output4"));
+        assertEquals("FIRST", context.get("output5"));
     }
 
     @Test
@@ -1533,7 +1538,7 @@ public class DecisionEngineTest {
 
         DecisionEngine engine = new DecisionEngine(provider);
 
-        Assertions.assertEquals(new HashSet<>(Collections.singletonList("remapped1")), engine.getInputs(schema.getMappings().get(0).getTablePaths().get(0)));
+        assertEquals(new HashSet<>(Collections.singletonList("remapped1")), engine.getInputs(schema.getMappings().get(0).getTablePaths().get(0)));
     }
 
 }
