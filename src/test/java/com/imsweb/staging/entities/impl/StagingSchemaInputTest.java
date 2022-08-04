@@ -2,19 +2,17 @@ package com.imsweb.staging.entities.impl;
 
 import java.util.Collections;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
-
-public class StagingSchemaInputTest {
+class StagingSchemaInputTest {
 
     @Test
-    public void testEquals() {
+    void testEquals() {
         StagingSchemaInput input1 = new StagingSchemaInput();
         StagingSchemaInput input2 = new StagingSchemaInput();
 
-        assertEquals(input1, input2);
+        Assertions.assertEquals(input1, input2);
 
         input1.setKey("key");
         input1.setName("name");
@@ -24,14 +22,14 @@ public class StagingSchemaInputTest {
         input2 = new StagingSchemaInput("key", "name", "table");
         input2.setMetadata(Collections.singletonList(new StagingMetadata("META1")));
 
-        assertEquals(input1, input2);
+        Assertions.assertEquals(input1, input2);
 
         input2.setMetadata(Collections.singletonList(new StagingMetadata("META2")));
 
-        assertNotEquals(input1, input2);
+        Assertions.assertNotEquals(input1, input2);
 
         // test copy constructor
         StagingSchemaInput input3 = new StagingSchemaInput(input1);
-        assertEquals(input1, input3);
+        Assertions.assertEquals(input1, input3);
     }
 }

@@ -8,7 +8,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.GlossaryHit;
@@ -20,10 +21,6 @@ import com.imsweb.staging.entities.Table;
 import com.imsweb.staging.entities.impl.StagingMetadata;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
 
 public abstract class FileDataProviderTest {
 
@@ -31,25 +28,25 @@ public abstract class FileDataProviderTest {
 
     @Test
     public void testExternalLoad() {
-        assertEquals("testing", getStaging().getAlgorithm());
-        assertEquals("99.99", getStaging().getVersion());
-        assertEquals(1, getStaging().getSchemaIds().size());
-        assertEquals(62, getStaging().getTableIds().size());
+        Assertions.assertEquals("testing", getStaging().getAlgorithm());
+        Assertions.assertEquals("99.99", getStaging().getVersion());
+        Assertions.assertEquals(1, getStaging().getSchemaIds().size());
+        Assertions.assertEquals(62, getStaging().getTableIds().size());
 
         Schema schema = getStaging().getSchema("urethra");
-        assertNotNull(schema);
-        assertEquals("testing", schema.getAlgorithm());
-        assertEquals("99.99", schema.getVersion());
+        Assertions.assertNotNull(schema);
+        Assertions.assertEquals("testing", schema.getAlgorithm());
+        Assertions.assertEquals("99.99", schema.getVersion());
 
         Table table = getStaging().getTable("ajcc_descriptor_codes");
-        assertNotNull(table);
-        assertEquals("testing", table.getAlgorithm());
-        assertEquals("99.99", table.getVersion());
-        assertEquals(6, table.getTableRows().size());
+        Assertions.assertNotNull(table);
+        Assertions.assertEquals("testing", table.getAlgorithm());
+        Assertions.assertEquals("99.99", table.getVersion());
+        Assertions.assertEquals(6, table.getTableRows().size());
 
         Set<String> involved = getStaging().getInvolvedTables("urethra");
-        assertEquals(62, involved.size());
-        assertTrue(involved.contains("mets_eval_ipa"));
+        Assertions.assertEquals(62, involved.size());
+        Assertions.assertTrue(involved.contains("mets_eval_ipa"));
 
         StagingData data = new StagingData();
         data.setInput("site", "C680");
@@ -68,53 +65,52 @@ public abstract class FileDataProviderTest {
         // perform the staging
         getStaging().stage(data);
 
-        assertEquals(Result.STAGED, data.getResult());
-        assertEquals("urethra", data.getSchemaId());
-        assertEquals(0, data.getErrors().size());
-        assertEquals(37, data.getPath().size());
+        Assertions.assertEquals(Result.STAGED, data.getResult());
+        Assertions.assertEquals("urethra", data.getSchemaId());
+        Assertions.assertEquals(0, data.getErrors().size());
+        Assertions.assertEquals(37, data.getPath().size());
 
         // check output
-        assertEquals("129", data.getOutput("schema_number"));
-        assertEquals("020550", data.getOutput("csver_derived"));
+        Assertions.assertEquals("129", data.getOutput("schema_number"));
+        Assertions.assertEquals("020550", data.getOutput("csver_derived"));
 
         // AJCC 6
-        assertEquals("70", data.getOutput("stor_ajcc6_stage"));
+        Assertions.assertEquals("70", data.getOutput("stor_ajcc6_stage"));
 
         // AJCC 7
-        assertEquals("700", data.getOutput("stor_ajcc7_stage"));
+        Assertions.assertEquals("700", data.getOutput("stor_ajcc7_stage"));
 
         // Summary Stage
-        assertEquals("7", data.getOutput("stor_ss77"));
-        assertEquals("7", data.getOutput("stor_ss2000"));
+        Assertions.assertEquals("7", data.getOutput("stor_ss77"));
+        Assertions.assertEquals("7", data.getOutput("stor_ss2000"));
 
         // test glossary items
-        assertNull(getStaging().getGlossaryDefinition("MISSING_TERM"));
-        assertEquals(13, getStaging().getGlossaryTerms().size());
-        assertEquals(new HashSet<>(Arrays.asList("Adjacent structures", "Carcinoma", "Cortex", "Parenchyma", "Stroma", "Medulla", "Isolated tumor cells",
-                        "Adjacent tissue(s), NOS", "Tumor deposits", "Postcricoid region", "Summary Stage", "Level V lymph nodes", "Masticator space")),
-                getStaging().getGlossaryTerms());
+        Assertions.assertNull(getStaging().getGlossaryDefinition("MISSING_TERM"));
+        Assertions.assertEquals(13, getStaging().getGlossaryTerms().size());
+        Assertions.assertEquals(new HashSet<>(Arrays.asList("Adjacent structures", "Carcinoma", "Cortex", "Parenchyma", "Stroma", "Medulla", "Isolated tumor cells",
+                "Adjacent tissue(s), NOS", "Tumor deposits", "Postcricoid region", "Summary Stage", "Level V lymph nodes", "Masticator space")), getStaging().getGlossaryTerms());
         GlossaryDefinition entry = getStaging().getGlossaryDefinition("Adjacent tissue(s), NOS");
-        assertNotNull(entry);
-        assertEquals("Adjacent tissue(s), NOS", entry.getName());
-        assertTrue(entry.getDefinition().startsWith("The unnamed tissues that immediately surround"));
-        assertEquals(Collections.singletonList("Connective tissue"), entry.getAlternateNames());
-        assertNotNull(entry.getLastModified());
+        Assertions.assertNotNull(entry);
+        Assertions.assertEquals("Adjacent tissue(s), NOS", entry.getName());
+        Assertions.assertTrue(entry.getDefinition().startsWith("The unnamed tissues that immediately surround"));
+        Assertions.assertEquals(Collections.singletonList("Connective tissue"), entry.getAlternateNames());
+        Assertions.assertNotNull(entry.getLastModified());
 
         Collection<GlossaryHit> hits = getStaging().getGlossaryMatches("Some text and cortex should be only match.");
-        assertEquals(1, hits.size());
+        Assertions.assertEquals(1, hits.size());
         GlossaryHit hit = hits.iterator().next();
-        assertEquals("Cortex", hit.getTerm());
-        assertEquals(14, (long)hit.getBegin());
-        assertEquals(19, (long)hit.getEnd());
+        Assertions.assertEquals("Cortex", hit.getTerm());
+        Assertions.assertEquals(14, (long)hit.getBegin());
+        Assertions.assertEquals(19, (long)hit.getEnd());
         hits = getStaging().getGlossaryMatches("Cortex and stroma should be two matches.");
-        assertEquals(2, hits.size());
+        Assertions.assertEquals(2, hits.size());
         hits = getStaging().getGlossaryMatches("stromafoo not be a match since the keyword it is not a whole word");
-        assertEquals(0, hits.size());
+        Assertions.assertEquals(0, hits.size());
 
         Set<String> glossary = getStaging().getSchemaGlossary("urethra");
-        assertEquals(1, glossary.size());
+        Assertions.assertEquals(1, glossary.size());
         glossary = getStaging().getTableGlossary("ssf1_jpd");
-        assertEquals(1, glossary.size());
+        Assertions.assertEquals(1, glossary.size());
     }
 
     @Test

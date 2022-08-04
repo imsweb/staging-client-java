@@ -13,7 +13,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,13 +25,6 @@ import com.imsweb.staging.entities.Range;
 import com.imsweb.staging.entities.Schema;
 import com.imsweb.staging.entities.Table;
 import com.imsweb.staging.entities.TableRow;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
 /**
  * Base class for all algorithm-specific testing
@@ -58,8 +52,8 @@ public abstract class StagingTest {
 
     @Test
     public void testInitialization() {
-        assertEquals(getAlgorithm(), _STAGING.getAlgorithm());
-        assertEquals(getVersion(), _STAGING.getVersion());
+        Assertions.assertEquals(getAlgorithm(), _STAGING.getAlgorithm());
+        Assertions.assertEquals(getVersion(), _STAGING.getVersion());
     }
 
     @Test
@@ -67,10 +61,10 @@ public abstract class StagingTest {
         for (String id : _STAGING.getTableIds()) {
             Table table = _STAGING.getTable(id);
 
-            assertNotNull(table);
-            assertNotNull(table.getAlgorithm());
-            assertNotNull(table.getVersion());
-            assertNotNull(table.getName());
+            Assertions.assertNotNull(table);
+            Assertions.assertNotNull(table.getAlgorithm());
+            Assertions.assertNotNull(table.getVersion());
+            Assertions.assertNotNull(table.getName());
         }
     }
 
@@ -78,19 +72,19 @@ public abstract class StagingTest {
     public void testValidCode() {
         Map<String, String> context = new HashMap<>();
         context.put("hist", "7000");
-        assertFalse(_STAGING.isContextValid("prostate", "hist", context));
+        Assertions.assertFalse(_STAGING.isContextValid("prostate", "hist", context));
         context.put("hist", "8000");
-        assertTrue(_STAGING.isContextValid("prostate", "hist", context));
+        Assertions.assertTrue(_STAGING.isContextValid("prostate", "hist", context));
         context.put("hist", "8542");
-        assertTrue(_STAGING.isContextValid("prostate", "hist", context));
+        Assertions.assertTrue(_STAGING.isContextValid("prostate", "hist", context));
 
         // make sure null is handled
         context.put("hist", null);
-        assertFalse(_STAGING.isContextValid("prostate", "hist", context));
+        Assertions.assertFalse(_STAGING.isContextValid("prostate", "hist", context));
 
         // make sure blank is handled
         context.put("hist", "");
-        assertFalse(_STAGING.isContextValid("prostate", "hist", context));
+        Assertions.assertFalse(_STAGING.isContextValid("prostate", "hist", context));
     }
 
     @Test
@@ -99,36 +93,36 @@ public abstract class StagingTest {
         for (String id : _STAGING.getSchemaIds()) {
             Schema schema = _STAGING.getSchema(id);
             for (Input input : schema.getInputs()) {
-                assertNull("No schemas should have units", input.getUnit());
-                assertNull("No schemas should have decimal places", input.getDecimalPlaces());
+                Assertions.assertNull(input.getUnit(), "No schemas should have units");
+                Assertions.assertNull(input.getDecimalPlaces(), "No schemas should have decimal places");
             }
         }
     }
 
     @Test
     public void testValidSite() {
-        assertFalse(_STAGING.isValidSite(null));
-        assertFalse(_STAGING.isValidSite(""));
-        assertFalse(_STAGING.isValidSite("C21"));
-        assertFalse(_STAGING.isValidSite("C115"));
+        Assertions.assertFalse(_STAGING.isValidSite(null));
+        Assertions.assertFalse(_STAGING.isValidSite(""));
+        Assertions.assertFalse(_STAGING.isValidSite("C21"));
+        Assertions.assertFalse(_STAGING.isValidSite("C115"));
 
-        assertTrue(_STAGING.isValidSite("C509"));
+        Assertions.assertTrue(_STAGING.isValidSite("C509"));
     }
 
     @Test
     public void testValidHistology() {
-        assertFalse(_STAGING.isValidHistology(null));
-        assertFalse(_STAGING.isValidHistology(""));
-        assertFalse(_STAGING.isValidHistology("810"));
-        assertFalse(_STAGING.isValidHistology("8176"));
+        Assertions.assertFalse(_STAGING.isValidHistology(null));
+        Assertions.assertFalse(_STAGING.isValidHistology(""));
+        Assertions.assertFalse(_STAGING.isValidHistology("810"));
+        Assertions.assertFalse(_STAGING.isValidHistology("8176"));
 
-        assertTrue(_STAGING.isValidHistology("8000"));
-        assertTrue(_STAGING.isValidHistology("8201"));
+        Assertions.assertTrue(_STAGING.isValidHistology("8000"));
+        Assertions.assertTrue(_STAGING.isValidHistology("8201"));
     }
 
     @Test
     public void testGetTable() {
-        assertNull(_STAGING.getTable("bad_table_name"));
+        Assertions.assertNull(_STAGING.getTable("bad_table_name"));
     }
 
     @Test
@@ -140,7 +134,7 @@ public abstract class StagingTest {
         Set<String> unusedTables = _STAGING.getTableIds().stream().filter(id -> !usedTables.contains(id)).collect(Collectors.toSet());
 
         if (!unusedTables.isEmpty())
-            fail("There are " + unusedTables.size() + " tables that are not used in any schema: " + unusedTables);
+            Assertions.fail("There are " + unusedTables.size() + " tables that are not used in any schema: " + unusedTables);
     }
 
     @Test
@@ -159,7 +153,7 @@ public abstract class StagingTest {
                         if (ColumnDefinition.ColumnType.INPUT.equals(def.getType()))
                             inputKeys.add(def.getKey());
 
-                    // make sure the input key matches the an input column
+                    // make sure the input key matches an input column
                     if (!inputKeys.contains(input.getKey()))
                         errors.add("Input key " + schemaId + ":" + input.getKey() + " does not match validation table " + table.getId() + ": " + inputKeys);
                 }
@@ -213,7 +207,7 @@ public abstract class StagingTest {
         if (!errors.isEmpty()) {
             _LOG.error("There were {} issues with {}.", errors.size(), description);
             errors.forEach(_LOG::error);
-            fail();
+            Assertions.fail();
         }
     }
 

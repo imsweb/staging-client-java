@@ -9,7 +9,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import com.imsweb.staging.InMemoryDataProvider;
 import com.imsweb.staging.Staging;
@@ -29,10 +29,10 @@ import com.imsweb.staging.entities.impl.StagingTablePath;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.catchRuntimeException;
 
-public class BasicStagingTest {
+class BasicStagingTest {
 
     @Test
-    public void testBlankInputs() {
+    void testBlankInputs() {
         InMemoryDataProvider provider = new InMemoryDataProvider("test", "1.0");
 
         StagingTable table = new StagingTable();
@@ -130,7 +130,7 @@ public class BasicStagingTest {
     }
 
     @Test
-    public void testNumericRangeTableMatch() {
+    void testNumericRangeTableMatch() {
         InMemoryDataProvider provider = new InMemoryDataProvider("test", "1.0");
 
         StagingTable table = new StagingTable();
@@ -152,7 +152,7 @@ public class BasicStagingTest {
     }
 
     @Test
-    public void testGetInputsWithContext() {
+    void testGetInputsWithContext() {
         InMemoryDataProvider provider = new InMemoryDataProvider("test", "1.0");
 
         StagingTable table = new StagingTable();
@@ -252,7 +252,7 @@ public class BasicStagingTest {
     }
 
     @Test
-    public void testInvalidContext() {
+    void testInvalidContext() {
         InMemoryDataProvider provider = new InMemoryDataProvider("test", "1.0");
 
         StagingTable table = new StagingTable();

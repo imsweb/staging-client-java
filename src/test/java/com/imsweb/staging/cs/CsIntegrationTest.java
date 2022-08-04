@@ -51,7 +51,7 @@ public class CsIntegrationTest {
         Stopwatch stopwatch = Stopwatch.create();
 
         // get list of schema files;
-        // NOTE: some of these files are REALLY large so they are not included in the project for now;  all files larger than 2MB (40 of them) are not
+        // NOTE: some of these files are REALLY large; so they are not included in the project for now;  all files larger than 2MB (40 of them) are not
         //       part of the repository and can be found at \\omni\btp\csb\Staging\CS
         List<String> schemaFiles;
         try (BufferedReader buffer = new BufferedReader(

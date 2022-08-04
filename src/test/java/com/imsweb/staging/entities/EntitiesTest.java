@@ -5,7 +5,7 @@ package com.imsweb.staging.entities;
 
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.MatcherAssert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import com.imsweb.staging.entities.impl.StagingColumnDefinition;
 import com.imsweb.staging.entities.impl.StagingEndpoint;
@@ -29,10 +29,10 @@ import static com.google.code.beanmatchers.BeanMatchers.hasValidGettersAndSetter
 import static com.google.code.beanmatchers.BeanMatchers.hasValidGettersAndSettersExcluding;
 import static com.google.code.beanmatchers.BeanMatchers.hasValidGettersAndSettersFor;
 
-public class EntitiesTest {
+class EntitiesTest {
 
     @Test
-    public void testEntities() {
+    void testEntities() {
         MatcherAssert.assertThat(Error.class, CoreMatchers.allOf(hasValidBeanConstructor(), hasValidGettersAndSetters()));
 
         MatcherAssert.assertThat(GlossaryDefinition.class, CoreMatchers.allOf(hasValidBeanConstructor(), hasValidGettersAndSetters(), hasValidBeanEquals(), hasValidBeanHashCode()));

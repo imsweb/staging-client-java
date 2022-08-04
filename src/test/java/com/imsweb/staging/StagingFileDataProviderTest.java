@@ -1,12 +1,12 @@
 package com.imsweb.staging;
 
-import org.junit.BeforeClass;
+import org.junit.jupiter.api.BeforeAll;
 
 public class StagingFileDataProviderTest extends FileDataProviderTest {
 
     private static Staging _STAGING;
 
-    @BeforeClass
+    @BeforeAll
     public static void setup() {
         _STAGING = Staging.getInstance(new StagingFileDataProvider("testing", "99.99"));
     }

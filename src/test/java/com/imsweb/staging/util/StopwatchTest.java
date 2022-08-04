@@ -2,15 +2,15 @@ package com.imsweb.staging.util;
 
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-public class StopwatchTest {
+class StopwatchTest {
 
     @Test
-    public void testStopwatch() {
+    void testStopwatch() {
         Stopwatch sw = Stopwatch.create();
 
         assertThat(sw.isRunning()).isTrue();
@@ -27,7 +27,7 @@ public class StopwatchTest {
     }
 
     @Test
-    public void testExceptions() {
+    void testExceptions() {
         final Stopwatch sw = Stopwatch.create();
         assertThatThrownBy(sw::start).isInstanceOf(IllegalStateException.class).hasMessageContaining("This stopwatch is already running");
 
