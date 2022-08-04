@@ -132,6 +132,13 @@ task csIntegrationTest(type: JavaExec) {
     classpath = sourceSets.test.runtimeClasspath
 }
 
+// run the full CS integration test suite
+task zipAlgorithms(type: JavaExec) {
+    mainClass.set('com.imsweb.staging.zip.ZipAlgorithms')
+    classpath = sourceSets.test.runtimeClasspath
+}
+check.dependsOn 'zipAlgorithms'
+
 // don't try to release a snapshot to a non-snapshot repository, that won't work anyway
 if (version.endsWith('-SNAPSHOT')) {
     gradle.startParameter.excludedTaskNames += 'signMavenJavaPublication'
