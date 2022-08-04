@@ -59,13 +59,16 @@
     "default" : "{{ctx_alg_version}}"
   }, {
     "key" : "toronto_t",
-    "name" : "Derived Toronto T"
+    "name" : "Derived Toronto T",
+    "default" : "88"
   }, {
     "key" : "toronto_n",
-    "name" : "Derived Toronto N"
+    "name" : "Derived Toronto N",
+    "default" : "88"
   }, {
     "key" : "toronto_m",
-    "name" : "Derived Toronto M"
+    "name" : "Derived Toronto M",
+    "default" : "88"
   }, {
     "key" : "toronto_group",
     "name" : "Derived Toronto Stage Group"
@@ -84,6 +87,6 @@
     } ]
   } ],
   "involved_tables" : [ "primary_site", "toronto_stage_22694", "histology", "age_at_diagnosis_validation_3881", "year_dx_validation", "eod_mets_96483", "schema_selection_malignant_bone_tumors_osteosarcoma" ],
-  "last_modified" : "2022-07-14T16:29:19.323Z",
+  "last_modified" : "2022-08-02T18:42:16.727Z",
   "on_invalid_input" : "CONTINUE"
 }

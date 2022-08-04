@@ -107,6 +107,7 @@ public class TorontoStagingData extends StagingData {
         TORONTO_N("toronto_n"),
         TORONTO_M("toronto_m"),
         TORONTO_GROUP("toronto_group"),
+        TORONTO_GRADE("toronto_grade"),
         DERIVED_VERSION("derived_version"),
         DERIVED_RISK_LEVEL("derived_risk_level"),
         DERIVED_ANN_ARBOR_STAGE("derived_ann_arbor_stage");

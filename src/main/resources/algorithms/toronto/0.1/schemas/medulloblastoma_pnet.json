@@ -53,18 +53,22 @@
     "default" : "{{ctx_alg_version}}"
   }, {
     "key" : "toronto_t",
-    "name" : "Derived Toronto T"
+    "name" : "Derived Toronto T",
+    "default" : "88"
   }, {
     "key" : "toronto_n",
-    "name" : "Derived Toronto N"
+    "name" : "Derived Toronto N",
+    "default" : "88"
   }, {
     "key" : "toronto_m",
-    "name" : "Derived Toronto M"
+    "name" : "Derived Toronto M",
+    "default" : "88"
   }, {
     "key" : "toronto_group",
-    "name" : "Derived Toronto Stage Group"
+    "name" : "Derived Toronto Stage Group",
+    "default" : "88"
   } ],
   "involved_tables" : [ "primary_site", "histology", "year_dx_validation", "schema_selection_medulloblastoma_pnet", "m_category_82562" ],
-  "last_modified" : "2022-07-12T18:08:08.763Z",
+  "last_modified" : "2022-08-02T18:38:54.679Z",
   "on_invalid_input" : "CONTINUE"
 }

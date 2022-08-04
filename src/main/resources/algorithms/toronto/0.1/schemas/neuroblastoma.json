@@ -98,16 +98,20 @@
     "default" : "{{ctx_alg_version}}"
   }, {
     "key" : "toronto_t",
-    "name" : "Derived Toronto T"
+    "name" : "Derived Toronto T",
+    "default" : "88"
   }, {
     "key" : "toronto_n",
-    "name" : "Derived Toronto N"
+    "name" : "Derived Toronto N",
+    "default" : "88"
   }, {
     "key" : "toronto_m",
-    "name" : "Derived Toronto M"
+    "name" : "Derived Toronto M",
+    "default" : "88"
   }, {
     "key" : "toronto_group",
-    "name" : "Derived Toronto Stage Group"
+    "name" : "Derived Toronto Stage Group",
+    "default" : "88"
   }, {
     "key" : "derived_risk_level",
     "name" : "Derived Risk Level",
@@ -129,6 +133,6 @@
     } ]
   } ],
   "involved_tables" : [ "primary_site", "n_myc_amplification_57417", "histology", "age_at_diagnosis_validation_3881", "derived_risk_level_56526", "shimada_classification_77931", "year_dx_validation", "schema_selection_neuroblastoma", "ingrss_28597", "behavior", "dna_ploidy_64062" ],
-  "last_modified" : "2022-07-14T16:38:57.841Z",
+  "last_modified" : "2022-08-02T18:37:58.852Z",
   "on_invalid_input" : "CONTINUE"
 }

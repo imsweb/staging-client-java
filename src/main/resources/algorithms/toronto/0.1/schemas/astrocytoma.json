@@ -71,13 +71,16 @@
     "default" : "{{ctx_alg_version}}"
   }, {
     "key" : "toronto_t",
-    "name" : "Derived Toronto T"
+    "name" : "Derived Toronto T",
+    "default" : "88"
   }, {
     "key" : "toronto_n",
-    "name" : "Derived Toronto N"
+    "name" : "Derived Toronto N",
+    "default" : "88"
   }, {
     "key" : "toronto_m",
-    "name" : "Derived Toronto M"
+    "name" : "Derived Toronto M",
+    "default" : "88"
   }, {
     "key" : "toronto_group",
     "name" : "Derived Toronto Stage Group"
@@ -96,6 +99,6 @@
     } ]
   } ],
   "involved_tables" : [ "primary_site", "histology", "age_at_diagnosis_validation_3881", "year_dx_validation", "toronto_stage_52481", "eod_mets_22959", "schema_selection_astrocytoma", "braf_mutational_analysis_80064" ],
-  "last_modified" : "2022-07-14T16:35:06.016Z",
+  "last_modified" : "2022-08-02T18:50:10.439Z",
   "on_invalid_input" : "CONTINUE"
 }

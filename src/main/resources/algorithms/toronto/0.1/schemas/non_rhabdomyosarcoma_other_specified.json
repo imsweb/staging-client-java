@@ -165,6 +165,10 @@
   }, {
     "key" : "toronto_group",
     "name" : "Derived Toronto Stage Group"
+  }, {
+    "key" : "toronto_grade",
+    "name" : "Toronto Grade",
+    "naaccr_item" : 3976
   } ],
   "mappings" : [ {
     "id" : "toronto_stage",
@@ -209,6 +213,6 @@
     } ]
   } ],
   "involved_tables" : [ "age_at_diagnosis_validation_3881", "eod_primary_tumor_83844", "grade_post_therapy_path_yp_40521", "toronto_stage_99818", "grade_pathological_62063", "grade_clinical_70093", "eod_regional_nodes_73651", "toronto_grade_30589", "toronto_n_86566", "primary_site", "histology", "toronto_m_27101", "year_dx_validation", "toronto_t_78451", "eod_mets_7171", "tumor_size_summary_47973", "grade_post_therapy_clin_yc_55468", "schema_selection_non_rhabdomyosarcoma_other_specified", "combined_grade_27592" ],
-  "last_modified" : "2022-07-14T16:31:19.134Z",
+  "last_modified" : "2022-08-03T18:25:03.244Z",
   "on_invalid_input" : "CONTINUE"
 }

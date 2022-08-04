@@ -106,18 +106,22 @@
     "default" : "{{ctx_alg_version}}"
   }, {
     "key" : "toronto_t",
-    "name" : "Derived Toronto T"
+    "name" : "Derived Toronto T",
+    "default" : "88"
   }, {
     "key" : "toronto_n",
-    "name" : "Derived Toronto N"
+    "name" : "Derived Toronto N",
+    "default" : "88"
   }, {
     "key" : "toronto_m",
-    "name" : "Derived Toronto M"
+    "name" : "Derived Toronto M",
+    "default" : "88"
   }, {
     "key" : "toronto_group",
-    "name" : "Derived Toronto Stage Group"
+    "name" : "Derived Toronto Stage Group",
+    "default" : "88"
   } ],
   "involved_tables" : [ "chromosome_1q_status_14467", "primary_site", "ews_fli1_fusion_45751", "chromosome_1p_status_97190", "histology", "year_dx_validation", "chromosome_19q_status_19104", "behavior", "schema_selection_renal_tumors_ewing_sarcoma_of_kidney", "wilms_tumor_staging_system_11570" ],
-  "last_modified" : "2022-07-12T19:48:35.961Z",
+  "last_modified" : "2022-08-02T18:33:18.028Z",
   "on_invalid_input" : "CONTINUE"
 }

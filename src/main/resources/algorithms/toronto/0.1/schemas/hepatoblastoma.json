@@ -51,13 +51,16 @@
     "default" : "{{ctx_alg_version}}"
   }, {
     "key" : "toronto_t",
-    "name" : "Derived Toronto T"
+    "name" : "Derived Toronto T",
+    "default" : "88"
   }, {
     "key" : "toronto_n",
-    "name" : "Derived Toronto N"
+    "name" : "Derived Toronto N",
+    "default" : "88"
   }, {
     "key" : "toronto_m",
-    "name" : "Derived Toronto M"
+    "name" : "Derived Toronto M",
+    "default" : "88"
   }, {
     "key" : "toronto_group",
     "name" : "Derived Toronto Stage Group"
@@ -76,6 +79,6 @@
     } ]
   } ],
   "involved_tables" : [ "toronto_stage_51677", "eod_mets_78681", "primary_site", "histology", "year_dx_validation", "schema_selection_hepatoblastoma" ],
-  "last_modified" : "2022-07-14T16:35:31.642Z",
+  "last_modified" : "2022-08-02T18:44:10.236Z",
   "on_invalid_input" : "CONTINUE"
 }

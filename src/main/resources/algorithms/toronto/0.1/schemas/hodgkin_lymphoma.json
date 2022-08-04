@@ -77,16 +77,20 @@
     "default" : "{{ctx_alg_version}}"
   }, {
     "key" : "toronto_t",
-    "name" : "Derived Toronto T"
+    "name" : "Derived Toronto T",
+    "default" : "88"
   }, {
     "key" : "toronto_n",
-    "name" : "Derived Toronto N"
+    "name" : "Derived Toronto N",
+    "default" : "88"
   }, {
     "key" : "toronto_m",
-    "name" : "Derived Toronto M"
+    "name" : "Derived Toronto M",
+    "default" : "88"
   }, {
     "key" : "toronto_group",
-    "name" : "Derived Toronto Stage Group"
+    "name" : "Derived Toronto Stage Group",
+    "default" : "88"
   }, {
     "key" : "derived_ann_arbor_stage",
     "name" : "Derived Ann Arbor Stage",
@@ -109,6 +113,6 @@
     } ]
   } ],
   "involved_tables" : [ "primary_site", "eod_primary_tumor_14251", "schema_selection_hodgkin_lymphoma", "histology", "age_at_diagnosis_validation_3881", "year_dx_validation", "behavior", "b_symptoms_95631", "derived_ann_arbor_stage_81702" ],
-  "last_modified" : "2022-07-14T16:35:53.617Z",
+  "last_modified" : "2022-08-02T18:48:52.059Z",
   "on_invalid_input" : "CONTINUE"
 }

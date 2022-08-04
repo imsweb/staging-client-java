@@ -58,18 +58,22 @@
     "default" : "{{ctx_alg_version}}"
   }, {
     "key" : "toronto_t",
-    "name" : "Derived Toronto T"
+    "name" : "Derived Toronto T",
+    "default" : "88"
   }, {
     "key" : "toronto_n",
-    "name" : "Derived Toronto N"
+    "name" : "Derived Toronto N",
+    "default" : "88"
   }, {
     "key" : "toronto_m",
-    "name" : "Derived Toronto M"
+    "name" : "Derived Toronto M",
+    "default" : "88"
   }, {
     "key" : "toronto_group",
-    "name" : "Derived Toronto Stage Group"
+    "name" : "Derived Toronto Stage Group",
+    "default" : "88"
   } ],
   "involved_tables" : [ "schema_selection_adult_other_non_pediatric", "primary_site", "histology", "age_at_diagnosis_validation_3881", "year_dx_validation", "behavior" ],
-  "last_modified" : "2022-07-22T14:38:14.285Z",
+  "last_modified" : "2022-08-02T18:26:44.532Z",
   "on_invalid_input" : "CONTINUE"
 }
