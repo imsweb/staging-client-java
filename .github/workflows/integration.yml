@@ -45,6 +45,9 @@ jobs:
           chmod +x gradlew
           ./gradlew build sonarqube
 
+      - name: Verify algorithm zip
+        run: ls build/algorithms
+
       - name: Upload binaries (release only)
         uses: softprops/action-gh-release@v1
         if: ${{startsWith(github.ref, 'refs/tags/') }}
