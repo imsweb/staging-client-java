@@ -44,13 +44,3 @@ jobs:
         run: |
           chmod +x gradlew
           ./gradlew build sonarqube
-
-      - name: Create algorithm zips
-        if: ${{startsWith(github.ref, 'refs/tags/v') }}
-        run: ./gradlew zipAlgorithms
-
-      - name: Add algorithms to release
-        uses: softprops/action-gh-release@v1
-        if: ${{startsWith(github.ref, 'refs/tags/v') }}
-        with:
-          files: build/algorithms/*.zip
