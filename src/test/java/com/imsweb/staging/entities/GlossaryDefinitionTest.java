@@ -3,14 +3,14 @@ package com.imsweb.staging.entities;
 import java.util.Collections;
 import java.util.Date;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class GlossaryDefinitionTest {
+class GlossaryDefinitionTest {
 
     @Test
-    public void testConstruction() {
+    void testConstruction() {
         Date now = new Date();
 
         GlossaryDefinition def = new GlossaryDefinition();

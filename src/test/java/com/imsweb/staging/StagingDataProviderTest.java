@@ -6,22 +6,22 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import com.imsweb.staging.entities.ColumnDefinition.ColumnType;
 import com.imsweb.staging.entities.Range;
 import com.imsweb.staging.entities.impl.StagingColumnDefinition;
 import com.imsweb.staging.entities.impl.StagingTable;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class StagingDataProviderTest {
+class StagingDataProviderTest {
 
     @Test
-    public void testExtraInput() {
+    void testExtraInput() {
         StagingTable table = new StagingTable();
         table.setId("test_table");
         StagingColumnDefinition def1 = new StagingColumnDefinition();
@@ -58,7 +58,7 @@ public class StagingDataProviderTest {
     }
 
     @Test
-    public void testSplitValues() {
+    void testSplitValues() {
         StagingDataProvider provider = new InMemoryDataProvider("algorithm", "verison");
 
         assertEquals(0, provider.splitValues(null).size());
@@ -135,7 +135,7 @@ public class StagingDataProviderTest {
     }
 
     @Test
-    public void testTableRowParsing() {
+    void testTableRowParsing() {
         StagingTable table = new StagingTable();
         table.setId("test_table");
         table.setColumnDefinitions(Collections.singletonList(new StagingColumnDefinition("key1", "Input 1", ColumnType.INPUT)));
@@ -153,7 +153,7 @@ public class StagingDataProviderTest {
     }
 
     @Test
-    public void testPadStart() {
+    void testPadStart() {
         assertNull(StagingDataProvider.padStart(null, 1, '0'));
 
         assertEquals("123", StagingDataProvider.padStart("123", 1, '0'));
@@ -163,7 +163,7 @@ public class StagingDataProviderTest {
     }
 
     @Test
-    public void testIsNumeric() {
+    void testIsNumeric() {
         assertTrue(StagingDataProvider.isNumeric("0"));
         assertTrue(StagingDataProvider.isNumeric("1"));
         assertTrue(StagingDataProvider.isNumeric("-1"));

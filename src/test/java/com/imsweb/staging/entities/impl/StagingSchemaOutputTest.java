@@ -5,15 +5,15 @@ package com.imsweb.staging.entities.impl;
 
 import java.util.Collections;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-public class StagingSchemaOutputTest {
+class StagingSchemaOutputTest {
 
     @Test
-    public void testEquals() {
+    void testEquals() {
         StagingSchemaOutput output1 = new StagingSchemaOutput();
         StagingSchemaOutput output2 = new StagingSchemaOutput();
 

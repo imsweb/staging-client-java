@@ -3,18 +3,18 @@ package com.imsweb.staging.entities;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import com.imsweb.staging.entities.impl.StagingRange;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class StagingRangeTest {
+class StagingRangeTest {
 
     @Test
-    public void testRanges() {
+    void testRanges() {
         assertFalse(new StagingRange("100", "103").contains("099", new HashMap<>()));
         assertTrue(new StagingRange("100", "103").contains("100", new HashMap<>()));
         assertTrue(new StagingRange("100", "103").contains("102", new HashMap<>()));
@@ -26,7 +26,7 @@ public class StagingRangeTest {
     }
 
     @Test
-    public void testContext() {
+    void testContext() {
         Map<String, String> context = new HashMap<>();
         Range range = new StagingRange("2000", "{{current_year}}");
 
@@ -53,25 +53,25 @@ public class StagingRangeTest {
 
     @Test
     @SuppressWarnings("ConstantConditions")
-    public void testNull() {
+    void testNull() {
         assertThatThrownBy(() -> new StagingRange(null, null))
                 .isInstanceOf(IllegalStateException.class)
                 .hasMessageContaining("Invalid range");
     }
 
     @Test
-    public void testEmptyBothValues() {
+    void testEmptyBothValues() {
         assertFalse(new StagingRange("", "").contains("099", new HashMap<>()));
     }
 
     @Test
-    public void testEmptyOneValues() {
+    void testEmptyOneValues() {
         assertFalse(new StagingRange("999", "").contains("999", new HashMap<>()));
         assertFalse(new StagingRange("", "999").contains("999", new HashMap<>()));
     }
 
     @Test
-    public void testDifferentLength() {
+    void testDifferentLength() {
         // string ranges must be the same length
         assertFalse(new StagingRange("AA", "AAA").contains("AAA", new HashMap<>()));
         assertFalse(new StagingRange("BBB", "BB").contains("BBB", new HashMap<>()));
@@ -84,7 +84,7 @@ public class StagingRangeTest {
     }
 
     @Test
-    public void testNumericRanges() {
+    void testNumericRanges() {
         assertFalse(new StagingRange("0.1", "99999.9").contains("0.0", new HashMap<>()));
         assertFalse(new StagingRange("0.1", "99999.9").contains("100000", new HashMap<>()));
         assertFalse(new StagingRange("0.1", "99999.9").contains("100000.1", new HashMap<>()));

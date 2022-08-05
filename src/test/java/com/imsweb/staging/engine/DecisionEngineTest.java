@@ -13,8 +13,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import com.imsweb.staging.InMemoryDataProvider;
 import com.imsweb.staging.entities.ColumnDefinition.ColumnType;
@@ -39,11 +39,12 @@ import com.imsweb.staging.entities.impl.StagingTablePath;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * Test class for DecisionEngine
@@ -52,7 +53,7 @@ public class DecisionEngineTest {
 
     private static DecisionEngine _ENGINE;
 
-    @BeforeClass
+    @BeforeAll
     public static void init() {
         InMemoryDataProvider provider = new InMemoryDataProvider("test", "1.0");
 
@@ -317,7 +318,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testMatch() {
+    void testMatch() {
         List<Range> range = new ArrayList<>();
         range.add(new StagingRange("1", "1"));
         range.add(new StagingRange("4", "4"));
@@ -332,7 +333,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testEmptyTable() {
+    void testEmptyTable() {
         InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
         StagingTable table = new StagingTable("basic_test_table");
         table.addColumnDefinition("size", ColumnType.INPUT);
@@ -345,7 +346,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testMatchTable() {
+    void testMatchTable() {
         InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
         StagingTable table = new StagingTable("basic_test_table");
         table.addColumnDefinition("size", ColumnType.INPUT);
@@ -389,7 +390,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testMatchTableWithBlankOrMissingInput() {
+    void testMatchTableWithBlankOrMissingInput() {
         InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
         StagingTable table = new StagingTable("basic_test_table");
         table.addColumnDefinition("size", ColumnType.INPUT);
@@ -406,7 +407,7 @@ public class DecisionEngineTest {
         // create context of input fields
         Map<String, String> input = new HashMap<>();
 
-        // first try it with missing input (null should match just like blank))
+        // first try it with missing input (null should match just like blank)
         assertNotNull(DecisionEngine.matchTable(matchTable, input));
 
         // now add blank input
@@ -427,7 +428,7 @@ public class DecisionEngineTest {
         matchTable = provider.getTable("basic_test_table_multi");
         assertNotNull(matchTable);
 
-        // first try it with missing input (null should match just like blank))
+        // first try it with missing input (null should match just like blank)
         assertNull(DecisionEngine.matchTable(matchTable, new HashMap<>()));
 
         input.put("a", "2");
@@ -435,7 +436,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testMatchOnSpecificKeys() {
+    void testMatchOnSpecificKeys() {
         InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
         StagingTable table = new StagingTable("basic_test_table_keytest");
         table.addColumnDefinition("key1", ColumnType.INPUT);
@@ -488,7 +489,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testMatchMissingVsAll() {
+    void testMatchMissingVsAll() {
         InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
         StagingTable table = new StagingTable("testMissingAndAll");
         table.addColumnDefinition("a", ColumnType.INPUT);
@@ -515,7 +516,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testValueKeyReferences() {
+    void testValueKeyReferences() {
         InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
         StagingTable table = new StagingTable("table_key_references");
         table.addColumnDefinition("a", ColumnType.INPUT);
@@ -564,7 +565,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testMatchTableMissingCell() {
+    void testMatchTableMissingCell() {
         InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
         StagingTable table = new StagingTable("table_sample_first");
         table.addColumnDefinition("a", ColumnType.INPUT);
@@ -599,7 +600,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testBlankMatching() {
+    void testBlankMatching() {
         InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
         StagingTable table = new StagingTable("table_blank_matching");
         table.addColumnDefinition("a", ColumnType.INPUT);
@@ -630,7 +631,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testLookupTable() {
+    void testLookupTable() {
         InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
         StagingTable table = new StagingTable("site_table");
         table.addColumnDefinition("site", ColumnType.INPUT);
@@ -659,7 +660,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testAllValuesMatching() {
+    void testAllValuesMatching() {
         InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
         StagingTable table = new StagingTable("all_values_test");
         table.addColumnDefinition("a", ColumnType.INPUT);
@@ -719,7 +720,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testMinimumAlgorithm() {
+    void testMinimumAlgorithm() {
         Schema minSchema = _ENGINE.getProvider().getSchema("starting_min");
         assertNotNull(minSchema);
         assertEquals("starting_min", minSchema.getId());
@@ -733,7 +734,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testAlgorithm() {
+    void testAlgorithm() {
         Schema starting = _ENGINE.getProvider().getSchema("starting_sample");
         assertNotNull(starting);
         assertEquals("starting_sample", starting.getId());
@@ -741,7 +742,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testMissingParameters() {
+    void testMissingParameters() {
         Map<String, String> input = new HashMap<>();
         Result result = _ENGINE.process("starting_sample", input);
 
@@ -754,7 +755,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testParameterLookupValidation() {
+    void testParameterLookupValidation() {
         Map<String, String> input = new HashMap<>();
         input.put("a", "3");
         input.put("b", "31");  // value is not in lookup table
@@ -781,7 +782,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testSingleTableProcess() {
+    void testSingleTableProcess() {
         Map<String, String> input = new HashMap<>();
         input.put("a", "7");
         input.put("b", "03");  // should map to "hemeretic" without using second table
@@ -796,7 +797,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testOneJumpProcess() {
+    void testOneJumpProcess() {
         Map<String, String> input = new HashMap<>();
         input.put("a", "5");
         input.put("b", "20");
@@ -843,7 +844,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testProcessError() {
+    void testProcessError() {
         Map<String, String> input = new HashMap<>();
         input.put("a", "9");
         input.put("b", "99");
@@ -872,7 +873,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testProcessWithNullValues() {
+    void testProcessWithNullValues() {
         InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
 
         StagingTable table = new StagingTable("table_null_values");
@@ -920,7 +921,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testProcessWithStop() {
+    void testProcessWithStop() {
         // first test that we get a result from the second table
         Map<String, String> input = new HashMap<>();
         input.put("a", "5");
@@ -951,7 +952,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testProcessWithBlanks() {
+    void testProcessWithBlanks() {
         Map<String, String> input = new HashMap<>();
         input.put("x", "1");
         input.put("y", "");
@@ -976,7 +977,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testProcessWithDoubleInputMapping() {
+    void testProcessWithDoubleInputMapping() {
         Map<String, String> input = new HashMap<>();
         input.put("x", "1");
         Result result = _ENGINE.process("starting_double_input", input);
@@ -988,7 +989,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testProcessWithDoubleOutputMapping() {
+    void testProcessWithDoubleOutputMapping() {
         Map<String, String> input = new HashMap<>();
         input.put("a", "1");
         input.put("b", "00");
@@ -1003,7 +1004,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testInvolvedAlgorithms() {
+    void testInvolvedAlgorithms() {
         List<Mapping> mappings;
         Map<String, String> context = new HashMap<>();
 
@@ -1026,7 +1027,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testInvolvedTables() {
+    void testInvolvedTables() {
         Set<String> tables;
 
         // test a case with no involved tables
@@ -1052,7 +1053,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testInvolvedTablesWhenEmpty() {
+    void testInvolvedTablesWhenEmpty() {
         InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
 
         // add empty table
@@ -1084,7 +1085,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testInvolvedTableRecursion() {
+    void testInvolvedTableRecursion() {
         Set<String> tables = _ENGINE.getInvolvedTables("starting_recursion");
 
         assertEquals(1, tables.size());
@@ -1092,7 +1093,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testProcessWithRecursion() {
+    void testProcessWithRecursion() {
         Map<String, String> input = new HashMap<>();
         input.put("a", "4");
         Result result = _ENGINE.process("starting_recursion", input);
@@ -1106,7 +1107,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testProcessWithMultipleEndpoints() {
+    void testProcessWithMultipleEndpoints() {
         // first test all 3 results get set
         Map<String, String> input = new HashMap<>();
         input.put("a", "2");
@@ -1186,10 +1187,10 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testRowNotFoundWithMultipleOutputs() {
+    void testRowNotFoundWithMultipleOutputs() {
         InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
 
-        // test a situation where a a row with mulitple inputs is not found
+        // test a situation where a row with mulitple inputs is not found
         StagingTable table = new StagingTable("table_input");
         table.addColumnDefinition("input1", ColumnType.INPUT);
         table.addColumnDefinition("output1", ColumnType.ENDPOINT);
@@ -1223,7 +1224,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testMultipleEndpointWithoutRecursion() {
+    void testMultipleEndpointWithoutRecursion() {
         // test 2 JUMPs to same table and one value; this is not infinite recursion but since same table called twice it gets confused
         Map<String, String> input = new HashMap<>();
         input.put("a", "4");
@@ -1240,7 +1241,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testInclusionsAndExclusions() {
+    void testInclusionsAndExclusions() {
         Map<String, String> input = new HashMap<>();
         input.put("a", "1");
         input.put("b", "2");
@@ -1275,13 +1276,12 @@ public class DecisionEngineTest {
         assertEquals("SUCCESS", input.get("special"));
     }
 
-    @Test(expected = IllegalStateException.class)
-    public void testDuplicateAlgorithms() {
+    @Test
+    void testDuplicateAlgorithms() {
         InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
         StagingSchema schema = new StagingSchema();
         schema.setId("TEST1");
-        provider.addSchema(schema);
-        provider.addSchema(schema);
+        assertThrows(IllegalStateException.class, () -> provider.addSchema(schema));
     }
 
     /**
@@ -1294,7 +1294,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testSchemaInputs() {
+    void testSchemaInputs() {
         DataProvider provider = _ENGINE.getProvider();
 
         assertEquals(asSet(), _ENGINE.getInputs(provider.getSchema("starting_min")));
@@ -1307,7 +1307,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testGetSchemaOutputs() {
+    void testGetSchemaOutputs() {
         DataProvider provider = _ENGINE.getProvider();
 
         assertEquals(asSet(), _ENGINE.getOutputs(provider.getSchema("starting_min")));
@@ -1320,7 +1320,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testGetTableInputsAsString() {
+    void testGetTableInputsAsString() {
         StagingTable table = new StagingTable("table_inputs");
         table.addColumnDefinition("a", ColumnType.INPUT);
         table.addColumnDefinition("b", ColumnType.INPUT);
@@ -1353,7 +1353,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testOutputsAndDefaults() {
+    void testOutputsAndDefaults() {
         InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
 
         StagingTable table = new StagingTable("table_input");
@@ -1427,7 +1427,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testInitialContextReferences() {
+    void testInitialContextReferences() {
         StagingSchema schema = new StagingSchema("test_initial_context");
         schema.setSchemaSelectionTable("table_selection");
         schema.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
@@ -1457,7 +1457,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testInputsOutputsDefaultContextReferences() {
+    void testInputsOutputsDefaultContextReferences() {
         StagingSchema schema = new StagingSchema("test_context");
         schema.setSchemaSelectionTable("dummy");
         schema.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
@@ -1511,7 +1511,7 @@ public class DecisionEngineTest {
     }
 
     @Test
-    public void testMappingInputsWithReferenceInTable() {
+    void testMappingInputsWithReferenceInTable() {
         InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
 
         // test a situation where an input is also used as a reference in an endpoint; when the definition remaps that input it should not show up

@@ -4,14 +4,14 @@ import java.util.HashSet;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SchemaLookupTest {
+class SchemaLookupTest {
 
     @Test
-    public void testConstructorMissingValues() {
+    void testConstructorMissingValues() {
         assertEquals(new SchemaLookup().getKeys(), new HashSet<>());
         assertEquals(new SchemaLookup(null, null).getKeys(), new HashSet<>());
         assertEquals(new SchemaLookup("", null).getKeys(), new HashSet<>());
