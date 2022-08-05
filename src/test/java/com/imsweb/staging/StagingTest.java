@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,12 +25,12 @@ import com.imsweb.staging.entities.Schema;
 import com.imsweb.staging.entities.Table;
 import com.imsweb.staging.entities.TableRow;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 /**
  * Base class for all algorithm-specific testing
@@ -99,8 +99,8 @@ public abstract class StagingTest {
         for (String id : _STAGING.getSchemaIds()) {
             Schema schema = _STAGING.getSchema(id);
             for (Input input : schema.getInputs()) {
-                assertNull("No schemas should have units", input.getUnit());
-                assertNull("No schemas should have decimal places", input.getDecimalPlaces());
+                assertNull(input.getUnit(), "No schemas should have units");
+                assertNull(input.getDecimalPlaces(), "No schemas should have decimal places");
             }
         }
     }
@@ -159,7 +159,7 @@ public abstract class StagingTest {
                         if (ColumnDefinition.ColumnType.INPUT.equals(def.getType()))
                             inputKeys.add(def.getKey());
 
-                    // make sure the input key matches the an input column
+                    // make sure the input key matches an input column
                     if (!inputKeys.contains(input.getKey()))
                         errors.add("Input key " + schemaId + ":" + input.getKey() + " does not match validation table " + table.getId() + ": " + inputKeys);
                 }

@@ -19,8 +19,8 @@ import java.util.Set;
 import java.util.stream.IntStream;
 import java.util.zip.GZIPInputStream;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,18 +43,18 @@ import com.imsweb.staging.entities.Table;
 import com.imsweb.staging.entities.TableRow;
 import com.imsweb.staging.entities.impl.StagingMetadata;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 public class CsStagingTest extends StagingTest {
 
     private static final Logger _LOG = LoggerFactory.getLogger(StagingTest.class);
 
-    @BeforeClass
+    @BeforeAll
     public static void init() {
         _STAGING = Staging.getInstance(CsDataProvider.getInstance(CsVersion.V020550));
     }
@@ -75,7 +75,7 @@ public class CsStagingTest extends StagingTest {
     }
 
     @Test
-    public void testBasicInitialization() {
+    void testBasicInitialization() {
         assertEquals(153, _STAGING.getSchemaIds().size());
         assertTrue(_STAGING.getTableIds().size() > 0);
 
@@ -84,7 +84,7 @@ public class CsStagingTest extends StagingTest {
     }
 
     @Test
-    public void testVersionInitializationTypes() {
+    void testVersionInitializationTypes() {
         Staging staging020550 = Staging.getInstance(CsDataProvider.getInstance(CsVersion.V020550));
         assertEquals("02.05.50", staging020550.getVersion());
 
@@ -93,13 +93,13 @@ public class CsStagingTest extends StagingTest {
     }
 
     @Test
-    public void testDescriminatorKeys() {
+    void testDescriminatorKeys() {
         assertEquals(new HashSet<>(Collections.singletonList("ssf25")), _STAGING.getSchema("nasopharynx").getSchemaDiscriminators());
         assertEquals(new HashSet<>(Collections.singletonList("ssf25")), _STAGING.getSchema("peritoneum_female_gen").getSchemaDiscriminators());
     }
 
     @Test
-    public void testSchemaSelection() {
+    void testSchemaSelection() {
         // test bad values
         List<Schema> lookup = _STAGING.lookupSchema(new SchemaLookup());
         assertEquals(0, lookup.size());
@@ -168,7 +168,7 @@ public class CsStagingTest extends StagingTest {
     }
 
     @Test
-    public void testLookupCache() {
+    void testLookupCache() {
         // do the same lookup twice
         List<Schema> lookup = _STAGING.lookupSchema(new CsSchemaLookup("C629", "9231", ""));
         assertEquals(1, lookup.size());
@@ -188,7 +188,7 @@ public class CsStagingTest extends StagingTest {
     }
 
     @Test
-    public void testSchemaSelectionIntegration() throws IOException, InterruptedException {
+    void testSchemaSelectionIntegration() throws IOException, InterruptedException {
         // test complete file of cases
         IntegrationResult result = IntegrationUtils.processSchemaSelection(_STAGING, "cs_schema_identification_unit_test.txt.gz",
                 new GZIPInputStream(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("cs/test-data/020550/cs_schema_identification_unit_test.txt.gz"))));
@@ -196,7 +196,7 @@ public class CsStagingTest extends StagingTest {
     }
 
     @Test
-    public void testOldSchemaNamesExist() {
+    void testOldSchemaNamesExist() {
         List<String> oldNames = Arrays.asList("AdnexaUterineOther", "AdrenalGland", "AmpullaVater", "Anus", "Appendix", "BileDuctsDistal", "BileDuctsIntraHepat", "BileDuctsPerihilar", "BiliaryOther",
                 "Bladder", "Bone", "Brain", "Breast", "BuccalMucosa", "CarcinoidAppendix", "Cervix", "CNSOther", "Colon", "Conjunctiva", "CorpusAdenosarcoma", "CorpusCarcinoma", "CorpusSarcoma",
                 "CysticDuct", "DigestiveOther", "EndocrineOther", "EpiglottisAnterior", "Esophagus", "EsophagusGEJunction", "EyeOther", "FallopianTube", "FloorMouth", "Gallbladder",
@@ -221,7 +221,7 @@ public class CsStagingTest extends StagingTest {
     }
 
     @Test
-    public void testFindTableRow() {
+    void testFindTableRow() {
         assertNull(_STAGING.findMatchingTableRow("size_apa", "size", null));
         assertNull(_STAGING.findMatchingTableRow("size_apa", "size", "X"));
         assertNull(_STAGING.findMatchingTableRow("size_apa", "size", "996"));
@@ -245,7 +245,7 @@ public class CsStagingTest extends StagingTest {
     }
 
     @Test
-    public void testInputBuilder() {
+    void testInputBuilder() {
         CsStagingData data1 = new CsStagingData();
         data1.setInput(CsStagingData.CsInput.PRIMARY_SITE, "C680");
         data1.setInput(CsStagingData.CsInput.HISTOLOGY, "8000");
@@ -277,7 +277,7 @@ public class CsStagingTest extends StagingTest {
     }
 
     @Test
-    public void testBlankValues() {
+    void testBlankValues() {
         CsStagingData data = new CsStagingData();
         data.setInput(CsStagingData.CsInput.PRIMARY_SITE, "C700");
         data.setInput(CsStagingData.CsInput.HISTOLOGY, "9530");
@@ -335,7 +335,7 @@ public class CsStagingTest extends StagingTest {
     }
 
     @Test
-    public void testErrors() {
+    void testErrors() {
         CsStagingData data = new CsStagingData();
         data.setInput(CsStagingData.CsInput.PRIMARY_SITE, "C209");
         data.setInput(CsStagingData.CsInput.HISTOLOGY, "8490");
@@ -378,7 +378,7 @@ public class CsStagingTest extends StagingTest {
 
     @Test
     @SuppressWarnings("java:S5961")
-    public void testStageUrethra() {
+    void testStageUrethra() {
         // test this case:  http://seer.cancer.gov/seertools/cstest/?mets=10&lnexam=99&diagnosis_year=2013&grade=9&exteval=9&age=060&site=C680&metseval=9&hist=8000&ext=100&version=020550&nodeseval=9&behav=3&lnpos=99&nodes=100&csver_original=020440&lvi=9&ssf1=020&size=075
         CsStagingData data = new CsStagingData();
         data.setInput(CsStagingData.CsInput.PRIMARY_SITE, "C680");
@@ -460,7 +460,7 @@ public class CsStagingTest extends StagingTest {
         Set<String> outputKeys = data.getOutput().keySet();
         for (CsOutput output : CsOutput.values())
             outputKeys.remove(output.toString());
-        assertTrue("The keys " + outputKeys + " were in the output but are not CS output fields.", outputKeys.isEmpty());
+        assertTrue(outputKeys.isEmpty(), "The keys " + outputKeys + " were in the output but are not CS output fields.");
 
         // test case with valid year_dx and invalid version original
         data.setInput(CsStagingData.CsInput.DX_YEAR, "2013");
@@ -539,7 +539,7 @@ public class CsStagingTest extends StagingTest {
     }
 
     @Test
-    public void testColonUnknownDxYear() {
+    void testColonUnknownDxYear() {
         CsStagingData data = new CsStagingData();
         data.setInput(CsStagingData.CsInput.PRIMARY_SITE, "C183");
         data.setInput(CsStagingData.CsInput.HISTOLOGY, "8140");
@@ -576,14 +576,14 @@ public class CsStagingTest extends StagingTest {
         // verify the AJCC7 values should be null
         data.getOutput().forEach((k, v) -> {
             if (k.contains("ajcc7"))
-                assertNull("AJCC7 Key '" + k + " should be null", v);
+                assertNull(v, "AJCC7 Key '" + k + " should be null");
             else
-                assertNotNull("Key '" + k + " should not be null", v);
+                assertNotNull(v, "Key '" + k + " should not be null");
         });
     }
 
     @Test
-    public void testBadLookupInStage() {
+    void testBadLookupInStage() {
         CsStagingData data = new CsStagingData();
 
         // if site/hist are not supplied, no lookup
@@ -608,36 +608,34 @@ public class CsStagingTest extends StagingTest {
     }
 
     @Test
-    public void testInvolvedTables() {
+    void testInvolvedTables() {
         Set<String> tables = _STAGING.getInvolvedTables("brain");
 
-        assertEquals(
-                new HashSet<>(
-                        Arrays.asList("cs_year_validation", "schema_selection_brain", "ajcc6_m_codes", "ajcc7_m_codes", "ssf22_snq", "nodes_exam_gna", "ssf13_snh",
-                                "ssf7_sqk", "lvi", "ajcc6_n_codes", "ssf18_snm", "ssf15_snj", "ssf20_sno", "ssf10_sne", "ssf17_snl", "ssf6_opf", "summary_stage_rpa",
-                                "histology", "ss_codes", "mets_haw", "nodes_pos_fna", "ajcc7_stage_una", "ajcc7_year_validation", "ssf4_mpn", "mets_eval_ina", "ssf3_lpm",
-                                "primary_site", "nodes_dna", "ajcc6_stage_qna", "ssf8_sql", "ssf19_snn", "ssf2_kpl", "ajcc7_t_codes", "behavior", "nodes_eval_ena",
-                                "ajcc_tdescriptor_cleanup", "ssf21_snp", "ajcc_descriptor_codes", "ssf16_snk", "ajcc6_t_codes", "ssf5_nph", "ajcc7_n_codes",
-                                "ajcc6_stage_codes", "extension_bcc", "grade", "size_apa", "ajcc_ndescriptor_cleanup", "ssf12_sng", "ssf23_snr", "ajcc7_inclusions_tqf",
-                                "ajcc7_stage_codes", "extension_eval_cna", "ajcc_mdescriptor_cleanup", "cs_input_version_original", "ajcc6_year_validation", "ssf1_jpo",
-                                "ssf25_snt", "ssf11_snf", "ssf9_snd", "ssf14_sni", "ssf24_sns")), tables);
+        assertEquals(new HashSet<>(
+                Arrays.asList("cs_year_validation", "schema_selection_brain", "ajcc6_m_codes", "ajcc7_m_codes", "ssf22_snq", "nodes_exam_gna", "ssf13_snh",
+                        "ssf7_sqk", "lvi", "ajcc6_n_codes", "ssf18_snm", "ssf15_snj", "ssf20_sno", "ssf10_sne", "ssf17_snl", "ssf6_opf", "summary_stage_rpa",
+                        "histology", "ss_codes", "mets_haw", "nodes_pos_fna", "ajcc7_stage_una", "ajcc7_year_validation", "ssf4_mpn", "mets_eval_ina", "ssf3_lpm",
+                        "primary_site", "nodes_dna", "ajcc6_stage_qna", "ssf8_sql", "ssf19_snn", "ssf2_kpl", "ajcc7_t_codes", "behavior", "nodes_eval_ena",
+                        "ajcc_tdescriptor_cleanup", "ssf21_snp", "ajcc_descriptor_codes", "ssf16_snk", "ajcc6_t_codes", "ssf5_nph", "ajcc7_n_codes",
+                        "ajcc6_stage_codes", "extension_bcc", "grade", "size_apa", "ajcc_ndescriptor_cleanup", "ssf12_sng", "ssf23_snr", "ajcc7_inclusions_tqf",
+                        "ajcc7_stage_codes", "extension_eval_cna", "ajcc_mdescriptor_cleanup", "cs_input_version_original", "ajcc6_year_validation", "ssf1_jpo",
+                        "ssf25_snt", "ssf11_snf", "ssf9_snd", "ssf14_sni", "ssf24_sns")), tables);
     }
 
     @Test
-    public void testInvolvedSchemas() {
+    void testInvolvedSchemas() {
         Set<String> schemas = _STAGING.getInvolvedSchemas("ssf1_jpd");
 
         assertEquals(new HashSet<>(Arrays.asList("kidney_renal_pelvis", "bladder", "urethra")), schemas);
     }
 
     @Test
-    public void testGetInputs() {
+    void testGetInputs() {
         assertEquals(new HashSet<>(Arrays.asList("extension", "site", "extension_eval", "mets_eval", "nodes_eval", "nodes", "hist", "year_dx", "cs_input_version_original",
                 "mets")), _STAGING.getInputs(_STAGING.getSchema("adnexa_uterine_other")));
 
-        assertEquals(
-                new HashSet<>(Arrays.asList("site", "nodes_pos", "mets_eval", "nodes_eval", "ssf16", "ssf15", "ssf13", "cs_input_version_original", "lvi", "extension",
-                        "extension_eval", "ssf1", "ssf2", "ssf3", "hist", "ssf4", "nodes", "ssf5", "year_dx", "mets")), _STAGING.getInputs(_STAGING.getSchema("testis")));
+        assertEquals(new HashSet<>(Arrays.asList("site", "nodes_pos", "mets_eval", "nodes_eval", "ssf16", "ssf15", "ssf13", "cs_input_version_original", "lvi", "extension",
+                "extension_eval", "ssf1", "ssf2", "ssf3", "hist", "ssf4", "nodes", "ssf5", "year_dx", "mets")), _STAGING.getInputs(_STAGING.getSchema("testis")));
 
         // test with context
         Map<String, String> context = new HashMap<>();
@@ -650,13 +648,12 @@ public class CsStagingTest extends StagingTest {
                 "ssf3", "hist", "nodes", "year_dx", "mets")), _STAGING.getInputs(_STAGING.getSchema("prostate"), context));
 
         // test without context
-        assertEquals(
-                new HashSet<>(Arrays.asList("site", "nodes_eval", "mets_eval", "ssf10", "cs_input_version_original", "ssf8", "extension", "extension_eval", "ssf1",
-                        "ssf3", "hist", "nodes", "year_dx", "grade", "mets")), _STAGING.getInputs(_STAGING.getSchema("prostate")));
+        assertEquals(new HashSet<>(Arrays.asList("site", "nodes_eval", "mets_eval", "ssf10", "cs_input_version_original", "ssf8", "extension", "extension_eval", "ssf1",
+                "ssf3", "hist", "nodes", "year_dx", "grade", "mets")), _STAGING.getInputs(_STAGING.getSchema("prostate")));
     }
 
     @Test
-    public void testIsCodeValid() {
+    void testIsCodeValid() {
         // test bad parameters for schema or field
         assertFalse(_STAGING.isCodeValid("bad_schema_name", "site", "C509"));
         assertFalse(_STAGING.isCodeValid("testis", "bad_field_name", "C509"));
@@ -682,7 +679,7 @@ public class CsStagingTest extends StagingTest {
     }
 
     @Test
-    public void testIsContextValid() {
+    void testIsContextValid() {
         CsStagingData data = new CsStagingData();
 
         data.setInput(Staging.CTX_YEAR_CURRENT, "2015");
@@ -728,7 +725,7 @@ public class CsStagingTest extends StagingTest {
     }
 
     @Test
-    public void testGetSchemaIds() {
+    void testGetSchemaIds() {
         Set<String> algorithms = _STAGING.getSchemaIds();
 
         assertTrue(algorithms.size() > 0);
@@ -736,7 +733,7 @@ public class CsStagingTest extends StagingTest {
     }
 
     @Test
-    public void testGetTableIds() {
+    void testGetTableIds() {
         Set<String> tables = _STAGING.getTableIds();
 
         assertTrue(tables.size() > 0);
@@ -744,27 +741,25 @@ public class CsStagingTest extends StagingTest {
     }
 
     @Test
-    public void testGetSchema() {
+    void testGetSchema() {
         assertNull(_STAGING.getSchema("bad_schema_name"));
         assertNotNull(_STAGING.getSchema("brain"));
         assertEquals(Integer.valueOf(143), _STAGING.getSchema("brain").getSchemaNum());
     }
 
     @Test
-    public void testStagingInputsAndOutputs() {
+    void testStagingInputsAndOutputs() {
         Schema schema = _STAGING.getSchema("testis");
 
-        assertEquals("Inputs do not match",
-                new HashSet<>(Arrays.asList("cs_input_version_original", "extension", "extension_eval", "site", "hist", "lvi", "mets_eval", "mets", "nodes",
-                        "nodes_eval", "nodes_pos", "ssf1", "ssf2", "ssf3", "ssf4", "ssf5", "ssf13", "ssf15", "ssf16", "year_dx")), _STAGING.getInputs(schema));
+        assertEquals(new HashSet<>(Arrays.asList("cs_input_version_original", "extension", "extension_eval", "site", "hist", "lvi", "mets_eval", "mets", "nodes",
+                "nodes_eval", "nodes_pos", "ssf1", "ssf2", "ssf3", "ssf4", "ssf5", "ssf13", "ssf15", "ssf16", "year_dx")), _STAGING.getInputs(schema), "Inputs do not match");
 
         // note that outputs should NOT include values produced by staging that are not in the defined output list (if an output list exists on the schema)
-        assertEquals("Outputs do not match",
-                new HashSet<>(Arrays.asList("schema_number", "csver_derived", "ss77", "stor_ajcc7_m", "t2000", "stor_ajcc7_n", "stor_ajcc6_tdescriptor", "ajcc7_stage",
-                        "stor_ajcc6_mdescriptor", "stor_ss2000", "ajcc6_tdescriptor", "stor_ajcc7_t", "ajcc6_stage", "n2000", "ajcc7_ndescriptor", "ajcc6_ndescriptor",
-                        "ajcc7_mdescriptor", "ajcc6_mdescriptor", "stor_ajcc7_stage", "m77", "ajcc6_m", "ss2000", "stor_ajcc7_ndescriptor", "ajcc7_m", "ajcc7_n",
-                        "stor_ajcc7_mdescriptor", "t77", "ajcc6_n", "stor_ss77", "ajcc6_t", "stor_ajcc6_ndescriptor", "stor_ajcc6_stage", "m2000", "ajcc7_t", "n77",
-                        "ajcc7_tdescriptor", "stor_ajcc6_m", "stor_ajcc6_n", "stor_ajcc6_t", "stor_ajcc7_tdescriptor")), _STAGING.getOutputs(schema));
+        assertEquals(new HashSet<>(Arrays.asList("schema_number", "csver_derived", "ss77", "stor_ajcc7_m", "t2000", "stor_ajcc7_n", "stor_ajcc6_tdescriptor", "ajcc7_stage",
+                "stor_ajcc6_mdescriptor", "stor_ss2000", "ajcc6_tdescriptor", "stor_ajcc7_t", "ajcc6_stage", "n2000", "ajcc7_ndescriptor", "ajcc6_ndescriptor",
+                "ajcc7_mdescriptor", "ajcc6_mdescriptor", "stor_ajcc7_stage", "m77", "ajcc6_m", "ss2000", "stor_ajcc7_ndescriptor", "ajcc7_m", "ajcc7_n",
+                "stor_ajcc7_mdescriptor", "t77", "ajcc6_n", "stor_ss77", "ajcc6_t", "stor_ajcc6_ndescriptor", "stor_ajcc6_stage", "m2000", "ajcc7_t", "n77",
+                "ajcc7_tdescriptor", "stor_ajcc6_m", "stor_ajcc6_n", "stor_ajcc6_t", "stor_ajcc7_tdescriptor")), _STAGING.getOutputs(schema), "Outputs do not match");
 
         // test used for staging
         assertFalse(schema.getInputMap().get("ssf14").getUsedForStaging());
@@ -782,7 +777,7 @@ public class CsStagingTest extends StagingTest {
 
         // this is a case that summary stages only.  Testing to make sure "hist", which is used in the inclusion/exclusion criteria
         // is included in the list even though the mappings for AJCC6 and 7 are not included
-        assertTrue("Inclusion/exclusion input is not included", inputs.contains("hist"));
+        assertTrue(inputs.contains("hist"), "Inclusion/exclusion input is not included");
 
         assertTrue(inputs.contains("mets"));
 
@@ -812,19 +807,19 @@ public class CsStagingTest extends StagingTest {
     }
 
     @Test
-    public void testExpectedOutput() throws IOException, InterruptedException {
+    void testExpectedOutput() throws IOException, InterruptedException {
         IntegrationResult ajcc6Result = IntegrationUtils.processSchema(_STAGING, "AJCC_6.V020550.10000.txt.gz",
                 new GZIPInputStream(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("cs/test-data/020550/AJCC_6.V020550.10000.txt.gz"))));
         IntegrationResult ajcc7Result = IntegrationUtils.processSchema(_STAGING, "AJCC_7.V020550.10000.txt.gz",
                 new GZIPInputStream(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("cs/test-data/020550/AJCC_7.V020550.10000.txt.gz"))));
 
         // make sure there were no errors returned
-        assertEquals("There were failures in the AJCC6 tests", 0, ajcc6Result.getNumFailures());
-        assertEquals("There were failures in the AJCC7 tests", 0, ajcc7Result.getNumFailures());
+        assertEquals(0, ajcc6Result.getNumFailures(), "There were failures in the AJCC6 tests");
+        assertEquals(0, ajcc7Result.getNumFailures(), "There were failures in the AJCC7 tests");
     }
 
     @Test
-    public void testAllValidInputs() throws IOException {
+    void testAllValidInputs() throws IOException {
         GZIPInputStream is = new GZIPInputStream(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("cs/test-data/020550/valid_inputs.020550.txt.gz")));
         LineNumberReader reader = new LineNumberReader(new InputStreamReader(is, StandardCharsets.UTF_8));
 
@@ -841,7 +836,8 @@ public class CsStagingTest extends StagingTest {
 
             // get schema by schema name
             Schema schema = _STAGING.getSchema(nameMap.get(values[0]));
-            assertTrue("The value '" + values[2] + "' is not valid for table '" + values[1] + "' and schema '" + values[0] + "'", _STAGING.isCodeValid(schema.getId(), values[1], values[2]));
+            assertTrue(_STAGING.isCodeValid(schema.getId(), values[1], values[2]),
+                    "The value '" + values[2] + "' is not valid for table '" + values[1] + "' and schema '" + values[0] + "'");
 
             line = reader.readLine();
         }
@@ -857,7 +853,7 @@ public class CsStagingTest extends StagingTest {
      * 3 characters long based on the ssf4_lookup_table.
      */
     @Test
-    public void testInvalidTableInputs() {
+    void testInvalidTableInputs() {
         Set<String> errors = new HashSet<>();
 
         for (String schemaId : _STAGING.getSchemaIds()) {

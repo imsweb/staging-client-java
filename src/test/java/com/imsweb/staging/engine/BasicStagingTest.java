@@ -9,7 +9,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import com.imsweb.staging.InMemoryDataProvider;
 import com.imsweb.staging.Staging;
@@ -29,10 +29,10 @@ import com.imsweb.staging.entities.impl.StagingTablePath;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.catchRuntimeException;
 
-public class BasicStagingTest {
+class BasicStagingTest {
 
     @Test
-    public void testBlankInputs() {
+    void testBlankInputs() {
         InMemoryDataProvider provider = new InMemoryDataProvider("test", "1.0");
 
         StagingTable table = new StagingTable();
@@ -98,7 +98,7 @@ public class BasicStagingTest {
         assertThat(staging.getSchema("schema_test").getId()).isEqualTo("schema_test");
         assertThat(staging.getTableIds()).hasSameElementsAs(Arrays.asList("table_input1", "table_input2", "table_selection", "primary_site", "histology", "table_year_dx"));
 
-        // check case where required input field not supplied (i.e. no default); since there are is no workflow defined, this should
+        // check case where required to be input field not supplied (i.e. no default); since there are is no workflow defined, this should
         // not cause an error
 
         StagingData data = new StagingData("C509", "8000");
@@ -130,7 +130,7 @@ public class BasicStagingTest {
     }
 
     @Test
-    public void testNumericRangeTableMatch() {
+    void testNumericRangeTableMatch() {
         InMemoryDataProvider provider = new InMemoryDataProvider("test", "1.0");
 
         StagingTable table = new StagingTable();
@@ -152,7 +152,7 @@ public class BasicStagingTest {
     }
 
     @Test
-    public void testGetInputsWithContext() {
+    void testGetInputsWithContext() {
         InMemoryDataProvider provider = new InMemoryDataProvider("test", "1.0");
 
         StagingTable table = new StagingTable();
@@ -252,7 +252,7 @@ public class BasicStagingTest {
     }
 
     @Test
-    public void testInvalidContext() {
+    void testInvalidContext() {
         InMemoryDataProvider provider = new InMemoryDataProvider("test", "1.0");
 
         StagingTable table = new StagingTable();

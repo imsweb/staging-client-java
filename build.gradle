@@ -35,7 +35,7 @@ repositories {
 }
 
 dependencies {
-    spotbugs 'com.github.spotbugs:spotbugs:4.7.0'
+    spotbugs 'com.github.spotbugs:spotbugs:4.7.1'
 
     api "com.fasterxml.jackson.core:jackson-core:2.13.3"
     api "com.fasterxml.jackson.core:jackson-annotations:2.13.3"
@@ -49,7 +49,9 @@ dependencies {
 
     implementation 'org.slf4j:slf4j-api:1.7.36'
 
-    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
     testImplementation 'org.assertj:assertj-core:3.23.1'
     testImplementation 'org.slf4j:slf4j-simple:1.7.36'
     testImplementation 'com.google.code.bean-matchers:bean-matchers:0.13'
@@ -69,6 +71,10 @@ jar {
                 'Automatic-Module-Name': 'com.imsweb.algorithms.staging'
         )
     }
+}
+
+test {
+    useJUnitPlatform()
 }
 
 checkstyle {

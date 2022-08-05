@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.GlossaryHit;
@@ -20,10 +20,10 @@ import com.imsweb.staging.entities.Table;
 import com.imsweb.staging.entities.impl.StagingMetadata;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public abstract class FileDataProviderTest {
 
@@ -91,8 +91,7 @@ public abstract class FileDataProviderTest {
         assertNull(getStaging().getGlossaryDefinition("MISSING_TERM"));
         assertEquals(13, getStaging().getGlossaryTerms().size());
         assertEquals(new HashSet<>(Arrays.asList("Adjacent structures", "Carcinoma", "Cortex", "Parenchyma", "Stroma", "Medulla", "Isolated tumor cells",
-                        "Adjacent tissue(s), NOS", "Tumor deposits", "Postcricoid region", "Summary Stage", "Level V lymph nodes", "Masticator space")),
-                getStaging().getGlossaryTerms());
+                "Adjacent tissue(s), NOS", "Tumor deposits", "Postcricoid region", "Summary Stage", "Level V lymph nodes", "Masticator space")), getStaging().getGlossaryTerms());
         GlossaryDefinition entry = getStaging().getGlossaryDefinition("Adjacent tissue(s), NOS");
         assertNotNull(entry);
         assertEquals("Adjacent tissue(s), NOS", entry.getName());

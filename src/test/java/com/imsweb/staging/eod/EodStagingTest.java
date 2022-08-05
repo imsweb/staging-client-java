@@ -12,8 +12,8 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import com.imsweb.staging.Staging;
 import com.imsweb.staging.StagingDataProvider;
@@ -34,13 +34,13 @@ import com.imsweb.staging.eod.EodStagingData.EodOutput;
 import com.imsweb.staging.eod.EodStagingData.EodStagingInputBuilder;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class EodStagingTest extends StagingTest {
+class EodStagingTest extends StagingTest {
 
-    @BeforeClass
+    @BeforeAll
     public static void init() {
         _STAGING = Staging.getInstance(EodDataProvider.getInstance(EodDataProvider.EodVersion.LATEST));
     }
@@ -61,7 +61,7 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
-    public void testBasicInitialization() {
+    void testBasicInitialization() {
         assertThat(_STAGING.getSchemaIds()).hasSize(121);
         assertThat(_STAGING.getTableIds().size() > 0).isTrue();
 
@@ -70,7 +70,7 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
-    public void testVersionInitializationTypes() {
+    void testVersionInitializationTypes() {
         Staging staging10 = Staging.getInstance(EodDataProvider.getInstance(EodDataProvider.EodVersion.V2_1));
         assertThat(staging10.getVersion()).isEqualTo(EodDataProvider.EodVersion.LATEST.getVersion());
 
@@ -79,13 +79,13 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
-    public void testDescriminatorKeys() {
+    void testDescriminatorKeys() {
         assertThat(_STAGING.getSchema("nasopharynx").getSchemaDiscriminators()).containsOnly("discriminator_1");
         assertThat(_STAGING.getSchema("oropharynx_p16_neg").getSchemaDiscriminators()).containsOnly("discriminator_1", "discriminator_2");
     }
 
     @Test
-    public void testSchemaSelection() {
+    void testSchemaSelection() {
         // test bad values
         List<Schema> lookup = _STAGING.lookupSchema(new SchemaLookup());
         assertThat(lookup).isEmpty();
@@ -165,7 +165,7 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
-    public void testDiscriminatorInputs() {
+    void testDiscriminatorInputs() {
         Set<String> discriminators = new HashSet<>();
         _STAGING.getSchemaIds().stream()
                 .map(schemaId -> _STAGING.getSchema(schemaId))
@@ -177,7 +177,7 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
-    public void testLookupCache() {
+    void testLookupCache() {
         // do the same lookup twice
         List<Schema> lookup = _STAGING.lookupSchema(new EodSchemaLookup("C629", "9231"));
         assertThat(lookup).hasSize(1);
@@ -197,7 +197,7 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
-    public void testFindTableRow() {
+    void testFindTableRow() {
         assertThat(_STAGING.findMatchingTableRow("tumor_size_clinical_60979", "size_clin", "00X")).isNull();
 
         // null maps to blank
@@ -209,7 +209,7 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
-    public void testStageUrethra() {
+    void testStageUrethra() {
         EodStagingData data = new EodStagingInputBuilder()
                 .withInput(EodInput.PRIMARY_SITE, "C250")
                 .withInput(EodInput.HISTOLOGY, "8154")
@@ -241,7 +241,7 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
-    public void testStageDefaultSsdi() {
+    void testStageDefaultSsdi() {
         EodStagingData data = new EodStagingInputBuilder()
                 .withInput(EodInput.PRIMARY_SITE, "C502")
                 .withInput(EodInput.HISTOLOGY, "8500")
@@ -256,7 +256,7 @@ public class EodStagingTest extends StagingTest {
                 .build();
 
         // add SSDIs
-        // - Lymph Nodes Pos Axillary Level I-II: leave blank, should default to X8)
+        // - Lymph Nodes Pos Axillary Level I-II: leave blank, should default to X8
         // - Oncotype DX Recur Score: leave blank, should default to XX9
         data.setInput("er", "1");
         data.setInput("pr", "0");
@@ -283,7 +283,7 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
-    public void testBadLookupInStage() {
+    void testBadLookupInStage() {
         EodStagingData data = new EodStagingData();
 
         // if site/hist are not supplied, no lookup
@@ -308,7 +308,7 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
-    public void testInvolvedTables() {
+    void testInvolvedTables() {
         Set<String> tables = _STAGING.getInvolvedTables("adnexa_uterine_other");
 
         assertThat(tables).containsOnly("seer_mets_48348", "nodes_dcc", "grade_clinical_standard_non_ajcc_32473", "grade_pathological_standard_non_ajcc_5627",
@@ -318,21 +318,21 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
-    public void testInvolvedSchemas() {
+    void testInvolvedSchemas() {
         Set<String> schemas = _STAGING.getInvolvedSchemas("her2_summary_30512");
 
         assertThat(schemas).isEqualTo(new HashSet<>(Collections.singletonList("breast")));
     }
 
     @Test
-    public void testGetInputs() {
+    void testGetInputs() {
         assertThat(_STAGING.getInputs(_STAGING.getSchema("adnexa_uterine_other"))).containsOnly("eod_mets", "site", "hist", "eod_primary_tumor", "eod_regional_nodes");
         assertThat(_STAGING.getInputs(_STAGING.getSchema("testis"))).containsOnly("eod_mets", "site", "hist", "nodes_pos", "s_category_path",
                 "eod_primary_tumor", "s_category_clin", "eod_regional_nodes");
     }
 
     @Test
-    public void testIsCodeValid() {
+    void testIsCodeValid() {
         // test bad parameters for schema or field
         assertThat(_STAGING.isCodeValid("bad_schema_name", "site", "C509")).isFalse();
         assertThat(_STAGING.isCodeValid("testis", "bad_field_name", "C509")).isFalse();
@@ -357,7 +357,7 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
-    public void testIsContextValid() {
+    void testIsContextValid() {
         EodStagingData data = new EodStagingData();
 
         data.setInput(Staging.CTX_YEAR_CURRENT, "2018");
@@ -372,7 +372,7 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
-    public void testGetSchemaIds() {
+    void testGetSchemaIds() {
         Set<String> algorithms = _STAGING.getSchemaIds();
 
         assertThat(algorithms.size() > 0).isTrue();
@@ -380,7 +380,7 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
-    public void testGetTableIds() {
+    void testGetTableIds() {
         Set<String> tables = _STAGING.getTableIds();
 
         assertThat(tables.size() > 0).isTrue();
@@ -388,14 +388,14 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
-    public void testGetSchema() {
+    void testGetSchema() {
         assertThat(_STAGING.getSchema("bad_schema_name")).isNull();
         assertThat(_STAGING.getSchema("brain")).isNotNull();
         assertThat(_STAGING.getSchema("brain").getName()).isEqualTo("Brain");
     }
 
     @Test
-    public void testLookupOutputs() {
+    void testLookupOutputs() {
         EodSchemaLookup lookup = new EodSchemaLookup("C680", "8590");
         List<Schema> lookups = _STAGING.lookupSchema(lookup);
         assertThat(lookups).hasSize(2);
@@ -414,7 +414,7 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
-    public void testEncoding() {
+    void testEncoding() {
         Table table = _STAGING.getTable("serum_alb_pretx_level_58159");
 
         assertThat(table).isNotNull();
@@ -430,7 +430,7 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
-    public void testContentReturnedForInvalidInput() {
+    void testContentReturnedForInvalidInput() {
         EodStagingData data = new EodStagingInputBuilder()
                 .withInput(EodInput.PRIMARY_SITE, "C713")
                 .withInput(EodInput.HISTOLOGY, "8020")
@@ -452,7 +452,7 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
-    public void testContentNotReturnedForInvalidYear() {
+    void testContentNotReturnedForInvalidYear() {
         EodStagingData data = new EodStagingInputBuilder()
                 .withInput(EodInput.PRIMARY_SITE, "C713")
                 .withInput(EodInput.HISTOLOGY, "8020")
@@ -473,7 +473,7 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
-    public void testGlossary() {
+    void testGlossary() {
         assertEquals(23, _STAGING.getGlossaryTerms().size());
         GlossaryDefinition entry = _STAGING.getGlossaryDefinition("Medulla");
         assertNotNull(entry);
@@ -489,7 +489,7 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
-    public void testMetadata() {
+    void testMetadata() {
         Schema urethra = _STAGING.getSchema("urethra");
         assertNotNull(urethra);
 
@@ -505,7 +505,7 @@ public class EodStagingTest extends StagingTest {
     }
 
     @Test
-    public void testCachedSiteAndHistology() {
+    void testCachedSiteAndHistology() {
         StagingDataProvider provider = getProvider();
         assertThat(provider.getValidSites().size() > 0).isTrue();
         assertThat(provider.getValidHistologies().size() > 0).isTrue();
