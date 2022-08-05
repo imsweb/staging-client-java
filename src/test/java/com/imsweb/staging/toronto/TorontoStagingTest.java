@@ -15,8 +15,8 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import com.imsweb.staging.Staging;
 import com.imsweb.staging.StagingDataProvider;
@@ -36,9 +36,9 @@ import com.imsweb.staging.toronto.TorontoStagingData.TorontoStagingInputBuilder;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TorontoStagingTest extends StagingTest {
+class TorontoStagingTest extends StagingTest {
 
-    @BeforeClass
+    @BeforeAll
     public static void init() {
         _STAGING = Staging.getInstance(TorontoDataProvider.getInstance(TorontoVersion.V0_1));
     }
@@ -59,7 +59,7 @@ public class TorontoStagingTest extends StagingTest {
     }
 
     @Test
-    public void testBasicInitialization() {
+    void testBasicInitialization() {
         assertThat(_STAGING.getSchemaIds()).hasSize(35);
         assertThat(_STAGING.getTableIds().size() > 0).isTrue();
 
@@ -68,7 +68,7 @@ public class TorontoStagingTest extends StagingTest {
     }
 
     @Test
-    public void testVersionInitializationTypes() {
+    void testVersionInitializationTypes() {
         Staging staging10 = Staging.getInstance(TorontoDataProvider.getInstance(TorontoVersion.V0_1));
         assertThat(staging10.getVersion()).isEqualTo(TorontoVersion.LATEST.getVersion());
 
@@ -77,7 +77,7 @@ public class TorontoStagingTest extends StagingTest {
     }
 
     @Test
-    public void testDescriminatorKeys() {
+    void testDescriminatorKeys() {
         assertThat(_STAGING.getSchema("acute_myeloid_leukemia").getSchemaDiscriminators()).containsOnly("age_dx");
         assertThat(_STAGING.getSchema("ovarian").getSchemaDiscriminators()).containsOnly("age_dx", "behavior");
 
@@ -111,7 +111,7 @@ public class TorontoStagingTest extends StagingTest {
     }
 
     @Test
-    public void testInputAndOutput() {
+    void testInputAndOutput() {
         Set<String> inputs = new HashSet<>();
         Set<String> outputs = new HashSet<>();
         _STAGING.getSchemaIds().stream()
@@ -130,7 +130,7 @@ public class TorontoStagingTest extends StagingTest {
     }
 
     @Test
-    public void testSchemaSelection() {
+    void testSchemaSelection() {
         // test bad values
         List<Schema> lookup = _STAGING.lookupSchema(new SchemaLookup());
         assertThat(lookup).isEmpty();
@@ -175,7 +175,7 @@ public class TorontoStagingTest extends StagingTest {
     }
 
     @Test
-    public void testDiscriminatorInputs() {
+    void testDiscriminatorInputs() {
         Set<String> discriminators = new HashSet<>();
         _STAGING.getSchemaIds().stream()
                 .map(schemaId -> _STAGING.getSchema(schemaId))
@@ -187,7 +187,7 @@ public class TorontoStagingTest extends StagingTest {
     }
 
     @Test
-    public void testLookupCache() {
+    void testLookupCache() {
         final String site = "C710";
         final String hist = "9392";
         final String schemaId = "ependymoma";
@@ -211,7 +211,7 @@ public class TorontoStagingTest extends StagingTest {
     }
 
     @Test
-    public void testFindTableRow() {
+    void testFindTableRow() {
         final String tableId = "toronto_m_65862";
         final String colId = "eod_mets";
 
@@ -228,7 +228,7 @@ public class TorontoStagingTest extends StagingTest {
     }
 
     @Test
-    public void testStageOvarian() {
+    void testStageOvarian() {
         TorontoStagingData data = new TorontoStagingInputBuilder()
                 .withInput(TorontoInput.PRIMARY_SITE, "C569")
                 .withInput(TorontoInput.HISTOLOGY, "9081")
@@ -269,7 +269,7 @@ public class TorontoStagingTest extends StagingTest {
     }
 
     @Test
-    public void testBadLookupInStage() {
+    void testBadLookupInStage() {
         TorontoStagingData data = new TorontoStagingData();
         data.setInput(TorontoInput.AGE_DX, "15");
 
@@ -308,7 +308,7 @@ public class TorontoStagingTest extends StagingTest {
     }
 
     @Test
-    public void testInvolvedTables() {
+    void testInvolvedTables() {
         Set<String> tables = _STAGING.getInvolvedTables("testicular");
 
         assertThat(tables).containsOnly("toronto_n_21728",
@@ -338,21 +338,21 @@ public class TorontoStagingTest extends StagingTest {
     }
 
     @Test
-    public void testInvolvedSchemas() {
+    void testInvolvedSchemas() {
         Set<String> schemas = _STAGING.getInvolvedSchemas("s_category_clinical_11368");
 
         assertThat(schemas).isEqualTo(new HashSet<>(Collections.singletonList("testicular")));
     }
 
     @Test
-    public void testGetInputs() {
+    void testGetInputs() {
         assertThat(_STAGING.getInputs(_STAGING.getSchema("nhl_nos"))).containsOnly("site", "hist", "age_dx", "behavior");
         assertThat(_STAGING.getInputs(_STAGING.getSchema("testicular"))).containsOnly("eod_mets", "site", "hist",
                 "nodes_pos", "age_dx", "s_category_path", "schema_id", "eod_primary_tumor", "s_category_clin", "behavior", "eod_regional_nodes");
     }
 
     @Test
-    public void testIsCodeValid() {
+    void testIsCodeValid() {
         // test bad parameters for schema or field
         assertThat(_STAGING.isCodeValid("bad_schema_name", "site", "C509")).isFalse();
         assertThat(_STAGING.isCodeValid("testicular", "bad_field_name", "C509")).isFalse();
@@ -379,14 +379,14 @@ public class TorontoStagingTest extends StagingTest {
     }
 
     @Test
-    public void testGetSchema() {
+    void testGetSchema() {
         assertThat(_STAGING.getSchema("bad_schema_name")).isNull();
         assertThat(_STAGING.getSchema("hepatoblastoma")).isNotNull();
         assertThat(_STAGING.getSchema("hepatoblastoma").getName()).isEqualTo("Hepatoblastoma");
     }
 
     @Test
-    public void testLookupOutputs() {
+    void testLookupOutputs() {
         TorontoSchemaLookup lookup = new TorontoSchemaLookup("C569", "9091");
         List<Schema> lookups = _STAGING.lookupSchema(lookup);
         assertThat(lookups).hasSize(2);
@@ -405,7 +405,7 @@ public class TorontoStagingTest extends StagingTest {
     }
 
     @Test
-    public void testGlossary() {
+    void testGlossary() {
         assertThat(_STAGING.getGlossaryTerms()).isNotEmpty();
         GlossaryDefinition entry = _STAGING.getGlossaryDefinition("Cortex");
         assertThat(entry).isNotNull();
@@ -416,7 +416,7 @@ public class TorontoStagingTest extends StagingTest {
     }
 
     @Test
-    public void testMetadata() {
+    void testMetadata() {
         Schema schema = _STAGING.getSchema("testicular");
         assertThat(schema).isNotNull();
 
@@ -428,7 +428,7 @@ public class TorontoStagingTest extends StagingTest {
     }
 
     @Test
-    public void testCachedSiteAndHistology() {
+    void testCachedSiteAndHistology() {
         StagingDataProvider provider = getProvider();
         assertThat(provider.getValidSites().size() > 0).isTrue();
         assertThat(provider.getValidHistologies().size() > 0).isTrue();
