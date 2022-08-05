@@ -182,10 +182,16 @@
   "outputs" : [ {
     "key" : "toronto_id",
     "name" : "Toronto ID",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3977,
+    "naaccr_xml_id" : "torontoId",
     "default" : "10c1"
   }, {
     "key" : "toronto_version_number",
     "name" : "Toronto Version Number",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3980,
+    "naaccr_xml_id" : "torontoVersionNumber",
     "default" : "1"
   }, {
     "key" : "derived_version",
@@ -193,16 +199,28 @@
     "default" : "{{ctx_alg_version}}"
   }, {
     "key" : "toronto_t",
-    "name" : "Derived Toronto T"
+    "name" : "Derived Toronto T",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3965,
+    "naaccr_xml_id" : "derivedTorontoT"
   }, {
     "key" : "toronto_n",
-    "name" : "Derived Toronto N"
+    "name" : "Derived Toronto N",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3966,
+    "naaccr_xml_id" : "derivedTorontoN"
   }, {
     "key" : "toronto_m",
-    "name" : "Derived Toronto M"
+    "name" : "Derived Toronto M",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3967,
+    "naaccr_xml_id" : "derivedTorontoM"
   }, {
     "key" : "toronto_group",
-    "name" : "Derived Toronto Stage Group"
+    "name" : "Derived Toronto Stage Group",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3968,
+    "naaccr_xml_id" : "derivedTorontoStageGroup"
   } ],
   "mappings" : [ {
     "id" : "toronto_stage",
@@ -243,6 +261,6 @@
     } ]
   } ],
   "involved_tables" : [ "toronto_n_21728", "age_at_diagnosis_validation_3881", "toronto_t_57044", "toronto_m_65862", "combined_s_category_15139", "schema_selection_testicular", "hcg_post_orchiectomy_range_2422", "schema_id_42744", "s_category_clinical_11368", "nodes_pos_fpa", "hcg_pre_orchiectomy_range_1551", "toronto_stage_81706", "primary_site", "eod_primary_tumor_63650", "s_category_pathological_46197", "histology", "ldh_pre_orchiectomy_range_4903", "afp_alpha_fetoprotein_pre_orchiectomy_range_33270", "year_dx_validation", "eod_mets_68192", "behavior", "afp_alpha_fetoprotein_post_orchiectomy_range_40524", "eod_regional_nodes_4689", "ldh_post_orchiectomy_range_81426" ],
-  "last_modified" : "2022-07-14T21:26:52.539Z",
+  "last_modified" : "2022-08-04T18:22:47.961Z",
   "on_invalid_input" : "CONTINUE"
 }

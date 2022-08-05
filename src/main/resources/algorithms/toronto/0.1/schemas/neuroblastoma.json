@@ -4,8 +4,8 @@
   "version" : "0.1",
   "name" : "Neuroblastoma",
   "title" : "Neuroblastoma",
-  "description" : "JENNIFER: notes have to be cleaned up, just left them here as a reminder of the pattern in EOD\n- Derived risk level is currently using Age by year (0 for 0-12 months, 1 for 12-18 months, 2+ for 18+ months.  clearly not perfect but i wasn't sure what else to do.\n- also, you only defined High Risk.   the others are guesses and need to be corrected.",
-  "notes" : "9490, 9500: C000-C809 (all ages)\n\n**Note 1:** The following sources were used in the development of this schema\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)",
+  "description" : "- Derived risk level is currently using Age by year (0 for 0-12 months, 1 for 12-18 months, 2+ for 18+ months.  clearly not perfect but i wasn't sure what else to do.\n- also, you only defined High Risk.   the others are guesses and need to be corrected.\n\nJLR: Working on the algorithm and will get back to you.",
+  "notes" : "9490, 9500: C000-C809 (all ages)\n\n**Note 1:** The following sources were used in the development of this schema\n* Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022\nhttps://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf",
   "schema_selection_table" : "schema_selection_neuroblastoma",
   "schema_discriminators" : [ "behavior" ],
   "inputs" : [ {
@@ -46,6 +46,9 @@
   }, {
     "key" : "ingrss",
     "name" : "International Neuroblastoma Risk Group Staging System",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3970,
+    "naaccr_xml_id" : "intlNeuroblastomaRiskGrpStgSys",
     "table" : "ingrss_28597",
     "used_for_staging" : true,
     "metadata" : [ {
@@ -56,6 +59,9 @@
   }, {
     "key" : "n_myc_amplification",
     "name" : "n-MYC Amplification",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3973,
+    "naaccr_xml_id" : "nMycAcmplification",
     "table" : "n_myc_amplification_57417",
     "used_for_staging" : true,
     "metadata" : [ {
@@ -66,6 +72,9 @@
   }, {
     "key" : "shimada_classification",
     "name" : "Shimada Classification",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3974,
+    "naaccr_xml_id" : "shimadaClassification",
     "table" : "shimada_classification_77931",
     "used_for_staging" : true,
     "metadata" : [ {
@@ -76,6 +85,9 @@
   }, {
     "key" : "dna_ploidy",
     "name" : "DNA Ploidy",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3962,
+    "naaccr_xml_id" : "dnaPloidy",
     "table" : "dna_ploidy_64062",
     "used_for_staging" : true,
     "metadata" : [ {
@@ -87,10 +99,16 @@
   "outputs" : [ {
     "key" : "toronto_id",
     "name" : "Toronto ID",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3977,
+    "naaccr_xml_id" : "torontoId",
     "default" : "4a"
   }, {
     "key" : "toronto_version_number",
     "name" : "Toronto Version Number",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3980,
+    "naaccr_xml_id" : "torontoVersionNumber",
     "default" : "1"
   }, {
     "key" : "derived_version",
@@ -99,22 +117,37 @@
   }, {
     "key" : "toronto_t",
     "name" : "Derived Toronto T",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3965,
+    "naaccr_xml_id" : "derivedTorontoT",
     "default" : "88"
   }, {
     "key" : "toronto_n",
     "name" : "Derived Toronto N",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3966,
+    "naaccr_xml_id" : "derivedTorontoN",
     "default" : "88"
   }, {
     "key" : "toronto_m",
     "name" : "Derived Toronto M",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3967,
+    "naaccr_xml_id" : "derivedTorontoM",
     "default" : "88"
   }, {
     "key" : "toronto_group",
     "name" : "Derived Toronto Stage Group",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3968,
+    "naaccr_xml_id" : "derivedTorontoStageGroup",
     "default" : "88"
   }, {
     "key" : "derived_risk_level",
     "name" : "Derived Risk Level",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3964,
+    "naaccr_xml_id" : "derivedRiskLevel",
     "metadata" : [ {
       "name" : "SSDI"
     } ]
@@ -133,6 +166,6 @@
     } ]
   } ],
   "involved_tables" : [ "primary_site", "n_myc_amplification_57417", "histology", "age_at_diagnosis_validation_3881", "derived_risk_level_56526", "shimada_classification_77931", "year_dx_validation", "schema_selection_neuroblastoma", "ingrss_28597", "behavior", "dna_ploidy_64062" ],
-  "last_modified" : "2022-08-02T18:37:58.852Z",
+  "last_modified" : "2022-08-05T15:22:28.035Z",
   "on_invalid_input" : "CONTINUE"
 }

@@ -4,8 +4,7 @@
   "version" : "0.1",
   "name" : "Chronic Myeloid Leukemia",
   "title" : "Chronic Myeloid Leukemia",
-  "description" : "JENNIFER: notes have to be cleaned up, just left them here as a reminder of the pattern in EOD",
-  "notes" : "9863, 9875-9876, 9950, 9961-9964: C000-C809 (ages 0-19)\n\n**Note 1:** The following sources were used in the development of this schema\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)",
+  "notes" : "9863, 9875-9876, 9950, 9961-9964: C000-C809 (ages 0-19)\n\n**Note 1:** The following sources were used in the development of this schema\n* Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022\nhttps://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf",
   "schema_selection_table" : "schema_selection_chronic_myeloid_leukemia",
   "schema_discriminators" : [ "age_dx" ],
   "inputs" : [ {
@@ -40,10 +39,16 @@
   "outputs" : [ {
     "key" : "toronto_id",
     "name" : "Toronto ID",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3977,
+    "naaccr_xml_id" : "torontoId",
     "default" : "1c"
   }, {
     "key" : "toronto_version_number",
     "name" : "Toronto Version Number",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3980,
+    "naaccr_xml_id" : "torontoVersionNumber",
     "default" : "1"
   }, {
     "key" : "derived_version",
@@ -52,21 +57,33 @@
   }, {
     "key" : "toronto_t",
     "name" : "Derived Toronto T",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3965,
+    "naaccr_xml_id" : "derivedTorontoT",
     "default" : "88"
   }, {
     "key" : "toronto_n",
     "name" : "Derived Toronto N",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3966,
+    "naaccr_xml_id" : "derivedTorontoN",
     "default" : "88"
   }, {
     "key" : "toronto_m",
     "name" : "Derived Toronto M",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3967,
+    "naaccr_xml_id" : "derivedTorontoM",
     "default" : "88"
   }, {
     "key" : "toronto_group",
     "name" : "Derived Toronto Stage Group",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3968,
+    "naaccr_xml_id" : "derivedTorontoStageGroup",
     "default" : "88"
   } ],
   "involved_tables" : [ "primary_site", "histology", "age_at_diagnosis_validation_3881", "year_dx_validation", "schema_selection_chronic_myeloid_leukemia" ],
-  "last_modified" : "2022-08-02T18:23:47.293Z",
+  "last_modified" : "2022-08-05T13:16:24.860Z",
   "on_invalid_input" : "CONTINUE"
 }

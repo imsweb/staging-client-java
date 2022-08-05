@@ -144,10 +144,16 @@
   "outputs" : [ {
     "key" : "toronto_id",
     "name" : "Toronto ID",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3977,
+    "naaccr_xml_id" : "torontoId",
     "default" : "9d"
   }, {
     "key" : "toronto_version_number",
     "name" : "Toronto Version Number",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3980,
+    "naaccr_xml_id" : "torontoVersionNumber",
     "default" : "1"
   }, {
     "key" : "derived_version",
@@ -155,20 +161,34 @@
     "default" : "{{ctx_alg_version}}"
   }, {
     "key" : "toronto_t",
-    "name" : "Derived Toronto T"
+    "name" : "Derived Toronto T",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3965,
+    "naaccr_xml_id" : "derivedTorontoT"
   }, {
     "key" : "toronto_n",
-    "name" : "Derived Toronto N"
+    "name" : "Derived Toronto N",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3966,
+    "naaccr_xml_id" : "derivedTorontoN"
   }, {
     "key" : "toronto_m",
-    "name" : "Derived Toronto M"
+    "name" : "Derived Toronto M",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3967,
+    "naaccr_xml_id" : "derivedTorontoM"
   }, {
     "key" : "toronto_group",
-    "name" : "Derived Toronto Stage Group"
+    "name" : "Derived Toronto Stage Group",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3968,
+    "naaccr_xml_id" : "derivedTorontoStageGroup"
   }, {
     "key" : "toronto_grade",
     "name" : "Toronto Grade",
-    "naaccr_item" : 3976
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3976,
+    "naaccr_xml_id" : "torontoGrade"
   } ],
   "mappings" : [ {
     "id" : "toronto_stage",
@@ -213,6 +233,6 @@
     } ]
   } ],
   "involved_tables" : [ "age_at_diagnosis_validation_3881", "eod_primary_tumor_83844", "grade_post_therapy_path_yp_40521", "toronto_stage_99818", "grade_pathological_62063", "grade_clinical_70093", "eod_regional_nodes_73651", "toronto_grade_30589", "toronto_n_86566", "primary_site", "histology", "toronto_m_27101", "year_dx_validation", "toronto_t_78451", "eod_mets_7171", "tumor_size_summary_47973", "grade_post_therapy_clin_yc_55468", "schema_selection_non_rhabdomyosarcoma_other_specified", "combined_grade_27592" ],
-  "last_modified" : "2022-08-03T18:25:03.244Z",
+  "last_modified" : "2022-08-04T18:05:11.476Z",
   "on_invalid_input" : "CONTINUE"
 }

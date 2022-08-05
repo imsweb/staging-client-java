@@ -31,6 +31,9 @@
   }, {
     "key" : "m_category",
     "name" : "M Category",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3972,
+    "naaccr_xml_id" : "mCategory",
     "table" : "m_category_82562",
     "used_for_staging" : false,
     "metadata" : [ {
@@ -42,10 +45,16 @@
   "outputs" : [ {
     "key" : "toronto_id",
     "name" : "Toronto ID",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3977,
+    "naaccr_xml_id" : "torontoId",
     "default" : "3c4"
   }, {
     "key" : "toronto_version_number",
     "name" : "Toronto Version Number",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3980,
+    "naaccr_xml_id" : "torontoVersionNumber",
     "default" : "1"
   }, {
     "key" : "derived_version",
@@ -54,21 +63,33 @@
   }, {
     "key" : "toronto_t",
     "name" : "Derived Toronto T",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3965,
+    "naaccr_xml_id" : "derivedTorontoT",
     "default" : "88"
   }, {
     "key" : "toronto_n",
     "name" : "Derived Toronto N",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3966,
+    "naaccr_xml_id" : "derivedTorontoN",
     "default" : "88"
   }, {
     "key" : "toronto_m",
     "name" : "Derived Toronto M",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3967,
+    "naaccr_xml_id" : "derivedTorontoM",
     "default" : "88"
   }, {
     "key" : "toronto_group",
     "name" : "Derived Toronto Stage Group",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3968,
+    "naaccr_xml_id" : "derivedTorontoStageGroup",
     "default" : "88"
   } ],
   "involved_tables" : [ "primary_site", "histology", "year_dx_validation", "schema_selection_medulloblastoma_atypical_teratoid_rhabdoid", "m_category_82562" ],
-  "last_modified" : "2022-08-02T18:40:17.113Z",
+  "last_modified" : "2022-08-04T15:51:35.636Z",
   "on_invalid_input" : "CONTINUE"
 }

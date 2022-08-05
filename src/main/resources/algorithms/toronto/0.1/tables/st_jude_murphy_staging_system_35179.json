@@ -5,7 +5,8 @@
   "name" : "St. Jude/Murphy Staging System",
   "title" : "St. Jude/Murphy Staging System",
   "notes" : "**Note 1:** **Collect for all years at this time** This SSDI is effective for diagnosis years xxxx    \n* For cases diagnosed xxxx-xxxx, leave this SSDI blank\n\n**Note 2:** Physician statement of the St Jude/Murphy stage can be used to code this data item\n\n**Note 3:** If there is more than one St Jude/Murphy stage provided, code the stage documented prior to treatment. \n* If no stage is provided before treatment, or it’s unknown if that stage is prior to treatment, then code the available stage\n\n**Note 4:** Extensive disease (Stage III) typically exhibits spread to para-aortic and retro-peritoneal areas by implants and plaques in mesentery or peritoneum, or by direct infiltration of structures adjacent to the primary tumor. Ascites may be present, and complete resection of all gross tumor is not possible.",
-  "last_modified" : "2022-06-29T22:38:18.038Z",
+  "footnotes" : "(1)\tAitken JF, Youlden D, O’Neill L, Gupta S, Frazier AL, eds. Childhood cancer staging for population registries according to the Toronto Childhood Cancer Stage Guidelines – Version 2. Cancer Council Queensland and Cancer Australia: Brisbane, Australia; 2021.",
+  "last_modified" : "2022-08-05T13:18:01.502Z",
   "definition" : [ {
     "key" : "st_jude_murphy_staging",
     "name" : "Code",

@@ -47,6 +47,9 @@
   }, {
     "key" : "ews_fli1_fusion",
     "name" : "EWS-FLI1 fusion",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3969,
+    "naaccr_xml_id" : "ewsFli1Fusion",
     "table" : "ews_fli1_fusion_45751",
     "used_for_staging" : false,
     "metadata" : [ {
@@ -58,10 +61,16 @@
   "outputs" : [ {
     "key" : "toronto_id",
     "name" : "Toronto ID",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3977,
+    "naaccr_xml_id" : "torontoId",
     "default" : "8c"
   }, {
     "key" : "toronto_version_number",
     "name" : "Toronto Version Number",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3980,
+    "naaccr_xml_id" : "torontoVersionNumber",
     "default" : "1"
   }, {
     "key" : "derived_version",
@@ -70,18 +79,30 @@
   }, {
     "key" : "toronto_t",
     "name" : "Derived Toronto T",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3965,
+    "naaccr_xml_id" : "derivedTorontoT",
     "default" : "88"
   }, {
     "key" : "toronto_n",
     "name" : "Derived Toronto N",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3966,
+    "naaccr_xml_id" : "derivedTorontoN",
     "default" : "88"
   }, {
     "key" : "toronto_m",
     "name" : "Derived Toronto M",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3967,
+    "naaccr_xml_id" : "derivedTorontoM",
     "default" : "88"
   }, {
     "key" : "toronto_group",
-    "name" : "Derived Toronto Stage Group"
+    "name" : "Derived Toronto Stage Group",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3968,
+    "naaccr_xml_id" : "derivedTorontoStageGroup"
   } ],
   "mappings" : [ {
     "id" : "toronto_stage",
@@ -97,6 +118,6 @@
     } ]
   } ],
   "involved_tables" : [ "primary_site", "ews_fli1_fusion_45751", "toronto_stage_22694", "histology", "age_at_diagnosis_validation_3881", "schema_selection_malignant_bone_tumors_ewing", "year_dx_validation", "eod_mets_96483" ],
-  "last_modified" : "2022-08-02T18:25:21.364Z",
+  "last_modified" : "2022-08-04T15:43:10.021Z",
   "on_invalid_input" : "CONTINUE"
 }

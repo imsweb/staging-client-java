@@ -40,10 +40,16 @@
   "outputs" : [ {
     "key" : "toronto_id",
     "name" : "Toronto ID",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3977,
+    "naaccr_xml_id" : "torontoId",
     "default" : "7a"
   }, {
     "key" : "toronto_version_number",
     "name" : "Toronto Version Number",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3980,
+    "naaccr_xml_id" : "torontoVersionNumber",
     "default" : "1"
   }, {
     "key" : "derived_version",
@@ -52,18 +58,30 @@
   }, {
     "key" : "toronto_t",
     "name" : "Derived Toronto T",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3965,
+    "naaccr_xml_id" : "derivedTorontoT",
     "default" : "88"
   }, {
     "key" : "toronto_n",
     "name" : "Derived Toronto N",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3966,
+    "naaccr_xml_id" : "derivedTorontoN",
     "default" : "88"
   }, {
     "key" : "toronto_m",
     "name" : "Derived Toronto M",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3967,
+    "naaccr_xml_id" : "derivedTorontoM",
     "default" : "88"
   }, {
     "key" : "toronto_group",
-    "name" : "Derived Toronto Stage Group"
+    "name" : "Derived Toronto Stage Group",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3968,
+    "naaccr_xml_id" : "derivedTorontoStageGroup"
   } ],
   "mappings" : [ {
     "id" : "toronto_stage",
@@ -79,6 +97,6 @@
     } ]
   } ],
   "involved_tables" : [ "toronto_stage_51677", "eod_mets_78681", "primary_site", "histology", "year_dx_validation", "schema_selection_hepatoblastoma" ],
-  "last_modified" : "2022-08-02T18:44:10.236Z",
+  "last_modified" : "2022-08-04T13:59:25.273Z",
   "on_invalid_input" : "CONTINUE"
 }
