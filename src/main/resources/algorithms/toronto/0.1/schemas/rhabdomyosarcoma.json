@@ -4,8 +4,8 @@
   "version" : "0.1",
   "name" : "Rhabdomyosarcoma",
   "title" : "Rhabdomyosarcoma",
-  "description" : "JENNIFER: notes have to be cleaned up, just left them here as a reminder of the pattern in EOD\n- are these the favorable sites? C000-C148,C300-C329,C510-C609,C620-C669,C680-C689,C696",
-  "notes" : "8900-8905, 8920, 8991: C000-C809 (ages 0-19)\n8910, 8912: C000-C809 (all ages)\n\n**Note 1:** The following sources were used in the development of this schema\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)",
+  "description" : "- are these the favorable sites? C000-C148,C300-C329,C510-C609,C620-C669,C680-C689,C696",
+  "notes" : "8900-8905, 8920, 8991: C000-C809 (ages 0-19)\n8910, 8912: C000-C809 (all ages)\n\n**Note 1:** The following sources were used in the development of this schema\n* Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022\nhttps://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf",
   "schema_selection_table" : "schema_selection_rhabdomyosarcoma",
   "schema_discriminators" : [ "age_dx" ],
   "inputs" : [ {
@@ -75,6 +75,18 @@
     "naaccr_xml_id" : "schemaId",
     "table" : "schema_id_82597",
     "used_for_staging" : true
+  }, {
+    "key" : "high_risk_cytogenetics",
+    "name" : "High Risk Cytogenetics",
+    "naaccr_item" : 3857,
+    "naaccr_xml_id" : "highRiskCytogenetics",
+    "table" : "high_risk_cytogenetics_34378",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
   } ],
   "outputs" : [ {
     "key" : "toronto_id",
@@ -153,7 +165,7 @@
       "outputs" : [ "toronto_group" ]
     } ]
   } ],
-  "involved_tables" : [ "schema_id_82597", "toronto_n_81084", "age_at_diagnosis_validation_3881", "toronto_t_65696", "toronto_m_27988", "schema_selection_rhabdomyosarcoma", "primary_site", "eod_regional_nodes_91361", "toronto_stage_49622", "histology", "year_dx_validation", "tumor_size_summary_47973", "eod_mets_98979", "eod_primary_tumor_50161" ],
-  "last_modified" : "2022-08-04T18:21:19.648Z",
+  "involved_tables" : [ "schema_id_82597", "toronto_n_81084", "age_at_diagnosis_validation_3881", "toronto_t_65696", "toronto_m_27988", "high_risk_cytogenetics_34378", "schema_selection_rhabdomyosarcoma", "primary_site", "eod_regional_nodes_91361", "toronto_stage_49622", "histology", "year_dx_validation", "tumor_size_summary_47973", "eod_mets_98979", "eod_primary_tumor_50161" ],
+  "last_modified" : "2022-08-09T14:11:10.387Z",
   "on_invalid_input" : "CONTINUE"
 }

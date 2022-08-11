@@ -4,7 +4,6 @@
   "version" : "0.1",
   "name" : "NHL: NOS",
   "title" : "NHL: NOS",
-  "description" : "JENNIFER: notes have to be cleaned up, just left them here as a reminder of the pattern in EOD\n- is there a calculated Toronto stage or just the collected St Judes?  if no Toronto, should it be blank (current)?\n\nTO DO: remove Toronto ID calc, Toronto Stage, and unused data items",
   "notes" : "9591: C000-C809 (ages 0-19)\n  \n**Note 1:** The following sources were used in the development of this schema\n* Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022\nhttps://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf",
   "schema_selection_table" : "schema_selection_nhl_nos",
   "schema_discriminators" : [ "age_dx", "behavior" ],
@@ -105,6 +104,6 @@
     "default" : "88"
   } ],
   "involved_tables" : [ "primary_site", "histology", "age_at_diagnosis_validation_3881", "schema_selection_nhl_nos", "year_dx_validation", "behavior", "st_jude_murphy_staging_system_35179" ],
-  "last_modified" : "2022-08-05T13:20:23.139Z",
+  "last_modified" : "2022-08-05T17:42:39.982Z",
   "on_invalid_input" : "CONTINUE"
 }

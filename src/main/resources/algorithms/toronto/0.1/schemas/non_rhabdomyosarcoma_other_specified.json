@@ -4,8 +4,7 @@
   "version" : "0.1",
   "name" : "Non-Rhabdomyosarcoma: Other specified",
   "title" : "Non-Rhabdomyosarcoma of soft tissue sarcomas: Other specified soft tissue sarcomas",
-  "description" : "JENNIFER: notes have to be cleaned up, just left them here as a reminder of the pattern in EOD",
-  "notes" : "8587, 8710–8713, 8806, 8831–8833, 8836, 8840–8842, 8850–8858, 8860–8862, 8870, 8880, 8881, 8890–8898, 8921, 8982, 8990, 9040–9044, 9120–9125, 9130–9133, 9135, 9136, 9141, 9142, 9161, 9170–9175, 9231, 9251, 9252, 9373, 9581: C000-C399, C440-C768, C809 (ages 0-19)\n\n8830: C000-C399, C440-C768, C809 (ages 0-19)\n\n8963: C000-C639, C659-C699, C739-C768, C809 (ages 0-19)\n\n9180, 9210, 9220, 9240: C490-C499 (ages 0-19)\n\n9260: C000-C399, C470-C759 (ages 0-19)\n\n9364: C000-C399, C470-C639, C659-C699, C739-C768, C809 (ages 0-19)\n\n9365: C000-C399, C470-C639, C659-C768, C809 (ages 0-19)\n\n\n**Note 1:** The following sources were used in the development of this schema\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)",
+  "notes" : "8587, 8710–8713, 8806, 8831–8833, 8836, 8840–8842, 8850–8858, 8860–8862, 8870, 8880, 8881, 8890–8898, 8921, 8982, 8990, 9040–9044, 9120–9125, 9130–9133, 9135, 9136, 9141, 9142, 9161, 9170–9175, 9231, 9251, 9252, 9373, 9581: C000-C399, C440-C768, C809 (ages 0-19)\n\n8830: C000-C399, C440-C768, C809 (ages 0-19)\n\n8963: C000-C639, C659-C699, C739-C768, C809 (ages 0-19)\n\n9180, 9210, 9220, 9240: C490-C499 (ages 0-19)\n\n9260: C000-C399, C470-C759 (ages 0-19)\n\n9364: C000-C399, C470-C639, C659-C699, C739-C768, C809 (ages 0-19)\n\n9365: C000-C399, C470-C639, C659-C768, C809 (ages 0-19)\n\n\n**Note 1:** The following sources were used in the development of this schema\n* Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022\nhttps://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf",
   "schema_selection_table" : "schema_selection_non_rhabdomyosarcoma_other_specified",
   "schema_discriminators" : [ "age_dx" ],
   "inputs" : [ {
@@ -233,6 +232,6 @@
     } ]
   } ],
   "involved_tables" : [ "age_at_diagnosis_validation_3881", "eod_primary_tumor_83844", "grade_post_therapy_path_yp_40521", "toronto_stage_99818", "grade_pathological_62063", "grade_clinical_70093", "eod_regional_nodes_73651", "toronto_grade_30589", "toronto_n_86566", "primary_site", "histology", "toronto_m_27101", "year_dx_validation", "toronto_t_78451", "eod_mets_7171", "tumor_size_summary_47973", "grade_post_therapy_clin_yc_55468", "schema_selection_non_rhabdomyosarcoma_other_specified", "combined_grade_27592" ],
-  "last_modified" : "2022-08-04T18:05:11.476Z",
+  "last_modified" : "2022-08-05T17:43:29.007Z",
   "on_invalid_input" : "CONTINUE"
 }

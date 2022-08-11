@@ -4,8 +4,7 @@
   "version" : "0.1",
   "name" : "Ependymoma",
   "title" : "Ependymoma",
-  "description" : "JENNIFER: notes have to be cleaned up, just left them here as a reminder of the pattern in EOD",
-  "notes" : "9383, 9391-9394: C710-C729 (all ages)\n\n**Note 1:** The following sources were used in the development of this schema\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)",
+  "notes" : "9383, 9391-9394: C710-C729 (all ages)\n\n**Note 1:** The following sources were used in the development of this schema\n* Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022\nhttps://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf",
   "schema_selection_table" : "schema_selection_ependymoma",
   "inputs" : [ {
     "key" : "year_dx",
@@ -90,6 +89,6 @@
     "default" : "88"
   } ],
   "involved_tables" : [ "primary_site", "histology", "year_dx_validation", "schema_selection_ependymoma", "m_category_82562" ],
-  "last_modified" : "2022-08-04T13:58:04.635Z",
+  "last_modified" : "2022-08-05T17:39:11.697Z",
   "on_invalid_input" : "CONTINUE"
 }

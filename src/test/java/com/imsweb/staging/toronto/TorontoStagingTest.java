@@ -372,8 +372,8 @@ class TorontoStagingTest extends StagingTest {
         assertThat(_STAGING.isCodeValid(schemaId, "year_dx", "2018")).isTrue();
 
         // test valid and invalid fields
-        assertThat(_STAGING.isCodeValid(schemaId, "eod_mets", "10")).isTrue();
-        assertThat(_STAGING.isCodeValid(schemaId, "eod_mets", "09")).isFalse();
+        assertThat(_STAGING.isCodeValid(schemaId, "m_category", "1")).isTrue();
+        assertThat(_STAGING.isCodeValid(schemaId, "m_category", "5")).isFalse();
         assertThat(_STAGING.isCodeValid(schemaId, "braf_mutational_analysis", "2")).isTrue();
         assertThat(_STAGING.isCodeValid(schemaId, "braf_mutational_analysis", "3")).isFalse();
     }

@@ -5,7 +5,8 @@
   "name" : "M Category",
   "title" : "M Category",
   "notes" : "**Note 1:** **Collect for all years at this time** This SSDI is effective for diagnosis years xxxx    \n* For cases diagnosed xxxx-xxxx, leave this SSDI blank\n\n**Note 2:** Physician statement of the M category can be used to code this data item.",
-  "last_modified" : "2022-07-06T18:42:53.761Z",
+  "footnotes" : "(1)\tAitken JF, Youlden D, O’Neill L, Gupta S, Frazier AL, eds. Childhood cancer staging for population registries according to the Toronto Childhood Cancer Stage Guidelines – Version 2. Cancer Council Queensland and Cancer Australia: Brisbane, Australia; 2021.",
+  "last_modified" : "2022-08-05T17:38:54.609Z",
   "definition" : [ {
     "key" : "m_category",
     "name" : "Code",

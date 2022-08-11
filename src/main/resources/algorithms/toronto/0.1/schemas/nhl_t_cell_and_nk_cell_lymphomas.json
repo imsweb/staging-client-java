@@ -2,8 +2,8 @@
   "id" : "nhl_t_cell_and_nk_cell_lymphomas",
   "algorithm" : "toronto",
   "version" : "0.1",
-  "name" : "NHL: T-cell and NK-cell lymphomas",
-  "title" : "NHL: T-cell and NK-cell lymphomas",
+  "name" : "NHL: Mature T-cell and NK-cell lymphomas",
+  "title" : "NHL: Mature T-cell and NK-cell lymphomas",
   "notes" : "9702, 9705, 9714-9717, 9724, 9767-9768, 9827: C000-C809 (ages 0-19)\n  \n**Note 1:** The following sources were used in the development of this schema\n* Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022\nhttps://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf",
   "schema_selection_table" : "schema_selection_nhl_t_cell_and_nk_cell_lymphomas",
   "schema_discriminators" : [ "age_dx", "behavior" ],
@@ -104,6 +104,6 @@
     "default" : "88"
   } ],
   "involved_tables" : [ "primary_site", "histology", "age_at_diagnosis_validation_3881", "year_dx_validation", "schema_selection_nhl_t_cell_and_nk_cell_lymphomas", "behavior", "st_jude_murphy_staging_system_35179" ],
-  "last_modified" : "2022-08-05T13:20:41.643Z",
+  "last_modified" : "2022-08-08T19:57:50.870Z",
   "on_invalid_input" : "CONTINUE"
 }

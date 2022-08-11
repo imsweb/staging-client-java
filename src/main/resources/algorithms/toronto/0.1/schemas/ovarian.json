@@ -4,8 +4,7 @@
   "version" : "0.1",
   "name" : "Ovarian",
   "title" : "Ovarian - Malignant Gonadal Germ Cell Tumors Copy",
-  "description" : "JENNIFER: notes have to be cleaned up, just left them here as a reminder of the pattern in EOD \n- are the T calculations correct for st other (for now and if the hists don't move)\n- are the stage group calculation correct?",
-  "notes" : "9060-9065, 9070-9073, 9080-9085, 9090, 9091, 9100-9101: C569 (ages 0-19)\n\n**Note 1:** The following sources were used in the development of this schema\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)",
+  "notes" : "9060-9065, 9070-9073, 9080-9085, 9090, 9091, 9100-9101: C569 (ages 0-19)\n\n**Note 1:** The following sources were used in the development of this schema\n* Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022\nhttps://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf",
   "schema_selection_table" : "schema_selection_ovarian",
   "schema_discriminators" : [ "age_dx", "behavior" ],
   "inputs" : [ {
@@ -153,6 +152,6 @@
     } ]
   } ],
   "involved_tables" : [ "age_at_diagnosis_validation_3881", "eod_primary_tumor_76435", "toronto_stage_43114", "schema_id_96387", "eod_mets_39190", "primary_site", "toronto_n_26872", "toronto_m_81745", "histology", "toronto_t_78796", "schema_selection_ovarian", "year_dx_validation", "behavior", "eod_regional_nodes_85773" ],
-  "last_modified" : "2022-08-04T18:07:28.882Z",
+  "last_modified" : "2022-08-05T17:54:25.129Z",
   "on_invalid_input" : "CONTINUE"
 }

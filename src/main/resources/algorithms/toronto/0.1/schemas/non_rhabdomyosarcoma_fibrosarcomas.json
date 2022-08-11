@@ -4,8 +4,7 @@
   "version" : "0.1",
   "name" : "Non-Rhabdomyosarcoma: Fibrosarcomas",
   "title" : "Non-Rhabdomyosarcoma of soft tissue sarcomas: Fibrosarcomas, peripheral nerve sheath tumors and other fibrous neoplasms",
-  "description" : "JENNIFER: notes have to be cleaned up, just left them here as a reminder of the pattern in EOD",
-  "notes" : "8810, 8811, 8813–8815, 8821, 8823, 8834–8835: C000-C399, C440-C768, C809 (ages 0-19)\n\n8820, 8822, 8824-8827, 9150, 9160, 9491, 9540-9571, 9580: C000-C809 (ages 0-19)\n\n**Note 1:** The following sources were used in the development of this schema\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)",
+  "notes" : "8810, 8811, 8813–8815, 8821, 8823, 8834–8835: C000-C399, C440-C768, C809 (ages 0-19)\n\n8820, 8822, 8824-8827, 9150, 9160, 9491, 9540-9571, 9580: C000-C809 (ages 0-19)\n\n**Note 1:** The following sources were used in the development of this schema\n* Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022\nhttps://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf",
   "schema_selection_table" : "schema_selection_non_rhabdomyosarcoma_fibrosarcomas",
   "schema_discriminators" : [ "age_dx" ],
   "inputs" : [ {
@@ -233,6 +232,6 @@
     } ]
   } ],
   "involved_tables" : [ "eod_regional_nodes_35852", "age_at_diagnosis_validation_3881", "eod_primary_tumor_26148", "grade_post_therapy_clin_yc_24726", "toronto_stage_99818", "toronto_grade_30589", "schema_selection_non_rhabdomyosarcoma_fibrosarcomas", "grade_clinical_64711", "toronto_n_86566", "eod_mets_5790", "primary_site", "histology", "grade_post_therapy_path_yp_993", "grade_pathological_36526", "toronto_m_27101", "year_dx_validation", "toronto_t_78451", "tumor_size_summary_47973", "combined_grade_27592" ],
-  "last_modified" : "2022-08-04T18:05:16.803Z",
+  "last_modified" : "2022-08-05T17:43:08.036Z",
   "on_invalid_input" : "CONTINUE"
 }
