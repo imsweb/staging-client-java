@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_medulloblastoma_atypical_teratoid_rhabdoid",
+  "algorithm" : "toronto",
+  "version" : "0.1",
+  "name" : "Schema Selection Medulloblastoma: Atypical teratoid/rhabdoid",
+  "title" : "Schema selection for Medulloblastoma: Atypical teratoid/rhabdoid",
+  "last_modified" : "2022-08-05T17:41:08.332Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C700-C729", "9508", "MATCH" ] ]
+}

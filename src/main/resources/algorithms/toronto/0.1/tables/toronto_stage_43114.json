@@ -1,0 +1,26 @@
+{
+  "id" : "toronto_stage_43114",
+  "algorithm" : "toronto",
+  "version" : "0.1",
+  "name" : "Toronto Stage",
+  "title" : "Toronto Stage",
+  "last_modified" : "2022-06-24T19:19:47.576Z",
+  "definition" : [ {
+    "key" : "toronto_t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "toronto_n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "toronto_m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "toronto_group",
+    "name" : "Toronto Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "T0,T1,T2,T2a", "N0", "M0", "VALUE:1" ], [ "T0,T1,T2,T2a", "NX", "M0", "VALUE:1" ], [ "T2b", "N0", "M0", "VALUE:2" ], [ "T2b", "NX", "M0", "VALUE:2" ], [ "T3", "N0", "M0", "VALUE:3" ], [ "T3", "NX", "M0", "VALUE:3" ], [ "TX", "N0", "M0", "VALUE:99" ], [ "TX", "NX", "M0", "VALUE:99" ], [ "*", "N1", "M0", "VALUE:3" ], [ "*", "*", "M1", "VALUE:4" ] ]
+}

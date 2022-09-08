@@ -1,0 +1,15 @@
+{
+  "id" : "eod_mets_96483",
+  "algorithm" : "toronto",
+  "version" : "0.1",
+  "name" : "EOD Mets",
+  "title" : "EOD Mets",
+  "notes" : "NOT a lookup (code/meaning); merely an expected value list\n\n00381: Bone Appendicular Skeleton\n00382: Bone Spine\n00383: Bone Pelvis\n00450: Soft Tissue Rare\n00459: Soft Tissue Other",
+  "last_modified" : "2022-06-24T16:10:28.311Z",
+  "definition" : [ {
+    "key" : "eod_mets",
+    "name" : "EOD M Code",
+    "type" : "INPUT"
+  } ],
+  "rows" : [ [ "00" ], [ "10" ], [ "30" ], [ "50" ], [ "70" ], [ "99" ] ]
+}

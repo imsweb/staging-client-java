@@ -14,7 +14,7 @@ public class EodUpdateFromAPI {
     private static final String _ALGORITHM = "eod";
 
     public static void main(String[] args) throws IOException {
-        UpdaterUtils.update(_ALGORITHM, "2.1", "c:/tmp/algorithms", new HashSet<>(Collections.singletonList("STAGING")));
+        UpdaterUtils.update(_ALGORITHM, "2.1", new HashSet<>(Collections.singletonList("STAGING")));
     }
 
 }

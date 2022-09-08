@@ -1,0 +1,18 @@
+{
+  "id" : "toronto_grade_30589",
+  "algorithm" : "toronto",
+  "version" : "0.1",
+  "name" : "Toronto Grade",
+  "title" : "Toronto Grade",
+  "last_modified" : "2022-07-07T16:51:25.548Z",
+  "definition" : [ {
+    "key" : "grade_combined",
+    "name" : "Grade Combined",
+    "type" : "INPUT"
+  }, {
+    "key" : "toronto_grade",
+    "name" : "Toronto Grade",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "1,A,L", "VALUE:1" ], [ "2,B,M", "VALUE:2" ], [ "3,4,5,C,D,E,H,S", "VALUE:3" ], [ "9", "VALUE:X" ] ]
+}

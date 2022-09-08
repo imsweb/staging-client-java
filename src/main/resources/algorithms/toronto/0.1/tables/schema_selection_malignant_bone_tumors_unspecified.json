@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_malignant_bone_tumors_unspecified",
+  "algorithm" : "toronto",
+  "version" : "0.1",
+  "name" : "Schema Selection Malignant Bone Tumors: Unspecified",
+  "title" : "Schema selection for Malignant Bone Tumors: Unspecified",
+  "last_modified" : "2022-08-05T17:37:47.558Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "age_dx",
+    "name" : "Age at Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C400-C419", "8000-8005, 8800, 8801, 8803-8805", "0-19", "MATCH" ] ]
+}

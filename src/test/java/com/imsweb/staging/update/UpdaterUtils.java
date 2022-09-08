@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -61,7 +62,7 @@ public final class UpdaterUtils {
     }
 
     @SuppressWarnings("ConstantConditions")
-    public static void update(String algorithm, String version, String baseDirectory, Set<String> glossaryCategories) throws IOException {
+    public static void update(String algorithm, String version, Set<String> glossaryCategories) throws IOException {
         Stopwatch stopwatch = Stopwatch.create();
 
         // convert set of strings to set of Enums; we can't expose the optional dependency Category class in the method signature.
@@ -115,12 +116,16 @@ public final class UpdaterUtils {
         }
         _LOG.info("{} valid schema idenfiers found.", schemaIds.size());
 
-        String schemaDir = baseDirectory + "/" + algorithm + "/" + version + "/schemas";
+        // get root algorithms directory in src/main/resources
+        Path resourceDirectory = Paths.get("src", "main", "resources");
+        String baseDirectory = resourceDirectory.toFile().getAbsolutePath() + "/algorithms/" + algorithm + "/" + version;
+
+        String schemaDir = baseDirectory + "/schemas";
         _LOG.info("Deleting all files from {}...", schemaDir);
         int count = purgeDirectory(new File(schemaDir));
         _LOG.info("Removed {} files", count);
 
-        String tableDir = baseDirectory + "/" + algorithm + "/" + version + "/tables";
+        String tableDir = baseDirectory + "/tables";
         _LOG.info("Deleting all files from {}...", tableDir);
         count = purgeDirectory(new File(tableDir));
         _LOG.info("Removed {} files", count);
@@ -166,7 +171,7 @@ public final class UpdaterUtils {
         _LOG.info("Saved schema IDs to {}/ids.txt", schemaDir);
 
         // build glossary
-        String glossaryDir = baseDirectory + "/" + algorithm + "/" + version + "/glossary";
+        String glossaryDir = baseDirectory + "/glossary";
         _LOG.info("Deleting all files from {}...", glossaryDir);
         count = purgeDirectory(new File(glossaryDir));
         _LOG.info("removed {} files", count);
