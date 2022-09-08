@@ -16,6 +16,7 @@ import org.zeroturnaround.zip.ZipUtil;
 import com.imsweb.staging.cs.CsDataProvider.CsVersion;
 import com.imsweb.staging.eod.EodDataProvider.EodVersion;
 import com.imsweb.staging.tnm.TnmDataProvider.TnmVersion;
+import com.imsweb.staging.toronto.TorontoDataProvider.TorontoVersion;
 
 /**
  * Create ZIP files of algorithms to include in releases
@@ -28,7 +29,7 @@ public class ZipAlgorithms {
         zipAlgorithm("cs", CsVersion.LATEST.getVersion());
         zipAlgorithm("tnm", TnmVersion.LATEST.getVersion());
         zipAlgorithm("eod_public", EodVersion.LATEST.getVersion());
-        //zipAlgorithm("toronto", TorontoVersion.LATEST.getVersion());
+        zipAlgorithm("toronto", TorontoVersion.LATEST.getVersion());
     }
 
     private static void zipAlgorithm(String algorithm, String version) throws IOException {
