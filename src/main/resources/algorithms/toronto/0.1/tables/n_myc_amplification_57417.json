@@ -5,7 +5,8 @@
   "name" : "n-MYC Amplification",
   "title" : "n-MYC Amplification",
   "notes" : "**Note 1:** **Collect for all years at this time** This SSDI is effective for diagnosis years xxxx    \n* For cases diagnosed xxxx-xxxx, leave this SSDI blank\n\n**Note 2:** Physician statement of n-MYC can be used to code this data item when no other information is available.",
-  "last_modified" : "2022-07-06T19:50:41.664Z",
+  "footnotes" : "(1) American Society of Clinical Oncology © 2009, The International Neuroblastoma Risk Group (INRG) Classification System: AN INRG Task Force Report; published by American Society of Clinical Oncology, 2009",
+  "last_modified" : "2022-09-06T20:08:12.707Z",
   "definition" : [ {
     "key" : "n_myc_amplification",
     "name" : "Code",

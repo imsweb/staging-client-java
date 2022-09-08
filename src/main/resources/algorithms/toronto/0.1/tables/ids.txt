@@ -4,6 +4,9 @@ age_at_diagnosis_validation_3881
 b_symptoms_95631
 behavior
 braf_mutational_analysis_15216
+calculate_age_in_months_category_91438
+calculate_months_since_birthmonth_86026
+chromosome_11q_status_53677
 chromosome_19q_status_19104
 chromosome_1p_status_97190
 chromosome_1q_status_14467
@@ -11,7 +14,7 @@ cns_involvement_24387
 combined_grade_27592
 combined_s_category_15139
 derived_ann_arbor_stage_81702
-derived_risk_level_56526
+derived_risk_level_69584
 dna_ploidy_64062
 eod_mets_39190
 eod_mets_5790
@@ -34,11 +37,15 @@ eod_regional_nodes_91361
 ews_fli1_fusion_45751
 grade_clinical_64711
 grade_clinical_70093
+grade_clinical_79675
 grade_pathological_36526
 grade_pathological_62063
+grade_pathological_63578
 grade_post_therapy_clin_yc_24726
 grade_post_therapy_clin_yc_55468
+grade_post_therapy_clin_yc_71514
 grade_post_therapy_path_yp_40521
+grade_post_therapy_path_yp_44929
 grade_post_therapy_path_yp_993
 hcg_post_orchiectomy_range_2422
 hcg_pre_orchiectomy_range_1551
@@ -49,6 +56,8 @@ irss_44416
 ldh_post_orchiectomy_range_81426
 ldh_pre_orchiectomy_range_4903
 m_category_82562
+month_of_birth_76328
+month_of_diagnosis_74026
 n_myc_amplification_57417
 nodes_pos_fpa
 primary_site

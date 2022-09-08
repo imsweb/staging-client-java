@@ -4,9 +4,8 @@
   "version" : "0.1",
   "name" : "Chromosome 1q Status",
   "title" : "Chromosome 1q Status: Gain of heterozygosity (GOH)",
-  "description" : "JENNIFER: need synonyms for Gain",
   "notes" : "**Note 1:** **Collect for all years at this time** This SSDI is effective for diagnosis years xxxx\n* For cases diagnosed xxxx-xxxx, leave this SSDI blank\n\n**Note 2:** Physician statement of Chromosome 1q gain can be used to code this data item.\n\n**Note 3:** This is a special molecular diagnostic test performed on tumor tissue to identify loss of genetic material normally found on the short arm of one of the patient's two copies of chromosome 1. A normal cell will contain two complete copies of each chromosome, one from each parent, and this normal state is termed heterozygous. Gain of heterozygosity (GOH) is an abnormal state reflecting gain of the whole arm of chromosome 1q following a chromosomal translocation event.",
-  "last_modified" : "2022-08-05T17:34:20.608Z",
+  "last_modified" : "2022-09-06T20:39:59.957Z",
   "definition" : [ {
     "key" : "chrom_1q_status",
     "name" : "Code",

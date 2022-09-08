@@ -85,7 +85,10 @@ public class TorontoStagingData extends StagingData {
         S_CATEGORY_PATH("s_category_path"),
         SIZE_SUMMARY("size_summary"),
         INGRSS("ingrss"),
-        B_SYMPTOMS("b_symptoms");
+        B_SYMPTOMS("b_symptoms"),
+        MONTH_DX("month_dx"),
+        MONTH_BIRTH("month_birth"),
+        CHROM_11Q_STATUS("chrom_11q_status");
 
         private final String _name;
 
