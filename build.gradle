@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
     id 'checkstyle'
-    id "com.github.spotbugs" version "5.0.8"
+    id "com.github.spotbugs" version "5.0.12"
     id 'jacoco'
     id 'maven-publish'
     id 'signing'
@@ -35,7 +35,7 @@ repositories {
 }
 
 dependencies {
-    spotbugs 'com.github.spotbugs:spotbugs:4.7.1'
+    spotbugs 'com.github.spotbugs:spotbugs:4.7.2'
 
     api "com.fasterxml.jackson.core:jackson-core:2.13.4"
     api "com.fasterxml.jackson.core:jackson-annotations:2.13.4"
