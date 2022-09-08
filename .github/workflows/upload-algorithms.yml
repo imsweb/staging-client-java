@@ -25,7 +25,9 @@ jobs:
 
       - name: Create algorithm zips
         if: ${{startsWith(github.ref, 'refs/tags/v') }}
-        run: ./gradlew zipAlgorithms
+        run: |
+          chmod +x gradlew
+          ./gradlew zipAlgorithms
 
       - name: Add algorithms to release
         uses: softprops/action-gh-release@v1
