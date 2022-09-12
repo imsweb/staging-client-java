@@ -249,6 +249,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_81470",
+      "inputs" : [ "site", "hist" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "tables" : [ {
@@ -269,7 +277,7 @@
       "outputs" : [ "ss2018_derived" ]
     } ]
   } ],
-  "involved_tables" : [ "tumor_size_clinical_full_19656", "tumor_size_summary_full_15510", "extension_bbr", "grade_pathological_40399", "nodes_dbi", "grade_post_therapy_path_36935", "nodes_pos_fpa", "schema_selection_soft_tissue_rare", "grade_clinical_41135", "primary_site", "grade_post_therapy_clin_1647", "histology", "nodes_exam_76029", "bone_invasion_96628", "eod_mets_20229", "year_dx_validation", "sex_19563", "lvi_full_56663", "summary_stage_rpa", "behavior", "ss2018_soft_tissue_31311", "tumor_size_pathological_full_93442" ],
-  "last_modified" : "2022-09-12T17:31:17.529Z",
+  "involved_tables" : [ "tumor_size_clinical_full_19656", "tumor_size_summary_full_15510", "extension_bbr", "ajcc_chapter_calculation_81470", "grade_pathological_40399", "nodes_dbi", "grade_post_therapy_path_36935", "nodes_pos_fpa", "schema_selection_soft_tissue_rare", "grade_clinical_41135", "primary_site", "grade_post_therapy_clin_1647", "histology", "nodes_exam_76029", "bone_invasion_96628", "eod_mets_20229", "year_dx_validation", "sex_19563", "lvi_full_56663", "summary_stage_rpa", "behavior", "ss2018_soft_tissue_31311", "tumor_size_pathological_full_93442" ],
+  "last_modified" : "2022-09-12T20:12:14.508Z",
   "on_invalid_input" : "CONTINUE"
 }

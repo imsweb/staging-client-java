@@ -323,6 +323,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_82941",
+      "inputs" : [ "hist" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -431,7 +439,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "radiation_surg_seq", "tumor_size_pathological_43328", "number_of_postive_pelvic_nodes_94512", "grade_clinical_83264", "nodes_pos_fpa", "parse_t_2177", "nodes_dfh", "eod_mets_26533", "tnm8_inclusions_tqi", "parse_n_67182", "peritoneal_cytology_with_primary_tumor_for_ss2018_t_88427", "histology", "nodes_exam_76029", "tumor_size_with_primary_tumor_for_ajcc_t_5707", "lvi_full_56663", "extension_bfm", "figo_stage_corpus_sarcoma_78807", "peritoneal_cytology_38674", "number_of_positive_para_aortic_nodes_62533", "ss2018_corpus_sarcoma_75896", "schema_selection_corpus_sarcoma", "tnm8_path_stage_ubu", "tumor_size_clinical_48894", "grade_pathological_4783", "grade_post_therapy_path_87571", "systemic_surg_seq", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "number_of_examined_para_aortic_nodes_38078", "grade_post_therapy_clin_21162", "number_of_examined_pelvic_nodes_60771", "year_dx_validation", "summary_stage_rpa", "tumor_size_summary_47973" ],
-  "last_modified" : "2022-09-12T17:31:14.549Z",
+  "involved_tables" : [ "radiation_surg_seq", "tumor_size_pathological_43328", "number_of_postive_pelvic_nodes_94512", "grade_clinical_83264", "ajcc_chapter_calculation_82941", "nodes_pos_fpa", "parse_t_2177", "nodes_dfh", "eod_mets_26533", "tnm8_inclusions_tqi", "parse_n_67182", "peritoneal_cytology_with_primary_tumor_for_ss2018_t_88427", "histology", "nodes_exam_76029", "tumor_size_with_primary_tumor_for_ajcc_t_5707", "lvi_full_56663", "extension_bfm", "figo_stage_corpus_sarcoma_78807", "peritoneal_cytology_38674", "number_of_positive_para_aortic_nodes_62533", "ss2018_corpus_sarcoma_75896", "schema_selection_corpus_sarcoma", "tnm8_path_stage_ubu", "tumor_size_clinical_48894", "grade_pathological_4783", "grade_post_therapy_path_87571", "systemic_surg_seq", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "number_of_examined_para_aortic_nodes_38078", "grade_post_therapy_clin_21162", "number_of_examined_pelvic_nodes_60771", "year_dx_validation", "summary_stage_rpa", "tumor_size_summary_47973" ],
+  "last_modified" : "2022-09-12T20:13:43.373Z",
   "on_invalid_input" : "CONTINUE"
 }

@@ -33,7 +33,7 @@
     "naaccr_item" : 523,
     "naaccr_xml_id" : "behaviorCodeIcdO3",
     "table" : "behavior",
-    "used_for_staging" : false
+    "used_for_staging" : true
   }, {
     "key" : "size_clin",
     "name" : "Tumor Size Clinical",
@@ -240,6 +240,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_83485",
+      "inputs" : [ "site", "hist", "behavior" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -348,7 +356,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "grade_clinical_26293", "grade_post_therapy_clin_53870", "radiation_surg_seq", "tumor_size_pathological_43328", "nodes_pos_fpa", "tnm8_inclusions_tqc", "parse_t_2177", "parse_n_67182", "histology", "nodes_exam_76029", "lvi_full_56663", "behavior", "grade_pathological_38051", "tumor_size_clinical_48894", "schema_selection_adrenal_gland", "eod_mets_13303", "seer_primary_tumor_44962", "tnm_8_path_stage_group_for_eod_6629", "systemic_surg_seq", "tumor_size_with_primary_tumor_for_ajcc_t_57728", "ss2018_adrenal_gland_including_net_adrenal_70096", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "year_dx_validation", "summary_stage_rpa", "tumor_size_summary_47973", "grade_post_therapy_path_93034", "eod_regional_nodes_22383" ],
-  "last_modified" : "2022-09-12T17:31:14.839Z",
+  "involved_tables" : [ "grade_clinical_26293", "grade_post_therapy_clin_53870", "radiation_surg_seq", "tumor_size_pathological_43328", "nodes_pos_fpa", "tnm8_inclusions_tqc", "parse_t_2177", "parse_n_67182", "histology", "nodes_exam_76029", "lvi_full_56663", "behavior", "ajcc_chapter_calculation_83485", "grade_pathological_38051", "tumor_size_clinical_48894", "schema_selection_adrenal_gland", "eod_mets_13303", "seer_primary_tumor_44962", "tnm_8_path_stage_group_for_eod_6629", "systemic_surg_seq", "tumor_size_with_primary_tumor_for_ajcc_t_57728", "ss2018_adrenal_gland_including_net_adrenal_70096", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "year_dx_validation", "summary_stage_rpa", "tumor_size_summary_47973", "grade_post_therapy_path_93034", "eod_regional_nodes_22383" ],
+  "last_modified" : "2022-09-12T20:13:43.552Z",
   "on_invalid_input" : "CONTINUE"
 }

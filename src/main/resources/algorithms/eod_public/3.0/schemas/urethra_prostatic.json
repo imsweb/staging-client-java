@@ -260,6 +260,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_75774",
+      "inputs" : [ "hist" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -368,7 +376,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "eod_mets_83665", "radiation_surg_seq", "tnm8_path_stage_uaz", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "urethra_prostatic_urethra_30106", "grade_post_therapy_path_55848", "histology", "nodes_exam_76029", "lvi_full_56663", "tumor_size_summary_63115", "behavior", "tumor_size_pathological_25597", "systemic_surg_seq", "tumor_size_clinical_60979", "tnm8_inclusions_62282", "parse_m_47057", "primary_site", "grade_pathological_59975", "eod_tnm_component_cleanup_58170", "seer_primary_tumor_59317", "grade_post_therapy_clin_68213", "year_dx_validation", "summary_stage_rpa", "grade_clinical_91989", "schema_selection_urethra_prostatic", "ss2018_urethra_14363", "nodes_dbu" ],
-  "last_modified" : "2022-09-12T17:31:14.735Z",
+  "involved_tables" : [ "eod_mets_83665", "radiation_surg_seq", "tnm8_path_stage_uaz", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "urethra_prostatic_urethra_30106", "grade_post_therapy_path_55848", "ajcc_chapter_calculation_75774", "histology", "nodes_exam_76029", "lvi_full_56663", "tumor_size_summary_63115", "behavior", "tumor_size_pathological_25597", "systemic_surg_seq", "tumor_size_clinical_60979", "tnm8_inclusions_62282", "parse_m_47057", "primary_site", "grade_pathological_59975", "eod_tnm_component_cleanup_58170", "seer_primary_tumor_59317", "grade_post_therapy_clin_68213", "year_dx_validation", "summary_stage_rpa", "grade_clinical_91989", "schema_selection_urethra_prostatic", "ss2018_urethra_14363", "nodes_dbu" ],
+  "last_modified" : "2022-09-12T20:13:43.491Z",
   "on_invalid_input" : "CONTINUE"
 }

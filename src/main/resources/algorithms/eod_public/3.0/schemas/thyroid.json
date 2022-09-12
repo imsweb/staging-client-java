@@ -33,7 +33,7 @@
     "naaccr_item" : 523,
     "naaccr_xml_id" : "behaviorCodeIcdO3",
     "table" : "behavior",
-    "used_for_staging" : false
+    "used_for_staging" : true
   }, {
     "key" : "age_dx",
     "name" : "Age at Diagnosis",
@@ -48,7 +48,7 @@
     "naaccr_xml_id" : "schemaDiscriminator1",
     "default" : "1",
     "table" : "thyroid_gland_thyroglossal_duct_21498",
-    "used_for_staging" : false,
+    "used_for_staging" : true,
     "metadata" : [ {
       "name" : "COC_REQUIRED"
     }, {
@@ -266,6 +266,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_46717",
+      "inputs" : [ "hist", "discriminator_1", "behavior" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -374,7 +382,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "radiation_surg_seq", "tumor_size_pathological_43328", "ss2018_thyroid_33058", "schema_selection_thyroid", "nodes_pos_fpa", "parse_t_2177", "tnm8_inclusions_71108", "parse_n_67182", "histology", "nodes_exam_76029", "eod_mets_91154", "age_at_diagnosis_validation_65093", "lvi_full_56663", "grade_post_therapy_clin_95734", "thyroid_gland_thyroglossal_duct_21498", "behavior", "ajcc_id_age_eod_stage_tnm_8_6558", "tnm_8_eod_stage_differentiated_age_55_and_older_23489", "eod_regional_nodes_29442", "grade_clinical_standard_94331", "tumor_size_clinical_48894", "tnm_8_eod_stage_thyroid_anaplastic_25166", "systemic_surg_seq", "tnm_8_eod_stage_thyroid_differentiated_age_less_than_55_15343", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "year_dx_validation", "grade_pathological_standard_94268", "summary_stage_rpa", "seer_primary_tumor_6275", "tumor_size_with_primary_tumor_for_ajcc_t_19033", "grade_post_therapy_path_32110", "tumor_size_summary_47973" ],
-  "last_modified" : "2022-09-12T17:31:15.080Z",
+  "involved_tables" : [ "radiation_surg_seq", "tumor_size_pathological_43328", "ss2018_thyroid_33058", "schema_selection_thyroid", "nodes_pos_fpa", "parse_t_2177", "tnm8_inclusions_71108", "parse_n_67182", "histology", "nodes_exam_76029", "eod_mets_91154", "age_at_diagnosis_validation_65093", "lvi_full_56663", "grade_post_therapy_clin_95734", "thyroid_gland_thyroglossal_duct_21498", "behavior", "ajcc_chapter_calculation_46717", "ajcc_id_age_eod_stage_tnm_8_6558", "tnm_8_eod_stage_differentiated_age_55_and_older_23489", "eod_regional_nodes_29442", "grade_clinical_standard_94331", "tumor_size_clinical_48894", "tnm_8_eod_stage_thyroid_anaplastic_25166", "systemic_surg_seq", "tnm_8_eod_stage_thyroid_differentiated_age_less_than_55_15343", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "year_dx_validation", "grade_pathological_standard_94268", "summary_stage_rpa", "seer_primary_tumor_6275", "tumor_size_with_primary_tumor_for_ajcc_t_19033", "grade_post_therapy_path_32110", "tumor_size_summary_47973" ],
+  "last_modified" : "2022-09-12T20:13:43.714Z",
   "on_invalid_input" : "CONTINUE"
 }

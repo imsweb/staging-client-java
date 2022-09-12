@@ -33,7 +33,7 @@
     "naaccr_item" : 523,
     "naaccr_xml_id" : "behaviorCodeIcdO3",
     "table" : "behavior",
-    "used_for_staging" : false
+    "used_for_staging" : true
   }, {
     "key" : "size_clin",
     "name" : "Tumor Size Clinical",
@@ -300,6 +300,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_8614",
+      "inputs" : [ "hist", "behavior" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -408,7 +416,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "ss2018_kidney_renal_parenchyma_30980", "extension_bbp", "radiation_surg_seq", "tumor_size_pathological_43328", "tnm8_inclusions_51587", "nodes_pos_fpa", "parse_t_2177", "mets_hcg", "parse_n_67182", "nodes_dbg", "histology", "nodes_exam_76029", "lvi_full_56663", "grade_pathological_20722", "behavior", "tumor_size_clinical_48894", "tumor_size_with_primary_tumor_for_ajcc_t_67751", "systemic_surg_seq", "invasion_beyond_capsule_4149", "major_vein_involvement_87947", "parse_m_47057", "primary_site", "grade_post_therapy_path_80308", "eod_tnm_component_cleanup_58170", "ipsilateral_adrenal_gland_involvement_61538", "sarcomatoid_features_99558", "year_dx_validation", "tnm_8_path_stage_group_for_eod_81951", "summary_stage_rpa", "tumor_size_summary_47973", "grade_clinical_18831", "grade_post_therapy_clin_97989", "schema_selection_kidney_parenchyma" ],
-  "last_modified" : "2022-09-12T17:31:15.816Z",
+  "involved_tables" : [ "ss2018_kidney_renal_parenchyma_30980", "extension_bbp", "radiation_surg_seq", "tumor_size_pathological_43328", "tnm8_inclusions_51587", "nodes_pos_fpa", "parse_t_2177", "mets_hcg", "parse_n_67182", "nodes_dbg", "histology", "nodes_exam_76029", "lvi_full_56663", "grade_pathological_20722", "behavior", "tumor_size_clinical_48894", "tumor_size_with_primary_tumor_for_ajcc_t_67751", "systemic_surg_seq", "invasion_beyond_capsule_4149", "major_vein_involvement_87947", "parse_m_47057", "primary_site", "ajcc_chapter_calculation_8614", "grade_post_therapy_path_80308", "eod_tnm_component_cleanup_58170", "ipsilateral_adrenal_gland_involvement_61538", "sarcomatoid_features_99558", "year_dx_validation", "tnm_8_path_stage_group_for_eod_81951", "summary_stage_rpa", "tumor_size_summary_47973", "grade_clinical_18831", "grade_post_therapy_clin_97989", "schema_selection_kidney_parenchyma" ],
+  "last_modified" : "2022-09-12T20:13:44.230Z",
   "on_invalid_input" : "CONTINUE"
 }

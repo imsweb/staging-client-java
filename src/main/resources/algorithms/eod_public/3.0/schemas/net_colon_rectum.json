@@ -33,7 +33,7 @@
     "naaccr_item" : 523,
     "naaccr_xml_id" : "behaviorCodeIcdO3",
     "table" : "behavior",
-    "used_for_staging" : false
+    "used_for_staging" : true
   }, {
     "key" : "size_clin",
     "name" : "Tumor Size Clinical",
@@ -255,6 +255,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_76566",
+      "inputs" : [ "hist", "behavior" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -363,7 +371,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "nodes_dfe", "grade_post_therapy_clin_2541", "radiation_surg_seq", "ss2018_colon_and_rectum_including_net_40538", "tumor_size_pathological_full_62176", "nodes_pos_fpa", "parse_t_2177", "mets_hci", "parse_n_67182", "schema_selection_net_colon", "ki_67_67661", "histology", "nodes_exam_76029", "extension_bfi", "lvi_full_56663", "behavior", "tnm_8_path_stage_group_for_eod_47623", "tumor_size_clinical_full_74867", "tumor_size_with_primary_tumor_for_ajcc_t_38905", "systemic_surg_seq", "grade_pathological_26086", "tumor_size_summary_full_31213", "parse_m_47057", "grade_post_therapy_path_76876", "primary_site", "tnm8_inclusions_52907", "eod_tnm_component_cleanup_58170", "grade_clinical_26768", "year_dx_validation", "summary_stage_rpa" ],
-  "last_modified" : "2022-09-12T17:31:13.789Z",
+  "involved_tables" : [ "nodes_dfe", "grade_post_therapy_clin_2541", "radiation_surg_seq", "ss2018_colon_and_rectum_including_net_40538", "tumor_size_pathological_full_62176", "nodes_pos_fpa", "parse_t_2177", "mets_hci", "parse_n_67182", "schema_selection_net_colon", "ki_67_67661", "ajcc_chapter_calculation_76566", "histology", "nodes_exam_76029", "extension_bfi", "lvi_full_56663", "behavior", "tnm_8_path_stage_group_for_eod_47623", "tumor_size_clinical_full_74867", "tumor_size_with_primary_tumor_for_ajcc_t_38905", "systemic_surg_seq", "grade_pathological_26086", "tumor_size_summary_full_31213", "parse_m_47057", "grade_post_therapy_path_76876", "primary_site", "tnm8_inclusions_52907", "eod_tnm_component_cleanup_58170", "grade_clinical_26768", "year_dx_validation", "summary_stage_rpa" ],
+  "last_modified" : "2022-09-12T20:13:42.828Z",
   "on_invalid_input" : "CONTINUE"
 }

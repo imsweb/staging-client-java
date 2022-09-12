@@ -34,7 +34,7 @@
     "naaccr_item" : 523,
     "naaccr_xml_id" : "behaviorCodeIcdO3",
     "table" : "behavior",
-    "used_for_staging" : false
+    "used_for_staging" : true
   }, {
     "key" : "discriminator_1",
     "name" : "Schema Discriminator 1",
@@ -366,6 +366,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_74928",
+      "inputs" : [ "hist", "behavior" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -474,7 +482,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "tumor_size_clinical_dna_64119", "radiation_surg_seq", "grade_post_therapy_clin_2503", "nodes_pos_fpa", "parse_t_2177", "tumor_size_summary_dna_13275", "tnm8_inclusions_92823", "parse_n_67182", "histology", "nodes_exam_76029", "lvi_full_56663", "grade_pathological_46618", "schema_selection_melanoma_iris", "behavior", "extension_bfr", "grade_post_therapy_path_58350", "eod_regional_nodes_79068", "extravascular_matrix_patterns_1397", "chromosome_8q_status_83582", "measured_basal_diameter_70699", "melanoma_ciliary_body_melanoma_iris_79773", "tumor_size_pathological_dna_6742", "microvascular_density_70589", "systemic_surg_seq", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "mitotic_count_uveal_melanoma_26990", "ss2018_melanoma_choroid_ciliary_body_iris_21929", "measured_thickness_84907", "year_dx_validation", "chromosome_3_status_93464", "summary_stage_rpa", "grade_clinical_54911", "seer_mets_melanomachoroid_55264", "tnm8_stage_for_sites_with_no_stage_groupings_unb" ],
-  "last_modified" : "2022-09-12T17:31:12.738Z",
+  "involved_tables" : [ "tumor_size_clinical_dna_64119", "radiation_surg_seq", "grade_post_therapy_clin_2503", "nodes_pos_fpa", "parse_t_2177", "tumor_size_summary_dna_13275", "tnm8_inclusions_92823", "parse_n_67182", "histology", "nodes_exam_76029", "lvi_full_56663", "grade_pathological_46618", "schema_selection_melanoma_iris", "behavior", "extension_bfr", "grade_post_therapy_path_58350", "eod_regional_nodes_79068", "extravascular_matrix_patterns_1397", "chromosome_8q_status_83582", "measured_basal_diameter_70699", "melanoma_ciliary_body_melanoma_iris_79773", "tumor_size_pathological_dna_6742", "microvascular_density_70589", "systemic_surg_seq", "ajcc_chapter_calculation_74928", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "mitotic_count_uveal_melanoma_26990", "ss2018_melanoma_choroid_ciliary_body_iris_21929", "measured_thickness_84907", "year_dx_validation", "chromosome_3_status_93464", "summary_stage_rpa", "grade_clinical_54911", "seer_mets_melanomachoroid_55264", "tnm8_stage_for_sites_with_no_stage_groupings_unb" ],
+  "last_modified" : "2022-09-12T20:13:42.127Z",
   "on_invalid_input" : "CONTINUE"
 }

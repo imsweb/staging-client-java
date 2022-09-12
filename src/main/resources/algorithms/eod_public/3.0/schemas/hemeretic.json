@@ -59,7 +59,7 @@
     "naaccr_item" : 230,
     "naaccr_xml_id" : "ageAtDiagnosis",
     "table" : "age_at_diagnosis_validation_65093",
-    "used_for_staging" : false
+    "used_for_staging" : true
   }, {
     "key" : "size_clin",
     "name" : "Tumor Size Clinical",
@@ -269,6 +269,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_46197",
+      "inputs" : [ "hist", "site", "age_dx" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "tables" : [ {
@@ -289,7 +297,7 @@
       "outputs" : [ "ss2018_derived" ]
     } ]
   } ],
-  "involved_tables" : [ "tumor_size_clinical_dna_64119", "jak2_80148", "tumor_size_pathological_dna_6742", "schema_selection_heme_retic", "ss2018_hemeretic_3793", "nodes_pos_fpa", "summary_stage_lymphoma_25139", "tumor_size_summary_dna_13275", "primary_site", "grade_post_therapy_clin_74830", "histology", "nodes_exam_76029", "schema_discriminator_1_63995", "year_dx_validation", "grade_post_therapy_path_65729", "age_at_diagnosis_validation_65093", "lvi_dna_56663", "mets_hna", "extension_bci", "grade_clinical_18316", "behavior", "grade_pathological_73388", "nodes_dna" ],
-  "last_modified" : "2022-09-12T17:31:12.219Z",
+  "involved_tables" : [ "tumor_size_clinical_dna_64119", "jak2_80148", "tumor_size_pathological_dna_6742", "schema_selection_heme_retic", "ss2018_hemeretic_3793", "nodes_pos_fpa", "summary_stage_lymphoma_25139", "tumor_size_summary_dna_13275", "ajcc_chapter_calculation_46197", "primary_site", "grade_post_therapy_clin_74830", "histology", "nodes_exam_76029", "schema_discriminator_1_63995", "year_dx_validation", "grade_post_therapy_path_65729", "age_at_diagnosis_validation_65093", "lvi_dna_56663", "mets_hna", "extension_bci", "grade_clinical_18316", "behavior", "grade_pathological_73388", "nodes_dna" ],
+  "last_modified" : "2022-09-12T20:13:41.796Z",
   "on_invalid_input" : "CONTINUE"
 }

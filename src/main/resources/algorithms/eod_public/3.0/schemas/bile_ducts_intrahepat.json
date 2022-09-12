@@ -291,6 +291,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_39839",
+      "inputs" : [ "hist" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -399,7 +407,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "tumor_growth_pattern_31889", "ss2018_intrahepatic_bile_ducts_51957", "grade_post_therapy_clin_61658", "radiation_surg_seq", "tumor_size_pathological_43328", "tumor_size_with_primary_tumor_for_ajcc_t_76336", "grade_clinical_6485", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "fibrosis_score_38658", "histology", "nodes_exam_76029", "lvi_full_56663", "tnm8_inclusions_tpt", "behavior", "nodes_dew", "tnm8_path_stage_ubi", "tumor_size_clinical_48894", "grade_post_therapy_path_40048", "primary_scleros_cholangitis_86402", "systemic_surg_seq", "extension_bfa", "mets_hbz", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "grade_pathological_84704", "year_dx_validation", "summary_stage_rpa", "schema_selection_bile_ducts_intrahepat", "tumor_size_summary_47973" ],
-  "last_modified" : "2022-09-12T17:31:15.477Z",
+  "involved_tables" : [ "tumor_growth_pattern_31889", "ss2018_intrahepatic_bile_ducts_51957", "grade_post_therapy_clin_61658", "radiation_surg_seq", "tumor_size_pathological_43328", "tumor_size_with_primary_tumor_for_ajcc_t_76336", "grade_clinical_6485", "nodes_pos_fpa", "parse_t_2177", "ajcc_chapter_calculation_39839", "parse_n_67182", "fibrosis_score_38658", "histology", "nodes_exam_76029", "lvi_full_56663", "tnm8_inclusions_tpt", "behavior", "nodes_dew", "tnm8_path_stage_ubi", "tumor_size_clinical_48894", "grade_post_therapy_path_40048", "primary_scleros_cholangitis_86402", "systemic_surg_seq", "extension_bfa", "mets_hbz", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "grade_pathological_84704", "year_dx_validation", "summary_stage_rpa", "schema_selection_bile_ducts_intrahepat", "tumor_size_summary_47973" ],
+  "last_modified" : "2022-09-12T20:13:43.988Z",
   "on_invalid_input" : "CONTINUE"
 }

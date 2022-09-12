@@ -262,6 +262,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_9_chapter_calculation_67531",
+      "inputs" : [ "site", "hist" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -370,7 +378,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "grade_post_therapy_path_3704", "grade_pathological_93273", "radiation_surg_seq", "tumor_size_pathological_43328", "nodes_pos_fpa", "parse_t_2177", "tumor_size_with_primary_tumor_for_ajcc_t_87130", "parse_n_67182", "ss2018_anus_55561", "eod_mets_14084", "grade_post_therapy_clin_93593", "p16_anus_2709", "histology", "nodes_exam_76029", "eod_regional_nodes_30921", "lvi_full_56663", "behavior", "tumor_size_clinical_48894", "tnm_9_path_stage_group_45424", "systemic_surg_seq", "grade_clinical_88426", "parse_m_47057", "primary_site", "tnm8_inclusions_23758", "eod_primary_tumor_v9_58724", "eod_tnm_component_cleanup_58170", "schema_selection_anus_v9_2023", "year_dx_validation", "summary_stage_rpa", "tumor_size_summary_47973" ],
-  "last_modified" : "2022-09-12T17:31:17.559Z",
+  "involved_tables" : [ "grade_post_therapy_path_3704", "grade_pathological_93273", "radiation_surg_seq", "tumor_size_pathological_43328", "nodes_pos_fpa", "parse_t_2177", "ajcc_9_chapter_calculation_67531", "tumor_size_with_primary_tumor_for_ajcc_t_87130", "parse_n_67182", "ss2018_anus_55561", "eod_mets_14084", "grade_post_therapy_clin_93593", "p16_anus_2709", "histology", "nodes_exam_76029", "eod_regional_nodes_30921", "lvi_full_56663", "behavior", "tumor_size_clinical_48894", "tnm_9_path_stage_group_45424", "systemic_surg_seq", "grade_clinical_88426", "parse_m_47057", "primary_site", "tnm8_inclusions_23758", "eod_primary_tumor_v9_58724", "eod_tnm_component_cleanup_58170", "schema_selection_anus_v9_2023", "year_dx_validation", "summary_stage_rpa", "tumor_size_summary_47973" ],
+  "last_modified" : "2022-09-12T20:12:14.551Z",
   "on_invalid_input" : "CONTINUE"
 }

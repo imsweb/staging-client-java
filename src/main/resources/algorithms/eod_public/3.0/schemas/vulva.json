@@ -33,7 +33,7 @@
     "naaccr_item" : 523,
     "naaccr_xml_id" : "behaviorCodeIcdO3",
     "table" : "behavior",
-    "used_for_staging" : false
+    "used_for_staging" : true
   }, {
     "key" : "size_clin",
     "name" : "Tumor Size Clinical",
@@ -322,6 +322,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_91940",
+      "inputs" : [ "hist", "behavior" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -430,7 +438,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "schema_selection_vulva", "ln_status_femoral_inguinal_13374", "nodes_dbb", "ln_status_pelvic_93438", "grade_post_therapy_clin_61658", "radiation_surg_seq", "tumor_size_pathological_43328", "grade_clinical_6485", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "tnm_8_path_stage_group_for_eod_73636", "tumor_size_with_primary_tumor_for_ajcc_t_34262", "histology", "tnm8_inclusions_tpq", "nodes_exam_76029", "mets_hba", "lymph_nodes_assessment_method_femoral_46948", "lvi_full_56663", "extension_bbi", "behavior", "ss2018_vulva_49198", "tumor_size_clinical_48894", "grade_post_therapy_path_40048", "ln_assessment_method_pelvic_vulva_10928", "figo_stage_vulva_69787", "systemic_surg_seq", "parse_m_47057", "lymph_node_laterality_65685", "primary_site", "eod_tnm_component_cleanup_58170", "grade_pathological_84704", "year_dx_validation", "summary_stage_rpa", "tumor_size_summary_47973" ],
-  "last_modified" : "2022-09-12T17:31:15.859Z",
+  "involved_tables" : [ "schema_selection_vulva", "ln_status_femoral_inguinal_13374", "nodes_dbb", "ln_status_pelvic_93438", "grade_post_therapy_clin_61658", "radiation_surg_seq", "tumor_size_pathological_43328", "grade_clinical_6485", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "tnm_8_path_stage_group_for_eod_73636", "tumor_size_with_primary_tumor_for_ajcc_t_34262", "histology", "tnm8_inclusions_tpq", "nodes_exam_76029", "mets_hba", "lymph_nodes_assessment_method_femoral_46948", "lvi_full_56663", "extension_bbi", "ajcc_chapter_calculation_91940", "behavior", "ss2018_vulva_49198", "tumor_size_clinical_48894", "grade_post_therapy_path_40048", "ln_assessment_method_pelvic_vulva_10928", "figo_stage_vulva_69787", "systemic_surg_seq", "parse_m_47057", "lymph_node_laterality_65685", "primary_site", "eod_tnm_component_cleanup_58170", "grade_pathological_84704", "year_dx_validation", "summary_stage_rpa", "tumor_size_summary_47973" ],
+  "last_modified" : "2022-09-12T20:12:12.688Z",
   "on_invalid_input" : "CONTINUE"
 }

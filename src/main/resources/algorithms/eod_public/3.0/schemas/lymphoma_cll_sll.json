@@ -367,6 +367,14 @@
     } ]
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_38461",
+      "inputs" : [ "site" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -427,7 +435,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "tumor_size_clinical_dna_64119", "thrombocytopenia_8479", "ss2018_lymphoma_27031", "tnm8_inclusions_80045", "lymphocytosis_79150", "hiv_status_12569", "derived_rai_stage_73218", "nodes_exam_dna_95635", "tumor_size_summary_dna_13275", "grade_post_therapy_clin_74830", "histology", "derive_rai_stage_42032", "intern_prognostic_index_90310", "mets_hna", "behavior", "adenopathy_40816", "nodes_dna", "eod_primary_tumor_copy_25294", "tumor_size_pathological_dna_6742", "summary_stage_lymphoma_25139", "anemia_15893", "organomegaly_16131", "lymphoma_stage_group_18599", "primary_site", "eod_tnm_component_cleanup_58170", "schema_selection_chronic_lymphocytic_leukemia_small_lymphocytic_lymphoma_cll_sll", "year_dx_validation", "systemic_symptoms_at_dx_60639", "grade_post_therapy_path_65729", "lvi_dna_56663", "grade_clinical_18316", "grade_pathological_73388", "nodes_pos_dna_91511" ],
-  "last_modified" : "2022-09-12T17:31:12.981Z",
+  "involved_tables" : [ "tumor_size_clinical_dna_64119", "thrombocytopenia_8479", "ss2018_lymphoma_27031", "tnm8_inclusions_80045", "lymphocytosis_79150", "hiv_status_12569", "derived_rai_stage_73218", "nodes_exam_dna_95635", "tumor_size_summary_dna_13275", "grade_post_therapy_clin_74830", "histology", "derive_rai_stage_42032", "intern_prognostic_index_90310", "mets_hna", "behavior", "adenopathy_40816", "nodes_dna", "ajcc_chapter_calculation_38461", "eod_primary_tumor_copy_25294", "tumor_size_pathological_dna_6742", "summary_stage_lymphoma_25139", "anemia_15893", "organomegaly_16131", "lymphoma_stage_group_18599", "primary_site", "eod_tnm_component_cleanup_58170", "schema_selection_chronic_lymphocytic_leukemia_small_lymphocytic_lymphoma_cll_sll", "year_dx_validation", "systemic_symptoms_at_dx_60639", "grade_post_therapy_path_65729", "lvi_dna_56663", "grade_clinical_18316", "grade_pathological_73388", "nodes_pos_dna_91511" ],
+  "last_modified" : "2022-09-12T20:13:42.299Z",
   "on_invalid_input" : "CONTINUE"
 }

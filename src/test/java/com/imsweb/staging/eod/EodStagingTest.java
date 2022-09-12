@@ -227,17 +227,16 @@ class EodStagingTest extends StagingTest {
         assertThat(data.getSchemaId()).isEqualTo("pancreas");
         assertThat(data.getErrors()).isEmpty();
         assertThat(data.getPath()).hasSize(12);
-        assertThat(data.getOutput()).hasSize(9);
+        assertThat(data.getOutput()).hasSize(7);
 
         // check outputs
         assertThat(data.getOutput(EodOutput.DERIVED_VERSION)).isEqualTo(EodDataProvider.EodVersion.LATEST.getVersion());
         assertThat(data.getOutput(EodOutput.SS_2018_DERIVED)).isEqualTo("7");
         assertThat(data.getOutput(EodOutput.NAACCR_SCHEMA_ID)).isEqualTo("00280");
         assertThat(data.getOutput(EodOutput.EOD_2018_STAGE_GROUP)).isEqualTo("4");
-        assertThat(data.getOutput(EodOutput.EOD_2018_T)).isEqualTo("T1a");
+        assertThat(data.getOutput(EodOutput.EOD_2018_T)).isEqualTo("TX");
         assertThat(data.getOutput(EodOutput.EOD_2018_N)).isEqualTo("N1");
         assertThat(data.getOutput(EodOutput.EOD_2018_M)).isEqualTo("M1");
-        assertThat(data.getOutput(EodOutput.AJCC_ID)).isEqualTo("28");
     }
 
     @Test
@@ -269,7 +268,7 @@ class EodStagingTest extends StagingTest {
         assertThat(data.getSchemaId()).isEqualTo("breast");
         assertThat(data.getErrors()).isEmpty();
         assertThat(data.getPath()).hasSize(16);
-        assertThat(data.getOutput()).hasSize(9);
+        assertThat(data.getOutput()).hasSize(7);
 
         // check outputs
         assertThat(data.getOutput(EodOutput.DERIVED_VERSION)).isEqualTo(EodDataProvider.EodVersion.LATEST.getVersion());
@@ -279,7 +278,6 @@ class EodStagingTest extends StagingTest {
         assertThat(data.getOutput(EodOutput.EOD_2018_T)).isEqualTo("T2");
         assertThat(data.getOutput(EodOutput.EOD_2018_N)).isEqualTo("N1");
         assertThat(data.getOutput(EodOutput.EOD_2018_M)).isEqualTo("M0");
-        assertThat(data.getOutput(EodOutput.AJCC_ID)).isEqualTo("48.2");
     }
 
     @Test
@@ -446,7 +444,7 @@ class EodStagingTest extends StagingTest {
         assertThat(data.getResult()).isEqualTo(Result.STAGED);
         assertThat(data.getSchemaId()).isEqualTo("brain");
         assertThat(data.getErrors()).hasSize(5);
-        assertThat(data.getPath()).hasSize(4);
+        assertThat(data.getPath()).hasSize(5);
         assertThat(data.getOutput()).hasSize(7);
         assertThat(data.getOutput()).containsEntry(EodOutput.DERIVED_VERSION.toString(), "3.0");
     }

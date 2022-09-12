@@ -338,6 +338,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_85776",
+      "inputs" : [ "site", "hist" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -446,7 +454,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "radiation_surg_seq", "nasopharynx_pharyngealtonsil_84756", "tumor_size_pathological_43328", "tnm8_inclusions_27690", "grade_post_therapy_path_41285", "extranodal_extension_head_and_neck_clinical_51375", "grade_pathological_31963", "grade_post_therapy_clin_41222", "nodes_pos_fpa", "parse_t_2177", "oropharyngeal_p16_44685", "parse_n_67182", "extranodal_extension_head_and_neck_pathological_93423", "histology", "tumor_size_with_primary_tumor_for_ajcc_t_84410", "nodes_exam_76029", "schema_selection_tongue_base", "lvi_full_56663", "lymph_nodes_size_of_metastasis_87329", "behavior", "tnm8_path_stage_upt", "eod_mets_29252", "ss2018_oropharynx_excluding_melanoma_8720_8790_9999", "tumor_size_clinical_48894", "eod_regional_nodes_55756", "systemic_surg_seq", "parse_m_47057", "p16_hpv_human_papilloma_virus_status_head_and_neck_509", "primary_site", "eod_tnm_component_cleanup_58170", "year_dx_validation", "grade_clinical_73056", "summary_stage_rpa", "tumor_size_summary_47973", "extension_bam" ],
-  "last_modified" : "2022-09-12T17:31:16.967Z",
+  "involved_tables" : [ "ajcc_chapter_calculation_85776", "radiation_surg_seq", "nasopharynx_pharyngealtonsil_84756", "tumor_size_pathological_43328", "tnm8_inclusions_27690", "grade_post_therapy_path_41285", "extranodal_extension_head_and_neck_clinical_51375", "grade_pathological_31963", "grade_post_therapy_clin_41222", "nodes_pos_fpa", "parse_t_2177", "oropharyngeal_p16_44685", "parse_n_67182", "extranodal_extension_head_and_neck_pathological_93423", "histology", "tumor_size_with_primary_tumor_for_ajcc_t_84410", "nodes_exam_76029", "schema_selection_tongue_base", "lvi_full_56663", "lymph_nodes_size_of_metastasis_87329", "behavior", "tnm8_path_stage_upt", "eod_mets_29252", "ss2018_oropharynx_excluding_melanoma_8720_8790_9999", "tumor_size_clinical_48894", "eod_regional_nodes_55756", "systemic_surg_seq", "parse_m_47057", "p16_hpv_human_papilloma_virus_status_head_and_neck_509", "primary_site", "eod_tnm_component_cleanup_58170", "year_dx_validation", "grade_clinical_73056", "summary_stage_rpa", "tumor_size_summary_47973", "extension_bam" ],
+  "last_modified" : "2022-09-12T20:12:13.731Z",
   "on_invalid_input" : "CONTINUE"
 }

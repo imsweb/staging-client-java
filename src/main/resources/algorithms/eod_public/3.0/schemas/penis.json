@@ -270,6 +270,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_11956",
+      "inputs" : [ "hist" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -378,7 +386,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "extension_bbs", "extranodal_extension_pathological_30739", "grade_post_therapy_clin_76032", "radiation_surg_seq", "ss2018_penis_97065", "grade_pathological_29069", "nodes_dbj", "nodes_pos_fpa", "extranodal_extension_clinical_5022", "parse_t_2177", "grade_clinical_22454", "tnm8_path_stage_uav", "parse_n_67182", "histology", "nodes_exam_76029", "lvi_25659", "tumor_size_summary_63115", "behavior", "eod_mets_34827", "tumor_size_pathological_25597", "systemic_surg_seq", "tumor_size_clinical_60979", "tnm8_inclusions_63195", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "grade_post_therapy_path_48765", "year_dx_validation", "rn_positive_with_regional_nodes_for_ajcc_n_88245", "summary_stage_rpa", "schema_selection_penis" ],
-  "last_modified" : "2022-09-12T17:31:16.672Z",
+  "involved_tables" : [ "extension_bbs", "extranodal_extension_pathological_30739", "grade_post_therapy_clin_76032", "radiation_surg_seq", "ss2018_penis_97065", "grade_pathological_29069", "nodes_dbj", "nodes_pos_fpa", "extranodal_extension_clinical_5022", "parse_t_2177", "grade_clinical_22454", "tnm8_path_stage_uav", "parse_n_67182", "histology", "nodes_exam_76029", "lvi_25659", "tumor_size_summary_63115", "behavior", "ajcc_chapter_calculation_11956", "eod_mets_34827", "tumor_size_pathological_25597", "systemic_surg_seq", "tumor_size_clinical_60979", "tnm8_inclusions_63195", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "grade_post_therapy_path_48765", "year_dx_validation", "rn_positive_with_regional_nodes_for_ajcc_n_88245", "summary_stage_rpa", "schema_selection_penis" ],
+  "last_modified" : "2022-09-12T20:12:13.435Z",
   "on_invalid_input" : "CONTINUE"
 }

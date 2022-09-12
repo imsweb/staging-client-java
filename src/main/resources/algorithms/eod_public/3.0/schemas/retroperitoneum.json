@@ -256,6 +256,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_45463",
+      "inputs" : [ "hist" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -371,7 +379,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "extension_bfv", "grade_post_therapy_clin_27082", "radiation_surg_seq", "tumor_size_pathological_43328", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "histology", "nodes_exam_76029", "tnm8_path_stage_upm", "bone_invasion_96628", "tumor_size_with_primary_tumor_for_ajcc_t_84996", "sex_19563", "lvi_full_56663", "combined_grade_56638", "grade_pathological_19141", "grade_post_therapy_path_35393", "ss2018_soft_tissue_retroperitoneum_5644", "tumor_size_clinical_48894", "schema_selection_retroperitoneum", "grade_clinical_64933", "systemic_surg_seq", "parse_m_47057", "eod_mets_23953", "primary_site", "eod_tnm_component_cleanup_58170", "tnm8_inclusions_tab", "nodes_dfq", "year_dx_validation", "summary_stage_rpa", "tumor_size_summary_47973" ],
-  "last_modified" : "2022-09-12T17:31:12.901Z",
+  "involved_tables" : [ "extension_bfv", "grade_post_therapy_clin_27082", "radiation_surg_seq", "tumor_size_pathological_43328", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "ajcc_chapter_calculation_45463", "histology", "nodes_exam_76029", "tnm8_path_stage_upm", "bone_invasion_96628", "tumor_size_with_primary_tumor_for_ajcc_t_84996", "sex_19563", "lvi_full_56663", "combined_grade_56638", "grade_pathological_19141", "grade_post_therapy_path_35393", "ss2018_soft_tissue_retroperitoneum_5644", "tumor_size_clinical_48894", "schema_selection_retroperitoneum", "grade_clinical_64933", "systemic_surg_seq", "parse_m_47057", "eod_mets_23953", "primary_site", "eod_tnm_component_cleanup_58170", "tnm8_inclusions_tab", "nodes_dfq", "year_dx_validation", "summary_stage_rpa", "tumor_size_summary_47973" ],
+  "last_modified" : "2022-09-12T20:13:42.226Z",
   "on_invalid_input" : "CONTINUE"
 }

@@ -272,6 +272,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_69851",
+      "inputs" : [ "hist" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -387,7 +395,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "tnm8_path_stage_uar", "radiation_surg_seq", "nodes_dfc", "mets_hcf", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "extension_bfg", "histology", "nodes_exam_76029", "lvi_full_56663", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "rn_positive_with_regional_nodes_for_ajcc_n_46395", "ss2018_appendix_including_netl_54459", "grade_clinical_29193", "tnm8_inclusions_tpc", "cea_pretx_lab_value_33864", "tumor_size_pathological_25597", "systemic_surg_seq", "tumor_size_clinical_60979", "cea_pretx_interpretation_99474", "schema_selection_appendix", "parse_m_47057", "primary_site", "grade_post_therapy_clin_45036", "eod_tnm_component_cleanup_58170", "grade_post_therapy_path_28874", "year_dx_validation", "summary_stage_rpa", "grade_pathological_57271" ],
-  "last_modified" : "2022-09-12T17:31:15.377Z",
+  "involved_tables" : [ "tnm8_path_stage_uar", "radiation_surg_seq", "nodes_dfc", "mets_hcf", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "extension_bfg", "histology", "nodes_exam_76029", "lvi_full_56663", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "rn_positive_with_regional_nodes_for_ajcc_n_46395", "ss2018_appendix_including_netl_54459", "grade_clinical_29193", "tnm8_inclusions_tpc", "cea_pretx_lab_value_33864", "tumor_size_pathological_25597", "systemic_surg_seq", "tumor_size_clinical_60979", "ajcc_chapter_calculation_69851", "cea_pretx_interpretation_99474", "schema_selection_appendix", "parse_m_47057", "primary_site", "grade_post_therapy_clin_45036", "eod_tnm_component_cleanup_58170", "grade_post_therapy_path_28874", "year_dx_validation", "summary_stage_rpa", "grade_pathological_57271" ],
+  "last_modified" : "2022-09-12T20:13:43.938Z",
   "on_invalid_input" : "CONTINUE"
 }

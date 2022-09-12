@@ -300,6 +300,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_64633",
+      "inputs" : [ "hist" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -408,7 +416,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "grade_post_therapy_clin_61658", "radiation_surg_seq", "tumor_size_pathological_43328", "extranodal_extension_head_and_neck_clinical_51375", "grade_clinical_6485", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "extranodal_extension_head_and_neck_pathological_93423", "ss2018_floor_mouth_83713", "histology", "nodes_exam_76029", "lymph_nodes_size_of_metastasis_87329", "lvi_full_56663", "schema_selection_floor_mouth", "behavior", "tnm8_path_stage_upt", "nodes_daa", "tumor_size_with_primary_tumor_for_ajcc_t_79936", "tumor_size_clinical_48894", "seer_mets_lip_lower_28596", "grade_post_therapy_path_40048", "tnm8_inclusions_tpb", "systemic_surg_seq", "parse_m_47057", "p16_hpv_human_papilloma_virus_status_head_and_neck_509", "primary_site", "eod_tnm_component_cleanup_58170", "grade_pathological_84704", "year_dx_validation", "eod_primary_tumor_98910", "summary_stage_rpa", "tumor_size_summary_47973" ],
-  "last_modified" : "2022-09-12T17:31:13.955Z",
+  "involved_tables" : [ "grade_post_therapy_clin_61658", "radiation_surg_seq", "tumor_size_pathological_43328", "ajcc_chapter_calculation_64633", "extranodal_extension_head_and_neck_clinical_51375", "grade_clinical_6485", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "extranodal_extension_head_and_neck_pathological_93423", "ss2018_floor_mouth_83713", "histology", "nodes_exam_76029", "lymph_nodes_size_of_metastasis_87329", "lvi_full_56663", "schema_selection_floor_mouth", "behavior", "tnm8_path_stage_upt", "nodes_daa", "tumor_size_with_primary_tumor_for_ajcc_t_79936", "tumor_size_clinical_48894", "seer_mets_lip_lower_28596", "grade_post_therapy_path_40048", "tnm8_inclusions_tpb", "systemic_surg_seq", "parse_m_47057", "p16_hpv_human_papilloma_virus_status_head_and_neck_509", "primary_site", "eod_tnm_component_cleanup_58170", "grade_pathological_84704", "year_dx_validation", "eod_primary_tumor_98910", "summary_stage_rpa", "tumor_size_summary_47973" ],
+  "last_modified" : "2022-09-12T20:13:42.950Z",
   "on_invalid_input" : "CONTINUE"
 }

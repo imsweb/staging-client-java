@@ -260,6 +260,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_57742",
+      "inputs" : [ "site", "hist" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -375,7 +383,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "tnm8_inclusions_32424", "grade_post_therapy_clin_27082", "schema_discriminator_2_15990", "radiation_surg_seq", "tumor_size_pathological_full_62176", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "seer_primary_tumor_31838", "histology", "nodes_exam_76029", "bone_invasion_96628", "tnm8_path_stage_ubj", "schema_selection_soft_tissue_trunk_and_extremities", "lvi_full_56663", "combined_grade_56638", "ss2018_soft_tissue_31311", "grade_pathological_19141", "grade_post_therapy_path_35393", "tumor_size_clinical_full_74867", "grade_clinical_64933", "systemic_surg_seq", "seer_regional_nodes_69974", "tumor_size_summary_full_31213", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "eod_mets_22645", "year_dx_validation", "summary_stage_rpa", "tumor_size_with_primary_tumor_for_ajcc_t_11071" ],
-  "last_modified" : "2022-09-12T17:31:13.733Z",
+  "involved_tables" : [ "tnm8_inclusions_32424", "grade_post_therapy_clin_27082", "schema_discriminator_2_15990", "radiation_surg_seq", "tumor_size_pathological_full_62176", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "seer_primary_tumor_31838", "histology", "nodes_exam_76029", "bone_invasion_96628", "tnm8_path_stage_ubj", "schema_selection_soft_tissue_trunk_and_extremities", "lvi_full_56663", "ajcc_chapter_calculation_57742", "combined_grade_56638", "ss2018_soft_tissue_31311", "grade_pathological_19141", "grade_post_therapy_path_35393", "tumor_size_clinical_full_74867", "grade_clinical_64933", "systemic_surg_seq", "seer_regional_nodes_69974", "tumor_size_summary_full_31213", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "eod_mets_22645", "year_dx_validation", "summary_stage_rpa", "tumor_size_with_primary_tumor_for_ajcc_t_11071" ],
+  "last_modified" : "2022-09-12T20:13:42.799Z",
   "on_invalid_input" : "CONTINUE"
 }

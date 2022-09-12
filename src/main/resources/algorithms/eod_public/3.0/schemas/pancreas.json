@@ -258,6 +258,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_23065",
+      "inputs" : [ "site", "hist" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -366,7 +374,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "grade_post_therapy_clin_61658", "ss2018_pancreas_95507", "radiation_surg_seq", "tumor_size_pathological_43328", "grade_clinical_6485", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "tnm8_path_stage_ups", "histology", "nodes_exam_76029", "seer_mets_66514", "rn_positive_with_regional_nodes_for_n_85525", "lvi_full_56663", "schema_selection_pancreas_body_tail", "behavior", "tumor_size_clinical_48894", "grade_post_therapy_path_40048", "systemic_surg_seq", "parse_m_47057", "seer_primary_tumor_95193", "primary_site", "eod_tnm_component_cleanup_58170", "ca_19_9_pretx_lab_value_17332", "grade_pathological_84704", "year_dx_validation", "eod_regional_nodes_11936", "summary_stage_rpa", "tnm8_inclusions_tae", "tumor_size_summary_47973", "tumor_size_with_primary_tumor_for_ajcc_t_15190" ],
-  "last_modified" : "2022-09-12T17:31:14.237Z",
+  "involved_tables" : [ "grade_post_therapy_clin_61658", "ss2018_pancreas_95507", "radiation_surg_seq", "tumor_size_pathological_43328", "grade_clinical_6485", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "tnm8_path_stage_ups", "histology", "nodes_exam_76029", "seer_mets_66514", "rn_positive_with_regional_nodes_for_n_85525", "lvi_full_56663", "schema_selection_pancreas_body_tail", "behavior", "tumor_size_clinical_48894", "grade_post_therapy_path_40048", "systemic_surg_seq", "parse_m_47057", "seer_primary_tumor_95193", "primary_site", "ajcc_chapter_calculation_23065", "eod_tnm_component_cleanup_58170", "ca_19_9_pretx_lab_value_17332", "grade_pathological_84704", "year_dx_validation", "eod_regional_nodes_11936", "summary_stage_rpa", "tnm8_inclusions_tae", "tumor_size_summary_47973", "tumor_size_with_primary_tumor_for_ajcc_t_15190" ],
+  "last_modified" : "2022-09-12T20:13:43.130Z",
   "on_invalid_input" : "CONTINUE"
 }

@@ -42,7 +42,7 @@
     "naaccr_xml_id" : "schemaDiscriminator1",
     "default" : "0",
     "table" : "multiple_myeloma_terminology_20875",
-    "used_for_staging" : false,
+    "used_for_staging" : true,
     "metadata" : [ {
       "name" : "COC_REQUIRED"
     }, {
@@ -316,6 +316,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_16971",
+      "inputs" : [ "site", "discriminator_1" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "tables" : [ {
@@ -336,7 +344,7 @@
       "outputs" : [ "ss2018_derived" ]
     } ]
   } ],
-  "involved_tables" : [ "multiple_myeloma_terminology_20875", "tumor_size_clinical_dna_64119", "b2_microglob_pretx_level_83264", "extension_bgc", "nodes_exam_dna_95635", "tumor_size_summary_dna_13275", "grade_post_therapy_clin_74830", "histology", "mets_hna", "behavior", "nodes_dna", "ss2018_44993", "tumor_size_pathological_dna_6742", "high_risk_cytogenetics_97806", "summary_stage_lymphoma_25139", "serum_alb_pretx_level_58159", "ldh_pretreatment_level_82697", "primary_site", "schema_selection_myeloma_plasma_cell_disorder", "year_dx_validation", "grade_post_therapy_path_65729", "lvi_dna_56663", "grade_clinical_18316", "grade_pathological_73388", "nodes_pos_dna_91511" ],
-  "last_modified" : "2022-09-12T17:31:16.618Z",
+  "involved_tables" : [ "multiple_myeloma_terminology_20875", "tumor_size_clinical_dna_64119", "ajcc_chapter_calculation_16971", "b2_microglob_pretx_level_83264", "extension_bgc", "nodes_exam_dna_95635", "tumor_size_summary_dna_13275", "grade_post_therapy_clin_74830", "histology", "mets_hna", "behavior", "nodes_dna", "ss2018_44993", "tumor_size_pathological_dna_6742", "high_risk_cytogenetics_97806", "summary_stage_lymphoma_25139", "serum_alb_pretx_level_58159", "ldh_pretreatment_level_82697", "primary_site", "schema_selection_myeloma_plasma_cell_disorder", "year_dx_validation", "grade_post_therapy_path_65729", "lvi_dna_56663", "grade_clinical_18316", "grade_pathological_73388", "nodes_pos_dna_91511" ],
+  "last_modified" : "2022-09-12T20:12:13.392Z",
   "on_invalid_input" : "CONTINUE"
 }

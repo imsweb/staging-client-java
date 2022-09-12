@@ -1,0 +1,35 @@
+{
+  "id" : "ajcc_chapter_calculation_67184",
+  "algorithm" : "eod_public",
+  "version" : "3.0",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "description" : "While this has a chapter, T, N, M and Stage Group are not defined.",
+  "last_modified" : "2022-05-26T16:22:38.820Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C715-C719", "9470-9471,9474-9477", "3", "VALUE:72.2", "Brain and Spinal Cord: Medulloblastoma.", "VALUE:09" ], [ "C700-C729,C753", "9362", "3", "VALUE:72.1", "Brain and Spinal Cord: Medulloblastoma.", "VALUE:09" ], [ "C700-C722,C724-C729", "9473", "3", "VALUE:72.1", "Brain and Spinal Cord: Medulloblastoma.", "VALUE:09" ], [ "C700-C729", "9478,9508", "3", "VALUE:72.1", "Brain and Spinal Cord: Medulloblastoma.", "VALUE:09" ], [ "C715-C719", "9470-9471,9474-9477", "0,1", "VALUE:XX", "Other Medulloblastoma", "VALUE:88" ], [ "C700-C729,C753", "9362", "0,1", "VALUE:XX", "Other Medulloblastoma", "VALUE:88" ], [ "C700-C722,C724-C729", "9473", "0,1", "VALUE:XX", "Other Medulloblastoma", "VALUE:88" ], [ "C700-C729", "9478,9508", "0,1", "VALUE:XX", "Other Medulloblastoma", "VALUE:88" ], [ "C700-C714,C720-C729", "9470-9471,9474-9477", "*", "VALUE:XX", "Other Medulloblastoma", "VALUE:88" ], [ "C700-C729", "9472-9472,9501-9504", "*", "VALUE:XX", "Other Medulloblastoma", "VALUE:88" ] ]
+}

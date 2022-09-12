@@ -240,6 +240,6 @@
     } ]
   } ],
   "involved_tables" : [ "seer_mets_48348", "grade_clinical_standard_non_ajcc_32473", "grade_pathological_standard_non_ajcc_5627", "nodes_pos_fpa", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "grade_post_therapy_clin_69737", "schema_selection_trachea", "primary_site", "histology", "nodes_exam_76029", "grade_post_therapy_path_75348", "extension_bcf", "ss2018_trachea_70961", "year_dx_validation", "lvi_full_56663", "summary_stage_rpa", "tumor_size_summary_63115", "nodes_dbw" ],
-  "last_modified" : "2022-09-12T17:31:16.226Z",
+  "last_modified" : "2022-09-12T20:12:13.010Z",
   "on_invalid_input" : "CONTINUE"
 }

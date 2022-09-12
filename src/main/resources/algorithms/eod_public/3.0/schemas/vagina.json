@@ -33,7 +33,7 @@
     "naaccr_item" : 523,
     "naaccr_xml_id" : "behaviorCodeIcdO3",
     "table" : "behavior",
-    "used_for_staging" : false
+    "used_for_staging" : true
   }, {
     "key" : "size_clin",
     "name" : "Tumor Size Clinical",
@@ -363,6 +363,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_21096",
+      "inputs" : [ "hist", "behavior" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -471,7 +479,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "tumor_size_with_primary_tumor_for_ajcc_t_52324", "mets_haj", "nodes_dba", "lymph_nodes_distant_assessment_method_24499", "grade_post_therapy_clin_61658", "tnm_8_path_stage_group_for_eod_74446", "radiation_surg_seq", "tumor_size_pathological_43328", "grade_clinical_6485", "nodes_pos_fpa", "parse_t_2177", "ln_status_para_aortic_41020", "parse_n_67182", "histology", "nodes_exam_76029", "schema_selection_vagina", "lvi_full_56663", "ln_status_femoral_inguinal_vagina_64638", "behavior", "tumor_size_clinical_48894", "grade_post_therapy_path_40048", "figo_stage_vagina_61098", "systemic_surg_seq", "tnm8_inclusions_tph", "ss2018_vagina_94653", "lymph_nodes_assessment_method_pelvic_33476", "parse_m_47057", "primary_site", "lymph_nodes_distant_mediastinal_scalene_90567", "eod_tnm_component_cleanup_58170", "ln_status_pelvic_31753", "grade_pathological_84704", "extension_bad", "year_dx_validation", "lymph_nodes_assessment_method_para_aortic_56026", "summary_stage_rpa", "tumor_size_summary_47973", "ln_assessment_method_femoral_inguinal_48450" ],
-  "last_modified" : "2022-09-12T17:31:14.785Z",
+  "involved_tables" : [ "tumor_size_with_primary_tumor_for_ajcc_t_52324", "mets_haj", "nodes_dba", "lymph_nodes_distant_assessment_method_24499", "grade_post_therapy_clin_61658", "tnm_8_path_stage_group_for_eod_74446", "radiation_surg_seq", "tumor_size_pathological_43328", "grade_clinical_6485", "nodes_pos_fpa", "parse_t_2177", "ln_status_para_aortic_41020", "parse_n_67182", "ajcc_chapter_calculation_21096", "histology", "nodes_exam_76029", "schema_selection_vagina", "lvi_full_56663", "ln_status_femoral_inguinal_vagina_64638", "behavior", "tumor_size_clinical_48894", "grade_post_therapy_path_40048", "figo_stage_vagina_61098", "systemic_surg_seq", "tnm8_inclusions_tph", "ss2018_vagina_94653", "lymph_nodes_assessment_method_pelvic_33476", "parse_m_47057", "primary_site", "lymph_nodes_distant_mediastinal_scalene_90567", "eod_tnm_component_cleanup_58170", "ln_status_pelvic_31753", "grade_pathological_84704", "extension_bad", "year_dx_validation", "lymph_nodes_assessment_method_para_aortic_56026", "summary_stage_rpa", "tumor_size_summary_47973", "ln_assessment_method_femoral_inguinal_48450" ],
+  "last_modified" : "2022-09-12T20:13:43.521Z",
   "on_invalid_input" : "CONTINUE"
 }

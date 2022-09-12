@@ -227,6 +227,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_9_chapter_calculation_8616",
+      "inputs" : [ "site", "hist", "behavior" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "tables" : [ {
@@ -247,7 +255,7 @@
       "outputs" : [ "ss2018_derived" ]
     } ]
   } ],
-  "involved_tables" : [ "ss2018_intracranial_gland_98794", "summary_stage_benign_3306", "eod_primary_tumor_12346", "eod_mets_24042", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "schema_selection_intracranial_gland_v9_2023", "nodes_exam_dna_95635", "grade_post_therapy_path_yp_3519", "primary_site", "grade_pathological_53280", "histology", "year_dx_validation", "grade_clinical_78613", "lvi_full_56663", "grade_post_therapy_clin_yc_55565", "tumor_size_summary_63115", "behavior", "nodes_dna", "nodes_pos_dna_91511" ],
-  "last_modified" : "2022-09-12T17:31:17.704Z",
+  "involved_tables" : [ "ss2018_intracranial_gland_98794", "summary_stage_benign_3306", "eod_primary_tumor_12346", "eod_mets_24042", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "schema_selection_intracranial_gland_v9_2023", "nodes_exam_dna_95635", "grade_post_therapy_path_yp_3519", "primary_site", "grade_pathological_53280", "histology", "year_dx_validation", "grade_clinical_78613", "lvi_full_56663", "grade_post_therapy_clin_yc_55565", "tumor_size_summary_63115", "ajcc_9_chapter_calculation_8616", "behavior", "nodes_dna", "nodes_pos_dna_91511" ],
+  "last_modified" : "2022-09-12T20:12:14.705Z",
   "on_invalid_input" : "CONTINUE"
 }

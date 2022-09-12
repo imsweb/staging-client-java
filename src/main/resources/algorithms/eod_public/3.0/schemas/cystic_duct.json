@@ -260,6 +260,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_97240",
+      "inputs" : [ "hist" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -368,7 +376,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "extension_bfw", "grade_post_therapy_clin_61658", "radiation_surg_seq", "rn_positive_with_regional_nodes_for_ajcc_n_62318", "grade_clinical_6485", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "histology", "nodes_exam_76029", "lvi_full_56663", "mets_hcv", "tumor_size_summary_63115", "behavior", "tnm8_inclusions_10206", "tnm8_path_stage_uqb", "grade_post_therapy_path_40048", "bileductsdistal_bileductsperihilar_cysticduct_24541", "tumor_size_pathological_25597", "systemic_surg_seq", "tumor_size_clinical_60979", "parse_m_47057", "primary_site", "schema_selection_cystic_duct", "eod_tnm_component_cleanup_58170", "ss2018_extrahepatic_bile_ducts_65728", "grade_pathological_84704", "nodes_dfr", "year_dx_validation", "summary_stage_rpa" ],
-  "last_modified" : "2022-09-12T17:31:15.647Z",
+  "involved_tables" : [ "extension_bfw", "grade_post_therapy_clin_61658", "radiation_surg_seq", "rn_positive_with_regional_nodes_for_ajcc_n_62318", "grade_clinical_6485", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "histology", "nodes_exam_76029", "ajcc_chapter_calculation_97240", "lvi_full_56663", "mets_hcv", "tumor_size_summary_63115", "behavior", "tnm8_inclusions_10206", "tnm8_path_stage_uqb", "grade_post_therapy_path_40048", "bileductsdistal_bileductsperihilar_cysticduct_24541", "tumor_size_pathological_25597", "systemic_surg_seq", "tumor_size_clinical_60979", "parse_m_47057", "primary_site", "schema_selection_cystic_duct", "eod_tnm_component_cleanup_58170", "ss2018_extrahepatic_bile_ducts_65728", "grade_pathological_84704", "nodes_dfr", "year_dx_validation", "summary_stage_rpa" ],
+  "last_modified" : "2022-09-12T20:13:44.105Z",
   "on_invalid_input" : "CONTINUE"
 }

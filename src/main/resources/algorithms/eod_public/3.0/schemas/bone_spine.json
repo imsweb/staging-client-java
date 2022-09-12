@@ -250,6 +250,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_3412",
+      "inputs" : [ "hist" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -358,7 +366,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "radiation_surg_seq", "ss2018_validation", "nodes_dbh", "schema_selection_bone_spine", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "tnm8_inclusions_bone_spine", "ajcc_path_grade_3_70197", "histology", "nodes_exam_76029", "post_neoadj_chemo_percent_necrosis_15912", "lvi_full_56663", "eod_primary_tumor_72332", "tumor_size_summary_63115", "mets_hav", "grade_post_therapy_clin_4232", "grade_post_therapy_path_25809", "ajcc_grade_3_94758", "tumor_size_pathological_25597", "systemic_surg_seq", "tumor_size_clinical_60979", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "year_dx_validation", "summary_stage_rpa", "tnm8_stage_for_sites_with_no_stage_groupings_unb" ],
-  "last_modified" : "2022-09-12T17:31:13.200Z",
+  "involved_tables" : [ "radiation_surg_seq", "ss2018_validation", "nodes_dbh", "schema_selection_bone_spine", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "tnm8_inclusions_bone_spine", "ajcc_path_grade_3_70197", "histology", "nodes_exam_76029", "post_neoadj_chemo_percent_necrosis_15912", "lvi_full_56663", "eod_primary_tumor_72332", "tumor_size_summary_63115", "mets_hav", "grade_post_therapy_clin_4232", "grade_post_therapy_path_25809", "ajcc_grade_3_94758", "ajcc_chapter_calculation_3412", "tumor_size_pathological_25597", "systemic_surg_seq", "tumor_size_clinical_60979", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "year_dx_validation", "summary_stage_rpa", "tnm8_stage_for_sites_with_no_stage_groupings_unb" ],
+  "last_modified" : "2022-09-12T20:13:42.444Z",
   "on_invalid_input" : "CONTINUE"
 }

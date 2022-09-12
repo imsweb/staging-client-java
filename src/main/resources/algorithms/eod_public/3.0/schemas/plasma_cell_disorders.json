@@ -229,6 +229,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_84768",
+      "inputs" : [ "hist", "site" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "tables" : [ {
@@ -249,7 +257,7 @@
       "outputs" : [ "ss2018_derived" ]
     } ]
   } ],
-  "involved_tables" : [ "nodes_exam_17543", "tumor_size_clinical_dna_64119", "nodes_pos_2999", "ss2018_44993", "tumor_size_pathological_dna_6742", "tumor_size_summary_dna_13275", "primary_site", "schema_selection_plasmacytomas", "grade_post_therapy_clin_74830", "histology", "year_dx_validation", "grade_post_therapy_path_65729", "summary_stage_rpa", "lvi_dna_56663", "mets_hna", "grade_clinical_18316", "eod_primary_tumor_3385", "behavior", "grade_pathological_73388", "eod_regional_nodes_80411" ],
-  "last_modified" : "2022-09-12T17:31:12.131Z",
+  "involved_tables" : [ "nodes_exam_17543", "tumor_size_clinical_dna_64119", "nodes_pos_2999", "ss2018_44993", "ajcc_chapter_calculation_84768", "tumor_size_pathological_dna_6742", "tumor_size_summary_dna_13275", "primary_site", "schema_selection_plasmacytomas", "grade_post_therapy_clin_74830", "histology", "year_dx_validation", "grade_post_therapy_path_65729", "summary_stage_rpa", "lvi_dna_56663", "mets_hna", "grade_clinical_18316", "eod_primary_tumor_3385", "behavior", "grade_pathological_73388", "eod_regional_nodes_80411" ],
+  "last_modified" : "2022-09-12T20:13:41.732Z",
   "on_invalid_input" : "CONTINUE"
 }

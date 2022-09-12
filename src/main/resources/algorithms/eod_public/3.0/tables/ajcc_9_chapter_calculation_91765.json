@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc_9_chapter_calculation_91765",
+  "algorithm" : "eod_public",
+  "version" : "3.0",
+  "name" : "AJCC 9 Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2022-05-26T23:01:53.275Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8000,8010,8012-8013,8020,8041,8070", "VALUE:19", "Appendix", "VALUE:09" ], [ "8140,8154", "VALUE:19", "Appendix", "VALUE:09" ], [ "8210,8213,8243-8246,8255", "VALUE:19", "Appendix", "VALUE:09" ], [ "8440,8480-8481,8490", "VALUE:19", "Appendix", "VALUE:09" ], [ "8510,8560,8574", "VALUE:19", "Appendix", "VALUE:09" ], [ "8001-8005,8011,8014-8015,8021-8033,8034-8040,8042-8060,8071-8131", "VALUE:XX", "Other Appendix", "VALUE:88" ], [ "8141-8149,8160-8204", "VALUE:XX", "Other Appendix", "VALUE:88" ], [ "8211-8212,8214-8231,8247-8248,8250-8254,8256-8430", "VALUE:XX", "Other Appendix", "VALUE:88" ], [ "8441-8474,8482-8484,8500-8509,8512-8552,8561-8573,8575-8682", "VALUE:XX", "Other Appendix", "VALUE:88" ], [ "8690-8700,8720-8790", "VALUE:XX", "Other Appendix", "VALUE:88" ] ]
+}

@@ -289,6 +289,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_38819",
+      "inputs" : [ "hist" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -397,7 +405,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "radiation_surg_seq", "tumor_size_pathological_43328", "extranodal_extension_head_and_neck_clinical_51375", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "extranodal_extension_head_and_neck_pathological_93423", "histology", "nodes_exam_76029", "lymph_nodes_size_of_metastasis_87329", "lvi_full_56663", "tumor_size_with_primary_tumor_for_ajcc_t_36381", "grade_post_therapy_clin_95734", "behavior", "grade_clinical_standard_94331", "ss2018_major_salivary_glands_43893", "tnm8_path_stage_uqc", "tumor_size_clinical_48894", "extension_bcv", "schema_selection_parotid_gland", "systemic_surg_seq", "tnm8_inclusions_tqn", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "eod_regional_nodes_94494", "year_dx_validation", "grade_pathological_standard_94268", "summary_stage_rpa", "grade_post_therapy_path_32110", "tumor_size_summary_47973", "eod_mets_71734" ],
-  "last_modified" : "2022-09-12T17:31:15.127Z",
+  "involved_tables" : [ "radiation_surg_seq", "tumor_size_pathological_43328", "extranodal_extension_head_and_neck_clinical_51375", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "extranodal_extension_head_and_neck_pathological_93423", "histology", "nodes_exam_76029", "lymph_nodes_size_of_metastasis_87329", "lvi_full_56663", "tumor_size_with_primary_tumor_for_ajcc_t_36381", "grade_post_therapy_clin_95734", "behavior", "grade_clinical_standard_94331", "ss2018_major_salivary_glands_43893", "tnm8_path_stage_uqc", "tumor_size_clinical_48894", "extension_bcv", "schema_selection_parotid_gland", "systemic_surg_seq", "ajcc_chapter_calculation_38819", "tnm8_inclusions_tqn", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "eod_regional_nodes_94494", "year_dx_validation", "grade_pathological_standard_94268", "summary_stage_rpa", "grade_post_therapy_path_32110", "tumor_size_summary_47973", "eod_mets_71734" ],
+  "last_modified" : "2022-09-12T20:13:43.746Z",
   "on_invalid_input" : "CONTINUE"
 }

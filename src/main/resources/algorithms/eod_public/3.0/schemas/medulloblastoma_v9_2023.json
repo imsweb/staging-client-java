@@ -34,7 +34,7 @@
     "naaccr_item" : 523,
     "naaccr_xml_id" : "behaviorCodeIcdO3",
     "table" : "behavior",
-    "used_for_staging" : false
+    "used_for_staging" : true
   }, {
     "key" : "size_clin",
     "name" : "Tumor Size Clinical",
@@ -242,6 +242,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_67184",
+      "inputs" : [ "site", "hist", "behavior" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "tables" : [ {
@@ -262,7 +270,7 @@
       "outputs" : [ "ss2018_derived" ]
     } ]
   } ],
-  "involved_tables" : [ "summary_stage_benign_3306", "schema_selection_medulloblastoma_v9_2023", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "nodes_exam_dna_95635", "grade_post_therapy_path_yp_3519", "eod_mets_22894", "primary_site", "grade_pathological_53280", "histology", "ss2018_medulloblastoma_22906", "year_dx_validation", "grade_clinical_78613", "brain_molecular_markers_75370", "lvi_full_56663", "grade_post_therapy_clin_yc_55565", "tumor_size_summary_63115", "behavior", "eod_primary_tumor_60922", "nodes_dna", "nodes_pos_dna_91511" ],
-  "last_modified" : "2022-09-12T17:31:17.744Z",
+  "involved_tables" : [ "summary_stage_benign_3306", "schema_selection_medulloblastoma_v9_2023", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "nodes_exam_dna_95635", "grade_post_therapy_path_yp_3519", "eod_mets_22894", "primary_site", "grade_pathological_53280", "ajcc_chapter_calculation_67184", "histology", "ss2018_medulloblastoma_22906", "year_dx_validation", "grade_clinical_78613", "brain_molecular_markers_75370", "lvi_full_56663", "grade_post_therapy_clin_yc_55565", "tumor_size_summary_63115", "behavior", "eod_primary_tumor_60922", "nodes_dna", "nodes_pos_dna_91511" ],
+  "last_modified" : "2022-09-12T20:12:14.736Z",
   "on_invalid_input" : "CONTINUE"
 }

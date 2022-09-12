@@ -240,6 +240,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_41720",
+      "inputs" : [ "hist" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -348,7 +356,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "schema_selection_parathyroid", "radiation_surg_seq", "ss2018_parathyroid_99309", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "histology", "nodes_exam_76029", "grade_clinical_25704", "lvi_full_56663", "tumor_size_summary_63115", "grade_post_therapy_clin_35900", "behavior", "seer_regional_nodes_17757", "grade_pathological_27152", "tumor_size_pathological_25597", "systemic_surg_seq", "tumor_size_clinical_60979", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "year_dx_validation", "grade_post_therapy_path_30693", "summary_stage_rpa", "tnm8_inclusions_parathyroid", "seer_primary_tumor_25824", "mets_hbv", "tnm8_stage_for_sites_with_no_stage_groupings_unb" ],
-  "last_modified" : "2022-09-12T17:31:13.408Z",
+  "involved_tables" : [ "schema_selection_parathyroid", "radiation_surg_seq", "ss2018_parathyroid_99309", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "histology", "nodes_exam_76029", "grade_clinical_25704", "lvi_full_56663", "tumor_size_summary_63115", "grade_post_therapy_clin_35900", "behavior", "seer_regional_nodes_17757", "ajcc_chapter_calculation_41720", "grade_pathological_27152", "tumor_size_pathological_25597", "systemic_surg_seq", "tumor_size_clinical_60979", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "year_dx_validation", "grade_post_therapy_path_30693", "summary_stage_rpa", "tnm8_inclusions_parathyroid", "seer_primary_tumor_25824", "mets_hbv", "tnm8_stage_for_sites_with_no_stage_groupings_unb" ],
+  "last_modified" : "2022-09-12T20:13:42.596Z",
   "on_invalid_input" : "CONTINUE"
 }

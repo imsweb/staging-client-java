@@ -241,6 +241,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_19982",
+      "inputs" : [ "site", "hist" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -349,7 +357,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "grade_post_therapy_path_3704", "grade_pathological_93273", "radiation_surg_seq", "tumor_size_pathological_43328", "eod_mets_41985", "nodes_pos_fpa", "parse_t_2177", "tumor_size_with_primary_tumor_for_ajcc_t_87130", "parse_n_67182", "ss2018_anus_55561", "grade_post_therapy_clin_93593", "histology", "nodes_exam_76029", "lvi_full_56663", "behavior", "nodes_dab", "tumor_size_clinical_48894", "systemic_surg_seq", "grade_clinical_88426", "parse_m_47057", "schema_selection_anus", "extension_baa", "primary_site", "tnm8_inclusions_23758", "tnm8_path_stage_uab", "eod_tnm_component_cleanup_58170", "year_dx_validation", "summary_stage_rpa", "tumor_size_summary_47973" ],
-  "last_modified" : "2022-09-12T17:31:15.326Z",
+  "involved_tables" : [ "grade_post_therapy_path_3704", "grade_pathological_93273", "radiation_surg_seq", "tumor_size_pathological_43328", "eod_mets_41985", "nodes_pos_fpa", "parse_t_2177", "tumor_size_with_primary_tumor_for_ajcc_t_87130", "parse_n_67182", "ss2018_anus_55561", "grade_post_therapy_clin_93593", "histology", "nodes_exam_76029", "ajcc_chapter_calculation_19982", "lvi_full_56663", "behavior", "nodes_dab", "tumor_size_clinical_48894", "systemic_surg_seq", "grade_clinical_88426", "parse_m_47057", "schema_selection_anus", "extension_baa", "primary_site", "tnm8_inclusions_23758", "tnm8_path_stage_uab", "eod_tnm_component_cleanup_58170", "year_dx_validation", "summary_stage_rpa", "tumor_size_summary_47973" ],
+  "last_modified" : "2022-09-12T20:13:43.911Z",
   "on_invalid_input" : "CONTINUE"
 }

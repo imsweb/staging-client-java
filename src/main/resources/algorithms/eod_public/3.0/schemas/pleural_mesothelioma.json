@@ -248,6 +248,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_30349",
+      "inputs" : [ "site", "hist" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -356,7 +364,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "tumor_size_summary_full_15510", "tnm8_path_stage_uaq", "radiation_surg_seq", "grade_post_therapy_path_41285", "grade_pathological_31963", "grade_post_therapy_clin_41222", "extension_bbx", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "schema_selection_pleura", "histology", "nodes_exam_76029", "pleural_effusion_40041", "lvi_full_56663", "mets_hat", "tumor_size_pathological_full_93442", "tumor_size_clinical_full_19656", "ss2018_pleura_60930", "systemic_surg_seq", "tnm8_inclusions_tpf", "parse_m_47057", "primary_site", "nodes_dbq", "eod_tnm_component_cleanup_58170", "year_dx_validation", "grade_clinical_73056", "summary_stage_rpa" ],
-  "last_modified" : "2022-09-12T17:31:14.281Z",
+  "involved_tables" : [ "tumor_size_summary_full_15510", "tnm8_path_stage_uaq", "radiation_surg_seq", "grade_post_therapy_path_41285", "grade_pathological_31963", "grade_post_therapy_clin_41222", "extension_bbx", "nodes_pos_fpa", "parse_t_2177", "ajcc_chapter_calculation_30349", "parse_n_67182", "schema_selection_pleura", "histology", "nodes_exam_76029", "pleural_effusion_40041", "lvi_full_56663", "mets_hat", "tumor_size_pathological_full_93442", "tumor_size_clinical_full_19656", "ss2018_pleura_60930", "systemic_surg_seq", "tnm8_inclusions_tpf", "parse_m_47057", "primary_site", "nodes_dbq", "eod_tnm_component_cleanup_58170", "year_dx_validation", "grade_clinical_73056", "summary_stage_rpa" ],
+  "last_modified" : "2022-09-12T20:13:43.171Z",
   "on_invalid_input" : "CONTINUE"
 }

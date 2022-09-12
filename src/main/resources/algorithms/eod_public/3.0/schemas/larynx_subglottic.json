@@ -289,6 +289,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_73487",
+      "inputs" : [ "hist" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -397,7 +405,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "grade_post_therapy_clin_61658", "eod_regional_nodes_12613", "schema_selection_larynx_subglottic", "radiation_surg_seq", "extranodal_extension_head_and_neck_clinical_51375", "grade_clinical_6485", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "extranodal_extension_head_and_neck_pathological_93423", "histology", "nodes_exam_76029", "eod_mets_89421", "lymph_nodes_size_of_metastasis_87329", "lvi_full_56663", "tumor_size_summary_63115", "behavior", "tnm8_path_stage_upt", "ss2018_larynx_subglottic_excluding_melanoma_8720_8790_93242", "extension_bav", "grade_post_therapy_path_40048", "tnm8_inclusions_30955", "tumor_size_pathological_25597", "systemic_surg_seq", "tumor_size_clinical_60979", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "grade_pathological_84704", "year_dx_validation", "summary_stage_rpa" ],
-  "last_modified" : "2022-09-12T17:31:14.504Z",
+  "involved_tables" : [ "grade_post_therapy_clin_61658", "eod_regional_nodes_12613", "schema_selection_larynx_subglottic", "radiation_surg_seq", "extranodal_extension_head_and_neck_clinical_51375", "grade_clinical_6485", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "extranodal_extension_head_and_neck_pathological_93423", "histology", "nodes_exam_76029", "eod_mets_89421", "lymph_nodes_size_of_metastasis_87329", "lvi_full_56663", "tumor_size_summary_63115", "behavior", "tnm8_path_stage_upt", "ss2018_larynx_subglottic_excluding_melanoma_8720_8790_93242", "extension_bav", "grade_post_therapy_path_40048", "tnm8_inclusions_30955", "tumor_size_pathological_25597", "systemic_surg_seq", "tumor_size_clinical_60979", "ajcc_chapter_calculation_73487", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "grade_pathological_84704", "year_dx_validation", "summary_stage_rpa" ],
+  "last_modified" : "2022-09-12T20:13:43.343Z",
   "on_invalid_input" : "CONTINUE"
 }

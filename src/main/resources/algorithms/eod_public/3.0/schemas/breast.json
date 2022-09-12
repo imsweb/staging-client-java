@@ -626,6 +626,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_15027",
+      "inputs" : [ "site", "hist", "behavior" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "initial_context" : [ {
@@ -762,7 +770,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "her2_ish_sp_copy_no_95955", "er_percent_positive_61867", "oncotype_dx_recur_score_73667", "grade_post_therapy_clin_88214", "her2_ish_summary_40783", "grade_pathological_47031", "parse_t_2177", "schema_selection_breast", "ss2018_breast_69079", "histology", "sentinel_nodes_pos_95909", "nodes_exam_76029", "nodes_pos_fab", "er_summary_44166", "her2_summary_30512", "temp_eod_prefixes_52976", "her2_ish_dp_copy_no_89821", "tumor_size_clinical_breast_34385", "combined_grade_breast_8723", "her2_ish_dual_probe_ration_4635", "oncotype_less_than_11_10827", "tnm_8_stage_group_breast_16868", "nodes_daj", "systemic_surg_seq", "tnm8_inclusions_tpg", "her2_ihc_summary_57693", "tnm_8_path_stage_group_breast_21522", "parse_m_47057", "pr_allred_score_83938", "morphology_with_primary_tumor_for_ajcc_t_82996", "sentinel_nodes_exam_7235", "summary_stage_rpa", "extension_bak", "tumor_size_pathological_breast_85445", "pr_summary_49534", "radiation_surg_seq", "oncotype_dx_risk_level_11033", "multigene_signature_result_37000", "ki67_8355", "parse_n_67182", "oncotype_dx_recurrence_score_dcis_70549", "grade_post_therapy_path_47044", "tumor_size_with_primary_tumor_for_ajcc_t_16997", "response_to_neoadjuvant_therapy_57695", "er_allred_score_36612", "grade_clinical_91491", "pr_percent_positive_94563", "lvi_full_56663", "mets_hau", "behavior", "num_pos_aln_with_regional_nodes_for_ajcc_n_30002", "tnm_8_combined_group_breast_93916", "multigene_signature_method_85043", "behavior_with_primary_tumor_for_ss2018_t_69793", "primary_site", "eod_tnm_component_cleanup_58170", "number_of_positive_ipsilateral_level_i_ii_axillary_lymph_nodes_79439", "tumor_size_summary_breast_14624", "year_dx_validation", "oncotype_dx_risk_level_dcis_53080" ],
-  "last_modified" : "2022-09-12T17:31:17.342Z",
+  "involved_tables" : [ "her2_ish_sp_copy_no_95955", "er_percent_positive_61867", "oncotype_dx_recur_score_73667", "grade_post_therapy_clin_88214", "her2_ish_summary_40783", "grade_pathological_47031", "parse_t_2177", "schema_selection_breast", "ss2018_breast_69079", "histology", "sentinel_nodes_pos_95909", "nodes_exam_76029", "nodes_pos_fab", "er_summary_44166", "her2_summary_30512", "temp_eod_prefixes_52976", "her2_ish_dp_copy_no_89821", "tumor_size_clinical_breast_34385", "combined_grade_breast_8723", "her2_ish_dual_probe_ration_4635", "oncotype_less_than_11_10827", "tnm_8_stage_group_breast_16868", "nodes_daj", "systemic_surg_seq", "tnm8_inclusions_tpg", "her2_ihc_summary_57693", "tnm_8_path_stage_group_breast_21522", "parse_m_47057", "pr_allred_score_83938", "morphology_with_primary_tumor_for_ajcc_t_82996", "sentinel_nodes_exam_7235", "summary_stage_rpa", "extension_bak", "tumor_size_pathological_breast_85445", "pr_summary_49534", "radiation_surg_seq", "ajcc_chapter_calculation_15027", "oncotype_dx_risk_level_11033", "multigene_signature_result_37000", "ki67_8355", "parse_n_67182", "oncotype_dx_recurrence_score_dcis_70549", "grade_post_therapy_path_47044", "tumor_size_with_primary_tumor_for_ajcc_t_16997", "response_to_neoadjuvant_therapy_57695", "er_allred_score_36612", "grade_clinical_91491", "pr_percent_positive_94563", "lvi_full_56663", "mets_hau", "behavior", "num_pos_aln_with_regional_nodes_for_ajcc_n_30002", "tnm_8_combined_group_breast_93916", "multigene_signature_method_85043", "behavior_with_primary_tumor_for_ss2018_t_69793", "primary_site", "eod_tnm_component_cleanup_58170", "number_of_positive_ipsilateral_level_i_ii_axillary_lymph_nodes_79439", "tumor_size_summary_breast_14624", "year_dx_validation", "oncotype_dx_risk_level_dcis_53080" ],
+  "last_modified" : "2022-09-12T20:12:14.051Z",
   "on_invalid_input" : "CONTINUE"
 }

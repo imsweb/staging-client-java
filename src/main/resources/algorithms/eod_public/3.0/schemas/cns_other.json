@@ -287,6 +287,14 @@
     "default" : "9"
   } ],
   "mappings" : [ {
+    "id" : "ajcc_chapter_calculation",
+    "name" : "AJCC Chapter Calculation",
+    "tables" : [ {
+      "id" : "ajcc_chapter_calculation_81087",
+      "inputs" : [ "site", "hist", "behavior" ],
+      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+    } ]
+  }, {
     "id" : "summary_stage_2018",
     "name" : "Summary Stage 2018",
     "tables" : [ {
@@ -307,7 +315,7 @@
       "outputs" : [ "ss2018_derived" ]
     } ]
   } ],
-  "involved_tables" : [ "mgmt_17454", "summary_stage_benign_3306", "tumor_size_pathological_25597", "grade_post_therapy_path_86055", "chromosome_1p_status_40269", "tumor_size_clinical_60979", "nodes_exam_dna_95635", "grade_pathological_11803", "extension_bcd", "ss2018_cns_other_67712", "primary_site", "schema_selection_cns_other", "histology", "chromosome_19q_status_72683", "grade_post_therapy_clin_26948", "year_dx_validation", "brain_molecular_markers_75370", "lvi_full_56663", "eod_mets_35594", "tumor_size_summary_63115", "behavior", "grade_clinical_19997", "nodes_dna", "nodes_pos_dna_91511" ],
-  "last_modified" : "2022-09-12T17:31:12.357Z",
+  "involved_tables" : [ "mgmt_17454", "grade_post_therapy_path_86055", "chromosome_1p_status_40269", "nodes_exam_dna_95635", "schema_selection_cns_other", "histology", "chromosome_19q_status_72683", "lvi_full_56663", "tumor_size_summary_63115", "behavior", "grade_clinical_19997", "nodes_dna", "summary_stage_benign_3306", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "grade_pathological_11803", "ajcc_chapter_calculation_81087", "extension_bcd", "ss2018_cns_other_67712", "primary_site", "grade_post_therapy_clin_26948", "year_dx_validation", "brain_molecular_markers_75370", "eod_mets_35594", "nodes_pos_dna_91511" ],
+  "last_modified" : "2022-09-12T20:13:41.895Z",
   "on_invalid_input" : "CONTINUE"
 }
