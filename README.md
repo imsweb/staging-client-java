@@ -52,7 +52,7 @@ To get started using the EOD algorithm, instantiate a `Staging` instance:
 Staging staging = Staging.getInstance(EodDataProvider.getInstance(EodVersion.LATEST));
 ```
 
-### TNM 1.9
+### TNM 2.0
 
 TNM is a widely accepted system of cancer staging. TNM stands for Tumor, Nodes, and Metastasis. T is assigned based on the extent of involvement at the
 primary tumor site, N for the extent of involvement in regional lymph nodes, and M for distant spread. Clinical TNM is assigned prior to treatment and
