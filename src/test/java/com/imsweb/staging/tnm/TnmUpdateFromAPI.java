@@ -12,7 +12,7 @@ import com.imsweb.staging.update.UpdaterUtils;
 public class TnmUpdateFromAPI {
 
     private static final String _ALGORITHM = "tnm";
-    private static final String _VERSION = "1.9";
+    private static final String _VERSION = "2.0";
 
     public static void main(String[] args) throws IOException {
         UpdaterUtils.update(_ALGORITHM, _VERSION, new HashSet<>(Collections.singletonList("STAGING")));

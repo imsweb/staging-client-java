@@ -1,0 +1,90 @@
+{
+  "id" : "biliary_other",
+  "algorithm" : "tnm",
+  "version" : "2.0",
+  "name" : "Biliary Other",
+  "title" : "Other Biliary and Biliary, NOS",
+  "notes" : "C248  Overlapping lesion of biliary tract (neoplasms involving both intrahepatic and extrahepatic bile ducts)\nC249  Biliary tract, NOS\n\n**Note:** TNM is not defined for this schema. If directly assigning Summary Stage 2000 (SS2000), use the *Gallbladder, Other Biliary, and Biliary, NOS* chapter on page 110 of the [SS2000 on-line manual](https://seer.cancer.gov/tools/ssm/ssm2000/SSSM2000-122012.pdf#page=110).",
+  "schema_selection_table" : "schema_selection_biliary_other",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "naaccr_xml_id" : "dateOfDiagnosis",
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "naaccr_xml_id" : "primarySite",
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "naaccr_xml_id" : "histologicTypeIcdO3",
+    "table" : "histology",
+    "used_for_staging" : true
+  } ],
+  "outputs" : [ {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "clin_stage_group",
+    "name" : "Derived SEER Clin Stage Group",
+    "naaccr_item" : 3610,
+    "naaccr_xml_id" : "derivedSeerClinStgGrp",
+    "default" : "88"
+  }, {
+    "key" : "path_stage_group",
+    "name" : "Derived SEER Path Stage Group",
+    "naaccr_item" : 3605,
+    "naaccr_xml_id" : "derivedSeerPathStgGrp",
+    "default" : "88"
+  }, {
+    "key" : "combined_stage_group",
+    "name" : "Derived SEER Combined Stage Group",
+    "naaccr_item" : 3614,
+    "naaccr_xml_id" : "derivedSeerCmbStgGrp",
+    "default" : "88"
+  }, {
+    "key" : "combined_t",
+    "name" : "Derived SEER Combined T",
+    "naaccr_item" : 3616,
+    "naaccr_xml_id" : "derivedSeerCombinedT",
+    "default" : "88"
+  }, {
+    "key" : "combined_n",
+    "name" : "Derived SEER Combined N",
+    "naaccr_item" : 3618,
+    "naaccr_xml_id" : "derivedSeerCombinedN",
+    "default" : "88"
+  }, {
+    "key" : "combined_m",
+    "name" : "Derived SEER Combined M",
+    "naaccr_item" : 3620,
+    "naaccr_xml_id" : "derivedSeerCombinedM",
+    "default" : "88"
+  }, {
+    "key" : "source_t",
+    "name" : "Derived SEER Combined T Source",
+    "naaccr_item" : 3622,
+    "naaccr_xml_id" : "derivedSeerCmbTSrc"
+  }, {
+    "key" : "source_n",
+    "name" : "Derived SEER Combined N Source",
+    "naaccr_item" : 3624,
+    "naaccr_xml_id" : "derivedSeerCmbNSrc"
+  }, {
+    "key" : "source_m",
+    "name" : "Derived SEER Combined M Source",
+    "naaccr_item" : 3626,
+    "naaccr_xml_id" : "derivedSeerCmbMSrc"
+  } ],
+  "involved_tables" : [ "primary_site", "schema_selection_biliary_other", "histology", "year_dx_validation" ],
+  "last_modified" : "2020-06-30T19:47:43.541Z",
+  "on_invalid_input" : "FAIL_WHEN_USED_FOR_STAGING"
+}
