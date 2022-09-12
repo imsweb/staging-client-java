@@ -209,7 +209,7 @@ class EodStagingTest extends StagingTest {
     }
 
     @Test
-    void testStageUrethra() {
+    void testStagePancreas() {
         EodStagingData data = new EodStagingInputBuilder()
                 .withInput(EodInput.DX_YEAR, "2018")
                 .withInput(EodInput.PRIMARY_SITE, "C250")
