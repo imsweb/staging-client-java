@@ -61,8 +61,12 @@ public final class UpdaterUtils {
         throw new IllegalStateException("Utility class");
     }
 
-    @SuppressWarnings("ConstantConditions")
     public static void update(String algorithm, String version, Set<String> glossaryCategories) throws IOException {
+        update(algorithm, version, glossaryCategories, null);
+    }
+
+        @SuppressWarnings("ConstantConditions")
+    public static void update(String algorithm, String version, Set<String> glossaryCategories, Path outputDir) throws IOException {
         Stopwatch stopwatch = Stopwatch.create();
 
         // convert set of strings to set of Enums; we can't expose the optional dependency Category class in the method signature.
@@ -116,9 +120,12 @@ public final class UpdaterUtils {
         }
         _LOG.info("{} valid schema idenfiers found.", schemaIds.size());
 
-        // get root algorithms directory in src/main/resources
+        // get root algorithms directory in src/main/resources or use the passed in Path
         Path resourceDirectory = Paths.get("src", "main", "resources");
-        String baseDirectory = resourceDirectory.toFile().getAbsolutePath() + "/algorithms/" + algorithm + "/" + version;
+        String baseDirectory = (outputDir != null) ? outputDir.toFile().getAbsolutePath() : resourceDirectory.toFile().getAbsolutePath();
+
+        // add the algorithm and version to the path
+        baseDirectory = baseDirectory + "/algorithms/" + algorithm + "/" + version;
 
         String schemaDir = baseDirectory + "/schemas";
         _LOG.info("Deleting all files from {}...", schemaDir);
