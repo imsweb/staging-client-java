@@ -14,7 +14,7 @@ public final class TnmDataProvider extends StagingFileDataProvider {
 
     public enum TnmVersion {
         LATEST("2.0"),
-        V1_9("2.0");
+        V2_0("2.0");
 
         private final String _version;
 

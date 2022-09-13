@@ -27,7 +27,7 @@ be calculated.
 All the standard setting organizations will collect the predictive and prognostic factors through Site Specific Data Items (SSDIs). Unlike the SSFs, these data
 items have formats and code structures specific to the data item.
 
-### EOD 2.1
+### EOD 3.0
 
 Extent of Disease (EOD) is a set of three data items that describe how far a cancer has spread at the time of diagnosis. EOD 2018 is effective for
 cases diagnosed in 2018 and later.
