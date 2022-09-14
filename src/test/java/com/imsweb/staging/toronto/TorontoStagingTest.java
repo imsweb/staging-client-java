@@ -391,8 +391,9 @@ class TorontoStagingTest extends StagingTest {
         List<Schema> lookups = _STAGING.lookupSchema(lookup);
         assertThat(lookups).hasSize(2);
 
-        Schema schema = _STAGING.getSchema(lookups.get(0).getId());
-        assertThat(schema.getId()).isEqualTo("ovarian");
+        assertThat(lookups).extracting("id").containsExactlyInAnyOrder("ovarian", "adult_other_non_pediatric");
+
+        Schema schema = _STAGING.getSchema("ovarian");
 
         // build list of output keys
         Set<String> definedOutputs = schema.getOutputs().stream().map(Output::getKey).collect(Collectors.toSet());
