@@ -1,0 +1,30 @@
+{
+  "id" : "schema_selection_renal_tumors_unspecified_malignant_renal_tumors",
+  "algorithm" : "toronto",
+  "version" : "0.2",
+  "name" : "Schema Selection Renal Tumors: Unspecified Malignant Renal Tumors",
+  "title" : "Schema selection for Renal Tumors: Unspecified Malignant Renal Tumors",
+  "last_modified" : "2022-08-05T17:36:02.086Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "age_dx",
+    "name" : "Age at Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C649", "8000-8005", "0-19", "3", "MATCH" ] ]
+}
