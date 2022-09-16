@@ -39,7 +39,7 @@
     "key" : "cns_involvement",
     "name" : "CNS Involvement",
     "description" : "NAACCR IDs are not final",
-    "naaccr_item" : 3960,
+    "naaccr_item" : 3984,
     "naaccr_xml_id" : "cnsInvolvement",
     "table" : "cns_involvement_24387",
     "used_for_staging" : false,
@@ -110,6 +110,6 @@
     "default" : "88"
   } ],
   "involved_tables" : [ "primary_site", "cns_involvement_24387", "histology", "age_at_diagnosis_validation_3881", "schema_selection_acute_lymphoblastic_leukemia", "white_blood_cell_count_1932", "year_dx_validation" ],
-  "last_modified" : "2022-08-05T13:13:23.188Z",
+  "last_modified" : "2022-09-15T20:43:07.349Z",
   "on_invalid_input" : "CONTINUE"
 }
