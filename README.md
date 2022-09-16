@@ -10,7 +10,7 @@ A cancer staging client library for Java applications.
 
 In prior versions of this library the algorithms were released in separate repositories. They are all now included with this library.
 
-### Toronto Pedatric Staging 0.1
+### Toronto Pedatric Staging 0.2
 
 Toronto Stage was developed based on a consensus meeting by the Union for Internal Cancer Control (UICC) in 2014. Since this time, multiple countries have
 implemented the Toronto Staging Guidelines for pediatric cancers. Starting in 2024, the United States will also implement the Toronto Staging in the SEER
@@ -97,14 +97,14 @@ Download [the latest JAR][1] or grab via Maven:
 <dependency>
     <groupId>com.imsweb</groupId>
     <artifactId>staging-client-java</artifactId>
-    <version>9.0</version>
+    <version>9.1</version>
 </dependency>
 ```
 
 or via Gradle:
 
 ```groovy
-compile 'com.imsweb:staging-client-java:9.0'
+compile 'com.imsweb:staging-client-java:9.1'
 ```
 
 ## Usage
