@@ -38,8 +38,8 @@ public final class TorontoDataProvider extends StagingFileDataProvider {
     }
 
     public enum TorontoVersion {
-        LATEST("0.1"),
-        V0_1("0.1");
+        LATEST("0.2"),
+        V0_2("0.2");
 
         private final String _version;
 

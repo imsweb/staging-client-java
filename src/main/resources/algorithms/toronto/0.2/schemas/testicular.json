@@ -1,0 +1,265 @@
+{
+  "id" : "testicular",
+  "algorithm" : "toronto",
+  "version" : "0.2",
+  "name" : "Testicular",
+  "title" : "Testicular - Malignant Gonadal Germ Cell Tumors",
+  "notes" : "9060-9065, 9070-9073, 9080-9085, 9090, 9091, 9100-9101: C620-C629 (ages 0-19)\n\n**Note 1:** The following sources were used in the development of this schema\n* Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022\nhttps://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf",
+  "schema_selection_table" : "schema_selection_testicular",
+  "schema_discriminators" : [ "age_dx", "behavior" ],
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "naaccr_xml_id" : "dateOfDiagnosis",
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "naaccr_xml_id" : "primarySite",
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "naaccr_xml_id" : "histologicTypeIcdO3",
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "naaccr_item" : 523,
+    "naaccr_xml_id" : "behaviorCodeIcdO3",
+    "table" : "behavior",
+    "used_for_staging" : true
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "naaccr_xml_id" : "regionalNodesPositive",
+    "default" : "99",
+    "table" : "nodes_pos_fpa",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_primary_tumor",
+    "name" : "EOD Primary Tumor",
+    "naaccr_item" : 772,
+    "naaccr_xml_id" : "eodPrimaryTumor",
+    "default" : "999",
+    "table" : "eod_primary_tumor_63650",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_regional_nodes",
+    "name" : "EOD Regional Nodes",
+    "naaccr_item" : 774,
+    "naaccr_xml_id" : "eodRegionalNodes",
+    "default" : "999",
+    "table" : "eod_regional_nodes_4689",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_mets",
+    "name" : "EOD Mets",
+    "naaccr_item" : 776,
+    "naaccr_xml_id" : "eodMets",
+    "default" : "00",
+    "table" : "eod_mets_68192",
+    "used_for_staging" : true
+  }, {
+    "key" : "age_dx",
+    "name" : "Age at Diagnosis",
+    "naaccr_item" : 230,
+    "naaccr_xml_id" : "ageAtDiagnosis",
+    "table" : "age_at_diagnosis_validation_3881",
+    "used_for_staging" : true
+  }, {
+    "key" : "schema_id",
+    "name" : "Schema ID",
+    "naaccr_item" : 3800,
+    "naaccr_xml_id" : "schemaId",
+    "table" : "schema_id_42744",
+    "used_for_staging" : true
+  }, {
+    "key" : "s_category_clin",
+    "name" : "S Category Clinical",
+    "naaccr_item" : 3923,
+    "naaccr_xml_id" : "sCategoryClinical",
+    "table" : "s_category_clinical_11368",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "s_category_path",
+    "name" : "S Category Pathological",
+    "naaccr_item" : 3924,
+    "naaccr_xml_id" : "sCategoryPathological",
+    "table" : "s_category_pathological_46197",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "afp_pre_orch_range",
+    "name" : "AFP Pre-Orchiectomy Range",
+    "naaccr_item" : 3808,
+    "naaccr_xml_id" : "afpPreOrchiectomyRange",
+    "table" : "afp_alpha_fetoprotein_pre_orchiectomy_range_33270",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "hcg_pre_orch_range",
+    "name" : "hCG Pre-Orchiectomy Range",
+    "naaccr_item" : 3849,
+    "naaccr_xml_id" : "hcgPreOrchiectomyRange",
+    "table" : "hcg_pre_orchiectomy_range_1551",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "ldh_pre_orch_range",
+    "name" : "LDH Pre-Orchiectomy Range",
+    "naaccr_item" : 3868,
+    "naaccr_xml_id" : "ldhPreOrchiectomyRange",
+    "table" : "ldh_pre_orchiectomy_range_4903",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "afp_post_orch_range",
+    "name" : "AFP Post-Orchiectomy Range",
+    "naaccr_item" : 3806,
+    "naaccr_xml_id" : "afpPostOrchiectomyRange",
+    "table" : "afp_alpha_fetoprotein_post_orchiectomy_range_40524",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "hcg_post_orch_range",
+    "name" : "hCG Post-Orchiectomy Range",
+    "naaccr_item" : 3847,
+    "naaccr_xml_id" : "hcgPostOrchiectomyRange",
+    "table" : "hcg_post_orchiectomy_range_2422",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "ldh_post_orch_range",
+    "name" : "LDH Post-Orchiectomy Range",
+    "naaccr_item" : 3867,
+    "naaccr_xml_id" : "ldhPostOrchiectomyRange",
+    "table" : "ldh_post_orchiectomy_range_81426",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SEER_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    } ]
+  } ],
+  "outputs" : [ {
+    "key" : "toronto_id",
+    "name" : "Toronto ID",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3977,
+    "naaccr_xml_id" : "torontoId",
+    "default" : "10c1"
+  }, {
+    "key" : "toronto_version_number",
+    "name" : "Toronto Version Number",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3980,
+    "naaccr_xml_id" : "torontoVersionNumber",
+    "default" : "1"
+  }, {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "toronto_t",
+    "name" : "Derived Toronto T",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3965,
+    "naaccr_xml_id" : "derivedTorontoT"
+  }, {
+    "key" : "toronto_n",
+    "name" : "Derived Toronto N",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3966,
+    "naaccr_xml_id" : "derivedTorontoN"
+  }, {
+    "key" : "toronto_m",
+    "name" : "Derived Toronto M",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3967,
+    "naaccr_xml_id" : "derivedTorontoM"
+  }, {
+    "key" : "toronto_group",
+    "name" : "Derived Toronto Stage Group",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 3968,
+    "naaccr_xml_id" : "derivedTorontoStageGroup"
+  } ],
+  "mappings" : [ {
+    "id" : "toronto_stage",
+    "name" : "Toronto Stage",
+    "initial_context" : [ {
+      "key" : "toronto_n",
+      "value" : "90"
+    }, {
+      "key" : "toronto_m",
+      "value" : "90"
+    }, {
+      "key" : "toronto_group",
+      "value" : "90"
+    }, {
+      "key" : "toronto_t",
+      "value" : "90"
+    } ],
+    "tables" : [ {
+      "id" : "toronto_t_57044",
+      "inputs" : [ "schema_id", "eod_primary_tumor" ],
+      "outputs" : [ "toronto_t" ]
+    }, {
+      "id" : "toronto_n_21728",
+      "inputs" : [ "nodes_pos", "schema_id", "eod_regional_nodes" ],
+      "outputs" : [ "toronto_n" ]
+    }, {
+      "id" : "toronto_m_65862",
+      "inputs" : [ "eod_mets" ],
+      "outputs" : [ "toronto_m" ]
+    }, {
+      "id" : "combined_s_category_15139",
+      "inputs" : [ "s_category_path", "s_category_clin" ],
+      "outputs" : [ "s_category_combined" ]
+    }, {
+      "id" : "toronto_stage_81706",
+      "inputs" : [ "s_category_combined", "toronto_m", "toronto_n", "toronto_t" ],
+      "outputs" : [ "toronto_group" ]
+    } ]
+  } ],
+  "involved_tables" : [ "toronto_n_21728", "age_at_diagnosis_validation_3881", "toronto_t_57044", "toronto_m_65862", "combined_s_category_15139", "schema_selection_testicular", "hcg_post_orchiectomy_range_2422", "schema_id_42744", "s_category_clinical_11368", "nodes_pos_fpa", "hcg_pre_orchiectomy_range_1551", "toronto_stage_81706", "primary_site", "eod_primary_tumor_63650", "s_category_pathological_46197", "histology", "ldh_pre_orchiectomy_range_4903", "afp_alpha_fetoprotein_pre_orchiectomy_range_33270", "year_dx_validation", "eod_mets_68192", "behavior", "afp_alpha_fetoprotein_post_orchiectomy_range_40524", "eod_regional_nodes_4689", "ldh_post_orchiectomy_range_81426" ],
+  "last_modified" : "2022-08-05T17:59:04.159Z",
+  "on_invalid_input" : "CONTINUE"
+}

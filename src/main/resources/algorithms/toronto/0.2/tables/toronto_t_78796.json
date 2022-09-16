@@ -1,0 +1,22 @@
+{
+  "id" : "toronto_t_78796",
+  "algorithm" : "toronto",
+  "version" : "0.2",
+  "name" : "Toronto T",
+  "title" : "Toronto T",
+  "last_modified" : "2022-06-24T19:13:12.376Z",
+  "definition" : [ {
+    "key" : "schema_id",
+    "name" : "Schema",
+    "type" : "INPUT"
+  }, {
+    "key" : "eod_primary_tumor",
+    "name" : "EOD PT",
+    "type" : "INPUT"
+  }, {
+    "key" : "toronto_t",
+    "name" : "Toronto T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00551", "000,050,800", "VALUE:T0" ], [ "00551", "100-350", "VALUE:T1" ], [ "00551", "400", "VALUE:T2a" ], [ "00551", "450", "VALUE:T2b" ], [ "00551", "500", "VALUE:T2" ], [ "00551", "600-750", "VALUE:T3" ], [ "00551", "999", "VALUE:TX" ], [ "00459", "800", "VALUE:T0" ], [ "00459", "100", "VALUE:T1" ], [ "00459", "200", "VALUE:T2" ], [ "00459", "700", "VALUE:T3" ], [ "00459", "999", "VALUE:TX" ] ]
+}

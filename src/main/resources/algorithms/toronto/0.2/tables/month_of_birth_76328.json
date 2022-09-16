@@ -1,0 +1,14 @@
+{
+  "id" : "month_of_birth_76328",
+  "algorithm" : "toronto",
+  "version" : "0.2",
+  "name" : "Month of Birth",
+  "title" : "Month of Birth",
+  "last_modified" : "2022-09-02T15:27:50.429Z",
+  "definition" : [ {
+    "key" : "month_birth",
+    "name" : "Month of Birth",
+    "type" : "INPUT"
+  } ],
+  "rows" : [ [ "1" ], [ "01" ], [ "2" ], [ "02" ], [ "3" ], [ "03" ], [ "4" ], [ "04" ], [ "5" ], [ "05" ], [ "6" ], [ "06" ], [ "7" ], [ "07" ], [ "8" ], [ "08" ], [ "9" ], [ "09" ], [ "10" ], [ "11" ], [ "12" ], [ "99" ], [ "" ] ]
+}
