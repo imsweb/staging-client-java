@@ -72,7 +72,7 @@
     "key" : "chrom_1q_status",
     "name" : "Chromosome 1q Status",
     "description" : "NAACCR IDs are not final",
-    "naaccr_item" : 3961,
+    "naaccr_item" : 3985,
     "naaccr_xml_id" : "chromosome1qStatus",
     "table" : "chromosome_1q_status_14467",
     "used_for_staging" : false,
@@ -142,6 +142,6 @@
     "default" : "88"
   } ],
   "involved_tables" : [ "chromosome_1q_status_14467", "primary_site", "chromosome_1p_status_97190", "histology", "age_at_diagnosis_validation_3881", "year_dx_validation", "chromosome_19q_status_19104", "behavior", "schema_selection_renal_tumors_unspecified_malignant_renal_tumors", "wilms_tumor_staging_system_11570" ],
-  "last_modified" : "2022-08-05T17:36:02.122Z",
+  "last_modified" : "2022-09-15T20:46:14.978Z",
   "on_invalid_input" : "CONTINUE"
 }
