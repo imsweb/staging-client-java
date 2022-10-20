@@ -1,2 +1,5 @@
-rootProject.name = 'staging-client-java'
+rootProject.name = 'staging-client'
 include 'lib'
+
+// change subproject name
+project(":lib").name = "staging-client-java"
