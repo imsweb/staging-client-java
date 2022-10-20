@@ -1,0 +1,18 @@
+{
+  "id" : "toronto_m_65862",
+  "algorithm" : "toronto",
+  "version" : "0.2",
+  "name" : "Toronto M",
+  "title" : "Toronto M",
+  "last_modified" : "2022-06-24T17:39:59.888Z",
+  "definition" : [ {
+    "key" : "eod_mets",
+    "name" : "EOD M",
+    "type" : "INPUT"
+  }, {
+    "key" : "toronto_m",
+    "name" : "Toronto M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00,99", "VALUE:M0" ], [ "10-70", "VALUE:M1" ] ]
+}

@@ -1,0 +1,25 @@
+{
+  "id" : "ssf1_sstg_jat",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF1",
+  "title" : "CS Site-Specific Factor 1",
+  "subtitle" : "Extension Evaluated at Enucleation",
+  "notes" : "**Note 1**:  True invasion of the choroid is defined as one or more solid nests of tumor cells that fills or replaces the choroid and has pushing borders.  This is distinguished from artifactual invasion, or groups of tumor cells in the open spaces beween intraocular structures, extraocular tissues, and/or subarachnoid space.  Focal choroidal invasion is a solid nest of tumor measuring less than 3 millimeter (mm) in maximum diameter.  Massive choroidal invasion is a solid tumor nest 3 mm or more in maximum diameter.\n\n**Note 2**:  For correct calculation of derived staging fields for this schema, CS Extension and CS Site-Specific Factor 1, Extension Evaluated at Enucleation, must both be coded, whether or not an enucleation was performed. Information from enucleation is excluded from CS Extension and coded only in CS Site-Specific Factor 1.\n\n**Note 3**: For information regarding stage calculations, refer to CS Extension Note 3 and the special calculation extra tables.\n\n**Note 4**: This version of the table is only used to calculate Summary Stage T values.",
+  "footnotes" : "For this site, extension is coded in two CS fields:CS Extension (clinical extension), and CS Site-Specific Factor 1 - Extension Evaluated at Enucleation.  The mapping values for the T category for AJCC Stage, SS77, and SS2000 and the associated c, p, y, or a indicator are assigned based on the values in CS Extension, CS TS/Ext Eval, and Site-Specific Factor 1 as shown in the Special Calculation Table for AJCC Stage and Special Calculation Table for SEER Summary Stage.",
+  "last_modified" : "2015-05-27T16:20:00.737Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "ERROR:", "ERROR:" ], [ "030", "ERROR:", "ERROR:" ], [ "041", "ERROR:", "ERROR:" ], [ "043", "ERROR:", "ERROR:" ], [ "044", "ERROR:", "ERROR:" ], [ "046", "ERROR:", "ERROR:" ], [ "047", "ERROR:", "ERROR:" ], [ "048", "ERROR:", "ERROR:" ], [ "049", "ERROR:", "ERROR:" ], [ "054", "ERROR:", "ERROR:" ], [ "056", "ERROR:", "ERROR:" ], [ "057", "ERROR:", "ERROR:" ], [ "059", "ERROR:", "ERROR:" ], [ "072", "ERROR:", "ERROR:" ], [ "074", "VALUE:D", "VALUE:D" ], [ "075", "VALUE:RE", "VALUE:RE" ], [ "080", "VALUE:D", "VALUE:D" ], [ "095", "ERROR:", "ERROR:" ], [ "096", "ERROR:", "ERROR:" ], [ "300", "VALUE:L", "VALUE:L" ], [ "410", "VALUE:L", "VALUE:L" ], [ "430", "VALUE:L", "VALUE:L" ], [ "435", "VALUE:L", "VALUE:L" ], [ "440", "VALUE:L", "VALUE:L" ], [ "460", "VALUE:L", "VALUE:L" ], [ "465", "VALUE:L", "VALUE:L" ], [ "470", "VALUE:L", "VALUE:L" ], [ "490", "VALUE:L", "VALUE:L" ], [ "540", "VALUE:RE", "VALUE:RE" ], [ "550", "VALUE:RE", "VALUE:RE" ], [ "560", "VALUE:RE", "VALUE:RE" ], [ "570", "VALUE:RE", "VALUE:RE" ], [ "590", "VALUE:RE", "VALUE:RE" ], [ "725", "VALUE:RE", "VALUE:RE" ], [ "745", "VALUE:RE", "VALUE:RE" ], [ "755", "VALUE:D", "VALUE:D" ], [ "765", "VALUE:RE", "VALUE:RE" ], [ "775", "VALUE:D", "VALUE:D" ], [ "790", "VALUE:RE", "VALUE:RE" ], [ "810", "VALUE:RE", "VALUE:RE" ], [ "950", "VALUE:U", "VALUE:U" ], [ "960", "VALUE:U", "VALUE:U" ], [ "970", "VALUE:U", "VALUE:U" ], [ "999", "VALUE:U", "VALUE:U" ] ]
+}

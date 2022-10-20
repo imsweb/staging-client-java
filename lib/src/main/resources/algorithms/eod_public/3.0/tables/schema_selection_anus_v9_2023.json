@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_anus_v9_2023",
+  "algorithm" : "eod_public",
+  "version" : "3.0",
+  "name" : "Schema Selection Anus [V9: 2023+]",
+  "title" : "Schema selection for Anus [V9: 2023+]",
+  "last_modified" : "2022-05-27T16:46:33.043Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C210-C212,C218", "8000-8700, 8720-8790", "2023-9998,9999", "MATCH" ] ]
+}

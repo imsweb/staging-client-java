@@ -1,0 +1,35 @@
+{
+  "id" : "nodes_dbe",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field. Distant nodes are coded in the field CS Mets at DX.\n\n**Note 2**:  Regional nodes include bilateral and contralateral involvement of named nodes.\n\n**Note 3**:  Determine the size of the largest metastasis in a lymph node as documented in the pathology report to assign codes 100-300, not the size of the lymph node. If the size of the metastasis is not documented, determine the size of the largest involved lymph node as documented pathologically or clinically with pathology taking priority. Do not code the size of any node(s) coded in CS Mets at DX.\n\n**Note 4**:  The assignment of the N category is based both on number and size of metastasis.  Use codes as described here if the number and/or size of nodes involved is unknown:\n\n* Code 110:  Single node involved, size not stated.\n* Code 210:  Multiple nodes involved, size not stated.\n* Code 200:  Single or multiple nodes not stated, size stated and greater than 2 cm but less than or equal to 5 cm.\n* Code 300:  Single or multiple nodes not stated, size stated and greater than 5 cm.\n* Code 505:  Single or multiple nodes not stated, size not stated.",
+  "last_modified" : "2015-05-27T16:19:33.156Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "100", "SINGLE regional lymph node, less than or equal to 2 cm:\n    Renal Pelvis:\n        Aortic, NOS:\n            Lateral (lumbar)\n            Para-aortic\n            Periaortic\n        Paracaval\n        Renal hilar\n        Retroperitoneal, NOS\n        Regional lymph node, NOS\n    Ureter:\n        Iliac, NOS:\n            Common\n            External\n            Internal (hypogastric), NOS\n                Obturator\n        Lateral aortic (lumbar)\n        Paracaval\n        Pelvic, NOS\n        Periureteral\n        Renal hilar\n        Retroperitoneal, NOS\n        Regional lymph node, NOS\n\nStated as N1 with no other information on regional lymph nodes", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "110", "SINGLE regional node listed in code 100, size not stated", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "200", "SINGLE regional lymph node listed in code 100, greater than 2 cm but less than or equal to 5 cm \n   OR \nMULTIPLE regional nodes listed in code 100, none greater than 5 cm\n\nStated as N2 with no other information on regional lymph nodes", "VALUE:N2", "VALUE:N2", "VALUE:RN", "VALUE:RN" ], [ "210", "MULTIPLE regional nodes listed in code 100, size not stated", "VALUE:N2", "VALUE:N2", "VALUE:RN", "VALUE:RN" ], [ "300", "Regional lymph node(s) listed in code 100, at least one greater than 5 cm\n\nStated as N3 with no other information on regional lymph nodes", "VALUE:N3", "VALUE:N3", "VALUE:RN", "VALUE:RN" ], [ "500", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 110, 200, 210, 300, and 505\n\nRegional lymph node(s), NOS (size and/or number not stated)", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "505", "Regional lymph node(s), NOS:\nSize and/or number not stated \n(See Note 4 for exceptions)", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

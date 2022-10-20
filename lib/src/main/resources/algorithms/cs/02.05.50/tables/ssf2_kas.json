@@ -1,0 +1,20 @@
+{
+  "id" : "ssf2_kas",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF2",
+  "title" : "CS Site-Specific Factor 2",
+  "subtitle" : "Specific Location of Tumor",
+  "notes" : "**Note 1**: The location of a primary squamous cell carcinoma of the esophagus is a staging element for AJCC 7 staging.  The location of the primary cancer site is defined by AJCC as the position of the upper (proximal) edge of the tumor in the esophagus.  The location of the tumor in the esophagus provides important information about the tumor's relation to adjacent structures.  The location of the proximal edge of the tumor within the esophagus may be described based on imaging, esophagoscopy, or surgical results. \n\n**Note 2**:  As described in the AJCC 7th Edition and used in this Site-Specific Factor, the cervical esophagus is bordered superiorly by the hypopharynx and inferiorly by the thoracic inlet at the level of the sternal notch.  The upper thoracic esophagus is bordered inferiorly by the lower border of the azygos vein.  The middle thoracic esophagus is bordered inferiorly by the inferior pulmonary veins.  The lower thoracic esophagus is bordered inferiorly by the stomach.  The abdominal esophagus extends from the esophagogastric junction to 5 centimeters (cm) below the junction in the proximal stomach.  \n\n**Note 3**:  Code the specific location of the primary tumor according to the term(s) found in the medical record.  If multiple terms are used, give priority to codes 010- 060 over 070-090.",
+  "last_modified" : "2015-05-27T16:20:02.792Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Stated as cervical esophagus " ], [ "020", "Stated as upper thoracic esophagus" ], [ "030", "Stated as middle thoracic esophagus" ], [ "040", "OBSOLETE DATA CONVERTED V0203\nSee code 060\n\nAbdominal " ], [ "050", "Stated as lower thoracic esophagus" ], [ "060", "Stated as abdominal esophagus" ], [ "070", "Stated as upper third " ], [ "080", "Stated as middle third" ], [ "090", "Stated as lower third" ], [ "100", "OBSOLETE DATA REVIEWED AND CHANGED V0203\nOverlapping subsites is not appropriate for location of the tumor's proximal edge.  A specific location as described in Note 1 should be coded, or 999 if the proximal edge location is unknown.\n\nOverlapping lesion of the Esophagus" ], [ "888", "OBSOLETE DATA CONVERTED V0200\nSee code 988 \n\nNot applicable for this site" ], [ "988", "Not applicable:  Information not collected for this case\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.  If this item is required to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "999", "Unknown; Esophagus, NOS" ] ]
+}

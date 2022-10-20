@@ -1,0 +1,19 @@
+{
+  "id" : "size_aab",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Size",
+  "title" : "CS Tumor Size",
+  "notes" : "**Note 1**:  Code the specific tumor size as documented in the medical record. If the only information regarding tumor size is the physician's statement of the T category, assign code 990 (T1mi), 991 (T1b), 992 (T1 or T1c), or 995 (T2). If the physician's statement of the T category is T1a with no documentation of tumor size, code tumor size as 005. If the physician's statement of the T category is T3 with no documentation of tumor size or a statement specifying only that the tumor size is greater than 5 cm, code tumor size as 051.\n\n**Note 2**:  When coding pathologic size, code the measurement of the invasive component.  For example, if there is a large in situ component (e.g., 4 cm) and a small invasive component, see CS Site-Specific Factor 6 to code more information about the reported tumor size.  If the size of invasive component is not given, code the size of the entire tumor and record what the size value represents in CS Site-Specific Factor 6.  Note that some breast cancers cannot be sized pathologically.\n\n**Note 3**:  Microinvasion is the extension of cancer cells beyond the basement membrane into the adjacent tissues with no focus more than 0.1 cm in greatest dimension.  When there are multiple foci of microinvasion, the size of only the largest focus is used to classify the microinvasion.  (Do not use the sum of all the individual foci.)",
+  "last_modified" : "2015-05-27T16:19:49.306Z",
+  "definition" : [ {
+    "key" : "size",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No mass/tumor found" ], [ "001-988", "001 - 988 millimeters (mm) \n(Code exact size in mm)" ], [ "989", "989 mm or larger" ], [ "990", "Microinvasion\nMicroscopic focus or foci only and no size given \nDescribed as \"less than 1 mm\"\n\nStated as T1mi  with no other information on tumor size" ], [ "991", "Described as \"less than 1 centimeter (cm)\"\n\nStated as T1b  with no other information on tumor size" ], [ "992", "Described as \"less than 2 cm,\" or \"greater than 1 cm,\" or \"between 1 cm and 2 cm\"\n\nStated as T1 [NOS] or T1c [NOS] with no other information on tumor size" ], [ "993", "Described as \"less than 3 cm,\" or \"greater than 2 cm,\" or \"between 2 cm and 3 cm\"" ], [ "994", "Described as \"less than 4 cm,\" or \"greater than 3 cm,\" or \"between 3 cm and 4 cm\"" ], [ "995", "Described as \"less than 5 cm,\" or \"greater than 4 cm,\" or \"between 4 cm and 5 cm\"\n\nStated as T2 with no other information on tumor size" ], [ "996", "Mammographic/xerographic diagnosis only, no size given; clinically not palpable" ], [ "997", "Paget disease of nipple with no demonstrable tumor" ], [ "998", "Diffuse" ], [ "999", "Unknown; size not stated\nSize of tumor cannot be assessed\nNot documented in patient record" ] ]
+}

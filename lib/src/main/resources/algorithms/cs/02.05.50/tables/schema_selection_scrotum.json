@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_scrotum",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection Scrotum",
+  "title" : "Schema selection for Scrotum",
+  "last_modified" : "2015-05-27T16:19:48.159Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C632", "8000-8246,8248-8713,8800-9136,9141-9582", "MATCH" ] ]
+}

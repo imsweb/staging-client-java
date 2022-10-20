@@ -1,0 +1,20 @@
+{
+  "id" : "ssf5_npe",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF5",
+  "title" : "CS Site-Specific Factor 5",
+  "subtitle" : "International Prognostic Score (IPS)",
+  "notes" : "**Note 1**:  The International Prognostic Score (IPS) has been developed for Hodgkin lymphoma and predicts outcome based on the following adverse factors:  \n\n* Male sex\n* Age 45 years or greater\n* Ann Arbor Stage IV \n* Serum albumin less than 4 grams/deciliter (g/dl)\n* Hemoglobin concentration less than 10.5 g/dl\n* White blood cell count greater than or equal to 15,000/cubic millimeter (mm)\n* Lymphocytopenia, lymphocyte count less than 600/cubic mm or less than 8% of white cell count\n\n**Note 2**:  Record the IPS score as documented in the medical record.  Do not calculate points. Only record points if a physician has documented them.\n\n**Note 3**:  There are now three indices/scores associated with lymphoma: The International Prognostic Index (IPI, CS Site-Specific Factor 3), the Follicular Lymphoma International Prognostic Index (FLIPI, CS Site-Specific Factor 4) and the International Prognostic Score (for Hodgkin lymphomas, CS Site-Specific Factor 5.) Physicians may use these indices/scores interchangeably. For coding:\n\n* Score identified:  Value in appropriate CS SSF, 999 in other two CS SSF\n* Score not identified, point value 5 or less:  999 in all three CS SSF\n* Score not identified, point value 6or 7:  Value in CS SSF 5 (IPS), 999 in other two CS SSF.",
+  "last_modified" : "2015-05-27T16:20:08.306Z",
+  "definition" : [ {
+    "key" : "ssf5",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "0 points" ], [ "001", "1 point" ], [ "002", "2 points" ], [ "003", "3 points" ], [ "004", "4 points" ], [ "005", "5 points" ], [ "006", "6 points" ], [ "007", "7 points" ], [ "888", "OBSOLETE DATA CONVERTED V0200\nSee code 988\nNot applicable for this schema" ], [ "988", "Not applicable:  Information not collected for this case\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.  If this item is required to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

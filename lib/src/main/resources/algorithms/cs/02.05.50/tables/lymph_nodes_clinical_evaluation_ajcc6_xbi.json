@@ -1,0 +1,23 @@
+{
+  "id" : "lymph_nodes_clinical_evaluation_ajcc6_xbi",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Lymph Nodes Clinical Evaluation AJCC6",
+  "title" : "Lymph Nodes Clinical Evaluation AJCC 6 Table",
+  "notes" : "**Note**:  This table is used when CS Lymph Nodes is 100-300 and CS Lymph Nodes Eval is 0, 1, 5, or 9. The N category is determined based on the number of positive regional nodes in Regional Nodes Positive and the value of CS Site-Specific Factor 2, Clinical Assessment of Regional Lymph Nodes.",
+  "last_modified" : "2015-05-27T16:19:23.398Z",
+  "definition" : [ {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf2",
+    "name" : "CS SSF 2",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00-03", "000", "ERROR:" ], [ "04-90", "000", "ERROR:" ], [ "95,97-99", "000", "ERROR:" ], [ "00-03", "010", "VALUE:N1" ], [ "04-90", "010", "VALUE:N2" ], [ "95,97-99", "010", "VALUE:N1" ], [ "00-03", "020", "VALUE:N1" ], [ "04-90", "020", "VALUE:N2" ], [ "95,97-99", "020", "VALUE:N1" ], [ "00-03", "030", "ERROR:" ], [ "04-90", "030", "ERROR:" ], [ "95,97-99", "030", "ERROR:" ], [ "00-03", "100", "VALUE:N1" ], [ "04-90", "100", "VALUE:N2" ], [ "95,97-99", "100", "VALUE:N1" ], [ "00-03", "110", "VALUE:N2" ], [ "04-90", "110", "VALUE:N2" ], [ "95,97-99", "110", "VALUE:N2" ], [ "00-03", "120", "VALUE:N2" ], [ "04-90", "120", "VALUE:N2" ], [ "95,97-99", "120", "VALUE:N2" ], [ "00-03", "200", "VALUE:N2" ], [ "04-90", "200", "VALUE:N2" ], [ "95,97-99", "200", "VALUE:N2" ], [ "00-03", "400", "VALUE:N1" ], [ "04-90", "400", "VALUE:N2" ], [ "95,97-99", "400", "VALUE:N1" ], [ "00-03", "888", "ERROR:" ], [ "04-90", "888", "ERROR:" ], [ "95,97-99", "888", "ERROR:" ], [ "00-03", "988", "VALUE:N1" ], [ "04-90", "988", "VALUE:N2" ], [ "95,97-99", "988", "VALUE:N1" ], [ "00-03", "999", "VALUE:N1" ], [ "04-90", "999", "VALUE:N2" ], [ "95,97-99", "999", "VALUE:N1" ] ]
+}

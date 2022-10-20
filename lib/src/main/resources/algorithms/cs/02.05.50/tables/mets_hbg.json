@@ -1,0 +1,36 @@
+{
+  "id" : "mets_hbg",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note 1**:  Periesophageal lymph nodes extending from the cervical/supraclavicular region to the celiac region previously considered to be distant are now classified as regional nodes.  Involvement of these nodes is coded in CS Lymph Nodes.\n\n**Note 2**:  Lymph node stations/groups are listed in parentheses where applicable.  For a list of these nodal groups, see Part I Section 2 or Figure 10.3 from the AJCC Cancer Staging Atlas, 2nd Ed. or errata for AJCC 7th Ed. chapter 10.\n\n**Note 3**:  Errata for AJCC 7th Ed. has clarified the status of the most distal node chains for the esophagus/esophagogastric junction chapter.  The left gastric and celiac nodes (levels 17, 20) are regional, but the common hepatic and splenic artery nodes (levels 18, 19) are not regional.  The common hepatic and splenic nodes continue to be captured in code 15.",
+  "footnotes" : "- For CS Mets at DX codes 00 or 99, the N and M categories for AJCC 6 staging are assigned based on the coding of CS Lymph Nodes as shown in the Lymph Nodes Mets at DX AJCC 6 Table.",
+  "last_modified" : "2015-05-27T16:19:28.943Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "JUMP:lymph_nodes_metsat_dxtable_ajcc6_xfv", "VALUE:NONE", "VALUE:NONE" ], [ "10", "Distant lymph node(s), NOS", "VALUE:M1", "VALUE:M1NOS", "VALUE:D", "VALUE:D" ], [ "11", "OBSOLETE DATA RETAINED V0200\nConsidered regional in AJCC 7th Edition\nSee CS Lymph Nodes code 250\n\nUpper thoracic esophagus only:\n    Cervical lymph nodes M1\nLower thoracic (abdominal) esophagus only:\n    Celiac lymph nodes (20) M1", "ERROR:", "VALUE:M1a", "VALUE:D", "VALUE:D" ], [ "12", "OBSOLETE DATA REVIEWED AND CHANGED V0200\nThe specified lymph nodes in code 12 were considered distant in AJCC 6th Edition and are considered regional in AJCC 7th Edition EXCEPT for common hepatic and splenic lymph nodes which are still considered distant and are included in code 15. \nSee CS Lymph Nodes code 265\n\nSpecified distant lymph node(s), other than code 11, including:\nCervical esophagus only:\n    Common hepatic (18) \n    Diaphragmatic (15) \n    Pulmonary ligament (9) \n    Splenic (19) \nIntrathoracic esophagus, upper or middle, only:\n    Common hepatic (18) \n    Diaphragmatic (15) \n    Splenic (19) \nLower thoracic (abdominal) esophagus only:\n    Aortopulmonary (5)  \n    Pulmonary ligament (9)", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "15", "Common hepatic (18)\nSplenic (19)", "VALUE:M1", "VALUE:M1b", "VALUE:D", "VALUE:D" ], [ "40", "Distant metastases except distant lymph node(s) (codes 10 or 15) \nCarcinomatosis", "VALUE:M1", "VALUE:M1b", "VALUE:D", "VALUE:D" ], [ "50", "40 + any of (10 to 15)\n\nDistant lymph node(s) plus other distant metastases", "VALUE:M1", "VALUE:M1b", "VALUE:D", "VALUE:D" ], [ "60", "Distant metastasis, NOS\n\nStated as M1 [NOS] with no other information on distant metastasis", "VALUE:M1", "VALUE:M1NOS", "VALUE:D", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "JUMP:lymph_nodes_metsat_dxtable_ajcc6_xfv", "VALUE:U", "VALUE:U" ] ]
+}

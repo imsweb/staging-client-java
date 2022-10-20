@@ -1,0 +1,35 @@
+{
+  "id" : "extension_bcw",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  Impaired vocal cord mobility, also described as vocal cord paresis, may suggest invasion of intrinsic laryngeal muscle. Fixation of the vocal cord may be described as immobility of the arytenoids noted on endoscopy, vocal cord cord paralysis, or deviation of larynx to fixed side.\n\n**Note 2**:  Use code 300 for localized tumor only if no information is available to assign codes 100, 200, or 310.\n\n**Note 3**:  Use code 355, 435, 725, 810, or 815 if the physician's assignment of T category is the ONLY information available about the extent of the tumor.",
+  "last_modified" : "2015-05-27T16:19:09.858Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "VALUE:Tis", "VALUE:Tis", "VALUE:IS", "VALUE:IS" ], [ "100", "Invasive tumor confined to anterior surface of epiglottis with normal vocal cord mobility\n\nStated as T1 with no other information on extension", "VALUE:T1", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "200", "OBSOLETE DATA CONVERTED V0200\nSee code 305\n\nMucosa of adjacent subsite(s) of oropharynx", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "300", "Localized, NOS", "VALUE:T1", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "305", "Mucosa of adjacent subsite(s) of oropharynx", "VALUE:T2", "VALUE:T2", "VALUE:L", "VALUE:L" ], [ "310", "Mucosa of vallecula without fixation of larynx", "VALUE:T2", "VALUE:T2", "VALUE:L", "VALUE:L" ], [ "320", "Mucosa of adjacent subsite(s) of supraglottis (including posterior surface of epiglottis) \nWITHOUT fixation of larynx", "VALUE:T2", "VALUE:T2", "VALUE:RE", "VALUE:RE" ], [ "330", "Larynx, glottic or NOS\nWITHOUT fixation of larynx", "VALUE:T2", "VALUE:T2", "VALUE:RE", "VALUE:RE" ], [ "340", "Mucosa of pyriform sinus, medial wall or NOS\nWITHOUT fixation of larynx", "VALUE:T2", "VALUE:T2", "VALUE:RE", "VALUE:RE" ], [ "350", "Mucosa of base of tongue \nWITHOUT fixation of larynx", "VALUE:T2", "VALUE:T2", "VALUE:RE", "VALUE:RE" ], [ "355", "Stated as T2 with no other information on extension", "VALUE:T2", "VALUE:T2", "VALUE:L", "VALUE:L" ], [ "360", "Any structure coded in 200 to 350 \nWITH vocal cord fixation", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "370", "Paraglottic space\nPre-epiglottic tissues", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "380", "Inner cortex of thyroid cartilage (minor erosion)", "VALUE:T3", "VALUE:T3", "VALUE:D", "VALUE:D" ], [ "390", "Hypopharynx, NOS\nPostcricoid area\nPyriform sinus except medial wall \n(See code 340)", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "430", "390 + 280\n\n Any structure in 390 plus minor thyroid cartilage erosion", "VALUE:T3", "VALUE:T3", "VALUE:D", "VALUE:D" ], [ "435", "Stated as T3 with no other information on extension", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "450", "Soft palate, inferior surface including uvula\nSoft palate, NOS", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:RE" ], [ "470", "Nasopharynx, NOS\nSoft palate, superior (nasopharyngeal) surface", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:RE" ], [ "500", "Deep tissues of base of tongue\nBuccal mucosa (inner cheek)\nFloor of mouth\nGum (gingiva)", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:RE" ], [ "620", "Soft tissues of neck", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:RE" ], [ "650", "Pterygoid muscle", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:RE" ], [ "660", "(450 to 650) + (380 or 430) \n\nAny structure in 450 to 650 plus inner cortex of thyroid cartilage ", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "670", "Invasion of, through outer cortex of thyroid cartilage\nThyroid cartilage, NOS\n(See also code 380)", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "680", "Trachea", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "690", "Esophagus\nStrap muscles:\n    Omohyoid\n    Sternohyoid\n    Thyrohyoid\nThyroid", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "700", "Extrinsic muscles of tongue:\n    Genioglossus\n    Geniohyoid\n    Hyoglossus\n    Mylohyoid\n    Palatoglossus\n    Styloglossus", "VALUE:T4a", "VALUE:T4a", "VALUE:D", "VALUE:D" ], [ "725", "Stated as T4a with no other information on extension", "VALUE:T4a", "VALUE:T4a", "VALUE:RE", "VALUE:RE" ], [ "750", "Prevertebral fascia or muscle\nPrevertebral space", "VALUE:T4b", "VALUE:T4b", "VALUE:RE", "VALUE:RE" ], [ "770", "750 + (660 - 700) \n\nAny structure in 750 plus any structure coded in 660 through 700", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "800", "Further contiguous extension, including:\n    Anterior 2/3 of tongue\n    Bone\n    Carotid artery (encased)\n    Hard palate\n    Mandible\n    Mediastinal structures\n    Parotid gland", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "810", "Stated as T4b with no other information on extension", "VALUE:T4b", "VALUE:T4b", "VALUE:D", "VALUE:D" ], [ "815", "Stated as T4 [NOS] with no other information on extension", "VALUE:T4NOS", "VALUE:T4NOS", "VALUE:RE", "VALUE:RE" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

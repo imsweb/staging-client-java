@@ -1,0 +1,20 @@
+{
+  "id" : "ssf2_kbb",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF2",
+  "title" : "CS Site-Specific Factor 2",
+  "subtitle" : "Retinoblastoma (RB) Gene Mutation",
+  "notes" : "**Note**:  Information is collected on the germline mutation  of the retinoblastoma (RB) gene.  Typically tumor tissue is tested to identify the presence of the mutation. Peripheral blood lymphocytes are tested to determine if the RB gene is a germline mutation (inherited).  Code the results of testing as reported in the medical record.",
+  "last_modified" : "2015-05-27T16:20:03.250Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Germline retinoblastoma (RB) gene mutation not present" ], [ "010", "Germline RB gene mutation present" ], [ "020", "OBSOLETE DATA CONVERTED V0203\nSee code 000\n\nGermline RB gene mutation not present" ], [ "888", "OBSOLETE DATA CONVERTED V0200\nSee code 988\n\nNot applicable for this site" ], [ "988", "Not applicable:  Information not collected for this case\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.  If this item is required to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

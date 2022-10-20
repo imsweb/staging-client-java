@@ -1,0 +1,26 @@
+{
+  "id" : "determine_validity_for_ajcc6_ns50",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Determine Validity of TNM for AJCC 6 Stage - Age at DX = 999",
+  "title" : "Determine Validity of TNM for AJCC 6 Stage - Age at DX = 999",
+  "last_modified" : "2015-05-27T16:19:05.277Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_stage",
+    "name" : "Stage Table 6",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "T0,T1,T2,T3,T4a,T4b,T4NOS,TX", "N0,N1a,N1b,N1NOS,NX", "M0,M1,MX", "VALUE:UNK" ], [ "*", "*", "", "ERROR:" ], [ "*", "", "*", "ERROR:" ], [ "", "*", "*", "ERROR:" ] ]
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "mets_eval_iaf",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets Eval",
+  "title" : "CS Mets Eval",
+  "notes" : "**Note**:  The staging basis AJCC 7 for this schema is blank because AJCC stage is not applicable for this site and histology.  Data were collected in this item in CSv1 and are being retained.",
+  "last_modified" : "2015-05-27T16:19:27.238Z",
+  "definition" : [ {
+    "key" : "mets_eval",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "mdescriptor",
+    "name" : "Staging Basis 7",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "staging_basis_6",
+    "name" : "Staging Basis 6",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0", "OBSOLETE DATA RETAINED V0200\n\nNo pathologic examination of metastatic tissue performed.  Evaluation of distant metastasis based on physical examination, imaging examination, and/or other non-invasive clinical evidence.  No autopsy evidence used.", "VALUE:", "VALUE:c" ], [ "1", "OBSOLETE DATA RETAINED V0200\n\nNo pathologic examination of metastatic tissue performed.  Evaluation of distant metastasis based on endoscopic examination or other invasive technique, including surgical observation without biopsy.  No autopsy evidence used.\nDoes not meet criteria for AJCC pathologic staging of distant metastasis.", "VALUE:", "VALUE:c" ], [ "2", "OBSOLETE DATA RETAINED V0200\n\nNo pathologic examination of metastatic specimen done prior to death, but evidence derived from autopsy (tumor was suspected or diagnosed prior to autopsy).", "VALUE:", "VALUE:p" ], [ "3", "OBSOLETE DATA RETAINED V0200\n\nPathologic examination of metastatic tissue performed WITHOUT pre-surgical systemic treatment \nOR pathologic examination of metastatic tissue performed, unknown if pre-surgical systemic treatment or radiation performed.\nMeets criteria for AJCC pathologic staging of distant metastasis.", "VALUE:", "VALUE:p" ], [ "5", "OBSOLETE DATA RETAINED V0200\n\nPathologic examination of metastatic tissue performed WITH pre-surgical systemic treatment or radiation, and metastasis based on clinical evidence.", "VALUE:", "VALUE:c" ], [ "6", "OBSOLETE DATA RETAINED V0200\n\nPathologic examination of metastatic tissue performed WITH pre-surgical systemic treatment or radiation, BUT metastasis based on pathologic evidence.", "VALUE:", "VALUE:yp" ], [ "8", "OBSOLETE DATA RETAINED V0200\n\nEvidence from autopsy AND tumor was unsuspected or undiagnosed prior to autopsy.", "VALUE:", "VALUE:a" ], [ "9", "Not assessed; cannot be assessed V01XX\nUnknown if assessed V01XX\nNot documented in patient record V01XX\n\nNot applicable for this schema V0200", "VALUE:", "VALUE:c" ] ]
+}

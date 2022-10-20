@@ -1,0 +1,23 @@
+{
+  "id" : "lymph_nodeand_nodal_status_clinical_eval_ajcc6_xlk",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Lymph Node and Nodal Status Clinical Eval AJCC6",
+  "title" : "Lymph Node and Nodal Status Clinical Eval AJCC 6 Table",
+  "notes" : "**Note**:  When nodes are clinically evaluated (CS Lymph Nodes Eval = 0, 1, 5, 9) for CS Lymph Nodes codes 010-118, 121-128, 152, 153, 155 and 158 ONLY, the N category for AJCC 6 staging is assigned based on the value of CS Lymph Nodes and CS Site-Specific Factor 3, Clinical Status of Lymph Node Mets, as shown in the following table.",
+  "last_modified" : "2015-05-27T16:19:21.887Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "CS Lymph Nodes",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf3",
+    "name" : "CS SSF 3",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100,110,115,118", "000-002,005", "ERROR:" ], [ "121", "000-002,005", "ERROR:" ], [ "122", "000-002,005", "ERROR:" ], [ "123", "000-002,005", "ERROR:" ], [ "124", "000-002,005", "ERROR:" ], [ "125", "000-002,005", "ERROR:" ], [ "128", "000-002,005", "ERROR:" ], [ "152", "000-002,005", "ERROR:" ], [ "153", "000-002,005", "ERROR:" ], [ "155", "000-002,005", "ERROR:" ], [ "158", "000-002,005", "ERROR:" ], [ "100,110,115,118", "010", "ERROR:" ], [ "121", "010", "ERROR:" ], [ "122", "010", "ERROR:" ], [ "123", "010", "ERROR:" ], [ "124", "010", "ERROR:" ], [ "125", "010", "ERROR:" ], [ "128", "010", "ERROR:" ], [ "152", "010", "ERROR:" ], [ "153", "010", "ERROR:" ], [ "155", "010", "ERROR:" ], [ "158", "010", "ERROR:" ], [ "100,110,115,118", "020", "VALUE:N1" ], [ "121", "020", "VALUE:N1" ], [ "122", "020", "VALUE:N1" ], [ "123", "020", "VALUE:N1" ], [ "124", "020", "ERROR:" ], [ "125", "020", "VALUE:N1" ], [ "128", "020", "VALUE:N2" ], [ "152", "020", "VALUE:N2" ], [ "153", "020", "VALUE:N2" ], [ "155", "020", "VALUE:N2" ], [ "158", "020", "ERROR:" ], [ "100,110,115,118", "043", "VALUE:N1" ], [ "121", "043", "VALUE:N1" ], [ "122", "043", "VALUE:N1" ], [ "123", "043", "VALUE:N1" ], [ "124", "043", "ERROR:" ], [ "125", "043", "VALUE:N1" ], [ "128", "043", "VALUE:N1" ], [ "152", "043", "VALUE:N1" ], [ "153", "043", "VALUE:N1" ], [ "155", "043", "VALUE:N1" ], [ "158", "043", "ERROR:" ], [ "100,110,115,118", "045", "VALUE:N2" ], [ "121", "045", "VALUE:N2" ], [ "122", "045", "VALUE:N2" ], [ "123", "045", "VALUE:N2" ], [ "124", "045", "ERROR:" ], [ "125", "045", "VALUE:N2" ], [ "128", "045", "VALUE:N2" ], [ "152", "045", "VALUE:N2" ], [ "153", "045", "VALUE:N2" ], [ "155", "045", "VALUE:N2" ], [ "158", "045", "ERROR:" ], [ "100,110,115,118", "048", "VALUE:N3" ], [ "121", "048", "VALUE:N3" ], [ "122", "048", "VALUE:N3" ], [ "123", "048", "VALUE:N3" ], [ "124", "048", "ERROR:" ], [ "125", "048", "VALUE:N3" ], [ "128", "048", "VALUE:N3" ], [ "152", "048", "VALUE:N3" ], [ "153", "048", "VALUE:N3" ], [ "155", "048", "VALUE:N3" ], [ "158", "048", "ERROR:" ], [ "100,110,115,118", "050", "VALUE:N1" ], [ "121", "050", "VALUE:N1" ], [ "122", "050", "VALUE:N1" ], [ "123", "050", "VALUE:N1" ], [ "124", "050", "ERROR:" ], [ "125", "050", "VALUE:N1" ], [ "128", "050", "VALUE:N2" ], [ "152", "050", "VALUE:N2" ], [ "153", "050", "VALUE:N2" ], [ "155", "050", "VALUE:N2" ], [ "158", "050", "ERROR:" ], [ "100,110,115,118", "100", "ERROR:" ], [ "121", "100", "ERROR:" ], [ "122", "100", "ERROR:" ], [ "123", "100", "ERROR:" ], [ "124", "100", "ERROR:" ], [ "125", "100", "ERROR:" ], [ "128", "100", "ERROR:" ], [ "152", "100", "ERROR:" ], [ "153", "100", "ERROR:" ], [ "155", "100", "VALUE:N2c" ], [ "158", "100", "ERROR:" ], [ "100,110,115,118", "150", "VALUE:N3" ], [ "121", "150", "VALUE:N3" ], [ "122", "150", "VALUE:N3" ], [ "123", "150", "VALUE:N3" ], [ "124", "150", "VALUE:N3" ], [ "125", "150", "VALUE:N3" ], [ "128", "150", "VALUE:N3" ], [ "152", "150", "VALUE:N3" ], [ "153", "150", "VALUE:N3" ], [ "155", "150", "VALUE:N3" ], [ "158", "150", "VALUE:N3" ], [ "100,110,115,118", "988", "ERROR:" ], [ "121", "988", "ERROR:" ], [ "122", "988", "ERROR:" ], [ "123", "988", "ERROR:" ], [ "124", "988", "ERROR:" ], [ "125", "988", "ERROR:" ], [ "128", "988", "ERROR:" ], [ "152", "988", "ERROR:" ], [ "153", "988", "ERROR:" ], [ "155", "988", "ERROR:" ], [ "158", "988", "ERROR:" ], [ "100,110,115,118", "999", "VALUE:N1" ], [ "121", "999", "VALUE:N1" ], [ "122", "999", "VALUE:N1" ], [ "123", "999", "VALUE:N1" ], [ "124", "999", "ERROR:" ], [ "125", "999", "VALUE:N1" ], [ "128", "999", "VALUE:N2" ], [ "152", "999", "VALUE:N2" ], [ "153", "999", "VALUE:N2" ], [ "155", "999", "VALUE:N2" ], [ "158", "999", "ERROR:" ] ]
+}

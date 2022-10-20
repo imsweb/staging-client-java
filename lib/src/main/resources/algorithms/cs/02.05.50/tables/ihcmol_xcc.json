@@ -1,0 +1,27 @@
+{
+  "id" : "ihcmol_xcc",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "IHC MOL",
+  "title" : "IHC MOL Table",
+  "notes" : "**Note**:  For CS Lymph Nodes code 000 ONLY, the N category is based on the value of CS Site-Specific Factor 4, IHC of Regional Lymph Nodes, and CS Site-Specific Factor 5, Molecular Studies of Regional Lymph Nodes, as shown in this table:",
+  "last_modified" : "2015-05-27T16:19:21.740Z",
+  "definition" : [ {
+    "key" : "ssf4",
+    "name" : "CS SSF 4 IHC",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf5",
+    "name" : "CS SSF 5 MOL",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "000", "VALUE:N0", "VALUE:N0" ], [ "001", "000", "VALUE:N0(i-)", "VALUE:N0(i-)" ], [ "002", "000", "VALUE:N0(i+)", "VALUE:N0(i+)" ], [ "009", "000", "VALUE:N0(i+)", "VALUE:N0(i+)" ], [ "888", "000", "ERROR:", "ERROR:" ], [ "987", "000", "ERROR:", "ERROR:" ], [ "988", "000", "ERROR:", "ERROR:" ], [ "000", "001", "VALUE:N0(mol-)", "VALUE:N0(mol-)" ], [ "001", "001", "VALUE:N0(i-)", "VALUE:N0(i-)" ], [ "002", "001", "VALUE:N0(i+)", "VALUE:N0(i+)" ], [ "009", "001", "VALUE:N0(i+)", "VALUE:N0(i+)" ], [ "888", "001", "ERROR:", "ERROR:" ], [ "987", "001", "ERROR:", "ERROR:" ], [ "988", "001", "ERROR:", "ERROR:" ], [ "000", "002", "VALUE:N0(mol+)", "VALUE:N0(mol+)" ], [ "001", "002", "VALUE:N0(mol+)", "VALUE:N0(mol+)" ], [ "002", "002", "VALUE:N0(i+)", "VALUE:N0(i+)" ], [ "009", "002", "VALUE:N0(i+)", "VALUE:N0(i+)" ], [ "888", "002", "ERROR:", "ERROR:" ], [ "987", "002", "ERROR:", "ERROR:" ], [ "988", "002", "ERROR:", "ERROR:" ], [ "000", "888", "ERROR:", "ERROR:" ], [ "001", "888", "ERROR:", "ERROR:" ], [ "002", "888", "ERROR:", "ERROR:" ], [ "009", "888", "ERROR:", "ERROR:" ], [ "888", "888", "ERROR:", "ERROR:" ], [ "987", "888", "ERROR:", "ERROR:" ], [ "988", "888", "ERROR:", "ERROR:" ], [ "000", "987", "ERROR:", "ERROR:" ], [ "001", "987", "ERROR:", "ERROR:" ], [ "002", "987", "ERROR:", "ERROR:" ], [ "009", "987", "ERROR:", "ERROR:" ], [ "888", "987", "ERROR:", "ERROR:" ], [ "987", "987", "ERROR:", "ERROR:" ], [ "988", "987", "ERROR:", "ERROR:" ], [ "000", "988", "ERROR:", "ERROR:" ], [ "001", "988", "ERROR:", "ERROR:" ], [ "002", "988", "ERROR:", "ERROR:" ], [ "009", "988", "ERROR:", "ERROR:" ], [ "888", "988", "ERROR:", "ERROR:" ], [ "987", "988", "ERROR:", "ERROR:" ], [ "988", "988", "ERROR:", "ERROR:" ] ]
+}

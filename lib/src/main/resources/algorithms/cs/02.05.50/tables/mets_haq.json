@@ -1,0 +1,35 @@
+{
+  "id" : "mets_haq",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note 1**:  The lesser sac of the peritoneum, or omental bursa, is the cavity in the abdomen formed by the lesser and greater omentum; the pancreas forms part of the posterior wall of the lesser sac.\n\n**Note 2**:  Celiac axis and splenic nodes are classified as distant for AJCC 7 staging.  These nodes are now coded in CS Mets at DX.",
+  "last_modified" : "2015-05-27T16:19:28.246Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "VALUE:M0", "VALUE:NONE", "VALUE:NONE" ], [ "05", "Distant lymph nodes:\n    Celiac axis", "VALUE:M1", "VALUE:M0", "VALUE:RN", "VALUE:RN" ], [ "07", "Distant lymph nodes:\n    Pancreaticosplenic (pancreaticolienal)\n    Splenic (lineal), NOS\n        Splenic hilum\n        Splenic artery\n        Gastroepiploic (gastro-omental), left\n        Suprapancreatic ", "VALUE:M1", "VALUE:M0", "VALUE:D", "VALUE:D" ], [ "10", "Distant lymph node(s) other than in codes 05, 07\nDistant lymph nodes, NOS", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "20", "10 + (05, 07)", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "40", "Distant metastasis except distant lymph node(s) \n(Includes seeding of peritoneum, even if limited to the lesser sac region; positive peritoneal cytology)\nCarcinomatosis", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "45", "40 + (05, 07)\n\nDistant metastasis plus distant lymph nodes in codes 05, 07", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "50", "40 + 10\n\nDistant metastasis plus distant lymph nodes in code 10", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "60", "Distant metastasis, NOS  \n\nStated as M1 with no other information on distant metastasis", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "VALUE:MX", "VALUE:U", "VALUE:U" ] ]
+}

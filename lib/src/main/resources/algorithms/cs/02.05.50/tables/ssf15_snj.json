@@ -1,0 +1,18 @@
+{
+  "id" : "ssf15_snj",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF15",
+  "title" : "CS Site-Specific Factor 15",
+  "last_modified" : "2015-05-27T16:19:57.040Z",
+  "definition" : [ {
+    "key" : "ssf15",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "988", "Not applicable:  Site-specific factor not defined" ] ]
+}

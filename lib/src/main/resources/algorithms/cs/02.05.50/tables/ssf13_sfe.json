@@ -1,0 +1,20 @@
+{
+  "id" : "ssf13_sfe",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF13",
+  "title" : "CS Site-Specific Factor 13",
+  "subtitle" : "Post-Orchiectomy Alpha Fetoprotein (AFP) Range",
+  "notes" : "**Note 1**:  Record the range of the alpha fetoprotein (AFP) test as documented in the patient record after orchiectomy and prior to further treatment.\n\n**Note 2**:  Use the same laboratory test to record values for CS Site-Specific Factors 12 and 13.\n\n**Note 3**:  A lab value expressed in micrograms/liter (ug/L) is equivalent to the same value expressed in nanograms/milliliter (ng/ml).\n\n**Note 4**:  If the initial post-orchiectomy AFP test remains elevated, review the subsequent tests until normalization or plateau occurs and use that test to code this field. See Part I for further explanation of serum tumor marker half life.\n\n**Note 5**:  If the post-orchiectomy AFP test is unknown but the preorchiectomy AFP test was normal, use code 990.\n\n**Note 6**:  If the post-orchiectomy AFP test is unavailable but a physician's statement of the result is documented, use codes 991-993.\n\n**Note 7**:  For rare cases that are treated prior to orchiectomy or an orchiectomy is not performed, code the initial AFP range in this field and not in CS Site-Specific Factor 7.",
+  "last_modified" : "2015-05-27T16:19:55.893Z",
+  "definition" : [ {
+    "key" : "ssf13",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Within normal limits (S0)" ], [ "010", "Range 1 (S1) above normal and less than 1,000 nanograms/milliliter (ng/ml)" ], [ "020", "Range 2 (S2) 1,000 -10,000 ng/ml" ], [ "030", "Range 3 (S3)  greater than 10,000 ng/ml" ], [ "988", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 988 may result in an edit error.)" ], [ "990", "Post-orchiectomy alpha fetoprotein (AFP) unknown but preorchiectomy AFP was normal" ], [ "991", "Post-orchiectomy AFP stated to be still elevated" ], [ "992", "Post-orchiectomy AFP unknown but post-orchiectomy serum tumor markers NOS stated to be normal" ], [ "993", "Post-orchiectomy AFP unknown but post-orchiectomy serum tumor markers NOS stated to be still elevated\n\nStated as Stage IS" ], [ "997", "Test ordered, results not in chart" ], [ "998", "Test not done (test not ordered and not performed)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

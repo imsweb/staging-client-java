@@ -1,0 +1,23 @@
+{
+  "id" : "lymph_nodes_clinical_evaluation_ajcc6_xbe",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Lymph Nodes Clinical Evaluation AJCC6",
+  "title" : "Lymph Nodes Clinical Evaluation AJCC 6 Table",
+  "notes" : "**Note**:  This table is used when CS Lymph Nodes is 100-500 and CS Lymph Nodes Eval is 0, 1, 5 or 9.  The N category is determined based on the number of positive regional nodes in Regional Nodes Positive and the value of CS Site-Specific Factor 1, Clinical Assessment of Regional Lymph Nodes.",
+  "last_modified" : "2015-05-27T16:19:23.346Z",
+  "definition" : [ {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf1",
+    "name" : "CS SSF 1",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00-00", "000", "ERROR:" ], [ "01-06", "000", "ERROR:" ], [ "07-15", "000", "ERROR:" ], [ "16-90", "000", "ERROR:" ], [ "95,97", "000", "ERROR:" ], [ "98-99", "000", "ERROR:" ], [ "00-00", "100", "VALUE:N1" ], [ "01-06", "100", "VALUE:N1" ], [ "07-15", "100", "VALUE:N2" ], [ "16-90", "100", "VALUE:N3" ], [ "95,97", "100", "VALUE:N1" ], [ "98-99", "100", "VALUE:N1" ], [ "00-00", "200", "VALUE:N2" ], [ "01-06", "200", "VALUE:N2" ], [ "07-15", "200", "VALUE:N2" ], [ "16-90", "200", "VALUE:N3" ], [ "95,97", "200", "VALUE:N2" ], [ "98-99", "200", "VALUE:N2" ], [ "00-00", "300,310,320", "VALUE:N3" ], [ "01-06", "300,310,320", "VALUE:N3" ], [ "07-15", "300,310,320", "VALUE:N3" ], [ "16-90", "300,310,320", "VALUE:N3" ], [ "95,97", "300,310,320", "VALUE:N3" ], [ "98-99", "300,310,320", "VALUE:N3" ], [ "00-00", "400", "VALUE:N1" ], [ "01-06", "400", "VALUE:N1" ], [ "07-15", "400", "VALUE:N2" ], [ "16-90", "400", "VALUE:N3" ], [ "95,97", "400", "VALUE:N1" ], [ "98-99", "400", "VALUE:N1" ], [ "00-00", "888", "ERROR:" ], [ "01-06", "888", "ERROR:" ], [ "07-15", "888", "ERROR:" ], [ "16-90", "888", "ERROR:" ], [ "95,97", "888", "ERROR:" ], [ "98-99", "888", "ERROR:" ], [ "00-00", "988", "VALUE:N1" ], [ "01-06", "988", "VALUE:N1" ], [ "07-15", "988", "VALUE:N2" ], [ "16-90", "988", "VALUE:N3" ], [ "95,97", "988", "VALUE:N1" ], [ "98-99", "988", "VALUE:N1" ], [ "00-00", "999", "VALUE:N1" ], [ "01-06", "999", "VALUE:N1" ], [ "07-15", "999", "VALUE:N2" ], [ "16-90", "999", "VALUE:N3" ], [ "95,97", "999", "VALUE:N1" ], [ "98-99", "999", "VALUE:N1" ] ]
+}

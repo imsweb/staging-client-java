@@ -1,0 +1,35 @@
+{
+  "id" : "mets_hag",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note**:  For metastasis limited to a single distant lymph node chain, use code 08,16 or 18.  For metastases involving multiple distant lymph node chains, use codes 29, 31 or 33.",
+  "last_modified" : "2015-05-27T16:19:27.710Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "VALUE:M0", "VALUE:NONE", "VALUE:NONE" ], [ "05", "OBSOLETE DATA CONVERTED V0203\nSee code 18\n\nMetastasis to a single distant lymph node chain, NOS", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "08", "Metastasis limited to a single distant lymph node chain:\n    For rectosigmoid:\n        Internal iliac (hypogastric), NOS\n            Obturator", "VALUE:M1a", "VALUE:M1", "VALUE:RN", "VALUE:D" ], [ "10", "OBSOLETE DATA RETAINED V0200\nSee codes 15 and 20 \n\nDistant lymph node(s), NOS", "ERROR:", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "11", "OBSOLETE DATA RETAINED V0200\nSee codes 15 and 20\n\nRectosigmoid:\n    Internal iliac (hypogastric)\n    Obturator", "ERROR:", "VALUE:M1", "VALUE:RN", "VALUE:D" ], [ "12", "OBSOLETE DATA RETAINED V0200\nSee codes 15 and 20\n\nOther distant lymph node(s), including\n    external iliac \n    or common iliac", "ERROR:", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "15", "OBSOLETE DATA CONVERTED V0203\nSee code 08\n\nMetastasis limited to a single distant lymph node chain:\n    For rectosigmoid:\n        Internal iliac (hypogastric), NOS\n            Obturator", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "16", "Metastasis limited to a single distant lymph node chain:\n    For rectosigmoid and rectum: \n        Common iliac\n        External iliac\n        Superior mesenteric\n    For rectosigmoid:\n        Hemorrhoidal, inferior\n        Rectal, inferior\n    For rectum:\n        Left colic", "VALUE:M1a", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "18", "Metastasis limited to a single distant lymph node chain, NOS", "VALUE:M1a", "VALUE:M1", "VALUE:RN", "VALUE:D" ], [ "20", "OBSOLETE DATA CONVERTED V0203\nSee code 16\n\nMetastasis to other single distant lymph node chains, including\n    external iliac or common iliac", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "25", "OBSOLETE DATA CONVERTED V0203\nSee code 26\n\nMetastasis to a single distant organ", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "26", "Metastasis limited to a single distant organ except peritoneum", "VALUE:M1a", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "27", "Stated as M1a with no other information on distant metastasis", "VALUE:M1a", "VALUE:M1", "VALUE:RN", "VALUE:D" ], [ "29", "Metastases to multiple distant lymph node chains included in code 08 only", "VALUE:M1b", "VALUE:M1", "VALUE:RN", "VALUE:D" ], [ "30", "OBSOLETE DATA CONVERTED V0203\nSee code 31\n\nMetastasis to more than one distant \nlymph node chain", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "31", "Metastases to multiple distant lymph node chains listed in code 16, with or without distant lymph node chains listed in code 08", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "33", "Metastases to multiple distant lymph node chains, NOS", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "35", "OBSOLETE DATA REVIEWED V0203\nSee codes 36, 48\n\nDistant metastases to more than one distant organ\nMetastases to the peritoneum\nCarcinomatosis\nStated as M1b, NOS", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "36", "Metastases to more than one distant organ except distant lymph node(s)\nMetastasis to peritoneum\nCarcinomatosis", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "40", "OBSOLETE DATA RETAINED V0200\nSee codes 35 and 60\n\nDistant metastases except distant lymph node(s) codes 10-12\nDistant metastasis, NOS\nCarcinomatosis", "ERROR:", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "45", "(26 or 36) + any of (08, 16, 18, 29, 31 or 33)\n\nMetastases to distant organs plus distant nodes", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "48", "Stated as M1b with no other information on distant metastasis", "VALUE:M1b", "VALUE:M1", "VALUE:RN", "VALUE:D" ], [ "50", "OBSOLETE DATA RETAINED V0200\nSee code 45\n\n40+ any of (10 or 12)\nDistant lymph node(s) plus other distant metastases", "ERROR:", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "60", "Distant metastasis, NOS\n\nStated as M1 [NOS] with no other information on distant metastasis", "VALUE:M1NOS", "VALUE:M1", "VALUE:RN", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "VALUE:MX", "VALUE:U", "VALUE:U" ] ]
+}

@@ -1,0 +1,36 @@
+{
+  "id" : "nodes_dfe",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in the CS Mets at DX.\n\n**Note 2**:  Inferior mesenteric nodes are coded in CS Mets at DX for cecum, ascending colon, transverse colon, and hepatic flexure. Superior mesenteric nodes are coded in CS Mets at DX for all colon sites.",
+  "footnotes" : "- For CSLymph Nodes codes 050-300 ONLY: when CS Lymph Nodes Eval is 0, 1, 5, or 9, the N category for AJCC 6 staging is assigned as shown in the Lymph Nodes Clinical Evaluation AJCC 6 Table, using Regional Nodes Positive and CS Site-Specific Factor 2; when CS Regional Nodes Eval is 2, 3, 6, 8, or not coded, the N category for AJCC 6 staging is assigned as shown in the Lymph Nodes Pathologic Evaluation AJCC 6 Table Also Used When CS Reg Nodes Eval is Not Coded, using Regional Nodes Positive.",
+  "last_modified" : "2015-05-27T16:19:37.753Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "050", "Nodule(s) or foci in pericolic fat/adjacent mesentery/mesocolic fat", "VALUE:N1", "JUMP:determine_correct_table_for_ajcc6_n_ns22", "VALUE:RN", "VALUE:RN" ], [ "100", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nCode 100 was defined as \"Regional lymph nodes for all colon sites: Colic (NOS), Epicolic (adjacent to bowel wall), Mesocolic (NOS), Paracolic/pericolic, Nodule(s) or foci in pericolic fat/adjacent mesentery/mesocolic fat\" in CSv1.  Code 100 was defined as \"Regional lymph nodes for all colon sites: Colic (NOS), Epicolic (adjacent to bowel wall), Mesocolic (NOS), Paracolic/pericolic\" in CSv2:V0201, V0202.  All cases should be reviewed and recoded to appropriate codes; see codes 050 and 110.\n\nRegional lymph nodes for all colon sites:\n    Colic (NOS)\n    Epicolic (adjacent to bowel wall)\n    Mesocolic (NOS)\n    Paracolic/pericolic", "VALUE:N1", "JUMP:determine_correct_table_for_ajcc6_n_ns22", "VALUE:RN", "VALUE:RN" ], [ "110", "Regional lymph nodes for all colon sites:\n    Colic, NOS\n    Epicolic (adjacent to bowel wall)\n    Mesocolic, NOS\n    Paracolic/pericolic", "VALUE:N1", "JUMP:determine_correct_table_for_ajcc6_n_ns22", "VALUE:RN", "VALUE:RN" ], [ "200", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 210, 220\n\nRegional lymph nodes, for specific subsites:\n    Cecum:\n        Cecal: \n            Anterior (prececal),\n            Posterior (retrocecal)\n            Cecal, NOS\n        Ileocolic\n        Right colic\n    Ascending colon:\n        Ileocolic\n        Middle colic\n        Right colic\n    Transverse colon and flexures:\n        Inferior mesenteric for splenic flexure only\n        Left colic for splenic flexure only\n        Middle colic\n        Right colic for hepatic flexure only\n    Descending colon:\n        Inferior mesenteric\n        Left colic\n        Sigmoid\n    Sigmoid colon:\n        Inferior mesenteric\n        Sigmoidal (sigmoid mesenteric)\n        Superior hemorrhoidal\n        Superior rectal", "VALUE:N1", "JUMP:determine_correct_table_for_ajcc6_n_ns22", "VALUE:RN", "VALUE:RN" ], [ "210", "Regional lymph nodes, for specific subsites:\n    Cecum:\n        Cecal: \n            Anterior (prececal),\n            Posterior (retrocecal)\n            Cecal, NOS\n        Ileocolic\n        Right colic\n    Ascending colon:\n        Ileocolic\n        Middle colic\n        Right colic\n    Transverse colon and flexures:\n        Inferior mesenteric for splenic flexure only\n        Left colic for splenic flexure only\n        Middle colic\n        Right colic for hepatic flexure only\n    Descending colon:\n        Inferior mesenteric\n        Left colic\n    Sigmoid colon:\n        Inferior mesenteric\n        Sigmoidal (sigmoid mesenteric)\n        Superior hemorrhoidal\n        Superior rectal", "VALUE:N1", "JUMP:determine_correct_table_for_ajcc6_n_ns22", "VALUE:RN", "VALUE:RN" ], [ "220", "Regional lymph nodes for descending colon:\n    Sigmoid", "VALUE:N1", "JUMP:determine_correct_table_for_ajcc6_n_ns22", "VALUE:D", "VALUE:RN" ], [ "300", "Regional lymph nodes for all colon sites:\n    Mesenteric, NOS\n    Regional lymph node(s), NOS", "VALUE:N1", "JUMP:determine_correct_table_for_ajcc6_n_ns22", "VALUE:RN", "VALUE:RN" ], [ "400", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee code 410\n\nStated as N1 pathologic", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "410", "Stated as N1 with no other information on regional lymph nodes", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "450", "OBSOLETE DATA RETAINED V0200\n\nStated as N2 pathologic", "ERROR:", "VALUE:N2", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

@@ -1,0 +1,35 @@
+{
+  "id" : "extension_beh",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  AJCC does not include a Tis or TX for melanoma of mucosa of head and neck sites. CS Extension codes of 000 and 999 are mapped to NA and AJCC stage group is derived as NA.\n\n**Note 2**:  AJCC does not include a T1 or T2 category for mucosal melanoma of head and neck sites.\n\n**Note 3**:  Use codes 320 and 325 for extension involving the mucosa only of adjacent sites.  Use higher codes for extension involving the deeper tissues of the primary or adjacent sites.\n\n**Note 4**:  Use code 300 for localized tumor only if no information Is available to assign code 100, 350, or 360.\n\n**Note 5**:  Use code 350, 725, 810, or 815 if the physician's assignment of T category is the only information available about the extent of the tumor.",
+  "last_modified" : "2015-05-27T16:19:11.630Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "VALUE:NA", "VALUE:NA", "VALUE:IS", "VALUE:IS" ], [ "100", "Tumor confined to mucosa of maxillary antrum (sinus)", "VALUE:T3", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "300", "Localized, NOS", "VALUE:T3", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "320", "Extension involving mucosa only:\n    Frontal sinus\n    Sphenoid sinus\n    Ethmoid sinus", "VALUE:T3", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "325", "Extension involving mucosa only:\n    Nasal cavity\n    Nasopharynx", "VALUE:T3", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "350", "Stated as T3 with no other information on extension", "VALUE:T3", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "360", "Involvement of deep tissue or mucoperiosteum of maxillary sinus", "VALUE:T4a", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "365", "360 + (320 or 325)\n\nInvolvement of deep tissue or mucoperiosteum of maxillary sinus \nplus mucosal involvement of any structure in code 320 or 325", "VALUE:T4a", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "400", "OBSOLETE DATA RETAINED V0200\n\nInvasion of infrastructure:\n    Hard palate except extension to posterior wall of sinus  and pterygoid plates (code 680)\n    Middle nasal meatus, except extension to posterior wall  of sinus and pterygoid plates (code 680)\n    Nasal cavity (floor, lateral wall, septum, turbinates)\n    Palatine bone\nTumor causing bone erosion or destruction, except for the posterior antral wall", "ERROR:", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "500", "Involvement of  deep tissues, mucoperiosteum, cartilage, or bony wall of any structures in code 320", "VALUE:T4a", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "510", "Involvement of deep soft tissues, cartilage, or bony wall of any structures in code 325", "VALUE:T4a", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "520", "Involvement of palatine bone", "VALUE:T4a", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "600", "OBSOLETE DATA RETAINED V0200\n\nInvasion of suprastructure:\n    Ethmoid sinus, anterior\n    Floor or medial wall of orbit\n    Floor or posterior wall of maxillary sinus\n    Subcutaneous tissues", "ERROR:", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "650", "OBSOLETE DATA RETAINED V0200\n\nBone of the posterior wall of maxillary sinus\nInvasion of maxilla, NOS", "ERROR:", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "660", "OBSOLETE DATA RETAINED V0200\n\nEthmoid sinus\nPosterior ethmoid, NOS\nPterygoid sinus", "ERROR:", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "670", "Infratemporal fossa\nPterygoid plates\nPterygoid fossa", "VALUE:T4a", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "675", "Subcutaneous tissues\nSkin of cheek\nSkin of nose", "VALUE:T4a", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "680", "OBSOLETE DATA RETAINED V0200\n\nAnterior orbital contents\nCribriform plate\nFrontal sinus\nInfratemporal fossa\nPterygoid plates\nSkin of cheek\nSphenoid sinus", "ERROR:", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "690", "Orbital contents including eye\nSoft palate", "VALUE:T4a", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "700", "OBSOLETE DATA RETAINED V0200\n\nBase of skull\nOrbital contents, including eye\nPterygomaxillary  (temporal) fossa\nSoft palate", "ERROR:", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "725", "Stated as T4a with no other information on extension", "VALUE:T4a", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "740", "Anterior cranial fossa \nBase of skull\nClivus\nCribriform plate\nMiddle cranial fossa\nOrbital apex\nPterygomaxillary (temporal) fossa", "VALUE:T4b", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "750", "OBSOLETE DATA RETAINED V0200\n\nBrain\nClivus\nCranial nerves other than (V2)\nDura\nMiddle cranial fossa\nNasopharynx\nOrbital apex", "ERROR:", "VALUE:NA", "VALUE:U", "VALUE:U" ], [ "790", "Contiguous extension to:\n    Dura\n    Brain\n    Lower cranial nerves (IX, X, XI, XII)\n    Middle cranial fossa", "VALUE:T4b", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "800", "OBSOLETE DATA RETAINED V0200\n\nFurther contiguous extension", "ERROR:", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "801", "Further contiguous extension :\n    Carotid artery (encased)\n    Masticator space\n    Mediastinal structures\n    Prevertebral space", "VALUE:T4b", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "810", "Stated as T4b with no other information on extension", "VALUE:T4b", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "815", "Stated as T4 [NOS] with no other information on extension", "VALUE:T4NOS", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "950", "OBSOLETE DATA RETAINED V0200\n\nNo evidence of primary tumor", "ERROR:", "VALUE:NA", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:U" ] ]
+}

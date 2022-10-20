@@ -1,0 +1,22 @@
+{
+  "id" : "ajcc6_stage_qpo",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC6 Stage",
+  "title" : "AJCC TNM 6 Stage",
+  "last_modified" : "2015-05-27T16:18:51.336Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf2",
+    "name" : "SSF2",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "000,020", "VALUE:IA" ], [ "100", "010,030", "VALUE:IB" ], [ "100", "999", "VALUE:I" ], [ "100-999", "988", "ERROR:" ], [ "110", "000,020", "VALUE:IEA" ], [ "110", "010,030", "VALUE:IEB" ], [ "110", "999", "VALUE:IE" ], [ "120", "000,020", "VALUE:ISA" ], [ "120", "010,030", "VALUE:ISB" ], [ "120", "999", "VALUE:IS" ], [ "200", "000,020", "VALUE:IIA" ], [ "200", "010,030", "VALUE:IIB" ], [ "200", "999", "VALUE:II" ], [ "210", "000,020", "VALUE:IIEA" ], [ "210", "010,030", "VALUE:IIEB" ], [ "210", "999", "VALUE:IIE" ], [ "220", "000,020", "VALUE:IISA" ], [ "220", "010,030", "VALUE:IISB" ], [ "220", "999", "VALUE:IIS" ], [ "230", "000,020", "VALUE:IIESA" ], [ "230", "010,030", "VALUE:IIESB" ], [ "230", "999", "VALUE:IIES" ], [ "300", "000,020", "VALUE:IIIA" ], [ "300", "010,030", "VALUE:IIIB" ], [ "300", "999", "VALUE:III" ], [ "310", "000,020", "VALUE:IIIEA" ], [ "310", "010,030", "VALUE:IIIEB" ], [ "310", "999", "VALUE:IIIE" ], [ "320", "000,020", "VALUE:IIISA" ], [ "320", "010,030", "VALUE:IIISB" ], [ "320", "999", "VALUE:IIIS" ], [ "330", "000,020", "VALUE:IIIESA" ], [ "330", "010,030", "VALUE:IIIESB" ], [ "330", "999", "VALUE:IIIES" ], [ "800", "000,020", "VALUE:IVA" ], [ "800", "010,030", "VALUE:IVB" ], [ "800", "999", "VALUE:IV" ], [ "999", "000,020", "VALUE:UNK" ], [ "999", "010,030", "VALUE:UNK" ], [ "999", "999", "VALUE:UNK" ] ]
+}

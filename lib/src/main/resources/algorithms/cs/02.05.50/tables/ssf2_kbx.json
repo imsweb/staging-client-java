@@ -1,0 +1,20 @@
+{
+  "id" : "ssf2_kbx",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF2",
+  "title" : "CS Site-Specific Factor 2",
+  "subtitle" : "Durie-Salmon Staging System",
+  "notes" : "**Note 1**: Durie-Salmon staging applies to multiple myeloma (9732) only. For plasmacytomas, (9731 and 9734), use code 987 for not applicable.  \n\n**Note 2**: The A and B subclassifications reflect the serum creatinine levels at diagnosis. If the A or B subclassification is not noted, use the NOS codes.\n\n**Note 3**: Only code the Durie-Salmon stage when the stage is documented in the medical record. \n\n**Note 4**: Code the stage as Durie-Salmon when the record states the stage, but does not identify the staging system.",
+  "last_modified" : "2015-05-27T16:20:03.702Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Durie Salmon Stage IA" ], [ "020", "Durie Salmon Stage IB" ], [ "030", "Durie Salmon Stage INOS" ], [ "040", "Durie Salmon Stage IIA" ], [ "050", "Durie Salmon Stage IIB" ], [ "060", "Durie Salmon Stage IINOS" ], [ "070", "Durie Salmon Stage IIIA" ], [ "080", "Durie Salmon Stage IIIB" ], [ "090", "Durie Salmon Stage IIINOS" ], [ "888", "OBSOLETE DATA CONVERTED V0200\nSee code 988\n \nNot applicable for this site" ], [ "987", "Not applicable:  Use for codes 9731 (Plasmacytoma, NOS) and 9734 (Plasmacytoma, extramedullary) \nNot multiple myeloma or plasma cell myeloma (9732)" ], [ "988", "Not applicable:  Information not collected for this case\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.  If this item is required to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

@@ -1,0 +1,23 @@
+{
+  "id" : "lymph_nodes_ssf11_ajcc6_xqd",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Lymph Nodes SSF11 AJCC6",
+  "title" : "Lymph Nodes SSF 11 AJCC 6 Table",
+  "notes" : "**Note**:  For CS Lymph Node codes 110-450, the assignment of the N category for AJCC 6 staging is based on  CS Site Specific Factor 11,  Regional Lymph Node Laterality, as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:26.803Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "CS Lymph Nodes",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf11",
+    "name" : "CS SSF11",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "AJCC 6 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "110", "000", "ERROR:" ], [ "120", "000", "ERROR:" ], [ "130", "000", "ERROR:" ], [ "150", "000", "ERROR:" ], [ "210", "000", "ERROR:" ], [ "220", "000", "ERROR:" ], [ "230", "000", "ERROR:" ], [ "250", "000", "ERROR:" ], [ "300", "000", "ERROR:" ], [ "350", "000", "ERROR:" ], [ "360", "000", "ERROR:" ], [ "400", "000", "ERROR:" ], [ "450", "000", "ERROR:" ], [ "110", "010", "VALUE:N1" ], [ "120", "010", "VALUE:N1" ], [ "130", "010", "VALUE:N1" ], [ "150", "010", "VALUE:N1" ], [ "210", "010", "VALUE:N1" ], [ "220", "010", "VALUE:N1" ], [ "230", "010", "VALUE:N1" ], [ "250", "010", "VALUE:N1" ], [ "300", "010", "VALUE:N1" ], [ "350", "010", "VALUE:N1" ], [ "360", "010", "VALUE:N1" ], [ "400", "010", "VALUE:N1" ], [ "450", "010", "VALUE:N1" ], [ "110", "020", "VALUE:N2" ], [ "120", "020", "VALUE:N2" ], [ "130", "020", "VALUE:N2" ], [ "150", "020", "VALUE:N2" ], [ "210", "020", "VALUE:N2" ], [ "220", "020", "VALUE:N2" ], [ "230", "020", "VALUE:N2" ], [ "250", "020", "VALUE:N2" ], [ "300", "020", "VALUE:N2" ], [ "350", "020", "VALUE:N2" ], [ "360", "020", "VALUE:N2" ], [ "400", "020", "VALUE:N2" ], [ "450", "020", "VALUE:N2" ], [ "110", "030", "VALUE:N1" ], [ "120", "030", "VALUE:N1" ], [ "130", "030", "VALUE:N1" ], [ "150", "030", "VALUE:N1" ], [ "210", "030", "VALUE:N1" ], [ "220", "030", "VALUE:N1" ], [ "230", "030", "VALUE:N1" ], [ "250", "030", "VALUE:N1" ], [ "300", "030", "VALUE:N1" ], [ "350", "030", "VALUE:N1" ], [ "360", "030", "VALUE:N1" ], [ "400", "030", "VALUE:N1" ], [ "450", "030", "VALUE:N1" ], [ "110", "988", "VALUE:N1" ], [ "120", "988", "VALUE:N1" ], [ "130", "988", "VALUE:N1" ], [ "150", "988", "VALUE:N1" ], [ "210", "988", "VALUE:N1" ], [ "220", "988", "VALUE:N1" ], [ "230", "988", "VALUE:N1" ], [ "250", "988", "VALUE:N1" ], [ "300", "988", "VALUE:N1" ], [ "350", "988", "VALUE:N1" ], [ "360", "988", "VALUE:N1" ], [ "400", "988", "VALUE:N1" ], [ "450", "988", "VALUE:N1" ], [ "110", "998", "VALUE:N1" ], [ "120", "998", "VALUE:N1" ], [ "130", "998", "VALUE:N1" ], [ "150", "998", "VALUE:N1" ], [ "210", "998", "VALUE:N1" ], [ "220", "998", "VALUE:N1" ], [ "230", "998", "VALUE:N1" ], [ "250", "998", "VALUE:N1" ], [ "300", "998", "VALUE:N1" ], [ "350", "998", "VALUE:N1" ], [ "360", "998", "VALUE:N1" ], [ "400", "998", "VALUE:N1" ], [ "450", "998", "VALUE:N1" ], [ "110", "999", "VALUE:N1" ], [ "120", "999", "VALUE:N1" ], [ "130", "999", "VALUE:N1" ], [ "150", "999", "VALUE:N1" ], [ "210", "999", "VALUE:N1" ], [ "220", "999", "VALUE:N1" ], [ "230", "999", "VALUE:N1" ], [ "250", "999", "VALUE:N1" ], [ "300", "999", "VALUE:N1" ], [ "350", "999", "VALUE:N1" ], [ "360", "999", "VALUE:N1" ], [ "400", "999", "VALUE:N1" ], [ "450", "999", "VALUE:N1" ] ]
+}

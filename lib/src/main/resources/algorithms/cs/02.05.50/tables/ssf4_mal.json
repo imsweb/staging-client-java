@@ -1,0 +1,20 @@
+{
+  "id" : "ssf4_mal",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF4",
+  "title" : "CS Site-Specific Factor 4",
+  "subtitle" : "Creatinine Value",
+  "notes" : "**Note 1**:  The Model for End-Stage Liver Disease (MELD) is a numerical scale used to determine how urgently a patient with liver disease needs a liver transplant within the next three months.  Results from three routine lab tests are used to calculate the MELD score.  Creatinine, one of the tests, measures kidney function; impaired kidney function is often associated with severe liver disease.\n\n**Note 2**:  Normal values may vary from lab to lab. The typical human reference ranges are 0.5 to 1.0 milligrams/deciliter (mg/dl) (about 45-90 micromoles/liter (umol/l) for women and 0.7 to 1.2 mg/dl (60-110 umol/l) for men.\n\n**Note 3**:  Record the blood or serum creatinine value for this data item\n\n**Note 4**:  Record to the nearest tenth in mg/dl or umol/l the highest creatinine value prior to treatment. Record a creatinine value of 0.53 mg/dL as 005; record a value of 60 umol/l as 600; and record a value of 110 umol/l as 980.\n\n**Note 5**:  Record the creatinine unit of measure for the same laboratory test in CS Site-Specific Factor 5.\n\n**Note 6**:  Use code 997 ff the test was done but the actual value is not statedUse code 997 If the test was done but the unit is not in mg/dl or umol/l.",
+  "last_modified" : "2015-05-27T16:20:06.456Z",
+  "definition" : [ {
+    "key" : "ssf4",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "OBSOLETE DATA CONVERTED V0203\nSee code 998\n\nTest not done" ], [ "001", "0.1 or less milligram/deciliter (mg/dl)\n0.1 or less micromole/liter (umol/l) \n(Exact value to nearest tenth in mg/dl or umol/l)" ], [ "002-979", "0.2 - 97.9 mg/dl \n0.2 - 97.9 umol/l\n(Exact value to nearest tenth of mg/dl or umol/l)" ], [ "980", "98.0 mg/dl or greater\n98.0 umol/l or greater" ], [ "988", "Not applicable:  Information not collected for this case\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.  If this item is required to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "997", "Test ordered, results not in chart" ], [ "998", "CONVERTED AND CODE REUSED V0203\nPrior to V0203 code defined as \"Test ordered, results not in chart\".  Cases converted to code 997 with V0203 and code 998 redefined as \"Test not done (test not ordered and not performed)\".\n\nTest not done (test not ordered and not performed" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

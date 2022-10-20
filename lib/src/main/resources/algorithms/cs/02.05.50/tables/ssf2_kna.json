@@ -1,0 +1,18 @@
+{
+  "id" : "ssf2_kna",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF2",
+  "title" : "CS Site-Specific Factor 2",
+  "last_modified" : "2015-05-27T16:20:03.751Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "888", "OBSOLETE DATA CONVERTED V0200\nSee code 988\n Not applicable for this site" ], [ "988", "Not applicable:  Site-specific factor not defined" ] ]
+}

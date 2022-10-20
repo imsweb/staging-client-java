@@ -1,0 +1,19 @@
+{
+  "id" : "histology_subtype_79769",
+  "algorithm" : "eod_public",
+  "version" : "3.0",
+  "name" : "Histology Subtype",
+  "title" : "Histology Subtype",
+  "notes" : "**Note 1:** This SSDI is effective for diagnosis years 2023+.\n + For cases diagnosed 2018-2022, leave this SSDI blank\n\n**Note 2:** Use the Solid Tumor Rules to determine histology prior to coding this SSDI.\n\n**Note 3:** Histology 8480/2 or 8480/3 have multiple definitions that are collected in this histology. This data item is used to further identify specific subtypes for histology code 8480/2 or 8480/3.\n\n*Examples:* \n1.\tAppendix: Disseminated peritoneal adenomucinous/low grade mucinous carcinoma peritonei. Final diagnosis: Low grade appendiceal mucinous neoplasm\n + Code 1: This is a low grade mucinous (appendiceal) carcinoma (8480/3), which is LAMN. The peritoneal adenomucinous/low grade mucinous carcinoma peritonei is describing metastatic disease and not the histology\n2.\tAppendix: Low grade (well diff) appendiceal adenocarcinoma\n + Code 0: This is an adenocarcinoma (8140/3), the low grade (well diff) is describing the grade and not the histology\n3.\tAppendix, appendectomy: Low grade appendiceal mucinous neoplasm (LAMN) with focal high grade mucinous neoplasm.\n + Code 1: Based on the Solid Tumor Rules, the “focal” would be ignored and this would be a LAMN.\n4.\tAppendectomy: Mucinous adenocarcinoma of the appendix\n + Code 3: Mucinous adenocarcinoma is the preferred terminology for histology code 8480/3. Since there is no mention of “low grade” or “high grade”, this would not be LAMN or HAMN\n5.\tAppendix: Mucinous (colloid) adenocarcinoma\n + Code 3: Colloid adenocarcinoma is an alternate name for 8480/3",
+  "last_modified" : "2022-05-16T15:09:59.478Z",
+  "definition" : [ {
+    "key" : "histology_subtype",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Histology is NOT 8480" ], [ "1", "Low-grade appendiceal mucinous neoplasm\nLAMN" ], [ "2", "High-grade appendiceal mucinous neoplasm\nHAMN" ], [ "3", "Mucinous Adenocarcinoma/carcinoma\nMucus Adenocarcinoma/carcinoma\nMucoid adenocarcinoma/carcinoma\nColloid adenocarcinoma/carcinoma" ], [ "4", "Other terminology coded to 8480" ], [ "", "NA-Diagnosis year is prior to 2023" ] ]
+}

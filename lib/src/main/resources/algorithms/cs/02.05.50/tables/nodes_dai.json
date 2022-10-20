@@ -1,0 +1,35 @@
+{
+  "id" : "nodes_dai",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in CS Mets at DX.  \n\n**Note 2**:  If at mediastinoscopy/x-ray, the description is \"mass\", \"adenopathy\", or \"enlargement\" of any of the lymph nodes named as regional in codes 100 and 200, assume that at least regional lymph nodes are involved. If there is any mention of bilateral or contralateral mass, adenopathy or lymph node involvement , use code 600.\n\n**Note 3**:  The words \"no evidence of spread\" or \"remaining examination negative\" are sufficient information to consider regional lymph nodes negative in the absence of any statement about nodes.\n\n**Note 4**:  Vocal cord paralysis (resulting from involvement of the recurrent branch of the vagus nerve), superior vena cava (SVC) obstruction, or compression of the trachea or the esophagus, may be related to direct extension of the primary tumor or to lymph node involvement.  The treatment options and prognosis associated with these manifestations of disease extent fall within the T4-Stage IIIB category; therefore, generally use CS Extension code 700 for these manifestations and not CS Lymph Nodes .  However, if the primary tumor is peripheral and clearly unrelated to vocal cord paralysis, SVC obstruction, or compression of the trachea or the esophagus, code these manifestations as mediastinal lymph node involvement (code 200) in CS Lymph Nodes, unless there is a statement of involvement by direct extension from the primary tumor.",
+  "last_modified" : "2015-05-27T16:19:31.792Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "100", "Regional lymph nodes, ipsilateral:\n    Bronchial\n    Hilar (bronchopulmonary) (proximal lobar) (pulmonary root)\n    Intrapulmonary nodes, including involvement by \n    direct extension:\n        Interlobar\n        Lobar\n        Segmental\n        Subsegmental\nPeri/parabronchial \n\nStated as N1 with no other information on regional lymph nodes", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "200", "Regional lymph nodes, ipsilateral:\n    Aortic (above diaphragm), NOS:\n        Peri/para-aortic, NOS:\n            Ascending aorta (phrenic)\n        Subaortic (aortico-pulmonary window)\n    Carinal (tracheobronchial) (tracheal bifurcation)\n    Mediastinal, NOS:\n        Anterior\n        Posterior (tracheoesophageal)\n    Pericardial\n    Peri/paraesophageal\n    Peri/paratracheal, NOS:\n        Azygos (lower peritracheal)\n    Pre- and retrotracheal, NOS:\n        Precarinal\n    Pulmonary ligament\n    Subcarinal \n\n    Stated as N2 with no other information on regional lymph nodes", "VALUE:N2", "VALUE:N2", "VALUE:RN", "VALUE:RN" ], [ "500", "Regional lymph node(s), NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "600", "Contralateral/bilateral hilar (bronchopulmonary)  (proximal lobar) (pulmonary root)\nContralateral/bilateral mediastinal \nScalene (inferior deep cervical), ipsilateral or contralateral\nSupraclavicular (transverse cervical), ipsilateral or contralateral\n\nStated as N3 with no other information on regional lymph nodes", "VALUE:N3", "VALUE:N3", "VALUE:D", "VALUE:D" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

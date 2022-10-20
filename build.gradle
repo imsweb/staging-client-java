@@ -4,6 +4,9 @@ plugins {
     id "com.github.spotbugs" version "5.0.13"
 }
 
+group = 'com.imsweb'
+version = '9.2-SNAPSHOT'
+
 subprojects {
     apply plugin: "com.github.spotbugs"
 

@@ -1,0 +1,23 @@
+{
+  "id" : "nodes_eval_ena",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes Eval",
+  "title" : "CS Lymph Nodes Eval",
+  "notes" : "**Note**: The staging basis for this schema is blank because AJCC stage is not applicable.",
+  "last_modified" : "2015-05-27T16:19:39.433Z",
+  "definition" : [ {
+    "key" : "nodes_eval",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ndescriptor",
+    "name" : "Staging Basis",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "9", "Not applicable for this schema", "VALUE:" ] ]
+}

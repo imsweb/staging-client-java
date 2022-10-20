@@ -1,0 +1,23 @@
+{
+  "id" : "extension_ulceration_t1_ajcc6_xbo",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension Ulceration T1 AJCC6",
+  "title" : "Extension Ulceration T1 AJCC 6 Table",
+  "notes" : "**Note**:  For CS Extension codes 100-800 and 999 ONLY with thickness (CS Site-Specific Factor 1) between 001and 100 (0.01 to 1.00 millimeter (mm)), the T1 category for AJCC 6 staging is based on the value of Clark level of invasion coded in CS Extension and ulceration coded in CS Site-Specific Factor 2.",
+  "last_modified" : "2015-05-27T16:19:21.106Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf2",
+    "name" : "CS SSF 2 Ulceration",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "000", "VALUE:T1a" ], [ "200", "000", "VALUE:T1a" ], [ "300", "000", "VALUE:T1b" ], [ "310,315,320,330,335,340,350,355,360,370,375,380", "000", "VALUE:T1NOS" ], [ "400", "000", "VALUE:T1NOS" ], [ "500", "000", "VALUE:T1b" ], [ "800", "000", "VALUE:T1b" ], [ "999", "000", "VALUE:T1b" ], [ "100", "001", "ERROR:" ], [ "200", "001", "ERROR:" ], [ "300", "001", "ERROR:" ], [ "310,315,320,330,335,340,350,355,360,370,375,380", "001", "ERROR:" ], [ "400", "001", "ERROR:" ], [ "500", "001", "ERROR:" ], [ "800", "001", "ERROR:" ], [ "999", "001", "ERROR:" ], [ "100", "010", "VALUE:T1b" ], [ "200", "010", "VALUE:T1b" ], [ "300", "010", "VALUE:T1b" ], [ "310,315,320,330,335,340,350,355,360,370,375,380", "010", "VALUE:T1NOS" ], [ "400", "010", "VALUE:T1b" ], [ "500", "010", "VALUE:T1b" ], [ "800", "010", "VALUE:T1b" ], [ "999", "010", "VALUE:T1b" ], [ "100", "988", "ERROR:" ], [ "200", "988", "ERROR:" ], [ "300", "988", "ERROR:" ], [ "310,315,320,330,335,340,350,355,360,370,375,380", "988", "ERROR:" ], [ "400", "988", "ERROR:" ], [ "500", "988", "ERROR:" ], [ "800", "988", "ERROR:" ], [ "999", "988", "ERROR:" ], [ "100", "999", "VALUE:T1NOS" ], [ "200", "999", "VALUE:T1NOS" ], [ "300", "999", "VALUE:T1b" ], [ "310,315,320,330,335,340,350,355,360,370,375,380", "999", "VALUE:T1NOS" ], [ "400", "999", "VALUE:T1NOS" ], [ "500", "999", "VALUE:T1b" ], [ "800", "999", "VALUE:T1b" ], [ "999", "999", "VALUE:T1b" ] ]
+}

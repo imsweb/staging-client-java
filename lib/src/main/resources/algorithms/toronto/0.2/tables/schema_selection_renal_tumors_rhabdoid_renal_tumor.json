@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_renal_tumors_rhabdoid_renal_tumor",
+  "algorithm" : "toronto",
+  "version" : "0.2",
+  "name" : "Schema Selection Renal Tumors: Rhabdoid Renal Tumor",
+  "title" : "Schema selection for Renal Tumors: Rhabdoid Renal Tumor",
+  "last_modified" : "2022-09-15T20:45:54.714Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C649", "8963", "3", "MATCH" ] ]
+}

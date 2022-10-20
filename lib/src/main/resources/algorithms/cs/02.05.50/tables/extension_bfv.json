@@ -1,0 +1,36 @@
+{
+  "id" : "extension_bfv",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  For AJCC TNM staging, retroperitoneal sarcomas are classified as deep tumors.\n\n**Note 2**:  The assignment of T1 and T2 categories for soft tissue sarcomas is based on tumor size.  A physician's statement of the T category may be used to code CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields.  However the two fields are coded independently: for example the record may document size but not extension, other than the physician's statement of the T category.  Use codes 350 and 375 as appropriate to code CS Extension based on a statement of T when no other extension information is available.",
+  "footnotes" : "- For CS Extension codes 100-800 ONLY, the T category for AJCC 7 staging is assigned based on value of CS Tumor Size, as shown in the Extension Size Table for this schema.\n- For CS Extension codes 100-800 ONLY, the T category for AJCC 6 staging is assigned based on value of CS Tumor Size, as shown in the Extension Size Table for this schema.",
+  "last_modified" : "2015-05-27T16:19:13.895Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "Tumor confined to site of origin", "JUMP:extension_size_xqj", "JUMP:extension_size_xqj", "VALUE:L", "VALUE:L" ], [ "300", "Localized, NOS", "JUMP:extension_size_xqj", "JUMP:extension_size_xqj", "VALUE:L", "VALUE:L" ], [ "350", "Stated as T1b or T1 [NOS] with no other information on extension", "JUMP:extension_size_xqj", "JUMP:extension_size_xqj", "VALUE:L", "VALUE:L" ], [ "375", "Stated as T2b or T2 [NOS] with no other information on extension", "JUMP:extension_size_xqj", "JUMP:extension_size_xqj", "VALUE:L", "VALUE:L" ], [ "400", "Adjacent connective tissue \n(See definition of adjacent connective tissue in General Rules)", "JUMP:extension_size_xqj", "JUMP:extension_size_xqj", "VALUE:RE", "VALUE:RE" ], [ "600", "Adjacent organs/structures: \n    Adrenal(s) (suprarenal gland(s))\n    Aorta\n    Ascending colon\n    Bone/cartilage\n    Descending colon\n    Kidney(s)\n    Pancreas\n    Vena cava\n    Vertebra", "JUMP:extension_size_xqj", "JUMP:extension_size_xqj", "VALUE:RE", "VALUE:RE" ], [ "800", "Further contiguous extension, including:\n   Extension to colon other than ascending or descending", "JUMP:extension_size_xqj", "JUMP:extension_size_xqj", "VALUE:D", "VALUE:D" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

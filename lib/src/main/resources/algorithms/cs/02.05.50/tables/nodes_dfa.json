@@ -1,0 +1,35 @@
+{
+  "id" : "nodes_dfa",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  If information about named regional lymph nodes is available, use codes 110, 400, or 420 rather than code 600.\n\n**Note 3**:  Hepatoduodenal nodes are regional for primaries of the lesser curvature of the stomach.  They are coded in CS Mets at DX for all other subsites in this schema.\n\n**Note 4**:  Nodal metastasis is very rare in gastrointestinal stromal tumors and surgeons generally agree that nodal dissection is not indicated.  In the absence of information on regional lymph node status, N0 is appropriate; code 999 is mapped to N0 accordingly.",
+  "last_modified" : "2015-05-27T16:19:37.541Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:NA", "VALUE:NONE", "VALUE:NONE" ], [ "050", "Nodule(s) in perigastric fat", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "100", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 000, 050, and 110 and CS Mets at DX codes 10 and 50\n\nRegional lymph nodes:\n    Left gastric (superior gastric), NOS:\n        Cardial\n        Cardioesophageal\n        Gastric, left\n        Gastropancreatic, left\n        Lesser curvature\n        Lesser omental\n        Paracardial\n    Pancreaticosplenic (pancreaticolienal)\n    Pancreatoduodenal\n    Perigastric, NOS\n    Peripancreatic\n    Right gastric (inferior gastric), NOS:\n        Gastrocolic\n        Gastroduodenal\n        Gastroepiploic (gastro-omental), right or NOS\n        Gastrohepatic\n        Greater curvature\n        Greater omental\n        Pyloric, NOS\n            Infrapyloric (subpyloric)\n            Suprapyloric\n    Splenic (lienal), NOS:\n        Gastroepiploic (gastro-omental), left\n        Splenic hilar\n    Superior mesenteric\n    Nodule(s) in perigastric fat", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "110", "Regional lymph nodes:\n    Left gastric (superior gastric), NOS:\n        Cardial\n        Cardioesophageal\n        Gastric, left\n        Gastropancreatic, left\n        Lesser curvature\n        Lesser omental\n        Paracardial\n    Pancreaticosplenic (pancreaticolienal)\n    Pancreatoduodenal\n    Perigastric, NOS\n    Peripancreatic\n    Right gastric (inferior gastric), NOS:\n        Gastrocolic\n        Gastroduodenal\n        Gastroepiploic (gastro-omental), right or NOS\n        Gastrohepatic\n        Greater curvature\n        Greater omental\n        Pyloric, NOS\n            Infrapyloric (subpyloric)\n            Suprapyloric\n    Splenic (lienal), NOS:\n        Gastroepiploic (gastro-omental), left\n        Splenic hilar", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "400", "Hepatic (excluding gastrohepatic, [see code 100] and  hepatoduodenal [see code 420])", "VALUE:N1", "VALUE:NA", "VALUE:D", "VALUE:RN" ], [ "420", "For lesser curvature:\n    Hepatoduodenal", "VALUE:N1", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "500", "Regional lymph node(s), NOS", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "600", "Stated as N1 with no other information on regional lymph node", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "650", "OBSOLETE DATA RETAINED V0200 \n\nStated as N2, NOS", "ERROR:", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "700", "OBSOLETE DATA RETAINED V0200 \n\nStated as N3, NOS", "ERROR:", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "VALUE:N0", "VALUE:NA", "VALUE:U", "VALUE:U" ] ]
+}

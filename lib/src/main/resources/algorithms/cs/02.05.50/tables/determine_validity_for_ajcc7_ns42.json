@@ -1,0 +1,26 @@
+{
+  "id" : "determine_validity_for_ajcc7_ns42",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Determine Validity of TNM for AJCC 7 Stage - Age at DX = 999",
+  "title" : "Determine Validity of TNM for AJCC 7 Stage - Age at DX = 999",
+  "last_modified" : "2015-05-27T16:19:05.329Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_stage",
+    "name" : "Stage Table 7",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "T0,T1a,T1a(s),T1a(m),T1b,T1b(s),T1b(m),T1NOS,T1NOS(s),T1NOS(m),T2,T2(s),T2(m),T3,T3(s),T3(m),T4a,T4a(s),T4a(m),T4b,T4b(s),T4b(m),T4NOS,T4NOS(s),T4NOS(m),TX", "N0,N1a,N1b,N1NOS,NX", "M0,M1", "VALUE:UNK" ], [ "*", "*", "", "ERROR:" ], [ "*", "", "*", "ERROR:" ], [ "", "*", "*", "ERROR:" ] ]
+}

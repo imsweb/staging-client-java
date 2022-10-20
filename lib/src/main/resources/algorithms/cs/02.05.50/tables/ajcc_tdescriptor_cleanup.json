@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_tdescriptor_cleanup",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC T Descriptor Code Cleanup",
+  "title" : "AJCC T Descriptor Code Cleanup",
+  "last_modified" : "2015-05-27T16:19:02.043Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "tdescriptor",
+    "name" : "T Descriptor",
+    "type" : "INPUT"
+  }, {
+    "key" : "tdescriptor",
+    "name" : "T Descriptor",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "stor_tdescriptor",
+    "name" : "Storage T Descriptor",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "*", "ERROR", "VALUE:", "VALUE:", "If T Descriptor is an error, both should be set to blank" ], [ "NA", "*", "VALUE:", "VALUE:N", "For T values of NA" ], [ "", "*", "VALUE:", "VALUE:", "For missing T values caused by an ERROR in extension" ], [ "*", "*", "MATCH", "MATCH", "For all other cases, leave codes as they are" ] ]
+}

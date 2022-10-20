@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_sbh",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF1",
+  "title" : "CS Site-Specific Factor 1",
+  "subtitle" : "Separate Tumor Nodules - Ipsilateral Lung",
+  "notes" : "**Note 1**:  Separate tumor nodules in the ipsilateral lung are coded separately from CS Extension.  Separate tumor nodules in the contralateral lung are coded in CS Mets at DX.\n\n**Note 2**:  Separate tumor nodules can be defined clinically (by imaging) and/or pathologically.\n\n**Note 3**:  If separate tumor nodules are not mentioned in imaging and/or pathological reports, use code 000.\n\n**Note 4**: For in situ tumors, code CS Site-Factor 1 to 000.",
+  "last_modified" : "2015-05-27T16:20:00.690Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No separate tumor nodules noted" ], [ "010", "Separate tumor nodules in ipsilateral lung, same lobe" ], [ "020", "Separate tumor nodules in ipsilateral lung, different lobe" ], [ "030", "020 + 010\n\nSeparate tumor nodules, ipsilateral lung, same and different lobe" ], [ "040", "Separate tumor nodules, ipsilateral lung, unknown if same or different lobe" ], [ "888", "OBSOLETE DATA CONVERTED V0200 \nSee code 988  \n\nNot applicable for this site" ], [ "988", "Not applicable:  Information not collected for this case\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.  If this item is required to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "999", "Unknown if separate tumor nodules \nSeparate tumor nodules cannot be assessed\nNot documented in patient record" ] ]
+}

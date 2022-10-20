@@ -1,0 +1,35 @@
+{
+  "id" : "mets_hai",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note 1**:  Discontinuous metastasis to any of the following abdominal organs by way of peritoneal seeding or implants is included in the T3 category (FIGO Stage III) and coded in CS Extension: abdominal mesentery; diaphragm; gallbladder; infracolic omentum; kidneys; large intestine except rectum, rectosigmoid, and sigmoid colon; liver (peritoneal surface); omentum; pancreas; pericolic gutter; peritoneum, NOS; small intestine; spleen; stomach; and ureters outside pelvis. Hematogenous metastases are included in M1 (FIGO Stage IV) disease.\n\n**Note 2**:  The Federation Internationale de Gynecologie et d'Obstetrique (FIGO) stages are included for coding where no more specific information is available in the record.",
+  "last_modified" : "2015-05-27T16:19:27.813Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "VALUE:M0", "VALUE:NONE", "VALUE:NONE" ], [ "05", "Sacral lymph nodes:\n    Presacral lymph nodes\n    Lateral sacral (laterosacral)     Sacral NOS", "VALUE:M1", "VALUE:M0", "VALUE:D", "VALUE:RN" ], [ "10", "Distant lymph node(s) other than sacral", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "20", "10 + 05", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "40", "Distant metastasis (excluding involvement of other organs by peritoneal seeding or implants (See Note 1)), except distant lymph nodes\nincluding:\n    Liver parenchymal metastasis\n    Pleural effusion WITH positive cytology\n\n Carcinomatosis", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "45", "40 + 05", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "50", "40 + 10\n\nDistant metastasis plus distant lymph node(s) other than sacral ", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "55", "50 + 05  Distant metastasis plus distant lymph nodes including sacral nodes", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "60", "Distant metastasis, NOS\n\nFIGO Stage IV", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "VALUE:MX", "VALUE:U", "VALUE:U" ] ]
+}

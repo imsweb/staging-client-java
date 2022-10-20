@@ -1,0 +1,35 @@
+{
+  "id" : "histologies_grade_stage_xce",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Histologies Grade Stage - AJCC 7",
+  "title" : "Histologies, Grade, Stage - AJCC 7",
+  "notes" : "**Note**:  The determination of AJCC stage group from T, N, and M for thyroid depends further on histologic type, grade, and age.  This table shows the selection of the appropriate version of the AJCC Stage table based on histology and grade. For papillary and follicular carcinomas, a further check on age is needed to identify the correct AJCC Stage table to be used.  In the table below, \"Anaplastic\" maps to the table AJCC-Stage: Anaplastic; \"Med\", to AJCC-Stage: Medullary; and \"Pap/Fol\", to either AJCC Stage-Thyroid: Papillary and Follicular - Age less than 45 or AJCC Stage-Thyroid: Papillary and Follicular - Age 45 and Older.  If age at diagnosis is unknown, AJCC stage is derived as unknown for papillary and follicular carcinomas.",
+  "last_modified" : "2015-05-27T16:19:21.261Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "ICD-O-3 histology code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "grade",
+    "name" : "Grade",
+    "type" : "INPUT"
+  }, {
+    "key" : "age_dx",
+    "name" : "Age at Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Stage Table",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_stage",
+    "name" : "Stage Table 7",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8020", "Carcinoma, undifferentiated, NOS", "1,2,3,4,9", "*", "Anaplastic", "JUMP:ajcctnm7_stage_thyroid_anaplastic_xdz" ], [ "8021", "Carcinoma, anaplastic, NOS", "1,2,3,4,9", "*", "Anaplastic", "JUMP:ajcctnm7_stage_thyroid_anaplastic_xdz" ], [ "8030", "Giant cell and spindle cell carcinoma", "1,2,3,4,9", "*", "Anaplastic", "JUMP:ajcctnm7_stage_thyroid_anaplastic_xdz" ], [ "8031", "Giant cell carcinoma", "1,2,3,4,9", "*", "Anaplastic", "JUMP:ajcctnm7_stage_thyroid_anaplastic_xdz" ], [ "8032", "Spindle cell carcinoma", "1,2,3,4,9", "*", "Anaplastic", "JUMP:ajcctnm7_stage_thyroid_anaplastic_xdz" ], [ "8345", "Medullary carcinoma with amyloid stroma (C73.9)", "1,2,3,9", "*", "Med", "JUMP:ajcctnm7_stage_thyroid_medullary_xdy" ], [ "8346", "Mixed medullary-follicular carcinoma (C73.9)", "1,2,3,9", "*", "Med", "JUMP:ajcctnm7_stage_thyroid_medullary_xdy" ], [ "8347", "Mixed medullary-papillary carcinoma (C73.9)", "1,2,3,9", "*", "Med", "JUMP:ajcctnm7_stage_thyroid_medullary_xdy" ], [ "8430", "Mucoepidermoid tumor [obs]", "1,2,3,9", "*", "Med", "JUMP:ajcctnm7_stage_thyroid_medullary_xdy" ], [ "8510", "Medullary carcinoma, NOS", "1,2,3,9", "*", "Med", "JUMP:ajcctnm7_stage_thyroid_medullary_xdy" ], [ "8512", "Medullary carcinoma with lymphoid stroma", "1,2,3,9", "*", "Med", "JUMP:ajcctnm7_stage_thyroid_medullary_xdy" ], [ "8513", "Atypical medullary carcinoma (C50._)", "1,2,3,9", "*", "Med", "JUMP:ajcctnm7_stage_thyroid_medullary_xdy" ], [ "*", "Any histology in inclusion table", "4", "*", "Anaplastic", "JUMP:ajcctnm7_stage_thyroid_anaplastic_xdz" ], [ "*", "Any histology in inclusion table", "5-8", "*", "ERROR", "ERROR:" ], [ "*", "ALL OTHER HISTOLOGIES IN INCLUSION TABLE", "1,2,3,9", "000-044", "Pap/Fol", "JUMP:ajcc7_stage_uag" ], [ "*", "ALL OTHER HISTOLOGIES IN INCLUSION TABLE", "1,2,3,9", "045-120", "Pap/Fol", "JUMP:ajcctnm7_stage_thyroid_papillaryand_follicular_age45and_older_xdx" ], [ "*", "ALL OTHER HISTOLOGIES IN INCLUSION TABLE", "1,2,3,9", "999", "Pap/Fol", "JUMP:determine_validity_for_ajcc7_ns42" ] ]
+}

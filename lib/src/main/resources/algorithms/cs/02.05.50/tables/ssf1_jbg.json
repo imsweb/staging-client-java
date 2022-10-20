@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_jbg",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF1",
+  "title" : "CS Site-Specific Factor 1",
+  "subtitle" : "Clinical Assessment of Regional Lymph Nodes",
+  "notes" : "**Note 1**:  Only include information from imaging and physical examination in this item.  Do not include information on regional lymph nodes that is based on surgical observation or diagnostic lymph node biopsy.\n\n**Note 2**:  Use code 400 if nodes are involved clinically but there is no indication of number of nodes involved.  Do not use nodal involvement determined pathologically to code this data item.\n\n**Note 3**:  If there is no diagnostic work-up to assess regional lymph nodes, use code 999.  Do not apply the inaccessible nodes rule that presumes unmentioned nodes to be negative.",
+  "last_modified" : "2015-05-27T16:19:58.862Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Nodes not clinically evident; imaging of regional nodes was done, and nodes were not mentioned" ], [ "100", "Metastasis in 1 to 6 regional lymph nodes, determined clinically" ], [ "200", "Metastasis in 7 to 15 regional lymph nodes, determined clinically" ], [ "300", "Metastasis in more than 15 regional lymph nodes, determined clinically" ], [ "400", "Clinically positive regional nodes, NOS" ], [ "888", "OBSOLETE DATA CONVERTED V0200\nSee code 988\n \nNot applicable for this site" ], [ "988", "Not applicable:  Information not collected for this case\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.  If this item is required to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "999", "Regional lymph nodes involved pathologically, clinical assessment not stated\nUnknown if regional lymph nodes clinically evident\nNot documented in patient record" ] ]
+}

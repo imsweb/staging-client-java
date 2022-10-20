@@ -1,0 +1,23 @@
+{
+  "id" : "extension_cytology_ajcc6_table_csv1_xko",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension Cytology AJCC 6 Table CSv1",
+  "title" : "Extension Cytology AJCC 6 Table CSv1",
+  "notes" : "**Note**: For CS Version 2 cases (CS Version Input Original equals 02XXXX) or Year of Diagnosis greater than 2009) and for CS Extension codes 100-110, 116-120, 126-400, and 510-540 ONLY. The T category for AJCC 6 staging is assigned based on the value of CS Extension and peritoneal cytology status coded in CS Site Specific Factor 2 as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:14.533Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf2",
+    "name" : "CS SSF 2",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "000", "VALUE:T1NOS" ], [ "110", "000", "VALUE:T1a" ], [ "116", "000", "VALUE:T1NOS" ], [ "120", "000", "VALUE:T1b" ], [ "126", "000", "VALUE:T1b" ], [ "130", "000", "VALUE:T1c" ], [ "140", "000", "VALUE:T1NOS" ], [ "160", "000", "VALUE:T3a" ], [ "400", "000", "VALUE:T1NOS" ], [ "510", "000", "VALUE:T2a" ], [ "520", "000", "VALUE:T2b" ], [ "523", "000", "VALUE:T2NOS" ], [ "530", "000", "VALUE:T1NOS" ], [ "540", "000", "VALUE:T1NOS" ], [ "100", "010", "VALUE:T3a" ], [ "110", "010", "VALUE:T3a" ], [ "116", "010", "VALUE:T3a" ], [ "120", "010", "VALUE:T3a" ], [ "126", "010", "VALUE:T3a" ], [ "130", "010", "VALUE:T3a" ], [ "140", "010", "VALUE:T3a" ], [ "160", "010", "VALUE:T3a" ], [ "400", "010", "VALUE:T3a" ], [ "510", "010", "VALUE:T3a" ], [ "520", "010", "VALUE:T3a" ], [ "523", "010", "VALUE:T3a" ], [ "530", "010", "VALUE:T3a" ], [ "540", "010", "VALUE:T3a" ], [ "100", "020", "VALUE:T1NOS" ], [ "110", "020", "VALUE:T1a" ], [ "116", "020", "VALUE:T1NOS" ], [ "120", "020", "VALUE:T1b" ], [ "126", "020", "VALUE:T1b" ], [ "130", "020", "VALUE:T1c" ], [ "140", "020", "VALUE:T1NOS" ], [ "160", "020", "VALUE:T3a" ], [ "400", "020", "VALUE:T1NOS" ], [ "510", "020", "VALUE:T2a" ], [ "520", "020", "VALUE:T2b" ], [ "523", "020", "VALUE:T2NOS" ], [ "530", "020", "VALUE:T1NOS" ], [ "540", "020", "VALUE:T1NOS" ], [ "100", "888", "ERROR:" ], [ "110", "888", "ERROR:" ], [ "116", "888", "ERROR:" ], [ "120", "888", "ERROR:" ], [ "126", "888", "ERROR:" ], [ "130", "888", "ERROR:" ], [ "140", "888", "ERROR:" ], [ "160", "888", "ERROR:" ], [ "400", "888", "ERROR:" ], [ "510", "888", "ERROR:" ], [ "520", "888", "ERROR:" ], [ "523", "888", "ERROR:" ], [ "530", "888", "ERROR:" ], [ "540", "888", "ERROR:" ], [ "100", "988", "VALUE:T1NOS" ], [ "110", "988", "VALUE:T1a" ], [ "116", "988", "VALUE:T1NOS" ], [ "120", "988", "VALUE:T1b" ], [ "126", "988", "VALUE:T1b" ], [ "130", "988", "VALUE:T1c" ], [ "140", "988", "VALUE:T1NOS" ], [ "160", "988", "VALUE:T3a" ], [ "400", "988", "VALUE:T1NOS" ], [ "510", "988", "VALUE:T2a" ], [ "520", "988", "VALUE:T2b" ], [ "523", "988", "VALUE:T2NOS" ], [ "530", "988", "VALUE:T1NOS" ], [ "540", "988", "VALUE:T1NOS" ], [ "100", "997-999", "VALUE:T1NOS" ], [ "110", "997-999", "VALUE:T1a" ], [ "116", "997-999", "VALUE:T1NOS" ], [ "120", "997-999", "VALUE:T1b" ], [ "126", "997-999", "VALUE:T1b" ], [ "130", "997-999", "VALUE:T1c" ], [ "140", "997-999", "VALUE:T1NOS" ], [ "160", "997-999", "VALUE:T3a" ], [ "400", "997-999", "VALUE:T1NOS" ], [ "510", "997-999", "VALUE:T2a" ], [ "520", "997-999", "VALUE:T2b" ], [ "523", "997-999", "VALUE:T2NOS" ], [ "530", "997-999", "VALUE:T1NOS" ], [ "540", "997-999", "VALUE:T1NOS" ] ]
+}

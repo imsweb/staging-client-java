@@ -1,0 +1,36 @@
+{
+  "id" : "nodes_dfw",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Bilateral nodes are considered regional nodes for tumors with bidirectional drainage to primary nodal basins, as shown on lymphoscintigraphy.  Clinical assessment of bilateral regional nodal involvement is required for tumors where lymphoscintigraphy is not performed.\n\n**Note 3**:  Contiguous or secondary nodal basins are the next nodal drainage basins beyond the primary nodal basins.  Secondary basins are considered regional for AJCC staging but may be distant for Summary Stage.  Use code 100 for involvement of nodes in secondary nodal basins not otherwise specified.\n\n**Note 4**:  In transit metastasis is defined as a tumor distinct from the primary lesion and located either between the primary lesion and the draining regional lymph nodes or distal to the primary lesion. In transit metastasis is coded in CS Lymph Nodes. \n\n**Note 5**:  Isolated tumor cells (ITCs) should be considered positive nodes. If only ITCs are present, defined as any tumor deposits in lymph nodes less than or equal to 0.2 mm, use code 010. \n\n**Note 6**:  If the only information about lymph nodes is a statement of N1 involvement without a clinical or pathologic designation, use code 360.",
+  "footnotes" : "- When CS Lymph Nodes Eval is coded, for CS Lymph Nodes codes 010-360 ONLY, the N category for AJCC 7 staging is assigned based on the value of CS Lymph Nodes Eval and CS Site-Specific Factor 3, Clinical Status of Lymph Node Mets, as shown in the Lymph Node and Nodal Status Eval AJCC 7 Table.  When CS Lymph Nodes Eval is blank, for CS Lymph Nodes codes 010-360 ONLY, the N category for AJCC 7 staging is assigned based on the value of CS Site-Specific Factor 3, Clinical Status of Lymph Node Mets, and Regional Nodes Positive, as shown in the Lymph Node and Nodal Status Eval Blank AJCC 7 Table.",
+  "last_modified" : "2015-05-27T16:19:38.649Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "010", "Isolated tumor cells (ITCs) only", "JUMP:determine_correct_table_for_ajcc7_n_ns19", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "100", "Regional lymph nodes (unilateral or bilateral):\n    Iliac, NOS:\n        External\n        Internal (hypogastric), NOS:\n            Obturator\n    Inguinal, NOS:\n        Deep inguinal, NOS:\n            Node of Cloquet or Rosenmuller (highest deep inguinal)\n        Superficial inguinal (femoral)\n    Pelvic nodes in contiguous or secondary nodal basin (see Note 2)\n    Regional lymph node(s), NOS", "JUMP:determine_correct_table_for_ajcc7_n_ns19", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "310", "Evaluated clinically:\n\nClinically stated as N1 with no other information on regional lymph nodes", "JUMP:determine_correct_table_for_ajcc7_n_ns19", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "320", "Evaluated pathologically:\n\nPathologically stated as N1a with no other information on regional lymph nodes", "JUMP:determine_correct_table_for_ajcc7_n_ns19", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "340", "Evaluated pathologically:\n\nPathologically stated as N1b with no other information on regional lymph nodes", "JUMP:determine_correct_table_for_ajcc7_n_ns19", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "350", "Evaluated pathologically:\n\nPathologically stated as N1 [NOS] with no other information on regional lymph nodes", "JUMP:determine_correct_table_for_ajcc7_n_ns19", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "360", "Stated as N1 [NOS} with no information on pathologic or clinical evaluation", "JUMP:determine_correct_table_for_ajcc7_n_ns19", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "390", "Satellite nodule(s) or in transit metastasis, distance from primary tumor less than or equal to 2 cm or distance not stated\nWITHOUT regional lymph node involvement.  Includes cases with ITCs only and cases with regional lymph node involvement not stated  \n\nOR\n\nDescribed as tumor with satellite nodule(s), NOS\nWITHOUT regional lymph node involvement or regional lymph node involvement not stated\n(See Note 4)", "VALUE:N2", "VALUE:N0", "VALUE:RE", "VALUE:RE" ], [ "400", "Satellite nodule(s) or in transit metastasis, distance from primary tumor greater than 2 cm\nWITHOUT regional lymph node involvement.  Includes cases with ITCs only and cases with regional lymph node involvement not stated.\n\nOR\n\nDescribed as tumor with in transit metastasis, NOS\nWITHOUT regional lymph node involvement or regional lymph node involvement not stated\n(See Note 4)", "VALUE:N2", "VALUE:N1", "VALUE:RE", "VALUE:RN" ], [ "420", "400 + 100\n\nSatellite nodule(s) or in transit metastasis \nWITH regional lymph nodes listed in code 100 \n(See Note 4)", "VALUE:N2", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "450", "Stated as N2 with no other information on regional lymph nodes", "VALUE:N2", "VALUE:N1", "VALUE:RE", "VALUE:RE" ], [ "800", "Lymph nodes, NOS", "VALUE:N1NOS", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed \nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

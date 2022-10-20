@@ -1,0 +1,24 @@
+{
+  "id" : "extension_cytology_ajcc6_table_csv2_xkm",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension Cytology AJCC 6 Table CSv2",
+  "title" : "Extension Cytology AJCC 6 Table CSv2",
+  "subtitle" : "CS Version Input Original Equals 02XXXX or Year of Diagnosis is greater than 2009",
+  "notes" : "**Note**: For CS Version 2 cases (CS Version Input Original equals 02XXXX or Year of Diagnosis is greater than 2009) and for CS Extension codes 100-145, and 180-525 ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Extension and peritoneal cytology status coded in CS Site-Specific Factor 2 as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:14.588Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf2",
+    "name" : "CS SSF 2",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "000", "VALUE:T1NOS" ], [ "110", "000", "VALUE:T1a" ], [ "120", "000", "VALUE:T1b" ], [ "123", "000", "VALUE:T2a" ], [ "125", "000", "VALUE:T1a" ], [ "130", "000", "VALUE:T1c" ], [ "133", "000", "VALUE:T2a" ], [ "135", "000", "VALUE:T1c" ], [ "140", "000", "VALUE:T1NOS" ], [ "143", "000", "VALUE:T2a" ], [ "145", "000", "VALUE:T2a" ], [ "180", "000", "VALUE:T1NOS" ], [ "400", "000", "VALUE:T1NOS" ], [ "500", "000", "VALUE:T2NOS" ], [ "510", "000", "VALUE:T2a" ], [ "520", "000", "VALUE:T2b" ], [ "525", "000", "VALUE:T2NOS" ], [ "100", "010", "VALUE:T3a" ], [ "110", "010", "VALUE:T3a" ], [ "120", "010", "VALUE:T3a" ], [ "123", "010", "VALUE:T3a" ], [ "125", "010", "VALUE:T3a" ], [ "130", "010", "VALUE:T3a" ], [ "133", "010", "VALUE:T3a" ], [ "135", "010", "VALUE:T3a" ], [ "140", "010", "VALUE:T3a" ], [ "143", "010", "VALUE:T3a" ], [ "145", "010", "VALUE:T3a" ], [ "180", "010", "VALUE:T3a" ], [ "400", "010", "VALUE:T3a" ], [ "500", "010", "VALUE:T3a" ], [ "510", "010", "VALUE:T3a" ], [ "520", "010", "VALUE:T3a" ], [ "525", "010", "VALUE:T3a" ], [ "100", "020", "VALUE:T1NOS" ], [ "110", "020", "VALUE:T1a" ], [ "120", "020", "VALUE:T1b" ], [ "123", "020", "VALUE:T2a" ], [ "125", "020", "VALUE:T1a" ], [ "130", "020", "VALUE:T1c" ], [ "133", "020", "VALUE:T2a" ], [ "135", "020", "VALUE:T1c" ], [ "140", "020", "VALUE:T1NOS" ], [ "143", "020", "VALUE:T2a" ], [ "145", "020", "VALUE:T2a" ], [ "180", "020", "VALUE:T1NOS" ], [ "400", "020", "VALUE:T1NOS" ], [ "500", "020", "VALUE:T2NOS" ], [ "510", "020", "VALUE:T2a" ], [ "520", "020", "VALUE:T2b" ], [ "525", "020", "VALUE:T2NOS" ], [ "100", "888", "ERROR:" ], [ "110", "888", "ERROR:" ], [ "120", "888", "ERROR:" ], [ "123", "888", "ERROR:" ], [ "125", "888", "ERROR:" ], [ "130", "888", "ERROR:" ], [ "133", "888", "ERROR:" ], [ "135", "888", "ERROR:" ], [ "140", "888", "ERROR:" ], [ "143", "888", "ERROR:" ], [ "145", "888", "ERROR:" ], [ "180", "888", "ERROR:" ], [ "400", "888", "ERROR:" ], [ "500", "888", "ERROR:" ], [ "510", "888", "ERROR:" ], [ "520", "888", "ERROR:" ], [ "525", "888", "ERROR:" ], [ "100", "988", "ERROR:" ], [ "110", "988", "ERROR:" ], [ "120", "988", "ERROR:" ], [ "123", "988", "ERROR:" ], [ "125", "988", "ERROR:" ], [ "130", "988", "ERROR:" ], [ "133", "988", "ERROR:" ], [ "135", "988", "ERROR:" ], [ "140", "988", "ERROR:" ], [ "143", "988", "ERROR:" ], [ "145", "988", "ERROR:" ], [ "180", "988", "ERROR:" ], [ "400", "988", "ERROR:" ], [ "500", "988", "ERROR:" ], [ "510", "988", "ERROR:" ], [ "520", "988", "ERROR:" ], [ "525", "988", "ERROR:" ], [ "100", "997-999", "VALUE:T1NOS" ], [ "110", "997-999", "VALUE:T1a" ], [ "120", "997-999", "VALUE:T1b" ], [ "123", "997-999", "VALUE:T2a" ], [ "125", "997-999", "VALUE:T1a" ], [ "130", "997-999", "VALUE:T1c" ], [ "133", "997-999", "VALUE:T2a" ], [ "135", "997-999", "VALUE:T1c" ], [ "140", "997-999", "VALUE:T1NOS" ], [ "143", "997-999", "VALUE:T2a" ], [ "145", "997-999", "VALUE:T2a" ], [ "180", "997-999", "VALUE:T1NOS" ], [ "400", "997-999", "VALUE:T1NOS" ], [ "500", "997-999", "VALUE:T2NOS" ], [ "510", "997-999", "VALUE:T2a" ], [ "520", "997-999", "VALUE:T2b" ], [ "525", "997-999", "VALUE:T2NOS" ] ]
+}

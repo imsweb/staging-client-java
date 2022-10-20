@@ -1,0 +1,27 @@
+{
+  "id" : "extension_eval_cak",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension Eval",
+  "title" : "CS Tumor Size/Ext Eval",
+  "notes" : "**Note**:  CS Tumor Size/Ext Eval for ocular adnexal lymphomas is based on the standard table for AJCC 7th Edition staging.  Code 3 is appropriate ONLY for 2004-2009 cases where a staging laparotomy is performed.  The AJCC 6th Edition noted: \"Staging laparotomy and pathologic staging have been essentially abandoned as useful procedures.\"",
+  "last_modified" : "2015-05-27T16:19:15.259Z",
+  "definition" : [ {
+    "key" : "extension_eval",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "tdescriptor",
+    "name" : "Staging Basis 7",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "staging_basis_6",
+    "name" : "Staging Basis 6",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0", "Does not meet criteria for AJCC pathologic staging:\n\nNo surgical resection done.  Evaluation based on physical examination, imaging examination, other non-invasive clinical evidence, endoscopic examination, fine-needle aspiration, or other invasive techniques including surgical observation without biopsy.  No autopsy evidence used", "VALUE:c", "VALUE:c" ], [ "1", "Meets criteria for AJCC pathologic staging:\n\nNo surgical resection done.  Evaluation based on diagnostic biopsy excluding fine-needle aspiration. No autopsy evidence used.", "VALUE:p", "VALUE:c" ], [ "2", "Meets criteria for AJCC pathologic staging:\n\nNo surgical resection done, but evidence derived from autopsy (tumor was suspected or diagnosed prior to autopsy).", "VALUE:p", "VALUE:c" ], [ "3", "Staging laparotomy done\n\nNote:  This code is retained for compatibility with lymphoma data collected under AJCC 6 definitions.  The code is available for 2004-2009 cases where a staging laparotomy is performed.  See code 4 for pathologic criteria for cases diagnosed in 2010 and later.", "VALUE:p", "VALUE:p" ], [ "4", "Meets criteria for AJCC pathologic staging:\n\nSurgical resection performed WITHOUT pre-surgical systemic treatment or radiation,  \nOR surgical resection performed, unknown if pre-surgical systemic treatment or radiation performed,\nAND evaluation based on evidence acquired before treatment, supplemented or modified by the additional evidence acquired during and from surgery, particularly from pathologic examination of the resected specimen.\n\nNo surgical resection done.  Evaluation based on positive biopsy of highest T classification.", "VALUE:p", "VALUE:c" ], [ "5", "Does not meet criteria for AJCC y-pathologic (yp) staging:\n\nSurgical resection performed AFTER neoadjuvant therapy and tumor size/extension based on clinical evidence, unless the pathologic evidence at surgery (AFTER neoadjuvant treatment) is more extensive (see code 6).", "VALUE:c", "VALUE:c" ], [ "6", "Meets criteria for AJCC y-pathologic (yp) staging:\n\nSurgical resection performed AFTER neoadjuvant therapy AND tumor size/extension based on pathologic evidence, because pathologic evidence at surgery is more extensive than clinical evidence before treatment.", "VALUE:yp", "VALUE:c" ], [ "8", "Meets criteria for AJCC autopsy staging:\n\nEvidence from autopsy only (tumor was unsuspected or undiagnosed prior to autopsy).", "VALUE:a", "VALUE:a" ], [ "9", "Unknown if surgical resection done\nNot assessed; cannot be assessed\nUnknown if assessed\nNot documented in patient record", "VALUE:c", "VALUE:c" ] ]
+}

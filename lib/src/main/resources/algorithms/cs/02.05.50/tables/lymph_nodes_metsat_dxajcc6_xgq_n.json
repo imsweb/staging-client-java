@@ -1,0 +1,23 @@
+{
+  "id" : "lymph_nodes_metsat_dxajcc6_xgq_n",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Lymph Nodes Mets at DX AJCC6 - returning N",
+  "title" : "Lymph Nodes Mets at DX AJCC 6 Table - returning N",
+  "notes" : "**Note**:  For CS Lymph Nodes codes 000-999, and CS Mets at DX codes 00-99, the N and M categories for AJCC 6 staging are assigned  as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:24.734Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "CS Mets at DX",
+    "type" : "INPUT"
+  }, {
+    "key" : "nodes",
+    "name" : "CS Lymph Nodes",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "000", "VALUE:N0" ], [ "07", "000", "VALUE:N1" ], [ "10-13, 16-18, 40, 51-52, 58,60", "000", "VALUE:N0" ], [ "15, 50", "000", "VALUE:N0" ], [ "14, 20, 55", "000", "VALUE:N1" ], [ "99", "000", "VALUE:NX" ], [ "00", "100,110", "VALUE:N1" ], [ "07", "100,110", "VALUE:N1" ], [ "10-13, 16-18, 40, 51-52, 58,60", "100,110", "VALUE:N1" ], [ "15, 50", "100,110", "VALUE:N0" ], [ "14, 20, 55", "100,110", "VALUE:N1" ], [ "99", "100,110", "VALUE:N1" ], [ "00", "120,130,140,200", "VALUE:N0" ], [ "07", "120,130,140,200", "VALUE:N1" ], [ "10-13, 16-18, 40, 51-52, 58,60", "120,130,140,200", "VALUE:N0" ], [ "15, 50", "120,130,140,200", "VALUE:N0" ], [ "14, 20, 55", "120,130,140,200", "VALUE:N1" ], [ "99", "120,130,140,200", "VALUE:N0" ], [ "00", "300,310", "VALUE:N1" ], [ "07", "300,310", "VALUE:N1" ], [ "10-13, 16-18, 40, 51-52, 58,60", "300,310", "VALUE:N1" ], [ "15, 50", "300,310", "VALUE:N0" ], [ "14, 20, 55", "300,310", "VALUE:N1" ], [ "99", "300,310", "VALUE:N1" ], [ "00", "500,800", "VALUE:N1" ], [ "07", "500,800", "VALUE:N1" ], [ "10-13, 16-18, 40, 51-52, 58,60", "500,800", "VALUE:N1" ], [ "15, 50", "500,800", "VALUE:N0" ], [ "14, 20, 55", "500,800", "VALUE:N1" ], [ "99", "500,800", "VALUE:N1" ], [ "00", "999", "VALUE:NX" ], [ "07", "999", "VALUE:NX" ], [ "10-13, 16-18, 40, 51-52, 58,60", "999", "VALUE:NX" ], [ "15, 50", "999", "VALUE:N0" ], [ "14, 20, 55", "999", "VALUE:N1" ], [ "99", "999", "VALUE:NX" ] ]
+}

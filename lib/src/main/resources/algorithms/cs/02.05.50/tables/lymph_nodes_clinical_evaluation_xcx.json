@@ -1,0 +1,27 @@
+{
+  "id" : "lymph_nodes_clinical_evaluation_xcx",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Lymph Nodes Clinical Evaluation",
+  "title" : "Lymph Nodes Clinical Evaluation Table",
+  "notes" : "**Note**:  This table is used when CS Lymph Nodes Eval is coded 0 (c), 1 (c), 5 (c), or 9 (c) and CS Lymph Nodes is coded 250, 258, 260, 280, 500, 510, 520, 600, 610, 620, 630, 720, or 748 ONLY.  The N category is assigned based on the value of CS Lymph Nodes and the value of CS Site-Specific Factor 3, Number of Positive Ipsilateral Axillary Lymph Nodes.",
+  "last_modified" : "2015-05-27T16:19:23.639Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "CS Lymph Nodes",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf3",
+    "name" : "CS SSF 3",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "250", "000-090,095,097-099", "ERROR:", "ERROR:" ], [ "258", "000-090,095,097-099", "ERROR:", "ERROR:" ], [ "260", "000-090,095,097-099", "VALUE:N1", "VALUE:N1" ], [ "280", "000-090,095,097-099", "ERROR:", "VALUE:N2NOS" ], [ "500", "000-090,095,097-099", "ERROR:", "VALUE:N2a" ], [ "510", "000-090,095,097-099", "VALUE:N2a", "VALUE:N2a" ], [ "520", "000-090,095,097-099", "ERROR:", "ERROR:" ], [ "600", "000-090,095,097-099", "VALUE:N1", "VALUE:N1" ], [ "610", "000-090,095,097-099", "VALUE:N2NOS", "VALUE:N2NOS" ], [ "620", "000-090,095,097-099", "ERROR:", "ERROR:" ], [ "630", "000-090,095,097-099", "VALUE:N2NOS", "VALUE:N2NOS" ], [ "720", "000-090,095,097-099", "ERROR:", "ERROR:" ], [ "748", "000-090,095,097-099", "VALUE:N2b", "VALUE:N2b" ], [ "250", "988", "ERROR:", "ERROR:" ], [ "258", "988", "ERROR:", "ERROR:" ], [ "260", "988", "ERROR:", "ERROR:" ], [ "280", "988", "ERROR:", "ERROR:" ], [ "500", "988", "ERROR:", "ERROR:" ], [ "510", "988", "ERROR:", "ERROR:" ], [ "520", "988", "ERROR:", "ERROR:" ], [ "600", "988", "ERROR:", "ERROR:" ], [ "610", "988", "ERROR:", "ERROR:" ], [ "620", "988", "ERROR:", "ERROR:" ], [ "630", "988", "ERROR:", "ERROR:" ], [ "720", "988", "ERROR:", "ERROR:" ], [ "748", "988", "ERROR:", "ERROR:" ] ]
+}

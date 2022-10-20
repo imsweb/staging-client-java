@@ -1,0 +1,18 @@
+{
+  "id" : "ssf7_snb",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF7",
+  "title" : "CS Site-Specific Factor 7",
+  "last_modified" : "2015-05-27T16:20:10.378Z",
+  "definition" : [ {
+    "key" : "ssf7",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "988", "Not applicable:  Site-specific factor not defined" ] ]
+}

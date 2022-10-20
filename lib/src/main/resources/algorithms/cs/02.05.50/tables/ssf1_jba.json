@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_jba",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF1",
+  "title" : "CS Site-Specific Factor 1",
+  "subtitle" : "OBSOLETE - WHO Grade Classification",
+  "notes" : "**Note**:  This CS Site-Specific Factor is obsolete beginning with CS Version 2 (codes, code descriptions, and notes).  Old data are retained, but new cases are not coded 010-040 or 999.  Use code 988 for this field for all cases entered in CS Version 2.. (Adrenal Gland tumors were coded using another schema in CS Version 1 in which this factor was defined.)\n\n**OBSOLETE V0200 Note 1**: WHO grade applies only to C75.1 pituitary gland, C75.2 craniopharyngeal duct, C75.3 pineal gland.\n\n**OBSOLETE V0200 Note 2**:  Code the WHO Grade Classification as documented in the medical record.",
+  "last_modified" : "2015-05-27T16:19:58.751Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "OBSOLETE DATA RETAINED V0200 \n\nGrade I" ], [ "020", "OBSOLETE DATA RETAINED V0200 \n\nGrade II" ], [ "030", "OBSOLETE DATA RETAINED V0200 \n\nGrade III" ], [ "040", "OBSOLETE DATA RETAINED V0200 \n\nGrade IV" ], [ "988", "Not applicable:  Information not collected for this schema" ], [ "999", "OBSOLETE DATA RETAINED V0200\n \nClinically diagnosed/grade unknown\nDoes not apply \nNot documented in medical record\nGrade unknown, NOS" ] ]
+}

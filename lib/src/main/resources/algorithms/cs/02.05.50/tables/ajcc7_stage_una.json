@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc7_stage_una",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC7 Stage",
+  "title" : "AJCC TNM 7 Stage",
+  "last_modified" : "2015-05-27T16:18:59.314Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "NA", "NA", "NA", "VALUE:NA" ] ]
+}

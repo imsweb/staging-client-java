@@ -1,0 +1,35 @@
+{
+  "id" : "nodes_dfy",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**: Extraosseous plasmacytomas (9734), especially those in the respiratory tract, may metastasize to regional lymph nodes. Use code 100 to document regional lymph node metastasis. \n\n**Note 2**: Use code 987, not applicable, for the following histologies: Plasmacytoma, NOS (9731) and multiple myeloma (9732).",
+  "last_modified" : "2015-05-27T16:19:38.746Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "For extraosseous plasmacytomas (9734) only:\n    No regional lymph node involvement", "VALUE:NA", "VALUE:NA", "VALUE:NA", "VALUE:NA" ], [ "100", "For extraosseous plasmacytomas (9734) only:\n    Regional lymph node metastasis       ", "VALUE:NA", "VALUE:NA", "VALUE:NA", "VALUE:NA" ], [ "888", "OBSOLETE DATA CONVERTED V0200\nSee code 988\n\nNot applicable", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "987", "Not applicable:  Use for codes 9731(Plasmacytoma, NOS) and 9732 (multiple myeloma)\nNot extraosseous plasmacytoma (9734)", "VALUE:NA", "VALUE:NA", "VALUE:NA", "VALUE:NA" ], [ "988", "Not applicable: Information not collected for this schema", "VALUE:NA", "VALUE:NA", "VALUE:NA", "VALUE:NA" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "VALUE:NA", "VALUE:NA", "VALUE:NA", "VALUE:NA" ] ]
+}

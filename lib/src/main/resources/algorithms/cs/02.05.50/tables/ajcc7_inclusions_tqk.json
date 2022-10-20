@@ -1,0 +1,18 @@
+{
+  "id" : "ajcc7_inclusions_tqk",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC7 Inclusions",
+  "title" : "Histology Inclusion Table AJCC 7th ed.",
+  "last_modified" : "2015-05-27T16:18:53.827Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  } ],
+  "rows" : [ [ "C170,C171,C172,C178,C179", "8000-8152" ], [ "C170,C171,C172,C178,C179", "8154-8231" ], [ "C170,C171,C172,C178,C179", "8243-8245" ], [ "C170,C171,C172,C178,C179", "8247" ], [ "C170,C171,C172,C178,C179", "8248" ], [ "C170,C171,C172,C178,C179", "8250-8576" ], [ "C170,C171,C172,C178,C179", "8940-8950" ], [ "C170,C171,C172,C178,C179", "8980-8981" ] ]
+}

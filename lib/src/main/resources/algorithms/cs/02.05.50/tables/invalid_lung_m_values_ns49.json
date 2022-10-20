@@ -1,0 +1,34 @@
+{
+  "id" : "invalid_lung_m_values_ns49",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Invalid Lung M Values - AJCC 6 may stage",
+  "title" : "Invalid Lung M Values - AJCC 6 may stage",
+  "last_modified" : "2015-05-27T16:19:21.785Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "01-09,11-14,19,22,27-29,31,34,44-49,54-69,71-74,76-98", "INVALID VALUES: For AJCC 6, Stage Group can be assigned in some cases because the T value drives the result.", "ERROR:", "JUMP:determine_correct_table_for_ajcc6_tm_ns47", "ERROR:", "ERROR:" ] ]
+}

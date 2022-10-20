@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_jpa",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF1",
+  "title" : "CS Site-Specific Factor 1",
+  "subtitle" : "Size of Lymph Nodes",
+  "notes" : "**Note**:  Code the largest diameter, whether measured clinically or pathologically, of any involved regional lymph node(s). Do not code the size of any nodes coded in CS Mets at DX.",
+  "last_modified" : "2015-05-27T16:19:59.818Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No involved regional nodes" ], [ "001-979", "001 - 979 millimeters (mm)\n(Exact size of lymph node to nearest mm)" ], [ "980", "980 mm or larger\n(Includes cases converted from codes 981-989 during conversion to V0200)" ], [ "981-987", "OBSOLETE DATA CONVERTED V0200\nSee code 980\n\n981 - 987 mms" ], [ "988", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 988 will result in an edit error)" ], [ "989", "OBSOLETE DATA CONVERTED V0200\nSee code 980\n\n989 mm or larger" ], [ "990", "Microscopic focus or foci only and no size of focus given" ], [ "991", "Described as \"less than 1 centimeter (cm)\"" ], [ "992", "Described as \"less than 2cm\" or \"greater than 1cm\" or \"between 1cm and 2cm\"" ], [ "993", "Described as \"less than 3cm\" or \"greater than 2cm\" or \"between 2cm and 3cm\"" ], [ "994", "Described as \"less than 4cm\" or \"greater than 3cm\" or \"between 3cm and 4cm\"" ], [ "995", "Described as \"less than 5cm\" or \"greater than 4cm\" or \"between 4cm and 5cm\"" ], [ "996", "Described as \"less than 6cm\" or \"greater than 5cm\" or \"between 5cm and 6cm\"" ], [ "997", "Described as \"more than 6cm\"" ], [ "999", "Regional lymph node(s) involved, size not stated\nUnknown if regional lymph nodes involved\nNot documented in patient record" ] ]
+}

@@ -1,0 +1,36 @@
+{
+  "id" : "nodes_dfg",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Hepatoduodenal nodes are regional for primaries of the lesser curvature of the stomach.  They are coded in CS Mets at DX for all other subsites in this schema.\n\n**Note 3**:  If information about named regional lymph nodes is available, use codes 110, 400, or 420  rather than code 500 or 600.",
+  "footnotes" : "- For CS Lymph Nodes codes 050-500 and 800 ONLY, when CS Lymph Nodes Eval is 0, 1, 5, or 9, the N category is assigned as shown in the Lymph Nodes Clinical Evaluation Table, using Regional Nodes Positive and CS Site-Specific Factor 1; when CS Lymph Nodes Eval is 2, 3, 6, 8, or not coded, the N category is assigned as shown in the Lymph Nodes Pathologic Evaluation Table Also Used When CS Reg Nodes Eval Is Not Coded using Regional Nodes Positive.",
+  "last_modified" : "2015-05-27T16:19:37.851Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "050", "Nodule(s) in perigastric fat", "VALUE:N1", "JUMP:determine_correct_table_for_ajcc6_n_ns23", "VALUE:RN", "VALUE:RN" ], [ "100", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 000, 050, 110, CS Mets at DX codes 10, 50\n\nRegional lymph nodes:\n    Left gastric (superior gastric), NOS:\n        Cardial\n        Cardioesophageal\n        Gastric, left\n        Gastropancreatic, left\n        Lesser curvature\n        Lesser omental\n        Paracardial\n    Pancreaticosplenic (pancreaticolienal)\n    Pancreatoduodenal\n    Perigastric, NOS\n    Peripancreatic\n    Right gastric (inferior gastric), NOS:\n        Gastrocolic\n        Gastroduodenal\n        Gastroepiploic (gastro-omental), right or NOS\n        Gastrohepatic\n        Greater curvature\n        Greater omental\n        Pyloric, NOS\n            Infrapyloric (subpyloric)\n            Suprapyloric\n    Splenic (lienal), NOS:\n        Gastroepiploic (gastro-omental), left\n        Splenic hilar\n    Superior mesenteric\n    Nodule(s) in perigastric fat", "VALUE:N1", "JUMP:determine_correct_table_for_ajcc6_n_ns23", "VALUE:RN", "VALUE:RN" ], [ "110", "Regional lymph nodes:\n    Left gastric (superior gastric), NOS:\n        Cardial\n        Cardioesophageal\n        Gastric, left\n        Gastropancreatic, left\n        Lesser curvature\n        Lesser omental\n        Paracardial\n    Pancreaticosplenic (pancreaticolienal)\n    Pancreatoduodenal\n    Perigastric, NOS\n    Peripancreatic\n    Right gastric (inferior gastric), NOS:\n        Gastrocolic\n        Gastroduodenal\n        Gastroepiploic (gastro-omental), right or NOS\n        Gastrohepatic\n        Greater curvature\n        Greater omental\n        Pyloric, NOS\n            Infrapyloric (subpyloric)\n            Suprapyloric\n    Splenic (lienal), NOS:\n        Gastroepiploic (gastro-omental), left\n        Splenic hilar", "VALUE:N1", "JUMP:determine_correct_table_for_ajcc6_n_ns23", "VALUE:RN", "VALUE:RN" ], [ "400", "Celiac\nHepatic (excluding gastrohepatic, [see code 100] and hepatoduodenal [see code 420])", "VALUE:N1", "JUMP:determine_correct_table_for_ajcc6_n_ns23", "VALUE:D", "VALUE:RN" ], [ "420", "For lesser curvature only:\n    Hepatoduodenal", "VALUE:N1", "JUMP:determine_correct_table_for_ajcc6_n_ns23", "VALUE:D", "VALUE:D" ], [ "500", "Regional lymph nodes, NOS", "VALUE:N1", "JUMP:determine_correct_table_for_ajcc6_n_ns23", "VALUE:RN", "VALUE:RN" ], [ "600", "Stated as N1 with no other information on regional lymph nodes", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "650", "OBSOLETE DATA RETAINED V0200\n\nStated as N2, NOS", "ERROR:", "VALUE:N2", "VALUE:RN", "VALUE:RN" ], [ "700", "OBSOLETE DATA RETAINED V0200\n\nStated as N3, NOS", "ERROR:", "VALUE:N3", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

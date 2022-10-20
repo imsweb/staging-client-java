@@ -1,0 +1,26 @@
+{
+  "id" : "tnm_9_path_stage_group_45424",
+  "algorithm" : "eod_public",
+  "version" : "3.0",
+  "name" : "TNM 9 Path Stage Group",
+  "title" : "TNM 8 Path Stage Group",
+  "last_modified" : "2022-05-16T16:43:20.780Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0", "0", "0", "VALUE:99" ], [ "0", "1", "0", "VALUE:2B" ], [ "0", " 1A ", "0", "VALUE:2B" ], [ "0", " 1B ", "0", "VALUE:2B" ], [ "0", " 1C ", "0", "VALUE:2B" ], [ "0", " X ", "0", "VALUE:99" ], [ "1", "0", "0", "VALUE:1" ], [ "1", "1", "0", "VALUE:2B" ], [ "1", " 1A ", "0", "VALUE:2B" ], [ "1", " 1B ", "0", "VALUE:2B" ], [ "1", " 1C ", "0", "VALUE:2B" ], [ "1", " X ", "0", "VALUE:99" ], [ "2", "0", "0", "VALUE:2A" ], [ "2", "1", "0", "VALUE:2B" ], [ "2", " 1A ", "0", "VALUE:2B" ], [ "2", " 1B ", "0", "VALUE:2B" ], [ "2", " 1C ", "0", "VALUE:2B" ], [ "2", " X ", "0", "VALUE:2" ], [ "3", "0", "0", "VALUE:3A" ], [ "3", "1", "0", "VALUE:3A" ], [ "3", " 1A ", "0", "VALUE:3A" ], [ "3", " 1B ", "0", "VALUE:3A" ], [ "3", " 1C ", "0", "VALUE:3A" ], [ "3", " X ", "0", "VALUE:3A" ], [ "4", "0", "0", "VALUE:3B" ], [ "4", "1", "0", "VALUE:3C" ], [ "4", " 1A ", "0", "VALUE:3C" ], [ "4", " 1B ", "0", "VALUE:3C" ], [ "4", " 1C ", "0", "VALUE:3C" ], [ "4", " X ", "0", "VALUE:3" ], [ "X ", "0", "0", "VALUE:99" ], [ "X ", "1", "0", "VALUE:99" ], [ "X ", " 1A ", "0", "VALUE:99" ], [ "X ", " 1B ", "0", "VALUE:99" ], [ "X ", " 1C ", "0", "VALUE:99" ], [ "X ", " X ", "0", "VALUE:99" ], [ "*", "*", "1", "VALUE:4" ], [ "88", "88", "88", "VALUE:88" ] ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "ssf9_snd",
+  "algorithm": "testing",
+  "version": "99.99",
+  "name": "SSF9",
+  "title": "CS Site-Specific Factor 9",
+  "last_modified": "2015-05-27T16:20:11.987Z",
+  "definition": [
+    {
+      "key": "ssf9",
+      "name": "Code",
+      "type": "INPUT"
+    },
+    {
+      "key": "description",
+      "name": "Description",
+      "type": "DESCRIPTION"
+    }
+  ],
+  "rows": [
+    [
+      "988",
+      "Not applicable:  Site-specific factor not defined"
+    ]
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id" : "nodes_dfj",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  Regional lymph nodes for any part of the esophagus fall in the range from periesophageal/cervical to the celiac region.  Contralateral and bilateral cervical, supraclavicular, and mediastinal lymph nodes are included.\n\n**Note 3**:  Celiac nodes are coded in CS Lymph Nodes for lower thoracic (abdominal) esophagus; they are coded in CS Mets at DX for cervical and intrathoracic (upper and middle) esophagus.  Cervical nodes, NOS are coded in CS Lymph Nodes for cervical esophagus; they are coded in CS Mets at DX for upper and lower thoracic (abdominal) esophagus.\n\n**Note 4**:  Lymph node stations/groups are listed in parentheses when applicable.  See Figure 10.3 in the AJCC 7th Edition Staging Manual or Handbook for illustrations.\n\n**Note 5**:  Nodal metastasis is very rare in gastrointestinal stromal tumors (GISTs), and surgeons generally agree that nodal dissection is not indicated.  In the absence of information on regional lymph node status, N0 is appropriate; code 999 is mapped to N0 accordingly.",
+  "last_modified" : "2015-05-27T16:19:37.993Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:NA", "VALUE:NONE", "VALUE:NONE" ], [ "100", "Regional lymph nodes:\nFor all subsites:\n    Peri-/paraesophageal (8L, 8M)\nFor cervical esophagus:\n    Cervical, NOS:\n        Anterior deep cervical (laterotracheal) (recurrent laryngeal)\n        Internal jugular, NOS:\n            Deep cervical, NOS:\n                Upper cervical, NOS:\n                    Jugulodigastric (subdigastric)\nFor intrathoracic esophagus, upper or middle:\n    Internal jugular, NOS:\n        Deep cervical, NOS:\n            Upper cervical, NOS:\n                Jugulodigastric (subdigastric)\n            Middle cervical            Lower cervical, NOS:\n                Jugulo-omohyoid (supraomohyoid)\n    Intrabronchial:\n        Carinal (tracheobronchial) (tracheal bifurcation) (10R, 10L)\n        Hilar (bronchopulmonary) (proximal lobar) (pulmonary root)\n       Paratracheal (2)\n    Left gastric (superior gastric) (17): \n        Cardiac (cardial)\n        Lesser curvature\n        Perigastric, NOS\n    Posterior mediastinal (tracheoesophageal) (3P)\nFor intrathoracic esophagus, lower (abdominal):\n    Left gastric (superior gastric) (17):\n        Cardiac (cardial)\n        Lesser curvature\n        Perigastric, NOS\n    Posterior mediastinal (tracheoesophageal) (3P)\n    Subcarinal (7)", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "200", "For cervical esophagus:\n    Scalene (inferior deep cervical), low cervical (1)\n    Supraclavicular (transverse cervical) (1)", "VALUE:N1", "VALUE:NA", "VALUE:D", "VALUE:RN" ], [ "220", "For intrathoracic esophagus, upper thoracic or middle esophagus:\n    Superior mediastinal (2-4)", "VALUE:N1", "VALUE:NA", "VALUE:D", "VALUE:RN" ], [ "250", "For upper thoracic esophagus:\n    Cervical, NOS\nFor lower thoracic (abdominal) esophagus:\n    Celiac (20)", "VALUE:N1", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "260", "OBSOLETE DATA REVIEWED AND CHANGED V0203\nSee code 265 and CS Mets at DX code 15\n\nFor cervical esophagus:\n    Common hepatic (18)\n    Diaphragmatic (15) \n    Pulmonary ligament (9) \n    Splenic (19)\nFor intrathoracic esophagus, upper or middle:\n    Common hepatic (18)\n    Diaphragmatic (15)\n    Splenic (19)   \nFor lower thoracic (abdominal) esophagus:\n    Aortopulmonary (5) \n    Pulmonary ligament (9)", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "265", "For cervical esophagus:\n    Diaphragmatic (15) \n    Pulmonary ligament (9) \nFor intrathoracic esophagus, upper or middle:\n    Diaphragmatic (15)\nFor lower thoracic (abdominal) esophagus:\n    Aortopulmonary (5) \n        Para-aortic (ascending aorta or phrenic)\n        Subaortic\n    Pulmonary ligament (9)", "VALUE:N1", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "300", "OBSOLETE DATA REVIEWED AND CHANGED V0203\nSee codes 000-250, 265, and 305 and CS Mets at DX codes 15 amd 55\n\nFor all esophagus subsites:\n    Anterior mediastinal (6)\n    Mediastinal, NOS\nFor cervical esophagus only:\n    Aortopulmonary (5)\n    Paratracheal (2R,2L,4R, 4L)\n    Posterior mediastinal  (3P)\n    Superior mediastinal\nFor intrathoracic esophagus,upper or middle, only:\n    Aortopulmonary (5)\n    Pulmonary ligament (9)\nFor intrathoracic esophagus, lower (abdominal) only:\n    Common hepatic (18)\n    Diaphragmatic (15)\n    Paratracheal (2R,2L,4R,4L)\n    Splenic (19)\n    Superior mediastinal", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "305", "For all esophagus subsites:\n    Anterior mediastinal (6)\n    Mediastinal, NOS\nFor cervical esophagus only:\n    Aortopulmonary (5)\n    Paratracheal (2R,2L,4R, 4L)\n    Posterior mediastinal  (3P)\n    Superior mediastinal\nFor intrathoracic esophagus,upper or middle, only:\n    Aortopulmonary (5)\n    Pulmonary ligament (9)\nFor intrathoracic esophagus, lower (abdominal) only:\n    Diaphragmatic (15)\n    Paratracheal (2R,2L,4R,4L)\n    Superior mediastinal", "VALUE:N1", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "500", "Regional lymph node(s), NOS\n\nStated as N1 with no other information on regional lymph nodes", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "VALUE:N0", "VALUE:NA", "VALUE:U", "VALUE:U" ] ]
+}

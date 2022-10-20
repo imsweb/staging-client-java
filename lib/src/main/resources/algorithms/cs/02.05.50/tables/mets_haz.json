@@ -1,0 +1,35 @@
+{
+  "id" : "mets_haz",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note 1**:  For this site, code all lymph node (regional and distant) involvement in CS Lymph Nodes field. Only visceral and bone marrow involvement are coded in CS Mets at DX. Peripheral blood involvement is coded in CS Site-Specific Factor 1.\n\n**Note 2**: Visceral involvement is considered metastatic and should be questioned in the absence of node or blood involvement.\n\n**Note 3**: For visceral disease (Stage IVB), documentation of involvement by only one organ outside the skin, nodes, or blood is needed.\n\n**Note 4**: Visceral involvement must be pathologically confirmed, except for the liver and spleen, which may be documented with imaging (code 10).  If liver or spleen is involved clinically without imaging, use code 05.",
+  "last_modified" : "2015-05-27T16:19:28.620Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No visceral organ involvement", "VALUE:M0", "VALUE:M0", "VALUE:NONE", "VALUE:NONE" ], [ "05", "Clinical confirmation only of visceral (non-cutaneous, extra nodal) involvement \n(Except for liver and spleen imaging, see code 10)", "VALUE:M0", "VALUE:M1", "VALUE:NONE", "VALUE:NONE" ], [ "10", "Imaging confirmation of liver and/or spleen metastasis ", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "30", "Involvement of Bone marrow", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "40", "OBSOLETE DATA RETAINED V0200\n\nVisceral (non-cutaneous, extra nodal) involvement: \n    Carcinomatosis\n    Distant metastasis, NOS\n    MFCG Stage IV", "ERROR:", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "45", "Visceral (non-cutaneous, extranodal) involvement, pathologically confirmed:\n    Involvement by at least one organ outside the skin, nodes, blood, or bone marrow", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "60", "Carcinomatosis, unknown if clinical or pathological confirmation", "VALUE:M0", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "70", "Distant metastasis, NOS\n\nStated as M1 with no other information on distant metastasis", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "VALUE:MX", "VALUE:U", "VALUE:U" ] ]
+}

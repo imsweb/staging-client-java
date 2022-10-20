@@ -1,0 +1,36 @@
+{
+  "id" : "mets_hby",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note**:  Involvement of peripheral and central lymph nodes, distant nodes for ocular adnexal lymphomas, is coded in CS Lymph Nodes and not in CS Mets at DX.",
+  "footnotes" : "- Stage grouping for AJCC 6 staging of ocular adnexal lymphoma for cases collected in CSv2 is derived from a combination of CS Extension, CS Lymph Nodes, and CS Mets at DX codes as shown in the AJCC TNM 6 Stage table .  A or B categories  is appended to Stage I-IV based on coding of CS Site-Specific Factor 2, Systemic Symptoms at Diagnosis.",
+  "last_modified" : "2015-05-27T16:19:29.295Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No involvement of other extranodal sites", "VALUE:M0", "VALUE:NA", "VALUE:NONE", "VALUE:NONE" ], [ "20", "Spleen", "VALUE:M1a", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "30", "Non-contiguous involvement of other extranodal sites \nexcluding bone marrow, including but not limited to:\n    Parotid gland\n    Submandibular gland\n    Lung\n    Liver\n    Kidney\n    Breast", "VALUE:M1a", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "35", "Stated as M1a with no other information on metastasis", "VALUE:M1a", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "40", "Bone marrow\n\nStated as M1b with no other information on metastasis", "VALUE:M1b", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "50", "40 + (20, 30, or 35) \n\nBone marrow plus other extranodal site\n\nStated as M1c with no other information on metastasis", "VALUE:M1c", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "60", "Distant metastasis NOS\n\nStated as M1 [NOS] with no other information on metastasis", "VALUE:M1NOS", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "88", "OBSOLETE DATA CONVERTED V0200\nSee code 98\n\nNot applicable for this site", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "98", "OBSOLETE DATA RETAINED V0200\nNew schema for site/histology V0200\n\nNot applicable for this schema", "ERROR:", "VALUE:NA", "VALUE:U", "VALUE:U" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "VALUE:NA", "VALUE:U", "VALUE:U" ] ]
+}

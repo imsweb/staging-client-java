@@ -1,0 +1,23 @@
+{
+  "id" : "extension_eval_caf",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension Eval",
+  "title" : "CS Tumor Size/Ext Eval",
+  "notes" : "**Note**:  According to AJCC, \"The use of the term pathologic staging is reserved for patients who undergo staging laparotomy with an explicit intent to assess the presence of abdominal disease or to define histologic microscopic disease extent in the abdomen. Staging laparotomy and pathological staging have been essentially abandoned as useful procedures.\" (7th ed., page 610)  Therefore, Collaborative Staging uses a modified evaluation scheme for lymphomas, and it applies to the CS Tumor Size/Ext-Eval field only.  The other Eval fields are coded as \"not applicable\" for this schema.",
+  "last_modified" : "2015-05-27T16:19:15.118Z",
+  "definition" : [ {
+    "key" : "extension_eval",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "tdescriptor",
+    "name" : "Staging Basis",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0", "Does not meet criteria for AJCC pathologic staging:\n\nNo staging laparotomy done. No autopsy evidence used", "VALUE:c" ], [ "2", "Meets criteria for AJCC pathologic staging:\n\nNo surgical resection done, but evidence derived from autopsy (tumor was suspected or diagnosed prior to autopsy)", "VALUE:p" ], [ "3", "Meets criteria for AJCC pathologic staging:\n\nStaging laparotomy done", "VALUE:p" ], [ "8", "Meets criteria for autopsy (a) staging:\n\nEvidence from autopsy only (tumor was unsuspected or undiagnosed prior to autopsy).", "VALUE:a" ], [ "9", "Unknown if staging laparotomy done\nNot assessed; cannot be assessed\nUnknown if assessed\nNot documented in patient record", "VALUE:c" ] ]
+}

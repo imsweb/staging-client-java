@@ -1,0 +1,20 @@
+{
+  "id" : "ssf2_kpp",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF2",
+  "title" : "CS Site-Specific Factor 2",
+  "subtitle" : "Clinical Assessment of Regional Lymph Nodes",
+  "notes" : "**Note 1**:  Clinically evident regional lymph nodes are based on information from the diagnostic workup.  This might include:  physical examination, imaging, diagnostic lymph node biopsy and exploratory surgery (without a resection).  \n\n**Note 2**:  In the rare instance that the number of clinically positive nodes is stated but a clinical N category is not stated, use the code that reflects the most specific statement about the number of nodes.\n\n**Note 3**:  If there is no diagnostic work-up to assess regional lymph nodes, use code 999.  Do not apply the inaccessible nodes rule that presumes unmentioned nodes to be negative.",
+  "last_modified" : "2015-05-27T16:20:04.352Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "Nodes not clinically evident; imaging of regional nodes performed and nodes not mentioned" ], [ "010", "Metastasis in 1 regional node, determined clinically\n\nStated as clinical N1a" ], [ "020", "Metastases in 2-3 regional nodes, determined clinically\n\nStated as clinical N1b" ], [ "030", "OBSOLETE DATA REVIEWED AND CHANGED V0204\nClinical assessment of lymph nodes only are coded in this site-specific factor, tumor deposits are only assessed histologically. Cases coded to 030 should be reviewed and recoded to the clinical lymph node involvement. Tumor deposit information is coded in CS Lymph Nodes and CS Site-Specific Factor 4.\n\nTumor deposits without regional nodal metastasis\n\nStated as clinical N1c" ], [ "100", "Metastases in 1-3 regional nodes, determined clinically\n\nStated as clinical N1 [NOS]" ], [ "110", "Metastases in 4-6 regional nodes, determined clinically\n\nStated as clinical N2a" ], [ "120", "Metastases in 7 or more regional nodes, determined clinically\n\nStated as clinical N2b" ], [ "200", "Metastases in 4 or more regional nodes, determined clinically  Stated as clinical N2 [NOS]" ], [ "400", "Clinically positive regional node(s), NOS" ], [ "888", "OBSOLETE DATA CONVERTED V0200\nSee code 988\n\nNot applicable for this site" ], [ "988", "Not applicable:  Information not collected for this case\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.  If this item is required to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "999", "Regional lymph node(s) involved pathologically, clinical assessment not stated\nUnknown if regional lymph nodes clinically evident\nNot documented in patient record" ] ]
+}

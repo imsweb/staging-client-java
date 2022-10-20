@@ -1,0 +1,27 @@
+{
+  "id" : "nodes_eval_eaj",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes Eval",
+  "title" : "CS Lymph Nodes Eval",
+  "notes" : "**Note**:  The staging basis AJCC 7 for this schema is blank because AJCC stage is not applicable in the 7th Edition.",
+  "last_modified" : "2015-05-27T16:19:39.291Z",
+  "definition" : [ {
+    "key" : "nodes_eval",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ndescriptor",
+    "name" : "Staging Basis AJCC 7",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "staging_basis_ajcc_6",
+    "name" : "Staging Basis AJCC 6",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0", "Does not meet criteria for AJCC pathologic staging: \n\nNo regional lymph nodes removed for examination.  Evidence based on physical examination, imaging examination, or other non-invasive clinical evidence.  No autopsy evidence used.", "VALUE:", "VALUE:c" ], [ "1", "Does not meet criteria for AJCC pathologic staging based on at least one of the following criteria: \n\nNo regional lymph nodes removed for examination.  Evidence based on endoscopic examination, or other invasive techniques including surgical observation, without biopsy.  No autopsy evidence used. \n\nOR \n\nFine needle aspiration, incisional core needle biopsy, or excisional biopsy of regional lymph nodes or sentinel nodes as part of the diagnostic workup, WITHOUT removal of the primary site adequate for pathologic T classification (treatment).", "VALUE:", "VALUE:c" ], [ "2", "Meets criteria for AJCC pathologic staging: \n\nNo regional lymph nodes removed for examination, but evidence derived from autopsy (tumor was suspected or diagnosed prior to autopsy).", "VALUE:", "VALUE:p" ], [ "3", "Meets criteria for AJCC pathologic staging based on at least one of the following criteria: \n\nAny microscopic assessment of regional nodes (including FNA, incisional core needle bx, excisional bx, sentinel node bx or node resection), WITH removal of the primary site adequate for pathologic T classification (treatment) or biopsy assessment of the highest T category. \n\nOR \n\nAny microscopic assessment of a regional node in the highest N category, regardless of the T category information.", "VALUE:", "VALUE:p" ], [ "5", "Does not meet criteria for AJCC y-pathologic (yp) staging: \n\nRegional lymph nodes removed for examination AFTER neoadjuvant therapy AND lymph node evaluation based on clinical evidence, unless the pathologic evidence at surgery (AFTER neoadjuvant) is more extensive (see code 6).", "VALUE:", "VALUE:c" ], [ "6", "Meets criteria for AJCC y-pathologic (yp) staging: \n\nRegional lymph nodes removed for examination AFTER neoadjuvant therapy AND lymph node evaluation based on pathologic evidence, because the pathologic evidence at surgery is more extensive than clinical evidence before treatment.", "VALUE:", "VALUE:yp" ], [ "8", "Meets criteria for AJCC autopsy (a) staging: \n\nEvidence from autopsy; tumor was unsuspected or undiagnosed prior to autopsy.", "VALUE:", "VALUE:a" ], [ "9", "Unknown if lymph nodes removed for examination\nNot assessed; cannot be assessed\nUnknown if assessed\nNot documented in patient record", "VALUE:", "VALUE:c" ] ]
+}

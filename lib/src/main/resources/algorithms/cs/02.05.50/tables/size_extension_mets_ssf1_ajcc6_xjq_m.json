@@ -1,0 +1,24 @@
+{
+  "id" : "size_extension_mets_ssf1_ajcc6_xjq_m",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Size Extension Mets SSF1 AJCC6 - M",
+  "title" : "Size Extension Mets SSF1 AJCC 6 Table - M",
+  "subtitle" : "CS SSF1 030 with CS Tumor Size and CS Extension",
+  "notes" : "**Note**:  When CS Site-Specific Factor 1 is coded 030, separate tumor nodules in same and different lobes, the values of T and M for AJCC 6 staging are assigned as shown in this table.  CS Site-Specific Factor 1 code 030 maps to T4 M1 in AJCC 6 staging for all CS Extension and CS Tumor Size values.",
+  "last_modified" : "2015-05-27T16:19:51.415Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "size",
+    "name" : "CS Tumor Size",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000,100,110,115,120,125,200,210,220,230,300,400,410,420,430,440,450,455,460,465,500,520,530,540,550,560,570,590,600,610,650,680,700,705,710,720,730,740,745,748,750,760,770,780,785,790,800,810,950,980,999", "000-999", "VALUE:M1" ], [ "250,795", "000-999", "VALUE:M1" ] ]
+}

@@ -1,0 +1,36 @@
+{
+  "id" : "nodes_ddj",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note**:  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in CS Mets at DX.",
+  "footnotes" : "- For CS Lymph Nodes codes 150-700  ONLY, the N category for AJCC 7 staging is assigned based on the value of CS Site-Specific Factor 16, Size of Lymph Nodes, using the Lymph Nodes Size AJCC 7 Table for this schema.",
+  "last_modified" : "2015-05-27T16:19:35.694Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "100", "OBSOLETE DATA RETAINED V0200\n\nRegional lymph nodes\nIliac, NOS:\n    External\n    Internal (hypogastric), NOS:\n        Obturator\nInguinal, NOS:\n    Deep inguinal, NOS\n        Node of Cloquet or Rosenmuller (highest deep inguinal)\n    Superficial inguinal (femoral)\nRegional lymph node(s), NOS", "ERROR:", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "150", "SINGLE IPSILATERAL regional lymph node:\n     Iliac, NOS:\n         External\n         Internal (hypogastric), NOS:\n             Obturator\n    Inguinal, NOS:\n         Deep inguinal, NOS:\n             Node of Cloquet or Rosenmuller (highest deep inguinal)\n         Superficial inguinal (femoral)\n     Regional lymph node, NOS", "JUMP:lymph_nodes_size_ajcc7_xfb", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "180", "Stated as N1 with no other information on regional lymph nodes", "JUMP:lymph_nodes_size_ajcc7_xfb", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "190", "Stated as N2a with no other information on regional lymph nodes", "JUMP:lymph_nodes_size_ajcc7_xfb", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "250", "MULTIPLE IPSILATERAL regional lymph nodes listed in code 150", "JUMP:lymph_nodes_size_ajcc7_xfb", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "290", "Stated as N2b with no other information on regional lymph nodes", "JUMP:lymph_nodes_size_ajcc7_xfb", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "350", "IPSILATERAL regional lymph nodes listed in code 150, not stated if single or multiple", "JUMP:lymph_nodes_size_ajcc7_xfb", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "450", "BILATERAL or CONTRALATERAL regional lymph node(s) listed in code 150", "JUMP:lymph_nodes_size_ajcc7_xfb", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "490", "Stated as N2c with no other information on regional lymph nodes", "JUMP:lymph_nodes_size_ajcc7_xfb", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "550", "Regional lymph nodes listed in code 150,  \nNot stated if ipsilateral, bilateral or contralateral \nAND not stated if single or multiple", "JUMP:lymph_nodes_size_ajcc7_xfb", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "600", "Stated as N2 [NOS] with no other information on regional lymph nodes", "JUMP:lymph_nodes_size_ajcc7_xfb", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "700", "Stated as N3 with no other information on regional lymph nodes", "JUMP:lymph_nodes_size_ajcc7_xfb", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

@@ -1,0 +1,23 @@
+{
+  "id" : "eval_extension_t3_ajcc7_xgh",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Eval Extension T3 AJCC7",
+  "title" : "Eval Extension T3 AJCC 7 Table",
+  "notes" : "**Note 1**:  For CS Extension codes 710-740 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS TS/Ext Eval and CS Extension as shown here.\n\n**Note 2**:  Not all users of Collaborative Stagecollect the evaluation fields.  For this schema, if CS TS/Ext Eval is empty or invalid, the T3 category will be calculated as if CS TS/Ext Eval were '9'.",
+  "last_modified" : "2015-05-27T16:19:05.377Z",
+  "definition" : [ {
+    "key" : "extension_eval",
+    "name" : "CS TS/Ext Eval",
+    "type" : "INPUT"
+  }, {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0", "710", "VALUE:T3a" ], [ "1", "710", "VALUE:T3a" ], [ "2", "710", "VALUE:T3" ], [ "3", "710", "VALUE:T3" ], [ "5", "710", "VALUE:T3a" ], [ "6", "710", "VALUE:T3" ], [ "8", "710", "VALUE:T3" ], [ "9", "710", "VALUE:T3a" ], [ ",4,7", "710", "VALUE:T3a" ], [ "0", "720", "VALUE:T3b" ], [ "1", "720", "VALUE:T3b" ], [ "2", "720", "VALUE:T3" ], [ "3", "720", "VALUE:T3" ], [ "5", "720", "VALUE:T3b" ], [ "6", "720", "VALUE:T3" ], [ "8", "720", "VALUE:T3" ], [ "9", "720", "VALUE:T3b" ], [ ",4,7", "720", "VALUE:T3b" ], [ "0", "730", "VALUE:T3c" ], [ "1", "730", "VALUE:T3c" ], [ "2", "730", "VALUE:T3" ], [ "3", "730", "VALUE:T3" ], [ "5", "730", "VALUE:T3c" ], [ "6", "730", "VALUE:T3" ], [ "8", "730", "VALUE:T3" ], [ "9", "730", "VALUE:T3c" ], [ ",4,7", "730", "VALUE:T3c" ], [ "0", "740", "VALUE:T3d" ], [ "1", "740", "VALUE:T3d" ], [ "2", "740", "VALUE:T3" ], [ "3", "740", "VALUE:T3" ], [ "5", "740", "VALUE:T3d" ], [ "6", "740", "VALUE:T3" ], [ "8", "740", "VALUE:T3" ], [ "9", "740", "VALUE:T3d" ], [ ",4,7", "740", "VALUE:T3d" ] ]
+}

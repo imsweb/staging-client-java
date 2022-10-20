@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_mdescriptor_cleanup",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC M Descriptor Code Cleanup",
+  "title" : "AJCC M Descriptor Code Cleanup",
+  "last_modified" : "2015-05-27T16:19:01.937Z",
+  "definition" : [ {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "mdescriptor",
+    "name" : "M Descriptor",
+    "type" : "INPUT"
+  }, {
+    "key" : "mdescriptor",
+    "name" : "M Descriptor",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "stor_mdescriptor",
+    "name" : "Storage M Descriptor",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "*", "ERROR", "VALUE:", "VALUE:", "If M Descriptor is an error, both should be set to blank" ], [ "NA", "*", "VALUE:", "VALUE:N", "For M values of NA" ], [ "", "*", "VALUE:", "VALUE:", "For missing M values caused by an ERROR in mets" ], [ "*", "*", "MATCH", "MATCH", "For all other cases, leave codes as they are" ] ]
+}

@@ -9,8 +9,6 @@ plugins {
     id "org.sonarqube" version "3.4.0.2513"
 }
 
-group = 'com.imsweb'
-version = '9.1'
 description = 'Java client library for staging calculations'
 
 // fail the build if there are compiler warnings

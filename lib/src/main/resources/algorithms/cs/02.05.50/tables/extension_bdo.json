@@ -1,0 +1,36 @@
+{
+  "id" : "extension_bdo",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  AJCC 7th Edition T1 and T2 categories are based on size and high risk features and not depth of invasion or extension.  AJCC 7th Edition does not include a T3 category for scrotum.\n\n**Note 2**:  The assignment of the T1 category for cutaneous squamous cell carcinomas with one or no high-risk features is based on tumor size.  A physician's statement of the T1 category may be used to code both CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields. However the two fields are coded independently; for example, the record may document size but not extension.  Use codes 310, 320, and 810 as appropriate to code CS Extension based on a statement of T when no other extension information is available.\n\n**Note 3**:  Use code 300 (Localized, NOS) when no further information is available to assign code 100, 305, 310, or 320.",
+  "footnotes" : "- For CS Extension codes 100-310 and 400-800 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Tumor Size and CS Site-Specific Factor 12, High Risk Features, as shown in the Extension Size High Risk Table for this schema.\n- For CS Extension codes 100-310, 400, and 450 ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Tumor Size, as shown in the Extension Size AJCC 6 Table for this schema.",
+  "last_modified" : "2015-05-27T16:19:10.819Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepidermal, intraepithelial, noninvasive\nBowen disease", "VALUE:Tis", "VALUE:Tis", "VALUE:IS", "VALUE:IS" ], [ "100", "Confined to scrotum", "JUMP:extension_size_high_risk_xfa", "JUMP:extension_size_ajcc6_xqb", "VALUE:L", "VALUE:L" ], [ "300", "Localized, NOS", "JUMP:extension_size_high_risk_xfa", "JUMP:extension_size_ajcc6_xqb", "VALUE:L", "VALUE:L" ], [ "305", "Subcutaneous tissue", "JUMP:extension_size_high_risk_xfa", "JUMP:extension_size_ajcc6_xqb", "VALUE:L", "VALUE:L" ], [ "310", "Stated as T1 with no other information on extension", "JUMP:extension_size_high_risk_xfa", "JUMP:extension_size_ajcc6_xqb", "VALUE:L", "VALUE:L" ], [ "320", "Stated as T2 with no other information on extension", "VALUE:T2", "VALUE:T2", "VALUE:L", "VALUE:L" ], [ "400", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 450 and 500\n\nAdjacent connective tissue\n(See definition of connective tissue in General Rules, Part I)", "JUMP:extension_size_high_risk_xfa", "JUMP:extension_size_ajcc6_xqb", "VALUE:RE", "VALUE:RE" ], [ "450", "Adjacent connective tissue excluding skeletal muscle", "JUMP:extension_size_high_risk_xfa", "JUMP:extension_size_ajcc6_xqb", "VALUE:RE", "VALUE:RE" ], [ "500", "Skeletal muscle", "JUMP:extension_size_high_risk_xfa", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "600", "Adjacent organs/structures:\n    Male genital organs:\n        Epididymis\n        Penis\n        Prostate\n        Spermatic cord\n        Testis", "JUMP:extension_size_high_risk_xfa", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "650", "Underlying cartilage", "JUMP:extension_size_high_risk_xfa", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "800", "Further contiguous extension:\n    Other organs and structures in male pelvis:\n        Bladder\n        Rectum\n        Urethra", "JUMP:extension_size_high_risk_xfa", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "805", "Bone:\n    Axial or appendicular skeleton", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "810", "Stated as T4 with no other information on extension ", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

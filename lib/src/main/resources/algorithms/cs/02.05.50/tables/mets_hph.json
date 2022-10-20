@@ -1,0 +1,35 @@
+{
+  "id" : "mets_hph",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note 1**:  In-transit metastasis is coded in CS Lymph Nodes.\n\n**Note 2**:  Nodes in contiguous (secondary) and bidirectional (cephalad/caudal) primary nodal basins are coded in CS Lymph Nodes. (Clarification V0204)",
+  "last_modified" : "2015-05-27T16:19:31.300Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "VALUE:M0", "VALUE:NONE", "VALUE:NONE" ], [ "10", "Distant lymph node(s)", "VALUE:M1a", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "15", "Metastasis to skin or subcutaneous tissue", "VALUE:M1a", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "20", "Stated as M1a with no other information on distant metastases", "VALUE:M1a", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "30", "Lung", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "35", "30 + (10 or 15) \n\nMetastasis to lung plus distant lymph node(s) or skin or subcutaneous tissue", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "37", "Stated as M1b with no other information on distant metastasis", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "40", "OBSOLETE DATA RETAINED V0200\nSee code 60\n\nDistant metastasis, NOS\nDistant metastases except distant lymph node(s) (code 10)\nCarcinomatosis", "ERROR:", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "45", "Distant metastasis to all other visceral sites except distant lymph node(s), skin or subcutaneous tissue, or lung \nCarcinomatosis", "VALUE:M1c", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "50", "OBSOLETE DATA RETAINED V0200\n\n10 + 40\nDistant lymph node(s) plus other distant metastases", "ERROR:", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "55", "45 + (any of 10, 15, or 30)\n\nMetastasis to other visceral sites plus distant lymph node(s), skin, subcutaneous tissue, or lung", "VALUE:M1c", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "57", "Stated as M1c with no other information on distant metastases", "VALUE:M1c", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "60", "Distant metastasis, NOS \n\nStated as M1 [NOS] with no other information on distant metastasis", "VALUE:M1NOS", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "VALUE:MX", "VALUE:U", "VALUE:U" ] ]
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_lymphoma",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection Lymphoma",
+  "title" : "Schema selection for Lymphoma",
+  "last_modified" : "2015-05-27T16:19:44.203Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C000-C440,C442-C689,C691-C694,C698-C809", "9590-9699,9702-9729,9735,9737,9738", "MATCH" ], [ "C000-C419,C422-C423,C425-C440,C442-C689,C691-C694,C698-C809", "9811-9818,9823,9827,9837", "MATCH" ] ]
+}

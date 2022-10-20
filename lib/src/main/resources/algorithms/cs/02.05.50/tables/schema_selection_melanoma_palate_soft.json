@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_melanoma_palate_soft",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection MelanomaPalateSoft",
+  "title" : "Schema selection for MelanomaPalateSoft",
+  "last_modified" : "2015-05-27T16:19:45.505Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C051-C052", "8720-8790", "MATCH" ] ]
+}

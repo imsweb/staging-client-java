@@ -1,0 +1,36 @@
+{
+  "id" : "mets_hcy",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note**:  External and internal iliac nodes are coded in CS Lymph Nodes. (Clarification V0204)",
+  "footnotes" : "- For CS Mets at DX codes 00 and 99, the M category for AJCC 6 staging is assigned based on the coding of CS Lymph Nodes as shown in the Lymph Nodes Mets at DX AJCC 6 Table for this schema.",
+  "last_modified" : "2015-05-27T16:19:30.785Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "JUMP:lymph_nodes_metsat_dxajcc6_xlf", "VALUE:NONE", "VALUE:NONE" ], [ "10", "Distant lymph node(s), NOS", "VALUE:M1a", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "11", "OBSOLETE DATA RETAINED AND REVIEWED V0204\nSee codes 10 and 11, CS Lymph Nodes codes 106, 108, 550, and 570\n\nDistant lymph node(s):\n    External iliac", "VALUE:M1a", "VALUE:M1", "VALUE:RN", "VALUE:D" ], [ "12", "OBSOLETE DATA RETAINED AND REVIEWED V0204\nSee codes 10 and 11, CS Lymph Nodes code 107, 109, 560, and 580\n\nDistant lymph node(s):\n    Internal iliac (hypogastric)\n        Obturator\n    Pelvic, NOS", "VALUE:M1a", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "13", "Distant lymph node(s) including common iliac", "VALUE:M1a", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "15", "Metastasis to skin or subcutaneous tissue", "VALUE:M1a", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "20", "Stated as M1a with no other information on distant metastases", "VALUE:M1a", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "30", "Lung", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "35", "OBSOLETE DATA RETAINED AND REVIEWED V0204\nSee codes 30 and 36, CS Lymph Nodes codes 106, 107, 108, 109, 550, 560, 570, and 580\n\n30 + (any of 10-15)\n\nMetastasis to lung plus distant lymph node(s) or skin or subcutaneous tissue", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "36", "30 + 13\n\nMetastasis to lung plus distant lymph node(s) or skin or subcutaneous tissue", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "37", "Stated as M1b with no other information on distant metastases", "VALUE:M1b", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "40", "OBSOLETE DATA RETAINED V0200\n\nDistant metastases other than distant lymph node(s)(codes 10 to 13)\nDistant metastasis, NOS\nCarcinomatosis", "ERROR:", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "45", "Distant metastasis to all other visceral sites\nExcept distant lymph node(s), skin, subcutaneous tissue, or lung \nCarcinomatosis", "VALUE:M1c", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "50", "OBSOLETE DATA RETAINED V0200 \n\n40 + any of (10 to 13)\nDistant lymph node(s) plus other distant metastases", "ERROR:", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "55", "OBSOLETE DATA RETAINED AND REVIEWED V0204\nSee codes 45 and 56, CS Lymph Nodes codes 106, 107, 108, 109, 550, 560, 570, and 580\n\n45 + any of (10 -15, 30) \n\nMetastasis to other visceral sites plus distant lymph node(s), skin, subcutaneous tissues, or lung", "VALUE:M1c", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "56", "45 + any of (13, 30)  \n\nMetastasis to other visceral sites plus distant lymph node(s), skin, subcutaneous tissues, or lungs", "VALUE:M1c", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "57", "Stated as M1c with no other information on distant metastasis", "VALUE:M1c", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "60", "Distant metastasis, NOS\n\nStated as M1 [NOS] with no other information on distant metastasis", "VALUE:M1NOS", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "JUMP:lymph_nodes_metsat_dxajcc6_xlf", "VALUE:U", "VALUE:U" ] ]
+}

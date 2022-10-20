@@ -1,0 +1,22 @@
+{
+  "id" : "determine_correct_table_for_ajcc6_neval_ns31",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Determine Correct Table for AJCC 6 N EvaL",
+  "title" : "Determining Whether N Eval has already been set for AJCC 6",
+  "last_modified" : "2015-05-27T16:19:02.770Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "CS Lymph Nodes",
+    "type" : "INPUT"
+  }, {
+    "key" : "mets",
+    "name" : "CS Mets at DX",
+    "type" : "INPUT"
+  }, {
+    "key" : "ndescriptor",
+    "name" : "Staging Basis",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "200, 250", "00,10,20,30,35,40,45,50,55,60,65,70,75,80,99", "MATCH:" ], [ "000,100,800,999", "*", "JUMP:nodes_eval_epa" ] ]
+}

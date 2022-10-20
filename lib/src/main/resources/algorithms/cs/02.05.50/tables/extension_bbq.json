@@ -1,0 +1,36 @@
+{
+  "id" : "extension_bbq",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  The cortex of a bone is the dense outer shell that provides strength to the bone; the spongy center of a bone is the cancellous portion.  The periosteum of the bone is the fibrous membrane covering of a bone that contains the blood vessels and nerves; the periosteum is similar to the capsule on a visceral organ.\n\n**Note 2**:  The assignment of T1and T2 categories for tumors of bone is based on tumor size.  A physician's statement of the T category may be used to code CS Tumor Size and/or CS Extension if this is the only information in the medical record regarding one or both of these fields.  However the two fields are coded independently: for example the record may document size but not extension, other than the physician's statement of the T category.  Use codes 310 and 350 as appropriate to code CS Extension based on a statement of T when no other extension information is available.\n\n**Note 3**:  The term \"skip metastasis\" is not used with a consistent meaning in the literature.  In some cases, it refers to discontinuous metastasis in the same bone as the primary tumor, while in other cases it refers to discontinuous metastasis in an adjacent bone, usually in the same limb.  For AJCC staging, discontinuous metastasis in the same bone is classified as T3 (coded in CS Extension), and discontinuous metastasis in an adjacent bone is classified as M1b (coded in CS Mets at DX).  If a primary bone tumor is stated as having \"skip metastasis\" or \"skip lesions\" with no other information regarding the bone involved, use code 820 in CS Extension.",
+  "footnotes" : "- For CS Extension codes 100-800 ONLY, the T category for AJCC 7 staging is assigned based on the value of CS Tumor Size, as shown in the Extension Size Table for this schema.\n- For CS Extension codes 100-800 ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Tumor Size, as shown in the Extension Size Table for this schema.",
+  "last_modified" : "2015-05-27T16:19:08.125Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "Invasive tumor confined to cortex of bone", "JUMP:extension_size_xfu", "JUMP:extension_size_xfu", "VALUE:L", "VALUE:L" ], [ "200", "Extension beyond cortex to periosteum (No break in periosteum)", "JUMP:extension_size_xfu", "JUMP:extension_size_xfu", "VALUE:L", "VALUE:L" ], [ "300", "Localized, NOS", "JUMP:extension_size_xfu", "JUMP:extension_size_xfu", "VALUE:L", "VALUE:L" ], [ "310", "Stated as T1 with no other information on extension", "JUMP:extension_size_xfu", "JUMP:extension_size_xfu", "VALUE:L", "VALUE:L" ], [ "350", "Stated as T2 with no other information on extension", "JUMP:extension_size_xfu", "JUMP:extension_size_xfu", "VALUE:L", "VALUE:L" ], [ "400", "Extension beyond periosteum to surrounding tissues, including adjacent skeletal muscle(s)", "JUMP:extension_size_xfu", "JUMP:extension_size_xfu", "VALUE:RE", "VALUE:RE" ], [ "600", "Adjacent bone/cartilage", "JUMP:extension_size_xfu", "JUMP:extension_size_xfu", "VALUE:RE", "VALUE:RE" ], [ "700", "Skin", "JUMP:extension_size_xfu", "JUMP:extension_size_xfu", "VALUE:D", "VALUE:D" ], [ "800", "Further contiguous extension", "JUMP:extension_size_xfu", "JUMP:extension_size_xfu", "VALUE:D", "VALUE:D" ], [ "820", "Discontinuous tumors in the primary bone site", "VALUE:T3", "VALUE:T3", "VALUE:D", "VALUE:D" ], [ "850", "Stated as T3 with no other information on extension", "VALUE:T3", "VALUE:T3", "VALUE:D", "VALUE:D" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

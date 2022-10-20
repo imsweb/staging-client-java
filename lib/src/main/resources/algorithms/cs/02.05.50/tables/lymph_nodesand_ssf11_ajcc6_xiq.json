@@ -1,0 +1,23 @@
+{
+  "id" : "lymph_nodesand_ssf11_ajcc6_xiq",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Lymph Nodes and SSF11 AJCC6",
+  "title" : "Lymph Nodes and SSF 11 AJCC 6 Table",
+  "notes" : "**Note**:  For CS Lymph Nodes codes 105, 108, 109, 114-130, 520, 540, 570, and 580, the N category for AJCC 6 staging is assigned based on the value of CS Site-Specific Factor 11, Regional Lymph Node - Laterality, as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:23.158Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "CS Lymph Nodes",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf11",
+    "name" : "CS SSF 11",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "AJCC 6 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "105", "000", "ERROR:" ], [ "108-109", "000", "ERROR:" ], [ "114-130", "000", "ERROR:" ], [ "520-540", "000", "ERROR:" ], [ "570-580", "000", "ERROR:" ], [ "105", "010", "VALUE:N1" ], [ "108-109", "010", "VALUE:N1" ], [ "114-130", "010", "VALUE:N1" ], [ "520-540", "010", "VALUE:N1" ], [ "570-580", "010", "VALUE:N1" ], [ "105", "020", "VALUE:N2" ], [ "108-109", "020", "VALUE:N2" ], [ "114-130", "020", "VALUE:N2" ], [ "520-540", "020", "VALUE:N2" ], [ "570-580", "020", "VALUE:N2" ], [ "105", "030", "VALUE:N1" ], [ "108-109", "030", "VALUE:N1" ], [ "114-130", "030", "VALUE:N1" ], [ "520-540", "030", "VALUE:N1" ], [ "570-580", "030", "VALUE:N1" ], [ "105", "988", "VALUE:N1" ], [ "108-109", "988", "VALUE:N1" ], [ "114-130", "988", "VALUE:N1" ], [ "520-540", "988", "VALUE:N1" ], [ "570-580", "988", "VALUE:N1" ], [ "105", "998", "ERROR:" ], [ "108-109", "998", "ERROR:" ], [ "114-130", "998", "ERROR:" ], [ "520-540", "998", "ERROR:" ], [ "570-580", "998", "ERROR:" ], [ "105", "999", "VALUE:N1" ], [ "108-109", "999", "VALUE:N1" ], [ "114-130", "999", "VALUE:N1" ], [ "520-540", "999", "VALUE:N1" ], [ "570-580", "999", "VALUE:N1" ] ]
+}

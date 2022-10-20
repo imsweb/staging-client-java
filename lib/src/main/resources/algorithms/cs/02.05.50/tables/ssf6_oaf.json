@@ -1,0 +1,20 @@
+{
+  "id" : "ssf6_oaf",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF6",
+  "title" : "CS Site-Specific Factor 6",
+  "subtitle" : "Fuhrman Nuclear Grade",
+  "notes" : "**Note 1**:  Fuhrman nuclear grade is a four-grade system based on nuclear diameter and shape, the prominence of nucleoli, and the presence of chromatin clumping in the highest grade. \n\n**Note 2**:  Record the Fuhrman nuclear grade as documented in the pathology report prior to neoadjuvant treatment.",
+  "last_modified" : "2015-05-27T16:20:08.753Z",
+  "definition" : [ {
+    "key" : "ssf6",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "010", "Grade 1" ], [ "020", "Grade 2" ], [ "030", "Grade 3" ], [ "040", "Grade 4" ], [ "888", "OBSOLETE DATA CONVERTED V0200  \nSee code 988\n \nNot applicable for this schema" ], [ "987", "Not applicable: Not a renal cell carcinoma morphology" ], [ "988", "Not applicable:  Information not collected for this case\n(May include cases converted from code 888 used in CSv1 for \"Not applicable\" or when the item was not collected.  If this item is required to derive T, N, M, or any stage, use of code 988 may result in an error.)" ], [ "998", "No histologic examination of primary site" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

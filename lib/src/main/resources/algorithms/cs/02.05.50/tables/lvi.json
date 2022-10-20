@@ -1,0 +1,18 @@
+{
+  "id" : "lvi",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "LVI",
+  "title" : "Lymph-vascular Invasion",
+  "last_modified" : "2015-05-27T16:19:21.837Z",
+  "definition" : [ {
+    "key" : "lvi",
+    "name" : "LVI",
+    "type" : "INPUT"
+  }, {
+    "key" : "desc",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Lymph-vascular Invasion stated as Not Present" ], [ "1", "Lymph-vascular Invasion Present/Identified" ], [ "8", "Not Applicable" ], [ "9", "Unknown/Indeterminate/not mentioned in path report" ] ]
+}

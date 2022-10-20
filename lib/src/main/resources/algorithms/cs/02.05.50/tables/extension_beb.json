@@ -1,0 +1,35 @@
+{
+  "id" : "extension_beb",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  Use code 360 for extension involving the mucosa only of adjacent sites.  Use higher codes for extension involving the deeper tissues of the primary or adjacent sites.\n\n**Note 2**:  Use code 300 for localized tumor only if no information is available to assign code 105 or 360.",
+  "last_modified" : "2015-05-27T16:19:11.352Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "VALUE:NA", "VALUE:NA", "VALUE:IS", "VALUE:IS" ], [ "100", "OBSOLETE DATA RETAINED V0200\n\nInvasive tumor confined to mucosa of one of the following\n    Frontal sinus\n    Sphenoid sinus", "ERROR:", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "105", "Tumor confined to mucosa of one of the following:\n    Frontal sinus\n    Sphenoid sinus", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "300", "Localized, NOS", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "320", "Tumor confined to mucosa of more than one accessory sinus", "VALUE:NA", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "330", "Tumor confined to mucosa of adjacent structure:\n    Nasal cavity:\n        Floor\n        Lateral wall\n        Septum\n        Turbinates\n    Nasal cavity, NOS    \n    Nasopharynx", "VALUE:NA", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "340", "OBSOLETE DATA CONVERTED V0203\nSee code 105\n\nStated as T3 with no other information on extension", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "360", "Involvement of deep soft tissues of single accessory sinus", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "365", "360 +330\n\nInvolvement of deep soft tissues of single accessory sinus plus mucosal involvement of any structure in code 330", "VALUE:NA", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "370", "Involvement of deep soft tissues of more than one accessory sinus", "VALUE:NA", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "380", "Involvement of deep soft tissues of adjacent structures in code 330", "VALUE:NA", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "390", "Destruction of bony wall of sinus", "VALUE:NA", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "400", "OBSOLETE DATA RETAINED V0200\n\nMore than one accessory sinus invaded\nDestruction of bony wall of sinus", "ERROR:", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "500", "OBSOLETE DATA RETAINED V0200\n\nPalate\nNasal cavity, NOS:\n    Floor\n    Lateral wall\n    Septum\n    Turbinates", "ERROR:", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "550", "Involvement of hard palate", "VALUE:NA", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "600", "Bone, cartilage:\n    Facial bones\n    Maxilla\n    Orbital structures\n    Pterygoid fossa\n    Zygoma", "VALUE:NA", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "650", "Anterior orbital contents\nSkin of nose\nSkin of cheek\nMuscles:\n    Masseter\n    Pterygoid", "VALUE:NA", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "700", "OBSOLETE DATA RETAINED V0200\n\nBrain\nCranial nerves\nMuscles:\n    Masseter\n    Pterygoid\nNasopharynx\nOrbital contents, including eye\nSoft tissue\nSkin", "ERROR:", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "725", "OBSOLETE DATA CONVERTED V0203\nSee code 360\n\nStated as T4a with no other information on extension", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "750", "Anterior cranial fossa\nBase of skull\nClivus\nCribriform plate\nMiddle cranial fossa", "VALUE:NA", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "790", "Contiguous extension:\n    Brain\n    Lower cranial nerves (IX, X, XI, XII)\n    Dura\n    Middle cranial fossa\n    Orbital apex", "VALUE:NA", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "800", "OBSOLETE DATA RETAINED V0200\n\nFurther contiguous extension", "ERROR:", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "801", "OBSOLETE DATA REVIEWED V0203\nSee codes 790, 805\n\nFurther contiguous extension:\n    Brain\n    Dura\n    Lower cranial nerves (IX, X, XI, XII)\n    Prevertebral space\n    Mediastinal structures", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "805", "Further contiguous extension:\n    Carotid artery (encased)\n    Masticator space\n    Mediastinal structures\n    Prevertebral space", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "810", "OBSOLETE DATA CONVERTED V0203\nSee code 750\n\nStated as T4b with no other information on extension", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "815", "OBSOLETE DATA CONVERTED V0203\nSee code 360\n\nStated as T4 NOS with no other information on extension", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "950", "OBSOLETE DATA RETAINED V0200\n\nNo evidence of primary tumor", "ERROR:", "VALUE:NA", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:U" ] ]
+}

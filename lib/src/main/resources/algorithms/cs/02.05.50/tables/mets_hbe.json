@@ -1,0 +1,36 @@
+{
+  "id" : "mets_hbe",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note**:  Para-aortic and pericaval lymph nodes are classified as regional nodes for AJCC 7 staging and are coded in CS Lymph Nodes.",
+  "footnotes" : "- For CS Mets at DX codes 00 and 99, the M category for AJCC 6 staging is assigned based on the coding of CS Lymph Nodes and CS Mets at DX as shown in the Lymph Nodes Mets at DX AJCC 6 Table for this schema.",
+  "last_modified" : "2015-05-27T16:19:28.840Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "JUMP:lymph_nodes_metsat_dxajcc6_xhv", "VALUE:NONE", "VALUE:NONE" ], [ "10", "OBSOLETE DATA RETAINED V0200\nPara-aortic nodes reclassified from distant to regional nodes in AJCC 7th Edition; see CS Lymph Nodes codes 620 and 635 \n\nDistant lymph node(s), including:\n    Para-aortic\n    Peripancreatic (along body and tail of pancreas only)\nDistant lymph node(s), NOS", "ERROR:", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "15", "Distant lymph node(s), including:\n   Peripancreatic (along body and tail of pancreas only)\nDistant lymph node(s), NOS", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "40", "Distant metastases except distant lymph node(s) \n\nCarcinomatosis", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "50", "OBSOLETE DATA RETAINED V0200\nPara-aortic nodes reclassified from distant to regional nodes in AJCC 7th Edition; See Code 51 \n\n(40 + 10)\nDistant lymph node(s) plus other distant metastases", "ERROR:", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "51", "40 + 15\n\nDistant metastasis plus distant lymph nodes ", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "60", "Distant metastasis, NOS\n\nStated as M1 with no other information on distant metastasis", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "JUMP:lymph_nodes_metsat_dxajcc6_xhv", "VALUE:U", "VALUE:U" ] ]
+}

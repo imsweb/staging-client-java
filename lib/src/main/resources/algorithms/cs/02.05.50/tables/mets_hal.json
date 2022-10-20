@@ -1,0 +1,34 @@
+{
+  "id" : "mets_hal",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "last_modified" : "2015-05-27T16:19:27.979Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "VALUE:M0", "VALUE:NONE", "VALUE:NONE" ], [ "11", "Distant lymph node(s):\n    Common iliac", "VALUE:M1a", "VALUE:M1a", "VALUE:RN", "VALUE:D" ], [ "12", "Distant lymph node(s):\n    Aortic, NOS:\n        Lateral (lumbar)\n        Para-aortic\n        Periaortic\n    Cervical\n    Inguinal, NOS:\n        Deep, NOS:\n            Node of Cloquet or Rosenmuller  (highest deep inguinal)\n        Superficial (femoral)\n    Retroperitoneal, NOS\n    Scalene (inferior deep cervical)\n    Supraclavicular (transverse cervical)\n    Distant lymph node(s), NOS", "VALUE:M1a", "VALUE:M1a", "VALUE:D", "VALUE:D" ], [ "20", "Stated as M1a with no other information on distant metastasis", "VALUE:M1a", "VALUE:M1a", "VALUE:D", "VALUE:D" ], [ "30", "Metastasis in bone(s)", "VALUE:M1b", "VALUE:M1b", "VALUE:D", "VALUE:D" ], [ "35", "30 + (11 or 12)\n\nMetastasis in bone(s) plus distant lymph node(s)", "VALUE:M1b", "VALUE:M1b", "VALUE:D", "VALUE:D" ], [ "38", "Stated as M1b with no other information on distant metastasis", "VALUE:M1b", "VALUE:M1b", "VALUE:D", "VALUE:D" ], [ "40", "Distant metastasis, other than distant lymph nodes or bone(s)\nCarcinomatosis", "VALUE:M1c", "VALUE:M1c", "VALUE:D", "VALUE:D" ], [ "45", "OBSOLETE DATA CONVERTED V0200\nSee code 60\n\nDistant metastasis, NOS\nStage D2, NOS", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "50", "40 + (11 or 12)\n\nDistant metastasis other than bone(s) plus distant lymph node(s)", "VALUE:M1c", "VALUE:M1c", "VALUE:D", "VALUE:D" ], [ "55", "40 + (30 or 35)\n\nDistant metastasis other than distant lymph node(s) plus bone(s) \nOR \nDistant metastasis plus distant lymph nodes and bone(s)", "VALUE:M1c", "VALUE:M1c", "VALUE:D", "VALUE:D" ], [ "58", "Stated as M1c with no other information on distant metastasis", "VALUE:M1c", "VALUE:M1c", "VALUE:D", "VALUE:D" ], [ "60", "Distant metastasis, NOS \n\nStated as M1 [NOS] with no other information on distant metastasis", "VALUE:M1NOS", "VALUE:M1NOS", "VALUE:D", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated \nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "VALUE:MX", "VALUE:U", "VALUE:U" ] ]
+}

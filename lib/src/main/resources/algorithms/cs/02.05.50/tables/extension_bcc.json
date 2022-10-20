@@ -1,0 +1,35 @@
+{
+  "id" : "extension_bcc",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  The tentorium cerebelli is an extension of the dura mater that separates the cerebellum from the inferior portion of the occipital lobes.  The location of the tumor above or below the tentorium can help in determining the type of tumor; also most adult brain tumors are supratentorial, and most pediatric brain tumors are infratentorial.  In the following list, note that ICD-O-3 codes C71.0 and C71.9 include both supratentorial and infratentorial subsites.\n\n* Supratentorial sites by ICD-O-3 codes:\n    * C71.0, except hypothalamus, pallium, thalamus\n    * C71.1-C71.5\n    * C71.8:  Corpus callosum, tapetum\n    * C71.9:  Anterior cranial fossa, middle cranial fossa, suprasellar\n* Infratentorial sites by ICD-O-3 codes:\n    * C71.0:  Hypothalamus, pallium, thalamus\n    * C71.6-C71.7\n    * C71.9:  Posterior cranial fossa\n\n**Note 2**:  If discontiguous spread is limited to circulating cells in cerebrospinal fluid (CSF), use code 710 in CS Extension.  Code all other discontiguous spread in CS Mets at DX.",
+  "last_modified" : "2015-05-27T16:19:08.805Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "050", "Benign or borderline brain tumor", "VALUE:NA", "VALUE:NA", "VALUE:NA", "VALUE:NA" ], [ "100", "Supratentorial tumor confined to:\n    Cerebral hemisphere (cerebrum) or meninges of cerebral hemisphere (one side):\n        Frontal lobe\n        Occipital lobe\n        Parietal lobe\n        Temporal lobe", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "110", "Infratentorial tumor confined to cerebellum or meninges of cerebellum (one side or midline):\n        Vermis\n        Lateral lobes\n        Median lobe of cerebellum", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "120", "Infratentorial tumor confined to:\n    Brain stem or meninges of brain stem (one side):\n        Medulla oblongata\n        Midbrain (mesencephalon)\n        Pons\n    Hypothalamus\n    Thalamus", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "150", "Confined to brain, NOS\nConfined to meninges, NOS", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "200", "Infratentorial tumor:\n    Both cerebellum and brain stem involved with tumor on one side", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "300", "Confined to ventricles \nTumor invades or encroaches upon ventricular system", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "400", "Tumor crosses the midline\nTumor involves contralateral hemisphere\nTumor involves corpus callosum (including splenium)", "VALUE:NA", "VALUE:NA", "VALUE:RNOS", "VALUE:RNOS" ], [ "500", "Supratentorial tumor extends infratentorially to involve: \n    Cerebellum\n    Brain stem\n    Hypothalamus\n    Pallium\n    Posterior cranial fossa\n    Thalamus", "VALUE:NA", "VALUE:NA", "VALUE:RNOS", "VALUE:RNOS" ], [ "510", "Infratentorial tumor extends supratentorially to involve: \n    Cerebrum (cerebral hemisphere) (excluding hypothalamus, pallium, thalamus)\n    Anterior cranial fossa\n    Corpus callosum\n    Middle cranial fossa\n    Suprasellar brain\n    Tapetum", "VALUE:NA", "VALUE:NA", "VALUE:RNOS", "VALUE:RNOS" ], [ "600", "Tumor invades:\n    Bone (skull)\n    Major blood vessel(s)\n    Meninges (e.g., dura)\n    Nerves, NOS\n        Cranial nerves\n    Spinal cord/canal", "VALUE:NA", "VALUE:NA", "VALUE:RNOS", "VALUE:RNOS" ], [ "700", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 100-600 and 710, CS Mets at DX code 20\n\nCirculating cells in cerebral spinal fluid (CSF)\nNasal cavity\nNasopharynx\nPosterior pharynx\nDirect extension outside central nervous system (CNS)", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "710", "Circulating cells in cerebral spinal fluid (CSF)", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "750", "Extension to:\n    Nasal cavity\n    Nasopharynx\n    Posterior pharynx\nOther direct extension outside CNS", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "800", "Further contiguous extension", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "950", "No evidence of primary tumor", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:U" ] ]
+}

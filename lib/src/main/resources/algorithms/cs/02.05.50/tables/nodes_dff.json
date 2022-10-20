@@ -1,0 +1,36 @@
+{
+  "id" : "nodes_dff",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in the field Mets at DX.",
+  "footnotes" : "- For CSLymph Nodes codes 050-300 ONLY: when CS Lymph Nodes Eval is 0, 1, 5, or 9, the N category for AJCC 6 staging is assigned as shown in the Lymph Nodes Clinical Evaluation AJCC 6 Table, using Regional Nodes Positive and CS Site-Specific Factor 2; when CS Regional Nodes Eval is 2, 3, 6, 8, or not coded, the N category for AJCC6 staging is assigned as shown in the Lymph Nodes Pathologic Evaluation AJCC 6 Table Also Used When CS Reg Nodes Eval Is Not Coded using Regional Nodes Positive.",
+  "last_modified" : "2015-05-27T16:19:37.804Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "050", "Nodule(s) or foci in perirectal fat", "VALUE:N1", "JUMP:determine_correct_table_for_ajcc6_n_ns22", "VALUE:RN", "VALUE:RN" ], [ "100", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 050, 110\n\nRegional lymph nodes:\nRectosigmoid:\n    Paracolic/pericolic\n    Perirectal\n    Rectal\n    Nodule(s) or foci in pericolic fat/adjacent mesentery/mesocolic fat\nRectum:\n    Perirectal\n    Rectal, NOS\n    Nodule(s) or foci in perirectal fat", "VALUE:N1", "JUMP:determine_correct_table_for_ajcc6_n_ns22", "VALUE:RN", "VALUE:RN" ], [ "110", "Regional lymph nodes:\n    For rectosigmoid:\n        Paracolic/pericolic\n        Perirectal\n        Rectal\n    For rectum:\n        Perirectal\n        Rectal, NOS", "VALUE:N1", "JUMP:determine_correct_table_for_ajcc6_n_ns22", "VALUE:RN", "VALUE:RN" ], [ "200", "Regional lymph node(s):\n    For rectosigmoid:\n        Colic, NOS:\n            Left colic\n        Hemorrhoidal, superior or middle\n        Inferior mesenteric\n        Middle rectal\n        Sigmoidal (sigmoid mesenteric)\n        Superior rectal\n    For rectum:\n        Hemorrhoidal, superior, middle or inferior\n        Inferior mesenteric\n        Internal iliac (hypogastric):\n            Obturator\n        Rectal, superior, middle, or inferior\n        Sacral, NOS:\n            Lateral (laterosacral)\n            Middle (promontorial) (Gerota's node)\n            Presacral\n        Sacral promontory\n        Sigmoidal (sigmoid mesenteric)", "VALUE:N1", "JUMP:determine_correct_table_for_ajcc6_n_ns22", "VALUE:RN", "VALUE:RN" ], [ "300", "Mesenteric, NOS\nRegional lymph node(s), NOS", "VALUE:N1", "JUMP:determine_correct_table_for_ajcc6_n_ns22", "VALUE:RN", "VALUE:RN" ], [ "400", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee code 410\n\nStated as N1 pathologic", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "410", "Stated as N1 with no other information on regional lymph nodes", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "450", "OBSOLETE DATA RETAINED V0200\n\nStated as N2 pathologic", "ERROR:", "VALUE:N2", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph node(s) cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

@@ -1,0 +1,35 @@
+{
+  "id" : "extension_bcy",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note**:  If CS Extension code is 000 or 050, Behavior ICD-O-3 must be coded as 2.  If CS Extension code is 100 or greater, Behavior ICD-O-3 must be coded as 3.",
+  "last_modified" : "2015-05-27T16:19:09.976Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "OBSOLETE DATA CONVERTED V0203\nSee code 060\n\nIn situ, intraepithelial, noninvasive (flat, sessile)", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "050", "Noninvasive papillary, polypoid, or verrucous carcinoma", "VALUE:NA", "VALUE:NA", "VALUE:IS", "VALUE:IS" ], [ "060", "In situ, intraepithelial, non invasive (flat, sessile)", "VALUE:NA", "VALUE:NA", "VALUE:IS", "VALUE:IS" ], [ "100", "Subepithelial connective tissue (lamina propria, submucosa) invaded", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "200", "Muscularis invaded", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "300", "Localized, NOS", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "400", "Corpus spongiosum\nPeriurethral muscle (sphincter)\nProstate", "VALUE:NA", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "600", "Beyond the prostatic capsule\nBladder neck\nCorpus cavernosum\nVagina, anterior or NOS", "VALUE:NA", "VALUE:NA", "VALUE:RE", "VALUE:RE" ], [ "700", "Other adjacent organs, including\n    Bladder (excluding bladder neck)\n    Seminal vesicle(s)", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "800", "Further contiguous extension", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "950", "No evidence of primary tumor", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:U" ] ]
+}

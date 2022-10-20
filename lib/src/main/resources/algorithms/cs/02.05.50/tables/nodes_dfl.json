@@ -1,0 +1,35 @@
+{
+  "id" : "nodes_dfl",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in CS Mets at DX.",
+  "last_modified" : "2015-05-27T16:19:38.096Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "100", "Regional lymph node(s):\n   Duodenum:\n        Duodenal\n        Gastroduodenal\n        Hepatic\n        Infrapyloric (subpyloric)\n        Pancreaticoduodenal\n        Pyloric\n    Jejunum or ileum:\n        Superior mesenteric\n        Mesenteric, NOS\n        Ileocolic for terminal ileum \n        Cecal (anterior, posterior, or retrocecal)", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "200", "Regional lymph node(s) for duodenum primaries only:\n    Pericholedochal (common bile duct)\n    Superior mesenteric", "VALUE:N1", "VALUE:N1", "VALUE:D", "VALUE:RN" ], [ "300", "Regional lymph node(s), NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "400", "Stated as N1with no other information on regional lymph nodes", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

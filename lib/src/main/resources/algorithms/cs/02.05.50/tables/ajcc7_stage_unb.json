@@ -1,0 +1,27 @@
+{
+  "id" : "ajcc7_stage_unb",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC7 Stage",
+  "title" : "AJCC TNM 7 Stage for sites with no stage groupings",
+  "notes" : "In the table below, \"ANY\" designates any valid (allowable) value.",
+  "last_modified" : "2015-05-27T16:18:59.360Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "", "*", "*", "VALUE:" ], [ "*", "", "*", "VALUE:" ], [ "*", "*", "", "VALUE:" ], [ "*", "*", "*", "VALUE:NA" ] ]
+}

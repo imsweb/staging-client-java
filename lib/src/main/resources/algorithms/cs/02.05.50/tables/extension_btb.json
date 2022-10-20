@@ -1,0 +1,36 @@
+{
+  "id" : "extension_btb",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  The lacrimal sac is the upper dilated end of the nasolacrimal duct, lodged in a deep groove formed by the lacrimal bone and frontal process of the maxilla. The sac connects the lacrimal canaliculi, which drain tears from the eye's surface, and the nasolacrimal duct, which conveys this fluid into the nasal cavity. The most common epithelial tumors of the lacrimal sac are squamous cell and transitional cell carcinomas.\n\n**Note 2**:  Periosteum is a fibrous membrane that wraps the outer surface of bones.\n\n**Note 3**:  AJCC excludes lacrimal sac tumors from 7th Edition staging for the lacrimal gland.  Lacrimal sac tumors were not explicitly excluded from AJCC 6th Edition staging.",
+  "footnotes" : "- For CS Extension codes 100-405 ONLY, the T category for AJCC 6 staging is assigned based on the value of CS Tumor Size as shown in the Extension Size AJCC 6 Table. . Tumors 2.5 cm or less are T1, and tumors between 2.6 and 5 cm are T2.",
+  "last_modified" : "2015-05-27T16:19:14.435Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial,  noninvasive", "VALUE:NA", "VALUE:TX", "VALUE:IS", "VALUE:IS" ], [ "100", "Tumor confined to lacrimal sac", "VALUE:NA", "JUMP:extension_size_ajcc6_xea", "VALUE:L", "VALUE:L" ], [ "300", "Localized, NOS", "VALUE:NA", "JUMP:extension_size_ajcc6_xea", "VALUE:L", "VALUE:L" ], [ "400", "OBSOLETE DATA RETAINED V0200\nSee code 405\n\nInvading periosteum of fossa of lacrimal gland/duct", "ERROR:", "JUMP:extension_size_ajcc6_xea", "VALUE:RE", "VALUE:RE" ], [ "405", "Invading periosteum", "VALUE:NA", "JUMP:extension_size_ajcc6_xea", "VALUE:RE", "VALUE:RE" ], [ "600", "Extension to any of the following WITHOUT bone invasion:\n    Globe (eyeball)\n    Optic nerve\n    Orbital soft tissues", "VALUE:NA", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "700", "Adjacent bone", "VALUE:NA", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "750", "Adjacent structures:\n    Brain\n    Sinus\n    Pterygoid fossa\n    Temporal fossa", "VALUE:NA", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "800", "Further contiguous extension", "VALUE:NA", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "950", "No evidence of primary tumor", "VALUE:NA", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed \nNot documented in patient record", "VALUE:NA", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

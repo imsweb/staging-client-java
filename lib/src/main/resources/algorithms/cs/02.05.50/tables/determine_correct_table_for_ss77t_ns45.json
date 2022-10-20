@@ -1,0 +1,22 @@
+{
+  "id" : "determine_correct_table_for_ss77t_ns45",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Determine Correct Table for SS 1977 T",
+  "title" : "Determining Which Calculation Table Applies for SS 1977 T",
+  "last_modified" : "2015-05-27T16:19:05.114Z",
+  "definition" : [ {
+    "key" : "cs_input_version_original",
+    "name" : "CS Version Input Original",
+    "type" : "INPUT"
+  }, {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "010401,010400,010300,010200,010100,010005,010004,010003,010002,010000,000937", ",2004-2009", "JUMP:extension_ssf1_summary_stage77_xkd" ], [ "020500-999999,020440,020302,020200,020100,020001", ",2004-9999", "JUMP:extension_ssf1_summary_stage77_xkc" ], [ "020500-999999,020440,020302,020200,020100,020001,010401,010400,010300,010200,010100,010005,010004,010003,010002,010000,000937", "2010-9999", "JUMP:extension_ssf1_summary_stage77_xkc" ] ]
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_melanoma_mouth_other",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection MelanomaMouthOther",
+  "title" : "Schema selection for MelanomaMouthOther",
+  "last_modified" : "2015-05-27T16:19:45.270Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C058-C059,C068-C069", "8720-8790", "MATCH" ] ]
+}

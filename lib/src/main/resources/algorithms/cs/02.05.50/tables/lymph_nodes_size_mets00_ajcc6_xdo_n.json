@@ -1,0 +1,23 @@
+{
+  "id" : "lymph_nodes_size_mets00_ajcc6_xdo_n",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Lymph Nodes Size Mets 00 AJCC6 - For N",
+  "title" : "Lymph Nodes Size Mets 00 AJCC 6 Table - For N",
+  "notes" : "**Note**:  When CS Lymph Nodes is coded 150, 250, 350-450, or 505 and CS Mets at DX is coded 00, the AJCC 6 N and M categories are determined by the size of involved nodes as coded in CS Site-Specific Factor 2, Size of Metastasis in Lymph Nodes as shown in this table.  A CS Site-Specific Factor 2 code takes precedence over a CS Lymph Nodes code for \"stated as N\"; however, if CS Site-Specific Factor 2 is coded as unknown, the N category may be assigned based on \"stated as N\" recorded in CS Lymph Nodes.",
+  "last_modified" : "2015-05-27T16:19:26.190Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "CS Lymph Nodes",
+    "type" : "INPUT"
+  }, {
+    "key" : "ssf2",
+    "name" : "SSF2",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "150", "000", "ERROR:" ], [ "250", "000", "ERROR:" ], [ "350", "000", "ERROR:" ], [ "400", "000", "ERROR:" ], [ "450", "000", "ERROR:" ], [ "505", "000", "ERROR:" ], [ "150", "001-020", "VALUE:N1" ], [ "250", "001-020", "VALUE:N2" ], [ "350", "001-020", "VALUE:N0" ], [ "400", "001-020", "VALUE:N1" ], [ "450", "001-020", "VALUE:N2" ], [ "505", "001-020", "VALUE:N1" ], [ "150", "021-050", "VALUE:N2" ], [ "250", "021-050", "VALUE:N2" ], [ "350", "021-050", "VALUE:N0" ], [ "400", "021-050", "VALUE:N2" ], [ "450", "021-050", "VALUE:N2" ], [ "505", "021-050", "VALUE:N2" ], [ "150", "051-980", "VALUE:N3" ], [ "250", "051-980", "VALUE:N3" ], [ "350", "051-980", "VALUE:N0" ], [ "400", "051-980", "VALUE:N3" ], [ "450", "051-980", "VALUE:N3" ], [ "505", "051-980", "VALUE:N3" ], [ "150", "988", "VALUE:N1" ], [ "250", "988", "VALUE:N2" ], [ "350", "988", "VALUE:N0" ], [ "400", "988", "VALUE:N1" ], [ "450", "988", "VALUE:N2" ], [ "505", "988", "VALUE:N1" ], [ "150", "990-992", "VALUE:N1" ], [ "250", "990-992", "VALUE:N2" ], [ "350", "990-992", "VALUE:N0" ], [ "400", "990-992", "VALUE:N1" ], [ "450", "990-992", "VALUE:N2" ], [ "505", "990-992", "VALUE:N1" ], [ "150", "993-995", "VALUE:N2" ], [ "250", "993-995", "VALUE:N2" ], [ "350", "993-995", "VALUE:N0" ], [ "400", "993-995", "VALUE:N2" ], [ "450", "993-995", "VALUE:N2" ], [ "505", "993-995", "VALUE:N2" ], [ "150", "996-997", "VALUE:N3" ], [ "250", "996-997", "VALUE:N3" ], [ "350", "996-997", "VALUE:N0" ], [ "400", "996-997", "VALUE:N3" ], [ "450", "996-997", "VALUE:N3" ], [ "505", "996-997", "VALUE:N3" ], [ "150", "999", "VALUE:N1" ], [ "250", "999", "VALUE:N2" ], [ "350", "999", "VALUE:N0" ], [ "400", "999", "VALUE:N1" ], [ "450", "999", "VALUE:N2" ], [ "505", "999", "VALUE:N1" ] ]
+}

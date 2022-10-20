@@ -1,0 +1,19 @@
+{
+  "id" : "histologies_stage_xhx",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Histologies Stage",
+  "title" : "Histologies Stage Table",
+  "notes" : "**Note 1**:  The determination of AJCC stage group from T, N, M, and grade for EsophagusGEJunction depends further on histologic type.  Since squamous cell carcinoma typically has a poorer prognosis than adenocarcinoma, a tumor of mixed histopathologic type (including a squamous component or NOS histology) or a type that is not otherwise specified should be staged as squamous cell carcinoma.\n\n**Note 2**:  This table shows the selection of the appropriate version of the AJCC Stage table based on histology.  In the table below, Squamous maps to the table AJCC TNM 7 Stage Squamous, and Adenocarcinoma maps to the table AJCC TNM 7 Stage Adenocarcinoma.",
+  "last_modified" : "2015-05-27T16:19:21.494Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage Table",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8000-8046", "JUMP:ajcctnm7_stage_squamous_xia" ], [ "8050", "JUMP:ajcctnm7_stage_adenocarcinoma_xib" ], [ "8051-8131", "JUMP:ajcctnm7_stage_squamous_xia" ], [ "8140-8147", "JUMP:ajcctnm7_stage_adenocarcinoma_xib" ], [ "8148-8152", "JUMP:ajcctnm7_stage_squamous_xia" ], [ "8154-8157", "JUMP:ajcctnm7_stage_squamous_xia" ], [ "8160-8162", "JUMP:ajcctnm7_stage_adenocarcinoma_xib" ], [ "8170-8175", "JUMP:ajcctnm7_stage_squamous_xia" ], [ "8180-8221", "JUMP:ajcctnm7_stage_adenocarcinoma_xib" ], [ "8230-8231", "JUMP:ajcctnm7_stage_squamous_xia" ], [ "8243-8245", "JUMP:ajcctnm7_stage_squamous_xia" ], [ "8247-8248", "JUMP:ajcctnm7_stage_squamous_xia" ], [ "8250-8507", "JUMP:ajcctnm7_stage_adenocarcinoma_xib" ], [ "8508-8513", "JUMP:ajcctnm7_stage_squamous_xia" ], [ "8514-8551", "JUMP:ajcctnm7_stage_adenocarcinoma_xib" ], [ "8560-8570", "JUMP:ajcctnm7_stage_squamous_xia" ], [ "8571-8574", "JUMP:ajcctnm7_stage_adenocarcinoma_xib" ], [ "8575", "JUMP:ajcctnm7_stage_squamous_xia" ], [ "8576", "JUMP:ajcctnm7_stage_adenocarcinoma_xib" ], [ "8940-8941", "JUMP:ajcctnm7_stage_adenocarcinoma_xib" ], [ "8950", "JUMP:ajcctnm7_stage_squamous_xia" ], [ "8980-8981", "JUMP:ajcctnm7_stage_squamous_xia" ] ]
+}

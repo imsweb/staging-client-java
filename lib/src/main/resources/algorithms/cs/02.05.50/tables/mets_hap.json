@@ -1,0 +1,35 @@
+{
+  "id" : "mets_hap",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note 1**:  The lesser sac of the peritoneum, or omental bursa, is the cavity in the abdomen formed by the lesser and greater omentum; the pancreas forms part of the posterior wall of the lesser sac.\n\n**Note 2**:  Pericholedochal (nodes of the common bile duct), superior mesenteric, and pyloric nodes are classified as distant for AJCC 7 staging.  These nodes are now coded in CS Mets at DX.\n\n**Note 3**: The specific location of the mesenteric nodes determines whether they are regional or distant.  If the specific location is not described, code 800, Lymph Nodes NOS in CS Lymph Nodes.\n\n**Note 4**: Porta hepatic nodes are considered distant for Body and Tail and should be coded in CS Mets at DX, code 10.  If the specific location for hepatic nodes is not described, code 110, Regional lymph nodes - Hepatic in CS Lymph Nodes.",
+  "last_modified" : "2015-05-27T16:19:28.192Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "VALUE:M0", "VALUE:NONE", "VALUE:NONE" ], [ "07", "Distant lymph node(s):\n    Pericholedochal (common bile duct)\n    Superior mesenteric\n    Pyloric:\n        Infrapyloric\n        Retropyloric\n        Subpyloric\n        Suprapyloric", "VALUE:M1", "VALUE:M0", "VALUE:RN", "VALUE:RN" ], [ "10", "Distant lymph node(s) other than in code 07\nDistant lymph node(s) , NOS", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "20", "10 + 07\n\nDistant lymph node(s)  in code 10 plus distant lymph node(s) in code 07", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "40", "Distant metastasis except distant lymph node(s) \nSeeding of peritoneum, even if limited to the lesser sac region\nPositive peritoneal cytology\nCarcinomatosis", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "45", "40 + 07\n\nDistant metastasis plus distant lymph node(s) in code 07", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "50", "40 + 10\n\nDistant metastasis plus distant lymph node(s) in code 10", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "60", "Distant metastasis, NOS  \n\nStated as M1 with no other information on distant metastasis", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "VALUE:MX", "VALUE:U", "VALUE:U" ] ]
+}

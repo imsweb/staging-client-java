@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_merkel_cell_scrotum",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Schema Selection MerkelCellScrotum",
+  "title" : "Schema selection for MerkelCellScrotum",
+  "last_modified" : "2015-05-27T16:19:45.910Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C632", "8247", "MATCH" ] ]
+}

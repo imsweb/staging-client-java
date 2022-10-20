@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_ndescriptor_cleanup",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC N Descriptor Code Cleanup",
+  "title" : "AJCC N Descriptor Code Cleanup",
+  "last_modified" : "2015-05-27T16:19:01.987Z",
+  "definition" : [ {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "ndescriptor",
+    "name" : "N Descriptor",
+    "type" : "INPUT"
+  }, {
+    "key" : "ndescriptor",
+    "name" : "N Descriptor",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "stor_ndescriptor",
+    "name" : "Storage N Descriptor",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "*", "ERROR", "VALUE:", "VALUE:", "If N Descriptor is an error, both should be set to blank" ], [ "NA", "*", "VALUE:", "VALUE:N", "For N values of NA" ], [ "", "*", "VALUE:", "VALUE:", "For missing N values caused by an ERROR in nodes" ], [ "*", "*", "MATCH", "MATCH", "For all other cases, leave codes as they are" ] ]
+}

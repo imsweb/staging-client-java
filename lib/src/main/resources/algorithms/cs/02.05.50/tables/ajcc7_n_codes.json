@@ -1,0 +1,22 @@
+{
+  "id" : "ajcc7_n_codes",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC 7 N Codes",
+  "title" : "AJCC 7 N Allowable Codes",
+  "last_modified" : "2015-05-27T16:18:54.078Z",
+  "definition" : [ {
+    "key" : "ajcc7_n",
+    "name" : "Display String",
+    "type" : "INPUT"
+  }, {
+    "key" : "stor_ajcc7_n",
+    "name" : "AJCC7 Storage Code",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "comments",
+    "name" : "Comments",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "NX", "VALUE:999", "NX" ], [ "N0", "VALUE:000", "N0" ], [ "N0(i-)", "VALUE:010", "N0(i-)" ], [ "N0(i+)", "VALUE:020", "N0(i+)" ], [ "N0(mol-)", "VALUE:030", "N0(mol-)" ], [ "N0(mol+)", "VALUE:040", "N0(mol+)" ], [ "N1", "VALUE:100", "N1" ], [ "N1NOS", "VALUE:199", "N1 NOS" ], [ "N1a", "VALUE:110", "N1a" ], [ "N1b", "VALUE:120", "N1b" ], [ "N1c", "VALUE:130", "N1c" ], [ "N1mi", "VALUE:180", "N1mi" ], [ "N2", "VALUE:200", "N2" ], [ "N2NOS", "VALUE:299", "N2 NOS" ], [ "N2a", "VALUE:210", "N2a" ], [ "N2b", "VALUE:220", "N2b" ], [ "N2c", "VALUE:230", "N2c" ], [ "N3", "VALUE:300", "N3" ], [ "N3NOS", "VALUE:399", "N3 NOS" ], [ "N3a", "VALUE:310", "N3a" ], [ "N3b", "VALUE:320", "N3b" ], [ "N3c", "VALUE:330", "N3c" ], [ "N4", "VALUE:400", "N4" ], [ "NA", "VALUE:888", "Not applicable" ], [ "*", "VALUE:   ", "Error" ] ]
+}

@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc7_stage_uqa",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC7 Stage",
+  "title" : "AJCC TNM 7 Stage",
+  "last_modified" : "2015-05-27T16:19:00.093Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "T0", "N0", "M0", "ERROR:" ], [ "T0", "N1", "M0", "VALUE:IIIB" ], [ "T0", "NX", "M0", "VALUE:UNK" ], [ "T1", "N0", "M0", "VALUE:I" ], [ "T1", "N1", "M0", "VALUE:IIIB" ], [ "T1", "NX", "M0", "VALUE:UNK" ], [ "T2", "N0", "M0", "VALUE:IIA" ], [ "T2", "N1", "M0", "VALUE:IIIB" ], [ "T2", "NX", "M0", "VALUE:UNK" ], [ "T3", "N0", "M0", "VALUE:IIB" ], [ "T3", "N1", "M0", "VALUE:IIIB" ], [ "T3", "NX", "M0", "VALUE:UNK" ], [ "T4", "N0", "M0", "VALUE:IIIA" ], [ "T4", "N1", "M0", "VALUE:IIIB" ], [ "T4", "NX", "M0", "VALUE:UNK" ], [ "TX", "N0", "M0", "VALUE:UNK" ], [ "TX", "N1", "M0", "VALUE:IIIB" ], [ "TX", "NX", "M0", "VALUE:UNK" ], [ "T0", "N0", "M1", "VALUE:IV" ], [ "T0", "N1", "M1", "VALUE:IV" ], [ "T0", "NX", "M1", "VALUE:IV" ], [ "T1", "N0", "M1", "VALUE:IV" ], [ "T1", "N1", "M1", "VALUE:IV" ], [ "T1", "NX", "M1", "VALUE:IV" ], [ "T2", "N0", "M1", "VALUE:IV" ], [ "T2", "N1", "M1", "VALUE:IV" ], [ "T2", "NX", "M1", "VALUE:IV" ], [ "T3", "N0", "M1", "VALUE:IV" ], [ "T3", "N1", "M1", "VALUE:IV" ], [ "T3", "NX", "M1", "VALUE:IV" ], [ "T4", "N0", "M1", "VALUE:IV" ], [ "T4", "N1", "M1", "VALUE:IV" ], [ "T4", "NX", "M1", "VALUE:IV" ], [ "TX", "N0", "M1", "VALUE:IV" ], [ "TX", "N1", "M1", "VALUE:IV" ], [ "TX", "NX", "M1", "VALUE:IV" ] ]
+}

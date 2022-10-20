@@ -1,0 +1,20 @@
+{
+  "id" : "ssf2_kpa",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF2",
+  "title" : "CS Site-Specific Factor 2",
+  "subtitle" : "OBSOLETE - Extracapsular Extension, Lymph Nodes for Head and Neck",
+  "notes" : "**Note**:  This CS Site-Specific Factor is obsolete beginning with CS Version 2 (codes, code descriptions, and notes).  Old data are retained during conversion, but new cases are not coded 000-987 or 999.  Use code 988 for this field for all cases entered in CS Version 2.\n\n**OBSOLETE V0200 Note 1**:  Code the status of extracapsular extension whether assessed clinically or pathologically of any involved regional lymph node(s) coded in the CS Lymph Nodes field.  Do not code extracapsular extension in any nodes coded in CS Mets at DX in this field.\n\n**OBSOLETE V0200 Note 2**:  A statement of the presence or absence of extracapsular extension in a pathology report takes priority over clinical assessment. However, if the pathology report contains no statement about extracapsular extension, either positive or negative, the clinical assessment should be coded. If nodes are involved but there is neither a clinical assessment of extranodal extension nor a statement about it in the pathology report, use code 999.\n\n**OBSOLETE V0200 Note 3**:  According to AJCC (page 24), \"Imaging studies showing amorphous spiculated margins of involved nodes or involvement of internodal fat resulting in loss of normal oval-to-round nodal shape strongly suggest extracapsular (extranodal) tumor spread; however, pathologic examination is necessary for documentation of the extent of such disease.",
+  "last_modified" : "2015-05-27T16:20:03.801Z",
+  "definition" : [ {
+    "key" : "ssf2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "OBSOLETE DATA RETAINED V0200\n\nNo extracapsular extension" ], [ "001", "OBSOLETE DATA RETAINED V0200\n\nExtracapsular extension clinically, not assessed pathologically\nNodes described as \"fixed\", not assessed pathologically" ], [ "005", "OBSOLETE DATA RETAINED V0200\n\nExtracapsular extension present pathologically" ], [ "888", "OBSOLETE DATA CONVERTED V0200\nSee code 987\n\nNot applicable; no lymph node involvement" ], [ "987", "OBSOLETE DATA CONVERTED AND RETAINED V0200\nData converted from code 888\n\nNot applicable; no lymph node involvement" ], [ "988", "Not applicable:  Information not collected for this case" ], [ "999", "OBSOLETE DATA RETAINED V0200\n\nUnknown if regional lymph node(s) involved, not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record" ] ]
+}

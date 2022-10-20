@@ -1,0 +1,35 @@
+{
+  "id" : "nodes_dbq",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note**:  Code only regional nodes and nodes, NOS, in this field.  Distant nodes are coded in CS Mets at DX.   Peridiaphragmatic nodes are classified as regional nodes in AJCC 7 staging.  They are now coded in CS Lymph Nodes.",
+  "last_modified" : "2015-05-27T16:19:33.726Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:N0", "VALUE:NONE", "VALUE:NONE" ], [ "100", "Regional lymph nodes, ipsilateral, intrapulmonary:\n    Hilar:\n        Bronchopulmonary\n        Proximal lobar\n        Pulmonary root\n    Intrapulmonary:\n        Interlobar\n        Lobar\n        Segmental\n        Subsegmental\n    Peri/parabronchial", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "110", "Stated as N1 with no other information on regional lymph nodes", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "200", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee codes 210, 220, 230, 250\n\nRegional lymph nodes, ipsilateral, mediastinal:\n    Aortic [above diaphragm], NOS:\n        Aorto-pulmonary window\n        Ascending aorta\n        Peri/para-aortic\n        Phrenic\n        Subaortic\n    Carinal:\n        Tracheobronchial\n        Tracheal bifurcation\n    Internal mammary (parasternal)\n    Mediastinal, NOS:\n        Anterior\n        Posterior (tracheoesophageal)\n    Pericardial\n    Peri/paraesophageal [below carina]\n    Peri/paratracheal, NOS:\n        Lower peritracheal (azygos)\n        Upper paratracheal\n    Pretracheal and retrotracheal, NOS:\n        Precarinal\n    Prevascular\n    Pulmonary ligament\n    Subcardial\n    Subcarinal\n    Peridiaphragmatic \nStated as N2", "VALUE:N2", "VALUE:N2", "VALUE:RN", "VALUE:RN" ], [ "210", "Regional lymph nodes, ipsilateral, mediastinal:\n    Aortic (above diaphragm), NOS:\n        Aorto-pulmonary window\n        Ascending aorta\n        Peri/para-aortic\n        Phrenic\n        Subaortic\n    Carinal:\n        Tracheobronchial\n        Tracheal bifurcation\n    Internal mammary (parasternal)\n    Mediastinal, NOS:\n        Anterior\n        Posterior (tracheoesophageal)\n    Pericardial\n    Peri/paraesophageal (below carina)\n    Peri/paratracheal, NOS:\n        Lower peritracheal (azygos)\n        Upper paratracheal\n    Pretracheal and retrotracheal, NOS:\n        Precarinal\n    Prevascular\n    Pulmonary ligament\n    Subcardial\n    Subcarinal", "VALUE:N2", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "220", "Regional lymph nodes, ipsilateral, mediastinal:\n    Peridiaphragmatic", "VALUE:N2", "VALUE:N0", "VALUE:D", "VALUE:D" ], [ "230", "220 + (100, 210)", "VALUE:N2", "VALUE:N1", "VALUE:D", "VALUE:D" ], [ "250", "Stated as N2 with no other information on regional lymph nodes", "VALUE:N2", "VALUE:N2", "VALUE:RN", "VALUE:RN" ], [ "500", "Regional lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "700", "Contralateral or bilateral nodes specified in codes 100, 210, 220 or 230\n    Ipsilateral, contralateral or bilateral nodes:\n        Scalene (inferior deep cervical)\n        Supraclavicular (transverse cervical)\n\nStated as N3 with no other information on regional lymph nodes", "VALUE:N3", "VALUE:N3", "VALUE:D", "VALUE:D" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:N1", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "VALUE:NX", "VALUE:NX", "VALUE:U", "VALUE:U" ] ]
+}

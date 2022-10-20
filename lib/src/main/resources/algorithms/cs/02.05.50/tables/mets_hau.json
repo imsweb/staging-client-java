@@ -1,0 +1,35 @@
+{
+  "id" : "mets_hau",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note 1**:  Involvement of supraclavicular (transverse cervical) lymph nodes is coded in CS Lymph Nodes.\n\n**Note 2**:  Cases in which there are no distant metastases as determined by clinical and/or radiographic methods are designated cM0 (use code 00). Cases in which one or more distant metastases are identified by clinical and/or radiographic methods are designated cM1. A case is classified as clinically free of metastasis (cM0) unless there is documented evidence of metastasis by clinical means or by biopsy of a metastatic site (pathologic).  Use code 99 if there is no documentation available for any staging assessment, or if there is reasonable doubt that the tumor is no longer localized and there is no documentation of distant metastasis.",
+  "last_modified" : "2015-05-27T16:19:28.384Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "VALUE:M0", "VALUE:NONE", "VALUE:NONE" ], [ "05", "No clinical or radiographic evidence of distant metastasis, but deposits of molecularly or  microscopically  detected tumor cells in circulating blood, bone marrow or other non-regional nodal tissue that are 0.2 millimeters (mm)  or less in a patient without symptoms or signs of metastasis", "VALUE:M0(i+)", "VALUE:M0", "VALUE:NONE", "VALUE:NONE" ], [ "07", "Stated as M0(i+) with no other information on distant metastasis", "VALUE:M0(i+)", "VALUE:M0", "VALUE:NONE", "VALUE:NONE" ], [ "10", "Distant lymph node(s):\n    Cervical, NOS\n    Contralateral/bilateral axillary and/or internal mammary\n    Other than above\n\nDistant lymph node(s), NOS", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "40", "Distant metastasis except distant lymph node(s) (code 10)\nCarcinomatosis", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "42", "Further contiguous extension:\n    Skin over:\n        Axilla\n        Contralateral (opposite) breast\n        Sternum\n        Upper abdomen", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "44", "Metastasis:\n    Adrenal (suprarenal) gland\n    Bone, other than adjacent rib\n    Contralateral (opposite) breast - if stated as metastatic\n    Lung\n    Ovary\n    Satellite nodule(s) in skin other than primary breast", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "50", " (40 - 44) + 10", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "60", "Distant metastasis, NOS\n\nStated as M1 with no other information on distant metastasis", "VALUE:M1", "VALUE:M1", "VALUE:D", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "VALUE:MX", "VALUE:U", "VALUE:U" ] ]
+}

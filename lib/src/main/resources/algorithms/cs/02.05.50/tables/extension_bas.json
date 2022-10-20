@@ -1,0 +1,35 @@
+{
+  "id" : "extension_bas",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  Parapharyngeal involvement denotes postero-lateral infiltration of tumor beyond the pharyngobasilar fascia.  The pharyngobasilar fascia is the fibrous layer of the pharyngeal wall between the mucosa and the muscular layer, attached superiorly to the basilar part of the occipital bone and diminishing in thickness as it descends.\n\n**Note 2**:  The masticator space primarily consists of the muscles of mastication, the medial and lateral pterygoid, masseter, and temporalis muscles.  The space also includes the ramus of the mandible and the third division of cranial nerve V as it passes through the foramen ovale into the suprahyoid neck.\n\n**Note 3**:  Use code 300 for localized tumor ONLY if no information is available to assign codes 105 or 205. \n\n**Note 4**:  Use code 510, 585, 645, or 810 if the physician's assignment of T category is the ONLY information available about the extent of the tumor.",
+  "last_modified" : "2015-05-27T16:19:06.483Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "In situ, intraepithelial, noninvasive", "VALUE:Tis", "VALUE:Tis", "VALUE:IS", "VALUE:IS" ], [ "100", "OBSOLETE DATA RETAINED V0200\n\nInvasive tumor confined to one of the following subsites:\n    Inferior wall (superior surface of soft palate)\n    One lateral wall\n    Posterior superior wall (vault)", "ERROR:", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "105", "Invasive tumor confined to one of the following subsites:\n    Inferior wall (superior surface of soft palate)\n    One lateral wall\n    Posterior superior wall (vault)", "VALUE:T1", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "200", "OBSOLETE DATA RETAINED V0200\n\nInvolvement of two or more subsites:\n    Lateral wall extending into eustachian  tube/middle ear\n    Posterior, inferior, or lateral wall(s)", "ERROR:", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "205", "Involvement of two or more subsites:\n    Lateral wall extending into eustachian \n    tube/middle ear\n    Posterior, inferior, or lateral wall(s)", "VALUE:T1", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "300", "OBSOLETE DATA RETAINED V0200\n\nConfined to nasopharynx\nLocalized, NOS", "ERROR:", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "305", "Confined to nasopharynx\nLocalized, NOS", "VALUE:T1", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "400", "Oropharynx\nSoft palate, inferior surface including uvula\nWITHOUT parapharyngeal extension", "VALUE:T1", "VALUE:T2a", "VALUE:RE", "VALUE:RE" ], [ "500", "Nasal cavity \nWITHOUT parapharyngeal extension", "VALUE:T1", "VALUE:T2a", "VALUE:RE", "VALUE:RE" ], [ "505", "Extension to soft tissue, NOS (excluding soft tissue of neck)", "VALUE:T1", "VALUE:T2NOS", "VALUE:RE", "VALUE:RE" ], [ "510", "Stated as T1 with no other information on extension", "VALUE:T1", "VALUE:T1", "VALUE:L", "VALUE:L" ], [ "520", "OBSOLETE DATA CONVERTED V0203\nSee code 505\n\nExtends to soft tissue NOS", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "550", "OBSOLETE DATA RETAINED V0200\n\nAny extension coded in 100-500 WITH  fixation or tumor \nDescribed only as FIXED", "ERROR:", "VALUE:T4", "VALUE:RE", "VALUE:RE" ], [ "555", "Any extension coded in 105, 205, 305, 400, 500, or 505\nWITH fixation or tumor described only as FIXED", "VALUE:T2", "VALUE:T2b", "VALUE:RE", "VALUE:RE" ], [ "560", "OBSOLETE DATA RETAINED V0200\n\nAny extension coded in 100-500 WITH parapharyngeal extension", "ERROR:", "VALUE:T2b", "VALUE:RE", "VALUE:RE" ], [ "565", "Any extension coded in 105, 205, 305, 400, 500, 505, or 555\nWITH parapharyngeal extension", "VALUE:T2", "VALUE:T2b", "VALUE:RE", "VALUE:RE" ], [ "570", "OBSOLETE DATA CONVERTED V0200\nSee code 610\n\nHard palate", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "580", "OBSOLETE DATA RETAINED V0200\n\nPterygopalatine fossa ", "ERROR:", "VALUE:T2b", "VALUE:RE", "VALUE:RE" ], [ "585", "Pterygopalatine fossa \nWITHOUT bone invasion", "VALUE:T2", "VALUE:T2b", "VALUE:RE", "VALUE:RE" ], [ "590", "Stated as T2 with no other information on extension", "VALUE:T2", "VALUE:T2b", "VALUE:RE", "VALUE:RE" ], [ "600", "OBSOLETE DATA RETAINED V0200\n\nBone, including skull", "ERROR:", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "605", "Bony structures of skull base\nFloor of orbit\nCartilage, NOS\nBone, NOS", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "610", "Hard Palate", "VALUE:T3", "VALUE:T3", "VALUE:D", "VALUE:RE" ], [ "620", "Paranasal sinus", "VALUE:T3", "VALUE:T3", "VALUE:D", "VALUE:RE" ], [ "645", "Stated as T3 with no other information on extension", "VALUE:T3", "VALUE:T3", "VALUE:RE", "VALUE:RE" ], [ "650", "OBSOLETE DATA REVIEWED AND CHANGED V0200\nIn CSv1, extension to the orbit was included in both codes 650 and 700.  In addition, the instructions for coding invasion of orbital bone were not clear. Codes 650 and 700 should be reviewed for orbital involvement.   Involvement of bone of floor of orbit should be coded 605, and other orbit involvement should be coded 710.\n\nOrbit", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "700", "OBSOLETE DATA REVIEWED AND CHANGED V0200\nSee note in code 650\n\nBrain\nCranial nerves\nHypopharynx\nInfratemporal fossa\nOrbit\nIntracranial extension, NOS", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "710", "Brain\nCranial nerve involvement\nIntracranial extension, NOS\nHypopharynx\nInfratemporal fossa/masticator space\nOrbit except bone of floor of orbit (see code 605) ", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "750", "OBSOLETE DATA CONVERTED V0200\nSee code 710\n\nMasticator space", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "800", "Further contiguous extension including:\n    Soft tissues of neck", "VALUE:T4", "VALUE:T4", "VALUE:D", "VALUE:D" ], [ "810", "Stated as T4 with no other information on extension", "VALUE:T4", "VALUE:T4", "VALUE:RE", "VALUE:D" ], [ "950", "No evidence of primary tumor", "VALUE:T0", "VALUE:T0", "VALUE:U", "VALUE:U" ], [ "999", "Unknown;  extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:TX", "VALUE:TX", "VALUE:U", "VALUE:U" ] ]
+}

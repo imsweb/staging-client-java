@@ -1,0 +1,35 @@
+{
+  "id" : "nodes_dez",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Nodes",
+  "title" : "CS Lymph Nodes",
+  "notes" : "**Note 1**:  Code only regional nodes and nodes, NOS in this field.  Distant nodes are coded in CS Mets at DX.\n\n**Note 2**:  For rectosigmoid primaries, middle and superior rectal nodes are coded 200, and inferior rectal nodes are coded in CS Mets at DX; for rectum primaries, the inferior, middle, and superior rectal nodes are coded 200.  Rectal nodes, NOS are coded 100 for both rectosigmoid and rectum primaries.\n\n**Note 3**:  For rectum primaries, obturator nodes and internal iliac (hypogastric) nodes, NOS are coded 200; for rectosigmoid primaries, these are coded in CS Mets at DX.\n\n**Note 4**:  For rectosigmoid primaries, left colic nodes and colic nodes, NOS are coded 200; for rectum primaries, these are coded in CS Mets at DX.\n\n**Note 5**:  Nodal metastasis is very rare in gastrointestinal stromal tumors and surgeons generally agree that nodal dissection is not indicated.  In the absence of information on regional lymph node status, N0 is appropriate; code 999 is mapped to N0 accordingly.",
+  "last_modified" : "2015-05-27T16:19:37.489Z",
+  "definition" : [ {
+    "key" : "nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_n",
+    "name" : "AJCC 7 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_n",
+    "name" : "TNM 6 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n77",
+    "name" : "Summary Stage 1977 N",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "n2000",
+    "name" : "Summary Stage 2000 N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement", "VALUE:N0", "VALUE:NA", "VALUE:NONE", "VALUE:NONE" ], [ "050", "Nodule(s) or foci in perirectal fat", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "100", "OBSOLETE DATA RETAINED AND REVIEWED V0203\nSee code 050 and 110 \n\nRegional lymph nodes :\nRectosigmoid:\n    Paracolic/pericolic\n    Perirectal\n    Rectal\n    Nodule(s) or foci in pericolic fat/adjacent mesentery/mesocolic fat\nRectum:\n    Perirectal\n    Rectal, NOS\n    Nodule(s) or foci in perirectal fat", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "110", "Regional lymph nodes: \nFor all sites:\n    Perirectal\n    Rectal\nFor rectosigmoid:\n    Paracolic/pericolic", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "200", "Regional lymph node(s):    \n    For all sites:\n        Hemorrhoidal:\n            Middle\n            Superior\n        Mesenteric, inferior\n        Rectal:\n            Middle\n            Superior\n        Sigmoidal (sigmoid mesenteric)\n    For rectosigmoid:\n        Colic, NOS\n            Left colic\n    For rectum:\n        Hemorrhoidal:\n        Inferior         \n        Internal iliac (hypogastric), NOS:\n            Obturator\n        Rectal, inferior\n        Sacral, NOS :\n            Lateral (laterosacral)\n            Middle (promontorial) (Gerota's node)\n            Presacral\n            Sacral promontory", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "300", "Regional lymph nodes for all sites:\n    Mesenteric node(s), NOS\n    Regional lymph node(s), NOS", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "400", "Stated as N1 with no other information on regional lymph nodes", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "450", "OBSOLETE DATA RETAINED V0200\n\nStated as N2 pathologic", "ERROR:", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "800", "Lymph nodes, NOS", "VALUE:N1", "VALUE:NA", "VALUE:RN", "VALUE:RN" ], [ "999", "Unknown; regional lymph nodes not stated\nRegional lymph nodes cannot be assessed\nNot documented in patient record", "VALUE:N0", "VALUE:NA", "VALUE:U", "VALUE:U" ] ]
+}

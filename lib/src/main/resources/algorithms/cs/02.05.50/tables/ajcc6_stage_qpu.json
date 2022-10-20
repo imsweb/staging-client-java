@@ -1,0 +1,26 @@
+{
+  "id" : "ajcc6_stage_qpu",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "AJCC6 Stage",
+  "title" : "AJCC TNM 6 Stage",
+  "last_modified" : "2015-05-27T16:18:51.804Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "T0", "N0", "M0", "ERROR:" ], [ "T0", "N1", "M0", "VALUE:III" ], [ "T0", "N2", "M0", "VALUE:IVA" ], [ "T0", "NX", "M0", "VALUE:UNK" ], [ "Tis", "N0", "M0", "VALUE:0" ], [ "Tis", "N1", "M0", "ERROR:" ], [ "Tis", "N2", "M0", "ERROR:" ], [ "Tis", "NX", "M0", "VALUE:0" ], [ "T1a", "N0", "M0", "VALUE:IA" ], [ "T1a", "N1", "M0", "VALUE:III" ], [ "T1a", "N2", "M0", "VALUE:IVA" ], [ "T1a", "NX", "M0", "VALUE:UNK" ], [ "T1b", "N0", "M0", "VALUE:IB" ], [ "T1b", "N1", "M0", "VALUE:III" ], [ "T1b", "N2", "M0", "VALUE:IVA" ], [ "T1b", "NX", "M0", "VALUE:UNK" ], [ "T1NOS", "N0", "M0", "VALUE:I" ], [ "T1NOS", "N1", "M0", "VALUE:III" ], [ "T1NOS", "N2", "M0", "VALUE:IVA" ], [ "T1NOS", "NX", "M0", "VALUE:UNK" ], [ "T2", "N0", "M0", "VALUE:II" ], [ "T2", "N1", "M0", "VALUE:III" ], [ "T2", "N2", "M0", "VALUE:IVA" ], [ "T2", "NX", "M0", "VALUE:UNK" ], [ "T3", "N0", "M0", "VALUE:III" ], [ "T3", "N1", "M0", "VALUE:III" ], [ "T3", "N2", "M0", "VALUE:IVA" ], [ "T3", "NX", "M0", "VALUE:UNK" ], [ "T4", "N0", "M0", "VALUE:IVA" ], [ "T4", "N1", "M0", "VALUE:IVA" ], [ "T4", "N2", "M0", "VALUE:IVA" ], [ "T4", "NX", "M0", "VALUE:IVA" ], [ "TX", "N0", "M0", "VALUE:UNK" ], [ "TX", "N1", "M0", "VALUE:UNK" ], [ "TX", "N2", "M0", "VALUE:IVNOS" ], [ "TX", "NX", "M0", "VALUE:UNK" ], [ "T0", "N0", "M1", "VALUE:IVB" ], [ "T0", "N1", "M1", "VALUE:IVB" ], [ "T0", "N2", "M1", "VALUE:IVB" ], [ "T0", "NX", "M1", "VALUE:IVB" ], [ "Tis", "N0", "M1", "ERROR:" ], [ "Tis", "N1", "M1", "ERROR:" ], [ "Tis", "N2", "M1", "ERROR:" ], [ "Tis", "NX", "M1", "ERROR:" ], [ "T1a", "N0", "M1", "VALUE:IVB" ], [ "T1a", "N1", "M1", "VALUE:IVB" ], [ "T1a", "N2", "M1", "VALUE:IVB" ], [ "T1a", "NX", "M1", "VALUE:IVB" ], [ "T1b", "N0", "M1", "VALUE:IVB" ], [ "T1b", "N1", "M1", "VALUE:IVB" ], [ "T1b", "N2", "M1", "VALUE:IVB" ], [ "T1b", "NX", "M1", "VALUE:IVB" ], [ "T1NOS", "N0", "M1", "VALUE:IVB" ], [ "T1NOS", "N1", "M1", "VALUE:IVB" ], [ "T1NOS", "N2", "M1", "VALUE:IVB" ], [ "T1NOS", "NX", "M1", "VALUE:IVB" ], [ "T2", "N0", "M1", "VALUE:IVB" ], [ "T2", "N1", "M1", "VALUE:IVB" ], [ "T2", "N2", "M1", "VALUE:IVB" ], [ "T2", "NX", "M1", "VALUE:IVB" ], [ "T3", "N0", "M1", "VALUE:IVB" ], [ "T3", "N1", "M1", "VALUE:IVB" ], [ "T3", "N2", "M1", "VALUE:IVB" ], [ "T3", "NX", "M1", "VALUE:IVB" ], [ "T4", "N0", "M1", "VALUE:IVB" ], [ "T4", "N1", "M1", "VALUE:IVB" ], [ "T4", "N2", "M1", "VALUE:IVB" ], [ "T4", "NX", "M1", "VALUE:IVB" ], [ "TX", "N0", "M1", "VALUE:IVB" ], [ "TX", "N1", "M1", "VALUE:IVB" ], [ "TX", "N2", "M1", "VALUE:IVB" ], [ "TX", "NX", "M1", "VALUE:IVB" ], [ "T0", "N0", "MX", "VALUE:UNK" ], [ "T0", "N1", "MX", "VALUE:UNK" ], [ "T0", "N2", "MX", "VALUE:IVNOS" ], [ "T0", "NX", "MX", "VALUE:UNK" ], [ "Tis", "N0", "MX", "VALUE:0" ], [ "Tis", "N1", "MX", "ERROR:" ], [ "Tis", "N2", "MX", "ERROR:" ], [ "Tis", "NX", "MX", "VALUE:0" ], [ "T1a", "N0", "MX", "VALUE:UNK" ], [ "T1a", "N1", "MX", "VALUE:UNK" ], [ "T1a", "N2", "MX", "VALUE:IVNOS" ], [ "T1a", "NX", "MX", "VALUE:UNK" ], [ "T1b", "N0", "MX", "VALUE:UNK" ], [ "T1b", "N1", "MX", "VALUE:UNK" ], [ "T1b", "N2", "MX", "VALUE:IVNOS" ], [ "T1b", "NX", "MX", "VALUE:UNK" ], [ "T1NOS", "N0", "MX", "VALUE:UNK" ], [ "T1NOS", "N1", "MX", "VALUE:UNK" ], [ "T1NOS", "N2", "MX", "VALUE:IVNOS" ], [ "T1NOS", "NX", "MX", "VALUE:UNK" ], [ "T2", "N0", "MX", "VALUE:UNK" ], [ "T2", "N1", "MX", "VALUE:UNK" ], [ "T2", "N2", "MX", "VALUE:IVNOS" ], [ "T2", "NX", "MX", "VALUE:UNK" ], [ "T3", "N0", "MX", "VALUE:UNK" ], [ "T3", "N1", "MX", "VALUE:UNK" ], [ "T3", "N2", "MX", "VALUE:IVNOS" ], [ "T3", "NX", "MX", "VALUE:UNK" ], [ "T4", "N0", "MX", "VALUE:IVNOS" ], [ "T4", "N1", "MX", "VALUE:IVNOS" ], [ "T4", "N2", "MX", "VALUE:IVNOS" ], [ "T4", "NX", "MX", "VALUE:IVNOS" ], [ "TX", "N0", "MX", "VALUE:UNK" ], [ "TX", "N1", "MX", "VALUE:UNK" ], [ "TX", "N2", "MX", "VALUE:IVNOS" ], [ "TX", "NX", "MX", "VALUE:UNK" ] ]
+}

@@ -1,0 +1,24 @@
+{
+  "id" : "ssf25_sqp",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "discriminator_peritoneum",
+  "title" : "CS Site-Specific Factor 25",
+  "subtitle" : "Schema Discriminator: Peritoneum/PeritoneumFemaleGen",
+  "notes" : "**Note**:  For cases coded to primary site C48.1, C48.2, or C48.8, and histology in the ranges 8000-8576, 8590-8671, 8930-8934 or 8940-9110, the sex of the case is needed to determine the correct CS schema.  AJCC stages primary carcinomas of the peritoneum in females with the same staging criteria as for ovarian cancer.",
+  "last_modified" : "2015-05-27T16:20:02.175Z",
+  "definition" : [ {
+    "key" : "ssf25",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "schema",
+    "name" : "Schema",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "001", "Male", "VALUE:peritoneum" ], [ "002", "Female", "VALUE:peritoneum_female_gen" ], [ "003", "Other (hermaphrodite)", "VALUE:peritoneum" ], [ "004", "Transsexual", "VALUE:peritoneum" ], [ "009", "Unknown sex", "VALUE:peritoneum" ], [ "100", "OBSOLETE DATA RETAINED V0200\n\nC48.1, C48.2, or C48.8, and histology in the ranges 8000-8576, 8590-8671, 8930-8934, 8940-9110 coded in CSv1", "VALUE:peritoneum" ], [ "981", "C48.1, C48.2, or C48.8 with histology codes 8580-8589,8680-8921,9120-9136,9141-9582,9700-9701\nNote: May include cases which were converted to this code from a blank", "VALUE:peritoneum" ] ]
+}

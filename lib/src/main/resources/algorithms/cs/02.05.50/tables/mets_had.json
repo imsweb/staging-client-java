@@ -1,0 +1,36 @@
+{
+  "id" : "mets_had",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Mets",
+  "title" : "CS Mets at DX",
+  "notes" : "**Note**:  Nodes in contiguous (secondary) and bidirectional (cephalad/caudal) primary nodal basins are coded in CS Lymph Nodes. (Clarification V0204)",
+  "footnotes" : "- For CS Mets at DX codes 05, 10, 42, 43, 52, 53, 55, 56, and 60 ONLY, the M category is assigned based on the status of serum LDH as coded in CS Site-Specific Factor 4 and shown in the Mets at DX and LDH Table.\n- For CS Mets at DX codes 05, 10, 42, 43, 52, 53, 55, 56, and 60 ONLY, the M category is assigned based on the status of serum LDH as coded in CS Site-Specific Factor 4 and shown in the Mets at DX and LDH Table.",
+  "last_modified" : "2015-05-27T16:19:27.570Z",
+  "definition" : [ {
+    "key" : "mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_m",
+    "name" : "AJCC 6 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m77",
+    "name" : "Summary Stage 1977 M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "m2000",
+    "name" : "Summary Stage 2000 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis", "VALUE:M0", "VALUE:M0", "VALUE:NONE", "VALUE:NONE" ], [ "05", "Metastasis to underlying cartilage, bone, skeletal muscle (excluding direct extension)", "JUMP:metsat_dxand_ldh_xbs", "JUMP:metsat_dxand_ldh_xbs", "VALUE:D", "VALUE:D" ], [ "10", "Distant lymph node(s)", "JUMP:metsat_dxand_ldh_xbs", "JUMP:metsat_dxand_ldh_xbs", "VALUE:D", "VALUE:D" ], [ "40", "OBSOLETE DATA CONVERTED V0200\nSee code 60\n\nDistant metastasis, NOS", "ERROR:", "ERROR:", "ERROR:", "ERROR:" ], [ "42", "Metastasis to skin or subcutaneous tissue beyond regional lymph nodes", "JUMP:metsat_dxand_ldh_xbs", "JUMP:metsat_dxand_ldh_xbs", "VALUE:D", "VALUE:D" ], [ "43", "Lung", "JUMP:metsat_dxand_ldh_xbs", "JUMP:metsat_dxand_ldh_xbs", "VALUE:D", "VALUE:D" ], [ "44", "Metastasis to all other visceral or distant sites with or without metastasis to lungs\nCarcinomatosis", "VALUE:M1c", "VALUE:M1c", "VALUE:D", "VALUE:D" ], [ "52", "42 + 10\n\nMetastasis to skin or subcutaneous tissue beyond nodes plus distant nodes", "JUMP:metsat_dxand_ldh_xbs", "JUMP:metsat_dxand_ldh_xbs", "VALUE:D", "VALUE:D" ], [ "53", "43 + 10\n\nMetastasis to lung plus distant nodes", "JUMP:metsat_dxand_ldh_xbs", "JUMP:metsat_dxand_ldh_xbs", "VALUE:D", "VALUE:D" ], [ "54", "44 + 10\n\nMetastasis to all other visceral or distant sites plus distant nodes\nWith or without metastasis to lungs", "VALUE:M1c", "VALUE:M1c", "VALUE:D", "VALUE:D" ], [ "55", "Stated as M1a with no other information on metastasis", "JUMP:metsat_dxand_ldh_xbs", "JUMP:metsat_dxand_ldh_xbs", "VALUE:D", "VALUE:D" ], [ "56", "Stated as M1b with no other information on distant metastasis", "JUMP:metsat_dxand_ldh_xbs", "JUMP:metsat_dxand_ldh_xbs", "VALUE:D", "VALUE:D" ], [ "57", "Stated as M1c with no other information on distant metastasis", "VALUE:M1c", "VALUE:M1c", "VALUE:D", "VALUE:D" ], [ "60", "Distant metastasis, NOS\n\nStated as M1 [NOS] with no other information on distant metastasis", "JUMP:metsat_dxand_ldh_xbs", "JUMP:metsat_dxand_ldh_xbs", "VALUE:D", "VALUE:D" ], [ "99", "Unknown; distant metastasis not stated\nDistant metastasis cannot be assessed\nNot documented in patient record", "VALUE:M0", "VALUE:MX", "VALUE:U", "VALUE:U" ] ]
+}

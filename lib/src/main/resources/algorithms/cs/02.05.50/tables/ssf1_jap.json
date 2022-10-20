@@ -1,0 +1,20 @@
+{
+  "id" : "ssf1_jap",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "SSF1",
+  "title" : "CS Site-Specific Factor 1",
+  "subtitle" : "Solitary vs Multifocal Tumor",
+  "notes" : "**Note**:  The AJCC definition for multifocal tumor differs from the Multiple Primary/Histology (MP/H) definition for Multiplicity Counter.  Use code 020 for any tumor with multiple foci, even if foci are not measured.",
+  "last_modified" : "2015-05-27T16:19:58.389Z",
+  "definition" : [ {
+    "key" : "ssf1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No evidence of primary tumor (CS Extension code = 950)\nPrimary tumor in ectopic thyroid tissue" ], [ "001", "OBSOLETE DATA CONVERTED V0203\nSee code 010\n\nSolitary tumor" ], [ "002", "OBSOLETE DATA CONVERTED V0203\nSee code 020\n\nMultifocal tumor [AJCC descriptor (m)]" ], [ "010", "Solitary tumor (s)" ], [ "020", "Multifocal tumor (m)" ], [ "988", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 988 will result in an edit error.)" ], [ "999", "Unknown or no information\nNot documented in patient record" ] ]
+}

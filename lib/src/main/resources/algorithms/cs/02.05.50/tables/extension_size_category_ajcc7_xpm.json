@@ -1,0 +1,23 @@
+{
+  "id" : "extension_size_category_ajcc7_xpm",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension Size Category AJCC7",
+  "title" : "Extension Size Category AJCC 7 Table",
+  "notes" : "**Note**:  For CS Extension codes 150-180, the T for AJCC 7 staging is assigned based on the values of tumor basal diameter, recorded in CS Site-Specific Factor 2, and thickness, recorded in CS Site-Specific Factor 3.  Basal diameter and thickness are mapped to Tumor Size Categories in the Tumor Size Category AJCC 7 Table, and the CS Extension codes and Tumor Size Categories are mapped to T as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:18.538Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "CS Extension",
+    "type" : "INPUT"
+  }, {
+    "key" : "t_category",
+    "name" : "Tumor Size Category",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "T Category",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "150", "1", "VALUE:T1a" ], [ "160", "1", "VALUE:T1b" ], [ "170", "1", "VALUE:T1c" ], [ "180", "1", "VALUE:T1d" ], [ "150", "2", "VALUE:T2a" ], [ "160", "2", "VALUE:T2b" ], [ "170", "2", "VALUE:T2c" ], [ "180", "2", "VALUE:T2d" ], [ "150", "3", "VALUE:T3a" ], [ "160", "3", "VALUE:T3b" ], [ "170", "3", "VALUE:T3c" ], [ "180", "3", "VALUE:T3d" ], [ "150", "4", "VALUE:T4a" ], [ "160", "4", "VALUE:T4b" ], [ "170", "4", "VALUE:T4c" ], [ "180", "4", "VALUE:T4d" ], [ "150", "9", "VALUE:TX" ], [ "160", "9", "VALUE:TX" ], [ "170", "9", "VALUE:TX" ], [ "180", "9", "VALUE:TX" ] ]
+}

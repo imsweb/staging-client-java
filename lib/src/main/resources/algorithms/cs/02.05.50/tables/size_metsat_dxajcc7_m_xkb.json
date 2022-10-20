@@ -1,0 +1,24 @@
+{
+  "id" : "size_metsat_dxajcc7_m_xkb",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Size Mets at DX AJCC7 M",
+  "title" : "Size Mets at DX AJCC 7 M Table",
+  "subtitle" : "CS Mets at DX Codes 00 and 99",
+  "notes" : "**Note**:  For CS Mets at DX codes 00 and 99, the M category for AJCC 7 staging is assigned based on the value of CS Tumor Size as shown in this table.",
+  "last_modified" : "2015-05-27T16:19:52.466Z",
+  "definition" : [ {
+    "key" : "size",
+    "name" : "CS Tumor Size",
+    "type" : "INPUT"
+  }, {
+    "key" : "mets",
+    "name" : "CS Mets at DX ",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc7_m",
+    "name" : "AJCC 7 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000-997, 999", "00", "VALUE:M0" ], [ "998", "00", "VALUE:M1NOS" ], [ "000-997, 999", "99", "VALUE:M0" ], [ "998", "99", "VALUE:M1NOS" ] ]
+}

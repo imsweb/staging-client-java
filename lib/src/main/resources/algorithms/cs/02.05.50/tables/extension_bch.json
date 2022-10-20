@@ -1,0 +1,36 @@
+{
+  "id" : "extension_bch",
+  "algorithm" : "cs",
+  "version" : "02.05.50",
+  "name" : "Extension",
+  "title" : "CS Extension",
+  "notes" : "**Note 1**:  An E lesion is defined as disease that involves extralymphatic site(s), or sites other than lymph nodes and other lymphatic structures.  Other lymphatic structures include spleen (see note 4), thymus gland (C37.9), and Waldeyer's ring (tonsils) (C02.4, C09.0-C09.9, C11.1, C14.2),.  Any lymphatic structure (other than spleen) is coded the same as a lymph node region (codes 100, 200, 300).\n\n**Note 2**:  While spleen is considered a lymphatic structure, it is coded separately (see codes 120, 220, 230, 320, 330). S equals spleen involvement.\n\n**Note 3**:  If there is no mention of lymphatic or extralymphatic involvement but several diagnostic procedures were done, interpret as no involvement.\n\n**Note 4**:  Involvement of adjacent soft tissue does not alter the classification.",
+  "footnotes" : "- AJCC stage group for this schema is derived directly from CS Extension and CS Site-Specific Factor 2, as shown in the AJCC TNM 7 Stage table. The AJCC Stage Groups I-IV are subdivided into A and B based on the presence or absence of symptoms coded in CS Site-Specific Factor 2.\n- AJCC stage group for this schema is derived directly from CS Extension and CS Site-Specific Factor 2, as shown in the AJCC TNM 6 Stage table. The AJCC Stage Groups I-IV are subdivided into A and B based on the presence or absence of symptoms as coded in CS Site-Specific Factor 2.",
+  "last_modified" : "2015-05-27T16:19:09.113Z",
+  "definition" : [ {
+    "key" : "extension",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc7_t",
+    "name" : "AJCC 7 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ajcc6_t",
+    "name" : "AJCC 6 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t77",
+    "name" : "Summary Stage 1977 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "t2000",
+    "name" : "Summary Stage 2000 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "Involvement of a single lymph node region\n\nStated as Stage I", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "110", "Localized involvement of a single extralymphatic organ/site in the absence of any lymph node involvement\nMultifocal involvement of one extralymphatic organ/site\n\nStated as Stage IE", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "120", "Involvement of spleen only\n\nStated as Stage IS", "VALUE:NA", "VALUE:NA", "VALUE:L", "VALUE:L" ], [ "200", "Involvement of two or more lymph node regions on the SAME side of the diaphragm\n\nStated as Stage II", "VALUE:NA", "VALUE:NA", "VALUE:RNOS", "VALUE:RNOS" ], [ "210", "Localized involvement of a single extralymphatic organ/site\nWITH involvement of its regional lymph node(s)\nWITH or WITHOUT involvement of other lymph node(s) on the SAME side of the diaphragm\n\nDirect extension to adjacent organs or tissues\n\nStated as Stage IIE", "VALUE:NA", "VALUE:NA", "VALUE:RNOS", "VALUE:RNOS" ], [ "220", "Involvement of spleen\nPLUS lymph node(s) BELOW the diaphragm\n\nStated as Stage IIS", "VALUE:NA", "VALUE:NA", "VALUE:RNOS", "VALUE:RNOS" ], [ "230", "Involvement of spleen \nPLUS involvement of a single extralymphatic organ/site BELOW the diaphragm\nWITH/WITHOUT involvement of lymph node(s) BELOW the diaphragm\n\nStated as Stage IIES", "VALUE:NA", "VALUE:NA", "VALUE:RNOS", "VALUE:RNOS" ], [ "300", "Involvement of lymph node regions on BOTH sides of the diaphragm\n\nStated as Stage III", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "310", "Involvement of an extralymphatic organ/site \nPLUS involvement of lymph node(s) on the OPPOSITE side of the diaphragm\n\nStated as Stage IIIE", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "320", "Involvement of the spleen \nPLUS lymph node(s) ABOVE the diaphragm\n\nInvolvement of spleen \nPLUS lymph nodes on both sides of the diaphragm.\n\nStated as Stage IIIS", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "330", "320 + 310\n\nInvolvement of the spleen \nPLUS a single extralymphatic site ABOVE the diaphragm\nWITH or WITHOUT involvement of lymph node(s)\n\nInvolvement of the spleen \nPLUS involvement of lymph node region(s) ABOVE the diaphragm\nPLUS involvement of a single extralymphatic organ/site on either side of the diaphragm\n\nStated as Stage IIIES", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "800", "Diffuse or disseminated (multifocal) involvement of ONE OR MORE extralymphatic organ(s)/site(s)\nWITH OR WITHOUT associated lymph node involvement\n\nMultifocal involvement of MORE THAN ONE extralymphatic organ/site\n\nInvolvement of isolated extralymphatic organ in absence of involvement of\nadjacent lymph nodes, but in conjunction with disease in distant sites\n\nMetastasis/involvement:\n    Bone marrow\n    Liver\n    Nodular involvement of lung(s)\n\nStated as Stage IV", "VALUE:NA", "VALUE:NA", "VALUE:D", "VALUE:D" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in patient record", "VALUE:NA", "VALUE:NA", "VALUE:U", "VALUE:U" ] ]
+}
