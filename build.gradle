@@ -7,9 +7,6 @@ plugins {
     id "org.sonarqube" version "3.4.0.2513"
 }
 
-group = 'com.imsweb'
-version = '9.2-SNAPSHOT'
-
 sonarqube {
     properties {
         property "sonar.projectKey", "imsweb_staging-client-java"
@@ -31,6 +28,9 @@ subprojects {
     apply plugin: "com.github.ben-manes.versions"
     apply plugin: 'org.sonatype.gradle.plugins.scan'
     apply plugin: "org.sonarqube"
+
+    group = 'com.imsweb'
+    version = '9.2-SNAPSHOT'
 
     // fail the build if there are compiler warnings
     tasks.withType(JavaCompile) {
