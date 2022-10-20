@@ -1,223 +1,26 @@
 plugins {
-    id 'java-library'
+    id "io.codearte.nexus-staging" version "0.30.0"  // logs into Sonotype OSS and does a "Close" and "Release"
     id 'checkstyle'
     id "com.github.spotbugs" version "5.0.13"
-    id 'jacoco'
-    id 'maven-publish'
-    id 'signing'
-    id "io.codearte.nexus-staging" version "0.30.0"  // logs into Sonotype OSS and does a "Close" and "Release"
-    id 'com.adarshr.test-logger' version '3.2.0'
-    id "com.github.ben-manes.versions" version "0.43.0"
-    id 'org.sonatype.gradle.plugins.scan' version '2.5.2'
-    id "org.sonarqube" version "3.4.0.2513"
 }
 
-group = 'com.imsweb'
-version = '9.1'
-description = 'Java client library for staging calculations'
+subprojects {
+    apply plugin: "com.github.spotbugs"
 
-// fail the build if there are compiler warnings
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
-    options.compilerArgs << "-Xlint:all" << "-Xlint:-serial" << "-Werror"
-}
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
-
-    withJavadocJar()
-    withSourcesJar()
-}
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    spotbugs 'com.github.spotbugs:spotbugs:4.7.3'
-
-    api "com.fasterxml.jackson.core:jackson-core:2.13.4"
-    api "com.fasterxml.jackson.core:jackson-annotations:2.13.4"
-    api "com.fasterxml.jackson.core:jackson-databind:2.13.4.2"
-
-    implementation "org.cache2k:cache2k-api:2.6.1.Final"
-    runtimeOnly "org.cache2k:cache2k-core:2.6.1.Final"
-
-    implementation 'org.apache.commons:commons-lang3:3.12.0'
-    implementation 'org.ahocorasick:ahocorasick:0.6.3'
-
-    implementation 'org.slf4j:slf4j-api:2.0.3'
-
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.1'
-    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.9.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.1'
-    testImplementation 'org.assertj:assertj-core:3.23.1'
-    testImplementation 'org.slf4j:slf4j-simple:2.0.3'
-    testImplementation 'org.zeroturnaround:zt-zip:1.15'
-    testImplementation 'com.google.code.bean-matchers:bean-matchers:0.14'
-    testImplementation 'com.imsweb:seerapi-client-java:5.3'
-}
-
-jar {
-    manifest {
-        attributes('Implementation-Title': project.name,
-                'Implementation-Version': archiveVersion,
-                'Implementation-Vendor': group,
-                'Created-By': System.properties['java.vm.version'] + ' (' + System.properties['java.vm.vendor'] + ')',
-                'Built-By': System.getProperty('user.name'),
-                'Built-Date': new Date(),
-                'Built-JDK': System.getProperty('java.version'),
-                'Automatic-Module-Name': 'com.imsweb.algorithms.staging'
-        )
+    checkstyle {
+        toolVersion = '8.29'
+        configFile = file("../config/checkstyle/checkstyle.xml")
     }
-}
 
-test {
-    useJUnitPlatform()
-}
-
-checkstyle {
-    toolVersion = '8.29'
-    configFile = file('config/checkstyle/checkstyle.xml')
-}
-
-spotbugs {
-    excludeFilter = file('config/spotbugs/spotbugs-exclude.xml')
-}
-
-jacocoTestReport {
-    reports {
-        xml.required = true
+    spotbugs {
+        excludeFilter = file("../config/spotbugs/spotbugs-exclude.xml")
     }
-}
-test.finalizedBy jacocoTestReport
 
-sonarqube {
-    properties {
-        property "sonar.projectKey", "imsweb_staging-client-java"
-        property "sonar.organization", "imsweb"
-        property "sonar.host.url", "https://sonarcloud.io"
-        property "sonar.cpd.exclusions", "**/com/imsweb/staging/entities/impl/**"
-        property "sonar.coverage.exclusions", "**/UpdaterUtils.java"
-    }
-}
-
-def isNonStable = { String version ->
-    def stableKeyword = ['RELEASE', 'FINAL', 'GA'].any { qualifier -> version.toUpperCase().contains(qualifier) }
-    def regex = /^[0-9,.v-]+$/
-    return !stableKeyword && !(version ==~ regex)
-}
-
-dependencyUpdates {
-    // ignore alpha, beta, etc. versions
-    rejectVersionIf { selection ->
-        isNonStable(selection.candidate.version)
-    }
-}
-
-// Nexus vulnerability scan (see https://github.com/sonatype-nexus-community/scan-gradle-plugin)
-ossIndexAudit {
-    outputFormat = 'DEPENDENCY_GRAPH'
-    printBanner = false
-}
-check.dependsOn 'ossIndexAudit'
-
-// run the full CS integration test suite
-task csIntegrationTest(type: JavaExec) {
-    mainClass.set('com.imsweb.staging.cs.CsIntegrationTest')
-    classpath = sourceSets.test.runtimeClasspath
-}
-
-// run the full CS integration test suite
-task zipAlgorithms(type: JavaExec) {
-    mainClass.set('com.imsweb.staging.zip.ZipAlgorithms')
-    classpath = sourceSets.test.runtimeClasspath
-}
-
-// don't try to release a snapshot to a non-snapshot repository, that won't work anyway
-if (version.endsWith('-SNAPSHOT')) {
-    gradle.startParameter.excludedTaskNames += 'signMavenJavaPublication'
-    gradle.startParameter.excludedTaskNames += 'closeAndReleaseRepository'
-}
-
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            artifactId = 'staging-client-java'
-            from components.java
-            versionMapping {
-                usage('java-api') {
-                    fromResolutionOf('runtimeClasspath')
-                }
-                usage('java-runtime') {
-                    fromResolutionResult()
-                }
-            }
-            pom {
-                name = 'Staging Java Client'
-                description = 'A cancer staging client library'
-                url = 'https://github.com/imsweb/staging-client-java'
-                inceptionYear = '2015'
-
-                licenses {
-                    license {
-                        name = 'A modified BSD License (BSD)'
-                        url = 'https://github.com/imsweb/staging-client-java/blob/master/LICENSE'
-                        distribution = 'repo'
-                    }
-                }
-
-                developers {
-                    developer {
-                        id = 'ctmay4'
-                        name = 'Chuck May'
-                        email = 'mayc@imsweb.com'
-                    }
-                }
-
-                scm {
-                    url = 'https://github.com/imsweb/staging-client-java'
-                    connection = 'scm:https://github.com/imsweb/staging-client-java.git'
-                    developerConnection = 'scm:git@github.com:imsweb/staging-client-java.git'
-                }
-            }
-        }
-    }
-    repositories {
-        maven {
-            def releasesRepoUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2"
-            def snapshotsRepoUrl = "https://oss.sonatype.org/content/repositories/snapshots"
-            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
-
-            credentials {
-                username = project.findProperty('nexusUsername') ?: ''
-                password = project.findProperty('nexusPassword') ?: ''
-            }
-        }
-    }
-}
-
-signing {
-    def signingKey = project.findProperty('signingKey') ?: ''
-    def signingPassword = project.findProperty('signingPassword') ?: ''
-
-    useInMemoryPgpKeys(signingKey, signingPassword)
-
-    sign publishing.publications.mavenJava
-}
-
-javadoc {
-    if (JavaVersion.current().isJava9Compatible()) {
-        options.addBooleanOption('html5', true)
-        options.addStringOption('Xdoclint:none', '-quiet')
-    }
-}
-
-// configure nexus staging plugin
-nexusStaging {
-    numberOfRetries = 50
-    delayBetweenRetriesInMillis = 5000
+    // configure nexus staging plugin
+    nexusStaging {
+        numberOfRetries = 50
+        delayBetweenRetriesInMillis = 5000
+    }    
 }
 
 wrapper {
