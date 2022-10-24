@@ -1,5 +1,10 @@
 rootProject.name = 'staging-client'
 include 'lib'
+include 'algorithm-cs'
+include 'algorithm-tnm'
+include 'algorithm-eod'
+include 'algorithm-toronto'
+include 'updater'
 
 // change subproject name
-project(":lib").name = "staging-client-java"
+project(":lib").name = 'staging-client-java'

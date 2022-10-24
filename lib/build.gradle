@@ -1,5 +1,4 @@
 plugins {
-
 }
 
 description = 'Java client library for staging calculations'
@@ -18,15 +17,6 @@ dependencies {
     implementation 'org.ahocorasick:ahocorasick:0.6.3'
 
     implementation 'org.slf4j:slf4j-api:2.0.3'
-
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.1'
-    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.9.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.1'
-    testImplementation 'org.assertj:assertj-core:3.23.1'
-    testImplementation 'org.slf4j:slf4j-simple:2.0.3'
-    testImplementation 'org.zeroturnaround:zt-zip:1.15'
-    testImplementation 'com.google.code.bean-matchers:bean-matchers:0.14'
-    testImplementation 'com.imsweb:seerapi-client-java:5.3'
 }
 
 // run the full CS integration test suite
@@ -39,12 +29,6 @@ task csIntegrationTest(type: JavaExec) {
 task zipAlgorithms(type: JavaExec) {
     mainClass.set('com.imsweb.staging.zip.ZipAlgorithms')
     classpath = sourceSets.test.runtimeClasspath
-}
-
-// don't try to release a snapshot to a non-snapshot repository, that won't work anyway
-if (version.endsWith('-SNAPSHOT')) {
-    gradle.startParameter.excludedTaskNames += 'signMavenJavaPublication'
-    gradle.startParameter.excludedTaskNames += 'closeAndReleaseRepository'
 }
 
 publishing {
