@@ -21,6 +21,8 @@ dependencies {
 
     testFixturesImplementation 'com.imsweb:seerapi-client-java:5.3'
     testFixturesImplementation 'org.slf4j:slf4j-simple:2.0.3'
+    testFixturesImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.1'
+    testFixturesImplementation 'org.junit.jupiter:junit-jupiter-params:5.9.1'
 }
 
 // run the full CS integration test suite

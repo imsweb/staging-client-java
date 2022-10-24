@@ -24,14 +24,13 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.imsweb.staging.IntegrationUtils;
-import com.imsweb.staging.IntegrationUtils.IntegrationResult;
 import com.imsweb.staging.Staging;
 import com.imsweb.staging.StagingFileDataProvider;
 import com.imsweb.staging.StagingTest;
 import com.imsweb.staging.cs.CsDataProvider.CsVersion;
 import com.imsweb.staging.cs.CsStagingData.CsOutput;
 import com.imsweb.staging.cs.CsStagingData.CsStagingInputBuilder;
+import com.imsweb.staging.cs.IntegrationUtils.IntegrationResult;
 import com.imsweb.staging.entities.Error.Type;
 import com.imsweb.staging.entities.Input;
 import com.imsweb.staging.entities.Range;
