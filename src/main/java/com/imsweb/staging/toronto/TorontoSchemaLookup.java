@@ -12,14 +12,14 @@ import com.imsweb.staging.entities.SchemaLookup;
 
 import static com.imsweb.staging.entities.StagingData.HISTOLOGY_KEY;
 import static com.imsweb.staging.entities.StagingData.PRIMARY_SITE_KEY;
-import static com.imsweb.staging.eod.EodStagingData.EodInput.AGE_AT_DX;
+import static com.imsweb.staging.toronto.TorontoStagingData.TorontoInput.AGE_DX;
 
 public class TorontoSchemaLookup extends SchemaLookup {
 
     private static final Set<String> _ALLOWED_KEYS = Collections.unmodifiableSet(new HashSet<>(Arrays.asList(
             PRIMARY_SITE_KEY,
             HISTOLOGY_KEY,
-            AGE_AT_DX.toString())));
+            AGE_DX.toString())));
 
     /**
      * Constructor
