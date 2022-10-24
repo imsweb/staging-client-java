@@ -3,5 +3,6 @@ plugins {
 
 dependencies {
     implementation project(':staging-client-java')
-    implementation project(':updater')
+
+    testImplementation(testFixtures(project(':staging-client-java')))
 }

@@ -47,7 +47,7 @@ import com.imsweb.staging.util.Stopwatch;
  * 6. Gets the schemas from the API, initializes them (including the involved tables), and saves them
  * 7. Saves the schema identifiers into the ids.txt in the schemas directory
  */
-@SuppressWarnings({"java:S1192"})
+@SuppressWarnings({"java:S1192", "ConstantConditions"})
 public final class UpdaterUtils {
 
     private static final Logger _LOG = LoggerFactory.getLogger(UpdaterUtils.class);
@@ -65,7 +65,6 @@ public final class UpdaterUtils {
         update(algorithm, version, glossaryCategories, null);
     }
 
-        @SuppressWarnings("ConstantConditions")
     public static void update(String algorithm, String version, Set<String> glossaryCategories, Path outputDir) throws IOException {
         Stopwatch stopwatch = Stopwatch.create();
 

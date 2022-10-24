@@ -1,4 +1,5 @@
 plugins {
+    id 'java-test-fixtures'
 }
 
 description = 'Java client library for staging calculations'
@@ -17,6 +18,9 @@ dependencies {
     implementation 'org.ahocorasick:ahocorasick:0.6.3'
 
     implementation 'org.slf4j:slf4j-api:2.0.3'
+
+    testFixturesImplementation 'com.imsweb:seerapi-client-java:5.3'
+    testFixturesImplementation 'org.slf4j:slf4j-simple:2.0.3'
 }
 
 // run the full CS integration test suite

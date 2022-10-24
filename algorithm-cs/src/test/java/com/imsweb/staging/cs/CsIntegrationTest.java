@@ -19,10 +19,9 @@ import java.util.zip.GZIPInputStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.imsweb.staging.IntegrationUtils;
-import com.imsweb.staging.IntegrationUtils.IntegrationResult;
 import com.imsweb.staging.Staging;
 import com.imsweb.staging.cs.CsDataProvider.CsVersion;
+import com.imsweb.staging.cs.IntegrationUtils.IntegrationResult;
 import com.imsweb.staging.util.Stopwatch;
 
 @SuppressWarnings("java:S2187")
