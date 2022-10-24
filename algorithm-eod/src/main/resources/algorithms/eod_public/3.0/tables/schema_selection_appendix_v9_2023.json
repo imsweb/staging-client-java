@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_appendix_v9_2023",
+  "algorithm" : "eod_public",
+  "version" : "3.0",
+  "name" : "Schema Selection Appendix [V9: 2023+]",
+  "title" : "Schema selection for Appendix [V9: 2023+]",
+  "last_modified" : "2022-08-15T12:38:33.918Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C181", "8000-8149, 8154, 8160-8231, 8243-8248, 8250-8682, 8690-8700, 8720-8790", "2023-9998,9999", "MATCH" ] ]
+}
