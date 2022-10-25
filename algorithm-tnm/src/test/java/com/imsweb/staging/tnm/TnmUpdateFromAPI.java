@@ -11,11 +11,8 @@ import com.imsweb.staging.updater.UpdaterUtils;
  */
 public class TnmUpdateFromAPI {
 
-    private static final String _ALGORITHM = "tnm";
-    private static final String _VERSION = "2.0";
-
     public static void main(String[] args) throws IOException {
-        UpdaterUtils.update(_ALGORITHM, _VERSION, new HashSet<>(Collections.singletonList("STAGING")));
+        UpdaterUtils.update("tnm", "2.0", new HashSet<>(Collections.singletonList("STAGING")));
     }
 
 }

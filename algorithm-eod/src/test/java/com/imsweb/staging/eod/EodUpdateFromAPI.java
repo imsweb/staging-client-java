@@ -12,10 +12,8 @@ import com.imsweb.staging.updater.UpdaterUtils;
  */
 public class EodUpdateFromAPI {
 
-    private static final String _ALGORITHM = "eod";
-
     public static void main(String[] args) throws IOException {
-        UpdaterUtils.update(_ALGORITHM, "3.0", new HashSet<>(Collections.singletonList("STAGING")), Paths.get("c:/tmp"));
+        UpdaterUtils.update("eod", "3.0", new HashSet<>(Collections.singletonList("STAGING")), Paths.get("c:/tmp"));
     }
 
 }
