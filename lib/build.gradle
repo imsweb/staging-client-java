@@ -24,3 +24,10 @@ dependencies {
     testFixturesImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.1'
     testFixturesImplementation 'org.junit.jupiter:junit-jupiter-params:5.9.1'
 }
+
+// zip up all algorithms
+task zipAlgorithms(type: JavaExec) {
+    mainClass.set('com.imsweb.staging.zip.ZipAlgorithms')
+    classpath = sourceSets.test.runtimeClasspath
+}
+
