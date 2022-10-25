@@ -26,4 +26,4 @@ jobs:
       - name: CS Comparison
         run: |
           chmod +x gradlew
-          ./gradlew csIntegrationTest
+          ./gradlew :staging-client-java-cs:csIntegrationTest
