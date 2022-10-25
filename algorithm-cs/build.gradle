@@ -7,3 +7,9 @@ dependencies {
     testImplementation 'org.slf4j:slf4j-simple:2.0.3'
     testImplementation(testFixtures(project(':staging-client-java')))
 }
+
+// run the full CS integration test suite
+task csIntegrationTest(type: JavaExec) {
+    mainClass.set('com.imsweb.staging.cs.CsIntegrationTest')
+    classpath = sourceSets.test.runtimeClasspath
+}
