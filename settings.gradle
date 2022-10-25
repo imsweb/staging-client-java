@@ -5,5 +5,9 @@ include 'algorithm-tnm'
 include 'algorithm-eod'
 include 'algorithm-toronto'
 
-// change subproject name
+// change subproject names
 project(":lib").name = 'staging-client-java'
+project(":algorithm-cs").name = 'staging-client-java-cs'
+project(":algorithm-tnm").name = 'staging-client-java-tnm'
+project(":algorithm-eod").name = 'staging-client-java-eod'
+project(":algorithm-toronto").name = 'staging-client-java-toronto'
