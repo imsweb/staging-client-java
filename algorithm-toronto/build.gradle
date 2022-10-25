@@ -7,3 +7,4 @@ dependencies {
     testImplementation 'org.slf4j:slf4j-simple:2.0.3'
     testImplementation(testFixtures(project(':staging-client-java')))
 }
+

@@ -13,3 +13,4 @@ task csIntegrationTest(type: JavaExec) {
     mainClass.set('com.imsweb.staging.cs.CsIntegrationTest')
     classpath = sourceSets.test.runtimeClasspath
 }
+

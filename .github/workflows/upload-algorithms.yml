@@ -27,10 +27,14 @@ jobs:
         if: ${{startsWith(github.ref, 'refs/tags/v') }}
         run: |
           chmod +x gradlew
-          ./gradlew :staging-client:zipAlgorithms
+          ./gradlew zipAlgorithms
 
       - name: Add algorithms to release
         uses: softprops/action-gh-release@v1
         if: ${{startsWith(github.ref, 'refs/tags/v') }}
         with:
-          files: build/algorithms/*.zip
+          files: |
+            algorithm-cs/build/algorithms/*.zip
+            algorithm-eod/build/algorithms/*.zip
+            algorithm-tnm/build/algorithms/*.zip
+            algorithm-toronto/build/algorithms/*.zip
