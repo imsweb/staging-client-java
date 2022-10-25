@@ -5,8 +5,6 @@ plugins {
 description = 'Java client library for staging calculations'
 
 dependencies {
-    spotbugs 'com.github.spotbugs:spotbugs:4.7.3'
-
     api "com.fasterxml.jackson.core:jackson-core:2.13.4"
     api "com.fasterxml.jackson.core:jackson-annotations:2.13.4"
     api "com.fasterxml.jackson.core:jackson-databind:2.13.4.2"
