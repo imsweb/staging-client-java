@@ -120,7 +120,7 @@ public final class UpdaterUtils {
         _LOG.info("{} valid schema idenfiers found.", schemaIds.size());
 
         // get root algorithms directory in src/main/resources or use the passed in Path
-        Path resourceDirectory = Paths.get("src", "main", "resources");
+        Path resourceDirectory = Paths.get("algorithm-" + algorithm, "src", "main", "resources");
         String baseDirectory = (outputDir != null) ? outputDir.toFile().getAbsolutePath() : resourceDirectory.toFile().getAbsolutePath();
 
         // add the algorithm and version to the path

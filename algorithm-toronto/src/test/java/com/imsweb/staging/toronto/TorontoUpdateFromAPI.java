@@ -11,10 +11,8 @@ import com.imsweb.staging.updater.UpdaterUtils;
  */
 public class TorontoUpdateFromAPI {
 
-    private static final String _ALGORITHM = "toronto";
-
     public static void main(String[] args) throws IOException {
-        UpdaterUtils.update(_ALGORITHM, "0.2", new HashSet<>(Collections.singletonList("STAGING")));
+        UpdaterUtils.update("toronto", "0.3", new HashSet<>(Collections.singletonList("STAGING")));
     }
 
 }

@@ -1,0 +1,19 @@
+{
+  "id" : "chromosome_1q_status_14467",
+  "algorithm" : "toronto",
+  "version" : "0.3",
+  "name" : "Chromosome 1q Status",
+  "title" : "Chromosome 1q Status: Gain of heterozygosity (GOH)",
+  "notes" : "**Note 1:** **Collect for all years at this time** This SSDI is effective for diagnosis years xxxx\n* For cases diagnosed xxxx-xxxx, leave this SSDI blank\n\n**Note 2:** Physician statement of Chromosome 1q gain can be used to code this data item.\n\n**Note 3:** This is a special molecular diagnostic test performed on tumor tissue to identify loss of genetic material normally found on the short arm of one of the patient's two copies of chromosome 1. A normal cell will contain two complete copies of each chromosome, one from each parent, and this normal state is termed heterozygous. Gain of heterozygosity (GOH) is an abnormal state reflecting gain of the whole arm of chromosome 1q following a chromosomal translocation event.",
+  "last_modified" : "2022-10-03T15:30:09.120Z",
+  "definition" : [ {
+    "key" : "chrom_1q_status",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Chromosome 1q gain/GOH not identified/not present" ], [ "1", "Chromosome 1q gain/GOH identified/present" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nCannot be determined by the pathologist\nChromosome 1q gain/GOH not assessed or unknown if assessed" ], [ "", "N/A - Diagnosis year is prior to xxxx" ] ]
+}

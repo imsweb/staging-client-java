@@ -1,5 +1,5 @@
 plugins {
-    id 'io.codearte.nexus-staging' version '0.30.0'  // logs into Sonotype OSS and does a "Close" and "Release"
+    //id 'io.codearte.nexus-staging' version '0.30.0'  // logs into Sonotype OSS and does a "Close" and "Release"
     id 'com.github.spotbugs' version '5.0.13'
     id 'com.adarshr.test-logger' version '3.2.0'
     id 'com.github.ben-manes.versions' version '0.43.0'
@@ -17,11 +17,11 @@ sonarqube {
     }
 }
 
-// configure nexus staging plugin
-nexusStaging {
-    numberOfRetries = 50
-    delayBetweenRetriesInMillis = 5000
-}
+//// configure nexus staging plugin
+//nexusStaging {
+//    numberOfRetries = 50
+//    delayBetweenRetriesInMillis = 5000
+//}
 
 subprojects {
     apply plugin: 'java-library'
@@ -136,7 +136,7 @@ subprojects {
     // don't try to release a snapshot to a non-snapshot repository, that won't work anyway
     if (version.endsWith('-SNAPSHOT')) {
         gradle.startParameter.excludedTaskNames += 'signMavenJavaPublication'
-        gradle.startParameter.excludedTaskNames += 'closeAndReleaseRepository'
+        //gradle.startParameter.excludedTaskNames += 'closeAndReleaseRepository'
     }
 
     publishing {

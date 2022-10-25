@@ -40,7 +40,7 @@ class TorontoStagingTest extends StagingTest {
 
     @BeforeAll
     public static void init() {
-        _STAGING = Staging.getInstance(TorontoDataProvider.getInstance(TorontoVersion.V0_2));
+        _STAGING = Staging.getInstance(TorontoDataProvider.getInstance(TorontoVersion.V0_3));
     }
 
     @Override
@@ -50,7 +50,7 @@ class TorontoStagingTest extends StagingTest {
 
     @Override
     public String getVersion() {
-        return TorontoVersion.V0_2.getVersion();
+        return TorontoVersion.V0_3.getVersion();
     }
 
     @Override
@@ -69,7 +69,7 @@ class TorontoStagingTest extends StagingTest {
 
     @Test
     void testVersionInitializationTypes() {
-        Staging staging10 = Staging.getInstance(TorontoDataProvider.getInstance(TorontoVersion.V0_2));
+        Staging staging10 = Staging.getInstance(TorontoDataProvider.getInstance(TorontoVersion.V0_3));
         assertThat(staging10.getVersion()).isEqualTo(TorontoVersion.LATEST.getVersion());
 
         Staging stagingLatest = Staging.getInstance(TorontoDataProvider.getInstance());
@@ -202,7 +202,7 @@ class TorontoStagingTest extends StagingTest {
         assertThat(lookup.get(0).getId()).isEqualTo(schemaId);
 
         // now invalidate the cache
-        TorontoDataProvider.getInstance(TorontoVersion.V0_2).invalidateCache();
+        TorontoDataProvider.getInstance(TorontoVersion.V0_3).invalidateCache();
 
         // try the lookup again
         lookup = _STAGING.lookupSchema(new TorontoSchemaLookup(site, hist));

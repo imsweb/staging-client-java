@@ -1,0 +1,18 @@
+{
+  "id" : "toronto_n_86566",
+  "algorithm" : "toronto",
+  "version" : "0.3",
+  "name" : "Toronto N",
+  "title" : "Toronto N",
+  "last_modified" : "2022-06-24T15:32:57.146Z",
+  "definition" : [ {
+    "key" : "eod_regional_nodes",
+    "name" : "EOD RN",
+    "type" : "INPUT"
+  }, {
+    "key" : "toronto_n",
+    "name" : "Toronto N",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "000-070,888", "VALUE:N0" ], [ "100-800", "VALUE:N1" ], [ "999", "VALUE:NX" ] ]
+}

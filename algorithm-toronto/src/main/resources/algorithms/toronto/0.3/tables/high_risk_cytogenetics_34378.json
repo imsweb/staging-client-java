@@ -1,0 +1,19 @@
+{
+  "id" : "high_risk_cytogenetics_34378",
+  "algorithm" : "toronto",
+  "version" : "0.3",
+  "name" : "High Risk Cytogenetics",
+  "title" : "High Risk Cytogenetics",
+  "notes" : "**Note 1:** **Collect for all years at this time** This SSDI is effective for diagnosis years xxxx    \n* For cases diagnosed xxxx-xxxx, leave this SSDI blank \n\n**Note 2:** Physician statement of FKHR-PAX3 or FKHR-PAX cytogenetics can be used to code this data item.\n\n**Note 3:** If the presence/absence of FKHR-PAX3 or FKHR-PAX cytogenetics determined by available test results differs from the physician statement of presence/absence, the physician’s statement takes precedence. \n\n**Note 4:** If there is no mention of FKHR-PAX3 or FKHR-PAX cytogenetics, code 9",
+  "last_modified" : "2022-10-03T15:31:42.113Z",
+  "definition" : [ {
+    "key" : "high_risk_cytogenetics",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "FKHR-PAX3 or FKHR-PAX cytogenetics not present" ], [ "1", "FKHR-PAX3 cytogenetics present" ], [ "2", "FKHR-PAX cytogenetics present\nWITH or WITHOUT FKHR-PAX3 cytogenetics" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nCannot be determined by the pathologist\nFKHR-PAX3 or FKHR-PAX cytogenetics not assessed or unknown if assessed" ], [ "", "N/A - Diagnosis year is prior to xxxx" ] ]
+}
