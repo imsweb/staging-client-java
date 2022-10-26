@@ -8,7 +8,7 @@ A cancer staging client library for Java applications.
 
 ## Supported staging algorithms
 
-In prior versions of this library the algorithms were released in separate repositories. They are all now included with this library.
+The library artifact does not contain algorithms. There are separate artifacts which bundle each algorithm. 
 
 ### Toronto Pedatric Staging 0.3
 
