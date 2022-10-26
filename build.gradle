@@ -51,6 +51,7 @@ subprojects {
         testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.1'
         testImplementation 'org.assertj:assertj-core:3.23.1'
         testImplementation 'com.google.code.bean-matchers:bean-matchers:0.14'
+        testImplementation 'org.slf4j:slf4j-simple:2.0.3'
     }
 
     // fail the build if there are compiler warnings
