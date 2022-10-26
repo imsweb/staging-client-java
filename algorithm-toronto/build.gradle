@@ -1,9 +1,5 @@
-plugins {
-}
-
 dependencies {
     implementation project(':staging-client-java')
 
     testImplementation(testFixtures(project(':staging-client-java')))
 }
-

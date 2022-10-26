@@ -2,8 +2,6 @@ plugins {
     id 'java-test-fixtures'
 }
 
-description = 'Java client library for staging calculations'
-
 dependencies {
     api "com.fasterxml.jackson.core:jackson-core:2.13.4"
     api "com.fasterxml.jackson.core:jackson-annotations:2.13.4"
