@@ -177,11 +177,11 @@ For example, for the Collaborative Staging algorithm, the call will look like th
 Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.LATEST));
 ```
 
-There are some algorithms that are distributed outside of the library.  If you need to instantiate a `Staging` instance with an external algorithm use 
-the `ExternalStagingFileDataProvider`.
+Each release contains links to all the current algorithms. There could be times when you want to load an older version of an algorithm. You can get the algorithm
+zip file from the release page and load it using `ExternalStagingFileDataProvider`. 
 
 ```java
-Path path = Paths.get("C:/path/to/algorithm", "external_algorithm.zip");
+Path path = Paths.get("C:/path/to/algorithm", "tnm-1.9.zip");
 try (InputStream is = Files.newInputStream(path)) {
     Staging staging = Staging.getInstance(new ExternalStagingFileDataProvider(is));
 
