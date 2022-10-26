@@ -42,7 +42,7 @@ subprojects {
     apply plugin: "org.sonarqube"
 
     group = 'com.imsweb'
-    version = '10.0'
+    version = '10.0.0'
 
     dependencies {
         spotbugs 'com.github.spotbugs:spotbugs:4.7.3'
