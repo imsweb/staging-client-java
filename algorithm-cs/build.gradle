@@ -1,0 +1,11 @@
+dependencies {
+    implementation project(':staging-client-java')
+
+    testImplementation(testFixtures(project(':staging-client-java')))
+}
+
+// run the full CS integration test suite
+task csIntegrationTest(type: JavaExec) {
+    mainClass.set('com.imsweb.staging.cs.CsIntegrationTest')
+    classpath = sourceSets.test.runtimeClasspath
+}

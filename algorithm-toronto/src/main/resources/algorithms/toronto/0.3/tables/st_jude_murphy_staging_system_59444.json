@@ -1,0 +1,19 @@
+{
+  "id" : "st_jude_murphy_staging_system_59444",
+  "algorithm" : "toronto",
+  "version" : "0.3",
+  "name" : "St. Jude/Murphy Staging System",
+  "title" : "St. Jude/Murphy Staging System",
+  "notes" : "**Note 1:** **Collect for all years at this time** This SSDI is effective for diagnosis years xxxx    \n* For cases diagnosed xxxx-xxxx, leave this SSDI blank\n\n**Note 2:** Physician statement of the St Jude/Murphy stage can be used to code this data item\n\n**Note 3:** If there is more than one St Jude/Murphy stage provided, code the stage documented prior to treatment. \n* If no stage is provided before treatment, or it’s unknown if that stage is prior to treatment, then code the available stage\n\n**Note 4:** Extensive disease (Stage III) typically exhibits spread to para-aortic and retro-peritoneal areas by implants and plaques in mesentery or peritoneum, or by direct infiltration of structures adjacent to the primary tumor. Ascites may be present, and complete resection of all gross tumor is not possible.",
+  "last_modified" : "2022-08-05T18:01:32.156Z",
+  "definition" : [ {
+    "key" : "st_jude_murphy_staging",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Involvement of a single tumor, mass or nodal area\n* EXCLUDING the abdomen and mediastinum" ], [ "2", "Single tumor (extranodal) with regional node involvement OR\nTwo or more nodal areas on the SAME side (either above or below) the diaphragm OR\nTwo or more single (extranodal) tumors\n* WITH or WITHOUT regional lymph node involvement\n* AND on SAME side (either above or below) the diaphragm\n\nCompletely resectable primary gastrointestinal tract tumor\n* WITH or WITHOUT involvement of associated mesenteric nodes only" ], [ "3", "Tumor (extranodal) or nodal areas on BOTH side (above and below) of the diaphragm OR\nAny primary intrathoracic tumor (mediastinal, hilar, pulmonary, pleural or thymic) OR\nExtensive (unresectable) primary intraabdominal disease OR\nAny paraspinal or epidural tumors regardless of other tumor sites" ], [ "4", "CNS involvement\n* Any CNS tumor mass (identified by imaging techniques [i.e., CT, MRI]) OR\n* Cranial nerve palsy that cannot be explained by extradural lesions, OR\n* Blasts morphologically identified in CSF\n   - In the absence of a CSF tumor mass and cranial nerve palsy, a CSF report is required to confirm or exclude CNS involvement\n\nAND/OR Bone marrow involvement\n* Morphologic evidence of > 5% blasts or lymphoma cells by bone marrow aspiration or biopsy" ], [ "7", "Not applicable: histologies 9731, 9732, 9734" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nSt Jude Staging System not assessed" ], [ "", "N/A - Diagnosis year is prior to xxxx" ] ]
+}

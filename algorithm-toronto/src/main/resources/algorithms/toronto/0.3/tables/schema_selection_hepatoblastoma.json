@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_hepatoblastoma",
+  "algorithm" : "toronto",
+  "version" : "0.3",
+  "name" : "Schema Selection Hepatoblastoma",
+  "title" : "Schema selection for Hepatoblastoma",
+  "last_modified" : "2022-08-05T17:39:42.218Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C220", "8970", "MATCH" ] ]
+}
