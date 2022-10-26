@@ -10,7 +10,7 @@ A cancer staging client library for Java applications.
 
 In prior versions of this library the algorithms were released in separate repositories. They are all now included with this library.
 
-### Toronto Pedatric Staging 0.2
+### Toronto Pedatric Staging 0.3
 
 Toronto Stage was developed based on a consensus meeting by the Union for Internal Cancer Control (UICC) in 2014. Since this time, multiple countries have
 implemented the Toronto Staging Guidelines for pediatric cancers. Starting in 2024, the United States will also implement the Toronto Staging in the SEER
@@ -26,6 +26,24 @@ be calculated.
 
 All the standard setting organizations will collect the predictive and prognostic factors through Site Specific Data Items (SSDIs). Unlike the SSFs, these data
 items have formats and code structures specific to the data item.
+
+To include this algorithm in your project, use 
+
+```groovy
+implementation 'com.imsweb:staging-client-java-toronto:x.x.x'
+```
+
+Current version mappings
+
+| Library version | Toronto version | Algorithm ZIP                                                                               |
+|-----------------|-----------------|---------------------------------------------------------------------------------------------|
+| 10.0.0+         | 0.3             | [toronto-0.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/toronto-0.3.zip) |
+
+To get started using the Toronto Pediatric algorithm, instantiate a `Staging` instance:
+
+```java
+Staging staging = Staging.getInstance(TorontoDataProvider.getInstance(TorontoVersion.LATEST));
+```
 
 ### EOD 3.0
 
@@ -45,6 +63,18 @@ been developed to be compatible with the AJCC 8th Edition chapter definitions.
 
 All the standard setting organizations will collect the predictive and prognostic factors through Site Specific Data Items (SSDIs). Unlike the SSFs, these data items have
 formats and code structures specific to the data item.
+
+To include this algorithm in your project, use
+
+```groovy
+implementation 'com.imsweb:staging-client-java-eod-public:x.x.x'
+```
+
+Current version mappings
+
+| Library Version | EOD version | Algorithm Zip |
+|-----------------|-------------| ------------- |
+| 10.0.0+         | 3.0         | [ eod_public-3.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/eod_public-3.0.zip) |
 
 To get started using the EOD algorithm, instantiate a `Staging` instance:
 
@@ -68,6 +98,18 @@ classification. UICC 7th edition and AJCC 7th edition TNM categories and stage g
 For diagnosis years 2016-2017, SEER Summary Stage 2000 is required. SEER Summary Stage 2000 should be collected manually unless the registry is collecting
 Collaborative Stage, which would derive Summary Stage 2000.
 
+To include this algorithm in your project, use
+
+```groovy
+implementation 'com.imsweb:staging-client-java-tnm:x.x.x'
+```
+
+Current version mappings
+
+| Library version | TNM version | Algorithm Zip |
+|-----------------|-------------| ------------- |
+| 10.0.0+         | 2.0         | [tnm-2.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/tnm-2.0.zip) |
+
 To get started using the TNM algorithm, instantiate a `Staging` instance:
 
 ```java
@@ -80,6 +122,18 @@ Collaborative Stage is a unified data collection system designed to provide a co
 provides a comprehensive system to improve data quality by standardizing rules for timing, clinical and pathologic assessments, and compatibility across all the systems for
 all cancer sites.
 
+To include this algorithm in your project, use
+
+```groovy
+implementation 'com.imsweb:staging-client-java-cs:x.x.x'
+```
+
+Current version mappings
+
+| Library version | CS version  | Algorithm Zip |
+|------------------|------------| ------------- |
+| 10.0.0+          | 02.05.50   | [cs-02.05.50.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/cs-02.05.50.zip) |
+
 To get started using the CS algorithm, instantiate a `Staging` instance:
 
 ```java
@@ -90,21 +144,22 @@ Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.LATES
 
 Java 8 is the minimum version required to use the library.
 
-Download [the latest JAR][1] or grab via Maven:
+If you are interested in a specific algorithm, look above for how to include them in your project. If
+you are interested in just the library, it can be included via Maven:
 
 ```xml
 
 <dependency>
     <groupId>com.imsweb</groupId>
     <artifactId>staging-client-java</artifactId>
-    <version>9.1</version>
+    <version>x.x.x</version>
 </dependency>
 ```
 
 or via Gradle:
 
 ```groovy
-compile 'com.imsweb:staging-client-java:9.1'
+compile 'com.imsweb:staging-client-java:x.x.x'
 ```
 
 ## Usage
@@ -323,5 +378,3 @@ assertEquals("7", data.getOutput(CsOutput.STOR_SS2000_STAGE));
 The Surveillance, Epidemiology and End Results ([SEER](http://seer.cancer.gov)) Program is a premier source for cancer statistics in the United States. The SEER
 Program collects information on incidence, prevalence and survival from specific geographic areas representing 28 percent of the US population and reports on all
 these data plus cancer mortality data for the entire country.
-
-[1]: http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=com.imsweb&a=staging-client-java&v=LATEST
