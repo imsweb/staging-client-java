@@ -1,6 +1,0 @@
-plugins {
-}
-
-dependencies {
-    implementation project(':staging-client-java')
-}
