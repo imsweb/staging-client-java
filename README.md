@@ -27,18 +27,6 @@ be calculated.
 All the standard setting organizations will collect the predictive and prognostic factors through Site Specific Data Items (SSDIs). Unlike the SSFs, these data
 items have formats and code structures specific to the data item.
 
-To include this algorithm in your project, use 
-
-```groovy
-implementation 'com.imsweb:staging-client-java-toronto:x.x.x'
-```
-
-Current version mappings
-
-| Library version | Toronto version | Algorithm ZIP                                                                               |
-|-----------------|-----------------|---------------------------------------------------------------------------------------------|
-| 10.0.0+         | 0.3             | [toronto-0.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/toronto-0.3.zip) |
-
 To get started using the Toronto Pediatric algorithm, instantiate a `Staging` instance:
 
 ```java
@@ -64,18 +52,6 @@ been developed to be compatible with the AJCC 8th Edition chapter definitions.
 All the standard setting organizations will collect the predictive and prognostic factors through Site Specific Data Items (SSDIs). Unlike the SSFs, these data items have
 formats and code structures specific to the data item.
 
-To include this algorithm in your project, use
-
-```groovy
-implementation 'com.imsweb:staging-client-java-eod-public:x.x.x'
-```
-
-Current version mappings
-
-| Library Version | EOD version | Algorithm Zip |
-|-----------------|-------------| ------------- |
-| 10.0.0+         | 3.0         | [ eod_public-3.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/eod_public-3.0.zip) |
-
 To get started using the EOD algorithm, instantiate a `Staging` instance:
 
 ```java
@@ -98,18 +74,6 @@ classification. UICC 7th edition and AJCC 7th edition TNM categories and stage g
 For diagnosis years 2016-2017, SEER Summary Stage 2000 is required. SEER Summary Stage 2000 should be collected manually unless the registry is collecting
 Collaborative Stage, which would derive Summary Stage 2000.
 
-To include this algorithm in your project, use
-
-```groovy
-implementation 'com.imsweb:staging-client-java-tnm:x.x.x'
-```
-
-Current version mappings
-
-| Library version | TNM version | Algorithm Zip |
-|-----------------|-------------| ------------- |
-| 10.0.0+         | 2.0         | [tnm-2.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/tnm-2.0.zip) |
-
 To get started using the TNM algorithm, instantiate a `Staging` instance:
 
 ```java
@@ -122,18 +86,6 @@ Collaborative Stage is a unified data collection system designed to provide a co
 provides a comprehensive system to improve data quality by standardizing rules for timing, clinical and pathologic assessments, and compatibility across all the systems for
 all cancer sites.
 
-To include this algorithm in your project, use
-
-```groovy
-implementation 'com.imsweb:staging-client-java-cs:x.x.x'
-```
-
-Current version mappings
-
-| Library version | CS version  | Algorithm Zip |
-|------------------|------------| ------------- |
-| 10.0.0+          | 02.05.50   | [cs-02.05.50.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/cs-02.05.50.zip) |
-
 To get started using the CS algorithm, instantiate a `Staging` instance:
 
 ```java
@@ -144,11 +96,11 @@ Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.LATES
 
 Java 8 is the minimum version required to use the library.
 
-If you are interested in a specific algorithm, look above for how to include them in your project. If
-you are interested in just the library, it can be included via Maven:
+If you are interested in just the library, it can be included:
+
+Maven
 
 ```xml
-
 <dependency>
     <groupId>com.imsweb</groupId>
     <artifactId>staging-client-java</artifactId>
@@ -156,11 +108,59 @@ you are interested in just the library, it can be included via Maven:
 </dependency>
 ```
 
-or via Gradle:
+Gradle
 
 ```groovy
 compile 'com.imsweb:staging-client-java:x.x.x'
 ```
+
+If you are interested in a specific algorithm, you can include them using their specific artifact.
+
+Maven
+
+```xml
+<dependency>
+    <groupId>com.imsweb</groupId>
+    <artifactId>staging-client-java-cs</artifactId>
+    <version>x.x.x</version>
+</dependency>
+<dependency>
+    <groupId>com.imsweb</groupId>
+    <artifactId>staging-client-java-eod-public</artifactId>
+    <version>x.x.x</version>
+</dependency>
+<dependency>
+    <groupId>com.imsweb</groupId>
+    <artifactId>staging-client-java-tnm</artifactId>
+    <version>x.x.x</version>
+</dependency>
+<dependency>
+    <groupId>com.imsweb</groupId>
+    <artifactId>staging-client-java-toronto</artifactId>
+    <version>x.x.x</version>
+</dependency>
+```
+
+Gradle
+
+```groovy
+implementation 'com.imsweb:staging-client-java-cs:x.x.x'
+implementation 'com.imsweb:staging-client-java-eod-public:x.x.x'
+implementation 'com.imsweb:staging-client-java-tnm:x.x.x'
+implementation 'com.imsweb:staging-client-java-toronto:x.x.x'
+```
+
+Note that the algorithm artifacts only include the latest version of each algorithm. If an older version is necessary, the algorithm zip file can be downloaded and 
+initializeed using an `ExternalStagingFileDataProvider`.
+
+| Algorithm           | Version  | staging-client-java version | Algorithm ZIP                                                                                                    |
+|---------------------|----------|-----------------------------|------------------------------------------------------------------------------------------------------------------|
+| Collaborative Stage | 02.05.50 | 10.0.0                      | [cs-02.05.50.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/cs-02.05.50.zip)       |
+| EOD                 | 3.0      | 10.0.0                      | [eod_public-3.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/eod_public-3.0.zip) |
+| EOD                 | 2.1      |                             | [eod_public-2.1.zip](https://github.com/imsweb/staging-client-java/releases/download/v8.0/eod_public-2.1.zip)    |
+| TNM                 | 2.0      | 10.0.0                      | [tnm-2.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/tnm-2.0.zip)               |
+| TNM                 | 1.9      |                             | [tnm-1.9.zip](https://github.com/imsweb/staging-client-java/releases/download/v8.0/tnm-1.9.zip)                  |
+| Toronto Pediatric   | 0.3      | 10.0.0                      | [toronto-0.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/toronto-0.3.zip)       |
 
 ## Usage
 
