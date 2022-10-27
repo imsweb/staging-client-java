@@ -8,8 +8,6 @@ A cancer staging client library for Java applications.
 
 ## Supported staging algorithms
 
-The library artifact does not contain algorithms. There are separate artifacts which bundle each algorithm. 
-
 ### Toronto Pedatric Staging 0.3
 
 Toronto Stage was developed based on a consensus meeting by the Union for Internal Cancer Control (UICC) in 2014. Since this time, multiple countries have
@@ -96,7 +94,7 @@ Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.LATES
 
 Java 8 is the minimum version required to use the library.
 
-If you are interested in just the library, it can be included:
+If you are interested in just the library without any bundled algorithm, it can be included with the following.
 
 Maven
 
