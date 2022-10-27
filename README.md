@@ -153,14 +153,16 @@ implementation 'com.imsweb:staging-client-java-toronto:x.x.x'
 Note that the algorithm artifacts only include the latest version of each algorithm. If an older version is necessary, the algorithm zip file can be downloaded and 
 initializeed using an `ExternalStagingFileDataProvider`.
 
-| Algorithm           | Version  | staging-client-java version | Algorithm ZIP                                                                                                    |
-|---------------------|----------|-----------------------------|------------------------------------------------------------------------------------------------------------------|
-| Collaborative Stage | 02.05.50 | 10.0.0                      | [cs-02.05.50.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/cs-02.05.50.zip)       |
-| EOD                 | 3.0      | 10.0.0                      | [eod_public-3.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/eod_public-3.0.zip) |
-| EOD                 | 2.1      |                             | [eod_public-2.1.zip](https://github.com/imsweb/staging-client-java/releases/download/v8.0/eod_public-2.1.zip)    |
-| TNM                 | 2.0      | 10.0.0                      | [tnm-2.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/tnm-2.0.zip)               |
-| TNM                 | 1.9      |                             | [tnm-1.9.zip](https://github.com/imsweb/staging-client-java/releases/download/v8.0/tnm-1.9.zip)                  |
-| Toronto Pediatric   | 0.3      | 10.0.0                      | [toronto-0.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/toronto-0.3.zip)       |
+Here are recent releases which included new algorithm versions.
+
+| staging-client-java version | Algorithm           | Version  | Algorithm ZIP                                                                                                    |
+|-----------------------------|---------------------|----------|------------------------------------------------------------------------------------------------------------------|
+| 10.0.0                      | Toronto Pediatric   | 0.3      | [toronto-0.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/toronto-0.3.zip)       |
+| 10.0.0                      | EOD                 | 3.0      | [eod_public-3.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/eod_public-3.0.zip) |
+| 10.0.0                      | TNM                 | 2.0      | [tnm-2.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/tnm-2.0.zip)               |
+| 10.0.0                      | Collaborative Stage | 02.05.50 | [cs-02.05.50.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/cs-02.05.50.zip)       |
+| 8.0                         | EOD                 | 2.1      | [eod_public-2.1.zip](https://github.com/imsweb/staging-client-java/releases/download/v8.0/eod_public-2.1.zip)    |
+| 8.0                         | TNM                 | 1.9      | [tnm-1.9.zip](https://github.com/imsweb/staging-client-java/releases/download/v8.0/tnm-1.9.zip)                  |
 
 ## Usage
 
