@@ -149,7 +149,7 @@ implementation 'com.imsweb:staging-client-java-toronto:x.x.x'
 ```
 
 Note that the algorithm artifacts only include the latest version of each algorithm. If an older version is necessary, the algorithm zip file can be downloaded and 
-initializeed using an `ExternalStagingFileDataProvider`.
+initialized using an `ExternalStagingFileDataProvider`.
 
 Here are recent releases which included new algorithm versions.
 
