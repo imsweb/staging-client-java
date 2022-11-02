@@ -6,13 +6,15 @@ import java.util.HashSet;
 
 import com.imsweb.staging.updater.UpdaterUtils;
 
+import static com.imsweb.staging.toronto.TorontoDataProvider.TorontoVersion.V0_4;
+
 /**
  * Update the Toronto data from the API
  */
 public class TorontoUpdateFromAPI {
 
     public static void main(String[] args) throws IOException {
-        UpdaterUtils.update("toronto", "0.3", new HashSet<>(Collections.singletonList("STAGING")));
+        UpdaterUtils.update("toronto", V0_4.getVersion(), new HashSet<>(Collections.singletonList("STAGING")));
     }
 
 }
