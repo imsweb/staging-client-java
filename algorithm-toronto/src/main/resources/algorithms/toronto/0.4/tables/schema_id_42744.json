@@ -1,0 +1,15 @@
+{
+  "id" : "schema_id_42744",
+  "algorithm" : "toronto",
+  "version" : "0.4",
+  "name" : "Schema ID",
+  "title" : "Schema ID",
+  "notes" : "NOT a lookup (code/meaning); merely an expected value list\n\n00590: Testis\n00421: Soft Tissue: Abdomen and Thoracic",
+  "last_modified" : "2022-07-14T21:25:10.897Z",
+  "definition" : [ {
+    "key" : "schema_id",
+    "name" : "Schema ID",
+    "type" : "INPUT"
+  } ],
+  "rows" : [ [ "00421" ], [ "00590" ] ]
+}

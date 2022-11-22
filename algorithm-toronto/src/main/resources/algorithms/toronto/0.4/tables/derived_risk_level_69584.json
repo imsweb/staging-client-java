@@ -1,0 +1,48 @@
+{
+  "id" : "derived_risk_level_69584",
+  "algorithm" : "toronto",
+  "version" : "0.4",
+  "name" : "Derived Risk Level",
+  "title" : "Derived Risk Level",
+  "notes" : "**SECOND DRAFT**\n* Age at DX: Age dx in years and Months since Dx used to calculate category\n   - Cat=0:  0-11\n   - Cat=1: 12-17 \n   - Cat=2: 18+ \n \n* Value list\n   - 1: Very Low\n   - 2: Low\n   - 3: Intermediate\n   - 4: High\n   - 9: Unknown",
+  "footnotes" : "(1) American Society of Clinical Oncology © 2009, The International Neuroblastoma Risk Group (INRG) Classification System: AN INRG Task Force Report; published by American Society of Clinical Oncology, 2009",
+  "last_modified" : "2022-09-06T20:53:34.515Z",
+  "definition" : [ {
+    "key" : "ingrss",
+    "name" : "INGRSS",
+    "type" : "INPUT"
+  }, {
+    "key" : "age_dx_months_cat",
+    "name" : "Age DX Months Cat",
+    "type" : "INPUT"
+  }, {
+    "key" : "shimada_classification",
+    "name" : "Shimada",
+    "type" : "INPUT"
+  }, {
+    "key" : "grade_combined",
+    "name" : "Combined Grade",
+    "type" : "INPUT"
+  }, {
+    "key" : "n_myc_amplification",
+    "name" : "n-MYC",
+    "type" : "INPUT"
+  }, {
+    "key" : "chrom_11q_status",
+    "name" : "Chrom 11q",
+    "type" : "INPUT"
+  }, {
+    "key" : "dna_ploidy",
+    "name" : "DNA Ploidy",
+    "type" : "INPUT"
+  }, {
+    "key" : "derived_risk_level",
+    "name" : "Derived Risk Level",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Pretreatment Risk Group",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "*", "1,7,8,9", "*", "*", "*", "*", "VALUE: 1", "A: Very low" ], [ "1", "*", "0", "*", "0, 7, 8, 9", "*", "*", "VALUE: 1", "B: Very low" ], [ "1", "*", "0", "*", "1", "*", "*", "VALUE: 4", "K: High" ], [ "2", "*", "1,7,8,9", "*", "*", "*", "*", "VALUE: 1", "A: Very low" ], [ "2", "0,1", "0", "*", "*", "0, 7, 8, 9", "*", "VALUE: 2", "D: Low" ], [ "2", "0,1", "0", "*", "*", "1", "*", "VALUE: 3", "G: Intermediate" ], [ "2", "2", "0", "1,2,A,B,L,9", "*", "0, 7, 8, 9", "*", "VALUE: 2", "E: Low" ], [ "2", "2", "0", "1,2,A,B,L,9", "*", "1", "*", "VALUE: 3", "H: Intermediate" ], [ "2", "2", "0", "3, 4, 5, C, D, E, H, M, S", "*", "*", "*", "VALUE: 3", "H: Intermediate" ], [ "3", "0", "*", "*", "*", "*", "0, 7, 8, 9", "VALUE: 3", "I: Intermediate" ], [ "3", "0", "*", "*", "*", "*", "1", "VALUE: 2", "F: Low" ], [ "3", "1", "*", "*", "0, 7, 8, 9", "*", "0, 7, 8, 9", "VALUE: 3", "J: Intermediate" ], [ "3", "1", "*", "*", "0, 7, 8, 9", "*", "1", "VALUE: 2", "F: Low" ], [ "3", "1", "*", "*", "1", "*", "0, 7, 8, 9", "VALUE: 4", "O: High" ], [ "3", "1", "*", "*", "1", "*", "1", "VALUE: 4", "U: High, NOS" ], [ "3", "2", "*", "*", "*", "*", "*", "VALUE: 4", "P: High" ], [ "4", "0,1", "*", "*", "0, 7, 8, 9", "0, 7, 8, 9", "*", "VALUE: 1", "C: Very low" ], [ "4", "0,1", "*", "*", "0, 7, 8, 9", "1", "*", "VALUE: 4", "Q: High" ], [ "4", "0,1", "*", "*", "1", "0, 7, 8, 9", "*", "VALUE: 4", "U: High, NOS" ], [ "4", "0,1", "*", "*", "1", "1", "*", "VALUE: 4", "R: High" ], [ "4", "2", "*", "*", "*", "*", "*", "VALUE: 4", "U: High, NOS" ], [ "8", "*", "*", "*", "*", "*", "*", "VALUE: 9", "Unknown" ], [ "9", "*", "*", "*", "*", "*", "*", "VALUE: 9", "Unknown" ], [ "", "*", "*", "*", "*", "*", "*", "VALUE: ", "Not Calculated" ], [ "*", "*", "", "*", "*", "*", "*", "VALUE: ", "Not Calculated" ], [ "*", "*", "*", "*", "", "*", "*", "VALUE: ", "Not Calculated" ], [ "*", "*", "*", "*", "*", "", "*", "VALUE: ", "Not Calculated" ], [ "*", "*", "*", "*", "*", "*", "", "VALUE: ", "Not Calculated" ] ]
+}

@@ -1,0 +1,20 @@
+{
+  "id" : "shimada_classification_77931",
+  "algorithm" : "toronto",
+  "version" : "0.4",
+  "name" : "Shimada Classification",
+  "title" : "Shimada Classification",
+  "notes" : "**Note 1:** **Collect for all years at this time** This SSDI is effective for diagnosis years xxxx    \n* For cases diagnosed xxxx-xxxx, leave this SSDI blank\n\n**Note 2:** Physician statement of Shimada Classification can be used to code this data item when no other information is available. \n\n**Note 3:** The Shimada Classification is a biologically relevant classification based on morphologic features of neuroblastic tumors which has prognostic indications. It is based on the following criteria\n* Quantity of Schwannian stromal development\n* Grade of tumor differentiation\n* Mitosis-kayorrhexis index (MKI)\n* Presence of nodules\n* Age\n\n**Note 4:** Record “favorable,” or “unfavorable” based on the pathology report.",
+  "footnotes" : "(1) American Society of Clinical Oncology © 2009, The International Neuroblastoma Risk Group (INRG) Classification System: AN INRG Task Force Report; published by American Society of Clinical Oncology, 2009",
+  "last_modified" : "2022-10-03T15:26:45.676Z",
+  "definition" : [ {
+    "key" : "shimada_classification",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Unfavorable" ], [ "1", "Favorable" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error)" ], [ "9", "Not documented in medical record\nShimada Classification not assessed or unknown if assessed" ], [ "", "N/A - Diagnosis year is prior to xxxx" ] ]
+}

@@ -1,0 +1,15 @@
+{
+  "id" : "eod_regional_nodes_85773",
+  "algorithm" : "toronto",
+  "version" : "0.4",
+  "name" : "EOD Regional Nodes",
+  "title" : "EOD Regional Nodes",
+  "notes" : "NOT a lookup (code/meaning); merely an expected value list\n\n00551: Ovary\n00459: Soft Tissue Other",
+  "last_modified" : "2022-06-24T19:04:20.854Z",
+  "definition" : [ {
+    "key" : "eod_regional_nodes",
+    "name" : "EOD RN Code",
+    "type" : "INPUT"
+  } ],
+  "rows" : [ [ "000" ], [ "050" ], [ "300" ], [ "400" ], [ "500" ], [ "800" ], [ "999" ] ]
+}

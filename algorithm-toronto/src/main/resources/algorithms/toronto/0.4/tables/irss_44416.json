@@ -1,0 +1,20 @@
+{
+  "id" : "irss_44416",
+  "algorithm" : "toronto",
+  "version" : "0.4",
+  "name" : "IRSS",
+  "title" : "International Retinoblastoma Staging System",
+  "notes" : "**Note 1:** **Collect for all years at this time** This SSDI is effective for diagnosis years xxxx    \n* For cases diagnosed xxxx-xxxx, leave this SSDI blank\n\n**Note 2:** Physician statement of the International Retinoblastoma Staging System (IRSS) can be used to code this data item.\n\n**Note 3:** If there is more than one stage is provided, code the stage documented prior to treatment. \n* If no stage is provided before treatment, or it’s unknown if that stage is prior to treatment, then code the available stage",
+  "footnotes" : "(1)\tAitken JF, Youlden D, O’Neill L, Gupta S, Frazier AL, eds. Childhood cancer staging for population registries according to the Toronto Childhood Cancer Stage Guidelines – Version 2. Cancer Council Queensland and Cancer Australia: Brisbane, Australia; 2021.",
+  "last_modified" : "2022-09-15T17:55:40.614Z",
+  "definition" : [ {
+    "key" : "irss",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Stage 0: \n* Tumor confined to the globe\n* Enucleation has not been performed\n* Patient treated conservatively with either focal therapies or chemotherapy\n\nPhysician documents IRSS as Stage 0" ], [ "1", "Stage I: \n* Enucleation with negative margins (R0)\n   - Completely resected histologically\n \nPhysician documents IRSS as Stage I" ], [ "2", "Stage II\n* Enucleation with positive/microscopic residual tumor\n\nPhysician documents IRSS as Stage II" ], [ "3", "Stage III: \n* Regional extension \n   - Orbit\n   - Preauricular extension\n   - Cervical lymph node involvement\n\nPhysician documents IRSS as Stage III" ], [ "4", "Stage IV: \n* Distant metastatic disease \n  \nPhysician documents IRSS as Stage IV" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nInternational Retinoblastoma Staging System  (IRSS) not stated" ], [ "", "N/A - Diagnosis year is prior to xxxx" ] ]
+}
