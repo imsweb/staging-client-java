@@ -61,7 +61,7 @@ class TorontoStagingTest extends StagingTest {
     @Test
     void testBasicInitialization() {
         assertThat(_STAGING.getSchemaIds()).hasSize(35);
-        assertThat(_STAGING.getTableIds().size() > 0).isTrue();
+        assertThat(_STAGING.getTableIds()).isNotEmpty();
 
         assertThat(_STAGING.getSchema("ependymoma")).isNotNull();
         assertThat(_STAGING.getTable("st_jude_murphy_staging_system_35179")).isNotNull();
@@ -431,8 +431,8 @@ class TorontoStagingTest extends StagingTest {
     @Test
     void testCachedSiteAndHistology() {
         StagingDataProvider provider = getProvider();
-        assertThat(provider.getValidSites().size() > 0).isTrue();
-        assertThat(provider.getValidHistologies().size() > 0).isTrue();
+        assertThat(provider.getValidSites()).isNotEmpty();
+        assertThat(provider.getValidHistologies()).isNotEmpty();
 
         // site tests
         List<String> validSites = Arrays.asList("C000", "C809");

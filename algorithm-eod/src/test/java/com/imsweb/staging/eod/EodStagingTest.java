@@ -63,7 +63,7 @@ class EodStagingTest extends StagingTest {
     @Test
     void testBasicInitialization() {
         assertThat(_STAGING.getSchemaIds()).hasSize(127);
-        assertThat(_STAGING.getTableIds().size() > 0).isTrue();
+        assertThat(_STAGING.getTableIds()).isNotEmpty();
 
         assertThat(_STAGING.getSchema("urethra")).isNotNull();
         assertThat(_STAGING.getTable("ss2018_urethra_14363")).isNotNull();
@@ -373,16 +373,14 @@ class EodStagingTest extends StagingTest {
     void testGetSchemaIds() {
         Set<String> algorithms = _STAGING.getSchemaIds();
 
-        assertThat(algorithms.size() > 0).isTrue();
-        assertThat(algorithms).contains("testis");
+        assertThat(algorithms).isNotEmpty().contains("testis");
     }
 
     @Test
     void testGetTableIds() {
         Set<String> tables = _STAGING.getTableIds();
 
-        assertThat(tables.size() > 0).isTrue();
-        assertThat(tables).contains("urethra_prostatic_urethra_30106");
+        assertThat(tables).isNotEmpty().contains("urethra_prostatic_urethra_30106");
     }
 
     @Test
@@ -505,8 +503,8 @@ class EodStagingTest extends StagingTest {
     @Test
     void testCachedSiteAndHistology() {
         StagingDataProvider provider = getProvider();
-        assertThat(provider.getValidSites().size() > 0).isTrue();
-        assertThat(provider.getValidHistologies().size() > 0).isTrue();
+        assertThat(provider.getValidSites()).isNotEmpty();
+        assertThat(provider.getValidHistologies()).isNotEmpty();
 
         // site tests
         List<String> validSites = Arrays.asList("C000", "C809");
