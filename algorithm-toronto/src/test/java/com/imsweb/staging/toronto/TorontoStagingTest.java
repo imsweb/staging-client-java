@@ -40,7 +40,7 @@ class TorontoStagingTest extends StagingTest {
 
     @BeforeAll
     public static void init() {
-        _STAGING = Staging.getInstance(TorontoDataProvider.getInstance(TorontoVersion.V0_4));
+        _STAGING = Staging.getInstance(TorontoDataProvider.getInstance(TorontoVersion.V0_5));
     }
 
     @Override
@@ -50,7 +50,7 @@ class TorontoStagingTest extends StagingTest {
 
     @Override
     public String getVersion() {
-        return TorontoVersion.V0_4.getVersion();
+        return TorontoVersion.V0_5.getVersion();
     }
 
     @Override
@@ -60,7 +60,7 @@ class TorontoStagingTest extends StagingTest {
 
     @Test
     void testBasicInitialization() {
-        assertThat(_STAGING.getSchemaIds()).hasSize(35);
+        assertThat(_STAGING.getSchemaIds()).hasSize(33);
         assertThat(_STAGING.getTableIds()).isNotEmpty();
 
         assertThat(_STAGING.getSchema("ependymoma")).isNotNull();
@@ -69,7 +69,7 @@ class TorontoStagingTest extends StagingTest {
 
     @Test
     void testVersionInitializationTypes() {
-        Staging staging10 = Staging.getInstance(TorontoDataProvider.getInstance(TorontoVersion.V0_4));
+        Staging staging10 = Staging.getInstance(TorontoDataProvider.getInstance(TorontoVersion.V0_5));
         assertThat(staging10.getVersion()).isEqualTo(TorontoVersion.LATEST.getVersion());
 
         Staging stagingLatest = Staging.getInstance(TorontoDataProvider.getInstance());
@@ -78,7 +78,7 @@ class TorontoStagingTest extends StagingTest {
 
     @Test
     void testDescriminatorKeys() {
-        assertThat(_STAGING.getSchema("acute_myeloid_leukemia").getSchemaDiscriminators()).containsOnly("age_dx");
+        assertThat(_STAGING.getSchema("acute_lymphoblastic_leukemia").getSchemaDiscriminators()).containsOnly("age_dx");
         assertThat(_STAGING.getSchema("ovarian").getSchemaDiscriminators()).containsOnly("age_dx", "behavior");
 
         // check all schema discriminators
@@ -167,7 +167,7 @@ class TorontoStagingTest extends StagingTest {
 
         // test searching on only site
         lookup = _STAGING.lookupSchema(new TorontoSchemaLookup("C401", null));
-        assertThat(lookup).hasSize(18);
+        assertThat(lookup).hasSize(16);
 
         // test searching on only hist
         lookup = _STAGING.lookupSchema(new TorontoSchemaLookup(null, "9702"));
@@ -202,7 +202,7 @@ class TorontoStagingTest extends StagingTest {
         assertThat(lookup.get(0).getId()).isEqualTo(schemaId);
 
         // now invalidate the cache
-        TorontoDataProvider.getInstance(TorontoVersion.V0_4).invalidateCache();
+        TorontoDataProvider.getInstance(TorontoVersion.V0_5).invalidateCache();
 
         // try the lookup again
         lookup = _STAGING.lookupSchema(new TorontoSchemaLookup(site, hist));
@@ -317,24 +317,18 @@ class TorontoStagingTest extends StagingTest {
                 "toronto_m_65862",
                 "combined_s_category_15139",
                 "schema_selection_testicular",
-                "hcg_post_orchiectomy_range_2422",
                 "schema_id_42744",
                 "s_category_clinical_11368",
                 "nodes_pos_fpa",
-                "hcg_pre_orchiectomy_range_1551",
                 "toronto_stage_81706",
                 "primary_site",
-                "eod_primary_tumor_63650",
                 "s_category_pathological_46197",
+                "eod_primary_tumor_63650",
                 "histology",
-                "ldh_pre_orchiectomy_range_4903",
-                "afp_alpha_fetoprotein_pre_orchiectomy_range_33270",
                 "year_dx_validation",
                 "eod_mets_68192",
                 "behavior",
-                "afp_alpha_fetoprotein_post_orchiectomy_range_40524",
-                "eod_regional_nodes_4689",
-                "ldh_post_orchiectomy_range_81426");
+                "eod_regional_nodes_4689");
     }
 
     @Test
@@ -365,17 +359,17 @@ class TorontoStagingTest extends StagingTest {
         assertThat(_STAGING.isCodeValid(schemaId, "site", null)).isFalse();
 
         // test fields that have a "value" specified
-        assertThat(_STAGING.isCodeValid(schemaId, "year_dx", null)).isFalse();
+        assertThat(_STAGING.isCodeValid(schemaId, "year_dx", null)).isTrue();  // year_dx is now allowed to be null
         assertThat(_STAGING.isCodeValid(schemaId, "year_dx", "200")).isFalse();
         assertThat(_STAGING.isCodeValid(schemaId, "year_dx", "2003")).isFalse();
         assertThat(_STAGING.isCodeValid(schemaId, "year_dx", "2145")).isFalse();
         assertThat(_STAGING.isCodeValid(schemaId, "year_dx", "2018")).isTrue();
 
         // test valid and invalid fields
-        assertThat(_STAGING.isCodeValid(schemaId, "m_category", "1")).isTrue();
-        assertThat(_STAGING.isCodeValid(schemaId, "m_category", "5")).isFalse();
         assertThat(_STAGING.isCodeValid(schemaId, "braf_mutational_analysis", "2")).isTrue();
-        assertThat(_STAGING.isCodeValid(schemaId, "braf_mutational_analysis", "3")).isFalse();
+        assertThat(_STAGING.isCodeValid(schemaId, "braf_mutational_analysis", "5")).isFalse();
+        assertThat(_STAGING.isCodeValid(schemaId, "eod_mets", "10")).isTrue();
+        assertThat(_STAGING.isCodeValid(schemaId, "eod_mets", "20")).isFalse();
     }
 
     @Test
@@ -421,7 +415,7 @@ class TorontoStagingTest extends StagingTest {
         Schema schema = _STAGING.getSchema("testicular");
         assertThat(schema).isNotNull();
 
-        Input input = schema.getInputMap().get("afp_pre_orch_range");
+        Input input = schema.getInputMap().get("s_category_clin");
         assertThat(input).isNotNull();
 
         Set<String> metadata = input.getMetadata().stream().map(Metadata::getName).collect(Collectors.toSet());

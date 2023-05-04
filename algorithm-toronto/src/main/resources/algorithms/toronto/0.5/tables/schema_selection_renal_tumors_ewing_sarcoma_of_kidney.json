@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_renal_tumors_ewing_sarcoma_of_kidney",
+  "algorithm" : "toronto",
+  "version" : "0.5",
+  "name" : "Schema Selection Renal Tumors: Ewing Sarcoma of Kidney",
+  "title" : "Schema selection for Renal Tumors: Ewing Sarcoma of Kidney",
+  "last_modified" : "2023-04-11T21:06:41.235Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C649", "9364", "3", "MATCH" ] ]
+}

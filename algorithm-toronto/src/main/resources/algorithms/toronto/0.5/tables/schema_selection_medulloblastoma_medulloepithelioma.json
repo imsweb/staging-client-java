@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_medulloblastoma_medulloepithelioma",
+  "algorithm" : "toronto",
+  "version" : "0.5",
+  "name" : "Schema Selection Medulloblastoma: Medulloepithelioma",
+  "title" : "Schema selection for Medulloblastoma: Medulloepithelioma",
+  "last_modified" : "2023-04-12T13:58:42.809Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C700-C729", "9501-9504", "MATCH" ] ]
+}

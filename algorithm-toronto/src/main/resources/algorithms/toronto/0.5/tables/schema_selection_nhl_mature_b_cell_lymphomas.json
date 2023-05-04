@@ -1,0 +1,30 @@
+{
+  "id" : "schema_selection_nhl_mature_b_cell_lymphomas",
+  "algorithm" : "toronto",
+  "version" : "0.5",
+  "name" : "Schema Selection NHL, Mature B-cell lymphomas",
+  "title" : "Schema selection for NHL, Mature B-cell lymphomas",
+  "last_modified" : "2023-04-26T16:30:52.929Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "age_dx",
+    "name" : "Age at Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C000-C809", "9671, 9673, 9678-9680, 9688-9691, 9695, 9698, 9699, 9735, 9737-9738, 9761-9762, 9765-9766, 9769, 9823, 9970-9971", "0-19", "3", "MATCH" ], [ "C000-C809", "9731-9732, 9734", "0-19", "3", "MATCH" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "white_blood_cell_count_1932",
+  "algorithm" : "toronto",
+  "version" : "0.5",
+  "name" : "White Blood Cell Count",
+  "title" : "White Blood Cell Count",
+  "notes" : "**Note 1:** This SSDI is effective for diagnosis years 2023+\n* For cases diagnosed 2018-2022, leave this SSDI blank\n\n**Note 2:** Physician statement of WBC (White Blood Cell Count) Pretreatment Lab Value can be used to code this data item when no other information is available. \n* Record the lab value of the highest WBC test result documented in the medical record **prior to treatment**. The lab value may be recorded in a lab report, history and physical, or clinical statement in the pathology report\n* Record to the nearest microliter (cells/mcL) the highest WBC lab value documented in the medical record **prior to treatment**. \n* A known lab value takes priority over codes XXXXX.2-XXXXX.4\n    - The lab value takes priority even if the physician documents the interpretation\n    - *Example:* Patient noted to have a WBC count of 60,000. Physician notes that the value is elevated\n    - Code 60,000 instead of XXXXX.4 (elevated)",
+  "last_modified" : "2023-04-06T18:37:24.138Z",
+  "definition" : [ {
+    "key" : "white_blood_cell_count",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0-99999.9", "0.0-99999.9 microliter (cells/mcL)\n(Exact value to nearest tenth in cells/mcL)" ], [ "XXXXX.1", "100,000 or greater" ], [ "XXXXX.2", "Lab value not available, physician states WBC is low" ], [ "XXXXX.3", "Lab value not available, physician states WBC is normal" ], [ "XXXXX.4", "Lab value not available, physician states WBC is elevated/high" ], [ "XXXXX.7", "Test ordered, results not in chart" ], [ "XXXXX.8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code XXXXX.8 may result in an edit error)" ], [ "XXXXX.9", "Not documented in medical record\nWBC (White Blood Cell Count) Pretreatment Lab Value not assessed or unknown if assessed" ], [ "", "N/A - Diagnosis year is prior to 2023" ] ]
+}
