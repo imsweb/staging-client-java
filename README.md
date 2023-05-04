@@ -155,7 +155,7 @@ Here are recent releases which included new algorithm versions.
 
 | staging-client-java                                                          | Algorithm           | Version  | Algorithm ZIP                                                                                                    |
 |------------------------------------------------------------------------------|---------------------|----------|------------------------------------------------------------------------------------------------------------------|
-| [10.1.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.2.0) | Toronto Pediatric   | 0.5      | [toronto-0.4.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.2.0/toronto-0.5.zip)       |
+| [10.1.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.2.0) | Toronto Pediatric   | 0.5      | [toronto-0.5.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.2.0/toronto-0.5.zip)       |
 | [10.1.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.1.0) | Toronto Pediatric   | 0.4      | [toronto-0.4.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.1.0/toronto-0.4.zip)       |
 | [10.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.0.0) | Toronto Pediatric   | 0.3      | [toronto-0.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/toronto-0.3.zip)       |
 | [10.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.0.0) | EOD                 | 3.0      | [eod_public-3.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/eod_public-3.0.zip) |
