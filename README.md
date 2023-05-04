@@ -8,7 +8,7 @@ A cancer staging client library for Java applications.
 
 ## Supported staging algorithms
 
-### Toronto Pedatric Staging 0.3
+### Toronto Pedatric Staging 0.5
 
 Toronto Stage was developed based on a consensus meeting by the Union for Internal Cancer Control (UICC) in 2014. Since this time, multiple countries have
 implemented the Toronto Staging Guidelines for pediatric cancers. Starting in 2024, the United States will also implement the Toronto Staging in the SEER
