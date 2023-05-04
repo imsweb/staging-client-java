@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_medulloblastoma_pnet",
+  "algorithm" : "toronto",
+  "version" : "0.5",
+  "name" : "Schema Selection Medulloblastoma- pNET",
+  "title" : "Schema selection for Medulloblastoma- pNET",
+  "last_modified" : "2023-04-12T13:58:48.552Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C700-C729", "9473", "MATCH" ] ]
+}

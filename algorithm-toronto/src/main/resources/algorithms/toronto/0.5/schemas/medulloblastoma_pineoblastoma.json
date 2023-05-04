@@ -1,0 +1,94 @@
+{
+  "id" : "medulloblastoma_pineoblastoma",
+  "algorithm" : "toronto",
+  "version" : "0.5",
+  "name" : "Medulloblastoma: Pineoblastoma",
+  "title" : "Medulloblastoma and Other CNS embryonal tumors: Pineoblastoma",
+  "notes" : "9362: C700-C729, C753 (all ages)\n\n**Note 1:** The following sources were used in the development of this schema\n* Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022\nhttps://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf",
+  "schema_selection_table" : "schema_selection_medulloblastoma_pineoblastoma",
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "naaccr_xml_id" : "dateOfDiagnosis",
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "naaccr_xml_id" : "primarySite",
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "naaccr_xml_id" : "histologicTypeIcdO3",
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "m_category",
+    "name" : "M Category",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9613,
+    "naaccr_xml_id" : "mCategory",
+    "table" : "m_category_82562",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  } ],
+  "outputs" : [ {
+    "key" : "toronto_id",
+    "name" : "Toronto ID",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9617,
+    "naaccr_xml_id" : "torontoId",
+    "default" : "3e3"
+  }, {
+    "key" : "toronto_version_number",
+    "name" : "Toronto Version Number",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9620,
+    "naaccr_xml_id" : "torontoVersionNumber",
+    "default" : "1"
+  }, {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "toronto_t",
+    "name" : "Derived Toronto T",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9607,
+    "naaccr_xml_id" : "derivedTorontoT",
+    "default" : "88"
+  }, {
+    "key" : "toronto_n",
+    "name" : "Derived Toronto N",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9605,
+    "naaccr_xml_id" : "derivedTorontoN",
+    "default" : "88"
+  }, {
+    "key" : "toronto_m",
+    "name" : "Derived Toronto M",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9604,
+    "naaccr_xml_id" : "derivedTorontoM",
+    "default" : "88"
+  }, {
+    "key" : "toronto_group",
+    "name" : "Derived Toronto Stage Group",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9606,
+    "naaccr_xml_id" : "derivedTorontoStageGroup",
+    "default" : "88"
+  } ],
+  "involved_tables" : [ "primary_site", "histology", "year_dx_validation", "m_category_82562", "schema_selection_medulloblastoma_pineoblastoma" ],
+  "last_modified" : "2023-04-12T13:58:45.845Z",
+  "on_invalid_input" : "CONTINUE"
+}

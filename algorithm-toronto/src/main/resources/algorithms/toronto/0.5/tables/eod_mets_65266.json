@@ -1,0 +1,15 @@
+{
+  "id" : "eod_mets_65266",
+  "algorithm" : "toronto",
+  "version" : "0.5",
+  "name" : "EOD Mets",
+  "title" : "EOD Mets",
+  "notes" : "NOT a lookup (code/meaning); merely an expected value list\n\n09722: CNS Other – V9: 2023+",
+  "last_modified" : "2023-01-20T18:35:49.527Z",
+  "definition" : [ {
+    "key" : "eod_mets",
+    "name" : "EOD M Code",
+    "type" : "INPUT"
+  } ],
+  "rows" : [ [ "00" ], [ "10" ], [ "70" ], [ "99" ] ]
+}

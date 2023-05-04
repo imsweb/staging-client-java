@@ -1,0 +1,141 @@
+{
+  "id" : "renal_tumors_nephroblastoma",
+  "algorithm" : "toronto",
+  "version" : "0.5",
+  "name" : "Renal Tumors: Nephroblastoma",
+  "title" : "Renal Tumors: Nephroblastoma",
+  "notes" : "8959, 8960: C649, C659 (all ages)\n\n**Note 1:** The following sources were used in the development of this schema\n* Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022\nhttps://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf",
+  "schema_selection_table" : "schema_selection_renal_tumors_nephroblastoma",
+  "schema_discriminators" : [ "behavior" ],
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "naaccr_xml_id" : "dateOfDiagnosis",
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "naaccr_xml_id" : "primarySite",
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "naaccr_xml_id" : "histologicTypeIcdO3",
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "naaccr_item" : 523,
+    "naaccr_xml_id" : "behaviorCodeIcdO3",
+    "table" : "behavior",
+    "used_for_staging" : true
+  }, {
+    "key" : "wilms_tumor_staging",
+    "name" : "Wilms Tumor Staging System",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9622,
+    "naaccr_xml_id" : "wilmsTumorStagingSystem",
+    "default" : "99",
+    "table" : "wilms_tumor_staging_system_11570",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "chrom_1p_status",
+    "name" : "Chromosome 1p Status",
+    "naaccr_item" : 3801,
+    "naaccr_xml_id" : "chromosome1pLossHeterozygosity",
+    "table" : "chromosome_1p_status_97190",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "chrom_1q_status",
+    "name" : "Chromosome 1q Status",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9601,
+    "naaccr_xml_id" : "chromosome1qStatus",
+    "table" : "chromosome_1q_status_14467",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "chrom_16q_status",
+    "name" : "Chromosome 16q Status",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9600,
+    "naaccr_xml_id" : "chromosome16qLossHeterozygosity",
+    "table" : "chromosome_16q_status_46566",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  } ],
+  "outputs" : [ {
+    "key" : "toronto_id",
+    "name" : "Toronto ID",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9617,
+    "naaccr_xml_id" : "torontoId",
+    "default" : "6a1"
+  }, {
+    "key" : "toronto_version_number",
+    "name" : "Toronto Version Number",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9620,
+    "naaccr_xml_id" : "torontoVersionNumber",
+    "default" : "1"
+  }, {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "toronto_t",
+    "name" : "Derived Toronto T",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9607,
+    "naaccr_xml_id" : "derivedTorontoT",
+    "default" : "88"
+  }, {
+    "key" : "toronto_n",
+    "name" : "Derived Toronto N",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9605,
+    "naaccr_xml_id" : "derivedTorontoN",
+    "default" : "88"
+  }, {
+    "key" : "toronto_m",
+    "name" : "Derived Toronto M",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9604,
+    "naaccr_xml_id" : "derivedTorontoM",
+    "default" : "88"
+  }, {
+    "key" : "toronto_group",
+    "name" : "Derived Toronto Stage Group",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9606,
+    "naaccr_xml_id" : "derivedTorontoStageGroup",
+    "default" : "88"
+  } ],
+  "involved_tables" : [ "chromosome_1q_status_14467", "schema_selection_renal_tumors_nephroblastoma", "primary_site", "chromosome_1p_status_97190", "histology", "year_dx_validation", "chromosome_16q_status_46566", "behavior", "wilms_tumor_staging_system_11570" ],
+  "last_modified" : "2023-04-19T15:51:50.587Z",
+  "on_invalid_input" : "CONTINUE"
+}

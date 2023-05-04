@@ -6,7 +6,7 @@ import java.util.HashSet;
 
 import com.imsweb.staging.updater.UpdaterUtils;
 
-import static com.imsweb.staging.toronto.TorontoDataProvider.TorontoVersion.V0_4;
+import static com.imsweb.staging.toronto.TorontoDataProvider.TorontoVersion.V0_5;
 
 /**
  * Update the Toronto data from the API
@@ -14,7 +14,7 @@ import static com.imsweb.staging.toronto.TorontoDataProvider.TorontoVersion.V0_4
 public class TorontoUpdateFromAPI {
 
     public static void main(String[] args) throws IOException {
-        UpdaterUtils.update("toronto", V0_4.getVersion(), new HashSet<>(Collections.singletonList("STAGING")));
+        UpdaterUtils.update("toronto", V0_5.getVersion(), new HashSet<>(Collections.singletonList("STAGING")));
     }
 
 }

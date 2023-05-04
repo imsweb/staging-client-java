@@ -75,20 +75,11 @@ public class TorontoStagingData extends StagingData {
         NODES_POS("nodes_pos"),
         GRADE_PATH("grade_path"),
         GRADE_CLIN("grade_clin"),
-        GRADE_POST_THERAPY_CLIN("grade_post_therapy_clin"),
-        GRADE_POST_THERAPY_PATH("grade_post_therapy_path"),
         SCHEMA_ID("schema_id"),
-        SHIMADA_CLASSIFICATION("shimada_classification"),
         S_CATEGORY_CLIN("s_category_clin"),
-        DNA_PLOIDY("dna_ploidy"),
-        N_MYC_APMLIFICATION("n_myc_amplification"),
         S_CATEGORY_PATH("s_category_path"),
         SIZE_SUMMARY("size_summary"),
-        INGRSS("ingrss"),
-        B_SYMPTOMS("b_symptoms"),
-        MONTH_DX("month_dx"),
-        MONTH_BIRTH("month_birth"),
-        CHROM_11Q_STATUS("chrom_11q_status");
+        B_SYMPTOMS("b_symptoms");
 
         private final String _name;
 
@@ -112,7 +103,6 @@ public class TorontoStagingData extends StagingData {
         TORONTO_GROUP("toronto_group"),
         TORONTO_GRADE("toronto_grade"),
         DERIVED_VERSION("derived_version"),
-        DERIVED_RISK_LEVEL("derived_risk_level"),
         DERIVED_ANN_ARBOR_STAGE("derived_ann_arbor_stage");
 
         private final String _name;
