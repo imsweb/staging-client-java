@@ -8,7 +8,7 @@ A cancer staging client library for Java applications.
 
 ## Supported staging algorithms
 
-### Toronto Pedatric Staging 0.5
+### Toronto Pedatric Staging
 
 Toronto Stage was developed based on a consensus meeting by the Union for Internal Cancer Control (UICC) in 2014. Since this time, multiple countries have
 implemented the Toronto Staging Guidelines for pediatric cancers. Starting in 2024, the United States will also implement the Toronto Staging in the SEER
@@ -28,10 +28,19 @@ items have formats and code structures specific to the data item.
 To get started using the Toronto Pediatric algorithm, instantiate a `Staging` instance:
 
 ```java
-Staging staging = Staging.getInstance(TorontoDataProvider.getInstance(TorontoVersion.LATEST));
+Staging staging=Staging.getInstance(TorontoDataProvider.getInstance(TorontoVersion.LATEST));
 ```
 
-### EOD 3.0
+If a specific version is needed, the algorithm zip file can be downloaded and initialized using an `ExternalStagingFileDataProvider`.
+
+| Version | Release                                                                      | Algorithm ZIP                                                                                              |
+|---------|------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| 0.5     | [10.2.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.2.0) | [toronto-0.5.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.2.0/toronto-0.5.zip) |
+| 0.4     | [10.1.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.1.0) | [toronto-0.4.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.1.0/toronto-0.4.zip) |
+| 0.3     | [10.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.0.0) | [toronto-0.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/toronto-0.3.zip) |
+| 0.2     | [9.1](https://github.com/imsweb/staging-client-java/releases/tag/v9.1)       | [toronto-0.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v9.1/toronto-0.2.zip)    |
+
+### EOD
 
 Extent of Disease (EOD) is a set of three data items that describe how far a cancer has spread at the time of diagnosis. EOD 2018 is effective for
 cases diagnosed in 2018 and later.
@@ -53,10 +62,17 @@ formats and code structures specific to the data item.
 To get started using the EOD algorithm, instantiate a `Staging` instance:
 
 ```java
-Staging staging = Staging.getInstance(EodDataProvider.getInstance(EodVersion.LATEST));
+Staging staging=Staging.getInstance(EodDataProvider.getInstance(EodVersion.LATEST));
 ```
 
-### TNM 2.0
+If a specific version is needed, the algorithm zip file can be downloaded and initialized using an `ExternalStagingFileDataProvider`.
+
+| Version | Release                                                                      | Algorithm ZIP                                                                                                    |
+|---------|------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| 3.0     | [10.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.0.0) | [eod_public-3.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/eod_public-3.0.zip) |
+| 2.1     | [8.0](https://github.com/imsweb/staging-client-java/releases/tag/v8.0)       | [eod_public-2.1.zip](https://github.com/imsweb/staging-client-java/releases/download/v8.0/eod_public-2.1.zip)    |
+
+### TNM
 
 TNM is a widely accepted system of cancer staging. TNM stands for Tumor, Nodes, and Metastasis. T is assigned based on the extent of involvement at the
 primary tumor site, N for the extent of involvement in regional lymph nodes, and M for distant spread. Clinical TNM is assigned prior to treatment and
@@ -75,10 +91,17 @@ Collaborative Stage, which would derive Summary Stage 2000.
 To get started using the TNM algorithm, instantiate a `Staging` instance:
 
 ```java
-Staging staging = Staging.getInstance(TnmDataProvider.getInstance(TnmVersion.LATEST));
+Staging staging=Staging.getInstance(TnmDataProvider.getInstance(TnmVersion.LATEST));
 ```
 
-### Collaborative Staging 02.05.50
+If a specific version is needed, the algorithm zip file can be downloaded and initialized using an `ExternalStagingFileDataProvider`.
+
+| Version | Release                                                                      | Algorithm ZIP                                                                                      |
+|---------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| 2.0     | [10.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.0.0) | [tnm-2.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/tnm-2.0.zip) |
+| 1.9     | [8.0](https://github.com/imsweb/staging-client-java/releases/tag/v8.0)       | [tnm-1.9.zip](https://github.com/imsweb/staging-client-java/releases/download/v8.0/tnm-1.9.zip)    |
+
+### Collaborative Staging
 
 Collaborative Stage is a unified data collection system designed to provide a common data set to meet the needs of all three staging systems (TNM, SEER EOD, and SEER SS). It
 provides a comprehensive system to improve data quality by standardizing rules for timing, clinical and pathologic assessments, and compatibility across all the systems for
@@ -87,8 +110,12 @@ all cancer sites.
 To get started using the CS algorithm, instantiate a `Staging` instance:
 
 ```java
-Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.LATEST));
+Staging staging=Staging.getInstance(CsDataProvider.getInstance(CsVersion.LATEST));
 ```
+
+| Version  | Release                                                                      | Algorithm ZIP                                                                                              |
+|----------|------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| 02.05.50 | [10.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.0.0) | [cs-02.05.50.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/cs-02.05.50.zip) |
 
 ## Download
 
@@ -148,23 +175,6 @@ implementation 'com.imsweb:staging-client-java-tnm:x.x.x'
 implementation 'com.imsweb:staging-client-java-toronto:x.x.x'
 ```
 
-Note that the algorithm artifacts only include the latest version of each algorithm. If an older version is necessary, the algorithm zip file can be downloaded and 
-initialized using an `ExternalStagingFileDataProvider`.
-
-Here are recent releases which included new algorithm versions.
-
-| staging-client-java                                                          | Algorithm           | Version  | Algorithm ZIP                                                                                                    |
-|------------------------------------------------------------------------------|---------------------|----------|------------------------------------------------------------------------------------------------------------------|
-| [10.2.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.2.0) | Toronto Pediatric   | 0.5      | [toronto-0.5.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.2.0/toronto-0.5.zip)       |
-| [10.1.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.1.0) | Toronto Pediatric   | 0.4      | [toronto-0.4.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.1.0/toronto-0.4.zip)       |
-| [10.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.0.0) | Toronto Pediatric   | 0.3      | [toronto-0.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/toronto-0.3.zip)       |
-| [10.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.0.0) | EOD                 | 3.0      | [eod_public-3.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/eod_public-3.0.zip) |
-| [10.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.0.0) | TNM                 | 2.0      | [tnm-2.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/tnm-2.0.zip)               |
-| [10.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.0.0) | Collaborative Stage | 02.05.50 | [cs-02.05.50.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/cs-02.05.50.zip)       |
-| [9.1](https://github.com/imsweb/staging-client-java/releases/tag/v9.1)       | Toronto Pediatric   | 0.2      | [toronto-0.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v9.1/toronto-0.2.zip)          |
-| [9.0](https://github.com/imsweb/staging-client-java/releases/tag/v9.0)       | EOD                 | 2.1      | [eod_public-2.1.zip](https://github.com/imsweb/staging-client-java/releases/download/v8.0/eod_public-2.1.zip)    |
-| [9.0](https://github.com/imsweb/staging-client-java/releases/tag/v9.0)       | TNM                 | 1.9      | [tnm-1.9.zip](https://github.com/imsweb/staging-client-java/releases/download/v8.0/tnm-1.9.zip)                  |
-
 ## Usage
 
 More detailed documentation can be found in the [Wiki](https://github.com/imsweb/staging-client-java/wiki/)
@@ -180,8 +190,8 @@ For example, for the Collaborative Staging algorithm, the call will look like th
 Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.LATEST));
 ```
 
-Each release contains links to all the current algorithms. There could be times when you want to load an older version of an algorithm. You can get the algorithm
-zip file from the release page and load it using `ExternalStagingFileDataProvider`. 
+There could be times when you want to load either a private algorithm or even an older version of an existing algorithm. You can get the algorithm
+zip file from the release page and load it using `ExternalStagingFileDataProvider`.
 
 ```java
 Path path = Paths.get("C:/path/to/algorithm", "tnm-1.9.zip");
