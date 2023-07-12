@@ -3,9 +3,9 @@ plugins {
 }
 
 dependencies {
-    api "com.fasterxml.jackson.core:jackson-core:2.15.0"
-    api "com.fasterxml.jackson.core:jackson-annotations:2.15.0"
-    api "com.fasterxml.jackson.core:jackson-databind:2.15.0"
+    api "com.fasterxml.jackson.core:jackson-core:2.15.2"
+    api "com.fasterxml.jackson.core:jackson-annotations:2.15.2"
+    api "com.fasterxml.jackson.core:jackson-databind:2.15.2"
 
     implementation "org.cache2k:cache2k-api:2.6.1.Final"
     runtimeOnly "org.cache2k:cache2k-core:2.6.1.Final"
@@ -15,7 +15,7 @@ dependencies {
 
     implementation 'org.slf4j:slf4j-api:2.0.7'
 
-    testFixturesImplementation 'com.imsweb:seerapi-client-java:5.3'
+    testFixturesImplementation 'com.imsweb:seerapi-client-java:5.4'
     testFixturesImplementation 'org.slf4j:slf4j-simple:2.0.7'
     testFixturesImplementation 'org.zeroturnaround:zt-zip:1.15'
     testFixturesImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.3'
