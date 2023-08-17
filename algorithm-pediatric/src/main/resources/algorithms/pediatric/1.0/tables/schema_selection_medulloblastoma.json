@@ -1,0 +1,32 @@
+{
+  "id": "schema_selection_medulloblastoma",
+  "algorithm": "pediatric",
+  "version": "1.0",
+  "name": "Schema Selection Medulloblastoma",
+  "title": "Schema selection for Medulloblastoma",
+  "last_modified": "2023-08-02T15:39:39.945Z",
+  "definition": [
+    {
+      "key": "site",
+      "name": "Primary Site",
+      "type": "INPUT"
+    },
+    {
+      "key": "hist",
+      "name": "Histology",
+      "type": "INPUT"
+    },
+    {
+      "key": "result",
+      "name": "Result",
+      "type": "ENDPOINT"
+    }
+  ],
+  "rows": [
+    [
+      "C700-C729",
+      "9470-9472, 9474-9478, 9480",
+      "MATCH"
+    ]
+  ]
+}

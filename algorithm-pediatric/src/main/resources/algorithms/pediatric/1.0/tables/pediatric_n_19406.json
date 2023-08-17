@@ -1,0 +1,34 @@
+{
+  "id": "pediatric_n_19406",
+  "algorithm": "pediatric",
+  "version": "1.0",
+  "name": "Pediatric N",
+  "title": "Pediatric N",
+  "last_modified": "2023-08-03T16:54:37.939Z",
+  "definition": [
+    {
+      "key": "ped_regional_nodes",
+      "name": "Ped Regional Nodes",
+      "type": "INPUT"
+    },
+    {
+      "key": "pediatric_n",
+      "name": "Derived Pediatric N",
+      "type": "ENDPOINT"
+    }
+  ],
+  "rows": [
+    [
+      "000",
+      "VALUE:N0"
+    ],
+    [
+      "800",
+      "VALUE:N1"
+    ],
+    [
+      "999",
+      "VALUE:NX"
+    ]
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "pediatric_primary_tumor_92453",
+  "algorithm": "pediatric",
+  "version": "1.0",
+  "name": "Pediatric Primary Tumor",
+  "title": "Pediatric Primary Tumor",
+  "notes": "**Note 1:** For Ovary, Pediatric Staging is based on Stage Group and collected in this data item.  \n\n**Note 2:** If there is involvement of the fallopian tube with no further evidence of extension, regional lymph node involvement or metastasis, and the physician verifies this is an ovary primary, code 200.\n\n**Note 3:** Code 200 for extension to and/or discontinuous metastasis to any of the following pelvic organs WITHOUT regional lymph node involvement and/or distant metastasis \n* Adjacent (pelvic) peritoneum\n* Bladder\n* Bladder serosa\n* Cul de sac (rectouterine pouch)\n* Ligament(s) (broad, ovarian, round, suspensory)\n* Mesosalpinx (Meosvarium)\n* Parametrium\n* Pelvic wall\n* Rectosigmoid\n* Rectum\n* Sigmoid colon (including sigmoid mesentery)\n* Ureter (pelvic portion)\n\n**Note 4:** Code 300 for any evidence of peritoneal carcinomatosis, which may also be called seeding, salting, talcum powder appearance, or studding in any of the following abdominal organs WITHOUT regional lymph node involvement and/or distant metastasis (see Code 500 for extraperitoneal carcinomatosis)\n* Abdominal mesentery\n* Diaphragm\n* Gallbladder\n* Intestine, large (except rectum, rectosigmoid and sigmoid colon)\n* Kidneys\n* Omentum (infracolic, NOS)\n* Pancreas\n* Pericolic gutter\n* Peritoneum, NOS\n* Small intestine\n* Stomach\n* Ureters (outside pelvis)\n\n**Note 5:** Code 400 for involvement of regional lymph nodes (bilateral and contralateral) WITHOUT distant metastasis\n* Intrabdominal\n* Para-aortic, NOS\n   - Aortic\n   - Lateral aortic/lateral lumbar\n   - Periaortic\n* Pelvic, NOS\n   - Iliac, NOS\n      + Common\n      + External\n      + Internal (hypogastric) (obturator)\n   - Paracervical\n   - Parametrial\n   - Sacral, NOS\n      + Lateral (laterosacral)\n      + Middle (promontorial) (Gerota's node)\n      + Presacral\n      + Uterosacral\n* Retroperitoneal, NOS\n\n**Note 6:** Code 500 for distant metastasis involvement, including\n* Any parenchymal involvement of the liver or spleen \n   - See code 300 or 400 (if regional lymph node involvement) if the tumor is limited to the peritoneal surface of the liver or splenic capsule\n* Extraperitoneal carcinomatosis (excludes peritoneal carcinomatosis)",
+  "last_modified": "2023-08-17T15:47:33.201Z",
+  "definition": [
+    {
+      "key": "ped_primary_tumor",
+      "name": "Code",
+      "type": "INPUT"
+    },
+    {
+      "key": "description",
+      "name": "Description",
+      "type": "DESCRIPTION"
+    }
+  ],
+  "rows": [
+    [
+      "000",
+      "In situ\n\nWITHOUT lymph node involvement and/or distant metastasis"
+    ],
+    [
+      "100",
+      "Limited to one or both ovaries\n* WITH or WITHOUT tumor on ovarian surface\n* WITH or WITHOUT surgical spill\n* AND No or UNKNOWN\n   - Malignant cells in ascites or peritoneal washings\n   - Capsule rupture\n\nWITHOUT lymph node involvement and/or distant metastasis"
+    ],
+    [
+      "150",
+      "Limited to one or both ovaries\n* WITH Malignant Cells in ascites or peritoneal washings OR\n* Capsule rupture\n* Negative or unknown lymph node involvement (both regional and distant) \n\nWITHOUT lymph node involvement and/or distant metastasis"
+    ],
+    [
+      "200",
+      "Tumor involves one or both ovaries with pelvic extension (below the pelvic brim) (See Note 2)\n\nWITHOUT lymph node involvement and/or distant metastasis"
+    ],
+    [
+      "300",
+      "Tumor involves one or both ovaries WITH cytologically OR histologically confirmed spread to the peritoneum outside the pelvis (See Note 3)\n\nWITHOUT lymph node involvement and/or distant metastasis"
+    ],
+    [
+      "400",
+      "Retroperitoneal lymph nodes are involved (See Note 4)\n\nWITHOUT distant metastasis"
+    ],
+    [
+      "500",
+      "Distant metastasis (excludes peritoneal metastases) (See Note 5)\n\nPleural effusion with positive cytology\n\nDistant lymph node(s)\n\n* Inguinal, NOS\n   - Inguinofemoral (groin)\n   - Node of Cloquet or Rosenmuller (highest deep inguinal)\n   - Superficial inguinal (femoral)\n* Distant lymph node(s)\n\nExtra-abdominal organs\n\nLiver parenchymal\nSpleen parenchymal\nTransmural involvement of intestine\n\nCarcinomatosis (involvement of multiple parenchymal organs OR\ndiffuse involvement of multiple non-abdominal organs)\n\n* Excludes peritoneal carcinomatosis (see Codes 300 or 400)\n\nWITH or WITHOUT distant lymph node(s) OR pleural effusion with positive cytology\n\nDistant metastasis, NOS"
+    ],
+    [
+      "999",
+      "Unknown stage: stage group not stated\nStage group cannot be assessed\nNot documented in medical record\n\nDeath Certificate Only"
+    ]
+  ]
+}

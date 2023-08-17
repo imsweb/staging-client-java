@@ -9,7 +9,7 @@ import com.imsweb.staging.updater.UpdaterUtils;
 import static com.imsweb.staging.pediatric.PediatricDataProvider.PediatricVersion.LATEST;
 
 /**
- * Update the Toronto data from the API
+ * Update the pediatric data from the API
  */
 public class PediatricUpdateFromAPI {
 

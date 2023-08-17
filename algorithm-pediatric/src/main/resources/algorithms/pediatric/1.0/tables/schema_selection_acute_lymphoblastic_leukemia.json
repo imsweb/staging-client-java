@@ -1,0 +1,44 @@
+{
+  "id": "schema_selection_acute_lymphoblastic_leukemia",
+  "algorithm": "pediatric",
+  "version": "1.0",
+  "name": "Schema Selection Acute Lymphoblastic Leukemia",
+  "title": "Schema selection for Acute Lymphoblastic Leukemia",
+  "last_modified": "2023-08-17T16:10:03.186Z",
+  "definition": [
+    {
+      "key": "site",
+      "name": "Primary Site",
+      "type": "INPUT"
+    },
+    {
+      "key": "hist",
+      "name": "Histology",
+      "type": "INPUT"
+    },
+    {
+      "key": "age_dx",
+      "name": "Age at Diagnosis",
+      "type": "INPUT"
+    },
+    {
+      "key": "behavior",
+      "name": "Behavior",
+      "type": "INPUT"
+    },
+    {
+      "key": "result",
+      "name": "Result",
+      "type": "ENDPOINT"
+    }
+  ],
+  "rows": [
+    [
+      "C000-C809",
+      "9811-9819, 9837",
+      "0-39",
+      "3",
+      "MATCH"
+    ]
+  ]
+}

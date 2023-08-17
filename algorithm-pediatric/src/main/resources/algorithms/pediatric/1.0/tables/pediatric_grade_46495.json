@@ -1,0 +1,39 @@
+{
+  "id": "pediatric_grade_46495",
+  "algorithm": "pediatric",
+  "version": "1.0",
+  "name": "Pediatric Grade",
+  "title": "Pediatric Grade",
+  "description": "Used for calculation",
+  "last_modified": "2023-08-03T17:13:47.785Z",
+  "definition": [
+    {
+      "key": "derived_summary_grade",
+      "name": "Derived Summary Grade",
+      "type": "INPUT"
+    },
+    {
+      "key": "pediatric_grade",
+      "name": "Collapsed Pediatric Grade",
+      "type": "ENDPOINT"
+    }
+  ],
+  "rows": [
+    [
+      "1,A,L",
+      "VALUE:1"
+    ],
+    [
+      "2,B,M",
+      "VALUE:2"
+    ],
+    [
+      "3,4,5,C,D,E,H",
+      "VALUE:3"
+    ],
+    [
+      "9,S",
+      "VALUE:X"
+    ]
+  ]
+}

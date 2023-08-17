@@ -1,0 +1,59 @@
+{
+  "id": "pediatric_regional_nodes_42195",
+  "algorithm": "pediatric",
+  "version": "1.0",
+  "name": "Pediatric Regional Nodes",
+  "title": "Pediatric Regional Nodes",
+  "notes": "**Note 1:** For Testis, Pediatric Staging is based on extension (see Pediatric Primary Tumor), regional nodes (collected in this data item), and mets (see Pediatric Mets).  \n\n**Note 2:** Code only regional nodes and nodes, NOS, in this field. Distant nodes are coded in Pediatric   Mets.\n\n**Note 3:** Involvement of inguinal, pelvic, or external iliac lymph nodes WITHOUT or unknown if previous scrotal or inguinal surgery prior to presentation of the testis tumor is coded in Pediatric Mets as distant lymph node involvement.\n\n**Note 4:** Regional lymph nodes include:\nAortic, NOS\n* Lateral (lumbar)\n* Para-aortic\n* Periaortic\n* Preaortic\n* Retroaortic\n\nPericaval, NOS\n* Interaortocaval\n* Paracaval\n* Precaval\n* Retrocaval\n\nRetroperitoneal below the diaphragm or NOS\nSpermatic vein\n\nLymph nodes **WITH** previous scrotal or inguinal surgery\n* External iliac\n* Inguinal nodes, NOS\n   - Deep, NOS\n   - Node of Cloquet or Rosenmuller (highest deep inguinal)\n   - Superficial (femoral)\n* Pelvic\n\n**Note 5:** Code 800 if regional lymph nodes are involved, but there is no indication which ones are involved.",
+  "last_modified": "2023-08-17T15:36:17.399Z",
+  "definition": [
+    {
+      "key": "ped_regional_nodes",
+      "name": "Code",
+      "type": "INPUT"
+    },
+    {
+      "key": "description",
+      "name": "Description",
+      "type": "DESCRIPTION"
+    }
+  ],
+  "rows": [
+    [
+      "000",
+      "No regional lymph node involvement"
+    ],
+    [
+      "100",
+      "CLINICAL assessment only\n\nMetastasis in lymph node(s), all less than 2 cm"
+    ],
+    [
+      "200",
+      "PATHOLOGICAL assessment only\n\nMetastasis in lymph node(s), all less than 2 cm"
+    ],
+    [
+      "300",
+      "CLINICAL assessment only\n\nMetastasis lymph node(s) between 2 cm and 5 cm"
+    ],
+    [
+      "400",
+      "PATHOLOGICAL assessment only\n\nMetastasis in a lymph node, between 2 cm and 5 cm"
+    ],
+    [
+      "500",
+      "PATHOLOGICAL assessment only\n\nExtranodal extension of lymph nodes present"
+    ],
+    [
+      "600",
+      "Metastasis in a lymph node larger than 5 cm in greatest dimension"
+    ],
+    [
+      "800",
+      "Regional lymph node(s), NOS\nLymph node(s), NOS"
+    ],
+    [
+      "999",
+      "Unknown; regional lymph node(s) not stated\nRegional lymph node(s) cannot be assessed\nNot documented in medical record\n\nDeath Certificate Only"
+    ]
+  ]
+}

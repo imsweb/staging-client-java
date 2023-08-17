@@ -1,0 +1,39 @@
+{
+  "id": "pediatric_mets_12638",
+  "algorithm": "pediatric",
+  "version": "1.0",
+  "name": "Pediatric Mets",
+  "title": "Pediatric Mets",
+  "notes": "**Note 1:** For non-Rhabdomyosarcoma, Pediatric Staging is based on extension (see Pediatric Primary Tumor), regional nodes (see Pediatric Regional Nodes), and mets (collected in this data item).\n  \n**Note 2:** Use the following resources to determine if involved lymph nodes are distant or if involved organs are metastatic.\n* EOD: Review the primary site-based schema\n* Summary Stage: Review the primary site-based chapter",
+  "last_modified": "2023-08-02T19:45:28.828Z",
+  "definition": [
+    {
+      "key": "ped_mets",
+      "name": "Code",
+      "type": "INPUT"
+    },
+    {
+      "key": "description",
+      "name": "Description",
+      "type": "DESCRIPTION"
+    }
+  ],
+  "rows": [
+    [
+      "00",
+      "No distant metastasis"
+    ],
+    [
+      "10",
+      "Distant lymph node(s), NOS"
+    ],
+    [
+      "70",
+      "Carcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS"
+    ],
+    [
+      "99",
+      "Unknown; distant metastasis not stated\nNot documented in medical record\n\nDeath Certificate Only"
+    ]
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "schema_selection_astrocytoma",
+  "algorithm": "pediatric",
+  "version": "1.0",
+  "name": "Schema Selection Astrocytoma",
+  "title": "Schema selection for Astrocytoma",
+  "last_modified": "2023-08-14T20:13:38.138Z",
+  "definition": [
+    {
+      "key": "site",
+      "name": "Primary Site",
+      "type": "INPUT"
+    },
+    {
+      "key": "hist",
+      "name": "Histology",
+      "type": "INPUT"
+    },
+    {
+      "key": "age_dx",
+      "name": "Age at Diagnosis",
+      "type": "INPUT"
+    },
+    {
+      "key": "result",
+      "name": "Result",
+      "type": "ENDPOINT"
+    }
+  ],
+  "rows": [
+    [
+      "C700-C729",
+      "9380, 9384, 9400-9411, 9420-9424, 9440-9442, 9445",
+      "0-39",
+      "MATCH"
+    ]
+  ]
+}

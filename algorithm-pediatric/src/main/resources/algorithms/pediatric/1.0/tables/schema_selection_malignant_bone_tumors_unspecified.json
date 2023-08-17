@@ -1,0 +1,44 @@
+{
+  "id": "schema_selection_malignant_bone_tumors_unspecified",
+  "algorithm": "pediatric",
+  "version": "1.0",
+  "name": "Schema Selection Malignant Bone Tumors: Unspecified",
+  "title": "Schema selection for Malignant Bone Tumors: Unspecified",
+  "last_modified": "2023-08-17T16:58:07.630Z",
+  "definition": [
+    {
+      "key": "site",
+      "name": "Primary Site",
+      "type": "INPUT"
+    },
+    {
+      "key": "hist",
+      "name": "Histology",
+      "type": "INPUT"
+    },
+    {
+      "key": "age_dx",
+      "name": "Age at Diagnosis",
+      "type": "INPUT"
+    },
+    {
+      "key": "behavior",
+      "name": "Behavior",
+      "type": "INPUT"
+    },
+    {
+      "key": "result",
+      "name": "Result",
+      "type": "ENDPOINT"
+    }
+  ],
+  "rows": [
+    [
+      "C400-C419",
+      "8000-8005, 8800, 8801, 8803-8805",
+      "0-39",
+      "3",
+      "MATCH"
+    ]
+  ]
+}

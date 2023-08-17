@@ -13,15 +13,15 @@ public final class PediatricDataProvider extends StagingFileDataProvider {
     private static final Map<PediatricVersion, PediatricDataProvider> _PROVIDERS = new ConcurrentHashMap<>();
 
     /**
-     * Construct a Toronto data provider with the passed version
+     * Construct a pediatric data provider with the passed version
      * @param version version to initialize
      */
     private PediatricDataProvider(PediatricVersion version) {
-        super("toronto", version.getVersion());
+        super("pediatric", version.getVersion());
     }
 
     /**
-     * Return the Toronto provider for the latest version
+     * Return the pediatric provider for the latest version
      * @return the data provider
      */
     public static synchronized PediatricDataProvider getInstance() {
@@ -29,8 +29,8 @@ public final class PediatricDataProvider extends StagingFileDataProvider {
     }
 
     /**
-     * Return the Toronto provider for a specified version
-     * @param version Toronto version
+     * Return the pediatric provider for a specified version
+     * @param version pediatric version
      * @return the data provider
      */
     public static synchronized PediatricDataProvider getInstance(PediatricVersion version) {

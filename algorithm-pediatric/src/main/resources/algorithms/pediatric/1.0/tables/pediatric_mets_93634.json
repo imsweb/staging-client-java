@@ -1,0 +1,51 @@
+{
+  "id": "pediatric_mets_93634",
+  "algorithm": "pediatric",
+  "version": "1.0",
+  "name": "Pediatric Mets",
+  "title": "Pediatric Mets",
+  "notes": "**Note 1:** For Testis, Pediatric Staging is based on extension (see Pediatric Primary Tumor), regional nodes (see Pediatric Regional Nodes), and mets (collected in this data item).  \n\n**Note 2:** Involvement of inguinal, pelvic, or external iliac lymph nodes with previous scrotal or inguinal surgery prior to presentation of the testis tumor are coded in Pediatric Regional Nodes.",
+  "last_modified": "2023-08-02T21:22:03.524Z",
+  "definition": [
+    {
+      "key": "ped_mets",
+      "name": "Code",
+      "type": "INPUT"
+    },
+    {
+      "key": "description",
+      "name": "Description",
+      "type": "DESCRIPTION"
+    }
+  ],
+  "rows": [
+    [
+      "00",
+      "No distant metastasis"
+    ],
+    [
+      "10",
+      "Distant lymph node(s)\n* WITHOUT previous scrotal or inguinal surgery OR UNKNOWN if previous scrotal or inguinal surgery\n   - External iliac\n   - Pelvic, NOS"
+    ],
+    [
+      "30",
+      "Distant lymph node(s)\n* WITHOUT previous scrotal or inguinal surgery OR UNKNOWN if previous scrotal or inguinal surgery\n   - Inguinal, NOS\n   - Deep, NOS\n   - Node of Cloquet or Rosenmuller (highest deep inguinal)\n   - Superficial (femoral)\n* Retroperitoneal specified as above the diaphragm\n* Distant lymph node(s), NOS"
+    ],
+    [
+      "50",
+      "Lung\n\nWITH or WITHOUT distant lymph nodes"
+    ],
+    [
+      "60",
+      "Other specified distant metastasis\nWITH or WITHOUT distant lymph node(s) and/or lung\n\nCarcinomatosis"
+    ],
+    [
+      "70",
+      "Distant metastasis, NOS"
+    ],
+    [
+      "99",
+      "Unknown; distant metastasis not stated\nNot documented in medical record\n\nDeath Certificate Only"
+    ]
+  ]
+}

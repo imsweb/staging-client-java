@@ -69,17 +69,15 @@ public class PediatricStagingData extends StagingData {
         BEHAVIOR("behavior"),
         AGE_DX("age_dx"),
         YEAR_DX("year_dx"),
-        EOD_PRIMARY_TUMOR("eod_primary_tumor"),
-        EOD_REGIONAL_NODES("eod_regional_nodes"),
-        EOD_METS("eod_mets"),
+        PED_PRIMARY_TUMOR("ped_primary_tumor"),
+        PED_REGIONAL_NODES("ped_regional_nodes"),
+        PED_METS("ped_mets"),
         NODES_POS("nodes_pos"),
-        GRADE_PATH("grade_path"),
-        GRADE_CLIN("grade_clin"),
-        SCHEMA_ID("schema_id"),
         S_CATEGORY_CLIN("s_category_clin"),
         S_CATEGORY_PATH("s_category_path"),
         SIZE_SUMMARY("size_summary"),
-        B_SYMPTOMS("b_symptoms");
+        B_SYMPTOMS("b_symptoms"),
+        DERIVED_SUMMARY_GRADE("derived_summary_grade");
 
         private final String _name;
 
@@ -97,7 +95,7 @@ public class PediatricStagingData extends StagingData {
     public enum PediatricOutput {
         PEDIATRIC_ID("pediatric_id"),
         TORONTO_VERSION_NUMBER("toronto_version_number"),
-        PEDIATRIC_T("peditric_t"),
+        PEDIATRIC_T("pediatric_t"),
         PEDIATRIC_N("pediatric_n"),
         PEDIATRIC_M("pediatric_m"),
         PEDIATRIC_GROUP("pediatric_group"),
@@ -116,7 +114,7 @@ public class PediatricStagingData extends StagingData {
     }
 
     /**
-     * TorontoStagingInputBuilder builder
+     * PediatricStagingInputBuilder builder
      */
     public static class PediatricStagingInputBuilder {
 

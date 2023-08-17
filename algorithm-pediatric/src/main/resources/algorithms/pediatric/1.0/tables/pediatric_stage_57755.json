@@ -1,0 +1,156 @@
+{
+  "id": "pediatric_stage_57755",
+  "algorithm": "pediatric",
+  "version": "1.0",
+  "name": "Pediatric Stage",
+  "title": "Pediatric Stage",
+  "last_modified": "2023-08-03T19:23:36.443Z",
+  "definition": [
+    {
+      "key": "pediatric_t",
+      "name": "T",
+      "type": "INPUT"
+    },
+    {
+      "key": "pediatric_n",
+      "name": "N",
+      "type": "INPUT"
+    },
+    {
+      "key": "pediatric_m",
+      "name": "M",
+      "type": "INPUT"
+    },
+    {
+      "key": "s_category_combined",
+      "name": "S Category",
+      "type": "INPUT"
+    },
+    {
+      "key": "pediatric_group",
+      "name": "Derived Pediatric Stage Group",
+      "type": "ENDPOINT"
+    }
+  ],
+  "rows": [
+    [
+      "T1,T2,T3,T4",
+      "N0",
+      "M0",
+      "9",
+      "VALUE:1"
+    ],
+    [
+      "T1",
+      "N0",
+      "M0",
+      "0",
+      "VALUE:1A"
+    ],
+    [
+      "T2,T3,T4",
+      "N0",
+      "M0",
+      "0",
+      "VALUE:1B"
+    ],
+    [
+      "*",
+      "N0",
+      "M0",
+      "1,2,3",
+      "VALUE:1S"
+    ],
+    [
+      "*",
+      "N1,N2,N3",
+      "M0",
+      "9",
+      "VALUE:2"
+    ],
+    [
+      "*",
+      "N1",
+      "M0",
+      "0,1",
+      "VALUE:2A"
+    ],
+    [
+      "*",
+      "N2",
+      "M0",
+      "0,1",
+      "VALUE:2B"
+    ],
+    [
+      "*",
+      "N3",
+      "M0",
+      "0,1",
+      "VALUE:2C"
+    ],
+    [
+      "*",
+      "*",
+      "M1",
+      "9",
+      "VALUE:3"
+    ],
+    [
+      "*",
+      "*",
+      "M1",
+      "0,1",
+      "VALUE:3A"
+    ],
+    [
+      "*",
+      "N1,N2,N3",
+      "M0",
+      "2",
+      "VALUE:3B"
+    ],
+    [
+      "*",
+      "*",
+      "M1",
+      "2",
+      "VALUE:3B"
+    ],
+    [
+      "*",
+      "N1,N2,N3",
+      "M0",
+      "3",
+      "VALUE:3C"
+    ],
+    [
+      "*",
+      "*",
+      "M1",
+      "3",
+      "VALUE:3C"
+    ],
+    [
+      "T0,TX",
+      "N0",
+      "M0",
+      "0,9",
+      "VALUE:99"
+    ],
+    [
+      "*",
+      "NX",
+      "M0",
+      "*",
+      "VALUE:99"
+    ],
+    [
+      "88",
+      "88",
+      "88",
+      "*",
+      "VALUE:88"
+    ]
+  ]
+}

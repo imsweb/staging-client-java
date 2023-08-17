@@ -1,0 +1,248 @@
+{
+  "id": "rhabdomyosarcoma",
+  "algorithm": "pediatric",
+  "version": "1.0",
+  "name": "Rhabdomyosarcoma",
+  "title": "Rhabdomyosarcoma",
+  "notes": "8900-8905, 8920, 8991: C000-C809 (ages 0-39)\n\n8910, 8912: C000-C809 (all ages)\n\n**Note 1:** The following sources were used in the development of this schema\n* [Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022](https://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf)",
+  "schema_selection_table": "schema_selection_rhabdomyosarcoma",
+  "schema_discriminators": [
+    "age_dx",
+    "behavior"
+  ],
+  "inputs": [
+    {
+      "key": "year_dx",
+      "name": "Year of Diagnosis",
+      "naaccr_item": 390,
+      "naaccr_xml_id": "dateOfDiagnosis",
+      "table": "year_dx_validation",
+      "used_for_staging": false
+    },
+    {
+      "key": "site",
+      "name": "Primary Site",
+      "naaccr_item": 400,
+      "naaccr_xml_id": "primarySite",
+      "table": "primary_site",
+      "used_for_staging": true
+    },
+    {
+      "key": "hist",
+      "name": "Histology",
+      "naaccr_item": 522,
+      "naaccr_xml_id": "histologicTypeIcdO3",
+      "table": "histology",
+      "used_for_staging": true
+    },
+    {
+      "key": "size_summary",
+      "name": "Tumor Size Summary",
+      "naaccr_item": 756,
+      "naaccr_xml_id": "tumorSizeSummary",
+      "default": "999",
+      "table": "tumor_size_summary_47973",
+      "used_for_staging": true
+    },
+    {
+      "key": "age_dx",
+      "name": "Age at Diagnosis",
+      "naaccr_item": 230,
+      "naaccr_xml_id": "ageAtDiagnosis",
+      "table": "age_at_diagnosis_validation_3881",
+      "used_for_staging": true
+    },
+    {
+      "key": "foxo1_gene_rearrangements",
+      "name": "FOXO1 Gene Rearrangements",
+      "description": "NAACCR IDs are not final",
+      "naaccr_item": 9609,
+      "naaccr_xml_id": "foxo1GeneRearrangements",
+      "table": "foxo1_gene_rearrangements_72870",
+      "used_for_staging": false,
+      "metadata": [
+        {
+          "name": "SSDI"
+        },
+        {
+          "name": "SEER_REQUIRED"
+        }
+      ]
+    },
+    {
+      "key": "ped_primary_tumor",
+      "name": "Pediatric Primary Tumor",
+      "description": "NAACCR IDs are not final",
+      "naaccr_item": 9623,
+      "naaccr_xml_id": "pediatricPrimaryTumor",
+      "default": "999",
+      "table": "pediatric_primary_tumor_57637",
+      "used_for_staging": true
+    },
+    {
+      "key": "ped_regional_nodes",
+      "name": "Pediatric Regional Nodes",
+      "description": "NAACCR IDs are not final",
+      "naaccr_item": 9624,
+      "naaccr_xml_id": "pediatricRegionalNodes",
+      "default": "999",
+      "table": "pediatric_regional_nodes_32357",
+      "used_for_staging": true
+    },
+    {
+      "key": "ped_mets",
+      "name": "Pediatric Mets",
+      "description": "NAACCR IDs are not final",
+      "naaccr_item": 9625,
+      "naaccr_xml_id": "pediatricMets",
+      "default": "99",
+      "table": "pediatric_mets_64617",
+      "used_for_staging": true
+    },
+    {
+      "key": "behavior",
+      "name": "Behavior",
+      "naaccr_item": 523,
+      "naaccr_xml_id": "behaviorCodeIcdO3",
+      "table": "behavior",
+      "used_for_staging": true
+    }
+  ],
+  "outputs": [
+    {
+      "key": "pediatric_id",
+      "name": "Pediatric ID",
+      "description": "NAACCR IDs are not final",
+      "naaccr_item": 9617,
+      "naaccr_xml_id": "pediatricId",
+      "default": "9a"
+    },
+    {
+      "key": "toronto_version_number",
+      "name": "Toronto Version Number",
+      "description": "NAACCR IDs are not final \nVersion of the Toronto Pediatric Staging System that this version of the Pediatric staging API is based upon.",
+      "naaccr_item": 9620,
+      "naaccr_xml_id": "torontoVersionNumber",
+      "default": "2"
+    },
+    {
+      "key": "derived_version",
+      "name": "Derived Version",
+      "description": "For Pediatric ID Version Current - 9618, update all cases when API is updated; Pediatric ID Version Original - 9619, set when the case is coded and do not update",
+      "default": "{{ctx_alg_version}}"
+    },
+    {
+      "key": "pediatric_t",
+      "name": "Derived Pediatric T",
+      "description": "NAACCR IDs are not final",
+      "naaccr_item": 9607,
+      "naaccr_xml_id": "derivedPediatricT"
+    },
+    {
+      "key": "pediatric_n",
+      "name": "Derived Pediatric N",
+      "description": "NAACCR IDs are not final",
+      "naaccr_item": 9605,
+      "naaccr_xml_id": "derivedPediatricN"
+    },
+    {
+      "key": "pediatric_m",
+      "name": "Derived Pediatric M",
+      "description": "NAACCR IDs are not final",
+      "naaccr_item": 9604,
+      "naaccr_xml_id": "derivedPediatricM"
+    },
+    {
+      "key": "pediatric_group",
+      "name": "Derived Pediatric Stage Group",
+      "description": "NAACCR IDs are not final",
+      "naaccr_item": 9606,
+      "naaccr_xml_id": "derivedPediatricStageGroup"
+    }
+  ],
+  "mappings": [
+    {
+      "id": "toronto_stage",
+      "name": "Pediatric Stage",
+      "initial_context": [
+        {
+          "key": "pediatric_group",
+          "value": "90"
+        },
+        {
+          "key": "pediatric_n",
+          "value": "90"
+        },
+        {
+          "key": "pediatric_m",
+          "value": "90"
+        },
+        {
+          "key": "pediatric_t",
+          "value": "90"
+        }
+      ],
+      "tables": [
+        {
+          "id": "pediatric_t_59799",
+          "inputs": [
+            "size_summary",
+            "ped_primary_tumor"
+          ],
+          "outputs": [
+            "pediatric_t"
+          ]
+        },
+        {
+          "id": "pediatric_n_21296",
+          "inputs": [
+            "ped_regional_nodes"
+          ],
+          "outputs": [
+            "pediatric_n"
+          ]
+        },
+        {
+          "id": "pediatric_m_79386",
+          "inputs": [
+            "ped_mets"
+          ],
+          "outputs": [
+            "pediatric_m"
+          ]
+        },
+        {
+          "id": "pediatric_stage_94654",
+          "inputs": [
+            "pediatric_t",
+            "site",
+            "pediatric_m",
+            "pediatric_n"
+          ],
+          "outputs": [
+            "pediatric_group"
+          ]
+        }
+      ]
+    }
+  ],
+  "involved_tables": [
+    "pediatric_primary_tumor_57637",
+    "pediatric_stage_94654",
+    "age_at_diagnosis_validation_3881",
+    "pediatric_t_59799",
+    "pediatric_mets_64617",
+    "schema_selection_rhabdomyosarcoma",
+    "pediatric_m_79386",
+    "primary_site",
+    "pediatric_n_21296",
+    "histology",
+    "foxo1_gene_rearrangements_72870",
+    "pediatric_regional_nodes_32357",
+    "year_dx_validation",
+    "tumor_size_summary_47973",
+    "behavior"
+  ],
+  "last_modified": "2023-08-17T16:58:10.540Z",
+  "on_invalid_input": "CONTINUE"
+}

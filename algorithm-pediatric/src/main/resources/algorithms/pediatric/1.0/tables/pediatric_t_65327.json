@@ -1,0 +1,50 @@
+{
+  "id": "pediatric_t_65327",
+  "algorithm": "pediatric",
+  "version": "1.0",
+  "name": "Pediatric T",
+  "title": "Pediatric T",
+  "last_modified": "2023-08-03T18:56:06.965Z",
+  "definition": [
+    {
+      "key": "ped_primary_tumor",
+      "name": "Ped Primary Tumor",
+      "type": "INPUT"
+    },
+    {
+      "key": "pediatric_t",
+      "name": "Derived Pediatric T",
+      "type": "ENDPOINT"
+    }
+  ],
+  "rows": [
+    [
+      "000",
+      "VALUE:88"
+    ],
+    [
+      "125,150,210",
+      "VALUE:T1"
+    ],
+    [
+      "240,350",
+      "VALUE:T2"
+    ],
+    [
+      "500",
+      "VALUE:T3"
+    ],
+    [
+      "600,700",
+      "VALUE:T4"
+    ],
+    [
+      "800",
+      "VALUE:T0"
+    ],
+    [
+      "999",
+      "VALUE:TX"
+    ]
+  ]
+}

@@ -45,7 +45,7 @@ class PediatricStagingTest extends StagingTest {
 
     @Override
     public String getAlgorithm() {
-        return "toronto";
+        return "pediatric";
     }
 
     @Override
@@ -64,7 +64,7 @@ class PediatricStagingTest extends StagingTest {
         assertThat(_STAGING.getTableIds()).isNotEmpty();
 
         assertThat(_STAGING.getSchema("ependymoma")).isNotNull();
-        assertThat(_STAGING.getTable("st_jude_murphy_staging_system_35179")).isNotNull();
+        assertThat(_STAGING.getTable("n_myc_amplification_57417")).isNotNull();
     }
 
     @Test
@@ -78,7 +78,7 @@ class PediatricStagingTest extends StagingTest {
 
     @Test
     void testDescriminatorKeys() {
-        assertThat(_STAGING.getSchema("acute_lymphoblastic_leukemia").getSchemaDiscriminators()).containsOnly("age_dx");
+        assertThat(_STAGING.getSchema("acute_lymphoblastic_leukemia").getSchemaDiscriminators()).containsOnly("age_dx", "behavior");
         assertThat(_STAGING.getSchema("ovarian").getSchemaDiscriminators()).containsOnly("age_dx", "behavior");
 
         // check all schema discriminators
@@ -139,7 +139,7 @@ class PediatricStagingTest extends StagingTest {
         assertThat(lookup).isEmpty();
 
         // test valid combinations that do not require a discriminator
-        PediatricSchemaLookup schemaLookup = new PediatricSchemaLookup("C220", "8970");
+        PediatricSchemaLookup schemaLookup = new PediatricSchemaLookup("C220", "8970", "10", "3");
         lookup = _STAGING.lookupSchema(schemaLookup);
         assertThat(lookup).hasSize(1);
         assertThat(lookup.get(0).getId()).isEqualTo("hepatoblastoma");
@@ -212,8 +212,8 @@ class PediatricStagingTest extends StagingTest {
 
     @Test
     void testFindTableRow() {
-        final String tableId = "toronto_m_65862";
-        final String colId = "eod_mets";
+        final String tableId = "pediatric_mets_12638";
+        final String colId = "ped_mets";
 
         assertThat(_STAGING.getTable(tableId)).isNotNull();
 
@@ -221,10 +221,9 @@ class PediatricStagingTest extends StagingTest {
 
         // null maps to blank
         assertThat(_STAGING.findMatchingTableRow(tableId, colId, "00")).isEqualTo(Integer.valueOf(0));
-        assertThat(_STAGING.findMatchingTableRow(tableId, colId, "99")).isEqualTo(Integer.valueOf(0));
         assertThat(_STAGING.findMatchingTableRow(tableId, colId, "10")).isEqualTo(Integer.valueOf(1));
-        assertThat(_STAGING.findMatchingTableRow(tableId, colId, "30")).isEqualTo(Integer.valueOf(1));
-        assertThat(_STAGING.findMatchingTableRow(tableId, colId, "70")).isEqualTo(Integer.valueOf(1));
+        assertThat(_STAGING.findMatchingTableRow(tableId, colId, "70")).isEqualTo(Integer.valueOf(2));
+        assertThat(_STAGING.findMatchingTableRow(tableId, colId, "99")).isEqualTo(Integer.valueOf(3));
     }
 
     @Test
@@ -235,10 +234,8 @@ class PediatricStagingTest extends StagingTest {
                 .withInput(PediatricInput.YEAR_DX, "2021")
                 .withInput(PediatricInput.AGE_DX, "16")
                 .withInput(PediatricInput.BEHAVIOR, "3")
-                .withInput(PediatricInput.SCHEMA_ID, "00459")
-                .withInput(PediatricInput.EOD_PRIMARY_TUMOR, "200")
-                .withInput(PediatricInput.EOD_REGIONAL_NODES, "300")
-                .withInput(PediatricInput.EOD_METS, "30").build();
+                .withInput(PediatricInput.PED_PRIMARY_TUMOR, "200")
+                .build();
 
         // perform the staging
         _STAGING.stage(data);
@@ -246,12 +243,7 @@ class PediatricStagingTest extends StagingTest {
         assertThat(data.getResult()).isEqualTo(Result.STAGED);
         assertThat(data.getSchemaId()).isEqualTo("ovarian");
         assertThat(data.getErrors()).isEmpty();
-        assertThat(data.getPath()).containsExactlyInAnyOrder(
-                "toronto_stage.toronto_t_78796",
-                "toronto_stage.toronto_n_26872",
-                "toronto_stage.toronto_m_81745",
-                "toronto_stage.toronto_stage_43114"
-        );
+        assertThat(data.getPath()).containsExactlyInAnyOrder("toronto_stage.pediatric_stage_78332");
         assertThat(data.getOutput()).hasSize(7);
 
         // check outputs
@@ -260,12 +252,12 @@ class PediatricStagingTest extends StagingTest {
         assertThat(data.getOutput())
                 .hasSize(7)
                 .hasFieldOrPropertyWithValue(PediatricOutput.DERIVED_VERSION.toString(), PediatricVersion.LATEST.getVersion())
-                .hasFieldOrPropertyWithValue(PediatricOutput.TORONTO_VERSION_NUMBER.toString(), "1")
+                .hasFieldOrPropertyWithValue(PediatricOutput.TORONTO_VERSION_NUMBER.toString(), "2")
                 .hasFieldOrPropertyWithValue(PediatricOutput.PEDIATRIC_ID.toString(), "10c2")
-                .hasFieldOrPropertyWithValue(PediatricOutput.PEDIATRIC_GROUP.toString(), "4")
-                .hasFieldOrPropertyWithValue(PediatricOutput.PEDIATRIC_T.toString(), "T2")
-                .hasFieldOrPropertyWithValue(PediatricOutput.PEDIATRIC_N.toString(), "N1")
-                .hasFieldOrPropertyWithValue(PediatricOutput.PEDIATRIC_M.toString(), "M1");
+                .hasFieldOrPropertyWithValue(PediatricOutput.PEDIATRIC_GROUP.toString(), "2")
+                .hasFieldOrPropertyWithValue(PediatricOutput.PEDIATRIC_T.toString(), "88")
+                .hasFieldOrPropertyWithValue(PediatricOutput.PEDIATRIC_N.toString(), "88")
+                .hasFieldOrPropertyWithValue(PediatricOutput.PEDIATRIC_M.toString(), "88");
     }
 
     @Test
@@ -311,24 +303,25 @@ class PediatricStagingTest extends StagingTest {
     void testInvolvedTables() {
         Set<String> tables = _STAGING.getInvolvedTables("testicular");
 
-        assertThat(tables).containsOnly("toronto_n_21728",
+        assertThat(tables).containsOnly(
                 "age_at_diagnosis_validation_3881",
-                "toronto_t_57044",
-                "toronto_m_65862",
-                "combined_s_category_15139",
-                "schema_selection_testicular",
-                "schema_id_42744",
-                "s_category_clinical_11368",
-                "nodes_pos_fpa",
-                "toronto_stage_81706",
-                "primary_site",
-                "s_category_pathological_46197",
-                "eod_primary_tumor_63650",
-                "histology",
-                "year_dx_validation",
-                "eod_mets_68192",
                 "behavior",
-                "eod_regional_nodes_4689");
+                "combined_s_category_15139",
+                "histology",
+                "in_situ_to_88s_95645",
+                "nodes_pos_fpa",
+                "pediatric_m_97287",
+                "pediatric_mets_93634",
+                "pediatric_n_84898",
+                "pediatric_primary_tumor_73431",
+                "pediatric_regional_nodes_42195",
+                "pediatric_stage_57755",
+                "pediatric_t_65327",
+                "primary_site",
+                "s_category_clinical_11368",
+                "s_category_pathological_46197",
+                "schema_selection_testicular",
+                "year_dx_validation");
     }
 
     @Test
@@ -341,8 +334,8 @@ class PediatricStagingTest extends StagingTest {
     @Test
     void testGetInputs() {
         assertThat(_STAGING.getInputs(_STAGING.getSchema("nhl_nos"))).containsOnly("site", "hist", "age_dx", "behavior");
-        assertThat(_STAGING.getInputs(_STAGING.getSchema("testicular"))).containsOnly("eod_mets", "site", "hist",
-                "nodes_pos", "age_dx", "s_category_path", "schema_id", "eod_primary_tumor", "s_category_clin", "behavior", "eod_regional_nodes");
+        assertThat(_STAGING.getInputs(_STAGING.getSchema("testicular"))).containsOnly("ped_mets", "site", "hist",
+                "nodes_pos", "age_dx", "s_category_path", "ped_primary_tumor", "s_category_clin", "behavior", "ped_regional_nodes");
     }
 
     @Test
@@ -368,8 +361,8 @@ class PediatricStagingTest extends StagingTest {
         // test valid and invalid fields
         assertThat(_STAGING.isCodeValid(schemaId, "braf_mutational_analysis", "2")).isTrue();
         assertThat(_STAGING.isCodeValid(schemaId, "braf_mutational_analysis", "5")).isFalse();
-        assertThat(_STAGING.isCodeValid(schemaId, "eod_mets", "10")).isTrue();
-        assertThat(_STAGING.isCodeValid(schemaId, "eod_mets", "20")).isFalse();
+        assertThat(_STAGING.isCodeValid(schemaId, "ped_mets", "10")).isTrue();
+        assertThat(_STAGING.isCodeValid(schemaId, "ped_mets", "20")).isFalse();
     }
 
     @Test

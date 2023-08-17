@@ -1,0 +1,42 @@
+{
+  "id": "in_situ_to_88s_95645",
+  "algorithm": "pediatric",
+  "version": "1.0",
+  "name": "In Situ to 88s",
+  "title": "In Situ to 88s",
+  "notes": "In Situ is not defined by Toronto for Testicular, but is present in Pediatric Primary Tumor.  If Pediatric Primary Tumor is set to 000, then all derived Pediatric T, N and M should go to 88.",
+  "last_modified": "2023-08-03T19:23:00.208Z",
+  "definition": [
+    {
+      "key": "pediatric_t",
+      "name": "Derived Pediatric T In",
+      "type": "INPUT"
+    },
+    {
+      "key": "pediatric_n",
+      "name": "Derived Pediatric N",
+      "type": "ENDPOINT"
+    },
+    {
+      "key": "pediatric_m",
+      "name": "Derived Pediatric M",
+      "type": "ENDPOINT"
+    }
+  ],
+  "extra_input": [
+    "pediatric_m",
+    "pediatric_n"
+  ],
+  "rows": [
+    [
+      "88",
+      "VALUE:88",
+      "VALUE:88"
+    ],
+    [
+      "*",
+      "VALUE:{{pediatric_n}}",
+      "VALUE:{{pediatric_m}}"
+    ]
+  ]
+}
