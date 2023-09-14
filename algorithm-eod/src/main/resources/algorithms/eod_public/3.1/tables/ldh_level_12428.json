@@ -1,0 +1,19 @@
+{
+  "id" : "ldh_level_12428",
+  "algorithm" : "eod_public",
+  "version" : "3.1",
+  "name" : "LDH Level",
+  "title" : "LDH Level",
+  "notes" : "**Note 1:** Use the reference ranges from your lab to determine if LDH is normal.\n\n**Note 2:** Record the lab value of the highest serum LDH test results documented in the medical record either before or after surgical resection of the primary tumor with or without regional lymph node dissection. The LDH must be taken prior to systemic (chemo, immunotherapy, hormone), radiation therapy or surgery to a metastatic site. The lab value may be recorded in a lab report, history and physical, or clinical statement in the pathology report.\n\n**Note 3:** If there is no mention of the LDH, code 9.\n\n**Note 4:** The same laboratory test should be used to record information in 3870: LDH Upper Limits of Normal and 3932: LDH Lab Value.",
+  "last_modified" : "2022-04-29T17:42:35.302Z",
+  "definition" : [ {
+    "key" : "ldh_level",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Normal LDH level\nLow, below normal" ], [ "1", "Above normal LDH level; High" ], [ "7", "Test ordered, results not in chart" ], [ "9", "Not documented in medical record \nLDH Level not assessed or unknown if assessed" ] ]
+}

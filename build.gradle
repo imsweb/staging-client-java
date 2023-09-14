@@ -4,7 +4,7 @@ plugins {
     id 'com.adarshr.test-logger' version '3.2.0'
     id 'com.github.ben-manes.versions' version '0.47.0'
     id 'org.sonatype.gradle.plugins.scan' version '2.6.0'
-    id 'org.sonarqube' version '4.2.1.3168'
+    id 'org.sonarqube' version '4.3.1.3277'
 }
 
 sonarqube {
@@ -42,19 +42,19 @@ subprojects {
     apply plugin: "org.sonarqube"
 
     group = 'com.imsweb'
-    version = '10.2.0'
+    version = '10.3.0'
 
     dependencies {
-        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.3'
-        testImplementation 'org.junit.jupiter:junit-jupiter-params:5.9.3'
-        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.3'
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+        testImplementation 'org.junit.jupiter:junit-jupiter-params:5.10.0'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
         testImplementation 'org.assertj:assertj-core:3.24.2'
         testImplementation 'com.google.code.bean-matchers:bean-matchers:0.14'
-        testImplementation 'org.slf4j:slf4j-simple:2.0.7'
+        testImplementation 'org.slf4j:slf4j-simple:2.0.9'
     }
 
     // fail the build if there are compiler warnings
-    tasks.withType(JavaCompile) {
+    tasks.withType(JavaCompile).configureEach {
         options.encoding = 'UTF-8'
         options.compilerArgs << "-Xlint:all" << "-Xlint:-serial" << "-Werror"
     }
@@ -134,7 +134,7 @@ subprojects {
     }
 
     // zip up all algorithms
-    task zipAlgorithms(type: JavaExec) {
+    tasks.register('zipAlgorithms', JavaExec) {
         mainClass.set('com.imsweb.staging.zip.ZipAlgorithm')
         classpath = sourceSets.test.runtimeClasspath
     }

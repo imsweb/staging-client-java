@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_net_ampulla",
+  "algorithm" : "eod_public",
+  "version" : "3.1",
+  "name" : "Schema Selection NETAmpulla",
+  "title" : "Schema selection for NETAmpulla",
+  "last_modified" : "2023-08-04T22:07:17.083Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C241", "8150-8153,8155-8156,8158,8240-8242,8249,8683", "2018-2023", "MATCH" ] ]
+}

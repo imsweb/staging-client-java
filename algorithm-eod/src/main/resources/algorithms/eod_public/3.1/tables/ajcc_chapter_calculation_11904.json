@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_chapter_calculation_11904",
+  "algorithm" : "eod_public",
+  "version" : "3.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2023-04-20T20:22:25.637Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8152,8240-8241,8249", "3", "VALUE:9011", "Neuroendocrine Tumors of the Colon and Rectum", "VALUE:09" ], [ "8152,8240-8241,8249", "2", "VALUE:XX", "Other Neuroendocrine Tumors of the Colon and Rectum", "VALUE:88" ], [ "8150-8151,8153,8155-8156,8158", "*", "VALUE:XX", "Other Neuroendocrine Tumors of the Colon and Rectum", "VALUE:88" ], [ "8242,8683", "*", "VALUE:XX", "Other Neuroendocrine Tumors of the Colon and Rectum", "VALUE:88" ] ]
+}
