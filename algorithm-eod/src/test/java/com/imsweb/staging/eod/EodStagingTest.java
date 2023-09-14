@@ -52,7 +52,7 @@ class EodStagingTest extends StagingTest {
 
     @Override
     public String getVersion() {
-        return EodVersion.V3_0.getVersion();
+        return EodVersion.V3_1.getVersion();
     }
 
     @Override
@@ -62,7 +62,7 @@ class EodStagingTest extends StagingTest {
 
     @Test
     void testBasicInitialization() {
-        assertThat(_STAGING.getSchemaIds()).hasSize(127);
+        assertThat(_STAGING.getSchemaIds()).hasSize(135);
         assertThat(_STAGING.getTableIds()).isNotEmpty();
 
         assertThat(_STAGING.getSchema("urethra")).isNotNull();
@@ -71,7 +71,7 @@ class EodStagingTest extends StagingTest {
 
     @Test
     void testVersionInitializationTypes() {
-        Staging staging10 = Staging.getInstance(EodDataProvider.getInstance(EodVersion.V3_0));
+        Staging staging10 = Staging.getInstance(EodDataProvider.getInstance(EodVersion.V3_1));
         assertThat(staging10.getVersion()).isEqualTo(EodVersion.LATEST.getVersion());
 
         Staging stagingLatest = Staging.getInstance(EodDataProvider.getInstance());
@@ -188,7 +188,7 @@ class EodStagingTest extends StagingTest {
         assertThat(lookup.get(0).getId()).isEqualTo("soft_tissue_rare");
 
         // now invalidate the cache
-        EodDataProvider.getInstance(EodVersion.V3_0).invalidateCache();
+        EodDataProvider.getInstance(EodVersion.V3_1).invalidateCache();
 
         // try the lookup again
         lookup = _STAGING.lookupSchema(new EodSchemaLookup("C629", "9231"));
@@ -226,8 +226,8 @@ class EodStagingTest extends StagingTest {
         assertThat(data.getResult()).isEqualTo(StagingData.Result.STAGED);
         assertThat(data.getSchemaId()).isEqualTo("pancreas");
         assertThat(data.getErrors()).isEmpty();
-        assertThat(data.getPath()).hasSize(12);
-        assertThat(data.getOutput()).hasSize(7);
+        assertThat(data.getPath()).hasSize(13);
+        assertThat(data.getOutput()).hasSize(8);
 
         // check outputs
         assertThat(data.getOutput(EodOutput.DERIVED_VERSION)).isEqualTo(EodVersion.LATEST.getVersion());
@@ -268,7 +268,7 @@ class EodStagingTest extends StagingTest {
         assertThat(data.getSchemaId()).isEqualTo("breast");
         assertThat(data.getErrors()).isEmpty();
         assertThat(data.getPath()).hasSize(16);
-        assertThat(data.getOutput()).hasSize(7);
+        assertThat(data.getOutput()).hasSize(8);
 
         // check outputs
         assertThat(data.getOutput(EodOutput.DERIVED_VERSION)).isEqualTo(EodVersion.LATEST.getVersion());
@@ -312,7 +312,7 @@ class EodStagingTest extends StagingTest {
         assertThat(tables).containsOnly("seer_mets_48348", "nodes_dcc", "grade_clinical_standard_non_ajcc_32473", "grade_pathological_standard_non_ajcc_5627",
                 "adnexa_uterine_other_97891", "nodes_pos_fpa", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "primary_site", "histology",
                 "nodes_exam_76029", "grade_post_therapy_clin_69737", "grade_post_therapy_path_75348", "schema_selection_adnexa_uterine_other",
-                "year_dx_validation", "summary_stage_rpa", "lvi_full_56663", "tumor_size_summary_63115", "extension_bcn");
+                "year_dx_validation", "summary_stage_rpa", "tumor_size_summary_63115", "extension_bcn", "combined_grade_56638");
     }
 
     @Test
@@ -324,9 +324,10 @@ class EodStagingTest extends StagingTest {
 
     @Test
     void testGetInputs() {
-        assertThat(_STAGING.getInputs(_STAGING.getSchema("adnexa_uterine_other"))).containsOnly("eod_mets", "site", "hist", "eod_primary_tumor", "eod_regional_nodes");
+        assertThat(_STAGING.getInputs(_STAGING.getSchema("adnexa_uterine_other"))).containsOnly("eod_mets", "site", "hist", "eod_primary_tumor",
+                "eod_regional_nodes", "grade_path", "grade_clin");
         assertThat(_STAGING.getInputs(_STAGING.getSchema("testis"))).containsOnly("eod_mets", "site", "hist", "nodes_pos", "s_category_path",
-                "eod_primary_tumor", "s_category_clin", "eod_regional_nodes");
+                "eod_primary_tumor", "s_category_clin", "eod_regional_nodes", "grade_path", "grade_clin");
     }
 
     @Test
@@ -341,7 +342,7 @@ class EodStagingTest extends StagingTest {
         assertThat(_STAGING.isCodeValid("urethra", "site", null)).isFalse();
 
         // test fields that have a "value" specified
-        assertThat(_STAGING.isCodeValid("urethra", "year_dx", null)).isFalse();
+        assertThat(_STAGING.isCodeValid("urethra", "year_dx", null)).isTrue();
         assertThat(_STAGING.isCodeValid("urethra", "year_dx", "200")).isFalse();
         assertThat(_STAGING.isCodeValid("urethra", "year_dx", "2003")).isFalse();
         assertThat(_STAGING.isCodeValid("urethra", "year_dx", "2145")).isFalse();
@@ -442,9 +443,9 @@ class EodStagingTest extends StagingTest {
         assertThat(data.getResult()).isEqualTo(Result.STAGED);
         assertThat(data.getSchemaId()).isEqualTo("brain");
         assertThat(data.getErrors()).hasSize(5);
-        assertThat(data.getPath()).hasSize(5);
-        assertThat(data.getOutput()).hasSize(7);
-        assertThat(data.getOutput()).containsEntry(EodOutput.DERIVED_VERSION.toString(), "3.0");
+        assertThat(data.getPath()).hasSize(6);
+        assertThat(data.getOutput()).hasSize(8);
+        assertThat(data.getOutput()).containsEntry(EodOutput.DERIVED_VERSION.toString(), "3.1");
     }
 
     @Test

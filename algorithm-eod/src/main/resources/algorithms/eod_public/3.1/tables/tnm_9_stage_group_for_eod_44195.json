@@ -1,0 +1,26 @@
+{
+  "id" : "tnm_9_stage_group_for_eod_44195",
+  "algorithm" : "eod_public",
+  "version" : "3.1",
+  "name" : "TNM 9 Stage Group for EOD",
+  "title" : "TNM 9 Path Stage Group for EOD",
+  "last_modified" : "2023-04-24T18:46:51.787Z",
+  "definition" : [ {
+    "key" : "t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "stage",
+    "name" : "Stage",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "0", "0", "0", "VALUE:99" ], [ "0", " 0I+ ", "0", "VALUE:99" ], [ "0", "1", "0", "VALUE:99" ], [ "0", "1MI", "0", "VALUE:99" ], [ "0", " 1A ", "0", "VALUE:99" ], [ "0", " 1B ", "0", "VALUE:99" ], [ "0", "1C", "0", "VALUE:99" ], [ "0", "2", "0", "VALUE:4A" ], [ "0", " X ", "0", "VALUE:99" ], [ "1", "0", "0", "VALUE:1" ], [ "1", " 0I+ ", "0", "VALUE:1" ], [ "1", "1", "0", "VALUE:3" ], [ "1", "1MI", "0", "VALUE:3A" ], [ "1", " 1A ", "0", "VALUE:3A" ], [ "1", " 1B ", "0", "VALUE:3B" ], [ "1", "1C", "0", "VALUE:3C" ], [ "1", "2", "0", "VALUE:4A" ], [ "1", " X ", "0", "VALUE:99" ], [ "1A ", "0", "0", "VALUE:1A" ], [ "1A ", " 0I+ ", "0", "VALUE:1A" ], [ "1A ", "1", "0", "VALUE:3" ], [ "1A ", "1MI", "0", "VALUE:3A" ], [ "1A ", " 1A ", "0", "VALUE:3A" ], [ "1A ", " 1B ", "0", "VALUE:3B" ], [ "1A ", "1C", "0", "VALUE:3C" ], [ "1A ", "2", "0", "VALUE:4A" ], [ "1A ", " X ", "0", "VALUE:99" ], [ "1B ", "0", "0", "VALUE:1B" ], [ "1B ", " 0I+ ", "0", "VALUE:1B" ], [ "1B ", "1", "0", "VALUE:3" ], [ "1B ", "1MI", "0", "VALUE:3A" ], [ "1B ", " 1A ", "0", "VALUE:3A" ], [ "1B ", " 1B ", "0", "VALUE:3B" ], [ "1B ", "1C", "0", "VALUE:3C" ], [ "1B ", "2", "0", "VALUE:4A" ], [ "1B ", " X ", "0", "VALUE:99" ], [ "2", "0", "0", "VALUE:2" ], [ "2", " 0I+ ", "0", "VALUE:2" ], [ "2", "1", "0", "VALUE:3" ], [ "2", "1MI", "0", "VALUE:3A" ], [ "2", " 1A ", "0", "VALUE:3A" ], [ "2", " 1B ", "0", "VALUE:3B" ], [ "2", "1C", "0", "VALUE:3C" ], [ "2", "2", "0", "VALUE:4A" ], [ "2", " X ", "0", "VALUE:99" ], [ "3", "0", "0", "VALUE:3A" ], [ "3", " 0I+ ", "0", "VALUE:3A" ], [ "3", "1", "0", "VALUE:3" ], [ "3", "1MI", "0", "VALUE:3A" ], [ "3", " 1A ", "0", "VALUE:3A" ], [ "3", " 1B ", "0", "VALUE:3B" ], [ "3", "1C", "0", "VALUE:3C" ], [ "3", "2", "0", "VALUE:4A" ], [ "3", " X ", "0", "VALUE:99" ], [ "4", "* ", "0", "VALUE:4A" ], [ "X ", "0", "0", "VALUE:99" ], [ "X ", " 0I+ ", "0", "VALUE:99" ], [ "X ", "1", "0", "VALUE:3" ], [ "X ", "1MI", "0", "VALUE:3A" ], [ "X ", " 1A ", "0", "VALUE:3A" ], [ "X ", " 1B ", "0", "VALUE:3B" ], [ "X ", "1C", "0", "VALUE:3C" ], [ "X ", "2", "0", "VALUE:4A" ], [ "X ", " X ", "0", "VALUE:99" ], [ "*", "*", "1", "VALUE:4B" ], [ "88", "88", "88", "VALUE:88" ], [ "88", "*", "*", "VALUE:88" ] ]
+}
