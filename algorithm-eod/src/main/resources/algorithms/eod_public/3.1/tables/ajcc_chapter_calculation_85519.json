@@ -1,0 +1,30 @@
+{
+  "id" : "ajcc_chapter_calculation_85519",
+  "algorithm" : "eod_public",
+  "version" : "3.1",
+  "name" : "AJCC Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2023-04-20T17:32:47.734Z",
+  "definition" : [ {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "8153,8156,8240-8241,8249,8683", "3", "VALUE:9008", "Neuroendocrine Tumors of the Duodenum and Ampulla of Vater", "VALUE:09" ], [ "8153,8156,8240-8241,8249,8683", "2", "VALUE:XX", "Other Neuroendocrine Tumors of the Duodenum and Ampulla of Vater", "VALUE:88" ], [ "8150-8152,8155,8158,8242", "*", "VALUE:XX", "Other Neuroendocrine Tumors of the Duodenum and Ampulla of Vater", "VALUE:88" ] ]
+}

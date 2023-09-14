@@ -1,0 +1,19 @@
+{
+  "id" : "figo_stage_corpus_adenosarcoma_24886",
+  "algorithm" : "eod_public",
+  "version" : "3.1",
+  "name" : "FIGO Stage",
+  "title" : "FIGO Stage Corpus Adenosarcoma",
+  "notes" : "**Note 1:** There must be a statement about FIGO stage from the managing physician in order to code this data item\n* Do **not** code FIGO stage based on the pathology report\n* Do **not** code FIGO stage based only on T, N, M\n* If \"FIGO\" is not included with a stated stage, then do **not** assume it is a FIGO stage\n\n**Note 2:** FIGO stage is not the same thing as FIGO grade. Only code FIGO stage in this field, do not code FIGO grade.\n* Code FIGO grade in the grade fields\n\n**Note 3:** If there is more than one FIGO stage provided from the clinical and pathological work up, code the most extensive FIGO stage.",
+  "last_modified" : "2022-04-06T15:11:37.155Z",
+  "definition" : [ {
+    "key" : "figo",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "FIGO Stage I " ], [ "1A", "FIGO Stage IA " ], [ "1B", "FIGO Stage IB " ], [ "1C", "FIGO Stage IC " ], [ "2", "FIGO Stage II " ], [ "2A", "FIGO Stage IIA " ], [ "2B", "FIGO Stage IIB" ], [ "3", "FIGO Stage III" ], [ "3A", "FIGO Stage IIIA" ], [ "3B", "FIGO Stage IIIB" ], [ "3C", "FIGO Stage IIIC" ], [ "4", "FIGO Stage IV " ], [ "4A", "FIGO Stage IVA" ], [ "4B", "FIGO Stage IVB" ], [ "98", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 98 will result in an edit error.)" ], [ "99", "Not documented in medical record\nFIGO stage not assessed or unknown if assessed" ] ]
+}
