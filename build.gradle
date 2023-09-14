@@ -42,7 +42,7 @@ subprojects {
     apply plugin: "org.sonarqube"
 
     group = 'com.imsweb'
-    version = '10.2.0'
+    version = '10.3.0'
 
     dependencies {
         testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.3'
