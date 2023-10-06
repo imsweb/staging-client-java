@@ -1,0 +1,23 @@
+{
+  "id" : "pediatric_stage_51275",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Pediatric Stage",
+  "title" : "Pediatric Stage",
+  "notes" : "Ann Arbor Stage",
+  "last_modified" : "2023-09-11T16:31:06.480Z",
+  "definition" : [ {
+    "key" : "ped_primary_tumor",
+    "name" : "Ped Primary Tumor",
+    "type" : "INPUT"
+  }, {
+    "key" : "b_symptoms",
+    "name" : "B Symptoms",
+    "type" : "INPUT"
+  }, {
+    "key" : "pediatric_group",
+    "name" : "Derived Pediatric Stage Group",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100,200", "0", "VALUE:1A" ], [ "100,200", "1", "VALUE:1B" ], [ "100,200", "8,9", "VALUE:1" ], [ "300,400", "0", "VALUE:2A" ], [ "300,400", "1", "VALUE:2B" ], [ "300,400", "8,9", "VALUE:2" ], [ "575,600", "0", "VALUE:3A" ], [ "575,600", "1", "VALUE:3B" ], [ "575,600", "8,9", "VALUE:3" ], [ "700,800", "0", "VALUE:4A" ], [ "700,800", "1", "VALUE:4B" ], [ "700,800", "8,9", "VALUE:4" ], [ "750,999", "*", "VALUE:99" ] ]
+}

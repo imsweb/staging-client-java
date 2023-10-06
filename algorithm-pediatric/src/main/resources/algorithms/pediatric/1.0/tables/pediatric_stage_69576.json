@@ -1,0 +1,18 @@
+{
+  "id" : "pediatric_stage_69576",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Pediatric Stage",
+  "title" : "Pediatric Stage",
+  "last_modified" : "2023-09-20T20:01:42.643Z",
+  "definition" : [ {
+    "key" : "ped_mets",
+    "name" : "Ped Mets",
+    "type" : "INPUT"
+  }, {
+    "key" : "pediatric_group",
+    "name" : "Derived Pediatric Stage Group",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "VALUE:Loc" ], [ "15", "VALUE:Met" ], [ "25", "VALUE:Met" ], [ "35", "VALUE:Met" ], [ "45", "VALUE:Met" ], [ "70", "VALUE:Met" ], [ "99", "VALUE:Unk" ] ]
+}

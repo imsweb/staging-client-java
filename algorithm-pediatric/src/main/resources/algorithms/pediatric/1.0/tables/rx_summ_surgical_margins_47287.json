@@ -1,0 +1,19 @@
+{
+  "id" : "rx_summ_surgical_margins_47287",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "RX Summ Surgical Margins",
+  "title" : "RX Summ Surgical Margins",
+  "description" : "Use for field validation",
+  "last_modified" : "2023-09-11T19:54:03.192Z",
+  "definition" : [ {
+    "key" : "surgical_margins",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "No residual tumor" ], [ "1", "Residual tumor, NOS" ], [ "2", "Microscopic residual tumor" ], [ "3", "Macroscopic residual tumor" ], [ "7", "Margins not evaluable" ], [ "8", "No primary site surgery" ], [ "9", "Unknown or not applicable" ] ]
+}

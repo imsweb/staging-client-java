@@ -1,0 +1,19 @@
+{
+  "id" : "pediatric_regional_nodes_30482",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Pediatric Regional Nodes",
+  "title" : "Pediatric Regional Nodes",
+  "notes" : "**Note 1:** Code only regional nodes, and nodes, NOS in this field. Distant nodes are coded in Pediatric Mets.\n\n**Note 2:** Use the following resources to determine if involved lymph nodes are regional or distant. \n* EOD: Review the primary site-based schema\n* Summary Stage: Review the primary site-based chapter\n\n**Note 3:** Regional lymph node involvement is rare. For this Pediatric Schema, if there is no mention of lymph node involvement clinically, assume that lymph nodes are negative. Code 999 (unknown) only when there is no available information on the patient’s disease, for example when a lab only case is abstracted from a biopsy report and no clinical information is provided.",
+  "last_modified" : "2023-09-07T22:25:28.581Z",
+  "definition" : [ {
+    "key" : "ped_regional_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement" ], [ "800", "Regional lymph node(s), NOS\nLymph node(s), NOS" ], [ "888", "Not applicable: Primary site C420-C424, C700-C729, C751-C753, C760-C809" ], [ "999", "Unknown; regional lymph node(s) not stated\nRegional lymph node(s) cannot be assessed\nNot documented in medical record\n\nDeath Certificate Only" ] ]
+}

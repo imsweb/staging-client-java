@@ -1,0 +1,19 @@
+{
+  "id" : "pretext_clinical_staging_39169",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Pretext Clinical Staging",
+  "title" : "Pretext Clinical Staging",
+  "notes" : "**Note 1:** This SSDI is effective for diagnosis years 2024+\n* For cases diagnosed 2018-2023, leave this SSDI blank\n\n**Note 2:** This SSDI is based on imaging findings only. Do not code any findings from surgical resection in this data item. Evaluation must also be done prior to any neoadjuvant therapy.\n\n**Note 3:** For Pretext Staging, the 8 segments of the liver are grouped into 4 sections\n* Left lateral section: Segments II & III\n* Left medial section: Segments IVA & IVB\n* Right anterior section: Segments V & VIII\n* Right posterior section: Segments VI & VII\n* Segment 1 is ignored for Pretext",
+  "last_modified" : "2023-09-20T22:20:58.843Z",
+  "definition" : [ {
+    "key" : "pretext_clinical_staging",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "One section involved; three adjoining sections are tumor free\n\nStage I, Pretext 1" ], [ "2", "One or two sections involved; two adjoining sections are tumor free\n\nStage 2, Pretext 2" ], [ "3", "Two or three sections involved; one adjoining section is tumor free\n\nStage 3, Pretext 3" ], [ "4", "Four sections involved\n\nStage 4, Pretext 4" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nCannot be determined by pathologist\nPRETEXT not assessed or unknown if assessed" ], [ "", "N/A - Diagnosis year is prior to 2024" ] ]
+}

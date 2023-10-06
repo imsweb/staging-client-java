@@ -1,0 +1,19 @@
+{
+  "id" : "ewsr1_fli1_fusion_57187",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "EWSR1-FLI1 Fusion",
+  "title" : "EWSR1-FLI1 Fusion",
+  "notes" : "**Note 1:** This SSDI is effective for diagnosis years 2024+.\n* For cases diagnosed 2018-2023, leave this SSDI blank\n\n**Note 2:** EWS-FLI1 fusion occurs in about 90% of Ewing Sarcomas and functions as both a pioneering transcription factor and potent oncogene.\n* Primary sources of information: molecular pathology report (may be addendum to original pathology report), CAP protocol\n\n**Note 3:** Physician statement of the EWSR1-FLI1 fusion can be used to code this data item",
+  "last_modified" : "2023-09-15T14:45:02.146Z",
+  "definition" : [ {
+    "key" : "ewsr1_fli1_fusion",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "No gene arrangements (fusions) identified" ], [ "1", "EWSR1-FLI1 gene rearrangement (fusion) present" ], [ "2", "EWSR1-ERG gene rearrangement (fusion) present" ], [ "3", "Other EWSR1 gene rearrangement (fusion) present" ], [ "4", "EWSR1 rearrangement present, fusion partner not known " ], [ "5", "Non-EWSR1 variant translocation present" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nCannot be determined by pathologist\nEWSR1 gene arrangements not assessed or unknown if assessed" ], [ "", "N/A - Diagnosis year is prior to 2024" ] ]
+}

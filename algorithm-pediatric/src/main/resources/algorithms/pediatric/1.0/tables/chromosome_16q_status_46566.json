@@ -1,0 +1,19 @@
+{
+  "id" : "chromosome_16q_status_46566",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Chromosome 16q Status",
+  "title" : "Chromosome 16q: Loss of Heterozygosity (LOH)",
+  "notes" : "**Note 1:** This SSDI is effective for diagnosis years 2024+. \n* For cases diagnosed 2018-2023, leave this SSDI blank\n\n**Note 2:** Chromosome 16q: Loss of Heterozygosity (LOH) refers to the loss of genetic material normally found on the short arm of one of the patient's two copies of chromosome 16. Occurs in approximately 5% of favorable (non-anaplastic) histology Wilm’s tumor (FHWT) cells and has been shown to be associated with inferior relapse-free survival (RFS) and overall survival (OS) in patients with FH Wilm’s tumor. This testing is commonly done in conjunction with Chromosome 1p: Loss of Heterozygosity (NAACCR ID: 3801) and Chromosome 1q: Loss of Heterozygosity (NAACCR ID: 9601)\n* This is a special molecular diagnostic test performed on tumor tissue to identify loss of genetic material found on the long arm of one of the patient’s two copies of chromosome 16. A normal cell will contain two complete copies of each chromosome, one from each parent, and this normal state is termed heterozygous. Loss of heterozygosity (LOH) is an abnormal state reflecting loss of the whole arm of chromosome 16q following a chromosomal translocation event\n* Primary sources of information: molecular pathology report (may be addendum to original pathology report)\n\n**Note 3:** Physician statement of Chromosome 16q deletion/LOH can be used to code this data item.\n\n**Note 4:** Other terms for LOH include whole arm loss, gene deletion and allelic loss.",
+  "last_modified" : "2023-09-08T15:50:14.164Z",
+  "definition" : [ {
+    "key" : "chrom_16q_status",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Chromosome 16q deletion/LOH not identified/not present/negative" ], [ "1", "Chromosome 16q deletion/LOH identified/present/positive" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nCannot be determined by pathologist\nChromosome 16q deletion/LOH not assessed or unknown if assessed" ], [ "", "N/A - Diagnosis year is prior to 2024" ] ]
+}

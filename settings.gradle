@@ -3,11 +3,11 @@ include 'lib'
 include 'algorithm-cs'
 include 'algorithm-tnm'
 include 'algorithm-eod'
-include 'algorithm-toronto'
+include 'algorithm-pediatric'
 
 // change subproject names
 project(":lib").name = 'staging-client-java'
 project(":algorithm-cs").name = 'staging-client-java-cs'
 project(":algorithm-tnm").name = 'staging-client-java-tnm'
 project(":algorithm-eod").name = 'staging-client-java-eod-public'
-project(":algorithm-toronto").name = 'staging-client-java-toronto'
+project(":algorithm-pediatric").name = 'staging-client-java-pediatric'

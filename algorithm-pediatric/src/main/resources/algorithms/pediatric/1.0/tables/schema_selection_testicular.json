@@ -1,0 +1,30 @@
+{
+  "id" : "schema_selection_testicular",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Schema Selection Testicular",
+  "title" : "Schema selection for Testicular",
+  "last_modified" : "2023-09-28T20:18:00.887Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "age_dx",
+    "name" : "Age at Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C620-C629", "9060-9065, 9070-9073, 9080-9085, 9090, 9091, 9100-9101", "0-39", "3", "MATCH" ] ]
+}

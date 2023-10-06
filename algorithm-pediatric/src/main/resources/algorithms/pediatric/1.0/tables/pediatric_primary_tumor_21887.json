@@ -1,0 +1,21 @@
+{
+  "id" : "pediatric_primary_tumor_21887",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Pediatric Primary Tumor",
+  "title" : "Pediatric Primary Tumor",
+  "subtitle" : "St. Jude/Murphy Staging System",
+  "notes" : "**Note 1:** Extensive disease (Stage III) typically exhibits spread to para-aortic and retro-peritoneal areas by implants and plaques in mesentery or peritoneum, or by direct infiltration of structures adjacent to the primary tumor. Ascites may be present, and complete resection of all gross tumor is not possible. \n\n**Note 2:** Code 888 for histologies 9731, 9732, and 9734",
+  "footnotes" : "(1)\tAitken JF, Youlden D, O’Neill L, Gupta S, Frazier AL, eds. Childhood cancer staging for population registries according to the Toronto Childhood Cancer Stage Guidelines – Version 2. Cancer Council Queensland and Cancer Australia: Brisbane, Australia; 2021.",
+  "last_modified" : "2023-09-20T14:16:45.171Z",
+  "definition" : [ {
+    "key" : "ped_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "100", "Involvement of a single tumor, mass, or nodal area\n* EXCLUDING the following\n   - GI tract (C160-C218) (see code 200)\n   - Abdomen (see code 300)\n   - Mediastinum (see code 300)\n   - CNS (C700-C729) (see code 400)" ], [ "200", "Involvement of the GI tract (C160-C218) \n* WITHOUT lymph node involvement (see code 500 for lymph node involvement)" ], [ "300", "Involvement of a single tumor, mass, or nodal area \n* Primary intrathoracic (mediastinal, hilar, pulmonary, pleural, thymic)\n* Abdominal/intraabdominal\n* Paraspinal or epidural" ], [ "400", "Involvement of a single CNS tumor, mass (C700-C729)\n* See code 800 if lymph node involvement" ], [ "500", "Any of the following (excluding sites listed in codes 200-400)\n* Single tumor (extranodal) with regional node involvement\n* Two or more nodal areas on the SAME side (either above or below) the diaphragm\n* Two or more single (extranodal) tumors\n   - WITH or WITHOUT regional lymph node involvement\n   - AND on SAME side (either above or below) of the diaphragm\n\nPrimary gastrointestinal tract tumor (C160-C218)\n* WITH involvement of associated mesenteric nodes only\n   - See code 700 if additional lymph node regions involved" ], [ "600", "Any of the following with multiple tumors, extranodal site(s) WITH lymph node involvement on the SAME side (either above or below) the diaphragm\n* Primary intrathoracic (mediastinal, hilar, pulmonary, pleural, thymic)\n* Abdominal/intraabdominal\n* Paraspinal or epidural" ], [ "700", "Tumor (extranodal) or nodal areas on BOTH sides (above and below) of the diaphragm (excluding sites C700-C729)\n* Includes:\n   - Gastrointestinal tumors\n   - Gastrointestinal tumors\n   - Primary intrathoracic (mediastinal, hilar, pulmonary, pleural, thymic)\n   - Abdominal/intraabdominal\n   - Paraspinal or epidural" ], [ "800", "Any of the following\n* Multiple CNS tumors, or CNS tumor WITH lymph node involvement\n* Cranial nerve palsy that cannot be explained by extradural lesions, OR\n* Blasts morphologically identified in CSF\n   - In the absence of a CSF tumor mass and cranial nerve palsy, a CSF report is required to confirm or exclude CNS involvement\n\nAND/OR Bone marrow involvement" ], [ "888", "Not applicable: histologies 9731, 9732, 9734" ], [ "999", "Not documented in medical record\nSt Jude Staging System not assessed\n\nDeath certificate only" ] ]
+}

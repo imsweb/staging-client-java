@@ -1,0 +1,18 @@
+{
+  "id" : "pediatric_primary_tumor_na_1293",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Pediatric Primary Tumor",
+  "title" : "Pediatric Primary Tumor",
+  "last_modified" : "2023-08-01T13:52:25.021Z",
+  "definition" : [ {
+    "key" : "ped_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "888", "Not applicable: Information not collected for this schema" ] ]
+}

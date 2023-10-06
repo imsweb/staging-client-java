@@ -1,0 +1,19 @@
+{
+  "id" : "pediatric_mets_26722",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Pediatric Mets",
+  "title" : "Pediatric Mets",
+  "notes" : "**Note:** Code 50 does not include \"trilateral retinoblastomas.\" The presence of \"trilateral retinoblastomas\" is coded in the data item Heritable Trait. [NAACCR Data Item #3856]",
+  "last_modified" : "2023-09-27T13:18:55.178Z",
+  "definition" : [ {
+    "key" : "ped_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis" ], [ "10", "Distant lymph node(s), NOS" ], [ "30", "Distant metastasis to any organ EXCEPT CNS\n\nCarcinomatosis\n\nCode 10 + 30" ], [ "50", "CNS parenchyma\nCerebrospinal fluid\n\nAny combination of codes 10, 30 and 50" ], [ "70", "Distant metastasis, NOS" ], [ "99", "Unknown; distant metastasis not stated\nNot documented in medical record\n\nDeath Certificate Only" ] ]
+}

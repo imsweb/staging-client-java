@@ -1,0 +1,19 @@
+{
+  "id" : "white_blood_cell_count_1932",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "White Blood Cell Count",
+  "title" : "White Blood Cell Count",
+  "notes" : "**Note 1:** This SSDI is effective for diagnosis years 2024+\n* For cases diagnosed 2018-2023, leave this SSDI blank\n\n**Note 2:** Physician statement of WBC (White Blood Cell Count) Pretreatment Lab Value can be used to code this data item when no other information is available. \n* Record the lab value of the highest WBC test result documented in the medical record **prior to treatment**. The lab value may be recorded in a lab report, history and physical, or clinical statement in the pathology report\n* Record to the nearest cells per microliter (cells/uL) the highest WBC lab value documented in the medical record **prior to treatment**. \n* A known lab value takes priority over codes XXXXX.2-XXXXX.4\n    - The lab value takes priority even if the physician documents the interpretation\n      *Example:* Patient noted to have a WBC count of 60,000. Physician notes that the value is elevated. \n      Code 60,000 instead of XXXXX.4 (elevated)\n\n**Note 3:** The most common measurement of white blood cells is cells/mm3. If your facility has a different measurement, here are the conversions \n* ***Example:*** 4250 cells/mm3\n  * Kul: 4.25 (divide cells/mm3 by 1000)\n  * 10^3/ul: 4.25 (divide cells/mm3 by 1000)\n  * K/mm3: 4.25 (divide cells/mm3 by 1000)\n  * cells/uL: 4250 (same as cells/mm3)",
+  "last_modified" : "2023-09-26T15:22:18.816Z",
+  "definition" : [ {
+    "key" : "white_blood_cell_count",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0-99999.9", "0.0-99999.9 microliter (10^3 cells/uL)\n(Exact value to nearest tenth in 10^3 cells/uL)" ], [ "XXXXX.1", "100,000 or greater (10^3 cells/uL)" ], [ "XXXXX.2", "Lab value not available, physician states WBC is low" ], [ "XXXXX.3", "Lab value not available, physician states WBC is normal" ], [ "XXXXX.4", "Lab value not available, physician states WBC is elevated/high" ], [ "XXXXX.7", "Test ordered, results not in chart" ], [ "XXXXX.8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code XXXXX.8 may result in an edit error)" ], [ "XXXXX.9", "Not documented in medical record\nWBC (White Blood Cell Count) Pretreatment Lab Value not assessed or unknown if assessed" ], [ "", "N/A - Diagnosis year is prior to 2024" ] ]
+}

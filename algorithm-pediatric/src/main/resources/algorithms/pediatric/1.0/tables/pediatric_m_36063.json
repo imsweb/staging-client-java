@@ -1,0 +1,18 @@
+{
+  "id" : "pediatric_m_36063",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Pediatric M",
+  "title" : "Pediatric M",
+  "last_modified" : "2023-09-12T16:19:30.435Z",
+  "definition" : [ {
+    "key" : "ped_mets",
+    "name" : "Ped Mets",
+    "type" : "INPUT"
+  }, {
+    "key" : "pediatric_m",
+    "name" : "Derived Pediatric M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "VALUE:M0" ], [ "10,70", "VALUE:M1" ], [ "99", "VALUE:MX" ] ]
+}
