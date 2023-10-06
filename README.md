@@ -28,17 +28,18 @@ items have formats and code structures specific to the data item.
 To get started using the Pediatric Pediatric algorithm, instantiate a `Staging` instance:
 
 ```java
-Staging staging=Staging.getInstance(TorontoDataProvider.getInstance(PediatricVersion.LATEST));
+Staging staging=Staging.getInstance(PediatricDataProvider.getInstance(PediatricVersion.LATEST));
 ```
 
 If a specific version is needed, the algorithm zip file can be downloaded and initialized using an `ExternalStagingFileDataProvider`.
 
-| Version | Release                                                                      | Algorithm ZIP                                                                                              |
-|---------|------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| 0.5     | [10.2.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.2.0) | [toronto-0.5.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.2.0/toronto-0.5.zip) |
-| 0.4     | [10.1.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.1.0) | [toronto-0.4.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.1.0/toronto-0.4.zip) |
-| 0.3     | [10.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.0.0) | [toronto-0.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/toronto-0.3.zip) |
-| 0.2     | [9.1](https://github.com/imsweb/staging-client-java/releases/tag/v9.1)       | [toronto-0.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v9.1/toronto-0.2.zip)    |
+| Version | Release                                                                      | Algorithm ZIP                                                                                                  |
+|---------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+| 1.0     | [11.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v11.0.0) | [pediatric-1.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.0.0/pediatric-1.0.zip) |
+| 0.5     | [10.2.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.2.0) | [toronto-0.5.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.2.0/toronto-0.5.zip)     |
+| 0.4     | [10.1.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.1.0) | [toronto-0.4.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.1.0/toronto-0.4.zip)     |
+| 0.3     | [10.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.0.0) | [toronto-0.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/toronto-0.3.zip)     |
+| 0.2     | [9.1](https://github.com/imsweb/staging-client-java/releases/tag/v9.1)       | [toronto-0.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v9.1/toronto-0.2.zip)        |
 
 ### EOD
 
@@ -161,7 +162,7 @@ Maven
 <version>x.x.x</version>
 </dependency><dependency>
 <groupId>com.imsweb</groupId>
-<artifactId>staging-client-java-toronto</artifactId>
+<artifactId>staging-client-java-pediatric</artifactId>
 <version>x.x.x</version>
 </dependency>
 ```
@@ -172,7 +173,7 @@ Gradle
 implementation 'com.imsweb:staging-client-java-cs:x.x.x'
 implementation 'com.imsweb:staging-client-java-eod-public:x.x.x'
 implementation 'com.imsweb:staging-client-java-tnm:x.x.x'
-implementation 'com.imsweb:staging-client-java-toronto:x.x.x'
+implementation 'com.imsweb:staging-client-java-pediatric:x.x.x'
 ```
 
 ## Usage
