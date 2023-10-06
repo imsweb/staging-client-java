@@ -147,23 +147,25 @@ If you are interested in a specific algorithm, you can include them using their 
 Maven
 
 ```xml
-
 <dependency>
     <groupId>com.imsweb</groupId>
     <artifactId>staging-client-java-cs</artifactId>
     <version>x.x.x</version>
-</dependency><dependency>
-<groupId>com.imsweb</groupId>
-<artifactId>staging-client-java-eod-public</artifactId>
-<version>x.x.x</version>
-</dependency><dependency>
-<groupId>com.imsweb</groupId>
-<artifactId>staging-client-java-tnm</artifactId>
-<version>x.x.x</version>
-</dependency><dependency>
-<groupId>com.imsweb</groupId>
-<artifactId>staging-client-java-pediatric</artifactId>
-<version>x.x.x</version>
+</dependency>
+<dependency>
+    <groupId>com.imsweb</groupId>
+    <artifactId>staging-client-java-eod-public</artifactId>
+    <version>x.x.x</version>
+</dependency>
+<dependency>
+    <groupId>com.imsweb</groupId>
+    <artifactId>staging-client-java-tnm</artifactId>
+    <version>x.x.x</version>
+</dependency>
+<dependency>
+    <groupId>com.imsweb</groupId>
+    <artifactId>staging-client-java-pediatric</artifactId>
+    <version>x.x.x</version>
 </dependency>
 ```
 
