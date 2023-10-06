@@ -1,67 +1,19 @@
 {
-  "id": "pediatric_primary_tumor_73431",
-  "algorithm": "pediatric",
-  "version": "1.0",
-  "name": "Pediatric Primary Tumor",
-  "title": "Pediatric Primary Tumor",
-  "notes": "**Note 1:** For Testis, Pediatric Staging is based on extension (collected in this data item), regional nodes (see Pediatric Regional Nodes), and mets (see Pediatric Mets).",
-  "last_modified": "2023-08-17T14:27:59.760Z",
-  "definition": [
-    {
-      "key": "ped_primary_tumor",
-      "name": "Code",
-      "type": "INPUT"
-    },
-    {
-      "key": "description",
-      "name": "Description",
-      "type": "DESCRIPTION"
-    }
-  ],
-  "rows": [
-    [
-      "000",
-      "In situ, intraepithelial, noninvasive\nIntratubular germ cell neoplasia\nGerm cell neoplasia in situ"
-    ],
-    [
-      "125",
-      "PATHOLOGICAL assessment only\nTumour limited to the testis\n* Body of testis\n* Rete testis\n* Tunica albuginea\n* Tunica, NOS\n* Confined to testis, NOS\n\nLocalized, NOS\n\nWITHOUT or UNKNOWN vascular/lymphatic invasion"
-    ],
-    [
-      "150",
-      "PATHOLOGICAL assessment only\n\nCode 100 WITH vascular/lymphatic invasion"
-    ],
-    [
-      "210",
-      "PATHOLOGICAL assessment only\n\nEpididymis\nHilar soft tissue\nMediastinum (of testis)\nVisceral mesothelial layer\n\nWITHOUT or UNKNOWN vascular/lymphatic invasion"
-    ],
-    [
-      "240",
-      "PATHOLOGICAL assessment only\n\nCode 210 WITH vascular/lymphatic invasion"
-    ],
-    [
-      "350",
-      "PATHOLOGICAL assessment only\n\nTunica vaginalis involved\nSurface implants (surface of tunica vaginalis)"
-    ],
-    [
-      "500",
-      "PATHOLOGICAL assessment only\n\nSpermatic cord, ipsilateral\nVas deferens"
-    ],
-    [
-      "600",
-      "Dartos muscle, ipsilateral\nScrotum, ipsilateral"
-    ],
-    [
-      "700",
-      "Penis\nScrotum, contralateral\nUlceration of scrotum\n\nFurther contiguous extension"
-    ],
-    [
-      "800",
-      "No evidence of primary tumor"
-    ],
-    [
-      "999",
-      "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in medical record\n\nDeath Certificate Only"
-    ]
-  ]
+  "id" : "pediatric_primary_tumor_73431",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Pediatric Primary Tumor",
+  "title" : "Pediatric Primary Tumor",
+  "notes" : "**Note 1:** This schema has extension codes that are defined as “PATHOLOGICAL assessment only”\n* PATHOLOGICAL assessment only codes (200, 300, 350, 450, 500) are used when there is an orchiectomy\n\n**Note 2:** Code 200 for Seminomas confined to the testis.",
+  "last_modified" : "2023-09-18T17:45:42.625Z",
+  "definition" : [ {
+    "key" : "ped_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "200", "PATHOLOGICAL assessment only\n\nTumour limited to the testis\n* Body of testis\n* Rete testis\n* Tunica albuginea\n* Tunica, NOS\n* Confined to testis, NOS\n\nLocalized, NOS\n\nWITHOUT or UNKNOWN vascular/lymphatic invasion" ], [ "250", "PATHOLOGICAL assessment only\n\nEpididymis\n* WITHOUT vascular/lymphatic invasion" ], [ "350", "PATHOLOGICAL assessment only\n\nTumor limited to testis (including rete testis invasion) (code 200) \n* WITH vascular/lymphatic invasion\n   - Excludes Epididymis (see code 450)\n\nTunica vaginalis (includes implants on surface of tunica vaginalis)\n* WITH or WITHOUT vascular/lymphatic invasion" ], [ "450", "PATHOLOGICAL assessment only\n\nHilar soft tissue\nMediastinum (of testis)\nVisceral mesothelial layer\n\nWITHOUT or UNKNOWN vascular/lymphatic invasion\n\nOR Epididymis WITH vascular invasion" ], [ "500", "PATHOLOGICAL assessment only\n\nSpermatic cord, ipsilateral\nVas deferens" ], [ "600", "Dartos muscle, ipsilateral\nScrotum, ipsilateral" ], [ "700", "Penis\nScrotum, contralateral\nUlceration of scrotum\n\nFurther contiguous extension" ], [ "800", "No evidence of primary tumor" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in medical record\n\nDeath Certificate Only" ] ]
 }

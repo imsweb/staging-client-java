@@ -1,0 +1,30 @@
+{
+  "id" : "pediatric_stage_16688",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Pediatric Stage",
+  "title" : "Wilms Tumor Staging System",
+  "last_modified" : "2023-09-20T20:53:14.666Z",
+  "definition" : [ {
+    "key" : "ped_primary_tumor",
+    "name" : "Ped Primary Tumor",
+    "type" : "INPUT"
+  }, {
+    "key" : "ped_regional_nodes",
+    "name" : "Ped Regional Nodes",
+    "type" : "INPUT"
+  }, {
+    "key" : "ped_mets",
+    "name" : "Ped Mets",
+    "type" : "INPUT"
+  }, {
+    "key" : "surgical_margins",
+    "name" : "Surg Margins",
+    "type" : "INPUT"
+  }, {
+    "key" : "pediatric_group",
+    "name" : "Derived Pediatric Stage Group",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100", "000,999", "00,99", "0,7,8,9", "VALUE:1" ], [ "110", "000,999", "00,99", "*", "VALUE:1" ], [ "200", "000,999", "00,99", "0,7,8,9", "VALUE:2" ], [ "210", "000,999", "00,99", "*", "VALUE:2" ], [ "300", "000,999", "00,99", "0,7,8,9", "VALUE:3" ], [ "310", "000,999", "00,99", "*", "VALUE:3" ], [ "100,200,300", "000,999", "00,99", "1,2,3", "VALUE:3" ], [ "800", "000,999", "00,99", "*", "VALUE:99" ], [ "999", "000,999", "00,99", "*", "VALUE:99" ], [ "100,200,300", "300", "00,99", "*", "VALUE:3" ], [ "110,210,310", "300", "00,99", "*", "VALUE:3" ], [ "800", "300", "00,99", "*", "VALUE:3" ], [ "999", "300", "00,99", "*", "VALUE:3" ], [ "100,200,300", "800", "00,99", "*", "VALUE:3" ], [ "110,210,310", "800", "00,99", "*", "VALUE:3" ], [ "800", "800", "00,99", "*", "VALUE:3" ], [ "999", "800", "00,99", "*", "VALUE:3" ], [ "*", "*", "10,70", "*", "VALUE:4" ] ]
+}

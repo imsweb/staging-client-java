@@ -4,7 +4,7 @@
   "version": "1.0",
   "name": "Malignant Bone Tumors: Chondrosarcomas",
   "title": "Malignant Bone Tumors: Chondrosarcomas",
-  "notes": "9210, 9220-9221, 9230, 9240-9243: C400-C419, C760-C768, C809 (ages 0-39)\n\n**Note 1:** The following sources were used in the development of this schema\n* [Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022](https://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf)",
+  "notes": "9210, 9220-9221, 9230, 9240-9243: C400-C419, C760-C768, C809 (ages 0-39)\n\n**Note 1:** The following sources were used in the development of this schema\n* [Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022](https://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf)\n* [SEER Extent of Disease (EOD) 2018: Codes and Coding Instructions](https://seer.cancer.gov/tools/staging/eod/2018_Extent_of_Disease_General_Instructions.pdf)\n* [Summary Stage 2018 - SEER (cancer.gov)](https://seer.cancer.gov/tools/ssm/)\n\n**Note 2:** For Bone tumors, Toronto Staging is based on the presence or absence of mets and is collected in Pediatric Mets.\n* Pediatric Primary Tumor and Pediatric Regional Nodes are collected for surveillance purposes",
   "schema_selection_table": "schema_selection_malignant_bone_tumors_chondrosarcomas",
   "schema_discriminators": [
     "age_dx",
@@ -36,6 +36,14 @@
       "used_for_staging": true
     },
     {
+      "key": "behavior",
+      "name": "Behavior",
+      "naaccr_item": 523,
+      "naaccr_xml_id": "behaviorCodeIcdO3",
+      "table": "behavior",
+      "used_for_staging": true
+    },
+    {
       "key": "age_dx",
       "name": "Age at Diagnosis",
       "naaccr_item": 230,
@@ -49,8 +57,8 @@
       "description": "NAACCR IDs are not final",
       "naaccr_item": 9623,
       "naaccr_xml_id": "pediatricPrimaryTumor",
-      "default": "888",
-      "table": "pediatric_primary_tumor_na_1293",
+      "default": "999",
+      "table": "pediatric_primary_tumor_7436",
       "used_for_staging": false
     },
     {
@@ -59,8 +67,8 @@
       "description": "NAACCR IDs are not final",
       "naaccr_item": 9624,
       "naaccr_xml_id": "pediatricRegionalNodes",
-      "default": "888",
-      "table": "pediatric_regional_nodes_na_68667",
+      "default": "999",
+      "table": "pediatric_regional_nodes_24935",
       "used_for_staging": false
     },
     {
@@ -71,14 +79,6 @@
       "naaccr_xml_id": "pediatricMets",
       "default": "99",
       "table": "pediatric_mets_61257",
-      "used_for_staging": true
-    },
-    {
-      "key": "behavior",
-      "name": "Behavior",
-      "naaccr_item": 523,
-      "naaccr_xml_id": "behaviorCodeIcdO3",
-      "table": "behavior",
       "used_for_staging": true
     }
   ],
@@ -163,15 +163,15 @@
   "involved_tables": [
     "schema_selection_malignant_bone_tumors_chondrosarcomas",
     "primary_site",
+    "pediatric_primary_tumor_7436",
     "histology",
     "age_at_diagnosis_validation_3881",
     "year_dx_validation",
     "pediatric_mets_61257",
+    "pediatric_regional_nodes_24935",
     "pediatric_stage_11224",
-    "behavior",
-    "pediatric_regional_nodes_na_68667",
-    "pediatric_primary_tumor_na_1293"
+    "behavior"
   ],
-  "last_modified": "2023-08-17T16:57:55.880Z",
+  "last_modified": "2023-09-28T20:11:46.615Z",
   "on_invalid_input": "CONTINUE"
 }

@@ -254,7 +254,7 @@ class PediatricStagingTest extends StagingTest {
                 .hasFieldOrPropertyWithValue(PediatricOutput.DERIVED_VERSION.toString(), PediatricVersion.LATEST.getVersion())
                 .hasFieldOrPropertyWithValue(PediatricOutput.TORONTO_VERSION_NUMBER.toString(), "2")
                 .hasFieldOrPropertyWithValue(PediatricOutput.PEDIATRIC_ID.toString(), "10c2")
-                .hasFieldOrPropertyWithValue(PediatricOutput.PEDIATRIC_GROUP.toString(), "2")
+                .hasFieldOrPropertyWithValue(PediatricOutput.PEDIATRIC_GROUP.toString(), "1")
                 .hasFieldOrPropertyWithValue(PediatricOutput.PEDIATRIC_T.toString(), "88")
                 .hasFieldOrPropertyWithValue(PediatricOutput.PEDIATRIC_N.toString(), "88")
                 .hasFieldOrPropertyWithValue(PediatricOutput.PEDIATRIC_M.toString(), "88");
@@ -308,7 +308,6 @@ class PediatricStagingTest extends StagingTest {
                 "behavior",
                 "combined_s_category_15139",
                 "histology",
-                "in_situ_to_88s_95645",
                 "nodes_pos_fpa",
                 "pediatric_m_97287",
                 "pediatric_mets_93634",
@@ -333,7 +332,7 @@ class PediatricStagingTest extends StagingTest {
 
     @Test
     void testGetInputs() {
-        assertThat(_STAGING.getInputs(_STAGING.getSchema("nhl_nos"))).containsOnly("site", "hist", "age_dx", "behavior");
+        assertThat(_STAGING.getInputs(_STAGING.getSchema("nhl_nos"))).containsOnly("site", "hist", "age_dx", "behavior", "ped_primary_tumor");
         assertThat(_STAGING.getInputs(_STAGING.getSchema("testicular"))).containsOnly("ped_mets", "site", "hist",
                 "nodes_pos", "age_dx", "s_category_path", "ped_primary_tumor", "s_category_clin", "behavior", "ped_regional_nodes");
     }

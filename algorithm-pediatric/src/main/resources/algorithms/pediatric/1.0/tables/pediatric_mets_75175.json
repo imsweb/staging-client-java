@@ -1,41 +1,21 @@
 {
-  "id": "pediatric_mets_75175",
-  "algorithm": "pediatric",
-  "version": "1.0",
-  "name": "Pediatric Mets",
-  "title": "Pediatric Mets",
-  "subtitle": "CNS Involvement",
-  "notes": "**Note 1:** For Acute Lymphoblastic Leukemia, Pediatric Staging is based on the absence/presence of CNS involvement.\n* This field records the clinically or cytologically confirmed involvement of the Central Nervous System at diagnosis or during the initial workup of Acute Lymphoblastic Leukemia (ALL) in pediatric patients. CNS involvement at diagnosis or at relapse is a significant cause of treatment failure and tx-related morbidity\n* Use the following resources to find information on CNS involvement: imaging, laboratory reports, CSF lactate dehydrogenase (LD, LDH) test\n\n**Note 2:** Criteria for CNS Involvement\n* Clinical signs of CNS involvement\n   * Radiologic evidence of intracranial, intradural mass\n   * Cranial nerve palsy (e.g. facial weakness, ptosis), brain/eye involvement or hypothalamic syndrome\n    * **Note:** Extra-ocular orbital masses, severe headaches and eye swelling (in the absence of signs of cranial nerve involvement) are **not** sufficient to constitute clinical evidence of CNS involvement\n* The presence of blasts in the cerebrospinal fluid (CSF)\n   * Cytospin is required to determine the presence or absence of blasts in the CSF. If Cytospin is not documented, assume there are no blasts in the CSF\n   * If there is no mention of blasts, code blasts as absent\n   * If blasts are referred to as “occasional” or “seen” or similar wording, code blasts are present\n* Red and white blood cell counts from the cerebrospinal fluid  (RBC CSF and WBC CSF) \n  * Lumbar punctures are the most common way to collect this information \n  * If RBC <1/ul,  record as RBC = 0\n  * If WBC <1/uL, record as WBC = 0",
-  "footnotes": "(1) Aitken JF, Youlden D, O’Neill L, Gupta S, Frazier AL, eds. Childhood cancer staging for population registries according to the Toronto Childhood Cancer Stage Guidelines – Version 2. Cancer Council Queensland and Cancer Australia: Brisbane, Australia; 2021.",
-  "last_modified": "2023-08-16T23:36:25.559Z",
-  "definition": [
-    {
-      "key": "ped_mets",
-      "name": "Code",
-      "type": "INPUT"
-    },
-    {
-      "key": "description",
-      "name": "Description",
-      "type": "DESCRIPTION"
-    }
-  ],
-  "rows": [
-    [
-      "10",
-      "CNS1\n* No clinical signs of CNS involvement AND\n* No blasts in CSF"
-    ],
-    [
-      "20",
-      "CNS2\n- No clinical signs of CNS involvement AND blasts in CSF AND\n  - WBC < 5/ul CSF\n \nOR\n- No clinical signs of CNS involvement OR blasts in CSF AND\n  - WBC >= 5/ul CSF and \n  - RBC >= 10/ul CSF AND\n  - WBC/RBC in CSF <= 2x WBC/RBC in blood"
-    ],
-    [
-      "30",
-      "CNS3\n- Clinical signs of CNS involvement \n\nOR\n- Blasts in CSF and WBC >= 5/ul CSF AND EITHER\n  - RBC < 10/ul CSF OR \n  - RBC >= 10/ul CSF and WBC/RBC in CSF > 2x WBC/RBC in blood"
-    ],
-    [
-      "99",
-      "Unknown; distant metastasis not stated\nNot documented in medical record\n\nDeath Certificate Only"
-    ]
-  ]
+  "id" : "pediatric_mets_75175",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Pediatric Mets",
+  "title" : "Pediatric Mets",
+  "subtitle" : "CNS Involvement",
+  "notes" : "**Note 1:** This field records the clinically or cytologically confirmed involvement of the Central Nervous System at diagnosis or during the initial workup of Acute Lymphoblastic Leukemia (ALL) in pediatric patients. CNS involvement at diagnosis or at relapse is a significant cause of treatment failure and tx-related morbidity\n* Use the following resources to find information on CNS involvement: imaging, laboratory reports, CSF lactate dehydrogenase (LD, LDH) test\n\n**Note 2:** Physician statement of CNS Involvement can be used to code this data item when no other information is available. \n\n**Note 3:** Criteria for CNS Involvement\n* Clinical signs of CNS involvement\n   * Radiologic evidence of intracranial, intradural mass\n   * Cranial nerve palsy (e.g. facial weakness, ptosis), brain/eye involvement or hypothalamic syndrome\n    * **Note:** Extra-ocular orbital masses, severe headaches and eye swelling (in the absence of signs of cranial nerve involvement) are **not** sufficient to constitute clinical evidence of CNS involvement\n* The presence of blasts in the cerebrospinal fluid (CSF)\n   * Cytospin is required to determine the presence or absence of blasts in the CSF. \n      * If Cytospin is not documented, then the presence of blasts cannot be determined. CNS involvement would be unknown (code 9) unless there are clinical signs of CNS Involvement\n   * If Cytospin is documented and there is no mention of blasts, code blasts as absent\n   * If blasts are referred to as “occasional” or “seen” or similar wording, code blasts are present\n* Red and white blood cell counts from the cerebrospinal fluid (RBC CSF and WBC CSF) \n  * Lumbar punctures are the most common way to collect this information \n  * If RBC <1/ul,  record as RBC = 0\n  * If WBC <1/uL, record as WBC = 0",
+  "footnotes" : "(1) Aitken JF, Youlden D, O’Neill L, Gupta S, Frazier AL, eds. Childhood cancer staging for population registries according to the Toronto Childhood Cancer Stage Guidelines – Version 2. Cancer Council Queensland and Cancer Australia: Brisbane, Australia; 2021.",
+  "last_modified" : "2023-09-26T15:19:57.423Z",
+  "definition" : [ {
+    "key" : "ped_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "10", "CNS1\n* No clinical signs of CNS involvement AND\n* No blasts in CSF" ], [ "20", "CNS2\n- No clinical signs of CNS involvement AND blasts in CSF AND\n  - WBC < 5/ul CSF\n \nOR\n- No clinical signs of CNS involvement OR blasts in CSF AND\n  - WBC >= 5/ul CSF and \n  - RBC >= 10/ul CSF AND\n  - WBC/RBC in CSF <= 2x WBC/RBC in blood" ], [ "30", "CNS3\n- Clinical signs of CNS involvement \n\nOR\n- Blasts in CSF and WBC >= 5/ul CSF AND EITHER\n  - RBC < 10/ul CSF OR \n  - RBC >= 10/ul CSF and WBC/RBC in CSF > 2x WBC/RBC in blood" ], [ "99", "Unknown; distant metastasis not stated\nNot documented in medical record\n\nDeath Certificate Only" ] ]
 }

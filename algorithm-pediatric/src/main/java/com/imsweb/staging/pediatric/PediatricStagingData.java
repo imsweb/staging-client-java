@@ -77,7 +77,9 @@ public class PediatricStagingData extends StagingData {
         S_CATEGORY_PATH("s_category_path"),
         SIZE_SUMMARY("size_summary"),
         B_SYMPTOMS("b_symptoms"),
-        DERIVED_SUMMARY_GRADE("derived_summary_grade");
+        DERIVED_SUMMARY_GRADE("derived_summary_grade"),
+        SURG_2023("surg_2023"),
+        SURGICAL_MARGINS("surgical_margins");
 
         private final String _name;
 

@@ -4,7 +4,7 @@
   "version": "1.0",
   "name": "Hepatoblastoma",
   "title": "Hepatoblastoma",
-  "notes": "8970: C220 (all ages)\n\n**Note 1:** The following sources were used in the development of this schema\n* [Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022](https://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf)",
+  "notes": "8970: C220 (all ages)\n\n**Note 1:** The following sources were used in the development of this schema\n* [Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022](https://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf)\n* [Children’s Oncology Group - Newly Diagnosed with Hepatoblastoma or Hepatocellular Carcinoma](https://childrensoncologygroup.org/newly-diagnosed-with-hepatoblastoma-or-hepatocellular-carcinoma-)\n* [SEER Extent of Disease (EOD) 2018: Codes and Coding Instructions](https://seer.cancer.gov/tools/staging/eod/2018_Extent_of_Disease_General_Instructions.pdf)\n* [Summary Stage 2018 - SEER (cancer.gov)](https://seer.cancer.gov/tools/ssm/)\n\n**Note 2:** For Hepatoblastoma tumors, there are three different staging systems collected \n* Toronto Staging is based on the absence or presence of mets and is collected in Pediatric Mets\n* The Children’s Oncology Group (COG) for liver staging is used. \n   * Per this staging system, anything involved out the liver is Stage IV. This is different than other staging used in the US that has adjacent organs not being a Stage IV\n    * Pediatric Primary Tumor, Pediatric Regional Nodes and Pediatric Mets are used to derive the stage group\n* Pretext is collected as a SSDI and is based on clinical staging only",
   "schema_selection_table": "schema_selection_hepatoblastoma",
   "schema_discriminators": [
     "behavior"
@@ -35,13 +35,21 @@
       "used_for_staging": true
     },
     {
+      "key": "behavior",
+      "name": "Behavior",
+      "naaccr_item": 523,
+      "naaccr_xml_id": "behaviorCodeIcdO3",
+      "table": "behavior",
+      "used_for_staging": true
+    },
+    {
       "key": "ped_primary_tumor",
       "name": "Pediatric Primary Tumor",
       "description": "NAACCR IDs are not final",
       "naaccr_item": 9623,
       "naaccr_xml_id": "pediatricPrimaryTumor",
-      "default": "888",
-      "table": "pediatric_primary_tumor_na_1293",
+      "default": "999",
+      "table": "pediatric_primary_tumor_39067",
       "used_for_staging": false
     },
     {
@@ -50,8 +58,8 @@
       "description": "NAACCR IDs are not final",
       "naaccr_item": 9624,
       "naaccr_xml_id": "pediatricRegionalNodes",
-      "default": "888",
-      "table": "pediatric_regional_nodes_na_68667",
+      "default": "999",
+      "table": "pediatric_regional_nodes_59828",
       "used_for_staging": false
     },
     {
@@ -65,12 +73,18 @@
       "used_for_staging": true
     },
     {
-      "key": "behavior",
-      "name": "Behavior",
-      "naaccr_item": 523,
-      "naaccr_xml_id": "behaviorCodeIcdO3",
-      "table": "behavior",
-      "used_for_staging": true
+      "key": "pretext_clinical_staging",
+      "name": "Pretext Clinical Staging",
+      "description": "NAACCR IDs are not final",
+      "naaccr_item": 9626,
+      "naaccr_xml_id": "pretextClinicalStaging",
+      "table": "pretext_clinical_staging_39169",
+      "used_for_staging": false,
+      "metadata": [
+        {
+          "name": "SSDI"
+        }
+      ]
     }
   ],
   "outputs": [
@@ -152,16 +166,17 @@
     }
   ],
   "involved_tables": [
+    "pediatric_primary_tumor_39067",
     "primary_site",
     "pediatric_mets_40773",
+    "pediatric_regional_nodes_59828",
     "histology",
+    "pretext_clinical_staging_39169",
     "year_dx_validation",
     "behavior",
-    "pediatric_regional_nodes_na_68667",
     "pediatric_stage_70937",
-    "schema_selection_hepatoblastoma",
-    "pediatric_primary_tumor_na_1293"
+    "schema_selection_hepatoblastoma"
   ],
-  "last_modified": "2023-08-17T16:37:00.621Z",
+  "last_modified": "2023-09-28T20:11:35.665Z",
   "on_invalid_input": "CONTINUE"
 }

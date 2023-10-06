@@ -1,32 +1,22 @@
 {
-  "id": "schema_selection_medulloblastoma_atypical_teratoid_rhabdoid",
-  "algorithm": "pediatric",
-  "version": "1.0",
-  "name": "Schema Selection Medulloblastoma: Atypical teratoid/rhabdoid",
-  "title": "Schema selection for Medulloblastoma: Atypical teratoid/rhabdoid",
-  "last_modified": "2023-08-03T14:13:34.271Z",
-  "definition": [
-    {
-      "key": "site",
-      "name": "Primary Site",
-      "type": "INPUT"
-    },
-    {
-      "key": "hist",
-      "name": "Histology",
-      "type": "INPUT"
-    },
-    {
-      "key": "result",
-      "name": "Result",
-      "type": "ENDPOINT"
-    }
-  ],
-  "rows": [
-    [
-      "C700-C729",
-      "9508",
-      "MATCH"
-    ]
-  ]
+  "id" : "schema_selection_medulloblastoma_atypical_teratoid_rhabdoid",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Schema Selection Medulloblastoma: Atypical teratoid/rhabdoid",
+  "title" : "Schema selection for Medulloblastoma: Atypical teratoid/rhabdoid",
+  "last_modified" : "2023-09-28T20:12:32.232Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C700-C729", "9508", "MATCH" ] ]
 }

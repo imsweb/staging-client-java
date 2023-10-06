@@ -1,44 +1,30 @@
 {
-  "id": "schema_selection_renal_tumors_unspecified_malignant_renal_tumors",
-  "algorithm": "pediatric",
-  "version": "1.0",
-  "name": "Schema Selection Renal Tumors: Unspecified Malignant Renal Tumors",
-  "title": "Schema selection for Renal Tumors: Unspecified Malignant Renal Tumors",
-  "last_modified": "2023-08-02T15:40:38.955Z",
-  "definition": [
-    {
-      "key": "site",
-      "name": "Primary Site",
-      "type": "INPUT"
-    },
-    {
-      "key": "hist",
-      "name": "Histology",
-      "type": "INPUT"
-    },
-    {
-      "key": "age_dx",
-      "name": "Age at Diagnosis",
-      "type": "INPUT"
-    },
-    {
-      "key": "behavior",
-      "name": "Behavior",
-      "type": "INPUT"
-    },
-    {
-      "key": "result",
-      "name": "Result",
-      "type": "ENDPOINT"
-    }
-  ],
-  "rows": [
-    [
-      "C649",
-      "8000-8005",
-      "0-39",
-      "3",
-      "MATCH"
-    ]
-  ]
+  "id" : "schema_selection_renal_tumors_unspecified_malignant_renal_tumors",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Schema Selection Renal Tumors: Unspecified Malignant Renal Tumors",
+  "title" : "Schema selection for Renal Tumors: Unspecified Malignant Renal Tumors",
+  "last_modified" : "2023-09-28T20:17:49.519Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "age_dx",
+    "name" : "Age at Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C649", "8000-8005", "0-39", "3", "MATCH" ] ]
 }

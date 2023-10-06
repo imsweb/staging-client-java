@@ -1,38 +1,26 @@
 {
-  "id": "schema_selection_hepatoblastoma",
-  "algorithm": "pediatric",
-  "version": "1.0",
-  "name": "Schema Selection Hepatoblastoma",
-  "title": "Schema selection for Hepatoblastoma",
-  "last_modified": "2023-08-17T16:37:00.587Z",
-  "definition": [
-    {
-      "key": "site",
-      "name": "Primary Site",
-      "type": "INPUT"
-    },
-    {
-      "key": "hist",
-      "name": "Histology",
-      "type": "INPUT"
-    },
-    {
-      "key": "behavior",
-      "name": "Behavior",
-      "type": "INPUT"
-    },
-    {
-      "key": "result",
-      "name": "Result",
-      "type": "ENDPOINT"
-    }
-  ],
-  "rows": [
-    [
-      "C220",
-      "8970",
-      "3",
-      "MATCH"
-    ]
-  ]
+  "id" : "schema_selection_hepatoblastoma",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Schema Selection Hepatoblastoma",
+  "title" : "Schema selection for Hepatoblastoma",
+  "last_modified" : "2023-09-28T20:11:35.630Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C220", "8970", "3", "MATCH" ] ]
 }

@@ -4,7 +4,7 @@
   "version": "1.0",
   "name": "Hodgkin Lymphoma",
   "title": "Hodgkin Lymphoma",
-  "notes": "9650-9653, 9655, 9659, 9663: C000-C809 (ages 0-39)\n\n**Note 1:** The following sources were used in the development of this schema\n* [Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022](https://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf)",
+  "notes": "9650-9653, 9655, 9659, 9663: C000-C809 (ages 0-39)\n\n**Note 1:** The following sources were used in the development of this schema\n* [Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022](https://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf)\n* [SEER Extent of Disease (EOD) 2018: Codes and Coding Instructions](https://seer.cancer.gov/tools/staging/eod/2018_Extent_of_Disease_General_Instructions.pdf) \n* [Summary Stage 2018 - SEER (cancer.gov)](https://seer.cancer.gov/tools/ssm/)\n\n**Note 2:** For Hodgkin Lymphoma, Toronto Staging is based on the *Ann Arbor Staging Classification* and is collected in Pediatric Primary Tumor\n* Internationally, the Ann Arbor Stage is still used for Lymphomas. Ann Arbor Stage is very similar to the Lugano Stage that has been collected in the US since 2018. The major difference between the two is that Lugano Stage has bulky disease, and Ann Arbor does not (see **Note 5** in Pediatric Primary Tumor)",
   "schema_selection_table": "schema_selection_hodgkin_lymphoma",
   "schema_discriminators": [
     "age_dx",
@@ -188,6 +188,6 @@
     "b_symptoms_95631",
     "pediatric_regional_nodes_na_68667"
   ],
-  "last_modified": "2023-08-03T18:50:26.645Z",
+  "last_modified": "2023-09-28T20:11:40.891Z",
   "on_invalid_input": "CONTINUE"
 }

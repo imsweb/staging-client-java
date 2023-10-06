@@ -4,7 +4,7 @@
   "version": "1.0",
   "name": "Astrocytoma",
   "title": "Astrocytoma",
-  "notes": "9380, 9384, 9400-9411, 9420-9424, 9440-9442, 9445: C723 (ages 0-39)\n\n**Note 1:** The following sources were used in the development of this schema\n* [Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022](https://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf)",
+  "notes": "9380, 9384, 9400-9411, 9420-9424, 9440-9442, 9445: C700-C729 (ages 0-39)\n\n**Note 1:** The following sources were used in the development of this schema\n* [Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022](https://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf)\n* [SEER Extent of Disease (EOD) 2018: Codes and Coding Instructions](https://seer.cancer.gov/tools/staging/eod/2018_Extent_of_Disease_General_Instructions.pdf)\n* [Summary Stage 2018 - SEER (cancer.gov)](https://seer.cancer.gov/tools/ssm/)\n\n**Note 2:** For Astrocytoma, Toronto Staging is based on the presence or absence of mets and is collected in Pediatric Mets.\n* Pediatric Primary Tumor is collected for surveillance purposes",
   "schema_selection_table": "schema_selection_astrocytoma",
   "schema_discriminators": [
     "age_dx"
@@ -48,8 +48,8 @@
       "description": "NAACCR IDs are not final",
       "naaccr_item": 9623,
       "naaccr_xml_id": "pediatricPrimaryTumor",
-      "default": "888",
-      "table": "pediatric_primary_tumor_na_1293",
+      "default": "999",
+      "table": "pediatric_primary_tumor_36616",
       "used_for_staging": false
     },
     {
@@ -70,7 +70,7 @@
       "naaccr_xml_id": "pediatricMets",
       "default": "99",
       "table": "pediatric_mets_72113",
-      "used_for_staging": false
+      "used_for_staging": true
     },
     {
       "key": "braf_mutational_analysis",
@@ -141,21 +141,44 @@
       "name": "Derived Pediatric Stage Group",
       "description": "NAACCR IDs are not final",
       "naaccr_item": 9606,
-      "naaccr_xml_id": "derivedPediatricStageGroup",
-      "default": "88"
+      "naaccr_xml_id": "derivedPediatricStageGroup"
+    }
+  ],
+  "mappings": [
+    {
+      "id": "pediatric_stage",
+      "name": "Pediatric Stage",
+      "initial_context": [
+        {
+          "key": "pediatric_group",
+          "value": "90"
+        }
+      ],
+      "tables": [
+        {
+          "id": "pediatric_stage_85957",
+          "inputs": [
+            "ped_mets"
+          ],
+          "outputs": [
+            "pediatric_group"
+          ]
+        }
+      ]
     }
   ],
   "involved_tables": [
+    "pediatric_stage_85957",
     "primary_site",
     "histology",
     "age_at_diagnosis_validation_3881",
+    "pediatric_primary_tumor_36616",
     "pediatric_mets_72113",
     "year_dx_validation",
     "braf_mutational_analysis_15216",
     "schema_selection_astrocytoma",
-    "pediatric_regional_nodes_na_68667",
-    "pediatric_primary_tumor_na_1293"
+    "pediatric_regional_nodes_na_68667"
   ],
-  "last_modified": "2023-08-14T20:13:38.166Z",
+  "last_modified": "2023-09-28T20:11:23.910Z",
   "on_invalid_input": "CONTINUE"
 }

@@ -4,7 +4,7 @@
   "version": "1.0",
   "name": "Ependymoma",
   "title": "Ependymoma",
-  "notes": "9383, 9391-9394, 9396: C710-C729 (all ages)\n\n**Note 1:** The following sources were used in the development of this schema\n* [Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022](https://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf)",
+  "notes": "9383, 9391-9394, 9396: C710-C729 (all ages)\n\n**Note 1:** The following sources were used in the development of this schema\n* [Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022](https://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf)\n* [SEER Extent of Disease (EOD) 2018: Codes and Coding Instructions](https://seer.cancer.gov/tools/staging/eod/2018_Extent_of_Disease_General_Instructions.pdf)\n* [Summary Stage 2018 - SEER (cancer.gov)](https://seer.cancer.gov/tools/ssm/)\n\n**Note 2:** For Ependymoma, Toronto Staging is based on the presence or absence of mets based on the *Chang M* definition for metastases within the CNS at diagnosis and is collected in Pediatric Mets.\n•\tPediatric Primary Tumor is collected for surveillance purposes",
   "schema_selection_table": "schema_selection_ependymoma",
   "inputs": [
     {
@@ -37,8 +37,8 @@
       "description": "NAACCR IDs are not final",
       "naaccr_item": 9623,
       "naaccr_xml_id": "pediatricPrimaryTumor",
-      "default": "888",
-      "table": "pediatric_primary_tumor_na_1293",
+      "default": "999",
+      "table": "pediatric_primary_tumor_1156",
       "used_for_staging": false
     },
     {
@@ -59,7 +59,7 @@
       "naaccr_xml_id": "pediatricMets",
       "default": "99",
       "table": "pediatric_mets_78586",
-      "used_for_staging": false
+      "used_for_staging": true
     }
   ],
   "outputs": [
@@ -114,19 +114,42 @@
       "name": "Derived Pediatric Stage Group",
       "description": "NAACCR IDs are not final",
       "naaccr_item": 9606,
-      "naaccr_xml_id": "derivedPediatricStageGroup",
-      "default": "88"
+      "naaccr_xml_id": "derivedPediatricStageGroup"
+    }
+  ],
+  "mappings": [
+    {
+      "id": "pediatric_stage",
+      "name": "Pediatric Stage",
+      "initial_context": [
+        {
+          "key": "pediatric_group",
+          "value": "90"
+        }
+      ],
+      "tables": [
+        {
+          "id": "pediatric_stage_69576",
+          "inputs": [
+            "ped_mets"
+          ],
+          "outputs": [
+            "pediatric_group"
+          ]
+        }
+      ]
     }
   ],
   "involved_tables": [
     "pediatric_mets_78586",
     "primary_site",
+    "pediatric_stage_69576",
     "histology",
+    "pediatric_primary_tumor_1156",
     "year_dx_validation",
     "schema_selection_ependymoma",
-    "pediatric_regional_nodes_na_68667",
-    "pediatric_primary_tumor_na_1293"
+    "pediatric_regional_nodes_na_68667"
   ],
-  "last_modified": "2023-08-17T00:07:36.639Z",
+  "last_modified": "2023-09-28T20:11:29.711Z",
   "on_invalid_input": "CONTINUE"
 }

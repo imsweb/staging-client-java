@@ -1,30 +1,18 @@
 {
-  "id": "pediatric_m_97287",
-  "algorithm": "pediatric",
-  "version": "1.0",
-  "name": "Pediatric M",
-  "title": "Pediatric M",
-  "last_modified": "2023-08-03T18:57:21.767Z",
-  "definition": [
-    {
-      "key": "ped_mets",
-      "name": "Ped Mets",
-      "type": "INPUT"
-    },
-    {
-      "key": "pediatric_m",
-      "name": "Derived Pediatric M",
-      "type": "ENDPOINT"
-    }
-  ],
-  "rows": [
-    [
-      "00,99",
-      "VALUE:M0"
-    ],
-    [
-      "10,30,50,60,70",
-      "VALUE:M1"
-    ]
-  ]
+  "id" : "pediatric_m_97287",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Pediatric M",
+  "title" : "Pediatric M",
+  "last_modified" : "2023-09-12T18:17:41.721Z",
+  "definition" : [ {
+    "key" : "ped_mets",
+    "name" : "Ped Mets",
+    "type" : "INPUT"
+  }, {
+    "key" : "pediatric_m",
+    "name" : "Derived Pediatric M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "VALUE:M0" ], [ "10,30,50,60,70", "VALUE:M1" ], [ "99", "VALUE:MX" ] ]
 }

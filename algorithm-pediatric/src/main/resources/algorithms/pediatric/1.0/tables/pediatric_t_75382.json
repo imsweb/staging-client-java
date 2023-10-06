@@ -1,72 +1,22 @@
 {
-  "id": "pediatric_t_75382",
-  "algorithm": "pediatric",
-  "version": "1.0",
-  "name": "Pediatric T",
-  "title": "Pediatric T",
-  "last_modified": "2023-08-03T16:54:09.584Z",
-  "definition": [
-    {
-      "key": "ped_primary_tumor",
-      "name": "Ped Primary Tumor",
-      "type": "INPUT"
-    },
-    {
-      "key": "size_summary",
-      "name": "Tumor Size",
-      "type": "INPUT"
-    },
-    {
-      "key": "pediatric_t",
-      "name": "Derived Pediatric T",
-      "type": "ENDPOINT"
-    }
-  ],
-  "rows": [
-    [
-      "800",
-      "000",
-      "VALUE:T0"
-    ],
-    [
-      "100,200,700",
-      "001-050,990",
-      "VALUE:T1"
-    ],
-    [
-      "100,200,700",
-      "051-100",
-      "VALUE:T2"
-    ],
-    [
-      "100,200,700",
-      "101-150",
-      "VALUE:T3"
-    ],
-    [
-      "100,200,700",
-      "151-989,998",
-      "VALUE:T4"
-    ],
-    [
-      "100,200,700",
-      "999",
-      "VALUE:TX"
-    ],
-    [
-      "999",
-      "*",
-      "VALUE:TX"
-    ],
-    [
-      "100,200,700",
-      "000",
-      "ERROR:Tumor Size of 000 should be used with Pediatric Primary Tumor 800"
-    ],
-    [
-      "800",
-      "001-999",
-      "ERROR:Tumor Size of 000 should be used with Pediatric Primary Tumor 800"
-    ]
-  ]
+  "id" : "pediatric_t_75382",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Pediatric T",
+  "title" : "Pediatric T",
+  "last_modified" : "2023-09-26T18:16:17.699Z",
+  "definition" : [ {
+    "key" : "ped_primary_tumor",
+    "name" : "Ped Primary Tumor",
+    "type" : "INPUT"
+  }, {
+    "key" : "size_summary",
+    "name" : "Tumor Size",
+    "type" : "INPUT"
+  }, {
+    "key" : "pediatric_t",
+    "name" : "Derived Pediatric T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100,200,700,999", "000", "ERROR:Tumor Size of 000 should be used with Pediatric Primary Tumor 800" ], [ "100,200,700,999", "001-050,990", "VALUE:T1" ], [ "100,200,700,999", "051-100", "VALUE:T2" ], [ "100,200,700,999", "101-150", "VALUE:T3" ], [ "100,200,700,999", "151-989,998", "VALUE:T4" ], [ "100,200,700,999", "999", "VALUE:TX" ], [ "800", "000,999", "VALUE:T0" ], [ "800", "001-998", "ERROR:Tumor Size of 000 should be used with Pediatric Primary Tumor 800" ] ]
 }

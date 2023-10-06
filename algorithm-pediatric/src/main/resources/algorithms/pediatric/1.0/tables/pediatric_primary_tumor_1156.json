@@ -1,0 +1,20 @@
+{
+  "id" : "pediatric_primary_tumor_1156",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Pediatric Primary Tumor",
+  "title" : "Pediatric Primary Tumor",
+  "notes" : "**Note 1:** Pediatric Primary Tumor for Ependymomas is coded **only for single tumors confined to the primary site** (see code 150) or a tumor crossing the midline (see code 250).\n\n**Note 2:** Direct or contiguous extension to an adjacent site is not collected in Pediatric Primary Tumor for Ependymoma. If the only information available is extension to an adjacent site, code Pediatric Primary Tumor 999 and assign the appropriate Pediatric Mets code. The following are collected in Pediatric Mets (see code 25 for all except circulating cells in CSF (code 15)).\n* Adjacent connective/soft tissue\n* Adjacent muscle\n* Bone\n* Circulating cells in cerebral spinal fluid (CSF)\n* Major blood vessel(s)\n* Meninges (e.g., dura)\n* Multiple/multifocal tumors\n* Nerves (cranial, NOS)\n* Ventricular system",
+  "footnotes" : "(1) American Society of Clinical Oncology © 2009, The International Neuroblastoma Risk Group (INRG) Classification System: AN INRG Task Force Report; published by American Society of Clinical Oncology, 2009\n\n(2) Aitken JF, Youlden D, O’Neill L, Gupta S, Frazier AL, eds. Childhood cancer staging for population registries according to the Toronto Childhood Cancer Stage Guidelines – Version 2. Cancer Council Queensland and Cancer Australia: Brisbane, Australia; 2021.",
+  "last_modified" : "2023-09-07T14:03:29.529Z",
+  "definition" : [ {
+    "key" : "ped_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "050", "Benign or borderline brain" ], [ "150", "All sites\n* Single tumor with no invasion or seeding to other structures\n\nConfined to site of origin, NOS\nLocalized, NOS" ], [ "250", "Tumor crosses the midline" ], [ "800", "No evidence of primary tumor" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in medical record\n\nDeath Certificate Only" ] ]
+}

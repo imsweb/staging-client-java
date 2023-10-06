@@ -1,86 +1,30 @@
 {
-  "id": "pediatric_stage_79275",
-  "algorithm": "pediatric",
-  "version": "1.0",
-  "name": "Pediatric Stage",
-  "title": "Pediatric Stage",
-  "last_modified": "2023-08-03T17:25:49.697Z",
-  "definition": [
-    {
-      "key": "pediatric_t",
-      "name": "T",
-      "type": "INPUT"
-    },
-    {
-      "key": "pediatric_n",
-      "name": "N",
-      "type": "INPUT"
-    },
-    {
-      "key": "pediatric_m",
-      "name": "M",
-      "type": "INPUT"
-    },
-    {
-      "key": "pediatric_grade",
-      "name": "Grade",
-      "type": "INPUT"
-    },
-    {
-      "key": "pediatric_group",
-      "name": "Derived Pediatric Stage Group",
-      "type": "ENDPOINT"
-    }
-  ],
-  "rows": [
-    [
-      "*",
-      "N0",
-      "M0",
-      "1,X",
-      "VALUE:1"
-    ],
-    [
-      "T1",
-      "N0",
-      "M0",
-      "2,3",
-      "VALUE:2"
-    ],
-    [
-      "T2,T3,T4",
-      "N0",
-      "M0",
-      "2,3",
-      "VALUE:3"
-    ],
-    [
-      "T0,TX",
-      "N0",
-      "M0",
-      "2,3",
-      "VALUE:99"
-    ],
-    [
-      "*",
-      "N1",
-      "M0",
-      "*",
-      "VALUE:3"
-    ],
-    [
-      "*",
-      "NX",
-      "M0",
-      "*",
-      "VALUE:99"
-    ],
-    [
-      "*",
-      "*",
-      "M1",
-      "*",
-      "VALUE:4"
-    ]
-  ]
+  "id" : "pediatric_stage_79275",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Pediatric Stage",
+  "title" : "Pediatric Stage",
+  "last_modified" : "2023-09-27T21:40:57.264Z",
+  "definition" : [ {
+    "key" : "pediatric_t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "pediatric_n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "pediatric_m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "pediatric_grade",
+    "name" : "Grade",
+    "type" : "INPUT"
+  }, {
+    "key" : "pediatric_group",
+    "name" : "Derived Pediatric Stage Group",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "*", "N0,NX,88", "M0", "1,X", "VALUE:1" ], [ "T1", "N0,NX,88", "M0", "2,3", "VALUE:2" ], [ "T2,T3,T4", "N0,NX,88", "M0", "2,3", "VALUE:3" ], [ "*", "N1", "M0", "*", "VALUE:3" ], [ "*", "*", "M1", "*", "VALUE:4" ], [ "*", "*", "MX", "*", "VALUE:99" ], [ "TX", "N0,NX,88", "M0", "2,3", "VALUE:99" ], [ "T0", "N0,NX,88", "M0", "2,3", "ERROR:T0 implies no grade" ] ]
 }

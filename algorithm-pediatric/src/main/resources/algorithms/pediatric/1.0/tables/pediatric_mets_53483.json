@@ -1,0 +1,18 @@
+{
+  "id" : "pediatric_mets_53483",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Pediatric Mets",
+  "title" : "Pediatric Mets",
+  "last_modified" : "2023-09-01T20:29:20.218Z",
+  "definition" : [ {
+    "key" : "ped_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis" ], [ "10", "Pleural effusion with positive cytology\n\nFIGO Stage IVA" ], [ "30", "Distant lymph node(s)\n* Inguinal, NOS\n   - Inguinofemoral (groin)\n   - Node of Cloquet or Rosenmuller (highest deep inguinal)\n   - Superficial inguinal (femoral)\n* Distant lymph node(s)\n\nWITH or WITHOUT pleural effusion with positive cytology" ], [ "50", "Extra-abdominal organs\n\nLiver parenchymal\nSpleen parenchymal\nTransmural involvement of intestine\n\nCarcinomatosis (involvement of multiple parenchymal organs OR\ndiffuse involvement of multiple non-abdominal organs)\n* Excludes peritoneal carcinomatosis (see Pediatric Primary Tumor)\n\nWITH or WITHOUT distant lymph node(s) OR pleural effusion with positive cytology\n\nFIGO Stage IVB" ], [ "70", "Distant metastasis, NOS\n\nFIGO Stage IV [NOS]" ], [ "99", "Unknown; distant metastasis not stated\nNot documented in medical record\n\nDeath Certificate Only" ] ]
+}

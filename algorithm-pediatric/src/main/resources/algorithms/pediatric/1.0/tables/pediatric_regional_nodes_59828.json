@@ -1,0 +1,19 @@
+{
+  "id" : "pediatric_regional_nodes_59828",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Pediatric Regional Nodes",
+  "title" : "Pediatric Regional Nodes",
+  "notes" : "**Note 1:** Code only regional nodes and nodes, NOS, in this field. Distant nodes are coded in Pediatric Mets.\n\n**Note 2:** Regional lymph nodes are defined as those in the vicinity of the primary tumor.",
+  "last_modified" : "2023-09-01T18:58:00.508Z",
+  "definition" : [ {
+    "key" : "ped_regional_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "000", "No regional lymph node involvement" ], [ "300", "Caval\nHepatic, NOS\n* Hepatic artery\n* Hepatic pedicle\n* Inferior vena cava\n* Porta hepatis (portal) (hilar) [in hilus of liver]\n\nHepatoduodenal ligament\nPeriportal\nPortal vein" ], [ "700", "Inferior phrenic nodes" ], [ "800", "Regional lymph node(s), NOS\nLymph node(s), NOS" ], [ "999", "Unknown; regional lymph node(s) not stated\nRegional lymph node(s) cannot be assessed\nNot documented in medical record\n\nDeath Certificate Only" ] ]
+}

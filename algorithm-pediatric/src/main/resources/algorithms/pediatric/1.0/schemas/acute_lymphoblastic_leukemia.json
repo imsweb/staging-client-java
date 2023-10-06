@@ -4,7 +4,7 @@
   "version": "1.0",
   "name": "Acute Lymphoblastic Leukemia",
   "title": "Acute Lymphoblastic Leukemia",
-  "notes": "9811-9819, 9837: C000-C809 (ages 0-39)\n\n**Note 1:** The following sources were used in the development of this schema\n* [Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022](https://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf)",
+  "notes": "9811-9819, 9837: C000-C809 (ages 0-39)\n\n**Note 1:** The following sources were used in the development of this schema\n* [Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022](https://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf)\n* [SEER Extent of Disease (EOD) 2018: Codes and Coding Instructions](https://seer.cancer.gov/tools/staging/eod/2018_Extent_of_Disease_General_Instructions.pdf)\n* [Summary Stage 2018 - SEER (cancer.gov)](https://seer.cancer.gov/tools/ssm/)\n\n**Note 2:** For Acute Lymphoblastic Leukemia, Toronto Staging is based on the presence or absence of CNS Involvement, which is collected in Pediatric Mets.",
   "schema_selection_table": "schema_selection_acute_lymphoblastic_leukemia",
   "schema_discriminators": [
     "age_dx",
@@ -33,6 +33,14 @@
       "naaccr_item": 522,
       "naaccr_xml_id": "histologicTypeIcdO3",
       "table": "histology",
+      "used_for_staging": true
+    },
+    {
+      "key": "behavior",
+      "name": "Behavior",
+      "naaccr_item": 523,
+      "naaccr_xml_id": "behaviorCodeIcdO3",
+      "table": "behavior",
       "used_for_staging": true
     },
     {
@@ -89,14 +97,6 @@
           "name": "SEER_REQUIRED"
         }
       ]
-    },
-    {
-      "key": "behavior",
-      "name": "Behavior",
-      "naaccr_item": 523,
-      "naaccr_xml_id": "behaviorCodeIcdO3",
-      "table": "behavior",
-      "used_for_staging": true
     }
   ],
   "outputs": [
@@ -167,6 +167,6 @@
     "pediatric_regional_nodes_na_68667",
     "pediatric_primary_tumor_na_1293"
   ],
-  "last_modified": "2023-08-17T16:10:03.229Z",
+  "last_modified": "2023-09-28T20:11:18.258Z",
   "on_invalid_input": "CONTINUE"
 }

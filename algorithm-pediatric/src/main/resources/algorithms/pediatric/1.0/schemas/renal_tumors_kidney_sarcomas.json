@@ -1,207 +1,182 @@
 {
-  "id": "renal_tumors_kidney_sarcomas",
-  "algorithm": "pediatric",
-  "version": "1.0",
-  "name": "Renal Tumors: Kidney Sarcomas",
-  "title": "Renal Tumors: Kidney Sarcomas",
-  "notes": "8964-8967: C649, C659 (ages 0-39)\n\n**Note 1:** The following sources were used in the development of this schema\n* [Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022](https://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf)",
-  "schema_selection_table": "schema_selection_renal_tumors_kidney_sarcomas",
-  "schema_discriminators": [
-    "age_dx",
-    "behavior"
-  ],
-  "inputs": [
-    {
-      "key": "year_dx",
-      "name": "Year of Diagnosis",
-      "naaccr_item": 390,
-      "naaccr_xml_id": "dateOfDiagnosis",
-      "table": "year_dx_validation",
-      "used_for_staging": false
-    },
-    {
-      "key": "site",
-      "name": "Primary Site",
-      "naaccr_item": 400,
-      "naaccr_xml_id": "primarySite",
-      "table": "primary_site",
-      "used_for_staging": true
-    },
-    {
-      "key": "hist",
-      "name": "Histology",
-      "naaccr_item": 522,
-      "naaccr_xml_id": "histologicTypeIcdO3",
-      "table": "histology",
-      "used_for_staging": true
-    },
-    {
-      "key": "behavior",
-      "name": "Behavior",
-      "naaccr_item": 523,
-      "naaccr_xml_id": "behaviorCodeIcdO3",
-      "table": "behavior",
-      "used_for_staging": true
-    },
-    {
-      "key": "age_dx",
-      "name": "Age at Diagnosis",
-      "naaccr_item": 230,
-      "naaccr_xml_id": "ageAtDiagnosis",
-      "table": "age_at_diagnosis_validation_3881",
-      "used_for_staging": true
-    },
-    {
-      "key": "ped_primary_tumor",
-      "name": "Pediatric Primary Tumor",
-      "description": "NAACCR IDs are not final",
-      "naaccr_item": 9623,
-      "naaccr_xml_id": "pediatricPrimaryTumor",
-      "default": "999",
-      "table": "pediatric_primary_tumor_47758",
-      "used_for_staging": false
-    },
-    {
-      "key": "ped_regional_nodes",
-      "name": "Pediatric Regional Nodes",
-      "description": "NAACCR IDs are not final",
-      "naaccr_item": 9624,
-      "naaccr_xml_id": "pediatricRegionalNodes",
-      "default": "888",
-      "table": "pediatric_regional_nodes_na_68667",
-      "used_for_staging": false
-    },
-    {
-      "key": "ped_mets",
-      "name": "Pediatric Mets",
-      "description": "NAACCR IDs are not final",
-      "naaccr_item": 9625,
-      "naaccr_xml_id": "pediatricMets",
-      "default": "88",
-      "table": "pediatric_mets_na_36656",
-      "used_for_staging": false
-    },
-    {
-      "key": "chrom_1p_status",
-      "name": "Chromosome 1p Status",
-      "naaccr_item": 3801,
-      "naaccr_xml_id": "chromosome1pLossHeterozygosity",
-      "table": "chromosome_1p_status_97190",
-      "used_for_staging": false,
-      "metadata": [
-        {
-          "name": "SSDI"
-        },
-        {
-          "name": "SEER_REQUIRED"
-        }
-      ]
-    },
-    {
-      "key": "chrom_1q_status",
-      "name": "Chromosome 1q Status",
-      "description": "NAACCR IDs are not final",
-      "naaccr_item": 9601,
-      "naaccr_xml_id": "chromosome1qStatus",
-      "table": "chromosome_1q_status_14467",
-      "used_for_staging": false,
-      "metadata": [
-        {
-          "name": "SSDI"
-        },
-        {
-          "name": "SEER_REQUIRED"
-        }
-      ]
-    },
-    {
-      "key": "chrom_16q_status",
-      "name": "Chromosome 16q Status",
-      "description": "NAACCR IDs are not final",
-      "naaccr_item": 9600,
-      "naaccr_xml_id": "chromosome16qLossHeterozygosity",
-      "table": "chromosome_16q_status_46566",
-      "used_for_staging": false,
-      "metadata": [
-        {
-          "name": "SSDI"
-        },
-        {
-          "name": "SEER_REQUIRED"
-        }
-      ]
-    }
-  ],
-  "outputs": [
-    {
-      "key": "pediatric_id",
-      "name": "Pediatric ID",
-      "description": "NAACCR IDs are not final",
-      "naaccr_item": 9617,
-      "naaccr_xml_id": "pediatricId",
-      "default": "6a3"
-    },
-    {
-      "key": "toronto_version_number",
-      "name": "Toronto Version Number",
-      "description": "NAACCR IDs are not final \nVersion of the Toronto Pediatric Staging System that this version of the Pediatric staging API is based upon.",
-      "naaccr_item": 9620,
-      "naaccr_xml_id": "torontoVersionNumber",
-      "default": "2"
-    },
-    {
-      "key": "derived_version",
-      "name": "Derived Version",
-      "description": "For Pediatric ID Version Current - 9618, update all cases when API is updated; Pediatric ID Version Original - 9619, set when the case is coded and do not update",
-      "default": "{{ctx_alg_version}}"
-    },
-    {
-      "key": "pediatric_t",
-      "name": "Derived Pediatric T",
-      "description": "NAACCR IDs are not final",
-      "naaccr_item": 9607,
-      "naaccr_xml_id": "derivedPediatricT",
-      "default": "88"
-    },
-    {
-      "key": "pediatric_n",
-      "name": "Derived Pediatric N",
-      "description": "NAACCR IDs are not final",
-      "naaccr_item": 9605,
-      "naaccr_xml_id": "derivedPediatricN",
-      "default": "88"
-    },
-    {
-      "key": "pediatric_m",
-      "name": "Derived Pediatric M",
-      "description": "NAACCR IDs are not final",
-      "naaccr_item": 9604,
-      "naaccr_xml_id": "derivedPediatricM",
-      "default": "88"
-    },
-    {
-      "key": "pediatric_group",
-      "name": "Derived Pediatric Stage Group",
-      "description": "NAACCR IDs are not final",
-      "naaccr_item": 9606,
-      "naaccr_xml_id": "derivedPediatricStageGroup",
-      "default": "88"
-    }
-  ],
-  "involved_tables": [
-    "chromosome_1q_status_14467",
-    "primary_site",
-    "pediatric_primary_tumor_47758",
-    "chromosome_1p_status_97190",
-    "histology",
-    "age_at_diagnosis_validation_3881",
-    "schema_selection_renal_tumors_kidney_sarcomas",
-    "pediatric_mets_na_36656",
-    "year_dx_validation",
-    "chromosome_16q_status_46566",
-    "behavior",
-    "pediatric_regional_nodes_na_68667"
-  ],
-  "last_modified": "2023-08-02T22:24:10.246Z",
-  "on_invalid_input": "CONTINUE"
+  "id" : "renal_tumors_kidney_sarcomas",
+  "algorithm" : "pediatric",
+  "version" : "1.0",
+  "name" : "Renal Tumors: Kidney Sarcomas",
+  "title" : "Renal Tumors: Kidney Sarcomas",
+  "notes" : "8964-8967: C649, C659 (ages 0-39)\n\n**Note 1:** The following sources were used in the development of this schema\n* [Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022](https://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf)\n* [SEER Extent of Disease (EOD) 2018: Codes and Coding Instructions](https://seer.cancer.gov/tools/staging/eod/2018_Extent_of_Disease_General_Instructions.pdf)\n* [Summary Stage 2018 - SEER (cancer.gov)](https://seer.cancer.gov/tools/ssm/)\n\n**Note 2:** For Renal tumors, Toronto Staging is based on the *Wilms Tumor Staging System* and records the stage group only.\n* Pediatric Primary Tumor, Pediatric Regional Nodes, and Pediatric Mets will be collected for surveillance purposes and will derive the Wilms Tumor Stage Group\n\n**Note 3:** This staging system is not the same as the National Wilms Tumor Study Group (NWTS) \n* Do not record stage information from the National Wilms Tumor Study Group (NWTS) in these data items",
+  "schema_selection_table" : "schema_selection_renal_tumors_kidney_sarcomas",
+  "schema_discriminators" : [ "age_dx", "behavior" ],
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "naaccr_xml_id" : "dateOfDiagnosis",
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "naaccr_xml_id" : "primarySite",
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "naaccr_xml_id" : "histologicTypeIcdO3",
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "naaccr_item" : 523,
+    "naaccr_xml_id" : "behaviorCodeIcdO3",
+    "table" : "behavior",
+    "used_for_staging" : true
+  }, {
+    "key" : "age_dx",
+    "name" : "Age at Diagnosis",
+    "naaccr_item" : 230,
+    "naaccr_xml_id" : "ageAtDiagnosis",
+    "table" : "age_at_diagnosis_validation_3881",
+    "used_for_staging" : true
+  }, {
+    "key" : "surgical_margins",
+    "name" : "RX Summ Surgical Margins",
+    "naaccr_item" : 1320,
+    "naaccr_xml_id" : "rxSummSurgicalMargins",
+    "default" : "9",
+    "table" : "rx_summ_surgical_margins_47287",
+    "used_for_staging" : true
+  }, {
+    "key" : "ped_primary_tumor",
+    "name" : "Pediatric Primary Tumor",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9623,
+    "naaccr_xml_id" : "pediatricPrimaryTumor",
+    "default" : "999",
+    "table" : "pediatric_primary_tumor_47758",
+    "used_for_staging" : true
+  }, {
+    "key" : "ped_regional_nodes",
+    "name" : "Pediatric Regional Nodes",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9624,
+    "naaccr_xml_id" : "pediatricRegionalNodes",
+    "default" : "999",
+    "table" : "pediatric_regional_nodes_26974",
+    "used_for_staging" : true
+  }, {
+    "key" : "ped_mets",
+    "name" : "Pediatric Mets",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9625,
+    "naaccr_xml_id" : "pediatricMets",
+    "default" : "99",
+    "table" : "pediatric_mets_19048",
+    "used_for_staging" : true
+  }, {
+    "key" : "chrom_1p_status",
+    "name" : "Chromosome 1p Status",
+    "naaccr_item" : 3801,
+    "naaccr_xml_id" : "chromosome1pLossHeterozygosity",
+    "table" : "chromosome_1p_status_97190",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "chrom_1q_status",
+    "name" : "Chromosome 1q Status",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9601,
+    "naaccr_xml_id" : "chromosome1qStatus",
+    "table" : "chromosome_1q_status_14467",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "chrom_16q_status",
+    "name" : "Chromosome 16q Status",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9600,
+    "naaccr_xml_id" : "chromosome16qLossHeterozygosity",
+    "table" : "chromosome_16q_status_46566",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  } ],
+  "outputs" : [ {
+    "key" : "pediatric_id",
+    "name" : "Pediatric ID",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9617,
+    "naaccr_xml_id" : "pediatricId",
+    "default" : "6a3"
+  }, {
+    "key" : "toronto_version_number",
+    "name" : "Toronto Version Number",
+    "description" : "NAACCR IDs are not final \nVersion of the Toronto Pediatric Staging System that this version of the Pediatric staging API is based upon.",
+    "naaccr_item" : 9620,
+    "naaccr_xml_id" : "torontoVersionNumber",
+    "default" : "2"
+  }, {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "description" : "For Pediatric ID Version Current - 9618, update all cases when API is updated; Pediatric ID Version Original - 9619, set when the case is coded and do not update",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "pediatric_t",
+    "name" : "Derived Pediatric T",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9607,
+    "naaccr_xml_id" : "derivedPediatricT",
+    "default" : "88"
+  }, {
+    "key" : "pediatric_n",
+    "name" : "Derived Pediatric N",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9605,
+    "naaccr_xml_id" : "derivedPediatricN",
+    "default" : "88"
+  }, {
+    "key" : "pediatric_m",
+    "name" : "Derived Pediatric M",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9604,
+    "naaccr_xml_id" : "derivedPediatricM",
+    "default" : "88"
+  }, {
+    "key" : "pediatric_group",
+    "name" : "Derived Pediatric Stage Group",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9606,
+    "naaccr_xml_id" : "derivedPediatricStageGroup"
+  } ],
+  "mappings" : [ {
+    "id" : "pediatric_stage",
+    "name" : "Pediatric Stage",
+    "initial_context" : [ {
+      "key" : "pediatric_group",
+      "value" : "90"
+    } ],
+    "tables" : [ {
+      "id" : "pediatric_stage_16688",
+      "inputs" : [ "ped_mets", "surgical_margins", "ped_regional_nodes", "ped_primary_tumor" ],
+      "outputs" : [ "pediatric_group" ]
+    } ]
+  } ],
+  "involved_tables" : [ "chromosome_1q_status_14467", "chromosome_1p_status_97190", "age_at_diagnosis_validation_3881", "schema_selection_renal_tumors_kidney_sarcomas", "rx_summ_surgical_margins_47287", "primary_site", "pediatric_primary_tumor_47758", "pediatric_mets_19048", "histology", "pediatric_regional_nodes_26974", "year_dx_validation", "chromosome_16q_status_46566", "pediatric_stage_16688", "behavior" ],
+  "last_modified" : "2023-09-28T20:17:38.749Z",
+  "on_invalid_input" : "CONTINUE"
 }
