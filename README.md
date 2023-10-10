@@ -25,7 +25,7 @@ be calculated.
 All the standard setting organizations will collect the predictive and prognostic factors through Site Specific Data Items (SSDIs). Unlike the SSFs, these data
 items have formats and code structures specific to the data item.
 
-To get started using the Pediatric Pediatric algorithm, instantiate a `Staging` instance:
+To get started using the Pediatric staging algorithm, instantiate a `Staging` instance:
 
 ```java
 Staging staging=Staging.getInstance(PediatricDataProvider.getInstance(PediatricVersion.LATEST));
