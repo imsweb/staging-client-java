@@ -1,0 +1,31 @@
+{
+  "id" : "pediatric_stage_78332",
+  "algorithm" : "pediatric",
+  "version" : "1.1",
+  "name" : "Pediatric Stage",
+  "title" : "Pediatric Stage",
+  "notes" : "calculates Pediatric Stage and Toronto Stage",
+  "last_modified" : "2023-11-18T02:53:08.789Z",
+  "definition" : [ {
+    "key" : "ped_primary_tumor",
+    "name" : "Ped Primary Tumor",
+    "type" : "INPUT"
+  }, {
+    "key" : "ped_regional_nodes",
+    "name" : "Ped Regional Nodes",
+    "type" : "INPUT"
+  }, {
+    "key" : "ped_mets",
+    "name" : "Ped Mets",
+    "type" : "INPUT"
+  }, {
+    "key" : "pediatric_group",
+    "name" : "Derived Pediatric Stage Group",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "toronto_stage_group",
+    "name" : "Toronto Stage Group",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100,200", "000,999", "00,99", "VALUE:1", "VALUE:1" ], [ "300", "000,999", "00,99", "VALUE:2", "VALUE:2" ], [ "400", "000,999", "00,99", "VALUE:3", "VALUE:3" ], [ "*", "300,800", "00,99", "VALUE:3", "VALUE:3" ], [ "*", "*", "10-70", "VALUE:4", "VALUE:4" ], [ "800,999", "000,999", "00,99", "VALUE:99", "VALUE:X" ] ]
+}

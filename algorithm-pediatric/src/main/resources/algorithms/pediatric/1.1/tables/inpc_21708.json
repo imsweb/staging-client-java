@@ -1,0 +1,21 @@
+{
+  "id" : "inpc_21708",
+  "algorithm" : "pediatric",
+  "version" : "1.1",
+  "name" : "Intl Neuroblastoma Path Prog Class (INPC)",
+  "title" : "International Neuroblastoma Pathology Prognostic Classification (INPC)",
+  "subtitle" : "Shimada Classification, Unfavorable histology or Favorable histology",
+  "notes" : "**Note 1:** This SSDI is effective for diagnosis years 2024+\n* For cases diagnosed 2018-2023, leave this SSDI blank\n\n**Note 2:** The International Neuroblastoma Pathology Prognostic Classification (INPC) (unfavorable versus favorable histology) is a biologically relevant classification based on morphologic features of neuroblastic tumors which has prognostic indications. It is based on the following criteria\n* Age\n* Neuroblastic maturation\n* Schwannian stromal content\n* Mitosis-kayorrhexis index (MKI)\n* Degree of differentiation (grade)\n\n**Note 3:** The INPC results are to be coded based on either biopsy or surgical resection (without neoadjuvant therapy). If the only results are from a post neoadjuvant surgical resection, code 9. \n\n**Note 4:**  Physician statement of unfavorable vs favorable histology can be used to code this data item when no other information is available, provided there is information that the results are from a biopsy or surgical resection without neoadjuvant therapy.",
+  "footnotes" : "(1) American Society of Clinical Oncology © 2009, The International Neuroblastoma Risk Group (INRG) Classification System: AN INRG Task Force Report; published by American Society of Clinical Oncology, 2009",
+  "last_modified" : "2023-09-20T16:13:13.442Z",
+  "definition" : [ {
+    "key" : "inpc",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Unfavorable" ], [ "1", "Favorable" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error)" ], [ "9", "Not documented in medical record\nCannot be determined by pathologist\nInternational Neuroblastoma Pathology Prognostic Classification (INPC) not assessed or unknown if assessed\nINPC assessed only at post neoadjuvant surgical resection" ], [ "", "N/A - Diagnosis year is prior to 2024" ] ]
+}

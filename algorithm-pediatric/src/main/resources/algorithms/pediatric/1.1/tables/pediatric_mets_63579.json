@@ -1,0 +1,19 @@
+{
+  "id" : "pediatric_mets_63579",
+  "algorithm" : "pediatric",
+  "version" : "1.1",
+  "name" : "Pediatric Mets",
+  "title" : "Pediatric Mets",
+  "notes" : "**Note:** Use the following resources to determine if involved lymph nodes are distant or if involved organs are metastatic.\n* EOD: Review the primary site-based schema\n* Summary Stage: Review the primary site-based chapter",
+  "last_modified" : "2023-11-17T17:11:45.034Z",
+  "definition" : [ {
+    "key" : "ped_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis" ], [ "10", "Distant lymph node(s), NOS" ], [ "20", "Skin\nWITH or WITHOUT distant lymph nodes" ], [ "30", "Liver \nWITH or WITHOUT distant lymph nodes or skin" ], [ "40", "Bone marrow\nWITH or WITHOUT distant lymph nodes, skin, or liver" ], [ "50", "Bone\nWITH or WITHOUT distant lymph nodes, skin, liver, bone marrow" ], [ "70", "Other specified metastasis excluding skin, liver, bone marrow, bone\n\nCarcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nDistant metastasis, NOS" ], [ "99", "Unknown; distant metastasis not stated\nNot documented in medical record\n\nDeath Certificate Only" ] ]
+}

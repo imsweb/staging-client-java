@@ -1,0 +1,21 @@
+{
+  "id" : "pediatric_mets_20116",
+  "algorithm" : "pediatric",
+  "version" : "1.1",
+  "name" : "Pediatric Mets",
+  "title" : "Pediatric Mets",
+  "subtitle" : "M Category",
+  "notes" : "**Note 1:** Use code 70 when the only information is “distant metastasis, NOS,” and there is no documentation regarding the specific metastases.\n* If there are specific metastasis documented that are not listed in codes 15, 25, or 35, or 45, assign code 45 for “other specified distant metastasis.”\n\n**Note 2:** Code 00 for benign (behavior /0) and borderline (behavior /1) tumors.\n\n**Note 3:** The following adjacent structures/sites, by direct or contiguous extension, are coded to 35. \n* Adjacent connective/soft tissue\n* Adjacent muscle\n* Bone\n* Circulating cells in cerebral spinal fluid (CSF)\n* Major blood vessel(s)\n* Meninges (e.g., dura)\n* Multiple/multifocal tumors\n* Nerves (cranial, NOS)\n* Ventricular system\n\n**Note 4:** Leptomeningeal metastases, also known as carcinomatous meningitis and meningeal carcinomatosis, refers to the spread of malignant cells through the CSF space. These cells can originate from primary CNS tumors (e.g., in the form of drop metastases), as well as from distant tumors that have metastasized via hematogenous spread (code 35).",
+  "footnotes" : "(1)\tAitken JF, Youlden D, O’Neill L, Gupta S, Frazier AL, eds. Childhood cancer staging for population registries according to the Toronto Childhood Cancer Stage Guidelines – Version 2. Cancer Council Queensland and Cancer Australia: Brisbane, Australia; 2021.",
+  "last_modified" : "2023-11-17T15:46:37.199Z",
+  "definition" : [ {
+    "key" : "ped_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "No visible disease on imaging (MRI brain and spine) beyond primary site of disease \nAND no tumor cells into the cerebrospinal fluid (CSF)" ], [ "15", "Tumor cells in the CSF\n* Circulating cells in cerebral spinal fluid (CSF)" ], [ "25", "Intracranial spread beyond a single lesion\n\nAll sites\n* Bone (skull) (see code 45 for other bone involvement)\n* Major blood vessel(s)\n* Meninges (e.g., dura)\n* Multiple/multifocal tumors\n* Nerves (cranial, NOS)\n* Tumor invades or encroaches upon ventricular system\n\nBrain tumors (C700, C710-C719)\n* Anterior cranial fossa\n* Brain stem\n* Cerebellum\n* Cerebrum (cerebral hemisphere)\n* Contralateral hemisphere\n* Hypothalamus\n* Middle cranial fossa\n* Pallium\n* Posterior cranial fossa\n* Suprasellar brain\n* Tapetum\n* Thalamus\n\nCNS tumors (C701, C709, C720-C729)\n* Adjacent connective tissue\n* Adjacent muscle\n* Brain for cranial nerve tumor(s)\n* Sphenoid and frontal sinuses(skull)\n\nPineal Gland (C753)\n* Adjacent connective/soft tissue\n* Cavernous sinus\n* Infratentorial and central brain" ], [ "35", "Visible metastasis in spine OR\nVisible metastasis in cervicomedullary (junction)\n\nMetastasis within CNS and CSF pathways\n* Carcinomatous meningitis\n* Drop metastasis\n* Leptomeningeal metastases\n* Meningeal carcinomatosis" ], [ "45", "Extra-neural metastasis\n\nAll Sites\n* Blood\n* Bone (other than skull) (see code 25 for skull)\n* Bone marrow\n* Carcinomatosis\n* Distant lymph nodes, NOS\n* Further contiguous extension\n* Other specified metastasis\n\nBrain tumors (C700, C710-C719)\n* Nasal cavity\n* Nasopharynx\n* Other direct extension outside CNS\n* Posterior pharynx\n\nCNS tumors (C701, C709, C720-729)\n* Eye" ], [ "70", "Distant metastasis, NOS" ], [ "99", "Unknown; distant metastasis not stated\nNot documented in medical record\n\nDeath Certificate Only" ] ]
+}
