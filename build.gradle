@@ -57,7 +57,7 @@ subprojects {
     // fail the build if there are compiler warnings
     tasks.withType(JavaCompile).configureEach {
         options.encoding = 'UTF-8'
-        options.compilerArgs << "-Xlint:-options"
+        options.compilerArgs << "-Xlint:all" << "-Xlint:-serial" << "-Werror"
     }
 
     java {
