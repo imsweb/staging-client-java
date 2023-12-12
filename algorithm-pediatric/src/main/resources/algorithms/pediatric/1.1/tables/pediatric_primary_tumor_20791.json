@@ -1,0 +1,19 @@
+{
+  "id" : "pediatric_primary_tumor_20791",
+  "algorithm" : "pediatric",
+  "version" : "1.1",
+  "name" : "Pediatric Primary Tumor",
+  "title" : "Pediatric Primary Tumor",
+  "notes" : "**Note:** Use the following resources to determine if a tumor is localized, regional, or distant (further contiguous extension).\n* EOD: Review the primary site-based schema\n* Summary Stage: Review the primary site-based chapter",
+  "last_modified" : "2023-09-07T22:52:44.498Z",
+  "definition" : [ {
+    "key" : "ped_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "100", "Any size tumor\n* Confined to site of origin\n* Localized, NOS" ], [ "200", "Any size tumor\n* Adjacent (connective) tissue, NOS\n* Adjacent organ(s)/structure(s), NOS\n* Regional, NOS" ], [ "700", "Any size tumor\n* Further contiguous extension" ], [ "800", "No evidence of primary tumor" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in medical record\n\nDeath Certificate Only" ] ]
+}

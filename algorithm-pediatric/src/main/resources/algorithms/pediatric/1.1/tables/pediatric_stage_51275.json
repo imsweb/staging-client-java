@@ -1,0 +1,27 @@
+{
+  "id" : "pediatric_stage_51275",
+  "algorithm" : "pediatric",
+  "version" : "1.1",
+  "name" : "Pediatric Stage",
+  "title" : "Pediatric Stage",
+  "notes" : "Ann Arbor Stage\ncalculates Pediatric Stage and Toronto Stage",
+  "last_modified" : "2023-11-18T02:24:37.640Z",
+  "definition" : [ {
+    "key" : "ped_primary_tumor",
+    "name" : "Ped Primary Tumor",
+    "type" : "INPUT"
+  }, {
+    "key" : "b_symptoms",
+    "name" : "B Symptoms",
+    "type" : "INPUT"
+  }, {
+    "key" : "pediatric_group",
+    "name" : "Derived Pediatric Stage Group",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "toronto_stage_group",
+    "name" : "Toronto Stage Group",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "100,200", "0", "VALUE:1A", "VALUE:1A" ], [ "100,200", "1", "VALUE:1B", "VALUE:1B" ], [ "100,200", "8,9", "VALUE:1", "VALUE:1A" ], [ "300,400", "0", "VALUE:2A", "VALUE:2A" ], [ "300,400", "1", "VALUE:2B", "VALUE:2B" ], [ "300,400", "8,9", "VALUE:2", "VALUE:2A" ], [ "575,600", "0", "VALUE:3A", "VALUE:3A" ], [ "575,600", "1", "VALUE:3B", "VALUE:3B" ], [ "575,600", "8,9", "VALUE:3", "VALUE:3A" ], [ "700,800", "0", "VALUE:4A", "VALUE:4A" ], [ "700,800", "1", "VALUE:4B", "VALUE:4B" ], [ "700,800", "8,9", "VALUE:4", "VALUE:4A" ], [ "750,999", "*", "VALUE:99", "VALUE:X" ] ]
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_ependymoma",
+  "algorithm" : "pediatric",
+  "version" : "1.1",
+  "name" : "Schema Selection Ependymoma",
+  "title" : "Schema selection for Ependymoma",
+  "last_modified" : "2023-11-18T02:14:44.313Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C710-C729", "9383, 9391-9394, 9396", "MATCH" ] ]
+}

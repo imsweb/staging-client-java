@@ -1,0 +1,23 @@
+{
+  "id" : "pediatric_m_36063",
+  "algorithm" : "pediatric",
+  "version" : "1.1",
+  "name" : "Pediatric M",
+  "title" : "Pediatric M",
+  "notes" : "calculates Pediatric M and Toronto M",
+  "last_modified" : "2023-10-30T19:36:50.955Z",
+  "definition" : [ {
+    "key" : "ped_mets",
+    "name" : "Ped Mets",
+    "type" : "INPUT"
+  }, {
+    "key" : "pediatric_m",
+    "name" : "Derived Pediatric M",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "toronto_m",
+    "name" : "Toronto M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "VALUE:M0", "VALUE:M0" ], [ "10,70", "VALUE:M1", "VALUE:M1" ], [ "99", "VALUE:MX", "VALUE:MX" ] ]
+}

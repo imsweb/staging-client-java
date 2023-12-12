@@ -79,7 +79,9 @@ public class PediatricStagingData extends StagingData {
         B_SYMPTOMS("b_symptoms"),
         DERIVED_SUMMARY_GRADE("derived_summary_grade"),
         SURG_2023("surg_2023"),
-        SURGICAL_MARGINS("surgical_margins");
+        SURGICAL_MARGINS("surgical_margins"),
+        INGRESS("inrgss"),
+        PRETEXT_CLINICAL_STAGING("pretext_clinical_staging");
 
         private final String _name;
 
@@ -101,6 +103,10 @@ public class PediatricStagingData extends StagingData {
         PEDIATRIC_N("pediatric_n"),
         PEDIATRIC_M("pediatric_m"),
         PEDIATRIC_GROUP("pediatric_group"),
+        TORONTO_T("toronto_t"),
+        TORONTO_N("toronto_n"),
+        TORONTO_M("toronto_m"),
+        TORONTO_STAGE_GROUP("toronto_stage_group"),
         DERIVED_VERSION("derived_version");
 
         private final String _name;

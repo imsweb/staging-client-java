@@ -1,0 +1,186 @@
+{
+  "id" : "retinoblastoma",
+  "algorithm" : "pediatric",
+  "version" : "1.1",
+  "name" : "Retinoblastoma",
+  "title" : "Retinoblastoma",
+  "notes" : "9510-9514: C690-C699 (all ages)\n\n**Note 1:** The following sources were used in the development of this schema\n* [Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022](https://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf)\n* [SEER Extent of Disease (EOD) 2018: Codes and Coding Instructions](https://seer.cancer.gov/tools/staging/eod/2018_Extent_of_Disease_General_Instructions.pdf)\n* [Summary Stage 2018 - SEER (cancer.gov)](https://seer.cancer.gov/tools/ssm/)\n\n**Note 2:** For Retinoblastoma, Toronto Staging is based on the International Retinoblastoma Staging System (IRSS) and records the stage group only.\n* Pediatric Primary Tumor, Pediatric Regional Nodes, and Pediatric Mets will be collected for surveillance purposes and will derive the IRSS Stage System",
+  "schema_selection_table" : "schema_selection_retinoblastoma",
+  "schema_discriminators" : [ "behavior" ],
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "naaccr_xml_id" : "dateOfDiagnosis",
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "naaccr_xml_id" : "primarySite",
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "naaccr_xml_id" : "histologicTypeIcdO3",
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "naaccr_item" : 523,
+    "naaccr_xml_id" : "behaviorCodeIcdO3",
+    "table" : "behavior",
+    "used_for_staging" : true
+  }, {
+    "key" : "surg_2023",
+    "name" : "RX Summ Surg Prim Site 2023",
+    "naaccr_item" : 1291,
+    "naaccr_xml_id" : "rxSummSurgPrimSite2023",
+    "default" : "A990",
+    "table" : "rx_summ_surg_2023_retinoblastoma_97268",
+    "used_for_staging" : true
+  }, {
+    "key" : "surgical_margins",
+    "name" : "RX Summ Surgical Margins",
+    "naaccr_item" : 1320,
+    "naaccr_xml_id" : "rxSummSurgicalMargins",
+    "default" : "9",
+    "table" : "rx_summ_surgical_margins_47287",
+    "used_for_staging" : true
+  }, {
+    "key" : "ped_primary_tumor",
+    "name" : "Pediatric Primary Tumor",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9623,
+    "naaccr_xml_id" : "pediatricPrimaryTumor",
+    "default" : "999",
+    "table" : "pediatric_primary_tumor_1604",
+    "used_for_staging" : true
+  }, {
+    "key" : "ped_regional_nodes",
+    "name" : "Pediatric Regional Nodes",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9624,
+    "naaccr_xml_id" : "pediatricRegionalNodes",
+    "default" : "999",
+    "table" : "pediatric_regional_nodes_67911",
+    "used_for_staging" : true
+  }, {
+    "key" : "ped_mets",
+    "name" : "Pediatric Mets",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9625,
+    "naaccr_xml_id" : "pediatricMets",
+    "default" : "99",
+    "table" : "pediatric_mets_26722",
+    "used_for_staging" : true
+  }, {
+    "key" : "irss_stage_for_eye2",
+    "name" : "IRSS Stage for Eye-2",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9627,
+    "naaccr_xml_id" : "irssStageForEye2",
+    "table" : "irss_stage_for_eye_2_95484",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    } ]
+  } ],
+  "outputs" : [ {
+    "key" : "pediatric_id",
+    "name" : "Pediatric ID",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9617,
+    "naaccr_xml_id" : "pediatricId",
+    "default" : "5"
+  }, {
+    "key" : "toronto_version_number",
+    "name" : "Toronto Version Number",
+    "description" : "NAACCR IDs are not final \nVersion of the Toronto Pediatric Staging System that this version of the Pediatric staging API is based upon.",
+    "naaccr_item" : 9620,
+    "naaccr_xml_id" : "torontoVersionNumber",
+    "default" : "2"
+  }, {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "description" : "For Pediatric ID Version Current - 9618, update all cases when API is updated; Pediatric ID Version Original - 9619, set when the case is coded and do not update",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "pediatric_t",
+    "name" : "Derived Pediatric T",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9607,
+    "naaccr_xml_id" : "derivedPediatricT",
+    "default" : "88"
+  }, {
+    "key" : "pediatric_n",
+    "name" : "Derived Pediatric N",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9605,
+    "naaccr_xml_id" : "derivedPediatricN",
+    "default" : "88"
+  }, {
+    "key" : "pediatric_m",
+    "name" : "Derived Pediatric M",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9604,
+    "naaccr_xml_id" : "derivedPediatricM",
+    "default" : "88"
+  }, {
+    "key" : "pediatric_group",
+    "name" : "Derived Pediatric Stage Group",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9606,
+    "naaccr_xml_id" : "derivedPediatricStageGroup"
+  }, {
+    "key" : "toronto_t",
+    "name" : "Toronto T",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9628,
+    "naaccr_xml_id" : "torontoT",
+    "default" : "88"
+  }, {
+    "key" : "toronto_n",
+    "name" : "Toronto N",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9629,
+    "naaccr_xml_id" : "torontoN",
+    "default" : "88"
+  }, {
+    "key" : "toronto_m",
+    "name" : "Toronto M",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9630,
+    "naaccr_xml_id" : "torontoM",
+    "default" : "88"
+  }, {
+    "key" : "toronto_stage_group",
+    "name" : "Toronto Stage Group",
+    "description" : "NAACCR IDs are not final",
+    "naaccr_item" : 9631,
+    "naaccr_xml_id" : "torontoStageGroup"
+  } ],
+  "mappings" : [ {
+    "id" : "pediatric_stage",
+    "name" : "Pediatric Stage",
+    "initial_context" : [ {
+      "key" : "pediatric_group",
+      "value" : "90"
+    }, {
+      "key" : "toronto_stage_group",
+      "value" : "90"
+    } ],
+    "tables" : [ {
+      "id" : "pediatric_stage_19429",
+      "inputs" : [ "surg_2023", "ped_mets", "surgical_margins", "ped_regional_nodes", "ped_primary_tumor" ],
+      "outputs" : [ "toronto_stage_group", "pediatric_group" ]
+    } ]
+  } ],
+  "involved_tables" : [ "primary_site", "irss_stage_for_eye_2_95484", "histology", "pediatric_regional_nodes_67911", "year_dx_validation", "rx_summ_surgical_margins_47287", "pediatric_mets_26722", "behavior", "schema_selection_retinoblastoma", "rx_summ_surg_2023_retinoblastoma_97268", "pediatric_primary_tumor_1604", "pediatric_stage_19429" ],
+  "last_modified" : "2023-10-30T20:05:47.660Z",
+  "on_invalid_input" : "CONTINUE"
+}
