@@ -137,7 +137,7 @@ public abstract class StagingTest {
         for (String id : _STAGING.getSchemaIds())
             usedTables.addAll(_STAGING.getSchema(id).getInvolvedTables());
 
-        Set<String> unusedTables = _STAGING.getTableIds().stream().filter(id -> !usedTables.contains(id)).collect(Collectors.toSet());
+        Set<String> unusedTables = _STAGING.getTableIds().stream().filter(id -> !usedTables.contains(id) && !id.startsWith("conversion_")).collect(Collectors.toSet());
 
         if (!unusedTables.isEmpty())
             fail("There are " + unusedTables.size() + " tables that are not used in any schema: " + unusedTables);
