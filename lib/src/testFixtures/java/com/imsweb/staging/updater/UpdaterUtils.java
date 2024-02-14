@@ -99,7 +99,7 @@ public final class UpdaterUtils {
             // if there are invalid table identifiers, just skip them
             if (!_ID_CHARACTERS.matcher(id).matches())
                 _LOG.info(" **** skipping bad table identifier: '{}' ****", id);
-            else if (unusedTableIds.contains(id))
+            else if (unusedTableIds.contains(id) && !id.startsWith("conversion_"))
                 _LOG.info(" **** skipping unused table identifier: '{}' ****", id);
             else
                 tableIds.add(id);
