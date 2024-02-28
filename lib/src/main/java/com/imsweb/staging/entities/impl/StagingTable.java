@@ -18,7 +18,8 @@ import com.imsweb.staging.entities.ColumnDefinition.ColumnType;
 import com.imsweb.staging.entities.Table;
 import com.imsweb.staging.entities.TableRow;
 
-@JsonPropertyOrder({"id", "algorithm", "version", "name", "title", "subtitle", "description", "notes", "footnotes", "last_modified", "definition", "extra_input", "rows"})
+@JsonPropertyOrder({"id", "algorithm", "version", "name", "title", "subtitle", "description", "notes", "rational", "additional_info", "coding_guildlines", "footnotes",
+        "last_modified", "definition", "extra_input", "rows"})
 public class StagingTable implements Table {
 
     private String _displayId;
@@ -30,6 +31,9 @@ public class StagingTable implements Table {
     private String _subtitle;
     private String _notes;
     private String _footnotes;
+    private String _rational;
+    private String _additionalInfo;
+    private String _codingGuidelines;
     private Date _lastModified;
     private List<StagingColumnDefinition> _definition;
     private Set<String> _extraInput;
@@ -139,6 +143,36 @@ public class StagingTable implements Table {
     }
 
     @Override
+    @JsonProperty("rational")
+    public String getRational() {
+        return _rational;
+    }
+
+    public void setRational(String rational) {
+        _rational = rational;
+    }
+
+    @Override
+    @JsonProperty("additional_info")
+    public String getAdditionalInfo() {
+        return _additionalInfo;
+    }
+
+    public void setAdditionalInfo(String additionalInformation) {
+        _additionalInfo = additionalInformation;
+    }
+
+    @Override
+    @JsonProperty("coding_guidelines")
+    public String getCodingGuidelines() {
+        return _codingGuidelines;
+    }
+
+    public void setCodingGuidelines(String codingGuidelines) {
+        _codingGuidelines = codingGuidelines;
+    }
+
+    @Override
     @JsonProperty("last_modified")
     public Date getLastModified() {
         return _lastModified;
@@ -236,6 +270,9 @@ public class StagingTable implements Table {
                 Objects.equals(_subtitle, table._subtitle) &&
                 Objects.equals(_notes, table._notes) &&
                 Objects.equals(_footnotes, table._footnotes) &&
+                Objects.equals(_rational, table._rational) &&
+                Objects.equals(_additionalInfo, table._additionalInfo) &&
+                Objects.equals(_codingGuidelines, table._codingGuidelines) &&
                 Objects.equals(_definition, table._definition) &&
                 Objects.equals(_extraInput, table._extraInput) &&
                 Objects.equals(_rows, table._rows);
@@ -244,6 +281,7 @@ public class StagingTable implements Table {
     @Override
     public int hashCode() {
         // intentionally does not include _id, _lastModified, _parsedTableRows
-        return Objects.hash(_displayId, _algorithm, _version, _name, _title, _description, _subtitle, _notes, _footnotes, _definition, _extraInput, _rows);
+        return Objects.hash(_displayId, _algorithm, _version, _name, _title, _description, _subtitle, _notes, _footnotes, _rational, _additionalInfo,
+                _codingGuidelines, _definition, _extraInput, _rows);
     }
 }

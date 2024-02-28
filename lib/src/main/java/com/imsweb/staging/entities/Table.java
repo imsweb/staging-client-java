@@ -34,6 +34,12 @@ public interface Table {
 
     String getFootnotes();
 
+    String getRational();
+
+    String getAdditionalInfo();
+
+    String getCodingGuidelines();
+
     Date getLastModified();
 
     /**
