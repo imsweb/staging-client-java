@@ -158,7 +158,7 @@ public class StagingTable implements Table {
         return _additionalInfo;
     }
 
-    public void setAdditonalInfo(String additionalInformation) {
+    public void setAdditionalInfo(String additionalInformation) {
         _additionalInfo = additionalInformation;
     }
 
@@ -270,6 +270,9 @@ public class StagingTable implements Table {
                 Objects.equals(_subtitle, table._subtitle) &&
                 Objects.equals(_notes, table._notes) &&
                 Objects.equals(_footnotes, table._footnotes) &&
+                Objects.equals(_rational, table._rational) &&
+                Objects.equals(_additionalInfo, table._additionalInfo) &&
+                Objects.equals(_codingGuidelines, table._codingGuidelines) &&
                 Objects.equals(_definition, table._definition) &&
                 Objects.equals(_extraInput, table._extraInput) &&
                 Objects.equals(_rows, table._rows);
@@ -278,6 +281,7 @@ public class StagingTable implements Table {
     @Override
     public int hashCode() {
         // intentionally does not include _id, _lastModified, _parsedTableRows
-        return Objects.hash(_displayId, _algorithm, _version, _name, _title, _description, _subtitle, _notes, _footnotes, _definition, _extraInput, _rows);
+        return Objects.hash(_displayId, _algorithm, _version, _name, _title, _description, _subtitle, _notes, _footnotes, _rational, _additionalInfo,
+                _codingGuidelines, _definition, _extraInput, _rows);
     }
 }
