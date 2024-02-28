@@ -18,7 +18,8 @@ import com.imsweb.staging.entities.ColumnDefinition.ColumnType;
 import com.imsweb.staging.entities.Table;
 import com.imsweb.staging.entities.TableRow;
 
-@JsonPropertyOrder({"id", "algorithm", "version", "name", "title", "subtitle", "description", "notes", "footnotes", "last_modified", "definition", "extra_input", "rows"})
+@JsonPropertyOrder({"id", "algorithm", "version", "name", "title", "subtitle", "description", "notes", "rational", "additional_info", "coding_guildlines", "footnotes",
+        "last_modified", "definition", "extra_input", "rows"})
 public class StagingTable implements Table {
 
     private String _displayId;
@@ -30,6 +31,9 @@ public class StagingTable implements Table {
     private String _subtitle;
     private String _notes;
     private String _footnotes;
+    private String _rational;
+    private String _additionalInfo;
+    private String _codingGuidelines;
     private Date _lastModified;
     private List<StagingColumnDefinition> _definition;
     private Set<String> _extraInput;
@@ -136,6 +140,36 @@ public class StagingTable implements Table {
 
     public void setFootnotes(String footnotes) {
         _footnotes = footnotes;
+    }
+
+    @Override
+    @JsonProperty("rational")
+    public String getRational() {
+        return _rational;
+    }
+
+    public void setRational(String rational) {
+        _rational = rational;
+    }
+
+    @Override
+    @JsonProperty("additional_info")
+    public String getAdditionalInfo() {
+        return _additionalInfo;
+    }
+
+    public void setAdditonalInfo(String additionalInformation) {
+        _additionalInfo = additionalInformation;
+    }
+
+    @Override
+    @JsonProperty("coding_guidelines")
+    public String getCodingGuidelines() {
+        return _codingGuidelines;
+    }
+
+    public void setCodingGuidelines(String codingGuidelines) {
+        _codingGuidelines = codingGuidelines;
     }
 
     @Override
