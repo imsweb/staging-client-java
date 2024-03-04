@@ -4,8 +4,8 @@
   "version" : "1.1",
   "name" : "Conversion to Pediatric Primary Tumor",
   "title" : "Conversion to Pediatric Primary Tumor",
-  "notes" : "Conversion going from EOD 3.1 to Pediatric 1.0 Pediatric Primary Tumor field",
-  "last_modified" : "2023-09-27T21:44:16.094Z",
+  "notes": "Conversion going from EOD 3.1 to Pediatric 1.1 Pediatric Primary Tumor field",
+  "last_modified": "2024-03-04T20:16:38.247Z",
   "definition" : [ {
     "key" : "pediatric_id",
     "name" : "Pediatric Schema ID",
