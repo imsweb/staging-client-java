@@ -4,8 +4,8 @@
   "version" : "1.1",
   "name" : "Conversion to Pediatric Mets",
   "title" : "Conversion to Pediatric Mets",
-  "notes": "Conversion going from EOD 3.1 to Pediatric 1.1 Pediatric Mets field",
-  "last_modified": "2024-03-04T20:16:25.625Z",
+  "notes" : "Conversion going from EOD 3.1 to Pediatric 1.1 Pediatric Mets field",
+  "last_modified" : "2024-03-04T20:16:25.625Z",
   "definition" : [ {
     "key" : "pediatric_id",
     "name" : "Pediatric Schema ID",
