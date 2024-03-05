@@ -34,7 +34,7 @@ public interface Table {
 
     String getFootnotes();
 
-    String getRational();
+    String getRationale();
 
     String getAdditionalInfo();
 
