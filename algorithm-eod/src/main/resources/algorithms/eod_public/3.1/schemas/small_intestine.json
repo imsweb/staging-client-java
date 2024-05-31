@@ -358,6 +358,6 @@
     } ]
   } ],
   "involved_tables" : [ "radiation_surg_seq", "grade_post_therapy_path_41285", "grade_pathological_31963", "grade_post_therapy_clin_41222", "nodes_pos_fpa", "parse_t_2177", "ajcc_id_path_stage_63918", "parse_n_67182", "histology", "schema_selection_small_intestine", "nodes_exam_76029", "extension_bbe", "nodes_daw", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "ss2018_small_intestine_including_net_85335", "mets_hbo", "tumor_size_pathological_25597", "systemic_surg_seq", "tumor_size_clinical_60979", "rn_positive_with_regional_nodes_for_ajcc_n_30509", "parse_m_47057", "primary_site", "tnm8_inclusions_tqk", "eod_tnm_component_cleanup_58170", "year_dx_validation", "grade_clinical_73056", "summary_stage_rpa", "tnm8_path_stage_ual", "tnm8_stage_for_sites_with_no_stage_groupings_unb", "ajcc_chapter_calculation_91473" ],
-  "last_modified" : "2023-09-13T17:22:26.427Z",
+  "last_modified" : "2024-05-31T16:43:41.071Z",
   "on_invalid_input" : "CONTINUE"
 }

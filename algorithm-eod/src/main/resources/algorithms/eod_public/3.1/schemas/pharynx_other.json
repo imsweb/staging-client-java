@@ -241,6 +241,6 @@
     } ]
   } ],
   "involved_tables" : [ "grade_clinical_standard_non_ajcc_32473", "schema_selection_pharynx_other", "grade_pathological_standard_non_ajcc_5627", "nodes_pos_fpa", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "grade_post_therapy_clin_69737", "seer_mets_sinus_othervs2_15755", "extension_bdd", "primary_site", "nodes_daq", "ss2018_pharynx_nos_excluding_melanoma_8720_8790_3303", "histology", "nodes_exam_76029", "grade_post_therapy_path_75348", "year_dx_validation", "summary_stage_rpa", "tumor_size_summary_63115", "combined_grade_56638" ],
-  "last_modified" : "2023-09-13T17:22:21.563Z",
+  "last_modified" : "2024-05-31T16:43:36.091Z",
   "on_invalid_input" : "CONTINUE"
 }

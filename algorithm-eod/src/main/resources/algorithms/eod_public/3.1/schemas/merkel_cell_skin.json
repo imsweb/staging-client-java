@@ -422,6 +422,6 @@
     } ]
   } ],
   "involved_tables" : [ "nodes_pos_fah", "extranodal_extension_pathological_30739", "extension_bds", "tnm8_inclusions_tqb", "radiation_surg_seq", "tumor_size_pathological_43328", "extranodal_extension_clinical_5022", "parse_t_2177", "parse_n_67182", "schema_selection_merkel_cell_skin", "mets_hph", "histology", "nodes_exam_76029", "combined_grade_56638", "grade_post_therapy_clin_95734", "behavior", "tumor_size_with_primary_tumor_for_ajcc_t_41327", "lymph_nodes_isolated_tumor_cells_67876", "grade_clinical_standard_94331", "ss2018_merkel_cell_carcinoma_89481", "tumor_size_clinical_48894", "systemic_surg_seq", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "profound_immune_suppression_68178", "nodes_ddn", "year_dx_validation", "grade_pathological_standard_94268", "summary_stage_rpa", "grade_post_therapy_path_32110", "tumor_size_summary_47973", "ajcc_chapter_calculation_17330", "tnm_8_combined_stage_group_48585" ],
-  "last_modified" : "2023-09-13T17:22:23.809Z",
+  "last_modified" : "2024-05-31T16:43:38.181Z",
   "on_invalid_input" : "CONTINUE"
 }

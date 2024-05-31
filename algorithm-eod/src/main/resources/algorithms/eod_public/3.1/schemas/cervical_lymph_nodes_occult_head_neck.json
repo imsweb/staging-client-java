@@ -488,6 +488,6 @@
     } ]
   } ],
   "involved_tables" : [ "extranodal_extension_head_and_neck_pathological_87046", "radiation_surg_seq", "lymph_nodes_head_and_neck_levels_i_iii_19222", "occult_head_and_neck_lymph_nodes_10277", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "eod_regional_nodes_77237", "histology", "nodes_exam_76029", "tnm8_inclusions_40722", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "grade_post_therapy_clin_95734", "tnm_8_path_stage_group_36864", "grade_clinical_standard_94331", "lymph_nodes_head_and_neck_other_31141", "lymph_nodes_head_and_neck_levels_vi_vii_32325", "eod_primary_tumor_85962", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "systemic_surg_seq", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "eod_mets_98654", "extranodal_extension_head_and_neck_clinical_79321", "grade_pathological_standard_94268", "year_dx_validation", "ss2018_cervical_lymph_nodes_and_unknown_primary_tumor_8991", "lymph_nodes_head_and_neck_levels_iv_v_55093", "summary_stage_rpa", "ajcc_chapter_calculation_24559", "grade_post_therapy_path_32110", "ln_size_70140", "schema_selection_cervical_lymph_nodes_occult_head_and_neck" ],
-  "last_modified" : "2023-09-13T17:22:26.884Z",
+  "last_modified" : "2024-05-31T16:43:41.524Z",
   "on_invalid_input" : "CONTINUE"
 }

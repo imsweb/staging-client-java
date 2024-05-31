@@ -378,6 +378,6 @@
     } ]
   } ],
   "involved_tables" : [ "eod_mets_83665", "radiation_surg_seq", "ajcc_chapter_calculation_29751", "tnm8_path_stage_uaz", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "urethra_prostatic_urethra_30106", "grade_post_therapy_path_55848", "histology", "tnm8_inclusions_27308", "nodes_exam_76029", "schema_selection_urethra", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "seer_primary_tumor_94875", "tumor_size_pathological_25597", "systemic_surg_seq", "tumor_size_clinical_60979", "parse_m_47057", "primary_site", "grade_pathological_59975", "eod_tnm_component_cleanup_58170", "grade_post_therapy_clin_68213", "year_dx_validation", "summary_stage_rpa", "grade_clinical_91989", "ss2018_urethra_14363", "nodes_dbu" ],
-  "last_modified" : "2023-09-13T17:22:24.680Z",
+  "last_modified" : "2024-05-31T16:43:39.488Z",
   "on_invalid_input" : "CONTINUE"
 }

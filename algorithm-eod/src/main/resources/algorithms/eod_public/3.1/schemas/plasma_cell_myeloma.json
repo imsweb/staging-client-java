@@ -346,6 +346,6 @@
     } ]
   } ],
   "involved_tables" : [ "multiple_myeloma_terminology_20875", "tumor_size_clinical_dna_64119", "ajcc_chapter_calculation_16971", "b2_microglob_pretx_level_83264", "extension_bgc", "nodes_exam_dna_95635", "tumor_size_summary_dna_13275", "grade_post_therapy_clin_74830", "histology", "mets_hna", "behavior", "nodes_dna", "ss2018_44993", "tumor_size_pathological_dna_6742", "high_risk_cytogenetics_97806", "summary_stage_lymphoma_25139", "serum_alb_pretx_level_58159", "ldh_pretreatment_level_82697", "primary_site", "schema_selection_myeloma_plasma_cell_disorder", "year_dx_validation", "derived_summary_grade_na_6690", "grade_post_therapy_path_65729", "grade_clinical_18316", "grade_pathological_73388", "nodes_pos_dna_91511" ],
-  "last_modified" : "2023-09-13T17:22:26.589Z",
+  "last_modified" : "2024-05-31T16:43:41.221Z",
   "on_invalid_input" : "CONTINUE"
 }

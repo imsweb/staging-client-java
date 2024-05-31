@@ -334,7 +334,7 @@
     "id" : "eod_2018_stage_group",
     "name" : "EOD 2018 Stage Group",
     "inclusion_tables" : [ {
-      "id" : "tnm8_inclusions_tpc",
+      "id" : "tnm9_inclusions_68894",
       "inputs" : [ "ajcc_id" ]
     } ],
     "initial_context" : [ {
@@ -403,7 +403,7 @@
     "id" : "eod_tnm_cleanup",
     "name" : "EOD TNM Cleanup",
     "exclusion_tables" : [ {
-      "id" : "tnm8_inclusions_tpc",
+      "id" : "tnm9_inclusions_68894",
       "inputs" : [ "ajcc_id" ]
     } ],
     "tables" : [ {
@@ -412,7 +412,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "tnm8_path_stage_uar", "radiation_surg_seq", "eod_mets_89986", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "ajcc_9_chapter_calculation_91765", "histology", "nodes_exam_76029", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "rn_positive_with_regional_nodes_for_ajcc_n_46395", "eod_regional_nodes_62689", "ss2018_appendix_including_netl_54459", "grade_clinical_29193", "tnm8_inclusions_tpc", "cea_pretx_lab_value_33864", "tumor_size_pathological_25597", "schema_selection_appendix_v9_2023", "systemic_surg_seq", "tumor_size_clinical_60979", "cea_pretx_interpretation_99474", "parse_m_47057", "primary_site", "grade_post_therapy_clin_45036", "eod_tnm_component_cleanup_58170", "grade_post_therapy_path_28874", "histology_subtype_79769", "year_dx_validation", "summary_stage_rpa", "grade_pathological_57271", "eod_primary_tumor_93243" ],
-  "last_modified" : "2023-09-13T17:22:27.624Z",
+  "involved_tables" : [ "tnm8_path_stage_uar", "radiation_surg_seq", "tnm9_inclusions_68894", "eod_mets_89986", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "ajcc_9_chapter_calculation_91765", "histology", "nodes_exam_76029", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "rn_positive_with_regional_nodes_for_ajcc_n_46395", "eod_regional_nodes_62689", "ss2018_appendix_including_netl_54459", "grade_clinical_29193", "cea_pretx_lab_value_33864", "tumor_size_pathological_25597", "schema_selection_appendix_v9_2023", "systemic_surg_seq", "tumor_size_clinical_60979", "cea_pretx_interpretation_99474", "parse_m_47057", "primary_site", "grade_post_therapy_clin_45036", "eod_tnm_component_cleanup_58170", "grade_post_therapy_path_28874", "histology_subtype_79769", "year_dx_validation", "summary_stage_rpa", "grade_pathological_57271", "eod_primary_tumor_93243" ],
+  "last_modified" : "2024-05-31T16:43:42.244Z",
   "on_invalid_input" : "CONTINUE"
 }

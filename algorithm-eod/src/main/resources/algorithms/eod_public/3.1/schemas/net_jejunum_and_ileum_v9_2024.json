@@ -298,7 +298,7 @@
     "id" : "eod_2018_stage_group",
     "name" : "EOD 2018 Stage Group",
     "inclusion_tables" : [ {
-      "id" : "tnm8_inclusions_tpm",
+      "id" : "tnm9_inclusions_3892",
       "inputs" : [ "ajcc_id" ]
     } ],
     "initial_context" : [ {
@@ -368,7 +368,7 @@
     "id" : "eod_tnm_cleanup",
     "name" : "EOD TNM Cleanup",
     "exclusion_tables" : [ {
-      "id" : "tnm8_inclusions_tpm",
+      "id" : "tnm9_inclusions_3892",
       "inputs" : [ "ajcc_id" ]
     } ],
     "tables" : [ {
@@ -377,7 +377,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "grade_post_therapy_clin_2541", "mets_hcp", "radiation_surg_seq", "nodes_dfl", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "tnm8_inclusions_tpm", "ki_67_67661", "histology", "nodes_exam_76029", "tnm_9_path_stage_group_for_eod_25078", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "ss2018_small_intestine_including_net_85335", "extension_bfp", "in_situ_to_88s_14856", "tumor_size_pathological_25597", "rn_positive_with_regional_nodes_for_n_51494", "systemic_surg_seq", "tumor_size_clinical_60979", "grade_pathological_26086", "parse_m_47057", "grade_post_therapy_path_76876", "primary_site", "eod_tnm_component_cleanup_58170", "grade_clinical_26768", "ajcc_chapter_calculation_72855", "year_dx_validation", "summary_stage_rpa", "schema_selection_net_jejunum_and_ileum_v9_2024" ],
-  "last_modified" : "2023-09-13T17:22:28.006Z",
+  "involved_tables" : [ "grade_post_therapy_clin_2541", "mets_hcp", "radiation_surg_seq", "nodes_dfl", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "ki_67_67661", "histology", "nodes_exam_76029", "tnm_9_path_stage_group_for_eod_25078", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "ss2018_small_intestine_including_net_85335", "extension_bfp", "in_situ_to_88s_14856", "tumor_size_pathological_25597", "rn_positive_with_regional_nodes_for_n_51494", "systemic_surg_seq", "tumor_size_clinical_60979", "grade_pathological_26086", "parse_m_47057", "grade_post_therapy_path_76876", "primary_site", "eod_tnm_component_cleanup_58170", "tnm9_inclusions_3892", "grade_clinical_26768", "ajcc_chapter_calculation_72855", "year_dx_validation", "summary_stage_rpa", "schema_selection_net_jejunum_and_ileum_v9_2024" ],
+  "last_modified" : "2024-05-31T16:43:42.639Z",
   "on_invalid_input" : "CONTINUE"
 }

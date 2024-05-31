@@ -241,6 +241,6 @@
     } ]
   } ],
   "involved_tables" : [ "seer_mets_48348", "grade_clinical_standard_non_ajcc_32473", "grade_pathological_standard_non_ajcc_5627", "extension_bcy", "nodes_pos_fpa", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "grade_post_therapy_clin_69737", "primary_site", "histology", "nodes_exam_76029", "grade_post_therapy_path_75348", "ss2018_urinary_other_87865", "year_dx_validation", "nodes_dcz", "summary_stage_rpa", "schema_selection_urinary_other", "tumor_size_summary_63115", "combined_grade_56638" ],
-  "last_modified" : "2023-09-13T17:22:25.874Z",
+  "last_modified" : "2024-05-31T16:43:40.647Z",
   "on_invalid_input" : "CONTINUE"
 }

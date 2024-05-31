@@ -589,6 +589,6 @@
     } ]
   } ],
   "involved_tables" : [ "mets_hal", "ajcc_chapter_calculation_41833", "radiation_surg_seq", "gleason_patterns_pathological_833", "nodes_pos_fpa", "parse_t_2177", "tnm_8_combined_stage_group_for_eod_44498", "nodes_dbf", "parse_n_67182", "grade_clinical_46962", "grade_post_therapy_clin_26978", "schema_selection_prostate", "histology", "combine_prostate_eod_extension_16771", "nodes_exam_76029", "gleason_score_pathological_82121", "combined_t_no_tis", "grade_post_therapy_path_20786", "tumor_size_summary_63115", "ss2018_prostate_76172", "combined_grade_56638", "behavior", "extension_bbo", "concatenate_t_51262", "tnm8_inclusions_tpv", "number_of_cores_examined_64985", "number_of_cores_positive_87819", "grade_pathological_20069", "gleason_pattern_clinical_75179", "in_situ_to_88s_14856", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "gleason_tertiary_pattern_6430", "systemic_surg_seq", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "psa_46258", "year_dx_validation", "summary_stage_rpa", "eod_prostate_pathologic_extension_2781", "gleason_score_clinical_67175" ],
-  "last_modified" : "2023-09-13T17:22:27.063Z",
+  "last_modified" : "2024-05-31T16:43:41.686Z",
   "on_invalid_input" : "CONTINUE"
 }

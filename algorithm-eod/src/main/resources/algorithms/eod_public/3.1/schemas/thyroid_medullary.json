@@ -381,6 +381,6 @@
     } ]
   } ],
   "involved_tables" : [ "radiation_surg_seq", "tumor_size_pathological_43328", "eod_regional_nodes_16316", "ss2018_thyroid_33058", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "tnm8_inclusions_31730", "tnm_8_path_stage_thyroid_medullary_for_eod_62429", "histology", "nodes_exam_76029", "ajcc_chapter_calculation_51586", "combined_grade_56638", "grade_post_therapy_clin_95734", "thyroid_gland_thyroglossal_duct_21498", "behavior", "grade_clinical_standard_94331", "tumor_size_clinical_48894", "in_situ_to_88s_14856", "systemic_surg_seq", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "seer_primary_tumor_36538", "schema_selection_thyroid_medullary", "year_dx_validation", "grade_pathological_standard_94268", "summary_stage_rpa", "tumor_size_with_primary_tumor_for_ajcc_t_19033", "grade_post_therapy_path_32110", "tumor_size_summary_47973", "eod_mets_53046" ],
-  "last_modified" : "2023-09-13T17:22:23.141Z",
+  "last_modified" : "2024-05-31T16:43:37.616Z",
   "on_invalid_input" : "CONTINUE"
 }

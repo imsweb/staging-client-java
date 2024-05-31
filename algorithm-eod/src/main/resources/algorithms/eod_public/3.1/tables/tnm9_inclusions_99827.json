@@ -1,0 +1,14 @@
+{
+  "id" : "tnm9_inclusions_99827",
+  "algorithm" : "eod_public",
+  "version" : "3.1",
+  "name" : "TNM9 Inclusions",
+  "title" : "Inclusion Table TNM V9",
+  "last_modified" : "2024-05-31T13:41:21.665Z",
+  "definition" : [ {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "INPUT"
+  } ],
+  "rows" : [ [ "9011" ] ]
+}

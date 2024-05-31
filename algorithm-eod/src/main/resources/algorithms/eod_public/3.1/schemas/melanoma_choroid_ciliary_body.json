@@ -492,6 +492,6 @@
     } ]
   } ],
   "involved_tables" : [ "tumor_size_category_with_primary_tumor_for_t_63342", "tumor_size_clinical_dna_64119", "radiation_surg_seq", "grade_post_therapy_clin_2503", "nodes_pos_fpa", "tnm8_inclusions_15426", "parse_t_2177", "tumor_size_summary_dna_13275", "parse_n_67182", "tnm_8_path_stage_group_for_eod_56790", "histology", "schema_selection_melanoma_ciliary_body", "nodes_exam_76029", "grade_pathological_46618", "combined_grade_56638", "behavior", "extension_bfq", "grade_post_therapy_path_58350", "extravascular_matrix_patterns_1397", "chromosome_8q_status_83582", "measured_basal_diameter_70699", "in_situ_to_88s_14856", "melanoma_ciliary_body_melanoma_iris_79773", "tumor_size_pathological_dna_6742", "microvascular_density_70589", "eod_regional_nodes_76612", "systemic_surg_seq", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "mitotic_count_uveal_melanoma_26990", "ss2018_melanoma_choroid_ciliary_body_iris_21929", "measured_thickness_84907", "year_dx_validation", "chromosome_3_status_93464", "ajcc_chapter_calculation_38053", "measured_basal_diameter_with_measured_thickness_for_tumor_size_category_65198", "summary_stage_rpa", "grade_clinical_54911", "seer_mets_melanomachoroid_55264" ],
-  "last_modified" : "2023-09-13T17:22:27.109Z",
+  "last_modified" : "2024-05-31T16:43:41.731Z",
   "on_invalid_input" : "CONTINUE"
 }

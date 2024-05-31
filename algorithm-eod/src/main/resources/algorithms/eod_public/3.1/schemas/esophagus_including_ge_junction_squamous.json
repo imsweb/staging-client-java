@@ -430,6 +430,6 @@
     } ]
   } ],
   "involved_tables" : [ "tumor_size_summary_full_15510", "radiation_surg_seq", "esophagusgejunction_egj_stomach_57130", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "extension_bbb", "rn_positive_with_regional_nodes_for_ajcc_n_76932", "histology", "nodes_exam_76029", "tnm_8_path_stage_squamous_15592", "esoph_tumor_epicenter_18976", "combined_grade_56638", "behavior", "grade_post_therapy_path_92197", "tumor_size_pathological_full_93442", "nodes_dat", "ss2018_esophagus_excluding_gist_57104", "tumor_size_clinical_full_19656", "grade_pathological_19694", "tnm8_inclusions_83545", "histology_discriminator_for_8020_3_93311", "schema_selection_esophagus_including_ge_junction_squamous", "mets_hbg", "systemic_surg_seq", "ajcc_chapter_calculation_67210", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "grade_clinical_8742", "year_dx_validation", "summary_stage_rpa", "her2_overall_summary_copy_71435", "grade_post_therapy_clin_30400" ],
-  "last_modified" : "2023-09-13T17:22:27.244Z",
+  "last_modified" : "2024-05-31T16:43:41.837Z",
   "on_invalid_input" : "CONTINUE"
 }
