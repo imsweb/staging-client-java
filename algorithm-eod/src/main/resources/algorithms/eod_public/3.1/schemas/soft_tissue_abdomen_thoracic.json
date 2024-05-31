@@ -378,6 +378,6 @@
     } ]
   } ],
   "involved_tables" : [ "tumor_size_summary_full_15510", "schema_discriminator_2_15990", "radiation_surg_seq", "seer_primary_tumor_53926", "eod_mets_33408", "grade_post_therapy_path_36935", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "ajcc_chapter_calculation_54616", "grade_post_therapy_clin_1647", "histology", "nodes_exam_76029", "schema_selection_heart_mediastinum", "bone_invasion_96628", "tnm8_inclusions_tps", "combined_grade_56638", "ss2018_soft_tissue_31311", "tumor_size_pathological_full_93442", "tumor_size_clinical_full_19656", "grade_pathological_40399", "systemic_surg_seq", "grade_clinical_41135", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "year_dx_validation", "seer_regional_nodes_19661", "summary_stage_rpa", "tnm8_stage_for_sites_with_no_stage_groupings_unb" ],
-  "last_modified" : "2023-09-13T17:22:26.756Z",
+  "last_modified" : "2024-05-31T16:43:41.382Z",
   "on_invalid_input" : "CONTINUE"
 }

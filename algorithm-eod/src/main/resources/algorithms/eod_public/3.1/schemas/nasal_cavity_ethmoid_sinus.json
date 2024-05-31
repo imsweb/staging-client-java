@@ -407,6 +407,6 @@
     } ]
   } ],
   "involved_tables" : [ "grade_post_therapy_clin_61658", "radiation_surg_seq", "schema_selection_nasal_cavity", "extranodal_extension_head_and_neck_clinical_51375", "grade_clinical_6485", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "extranodal_extension_head_and_neck_pathological_93423", "eod_mets_94984", "ajcc_chapter_calculation_97562", "histology", "nodes_exam_76029", "lymph_nodes_size_of_metastasis_87329", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "extension_bcq", "grade_post_therapy_path_40048", "tumor_size_pathological_25597", "systemic_surg_seq", "tumor_size_clinical_60979", "ss2018_nasal_cavity_and_ethmoid_sinus_excluding_melanoma_8720_8790_21699", "eod_regional_nodes_99855", "parse_m_47057", "primary_site", "tnm_8_path_stage_group_for_eod_69709", "eod_tnm_component_cleanup_58170", "tnm8_inclusions_44110", "grade_pathological_84704", "year_dx_validation", "summary_stage_rpa" ],
-  "last_modified" : "2023-09-13T17:22:23.643Z",
+  "last_modified" : "2024-05-31T16:43:38.002Z",
   "on_invalid_input" : "CONTINUE"
 }

@@ -549,6 +549,6 @@
     } ]
   } ],
   "involved_tables" : [ "radiation_surg_seq", "nodes_pos_fpa", "parse_t_2177", "nodes_ddf", "ajcc_chapter_calculation_23295", "parse_n_67182", "tnm8_inclusions_tpj", "histology", "ldh_pre_orchiectomy_range_42762", "nodes_exam_76029", "extension_bdh", "hcg_post_orchiectomy_range_92334", "schema_selection_testis", "rn_positive_with_regional_nodes_for_n_84896", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "grade_post_therapy_clin_95734", "s_category_pathologic_34448", "grade_clinical_standard_94331", "tnm8_path_stage_uqd", "ldh_post_orchiectomy_range_38574", "combined_s_category_34866", "mets_hbb", "hcg_pre_orchiectomy_lab_value_55584", "afp_pre_orchiectomy_lab_value_94162", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "systemic_surg_seq", "afp_pre_orchiectomy_range_11386", "parse_m_47057", "s_category_clinical_19191", "primary_site", "eod_tnm_component_cleanup_58170", "hcg_post_orchiectomy_lab_value_13834", "hcg_pre_orchiectomy_range_67679", "afp_post_orchiectomy_range_84758", "grade_pathological_standard_94268", "afp_post_orchiectomy_lab_value_90733", "year_dx_validation", "summary_stage_rpa", "grade_post_therapy_path_32110", "ss2018_testis_82848" ],
-  "last_modified" : "2023-09-13T17:22:27.191Z",
+  "last_modified" : "2024-05-31T16:43:41.790Z",
   "on_invalid_input" : "CONTINUE"
 }

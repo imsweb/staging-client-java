@@ -426,6 +426,6 @@
     } ]
   } ],
   "involved_tables" : [ "radiation_surg_seq", "nasopharynx_pharyngealtonsil_84756", "tnm8_inclusions_77478", "extranodal_extension_head_and_neck_clinical_51375", "nodes_pos_fpa", "parse_t_2177", "ajcc_chapter_calculation_69125", "parse_n_67182", "extranodal_extension_head_and_neck_pathological_93423", "seer_mets_nasopharynx_46629", "histology", "nodes_exam_76029", "nodes_dcn", "lymph_nodes_size_of_metastasis_87329", "tumor_size_summary_63115", "combined_grade_56638", "grade_post_therapy_clin_95734", "behavior", "grade_clinical_standard_94331", "extension_bas", "tumor_size_pathological_25597", "systemic_surg_seq", "tumor_size_clinical_60979", "ss2018_nasopharynx_excluding_melanoma_8720_8790_copy_99106", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "schema_selection_nasopharynx", "year_dx_validation", "grade_pathological_standard_94268", "summary_stage_rpa", "grade_post_therapy_path_32110", "tnm8_path_stage_uae" ],
-  "last_modified" : "2023-09-13T17:22:23.287Z",
+  "last_modified" : "2024-05-31T16:43:37.749Z",
   "on_invalid_input" : "CONTINUE"
 }

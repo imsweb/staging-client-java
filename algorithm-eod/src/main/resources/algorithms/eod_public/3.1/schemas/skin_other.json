@@ -241,6 +241,6 @@
     } ]
   } ],
   "involved_tables" : [ "grade_clinical_standard_non_ajcc_32473", "schema_selection_skin_other", "grade_pathological_standard_non_ajcc_5627", "nodes_ddj", "nodes_pos_fpa", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "grade_post_therapy_clin_69737", "primary_site", "ss2018_skin_other_56341", "histology", "nodes_exam_76029", "grade_post_therapy_path_75348", "year_dx_validation", "summary_stage_rpa", "seer_mets_90643", "tumor_size_summary_63115", "combined_grade_56638", "extension_bdo" ],
-  "last_modified" : "2023-09-13T17:22:26.327Z",
+  "last_modified" : "2024-05-31T16:43:40.976Z",
   "on_invalid_input" : "CONTINUE"
 }

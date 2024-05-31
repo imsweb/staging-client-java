@@ -362,6 +362,6 @@
     } ]
   } ],
   "involved_tables" : [ "schema_selection_net_adrenal_gland", "tnm_8_path_stage_group_for_eod_6696", "radiation_surg_seq", "tumor_size_pathological_43328", "nodes_pos_fpa", "parse_t_2177", "ajcc_chapter_calculation_3803", "parse_n_67182", "eod_regional_nodes_97333", "histology", "nodes_exam_76029", "combined_grade_56638", "grade_post_therapy_clin_95734", "behavior", "seer_mets_21628", "grade_clinical_standard_94331", "tumor_size_clinical_48894", "in_situ_to_88s_14856", "systemic_surg_seq", "ss2018_adrenal_gland_including_net_adrenal_70096", "seer_primary_tumor_52444", "parse_m_47057", "primary_site", "tnm8_inclusions_net_adrenal_gland", "eod_tnm_component_cleanup_58170", "year_dx_validation", "grade_pathological_standard_94268", "tumor_size_with_primary_tumor_for_ajcc_t_86208", "summary_stage_rpa", "grade_post_therapy_path_32110", "tumor_size_summary_47973" ],
-  "last_modified" : "2023-09-13T17:22:23.080Z",
+  "last_modified" : "2024-05-31T16:43:37.568Z",
   "on_invalid_input" : "CONTINUE"
 }

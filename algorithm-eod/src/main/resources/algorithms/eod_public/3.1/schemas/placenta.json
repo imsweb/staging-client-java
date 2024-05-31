@@ -380,6 +380,6 @@
     } ]
   } ],
   "involved_tables" : [ "mets_hak", "tnm_8_path_stage_group_for_eod_74403", "radiation_surg_seq", "nodes_dfm", "parse_t_2177", "nodes_exam_dna_95635", "schema_selection_placenta", "histology", "figo_stage_placenta_73452", "tumor_size_summary_63115", "combined_grade_56638", "grade_post_therapy_clin_95734", "behavior", "extension_bbm", "grade_clinical_standard_94331", "in_situ_to_88s_placenta_34344", "ss2018_placenta_66365", "tumor_size_pathological_25597", "tnm8_inclusions_tpi", "eod_tnm_component_cleanup_placenta_66040", "systemic_surg_seq", "tumor_size_clinical_60979", "parse_m_47057", "primary_site", "placenta_eod_n_and_m_37548", "gestational_prog_index_28647", "year_dx_validation", "grade_pathological_standard_94268", "summary_stage_rpa", "grade_post_therapy_path_32110", "ajcc_chapter_calculation_70393", "nodes_pos_dna_91511" ],
-  "last_modified" : "2023-09-13T17:22:22.078Z",
+  "last_modified" : "2024-05-31T16:43:36.622Z",
   "on_invalid_input" : "CONTINUE"
 }

@@ -374,6 +374,6 @@
     } ]
   } ],
   "involved_tables" : [ "radiation_surg_seq", "seer_primary_tumor_42176", "grade_post_therapy_path_36935", "tumor_size_pathological_full_62176", "nodes_pos_fpa", "parse_t_2177", "ajcc_chapter_calculation_86760", "parse_n_67182", "schema_selection_soft_tissue_sarcoma_head_and_neck", "grade_post_therapy_clin_1647", "tnm8_inclusions_93512", "histology", "nodes_exam_76029", "seer_regional_nodes_93152", "bone_invasion_96628", "eod_mets_23805", "combined_grade_56638", "behavior", "ss2018_soft_tissue_31311", "tumor_size_clinical_full_74867", "grade_pathological_40399", "systemic_surg_seq", "tumor_size_with_primary_tumor_for_ajcc_t_29391", "tumor_size_summary_full_31213", "grade_clinical_41135", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "year_dx_validation", "summary_stage_rpa", "tnm8_stage_for_sites_with_no_stage_groupings_unb" ],
-  "last_modified" : "2023-09-13T17:22:25.614Z",
+  "last_modified" : "2024-05-31T16:43:40.378Z",
   "on_invalid_input" : "CONTINUE"
 }

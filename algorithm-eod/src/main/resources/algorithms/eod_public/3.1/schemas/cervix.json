@@ -468,6 +468,6 @@
     } ]
   } ],
   "involved_tables" : [ "lymph_nodes_distant_assessment_method_24499", "grade_post_therapy_clin_61658", "nodes_dbc", "mets_han", "radiation_surg_seq", "tumor_size_pathological_43328", "grade_clinical_6485", "nodes_pos_fpa", "parse_t_2177", "ln_status_para_aortic_41020", "parse_n_67182", "histology", "nodes_exam_76029", "extension_bbk", "combined_grade_56638", "tnm_8_path_stage_group_for_eod_23339", "behavior", "figo_stage_cervix_46535", "tumor_size_clinical_48894", "grade_post_therapy_path_40048", "in_situ_to_88s_14856", "systemic_surg_seq", "ajcc_chapter_calculation_5517", "lymph_nodes_assessment_method_pelvic_33476", "parse_m_47057", "primary_site", "schema_selection_cervix", "lymph_nodes_distant_mediastinal_scalene_90567", "tnm8_inclusions_20667", "tumor_size_with_primary_tumor_for_ajcc_t_59134", "eod_tnm_component_cleanup_58170", "ss2018_cervix_64954", "ln_status_pelvic_31753", "grade_pathological_84704", "year_dx_validation", "lymph_nodes_assessment_method_para_aortic_56026", "summary_stage_rpa", "tumor_size_summary_47973" ],
-  "last_modified" : "2023-09-13T17:22:25.049Z",
+  "last_modified" : "2024-05-31T16:43:39.803Z",
   "on_invalid_input" : "CONTINUE"
 }

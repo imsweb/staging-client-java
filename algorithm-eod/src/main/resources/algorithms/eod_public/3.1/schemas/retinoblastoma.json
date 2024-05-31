@@ -368,6 +368,6 @@
     } ]
   } ],
   "involved_tables" : [ "radiation_surg_seq", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "grade_post_therapy_path_98398", "tnm8_inclusions_tpk", "histology", "nodes_exam_76029", "seer_primary_tumor_88917", "seer_mets_32413", "eod_regional_nodes_27426", "tumor_size_summary_63115", "combined_grade_56638", "ss2018_retinoblastoma_45411", "grade_pathological_12915", "tumor_size_pathological_25597", "systemic_surg_seq", "tumor_size_clinical_60979", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "grade_clinical_62593", "ajcc_chapter_calculation_19676", "year_dx_validation", "tnm_8_combined_stage_group_49871", "summary_stage_rpa", "schema_selection_retinoblastoma", "grade_post_therapy_clin_18631", "heritable_trait_49734" ],
-  "last_modified" : "2023-09-13T17:22:24.820Z",
+  "last_modified" : "2024-05-31T16:43:39.627Z",
   "on_invalid_input" : "CONTINUE"
 }

@@ -298,7 +298,7 @@
     "id" : "eod_2018_stage_group",
     "name" : "EOD 2018 Stage Group",
     "inclusion_tables" : [ {
-      "id" : "tnm8_inclusions_net_stomach_37343",
+      "id" : "tnm9_inclusions_10460",
       "inputs" : [ "ajcc_id" ]
     } ],
     "initial_context" : [ {
@@ -368,7 +368,7 @@
     "id" : "eod_tnm_cleanup",
     "name" : "EOD TNM Cleanup",
     "exclusion_tables" : [ {
-      "id" : "tnm8_inclusions_net_stomach_37343",
+      "id" : "tnm9_inclusions_10460",
       "inputs" : [ "ajcc_id" ]
     } ],
     "tables" : [ {
@@ -377,7 +377,7 @@
       "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "mets_hck", "tumor_size_with_primary_tumor_for_ajcc_t_99631", "nodes_dfg", "grade_post_therapy_clin_2541", "radiation_surg_seq", "tnm_9_path_stage_group_for_eod_39103", "ss2018_stomach_including_net_stomach_35647", "tumor_size_pathological_full_62176", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "ki_67_67661", "extension_bfk", "histology", "nodes_exam_76029", "combined_grade_56638", "behavior", "ajcc_chapter_calculation_78195", "tumor_size_clinical_full_74867", "in_situ_to_88s_14856", "schema_selection_net_stomach_v9_2024", "systemic_surg_seq", "grade_pathological_26086", "tumor_size_summary_full_31213", "parse_m_47057", "grade_post_therapy_path_76876", "primary_site", "eod_tnm_component_cleanup_58170", "grade_clinical_26768", "year_dx_validation", "summary_stage_rpa", "tnm8_inclusions_net_stomach_37343" ],
-  "last_modified" : "2023-09-13T17:22:28.091Z",
+  "involved_tables" : [ "mets_hck", "tumor_size_with_primary_tumor_for_ajcc_t_99631", "nodes_dfg", "grade_post_therapy_clin_2541", "radiation_surg_seq", "tnm_9_path_stage_group_for_eod_39103", "ss2018_stomach_including_net_stomach_35647", "tumor_size_pathological_full_62176", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "ki_67_67661", "extension_bfk", "histology", "nodes_exam_76029", "combined_grade_56638", "behavior", "tnm9_inclusions_10460", "ajcc_chapter_calculation_78195", "tumor_size_clinical_full_74867", "in_situ_to_88s_14856", "schema_selection_net_stomach_v9_2024", "systemic_surg_seq", "grade_pathological_26086", "tumor_size_summary_full_31213", "parse_m_47057", "grade_post_therapy_path_76876", "primary_site", "eod_tnm_component_cleanup_58170", "grade_clinical_26768", "year_dx_validation", "summary_stage_rpa" ],
+  "last_modified" : "2024-05-31T16:43:42.715Z",
   "on_invalid_input" : "CONTINUE"
 }

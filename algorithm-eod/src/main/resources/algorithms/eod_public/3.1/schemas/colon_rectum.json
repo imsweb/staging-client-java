@@ -498,6 +498,6 @@
     } ]
   } ],
   "involved_tables" : [ "tumor_size_summary_full_15510", "nras_mutational_analysis_16621", "radiation_surg_seq", "braf_mutational_analysis_37823", "kras_79447", "grade_post_therapy_path_41285", "ss2018_colon_and_rectum_including_net_40538", "grade_pathological_31963", "grade_post_therapy_clin_41222", "nodes_pos_fpa", "tnm8_inclusions_94807", "parse_t_2177", "mets_hae", "parse_n_67182", "tumor_deposits_40070", "histology", "nodes_exam_76029", "schema_selection_colon", "nodes_dan", "combined_grade_56638", "tumor_size_pathological_full_93442", "circumferential_resection_margin_77909", "perineural_invasion_24604", "tnm8_path_stage_upw", "tumor_size_clinical_full_19656", "extension_bao", "cea_pretx_lab_value_33864", "systemic_surg_seq", "cea_pretx_interpretation_99474", "parse_m_47057", "rn_positive_with_regional_nodes_for_ajcc_n_45992", "primary_site", "microsatellite_instability_7008", "eod_tnm_component_cleanup_58170", "year_dx_validation", "grade_clinical_73056", "summary_stage_rpa", "ajcc_chapter_calculation_21765" ],
-  "last_modified" : "2023-09-13T17:22:22.857Z",
+  "last_modified" : "2024-05-31T16:43:37.425Z",
   "on_invalid_input" : "CONTINUE"
 }

@@ -251,6 +251,6 @@
     } ]
   } ],
   "involved_tables" : [ "tumor_size_clinical_dna_64119", "grade_pathological_40399", "tumor_size_pathological_dna_6742", "grade_post_therapy_path_36935", "nodes_pos_fpa", "tumor_size_summary_dna_13275", "grade_clinical_41135", "primary_site", "grade_post_therapy_clin_1647", "ss2018_kaposi_sarcoma_17563", "histology", "nodes_exam_76029", "year_dx_validation", "ajcc_chapter_calculation_60109", "nodes_dby", "summary_stage_rpa", "schema_selection_kaposi_sarcoma", "extension_bcj", "mets_hna", "combined_grade_56638" ],
-  "last_modified" : "2023-09-13T17:22:25.979Z",
+  "last_modified" : "2024-05-31T16:43:40.751Z",
   "on_invalid_input" : "CONTINUE"
 }

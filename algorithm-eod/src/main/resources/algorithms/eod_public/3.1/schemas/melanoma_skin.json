@@ -500,6 +500,6 @@
     } ]
   } ],
   "involved_tables" : [ "tumor_size_summary_full_15510", "nodes_pos_fah", "schema_selection_melanoma_skin", "radiation_surg_seq", "summary_stage_rac", "mets_had", "parse_t_2177", "parse_n_67182", "ulceration_5718", "mitotic_rate_melanoma_88184", "histology", "sentinel_nodes_pos_95909", "tnm8_inclusions_52715", "nodes_exam_76029", "nodes_dam", "ldh_level_12428", "clinical_margin_width_1179", "tnm_8_combined_stage_group_55778", "combined_grade_56638", "ldh_with_mets_for_ajcc_m_72612", "behavior", "grade_post_therapy_clin_95734", "tumor_size_pathological_full_93442", "tumor_size_clinical_full_19656", "grade_clinical_standard_94331", "breslow_thickness_and_ulceration_with_primary_tumor_for_ajcc_t_56429", "breslow_thickness_79262", "parsing_breslow_thickness_36132", "systemic_surg_seq", "parse_m_47057", "ldh_lab_value_85652", "primary_site", "ss2018_melanoma_skin_64985", "eod_tnm_component_cleanup_58170", "ajcc_chapter_calculation_70850", "grade_pathological_standard_94268", "sentinel_nodes_exam_7235", "year_dx_validation", "grade_post_therapy_path_32110", "ldh_upper_limits_of_normal_34244", "extension_ban" ],
-  "last_modified" : "2023-09-13T17:22:22.200Z",
+  "last_modified" : "2024-05-31T16:43:36.743Z",
   "on_invalid_input" : "CONTINUE"
 }

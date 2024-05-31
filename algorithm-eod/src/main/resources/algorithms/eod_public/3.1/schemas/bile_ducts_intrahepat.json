@@ -409,6 +409,6 @@
     } ]
   } ],
   "involved_tables" : [ "tumor_growth_pattern_31889", "ss2018_intrahepatic_bile_ducts_51957", "grade_post_therapy_clin_61658", "radiation_surg_seq", "tumor_size_pathological_43328", "tumor_size_with_primary_tumor_for_ajcc_t_76336", "grade_clinical_6485", "nodes_pos_fpa", "parse_t_2177", "ajcc_chapter_calculation_39839", "parse_n_67182", "fibrosis_score_38658", "histology", "nodes_exam_76029", "tnm8_inclusions_tpt", "combined_grade_56638", "behavior", "nodes_dew", "tnm8_path_stage_ubi", "tumor_size_clinical_48894", "grade_post_therapy_path_40048", "primary_scleros_cholangitis_86402", "systemic_surg_seq", "extension_bfa", "mets_hbz", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "grade_pathological_84704", "year_dx_validation", "summary_stage_rpa", "schema_selection_bile_ducts_intrahepat", "tumor_size_summary_47973" ],
-  "last_modified" : "2023-09-13T17:22:25.298Z",
+  "last_modified" : "2024-05-31T16:43:40.028Z",
   "on_invalid_input" : "CONTINUE"
 }

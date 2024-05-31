@@ -261,6 +261,6 @@
     } ]
   } ],
   "involved_tables" : [ "grade_clinical_standard_non_ajcc_32473", "occult_head_and_neck_lymph_nodes_10277", "extension_bna", "grade_pathological_standard_non_ajcc_5627", "tumor_size_pathological_25597", "summary_stage_lymphoma_25139", "tumor_size_clinical_60979", "nodes_exam_dna_95635", "grade_post_therapy_clin_69737", "primary_site", "schema_selection_ill_defined_other", "histology", "grade_post_therapy_path_75348", "year_dx_validation", "mets_hna", "tumor_size_summary_63115", "combined_grade_56638", "nodes_dna", "ss2018_ill_defined_18664", "nodes_pos_dna_91511" ],
-  "last_modified" : "2023-09-13T17:22:21.970Z",
+  "last_modified" : "2024-05-31T16:43:36.516Z",
   "on_invalid_input" : "CONTINUE"
 }

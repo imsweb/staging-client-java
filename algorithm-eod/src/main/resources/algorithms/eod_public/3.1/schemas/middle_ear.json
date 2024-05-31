@@ -241,6 +241,6 @@
     } ]
   } ],
   "involved_tables" : [ "extension_bcr", "grade_clinical_standard_non_ajcc_32473", "grade_pathological_standard_non_ajcc_5627", "ss2018_middle_ear_16857", "nodes_pos_fpa", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "grade_post_therapy_clin_69737", "seer_mets_sinus_othervs2_15755", "schema_selection_middle_ear", "primary_site", "nodes_daq", "histology", "nodes_exam_76029", "grade_post_therapy_path_75348", "year_dx_validation", "summary_stage_rpa", "tumor_size_summary_63115", "combined_grade_56638" ],
-  "last_modified" : "2023-09-13T17:22:21.921Z",
+  "last_modified" : "2024-05-31T16:43:36.470Z",
   "on_invalid_input" : "CONTINUE"
 }
