@@ -1,0 +1,18 @@
+{
+  "id" : "toronto_stage_group_41463",
+  "algorithm" : "pediatric",
+  "version" : "1.2",
+  "name" : "Toronto Stage Group",
+  "title" : "Toronto Stage Group",
+  "last_modified" : "2023-11-18T02:07:04.014Z",
+  "definition" : [ {
+    "key" : "ped_mets",
+    "name" : "Pediatric Mets",
+    "type" : "INPUT"
+  }, {
+    "key" : "toronto_stage_group",
+    "name" : "Toronto Stage Group",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "10", "VALUE:CNS1" ], [ "20", "VALUE:CNS2" ], [ "30", "VALUE:CNS3" ], [ "99", "VALUE:X" ] ]
+}

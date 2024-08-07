@@ -1,0 +1,20 @@
+{
+  "id" : "pediatric_primary_tumor_25859",
+  "algorithm" : "pediatric",
+  "version" : "1.2",
+  "name" : "Pediatric Primary Tumor",
+  "title" : "Pediatric Primary Tumor",
+  "notes" : "**Note 1:** Benign (/0) or Borderline (/1) tumors **are always coded to 050** regardless of size, extension to adjacent sites, or multiple tumors. \n* **Note:** Benign (/0) or Borderline (/1) Medulloblastoma's are very rare.\n\n**Note 2:** For invasive tumors, EOD Primary tumor is coded only for **single tumors confined to the primary site** (see code 150) or a **single** tumor crossing the midline without extension to adjacent structures (see code 250).\n * Code 999 if there are multiple tumors in the brain\n* The presence of multiple tumors is recorded in EOD Mets\n\n**Note 3:** A midline shift is not the same thing as crossing the midline\n   * Documentation must state “crossing the midline”\n   * Code 150 if you have a single tumor confined to the primary site with a midline shift that is not extending into adjacent structures (see **Note 4**). \n\n**Note 4:** Direct or contiguous extension to an adjacent site is collected in Pediatric Mets. \n   * If the only information available is extension to an adjacent site, code Pediatric Primary Tumor 999 and assign the appropriate Pediatric Mets code\n   * The following are collected in Pediatric Mets (see code 25 for all except circulating cells in CSF (code 15))\n     * Adjacent connective/soft tissue\n     * Adjacent muscle\n     * Bone\n     * Circulating cells in cerebral spinal fluid (CSF)\n     * Major blood vessel(s)\n     * Meninges (e.g.; dura)\n     * Multiple/multifocal tumors\n     * Nerves (cranial, NOS)\n     * Ventricular system",
+  "footnotes" : "(1) American Society of Clinical Oncology © 2009, The International Neuroblastoma Risk Group (INRG) Classification System: AN INRG Task Force Report; published by American Society of Clinical Oncology, 2009\n\n(2) Aitken JF, Youlden D, O’Neill L, Gupta S, Frazier AL, eds. Childhood cancer staging for population registries according to the Toronto Childhood Cancer Stage Guidelines – Version 2. Cancer Council Queensland and Cancer Australia: Brisbane, Australia; 2021.",
+  "last_modified" : "2024-02-13T16:02:08.679Z",
+  "definition" : [ {
+    "key" : "ped_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "050", "Benign or borderline brain" ], [ "150", "All sites\n   - Single tumor confined to the primary site with no invasion or seeding to other structures\n \nConfined to site of origin, NOS\nLocalized, NOS" ], [ "250", "Single tumor confined to the primary site and crossing the midline \n   - WITHOUT invasion of adjacent structures (see Note 4)" ], [ "800", "No evidence of primary tumor" ], [ "999", "Unknown; extension not stated\nMultiple tumors (See Note 1)\nSingle tumor with extension to an adjacent site (see Note 4)\nPrimary tumor cannot be assessed\nNot documented in medical record\n\nDeath Certificate Only" ] ]
+}

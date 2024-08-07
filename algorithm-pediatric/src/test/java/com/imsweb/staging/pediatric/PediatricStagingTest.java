@@ -34,13 +34,11 @@ import com.imsweb.staging.pediatric.PediatricStagingData.PediatricInput;
 import com.imsweb.staging.pediatric.PediatricStagingData.PediatricOutput;
 import com.imsweb.staging.pediatric.PediatricStagingData.PediatricStagingInputBuilder;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 class PediatricStagingTest extends StagingTest {
 
     @BeforeAll
     public static void init() {
-        _STAGING = Staging.getInstance(PediatricDataProvider.getInstance(PediatricVersion.V1_1));
+        _STAGING = Staging.getInstance(PediatricDataProvider.getInstance(PediatricVersion.V1_2));
     }
 
     @Override
@@ -50,7 +48,7 @@ class PediatricStagingTest extends StagingTest {
 
     @Override
     public String getVersion() {
-        return PediatricVersion.V1_1.getVersion();
+        return PediatricVersion.V1_2.getVersion();
     }
 
     @Override
@@ -69,7 +67,7 @@ class PediatricStagingTest extends StagingTest {
 
     @Test
     void testVersionInitializationTypes() {
-        Staging staging10 = Staging.getInstance(PediatricDataProvider.getInstance(PediatricVersion.V1_1));
+        Staging staging10 = Staging.getInstance(PediatricDataProvider.getInstance(PediatricVersion.V1_2));
         assertThat(staging10.getVersion()).isEqualTo(PediatricVersion.LATEST.getVersion());
 
         Staging stagingLatest = Staging.getInstance(PediatricDataProvider.getInstance());
@@ -202,7 +200,7 @@ class PediatricStagingTest extends StagingTest {
         assertThat(lookup.get(0).getId()).isEqualTo(schemaId);
 
         // now invalidate the cache
-        PediatricDataProvider.getInstance(PediatricVersion.V1_1).invalidateCache();
+        PediatricDataProvider.getInstance(PediatricVersion.V1_2).invalidateCache();
 
         // try the lookup again
         lookup = _STAGING.lookupSchema(new PediatricSchemaLookup(site, hist));

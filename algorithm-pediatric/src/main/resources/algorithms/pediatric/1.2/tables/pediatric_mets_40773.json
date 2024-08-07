@@ -1,0 +1,19 @@
+{
+  "id" : "pediatric_mets_40773",
+  "algorithm" : "pediatric",
+  "version" : "1.2",
+  "name" : "Pediatric Mets",
+  "title" : "Pediatric Mets",
+  "notes" : "**Note:** This field includes the involvement of adjacent structures to the liver.",
+  "last_modified" : "2023-11-13T17:48:29.502Z",
+  "definition" : [ {
+    "key" : "ped_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis" ], [ "10", "Diaphragm\nExtrahepatic bile duct(s)\nExtrahepatic blood vessel(s)\n* Hepatic artery\n* Portal vein\n* Vena cava\n\nGallbladder\n\nLigament(s)\n* Coronary\n* Falciform\n* Hepatoduodenal\n* Hepatogastric\n* Round (of liver)\n* Triangular\n\nOmentum (lesser and NOS) (see code 20 for greater omentum)\nPeritoneum, NOS\n* Parietal\n* Visceral" ], [ "20", "Greater omentum (see code 10 for lesser omentum and omentum, NOS)\nPancreas\nPleura\nStomach\n\nFurther contiguous extension" ], [ "30", "Distant lymph node(s)\n* Aortic (para-aortic, periaortic)\n* Cardiac\n* Coronary artery\n* Diaphragmatic, NOS\n* Lateral (aortic) (lumbar)\n* Pericardial (pericardiac)\n* Peripancreatic (near head of pancreas only)\n* Posterior mediastinal (tracheoesophageal) including juxtaphrenic nodes\n* Renal artery\n* Retroperitoneal, NOS\n\nDistant lymph node(s), NOS" ], [ "40", "Lungs" ], [ "70", "Carcinomatosis\n\nDistant metastasis WITH or WITHOUT distant lymph node(s)\n\nOther specified metastasis\n\nDistant metastasis, NOS" ], [ "99", "Unknown; distant metastasis not stated\nNot documented in medical record\n\nDeath Certificate Only" ] ]
+}

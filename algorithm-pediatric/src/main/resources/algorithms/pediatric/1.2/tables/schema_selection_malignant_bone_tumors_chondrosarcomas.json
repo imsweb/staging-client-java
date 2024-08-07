@@ -1,0 +1,30 @@
+{
+  "id" : "schema_selection_malignant_bone_tumors_chondrosarcomas",
+  "algorithm" : "pediatric",
+  "version" : "1.2",
+  "name" : "Schema Selection Malignant Bone Tumors: Chondrosarcomas",
+  "title" : "Schema selection for Malignant Bone Tumors: Chondrosarcomas",
+  "last_modified" : "2024-05-03T18:54:15.826Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "age_dx",
+    "name" : "Age at Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C400-C419, C760-C768, C809", "9210, 9220-9221, 9230, 9240-9243", "0-39", "3", "MATCH" ] ]
+}
