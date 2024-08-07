@@ -34,6 +34,8 @@ import com.imsweb.staging.pediatric.PediatricStagingData.PediatricInput;
 import com.imsweb.staging.pediatric.PediatricStagingData.PediatricOutput;
 import com.imsweb.staging.pediatric.PediatricStagingData.PediatricStagingInputBuilder;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 class PediatricStagingTest extends StagingTest {
 
     @BeforeAll
