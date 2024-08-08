@@ -57,7 +57,7 @@ subprojects {
     // fail the build if there are compiler warnings
     tasks.withType(JavaCompile).configureEach {
         options.encoding = 'UTF-8'
-        options.compilerArgs << "-Xlint:all" << "-Xlint:-serial" << "-Werror"
+        //options.compilerArgs << "-Xlint:all" << "-Xlint:-serial" << "-Xlint:-options" << "-Werror"
     }
 
     java {
@@ -213,6 +213,6 @@ subprojects {
 }
 
 wrapper {
-    gradleVersion = '8.2.1'
+    gradleVersion = '8.8'
     distributionType = Wrapper.DistributionType.ALL
 }

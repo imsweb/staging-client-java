@@ -1,0 +1,30 @@
+{
+  "id" : "schema_selection_nhl_t_cell_and_nk_cell_lymphomas",
+  "algorithm" : "pediatric",
+  "version" : "1.2",
+  "name" : "Schema Selection NHL, T-cell and NK-cell lymphomas",
+  "title" : "Schema selection for NHL, T-cell and NK-cell lymphomas",
+  "last_modified" : "2024-05-03T19:43:07.032Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "age_dx",
+    "name" : "Age at Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C000-C424, C470-C809", "9702, 9705, 9714-9717, 9724, 9767-9768, 9827", "0-39", "3", "MATCH" ] ]
+}

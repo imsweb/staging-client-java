@@ -1,0 +1,19 @@
+{
+  "id" : "pediatric_primary_tumor_39067",
+  "algorithm" : "pediatric",
+  "version" : "1.2",
+  "name" : "Pediatric Primary Tumor",
+  "title" : "Pediatric Primary Tumor",
+  "notes" : "**Note 1:** Evaluation of primary tumor is based on several factors\n* Surgically resected WITH or WITHOUT neoadjuvant therapy and tumor(s) confined to the liver with **negative/unknown** margins \n   - One lobe involved (see code 150)\n   - More than one lobe involved (see code 250)\n* Surgically resected WITH or WITHOUT neoadjuvant therapy and tumor(s) confined to the liver with **positive** margins (codes 175 and 275)\n   - One lobe involved (see code 175)\n   - More than one lobe involved (see code 275)\n* Partial surgical resection WITH or WITHOUT neoadjuvant therapy, or unresectable and tumor(s) confined to the liver (code 350)\n\n**Note 2:** See Pediatric Mets for involvement of adjacent structures, along with metastatic disease",
+  "last_modified" : "2023-09-18T17:36:57.407Z",
+  "definition" : [ {
+    "key" : "ped_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "150", "PATHOLOGICAL ASSESSMENT ONLY\n\nTumor confined to the liver WITH or WITHOUT vascular invasion and NEGATIVE/UNKNOWN surgical margins\n* Complete resection of the tumor(s)\n* Single lesion (one lobe)\n* Multiple (satellite) nodules/tumors confined to one lobe\n* Confined to liver, NOS\n* Localized, NOS" ], [ "175", "Code 150 with positive surgical margins" ], [ "250", "PATHOLOGICAL ASSESSMENT ONLY\n\nTumor confined to the liver WITH or WITHOUT vascular invasion\n* Complete resection of the tumor(s)\n* More than one lobe involved by contiguous growth (single lesion)\n* Multiple (satellite) nodules/tumors in more than one lobe of liver or on surface of parenchyma" ], [ "275", "Code 250 with positive surgical margins" ], [ "350", "Tumor confined to the liver WITH or WITHOUT vascular invasion\n* Incomplete resection done or no surgical resection performed\n* Determined to be unresectable \n* Presses onto vital tissues in the liver" ], [ "800", "No evidence of primary tumor" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in medical record\n\nDeath Certificate Only" ] ]
+}

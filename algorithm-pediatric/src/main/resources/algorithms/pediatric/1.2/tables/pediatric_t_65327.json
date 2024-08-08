@@ -1,0 +1,23 @@
+{
+  "id" : "pediatric_t_65327",
+  "algorithm" : "pediatric",
+  "version" : "1.2",
+  "name" : "Pediatric T",
+  "title" : "Pediatric T",
+  "notes" : "calculates Pediatric T and Toronto T",
+  "last_modified" : "2023-10-30T20:10:23.254Z",
+  "definition" : [ {
+    "key" : "ped_primary_tumor",
+    "name" : "Ped Primary Tumor",
+    "type" : "INPUT"
+  }, {
+    "key" : "pediatric_t",
+    "name" : "Derived Pediatric T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "toronto_t",
+    "name" : "Toronto T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "200,250", "VALUE:T1", "VALUE:T1" ], [ "350,450", "VALUE:T2", "VALUE:T2" ], [ "500,600", "VALUE:T3", "VALUE:T3" ], [ "700", "VALUE:T4", "VALUE:T4" ], [ "800", "VALUE:T0", "VALUE:T0" ], [ "999", "VALUE:TX", "VALUE:TX" ] ]
+}

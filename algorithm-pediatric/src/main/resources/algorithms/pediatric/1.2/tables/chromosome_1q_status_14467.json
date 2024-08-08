@@ -1,0 +1,22 @@
+{
+  "id" : "chromosome_1q_status_14467",
+  "algorithm" : "pediatric",
+  "version" : "1.2",
+  "name" : "Chromosome 1q Status",
+  "title" : "Chromosome 1q Status",
+  "description" : "Gain of chromosome 1q is one of the most common cytogenetic findings in Wilms tumor, occurring approximately 30% of tumors. It is associated with a poorer relapse-free survival (RFS) and overall survival (OS) in patients with favorable (non-anaplastic) histology Wilm’s tumor (FHWT). This testing is commonly done in conjunction with Chromosome 1p: Loss of Heterozygosity (see NAACCR ID: 3801) and Chromosome 16q: Loss of Heterozygosity (see NAACCR ID: 1189).\n\nThis is a special molecular diagnostic test performed on tumor tissue to identify gain of genetic material normally found on the long arm of one of the patient's two copies of chromosome 1. A normal cell will contain two complete copies of each chromosome, one from each parent, and this normal state is termed heterozygous. Gain of heterozygosity (GOH) is an abnormal state reflecting gain of the whole arm of chromosome 1q following a chromosomal translocation event.",
+  "notes" : "**Note 1:** **Effective years**\n* This SSDI is effective for diagnosis years 2024+\n* For cases diagnosed 2018-2023, this SSDI must be blank\n\n**Note 2:** **Physician statement**\n* Physician statement of Chromosome 1q gain deletion/LOH can be used to code this data item when no other information is available.",
+  "last_modified" : "2024-04-19T13:44:05.973Z",
+  "definition" : [ {
+    "key" : "chrom_1q_status",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Chromosome 1q gain/GOH not identified/not present/negative" ], [ "1", "Chromosome 1q gain/GOH identified/present/positive" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nCannot be determined by pathologist\nChromosome 1q gain/LOH not assessed or unknown if assessed" ], [ "", "N/A - Diagnosis year is prior to 2024" ] ],
+  "additional_info" : "**Source documents:** molecular pathology report (may be addendum to original pathology report)",
+  "rationale" : "This is part of the National Childhood Cancer Registry (NCCR) project to collect more specific information on pediatric patients. Registries part of the NCCR will start collection on specific pediatric data items with 2024+ diagnoses."
+}

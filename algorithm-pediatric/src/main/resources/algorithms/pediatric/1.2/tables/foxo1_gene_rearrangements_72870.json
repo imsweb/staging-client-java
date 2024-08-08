@@ -1,0 +1,23 @@
+{
+  "id" : "foxo1_gene_rearrangements_72870",
+  "algorithm" : "pediatric",
+  "version" : "1.2",
+  "name" : "FOXO1 Gene Rearrangements",
+  "title" : "FOXO1 Gene Rearrangements",
+  "subtitle" : "FKHR-PAX3 or FKHR-PAX7",
+  "description" : "FOXO1 gene rearrangement fusions are found to be positive in about 85% of alveolar rhabdomyosarcoma patients, while are generally negative for embryonal rhabdomyosarcomas. The presence of these fusions indicates a poor prognosis. Identify these fusions will also provide new therapeutic opportunities for the treatment of fusion positive rhabdomyosarcomas (FP-RMS).",
+  "notes" : "**Note 1:** **Effective years**\n* This SSDI is effective for diagnosis years 2024+\n* For cases diagnosed 2018-2023, this SSDI must be blank\n\n**Note 2:** **Physician statement**\n* Physician statement of FOXO1 gene rearrangements can be used to code this data item when no other information is available.\n\n**Note 3:** **Applicable histologies**\n* FOXO1 may be recorded all sarcomas; however, it is primary done for Alveolar Rhabdomyosarcomas\n* Embryonal Rhabdomyosarcomas are usually negative, and therefore the test is usually not done. \n* Code 9 if information is not available",
+  "last_modified" : "2024-04-10T16:50:57.799Z",
+  "definition" : [ {
+    "key" : "foxo1_gene_rearrangements",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "No gene rearrangements (fusions) identified" ], [ "1", "FOXO1-PAX3 gene rearrangement (fusion) present" ], [ "2", "FOXO1-PAX7 gene rearrangement (fusion) present" ], [ "3", "FOXO1-PAX3 and FOXO1-PAX7 gene rearrangements (fusions) present" ], [ "4", "FOXO1 gene rearrangement present, fusion partner not known" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nCannot be determined by pathologist\nFOXO1 gene rearrangement not assessed or unknown if assessed" ], [ "", "N/A - Diagnosis year is prior to 2024" ] ],
+  "additional_info" : "**Source documents:** molecular pathology report (may be addendum to original pathology report)\n\nFor further information, refer to the **Rhabdomyosarcoma** cancer protocol published by the College of American Pathologists.",
+  "rationale" : "This is part of the National Childhood Cancer Registry (NCCR) project to collect more specific information on pediatric patients, specifically for Rhabdomyosarcoma. Registries part of the NCCR will start collection on specific pediatric data items with 2024+ diagnoses."
+}
