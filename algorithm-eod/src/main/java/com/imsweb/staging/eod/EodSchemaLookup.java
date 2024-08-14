@@ -12,7 +12,6 @@ import com.imsweb.staging.entities.SchemaLookup;
 
 import static com.imsweb.staging.entities.StagingData.HISTOLOGY_KEY;
 import static com.imsweb.staging.entities.StagingData.PRIMARY_SITE_KEY;
-import static com.imsweb.staging.entities.StagingData.YEAR_DX_KEY;
 import static com.imsweb.staging.eod.EodStagingData.EodInput.BEHAVIOR;
 import static com.imsweb.staging.eod.EodStagingData.EodInput.DISCRIMINATOR_1;
 import static com.imsweb.staging.eod.EodStagingData.EodInput.DISCRIMINATOR_2;
