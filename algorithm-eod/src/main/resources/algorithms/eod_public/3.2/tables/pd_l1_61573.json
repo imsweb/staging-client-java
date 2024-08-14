@@ -1,0 +1,22 @@
+{
+  "id" : "pd_l1_61573",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "PD-L1",
+  "title" : "PD-L1",
+  "description" : "The absence or presence of PD-L1 expression determines if the tumor will respond to treatment with a targeted inhibitor (immunotherapy). PD-L1 is done for Non-Small Cell lung cancers (NSCLC).\n\nThis test is usually done on metastatic non-small cell lung cancer (NSCLC) patients. An assay is performed on formalin-fixed, paraffin-embedded (FFPE) tissue specimen of at least 100 cells taken from the patient. The assay is used to determine the PD-L1 expression by IHC. Then the pathologist determines the tumor proportion score. The treating physician uses that information to determine what type of treatment the patient will receive.",
+  "notes" : "**Note 1:** **Effective years**\n* This SSDI is effective for diagnosis years 2025+\n* For cases diagnosed 2018-2024, this SSDI must be blank\n\n**Note 2:** **Physician Statement** \n* Physician statement PD-L1 can be used to code this data item when no other information is available.\n\n**Note 3:** **Purpose of PD-L1** \n* The absence or presence of PD-L1 expression determines if the tumor will respond to treatment with a targeted inhibitor (immunotherapy). PD-L1 is done for Non-Small Cell lung cancers (NSCLC). \n\n**Note 4:** **Tumor Proportion Score** \n* PD-L1 is documented by the tumor proportion score. Record the actual Tumor Proportion Score (0.0-100.0) as stated from the pathology report. \n* An actual tumor proportion score (.1-100.0) takes priority over XXX.2 (Stated as negative), XXX.3 (Stated as low), or XXX.4 (Stated as high/positive) \n\n**Note 5:** **Neoadjuvant therapy** If neoadjuvant therapy is given, record the assay from tumor specimens prior to neoadjuvant therapy. \n* If neoadjuvant therapy is given and there are no PD-L1 results from pre-treatment specimens, report the findings from post-treatment specimens",
+  "last_modified" : "2024-05-28T20:32:33.261Z",
+  "definition" : [ {
+    "key" : "pdl1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0", "No PD-L1 expression identified\nTumor Proportion Score (TPS) = 0%" ], [ "0.1-100.0", "0.1-100.0 PD-L1 expression\nTumor Proportion Score (TPS) = 0.1%-100.0%" ], [ "XXX.2", "PD-L1 expression absent  **AND**\nTumor Proportion Score (TPS) stated as negative" ], [ "XXX.3", "PD-L1 expression present **AND**\nTumor Proportion Score (TPS) stated as low" ], [ "XXX.4", "PD-L1 expression present **AND**\nTumor Proportion Score (TPS) stated as high/positive" ], [ "XXX.7", "Test ordered, results not in chart" ], [ "XXX.8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error)" ], [ "XXX.9", "Not documented in medical record\nNo microscopic confirmation of tumor\nPD-L1 cannot be determined\nPD-L1 not assessed or unknown if assessed" ], [ "", "N/A - Diagnosis year is prior to 2025" ] ],
+  "additional_info" : "**Source documents**: pathology report\n\nFor further information, refer to the **Lung Biomarker Reporting** cancer protocol published by the College of American Pathologists",
+  "rationale" : "PD-L1 is recommended by treatment guidelines for lung cancer to determine if the patient may benefit from checkpoint inhibitor drugs (immunotherapy). **It is a new data item for cases diagnosed 1/1/2025+.**"
+}

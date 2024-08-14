@@ -1,0 +1,28 @@
+{
+  "id" : "eod_primary_tumor_60922",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "EOD Primary Tumor",
+  "title" : "EOD Primary Tumor",
+  "notes" : "**Note 1:** **Benign/borderline tumors** \n* Benign (/0) or Borderline (/1) tumors **are always coded to 050** regardless of size, extension to adjacent sites, or multiple tumors. \n  * **Note:** Benign (/0) or Borderline (/1) Medulloblastoma's are very rare.\n\n**Note 2:** **Single tumors** \n* For invasive tumors, EOD Primary tumor is coded only for **single tumors confined to the primary site** (see code 150) or a **single** tumor crossing the midline without extension to adjacent structures (see code 250).\n   * Code 999 if there are multiple tumors in the brain\n  * The presence of multiple tumors is recorded in EOD Mets\n\n**Note 3:** **Midline shift** \n* A midline shift is not the same thing as crossing the midline\n  * Code 250 if you have a single tumor confined to the primary site with a midline shift that is not extending into adjacent structures (see Note 4). \n\n**Note 4:** **Types of extension coded in EOD Mets** \n* Direct or contiguous extension to an adjacent site is collected in EOD Mets. \n  * If the only information available is extension to an adjacent site, code EOD Primary Tumor 999 and assign the appropriate EOD Mets code\n* The following are collected in EOD Mets (see code 25 for all except circulating cells in CSF (code 15))\n  * Adjacent connective/soft tissue\n  * Adjacent muscle\n  * Bone\n  * Circulating cells in cerebral spinal fluid (CSF)\n  * Major blood vessel(s)\n  * Meninges (e.g.; dura)\n  * Multiple/multifocal tumors\n  * Nerves (cranial, NOS)\n  * Ventricular system",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) **Brain and Spinal Cord**, from the AJCC Cancer Staging System Version 9 (2022). Used with permission of the American College of Surgeons, Chicago, Illinois.",
+  "last_modified" : "2024-05-18T13:37:59.895Z",
+  "definition" : [ {
+    "key" : "eod_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "eod_2018_t",
+    "name" : "EOD 2018 T",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "ss2018_t",
+    "name" : "SS2018 T",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "050", "Benign or borderline brain\n* Behavior is /0 or /1", "VALUE:88", "VALUE:B" ], [ "150", "Single tumor\n* Single tumor confined to the primary site with no invasion or seeding to other structures\n\nConfined to site of origin, NOS\nLocalized, NOS", "VALUE:88", "VALUE:L" ], [ "250", "Single tumor\n* Single tumor confined to the primary site that crosses the midline \n  * WITHOUT invasion of adjacent structures (see Note 4)", "VALUE:88", "VALUE:RE" ], [ "800", "No evidence of primary tumor", "VALUE:88", "VALUE:U" ], [ "999", "Unknown; extension not stated\nMultiple tumors (see Note 1)\nSingle tumor with extension to an adjacent site (see Note 4)\nPrimary tumor cannot be assessed\nNot documented in medical record\n\nDeath Certificate Only", "VALUE:88", "VALUE:U" ] ]
+}

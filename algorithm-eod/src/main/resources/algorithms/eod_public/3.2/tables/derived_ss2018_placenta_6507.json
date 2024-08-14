@@ -1,0 +1,19 @@
+{
+  "id" : "derived_ss2018_placenta_6507",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Derived SS2018: Placenta",
+  "title" : "Derived Summary Stage 2018: Placenta",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-02-15T14:18:37.672Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "In situ, intraepithelial, noninvasive" ], [ "1", "Localized only (localized, NOS)\n\n* Confined to placenta\n\nFIGO Stage I" ], [ "2", "Regional by direct extension only\n\n* Adjacent connective tissue, NOS\n* Cervix\n* Corpus uteri\n * Other genital structure(s) by DIRECT EXTENSION or NOS\n    + Broad ligament\n    + Fallopian tube(s)\n     + Genital structure(s), NOS\n     + Ovary(ies)\n     + Vagina\n* Uterus, NOS\n\nFIGO Stage II" ], [ "3", "Regional lymph node(s) involved only\n- Aortic, NOS\n  + Lateral (lumbar)\n  + Para-aortic\n  + Peri-aortic\n- Iliac, NOS\n  + Common\n  + External\n  + Internal (hypogastric), NOS\n     * Obturator\n- Parametrial\n- Pelvic, NOS\n- Sacral\n   + Lateral (laterosacral)\n   + Middle (promontorial) (Gerota's node)\n   + Presacral\n   + Uterosacral\n- Regional lymph node(s), NOS\n  + Lymph node(s), NOS" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n- Codes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant site(s) (including further contiguous extension)\n  + Other genital structure(s) by METASTASIS\n     * Broad ligament \n     * Cervix uteri\n     * Corpus uteri\n     * Fallopian tube(s)\n     * Genital structure(s), NOS\n     * Ovary(ies)\n     * Uterus, NOS\n     * Vagina\n- Distant lymph node(s), NOS\n  + Superficial inguinal (femoral)\n- Distant metastasis, NOS\n  + Carcinomatosis \n  + Distant metastasis WITH or WITHOUT distant lymph node(s)\n\nFIGO Stage III, IV" ], [ "9", "Unknown if extension or metastasis" ] ]
+}

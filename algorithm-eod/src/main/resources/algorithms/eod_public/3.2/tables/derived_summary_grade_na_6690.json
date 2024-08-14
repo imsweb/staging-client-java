@@ -1,0 +1,24 @@
+{
+  "id" : "derived_summary_grade_na_6690",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Derived Summary Grade NA",
+  "title" : "Derived Summary Grade",
+  "notes" : "This calculated the Derived Summary Grade, the highest grade based on Grade Clinical and Grade Pathological.  If grade is needed in the Stage Group Calculation, this value is also used there",
+  "last_modified" : "2023-05-17T15:30:33.126Z",
+  "definition" : [ {
+    "key" : "grade_clin",
+    "name" : "Grade Clin",
+    "type" : "INPUT"
+  }, {
+    "key" : "grade_path",
+    "name" : "Grade Path",
+    "type" : "INPUT"
+  }, {
+    "key" : "derived_summary_grade",
+    "name" : "Derived Grade",
+    "type" : "ENDPOINT"
+  } ],
+  "extra_input" : [ "grade_path", "grade_clin" ],
+  "rows" : [ [ "*", "8", "VALUE:{{grade_path}}" ], [ "8", "", "VALUE:{{grade_clin}}" ], [ "", "", "VALUE:" ] ]
+}

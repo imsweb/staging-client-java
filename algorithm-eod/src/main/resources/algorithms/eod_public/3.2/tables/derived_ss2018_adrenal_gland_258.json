@@ -1,0 +1,19 @@
+{
+  "id" : "derived_ss2018_adrenal_gland_258",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Derived SS2018: Adrenal Gland",
+  "title" : "Derived Summary Stage 2018: Adrenal Gland",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-02-14T18:40:03.189Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "In situ: noninvasive, intraepithelial" ], [ "1", "Localized only (localized, NOS)\n- Confined to adrenal gland, no extra-adrenal invasion" ], [ "2", "Regional by direct extension only\n- Adjacent connective tissue\n- Gerota's fascia\n- Invasion of adjacent organs\n  + Blood vessels (large)\n     * Renal vein\n     * Vena cava \n  + Kidney \n  + Retroperitoneal structures including\n     * Great vessels (aorta, inferior vena cava)" ], [ "3", "Regional lymph node(s) involved only\n- Aortic, NOS\n    + Para-aortic\n    + Periaortic\n- Pericaval, NOS\n    + Paracaval\n    + Precaval\n    + Retrocaval\n- Retroperitoneal, NOS\n- Regional lymph node(s), NOS\n  + Lymph node(s), NOS" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n- Codes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant site(s) (including further contiguous extension)\n  + Bone\n  + Diaphragm\n  + Liver\n  + Lung\n  + Pancreas\n  + Spleen\n- Distant lymph node(s), NOS\n- Distant metastasis, NOS \n  + Carcinomatosis \n  + Distant metastasis WITH or WITHOUT distant lymph node(s)" ], [ "9", "Unknown if extension or metastasis" ] ]
+}

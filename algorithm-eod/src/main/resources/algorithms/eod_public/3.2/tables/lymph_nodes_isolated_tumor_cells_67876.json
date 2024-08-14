@@ -1,0 +1,23 @@
+{
+  "id" : "lymph_nodes_isolated_tumor_cells_67876",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "LN Isolated Tumor Cells",
+  "title" : "Lymph Nodes Isolated Tumor Cells (ITC)",
+  "description" : "Lymph Nodes Isolated Tumor Cells (ITC), the presence of isolated tumor cells in regional lymph node(s) that may be detected by hematoxylin and eosin or by immunohistochemical staining, is a potential prognostic factor for Merkel Cell Carcinoma.\n\nIsolated tumor cells (ITCs) for Merkel cell carcinoma are defined as single tumor cells or small clusters of tumor cells not more than 0.2 mm in greatest dimension.  ITCs are usually detected by immunohistochemistry on sentinel lymph node biopsies. \n* Note: Examples of immunohistochemical staining methods are Cytokeratin 20 (CK20), CAM 5.2, pancytokeratin, and AE1/3.  ITCs may be detected by routine H&E stains.\n\nITCs may be identified in lymph nodes by hematoxylin and eosin staining or by specialized pathological techniques, such as IHC for cytokeratin proteins for carcinomas. Specialized pathology techniques such IHC and molecular techniques are not recommended for routine examination of lymph nodes.\n\nThese cells usually are found in the subcapsular nodal sinuses but may be seen within the nodal parenchyma.",
+  "notes" : "**Note:** **Physician statement** \n* Physician statement of Isolated Tumor Cells (ITCs) can be used to code this data item when no other information is available.",
+  "last_modified" : "2024-04-30T19:13:16.392Z",
+  "definition" : [ {
+    "key" : "ln_itc",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Regional lymph nodes negative for ITCs" ], [ "1", "Regional lymph nodes positive for ITCs \n(Tumor cell clusters not greater than 0.2 millimeter (mm))" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nCannot be determined by pathologist\nITCs not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source documents:** pathology report\n\nFor further information, refer to the **Merkel Cell Carcinoma** cancer protocol published by the College of American Pathologists for the AJCC Staging System *Merkel Cell Carcinoma*",
+  "coding_guidelines" : "Record the status of ITCs as documented by the pathologist",
+  "rationale" : "Lymph Nodes, Isolated Tumor Cells (ITC) is a Registry Data Collection Variable in AJCC. This data item was previously collected for Merkel Cell Skin, SSF #18."
+}

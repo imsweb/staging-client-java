@@ -1,0 +1,19 @@
+{
+  "id" : "ss2018_adnexa_uterine_other_values_44976",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Derived SS2018: Adnexa Uterine Other",
+  "title" : "Derived Summary Stage 2018: Adnexa Uterine Other",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-02-14T18:43:31.634Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "In situ: noninvasive, intraepithelial" ], [ "1", "Localized only (localized, NOS)\n- Confined to tissue or organ of origin" ], [ "2", "Regional by direct extension only\n- Corpus uteri\n- Fallopian tube for ligaments\n- Mesosalpinx, ipsilateral\n- Ovary, ipsilateral \n- Peritoneum\n- Uterus, NOS" ], [ "3", "Regional lymph node(s) involved only\n\n- Para-aortic, NOS\n  + Aortic\n  + Lateral aortic/lateral lumbar\n  + Periaortic\n\n- Pelvic, NOS\n  + Iliac, NOS\n     + Common\n     + External\n     + Internal (hypogastric) (obturator)\n   + Paracervical\n   + Parametrial\n   + Sacral, NOS\n      + Lateral (laterosacral)\n      + Middle (promontorial) (Gerota's node)\n      + Presacral\n      + Uterosacral\n\n- Retroperitoneal, NOS\n\n- Regional lymph node(s), NOS\n  + Lymph node(s), NOS" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n- Codes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant site(s) (including further contiguous extension)\n  + Cervix uteri\n  + Cul de sac (rectouterine pouch)\n  + Omentum\n  + Ovary, contralateral\n  + Rectosigmoid\n  + Sigmoid\n  + Small intestine\n- Distant lymph node(s), NOS\n- Distant metastasis, NOS\n  + Carcinomatosis\n  + Distant metastasis WITH or WITHOUT distant lymph node(s)" ], [ "9", "Unknown if extension or metastasis" ] ]
+}

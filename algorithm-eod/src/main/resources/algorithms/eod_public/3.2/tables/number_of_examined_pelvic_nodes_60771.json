@@ -1,0 +1,23 @@
+{
+  "id" : "number_of_examined_pelvic_nodes_60771",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Number of Examined Pelvic Nodes",
+  "title" : "Number of Examined Pelvic Nodes",
+  "description" : "Number of Examined Pelvic Nodes is the number of nodes examined based on pelvic nodal dissection.\n\nFor the Corpus schemas (3) and the Cervix Sarcoma schema, there are 4 data items that record information on the number of positive and examined para-aortic and pelvic lymph nodes. These related data items should be coded from the same procedure\n* 3899: Number of Examined Para-Aortic Nodes\n* 3900: Number of Examined Pelvic Nodes\n* 3901: Number of Positive Para-Aortic Nodes\n* 3902: Number of Positive Pelvic Nodes",
+  "notes" : "**Note 1:** **Physician Statement**\n* Physician statement of examined pelvic nodes can be used to code this data item when no other information is available \n\n**Note 2:** **Pelvic lymph nodes** \n* Iliac, NOS\n  * Common\n  * External\n  * Internal (hypogastric) (obturator)\n* Paracervical\n* Parametrial\n* Pelvic, NOS\n* Sacral, NOS\n  * Lateral (laterosacral)\n  * Middle (promontorial) (Gerota’s node)\n  * Uterosacral\n\n**Note 3:** **Isolated tumor cells**\n* For this data item, do not include isolated tumor cells (ITCs).\n\n**Note 4:** **Related data item**\n* The number of positive pelvic nodes is recorded in in the related data item 3902: Number of Positive Pelvic Nodes.",
+  "last_modified" : "2024-04-08T20:43:40.860Z",
+  "definition" : [ {
+    "key" : "num_exam_pelvic_nodes",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "No pelvic lymph nodes examined" ], [ "01-99", "1 - 99 pelvic lymph nodes examined \n(Exact number of pelvic lymph nodes examined)" ], [ "X1", "100 or more pelvic  nodes examined" ], [ "X2", "Pelvic nodes examined; number unknown" ], [ "X6", "No pelvic lymph nodes removed, but aspiration or core biopsy of pelvic node(s) only" ], [ "X8", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code X8 will result in an edit error.)" ], [ "X9", "Not documented in medical record\nCannot be determined, indeterminate if examined pelvic nodes present\nPelvic lymph nodes not assessed or unknown if assessed" ] ],
+  "additional_info" : "** Source documents:** pathology report, imaging reports, physical exam, other statements in medical record",
+  "coding_guidelines" : "**1)** Record the number of examined pelvic lymph nodes documented in the medical record.\n* **a.** Number of nodes examined must ALWAYS be **equal to or greater** than the number of nodes positive.\n* **b.** If a lymph node dissection is done and only “nodes” are documented without specifying pelvic or para-aortic, assume they are pelvic\n\n**2)** **Code 00** when no lymph nodes are examined by FNA, core biopsy or removal of lymph node(s) (e.g., sentinel lymph node biopsy or lymph node dissection)\n**3)** **Code 01-99** for the exact number of examined \n**4)** **Code X1** for 100 or more examined nodes\n**5)** **Code X2** for nodes examined, but unknown how many\n**6)** **Code X6** for aspiration or core biopsy of pelvic node(s) \n**7)** **Code X9** when\n* **a.** Not documented in the medical record\n* **b.** Pelvic lymph nodes not evaluated (assessed)\n* **c.** Unknown if Pelvic lymph nodes not evaluated (assessed)",
+  "rationale" : "Number of Examined Pelvic Nodes is listed as a Registry Data Collection Variable in AJCC. This data item was previously collected as Corpus, CS SSF #4."
+}

@@ -1,0 +1,23 @@
+{
+  "id" : "er_summary_44166",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Estrogen Receptor Summary",
+  "title" : "ER (Estrogen Receptor) Summary",
+  "description" : "Estrogen Receptor Summary is a summary of results of the estrogen receptor (ER) assay.\n\nEstrogen receptor (ER) positivity and progesterone receptor (PR) positivity are favorable prognostic factors in breast cancer, as well as endometrial carcinoma and meningioma. Positive results predict a favorable response to endocrine (hormonal) therapy. Combined ER and PR positivity is associated with increased response to antiestrogen therapies. \nThere are a variety of ways to report information on ER and PR results, but there is almost always a summary statement that the result is positive or negative.",
+  "notes" : "**Note 1:** **Physician Statement** \n* Physician statement of ER (Estrogen Receptor) Summary status can be used to code this data item when no other information is available.\n\n**Note 2:** **In-situ and Invasive components present**\n* If ER is positive on an in-situ component and ER is negative on all tested invasive components in the primary tumor, code ER as negative (code 0)\n* If in situ and invasive components present and ER only done on the in-situ component in the primary tumor, code unknown (code 9)\n\n**Note 3:** **Single tumor, multiple biopsies or surgical resection, different results**\n* Use the highest (positive versus negative)\n\n**Note 4:** **Multiple tumors, different results**\n* Code the results from the largest tumor size (determined either clinically or pathologically) when multiple tumors are present.\n  * Do not use specimen size to determine the largest tumor size\n\n**Note 5:** **Results from nodal or metastatic tissue**\n* May be used ONLY when there is no evidence of primary tumor\n  * **Note:** In-situ is evidence of primary tumor\n\n**Note 6:** **Neoadjuvant Therapy**\n* Record the assay from tumor specimens prior to neoadjuvant therapy.\n* If neoadjuvant therapy is given and there are no ER results from pre-treatment specimens, report the findings from post-treatment specimens\n\n**Note 7:** **ER Positive and Oncotype**\n* If the patient is ER positive and node negative, a multigene test such as Oncotype Dx may be performed, in which case another ER test will be performed. Do not record the results of that test in this field.\n* Record only the results of the test which made the patient eligible to be given the multigene test\n\n**Note 8:** **Others tests for ER**\n* Do not use results from the following tests to record ER or PR results\n  * MammaPrint\n  * EndoPredict\n  * PAM 50 (Prosigna)\n  * Any other test that records ER",
+  "last_modified" : "2024-04-08T19:51:58.904Z",
+  "definition" : [ {
+    "key" : "er",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "ER negative (0.0% or less than 1%)" ], [ "1", "ER positive" ], [ "7", "Test ordered, results not in chart" ], [ "9", "Not documented in medical record\nCannot be determined (indeterminate)\nER (Estrogen Receptor) Summary status not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source documents:** pathology report\n\nFor further information, refer to the **Breast Biomarker Reporting** cancer protocols published by the College of American Pathologists for the AJCC Staging System Breast",
+  "coding_guidelines" : "**1)** **Code 0** when the ER is reported as negative or normal\n**2)** **Code 1** when the ER is reported as positive or elevated\n**3)** **Code 7** when the ER test was ordered but the results are not available\n**4)** **Code 9** when the ER is \n  * **a.** Reported as borderline; undetermined whether positive or negative \n  * **b.** Cannot be determined by the pathologist (e.g., inadequate specimen)\n  * **c.** It is unknown whether the ER test was performed\n  * **d.** The patient has only a clinical diagnosis of breast cancer (no tissue diagnosis)",
+  "rationale" : "This data item is required for prognostic stage grouping in AJCC 8th edition, Chapter 48, Breast. It was previously collected as Breast CS SSF # 1."
+}

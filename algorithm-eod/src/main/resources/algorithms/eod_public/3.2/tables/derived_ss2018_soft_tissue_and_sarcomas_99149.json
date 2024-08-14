@@ -1,0 +1,19 @@
+{
+  "id" : "derived_ss2018_soft_tissue_and_sarcomas_99149",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Derived SS2018: Soft Tissue and Sarcomas (excluding Heart, Mediastinum, Retroperitoneum)",
+  "title" : "Derived Summary Stage 2018: SS2018: Soft Tissue and Sarcomas",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-02-15T16:24:10.976Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Localized only (localized, NOS)\n- Confined to site of origin\n- Deep tumor, NOS\n- Superficial tumor, NOS" ], [ "2", "Regional by direct extension only\n- Adjacent (connective) tissue, NOS\n  + Into tissue beyond organ\n- Adjacent organ(s)/structure(s), NOS\n- Major vessel invasion\n- Superficial or deep tumor WITH involvement of\n  + adjacent (connective) tissue or adjacent organ(s)/structure(s)\n- Abdomen and Thoracic Visceral Organs\n  + Mesentery\n  + Serosa\n  + Visceral peritoneum" ], [ "3", "Regional lymph node(s) involved only\n- Head and Neck \n    + Cervical\n- Lip\n    + Facial, NOS\n    + Buccinator (buccal)\n    + Mandibular (submandibular, submaxillary, submental)\n    + Nasolabial\n    + Parotid (infra-auricular, preauricular) \n- Eyelid/canthus\n    + Facial (buccinator [buccal], nasolabial, NOS)\n    + Mandibular (submandibular, submaxillary, submental)\n    + Parotid, NOS (infra-auricular)\n- External ear and auditory canal\n    + Mastoid (posterior, retro-auricular) (occipital)\n    + Preauricular\n- Face, Other (cheek, chin, forehead, jaw, nose, and temple):\n    + Facial, NOS (buccinator [buccal], nasolabial) \n    + Mandibular (submandibular, submaxillary, submental)\n    + Parotid (infra-auricular, preauricular)\n- Scalp\n    + Mastoid (posterior, retro-auricular) (occipital)\n    + Parotid (infra-auricular, preauricular)\n    + Spinal accessory (posterior cervical)\n- Neck\n    + Axillary\n    + Mandibular\n    + Mastoid (posterior, retro-auricular) (occipital)\n    + Parotid (infra-auricular, preauricular)\n    + Spinal accessory (posterior cervical)\n    + Submental (bilateral or contralateral)\n    + Supraclavicular (transverse cervical)\n- Arm/shoulder\n    + Axillary\n    + Epitrochlear for hand/forearm\n    + Spinal accessory for shoulder\n - Leg/hip\n    + Femoral (superficial inguinal)\n    + Popliteal for heel and calf\n- Thorax\n    + Hilar (bronchopulmonary) (proximal lobar) (pulmonary root)\n    + Mediastinal\n - Abdomen\n    + Celiac\n    + Iliac\n    + Para-aortic\n- Pelvis\n    + Deep inguinal, NOS\n    + Rosenmuller or Cloquet node\n    + Superficial inguinal (femoral)\n- Upper trunk\n    + Axillary\n    + Cervical\n    + Internal mammary\n    + Supraclavicular (transverse cervical)\n - Lower trunk\n    + Superficial inguinal (femoral)\n- Regional lymph node(s), NOS\n  + Lymph node(s), NOS" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n- Codes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant site(s) (including further contiguous extension)\n  + Head and Neck subsites\n     * Brain parenchymal invasion\n     * Carotid artery encasement\n     * Central compartment visceral\n     * Central nervous system involvement via perineural spread\n     * Fascial skeleton\n     * Orbital invasion\n     * Prevertebral muscle invasion\n     * Pterygoid muscles\n     * Skull base/dural invasion\n- Distant lymph node(s), NOS\n- Distant metastasis, NOS\n  + Carcinomatosis\n  + Distant metastasis WITH or WITHOUT distant lymph node(s)" ], [ "9", "Unknown if extension or metastasis" ] ]
+}

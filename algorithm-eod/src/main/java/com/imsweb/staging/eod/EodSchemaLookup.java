@@ -16,6 +16,7 @@ import static com.imsweb.staging.eod.EodStagingData.EodInput.BEHAVIOR;
 import static com.imsweb.staging.eod.EodStagingData.EodInput.DISCRIMINATOR_1;
 import static com.imsweb.staging.eod.EodStagingData.EodInput.DISCRIMINATOR_2;
 import static com.imsweb.staging.eod.EodStagingData.EodInput.SEX;
+import static com.imsweb.staging.eod.EodStagingData.EodInput.YEAR_DX;
 
 public class EodSchemaLookup extends SchemaLookup {
 
@@ -24,6 +25,7 @@ public class EodSchemaLookup extends SchemaLookup {
             HISTOLOGY_KEY,
             SEX.toString(),
             BEHAVIOR.toString(),
+            YEAR_DX.toString(),
             DISCRIMINATOR_1.toString(),
             DISCRIMINATOR_2.toString())));
 

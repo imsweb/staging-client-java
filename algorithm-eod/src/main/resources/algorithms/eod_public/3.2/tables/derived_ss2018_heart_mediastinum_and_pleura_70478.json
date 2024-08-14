@@ -1,0 +1,19 @@
+{
+  "id" : "derived_ss2018_heart_mediastinum_and_pleura_70478",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Derived SS2018: Heart, Mediastinum and Pleura",
+  "title" : "Derived Summary Stage 2018: Heart, Mediastinum and Pleura",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-02-14T18:18:00.214Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Localized only (localized, NOS)\n- Confined to site of origin" ], [ "2", "Regional by direct extension only\n- All sites\n  + Adjacent (connective) tissue, NOS\n  + Adjacent organ(s)/structure(s), NOS\n  + Mesentery\n  + Serosa\n  + Visceral peritoneum\n- Heart (C380)\n  + Ascending aorta\n  + Parietal pericardium\n  + Vena cava\n- Mediastinum (C381-C383, C388)\n  + Descending aorta\n  + Esophagus\n  + Large (named) artery(ies) or vein(s)\n  + Pericardium (parietal, visceral [pericardium], NOS)\n  + Phrenic nerve(s)\n  + Pleura (parietal, visceral, NOS)\n  + Sternum\n  + Sympathetic nerve trunk(s)\n  + Thoracic duct\n  + Thymus\n  + Trachea, parietal pleura\n  + Vertebra(e)\n- Pleura (C384)\n  + Chest wall\n  + Diaphragm\n  + Endothoracic fascia\n  + Heart muscle\n  + Lung involvement, NOS\n  + Mediastinal organs or tissues\n  + Pericardium\n  + Rib" ], [ "3", "Regional lymph node(s) involved only\n- All sites\n  + Aortic (above diaphragm), NOS\n    * Peri/para-aortic, NOS\n       - Ascending aorta (phrenic)\n    * Subaortic (aortico-pulmonary window)\n  + Carinal (tracheobronchial) (tracheal bifurcation)\n  + Mediastinal (anterior, posterior [tracheoesophageal], NOS)\n  + Pericardial\n  + Peri-/paraesophageal\n  + Peri-/paratracheal (lower [azygos], upper, NOS)\n  + Pretracheal and retrotracheal (precarinal), NOS\n  + Pulmonary ligament\n  + Subcarinal\n  + Regional lymph node(s), NOS\n    * Lymph node(s), NOS\n- Pleura (C384)\n  + Hilar (bronchopulmonary) (proximal lobar) (pulmonary root)\n  + Intrapulmonary, NOS\n  + Interlobar\n  + Lobar\n    * Segmental\n    * Subsegmental\n  + Peri/parabronchial\n  + Precarinal" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n- Codes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant site(s) (including further contiguous extension)\n  + Pleura\n    * Cervical (neck) tissues\n    * Contralateral lung\n    * Contralateral pleura\n    * Intra-abdominal organs\n    * Peritoneum\n    * Pleural effusion\n- Distant lymph node(s), NOS\n  + Pleura\n    * Contralateral/bilateral hilar (bronchopulmonary) (proximal lobar) (pulmonary root)\n    * Contralateral/bilateral mediastinal\n    * Scalene (inferior deep cervical), ipsilateral or contralateral\n    * Supraclavicular (transverse cervical), ipsilateral or contralateral\n- Distant metastasis, NOS\n  + Carcinomatosis\n  + Distant metastasis WITH or WITHOUT distant lymph node(s)" ], [ "9", "Unknown if extension or metastasis" ] ]
+}

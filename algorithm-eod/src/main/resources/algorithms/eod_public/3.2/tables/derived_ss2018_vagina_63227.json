@@ -1,0 +1,19 @@
+{
+  "id" : "derived_ss2018_vagina_63227",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Derived SS2018: Vagina",
+  "title" : "Derived Summary Stage 2018: Vagina",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-02-15T18:20:37.057Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "In situ: noninvasive, intraepithelial" ], [ "1", "Localized only (localized, NOS)\n* Confined to vagina\n* Musculature involved\n* Submucosa (stroma) (vagina)\n\nFIGO Stage I" ], [ "2", "Regional by direct extension only\n\n  + Bladder wall or bladder, NOS (excluding mucosa)\n  + Cervix\n  + Cul de sac (rectouterine pouch)\n  + Extension to lower third of the vagina (from proximal vagina)\n  + \"Frozen pelvis\" (clinically diagnosed)\n  + Hydronephrosis or nonfunctioning kidney\n  + Parametrium\n  + Paravaginal soft tissue\n  + Pelvic wall \n     * Fascia \n     * Muscle\n     * Neurovascular structures\n     * Skeletal portions of bony pelvis\n  + Rectal wall or rectum, NOS excluding mucosa \n  + Rectovaginal septum\n  + Vesicovaginal septum\n  + Vulva\t\n\nFIGO Stage II\nFIGO Stage III WITHOUT lymph node involvement" ], [ "3", "Regional lymph node(s) involved only\n\n- Lower third of vagina (ipsilateral and bilateral)\n  + Femoral\n  + Inguinal, NOS\n     + Inguinofemoral (groin)\n     + Node of Cloquet or Rosenmuller (highest deep inguinal)\n     + Superficial inguinal \n\n- Upper two thirds of vagina\n  + Pelvic, NOS\n    + Iliac, NOS\n       + Common\n       + External\n       + Internal (hypogastric) (obturator)\n    + Paracervical\n    + Parametrial\n    + Sacral, NOS\n        + Lateral (laterosacral)\n        + Middle (promontorial) (Gerota's node)\n        + Presacral\n        + Uterosacral\n\n\n- Regional lymph node(s), NOS\n  + Lymph node(s), NOS\n\nFIGO Stage III\n* Localized tumor WITH regional lymph node involvement" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n- Codes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant site(s) (including further contiguous extension) \n    * Bladder mucosa (excluding bullous edema)\n     * Extension beyond true pelvis\n     * Rectal mucosa\n     * Urethra\n\n- Distant lymph node(s), NOS \n   + All sites\n      + Mediastinal \n      + Para-aortic, NOS\n         + Aortic\n         + Lateral aortic/lateral lumbar\n         + Periaortic\n      + Retroperitoneal, NOS\n      + Scalene\n\n    + Lower third of vagina (ipsilateral and bilateral)\n       + Pelvic, NOS\n       + Iliac, NOS\n          + Common\n          + External\n          + Internal (hypogastric) (obturator)\n        + Paracervical\n        + Parametrial\n        + Sacral, NOS\n           + Lateral (laterosacral)\n           + Middle (promontorial) (Gerota's node)\n           + Presacral\n           + Uterosacral\n\n    + Upper two thirds of vagina\n       + Femoral\n       + Inguinal, NOS\n         + Inguinofemoral (groin)\n         + Node of Cloquet or Rosenmuller (highest deep inguinal)\n         + Superficial inguinal \n\n- Distant metastasis, NOS \n  + Carcinomatosis\n  + Distant metastasis WITH or WITHOUT distant lymph node(s)\n\n\nFIGO Stage IV (IVA, IVB, IV NOS)" ], [ "9", "Unknown if extension or metastasis" ] ]
+}

@@ -43,7 +43,7 @@ public class SchemaLookup {
      * Returns a list of allowable keys.
      * @return a set of keys
      */
-    public Set<String> getAllowedKeys() {
+    public Set<String>  getAllowedKeys() {
         return Collections.emptySet();
     }
 

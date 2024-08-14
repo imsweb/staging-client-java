@@ -1,0 +1,26 @@
+{
+  "id" : "oropharyngeal_p16_44685",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Schema Discriminator 2",
+  "title" : "Schema Discriminator 2: Oropharyngeal p16",
+  "description" : "Staging for oropharyngeal cancers changed in the AJCC 8th edition. Chapter 10 is now for p16+ tumors, while Chapter 11 is for p16- negative tumors or where the p16 is not assessed or unknown. A schema discriminator is necessary to determine the p16 status so that the appropriate chapter/schema is used.",
+  "notes" : "**Note 1:** **Schema discriminator for Oropharynx** \n* A schema discriminator is used to discriminate between oropharyngeal tumors that are p16 positive and oropharyngeal tumors that are p16 negative OR p16 status unknown. \n\n**Note 2:** **p16 testing** \n* Only the HPV p16+ test can be used. If another HPV test is done, code 9.\n  * **00100: Oropharynx HPV-Mediated (p16+) (see code 2)**\n    * Used for p16 (+) (positive) \n  * **00111: Oropharynx (p16-)** \n    * p16 expression of weak intensity or limited distribution (see code 1)\n    * p16 without an immunostaining performed (see code 9)",
+  "last_modified" : "2024-04-30T19:15:58.755Z",
+  "definition" : [ {
+    "key" : "discriminator_2",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "disease",
+    "name" : "Schema ID #/Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "p16 Negative; Nonreactive", "00111: Oropharynx (p16-)" ], [ "2", "p16 Positive; HPV Positive; Diffuse, Strong reactivity", "00100: Oropharynx HPV-Mediated (p16+)" ], [ "9", "Not tested for p16; Unknown", "00111: Oropharynx (p16-)" ] ],
+  "additional_info" : "**Source documents:** pathology report, clinician's statement\n\nFor further information, refer to the **Pharynx** cancer protocol published by the College of American Pathologist for the AJCC Staging Systems *Oropharynx (p16-)* and *Oropharynx HPV-mediated (p16+)*",
+  "rationale" : "A schema discriminator is used to assign AJCC ID when site and histology alone are insufficient to identify the applicable AJCC staging method and to assign Schema ID, which links each case to the appropriate SSDIs, Grade, Summary Stage and EOD data collection system."
+}

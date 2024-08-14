@@ -1,0 +1,23 @@
+{
+  "id" : "chromosome_8q_status_83582",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Chromosome 8q Status",
+  "title" : "Chromosome 8q Status",
+  "description" : "Chromosome 8q Status refers to gain in Chromosome 8q, which is a prognostic factor for uveal melanoma.\n\nThe loss of an entire copy of chromosome 8, which occurs in about half of patients, is the most important indicator of poor prognosis for the uveal melanomas, particularly melanoma of the choroids and ciliary body. A variety of sophisticated tests can be used to determine chromosome 8 status \n* Karyotyping\n* Fluorescence in situ hybridization\n* Comparative genomic hybridization\n* DNA polymorphism analysis (e.g., single nucleotide polymorphism, microsatellite).\n* Multiplex ligation probe amplification\n\nMonosomy 3, especially if combined with a frequently coexisting gain in chromosome 8q, is independently associated with metastatic risk. Chromosome 3 and 8 statuses may be determined with karyotyping or fluorescent in situ hybridization (FISH).",
+  "notes" : "**Note 1:** **Physician Statement** \n* Physician statement of chromosome 8q status can be used to code this data item when no other information is available.\n\n**Note 2:** **Related data item** \n* See related data item 3821: Chromosome 3 Status.",
+  "last_modified" : "2024-04-07T18:08:46.132Z",
+  "definition" : [ {
+    "key" : "chrom_8q_status",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "No gain in chromosome 8q" ], [ "1", "Gain in chromosome 8q" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nChromosome 8q status not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source Documents:** pathology report, specialty/reference lab report, gene expression profile report, other statement in medical record\n\n**Other names include:** 8q duplication, 8q trisomy, duplication 8q, partial trisomy 8q, trisomy 8q\n\nFor further information, refer to the **Uveal Melanoma** cancer protocol published by the College of American Pathologist for the AJCC Staging System *Uveal Melanoma*.",
+  "coding_guidelines" : "**1)** **Code 0** when there is no gain in chromosome 8q\n**2)** **Code 1** when there is gain in chromosome 8q\n**3)** **Code 9** when\n* **a.** No documentation in the medical record\n* **b.** Chromosome 8q not evaluated (assessed)\n* **c.** Unknown if Chromosome 8q evaluated (assessed)\n* **d.** Patients received radiation therapy prior to testing",
+  "rationale" : "Chromosome 8q Status is a Registry Data Collection Variable in AJCC.  This data item was previously collected as Uveal Melanoma, CS SSF #7."
+}

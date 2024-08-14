@@ -1,0 +1,23 @@
+{
+  "id" : "systemic_symptoms_at_dx_60639",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "B Symptoms",
+  "title" : "B Symptoms",
+  "description" : "B symptoms refer to systemic symptoms of fever, night sweats, and weight loss which can be associated with both Hodgkin lymphoma and some non-Hodgkin lymphomas. The presence of B symptoms is a prognostic factor for some lymphomas.\n\nThe stages of Hodgkin Lymphoma are classified as either A or B according to the absence or presence of defined constitutional symptoms. The stage group suffix for a patient without these systemic symptoms is “A,” meaning absence of symptoms or asymptomatic; for example, Stage IIA. The stage group suffix for a patient with any of the symptoms listed below is “B,” such as Stage IIIB.  The symptoms are carefully defined.  \n* Fevers: Unexplained fever with temperature above 38 degrees centigrade or 100.4 degrees Fahrenheit. \n* Night sweats: Drenching sweats (e.g., those that require change of bedclothes)\n* Weight loss: Unexplained weight loss of more than 10% of the usual body weight in the 6 months prior to diagnosis. \n\nOther symptoms, such as chills, pruritic, alcohol-induced pain, and fatigue, are not included in the A or B designation but are recorded in the medical record, as the reappearance of these symptoms may be a harbinger of recurrence. The designation A or B is not included in the revised staging of NHL in AJCC 8th edition, although clinicians are encouraged to record the presence of these symptoms in the medical record. The presence or absence of B symptoms may be collected in registries for both HL and NHL.",
+  "notes" : "**Note 1:** **Physician Statement**\n* Physician statement of B Symptoms can be used to code this data item when no other information is available.\n\n**Note 2:** **Defining B symptoms** \n* Each stage should be classified as either A or B according to the absence or presence of defined constitutional symptoms, such as:\n  * Fevers: Unexplained fever with temperature above 38 degrees C (100.4 F)\n  * Night sweats: Drenching sweats that require change of bedclothes\n  * Weight loss: Unexplained weight loss of more than 10% of the usual body weight in the six months prior to diagnosis.\n\n**Note 3:** **Conditions that are not B symptoms** \n* Pruritus alone does not qualify for B classification, nor does alcohol intolerance, fatigue, or a short, febrile illness associated with suspected infections",
+  "last_modified" : "2024-04-07T19:00:58.832Z",
+  "definition" : [ {
+    "key" : "b_symptoms",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "No B symptoms (asymptomatic) \nClassified as \"A\" by physician when asymptomatic" ], [ "1", "Any B symptom(s)\nNight sweats (drenching)\nUnexplained fever (above 38 degrees C) (100.4 F)\nUnexplained weight loss (generally greater than 10% of body weight\nin the six months before admission)\nB symptoms, NOS\n\nClassified as \"B\" by physician when symptomatic" ], [ "8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nB symptoms not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source documents:** patient history, progress notes, consultant notes, other statements in medical record\n\n**Other names include** B symptoms fever, Palestine fever, hyperpyrexia, febrile response, sleep hyperhidrosis, nocturnal hyperhidrosis",
+  "coding_guidelines" : "**1)** **Code 0** when there is no evidence of B symptoms present, per physician or physical exam\n**2)** **Code 1** when the physician states the patient has B symptoms\n**3)** **Code 9** when\n* **a.** No mention of B symptoms\n* **b.** Not documented in the medical record\n* **c.** B symptoms not evaluated (assessed)\n* **d.** Unknown if B symptoms evaluated (assessed)",
+  "rationale" : "B symptoms is a Registry Data Collection Variable in AJCC. This data item was previously collected for Lymphomas, SSF #2."
+}

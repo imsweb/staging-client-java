@@ -1,0 +1,23 @@
+{
+  "id" : "oncotype_dx_risk_level_dcis_53080",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Oncotype Dx Risk Level - DCIS",
+  "title" : "Oncotype Dx Risk Level-DCIS",
+  "description" : "Oncotype Dx Risk Level-DCIS stratifies Oncotype Dx recurrence scores into low, intermediate, and high risk of local recurrence. \n\nOncotype DX DCIS Risk Level, coded in NAACCR Data Item #3905, stratifies the Oncotype DX DCIS Score into three risk levels \n* **Low risk: Recurrence Score lower than 39:** The DCIS has a lower risk of recurrence. \n* **Intermediate Risk: Recurrence Score between 39 and 54:** The DCIS has an intermediate risk of recurrence. \n* **High risk: Recurrence Score greater than 54:** The DCIS has a higher risk of recurrence.",
+  "notes" : "**Note 1:** **Physician Statement** \n* Physician statement of Oncotype Dx Risk Level-DCIS can be used to code this data item when no other information is available.\n\n**Note 2:** **Related data item** \n* Code this data item using the same report used to record the related data item 3903: Oncotype Dx Recurrence Score-DCIS.",
+  "last_modified" : "2024-04-05T21:07:02.520Z",
+  "definition" : [ {
+    "key" : "oncotype_dx_risk_level_dcis",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Low risk (recurrence score less than 39)" ], [ "1", "Intermediate risk (recurrence score 39-54)" ], [ "2", "High risk (recurrence score greater than 54)" ], [ "6", "Not applicable: invasive case" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nOncotype Dx risk level not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source documents:** Oncotype Dx DCIS laboratory report, other statements in medical record",
+  "coding_guidelines" : "**1)** Record only the results of an Oncotype Dx Risk Level-DCIS in this data item. If some other test is used for scoring, assign code 9.\n* **a.** Code 6 if the case is malignant\n* **b.** Code 9 for LCIS tumors\n\n**2)** The Oncotype Dx Risk Level-DCIS test stratifies scores into low, intermediate, and high risk of distant recurrence\n* **a.** If only the score is stated, assign the risk level based on the score.",
+  "rationale" : "Oncotype Dx Risk Level-DCIS is a Registry Data Collection Variable in AJCC. It is a new data item for cases diagnosed 1/1/2018+."
+}

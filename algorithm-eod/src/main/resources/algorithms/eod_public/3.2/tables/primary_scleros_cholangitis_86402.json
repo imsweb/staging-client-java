@@ -1,0 +1,23 @@
+{
+  "id" : "primary_scleros_cholangitis_86402",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Primary Scleros Cholangitis",
+  "title" : "Primary Sclerosing Cholangitis (PSC)",
+  "description" : "Primary sclerosing cholangitis denotes a chronic autoimmune inflammation of the bile ducts that leads to scar formation and narrowing of the ducts over time. It is a prognostic factor for intrahepatic bile duct cancer.\n\nPrimary sclerosing cholangitis is an idiopathic liver disease characterized by inflammation and fibrosis of the entire biliary tree. The chronic inflammation and injury to ducts may lead to cirrhosis and predispose to cholangiocarcinoma at any site in the biliary tree. \n\nPatients with primary sclerosing cholangitis are advised to receive neoadjuvant chemoradiation and liver transplantation.",
+  "notes" : "**Note:** **Physician Statement** \n* Physician statement of Primary Sclerosing Cholangitis (PSC) can be used to code this data item when no other information is available.",
+  "last_modified" : "2024-04-08T16:18:24.515Z",
+  "definition" : [ {
+    "key" : "prim_scleros_cholangitis",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "PSC not identified/not present" ], [ "1", "PSC present" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nPSC not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source documents:** patient history, pathology report, imaging reports\n\n**Other names include** PSC, fibrosing cholangitis, chronic obliterative cholangitis, sclerosing cholangitis",
+  "coding_guidelines" : "**1)** Code stated diagnosis of PSC either clinically or pathologically as documented in the medical record. This may be by history.\n **2)** **Code 0** when primary sclerosing cholangitis is not present\n**3)** **Code 1** when primary sclerosing cholangitis is present\n**4)** **Code 9** when \n  * **a.** No information in the medical record\n  * **b.** Pathology report is not available\n  * **c.** Primary sclerosing cholangitis is not evaluated (not assessed) \n  * **d.** Unknown if primary sclerosing cholangitis is evaluated (assessed)\n  * **e.** No mention of primary sclerosing cholangitis on the pathology report or in the medical record",
+  "rationale" : "Primary Sclerosing Cholangitis is a Registry Data Collection Variable in AJCC. This data item was previously collected for Intrahepatic Bile Duct, SSF #11."
+}

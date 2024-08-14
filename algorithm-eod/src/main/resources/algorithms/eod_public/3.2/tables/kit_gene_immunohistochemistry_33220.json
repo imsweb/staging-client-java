@@ -1,0 +1,22 @@
+{
+  "id" : "kit_gene_immunohistochemistry_33220",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "KIT Gene Immunohistochemistry",
+  "title" : "KIT Gene Immunohistochemistry (IHC)",
+  "description" : "KIT Gene Immunohistochemistry (IHC) is the expression of the KIT gene in tumor tissue specimens based on immunohistochemical (IHC) stains.  A positive test is a diagnostic and predictive marker for GIST tumors.\n\nKIT is a gene that regulates cell growth and differentiation. Mutations of this gene become oncogenes and cause a gastrointestinal stromal tumor to ignore cellular control signals. About 85-90% of GIST tumors contain oncogenic mutations of the KIT receptor gene. KIT immunohistochemistry is a special immunofluorescent stain that turns mutated cells brown and confirms a diagnosis of GIST. The presence of the KIT gene also indicates that the patient may respond to Gleevec or Sutent.",
+  "notes" : "**Note 1:** **Physician Statement** \n* Physician statement of KIT IHC can be used to code this data item when no other information is available.\n\n**Note 2:** **Results from nodal or metastatic tissue**\n* May be used for KIT Gene immunohistochemistry",
+  "last_modified" : "2024-04-08T16:42:58.524Z",
+  "definition" : [ {
+    "key" : "kit",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "KIT negative/normal; within normal limits" ], [ "1", "KIT positive" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nCannot be determined by pathologist\nKIT not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source documents:** pathology report (special stain)\n\n**Other names include** CD117, c-kit receptor, KIT receptor tyrosine kinase, or SCFR (stem cell factor receptor)",
+  "rationale" : "KIT Gene Immunohistochemistry (IHC) is a Registry Data Collection Variable in AJCC. This data item was previously collected for GIST schemas in CS (different SSFs)."
+}

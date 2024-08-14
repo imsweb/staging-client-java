@@ -1,0 +1,23 @@
+{
+  "id" : "chromosome_3_status_93464",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Chromosome 3 Status",
+  "title" : "Chromosome 3 Status",
+  "description" : "Chromosome 3 Status refers to the partial or total loss of Chromosome 3, which is a prognostic factor for uveal melanoma.\n\nThe loss of an entire copy of chromosome 3, which occurs in about half of patients, is the most important indicator of poor prognosis for the uveal melanomas, particularly melanoma of the choroids and ciliary body. A variety of sophisticated tests can be used to determine chromosome 3 status. \n* Karyotyping\n* Fluorescence in situ hybridization\n* Comparative genomic hybridization\n* DNA polymorphism analysis (e.g., single nucleotide polymorphism, microsatellite)\n* Multiplex ligation probe amplification\n* Monosomy 3 means loss of chromosome 3. Determination of chromosome status may be affected by prior irradiation\n\nMonosomy 3, especially if combined with a frequently coexisting gain in chromosome 8q, is independently associated with metastatic risk. Chromosome 3 and 8 statuses may be determined with karyotyping or fluorescent in situ hybridization (FISH).",
+  "notes" : "**Note 1:** **Physician Statement** \n* Physician statement of chromosome 3 status can be used to code this data item when no other information is available.\n\n**Note 2:** **Related data item** \n* See related data item 3822: Chromosome 8q Status.",
+  "last_modified" : "2024-04-07T18:05:01.058Z",
+  "definition" : [ {
+    "key" : "chrom_3_status",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "No loss of chromosome 3" ], [ "1", "Partial loss of chromosome 3" ], [ "2", "Complete loss of chromosome 3" ], [ "3", "Loss of chromosome 3, NOS\nLoss of BAP1 expression" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nChromosome 3 status not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source Documents:** pathology report, specialty/reference lab report, gene expression profile report, other statement in medical record\n\n**Other names include** Monosomy 3, loss of chromosome 3, chromosome 3 loss of heterozygosity (LOH), isodisomy 3 (rare)\n\nFor further information, refer to the **Uveal Melanoma** cancer protocol published by the College of American Pathologist for the AJCC Staging System *Uveal Melanoma*",
+  "coding_guidelines" : "**1)** **Code 0** when there is no loss of chromosome 3, or disomy 3\n**2)** **Code 1** when there is partial loss of chromosome 3\n**3)** **Code 2** when there is complete loss of chromosome 3, or monosomy 3\n**4)** **Code 3** when there is loss of chromosome 3, how much not known\n**5)** **Code 9** when\n* **a.** No documentation in the medical record\n* **b.** Chromosome 3 not evaluated (assessed)\n* **c.** Unknown if Chromosome 3 evaluated (assessed)\n* **d.** Patients received radiation therapy prior to testing",
+  "rationale" : "Chromosome 3 Status is a Registry Data Collection Variable in AJCC.  This data item was previously collected as Uveal Melanoma, CS SSF #5."
+}

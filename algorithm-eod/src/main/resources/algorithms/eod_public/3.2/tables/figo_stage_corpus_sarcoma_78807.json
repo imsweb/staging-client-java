@@ -1,0 +1,22 @@
+{
+  "id" : "figo_stage_corpus_sarcoma_78807",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "FIGO Stage",
+  "title" : "FIGO Stage Corpus Sarcoma",
+  "description" : "Federation Internationale de Gynecologie et d'Obstetrique (FIGO) is a staging system for female reproductive cancers.\n\nFIGO is a worldwide organization of obstetricians and gynecologists who maintain the international staging systems for female genital organs.  The FIGO staging system has been adapted into the AJCC staging manual.  FIGO uses Roman numerals and subscripts to define a stage. There is no T, N, or M descriptor with FIGO stage, only a stage group.  For example, FIGO Stage IA is equivalent to T1a, FIGO Stage III can be either T3_ or N1, and FIGO Stage IV is M1.  \n\nFIGO stages vary by primary site, but the structure is similar throughout. FIGO no longer includes an in-situ stage (Tis, Stage 0).  For in situ tumors, code the following \n* Code 97: Not applicable: Carcinoma in situ (intraepithelial, noninvasive, preinvasive)\n\nNote: Do not confuse FIGO stage with FIGO grade.",
+  "notes" : "**Note 1:** **Physician Statement**\n* There must be a statement about FIGO stage from the managing physician in order to code this data item.\n  * Do not code FIGO stage based on the pathology report\n  * Do not code FIGO stage based only on T, N, M\n  * If \"FIGO\" is not included with a stated stage, then do not assume it is a FIGO stage\n\n**Note 2:** **FIGO Stage vs FIGO Grade** \n* FIGO stage is not the same thing as FIGO grade. Only code FIGO stage in this field, do not code FIGO grade.\n* Code FIGO grade in the grade fields\n\n**Note 3:** **Multiple FIGO stages**\n* If there is more than one FIGO stage provided from the clinical and pathological work up, code the most extensive FIGO stage.\n\n**Note 4:** **FIGO Stage 0 (in-situ)**\n* The FIGO stage definitions do not include Stage 0 (Tis).\n* Code 97 for any non-invasive neoplasm (behavior /2)",
+  "last_modified" : "2024-04-08T20:32:58.811Z",
+  "definition" : [ {
+    "key" : "figo",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "FIGO Stage I " ], [ "1A", "FIGO Stage IA " ], [ "1B", "FIGO Stage IB " ], [ "2", "FIGO Stage II " ], [ "2A", "FIGO Stage IIA " ], [ "2B", "FIGO Stage IIB" ], [ "3", "FIGO Stage III" ], [ "3A", "FIGO Stage IIIA" ], [ "3B", "FIGO Stage IIIB" ], [ "3C", "FIGO Stage IIIC" ], [ "4", "FIGO Stage IV " ], [ "4A", "FIGO Stage IVA" ], [ "4B", "FIGO Stage IVB" ], [ "98", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 98 will result in an edit error.)" ], [ "99", "Not documented in medical record\nFIGO stage not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source documents:** clinician’s notes, consultant notes, radiation therapy notes",
+  "rationale" : "FIGO stage is a Registry Data Collection Variable in AJCC for the female genital cancers. This data item was previously collected for the female genital cancers as: Vulva SSF #10, Vagina SSF #1, Cervix SSF #1, Corpus Carcinoma SSF #1, Corpus Sarcoma SSF #1, Ovary SSF #2, Fallopian Tube SSF #1, Peritoneum Female Genital SSF #1, and Placenta SSF #2."
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "derived_ss2018_primary_cutaneous_lymphomas_45083",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Derived SS2018: Primary Cutaneous Lymphomas (excluding MF and SS)",
+  "title" : "Derived Summary Stage 2018: Primary Cutaneous Lymphomas (excluding MF and SS)",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-02-15T14:24:45.240Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Localized only\n- Solitary lesion\n- Solitary skin involvement" ], [ "2", "Regional by direct extension only\n- Multiple lesions confined to one or two contiguous body regions\n- Multiple lesions, NOS\n- Regional skin involvement" ], [ "3", "Regional lymph node(s) involved only \n- Central\n- Peripheral node region that drains an area of current or prior skin involvement \n- Regional lymph node(s), NOS\n  + Lymph node(s), NOS" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n- Codes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant site(s) (including further contiguous extension)\n  + Blood/peripheral blood\n  + Bone marrow\n  + Extracutaneous non-lymph node disease present\n  + Generalized skin involvement\n  + Multiple lesions confined to discontiguous body regions\n  + Multiple lesions confined to three or more contiguous body regions\n  + Visceral (non-cutaneous) metastasis\n- Distant lymph node(s), NOS\n- Distant metastasis, NOS\n   + Carcinomatosis\n  + Distant metastasis WITH or WITHOUT distant lymph node(s)" ], [ "9", "Unknown if extension or metastasis" ] ]
+}
