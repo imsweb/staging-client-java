@@ -70,6 +70,7 @@ If a specific version is needed, the algorithm zip file can be downloaded and in
 
 | Version | Release                                                                      | Algorithm ZIP                                                                                                    |
 |---------|------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| 3.2     | [11.3.0](https://github.com/imsweb/staging-client-java/releases/tag/v11.3.0) | [eod_public-3.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.3.0/eod_public-3.2.zip) |
 | 3.1     | [10.3.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.3.0) | [eod_public-3.1.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.3.0/eod_public-3.1.zip) |
 | 3.0     | [10.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.0.0) | [eod_public-3.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/eod_public-3.0.zip) |
 | 2.1     | [8.0](https://github.com/imsweb/staging-client-java/releases/tag/v8.0)       | [eod_public-2.1.zip](https://github.com/imsweb/staging-client-java/releases/download/v8.0/eod_public-2.1.zip)    |
