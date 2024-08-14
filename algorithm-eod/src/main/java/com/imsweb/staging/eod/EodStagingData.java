@@ -85,6 +85,7 @@ public class EodStagingData extends StagingData {
         AGE_AT_DX("age_dx"),
         DISCRIMINATOR_1("discriminator_1"),
         DISCRIMINATOR_2("discriminator_2"),
+        YEAR_DX("year_dx"),
         NODES_POS("nodes_pos"),
         EOD_PRIMARY_TUMOR("eod_primary_tumor"),
         EOD_REGIONAL_NODES("eod_regional_nodes"),

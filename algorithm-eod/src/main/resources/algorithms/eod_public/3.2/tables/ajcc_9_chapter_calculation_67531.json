@@ -1,0 +1,34 @@
+{
+  "id" : "ajcc_9_chapter_calculation_67531",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "AJCC 9 Chapter Calculation",
+  "title" : "AJCC Chapter Calculation",
+  "last_modified" : "2023-07-27T20:00:44.544Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "ajcc_id",
+    "name" : "AJCC ID",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ajcc_version_number",
+    "name" : "AJCC Version Number",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C210-C211,C218", "8000,8010,8013,8020,8032-8033,8041,8051,8070-8072,8077,8083,8085-8086,8090", "3", "VALUE:9003", "Anus", "VALUE:09" ], [ "C210-C211,C218", "8123-8124,8140,8154", "3", "VALUE:9003", "Anus", "VALUE:09" ], [ "C210-C211,C218", "8215,8244,8246", "3", "VALUE:9003", "Anus", "VALUE:09" ], [ "C210-C211,C218", "8480,8490", "3", "VALUE:9003", "Anus", "VALUE:09" ], [ "C210-C211,C218", "8000,8010,8013,8020,8032-8033,8041,8051,8070-8072,8077,8083,8085-8086,8090", "2", "VALUE:XX", "Other Anus", "VALUE:88" ], [ "C210-C211,C218", "8123-8124,8140,8154", "2", "VALUE:XX", "Other Anus", "VALUE:88" ], [ "C210-C211,C218", "8215,8244,8246", "2", "VALUE:XX", "Other Anus", "VALUE:88" ], [ "C210-C211,C218", "8480,8490", "2", "VALUE:XX", "Other Anus", "VALUE:88" ], [ "C212", "8000,8010,8013,8020,8032-8033,8041,8051,8070-8072,8077,8083,8085-8086,8090", "*", "VALUE:XX", "Other Anus", "VALUE:88" ], [ "C212", "8123-8124,8140,8154", "*", "VALUE:XX", "Other Anus", "VALUE:88" ], [ "C212", "8215,8244,8246", "*", "VALUE:XX", "Other Anus", "VALUE:88" ], [ "C212", "8480,8490", "*", "VALUE:XX", "Other Anus", "VALUE:88" ], [ "C210-C212, C218", "8001-8005,8011-8012,8014-8015,8021-8031,8034-8040,8042-8050", "*", "VALUE:XX", "Other Anus", "VALUE:88" ], [ "C210-C212, C218", "8052-8060,8073-8076,8078-8082,8084", "*", "VALUE:XX", "Other Anus", "VALUE:88" ], [ "C210-C212, C218", "8091-8122,8130-8131,8141-8153,8155-8214", "*", "VALUE:XX", "Other Anus", "VALUE:88" ], [ "C210-C212, C218", "8220-8243,8245,8247-8474,8481-8484,8500-8700", "*", "VALUE:XX", "Other Anus", "VALUE:88" ], [ "C210-C212,C218", "8720-8790", "*", "VALUE:XX", "Other Anus", "VALUE:88" ] ]
+}

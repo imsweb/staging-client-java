@@ -1,0 +1,22 @@
+{
+  "id" : "her2_ish_summary_40783",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "HER2 ISH Summary",
+  "title" : "HER2 ISH Summary",
+  "description" : "HER2 in situ hybridization (ISH) Summary is the summary score for results of testing for ERBB2 gene copy number by any ISH method.  An immunohistochemistry (IHC) test identifies the protein expressed by the gene (ERBB2), and an ISH test identifies the number of copies of the gene (ERBB2) itself.\n\nIf an Immunochemistry (IHC) test is borderline or indeterminate, an ISH test may be performed. The ISH test is a method of testing for overexpression of the HER2 gene that uses fluorescent pieces of DNA that attach only to the HER2 gene copies in cells, which can then be counted under a special microscope.  ISH studies determine the presence or absence of gene amplification and methods include fluorescence in situ hybridization (FISH), chromogenic in situ hybridization (CISH), and silver-enhanced in situ hybridization (SISH). Some assays use a single probe to determine the number of HER2 gene copies present (single-probe assays) and others include a chromosome enumeration probe (CEP17) to determine the ratio of HER2 signals to copies of chromosome 17 (dual-probe assays). \n\nResults from single probe and dual probe ISH tests are reported differently and are collected in different data items. For dual probe tests, both HER2/CEP17 ratio and HER2 copy number results are collected in separate data items.",
+  "notes" : "**Note 1:** This SSDI is no longer required by any of the standard setters starting with 2021 diagnoses. \n* For cases diagnosed 2021+, this SSDI may be left blank\n\n**Note 2:** Physician statement of HER2 in situ hybridization (ISH) Summary can be used to code this data item when no other information is available.\n\n**Note 3:** The HER2 ISH test performed on the primary breast tissue is to be recorded in this data item. \n\n**Note 4:** Any type of ISH test (e.g., FISH, CISH, SISH) can be used to code this data item. The same test should be used to code all the HER2 ISH data items.",
+  "last_modified" : "2024-03-28T19:51:34.873Z",
+  "definition" : [ {
+    "key" : "her2_ish_summary",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Negative  [not amplified]" ], [ "2", "Equivocal " ], [ "3", "Positive [amplified]" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nResults cannot be determined (indeterminate)\nBorderline\nHER2 ISH Summary not assessed or unknown if assessed" ], [ "", "May be blank if diagnosis year is after 2020" ] ],
+  "additional_info" : "* **Source documents:** pathology report\n* **For further information,** refer to the **Breast Biomarker Reporting** cancer protocols published by the College of American Pathologists for the AJCC Staging System *Breast*",
+  "rationale" : "HER2 ISH Summary is a Registry Data Collection Variable in AJCC. It is a new data item for cases diagnosed 1/1/2018+."
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "perineural_invasion_24604",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Perineural Invasion",
+  "title" : "Perineural Invasion",
+  "description" : "Perineural Invasion, within or adjacent to the primary tumor, is a negative prognostic factor for cutaneous squamous cell carcinomas of the head and neck and carcinomas of the colon and rectum, eyelid, and lacrimal gland.\n\nPerineural invasion is infiltration of nerves in the area of the lesion by tumor cells or spread of tumor along the nerve pathway. The presence of perineural invasion has been shown in several studies to be an indicator of poor patient prognosis. If perineural invasion is not mentioned in the pathology report, do not assume that there is no perineural invasion.",
+  "notes" : "**Note 1:** **Physician Statement**\n* Physician statement of microscopically confirmed perineural invasion can be used to code this data item when no other information is available.\n\n**Note 2:** **Pathology report from a biopsy or surgical resection**\n* Information on **presence** of perineural invasion **must be from a pathology report** (biopsy or surgical resection)  \n* Absence of perineural invasion **can only be taken from a surgical resection pathology report**\n\n**Note 3:** **Perineural Invasion not documented on pathology report**\n* Code 9 if surgical resection of the primary site is performed and there is no mention of perineural invasion.\n* Do not assume that there is no perineural invasion",
+  "last_modified" : "2024-04-07T18:19:43.769Z",
+  "definition" : [ {
+    "key" : "perineural_invasion",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Perineural invasion not identified/not present\nNon-invasive neoplasm (behavior /2)" ], [ "1", "Perineural invasion identified/present" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nPathology report does not mention perineural invasion\nCannot be determined by the pathologist\nPerineural invasion not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source Documents:** pathology report (see **Note 3**)\n\n**Other names include** PIN, neurotropism",
+  "rationale" : "Perineural Invasion is a Registry Data Collection Variable in AJCC.  It was previously collected as Lacrimal Gland CS SSF #4."
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_adnexa_uterine_other",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Schema Selection AdnexaUterineOther",
+  "title" : "Schema selection for AdnexaUterineOther",
+  "last_modified" : "2024-04-15T17:20:47.565Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C571-C574", "8000-8700, 8720-8790", "MATCH" ] ]
+}

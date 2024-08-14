@@ -1,0 +1,22 @@
+{
+  "id" : "bilirubin_pretx_unit_98627",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Bilirubin Pretreatment Unit of Measure",
+  "title" : "Biliribun  Pretreatment Unit of Measure",
+  "description" : "Bilirubin Pretreatment Unit of Measure identifies the unit of measure for the bilirubin value measured prior to treatment. Bilirubin is commonly measured in units of Milligrams/deciliter (mg/dL) in the United States and Micromoles/liter (umol/L) in Canada and Europe.\n\nThere are two methods of describing bilirubin levels in the blood, weight in grams (milligrams per deciliter), usually used in the US, and molecular count in moles (micromoles per liter) in Canada. Conversion: 1 mg/dL = 17.1 umol/L. Code the unit of measure used by the facility laboratory\n\nThere are two related data items that record information on Bilirubin\n* 3813: Bilirubin Pretreatment Total Lab Value.\n* 3814: Bilirubin Pretreatment Unit of Measure.",
+  "notes" : "**Note 1:** **Physician Statement**\n* Physician statement of Bilirubin Pretreatment Unit of Measure can be used to code this data item when no other information is available.\n\n**Note 2:** **Pretreatment results only**\n* Record this data item based on a blood test performed at diagnosis (pre-treatment). Use the highest value available\n* Record the blood or serum creatinine value for this data item\n  * Do not use urine results to code this data item. \n\n**Note 3:** **Measurement definitions** \n* There are two main methods of describing concentrations: by weight, and by molecular count.\n* Weights are recorded in grams, and molecular counts are recorded in moles.\n* Milligrams/deciliter (mg/dL) is the unit of measure commonly used in the United States.\n* Micromoles/liter (umol/L) is the designated Systeme International (SI) unit of measure commonly used in Canada and Europe.\n•\t1 mg/dL of bilirubin is 17.1 umol/L.\n\n**Note 4:** **Related data item**\n* The same laboratory test should be used to record information in the related data item 3813: Bilirubin Pretreatment Total Lab Value.",
+  "last_modified" : "2024-04-08T16:03:18.786Z",
+  "definition" : [ {
+    "key" : "bilirubin_pretx_unit",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Milligrams per deciliter (mg/dL)" ], [ "2", "Micromoles/liter (umol/L)" ], [ "7", "Test ordered, results not in chart " ], [ "8", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nBilirubin unit of measure not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source documents:** clinical laboratory report (blood serum); value may be part of a metabolic or liver function panel\n\n**Other names include** TBIL\n\n**Normal Reference Range:**\n* 0.3-1.5 mg/dL (5-20.5 umol/L) \n* The normal range may vary slightly from lab to lab.",
+  "rationale" : "Bilirubin Pretreatment is a Registry Data Collection Variable in AJCC. Bilirubin Pretreatment Unit of Measure is needed to identify the unit in which bilirubin is measured and was previously collected as Liver, CS SSF #7."
+}

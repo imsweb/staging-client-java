@@ -1,0 +1,23 @@
+{
+  "id" : "extravascular_matrix_patterns_1397",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Extravascular Matrix Patterns",
+  "title" : "Extravascular Matrix Patterns",
+  "description" : "Extravascular Matrix Patterns, the presence of loops and networks in extracellular matrix patterns, is a prognostic factor for uveal melanoma.\n\nThe presence of extravascular matrix patterns is an indicator for shorter survival.  There are two different types of patterns: loops only, or loops forming networks.  The identification of the complex monocirculatory patterns (i.e., loops, networks, arcs with branching, parallel with cross-linking or a combination of these patterns) are done using confocal indocyanine green angiography. The patterns are assessed with light microscopy under a dark green filter after staining with periodic-acid Schiff without counterstain.  This determines the presence or absence of each matrix pattern, which appear deep purple against a pink background.",
+  "notes" : "**Note:** **Physician Statement** \n* Physician statement of extravascular matrix patterns can be used to code this data item when no other information is available.",
+  "last_modified" : "2024-04-07T17:57:13.423Z",
+  "definition" : [ {
+    "key" : "extravascular_matrix_patterns",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Extravascular matrix patterns not present/not identified" ], [ "1", "Extravascular matrix patterns present/identified" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nExtravascular Matrix Patterns not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source documents:** pathology report, confocal indocyanine green angiography report, clinician comment.\n\nFor further information, refer to the **Uveal Melanoma** cancer protocol published by the College of American Pathologists for the AJCC Staging System *Uveal Melanoma*",
+  "coding_guidelines" : "**1)** **Code 0** when pathology report states that loops and networks are not found\n**2)** **Code 1** when pathology reports states networks and/or loops present\n**3)** **Code 9** when\n* **a.** Pathology report available and there is no mention of extravascular matrix patterns (loops or networks)\n* **b.** Extravascular matrix patterns not assessed or unknown if assessed",
+  "rationale" : "Extravascular Matrix Patterns is a Registry Data Collection Variable in AJCC 8.  This data item was previously collected as Uveal Melanoma, CS SSF #11, and CS SSF #12. These two data items were combined into one data for cases diagnosed 1/1/2018+."
+}

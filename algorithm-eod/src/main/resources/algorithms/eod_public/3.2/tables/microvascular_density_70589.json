@@ -1,0 +1,22 @@
+{
+  "id" : "microvascular_density_70589",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Microvascular Density",
+  "title" : "Microvascular Density (MVD)",
+  "description" : "Microvascular Density, a quantitative measure of tumor vascularity, is a prognostic factor for uveal melanoma.\n\nA high density of microvessels, identified immunohistochemically using antibodies for vascular endothelial cells (such as Factor VIII-associated antigen, CD34 epitope, etc.), has prognostic significance in a melanoma of the uvea. Higher counts have more unfavorable outcome. To obtain microvascular density, the pathologist, using a microscope with an eyepiece graticule (grid) of approximately 0.3 square mm and X200 magnification, counts microvessels from the most highly vascularized areas (“hot spots”) of the tumor, identified by scanning the entire immunostained tumor at lower magnification. Any immunolabeled element, clearly separate from an adjacent one and either totally inside the graticule or touching its top or left border, is counted as a microvessel. In several studies, the range of microvascular density was from 5 to 121 vessels, although this will vary depending on the type of immunostaining and area of graticule used.",
+  "notes" : "**Note 1:** **Physician Statement** \n* Physician statement of microvascular density (MVD) can be used to code this data item when no other information is available.\n\n**Note 2:** **Recording the results** \n* Record the results as expressed on the laboratory test\n* Record the information based on quartiles for laboratory standards if this is the only expression of results.\n* Code the microvascular density (number of microvessels) in whole numbers as stated in the pathology report in the code range 001 (1 vessel per 0.3 square millimeters) to 500 (500 vessels per 0.3 square millimeters).",
+  "last_modified" : "2024-04-07T17:59:52.245Z",
+  "definition" : [ {
+    "key" : "mvd",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "No vessels involved" ], [ "01-99", "01-99 vessels per 0.3 square millimeter (mm2)" ], [ "X1", "Greater than or equal to 100 vessels per 0.3 square millimeter (mm2)" ], [ "X2", "Lowest quartile for laboratory" ], [ "X3", "Second quartile for laboratory" ], [ "X4", "Third quartile for laboratory" ], [ "X5", "Highest quartile for laboratory" ], [ "X7", "Test ordered, results not in chart" ], [ "X8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "X9", "Not documented in medical record\nMicrovascular Density (MVD) not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source documents:** pathology report\n\nFor further information, refer to the **Uveal Melanoma** cancer protocol published by the College of American Pathologists for the AJCC Staging System *Uveal Melanoma*",
+  "rationale" : "Microvascular Density is a Registry Data Collection Variable in AJCC.  This data item was previously collected as Uveal Melanoma, CS SSF #13."
+}

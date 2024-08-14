@@ -1,0 +1,23 @@
+{
+  "id" : "serum_alb_pretx_level_58159",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Serum Albumin Pretreatment Level",
+  "title" : "Serum Albumin Pretreatment Level",
+  "description" : "Albumin is the most abundant protein in human blood plasma.  Serum albumin pretreatment level is a prognostic factor for plasma cell myeloma.\n\nThe Revised International Staging System (RISS or R-ISS) is now used to stage plasma cell myeloma (9732/3), using several different criteria. The stages are based on the absence or presence of the following related criteria. \n* 3931: Serum Beta-2 Microglobulin Pretreatment Level\n* 3930: Serum Albumin Pretreatment Level\n* 3857: High Risk Cytogenetics\n* 3869: LDH Level\n\nRequired for Staging: The AJCC Staging System Plasma Cell Myeloma and Plasma Cell Disorders (9732/3 only) and EOD. \n* Note: RISS stage is not applicable for the descriptions of plasma multiple myeloma that are listed in the codes 1 and 9 in the SSDI Schema Discriminator 1: Plasma Cell Myeloma Terminology. If you have coded 1 or 9 for this Schema Discriminator, the four data items listed above are BLANK.\n\nThe RISS stages are\n* Stage I: Serum Beta-2-microglobulin <3.5 mg/L and serum albumin > 3.5 g/dL and no high-risk cytogenetics and Normal LDH\n* Stage II: Not R-ISS I or III\n* Stage III: Serum Beta-2-microglobulin > 5.5 mg/L and high-risk cytogenetics and/or high LDH",
+  "notes" : "**Note 1:** **Physician statement**\n* Physician statement of Serum Albumin Pretreatment Level can be used to code this data item when no other information is available\n\n**Note 2:** **Pretreatment results only**\n* Record this data item based on a **blood test** performed at diagnosis (pre-treatment). Use the highest value available.\n   * Do not use results from a urine test\n\n**Note 3:** **Component of RISS Stage**\n* Serum albumin is part of the Revised International Staging (RISS). \n* Elevated serum albumin is defined by ≥3.5 g/dL\n  * Use the cut points listed in the table below regardless of the lab’s reference range\n* A lab value expressed in grams per liter (g/L) is 10 times the same value expressed in g/dL; therefore, the cut point of 3.5 g/dL is equivalent to 35 g/L",
+  "last_modified" : "2024-04-30T18:13:24.510Z",
+  "definition" : [ {
+    "key" : "serum_alb_pretx_level",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Serum albumin <3.5 g/dL  " ], [ "1", "Serum albumin ≥3.5 g/dL " ], [ "5", "Schema Discriminator 1: Plasma Cell Myeloma Terminology coded to 1 or 9" ], [ "7", "Test ordered, results not in chart" ], [ "9", "Not documented in medical record\nSerum Albumin not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source documents:** laboratory tests (blood only)",
+  "coding_guidelines" : "**1) Code 5** if Schema Discriminator 1: Plasma Cell Myeloma Terminology is coded to 1 or 9\n\n**2) Code 9** when there is no mention of the serum albumin",
+  "rationale" : "Serum albumin pretreatment level is a prognostic factor required in AJCC 8th edition, Chapter 82 Plasma Cell Myeloma and Plasma Cell Disorders, for the Revised International Staging System (RISS).  It is a new data item for cases diagnosed 1/1/2018+."
+}

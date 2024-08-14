@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_buccal_mucosa",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Schema Selection BuccalMucosa",
+  "title" : "Schema selection for BuccalMucosa",
+  "last_modified" : "2024-04-15T16:35:30.694Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C060-C061", "8000-8700,8982", "MATCH" ] ]
+}

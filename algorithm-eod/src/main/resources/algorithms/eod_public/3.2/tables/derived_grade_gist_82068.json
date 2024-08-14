@@ -1,0 +1,18 @@
+{
+  "id" : "derived_grade_gist_82068",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Derived Grade GIST",
+  "title" : "Derived Grade",
+  "last_modified" : "2024-02-14T18:18:39.697Z",
+  "definition" : [ {
+    "key" : "derived_summary_grade",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "L", "Low: 5 or fewer mitoses per 5 square mm" ], [ "H", "High: Over 5 mitoses per 5 square mm" ], [ "A", "Well differentiated" ], [ "B", "Moderately differentiated" ], [ "C", "Poorly differentiated" ], [ "D", "Undifferentiated, anaplastic" ], [ "9", "Grade cannot be assessed; Unknown" ] ]
+}

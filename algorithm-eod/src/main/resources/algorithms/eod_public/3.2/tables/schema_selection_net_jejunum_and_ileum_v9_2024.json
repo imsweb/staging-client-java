@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_net_jejunum_and_ileum_v9_2024",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Schema Selection NET Jejunum and Ileum [V9: 2024+]",
+  "title" : "Schema selection for NET Jejunum and Ileum [V9: 2024+]",
+  "last_modified" : "2024-05-22T18:04:43.013Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C171-C173,C178-C179", "8150-8153,8155-8156,8158,8240-8242,8249,8683", "2024-9998, 9999,", "MATCH" ] ]
+}

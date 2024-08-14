@@ -1,0 +1,23 @@
+{
+  "id" : "high_risk_features_73750",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "High Risk Features",
+  "title" : "High Risk Histologic Features",
+  "description" : "High Risk Histologic Features are defined in AJCC 8 Chapter 15 to include the terms “poor differentiation, desmoplasia, sarcomatoid differentiation, undifferentiated.”  High risk histologic features are a prognostic factor for cutaneous cell carcinomas of the head and neck.\n\nIn addition to the tumor size (diameter, not depth), the presence of certain specific high-risk features is of prognostic significance for skin cancers of the head and neck.",
+  "notes" : "**Note 1:** **Physician Statement** \n* Physician statement of high-risk histologic features can be used to code this data item when no other information is available.\n\n**Note 2:** **High risk histologic features include** \n* Desmoplasia\n* Poor differentiation (grade 3)\n* Sarcomatoid differentiation (features)\n* Undifferentiated (grade 4)",
+  "last_modified" : "2024-04-08T15:33:55.480Z",
+  "definition" : [ {
+    "key" : "high_risk_features",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "No high risk histologic features\nNon-invasive neoplasm (behavior /2)" ], [ "1", "Desmoplasia" ], [ "2", "Poor differentiation (grade 3)" ], [ "3", "Sarcomatoid differentiation" ], [ "4", "Undifferentiated (grade 4)" ], [ "5", "Multiple high risk histologic features" ], [ "6", "Histologic features, NOS (type of high risk histologic feature not specified)" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error)" ], [ "9", "Not documented in medical record\nHigh risk histologic features not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source documents** pathology report, consultation report, other statements in the medical record\n\n**Other names include** high risk histologic features, high risk tumor features\n\nFor further information, refer to the **Cutaneous Carcinoma of Head and Neck** cancer protocols published by the College of American Pathologist for the AJCC Staging Systems for *Cutaneous Carcinoma of Head and Neck*",
+  "coding_guidelines" : "**1)** Code the presence or absence of high-risk histologic features as documented in the pathology report.\n**2)** **Code 1** for desmoplasia\n**3)** **Code 2** for poor differentiation (grade 3)\n**4)** **Code 3** for sarcomatoid differentiation (features)\n**5)** **Code 4** for undifferentiated (grade 4)\n**6)** **Code 5** when more than one high-risk feature is present\n**7)** **Code 6** when high risk features are present, but it is not specified which one\n**8)** **Code 9** when\n  * **a.** Not documented in medical record\n  * **b.** High risk features not evaluated (assessed)\n  * **c.** Unknown if high-risk features evaluated (assessed)",
+  "rationale" : "High Risk Histologic Features is a Registry Data Collection Variable in AJCC.  It was previously collected as Skin, CS SSF # 12."
+}

@@ -1,0 +1,23 @@
+{
+  "id" : "tumor_growth_pattern_31889",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Tumor Growth Pattern",
+  "title" : "Tumor Growth Pattern",
+  "description" : "Tumor Growth Pattern refers to the growth pattern of intrahepatic cholangiocarcinoma.\n\nThe tumor growth patterns of intrahepatic cholangiocarcinoma include the mass forming type, the periductal infiltrating type, and a mixed type. \n* **Periductal infiltrating type** (20%): spreads along the duct in a diffuse manner that may be associated with poorer prognosis. This type of cholangiocarcinoma demonstrates a diffuse longitudinal growth pattern along the bile duct. Limited analyses suggest that the diffuse periductal infiltrating type is associated with a poor prognosis.\n* **Mass-forming** (60% of intrahepatic bile duct cases), which grows outward (radially) from the duct and invades the liver parenchyma in a well-defined mass.",
+  "notes" : "**Note:** **Physician Statement** \n* Physician statement of tumor growth pattern can be used to code this data item when no other information is available",
+  "last_modified" : "2024-04-05T14:16:53.219Z",
+  "definition" : [ {
+    "key" : "tumor_growth_pattern",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Mass-forming" ], [ "2", "Periductal infiltrating" ], [ "3", "Mixed mass-forming and periductal infiltrating" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nRadiology and/or pathology report does not mention tumor growth pattern\nCannot be determined by the pathologist\nTumor growth pattern not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source documents:** radiology, surgery, or pathology report",
+  "coding_guidelines" : "**Record the specific type of tumor growth pattern.**\n\n**1)** **Code 1** when documentation describes the tumor as mass-forming only\n**2)** **Code 2** when documentation describes the tumor as periductal infiltrating only\n\n**3)** **Code 3** when documentation mentions mixed, mass forming and periductal infiltrating\n\n**4)** **Code 9** when\n  * **a.** Not documented in the medical record\n  * **b.** Tumor growth pattern not evaluated (assessed)\n  * **c.** Unknown if Tumor Growth Pattern evaluated (assessed)",
+  "rationale" : "Tumor Growth Pattern is a Registry Data Collection Variable in AJCC. This data item was previously collected for Intrahepatic Bile Duct, SSF #10."
+}

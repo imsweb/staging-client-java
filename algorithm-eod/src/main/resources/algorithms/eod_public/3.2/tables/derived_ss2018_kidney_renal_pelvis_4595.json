@@ -1,0 +1,19 @@
+{
+  "id" : "derived_ss2018_kidney_renal_pelvis_4595",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Derived SS2018: Kidney Renal Pelvis",
+  "title" : "Derived Summary Stage 2018: Kidney Renal Pelvis",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-02-14T20:16:07.706Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "In situ, intraepithelial, noninvasive\n\nPapillary \n- Non-infiltrating or non-invasive papillary transitional cell carcinoma\n- Non-infiltrating or non-invasive papillary urothelial carcinoma\n- Papillary transitional cell carcinoma, with inferred description of non-invasion\n- Papillary urothelial carcinoma, with inferred description of non-invasion\n\nNonpapillary\n- Carcinoma in situ, NOS \n- Sessile (flat) (solid) carcinoma in situ   \n- Transitional cell carcinoma in situ\n- Urothelial carcinoma (in situ, non-infiltrating, non-invasive)\n\nMultifocal non-invasive tumors" ], [ "1", "Localized only (localized, NOS)\n- Confined to renal pelvis, NOS\n- Confined to ureter, NOS\n- Muscularis \n  + Renal pelvis only\n  + Ureter only\n- Subepithelial connective tissue (lamina propria, submucosa) \n  + Renal pelvis only\n  + Ureter only" ], [ "2", "Regional by direct extension only\n- Extension to bladder from ureter\n  + Muscularis of distal ureter and/or bladder\n  + Subepithelial connective tissue of distal ureter and/or bladder\n- Invasion beyond muscularis into\n  + Peripelvic fat (renal pelvis)\n  + Periureteric fat (ureter)\n  + Retroperitoneal soft/connective tissue\n- Renal pelvis and ureter (unifocal or multifocal)\n  + Duodenum (from right renal pelvis or right ureter)\n  + Ipsilateral adrenal gland (suprarenal) gland\n  + Major blood vessel(s)\n     * Aorta\n     * Renal artery/vein\n     * Vena cava (inferior)\n   + Muscularis\n     * Distal ureter from proximal ureter \n     * Renal pelvis from ureter\n     * Ureter from renal pelvis\n    + Psoas muscle (ureter)\n    + Subepithelial connective tissue\n       * Distal ureter from proximal ureter\n       * Renal pelvis from ureter\n       * Ureter from renal pelvis\n    + Tumor thrombus in a renal vein, NOS\n- Renal pelvis only\n  + Ipsilateral kidney parenchyma and kidney, NOS" ], [ "3", "Regional lymph node(s) involved only\n- All sites\n  + Lateral aortic (lumbar)\n  + Paracaval\n  + Renal hilar\n  + Retroperitoneal, NOS\n  + Regional lymph node(s), NOS\n     * Lymph node(s), NOS\n- Renal Pelvis\n  + Aortic (para-aortic, periaortic, NOS)\n- Ureter\n  + Iliac (common, external, NOS)\n  + Internal (hypogastric) (obturator)\n  + Pelvic, NOS\n  + Periureteral" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n- Codes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant site(s) (including further contiguous extension)\n  + Ascending colon (from right renal pelvis or right ureter)\n  + Bladder (wall or mucosa) from renal pelvis\n  + Colon, NOS\n  + Descending colon (from right renal pelvis or right ureter)\n  + Ipsilateral kidney parenchyma from ureter\n  + Liver (from right renal pelvis or right ureter)\n  + Pancreas\n  + Perirenal (perinephric) fat (via kidney)\n  + Prostate (ureter)\n  + Spleen (from left renal pelvis or left ureter)\n  + Uterus (ureter)\n- Distant lymph node(s), NOS\n- Distant metastasis, NOS\n  + Carcinomatosis\n  + Distant metastasis WITH or WITHOUT distant lymph node(s)" ], [ "9", "Unknown if extension or metastasis" ] ]
+}

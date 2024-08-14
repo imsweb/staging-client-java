@@ -1,0 +1,23 @@
+{
+  "id" : "ca_125_pretx_interpretation_51295",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "CA-125 PreTx Interpretation",
+  "title" : "CA-125 (Carbohydrate Antigen 125) Pretreatment Interpretation",
+  "description" : "Carbohydrate Antigen 125 (CA-125)/CA-125 II is a tumor marker that is useful for following the response to therapy in patients with ovarian cancer, who may have elevated levels of this marker.\n\nCA-125/CA-125 II is a tumor marker that is not specific to ovarian or primary peritoneal cancer but is useful to monitor for success of treatment and recurrence.  Because it can be elevated in many diseases affecting the peritoneal lining of the abdominal and pelvic cavity, it is not a screening test for women who have no history of cancer.  Any value over 35 is highly linked with cancer and about 80% of ovarian cancers show an elevated CA-125/CA-125 II.  However, a result in the normal range does not rule out cancer. Values up to 65 U/ml may be considered borderline, and values over 200 are unlikely to be due to a benign condition.  CA-125/CA-125 II monitors for success of treatment and recurrence.  After obtaining a baseline value prior to treatment, a lower result on a subsequent test indicates a response to treatment, and an increasing value indicates possible recurrence.",
+  "notes" : "**Note 1:** **Physician Statement** \n* Physician statement of CA-125/CA-125 II pretreatment interpretation can be used to code this data item when no other information is available.\n\n**Note 2:** **Blood or Serum testing only** \n* Record only the blood or serum CA-125/CA-125 II interpretation for this data item. \n* Do not record CA-125 test results based on fluid from the chest or abdominal cavity. \n\n**Note 3:** **Pretreatment results only**\n* Record the CA-125/CA-125 II status prior to treatment.",
+  "last_modified" : "2024-04-08T20:46:51.004Z",
+  "definition" : [ {
+    "key" : "ca125_pretx_interpretation",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Negative/normal; within normal limits" ], [ "1", "Positive/elevated" ], [ "2", "Stated as borderline; undetermined whether positive or negative" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error)" ], [ "9", "Not documented in medical record\nCA-125 not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source documents:** clinical laboratory report (blood or serum test); may be reported in history, clinician or consultant notes or pathology report\n\n**Other names include** Cancer Antigen 125, CA 125, CA125, Carbohydrate Antigen 125, mucin 16, MUC16, CA 125 II\n\n**Normal reference range**\n* < 35 units per milliliter (U/ml); SI: < 35 kiloUnits/Liter (KU/L).\n* May also be reported as micrograms/milliliter (g/mL or ug/mL).\n* Normal values may vary with patient age and from lab to lab \n* The typical human reference ranges are 0 to less than or equal 35 units per milliliter (U/mL). This is equivalent to kU/L.",
+  "coding_guidelines" : "**1)** Record the clinician’s interpretation of the highest value prior to treatment from a blood or serum test, based on the reference range used by the lab.  \n**2)** Do **not** code the result from thoracentesis or paracentesis fluid. \n**3)** **Code 0** when the CA-125/CA-125 II is reported as negative or normal.\n**4)** **Code 1** when the CA-125/CA-125 II is reported as positive or elevated.\n**5)** **Code 2** when the CA-125/CA-125 II is reported as borderline; undetermined whether positive or negative.\n**6)** **Code 7** when the CA-125/CA-125 II test was ordered but the results are not in the medical record.\n**7)** **Code 9** when\n* **a.** No information in the medical record\n* **b.** CA-125/CA-125 II test not done (not assessed)\n* **c.** Unknown if CA-125/CA-125 II test was performed (unknown if assessed)\n* **d.** There is no statement that the CA-125/CA-125 II is positive/elevated, negative/normal, and the lab value with its normal range (from which you can determine interpretation) is not documented.",
+  "rationale" : "Preoperative CA-125/CA-125 II is a Registry Data Collection Variable listed in AJCC.  It was previously collected as Ovary, CS SSF #1."
+}

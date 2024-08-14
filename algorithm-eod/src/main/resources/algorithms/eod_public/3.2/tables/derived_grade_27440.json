@@ -1,0 +1,18 @@
+{
+  "id" : "derived_grade_27440",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Derived Grade",
+  "title" : "Derived Grade",
+  "last_modified" : "2024-02-15T18:26:08.155Z",
+  "definition" : [ {
+    "key" : "derived_summary_grade",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "G1: Mitotic count (per 2mm2) less than 2 AND \n        Ki-67 index (%) less than 3\n\nStated as WHO Grade 1" ], [ "2", "G2: Mitotic count (per 2mm2) equal 2-20 OR\n        Ki-67 index (%) equal 3-20\n\nStated as WHO Grade 2" ], [ "3", "G3: Mitotic count (per 2mm2) greater than 20 OR \n    Ki-67 index (%) greater than 20\n\nStated as WHO Grade 3" ], [ "A", "Well differentiated" ], [ "B", "Moderately differentiated" ], [ "C", "Poorly differentiated" ], [ "D", "Undifferentiated, anaplastic" ], [ "9", "Grade cannot be assessed (GX); Unknown" ] ]
+}

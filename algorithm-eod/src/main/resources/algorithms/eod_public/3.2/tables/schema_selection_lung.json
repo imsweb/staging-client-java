@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_lung",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Schema Selection Lung",
+  "title" : "Schema selection for Lung",
+  "last_modified" : "2024-04-18T18:10:05.194Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C340-C343,C348-C349", "8000-8700, 8720-8790, 8972,8980", "2018-2024", "MATCH" ] ]
+}

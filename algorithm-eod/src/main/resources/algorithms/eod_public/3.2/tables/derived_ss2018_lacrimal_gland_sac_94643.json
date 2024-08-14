@@ -1,0 +1,19 @@
+{
+  "id" : "derived_ss2018_lacrimal_gland_sac_94643",
+  "algorithm" : "eod_public",
+  "version" : "3.2",
+  "name" : "Derived SS2018: Lacrimal Gland/Sac",
+  "title" : "Derived Summary Stage 2018: Lacrimal Gland/Sac",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-02-14T17:08:21.423Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "In situ: noninvasive, intraepithelial" ], [ "1", "Localized only (localized, NOS)\n- Confined to lacrimal gland\n  + WITH or WITHOUT extraglandular extension into the orbital soft tissue\n  + No periosteal or orbital bone involvement or UNKNOWN if involved" ], [ "2", "Regional by direct extension only\n- Confined to lacrimal gland \n  + AND involvement of periosteum AND/OR periorbital bone" ], [ "3", "Regional lymph node(s) involved only\n- Cervical, NOS\n- Mandibular, NOS\n  + Submandibular (submaxillary)\n- Parotid, NOS\n  + Infra-auricular\n  + Preauricular\n- Regional lymph node(s), NOS\n  + Lymph node(s), NOS" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n- Codes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant site(s) (including further contiguous extension)\n   + Adjacent structure(s), NOS\n   + Brain\n   + Cavernous sinus\n   + Orbital bone\n   + Periosteum\n   + Pterygoid fossa \n   + Sinuses\n   + Superior orbital fissure\n   + Temporal fossa\n- Distant lymph node(s), NOS\n- Distant metastasis, NOS \n  + Carcinomatosis\n  + Distant metastasis WITH or WITHOUT distant lymph node(s)" ], [ "9", "Unknown if extension or metastasis" ] ]
+}
