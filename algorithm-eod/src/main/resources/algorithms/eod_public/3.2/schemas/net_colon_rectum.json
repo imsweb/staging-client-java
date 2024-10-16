@@ -296,7 +296,7 @@
     "tables" : [ {
       "id" : "ajcc_chapter_calculation_76566",
       "inputs" : [ "hist", "behavior" ],
-      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+      "outputs" : [ "ajcc_id", "ajcc_version_number" ]
     } ]
   }, {
     "id" : "summary_stage_2018",
@@ -305,10 +305,10 @@
       "key" : "eod_2018_t",
       "value" : "90"
     }, {
-      "key" : "eod_2018_n",
+      "key" : "eod_2018_m",
       "value" : "90"
     }, {
-      "key" : "eod_2018_m",
+      "key" : "eod_2018_n",
       "value" : "90"
     } ],
     "tables" : [ {
@@ -412,10 +412,10 @@
     "tables" : [ {
       "id" : "eod_tnm_component_cleanup_58170",
       "inputs" : [ "ajcc_id" ],
-      "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
+      "outputs" : [ "eod_2018_t", "eod_2018_n", "eod_2018_m", "eod_2018_stage_group" ]
     } ]
   } ],
   "involved_tables" : [ "nodes_dfe", "neoadjuvant_therapy_37302", "grade_post_therapy_clin_2541", "radiation_surg_seq", "ss2018_colon_and_rectum_including_net_40538", "tumor_size_pathological_full_62176", "nodes_pos_fpa", "parse_t_2177", "mets_hci", "parse_n_67182", "schema_selection_net_colon", "neoadj_tx_clinical_response_31723", "ki_67_67661", "ajcc_chapter_calculation_76566", "histology", "nodes_exam_76029", "extension_bfi", "derived_ss2018_colon_and_rectum_35271", "combined_grade_56638", "behavior", "tnm_8_path_stage_group_for_eod_47623", "tumor_size_clinical_full_74867", "in_situ_to_88s_14856", "tumor_size_with_primary_tumor_for_ajcc_t_38905", "systemic_surg_seq", "grade_pathological_26086", "tumor_size_summary_full_31213", "neoadj_tx_treatment_effect_18122", "parse_m_47057", "grade_post_therapy_path_76876", "primary_site", "tnm8_inclusions_52907", "eod_tnm_component_cleanup_58170", "grade_clinical_26768", "year_dx_validation", "summary_stage_rpa", "derived_grade_27440" ],
-  "last_modified" : "2024-08-13T16:43:28.342Z",
+  "last_modified" : "2024-10-15T21:25:38.942Z",
   "on_invalid_input" : "CONTINUE"
 }

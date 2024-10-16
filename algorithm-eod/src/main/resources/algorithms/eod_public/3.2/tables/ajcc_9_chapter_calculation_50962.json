@@ -4,7 +4,7 @@
   "version" : "3.2",
   "name" : "AJCC 9 Chapter Calculation",
   "title" : "AJCC 9 Chapter Calculation",
-  "last_modified" : "2024-03-29T18:25:05.190Z",
+  "last_modified" : "2024-08-22T16:26:29.308Z",
   "definition" : [ {
     "key" : "hist",
     "name" : "Histology",
@@ -26,5 +26,5 @@
     "name" : "AJCC Version Number",
     "type" : "ENDPOINT"
   } ],
-  "rows" : [ [ "8020,8023,8033,8041,8045,8070,8082", "3", "VALUE:9013", "Thymus", "VALUE:09" ], [ "8123,8140,8144", "3", "VALUE:9013", "Thymus", "VALUE:09" ], [ "8200,8240,8249,8260", "3", "VALUE:9013", "Thymus", "VALUE:09" ], [ "8310", "3", "VALUE:9013", "Thymus", "VALUE:09" ], [ "8430,8480", "3", "VALUE:9013", "Thymus", "VALUE:09" ], [ "8560,8580-8586,8980", "3", "VALUE:9013", "Thymus", "VALUE:09" ], [ "8020,8023,8033,8041,8045,8070,8082", "2", "VALUE:XX", "Other Thymus", "VALUE:88" ], [ "8123,8140,8144", "2", "VALUE:XX", "Other Thymus", "VALUE:88" ], [ "8200,8240,8249,8260", "2", "VALUE:XX", "Other Thymus", "VALUE:88" ], [ "8310", "2", "VALUE:XX", "Other Thymus", "VALUE:88" ], [ "8430,8480", "2", "VALUE:XX", "Other Thymus", "VALUE:88" ], [ "8560,8580-8586,8980", "2", "VALUE:XX", "Other Thymus", "VALUE:88" ], [ "8000-8015,8021-8022,8030-8032,8034-8040,8042-8044,8046-8060,8071-8081,8083-8122", "*", "VALUE:XX", "Other Thymus", "VALUE:88" ], [ "8124-8131,8141-8143,8145-8191", "*", "VALUE:XX", "Other Thymus", "VALUE:88" ], [ "8201-8231,8241-8248,8250-8257,8261-8300", "*", "VALUE:XX", "Other Thymus", "VALUE:88" ], [ "8311-8420,8440-8474,8481-8552,8561-8576,8587-8700,8720-8790", "*", "VALUE:XX", "Other Thymus", "VALUE:88" ] ]
+  "rows" : [ [ "8013,8020,8023,8033,8041,8045,8070,8082", "3", "VALUE:9013", "Thymus", "VALUE:09" ], [ "8123,8140,8144", "3", "VALUE:9013", "Thymus", "VALUE:09" ], [ "8200,8240,8249,8260", "3", "VALUE:9013", "Thymus", "VALUE:09" ], [ "8310", "3", "VALUE:9013", "Thymus", "VALUE:09" ], [ "8430,8480", "3", "VALUE:9013", "Thymus", "VALUE:09" ], [ "8560,8580-8586,8980", "3", "VALUE:9013", "Thymus", "VALUE:09" ], [ "8013,8020,8023,8033,8041,8045,8070,8082", "2", "VALUE:XX", "Other Thymus", "VALUE:88" ], [ "8123,8140,8144", "2", "VALUE:XX", "Other Thymus", "VALUE:88" ], [ "8200,8240,8249,8260", "2", "VALUE:XX", "Other Thymus", "VALUE:88" ], [ "8310", "2", "VALUE:XX", "Other Thymus", "VALUE:88" ], [ "8430,8480", "2", "VALUE:XX", "Other Thymus", "VALUE:88" ], [ "8560,8580-8586,8980", "2", "VALUE:XX", "Other Thymus", "VALUE:88" ], [ "8000-8012,8014-8015,8021-8022,8030-8032,8034-8040,8042-8044,8046-8060,8071-8081,8083-8122", "*", "VALUE:XX", "Other Thymus", "VALUE:88" ], [ "8124-8131,8141-8143,8145-8191", "*", "VALUE:XX", "Other Thymus", "VALUE:88" ], [ "8201-8231,8241-8248,8250-8257,8261-8300", "*", "VALUE:XX", "Other Thymus", "VALUE:88" ], [ "8311-8420,8440-8474,8481-8552,8561-8576,8587-8700,8720-8790", "*", "VALUE:XX", "Other Thymus", "VALUE:88" ] ]
 }

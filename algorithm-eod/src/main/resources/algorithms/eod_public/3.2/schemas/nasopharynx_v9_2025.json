@@ -348,7 +348,7 @@
     "tables" : [ {
       "id" : "ajcc_9_chapter_calculation_63694",
       "inputs" : [ "hist" ],
-      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+      "outputs" : [ "ajcc_id", "ajcc_version_number" ]
     } ]
   }, {
     "id" : "summary_stage_2018",
@@ -357,10 +357,10 @@
       "key" : "eod_2018_t",
       "value" : "90"
     }, {
-      "key" : "eod_2018_n",
+      "key" : "eod_2018_m",
       "value" : "90"
     }, {
-      "key" : "eod_2018_m",
+      "key" : "eod_2018_n",
       "value" : "90"
     } ],
     "tables" : [ {
@@ -460,10 +460,10 @@
     "tables" : [ {
       "id" : "eod_tnm_component_cleanup_58170",
       "inputs" : [ "ajcc_id" ],
-      "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
+      "outputs" : [ "eod_2018_t", "eod_2018_n", "eod_2018_m", "eod_2018_stage_group" ]
     } ]
   } ],
   "involved_tables" : [ "eod_mets_v9_58862", "neoadjuvant_therapy_37302", "radiation_surg_seq", "nasopharynx_pharyngealtonsil_84756", "schema_selection_nasopharynx_v9_2025", "extranodal_extension_head_and_neck_clinical_51375", "nodes_pos_fpa", "parse_t_2177", "tnm_9_path_stage_group_5176", "parse_n_67182", "extranodal_extension_head_and_neck_pathological_93423", "ajcc_9_chapter_calculation_63694", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "derived_ss2018_nasopharynx_69453", "eod_regional_nodes_v9_73197", "lymph_nodes_size_of_metastasis_87329", "eod_primary_tumor_v9_192", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "grade_post_therapy_clin_95734", "grade_clinical_standard_94331", "derived_grade_standard_1196", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "systemic_surg_seq", "neoadj_tx_treatment_effect_18122", "ss2018_nasopharynx_excluding_melanoma_8720_8790_copy_99106", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "grade_pathological_standard_94268", "year_dx_validation", "summary_stage_rpa", "grade_post_therapy_path_32110", "tnm9_inclusions_99926" ],
-  "last_modified" : "2024-08-13T16:43:32.784Z",
+  "last_modified" : "2024-10-15T21:25:46.102Z",
   "on_invalid_input" : "CONTINUE"
 }

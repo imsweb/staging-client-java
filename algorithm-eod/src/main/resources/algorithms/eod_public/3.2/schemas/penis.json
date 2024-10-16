@@ -310,7 +310,7 @@
     "tables" : [ {
       "id" : "ajcc_chapter_calculation_11956",
       "inputs" : [ "hist" ],
-      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+      "outputs" : [ "ajcc_id", "ajcc_version_number" ]
     } ]
   }, {
     "id" : "summary_stage_2018",
@@ -319,10 +319,10 @@
       "key" : "eod_2018_t",
       "value" : "90"
     }, {
-      "key" : "eod_2018_n",
+      "key" : "eod_2018_m",
       "value" : "90"
     }, {
-      "key" : "eod_2018_m",
+      "key" : "eod_2018_n",
       "value" : "90"
     } ],
     "tables" : [ {
@@ -422,10 +422,10 @@
     "tables" : [ {
       "id" : "eod_tnm_component_cleanup_58170",
       "inputs" : [ "ajcc_id" ],
-      "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
+      "outputs" : [ "eod_2018_t", "eod_2018_n", "eod_2018_m", "eod_2018_stage_group" ]
     } ]
   } ],
   "involved_tables" : [ "extension_bbs", "extranodal_extension_pathological_30739", "neoadjuvant_therapy_37302", "grade_post_therapy_clin_76032", "radiation_surg_seq", "ss2018_penis_97065", "grade_pathological_29069", "nodes_dbj", "nodes_pos_fpa", "extranodal_extension_clinical_5022", "parse_t_2177", "grade_clinical_22454", "tnm8_path_stage_uav", "parse_n_67182", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "ajcc_chapter_calculation_11956", "eod_mets_34827", "derived_grade_58317", "tumor_size_pathological_25597", "systemic_surg_seq", "tumor_size_clinical_60979", "neoadj_tx_treatment_effect_18122", "tnm8_inclusions_63195", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "grade_post_therapy_path_48765", "year_dx_validation", "rn_positive_with_regional_nodes_for_ajcc_n_88245", "summary_stage_rpa", "schema_selection_penis", "derived_ss2018_penis_70064" ],
-  "last_modified" : "2024-08-13T16:43:31.204Z",
+  "last_modified" : "2024-10-15T21:25:43.583Z",
   "on_invalid_input" : "CONTINUE"
 }

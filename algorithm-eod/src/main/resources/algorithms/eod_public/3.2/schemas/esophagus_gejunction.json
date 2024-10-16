@@ -332,7 +332,7 @@
     "tables" : [ {
       "id" : "ajcc_chapter_calculation_15124",
       "inputs" : [ "site", "hist" ],
-      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+      "outputs" : [ "ajcc_id", "ajcc_version_number" ]
     } ]
   }, {
     "id" : "summary_stage_2018",
@@ -341,10 +341,10 @@
       "key" : "eod_2018_t",
       "value" : "90"
     }, {
-      "key" : "eod_2018_n",
+      "key" : "eod_2018_m",
       "value" : "90"
     }, {
-      "key" : "eod_2018_m",
+      "key" : "eod_2018_n",
       "value" : "90"
     } ],
     "tables" : [ {
@@ -418,6 +418,9 @@
     }, {
       "id" : "ajcc_id_path_stage_83239",
       "input_mapping" : [ {
+        "from" : "grade_path",
+        "to" : "grade"
+      }, {
         "from" : "tmp_eod_n",
         "to" : "n"
       }, {
@@ -426,9 +429,6 @@
       }, {
         "from" : "tmp_eod_t",
         "to" : "t"
-      }, {
-        "from" : "grade_path",
-        "to" : "grade"
       } ],
       "output_mapping" : [ {
         "from" : "stage",
@@ -447,10 +447,10 @@
     "tables" : [ {
       "id" : "eod_tnm_component_cleanup_58170",
       "inputs" : [ "ajcc_id" ],
-      "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
+      "outputs" : [ "eod_2018_t", "eod_2018_n", "eod_2018_m", "eod_2018_stage_group" ]
     } ]
   } ],
   "involved_tables" : [ "tumor_size_summary_full_15510", "derived_ss2018_esophagus_32092", "neoadjuvant_therapy_37302", "radiation_surg_seq", "esophagusgejunction_egj_stomach_57130", "ajcc_chapter_calculation_15124", "nodes_pos_fpa", "neoadj_tx_treatment_effect_90678", "parse_t_2177", "parse_n_67182", "extension_bbb", "neoadj_tx_clinical_response_31723", "rn_positive_with_regional_nodes_for_ajcc_n_76932", "histology", "nodes_exam_76029", "combined_grade_56638", "behavior", "grade_post_therapy_path_92197", "nodes_dat", "tumor_size_pathological_full_93442", "ss2018_esophagus_excluding_gist_57104", "tumor_size_clinical_full_19656", "schema_selection_esophagus_gejunction", "grade_pathological_19694", "histology_discriminator_for_8020_3_93311", "ajcc_id_path_stage_83239", "tnm8_inclusions_77204", "mets_hbg", "systemic_surg_seq", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "derived_grade_32209", "grade_clinical_8742", "year_dx_validation", "summary_stage_rpa", "tnm8_stage_for_sites_with_no_stage_groupings_unb", "her2_overall_summary_copy_71435", "grade_post_therapy_clin_30400", "tnm_8_path_stage_adenocarcinoma_30413" ],
-  "last_modified" : "2024-08-13T16:43:29.152Z",
+  "last_modified" : "2024-10-15T21:25:40.315Z",
   "on_invalid_input" : "CONTINUE"
 }

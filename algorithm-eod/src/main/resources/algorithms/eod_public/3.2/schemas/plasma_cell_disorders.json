@@ -290,7 +290,7 @@
     "tables" : [ {
       "id" : "ajcc_chapter_calculation_84768",
       "inputs" : [ "hist", "site" ],
-      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+      "outputs" : [ "ajcc_id", "ajcc_version_number" ]
     } ]
   }, {
     "id" : "summary_stage_2018",
@@ -318,6 +318,6 @@
     } ]
   } ],
   "involved_tables" : [ "neoadjuvant_therapy_37302", "tumor_size_clinical_dna_64119", "nodes_pos_2999", "ajcc_chapter_calculation_84768", "derived_ss2018_myeloma_and_plasma_cell_disorders_3894", "tumor_size_summary_dna_13275", "schema_selection_plasmacytomas", "ptld_17694", "neoadj_tx_clinical_response_31723", "grade_post_therapy_clin_74830", "histology", "mets_hna", "behavior", "nodes_exam_17543", "ss2018_44993", "derived_grade_21945", "tumor_size_pathological_dna_6742", "primary_site", "neoadj_tx_treatment_effect_52725", "year_dx_validation", "derived_summary_grade_na_6690", "grade_post_therapy_path_65729", "summary_stage_rpa", "grade_clinical_18316", "eod_primary_tumor_3385", "grade_pathological_73388", "eod_regional_nodes_80411" ],
-  "last_modified" : "2024-08-13T16:43:26.597Z",
+  "last_modified" : "2024-10-15T21:25:36.226Z",
   "on_invalid_input" : "CONTINUE"
 }

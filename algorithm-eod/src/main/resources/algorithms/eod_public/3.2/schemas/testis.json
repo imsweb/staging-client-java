@@ -464,7 +464,7 @@
     "tables" : [ {
       "id" : "ajcc_chapter_calculation_23295",
       "inputs" : [ "hist" ],
-      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+      "outputs" : [ "ajcc_id", "ajcc_version_number" ]
     } ]
   }, {
     "id" : "summary_stage_2018",
@@ -473,10 +473,10 @@
       "key" : "eod_2018_t",
       "value" : "90"
     }, {
-      "key" : "eod_2018_n",
+      "key" : "eod_2018_m",
       "value" : "90"
     }, {
-      "key" : "eod_2018_m",
+      "key" : "eod_2018_n",
       "value" : "90"
     } ],
     "tables" : [ {
@@ -554,6 +554,9 @@
     }, {
       "id" : "tnm8_path_stage_uqd",
       "input_mapping" : [ {
+        "from" : "s_category_combined",
+        "to" : "s_category"
+      }, {
         "from" : "tmp_eod_n",
         "to" : "n"
       }, {
@@ -562,9 +565,6 @@
       }, {
         "from" : "tmp_eod_t",
         "to" : "t"
-      }, {
-        "from" : "s_category_combined",
-        "to" : "s_category"
       } ],
       "output_mapping" : [ {
         "from" : "stage",
@@ -583,10 +583,10 @@
     "tables" : [ {
       "id" : "eod_tnm_component_cleanup_58170",
       "inputs" : [ "ajcc_id" ],
-      "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
+      "outputs" : [ "eod_2018_t", "eod_2018_n", "eod_2018_m", "eod_2018_stage_group" ]
     } ]
   } ],
-  "involved_tables" : [ "neoadjuvant_therapy_37302", "radiation_surg_seq", "nodes_pos_fpa", "parse_t_2177", "nodes_ddf", "ajcc_chapter_calculation_23295", "parse_n_67182", "neoadj_tx_clinical_response_31723", "derived_ss2018_testis_36736", "tnm8_inclusions_tpj", "histology", "ldh_pre_orchiectomy_range_42762", "nodes_exam_76029", "extension_bdh", "hcg_post_orchiectomy_range_92334", "schema_selection_testis", "rn_positive_with_regional_nodes_for_n_84896", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "grade_post_therapy_clin_95734", "s_category_pathologic_34448", "grade_clinical_standard_94331", "tnm8_path_stage_uqd", "ldh_post_orchiectomy_range_38574", "derived_grade_standard_1196", "combined_s_category_34866", "mets_hbb", "hcg_pre_orchiectomy_lab_value_55584", "afp_pre_orchiectomy_lab_value_94162", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "systemic_surg_seq", "afp_pre_orchiectomy_range_11386", "neoadj_tx_treatment_effect_18122", "parse_m_47057", "s_category_clinical_19191", "primary_site", "eod_tnm_component_cleanup_58170", "hcg_post_orchiectomy_lab_value_13834", "hcg_pre_orchiectomy_range_67679", "afp_post_orchiectomy_range_84758", "grade_pathological_standard_94268", "afp_post_orchiectomy_lab_value_90733", "year_dx_validation", "summary_stage_rpa", "grade_post_therapy_path_32110", "ss2018_testis_82848" ],
-  "last_modified" : "2024-08-13T16:43:31.758Z",
+  "involved_tables" : [ "neoadjuvant_therapy_37302", "parse_t_2177", "nodes_ddf", "neoadj_tx_clinical_response_31723", "tnm8_inclusions_tpj", "histology", "nodes_exam_76029", "hcg_post_orchiectomy_range_92334", "schema_selection_testis", "tumor_size_summary_63115", "grade_clinical_standard_94331", "derived_grade_standard_1196", "combined_s_category_34866", "mets_hbb", "afp_pre_orchiectomy_lab_value_94162", "tumor_size_pathological_25597", "systemic_surg_seq", "afp_pre_orchiectomy_range_11386", "neoadj_tx_treatment_effect_18122", "parse_m_47057", "hcg_pre_orchiectomy_range_67679", "afp_post_orchiectomy_lab_value_90733", "summary_stage_rpa", "radiation_surg_seq", "nodes_pos_fpa", "ajcc_chapter_calculation_23295", "parse_n_67182", "derived_ss2018_testis_36736", "ldh_pre_orchiectomy_range_42762", "extension_bdh", "rn_positive_with_regional_nodes_for_n_84896", "combined_grade_56638", "behavior", "grade_post_therapy_clin_95734", "s_category_pathologic_34448", "tnm8_path_stage_uqd", "ldh_post_orchiectomy_range_38574", "hcg_pre_orchiectomy_lab_value_55584", "tumor_size_clinical_60979", "s_category_clinical_19191", "primary_site", "eod_tnm_component_cleanup_58170", "hcg_post_orchiectomy_lab_value_13834", "afp_post_orchiectomy_range_84758", "grade_pathological_standard_94268", "year_dx_validation", "grade_post_therapy_path_32110", "ss2018_testis_82848" ],
+  "last_modified" : "2024-10-15T21:25:44.467Z",
   "on_invalid_input" : "CONTINUE"
 }

@@ -428,7 +428,7 @@
     "tables" : [ {
       "id" : "ajcc_chapter_calculation_38461",
       "inputs" : [ "site" ],
-      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+      "outputs" : [ "ajcc_id", "ajcc_version_number" ]
     } ]
   }, {
     "id" : "summary_stage_2018",
@@ -444,7 +444,7 @@
     }, {
       "id" : "eod_primary_tumor_copy_25294",
       "inputs" : [ "eod_primary_tumor" ],
-      "outputs" : [ "eod_2018_t", "ss2018_t", "eod_2018_stage_group" ]
+      "outputs" : [ "eod_2018_t", "eod_2018_stage_group", "ss2018_t" ]
     }, {
       "id" : "nodes_dna",
       "inputs" : [ "eod_regional_nodes" ],
@@ -492,10 +492,10 @@
     "tables" : [ {
       "id" : "eod_tnm_component_cleanup_58170",
       "inputs" : [ "ajcc_id" ],
-      "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
+      "outputs" : [ "eod_2018_t", "eod_2018_n", "eod_2018_m", "eod_2018_stage_group" ]
     } ]
   } ],
   "involved_tables" : [ "neoadjuvant_therapy_37302", "tumor_size_clinical_dna_64119", "thrombocytopenia_8479", "ss2018_lymphoma_27031", "tnm8_inclusions_80045", "lymphocytosis_79150", "hiv_status_12569", "derived_rai_stage_73218", "nodes_exam_dna_95635", "tumor_size_summary_dna_13275", "ptld_17694", "neoadj_tx_clinical_response_31723", "grade_post_therapy_clin_74830", "histology", "derived_ss2018_lymphoma_35135", "derive_rai_stage_42032", "intern_prognostic_index_90310", "mets_hna", "behavior", "adenopathy_40816", "nodes_dna", "ajcc_chapter_calculation_38461", "eod_primary_tumor_copy_25294", "derived_grade_21945", "tumor_size_pathological_dna_6742", "summary_stage_lymphoma_25139", "anemia_15893", "organomegaly_16131", "lymphoma_stage_group_18599", "primary_site", "eod_tnm_component_cleanup_58170", "neoadj_tx_treatment_effect_52725", "schema_selection_chronic_lymphocytic_leukemia_small_lymphocytic_lymphoma_cll_sll", "year_dx_validation", "systemic_symptoms_at_dx_60639", "derived_summary_grade_na_6690", "grade_post_therapy_path_65729", "grade_clinical_18316", "grade_pathological_73388", "nodes_pos_dna_91511" ],
-  "last_modified" : "2024-08-13T16:43:27.490Z",
+  "last_modified" : "2024-10-15T21:25:37.407Z",
   "on_invalid_input" : "CONTINUE"
 }
