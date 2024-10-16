@@ -289,7 +289,7 @@
     "tables" : [ {
       "id" : "ajcc_chapter_calculation_81470",
       "inputs" : [ "site", "hist" ],
-      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+      "outputs" : [ "ajcc_id", "ajcc_version_number" ]
     } ]
   }, {
     "id" : "summary_stage_2018",
@@ -317,6 +317,6 @@
     } ]
   } ],
   "involved_tables" : [ "tumor_size_summary_full_15510", "extension_bbr", "ajcc_chapter_calculation_81470", "neoadjuvant_therapy_37302", "nodes_dbi", "grade_post_therapy_path_36935", "nodes_pos_fpa", "neoadj_tx_clinical_response_31723", "grade_post_therapy_clin_1647", "histology", "nodes_exam_76029", "bone_invasion_96628", "sex_19563", "neoadj_tx_treatment_effect_4391", "combined_grade_56638", "behavior", "ss2018_soft_tissue_31311", "tumor_size_pathological_full_93442", "tumor_size_clinical_full_19656", "derived_ss2018_soft_tissue_and_sarcomas_99149", "grade_pathological_40399", "derived_grade_71227", "schema_selection_soft_tissue_rare", "grade_clinical_41135", "primary_site", "eod_mets_20229", "year_dx_validation", "summary_stage_rpa" ],
-  "last_modified" : "2024-08-13T16:43:32.058Z",
+  "last_modified" : "2024-10-15T21:25:44.912Z",
   "on_invalid_input" : "CONTINUE"
 }

@@ -278,7 +278,7 @@
       "outputs" : [ "ss2018_derived" ]
     } ]
   } ],
-  "involved_tables" : [ "seer_mets_48348", "neoadjuvant_therapy_37302", "grade_clinical_standard_non_ajcc_32473", "grade_pathological_standard_non_ajcc_5627", "derived_grade_standard_non_ajcc_63932", "nodes_pos_fpa", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "grade_post_therapy_clin_69737", "neoadj_tx_treatment_effect_18122", "primary_site", "neoadj_tx_clinical_response_31723", "ss2018_respiratory_other_36695", "histology", "nodes_exam_76029", "grade_post_therapy_path_75348", "extension_bce", "year_dx_validation", "derived_ss2018_respiratory_other_17734", "summary_stage_rpa", "tumor_size_summary_63115", "combined_grade_56638", "nodes_dbv", "schema_selection_respiratory_other" ],
-  "last_modified" : "2024-08-13T16:43:30.648Z",
+  "involved_tables" : [ "seer_mets_48348", "neoadjuvant_therapy_37302", "nodes_pos_fpa", "grade_post_therapy_clin_69737", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "derived_ss2018_respiratory_other_17734", "tumor_size_summary_63115", "combined_grade_56638", "grade_clinical_standard_non_ajcc_32473", "grade_pathological_standard_non_ajcc_5627", "derived_grade_standard_non_ajcc_63932", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "neoadj_tx_treatment_effect_18122", "primary_site", "ss2018_respiratory_other_36695", "grade_post_therapy_path_75348", "extension_bce", "year_dx_validation", "summary_stage_rpa", "nodes_dbv", "schema_selection_respiratory_other" ],
+  "last_modified" : "2024-10-15T21:25:42.713Z",
   "on_invalid_input" : "CONTINUE"
 }

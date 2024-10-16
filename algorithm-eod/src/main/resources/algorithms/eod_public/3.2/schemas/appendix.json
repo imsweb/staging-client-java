@@ -312,7 +312,7 @@
     "tables" : [ {
       "id" : "ajcc_chapter_calculation_69851",
       "inputs" : [ "hist" ],
-      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+      "outputs" : [ "ajcc_id", "ajcc_version_number" ]
     } ]
   }, {
     "id" : "summary_stage_2018",
@@ -321,10 +321,10 @@
       "key" : "eod_2018_t",
       "value" : "90"
     }, {
-      "key" : "eod_2018_n",
+      "key" : "eod_2018_m",
       "value" : "90"
     }, {
-      "key" : "eod_2018_m",
+      "key" : "eod_2018_n",
       "value" : "90"
     } ],
     "tables" : [ {
@@ -427,10 +427,10 @@
     "tables" : [ {
       "id" : "eod_tnm_component_cleanup_58170",
       "inputs" : [ "ajcc_id" ],
-      "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
+      "outputs" : [ "eod_2018_t", "eod_2018_n", "eod_2018_m", "eod_2018_stage_group" ]
     } ]
   } ],
   "involved_tables" : [ "tnm8_path_stage_uar", "neoadjuvant_therapy_37302", "radiation_surg_seq", "nodes_dfc", "mets_hcf", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "extension_bfg", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "derived_grade_21657", "derived_ss2018_appendix_76889", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "rn_positive_with_regional_nodes_for_ajcc_n_46395", "ss2018_appendix_including_netl_54459", "grade_clinical_29193", "tnm8_inclusions_tpc", "cea_pretx_lab_value_33864", "tumor_size_pathological_25597", "systemic_surg_seq", "tumor_size_clinical_60979", "ajcc_chapter_calculation_69851", "cea_pretx_interpretation_99474", "neoadj_tx_treatment_effect_18122", "schema_selection_appendix", "parse_m_47057", "primary_site", "grade_post_therapy_clin_45036", "eod_tnm_component_cleanup_58170", "grade_post_therapy_path_28874", "year_dx_validation", "summary_stage_rpa", "grade_pathological_57271" ],
-  "last_modified" : "2024-08-13T16:43:29.932Z",
+  "last_modified" : "2024-10-15T21:25:41.468Z",
   "on_invalid_input" : "CONTINUE"
 }

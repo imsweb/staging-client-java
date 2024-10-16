@@ -278,7 +278,7 @@
       "outputs" : [ "ss2018_derived" ]
     } ]
   } ],
-  "involved_tables" : [ "neoadjuvant_therapy_37302", "grade_clinical_standard_non_ajcc_32473", "ss2018_sinus_other_excluding_melanoma_8720_8790_91859", "derived_ss2018_sinus_other_893", "grade_pathological_standard_non_ajcc_5627", "derived_grade_standard_non_ajcc_63932", "nodes_pos_fpa", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "grade_post_therapy_clin_69737", "neoadj_tx_treatment_effect_18122", "seer_mets_sinus_othervs2_15755", "primary_site", "neoadj_tx_clinical_response_31723", "nodes_daq", "histology", "nodes_exam_76029", "grade_post_therapy_path_75348", "schema_selection_sinus_other", "year_dx_validation", "summary_stage_rpa", "extension_bdk", "tumor_size_summary_63115", "combined_grade_56638" ],
-  "last_modified" : "2024-08-13T16:43:26.384Z",
+  "involved_tables" : [ "neoadjuvant_therapy_37302", "nodes_pos_fpa", "grade_post_therapy_clin_69737", "seer_mets_sinus_othervs2_15755", "neoadj_tx_clinical_response_31723", "nodes_daq", "histology", "nodes_exam_76029", "schema_selection_sinus_other", "extension_bdk", "tumor_size_summary_63115", "combined_grade_56638", "grade_clinical_standard_non_ajcc_32473", "ss2018_sinus_other_excluding_melanoma_8720_8790_91859", "derived_ss2018_sinus_other_893", "grade_pathological_standard_non_ajcc_5627", "derived_grade_standard_non_ajcc_63932", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "neoadj_tx_treatment_effect_18122", "primary_site", "grade_post_therapy_path_75348", "year_dx_validation", "summary_stage_rpa" ],
+  "last_modified" : "2024-10-15T21:25:35.931Z",
   "on_invalid_input" : "CONTINUE"
 }

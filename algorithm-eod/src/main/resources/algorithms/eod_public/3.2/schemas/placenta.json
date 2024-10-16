@@ -312,7 +312,7 @@
     "tables" : [ {
       "id" : "ajcc_chapter_calculation_70393",
       "inputs" : [ "hist", "behavior" ],
-      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+      "outputs" : [ "ajcc_id", "ajcc_version_number" ]
     } ]
   }, {
     "id" : "summary_stage_2018",
@@ -339,7 +339,7 @@
     }, {
       "id" : "mets_hak",
       "inputs" : [ "eod_mets" ],
-      "outputs" : [ "ss2018_m", "tmp_eod_m1" ]
+      "outputs" : [ "tmp_eod_m1", "ss2018_m" ]
     }, {
       "id" : "summary_stage_rpa",
       "inputs" : [ "ss2018_m", "ss2018_n", "ss2018_t" ],
@@ -414,10 +414,10 @@
     "tables" : [ {
       "id" : "eod_tnm_component_cleanup_placenta_66040",
       "inputs" : [ "ajcc_id" ],
-      "outputs" : [ "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
+      "outputs" : [ "eod_2018_t", "eod_2018_m", "eod_2018_stage_group" ]
     } ]
   } ],
   "involved_tables" : [ "mets_hak", "neoadjuvant_therapy_37302", "tnm_8_path_stage_group_for_eod_74403", "radiation_surg_seq", "derived_ss2018_placenta_6507", "nodes_dfm", "parse_t_2177", "nodes_exam_dna_95635", "schema_selection_placenta", "neoadj_tx_clinical_response_31723", "histology", "figo_stage_placenta_73452", "tumor_size_summary_63115", "combined_grade_56638", "grade_post_therapy_clin_95734", "behavior", "extension_bbm", "grade_clinical_standard_94331", "derived_grade_standard_1196", "in_situ_to_88s_placenta_34344", "ss2018_placenta_66365", "tumor_size_pathological_25597", "tnm8_inclusions_tpi", "eod_tnm_component_cleanup_placenta_66040", "systemic_surg_seq", "tumor_size_clinical_60979", "neoadj_tx_treatment_effect_18122", "parse_m_47057", "primary_site", "placenta_eod_n_and_m_37548", "gestational_prog_index_28647", "year_dx_validation", "grade_pathological_standard_94268", "summary_stage_rpa", "grade_post_therapy_path_32110", "ajcc_chapter_calculation_70393", "nodes_pos_dna_91511" ],
-  "last_modified" : "2024-08-13T16:43:27.031Z",
+  "last_modified" : "2024-10-15T21:25:36.774Z",
   "on_invalid_input" : "CONTINUE"
 }

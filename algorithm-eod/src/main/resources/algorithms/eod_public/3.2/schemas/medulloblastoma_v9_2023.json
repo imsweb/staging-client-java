@@ -282,7 +282,7 @@
     "tables" : [ {
       "id" : "ajcc_chapter_calculation_67184",
       "inputs" : [ "site", "hist", "behavior" ],
-      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+      "outputs" : [ "ajcc_id", "ajcc_version_number" ]
     } ]
   }, {
     "id" : "summary_stage_2018",
@@ -310,6 +310,6 @@
     } ]
   } ],
   "involved_tables" : [ "neoadjuvant_therapy_37302", "nodes_exam_dna_95635", "grade_post_therapy_path_yp_3519", "eod_mets_22894", "grade_pathological_53280", "neoadj_tx_clinical_response_31723", "ajcc_chapter_calculation_67184", "histology", "ss2018_medulloblastoma_22906", "grade_clinical_78613", "grade_post_therapy_clin_yc_55565", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "nodes_dna", "derived_ss2018_medulloblastoma_71501", "summary_stage_benign_3306", "schema_selection_medulloblastoma_v9_2023", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "brain_molecular_markers_v9_48556", "neoadj_tx_treatment_effect_18122", "derived_grade_96207", "primary_site", "year_dx_validation", "eod_primary_tumor_60922", "nodes_pos_dna_91511" ],
-  "last_modified" : "2024-08-13T16:43:32.297Z",
+  "last_modified" : "2024-10-15T21:25:45.319Z",
   "on_invalid_input" : "CONTINUE"
 }

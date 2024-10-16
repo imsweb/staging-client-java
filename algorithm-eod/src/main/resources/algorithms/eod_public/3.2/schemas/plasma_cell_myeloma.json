@@ -377,7 +377,7 @@
     "tables" : [ {
       "id" : "ajcc_chapter_calculation_16971",
       "inputs" : [ "site", "discriminator_1" ],
-      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+      "outputs" : [ "ajcc_id", "ajcc_version_number" ]
     } ]
   }, {
     "id" : "summary_stage_2018",
@@ -405,6 +405,6 @@
     } ]
   } ],
   "involved_tables" : [ "multiple_myeloma_terminology_20875", "neoadjuvant_therapy_37302", "tumor_size_clinical_dna_64119", "ajcc_chapter_calculation_16971", "derived_ss2018_myeloma_and_plasma_cell_disorders_3894", "b2_microglob_pretx_level_83264", "extension_bgc", "nodes_exam_dna_95635", "tumor_size_summary_dna_13275", "ptld_17694", "neoadj_tx_clinical_response_31723", "grade_post_therapy_clin_74830", "histology", "mets_hna", "behavior", "nodes_dna", "ss2018_44993", "derived_grade_21945", "tumor_size_pathological_dna_6742", "high_risk_cytogenetics_97806", "summary_stage_lymphoma_25139", "serum_alb_pretx_level_58159", "ldh_pretreatment_level_82697", "primary_site", "schema_selection_myeloma_plasma_cell_disorder", "neoadj_tx_treatment_effect_52725", "year_dx_validation", "derived_summary_grade_na_6690", "grade_post_therapy_path_65729", "grade_clinical_18316", "grade_pathological_73388", "nodes_pos_dna_91511" ],
-  "last_modified" : "2024-08-13T16:43:31.158Z",
+  "last_modified" : "2024-10-15T21:25:43.521Z",
   "on_invalid_input" : "CONTINUE"
 }

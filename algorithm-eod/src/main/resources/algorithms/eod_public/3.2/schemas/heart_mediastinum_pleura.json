@@ -288,7 +288,7 @@
     "tables" : [ {
       "id" : "ajcc_chapter_calculation_81092",
       "inputs" : [ "site", "hist" ],
-      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+      "outputs" : [ "ajcc_id", "ajcc_version_number" ]
     } ]
   }, {
     "id" : "summary_stage_2018",
@@ -297,10 +297,10 @@
       "key" : "eod_2018_t",
       "value" : "90"
     }, {
-      "key" : "eod_2018_n",
+      "key" : "eod_2018_m",
       "value" : "90"
     }, {
-      "key" : "eod_2018_m",
+      "key" : "eod_2018_n",
       "value" : "90"
     } ],
     "tables" : [ {
@@ -400,10 +400,10 @@
     "tables" : [ {
       "id" : "eod_tnm_component_cleanup_58170",
       "inputs" : [ "ajcc_id" ],
-      "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
+      "outputs" : [ "eod_2018_t", "eod_2018_n", "eod_2018_m", "eod_2018_stage_group" ]
     } ]
   } ],
   "involved_tables" : [ "ss2018_soft_tissue_heart_mediastinum_pleura_63956", "neoadjuvant_therapy_37302", "radiation_surg_seq", "ajcc_chapter_calculation_81092", "grade_post_therapy_path_36935", "nodes_pos_fpa", "parse_t_2177", "parse_n_67182", "derived_ss2018_heart_mediastinum_and_pleura_70478", "schema_selection_soft_tissue_heart_and_mediastinum", "neoadj_tx_clinical_response_31723", "grade_post_therapy_clin_1647", "histology", "nodes_exam_76029", "bone_invasion_96628", "neoadj_tx_treatment_effect_4391", "tnm8_inclusions_tps", "tumor_size_summary_63115", "seer_regional_nodes_67072", "combined_grade_56638", "grade_pathological_40399", "tumor_size_pathological_25597", "derived_grade_71227", "systemic_surg_seq", "tumor_size_clinical_60979", "grade_clinical_41135", "parse_m_47057", "primary_site", "seer_primary_tumor_72151", "eod_tnm_component_cleanup_58170", "year_dx_validation", "summary_stage_rpa", "tnm8_stage_for_sites_with_no_stage_groupings_unb", "eod_mets_76404" ],
-  "last_modified" : "2024-08-13T16:43:27.800Z",
+  "last_modified" : "2024-10-15T21:25:38.055Z",
   "on_invalid_input" : "CONTINUE"
 }

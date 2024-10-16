@@ -327,7 +327,7 @@
     "tables" : [ {
       "id" : "ajcc_chapter_calculation_75770",
       "inputs" : [ "site", "hist" ],
-      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+      "outputs" : [ "ajcc_id", "ajcc_version_number" ]
     } ]
   }, {
     "id" : "summary_stage_2018",
@@ -336,10 +336,10 @@
       "key" : "eod_2018_t",
       "value" : "90"
     }, {
-      "key" : "eod_2018_n",
+      "key" : "eod_2018_m",
       "value" : "90"
     }, {
-      "key" : "eod_2018_m",
+      "key" : "eod_2018_n",
       "value" : "90"
     } ],
     "tables" : [ {
@@ -439,10 +439,10 @@
     "tables" : [ {
       "id" : "eod_tnm_component_cleanup_58170",
       "inputs" : [ "ajcc_id" ],
-      "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
+      "outputs" : [ "eod_2018_t", "eod_2018_n", "eod_2018_m", "eod_2018_stage_group" ]
     } ]
   } ],
   "involved_tables" : [ "nodes_pos_fah", "neoadjuvant_therapy_37302", "radiation_surg_seq", "tumor_size_pathological_43328", "derived_grade_46639", "grade_post_therapy_path_41285", "eod_regional_nodes_7080", "grade_pathological_31963", "grade_post_therapy_clin_41222", "summary_stage_rac", "parse_t_2177", "parse_n_67182", "tnm_8_path_stage_group_90415", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "lymph_nodes_size_of_metastasis_87329", "combined_grade_56638", "behavior", "ajcc_chapter_calculation_75770", "tnm8_inclusions_83218", "tumor_size_with_primary_tumor_for_ajcc_t_55569", "tumor_size_clinical_48894", "derived_ss2018_skin_except_eyelid_95559", "high_risk_features_73750", "schema_selection_cutaneous_squamous_cell_carcinoma_head_and_neck", "systemic_surg_seq", "eod_mets_3742", "neoadj_tx_treatment_effect_18122", "parse_m_47057", "primary_site", "ss2018_skin_other_56341", "eod_tnm_component_cleanup_58170", "perineural_invasion_84622", "year_dx_validation", "grade_clinical_73056", "tumor_size_summary_47973", "seer_primary_tumor_9084" ],
-  "last_modified" : "2024-08-13T16:43:31.924Z",
+  "last_modified" : "2024-10-15T21:25:44.699Z",
   "on_invalid_input" : "CONTINUE"
 }

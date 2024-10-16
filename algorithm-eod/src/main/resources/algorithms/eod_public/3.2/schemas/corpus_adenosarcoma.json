@@ -363,7 +363,7 @@
     "tables" : [ {
       "id" : "ajcc_chapter_calculation_72062",
       "inputs" : [ "hist" ],
-      "outputs" : [ "ajcc_version_number", "ajcc_id" ]
+      "outputs" : [ "ajcc_id", "ajcc_version_number" ]
     } ]
   }, {
     "id" : "summary_stage_2018",
@@ -372,10 +372,10 @@
       "key" : "eod_2018_t",
       "value" : "90"
     }, {
-      "key" : "eod_2018_n",
+      "key" : "eod_2018_m",
       "value" : "90"
     }, {
-      "key" : "eod_2018_m",
+      "key" : "eod_2018_n",
       "value" : "90"
     } ],
     "tables" : [ {
@@ -475,10 +475,10 @@
     "tables" : [ {
       "id" : "eod_tnm_component_cleanup_58170",
       "inputs" : [ "ajcc_id" ],
-      "outputs" : [ "eod_2018_n", "eod_2018_m", "eod_2018_t", "eod_2018_stage_group" ]
+      "outputs" : [ "eod_2018_t", "eod_2018_n", "eod_2018_m", "eod_2018_stage_group" ]
     } ]
   } ],
   "involved_tables" : [ "peritoneal_cytology_with_primary_tumor_for_ss2018_t_19664", "neoadjuvant_therapy_37302", "radiation_surg_seq", "number_of_postive_pelvic_nodes_94512", "nodes_pos_fpa", "derived_ss2018_corpus_sarcoma_68247", "parse_t_2177", "nodes_dfh", "eod_mets_26533", "tnm8_inclusions_tqh", "parse_n_67182", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "grade_post_therapy_clin_72770", "grade_post_therapy_path_48957", "ajcc_chapter_calculation_72062", "tumor_size_summary_63115", "extension_bfl", "combined_grade_56638", "peritoneal_cytology_38674", "number_of_positive_para_aortic_nodes_62533", "ss2018_corpus_sarcoma_75896", "tnm8_path_stage_ubt", "schema_selection_corpus_adenosarcoma", "figo_stage_corpus_adenosarcoma_24886", "derived_grade_91894", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "systemic_surg_seq", "grade_clinical_24620", "grade_pathological_40052", "neoadj_tx_treatment_effect_18122", "parse_m_47057", "primary_site", "eod_tnm_component_cleanup_58170", "number_of_examined_para_aortic_nodes_38078", "number_of_examined_pelvic_nodes_60771", "year_dx_validation", "summary_stage_rpa" ],
-  "last_modified" : "2024-08-13T16:43:28.388Z",
+  "last_modified" : "2024-10-15T21:25:39.052Z",
   "on_invalid_input" : "CONTINUE"
 }

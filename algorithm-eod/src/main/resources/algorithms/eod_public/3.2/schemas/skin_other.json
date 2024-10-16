@@ -278,7 +278,7 @@
       "outputs" : [ "ss2018_derived" ]
     } ]
   } ],
-  "involved_tables" : [ "neoadjuvant_therapy_37302", "grade_clinical_standard_non_ajcc_32473", "schema_selection_skin_other", "grade_pathological_standard_non_ajcc_5627", "nodes_ddj", "derived_ss2018_skin_except_eyelid_95559", "derived_grade_standard_non_ajcc_63932", "nodes_pos_fpa", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "grade_post_therapy_clin_69737", "neoadj_tx_treatment_effect_18122", "primary_site", "neoadj_tx_clinical_response_31723", "ss2018_skin_other_56341", "histology", "nodes_exam_76029", "grade_post_therapy_path_75348", "year_dx_validation", "summary_stage_rpa", "seer_mets_90643", "tumor_size_summary_63115", "combined_grade_56638", "extension_bdo" ],
-  "last_modified" : "2024-08-13T16:43:30.937Z",
+  "involved_tables" : [ "neoadjuvant_therapy_37302", "nodes_ddj", "nodes_pos_fpa", "grade_post_therapy_clin_69737", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "seer_mets_90643", "tumor_size_summary_63115", "combined_grade_56638", "extension_bdo", "grade_clinical_standard_non_ajcc_32473", "schema_selection_skin_other", "grade_pathological_standard_non_ajcc_5627", "derived_ss2018_skin_except_eyelid_95559", "derived_grade_standard_non_ajcc_63932", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "neoadj_tx_treatment_effect_18122", "primary_site", "ss2018_skin_other_56341", "grade_post_therapy_path_75348", "year_dx_validation", "summary_stage_rpa" ],
+  "last_modified" : "2024-10-15T21:25:43.188Z",
   "on_invalid_input" : "CONTINUE"
 }
