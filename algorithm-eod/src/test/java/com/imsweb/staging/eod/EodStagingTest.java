@@ -215,6 +215,14 @@ class EodStagingTest extends StagingTest {
     }
 
     @Test
+    void testFindTableRowDecimal() {
+        // only do float comparison of ranges if the low or high vaslues have a decimal
+        assertThat(_STAGING.findMatchingTableRow("age_at_diagnosis_validation_65093", "age_dx", "10.5")).isNull();
+
+        assertThat(_STAGING.findMatchingTableRow("age_at_diagnosis_validation_65093", "age_dx", "10")).isNotNull();
+    }
+
+    @Test
     void testStagePancreas() {
         EodStagingData data = new EodStagingInputBuilder()
                 .withInput(EodInput.DX_YEAR, "2018")
