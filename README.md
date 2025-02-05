@@ -31,15 +31,16 @@ Staging staging=Staging.getInstance(PediatricDataProvider.getInstance(PediatricV
 
 If a specific version is needed, the algorithm zip file can be downloaded and initialized using an `ExternalStagingFileDataProvider`.
 
-| Version | Release                                                                      | Algorithm ZIP                                                                                                  |
-|---------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| 1.2     | [11.3.2](https://github.com/imsweb/staging-client-java/releases/tag/v11.3.2) | [pediatric-1.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.3.2/pediatric-1.2.zip) |
-| 1.1     | [11.2.2](https://github.com/imsweb/staging-client-java/releases/tag/v11.2.2) | [pediatric-1.1.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.2.2/pediatric-1.1.zip) |
-| 1.0     | [11.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v11.0.0) | [pediatric-1.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.0.0/pediatric-1.0.zip) |
-| 0.5     | [10.2.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.2.0) | [toronto-0.5.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.2.0/toronto-0.5.zip)     |
-| 0.4     | [10.1.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.1.0) | [toronto-0.4.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.1.0/toronto-0.4.zip)     |
-| 0.3     | [10.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.0.0) | [toronto-0.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/toronto-0.3.zip)     |
-| 0.2     | [9.1](https://github.com/imsweb/staging-client-java/releases/tag/v9.1)       | [toronto-0.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v9.1/toronto-0.2.zip)        |
+| Version       | Release                                                                      | Algorithm ZIP                                                                                                  |
+|---------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+| 1.2 (revised) | [11.3.2](https://github.com/imsweb/staging-client-java/releases/tag/v11.3.2) | [pediatric-1.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.3.2/pediatric-1.2.zip) |
+| 1.2           | [11.2.5](https://github.com/imsweb/staging-client-java/releases/tag/v11.2.5) | [pediatric-1.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.2.5/pediatric-1.2.zip) |
+| 1.1           | [11.2.2](https://github.com/imsweb/staging-client-java/releases/tag/v11.2.2) | [pediatric-1.1.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.2.2/pediatric-1.1.zip) |
+| 1.0           | [11.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v11.0.0) | [pediatric-1.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.0.0/pediatric-1.0.zip) |
+| 0.5           | [10.2.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.2.0) | [toronto-0.5.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.2.0/toronto-0.5.zip)     |
+| 0.4           | [10.1.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.1.0) | [toronto-0.4.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.1.0/toronto-0.4.zip)     |
+| 0.3           | [10.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.0.0) | [toronto-0.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/toronto-0.3.zip)     |
+| 0.2           | [9.1](https://github.com/imsweb/staging-client-java/releases/tag/v9.1)       | [toronto-0.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v9.1/toronto-0.2.zip)        |
 
 ### EOD
 
