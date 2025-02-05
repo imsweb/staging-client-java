@@ -146,19 +146,19 @@
     "id" : "toronto_stage",
     "name" : "Pediatric Stage",
     "initial_context" : [ {
-      "key" : "toronto_n",
-      "value" : "90"
-    }, {
       "key" : "toronto_m",
-      "value" : "90"
-    }, {
-      "key" : "pediatric_group",
       "value" : "90"
     }, {
       "key" : "pediatric_n",
       "value" : "90"
     }, {
+      "key" : "toronto_stage_group",
+      "value" : "90"
+    }, {
       "key" : "pediatric_m",
+      "value" : "90"
+    }, {
+      "key" : "pediatric_group",
       "value" : "90"
     }, {
       "key" : "toronto_t",
@@ -167,7 +167,7 @@
       "key" : "pediatric_t",
       "value" : "90"
     }, {
-      "key" : "toronto_stage_group",
+      "key" : "toronto_n",
       "value" : "90"
     } ],
     "tables" : [ {
