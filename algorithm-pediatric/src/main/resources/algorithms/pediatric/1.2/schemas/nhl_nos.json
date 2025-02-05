@@ -136,10 +136,10 @@
     "id" : "pediatric_stage",
     "name" : "Pediatric Stage",
     "initial_context" : [ {
-      "key" : "pediatric_group",
+      "key" : "toronto_stage_group",
       "value" : "90"
     }, {
-      "key" : "toronto_stage_group",
+      "key" : "pediatric_group",
       "value" : "90"
     } ],
     "tables" : [ {

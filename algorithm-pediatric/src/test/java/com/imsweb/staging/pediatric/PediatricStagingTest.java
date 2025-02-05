@@ -22,7 +22,6 @@ import com.imsweb.staging.Staging;
 import com.imsweb.staging.StagingDataProvider;
 import com.imsweb.staging.StagingFileDataProvider;
 import com.imsweb.staging.StagingTest;
-import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.Input;
 import com.imsweb.staging.entities.Metadata;
 import com.imsweb.staging.entities.Output;
@@ -393,13 +392,7 @@ class PediatricStagingTest extends StagingTest {
 
     @Test
     void testGlossary() {
-        assertThat(_STAGING.getGlossaryTerms()).isNotEmpty();
-        GlossaryDefinition entry = _STAGING.getGlossaryDefinition("Cortex");
-        assertThat(entry).isNotNull();
-        assertThat(entry.getName()).isEqualTo("Cortex");
-        assertThat(entry.getDefinition()).startsWith("The external or outer surface layer of an organ");
-        assertThat(entry.getAlternateNames()).contains("Cortical");
-        assertThat(entry.getLastModified()).isNotNull();
+        assertThat(_STAGING.getGlossaryTerms()).isEmpty();
     }
 
     @Test
