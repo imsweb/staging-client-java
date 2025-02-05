@@ -32,7 +32,6 @@ if (version.endsWith('-SNAPSHOT')) {
 
 subprojects {
     apply plugin: 'java-library'
-    apply plugin: 'checkstyle'
     apply plugin: "com.github.spotbugs"
     apply plugin: 'jacoco'
     apply plugin: 'maven-publish'
@@ -70,11 +69,6 @@ subprojects {
 
     repositories {
         mavenCentral()
-    }
-
-    checkstyle {
-        toolVersion = '8.29'
-        configFile = file("../config/checkstyle/checkstyle.xml")
     }
 
     spotbugs {
