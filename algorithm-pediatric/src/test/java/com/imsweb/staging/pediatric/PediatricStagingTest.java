@@ -22,7 +22,6 @@ import com.imsweb.staging.Staging;
 import com.imsweb.staging.StagingDataProvider;
 import com.imsweb.staging.StagingFileDataProvider;
 import com.imsweb.staging.StagingTest;
-import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.Input;
 import com.imsweb.staging.entities.Metadata;
 import com.imsweb.staging.entities.Output;
