@@ -35,7 +35,7 @@ subprojects {
     apply plugin: 'com.vanniktech.maven.publish'
 
     group = 'com.imsweb'
-    version = '11.4.0-SNAPSHOT'
+    version = '11.4.0'
 
     dependencies {
         testImplementation platform('org.junit:junit-bom:5.12.2')
