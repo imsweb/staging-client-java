@@ -1,10 +1,14 @@
+import com.vanniktech.maven.publish.JavaLibrary
+import com.vanniktech.maven.publish.JavadocJar
+import com.vanniktech.maven.publish.SonatypeHost
+
 plugins {
-    id 'io.codearte.nexus-staging' version '0.30.0'  // logs into Sonotype OSS and does a "Close" and "Release"
-    id 'com.github.spotbugs' version '6.0.15'
+    id 'com.github.spotbugs' version '6.1.11'
     id 'com.adarshr.test-logger' version '4.0.0'
-    id 'com.github.ben-manes.versions' version '0.51.0'
-    id 'org.sonatype.gradle.plugins.scan' version '2.8.2'
-    id 'org.sonarqube' version '5.0.0.4638'
+    id 'com.github.ben-manes.versions' version '0.52.0'
+    id 'org.sonatype.gradle.plugins.scan' version '3.1.1'
+    id 'org.sonarqube' version '6.1.0.5360'
+    id 'com.vanniktech.maven.publish' version '0.31.0'
 }
 
 sonarqube {
@@ -18,39 +22,31 @@ sonarqube {
     }
 }
 
-// configure nexus staging plugin
-nexusStaging {
-    numberOfRetries = 50
-    delayBetweenRetriesInMillis = 5000
-    packageGroup = 'com.imsweb'
-}
-
-// don't try to release a snapshot to a non-snapshot repository, that won't work anyway
-if (version.endsWith('-SNAPSHOT')) {
-    gradle.startParameter.excludedTaskNames += 'closeAndReleaseRepository'
-}
-
 subprojects {
     apply plugin: 'java-library'
-    apply plugin: "com.github.spotbugs"
+    apply plugin: 'com.github.spotbugs'
     apply plugin: 'jacoco'
     apply plugin: 'maven-publish'
     apply plugin: 'signing'
     apply plugin: 'com.adarshr.test-logger'
-    apply plugin: "com.github.ben-manes.versions"
+    apply plugin: 'com.github.ben-manes.versions'
     apply plugin: 'org.sonatype.gradle.plugins.scan'
-    apply plugin: "org.sonarqube"
+    apply plugin: 'org.sonarqube'
+    apply plugin: 'com.vanniktech.maven.publish'
 
     group = 'com.imsweb'
-    version = '11.3.2'
+    version = '11.4.0-SNAPSHOT'
 
     dependencies {
-        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.2'
-        testImplementation 'org.junit.jupiter:junit-jupiter-params:5.10.2'
-        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.2'
-        testImplementation 'org.assertj:assertj-core:3.26.0'
+        testImplementation platform('org.junit:junit-bom:5.12.2')
+        testImplementation 'org.junit.jupiter:junit-jupiter-api'
+        testImplementation 'org.junit.jupiter:junit-jupiter-params'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+        testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.12.2'
+
+        testImplementation 'org.assertj:assertj-core:3.27.3'
         testImplementation 'com.google.code.bean-matchers:bean-matchers:0.14'
-        testImplementation 'org.slf4j:slf4j-simple:2.0.13'
+        testImplementation 'org.slf4j:slf4j-simple:2.0.17'
     }
 
     // fail the build if there are compiler warnings
@@ -62,9 +58,6 @@ subprojects {
     java {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
-
-        withJavadocJar()
-        withSourcesJar()
     }
 
     repositories {
@@ -134,79 +127,44 @@ subprojects {
         classpath = sourceSets.test.runtimeClasspath
     }
 
-    // don't try to sign a snapshot; its not needed
-    if (version.endsWith('-SNAPSHOT')) {
-        gradle.startParameter.excludedTaskNames += 'signMavenJavaPublication'
-    }
+    mavenPublishing {
+        configure(new JavaLibrary(new JavadocJar.Javadoc(), true))
 
-    publishing {
-        publications {
-            mavenJava(MavenPublication) {
-                artifactId = project.name
-                from components.java
-                versionMapping {
-                    usage('java-api') {
-                        fromResolutionOf('runtimeClasspath')
-                    }
-                    usage('java-runtime') {
-                        fromResolutionResult()
-                    }
-                }
-                pom {
-                    name = 'Staging Java Client'
-                    description = 'A cancer staging client library'
-                    url = 'https://github.com/imsweb/staging-client-java'
-                    inceptionYear = '2015'
+        publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL, true)
+        signAllPublications()
 
-                    licenses {
-                        license {
-                            name = 'A modified BSD License (BSD)'
-                            url = 'https://github.com/imsweb/staging-client-java/blob/master/LICENSE'
-                            distribution = 'repo'
-                        }
-                    }
+        pom {
+            name = 'Staging Java Client'
+            description = 'A cancer staging client library'
+            url = 'https://github.com/imsweb/staging-client-java'
+            inceptionYear = '2015'
 
-                    developers {
-                        developer {
-                            id = 'ctmay4'
-                            name = 'Chuck May'
-                            email = 'mayc@imsweb.com'
-                        }
-                    }
-
-                    scm {
-                        url = 'https://github.com/imsweb/staging-client-java'
-                        connection = 'scm:https://github.com/imsweb/staging-client-java.git'
-                        developerConnection = 'scm:git@github.com:imsweb/staging-client-java.git'
-                    }
+            licenses {
+                license {
+                    name = 'A modified BSD License (BSD)'
+                    url = 'https://github.com/imsweb/staging-client-java/blob/master/LICENSE'
+                    distribution = 'repo'
                 }
             }
-        }
-        repositories {
-            maven {
-                def releasesRepoUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2"
-                def snapshotsRepoUrl = "https://oss.sonatype.org/content/repositories/snapshots"
-                url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
 
-                credentials {
-                    username = project.findProperty('nexusUsername') ?: ''
-                    password = project.findProperty('nexusPassword') ?: ''
+            developers {
+                developer {
+                    id = 'ctmay4'
+                    name = 'Chuck May'
+                    email = 'mayc@imsweb.com'
                 }
+            }
+
+            scm {
+                url = 'https://github.com/imsweb/staging-client-java'
+                connection = 'scm:https://github.com/imsweb/staging-client-java.git'
+                developerConnection = 'scm:git@github.com:imsweb/staging-client-java.git'
             }
         }
     }
 
-    signing {
-        def signingKey = project.findProperty('signingKey') ?: ''
-        def signingPassword = project.findProperty('signingPassword') ?: ''
-
-        useInMemoryPgpKeys(signingKey, signingPassword)
-
-        sign publishing.publications.mavenJava
+    wrapper {
+        gradleVersion = '8.14'
+        distributionType = Wrapper.DistributionType.ALL
     }
-}
-
-wrapper {
-    gradleVersion = '8.8'
-    distributionType = Wrapper.DistributionType.ALL
 }
