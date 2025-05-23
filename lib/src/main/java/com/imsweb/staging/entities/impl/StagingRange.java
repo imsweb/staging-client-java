@@ -81,9 +81,13 @@ public class StagingRange implements Range {
         String low = DecisionEngine.translateValue(_low, context);
         String high = DecisionEngine.translateValue(_high, context);
 
-        // if input, low and high values represent decimal numbers then do a float comparison
+        // if input, low and high values represent numbers then do a float comparison
         if (!low.equals(high) && NumberUtils.isParsable(low) && NumberUtils.isParsable(high)) {
             if (!NumberUtils.isParsable(value))
+                return false;
+
+            // if the numeric range is not using decimals then don't allow the value to match with a decimal
+            if (!(low.contains(".") || high.contains(".")) && value.contains("."))
                 return false;
 
             Float converted = NumberUtils.createFloat(value);
