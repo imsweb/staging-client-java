@@ -2,7 +2,7 @@
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=imsweb_staging-client-java&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=imsweb_staging-client-java)
 [![integration](https://github.com/imsweb/staging-client-java/workflows/integration/badge.svg)](https://github.com/imsweb/staging-client-java/actions)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.imsweb/staging-client-java/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.imsweb/staging-client-java)
+[![Maven Central](https://img.shields.io/maven-central/v/com.imsweb/staging-client-java.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/com.imsweb/staging-client-java)
 
 A cancer staging client library for Java applications.
 
