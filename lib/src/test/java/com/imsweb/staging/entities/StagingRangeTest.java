@@ -96,6 +96,12 @@ class StagingRangeTest {
         // nothing checks that a decimal is there.  Non-decimal value will still be considered in the range.
         assertTrue(new StagingRange("0.1", "99999.9").contains("1000", new HashMap<>()));
 
+        // however if the range do not contain decimals, then do not allow a mtch on decimals
+        assertFalse(new StagingRange("001", "999").contains("10.5", new HashMap<>()));
+        assertTrue(new StagingRange("001.1", "999").contains("10.5", new HashMap<>()));
+        assertTrue(new StagingRange("001", "999.99").contains("10.5", new HashMap<>()));
+        assertTrue(new StagingRange("001", "999").contains("10", new HashMap<>()));
+
         assertFalse(new StagingRange("1.0", "999.999").contains("0.1", new HashMap<>()));
         assertTrue(new StagingRange("1.0", "999.999").contains("1.000001", new HashMap<>()));
         assertTrue(new StagingRange("1.0", "999.999").contains("1.9", new HashMap<>()));
