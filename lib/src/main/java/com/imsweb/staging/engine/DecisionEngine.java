@@ -619,9 +619,24 @@ public class DecisionEngine {
 
             String value = context.get(input.getKey());
 
-            // if value not supplied, use the default and set it back into the context; if not supplied and no default, set the input the blank
+            // if value not supplied, use the default or defaultTable and set it back into the context; if not supplied and no default, set the input the blank
             if (value == null) {
-                value = (input.getDefault() != null ? translateValue(input.getDefault(), context) : "");
+                if (input.getDefault() != null)
+                    value = translateValue(input.getDefault(), context);
+                else if (input.getDefaultTable() != null) {
+                    Table defaultTable = getProvider().getTable(input.getDefaultTable());
+                    if (defaultTable == null) {
+                        result.addError(new ErrorBuilder(Type.UNKNOWN_TABLE).message("Default table does not exist: " + input.getDefaultTable()).key(input.getKey()).build());
+                        continue;
+                    }
+
+                    // lookup default from table
+                    List<? extends Endpoint> endpoints = matchTable(defaultTable, context);
+                    value = "";
+                }
+                else
+                    value = "";
+
                 context.put(input.getKey(), value);
             }
 

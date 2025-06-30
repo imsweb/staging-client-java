@@ -31,6 +31,14 @@ public interface Input {
     String getDefault();
 
     /**
+     * If supplied, a table lookup (using current context) will occur to determine
+     * the default value when it is not supplied. If both a default and a default table
+     * are specified, the default table will be ignored.
+     * @return A String representing the default value
+     */
+    String getDefaultTable();
+
+    /**
      * If supplied, the value of the field is verified to be contained in the table
      * @return a String representing the lookup table name
      */
