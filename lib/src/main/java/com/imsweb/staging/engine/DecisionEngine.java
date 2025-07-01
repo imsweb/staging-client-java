@@ -648,8 +648,9 @@ public class DecisionEngine {
                                 .build());
                         continue;
                     }
-
                 }
+                else
+                    value = "";
 
                 context.put(input.getKey(), value == null ? "" : value);
             }
