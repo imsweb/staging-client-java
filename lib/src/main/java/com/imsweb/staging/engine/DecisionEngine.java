@@ -621,6 +621,7 @@ public class DecisionEngine {
 
             // if value not supplied, use the default or defaultTable and set it back into the context; if not supplied and no default, set the input the blank
             if (value == null) {
+                value = "";
                 if (input.getDefault() != null)
                     value = translateValue(input.getDefault(), context);
                 else if (input.getDefaultTable() != null) {
@@ -630,12 +631,26 @@ public class DecisionEngine {
                         continue;
                     }
 
-                    // lookup default from table
+                    // look up default value from table
                     List<? extends Endpoint> endpoints = matchTable(defaultTable, context);
-                    value = "";
+                    if (endpoints != null) {
+                        value = endpoints.stream()
+                                .filter(endpoint -> EndpointType.VALUE.equals(endpoint.getType()))
+                                .filter(endpoint -> endpoint.getResultKey().equals(input.getKey()))
+                                .map(endpoint -> translateValue(endpoint.getValue(), context))
+                                .findFirst()
+                                .orElse(null);
+                    }
+
+                    if (value == null) {
+                        result.addError(new ErrorBuilder(Type.MATCH_NOT_FOUND)
+                                .message("Default table " + input.getDefaultTable() + " did not find a match")
+                                .key(input.getKey())
+                                .build());
+                        continue;
+                    }
+
                 }
-                else
-                    value = "";
 
                 context.put(input.getKey(), value);
             }
