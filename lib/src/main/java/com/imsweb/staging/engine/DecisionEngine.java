@@ -656,7 +656,7 @@ public class DecisionEngine {
             }
 
             // validate value against associated table, if supplied; if a value is not supplied, or blank, there is no need to validate it against the table
-            if (!value.isEmpty() && input.getTable() != null) {
+            if (value != null && !value.isEmpty() && input.getTable() != null) {
                 Table lookup = getProvider().getTable(input.getTable());
 
                 if (lookup == null) {
