@@ -1541,4 +1541,67 @@ public class DecisionEngineTest {
         assertEquals(new HashSet<>(Collections.singletonList("remapped1")), engine.getInputs(schema.getMappings().get(0).getTablePaths().get(0)));
     }
 
+    @Test
+    void testDefaultTable() {
+        InMemoryDataProvider provider = new InMemoryDataProvider("default_table_testing", "1.0");
+
+        StagingTable table = new StagingTable("table_input1");
+        table.addColumnDefinition("input1", ColumnType.INPUT);
+        table.addColumnDefinition("description", ColumnType.DESCRIPTION);
+        table.addRawRow("000", "Alpha");
+        table.addRawRow("001", "Beta");
+        table.addRawRow("002", "Gamma");
+        provider.addTable(table);
+
+        table = new StagingTable("table_input2");
+        table.addColumnDefinition("input2", ColumnType.INPUT);
+        table.addColumnDefinition("description", ColumnType.DESCRIPTION);
+        table.addRawRow("900", "Zeta");
+        table.addRawRow("901", "Eta");
+        table.addRawRow("902", "Theta");
+        provider.addTable(table);
+
+        table = new StagingTable("table_input2_default");
+        table.addColumnDefinition("input1", ColumnType.INPUT);
+        table.addColumnDefinition("input2", ColumnType.ENDPOINT);
+        table.addRawRow("000", "VALUE:900");
+        table.addRawRow("*", "VALUE:902");
+        provider.addTable(table);
+
+        table = new StagingTable("table_mapping");
+        table.addColumnDefinition("input1", ColumnType.INPUT);
+        table.addColumnDefinition("input2", ColumnType.INPUT);
+        table.addColumnDefinition("output1", ColumnType.ENDPOINT);
+        table.addRawRow("000", "900", "VALUE:000-900");
+        table.addRawRow("001", "901", "VALUE:001-901");
+        table.addRawRow("002", "902", "VALUE:001-901");
+        table.addRawRow("*", "*", "VALUE:Other");
+        provider.addTable(table);
+
+        StagingSchema schema = new StagingSchema("test_default_table");
+        schema.setSchemaSelectionTable("table_selection");
+        schema.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
+        schema.addInput(new StagingSchemaInput("input1", "input1", "table_input1"));
+        StagingSchemaInput input2 = new StagingSchemaInput("input2", "input2", "table_input2");
+        input2.setDefaultTable("table_input2_default");
+        schema.addInput(input2);
+
+        schema.addOutput(new StagingSchemaOutput("output1"));
+
+        schema.addMapping(new StagingMapping("m1", Collections.singletonList(new StagingTablePath("table_mapping"))));
+
+        provider.addSchema(schema);
+
+        DecisionEngine engine = new DecisionEngine(provider);
+
+        Map<String, String> context = new HashMap<>();
+        context.put("input1", "000");
+        Result result = engine.process("test_default_table", context);
+
+        assertEquals(Type.STAGED, result.getType());
+        assertFalse(result.hasErrors());
+        assertEquals(1, result.getContext().size());
+        assertEquals("000-900", result.getContext().get("output1"));
+    }
+
 }
