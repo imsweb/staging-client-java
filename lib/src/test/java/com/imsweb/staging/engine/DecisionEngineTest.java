@@ -1573,9 +1573,10 @@ public class DecisionEngineTest {
         table.addColumnDefinition("input2", ColumnType.INPUT);
         table.addColumnDefinition("output1", ColumnType.ENDPOINT);
         table.addRawRow("000", "900", "VALUE:000-900");
+        table.addRawRow("000", "*", "VALUE:000-*");
         table.addRawRow("001", "901", "VALUE:001-901");
+        table.addRawRow("001", "*", "VALUE:001-*");
         table.addRawRow("002", "902", "VALUE:001-901");
-        table.addRawRow("*", "*", "VALUE:Other");
         provider.addTable(table);
 
         StagingSchema schema = new StagingSchema("test_default_table");
@@ -1594,6 +1595,7 @@ public class DecisionEngineTest {
 
         DecisionEngine engine = new DecisionEngine(provider);
 
+        // test a case where the default_table make a successful lookup
         Map<String, String> context = new HashMap<>();
         context.put("input1", "000");
         Result result = engine.process("test_default_table", context);
@@ -1602,6 +1604,37 @@ public class DecisionEngineTest {
         assertFalse(result.hasErrors());
         assertEquals(1, result.getContext().size());
         assertEquals("000-900", result.getContext().get("output1"));
+
+        // test a case where there was a fallthrough match in the default table
+        context = new HashMap<>();
+        context.put("input1", "002");
+        result = engine.process("test_default_table", context);
+
+        assertEquals(Type.STAGED, result.getType());
+        assertFalse(result.hasErrors());
+        assertEquals(1, result.getContext().size());
+
+        // test a case where the default_table did not exist
+        schema.getInputs().stream().filter(i -> i.getDefaultTable() != null).forEach(i -> i.setDefaultTable("does_not_exist"));
+        context = new HashMap<>();
+        context.put("input1", "000");
+        result = engine.process("test_default_table", context);
+        assertEquals(Type.STAGED, result.getType());
+        assertEquals(1, result.getErrors().size());
+        assertEquals("input2", result.getErrors().get(0).getKey());
+        assertEquals("Default table does not exist: does_not_exist", result.getErrors().get(0).getMessage());
+
+        // test a case where the default table did not find a match
+        schema.getInputs().stream().filter(i -> i.getDefaultTable() != null).forEach(i -> i.setDefaultTable("table_input2_default"));
+        provider.getTable("table_input2_default").setRawRows(new ArrayList<>());
+        provider.initTable(provider.getTable("table_input2_default"));
+        context = new HashMap<>();
+        context.put("input1", "001");
+        result = engine.process("test_default_table", context);
+        assertEquals(Type.STAGED, result.getType());
+        assertEquals(1, result.getErrors().size());
+        assertEquals("input2", result.getErrors().get(0).getKey());
+        assertEquals("Default table table_input2_default did not find a match", result.getErrors().get(0).getMessage());
     }
 
 }

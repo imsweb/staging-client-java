@@ -621,7 +621,6 @@ public class DecisionEngine {
 
             // if value not supplied, use the default or defaultTable and set it back into the context; if not supplied and no default, set the input the blank
             if (value == null) {
-                value = "";
                 if (input.getDefault() != null)
                     value = translateValue(input.getDefault(), context);
                 else if (input.getDefaultTable() != null) {
@@ -652,7 +651,7 @@ public class DecisionEngine {
 
                 }
 
-                context.put(input.getKey(), value);
+                context.put(input.getKey(), value == null ? "" : value);
             }
 
             // validate value against associated table, if supplied; if a value is not supplied, or blank, there is no need to validate it against the table
