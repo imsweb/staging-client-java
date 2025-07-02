@@ -437,6 +437,21 @@ public final class Staging {
     }
 
     /**
+     * Calculates the default value for an Input using supplied context. This may be based on "default" or "default_table".
+     * @param schema Schema
+     * @param key Input key
+     * @param context a Map containing the context
+     * @return the default value for the input or blank if there is none
+     */
+    public String getInputDefault(Schema schema, String key, Map<String, String> context) {
+        Input input = schema.getInputMap().get(key);
+        if (input == null)
+            return "";
+
+        return _engine.getDefault(input, context, new Result(context));
+    }
+
+    /**
      * Looks at a table path (and all jump tables within in) and returns a list of output keys that could be created.
      * @param path a StagingTablePath
      * @return a Set of unique output keys
