@@ -46,7 +46,7 @@ public class DecisionEngine {
 
     // string to use for blank or null in error strings
     public static final String _BLANK_OUTPUT = "<blank>";
-    private static final Pattern _TEMPLATE_REFERENCE = Pattern.compile("\\{\\{(.*?)\\}\\}");
+    private static final Pattern _TEMPLATE_REFERENCE = Pattern.compile("\\{\\{(.*?)}}");
     private DataProvider _provider;
 
     private static final String _CONTEXT_MISSING_MESSAGE = "Context must not be missing";
@@ -584,6 +584,49 @@ public class DecisionEngine {
     }
 
     /**
+     * Calculates the default value for an Input using supplied context
+     * @param input Input definition
+     * @param context a Map containing the context
+     * @param result a Result object to store errors
+     * @return the default value for the input or blank if there is none
+     */
+    public String getDefault(Input input, Map<String, String> context, Result result) {
+        String value = "";
+
+        if (input.getDefault() != null)
+            value = translateValue(input.getDefault(), context);
+        else if (input.getDefaultTable() != null) {
+            Table defaultTable = getProvider().getTable(input.getDefaultTable());
+            if (defaultTable == null) {
+                result.addError(new ErrorBuilder(Type.UNKNOWN_TABLE).message("Default table does not exist: " + input.getDefaultTable()).key(input.getKey()).build());
+                return value;
+            }
+
+            // look up default value from table
+            List<? extends Endpoint> endpoints = matchTable(defaultTable, context);
+            if (endpoints != null) {
+                value = endpoints.stream()
+                        .filter(endpoint -> EndpointType.VALUE.equals(endpoint.getType()))
+                        .filter(endpoint -> endpoint.getResultKey().equals(input.getKey()))
+                        .map(endpoint -> translateValue(endpoint.getValue(), context))
+                        .findFirst()
+                        .orElse(null);
+            }
+
+            // if no match found, report the error
+            if (endpoints == null || value == null) {
+                result.addError(new ErrorBuilder(Type.MATCH_NOT_FOUND)
+                        .message("Default table " + input.getDefaultTable() + " did not find a match")
+                        .key(input.getKey())
+                        .build());
+                return "";
+            }
+        }
+
+        return value;
+    }
+
+    /**
      * Using the supplied context, process an schema.  The results will be added to the context.
      * @param schemaId an schema identifier
      * @param context a Map containing the context
@@ -620,40 +663,8 @@ public class DecisionEngine {
             String value = context.get(input.getKey());
 
             // if value not supplied, use the default or defaultTable and set it back into the context; if not supplied and no default, set the input the blank
-            if (value == null) {
-                if (input.getDefault() != null)
-                    value = translateValue(input.getDefault(), context);
-                else if (input.getDefaultTable() != null) {
-                    Table defaultTable = getProvider().getTable(input.getDefaultTable());
-                    if (defaultTable == null) {
-                        result.addError(new ErrorBuilder(Type.UNKNOWN_TABLE).message("Default table does not exist: " + input.getDefaultTable()).key(input.getKey()).build());
-                        continue;
-                    }
-
-                    // look up default value from table
-                    List<? extends Endpoint> endpoints = matchTable(defaultTable, context);
-                    if (endpoints != null) {
-                        value = endpoints.stream()
-                                .filter(endpoint -> EndpointType.VALUE.equals(endpoint.getType()))
-                                .filter(endpoint -> endpoint.getResultKey().equals(input.getKey()))
-                                .map(endpoint -> translateValue(endpoint.getValue(), context))
-                                .findFirst()
-                                .orElse(null);
-                    }
-
-                    if (value == null) {
-                        result.addError(new ErrorBuilder(Type.MATCH_NOT_FOUND)
-                                .message("Default table " + input.getDefaultTable() + " did not find a match")
-                                .key(input.getKey())
-                                .build());
-                        continue;
-                    }
-                }
-                else
-                    value = "";
-
-                context.put(input.getKey(), value == null ? "" : value);
-            }
+            if (value == null)
+                context.put(input.getKey(), getDefault(input, context, result));
 
             // validate value against associated table, if supplied; if a value is not supplied, or blank, there is no need to validate it against the table
             if (value != null && !value.isEmpty() && input.getTable() != null) {
