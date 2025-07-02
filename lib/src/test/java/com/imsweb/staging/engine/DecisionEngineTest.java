@@ -1576,7 +1576,7 @@ public class DecisionEngineTest {
         table.addRawRow("000", "*", "VALUE:000-*");
         table.addRawRow("001", "901", "VALUE:001-901");
         table.addRawRow("001", "*", "VALUE:001-*");
-        table.addRawRow("002", "902", "VALUE:001-901");
+        table.addRawRow("002", "902", "VALUE:002-902");
         provider.addTable(table);
 
         StagingSchema schema = new StagingSchema("test_default_table");
@@ -1605,6 +1605,13 @@ public class DecisionEngineTest {
         assertEquals(1, result.getContext().size());
         assertEquals("000-900", result.getContext().get("output1"));
 
+        // check same case with getDefault method
+        context = new HashMap<>();
+        context.put("input1", "000");
+        Result result1 = new Result(context);
+        assertEquals("900", engine.getDefault(input2, context, result1));
+        assertFalse(result1.hasErrors());
+
         // test a case where there was a fallthrough match in the default table
         context = new HashMap<>();
         context.put("input1", "002");
@@ -1613,6 +1620,14 @@ public class DecisionEngineTest {
         assertEquals(Type.STAGED, result.getType());
         assertFalse(result.hasErrors());
         assertEquals(1, result.getContext().size());
+        assertEquals("002-902", result.getContext().get("output1"));
+
+        // check same case with getDefault method
+        context = new HashMap<>();
+        context.put("input1", "002");
+        result1 = new Result(context);
+        assertEquals("902", engine.getDefault(input2, context, result1));
+        assertFalse(result1.hasErrors());
 
         // test a case where the default_table did not exist
         schema.getInputs().stream().filter(i -> i.getDefaultTable() != null).forEach(i -> i.setDefaultTable("does_not_exist"));
@@ -1624,6 +1639,15 @@ public class DecisionEngineTest {
         assertEquals("input2", result.getErrors().get(0).getKey());
         assertEquals("Default table does not exist: does_not_exist", result.getErrors().get(0).getMessage());
 
+        // check same case with getDefault method
+        context = new HashMap<>();
+        context.put("input1", "000");
+        result1 = new Result(context);
+        assertEquals("", engine.getDefault(input2, context, result1));
+        assertEquals(1, result1.getErrors().size());
+        assertEquals("input2", result1.getErrors().get(0).getKey());
+        assertEquals("Default table does not exist: does_not_exist", result1.getErrors().get(0).getMessage());
+
         // test a case where the default table did not find a match
         schema.getInputs().stream().filter(i -> i.getDefaultTable() != null).forEach(i -> i.setDefaultTable("table_input2_default"));
         provider.getTable("table_input2_default").setRawRows(new ArrayList<>());
@@ -1633,6 +1657,15 @@ public class DecisionEngineTest {
         result = engine.process("test_default_table", context);
         assertEquals(Type.STAGED, result.getType());
         assertEquals(1, result.getErrors().size());
+        assertEquals("input2", result.getErrors().get(0).getKey());
+        assertEquals("Default table table_input2_default did not find a match", result.getErrors().get(0).getMessage());
+
+        // check same case with getDefault method
+        context = new HashMap<>();
+        context.put("input1", "001");
+        result1 = new Result(context);
+        assertEquals("", engine.getDefault(input2, context, result1));
+        assertEquals(1, result1.getErrors().size());
         assertEquals("input2", result.getErrors().get(0).getKey());
         assertEquals("Default table table_input2_default did not find a match", result.getErrors().get(0).getMessage());
     }
