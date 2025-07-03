@@ -106,6 +106,31 @@ public abstract class StagingTest {
     }
 
     @Test
+    public void testInputDefault() {
+        Map<String, String> context = new HashMap<>();
+
+        // error conditions
+        String schemaId = _STAGING.getSchemaIds().stream().findFirst().orElse(null);
+        assertNotNull(schemaId);
+        assertEquals("", _STAGING.getInputDefault(_STAGING.getSchema(schemaId), "i_do_not_exist", context));
+
+        for (String id : _STAGING.getSchemaIds()) {
+            Schema schema = _STAGING.getSchema(id);
+            for (Input input : schema.getInputs()) {
+                if (input.getDefault() != null && input.getDefaultTable() != null)
+                    fail("In " + getAlgorithm() + ", schema " + schema.getId() + " and input " + input.getKey() + " there is a default and default_table. That is not allowed.");
+
+                if (input.getDefault() != null)
+                    assertEquals(input.getDefault(), _STAGING.getInputDefault(schema, input.getKey(), context));
+                else if (input.getDefaultTable() != null)
+                    assertFalse(_STAGING.getInputDefault(schema, input.getKey(), context).isEmpty());
+                else
+                    assertTrue(_STAGING.getInputDefault(schema, input.getKey(), context).isEmpty());
+            }
+        }
+    }
+
+    @Test
     public void testValidSite() {
         assertFalse(_STAGING.isValidSite(null));
         assertFalse(_STAGING.isValidSite(""));

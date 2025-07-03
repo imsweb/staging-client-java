@@ -22,6 +22,7 @@ public class StagingSchemaInput implements Input {
     private Integer _naaccrItem;
     private String _naaccrXmlId;
     private String _default;
+    private String _defaultTable;
     private String _table;
     private Boolean _usedForStaging;
     private String _unit;
@@ -60,6 +61,7 @@ public class StagingSchemaInput implements Input {
         setNaaccrItem(other.getNaaccrItem());
         setNaaccrXmlId(other.getNaaccrXmlId());
         setDefault(other.getDefault());
+        setDefaultTable(other.getDefaultTable());
         setTable(other.getTable());
         if (other.getMetadata() != null)
             setMetadata(new ArrayList<>(other.getMetadata()));
@@ -129,6 +131,16 @@ public class StagingSchemaInput implements Input {
     }
 
     @Override
+    @JsonProperty("default_table")
+    public String getDefaultTable() {
+        return _defaultTable;
+    }
+
+    public void setDefaultTable(String defaultTable) {
+        _defaultTable = defaultTable;
+    }
+
+    @Override
     @JsonProperty("table")
     public String getTable() {
         return _table;
@@ -194,6 +206,7 @@ public class StagingSchemaInput implements Input {
                 Objects.equals(_naaccrItem, that._naaccrItem) &&
                 Objects.equals(_naaccrXmlId, that._naaccrXmlId) &&
                 Objects.equals(_default, that._default) &&
+                Objects.equals(_defaultTable, that._defaultTable) &&
                 Objects.equals(_table, that._table) &&
                 Objects.equals(_usedForStaging, that._usedForStaging) &&
                 Objects.equals(_unit, that._unit) &&
@@ -204,6 +217,6 @@ public class StagingSchemaInput implements Input {
     @Override
     public int hashCode() {
         // do not include _parsedValues
-        return Objects.hash(_key, _name, _description, _naaccrItem, _naaccrXmlId, _default, _table, _usedForStaging, _unit, _decimalPlaces, _metadata);
+        return Objects.hash(_key, _name, _description, _naaccrItem, _naaccrXmlId, _default, _defaultTable, _table, _usedForStaging, _unit, _decimalPlaces, _metadata);
     }
 }

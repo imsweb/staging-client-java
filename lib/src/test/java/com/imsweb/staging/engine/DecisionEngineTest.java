@@ -1541,4 +1541,133 @@ public class DecisionEngineTest {
         assertEquals(new HashSet<>(Collections.singletonList("remapped1")), engine.getInputs(schema.getMappings().get(0).getTablePaths().get(0)));
     }
 
+    @Test
+    void testDefaultTable() {
+        InMemoryDataProvider provider = new InMemoryDataProvider("default_table_testing", "1.0");
+
+        StagingTable table = new StagingTable("table_input1");
+        table.addColumnDefinition("input1", ColumnType.INPUT);
+        table.addColumnDefinition("description", ColumnType.DESCRIPTION);
+        table.addRawRow("000", "Alpha");
+        table.addRawRow("001", "Beta");
+        table.addRawRow("002", "Gamma");
+        provider.addTable(table);
+
+        table = new StagingTable("table_input2");
+        table.addColumnDefinition("input2", ColumnType.INPUT);
+        table.addColumnDefinition("description", ColumnType.DESCRIPTION);
+        table.addRawRow("900", "Zeta");
+        table.addRawRow("901", "Eta");
+        table.addRawRow("902", "Theta");
+        provider.addTable(table);
+
+        table = new StagingTable("table_input2_default");
+        table.addColumnDefinition("input1", ColumnType.INPUT);
+        table.addColumnDefinition("input2", ColumnType.ENDPOINT);
+        table.addRawRow("000", "VALUE:900");
+        table.addRawRow("*", "VALUE:902");
+        provider.addTable(table);
+
+        table = new StagingTable("table_mapping");
+        table.addColumnDefinition("input1", ColumnType.INPUT);
+        table.addColumnDefinition("input2", ColumnType.INPUT);
+        table.addColumnDefinition("output1", ColumnType.ENDPOINT);
+        table.addRawRow("000", "900", "VALUE:000-900");
+        table.addRawRow("000", "*", "VALUE:000-*");
+        table.addRawRow("001", "901", "VALUE:001-901");
+        table.addRawRow("001", "*", "VALUE:001-*");
+        table.addRawRow("002", "902", "VALUE:002-902");
+        provider.addTable(table);
+
+        StagingSchema schema = new StagingSchema("test_default_table");
+        schema.setSchemaSelectionTable("table_selection");
+        schema.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
+        schema.addInput(new StagingSchemaInput("input1", "input1", "table_input1"));
+        StagingSchemaInput input2 = new StagingSchemaInput("input2", "input2", "table_input2");
+        input2.setDefaultTable("table_input2_default");
+        schema.addInput(input2);
+
+        schema.addOutput(new StagingSchemaOutput("output1"));
+
+        schema.addMapping(new StagingMapping("m1", Collections.singletonList(new StagingTablePath("table_mapping"))));
+
+        provider.addSchema(schema);
+
+        DecisionEngine engine = new DecisionEngine(provider);
+
+        // test a case where the default_table make a successful lookup
+        Map<String, String> context = new HashMap<>();
+        context.put("input1", "000");
+        Result result = engine.process("test_default_table", context);
+
+        assertEquals(Type.STAGED, result.getType());
+        assertFalse(result.hasErrors());
+        assertEquals(1, result.getContext().size());
+        assertEquals("000-900", result.getContext().get("output1"));
+
+        // check same case with getDefault method
+        context = new HashMap<>();
+        context.put("input1", "000");
+        Result result1 = new Result(context);
+        assertEquals("900", engine.getDefault(input2, context, result1));
+        assertFalse(result1.hasErrors());
+
+        // test a case where there was a fallthrough match in the default table
+        context = new HashMap<>();
+        context.put("input1", "002");
+        result = engine.process("test_default_table", context);
+
+        assertEquals(Type.STAGED, result.getType());
+        assertFalse(result.hasErrors());
+        assertEquals(1, result.getContext().size());
+        assertEquals("002-902", result.getContext().get("output1"));
+
+        // check same case with getDefault method
+        context = new HashMap<>();
+        context.put("input1", "002");
+        result1 = new Result(context);
+        assertEquals("902", engine.getDefault(input2, context, result1));
+        assertFalse(result1.hasErrors());
+
+        // test a case where the default_table did not exist
+        schema.getInputs().stream().filter(i -> i.getDefaultTable() != null).forEach(i -> i.setDefaultTable("does_not_exist"));
+        context = new HashMap<>();
+        context.put("input1", "000");
+        result = engine.process("test_default_table", context);
+        assertEquals(Type.STAGED, result.getType());
+        assertEquals(1, result.getErrors().size());
+        assertEquals("input2", result.getErrors().get(0).getKey());
+        assertEquals("Default table does not exist: does_not_exist", result.getErrors().get(0).getMessage());
+
+        // check same case with getDefault method
+        context = new HashMap<>();
+        context.put("input1", "000");
+        result1 = new Result(context);
+        assertEquals("", engine.getDefault(input2, context, result1));
+        assertEquals(1, result1.getErrors().size());
+        assertEquals("input2", result1.getErrors().get(0).getKey());
+        assertEquals("Default table does not exist: does_not_exist", result1.getErrors().get(0).getMessage());
+
+        // test a case where the default table did not find a match
+        schema.getInputs().stream().filter(i -> i.getDefaultTable() != null).forEach(i -> i.setDefaultTable("table_input2_default"));
+        provider.getTable("table_input2_default").setRawRows(new ArrayList<>());
+        provider.initTable(provider.getTable("table_input2_default"));
+        context = new HashMap<>();
+        context.put("input1", "001");
+        result = engine.process("test_default_table", context);
+        assertEquals(Type.STAGED, result.getType());
+        assertEquals(1, result.getErrors().size());
+        assertEquals("input2", result.getErrors().get(0).getKey());
+        assertEquals("Default table table_input2_default did not find a match", result.getErrors().get(0).getMessage());
+
+        // check same case with getDefault method
+        context = new HashMap<>();
+        context.put("input1", "001");
+        result1 = new Result(context);
+        assertEquals("", engine.getDefault(input2, context, result1));
+        assertEquals(1, result1.getErrors().size());
+        assertEquals("input2", result.getErrors().get(0).getKey());
+        assertEquals("Default table table_input2_default did not find a match", result.getErrors().get(0).getMessage());
+    }
+
 }
