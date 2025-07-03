@@ -76,13 +76,13 @@ class StagingDataProviderTest {
 
         List<? extends Range> ranges = provider.splitValues(",1,2,3,4");
         assertEquals(5, ranges.size());
-        assertEquals("", ranges.get(0).getLow());
-        assertEquals("", ranges.get(0).getHigh());
+        assertEquals("", ranges.getFirst().getLow());
+        assertEquals("", ranges.getFirst().getHigh());
 
         ranges = provider.splitValues("     ,1,2,3,4");
         assertEquals(5, ranges.size());
-        assertEquals("", ranges.get(0).getLow());
-        assertEquals("", ranges.get(0).getHigh());
+        assertEquals("", ranges.getFirst().getLow());
+        assertEquals("", ranges.getFirst().getHigh());
 
         ranges = provider.splitValues("1,2,3,4,");
         assertEquals(5, ranges.size());
@@ -114,24 +114,24 @@ class StagingDataProviderTest {
 
         ranges = provider.splitValues("p0I-");
         assertEquals(1, ranges.size());
-        assertEquals("p0I-", ranges.get(0).getLow());
-        assertEquals("p0I-", ranges.get(0).getHigh());
+        assertEquals("p0I-", ranges.getFirst().getLow());
+        assertEquals("p0I-", ranges.getFirst().getHigh());
 
         ranges = provider.splitValues("N0(mol-)");
         assertEquals(1, ranges.size());
-        assertEquals("N0(mol-)", ranges.get(0).getLow());
-        assertEquals("N0(mol-)", ranges.get(0).getHigh());
+        assertEquals("N0(mol-)", ranges.getFirst().getLow());
+        assertEquals("N0(mol-)", ranges.getFirst().getHigh());
 
         // test numeric ranges
         ranges = provider.splitValues("1-21");
         assertEquals(1, ranges.size());
-        assertEquals("1", ranges.get(0).getLow());
-        assertEquals("21", ranges.get(0).getHigh());
+        assertEquals("1", ranges.getFirst().getLow());
+        assertEquals("21", ranges.getFirst().getHigh());
 
         ranges = provider.splitValues("21-111");
         assertEquals(1, ranges.size());
-        assertEquals("21", ranges.get(0).getLow());
-        assertEquals("111", ranges.get(0).getHigh());
+        assertEquals("21", ranges.getFirst().getLow());
+        assertEquals("111", ranges.getFirst().getHigh());
     }
 
     @Test

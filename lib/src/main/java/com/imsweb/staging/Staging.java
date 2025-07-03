@@ -4,10 +4,8 @@
 package com.imsweb.staging;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -43,7 +41,7 @@ public final class Staging {
     public static final String CTX_YEAR_CURRENT = "ctx_year_current";
 
     // list of all context keys
-    public static final List<String> CONTEXT_KEYS = Collections.unmodifiableList(Arrays.asList(CTX_ALGORITHM_VERSION, CTX_YEAR_CURRENT));
+    public static final List<String> CONTEXT_KEYS = List.of(CTX_ALGORITHM_VERSION, CTX_YEAR_CURRENT);
 
     private final DecisionEngine _engine;
     private final StagingDataProvider _provider;
@@ -204,7 +202,7 @@ public final class Staging {
      * @param schemaId schema identifier
      * @param key input key
      * @param value value to check validity
-     * @return a boolean indicating whether the code exists for the the passed schema field
+     * @return a boolean indicating whether the code exists for the passed schema field
      */
     public boolean isCodeValid(String schemaId, String key, String value) {
         Map<String, String> context = new HashMap<>();
@@ -224,7 +222,7 @@ public final class Staging {
      * @param schemaId schema identifier
      * @param key input key
      * @param context Map of keys/values to validate against
-     * @return a boolean indicating whether the code exists for the the passed schema field
+     * @return a boolean indicating whether the code exists for the passed schema field
      */
     public boolean isContextValid(String schemaId, String key, Map<String, String> context) {
         // first get the algorithm
@@ -360,7 +358,7 @@ public final class Staging {
      * used in the inclusion and exclusion tables if any.  The inputs from each table path will only be included if it passes the inclusion/exclusion
      * criteria based on the context.
      * @param mapping a StagingMapping
-     * @param context a context of values used to to check mapping inclusion/exclusion
+     * @param context a context of values used to check mapping inclusion/exclusion
      * @param excludedInputs a list of input keys to not consider as inputs
      * @return a Set of unique input keys
      */
@@ -475,7 +473,7 @@ public final class Staging {
      * used in the inclusion and exclusion tables if any.  The outputs from each mapping will only be included if it passes the inclusion/exclusion
      * criteria based on the context.
      * @param mapping a StagingMapping
-     * @param context a context of values used to to check mapping inclusion/exclusion
+     * @param context a context of values used to check mapping inclusion/exclusion
      * @return a Set of unique output keys
      */
     public Set<String> getOutputs(Mapping mapping, Map<String, String> context) {
@@ -502,14 +500,14 @@ public final class Staging {
      * outputs.  The outputs from each mapping will only be included if it passes the inclusion/exclusion criteria based on the context.  If the schema has StagingOutputs
      * defined, then the calulated output list is exactly the same as the schema output list.
      * @param schema a StagingSchema
-     * @param context a context of values used to to check mapping inclusion/exclusion
+     * @param context a context of values used to check mapping inclusion/exclusion
      * @return a Set of unique output keys
      */
     public Set<String> getOutputs(Schema schema, Map<String, String> context) {
         Set<String> outputs = new HashSet<>();
 
         // if outputs are defined in the schema, then there is no reason to look any further into the mappings; the output defines exactly what keys will
-        // be returned and it doesn't matter what context is passed in that case
+        // be returned, and it doesn't matter what context is passed in that case
         if (schema.getOutputMap() != null) {
             for (Entry<String, ? extends Output> entry : schema.getOutputMap().entrySet())
                 outputs.add(entry.getKey());
@@ -559,7 +557,7 @@ public final class Staging {
             return data;
         }
 
-        Schema schema = schemas.get(0);
+        Schema schema = schemas.getFirst();
 
         // add schema id to result
         data.setSchemaId(schema.getId());
@@ -637,7 +635,7 @@ public final class Staging {
     }
 
     /**
-     * Return a list of glossary terms in the passed text
+     * Return a list of glossary terms in the supplied text
      * @param text text to match against
      * @return a list of glossary terms
      */

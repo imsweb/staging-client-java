@@ -4,10 +4,7 @@
 package com.imsweb.staging.entities;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -25,7 +22,7 @@ public class StagingData {
     public static final String YEAR_DX_KEY = "year_dx";
 
     // set of keys that are standard for all schema lookups; any other keys are considered a discriminator
-    public static final Set<String> STANDARD_LOOKUP_KEYS = Collections.unmodifiableSet(new HashSet<>(Arrays.asList(PRIMARY_SITE_KEY, HISTOLOGY_KEY)));
+    public static final Set<String> STANDARD_LOOKUP_KEYS = Set.of(PRIMARY_SITE_KEY, HISTOLOGY_KEY);
 
     private Result _result;
     private String _schemaId;

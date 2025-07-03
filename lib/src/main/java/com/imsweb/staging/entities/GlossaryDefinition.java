@@ -68,10 +68,9 @@ public class GlossaryDefinition {
     public boolean equals(Object o) {
         if (this == o)
             return true;
-        if (!(o instanceof GlossaryDefinition))
+        if (!(o instanceof GlossaryDefinition that))
             return false;
 
-        GlossaryDefinition that = (GlossaryDefinition)o;
         return Objects.equals(_name, that._name) &&
                 Objects.equals(_definition, that._definition) &&
                 Objects.equals(_alternateNames, that._alternateNames) &&

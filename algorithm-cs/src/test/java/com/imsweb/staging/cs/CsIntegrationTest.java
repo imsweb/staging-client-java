@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
 import java.util.zip.GZIPInputStream;
 
 import org.slf4j.Logger;
@@ -55,7 +54,7 @@ public class CsIntegrationTest {
         List<String> schemaFiles;
         try (BufferedReader buffer = new BufferedReader(
                 new InputStreamReader(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("cs/integration/schemas/index.txt")), StandardCharsets.UTF_8))) {
-            schemaFiles = buffer.lines().collect(Collectors.toList());
+            schemaFiles = buffer.lines().toList();
         }
 
         long totalFiles = 0;

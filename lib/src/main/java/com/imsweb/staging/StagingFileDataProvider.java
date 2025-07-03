@@ -102,8 +102,8 @@ public class StagingFileDataProvider extends StagingDataProvider {
                 TrieBuilder builder = Trie.builder().onlyWholeWords().ignoreCase();
 
                 try (BufferedReader buffer = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8))) {
-                    for (String line : buffer.lines().collect(Collectors.toList())) {
-                        if (line.length() > 0) {
+                    for (String line : buffer.lines().toList()) {
+                        if (!line.isEmpty()) {
                             String[] parts = line.split("~");
                             if (parts.length != 2)
                                 throw new IllegalStateException("Error parsing glossary terms.  Should only be two parts of each line in terms.txt");

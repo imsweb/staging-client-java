@@ -78,9 +78,9 @@ public final class IntegrationUtils {
                         lookup.setInput(CsStagingData.SSF25_KEY, parts[2]);
 
                         List<Schema> lookups = staging.lookupSchema(lookup);
-                        if (parts[3].length() == 0) {
+                        if (parts[3].isEmpty()) {
                             if (lookups.size() == 1) {
-                                _LOG.info("Line #{} [{}] --> The schema selection should not have found any schema but did: {}", lineNum, fullLine, lookups.get(0).getId());
+                                _LOG.info("Line #{} [{}] --> The schema selection should not have found any schema but did: {}", lineNum, fullLine, lookups.getFirst().getId());
                                 failedCases.getAndIncrement();
                             }
                         }
@@ -89,8 +89,8 @@ public final class IntegrationUtils {
                                 _LOG.info("Line #{} [{}] --> The schema selection should have found a schema, {}, but did not.", lineNum, fullLine, parts[3]);
                                 failedCases.getAndIncrement();
                             }
-                            else if (!Objects.equals(lookups.get(0).getId(), parts[3])) {
-                                _LOG.info("Line #{} [{}] --> The schema selection found schema {} but it should have found {}.", lineNum, fullLine, lookups.get(0).getId(), parts[3]);
+                            else if (!Objects.equals(lookups.getFirst().getId(), parts[3])) {
+                                _LOG.info("Line #{} [{}] --> The schema selection found schema {} but it should have found {}.", lineNum, fullLine, lookups.getFirst().getId(), parts[3]);
                                 failedCases.getAndIncrement();
                             }
                         }
@@ -304,7 +304,7 @@ public final class IntegrationUtils {
                                     _LOG.error(mismatch);
                                 _LOG.error("   {} *** RESULT: {}", lineNum, data.getResult());
                                 _LOG.error("   {} --> {}", lineNum, convertInputMap(data.getInput()));
-                                if (data.getErrors().size() > 0) {
+                                if (!data.getErrors().isEmpty()) {
                                     _LOG.error("   {} --> ERRORS: ", lineNum);
                                     for (com.imsweb.staging.entities.Error e : data.getErrors())
                                         _LOG.error("({}: {}) ", e.getTable(), e.getMessage());

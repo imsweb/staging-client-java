@@ -98,11 +98,11 @@ class EodStagingTest extends StagingTest {
         schemaLookup.setInput(EodInput.DISCRIMINATOR_1.toString(), "");
         lookup = _STAGING.lookupSchema(schemaLookup);
         assertThat(lookup).hasSize(1);
-        assertThat(lookup.get(0).getId()).isEqualTo("soft_tissue_rare");
+        assertThat(lookup.getFirst().getId()).isEqualTo("soft_tissue_rare");
         schemaLookup.setInput(EodInput.DISCRIMINATOR_1.toString(), null);
         lookup = _STAGING.lookupSchema(schemaLookup);
         assertThat(lookup).hasSize(1);
-        assertThat(lookup.get(0).getId()).isEqualTo("soft_tissue_rare");
+        assertThat(lookup.getFirst().getId()).isEqualTo("soft_tissue_rare");
 
         // test valid combination that requires a discriminator but is not supplied one
         lookup = _STAGING.lookupSchema(new EodSchemaLookup("C111", "8200"));
@@ -123,14 +123,14 @@ class EodStagingTest extends StagingTest {
         lookup = _STAGING.lookupSchema(schemaLookup);
         assertThat(lookup).hasSize(1);
         assertThat(lookup.stream().flatMap(d -> d.getSchemaDiscriminators().stream()).collect(Collectors.toSet())).isEqualTo(new HashSet<>(Arrays.asList("discriminator_1", "year_dx")));
-        assertThat(lookup.get(0).getId()).isEqualTo("nasopharynx");
+        assertThat(lookup.getFirst().getId()).isEqualTo("nasopharynx");
 
         schemaLookup.setInput(EodInput.DISCRIMINATOR_1.toString(), "2");
         schemaLookup.setInput(EodInput.DISCRIMINATOR_2.toString(), "1");
         lookup = _STAGING.lookupSchema(schemaLookup);
         assertThat(lookup).hasSize(1);
         assertThat(lookup.stream().flatMap(d -> d.getSchemaDiscriminators().stream()).collect(Collectors.toSet())).isEqualTo(new HashSet<>(Arrays.asList("discriminator_1", "discriminator_2")));
-        assertThat(lookup.get(0).getId()).isEqualTo("oropharynx_p16_neg");
+        assertThat(lookup.getFirst().getId()).isEqualTo("oropharynx_p16_neg");
 
         // test valid combination that requires a discriminator but is supplied a bad disciminator value
         schemaLookup = new EodSchemaLookup("C111", "8200");
@@ -167,7 +167,7 @@ class EodStagingTest extends StagingTest {
         schemaLookup.setInput(EodInput.SEX.toString(), "1");
         lookup = _STAGING.lookupSchema(schemaLookup);
         assertThat(lookup).hasSize(1);
-        assertThat(lookup.get(0).getId()).isEqualTo("retroperitoneum");
+        assertThat(lookup.getFirst().getId()).isEqualTo("retroperitoneum");
     }
 
     @Test
@@ -187,11 +187,11 @@ class EodStagingTest extends StagingTest {
         // do the same lookup twice
         List<Schema> lookup = _STAGING.lookupSchema(new EodSchemaLookup("C629", "9231"));
         assertThat(lookup).hasSize(1);
-        assertThat(lookup.get(0).getId()).isEqualTo("soft_tissue_rare");
+        assertThat(lookup.getFirst().getId()).isEqualTo("soft_tissue_rare");
 
         lookup = _STAGING.lookupSchema(new EodSchemaLookup("C629", "9231"));
         assertThat(lookup).hasSize(1);
-        assertThat(lookup.get(0).getId()).isEqualTo("soft_tissue_rare");
+        assertThat(lookup.getFirst().getId()).isEqualTo("soft_tissue_rare");
 
         // now invalidate the cache
         EodDataProvider.getInstance(EodVersion.V3_2).invalidateCache();
@@ -199,7 +199,7 @@ class EodStagingTest extends StagingTest {
         // try the lookup again
         lookup = _STAGING.lookupSchema(new EodSchemaLookup("C629", "9231"));
         assertThat(lookup).hasSize(1);
-        assertThat(lookup.get(0).getId()).isEqualTo("soft_tissue_rare");
+        assertThat(lookup.getFirst().getId()).isEqualTo("soft_tissue_rare");
     }
 
     @Test
@@ -412,7 +412,7 @@ class EodStagingTest extends StagingTest {
         List<Schema> lookups = _STAGING.lookupSchema(lookup);
         assertThat(lookups).hasSize(2);
 
-        Schema schema = _STAGING.getSchema(lookups.get(0).getId());
+        Schema schema = _STAGING.getSchema(lookups.getFirst().getId());
         assertThat(schema.getId()).isEqualTo("urethra");
 
         // build list of output keys

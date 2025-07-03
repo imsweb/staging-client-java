@@ -12,11 +12,11 @@ class SchemaLookupTest {
 
     @Test
     void testConstructorMissingValues() {
-        assertEquals(new SchemaLookup().getKeys(), new HashSet<>());
-        assertEquals(new SchemaLookup(null, null).getKeys(), new HashSet<>());
-        assertEquals(new SchemaLookup("", null).getKeys(), new HashSet<>());
-        assertEquals(new SchemaLookup(null, "").getKeys(), new HashSet<>());
-        assertEquals(new SchemaLookup("", "").getKeys(), new HashSet<>());
+        assertEquals(new HashSet<>(), new SchemaLookup().getKeys());
+        assertEquals(new HashSet<>(), new SchemaLookup(null, null).getKeys());
+        assertEquals(new HashSet<>(), new SchemaLookup("", null).getKeys());
+        assertEquals(new HashSet<>(), new SchemaLookup(null, "").getKeys());
+        assertEquals(new HashSet<>(), new SchemaLookup("", "").getKeys());
 
         assertEquals(new SchemaLookup("C629", null).getKeys(), Stream.of("site").collect(Collectors.toSet()));
         assertEquals(new SchemaLookup("C629", "").getKeys(), Stream.of("site").collect(Collectors.toSet()));

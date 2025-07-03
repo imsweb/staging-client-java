@@ -144,7 +144,7 @@ public final class UpdaterUtils {
             StagingTable table = staging.tableById(algorithm, version, tableId).execute().body();
             String tableText = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(table);
 
-            Files.write(Paths.get(tableDir + "/" + table.getId() + ".json"), tableText.getBytes(StandardCharsets.UTF_8));
+            Files.writeString(Paths.get(tableDir + "/" + table.getId() + ".json"), tableText);
             _LOG.info("Saved table: {}", table.getId());
 
             // collect the glossary hits
@@ -163,7 +163,7 @@ public final class UpdaterUtils {
 
             String schemaText = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(schema);
 
-            Files.write(Paths.get(schemaDir + "/" + schema.getId() + ".json"), schemaText.getBytes(StandardCharsets.UTF_8));
+            Files.writeString(Paths.get(schemaDir + "/" + schema.getId() + ".json"), schemaText);
             _LOG.info("Saved schema: {}", schema.getId());
 
             // collect the glossary hits
@@ -190,7 +190,7 @@ public final class UpdaterUtils {
             String glossaryText = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(
                     new GlossaryDefinition(entry.getName(), entry.getDefinition(), entry.getAlternateName(), entry.getLastModified()));
 
-            Files.write(Paths.get(glossaryDir + "/" + entry.getId() + ".json"), glossaryText.getBytes(StandardCharsets.UTF_8));
+            Files.writeString(Paths.get(glossaryDir + "/" + entry.getId() + ".json"), glossaryText);
             _LOG.info("Saved glossary term: {}", entry.getName());
         }
 

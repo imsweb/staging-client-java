@@ -51,7 +51,7 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 public class CsStagingTest extends StagingTest {
 
-    private static final Logger _LOG = LoggerFactory.getLogger(StagingTest.class);
+    private static final Logger _LOG = LoggerFactory.getLogger(CsStagingTest.class);
 
     @BeforeAll
     public static void init() {
@@ -76,7 +76,7 @@ public class CsStagingTest extends StagingTest {
     @Test
     void testBasicInitialization() {
         assertEquals(153, _STAGING.getSchemaIds().size());
-        assertTrue(_STAGING.getTableIds().size() > 0);
+        assertFalse(_STAGING.getTableIds().isEmpty());
 
         assertNotNull(_STAGING.getSchema("urethra"));
         assertNotNull(_STAGING.getTable("extension_bdi"));
@@ -109,12 +109,12 @@ public class CsStagingTest extends StagingTest {
         // test valid combinations that do not require a discriminator
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("C629", "9231", ""));
         assertEquals(1, lookup.size());
-        assertEquals("testis", lookup.get(0).getId());
-        assertEquals(Integer.valueOf(122), lookup.get(0).getSchemaNum());
+        assertEquals("testis", lookup.getFirst().getId());
+        assertEquals(Integer.valueOf(122), lookup.getFirst().getSchemaNum());
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("C629", "9231", null));
         assertEquals(1, lookup.size());
-        assertEquals("testis", lookup.get(0).getId());
-        assertEquals(Integer.valueOf(122), lookup.get(0).getSchemaNum());
+        assertEquals("testis", lookup.getFirst().getId());
+        assertEquals(Integer.valueOf(122), lookup.getFirst().getSchemaNum());
 
         // now test one that does do AJCC7
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("C629", "9100", ""));
@@ -123,7 +123,7 @@ public class CsStagingTest extends StagingTest {
         // test value combinations that do not require a discriminator and are supplied 988
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("C629", "9231", "988"));
         assertEquals(1, lookup.size());
-        assertEquals("testis", lookup.get(0).getId());
+        assertEquals("testis", lookup.getFirst().getId());
 
         // test valid combination that requires a discriminator but is not supplied one
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("C111", "8200"));
@@ -136,8 +136,8 @@ public class CsStagingTest extends StagingTest {
         assertEquals(1, lookup.size());
         for (Schema schema : lookup)
             assertEquals(new HashSet<>(Collections.singletonList("ssf25")), schema.getSchemaDiscriminators());
-        assertEquals("nasopharynx", lookup.get(0).getId());
-        assertEquals(Integer.valueOf(34), lookup.get(0).getSchemaNum());
+        assertEquals("nasopharynx", lookup.getFirst().getId());
+        assertEquals(Integer.valueOf(34), lookup.getFirst().getSchemaNum());
 
         // test valid combination that requires a discriminator but is supplied a bad disciminator value
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("C111", "8200", "999"));
@@ -146,8 +146,8 @@ public class CsStagingTest extends StagingTest {
         // test specific failure case:  Line #1995826 [C695,9701,100,lacrimal_gland] --> The schema selection should have found a schema, lacrimal_gland, but did not.
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("C695", "9701", "100"));
         assertEquals(1, lookup.size());
-        assertEquals("lacrimal_gland", lookup.get(0).getId());
-        assertEquals(Integer.valueOf(138), lookup.get(0).getSchemaNum());
+        assertEquals("lacrimal_gland", lookup.getFirst().getId());
+        assertEquals(Integer.valueOf(138), lookup.getFirst().getSchemaNum());
 
         // test searching on only site
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("C401", null));
@@ -171,11 +171,11 @@ public class CsStagingTest extends StagingTest {
         // do the same lookup twice
         List<Schema> lookup = _STAGING.lookupSchema(new CsSchemaLookup("C629", "9231", ""));
         assertEquals(1, lookup.size());
-        assertEquals("testis", lookup.get(0).getId());
+        assertEquals("testis", lookup.getFirst().getId());
 
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("C629", "9231", ""));
         assertEquals(1, lookup.size());
-        assertEquals("testis", lookup.get(0).getId());
+        assertEquals("testis", lookup.getFirst().getId());
 
         // now invalidate the cache
         getProvider().invalidateCache();
@@ -183,7 +183,7 @@ public class CsStagingTest extends StagingTest {
         // try the lookup again
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("C629", "9231", ""));
         assertEquals(1, lookup.size());
-        assertEquals("testis", lookup.get(0).getId());
+        assertEquals("testis", lookup.getFirst().getId());
     }
 
     @Test
@@ -369,7 +369,7 @@ public class CsStagingTest extends StagingTest {
 
         assertEquals(Result.STAGED, data.getResult());
         assertEquals(4, data.getErrors().size());
-        com.imsweb.staging.entities.Error error = data.getErrors().get(0);
+        com.imsweb.staging.entities.Error error = data.getErrors().getFirst();
         assertEquals("lymph_nodes_clinical_eval_v0205_ajcc7_xch", error.getTable());
         assertEquals(Collections.singletonList("ajcc7_n"), error.getColumns());
         assertEquals("Matching resulted in an error in table 'lymph_nodes_clinical_eval_v0205_ajcc7_xch' for column 'ajcc7_n' (000)", error.getMessage());
@@ -468,7 +468,7 @@ public class CsStagingTest extends StagingTest {
         assertEquals(Result.STAGED, data.getResult());
         assertEquals("urethra", data.getSchemaId());
         assertEquals(1, data.getErrors().size());
-        assertEquals(Type.INVALID_REQUIRED_INPUT, data.getErrors().get(0).getType());
+        assertEquals(Type.INVALID_REQUIRED_INPUT, data.getErrors().getFirst().getType());
 
         // test case with missing year_dx and valid version original
         data.setInput(CsStagingData.CsInput.DX_YEAR, "");
@@ -642,7 +642,7 @@ public class CsStagingTest extends StagingTest {
         context.put(StagingData.HISTOLOGY_KEY, "8120");
         context.put(StagingData.YEAR_DX_KEY, "2004");
 
-        // for that context, neither AJCC6 or 7 should be calculated so "grade" and "ssf1" should not be list of inputs
+        // for that context, neither AJCC6 nor 7 should be calculated so "grade" and "ssf1" should not be list of inputs
         assertEquals(new HashSet<>(Arrays.asList("site", "nodes_eval", "mets_eval", "ssf10", "cs_input_version_original", "ssf8", "extension", "extension_eval",
                 "ssf3", "hist", "nodes", "year_dx", "mets")), _STAGING.getInputs(_STAGING.getSchema("prostate"), context));
 
@@ -727,7 +727,7 @@ public class CsStagingTest extends StagingTest {
     void testGetSchemaIds() {
         Set<String> algorithms = _STAGING.getSchemaIds();
 
-        assertTrue(algorithms.size() > 0);
+        assertFalse(algorithms.isEmpty());
         assertTrue(algorithms.contains("testis"));
     }
 
@@ -735,7 +735,7 @@ public class CsStagingTest extends StagingTest {
     void testGetTableIds() {
         Set<String> tables = _STAGING.getTableIds();
 
-        assertTrue(tables.size() > 0);
+        assertFalse(tables.isEmpty());
         assertTrue(tables.contains("ajcc7_stage_uaz"));
     }
 

@@ -3,9 +3,6 @@
  */
 package com.imsweb.staging.cs;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashSet;
 import java.util.Set;
 
 import com.imsweb.staging.entities.SchemaLookup;
@@ -15,7 +12,7 @@ import static com.imsweb.staging.entities.StagingData.PRIMARY_SITE_KEY;
 
 public class CsSchemaLookup extends SchemaLookup {
 
-    private static final Set<String> _ALLOWED_KEYS = Collections.unmodifiableSet(new HashSet<>(Arrays.asList(PRIMARY_SITE_KEY, HISTOLOGY_KEY, CsStagingData.SSF25_KEY)));
+    private static final Set<String> _ALLOWED_KEYS = Set.of(PRIMARY_SITE_KEY, HISTOLOGY_KEY, CsStagingData.SSF25_KEY);
 
     /**
      * Constructor
