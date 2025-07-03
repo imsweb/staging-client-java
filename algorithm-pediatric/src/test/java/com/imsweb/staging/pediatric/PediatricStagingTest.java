@@ -141,7 +141,7 @@ class PediatricStagingTest extends StagingTest {
         PediatricSchemaLookup schemaLookup = new PediatricSchemaLookup("C220", "8970", "10", "3");
         lookup = _STAGING.lookupSchema(schemaLookup);
         assertThat(lookup).hasSize(1);
-        assertThat(lookup.get(0).getId()).isEqualTo("hepatoblastoma");
+        assertThat(lookup.getFirst().getId()).isEqualTo("hepatoblastoma");
 
         // test valid combination that requires a discriminator but is not supplied one
         lookup = _STAGING.lookupSchema(new PediatricSchemaLookup("C723", "9384"));
@@ -156,7 +156,7 @@ class PediatricStagingTest extends StagingTest {
         lookup = _STAGING.lookupSchema(schemaLookup);
         assertThat(lookup).hasSize(1);
         assertThat(lookup.stream().flatMap(d -> d.getSchemaDiscriminators().stream()).collect(Collectors.toSet())).isEqualTo(new HashSet<>(Collections.singletonList("age_dx")));
-        assertThat(lookup.get(0).getId()).isEqualTo("astrocytoma");
+        assertThat(lookup.getFirst().getId()).isEqualTo("astrocytoma");
 
         // test valid combination that requires a discriminator but is supplied a bad disciminator value
         schemaLookup = new PediatricSchemaLookup("C723", "9384");
@@ -194,11 +194,11 @@ class PediatricStagingTest extends StagingTest {
         // do the same lookup twice
         List<Schema> lookup = _STAGING.lookupSchema(new PediatricSchemaLookup(site, hist));
         assertThat(lookup).hasSize(1);
-        assertThat(lookup.get(0).getId()).isEqualTo(schemaId);
+        assertThat(lookup.getFirst().getId()).isEqualTo(schemaId);
 
         lookup = _STAGING.lookupSchema(new PediatricSchemaLookup(site, hist));
         assertThat(lookup).hasSize(1);
-        assertThat(lookup.get(0).getId()).isEqualTo(schemaId);
+        assertThat(lookup.getFirst().getId()).isEqualTo(schemaId);
 
         // now invalidate the cache
         PediatricDataProvider.getInstance(PediatricVersion.V1_2).invalidateCache();
@@ -206,7 +206,7 @@ class PediatricStagingTest extends StagingTest {
         // try the lookup again
         lookup = _STAGING.lookupSchema(new PediatricSchemaLookup(site, hist));
         assertThat(lookup).hasSize(1);
-        assertThat(lookup.get(0).getId()).isEqualTo(schemaId);
+        assertThat(lookup.getFirst().getId()).isEqualTo(schemaId);
     }
 
     @Test

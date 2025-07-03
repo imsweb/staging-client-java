@@ -56,8 +56,8 @@ subprojects {
     }
 
     java {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
 
     repositories {
@@ -115,10 +115,8 @@ subprojects {
     check.dependsOn 'ossIndexAudit'
 
     javadoc {
-        if (JavaVersion.current().isJava9Compatible()) {
-            options.addBooleanOption('html5', true)
-            options.addStringOption('Xdoclint:none', '-quiet')
-        }
+        options.addBooleanOption('html5', true)
+        options.addStringOption('Xdoclint:none', '-quiet')
     }
 
     // zip up all algorithms

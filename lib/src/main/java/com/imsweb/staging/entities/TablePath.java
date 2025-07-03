@@ -19,14 +19,14 @@ public interface TablePath {
     /**
      * A List of input key redirections.  Each entry maps an input key that the table uses to a new input key to read from instead.  It allows
      * for a single table to be called multiple times and use different input.
-     * @return a List of KeyMapping objects
+     * @return a Set of KeyMapping objects
      */
     Set<? extends KeyMapping> getInputMapping();
 
     /**
      * A List of output key redirections.  Each entry maps an output key that the table uses to a new output key.  It allows for a single table
      * to be called multiple times and produce output on different fields.
-     * @return a List of KeyMapping objects
+     * @return a Set of KeyMapping objects
      */
     Set<? extends KeyMapping> getOutputMapping();
 

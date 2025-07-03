@@ -13,7 +13,7 @@ public interface TableRow {
 
     /**
      * Return the list of columns
-     * @return a Map of field name to list of Range objects
+     * @return a Set of columns
      */
     Set<String> getColumns();
 

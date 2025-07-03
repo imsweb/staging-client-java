@@ -173,7 +173,7 @@ public class DecisionEngine {
 
     /**
      * Translates a value.  If it is a reference to a context, like {{var}} it will return the context value; otherwise
-     * if will return the value unchanged.  If the context key does not exist in the context, blank will be returned
+     * it will return the value unchanged.  If the context key does not exist in the context, blank will be returned
      * @param value String value
      * @param context Context for handling variable references
      * @return the context value if a reference, otherwise the original value is returned
@@ -331,7 +331,7 @@ public class DecisionEngine {
     }
 
     /**
-     * Return a list of tables involved in an schema.  This includes not only the tables paths, but also tables references in the input section.
+     * Return a list of tables involved in a schema.  This includes not only the tables paths, but also tables references in the input section.
      * @param schema a schema
      * @return a set of table identifiers
      */
@@ -403,7 +403,7 @@ public class DecisionEngine {
      * Returns a list of inputs that are required for the specified TablePath.  This method will deal with mapped inputs.
      * Note that if an output key is added during the mapping and used as an input in one of the later tables, we do not want
      * to include it in the final list of inputs.  Order matters here since if the key was already used as an input before being
-     * re-mapped, then it is still considered an input, otherwise if should be excluded.
+     * re-mapped, then it is still considered an input, otherwise it should be excluded.
      * @param path a TablePath
      * @return a Set of unique inputs
      */
@@ -415,7 +415,7 @@ public class DecisionEngine {
      * Returns a list of inputs that are required for the specified TablePath.  This method will deal with mapped inputs.
      * Note that if an output key is added during the mapping and used as an input in one of the later tables, we do not want
      * to include it in the final list of inputs.  Order matters here since if the key was already used as an input before being
-     * re-mapped, then it is still considered an input, otherwise if should be excluded.
+     * re-mapped, then it is still considered an input, otherwise it should be excluded.
      * @param path a TablePath
      * @param excludedInputs a list of keys that should not be included in the inputs
      * @return a Set of unique inputs
@@ -627,7 +627,7 @@ public class DecisionEngine {
     }
 
     /**
-     * Using the supplied context, process an schema.  The results will be added to the context.
+     * Using the supplied context, process a schema.  The results will be added to the context.
      * @param schemaId an schema identifier
      * @param context a Map containing the context
      * @return a Result
@@ -666,7 +666,7 @@ public class DecisionEngine {
             if (value == null)
                 context.put(input.getKey(), getDefault(input, context, result));
 
-            // validate value against associated table, if supplied; if a value is not supplied, or blank, there is no need to validate it against the table
+            // validate value against associated table if supplied; if a value is not supplied, or blank, there is no need to validate it against the table
             if (value != null && !value.isEmpty() && input.getTable() != null) {
                 Table lookup = getProvider().getTable(input.getTable());
 
@@ -861,7 +861,7 @@ public class DecisionEngine {
                         }
                     }
 
-                    // if the value if null, that is indicating that the key should be removed from the context; otherwise set the value into the context
+                    // if the value is null, that is indicating that the key should be removed from the context; otherwise set the value into the context
                     if (mappedKeys.isEmpty())
                         mappedKeys = Collections.singletonList(endpoint.getResultKey());
 
@@ -876,7 +876,7 @@ public class DecisionEngine {
             }
         }
 
-        // processing of this table is complete and it can be removed from the recursion stack
+        // processing of this table is complete, and it can be removed from the recursion stack
         stack.pop();
 
         return continueProcessing;

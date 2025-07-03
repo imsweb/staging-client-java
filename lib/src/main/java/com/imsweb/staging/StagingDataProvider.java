@@ -223,7 +223,7 @@ public abstract class StagingDataProvider implements DataProvider {
     }
 
     /**
-     * Parse the string representation of an endpoint into a Endpoint object
+     * Parse the string representation of an endpoint into an Endpoint object
      * @param endpoint endpoint String
      * @return an Endpoint object
      */
@@ -270,7 +270,7 @@ public abstract class StagingDataProvider implements DataProvider {
 
                 for (String range : ranges) {
                     // Not sure if this is the best way to handle this, but I ran into a problem when I converted the CS data.  One of the tables had
-                    // a value of "N0(mol-)".  This fails since it considers it a range and we require our ranges to have the same size on both sides.
+                    // a value of "N0(mol-)".  This fails since it considers it a range, and we require our ranges to have the same size on both sides.
                     // The only thing I can think of is for cases like this, assume it is not a range and use the whole string as a non-range value.
                     // The problem is that if something is entered incorrectly and was supposed to be a range, we will not process it correctly.  We
                     // may need to revisit this issue later.
@@ -282,7 +282,7 @@ public abstract class StagingDataProvider implements DataProvider {
                         // check if both sides of the range are numeric values; if so the length does not have to match
                         boolean isNumericRange = isNumeric(low) && isNumeric(high);
 
-                        // if same length, a numeric range, or one of the parts is a context variable, use the low and high as range.  Otherwise consier
+                        // if same length, a numeric range, or one of the parts is a context variable, use the low and high as range; otherwise consider
                         // a single value (i.e. low = high)
                         if (low.length() == high.length() || isNumericRange || DecisionEngine.isReferenceVariable(low) || DecisionEngine.isReferenceVariable(high))
                             convertedRanges.add(getRange(low, high));
@@ -311,12 +311,7 @@ public abstract class StagingDataProvider implements DataProvider {
         if (string == null || string.length() >= minLength)
             return string;
 
-        StringBuilder sb = new StringBuilder(minLength);
-        for (int i = string.length(); i < minLength; i++)
-            sb.append(padChar);
-        sb.append(string);
-
-        return sb.toString();
+        return String.valueOf(padChar).repeat(minLength - string.length()) + string;
     }
 
     /**
@@ -421,7 +416,7 @@ public abstract class StagingDataProvider implements DataProvider {
 
     /**
      * Return a set of all the table names
-     * @return a List of table identifier
+     * @return a Set of table identifier
      */
     public abstract Set<String> getTableIds();
 
@@ -489,7 +484,7 @@ public abstract class StagingDataProvider implements DataProvider {
         String histology = lookup.getInput(StagingData.HISTOLOGY_KEY);
         boolean hasDiscriminator = lookup.hasDiscriminator();
 
-        // site or histology must be supplied and they must be valid; I am assuming that all algorithms must have tables that validate
+        // site or histology must be supplied, and they must be valid; I am assuming that all algorithms must have tables that validate
         // both site and histology
         if ((site != null && !isValidSite(site)) || (histology != null && !isValidHistology(histology)))
             return matchedSchemas;

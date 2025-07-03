@@ -375,9 +375,9 @@ public class DecisionEngineTest {
         input.put("size", "014");
         List<? extends Endpoint> results = DecisionEngine.matchTable(matchTable, input);
         assertEquals(1, results.size());
-        assertEquals(EndpointType.VALUE, results.get(0).getType());
-        assertEquals("medium_stuff", results.get(0).getValue());
-        assertEquals("size_result", results.get(0).getResultKey());
+        assertEquals(EndpointType.VALUE, results.getFirst().getType());
+        assertEquals("medium_stuff", results.getFirst().getValue());
+        assertEquals("size_result", results.getFirst().getResultKey());
 
         input.put("size", "086");
         assertThat(DecisionEngine.matchTable(matchTable, input))
@@ -505,14 +505,14 @@ public class DecisionEngineTest {
         input.put("a", "");
         endpoints = DecisionEngine.matchTable(tableMissing, input);
         assertEquals(1, endpoints.size());
-        assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
-        assertEquals("missing", endpoints.get(0).getValue());
+        assertEquals(EndpointType.VALUE, endpoints.getFirst().getType());
+        assertEquals("missing", endpoints.getFirst().getValue());
 
         input.put("a", "1");
         endpoints = DecisionEngine.matchTable(tableMissing, input);
         assertEquals(1, endpoints.size());
-        assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
-        assertEquals("all", endpoints.get(0).getValue());
+        assertEquals(EndpointType.VALUE, endpoints.getFirst().getType());
+        assertEquals("all", endpoints.getFirst().getValue());
     }
 
     @Test
@@ -588,15 +588,15 @@ public class DecisionEngineTest {
         input.put("b", "55");
         List<? extends Endpoint> endpoints = DecisionEngine.matchTable(tableSample, input);
         assertEquals(1, endpoints.size());
-        assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
-        assertEquals("LINE5", endpoints.get(0).getValue());
+        assertEquals(EndpointType.VALUE, endpoints.getFirst().getType());
+        assertEquals("LINE5", endpoints.getFirst().getValue());
 
         // then test with a random "a"
         input.put("a", "982");
         endpoints = DecisionEngine.matchTable(tableSample, input);
         assertEquals(1, endpoints.size());
-        assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
-        assertEquals("LINE5", endpoints.get(0).getValue());
+        assertEquals(EndpointType.VALUE, endpoints.getFirst().getType());
+        assertEquals("LINE5", endpoints.getFirst().getValue());
     }
 
     @Test
@@ -686,37 +686,37 @@ public class DecisionEngineTest {
         input.put("b", "3");
         List<? extends Endpoint> endpoints = DecisionEngine.matchTable(allValuesTable, input);
         assertEquals(1, endpoints.size());
-        assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
-        assertEquals("RESULT2", endpoints.get(0).getValue());
+        assertEquals(EndpointType.VALUE, endpoints.getFirst().getType());
+        assertEquals("RESULT2", endpoints.getFirst().getValue());
 
         input = new HashMap<>();
         input.put("a", "3");
         endpoints = DecisionEngine.matchTable(allValuesTable, input);
         assertEquals(1, endpoints.size());
-        assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
-        assertEquals("3A,ANY B", endpoints.get(0).getValue());
+        assertEquals(EndpointType.VALUE, endpoints.getFirst().getType());
+        assertEquals("3A,ANY B", endpoints.getFirst().getValue());
 
         input = new HashMap<>();
         input.put("a", "3");
         input.put("b", "9");
         endpoints = DecisionEngine.matchTable(allValuesTable, input);
         assertEquals(1, endpoints.size());
-        assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
-        assertEquals("3A,ANY B", endpoints.get(0).getValue());
+        assertEquals(EndpointType.VALUE, endpoints.getFirst().getType());
+        assertEquals("3A,ANY B", endpoints.getFirst().getValue());
 
         input = new HashMap<>();
         input.put("a", "6");
         input.put("b", "4");
         endpoints = DecisionEngine.matchTable(allValuesTable, input);
         assertEquals(1, endpoints.size());
-        assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
-        assertEquals("ANY A,4B", endpoints.get(0).getValue());
+        assertEquals(EndpointType.VALUE, endpoints.getFirst().getType());
+        assertEquals("ANY A,4B", endpoints.getFirst().getValue());
 
         input = new HashMap<>();
         assertEquals(1, endpoints.size());
         endpoints = DecisionEngine.matchTable(allValuesTable, input);
-        assertEquals(EndpointType.VALUE, endpoints.get(0).getType());
-        assertEquals("CATCHALL", endpoints.get(0).getValue());
+        assertEquals(EndpointType.VALUE, endpoints.getFirst().getType());
+        assertEquals("CATCHALL", endpoints.getFirst().getValue());
     }
 
     @Test
@@ -822,9 +822,9 @@ public class DecisionEngineTest {
         assertTrue(result.hasErrors());
         assertEquals(3, result.getPath().size());
         assertEquals(1, result.getErrors().size());
-        assertEquals("Bad C value", result.getErrors().get(0).getMessage());
-        assertNull(result.getErrors().get(0).getKey());
-        assertEquals("table_jump_sample", result.getErrors().get(0).getTable());
+        assertEquals("Bad C value", result.getErrors().getFirst().getMessage());
+        assertNull(result.getErrors().getFirst().getKey());
+        assertEquals("table_jump_sample", result.getErrors().getFirst().getTable());
 
         // finally test that no match is found in the jump table
         input = new HashMap<>();
@@ -838,9 +838,9 @@ public class DecisionEngineTest {
         assertTrue(result.hasErrors());
         assertEquals(3, result.getPath().size());
         assertEquals(1, result.getErrors().size());
-        assertTrue(result.getErrors().get(0).getMessage().startsWith("Match not found"));
-        assertNull(result.getErrors().get(0).getKey());
-        assertEquals("table_jump_sample", result.getErrors().get(0).getTable());
+        assertTrue(result.getErrors().getFirst().getMessage().startsWith("Match not found"));
+        assertNull(result.getErrors().getFirst().getKey());
+        assertEquals("table_jump_sample", result.getErrors().getFirst().getTable());
     }
 
     @Test
@@ -854,10 +854,10 @@ public class DecisionEngineTest {
         assertTrue(result.hasErrors());
         assertEquals(1, result.getErrors().size());
         assertEquals(2, result.getPath().size());
-        assertEquals("999", result.getErrors().get(0).getMessage());
-        assertNull(result.getErrors().get(0).getKey());
-        assertEquals("table_sample_first", result.getErrors().get(0).getTable());
-        assertEquals(Collections.singletonList("result"), result.getErrors().get(0).getColumns());
+        assertEquals("999", result.getErrors().getFirst().getMessage());
+        assertNull(result.getErrors().getFirst().getKey());
+        assertEquals("table_sample_first", result.getErrors().getFirst().getTable());
+        assertEquals(Collections.singletonList("result"), result.getErrors().getFirst().getColumns());
 
         // test case with generated error message (i.e. the column is "ERROR:" without a message
         input.put("a", "8");
@@ -866,10 +866,10 @@ public class DecisionEngineTest {
         result = _ENGINE.process("starting_sample", input);
         assertEquals(1, result.getErrors().size());
         assertEquals(2, result.getPath().size());
-        assertEquals("Matching resulted in an error in table 'table_sample_first' for column 'result' (8,99)", result.getErrors().get(0).getMessage());
-        assertNull(result.getErrors().get(0).getKey());
-        assertEquals("table_sample_first", result.getErrors().get(0).getTable());
-        assertEquals(Collections.singletonList("result"), result.getErrors().get(0).getColumns());
+        assertEquals("Matching resulted in an error in table 'table_sample_first' for column 'result' (8,99)", result.getErrors().getFirst().getMessage());
+        assertNull(result.getErrors().getFirst().getKey());
+        assertEquals("table_sample_first", result.getErrors().getFirst().getTable());
+        assertEquals(Collections.singletonList("result"), result.getErrors().getFirst().getColumns());
     }
 
     @Test
@@ -1102,8 +1102,8 @@ public class DecisionEngineTest {
         assertTrue(result.hasErrors());
         assertEquals(1, result.getErrors().size());
         assertEquals(1, result.getPath().size());
-        assertEquals("table_recursion", result.getErrors().get(0).getTable());
-        assertNull(result.getErrors().get(0).getColumns());
+        assertEquals("table_recursion", result.getErrors().getFirst().getTable());
+        assertNull(result.getErrors().getFirst().getColumns());
     }
 
     @Test
@@ -1130,9 +1130,9 @@ public class DecisionEngineTest {
         assertEquals(Type.STAGED, result.getType());
         assertTrue(result.hasErrors());
         assertEquals(1, result.getErrors().size());
-        assertEquals("table_multiple_inputs", result.getErrors().get(0).getTable());
-        assertEquals(Collections.singletonList("r2"), result.getErrors().get(0).getColumns());
-        assertEquals("2_LINE2", result.getErrors().get(0).getMessage());
+        assertEquals("table_multiple_inputs", result.getErrors().getFirst().getTable());
+        assertEquals(Collections.singletonList("r2"), result.getErrors().getFirst().getColumns());
+        assertEquals("2_LINE2", result.getErrors().getFirst().getMessage());
         assertEquals(1, result.getPath().size());
 
         assertEquals("1_LINE2", input.get("r1"));
@@ -1147,10 +1147,10 @@ public class DecisionEngineTest {
 
         assertEquals(Type.STAGED, result.getType());
         assertTrue(result.hasErrors());
-        assertTrue(result.getErrors().get(0).getMessage().startsWith("Match not found"));
-        assertNull(result.getErrors().get(0).getKey());
-        assertEquals("table_jump_sample", result.getErrors().get(0).getTable());
-        assertEquals(Collections.singletonList("result"), result.getErrors().get(0).getColumns());
+        assertTrue(result.getErrors().getFirst().getMessage().startsWith("Match not found"));
+        assertNull(result.getErrors().getFirst().getKey());
+        assertEquals("table_jump_sample", result.getErrors().getFirst().getTable());
+        assertEquals(Collections.singletonList("result"), result.getErrors().getFirst().getColumns());
 
         // test 1 JUMP and 2 VALUEs
         input.clear();
@@ -1219,8 +1219,8 @@ public class DecisionEngineTest {
         Result result = engine.process("sample_outputs", input);
         assertTrue(result.hasErrors());
         assertEquals(1, result.getErrors().size());
-        assertEquals("table_input", result.getErrors().get(0).getTable());
-        assertEquals(Arrays.asList("output1", "output2"), result.getErrors().get(0).getColumns());
+        assertEquals("table_input", result.getErrors().getFirst().getTable());
+        assertEquals(Arrays.asList("output1", "output2"), result.getErrors().getFirst().getColumns());
     }
 
     @Test
@@ -1406,7 +1406,7 @@ public class DecisionEngineTest {
         assertEquals(new HashSet<>(Arrays.asList("table_input", "table_output")), engine.getInvolvedTables(schema));
 
         // modify the definition to create a bad default value for output1
-        schema.getOutputs().get(0).setDefault("BAD");
+        schema.getOutputs().getFirst().setDefault("BAD");
         provider.initSchema(schema);
         engine = new DecisionEngine(provider);
 
@@ -1416,9 +1416,9 @@ public class DecisionEngineTest {
 
         assertEquals(Type.STAGED, result.getType());
         assertTrue(result.hasErrors());
-        assertEquals(Error.Type.INVALID_OUTPUT, result.getErrors().get(0).getType());
-        assertEquals("table_output", result.getErrors().get(0).getTable());
-        assertEquals("output1", result.getErrors().get(0).getKey());
+        assertEquals(Error.Type.INVALID_OUTPUT, result.getErrors().getFirst().getType());
+        assertEquals("table_output", result.getErrors().getFirst().getTable());
+        assertEquals("output1", result.getErrors().getFirst().getKey());
 
         // default value should be set
         assertEquals("BAD", input.get("output1"));
@@ -1538,7 +1538,7 @@ public class DecisionEngineTest {
 
         DecisionEngine engine = new DecisionEngine(provider);
 
-        assertEquals(new HashSet<>(Collections.singletonList("remapped1")), engine.getInputs(schema.getMappings().get(0).getTablePaths().get(0)));
+        assertEquals(new HashSet<>(Collections.singletonList("remapped1")), engine.getInputs(schema.getMappings().getFirst().getTablePaths().getFirst()));
     }
 
     @Test
@@ -1636,8 +1636,8 @@ public class DecisionEngineTest {
         result = engine.process("test_default_table", context);
         assertEquals(Type.STAGED, result.getType());
         assertEquals(1, result.getErrors().size());
-        assertEquals("input2", result.getErrors().get(0).getKey());
-        assertEquals("Default table does not exist: does_not_exist", result.getErrors().get(0).getMessage());
+        assertEquals("input2", result.getErrors().getFirst().getKey());
+        assertEquals("Default table does not exist: does_not_exist", result.getErrors().getFirst().getMessage());
 
         // check same case with getDefault method
         context = new HashMap<>();
@@ -1645,8 +1645,8 @@ public class DecisionEngineTest {
         result1 = new Result(context);
         assertEquals("", engine.getDefault(input2, context, result1));
         assertEquals(1, result1.getErrors().size());
-        assertEquals("input2", result1.getErrors().get(0).getKey());
-        assertEquals("Default table does not exist: does_not_exist", result1.getErrors().get(0).getMessage());
+        assertEquals("input2", result1.getErrors().getFirst().getKey());
+        assertEquals("Default table does not exist: does_not_exist", result1.getErrors().getFirst().getMessage());
 
         // test a case where the default table did not find a match
         schema.getInputs().stream().filter(i -> i.getDefaultTable() != null).forEach(i -> i.setDefaultTable("table_input2_default"));
@@ -1657,8 +1657,8 @@ public class DecisionEngineTest {
         result = engine.process("test_default_table", context);
         assertEquals(Type.STAGED, result.getType());
         assertEquals(1, result.getErrors().size());
-        assertEquals("input2", result.getErrors().get(0).getKey());
-        assertEquals("Default table table_input2_default did not find a match", result.getErrors().get(0).getMessage());
+        assertEquals("input2", result.getErrors().getFirst().getKey());
+        assertEquals("Default table table_input2_default did not find a match", result.getErrors().getFirst().getMessage());
 
         // check same case with getDefault method
         context = new HashMap<>();
@@ -1666,8 +1666,8 @@ public class DecisionEngineTest {
         result1 = new Result(context);
         assertEquals("", engine.getDefault(input2, context, result1));
         assertEquals(1, result1.getErrors().size());
-        assertEquals("input2", result.getErrors().get(0).getKey());
-        assertEquals("Default table table_input2_default did not find a match", result.getErrors().get(0).getMessage());
+        assertEquals("input2", result.getErrors().getFirst().getKey());
+        assertEquals("Default table table_input2_default did not find a match", result.getErrors().getFirst().getMessage());
     }
 
 }

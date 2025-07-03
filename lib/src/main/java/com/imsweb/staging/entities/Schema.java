@@ -17,10 +17,10 @@ public interface Schema {
         // continue staging
         CONTINUE,
 
-        // stop staging and return an failed result
+        // stop staging and return a failed result
         FAIL,
 
-        // if the failed input is used for staging, stop staging and return an failed result; otherwise continue staging
+        // if the failed input is used for staging, stop staging and return a failed result; otherwise continue staging
         FAIL_WHEN_USED_FOR_STAGING
     }
 
@@ -74,7 +74,7 @@ public interface Schema {
 
     /**
      * A list of initial key/value pairs which will be set at the start of process
-     * @return a List of key/value pairs
+     * @return a Set of key/value pairs
      */
     Set<? extends KeyValue> getInitialContext();
 

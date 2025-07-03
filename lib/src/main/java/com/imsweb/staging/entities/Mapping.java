@@ -34,7 +34,7 @@ public interface Mapping {
 
     /**
      * A list of initial key/value pairs which will be set at the start of the mapping
-     * @return a List of key/value pairs
+     * @return a Set of key/value pairs
      */
     Set<? extends KeyValue> getInitialContext();
 

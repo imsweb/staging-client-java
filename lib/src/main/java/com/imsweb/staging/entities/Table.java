@@ -50,7 +50,7 @@ public interface Table {
 
     /**
      * Returns a list of input keys that are references in the table rows.  References are in the format "{{key}}".
-     * @return a list of input keys
+     * @return a Set of input keys
      */
     Set<String> getExtraInput();
 

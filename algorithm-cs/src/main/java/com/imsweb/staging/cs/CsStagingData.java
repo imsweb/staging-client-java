@@ -115,7 +115,7 @@ public class CsStagingData extends StagingData {
         STOR_SS1977_STAGE("stor_ss77"),
         STOR_SS2000_STAGE("stor_ss2000");
 
-        private String _name;
+        private final String _name;
 
         CsOutput(String name) {
             _name = name;
@@ -211,7 +211,7 @@ public class CsStagingData extends StagingData {
      */
     public static class CsStagingInputBuilder {
 
-        private CsStagingData _data;
+        private final CsStagingData _data;
 
         public CsStagingInputBuilder() {
             _data = new CsStagingData();

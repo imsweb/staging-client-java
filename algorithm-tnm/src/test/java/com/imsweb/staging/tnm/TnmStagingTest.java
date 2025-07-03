@@ -63,7 +63,7 @@ class TnmStagingTest extends StagingTest {
     @Test
     void testBasicInitialization() {
         assertEquals(153, _STAGING.getSchemaIds().size());
-        assertTrue(_STAGING.getTableIds().size() > 0);
+        assertFalse(_STAGING.getTableIds().isEmpty());
 
         assertNotNull(_STAGING.getSchema("urethra"));
         assertNotNull(_STAGING.getTable("ssf4_mpn"));
@@ -98,11 +98,11 @@ class TnmStagingTest extends StagingTest {
         schemaLookup.setInput(TnmStagingData.SSF25_KEY, "");
         lookup = _STAGING.lookupSchema(schemaLookup);
         assertEquals(1, lookup.size());
-        assertEquals("testis", lookup.get(0).getId());
+        assertEquals("testis", lookup.getFirst().getId());
         schemaLookup.setInput(TnmStagingData.SSF25_KEY, null);
         lookup = _STAGING.lookupSchema(schemaLookup);
         assertEquals(1, lookup.size());
-        assertEquals("testis", lookup.get(0).getId());
+        assertEquals("testis", lookup.getFirst().getId());
 
         // now test one that does do AJCC7
         lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C629", "9231"));
@@ -113,7 +113,7 @@ class TnmStagingTest extends StagingTest {
         schemaLookup.setInput(TnmStagingData.SSF25_KEY, "988");
         lookup = _STAGING.lookupSchema(schemaLookup);
         assertEquals(1, lookup.size());
-        assertEquals("testis", lookup.get(0).getId());
+        assertEquals("testis", lookup.getFirst().getId());
 
         // test valid combination that requires a discriminator but is not supplied one
         lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C111", "8200"));
@@ -128,7 +128,7 @@ class TnmStagingTest extends StagingTest {
         assertEquals(1, lookup.size());
         for (Schema schema : lookup)
             assertEquals(new HashSet<>(Collections.singletonList("ssf25")), schema.getSchemaDiscriminators());
-        assertEquals("nasopharynx", lookup.get(0).getId());
+        assertEquals("nasopharynx", lookup.getFirst().getId());
 
         // test valid combination that requires a discriminator but is supplied a bad disciminator value
         schemaLookup = new TnmSchemaLookup("C111", "8200");
@@ -164,11 +164,11 @@ class TnmStagingTest extends StagingTest {
         // do the same lookup twice
         List<Schema> lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C629", "9231"));
         assertEquals(1, lookup.size());
-        assertEquals("testis", lookup.get(0).getId());
+        assertEquals("testis", lookup.getFirst().getId());
 
         lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C629", "9231"));
         assertEquals(1, lookup.size());
-        assertEquals("testis", lookup.get(0).getId());
+        assertEquals("testis", lookup.getFirst().getId());
 
         // now invalidate the cache
         TnmDataProvider.getInstance(TnmVersion.V2_0).invalidateCache();
@@ -176,7 +176,7 @@ class TnmStagingTest extends StagingTest {
         // try the lookup again
         lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C629", "9231"));
         assertEquals(1, lookup.size());
-        assertEquals("testis", lookup.get(0).getId());
+        assertEquals("testis", lookup.getFirst().getId());
     }
 
     @Test
@@ -392,7 +392,7 @@ class TnmStagingTest extends StagingTest {
     void testGetSchemaIds() {
         Set<String> algorithms = _STAGING.getSchemaIds();
 
-        assertTrue(algorithms.size() > 0);
+        assertFalse(algorithms.isEmpty());
         assertTrue(algorithms.contains("testis"));
     }
 
@@ -400,7 +400,7 @@ class TnmStagingTest extends StagingTest {
     void testGetTableIds() {
         Set<String> tables = _STAGING.getTableIds();
 
-        assertTrue(tables.size() > 0);
+        assertFalse(tables.isEmpty());
         assertTrue(tables.contains("determine_default_n"));
     }
 
@@ -428,7 +428,7 @@ class TnmStagingTest extends StagingTest {
         List<Schema> lookups = _STAGING.lookupSchema(lookup);
         assertEquals(1, lookups.size());
 
-        Schema schema = _STAGING.getSchema(lookups.get(0).getId());
+        Schema schema = _STAGING.getSchema(lookups.getFirst().getId());
         assertEquals("urethra", schema.getId());
 
         // build list of output keys
@@ -446,9 +446,9 @@ class TnmStagingTest extends StagingTest {
         Table table = _STAGING.getTable("path_n_daj");
 
         assertNotNull(table);
-        assertEquals("p0I-", table.getRawRows().get(2).get(0));
-        assertEquals("p0I-", table.getTableRows().get(2).getColumnInput("path_n").get(0).getLow());
-        assertEquals("p0I-", table.getTableRows().get(2).getColumnInput("path_n").get(0).getHigh());
+        assertEquals("p0I-", table.getRawRows().get(2).getFirst());
+        assertEquals("p0I-", table.getTableRows().get(2).getColumnInput("path_n").getFirst().getLow());
+        assertEquals("p0I-", table.getTableRows().get(2).getColumnInput("path_n").getFirst().getHigh());
     }
 
     @Test
@@ -484,8 +484,8 @@ class TnmStagingTest extends StagingTest {
     @Test
     void testCachedSiteAndHistology() {
         StagingDataProvider provider = getProvider();
-        assertTrue(provider.getValidSites().size() > 0);
-        assertTrue(provider.getValidHistologies().size() > 0);
+        assertFalse(provider.getValidSites().isEmpty());
+        assertFalse(provider.getValidHistologies().isEmpty());
 
         // site tests
         List<String> validSites = Arrays.asList("C000", "C809");
