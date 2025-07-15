@@ -1595,6 +1595,10 @@ public class DecisionEngineTest {
 
         DecisionEngine engine = new DecisionEngine(provider);
 
+        // first, verify getInvolvedTables is working with default tables
+        Set<String> tables = engine.getInvolvedTables("test_default_table");
+        assertThat(tables).containsExactlyInAnyOrder("table_input1", "table_input2", "table_input2_default", "table_mapping");
+
         // test a case where the default_table make a successful lookup
         Map<String, String> context = new HashMap<>();
         context.put("input1", "000");
