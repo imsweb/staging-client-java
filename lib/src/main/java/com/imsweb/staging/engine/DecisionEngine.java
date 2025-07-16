@@ -343,6 +343,8 @@ public class DecisionEngine {
             Input input = schema.getInputMap().get(key);
             if (input.getTable() != null)
                 getInvolvedTables(getProvider().getTable(input.getTable()), tables);
+            if (input.getDefaultTable() != null)
+                getInvolvedTables(getProvider().getTable(input.getDefaultTable()), tables);
         }
         for (String key : schema.getOutputMap().keySet()) {
             Output output = schema.getOutputMap().get(key);
