@@ -547,13 +547,14 @@ class EodStagingTest extends StagingTest {
         Set<String> inputs = new HashSet<>();
         Set<String> outputs = new HashSet<>();
 
+        // collect all unique input and output keys
         for (String schemaId : _STAGING.getSchemaIds()) {
             Schema schema = _STAGING.getSchema(schemaId);
             schema.getInputs().stream().map(Input::getKey).forEach(inputs::add);
             schema.getOutputs().stream().map(Output::getKey).forEach(outputs::add);
         }
 
-        // ----- Outputs -----
+        // test outputs
         Set<String> enumOutputKeys = Arrays.stream(EodOutput.values())
                 .map(EodOutput::toString)
                 .collect(Collectors.toSet());
@@ -564,22 +565,14 @@ class EodStagingTest extends StagingTest {
         Set<String> unusedOutputEnum = new HashSet<>(enumOutputKeys);
         unusedOutputEnum.removeAll(outputs);
 
-        assertThat(missingInOutputEnum)
-                .as("Output keys found in staging data but not in EodOutput enum")
-                .isEmpty();
+        assertThat(missingInOutputEnum).as("Output keys found in staging data but not in EodOutput enum").isEmpty();
+        assertThat(unusedOutputEnum).as("EodOutput enum values never appear in staging outputs").isEmpty();
 
-        assertThat(unusedOutputEnum)
-                .as("EodOutput enum values never appear in staging outputs")
-                .isEmpty();
-
-        // ----- Inputs -----
-
+        // test inputs (don't need every input to be in enum)
         Set<String> unusedInputEnum = Arrays.stream(EodInput.values()).map(EodInput::toString).collect(Collectors.toSet());
         unusedInputEnum.removeAll(inputs);
 
-        assertThat(unusedInputEnum)
-                .as("EodInput enum values never appear in staging inputs")
-                .isEmpty();
+        assertThat(unusedInputEnum).as("EodInput enum values never appear in staging inputs").isEmpty();
     }
 
 }
