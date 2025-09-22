@@ -1,0 +1,19 @@
+{
+  "id" : "derived_ss2018_extrahepatic_bile_ducts_37420",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Derived SS2018: Extrahepatic BIle Ducts",
+  "title" : "Derived Summary Stage 2018: Extrahepatic Bile Ducts",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-02-14T20:09:06.198Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "In situ, intraepithelial, noninvasive\nHigh-grade biliary intraepithelial neoplasia (BilIn-3)" ], [ "1", "Localized only (localized, NOS)\n- Confined to \n  + Cystic duct, NOS\n  + Distal bile duct(s), NOS\n  + Extrahepatic bile duct(s), NOS\n  + Perihilar bile duct(s), NOS\n- Lamina propria\n- Mucosa, NOS\n- Muscle layer of fibrous tissue (bile ducts perihilar only)\n- Muscularis propria\n- Subepithelial connective tissue (tunica mucosa) (bile ducts perihilar only)\n- Submucosa (superficial invasion)" ], [ "2", "Regional by direct extension only\n- All sites\n  + Adipose tissue\n  + Adjacent (connective) tissue, NOS\n  + Colon\n  + Duodenum\n  + Gallbladder\n  + Hepatic artery (common, NOS)\n  + Liver\n  + Main portal vein or its branches bilaterally\n  + Omentum (greater, lesser, NOS)\n  + Pancreas\n  + Periductal/fibromuscular connective tissue\n  + Portal vein, NOS\n  + Stomach\n- Cystic duct\n  + Ampulla of Vater \n  + Beyond wall of cystic duct\n  + Perimuscular connective tissue\n  + Perimuscular tissue, NOS\n  + Serosa (visceral peritoneum) \n  + Small intestine \n  + Unilateral branches of hepatic artery (right or left)\n  + Unilateral branches of portal vein (right or left)\n- Distal bile duct(s)\n  + Adjacent hepatic parenchyma \n  + Beyond wall of bile duct \n  + Porta hepatis\n  + Unilateral branches of hepatic artery (right or left) \n  + Unilateral branches of portal vein (right or left)\n- Perihilar bile duct(s)\n  + Beyond wall of bile duct \n  + Second-order biliary radicals bilaterally\n     * Unilateral second-order biliary radicals \n     * WITH contralateral portal vein or hepatic artery involvement\n  + Unilateral branches of hepatic artery (right or left) \n  + Unilateral branches of portal vein (right or left)" ], [ "3", "Regional lymph node(s) involved only\n- Choledochal (bile ducts perihilar only)\n- Cystic duct (node of the neck of the gallbladder) (Calot's node)\n- Hepatic/hepatic artery nodes (common, NOS)\n- Hilar (porta hepatic) (portal) (in hilus of liver)\n- Node of the foramen of Winslow (omental) (epiploic)\n- Pancreaticoduodenal (anterior, posterior) (bile ducts distal only)\n- Pancreaticoduodenal, NOS (cystic duct only)\n- Pericholedochal (node along common bile duct)\n- Periduodenal\n- Peripancreatic (near head of pancreas only)\n- Periportal\n- Portal vein\n- Regional lymph node(s), NOS\n  + Lymph node(s), NOS" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n- Codes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant site(s) (including further contiguous extension) \n  + Abdominal wall\n  + Celiac axis (bile ducts distal only)\n  + Superior mesenteric artery (bile ducts distal only)\n- Distant lymph node(s), NOS\n  + Celiac (axis) artery\n  + Para-aortic\n  + Periaortic (cystic duct only)\n  + Pericaval\n  + Peripancreatic (along body and tail of pancreas only)\n  + Superior mesenteric artery\n  + Superior mesenteric vein\n- Distant metastasis, NOS\n  + Carcinomatosis \n  + Distant metastasis WITH or WITHOUT distant lymph node(s)" ], [ "9", "Unknown if extension or metastasis" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "derived_ss2018_kaposi_sarcoma_84609",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Derived SS2018: Kaposi Sarcoma",
+  "title" : "Derived Summary Stage 2018: Kaposi Sarcoma",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-02-14T20:15:50.077Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Localized only\n- Single or multiple lesion(s)\n    + Mucosa (e.g., oral cavity, anus, rectum, vagina, vulva)\n    + Skin and/or connective tissue\n    + Viscera (e.g., pulmonary, gastrointestinal tract, spleen, other)" ], [ "2", "Regional by direct extension only\n- Multiple lesion(s)\n    + Mucosa plus skin and/or connective tissue\n    + Viscera plus mucosa    \n    + Viscera plus skin and/or connective tissue" ], [ "3", "Regional lymph node(s) involved only\n- Both clinically enlarged palpable lymph node(s) (adenopathy)  and pathologically positive lymph node(s)\n- Clinically enlarged palpable lymph node(s) (adenopathy)  and either pathologically negative node(s) or no pathological statement\n- No clinically enlarged palpable lymph node(s) (adenopathy) but pathologically positive lymph node(s)\n- Regional lymph node(s), NOS\n  + Lymph node(s), NOS" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n- Codes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant site(s) (including further contiguous extension)\n  + Multiple lesions in all THREE of following: viscera plus mucosa plus skin and/or connective tissue\n- Distant lymph node(s), NOS\n- Distant metastasis, NOS \n  + Carcinomatosis \n  + Distant metastasis WITH or WITHOUT distant lymph node(s)" ], [ "9", "Unknown if extension or metastasis" ] ]
+}

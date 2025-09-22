@@ -1,0 +1,18 @@
+{
+  "id" : "derived_grade_74326",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Derived Grade",
+  "title" : "Derived Grade",
+  "last_modified" : "2024-02-15T15:47:07.943Z",
+  "definition" : [ {
+    "key" : "derived_summary_grade",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "Description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Grade Group 1: Gleason score less than or equal to 6" ], [ "2", "Grade Group 2: Gleason score 7\nGleason pattern 3+4" ], [ "3", "Grade Group 3: Gleason score 7\nGleason pattern 4+3" ], [ "4", "Grade Group 4: Gleason score 8" ], [ "5", "Grade Group 5: Gleason score 9 or 10" ], [ "A", "Well differentiated" ], [ "B", "Moderately differentiated" ], [ "C", "Poorly differentiated" ], [ "D", "Undifferentiated, anaplastic" ], [ "E", "Stated as \"Gleason score 7\" with no patterns documented or \nAny Gleason patterns combination equal to 7 not specified in 2 or 3" ], [ "9", "Grade cannot be assessed; Unknown" ] ]
+}

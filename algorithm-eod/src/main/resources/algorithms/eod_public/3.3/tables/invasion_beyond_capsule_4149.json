@@ -1,0 +1,23 @@
+{
+  "id" : "invasion_beyond_capsule_4149",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Invasion Beyond Capsule",
+  "title" : "Invasion Beyond Capsule",
+  "description" : "Kidney Tumor Extension pertains to the pathologically confirmed invasion of the tumor beyond the fibrous capsule in which the kidney is enclosed.\n\nThis data item collects additional information on the description of tumor spread (invasion beyond capsule) as documented in the pathology report. Do not include clinical findings in this field.",
+  "notes" : "**Note 1:** **Physician Statement**\n* Physician statement of pathologically confirmed invasion of the tumor beyond the fibrous capsule (invasion beyond capsule) can be used to code this data item when no other information is available.\n\n**Note 2:** **Relevance to Staging**\n* Information about invasion beyond the capsule is collected in primary tumor as an element in anatomic staging. It is also collected in this field as it may have an independent effect on prognosis. \n\n**Note 3:** **Perinephric/sinus fat invasion**\n* Should be confirmed microscopically and is invasion into fat by tumor cells, with or without desmoplastic reaction, and vascular invasion into perinephric/sinus soft tissue.\n   * Synonyms include renal sinus fat, medial invasion\n\n* **Do not code invasion of renal hilum in this data item.** \n   * Invasion of the renal hilum is invasion of vessels, nerves, lymphatics, and/or ureter before they enter the kidney parenchyma. If the only information you have is that the renal hilum is involved, code to 9 (unknown)",
+  "last_modified" : "2025-02-24T15:46:43.860Z",
+  "definition" : [ {
+    "key" : "invasion_beyond_capsule",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Invasion beyond capsule not identified" ], [ "1", "Perinephric (beyond renal capsule) fat or tissue" ], [ "2", "Renal sinus" ], [ "3", "Gerota's fascia" ], [ "4", "Any combination of codes 1-3" ], [ "5", "Invasion beyond capsule, NOS" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nInvasion beyond capsule not assessed or unknown if assessed\nNo surgical resection of primary site is performed" ] ],
+  "additional_info" : "**Source documents:** surgical pathology report\n\nFor further information, refer to the **Kidney** cancer protocol published by the College of American Pathologists for the AJCC Staging System *Kidney*",
+  "coding_guidelines" : "**1)** Record invasion beyond capsule as documented in the surgical \n pathology report\n* Surgical resection of primary site must be done \n* Do not use imaging findings to code this data item.\n\n**2)** **Code 0**: There is no invasion beyond capsule\n* If surgical resection is done and tumor is “confined to kidney” and staging is based on size, then there has been no invasion through the capsule (no invasion into perinephric fat)\n\n**3)** **Code 1**: Perinephric fat, which is the layer of fat (adipose tissue) outside the renal capsule but inside Gerota’s fascia\n**4)** **Code 2**: Renal sinus, which is the elongated oval indentation in the renal parenchyma occupied by the renal pelvis, renal calyces, blood vessels, nerves, and perisinus fat \n* Synonyms include renal sinus fat, medial invasion\n\n**5)** **Code 3**: Gerota’s fascia (Gerota’s capsule), which is a fibrous envelope of tissue that surrounds the kidney\n**6)** **Code 4**: Any combination of codes 1-3\n**7)** **Code 5**: Invasion beyond the capsule, NOS\n**8)** **Code 9** when\n* There is no documentation in the medical record\n* Clinical diagnosis only\n* Evaluation of capsule invasion not done or unknown if done\n* Surgical resection of the primary site is performed, tumor is **not** confined to the kidney and there is no mention of invasion beyond capsule",
+  "rationale" : "Kidney Tumor Extension into specific tissues for Kidney is a Registry Data Collection Variable in AJCC.  It was previously collected as Kidney, CS SSF #1."
+}

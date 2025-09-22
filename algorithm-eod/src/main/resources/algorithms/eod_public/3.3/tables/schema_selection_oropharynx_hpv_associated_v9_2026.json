@@ -1,0 +1,30 @@
+{
+  "id" : "schema_selection_oropharynx_hpv_associated_v9_2026",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Schema Selection Oropharynx HPV-Associated [V9: 2026+]",
+  "title" : "Schema selection for Oropharynx HPV-Associated [V9: 2026+]",
+  "last_modified" : "2025-09-15T19:35:19.311Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "discriminator_2",
+    "name" : "Schema Discriminator 2",
+    "type" : "INPUT"
+  }, {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C019, C024, C051-C052, C090-C091, C098-C099, C100, C102-C104, C108-C109", "8000-8700", "2", "2026-9998,9999,", "MATCH" ] ]
+}

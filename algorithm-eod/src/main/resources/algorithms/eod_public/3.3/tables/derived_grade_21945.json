@@ -1,0 +1,18 @@
+{
+  "id" : "derived_grade_21945",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Derived Grade",
+  "title" : "Derived Grade",
+  "last_modified" : "2024-02-14T18:16:57.600Z",
+  "definition" : [ {
+    "key" : "derived_summary_grade",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "8", "Not applicable" ] ]
+}

@@ -1,0 +1,18 @@
+{
+  "id" : "sex_assigned_at_birth_63290",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Sex Assigned At Birth",
+  "title" : "Sex Assigned At Birth",
+  "last_modified" : "2025-03-24T20:59:05.313Z",
+  "definition" : [ {
+    "key" : "sex_at_birth",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Male" ], [ "2", "Female" ], [ "9", "Not stated/Unknown" ] ]
+}

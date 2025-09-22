@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_urinary_other",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Schema Selection UrinaryOther",
+  "title" : "Schema selection for UrinaryOther",
+  "last_modified" : "2025-07-07T20:41:34.419Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C681,C688-C689", "8000-8700, 8720-8790", "MATCH" ] ]
+}

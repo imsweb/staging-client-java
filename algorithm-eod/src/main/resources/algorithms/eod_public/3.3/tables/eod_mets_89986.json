@@ -1,0 +1,24 @@
+{
+  "id" : "eod_mets_89986",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "EOD Mets",
+  "title" : "EOD Mets",
+  "notes" : "**Note 1:** **Peritoneal spread and Peritoneal implants** \n* Peritoneal spread is common in appendiceal tumors and is coded as 30 if limited to the peritoneum. \n* Peritoneal implants involving abdominopelvic organs, such as the serosa of the small or large bowel and the surface of the ovary, spleen, or liver, should be coded as 30, regardless of whether implants demonstrate infiltration of underlying tissue, manifested as invasion. \n* Nonperitoneal metastasis, such as pleuropulmonary involvement is rare and would be coded as 50.\n\n**Note 2:** **Distant metastasis, NOS** \n* Use code 70 when the only information is “distant metastasis, NOS,” and there is no documentation regarding the specific metastases. \n* If there are specific metastasis documented that are not listed in codes 10, 30, 40, or 50, assign code 50 for “other specified distant metastasis.”",
+  "footnotes" : "(1) Fritz AG, Ries LAG (eds). **SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998)**, National Cancer Institute, NIH Pub. No. 98-2313, Bethesda, MD, 1998\n\n(2) Young JL Jr, Roffers SD, Ries LAG, Fritz AG, Hurlbut AA (eds.). **SEER Summary Staging Manual-2000: Codes and Coding Instructions**, National Cancer Institute, NIH Pub. No. 01-4969, Bethesda, MD, 2001.\n\n(3) Collaborative Stage Work Group of the American Joint Committee on Cancer. **Collaborative Stage Data Collection System User Documentation and Coding Instructions, version 02.05**. American Joint Committee on Cancer (Chicago, IL)\n\n(4) **Appendix**, from the AJCC Cancer Staging System Version 9 (2022). Used with permission of the American College of Surgeons, Chicago, Illinois.",
+  "last_modified" : "2025-09-18T20:41:28.468Z",
+  "definition" : [ {
+    "key" : "eod_mets",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "ss2018_m",
+    "name" : "SS2018 M",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "No distant metastasis\nUnknown if distant metastasis", "VALUE:NONE" ], [ "10", "Intraperitoneal acellular mucin\n- WITHOUT peritoneal mucinous deposits containing tumor cells  or UNKNOWN", "VALUE:D" ], [ "30", "Intraperitoneal metastasis (peritoneal carcinomatosis) \n- WITH or WITHOUT peritoneal mucinous deposits containing tumor cells\n- Includes peritoneal spread with LAMN tumors", "VALUE:D" ], [ "40", "Distant lymph node(s)\n- Inferior mesenteric\n- Superior mesenteric\n- Distant lymph node(s), NOS", "VALUE:D" ], [ "50", "Non-peritoneal metastasis \nWITH or WITHOUT distant lymph nodes or intraperitoneal spread\n\nIntraperitoneal spread WITH distant lymph nodes\n\nOther specified distant metastasis\n\nCarcinomatosis\n* Excludes peritoneal carcinomatosis (see EOD Mets code 30)", "VALUE:D" ], [ "70", "Distant metastasis, NOS", "VALUE:D" ], [ "99", "Death Certificate Only", "VALUE:U" ] ]
+}

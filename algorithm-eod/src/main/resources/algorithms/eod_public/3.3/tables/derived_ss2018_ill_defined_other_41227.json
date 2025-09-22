@@ -1,0 +1,19 @@
+{
+  "id" : "derived_ss2018_ill_defined_other_41227",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Derived SS2018: Ill-Defined Other",
+  "title" : "Derived Summary Stage 2018:Ill-Defined Other",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-02-14T20:15:14.203Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "9", "Unknown if extension or metastasis; unstageable" ] ]
+}

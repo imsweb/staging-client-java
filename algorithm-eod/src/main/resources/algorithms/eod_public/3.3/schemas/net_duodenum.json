@@ -1,0 +1,290 @@
+{
+  "id" : "net_duodenum",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "NET Duodenum [8th: 2018-2023]",
+  "title" : "NET Duodenum [8th: 2018-2023]",
+  "notes" : "8150-8153, 8155-8156, 8158, 8240-8242, 8249, 8683 \n\nC170 Duodenum\n\n**Note:** **Sources used in the development of this schema**\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)\n* SEER Summary Staging Manual-2000: Codes and Coding Instructions (https://seer.cancer.gov/tools/ssm/ssm2000/)\n* Collaborative Stage Data Collection System, version 02.05:  https://cancerstaging.org/cstage/Pages/default.aspx \n* Chapter 30 *Neuroendocrine Tumors of the Duodenum and Ampulla of Vater*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.",
+  "schema_selection_table" : "schema_selection_net_duodenum",
+  "schema_discriminators" : [ "year_dx" ],
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "naaccr_xml_id" : "dateOfDiagnosis",
+    "table" : "year_dx_validation",
+    "used_for_staging" : true
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "naaccr_xml_id" : "primarySite",
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "naaccr_xml_id" : "histologicTypeIcdO3",
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "naaccr_item" : 523,
+    "naaccr_xml_id" : "behaviorCodeIcdO3",
+    "table" : "behavior",
+    "used_for_staging" : false
+  }, {
+    "key" : "reporting_source",
+    "name" : "Type of Reporting Source",
+    "naaccr_item" : 500,
+    "naaccr_xml_id" : "typeOfReportingSource",
+    "table" : "type_of_reporting_source_76696",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_clin",
+    "name" : "Tumor Size Clinical",
+    "naaccr_item" : 752,
+    "naaccr_xml_id" : "tumorSizeClinical",
+    "table" : "tumor_size_clinical_60979",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_path",
+    "name" : "Tumor Size Pathological",
+    "naaccr_item" : 754,
+    "naaccr_xml_id" : "tumorSizePathologic",
+    "table" : "tumor_size_pathological_25597",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_summary",
+    "name" : "Tumor Size Summary",
+    "naaccr_item" : 756,
+    "naaccr_xml_id" : "tumorSizeSummary",
+    "default" : "999",
+    "table" : "tumor_size_summary_63115",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "naaccr_xml_id" : "regionalNodesPositive",
+    "default" : "99",
+    "table" : "nodes_pos_fpa",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_exam",
+    "name" : "Regional Nodes Examined",
+    "naaccr_item" : 830,
+    "naaccr_xml_id" : "regionalNodesExamined",
+    "default" : "99",
+    "table" : "nodes_exam_76029",
+    "used_for_staging" : false
+  }, {
+    "key" : "neoadjuvant_therapy",
+    "name" : "Neoadjuvant Therapy",
+    "naaccr_item" : 1632,
+    "naaccr_xml_id" : "neoadjuvantTherapy",
+    "default" : "9",
+    "table" : "neoadjuvant_therapy_37302",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SEER_REQUIRED",
+      "start" : 2021
+    } ]
+  }, {
+    "key" : "neoadj_tx_clinical_response",
+    "name" : "Neoadjuvant Therapy – Clinical Response",
+    "naaccr_item" : 1633,
+    "naaccr_xml_id" : "neoadjuvTherapyClinicalResponse",
+    "default" : "9",
+    "table" : "neoadj_tx_clinical_response_31723",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SEER_REQUIRED",
+      "start" : 2021
+    } ]
+  }, {
+    "key" : "neoadj_tx_treatment_effect",
+    "name" : "Neoadjuvant Therapy – Treatment Effect",
+    "naaccr_item" : 1634,
+    "naaccr_xml_id" : "neoadjuvTherapyTreatmentEffect",
+    "default" : "9",
+    "table" : "neoadj_tx_treatment_effect_18122",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SEER_REQUIRED",
+      "start" : 2021
+    } ]
+  }, {
+    "key" : "eod_primary_tumor",
+    "name" : "EOD Primary Tumor",
+    "naaccr_item" : 772,
+    "naaccr_xml_id" : "eodPrimaryTumor",
+    "default" : "999",
+    "table" : "seer_primary_tumor_96082",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_regional_nodes",
+    "name" : "EOD Regional Nodes",
+    "naaccr_item" : 774,
+    "naaccr_xml_id" : "eodRegionalNodes",
+    "default" : "999",
+    "table" : "seer_regional_nodes_83435",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_mets",
+    "name" : "EOD Mets",
+    "naaccr_item" : 776,
+    "naaccr_xml_id" : "eodMets",
+    "default" : "00",
+    "table" : "seer_mets_84419",
+    "used_for_staging" : true
+  }, {
+    "key" : "ss2018",
+    "name" : "SS2018",
+    "naaccr_item" : 764,
+    "naaccr_xml_id" : "summaryStage2018",
+    "table" : "ss2018_small_intestine_including_net_85335",
+    "used_for_staging" : false
+  }, {
+    "key" : "grade_clin",
+    "name" : "Grade Clinical",
+    "naaccr_item" : 3843,
+    "naaccr_xml_id" : "gradeClinical",
+    "default" : "9",
+    "table" : "grade_clinical_26768",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_path",
+    "name" : "Grade Pathological",
+    "naaccr_item" : 3844,
+    "naaccr_xml_id" : "gradePathological",
+    "default" : "9",
+    "table" : "grade_pathological_26086",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_post_therapy_clin",
+    "name" : "Grade Post Therapy Clin (yc)",
+    "naaccr_item" : 1068,
+    "naaccr_xml_id" : "gradePostTherapyClin",
+    "table" : "grade_post_therapy_clin_2541",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_post_therapy_path",
+    "name" : "Grade Post Therapy Path (yp)",
+    "naaccr_item" : 3845,
+    "naaccr_xml_id" : "gradePostTherapy",
+    "table" : "grade_post_therapy_path_76876",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "ki67",
+    "name" : "Ki-67 (MIB-1)",
+    "naaccr_item" : 3863,
+    "naaccr_xml_id" : "ki67",
+    "default" : "XXX.8",
+    "table" : "ki_67_67661",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI",
+      "start" : 2021
+    }, {
+      "name" : "SEER_REQUIRED",
+      "start" : 2021
+    } ]
+  } ],
+  "outputs" : [ {
+    "key" : "naaccr_schema_id",
+    "name" : "Schema ID",
+    "naaccr_item" : 3800,
+    "naaccr_xml_id" : "schemaId",
+    "default" : "00301"
+  }, {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "ss2018_derived",
+    "name" : "Derived Summary Stage 2018",
+    "naaccr_item" : 762,
+    "naaccr_xml_id" : "derivedSummaryStage2018",
+    "table" : "derived_ss2018_small_intestine_48854",
+    "default" : "9"
+  }, {
+    "key" : "derived_summary_grade",
+    "name" : "Derived Summary Grade 2018",
+    "naaccr_item" : 1975,
+    "naaccr_xml_id" : "derivedSummaryGrade2018",
+    "table" : "derived_grade_27440"
+  } ],
+  "mappings" : [ {
+    "id" : "summary_stage_2018",
+    "name" : "Summary Stage 2018",
+    "tables" : [ {
+      "id" : "combined_grade_56638",
+      "inputs" : [ "grade_path", "grade_clin" ],
+      "outputs" : [ "derived_summary_grade" ]
+    }, {
+      "id" : "seer_primary_tumor_96082",
+      "inputs" : [ "eod_primary_tumor" ],
+      "outputs" : [ "ss2018_t" ]
+    }, {
+      "id" : "seer_regional_nodes_83435",
+      "inputs" : [ "eod_regional_nodes" ],
+      "outputs" : [ "ss2018_n" ]
+    }, {
+      "id" : "seer_mets_84419",
+      "inputs" : [ "eod_mets" ],
+      "outputs" : [ "ss2018_m" ]
+    }, {
+      "id" : "summary_stage_rpa",
+      "inputs" : [ "ss2018_m", "ss2018_n", "ss2018_t" ],
+      "outputs" : [ "ss2018_derived" ]
+    } ]
+  } ],
+  "involved_tables" : [ "neoadjuvant_therapy_37302", "grade_post_therapy_clin_2541", "nodes_pos_fpa", "seer_regional_nodes_83435", "neoadj_tx_clinical_response_31723", "derived_ss2018_small_intestine_48854", "ki_67_67661", "histology", "nodes_exam_76029", "schema_selection_net_duodenum", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "ss2018_small_intestine_including_net_85335", "type_of_reporting_source_76696", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "grade_pathological_26086", "neoadj_tx_treatment_effect_18122", "grade_post_therapy_path_76876", "primary_site", "seer_primary_tumor_96082", "grade_clinical_26768", "seer_mets_84419", "year_dx_validation", "summary_stage_rpa", "derived_grade_27440" ],
+  "last_modified" : "2025-09-19T18:55:07.505Z",
+  "on_invalid_input" : "CONTINUE"
+}

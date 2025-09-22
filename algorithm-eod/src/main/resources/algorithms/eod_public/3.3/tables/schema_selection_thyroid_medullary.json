@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_thyroid_medullary",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Schema Selection Thyroid-Medullary",
+  "title" : "Schema selection for Thyroid-Medullary",
+  "last_modified" : "2025-07-07T20:37:35.507Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C739", "8345-8349,8430,8510,8512-8513", "MATCH" ] ]
+}

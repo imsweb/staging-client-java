@@ -1,0 +1,19 @@
+{
+  "id" : "derived_ss2018_intrahepatic_bile_ducts_29879",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Derived SS2018: Intrahepatic Bile Ducts",
+  "title" : "Derived Summary Stage 2018: Intrahepatic Bile Ducts",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-02-14T20:09:21.549Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "In situ, intraepithelial, noninvasive\n- Biliary intraepithelial neoplasia grade 3 (BiIIN-3)\n- Intraductal tumor" ], [ "1", "Localized only (localized, NOS)\n- Confined to intrahepatic bile duct, NOS\n- Solitary or Multiple tumors WITH or WITHOUT intrahepatic vascular invasion" ], [ "2", "Regional by direct extension only\n- Abdominal wall\n- Adjacent (connective) tissue, NOS\n- Colon\n- Common bile duct\n- Diaphragm \n- Duodenum\n- Extrahepatic bile ducts PLUS satellite nodules in more than one lobe \n- Extrahepatic structure(s), NOS\n   + Retrohepatic vena cava\n   + Vena cava \n- Hepatic artery (proper)\n- Gallbladder\n- Lesser omentum ligament(s)\n  + Coronary \n  + Falciform \n  + Hepatoduodenal \n  + Hepatogastric \n  + Round (of liver) \n  + Triangular \n- Peritoneum, NOS\n  + Parietal\n  + Visceral\n- Multiple tumors with major vascular invasion\n- Retrohepatic vena cava" ], [ "3", "Regional lymph node(s) involved only\n- Common bile duct \n- Cystic duct \n- Hepatic, NOS\n- Hepatic artery\n- Hepatic pedicle\n- Hepatoduodenal ligament \n- Hilar\n- Portal vein\n  + Periportal \n  + Porta hepatis\n  + Portal \n- Portocaval (portacaval)\n- Regional lymph node(s), NOS\n  + Lymph node(s), NOS" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n- Codes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant site(s) (including further contiguous extension) \n  + Multiple (satellite) nodules on surface of liver parenchyma\n  + Pancreas\n  + Pleura\n  + Stomach\n- Distant lymph node(s), NOS\n  + Aortic (para-aortic, periaortic)\n  + Aortocaval\n  + Cardiac\n  + Caval (inferior vena cava)\n  + Celiac\n  + Diaphragmatic, NOS\n  + Gastrohepatic\n  + Inferior phrenic\n  + Lateral (aortic) (lumbar)\n  + Pancreaticoduodenal \n  + Pericardial (pericardiac)\n  + Periduodenal\n  + Peripancreatic\n  + Posterior mediastinal (tracheoesophageal) including juxtaphrenic nodes\n  + Renal artery\n  + Retroperitoneal, NOS\n- Distant metastasis, NOS\n  + Carcinomatosis \n  + Distant metastasis WITH or WITHOUT distant lymph node(s)" ], [ "9", "Unknown if extension or metastasis" ] ]
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "measured_thickness_84907",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Measured Thickness",
+  "title" : "Measured Thickness",
+  "description" : "Measured Thickness, or height, the thickness of a uveal melanoma, is a prognostic indicator for this tumor.\n\nThis data items measures tumor thickness, height, or depth (vertical dimension), rather than size (lateral dimension) or basal diameter (horizontal dimension). (For basal diameter, see NAACCR Data Item #3887-Measured Basal Diameter). \n\nThe depth of invasion or tumor thickness measurement for melanomas of the choroid, ciliary body, and iris is collected in tenths of millimeters as stated in the pathology report for the resected specimen. (This is similar to, but not the same as, Breslow depth of invasion, which is measured in hundredths of millimeters.) Code a measurement specifically labeled as “thickness” “height” or “depth” in the pathology report. In the absence of this label, a measurement described as taken from the cut surface of the specimen can be coded. And in the absence of either of these labels, the third dimension in a statement of tumor size (length x width x depth) can be used by the registrar to code this field.\n\nPer the CAP guidelines for Uveal Melanoma, “in clinical practice, tumor thickness may be estimated in diopters (average: 2.5 diopters = 1 mm).  Techniques such as ultrasonography and fundus photography are used to provide more accurate measurement. When histopathological measurements are recorded after fixation, tumor diameter and thickness may be underestimated because of tissue shrinkage.”",
+  "notes" : "**Note 1:** **Physician Statement**\n* Physician statement of measured thickness, or height, can be used to code this data item when no other information is available. \n\n**Note 2:** **Code height not Tumor Size** \n* Record actual measurement in millimeters (mm) from clinical documentation, or from a pathology report if surgery performed.",
+  "last_modified" : "2024-04-07T17:52:34.996Z",
+  "definition" : [ {
+    "key" : "measured_thickness",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0", "No mass/tumor found" ], [ "0.1-99.9", "0.1 - 99.9 millimeters (mm)\n(Exact measurement to nearest tenth of mm)" ], [ "XX.0", "100 millimeters (mm) or larger " ], [ "XX.1", "Described as \"less than 3 mm\"" ], [ "XX.2", "Described as \"at least\" 3 mm  " ], [ "XX.3", "Described as \"at least\" 6 mm" ], [ "XX.4", "Described as \"at least\" 9 mm" ], [ "XX.5", "Described as \"at least\" 12 mm" ], [ "XX.6", "Described as \"greater than\" 15 mm" ], [ "XX.8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code XX.8 may result in an edit error.)" ], [ "XX.9", "Not documented in medical record\nCannot be determined \nMeasured Thickness not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source Documents:** High-frequency ultrasonography (ultrasound biomicroscopy) report, pathology report, wide-angle fundus camera measurement, clinician report or other documentation in medical record. \n\n**Other names include** maximum tumor thickness, depth of invasion, perpendicular tumor diameter (PTD), tumor height\n\nFor further information, refer to the **Uveal Melanoma** cancer protocol published by the College of American Pathologists for the AJCC Staging System *Uveal Melanoma*",
+  "rationale" : "Measured Thickness is listed as a Registry Data Collection Variable in AJCC.  It was previously collected as Uveal Melanoma, CS SSF #3."
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "derived_ss2018_medulloblastoma_71501",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Derived SS2018: Medulloblastoma",
+  "title" : "Derived Summary Stage 2023: Medulloblastoma",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-02-14T23:08:00.654Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Localized only (Localized, NOS)\n\nAll sites\n\n* Single tumor with no invasion or seeding to other structures\n\nConfined to site of origin, NOS\nLocalized, NOS" ], [ "2", "Regional, NOS\n\nTumor crosses the midline" ], [ "7", "Distant site(s)/lymph node(s) involved\n\n* Distant site(s) (including further contiguous extension)\n  * All Sites\n    * Blood\n    * Bone (including skull)\n    * Bone marrow\n    * \"Drop\" metastasis\n    * Extra-neural metastasis, NOS\n    * Gross spinal subarachnoid seeing\n    * Intracranial spread beyond primary site\n    * Major blood vessel(s)\n    * Meninges (e.g., dura)\n    * Microscopic confirmation of tumor cells present in CSF by cytology (circulating cells in cerebral spinal fluid)\n    * Multiple/multifocal tumors\n    * Nerves (cranial, NOS)\n    * Tumor invades or encroaches upon ventricular system\n    * Visible metastasis in cervicomedullary (junction)\n  * Brain tumors (C700, C710-C719)\n    * Anterior cranial fossa\n    * Brain stem\n    * Cerebellum\n    * Cerebrum (cerebral hemisphere)\n    * Contralateral hemisphere\n    * Hypothalamus\n    * Middle cranial fossa\n    * Nasal cavity\n    * Nasopharynx\n    * Other direct extension outside CNS\n    * Pallium\n    * Posterior cranial fossa\n    * Posterior pharynx\n    * Suprasellar brain\n    * Tapetum\n    * Thalamus\n  * CNS Tumors (C701, C709, C720-C729)\n    * Adjacent connective tissue\n    * Adjacent muscle\n    * Brain \n    * Eye\n    * Sphenoid and frontal sinuses(skull)\n  * Pineal Gland (C753)\n    * Adjacent connective/soft tissue\n    * Cavernous sinus\n    * Infratentorial and central brain\n  * Distant lymph node(s), NOS\n  * Distant metastasis, NOS\n    * Carcinomatosis \n    * Distant metastasis WITH or WITHOUT distant lymph node(s)" ], [ "8", "Benign or borderline brain" ], [ "9", "Unknown if extension or metastasis" ] ]
+}

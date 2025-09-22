@@ -1,0 +1,19 @@
+{
+  "id" : "derived_ss2018_retroperitoneum_11521",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Derived SS2018: Retroperitoneum",
+  "title" : "Derived Summary Stage 2018: Retroperitoneum",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-02-15T16:15:31.152Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Localized only (localized, NOS)\n- Confined to site of origin" ], [ "2", "Regional by direct extension only\n- Adjacent connective tissue, NOS\n- Adjacent organs/structures, NOS\n- Bone/cartilage \n- Retroperitoneum (C480)\n    + Adrenal(s) (suprarenal gland(s))\n    + Aorta\n    + Colon (ascending and descending)\n    + Kidney(s)\n    + Pancreas\n    + Vena cava\n    + Vertebra\n- Peritoneum (C481, C482, C488)\n    + Colon (except ascending and descending colon)\n    + Esophagus\n    + Gallbladder\n    + Liver\n    + Small intestine\n    + Spleen\n    + Stomach" ], [ "3", "Regional lymph node(s) involved only\n- Intra-abdominal\n- Paracaval\n- Pelvic\n- Subdiaphragmatic \n- Regional lymph node(s), NOS\n  + Lymph node(s), NOS" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n- Codes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant site(s) (including further contiguous extension)\n  + Peritoneum (C481, C482, C488)\n     * Colon (ascending and descending colon) \n- Distant lymph node(s), NOS\n- Distant metastasis, NOS\n  + Carcinomatosis \n  + Distant mets WITH or WITHOUT distant lymph node(s)" ], [ "9", "Unknown if extension or metastasis" ] ]
+}

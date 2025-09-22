@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_thymus_v9_2025",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Schema Selection Thymus V9: 2025+]",
+  "title" : "Schema selection for Thymus V9: 2025+]",
+  "last_modified" : "2025-07-07T20:36:28.962Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C379", "8000-8700, 8720-8790, 8980", "2025-9998, 9999, ", "MATCH" ] ]
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "residual_tumor_volume_post_cytoreduction_90653",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Residual Tumor Volume Post Cytoreduction",
+  "title" : "Residual Tumor Volume Post Cytoreduction",
+  "description" : "Gross residual tumor after primary cytoreductive surgery is a prognostic factor for ovarian cancer and residual tumor volume after cytoreductive surgery is a prognostic factor for late-stage ovarian cancers.\n\nThe amount of ovarian tumor and the location of tumor remaining in the patient after initial ovarian or peritoneal cancer surgery are the most important prognostic factors for advanced disease.  The intent of cytoreductive or debulking surgery—particularly for Stage III cancer—is to remove as much of the cancer in the pelvis and abdomen as possible so that chemotherapy will be more effective.  The less tumor left behind, the more likely the patient will respond well to adjuvant hemotherapy.  Information about residual tumor volume will be in the operative report.",
+  "notes" : "**Note 1:** **Physician Statement** \n* Physician statement of residual tumor status after primary cytoreduction surgery can be used to code this data item when no other information is available.\n\n**Note 2:** **Optimal debulking surgery** \n* Optimal debulking is described as removal of all tumor except for residual nodules that measure no more than 1 centimeter (cm) in maximum diameter.\n\n**Note 3:** **Purpose of surgery** \n* The surgery to remove as much cancer in the pelvis and/or abdomen as possible, reducing the \"bulk\" of the cancer, is called **\"debulking\"** or **\"cytoreductive\"** surgery. \n  * It is performed when there is widespread evidence of advanced stage of ovarian cancer with obvious spread to other organs outside the ovary, typically in the upper abdomen, intestines, the omentum (the fat pad suspended from the transverse colon like an apron), the diaphragm, or liver.  \n\n**Note 4:** **Gross residual tumor** \n* Gross residual tumor after primary cytoreductive surgery is a prognostic factor that has been demonstrated in large studies. The best prognostic category after surgery includes those who are left with no gross residual tumor.\n* Physicians should record the presence or absence of residual disease, if residual disease is observed, the size of the largest visible lesion should be documented",
+  "last_modified" : "2024-04-08T20:47:22.516Z",
+  "definition" : [ {
+    "key" : "resid_tumor_vol_post_cyto",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "No gross residual tumor nodules" ], [ "50", "Residual tumor nodule(s) 1 centimeter (cm) or less" ], [ "60", "Residual tumor nodule(s) greater than 1 cm" ], [ "70", "Macroscopic residual tumor nodule(s), size not stated" ], [ "80", "Procedure described as optimal debulking and size of residual tumor nodule(s) not given" ], [ "97", "No cytoreductive surgery performed\nNon-invasive neoplasm (behavior /2)" ], [ "98", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 98 will result in an edit error.)" ], [ "99", "Not documented in medical record\nResidual tumor status after cytoreductive surgery not assessed or unknown if assessed" ] ],
+  "additional_info" : "* **Source documents:** operative report, discharge summary, chemotherapy records (inpatient and outpatient)\n\n* **Other names include** debulking, cytoreduction, residual tumor volume\n\nFor further information, refer to the **Ovary, Fallopian Tube, or Peritoneum** cancer protocol published by the College of American Pathologists for the AJCC Staging System *Ovary, Fallopian Tube, and Primary Peritoneal Carcinoma*",
+  "rationale" : "Residual Tumor Volume Post Cytoreduction is a Registry Data Collection Variable listed in AJCC. It was previously collected as Ovary, CS SSF # 3."
+}

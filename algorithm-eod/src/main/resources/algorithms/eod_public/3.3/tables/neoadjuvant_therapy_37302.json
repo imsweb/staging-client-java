@@ -1,0 +1,20 @@
+{
+  "id" : "neoadjuvant_therapy_37302",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Neoadjuvant Therapy",
+  "title" : "Neoadjuvant Therapy",
+  "description" : "This data item records whether the patient had neoadjuvant therapy prior to planned definitive surgical resection of the primary site.",
+  "notes" : "This data items provides information related to the quality of care and describes whether a patient had neoadjuvant therapy.\n\nFor the purposes of this data item, neoadjuvant therapy is defined as systemic treatment (chemotherapy, endocrine / hormone therapy, targeted therapy, immunotherapy, or biological therapy) and/or radiation therapy before intended or performed surgical resection to improve local therapy and long term outcomes.\n\nSee the [SEER Coding Manual](https://seer.cancer.gov/manuals/2023/SPCSM_2023_MainDoc.pdf) for additional information.",
+  "last_modified" : "2024-05-16T20:37:33.344Z",
+  "definition" : [ {
+    "key" : "neoadjuvant_therapy",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "No neoadjuvant therapy, no treatment before surgery, surgical resection not part of first course of treatment plan; Autopsy only" ], [ "1", "Neoadjuvant therapy completed according to treatment plan and guidelines" ], [ "2", "Neoadjuvant therapy started, but not completed OR unknown if completed" ], [ "3", "Limited systemic exposure when the intent was not neoadjuvant; treatment did not meet the definition of neoadjuvant therapy" ], [ "9", "Unknown if neoadjuvant therapy performed; \nDeath Certificate only (DCO)" ] ]
+}

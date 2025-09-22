@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_net_colon_and_rectum_v9_2024",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Schema Selection NET Colon and Rectum [V9: 2024+]",
+  "title" : "Schema selection for NET Colon and Rectum [V9: 2024+]",
+  "last_modified" : "2025-07-07T20:04:24.174Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C180,C182-C189, C199, C209", "8150-8153,8155-8156,8158,8240-8242,8249,8683", "2024-9998, 9999,", "MATCH" ] ]
+}

@@ -1,0 +1,26 @@
+{
+  "id" : "derived_rai_stage_73218",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Derived Rai Stage",
+  "title" : "Derived Rai Stage",
+  "description" : "This data item stores the Derived Rai stage value derived from the values coded in the following related data items for the Lymphoma-CLL/SLL schema (9823/3). \n\nPer confirmation from medical oncologists, Rai stage is only recorded for patients who have bone marrow and/or peripheral blood involvement. Per the Hematopoietic Rules, primary site would be C421 (See [Hematopoietic Manual](https://seer.cancer.gov/tools/heme/Hematopoietic_Instructions_and_Rules.pdf), Module 3: Rules PH 5, 6). Use code 5 for the 5 SSDIs when primary site is not C421.\n\nThe Rai classification system is now used to stage chronic lymphocytic leukemia/small lymphocytic lymphoma (CLL/SLL) (9823/3) when bone marrow and/or peripheral blood are involved using several different criteria. The stages are based on the absence or presence of the following related data items. \n * 3885: Lymphocytosis\n * 3804: Adenopathy\n * 3907: Organomegaly\n * 3811: Anemia\n * 3933: Thrombocytopenia\n\n**Note: All of these data items are required for Staging for the AJCC Staging System Hodgkin and Non-Hodgkin Lymphomas (9823/3 only) and EOD.**\n\nRai stages \n * Stage 0 CLL is characterized by absolute lymphocytosis (>15,000/mm3) without adenopathy, hepatosplenomegaly, anemia, or thrombocytopenia\n * Stage I CLL is characterized by absolute lymphocytosis with lymphadenopathy without hepatosplenomegaly, anemia, or thrombocytopenia\n * Stage II CLL is characterized by absolute lymphocytosis with either hepatomegaly or splenomegaly with or without lymphadenopathy\n * Stage III CLL is characterized by absolute lymphocytosis and anemia (hemoglobin <11 g/dL) with or without lymphadenopathy, hepatomegaly, or splenomegaly\n * Stage IV CLL is characterized by absolute lymphocytosis and thrombocytopenia (<100,000/mm3) with or without lymphadenopathy, hepatomegaly, splenomegaly, or anemia\n\nThis table below* can be used when the **ONLY** information available is the documented Rai stage from the managing physician. (Note: The Rai stage cannot be found on a pathology report).\n\n***Please see the Site-Specific Data Item (SSDI) Manual for the table.**",
+  "notes" : "This field should be left blank for all cases diagnosed prior to 2018, for schemas other than 00795, and when not required by standard setter.",
+  "last_modified" : "2025-05-08T18:53:14.046Z",
+  "definition" : [ {
+    "key" : "derived_rai_stage",
+    "name" : "Rai Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "rai_display",
+    "name" : "Rai Stage",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "0", "Lymphocytosis" ], [ "1", "I", "Lymphocytosis and Adenopathy" ], [ "2", "II", "Lymphocytosis and Organomegaly\n(Adenopathy is any value other than 5)" ], [ "3", "III", "Lymphocytosis and Anemia\n(Adenopathy and Organomegaly are any value other than 5)" ], [ "4", "IV", "Lymphocytosis and Thrombocytopenia\n(Adenopathy, Organomegaly and Anemia are any value other than 5)" ], [ "8", "N/A", "Does not apply, primary site not bone marrow (C421)\n(All 5 SSDIs should be set to 5)" ], [ "9", "9", "Unknown\n\n(All 5 SSDIs are 9 or blank OR\nAt least one is set to 9 OR\nLymphocytosis is 0,7,9 OR\nLymphocytosis is blank and one of the other SSDIs is a value other than 5 or 9)" ], [ "", "", "Not Calculated (DCO)" ] ],
+  "additional_info" : "**Source documents:** laboratory results, physical exam, clinician’s notes",
+  "rationale" : "The Derived Rai stage can be used to evaluate disease spread at diagnosis, treatment patterns and outcomes over time."
+}

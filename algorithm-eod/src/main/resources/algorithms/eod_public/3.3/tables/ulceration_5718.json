@@ -1,0 +1,22 @@
+{
+  "id" : "ulceration_5718",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Ulceration",
+  "title" : "Ulceration",
+  "description" : "Ulceration, the absence of an intact epidermis overlying the primary melanoma based upon histopathological examination, is a prognostic factor for melanoma of the skin.\n\nUlceration is the formation of a break on the skin or on the surface of an organ. An ulcer forms when the surface cells die and are cast off. Ulcers may be associated with cancer and other diseases. \n\nPrimary tumor ulceration has been shown to be a dominant independent prognostic factor, and if present, changes the pT stage from T1a to T1b, T2a to T2b, etc., depending on the thickness of the tumor.\nThe presence or absence of ulceration must be confirmed on microscopic examination. Melanoma ulceration is defined as the combination of the following features \n* Full-thickness epidermal defect (including absence of stratum corneum and basement membrane)\n* Evidence of reactive changes (i.e., fibrin deposition, neutrophils); and thinning, effacement, or reactive hyperplasia of the surrounding epidermis in the absence of trauma or a recent surgical procedure\n* Ulcerated melanomas typically show invasion through the epidermis, whereas nonulcerated melanomas tend to lift the overlying epidermis",
+  "notes" : "**Note 1:** **Physician Statement** \n* Physician statement of microscopically confirmed ulceration (e.g., based on biopsy or surgical resection) can be used to code this data item when no other information is available. \n\n**Note 2:** **Ulceration defined** \n* Melanoma ulceration is the absence of an intact epidermis overlying the primary melanoma based upon microscopic (histopathological) examination.\n* Ulceration can only be confirmed by microscopic examination. Do not use findings from physical exam. \n* It is possible for a patient to present with an ulcerated lesion noted on physical exam, but this is not the same thing as ulceration seen on a microscopic exam",
+  "last_modified" : "2025-02-24T16:14:08.701Z",
+  "definition" : [ {
+    "key" : "ulceration",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Ulceration not identified/not present" ], [ "1", "Ulceration present" ], [ "8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nCannot be determined by the pathologist\nPathology report does not mention ulceration\nUlceration not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source documents:** pathology report\n\nFor further information, refer to the **Melanoma of the Skin** cancer protocol published by the College of American Pathologists for the AJCC Staging System *Melanoma of the Skin*",
+  "coding_guidelines" : "**1)** **Code 0** when\n* There is a statement in the pathology report that no ulceration is present\n* All specimens are negative OR one specimen is negative, and the other is unknown\n\n**2)** **Code 1** when \n* Any biopsy (punch, shave, excisional, etc.) or wide excision is positive for ulceration in the presence of an underlying melanoma\n* Ulceration must be caused by an underlying melanoma. \n  * Ulceration caused by trauma from a previous procedure should not be coded as positive for this SSDI \n\n**3)** **Code 9** when\n* No information in the medical record\n* Pathology report is not available\n* Ulceration not evaluated (not assessed) \n* Unknown if Ulceration evaluated (assessed)\n* There is microscopic examination and there is no mention of ulceration.\n  * This instruction **does** apply to non-invasive neoplasms (behavior /2)"
+}

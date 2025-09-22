@@ -1,0 +1,23 @@
+{
+  "id" : "er_allred_score_36612",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Estrogen Receptor Total Allred Score",
+  "title" : "ER (Estrogen Receptor) Total Allred Score",
+  "description" : "Estrogen Receptor Total Allred Score is based on the percentage of cells that stain positive by IHC for estrogen receptor (ER) and the intensity of that staining.\n\nThe Allred Score is a method of quantifying ER and PR using both intensity and percentage of positive cells.  The Allred Score is calculated by adding the Proportion Score and the Intensity Score, as defined in the tables below.\n\nThe Allred score combines the percentage of positive cells (proportion score) and the intensity score of the reaction product in most of the carcinoma.  The 2 scores are added together for a final score with 8 possible values (00-08). \n\nPositive cells = 0; Proportion score = 0\nPositive cells = <1; Proportion score = 1\nPositive cells = 1 to 10; Proportion score = 2\nPositive cells = 11 to 33; Proportion score = 3\nPositive cells = 34 to 66; Proportion score = 4\nPositive cells = 67 or greater; Proportion score = 5\n\nIntensity = None; Intensity Score = 0\nIntensity = Weak; Intensity Score = 1\nIntensity = Intermediate/Moderate; Intensity Score = 2\nIntensity = Strong; Intensity Score = 3",
+  "notes" : "**Note 1:** **No longer required by any standard setter** \n* This SSDI is no longer required by any of the standard setters starting with 2023 diagnoses\n* For cases diagnosed 2023+, this SSDI may be left blank\n\n**Note 2:** **Physician Statement** \n* Physician statement of ER (Estrogen Receptor) Total Allred Score can be used to code this data item.\n\n**Note 3:** **Related data item** \n* Code this data item using the same report used to record the related data item 3827: Estrogen Receptor Summary.",
+  "last_modified" : "2024-04-08T19:54:41.600Z",
+  "definition" : [ {
+    "key" : "er_allred_score",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "00", "Total ER Allred score of 0 " ], [ "01", "Total ER Allred score of 1" ], [ "02", "Total ER Allred score of 2" ], [ "03", "Total ER Allred score of 3" ], [ "04", "Total ER Allred score of 4" ], [ "05", "Total ER Allred score of 5" ], [ "06", "Total ER Allred score of 6" ], [ "07", "Total ER Allred score of 7" ], [ "08", "Total ER Allred score of 8" ], [ "X8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code X8 will result in an edit error.)" ], [ "X9", "Not documented in medical record\nER (Estrogen Receptor) Total Allred Score not assessed, or unknown if assessed" ], [ "", "May be blank if diagnosis year is after 2022" ] ],
+  "additional_info" : "**Source documents:** pathology report\n\nFor further information, refer to the **Breast Biomarker Reporting** cancer protocols published by the College of American Pathologists for the AJCC Staging System *Breast*",
+  "coding_guidelines" : "**1)** Registrar should not calculate the Allred Score unless both components are available (proportion score and intensity)\n\n**2)** **Code X9** if ER test is performed, but Allred score is not documented, or cannot be calculated",
+  "rationale" : "Estrogen Receptor Total Allred Score is a Registry Data Collection Variable in AJCC. It is a new data item for cases diagnosed 1/1/2018+."
+}

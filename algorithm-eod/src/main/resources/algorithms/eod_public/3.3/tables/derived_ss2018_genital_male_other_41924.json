@@ -1,0 +1,19 @@
+{
+  "id" : "derived_ss2018_genital_male_other_41924",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Derived SS2018: Genital Male Other",
+  "title" : "Derived Summary Stage 2018: Genital Male Other",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-02-14T20:13:59.234Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "In situ: noninvasive, intraepithelial" ], [ "1", "Localized only (localized, NOS)\n- Confined to tissue or organ of origin" ], [ "2", "Regional by direct extension only\n- Adjacent connective tissue\n- Adjacent organ(s)/structure(s)\n    + Epididymis (from other site)\n    + Penis\n    + Prostate\n    + Seminal vesicle (from other site)\n    + Skeletal muscle (scrotum only)\n    + Spermatic cord (vas deferens) (from other site)\n    + Testis\n    + Tunica vaginalis (from other site)" ], [ "3", "Regional lymph node(s) involved only\n- Iliac , NOS\n    + External \n    + Internal  (hypogastric), NOS\n       * Obturator \n- Inguinal , NOS\n    + Deep inguinal, NOS\n        * Node of Cloquet or Rosenmuller (highest deep inguinal)\n    + Superficial  inguinal (femoral)\n- Pelvic , NOS\n- Regional  lymph node(s), NOS\n  + Lymph node(s), NOS" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n- Codes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant site(s) (including further contiguous extension)\n- Other organ(s) and structure(s) in male pelvis\n  + Bladder\n  + Bone (axial or appendicular skeleton) (scrotum only)\n  + Rectum \n  + Underlying cartilage (scrotum only)\n  + Urethra\n- Distant lymph node(s), NOS\n- Distant metastasis, NOS \n  + Carcinomatosis \n  + Distant metastasis WITH or WITHOUT distant lymph node(s)" ], [ "9", "Unknown if extension or metastasis" ] ]
+}

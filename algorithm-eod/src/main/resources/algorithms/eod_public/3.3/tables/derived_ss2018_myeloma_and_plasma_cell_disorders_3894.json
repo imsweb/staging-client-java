@@ -1,0 +1,19 @@
+{
+  "id" : "derived_ss2018_myeloma_and_plasma_cell_disorders_3894",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Derived SS2018: Myeloma and Plasma Cell Disorders",
+  "title" : "Derived Summary Stage 2018: Myeloma and Plasma Cell Disorders",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-02-15T14:20:30.741Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Localized only\n- Single plasmacytoma occurring in bone (osseous or medullary) (9731)\n  + WITH or WITHOUT soft tissue extension\n- Single plasmacytoma, NOS (9734)\n  + Single plasmacytoma occurring outside of bone (extraosseous or extramedullary) (9734)" ], [ "3", "Regional lymph node(s) involved only\n- Extraosseous plasmacytomas only (9734)\n  + Regional lymph node(s), NOS\n     * Lymph node(s), NOS" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Lymphoplasmacytic lymphoma (9671)\n- Plasma cell myeloma (9732)\n  + Multiple myeloma\n  + Myeloma, NOS\n  + Multiple extraosseous or extramedullary plasmacytomas \n  + Multiple osseous or medullary plasmacytomas \n  + Multiple plasmacytomas, NOS\n- Waldenstrom Macroglobulinemia (9761)" ], [ "9", "Unknown if extension or metastasis (applicable for 9731 and 9734 only)" ] ]
+}

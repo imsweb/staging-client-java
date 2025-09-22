@@ -1,0 +1,23 @@
+{
+  "id" : "profound_immune_suppression_68178",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Profound Immune Suppression",
+  "title" : "Profound Immune Suppression",
+  "description" : "Profound Immune Suppression suppressed immune status that may be associated with HIV/AIDs, solid organ transplant, chronic lymphocytic leukemia, non-Hodgkin lymphoma, multiple conditions, or other conditions, increases the risk of developing Merkel Cell Carcinoma and is an adverse prognostic factor. \n\nProfound immune suppression may greatly increase the risk of developing Merkel cell carcinoma. Immune suppression is suppression of the body's immune system and its ability to fight infections and other diseases. Immune suppression may be deliberately induced with drugs, as in preparation for bone marrow or other organ transplantation, to prevent rejection of the donor tissue. It may also result from certain diseases such as Acquired Immune Deficiency Syndrome (AIDS) or lymphoma, and from the use of anti-cancer drugs.",
+  "notes" : "**Note 1:** **Physician statement** \n* Physician statement of Profound Immune Suppression must be used to code this data item. \n* Do not assume that a patient is immune suppressed just because the patient has one of the conditions listed below in the table. \n\n**Note 2:** **Two-year limitation and exceptions**\n* Per AJCC experts, this data item is limited to the conditions in the table below occurring within two years of the diagnosis of Merkel cell carcinoma.\n  * ***Exceptions***: For the following conditions ONLY, these patients will experience chronic immunosuppression. These are no time limits for these conditions. If a patient has a history (regardless of when diagnosed or treatment status), code as present \n    * Human Immunodeficiency Virus (HIV)/acquired immunodeficiency syndrome (AIDS) (Code 1)\n    * Solid organ transplant recipient (Code 2)\n    * Chronic lymphocytic leukemia (Code 3)",
+  "last_modified" : "2024-04-30T19:13:19.892Z",
+  "definition" : [ {
+    "key" : "profound_immune_suppression",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "No immune suppression condition(s) identified/not present" ], [ "1", "Human Immunodeficiency Virus (HIV)/Acquired Immunodeficiency Syndrome (AIDS)" ], [ "2", "Solid organ transplant recipient" ], [ "3", "Chronic lymphocytic leukemia" ], [ "4", "Non-Hodgkin lymphoma" ], [ "5", "Multiple immune suppression conditions" ], [ "6", "Profound immune suppression present" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nProfound immune suppression not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source documents:** patient history, consultation notes, other statement in medical record\n\n**Other names (per AJCC experts) include** immunosuppression, immunocompromised, immunosuppressed, suppressed immune status",
+  "coding_guidelines" : "**1) Code 0** when there is no evidence of immune suppression at the time of diagnosis OR within 2 years of diagnosis\n**2) Code 1** for HIV diagnosis regardless of when diagnosed or treatment status\n**3) Code 2** for Solid Organ transplant recipient regardless  of when transplant was done\n**4) Code 3** for Chronic lymphocytic leukemia regardless of when diagnosed or treatment status\n**5) Code 4** for Non-Hodgkin lymphoma that has been diagnosed within the last two years\n**6) Code 5** when there are multiple immune suppression conditions (Codes 1-4) present at the same time\n**7) Code 6** when documentation states “profound immune suppression,” but no information regarding which condition is given\n**8) Code 9** if conditions (other than those noted above) were not active within 2 years of (or resolved more than 2 years prior to) diagnosis, or if it is unknown when they existed.",
+  "rationale" : "Profound Immune Suppression is a Registry Data Collection Variable in AJCC. It was previously collected as Merkel Cell Penis, SSF #22, Merkel Cell Scrotum SSF #22, Merkel Cell Skin, SSF #22, and Merkel Cell Vulva, SSF #22."
+}

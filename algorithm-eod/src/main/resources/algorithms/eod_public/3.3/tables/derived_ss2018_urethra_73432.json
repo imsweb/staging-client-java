@@ -1,0 +1,19 @@
+{
+  "id" : "derived_ss2018_urethra_73432",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Derived SS2018: Urethra",
+  "title" : "Derived Summary Stage 2018: Urethra",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-02-15T18:02:52.095Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "In situ, intraepithelial, noninvasive\n\nPapillary \n- Non-infiltrating or non-invasive papillary transitional cell carcinoma\n- Non-infiltrating or non-invasive papillary urothelial carcinoma\n- Papillary transitional cell carcinoma, with inferred description of non-invasion\n- Papillary urothelial carcinoma, with inferred description of non-invasion\n\nNonpapillary\n- Carcinoma in situ, NOS \n- Sessile (flat) (solid) carcinoma in situ   \n- Transitional cell carcinoma in situ\n- Urothelial carcinoma (in situ, non-infiltrating, non-invasive)\n\nMultifocal non-invasive tumors\n\nUrethra-Prostatic\nCarcinoma in situ involving (WITHOUT stromal invasion)\n- Periurethral or prostatic ducts\n- Prostatic urethra" ], [ "1", "Localized only (localized, NOS)\n- Muscularis invaded\n- Subepithelial connective tissue (lamina propria, submucosa) invaded" ], [ "2", "Regional by direct extension only\n- All sites\n    + Bladder neck\n- Urethra\n    + Corpus cavernosum\n    + Corpus spongiosum\n    + Periurethral muscle (sphincter muscle)\n    + Vagina (anterior, NOS)\n- Prostatic urethra\n    + Periprostatic fat (beyond prostate capsule)\n    + Prostate (prostatic stroma)\n    + Prostatic ducts" ], [ "3", "Regional lymph node(s) involved only\n- Iliac (common, external, internal [hypogastric] [obturator], NOS)\n- Inguinal (superficial [femoral], NOS)\n- Inguinal, deep (Node of Cloquet or Rosenmuller [highest deep inguinal], NOS)   \n- Pelvic, NOS (including true pelvis)\n- Perivesical\n- Presacral\n- Sacral, NOS\n- Regional lymph node(s), NOS\n  + Lymph node(s), NOS" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n- Codes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant site(s) (including further contiguous extension) \n  + All sites\n    * Adjacent organ(s), NOS\n    * Bladder wall\n  + Prostatic urethra\n     * Rectal wall \n- Distant lymph node(s), NOS\n- Distant metastasis, NOS \n  + Carcinomatosis \n  + Distant metastasis WITH or WITHOUT distant lymph node(s)" ], [ "9", "Unknown if extension or metastasis" ] ]
+}

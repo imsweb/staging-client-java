@@ -1,0 +1,28 @@
+{
+  "id" : "combined_grade_breast_8723",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Derived Summary Grade Breast",
+  "title" : "Derived Summary Grade Breast",
+  "notes" : "This calculated the Derived Summary Grade, the highest grade based on Grade Clinical and Grade Pathological. If grade is needed in the Stage Group Calculation, this value is also used there.  This table is specific to Breast cancer.",
+  "last_modified" : "2023-04-26T21:18:03.909Z",
+  "definition" : [ {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "grade_clin",
+    "name" : "Grade Clin",
+    "type" : "INPUT"
+  }, {
+    "key" : "grade_path",
+    "name" : "Grade Path",
+    "type" : "INPUT"
+  }, {
+    "key" : "derived_summary_grade",
+    "name" : "Derived Summary Grade",
+    "type" : "ENDPOINT"
+  } ],
+  "extra_input" : [ "grade_path", "grade_clin" ],
+  "rows" : [ [ "2", "*", "H", "VALUE:{{grade_path}}" ], [ "2", "H", "1,2,3,L,M,A,B,C,D,9", "VALUE:{{grade_clin}}" ], [ "2", "1,2,3,L,M,A,B,C,D,9", "M", "VALUE:{{grade_path}}" ], [ "2", "M", "1,2,3,L,A,B,C,D,9", "VALUE:{{grade_clin}}" ], [ "2", "1,2,3,L,A,B,C,D,9", "L", "VALUE:{{grade_path}}" ], [ "2", "L", "1,2,3,A,B,C,D,9", "VALUE:{{grade_clin}}" ], [ "2", "1,2,3,A,B,C,D,9", "3", "VALUE:{{grade_path}}" ], [ "2", "3", "1,2,A,B,C,D,9", "VALUE:{{grade_clin}}" ], [ "2", "1,2,A,B,C,D,9", "2", "VALUE:{{grade_path}}" ], [ "2", "2", "1,A,B,C,D,9", "VALUE:{{grade_clin}}" ], [ "2", "1,A,B,C,D,9", "1", "VALUE:{{grade_path}}" ], [ "2", "1", "A,B,C,D,9", "VALUE:{{grade_clin}}" ], [ "2", "A,B,C,D,9", "D", "VALUE:{{grade_path}}" ], [ "2", "D", "A,B,C,9", "VALUE:{{grade_clin}}" ], [ "2", "A,B,C,9", "C", "VALUE:{{grade_path}}" ], [ "2", "C", "A,B,9", "VALUE:{{grade_clin}}" ], [ "2", "A,B,9", "B", "VALUE:{{grade_path}}" ], [ "2", "B", "A,9", "VALUE:{{grade_clin}}" ], [ "2", "A,9", "A", "VALUE:{{grade_path}}" ], [ "2", "A", "9", "VALUE:{{grade_clin}}" ], [ "3", "*", "3", "VALUE:{{grade_path}}" ], [ "3", "3", "1,2,L,M,H,A,B,C,D,9", "VALUE:{{grade_clin}}" ], [ "3", "1,2,L,M,H,A,B,C,D,9", "2", "VALUE:{{grade_path}}" ], [ "3", "2", "1,L,M,H,A,B,C,D,9", "VALUE:{{grade_clin}}" ], [ "3", "1,L,M,H,A,B,C,D,9", "1", "VALUE:{{grade_path}}" ], [ "3", "1", "L,M,H,A,B,C,D,9", "VALUE:{{grade_clin}}" ], [ "3", "L,M,H,A,B,C,D,9", "H", "VALUE:{{grade_path}}" ], [ "3", "H", "L,M,A,B,C,D,9", "VALUE:{{grade_clin}}" ], [ "3", "L,M,A,B,C,D,9", "M", "VALUE:{{grade_path}}" ], [ "3", "M", "L,A,B,C,D,9", "VALUE:{{grade_clin}}" ], [ "3", "L,A,B,C,D,9", "L", "VALUE:{{grade_path}}" ], [ "3", "L", "A,B,C,D,9", "VALUE:{{grade_clin}}" ], [ "3", "A,B,C,D,9", "D", "VALUE:{{grade_path}}" ], [ "3", "D", "A,B,C,9", "VALUE:{{grade_clin}}" ], [ "3", "A,B,C,9", "C", "VALUE:{{grade_path}}" ], [ "3", "C", "A,B,9", "VALUE:{{grade_clin}}" ], [ "3", "A,B,9", "B", "VALUE:{{grade_path}}" ], [ "3", "B", "A,9", "VALUE:{{grade_clin}}" ], [ "3", "A,9", "A", "VALUE:{{grade_path}}" ], [ "3", "A", "9", "VALUE:{{grade_clin}}" ], [ "2,3", "9", "9", "VALUE:{{grade_path}}" ], [ "2,3", "", "", "VALUE:" ] ]
+}
