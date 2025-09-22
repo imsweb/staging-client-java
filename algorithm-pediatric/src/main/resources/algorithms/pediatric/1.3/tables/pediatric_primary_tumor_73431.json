@@ -1,0 +1,19 @@
+{
+  "id" : "pediatric_primary_tumor_73431",
+  "algorithm" : "pediatric",
+  "version" : "1.3",
+  "name" : "Pediatric Primary Tumor",
+  "title" : "Pediatric Primary Tumor",
+  "notes" : "**Note 1:** This schema has extension codes that are defined as “PATHOLOGICAL assessment only”\n* PATHOLOGICAL assessment only codes (2200, 250, 350, 450, 500) are used when there is an orchiectomy\n\n**Note 2:** Code 200 for Seminomas confined to the testis.\n\n**Note 3:** For codes 200 and 250, LVI [NAACCR # 1182] must be coded as none (code 0), not applicable (8), or unknown (9).\n* See the STORE or SEER manual for instructions on how to code LVI",
+  "last_modified" : "2024-06-05T15:41:33.340Z",
+  "definition" : [ {
+    "key" : "ped_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "200", "**PATHOLOGICAL assessment only**\n\nTumor limited to the testis\n* Body of testis\n* Rete testis\n* Tunica albuginea\n* Tunica, NOS\n* Confined to testis, NOS\n\nLocalized, NOS\n\nWITHOUT or UNKNOWN vascular/lymphatic invasion" ], [ "250", "**PATHOLOGICAL assessment only**\n\nEpididymis\n* WITHOUT vascular/lymphatic invasion" ], [ "350", "**PATHOLOGICAL assessment only**\n\nTumor limited to testis (including rete testis invasion) (code 200) \n* WITH vascular/lymphatic invasion\n   - Excludes Epididymis (see code 450)\n\nTunica vaginalis (includes implants on surface of tunica vaginalis)\n* WITH or WITHOUT vascular/lymphatic invasion" ], [ "450", "**PATHOLOGICAL assessment only**\n\nHilar soft tissue\nMediastinum (of testis)\nVisceral mesothelial layer\n\nWITH or WITHOUT vascular/lymphatic invasion\n\nOR Epididymis WITH vascular invasion" ], [ "500", "**PATHOLOGICAL assessment only**\n\nSpermatic cord, ipsilateral\nVas deferens" ], [ "600", "Dartos muscle, ipsilateral\nScrotum, ipsilateral" ], [ "700", "Penis\nScrotum, contralateral\nUlceration of scrotum\n\nFurther contiguous extension" ], [ "800", "No evidence of primary tumor" ], [ "999", "Unknown; extension not stated\nPrimary tumor cannot be assessed\nNot documented in medical record\n\nDeath Certificate Only" ] ]
+}

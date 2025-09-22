@@ -1,0 +1,35 @@
+{
+  "id" : "pediatric_stage_79275",
+  "algorithm" : "pediatric",
+  "version" : "1.3",
+  "name" : "Pediatric Stage",
+  "title" : "Pediatric Stage",
+  "notes" : "calculates Pediatric Stage and Toronto Stage",
+  "last_modified" : "2023-11-18T02:41:05.121Z",
+  "definition" : [ {
+    "key" : "pediatric_t",
+    "name" : "T",
+    "type" : "INPUT"
+  }, {
+    "key" : "pediatric_n",
+    "name" : "N",
+    "type" : "INPUT"
+  }, {
+    "key" : "pediatric_m",
+    "name" : "M",
+    "type" : "INPUT"
+  }, {
+    "key" : "pediatric_grade",
+    "name" : "Grade",
+    "type" : "INPUT"
+  }, {
+    "key" : "pediatric_group",
+    "name" : "Derived Pediatric Stage Group",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "toronto_stage_group",
+    "name" : "Toronto Stage Group",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "*", "N0,NX,88", "M0", "1,X", "VALUE:1", "VALUE:1" ], [ "T1", "N0,NX,88", "M0", "2,3", "VALUE:2", "VALUE:2" ], [ "T2,T3,T4", "N0,NX,88", "M0", "2,3", "VALUE:3", "VALUE:3" ], [ "*", "N1", "M0", "*", "VALUE:3", "VALUE:3" ], [ "*", "*", "M1", "*", "VALUE:4", "VALUE:4" ], [ "*", "*", "MX", "*", "VALUE:99", "VALUE:X" ], [ "TX", "N0,NX,88", "M0", "2,3", "VALUE:99", "VALUE:X" ], [ "T0", "N0,NX,88", "M0", "2,3", "ERROR:T0 implies no grade", "ERROR:T0 implies no grade" ] ]
+}

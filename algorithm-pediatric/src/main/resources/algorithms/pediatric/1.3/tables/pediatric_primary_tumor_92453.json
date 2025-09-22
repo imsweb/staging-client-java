@@ -1,0 +1,19 @@
+{
+  "id" : "pediatric_primary_tumor_92453",
+  "algorithm" : "pediatric",
+  "version" : "1.3",
+  "name" : "Pediatric Primary Tumor",
+  "title" : "Pediatric Primary Tumor",
+  "notes" : "**Note 1:** If there is involvement of the fallopian tube with no further evidence of extension, regional lymph node involvement or metastasis, and the physician verifies this is an ovary primary, code 300.\n\n**Note 2:** Code 300 for extension to and/or discontinuous metastasis to any of the following pelvic organs \n* Adnexa\n* Adjacent (pelvic) peritoneum\n* Bladder\n* Bladder serosa\n* Cul de sac (rectouterine pouch)\n* Fallopian Tube\n* Ligament(s) (broad, ovarian, round, suspensory)\n* Mesosalpinx (Meosvarium)\n* Parametrium\n* Pelvic wall\n* Rectosigmoid\n* Rectum\n* Sigmoid colon (including sigmoid mesentery)\n* Ureter (pelvic portion)\n* Uterus, NOS\n\n**Note 3:** Code 400 for any evidence of peritoneal carcinomatosis, which may also be called seeding, salting, talcum powder appearance, or studding in any of the following abdominal organs (see Pediatric Mets for extraperitoneal carcinomatosis)\n* Abdominal mesentery\n* Diaphragm\n* Gallbladder\n* Intestine, large (except rectum, rectosigmoid and sigmoid colon)\n* Kidneys\n* Omentum (infracolic, NOS)\n* Pancreas\n* Pericolic gutter\n* Peritoneum, NOS\n* Small intestine\n* Stomach\n* Ureters (outside pelvis)",
+  "last_modified" : "2023-09-22T12:13:37.135Z",
+  "definition" : [ {
+    "key" : "ped_primary_tumor",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "100", "Limited to one or both ovaries\n* WITH or WITHOUT tumor on ovarian surface\n* WITH or WITHOUT surgical spill\n* AND NO or UNKNOWN\n   - Malignant cells in ascites or peritoneal washings\n   - Capsule rupture" ], [ "200", "Limited to one or both ovaries\n* WITH Malignant Cells in ascites or peritoneal washings OR\n* Capsule rupture" ], [ "300", "Tumor involves one or both ovaries with pelvic extension (below the pelvic brim) (see Note 2)" ], [ "400", "Tumor involves one or both ovaries WITH cytologically OR histologically confirmed spread to the peritoneum outside the pelvis (see Note 3)" ], [ "800", "No evidence of primary tumor" ], [ "999", "Unknown stage: stage group not stated\nStage group cannot be assessed\nNot documented in medical record\n\nDeath Certificate Only" ] ]
+}

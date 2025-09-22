@@ -1,0 +1,30 @@
+{
+  "id" : "schema_selection_ovarian",
+  "algorithm" : "pediatric",
+  "version" : "1.3",
+  "name" : "Schema Selection Ovarian",
+  "title" : "Schema selection for Ovarian",
+  "last_modified" : "2024-05-03T19:47:30.336Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "age_dx",
+    "name" : "Age at Diagnosis",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C569", "9060-9065, 9070-9073, 9080-9085, 9090, 9091, 9100-9101", "0-39", "3", "MATCH" ] ]
+}

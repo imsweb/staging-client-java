@@ -38,8 +38,8 @@ public final class PediatricDataProvider extends StagingFileDataProvider {
     }
 
     public enum PediatricVersion {
-        LATEST("1.2"),
-        V1_2("1.2");
+        LATEST("1.3"),
+        V1_3("1.3");
 
         private final String _version;
 

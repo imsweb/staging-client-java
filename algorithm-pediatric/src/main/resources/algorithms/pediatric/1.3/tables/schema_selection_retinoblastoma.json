@@ -1,0 +1,26 @@
+{
+  "id" : "schema_selection_retinoblastoma",
+  "algorithm" : "pediatric",
+  "version" : "1.3",
+  "name" : "Schema Selection Retinoblastoma",
+  "title" : "Schema selection for Retinoblastoma",
+  "last_modified" : "2025-07-25T20:50:51.560Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C690-C699", "9510-9514", "3", "MATCH" ] ]
+}
