@@ -1,0 +1,19 @@
+{
+  "id" : "toronto_stage_92889",
+  "algorithm" : "pediatric",
+  "version" : "1.3",
+  "name" : "Toronto Stage",
+  "title" : "Toronto Stage",
+  "notes" : "calculates Toronto Stage",
+  "last_modified" : "2023-11-18T02:33:40.250Z",
+  "definition" : [ {
+    "key" : "inrgss",
+    "name" : "INRGSS",
+    "type" : "INPUT"
+  }, {
+    "key" : "toronto_stage_group",
+    "name" : "Toronto Stage Group",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "1", "VALUE:L1" ], [ "2", "VALUE:L2" ], [ "3", "VALUE:M" ], [ "4", "VALUE:MS" ], [ "8", "VALUE:N/A" ], [ "9", "VALUE:X" ] ]
+}

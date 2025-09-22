@@ -1,0 +1,165 @@
+{
+  "id" : "hodgkin_lymphoma",
+  "algorithm" : "pediatric",
+  "version" : "1.3",
+  "name" : "Hodgkin Lymphoma",
+  "title" : "Hodgkin Lymphoma",
+  "notes" : "9650-9653, 9655, 9659, 9663: C000-C809 (ages 0-39)\n\n**Note 1:** The following sources were used in the development of this schema\n* [Toronto Childhood Cancer Stage Guidelines, Version 2, May 2022](https://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf)\n* [SEER Extent of Disease (EOD) 2018: Codes and Coding Instructions](https://seer.cancer.gov/tools/staging/eod/2018_Extent_of_Disease_General_Instructions.pdf) \n* [Summary Stage 2018 - SEER (cancer.gov)](https://seer.cancer.gov/tools/ssm/)\n\n**Note 2:** For Hodgkin Lymphoma, Toronto Staging is based on the *Ann Arbor Staging Classification* and is collected in Pediatric Primary Tumor\n* Internationally, the Ann Arbor Stage is still used for Lymphomas. Ann Arbor Stage is very similar to the Lugano Stage that has been collected in the US since 2018. The major difference between the two is that Lugano Stage has bulky disease, and Ann Arbor does not (see **Note 5** in Pediatric Primary Tumor)",
+  "schema_selection_table" : "schema_selection_hodgkin_lymphoma",
+  "schema_discriminators" : [ "age_dx", "behavior" ],
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "naaccr_xml_id" : "dateOfDiagnosis",
+    "table" : "year_dx_validation",
+    "used_for_staging" : false
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "naaccr_xml_id" : "primarySite",
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "naaccr_xml_id" : "histologicTypeIcdO3",
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "naaccr_item" : 523,
+    "naaccr_xml_id" : "behaviorCodeIcdO3",
+    "table" : "behavior",
+    "used_for_staging" : true
+  }, {
+    "key" : "age_dx",
+    "name" : "Age at Diagnosis",
+    "naaccr_item" : 230,
+    "naaccr_xml_id" : "ageAtDiagnosis",
+    "table" : "age_at_diagnosis_validation_3881",
+    "used_for_staging" : true
+  }, {
+    "key" : "ped_primary_tumor",
+    "name" : "Pediatric Primary Tumor",
+    "naaccr_item" : 1136,
+    "naaccr_xml_id" : "pediatricPrimaryTumor",
+    "default" : "999",
+    "table" : "pediatric_primary_tumor_48137",
+    "used_for_staging" : true
+  }, {
+    "key" : "ped_regional_nodes",
+    "name" : "Pediatric Regional Nodes",
+    "naaccr_item" : 1137,
+    "naaccr_xml_id" : "pediatricRegionalNodes",
+    "default" : "888",
+    "table" : "pediatric_regional_nodes_na_68667",
+    "used_for_staging" : false
+  }, {
+    "key" : "ped_mets",
+    "name" : "Pediatric Mets",
+    "naaccr_item" : 1138,
+    "naaccr_xml_id" : "pediatricMets",
+    "default" : "88",
+    "table" : "pediatric_mets_na_36656",
+    "used_for_staging" : false
+  }, {
+    "key" : "b_symptoms",
+    "name" : "B Symptoms",
+    "naaccr_item" : 3812,
+    "naaccr_xml_id" : "bSymptoms",
+    "default" : "8",
+    "table" : "b_symptoms_95631",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "SSDI"
+    } ]
+  } ],
+  "outputs" : [ {
+    "key" : "pediatric_id",
+    "name" : "Pediatric ID",
+    "naaccr_item" : 1132,
+    "naaccr_xml_id" : "pediatricId",
+    "default" : "2a"
+  }, {
+    "key" : "toronto_version_number",
+    "name" : "Toronto Version Number",
+    "description" : "Version of the Toronto Pediatric Staging System that this version of the Pediatric staging API is based upon.",
+    "naaccr_item" : 1135,
+    "naaccr_xml_id" : "torontoVersionNumber",
+    "default" : "2"
+  }, {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "description" : "For Pediatric ID Version Current - 1133, update all cases when API is updated; Pediatric ID Version Original - 1134, set when the case is coded and do not update",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "pediatric_t",
+    "name" : "Derived Pediatric T",
+    "naaccr_item" : 1142,
+    "naaccr_xml_id" : "derivedPediatricT",
+    "default" : "88"
+  }, {
+    "key" : "pediatric_n",
+    "name" : "Derived Pediatric N",
+    "naaccr_item" : 1143,
+    "naaccr_xml_id" : "derivedPediatricN",
+    "default" : "88"
+  }, {
+    "key" : "pediatric_m",
+    "name" : "Derived Pediatric M",
+    "naaccr_item" : 1144,
+    "naaccr_xml_id" : "derivedPediatricM",
+    "default" : "88"
+  }, {
+    "key" : "pediatric_group",
+    "name" : "Derived Pediatric Stage Group",
+    "naaccr_item" : 1145,
+    "naaccr_xml_id" : "derivedPediatricStageGroup"
+  }, {
+    "key" : "toronto_t",
+    "name" : "Toronto T",
+    "naaccr_item" : 1146,
+    "naaccr_xml_id" : "torontoT",
+    "default" : "N/A"
+  }, {
+    "key" : "toronto_n",
+    "name" : "Toronto N",
+    "naaccr_item" : 1147,
+    "naaccr_xml_id" : "torontoN",
+    "default" : "N/A"
+  }, {
+    "key" : "toronto_m",
+    "name" : "Toronto M",
+    "naaccr_item" : 1148,
+    "naaccr_xml_id" : "torontoM",
+    "default" : "N/A"
+  }, {
+    "key" : "toronto_stage_group",
+    "name" : "Toronto Stage Group",
+    "naaccr_item" : 1149,
+    "naaccr_xml_id" : "torontoStageGroup"
+  } ],
+  "mappings" : [ {
+    "id" : "toronto_stage",
+    "name" : "Pediatric Stage",
+    "initial_context" : [ {
+      "key" : "toronto_stage_group",
+      "value" : "90"
+    }, {
+      "key" : "pediatric_group",
+      "value" : "90"
+    } ],
+    "tables" : [ {
+      "id" : "pediatric_stage_51275",
+      "inputs" : [ "b_symptoms", "ped_primary_tumor" ],
+      "outputs" : [ "toronto_stage_group", "pediatric_group" ]
+    } ]
+  } ],
+  "involved_tables" : [ "primary_site", "pediatric_stage_51275", "schema_selection_hodgkin_lymphoma", "histology", "age_at_diagnosis_validation_3881", "pediatric_mets_na_36656", "year_dx_validation", "pediatric_primary_tumor_48137", "behavior", "b_symptoms_95631", "pediatric_regional_nodes_na_68667" ],
+  "last_modified" : "2024-06-13T16:28:37.251Z",
+  "on_invalid_input" : "CONTINUE"
+}

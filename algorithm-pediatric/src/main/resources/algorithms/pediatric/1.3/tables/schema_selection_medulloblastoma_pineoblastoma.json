@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_medulloblastoma_pineoblastoma",
+  "algorithm" : "pediatric",
+  "version" : "1.3",
+  "name" : "Schema Selection Medulloblastoma: Pineoblastoma",
+  "title" : "Schema selection for Medulloblastoma: Pineoblastoma",
+  "last_modified" : "2024-05-03T19:13:38.659Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C700-C729, C753", "9362", "MATCH" ] ]
+}

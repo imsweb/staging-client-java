@@ -1,0 +1,23 @@
+{
+  "id" : "pediatric_stage_69576",
+  "algorithm" : "pediatric",
+  "version" : "1.3",
+  "name" : "Pediatric Stage",
+  "title" : "Pediatric Stage",
+  "notes" : "calculates Pediatric Stage and Toronto Stage",
+  "last_modified" : "2023-11-18T02:14:20.082Z",
+  "definition" : [ {
+    "key" : "ped_mets",
+    "name" : "Ped Mets",
+    "type" : "INPUT"
+  }, {
+    "key" : "pediatric_group",
+    "name" : "Derived Pediatric Stage Group",
+    "type" : "ENDPOINT"
+  }, {
+    "key" : "toronto_stage_group",
+    "name" : "Toronto Stage Group",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "00", "VALUE:Loc", "VALUE:M0" ], [ "15", "VALUE:Met", "VALUE:M1" ], [ "25", "VALUE:Met", "VALUE:M2" ], [ "35", "VALUE:Met", "VALUE:M3" ], [ "45", "VALUE:Met", "VALUE:M4" ], [ "70", "VALUE:Met", "VALUE:M4" ], [ "99", "VALUE:Unk", "VALUE:X" ] ]
+}

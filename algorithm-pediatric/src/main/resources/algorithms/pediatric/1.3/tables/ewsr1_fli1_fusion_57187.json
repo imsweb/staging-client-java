@@ -1,0 +1,22 @@
+{
+  "id" : "ewsr1_fli1_fusion_57187",
+  "algorithm" : "pediatric",
+  "version" : "1.3",
+  "name" : "EWSR1-FLI1 Fusion",
+  "title" : "EWSR1-FLI1 Fusion",
+  "description" : "This data item documents rearrangement (fusion) in EWR1 genes. EWSR1-FLI1 fusion occurs in about 90% of Ewing Sarcomas and functions as both a pioneering transcription factor and potent oncogene.",
+  "notes" : "**Note 1:** **Effective years**\n* This SSDI is effective for diagnosis years 2024+\n* For cases diagnosed 2018-2023, this SSDI must be blank\n\n**Note 2:** **Physician statement**\n* Physician statement of EWSR1-FLI1 fusion can be used to code this data item when no other information is available.",
+  "last_modified" : "2025-05-27T15:48:06.478Z",
+  "definition" : [ {
+    "key" : "ewsr1_fli1_fusion",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "No gene arrangements (fusions) identified" ], [ "1", "EWSR1-FLI1 gene rearrangement (fusion) present" ], [ "2", "EWSR1-ERG gene rearrangement (fusion) present" ], [ "3", "Other EWSR1 gene rearrangement (fusion) present" ], [ "4", "EWSR1 rearrangement present, fusion partner not known " ], [ "5", "Non-EWSR1 variant translocation present" ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nCannot be determined by pathologist\nEWSR1 gene arrangements not assessed or unknown if assessed" ], [ "", "N/A - Diagnosis year is prior to 2024" ] ],
+  "additional_info" : "**Source documents:** molecular pathology report (may be addendum to original pathology report)",
+  "rationale" : "This is part of the National Childhood Cancer Registry (NCCR) project to collect more specific information on pediatric patients. Registries part of the NCCR will start collection on specific pediatric data items with 2024+ diagnoses."
+}
