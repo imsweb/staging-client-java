@@ -62,7 +62,7 @@ class EodStagingTest extends StagingTest {
 
     @Test
     void testBasicInitialization() {
-        assertThat(_STAGING.getSchemaIds()).hasSize(139);
+        assertThat(_STAGING.getSchemaIds()).hasSize(141);
         assertThat(_STAGING.getTableIds()).isNotEmpty();
 
         assertThat(_STAGING.getSchema("urethra")).isNotNull();
@@ -81,7 +81,7 @@ class EodStagingTest extends StagingTest {
     @Test
     void testDescriminatorKeys() {
         assertThat(_STAGING.getSchema("nasopharynx").getSchemaDiscriminators()).containsOnly("discriminator_1", "year_dx");
-        assertThat(_STAGING.getSchema("oropharynx_p16_neg").getSchemaDiscriminators()).containsOnly("discriminator_1", "discriminator_2");
+        assertThat(_STAGING.getSchema("oropharynx_p16_neg").getSchemaDiscriminators()).containsOnly("discriminator_1", "discriminator_2", "year_dx");
     }
 
     @Test
@@ -130,12 +130,13 @@ class EodStagingTest extends StagingTest {
         schemaLookup.setInput(EodInput.DISCRIMINATOR_2.toString(), "1");
         lookup = _STAGING.lookupSchema(schemaLookup);
         assertThat(lookup).hasSize(1);
-        assertThat(lookup.stream().flatMap(d -> d.getSchemaDiscriminators().stream()).collect(Collectors.toSet())).isEqualTo(new HashSet<>(Arrays.asList("discriminator_1", "discriminator_2")));
+        assertThat(lookup.stream().flatMap(d -> d.getSchemaDiscriminators().stream()).collect(Collectors.toSet())).isEqualTo(
+                new HashSet<>(Arrays.asList("year_dx", "discriminator_1", "discriminator_2")));
         assertThat(lookup.getFirst().getId()).isEqualTo("oropharynx_p16_neg");
 
         // test valid combination that requires a discriminator but is supplied a bad disciminator value
         schemaLookup = new EodSchemaLookup("C111", "8200");
-        schemaLookup.setInput(EodInput.DISCRIMINATOR_1.toString(), "X");
+        schemaLookup.setInput(EodInput.YEAR_DX.toString(), "X");
         lookup = _STAGING.lookupSchema(schemaLookup);
         assertThat(lookup).isEmpty();
 
@@ -180,7 +181,7 @@ class EodStagingTest extends StagingTest {
                 .filter(Objects::nonNull)
                 .forEach(discriminators::addAll);
 
-        assertThat(discriminators).containsOnly("year_dx", "sex", "behavior", "discriminator_1", "discriminator_2");
+        assertThat(discriminators).containsOnly("year_dx", "sex_at_birth", "behavior", "discriminator_1", "discriminator_2");
     }
 
     @Test
@@ -241,17 +242,14 @@ class EodStagingTest extends StagingTest {
         assertThat(data.getResult()).isEqualTo(StagingData.Result.STAGED);
         assertThat(data.getSchemaId()).isEqualTo("pancreas");
         assertThat(data.getErrors()).isEmpty();
-        //assertThat(data.getPath()).hasSize(13);
-        assertThat(data.getOutput()).hasSize(8);
+        assertThat(data.getPath()).hasSize(5);
+        assertThat(data.getOutput()).hasSize(4);
 
         // check outputs
         assertThat(data.getOutput(EodOutput.DERIVED_VERSION)).isEqualTo(EodVersion.LATEST.getVersion());
-        assertThat(data.getOutput(EodOutput.SS_2018_DERIVED)).isEqualTo("7");
         assertThat(data.getOutput(EodOutput.NAACCR_SCHEMA_ID)).isEqualTo("00280");
-        assertThat(data.getOutput(EodOutput.EOD_2018_STAGE_GROUP)).isEqualTo("4");
-        assertThat(data.getOutput(EodOutput.EOD_2018_T)).isEqualTo("TX");
-        assertThat(data.getOutput(EodOutput.EOD_2018_N)).isEqualTo("N1");
-        assertThat(data.getOutput(EodOutput.EOD_2018_M)).isEqualTo("M1");
+        assertThat(data.getOutput(EodOutput.SS_2018_DERIVED)).isEqualTo("7");
+        assertThat(data.getOutput(EodOutput.DERIVED_SUMMARY_GRADE)).isEqualTo("9");
     }
 
     @Test
@@ -282,17 +280,14 @@ class EodStagingTest extends StagingTest {
         assertThat(data.getResult()).isEqualTo(StagingData.Result.STAGED);
         assertThat(data.getSchemaId()).isEqualTo("breast");
         assertThat(data.getErrors()).isEmpty();
-        assertThat(data.getPath()).hasSize(16);
-        assertThat(data.getOutput()).hasSize(8);
+        assertThat(data.getPath()).hasSize(5);
+        assertThat(data.getOutput()).hasSize(4);
 
         // check outputs
         assertThat(data.getOutput(EodOutput.DERIVED_VERSION)).isEqualTo(EodVersion.LATEST.getVersion());
         assertThat(data.getOutput(EodOutput.SS_2018_DERIVED)).isEqualTo("3");
         assertThat(data.getOutput(EodOutput.NAACCR_SCHEMA_ID)).isEqualTo("00480");
-        assertThat(data.getOutput(EodOutput.EOD_2018_STAGE_GROUP)).isEqualTo("2B");
-        assertThat(data.getOutput(EodOutput.EOD_2018_T)).isEqualTo("T2");
-        assertThat(data.getOutput(EodOutput.EOD_2018_N)).isEqualTo("N1");
-        assertThat(data.getOutput(EodOutput.EOD_2018_M)).isEqualTo("M0");
+        assertThat(data.getOutput(EodOutput.DERIVED_SUMMARY_GRADE)).isEqualTo("1");
     }
 
     @Test
@@ -328,7 +323,8 @@ class EodStagingTest extends StagingTest {
                 "adnexa_uterine_other_97891", "nodes_pos_fpa", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "primary_site", "histology",
                 "nodes_exam_76029", "grade_post_therapy_clin_69737", "grade_post_therapy_path_75348", "schema_selection_adnexa_uterine_other",
                 "year_dx_validation", "summary_stage_rpa", "tumor_size_summary_63115", "extension_bcn", "combined_grade_56638", "neoadjuvant_therapy_37302",
-                "derived_grade_standard_non_ajcc_63932", "neoadj_tx_treatment_effect_18122", "neoadj_tx_clinical_response_31723", "ss2018_adnexa_uterine_other_values_44976");
+                "derived_grade_standard_non_ajcc_63932", "neoadj_tx_treatment_effect_18122", "neoadj_tx_clinical_response_31723", "ss2018_adnexa_uterine_other_values_44976",
+                "behavior", "type_of_reporting_source_76696");
     }
 
     @Test
@@ -460,7 +456,7 @@ class EodStagingTest extends StagingTest {
         assertThat(data.getSchemaId()).isEqualTo("brain");
         assertThat(data.getErrors()).hasSize(5);
         assertThat(data.getPath()).hasSize(5);
-        assertThat(data.getOutput()).hasSize(8);
+        assertThat(data.getOutput()).hasSize(4);
         assertThat(data.getOutput()).containsEntry(EodOutput.DERIVED_VERSION.toString(), "3.3");
     }
 
@@ -545,4 +541,45 @@ class EodStagingTest extends StagingTest {
                     .withFailMessage("The histology '" + hist + "' is not supposed to be in the valid histology list")
                     .doesNotContain(hist);
     }
+
+    @Test
+    void testInputsAndOutputs() {
+        Set<String> inputs = new HashSet<>();
+        Set<String> outputs = new HashSet<>();
+
+        for (String schemaId : _STAGING.getSchemaIds()) {
+            Schema schema = _STAGING.getSchema(schemaId);
+            schema.getInputs().stream().map(Input::getKey).forEach(inputs::add);
+            schema.getOutputs().stream().map(Output::getKey).forEach(outputs::add);
+        }
+
+        // ----- Outputs -----
+        Set<String> enumOutputKeys = Arrays.stream(EodOutput.values())
+                .map(EodOutput::toString)
+                .collect(Collectors.toSet());
+
+        Set<String> missingInOutputEnum = new HashSet<>(outputs);
+        missingInOutputEnum.removeAll(enumOutputKeys);
+
+        Set<String> unusedOutputEnum = new HashSet<>(enumOutputKeys);
+        unusedOutputEnum.removeAll(outputs);
+
+        assertThat(missingInOutputEnum)
+                .as("Output keys found in staging data but not in EodOutput enum")
+                .isEmpty();
+
+        assertThat(unusedOutputEnum)
+                .as("EodOutput enum values never appear in staging outputs")
+                .isEmpty();
+
+        // ----- Inputs -----
+
+        Set<String> unusedInputEnum = Arrays.stream(EodInput.values()).map(EodInput::toString).collect(Collectors.toSet());
+        unusedInputEnum.removeAll(inputs);
+
+        assertThat(unusedInputEnum)
+                .as("EodInput enum values never appear in staging inputs")
+                .isEmpty();
+    }
+
 }
