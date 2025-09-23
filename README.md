@@ -33,8 +33,8 @@ If a specific version is needed, the algorithm zip file can be downloaded and in
 
 | Version       | Release                                                                      | Algorithm ZIP                                                                                                  |
 |---------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| 1.3 (BETA)    | [11.6.0](https://github.com/imsweb/staging-client-java/releases/tag/v11.6.0) | [pediatric-1.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.6.0/pediatric-1.3.zip) |
-| 1.2 (revised) | [11.3.2](https://github.com/imsweb/staging-client-java/releases/tag/v11.3.2) | [pediatric-1.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.3.2/pediatric-1.2.zip) |
+| 1.3 (**BETA**)    | [11.6.0](https://github.com/imsweb/staging-client-java/releases/tag/v11.6.0) | [pediatric-1.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.6.0/pediatric-1.3.zip) |
+| 1.2 (*revised*) | [11.3.2](https://github.com/imsweb/staging-client-java/releases/tag/v11.3.2) | [pediatric-1.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.3.2/pediatric-1.2.zip) |
 | 1.2           | [11.2.5](https://github.com/imsweb/staging-client-java/releases/tag/v11.2.5) | [pediatric-1.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.2.5/pediatric-1.2.zip) |
 | 1.1           | [11.2.2](https://github.com/imsweb/staging-client-java/releases/tag/v11.2.2) | [pediatric-1.1.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.2.2/pediatric-1.1.zip) |
 | 1.0           | [11.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v11.0.0) | [pediatric-1.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.0.0/pediatric-1.0.zip) |
@@ -72,7 +72,7 @@ If a specific version is needed, the algorithm zip file can be downloaded and in
 
 | Version | Release                                                                      | Algorithm ZIP                                                                                                    |
 |---------|------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| 3.3 (BETA) | [11.6.0](https://github.com/imsweb/staging-client-java/releases/tag/v11.6.0) | [eod_public-3.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.6.0/eod_public-3.3.zip) |
+| 3.3 (**BETA**) | [11.6.0](https://github.com/imsweb/staging-client-java/releases/tag/v11.6.0) | [eod_public-3.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.6.0/eod_public-3.3.zip) |
 | 3.2     | [11.4.1](https://github.com/imsweb/staging-client-java/releases/tag/v11.4.1) | [eod_public-3.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.3.1/eod_public-3.2.zip) |
 | 3.1     | [10.3.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.3.0) | [eod_public-3.1.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.3.0/eod_public-3.1.zip) |
 | 3.0     | [10.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.0.0) | [eod_public-3.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/eod_public-3.0.zip) |
