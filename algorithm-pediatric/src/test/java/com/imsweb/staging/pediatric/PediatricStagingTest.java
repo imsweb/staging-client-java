@@ -38,7 +38,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class PediatricStagingTest extends StagingTest {
 
     @BeforeAll
-    public static void init() {
+    static void init() {
         _STAGING = Staging.getInstance(PediatricDataProvider.getInstance(PediatricVersion.V1_3));
     }
 
