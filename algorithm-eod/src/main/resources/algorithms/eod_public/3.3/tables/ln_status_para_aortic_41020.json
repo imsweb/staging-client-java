@@ -1,0 +1,23 @@
+{
+  "id" : "ln_status_para_aortic_41020",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "LN Status: Para-aortic",
+  "title" : "LN Status: Para-aortic",
+  "description" : "This data item describes the status of para-aortic lymph nodes associated with certain female genital cancers.\n\nIn addition to assigning the N categories for vulva, vagina, and cervical cancers, the collection of specific lymph nodes and how they were assessed is important.\n* Status refers to positive or negative involvement\n* Assessment is the method by which the nodal status was determined\n\nThere are 3 related data items that collect status information on regional lymph nodes, 1 data item for distant lymph nodes, and 1 data item for laterality. \n\nThe LN status data items collect the individual status (positive, negative, unknown) involvement of femoral-inguinal, para-aortic, and pelvic lymph nodes, and distant lymph nodes mediastinal and scalene. These related data items include \n\n* 3957: LN Status: Pelvic\n* 3958: LN Status: Para-Aortic\n* 3959: LN Status: Femoral-Inguinal\n* 3875: LN Distant: Mediastinal, Scalene",
+  "notes" : "**Note 1:** **Physician Statement**\n* Physician statement of para-aortic status can be used to code this data item when no other information is available. \n\n**Note 2:** **Para-aortic lymph nodes**\n* Aortic\n* Lateral aortic/lumbar aortic\n* Para-aortic, NOS\n* Periaortic\n\n**Note 3:** **Isolated tumor cells**\n* For this data item, do not include isolated tumor cells (ITCs).\n\n**Note 4:** **Related data item**\n* The assessment method is recorded in the related data item 3872: LN Assessment Method Para-aortic.",
+  "last_modified" : "2025-03-24T16:04:51.508Z",
+  "definition" : [ {
+    "key" : "ln_status_para_aortic",
+    "name" : "LN Status: Para-aortic",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Negative para-aortic lymph nodes\nNon-invasive neoplasm (behavior /2)" ], [ "1", "Positive para-aortic lymph nodes" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nPara-aortic lymph node(s) not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source documents:** pathology report, imaging, physical exam, other statement in record",
+  "coding_guidelines" : "**1)** **Code 0** when \n* Non-invasive neoplasm (behavior /2) (in-situ)\n* All lymph nodes are negative and included an assessment of the para-aortic lymph nodes\n* If there is no mention of para-aortic lymph node involvement in the area being imaged, biopsied, or in the surgical field and there is no mention of involvement, then assume that the para-aortic lymph nodes are negative\n\n**2)** **Code 9** when\n* When there is no imaging, biopsy, surgical workup, or a physical exam only\n* Not documented in medical record\n* Regional/Distant lymph nodes not evaluated (assessed)\n* Unknown if regional/distant lymph nodes evaluated (assessed)",
+  "rationale" : "Specific regional lymph node involvement is listed as a Registry Data Collection Variable in AJCC. This information was previously collected as Vagina SSF #4"
+}

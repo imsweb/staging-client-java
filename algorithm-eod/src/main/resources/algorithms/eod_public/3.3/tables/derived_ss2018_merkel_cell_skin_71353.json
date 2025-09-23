@@ -1,0 +1,19 @@
+{
+  "id" : "derived_ss2018_merkel_cell_skin_71353",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Derived SS2018: Merkel Cell Skin",
+  "title" : "Derived Summary Stage 2018: Merkel Cell Skin",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-02-14T23:16:49.268Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "In situ, intraepidermal, intraepithelial, noninvasive" ], [ "1", "Localized only (localized, NOS)\n- Confined to site of origin\n- Lesion(s) confined to dermis\n- Subcutaneous tissue (through entire dermis)" ], [ "2", "Regional by direct extension only\n- Bone\n- Cartilage\n- Fascia\n- Skeletal muscle" ], [ "3", "Regional lymph node(s) involved only\n\n- All sites (Single, Multiple, Ipsilateral) (See Code 7 for contralateral or bilateral nodes (except for head and neck skin primaries))\n  + Isolated tumor cells (ITCs) WITH or WITHOUT regional lymph node involvement\n  + In-transit mets WITH or WITHOUT regional lymph node involvement\n  + Regional lymph node(s), NOS\n     * Lymph node(s), NOS\n- Head and Neck skin primaries only (C000-C002, C006, C440, C442-C444) (includes contralateral and bilateral nodes)\n  + Levels I-VII \n  + Axillary (neck only, C444)\n  + Cervical, NOS\n  + Deep cervical, NOS\n  + Facial (buccinator, buccal, nasolabial)\n  + Internal jugular, NOS\n  + Parapharyngeal \n  + Parotid (infraauricular, intraparotid, periparotid, preauricular)\n  + Retroauricular (mastoid)\n  + Retropharyngeal\n  + Suboccipital\n- Skin of trunk (C445)\n  + Upper trunk\n     * Axillary\n     * Cervical\n     * Internal mammary\n     * Supraclavicular\n  + Lower trunk\n     * Superficial inguinal (femoral) \n- Skin of upper limb and shoulder (C446)\n  + Axillary\n  + Cervical\n  + Epitrochlear for hand/forearm\n  + Internal mammary (parasternal)\n  + Spinal accessory for shoulder\n  + Supraclavicular (transverse cervical)\n- Skin of lower limb and hip (C447)\n  + Femoral (superficial inguinal)\n  + Inguinal\n  + Popliteal for heel and calf\n- Vulva (C510-C512, C518-C519)\n  + Deep inguinal, NOS\n  + Femoral\n  + Inguinal, NOS\n  + Inguinofemoral (groin)\n  + Node of Cloquet or Rosenmuller (highest deep inguinal)\n  + Superficial inguinal (femoral)\n- Penis (C600-C602, C608-C609)\n  + Iliac, NOS\n    * External\n    * Internal (hypogastric, obturator)\n  + Inguinal, NOS\n     * Node of Cloquet or Rosenmuller (highest deep inguinal)\n     * Superficial [femoral] \n  + Pelvic, NOS\n- Scrotum (C632)\n  + Iliac, NOS\n    * External\n    * Internal (hypogastric), NOS\n       - Obturator\n  + Inguinal, NOS\n     * Deep inguinal, NOS\n       - Node of Cloquet or Rosenmuller (highest deep inguinal)\n    * Superficial inguinal (femoral)" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n- Codes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant site(s) (including further contiguous extension)\n  + Bone\n  + Cartilage\n  + Fascia\n  + Lung\n  + Other visceral sites\n  + Skeletal muscle (excluding direct extension)\n  + Skin or subcutaneous tissue beyond regional lymph nodes\n  + Underlying cartilage\n- Distant lymph node(s), NOS\n  + Axillary (lower trunk)\n  + Femoral (cephalad/caudal) (upper trunk)\n  + Iliac (leg/hip)\n  + Supraclavicular (head and neck, arm/shoulder)\n- Distant metastasis, NOS\n  + Carcinomatosis\n  + Distant metastasis WITH or WITHOUT distant lymph node(s)" ], [ "9", "Unknown if extension or metastasis" ] ]
+}

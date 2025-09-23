@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_vagina",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Schema Selection Vagina",
+  "title" : "Schema selection for Vagina",
+  "last_modified" : "2025-09-15T20:42:58.706Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C529", "8000-8700, 8720-8790, 8933,8980,9071,9110", "MATCH" ] ]
+}

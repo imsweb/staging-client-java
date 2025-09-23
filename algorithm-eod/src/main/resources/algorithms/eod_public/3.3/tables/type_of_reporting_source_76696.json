@@ -1,0 +1,18 @@
+{
+  "id" : "type_of_reporting_source_76696",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Type of Reporting Source",
+  "title" : "Type of Reporting Source",
+  "last_modified" : "2025-07-07T18:33:03.483Z",
+  "definition" : [ {
+    "key" : "reporting_source",
+    "name" : "Reporting Source",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Hospital inpatient; Managed health plans with comprehensive, unified medical records" ], [ "2", "Radiation Treatment Centers or Medical Oncology Centers (hospital-affiliated or independent)" ], [ "3", "Laboratory only (hospital-affiliated or independent)" ], [ "4", "Physician's office/private medical practitioner (LMD)" ], [ "5", "Nursing/convalescent home/hospice" ], [ "6", "Autopsy only" ], [ "7", "Death certificate only" ], [ "8", "Other hospital outpatient units/surgery centers" ] ]
+}

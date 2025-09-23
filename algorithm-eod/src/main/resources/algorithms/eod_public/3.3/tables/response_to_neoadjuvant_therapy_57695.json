@@ -1,0 +1,23 @@
+{
+  "id" : "response_to_neoadjuvant_therapy_57695",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Response to Neoadjuvant Therapy",
+  "title" : "Response to Neoadjuvant Therapy",
+  "description" : "This data item records the physician’s statement of response to neoadjuvant chemotherapy.\n\nNeoadjuvant therapy is defined as systemic, or radiation treatment administered prior to surgery in an attempt to shrink the tumor or destroy regional metastases.  This data item documents whether that neoadjuvant therapy was successful.  \n\nThis data item is coded based on the clinician’s statement regarding response to neoadjuvant therapy.  Do not try to interpret or infer a response based on the medical record.  As a guide for the clinician, the definitions below are from the AJCC Cancer Staging Manual, 8th edition. \n\nThe registrar should not use these definitions to code this field \n* Complete Response (CR) – absence of invasive carcinoma in breast and lymph nodes; must be determined by microscopic evaluation of tissues; residual in situ cancer at primary site\n* Partial Response (PR) – a decrease in T and/or N category compared to pretreatment value and no increase, using same method of evaluation as baseline value, residual tumor in lymph nodes of any size\n* No Response (NR) – no apparent change in the T or N category compared to pretreatment value, or an increase in T or N value at time of y pathological examination",
+  "notes" : "**Note 1:** **Physician Statement**\n* A statement from the managing physician for Response to Neoadjuvant Therapy (\"treatment effect\") **must be used to code this data item**.\n\n**Note 2:** **Criteria for coding** \n* This data item should not be coded based on the following pathological, radiological, and imaging findings \n* **This data item should only be coded based on the managing physician's overall interpretation of the results**.\n\n**Note 3:** **SEER Data Item Neoadjuvant Therapy-Treatment effect**\n* The rules for this data item from SEER are different to Response to Neoadjuvant Therapy\n* **Do not use the rules from SEER's Neoadjuvant Therapy-Treatment effect [NAACCR ID# 1634] to code Response to Neoadjuvant therapy**",
+  "last_modified" : "2025-02-24T14:54:40.962Z",
+  "definition" : [ {
+    "key" : "response_neoadjuv_therapy",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Neoadjuvant therapy not given\nNon-invasive neoplasm (behavior /2)" ], [ "1", "Stated as complete response (CR)" ], [ "2", "Stated as partial response (PR)" ], [ "3", "Stated as response to treatment, but not noted if complete or partial" ], [ "4", "Stated as no response (NR)" ], [ "8", "Not applicable:  Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nResponse to neoadjuvant therapy not assessed or unknown if assessed\nUnknown if neoadjuvant therapy given" ] ],
+  "additional_info" : "**Source documents:** physician statement \n\n**Other names include** treatment effect\n\nFor further information, refer to the **Breast or Breast Biomarker Reporting** cancer protocols published by the College of American Pathologists for the AJCC Staging System *Breast*",
+  "coding_guidelines" : "**1)** Code 0 if there is no neoadjuvant therapy given\n* This includes in situ (behavior /2) cases\n\n**2)** Code 1 for a Residual Cancer Burden (RCB) result of '0' or an RCB Class of pCR (pathological complete response).\n* Code 1 is to be used only when the managing physician states the response is \"total\" or \"complete\"\n\n**3)** Code 9 when\n* There is no statement of complete, partial or no response by the clinician or when the response is not documented in the medical record\n* Only the post neoadjuvant surgical pathology report is available",
+  "rationale" : "Response to Neoadjuvant Therapy is a Registry Data Collection Variable in AJCC. It was previously collected as Breast, CS SSF #21."
+}

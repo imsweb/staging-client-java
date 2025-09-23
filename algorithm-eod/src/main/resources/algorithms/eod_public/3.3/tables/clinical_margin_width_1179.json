@@ -1,0 +1,22 @@
+{
+  "id" : "clinical_margin_width_1179",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Clinical Margin Width",
+  "title" : "Clinical Margin Width",
+  "description" : "Clinical margin width describes the margins from a wide excision for a melanoma primary. The margin width is measured by the surgeon prior to the procedure.  The measurement is taken, in centimeters, from the edge of the lesion or the prior excision scar to the peripheral margin of the specimen.",
+  "notes" : "**Note 1:** **Effective years**\n* This SSDI is effective for diagnosis years 2023+ AND **primary sites C440-C449 only**. For all other primary sites, code XX.9\n  *  See case_identification _guidelines_standard_5_5.pdf (facs.org)\n* For cases diagnosed 2018-2022, this SSDI must be blank\n\n**Note 2:** **Measuring the margins** \n* “The appropriate [wide local excision] margins are measured from the periphery of any gross residual tumor or the edges of the entire previous biopsy scar (shave or excisional).” Operative Standards for Cancer Surgery, Volume 2, page 392.\n\n**Note 3:** **Code peripheral surgical margins from the operative report from a wide excision** \n+ Do not use the pathology report to code this data item. \n+ Margins from wide excision-Measured from the edge of the lesion or the prior excision scar to the peripheral margin of the specimen, do not use deep margin\n+ Do not add margins together\n+ If multiple wide excisions are performed, code the clinical margin width from the procedure with the largest margin\n+ If a range is listed, code the lower range\n   + *Example:* Clinical Width Margin documented as 1-1.2 cm. Code 1 cm\n\n**Note 4:** **Physician statement** \n* Physician statement of clinical margin width can be used to code this data item when no other information is available, or the available information is ambiguous\n  + Order of priority:\n     - Operative Note\n     - Physician statement in medical record\n\n**Note 5:** **Code formats** \n* Record stated margin in centimeters. Include decimal point.\n *Examples:* \n  + 0.5 cm - 0.5\n  + 1 cm- 1.0\n  + 2.5 cm - 2.5",
+  "last_modified" : "2025-03-31T11:14:45.940Z",
+  "definition" : [ {
+    "key" : "clinical_margin_width",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.1", "Documented as 0.1cm or less (1mm or less)" ], [ "0.2-9.9", "0.2 cm – 9.9 cm" ], [ "XX.1", "10 centimeters or greater" ], [ "XX.8", "Not Applicable. Information not collected for this schema\n(If this information is required by your standard setter, use of code XX.8 may result in an edit error)" ], [ "XX.9", "Not documented in medical record\nNo Wide Excision performed\nMohs or similar procedure\nWide Excision performed, but clinical margin width not documented.\nNo surgical resection performed (B000)\nUnknown if procedure performed." ], [ "", "Must be blank if diagnosis year is before 2023" ] ],
+  "additional_info" : "Current version of the Commission on Cancer's STORE Manual, Appendix M",
+  "rationale" : "Per the American College of Surgeons Optimal Resources for Cancer Care-2020 Standards Standard 5.5 Local Excision for Primary Cutaneous Melanoma, the clinical margin width for wide local excision of invasive melanoma should be 1 cm for melanomas <1 mm thick, 1 to 2 cm for invasive melanomas 1 to 2 mm thick, and 2 cm for invasive melanomas >2 mm thick. The clinical margin width for wide local excision of a melanoma in situ should be at least 5 mm."
+}

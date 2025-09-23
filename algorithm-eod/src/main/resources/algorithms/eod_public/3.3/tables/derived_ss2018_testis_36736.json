@@ -1,0 +1,19 @@
+{
+  "id" : "derived_ss2018_testis_36736",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Derived SS2018: Testis",
+  "title" : "Derived Summary Stage 2018: Testis",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-02-15T16:39:51.645Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "In situ, intraepithelial, noninvasive\n- Germ cell neoplasia in situ\n- Intratubular germ cell neoplasia" ], [ "1", "Localized only (localized, NOS)\n- WITH OR WITHOUT lymphovascular invasion\n  + Body of testis\n  + Rete testis\n  + Surface implants (surface of tunica vaginalis)\n  + Tunica albuginea\n  + Tunica vaginalis involved\n  + Tunica, NOS\n\n* Confined to testis, NOS\n   + WITH or WITHOUT lymphovascular invasion" ], [ "2", "Regional by direct extension only\n\nAny of the following sites WITH or WITHOUT lymphovascular invasion\n  * Dartos muscle, ipsilateral\n  * Epididymis \n  * Hilar soft tissue\n  * Mediastinum (of testis)\n  * Scrotum, ipsilateral \n  * Spermatic cord, ipsilateral\n  * Vas deferens\n  * Visceral mesothelial layer" ], [ "3", "Regional lymph node(s) involved only\n- Lymph nodes WITH or WITHOUT previous scrotal or inguinal surgery\n  + Aortic, NOS\n     * Lateral (lumbar)\n     * Para-aortic\n     * Periaortic\n     * Preaortic \n     * Retroaortic\n  + Pericaval, NOS\n     * Interaortocaval\n     * Paracaval\n     * Precaval\n     * Retrocaval\n  + Retroperitoneal, NOS\n  + Spermatic vein\n  + Regional lymph node(s), NOS\n     * Lymph node(s), NOS\n- Lymph nodes WITH previous scrotal or inguinal surgery\n  + External iliac\n  + Inguinal node(s), NOS\n     * Deep, NOS\n     * Node of Cloquet or Rosenmuller (highest deep inguinal)\n     * Superficial (femoral)\n  + Pelvic, NOS" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n- Codes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant site(s) (including further contiguous extension)\n  + Adrenal (suprarenal gland)\n  + Kidney\n  + Penis \n  + Retroperitoneum\n  + Scrotum, contralateral\n  + Testis, bilateral\n  + Ulceration of scrotum\n- Distant lymph node(s), NOS\n     + Lymph nodes WITHOUT previous scrotal or inguinal surgery or UNKNOWN if previous scrotal or inguinal surgery\n        * External iliac\n        * Inguinal nodes, NOS\n          + Deep, NOS\n          + Node of Cloquet or Rosenmuller (highest deep inguinal)\n           + Superficial (femoral)\n        * Pelvic\n - Distant metastasis, NOS\n  + Carcinomatosis \n  + Distant metastasis WITH or WITHOUT distant lymph node(s)" ], [ "9", "Unknown if extension or metastasis" ] ]
+}

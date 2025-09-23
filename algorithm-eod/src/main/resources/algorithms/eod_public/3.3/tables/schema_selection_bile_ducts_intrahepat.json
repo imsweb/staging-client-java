@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_bile_ducts_intrahepat",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Schema Selection BileDuctsIntraHepat",
+  "title" : "Schema selection for BileDuctsIntraHepat",
+  "last_modified" : "2025-07-07T18:43:50.443Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C221", "8000-8700, 8720-8790, 8980", "MATCH" ] ]
+}

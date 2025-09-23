@@ -81,7 +81,7 @@ public class EodStagingData extends StagingData {
         PRIMARY_SITE("site"),
         HISTOLOGY("hist"),
         BEHAVIOR("behavior"),
-        SEX("sex"),
+        SEX("sex_at_birth"),
         AGE_AT_DX("age_dx"),
         DISCRIMINATOR_1("discriminator_1"),
         DISCRIMINATOR_2("discriminator_2"),
@@ -138,15 +138,10 @@ public class EodStagingData extends StagingData {
     // output key definitions
     public enum EodOutput {
         NAACCR_SCHEMA_ID("naaccr_schema_id"),
-        AJCC_ID("ajcc_id"),
-        AJCC_VERSION_NUMBER("ajcc_version_number"),
         DERIVED_VERSION("derived_version"),
-        EOD_2018_T("eod_2018_t"),
-        EOD_2018_N("eod_2018_n"),
-        EOD_2018_M("eod_2018_m"),
-        EOD_2018_STAGE_GROUP("eod_2018_stage_group"),
         SS_2018_DERIVED("ss2018_derived"),
-        DERIVED_RAI_STAGE("derived_rai_stage");
+        DERIVED_RAI_STAGE("derived_rai_stage"),
+        DERIVED_SUMMARY_GRADE("derived_summary_grade");
 
         private final String _name;
 

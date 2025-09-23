@@ -1,0 +1,22 @@
+{
+  "id" : "ldh_level_12428",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "LDH Level",
+  "title" : "LDH Level",
+  "description" : "LDH (Lactate Dehydrogenase) is an enzyme involved in conversion of sugars to energy and present in most cells in the body. Elevated LDH is an adverse prognostic factor for plasma cell myeloma and melanoma of the skin.",
+  "notes" : "**Note 1:** **Physician Statement** \n* Physician statement of LDH Level can be used to code this data item when no other information is available. \n\n**Note 2:** **Coding criteria** \n* Record the interpretation of the highest serum LDH test results documented in the medical record either before or after surgical resection of the primary tumor with or without regional lymph node dissection\n* The LDH must be taken prior to systemic (chemo, immunotherapy, hormone), radiation therapy or surgery to a metastatic site\n* Use the reference ranges from your lab to determine if LDH is normal\n\n**Note 3:** **Related data item** \n* The same laboratory test should be used to record the related data items 3869: LDH Level and 3870: LDH Upper Limits of Normal",
+  "last_modified" : "2024-04-05T19:55:45.577Z",
+  "definition" : [ {
+    "key" : "ldh_level",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Normal LDH level\nLow, below normal" ], [ "1", "Above normal LDH level; High" ], [ "7", "Test ordered, results not in chart" ], [ "9", "Not documented in medical record \nLDH Level not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source documents:** clinical laboratory report; may be included in a liver or hepatic panel/profile, a cardiac panel, or a general metabolic panel of tests\n\n**Other names include:** LDH, Lactate dehydrogenase, lactase dehydrogenase, lactic acid dehydrogenase",
+  "rationale" : "LDH (Lactate Dehydrogenase) Level is a prognostic factor required in AJCC 8th edition for Chapter 82 Plasma Cell Myeloma and Plasma Cell Disorders and Chapter 47 Melanoma Skin. For Plasma Cell Myeloma, LDH is part of the RISS Stage and is new for cases diagnosed 1/1/2018+. For Melanoma Skin, LDH is used to define the M subcategories and was previously collected as Melanoma Skin, SSF #4."
+}

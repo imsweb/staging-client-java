@@ -1,0 +1,26 @@
+{
+  "id" : "multiple_myeloma_terminology_20875",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Schema Discriminator 1",
+  "title" : "Schema Discriminator 1: Myeloma Terminology",
+  "description" : "A variety of descriptive terms refer to early phases of plasma cell myeloma, all of which are coded to 9732, and reportable based on the 2010 Hematopoietic and Lymphoid Neoplasms coding rules. \n\nPer AJCC 8th edition, not all terms are applicable for the Revised International Staging System (RISS or R-ISS) stage. This schema discriminators collects the specific terminology used to describe the plasma cell myeloma at the time of diagnosis.",
+  "notes" : "**Note 1:** **Code Selection** \n* Select the code based on the terminology specified by the physician in the record. Do not attempt to determine the correct terminology based on the diagnostic criteria in the AJCC 8th table 82.1\n* Do not change the discriminator code if a term used later indicates progression to a more aggressive disease course.\n\n**Note 2:** **Plasma cell leukemia** \n* Code 0 if diagnosis is plasma cell leukemia variant and is diagnosed concomitant with plasma cell myeloma",
+  "last_modified" : "2025-04-16T17:06:46.267Z",
+  "definition" : [ {
+    "key" : "discriminator_1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "stage_description",
+    "name" : "Staging",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "**Multiple myeloma**\n* Myeloma, NOS\n* Non-secretory myeloma\n* Plasma cell myeloma (PCM)\n* Ultra-High-Risk Smoldering MM (SMM)", "RISS Stage" ], [ "1", "Smoldering plasma cell myeloma (SPCM)\n    Asymptomatic plasma cell myeloma\n    Early myeloma\n    Evolving myeloma", "No RISS Stage" ], [ "9", "**Other terminology describing myeloma**\nUnknown terminology used", "No RISS Stage" ] ],
+  "additional_info" : "**Source documents:** pathology report, clinician’s statement",
+  "rationale" : "A schema discriminator is used to assign AJCC ID when site and histology alone are insufficient to identify the applicable AJCC staging method and to assign Schema ID, which links each case to the appropriate SSDIs, Grade, Summary Stage and EOD data collection system."
+}

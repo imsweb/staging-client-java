@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_kidney_parenchyma",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Schema Selection KidneyParenchyma",
+  "title" : "Schema selection for KidneyParenchyma",
+  "last_modified" : "2025-09-15T20:22:41.618Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C649", "8000-8700, 8720-8790", "MATCH" ] ]
+}

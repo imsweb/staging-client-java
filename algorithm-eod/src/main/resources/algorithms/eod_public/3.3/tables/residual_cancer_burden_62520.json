@@ -1,0 +1,23 @@
+{
+  "id" : "residual_cancer_burden_62520",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Residual Cancer Burden (RCB)",
+  "title" : "Residual Cancer Burden (RCB)",
+  "description" : "Residual Cancer Burden (RCB) is a score that measures the amount of cancer remaining in the breast and the regional lymph nodes after neoadjuvant therapy and surgical resection. The RCB score is based on 4 independent prognostic factors measuring the primary tumor bed and 2 independent factors measuring the lymph nodes. \n\nThe RCB score combines these 6 independently prognostic factors from the surgical specimen after neoadjuvant therapy into a single continuous score. This score is prognostic across breast cancer subtypes, different treatments, and within existing stage groups. \n\nThe independent prognostic factors include\n* Primary Tumor Bed\n  * Primary Tumor Bed area (measured in millimeters)\n    * Includes the largest two dimensions\n  * Overall Cancer Cellularity (as percentage of area)\n  * Percentage of cancer that is invasive disease\n  * Percentage of cancer that is in situ disease\n* Lymph nodes\n  * Number of positive lymph nodes\n  * Diameter of largest metastasis",
+  "notes" : "***Any questions regarding this SSDI are to be posted in the AJCC CAnswer Forum***\n\n**Note 1:** **Effective years**\n* This SSDI is effective for diagnosis years 2026+. \n* For cases diagnosed 2018-2025, this SSDI must be blank.\n\n**Note 2:** **Criteria for coding**\n* Neoadjuvant therapy **AND** a surgical resection must be done to determine score\n* Leave data item blank if neoadjuvant therapy and a surgical resection are not done\n\n**Note 3:** **CAP Protocol or Synoptic Pathology Report**\n* Only record the information from the CAP Protocol or synoptic pathology report.",
+  "last_modified" : "2025-05-05T13:50:37.693Z",
+  "definition" : [ {
+    "key" : "residual_cancer_burden",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.000-9.999", "0.000 – 9.999 score" ], [ "X.777", "Patient had no neoadjuvant therapy, but surgical resection done\nPatient had neoadjuvant therapy, but no surgical resection" ], [ "X.888", "Not applicable: information not collected for this case \n(If this item is required by your standard setter, use of code X.8 will result in an edit error)." ], [ "X.999", "Post neoadjuvant surgery completed and RCB burden not documented in CAP Protocol or synoptic pathology report" ], [ "", "Must be blank if diagnosis year is before 2026" ] ],
+  "additional_info" : "**Source documents:** pathology report, CAP synoptic report\n\nFor further information, refer to the **Breast Resection cancer protocol** published by the College of American Pathologists for the AJCC Staging System *Breast.*",
+  "coding_guidelines" : "**1)** Record the Residual Cancer Burden score to the nearest one thousandth. **All three digits beyond the decimal point must be filled in.**\n*Example:* CAP synoptic report states Residual Cancer Burden score 3.151\n* Code 3.151\n*Example:* CAP synoptic reports states Residual Cancer Burden score is 3. \n* Code 3.000\n\n**2)** **Code X.777** when the patient did not have neoadjuvant therapy or did not have surgery. The patient did not meet the criteria for an RCB Score.\n\n**3)** **Code X.999** when a patient has neoadjuvant therapy and post neoadjuvant surgery and information concerning the RCB score is not available. \n* Pathologist does not document the RCB score in the synoptic pathology report or CAP protocol after patient had neoadjuvant therapy followed by surgical resection. \n* Surgical pathology report is not available",
+  "rationale" : "Neoadjuvant therapy is now standard of care for HER2+ and triple negative breast carcinoma. Quantification of residual disease after neoadjuvant therapy determines further patient management in this setting. The Residual Cancer Burden (RCB) is the most validated measure of volume of residual disease post neoadjuvant for breast cancer and has prognostic value."
+}

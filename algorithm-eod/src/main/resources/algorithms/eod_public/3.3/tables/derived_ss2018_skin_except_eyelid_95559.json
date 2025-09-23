@@ -1,0 +1,19 @@
+{
+  "id" : "derived_ss2018_skin_except_eyelid_95559",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Derived SS2018: Skin (except Eyelid)",
+  "title" : "Derived Summary Stage 2018: Skin (except Eyelid)",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-02-14T20:11:46.921Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "In situ, intraepidermal, intraepithelial, noninvasive\n- Carcinoma in situ" ], [ "1", "Localized only (localized, NOS)\n- Lesion(s) confined to dermis\n- Subcutaneous tissue (through entire dermis)" ], [ "2", "Regional by direct extension only\n- All Sites\n    + Bone\n    + Cartilage\n    + Skeletal muscle\n    + Underlying cartilage\n- Head and Neck skin primaries only (C000-C002, C006, C440, C442-C444)\n    + Bone erosion (minor or NOS)\n    + Deep invasion\n    + Gross cortical bone/marrow\n    + Mandible\n    + Maxilla\n    + Orbital bone\n    + Perineural invasion\n    + Skull base foramen \n    + Skull base invasion\n    + Temporal bone" ], [ "3", "Regional lymph node(s) involved only\n- All sites (Single, Multiple, Ipsilateral) (See Code 7 for contralateral or bilateral nodes (except for head and neck skin primaries))\n  + Regional lymph node(s), NOS\n     * Lymph node(s), NOS\n- Head and Neck skin primaries only (C000-C002, C006, C440, C442-C444) (includes contralateral and bilateral nodes)\n  + Levels I-VII \n  + Axillary (neck only, C444)\n  + Cervical, NOS\n  + Deep cervical, NOS\n  + Facial (buccinator, buccal, nasolabial)\n  + Internal jugular, NOS\n  + Parapharyngeal \n  + Parotid (infraauricular, intraparotid, periparotid, preauricular)\n  + Retroauricular (mastoid)\n  + Retropharyngeal\n  + Suboccipital\n- Skin of trunk (C445)\n  + Upper trunk\n     * Axillary\n     * Cervical\n     * Internal mammary\n     * Supraclavicular\n   + Lower trunk\n     * Superficial inguinal (femoral) (lower trunk only)\n- Skin of upper limb and shoulder (C446)\n  + Axillary\n  + Cervical\n  + Epitrochlear for hand/forearm\n  + Internal mammary (parasternal)\n  + Spinal accessory for shoulder\n  + Supraclavicular (transverse cervical)\n- Skin of lower limb and hip (C447)\n  + Femoral (superficial inguinal)\n  + Inguinal\n  + Popliteal for heel and calf" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n- Codes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant site(s) (including further contiguous extension)\n- Distant lymph node(s), NOS\n- Distant metastasis, NOS\n  + Carcinomatosis\n  + Distant metastasis WITH or WITHOUT distant lymph node(s)" ], [ "9", "Unknown if extension or metastasis" ] ]
+}

@@ -1,0 +1,22 @@
+{
+  "id" : "schema_selection_mouth_other",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Schema Selection MouthOther",
+  "title" : "Schema selection for MouthOther",
+  "last_modified" : "2025-09-15T19:32:03.010Z",
+  "definition" : [ {
+    "key" : "site",
+    "name" : "Primary Site",
+    "type" : "INPUT"
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "type" : "INPUT"
+  }, {
+    "key" : "result",
+    "name" : "Result",
+    "type" : "ENDPOINT"
+  } ],
+  "rows" : [ [ "C058-C059,C068-C069", "8000-8700,8982", "MATCH" ] ]
+}

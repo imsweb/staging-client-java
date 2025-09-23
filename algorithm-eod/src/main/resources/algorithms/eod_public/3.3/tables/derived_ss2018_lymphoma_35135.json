@@ -1,0 +1,20 @@
+{
+  "id" : "derived_ss2018_lymphoma_35135",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Derived SS2018: Lymphoma",
+  "title" : "Derived Summary Stage 2018: Lymphoma",
+  "subtitle" : "Derived Summary Stage 2018",
+  "notes" : "e 7.",
+  "last_modified" : "2024-02-14T22:57:59.076Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Localized only\n\nNodal Lymphomas\n- Single lymph node region involved\n\n - Involvement of multiple nodal chains in the SAME lymph node region\n\nExtranodal Lymphomas\n- Single extralymphatic site \n   + WITHOUT nodal involvement (see code 2 for WITH nodal involvement)\n\n- Multifocal involvement of one extralymphatic organ/site (EXCEPT multifocal lung involvement or any liver involvement, see code 7)\n  + WITHOUT nodal involvement (see code 7 for WITH nodal involvement)" ], [ "2", "Regional by direct extension only\n\n\nBulky disease present\n\nNodal Lymphomas \n- Two or more lymph node regions involved SAME side of diaphragm\n- Contiguous extension between extralymphatic sites and regional nodes \n  + WITH or WITHOUT involvement of other nodal regions on SAME side of diaphragm\n\nExtranodal Lymphomas\n- Localized involvement of a single extralymphatic organ/site \n  + WITH involvement of its regional lymph node(s) OR\n  + WITH involvement of other lymph node(s) on the SAME side of the diaphragm" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant involvement\n  + Diffuse or disseminated involvement of ONE OR MORE extralymphatic organ(s)/site(s) WITH or WITHOUT nodal involvement\n  + Involvement of isolated extralymphatic organ in absence of involvement of adjacent lymph nodes, but in conjunction with disease in distant sites\n  + Involvement of lymph node regions on BOTH sides of the diaphragm WITH or WITHOUT spleen involvement\n  + Involvement of lymph node regions ABOVE the diaphragm WITH spleen involvement\n  + Multifocal involvement of one extralymphatic organ/site WITH nodal involvement\n  + Noncontiguous extralymphatic organ involvement in conjunction with nodal disease (two or more sites involved)\n- Distant metastasis, NOS\n  + Blood/peripheral blood\n  + Bone marrow\n  + Cerebrospinal fluid (CSF)\n  + Liver\n  + Lung (other than by direct extension in code 2)" ], [ "9", "Unknown if extension or metastasis" ] ]
+}

@@ -1,0 +1,23 @@
+{
+  "id" : "extranodal_extension_pathological_30739",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Extranodal Extension Pathological",
+  "title" : "Extranodal Extension Pathological",
+  "description" : "Extranodal Extension (ENE) Pathological is defined as “the extension of a nodal metastasis through the lymph node capsule into adjacent tissue.\" This data item defines pathological ENE for sites other than Head and Neck.\n\nExtranodal extension is defined as metastatic tumor growing from within the lymph node outward through the lymph node capsule and into surrounding connective tissues. \n* \"A regional node extending into a distant structure or organ is categorized as ENE and is not recorded as distant metastatic disease.\"\n\nThis data item is for ENE that is detected pathologically.",
+  "notes" : "**Note 1:** **Physician Statement** \n* Physician statement of Extranodal Extension (ENE) Pathological or physician pathological staging can be used to code this data item when there is no other information available.\n  * Note that the rules for coding ENE for head and neck sites compared to non-head and neck sites are different.\n\n**Note 2:** **Criteria for Coding**\n* Code the status of extranodal extension assessed on the **surgical resection** specimen for the most involved regional lymph node(s)\n* Do not code ENE for any distant lymph nodes.\n* Be aware that the rules for coding ENE for head and neck sites compared to non-head and neck sites are different.",
+  "last_modified" : "2025-02-24T14:05:17.180Z",
+  "definition" : [ {
+    "key" : "extranodal_ext_path",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Regional lymph node(s) involved, ENE not present/not identified from surgical resection" ], [ "1", "Regional lymph node(s) involved, ENE present/identified from surgical resection" ], [ "7", "No lymph node involvement identified from surgical resection (pN0)" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error)" ], [ "9", "Not documented in medical record\nNo surgical resection of regional lymph node(s)\nNon-invasive neoplasm (behavior /2)\nCannot be determined\nPathological assessment of lymph node(s) not done, or unknown if done\nExtranodal Extension Pathological not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source documents:** pathology report from surgical resection x\n\n**Other names include** ENE, extracapsular extension, ECE, extracapsular extension, ECE, extranodal spread, extracapsular extension, or extracapsular spread\n   * *Note*: ENE is the preferred terminology\n\nFor further information, refer to the **Merkel Cell Carcinoma** cancer protocol published by the College of American Pathologists for the AJCC Staging System *Merkel Cell Carcinoma*",
+  "coding_guidelines" : "**1)** **Code 0** when\n* Absence of ENE, positive lymph nodes assessed by lymph node dissection\n* 1292: Scope of Regional Lymph Node Surgery must be 3-7\n\n**2)** **Code 1** when\n* Presence of ENE assessed by Sentinel Lymph Node biopsy\n* Presence of ENE assessed by lymph node dissection\n* 1292: Scope of Regional Lymph Node Surgery must be 2-7\n\n**3)** **Code 7** when\n* Lymph nodes negative for cancer assessed by Sentinel lymph node biopsy or lymph node dissection\n* 1292: Scope of Regional Lymph Node Surgery must be 2-7\n\n**4)** **Code 9** when\n* Absence of ENE, positive lymph nodes assessed by Sentinel Lymph Node biopsy\n    * A positive Sentinel Lymph Node biopsy cannot assess the absence of ENE, only the presence of it. This is because there is not enough surrounding tissue in a Sentinel Lymph node biopsy to accurately assess ENE\n    * Scope of Regional Lymph Node Surgery [NAACCR Data Item: 1292] must be 2-7\n* No information in the medical record\n* Positive nodes pathologically, not evaluated (assessed) for ENE\n* Positive nodes pathologically, unknown if evaluated (assessed) for ENE\n* Lymph nodes not evaluated (assessed) pathologically (no surgical resection of lymph nodes)\n* Unknown if lymph nodes evaluated pathologically (assessed)",
+  "rationale" : "Extranodal Extension Pathological (non-Head and Neck) is a Registry Data Collection Variable for AJCC. This data item was previously collected for Penis, SSF #17."
+}

@@ -1,0 +1,23 @@
+{
+  "id" : "fibrosis_score_38658",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Fibrosis Score",
+  "title" : "Fibrosis Score",
+  "description" : "Fibrosis Score (Ishak Score), the degree of fibrosis of the liver based on pathological examination, is a prognostic factor for liver cancer.\n\nThe Fibrosis Score is based on degree of parenchymal fibrosis or cirrhosis of the nontumorous liver as defined in the surgical pathology report. Multiple fibrosis scoring systems have been described for use in pathological evaluation of liver disease.  \n* Ishak system uses a scale of 0-6 with 6 indicating cirrhosis. \n   * Recommended by AJCC and CAP\n* Batts-Ludwig system uses a score of 0-4, with a score of 3 defined as fibrous septa with architectural distortion but no obvious cirrhosis, and a score of 4 defined as cirrhosis\n  * Used most commonly by US pathologists\n* METAVIR uses scores of F0-F4\n   * Used mostly in Europe",
+  "notes" : "**Note 1:** **Physician Statement** \n* Physician statement of fibrosis score can be used to code this data item when no other information is available. \n  * Code 7 when the physician statement of fibrosis score is not based on histologic examination of the liver\n\n**Note 2:** **Criteria for collecting**\n* Record the results based on information collected during the initial work-up through the first course surgery, in the absence of neoadjuvant treatment. If multiple histologic assessments of the liver (biopsies or resections) are taken and have conflicting scores, record the highest score. \n  * Information collected after the start of **neoadjuvant treatment** or primary systemic or radiation therapy **may not be used** to code this data item\n\n**Note 3:** **FIB Scoring** \n* FIB-4 is **NOT** a pathological fibrosis score of 4, it is a scoring method using the patient's age and relevant lab values to calculate a score. The medical record may show something like \"FIB-4 = 3.52.\" \n* Do not code FIB-4 values in this data item.\n\n**Note 4:** **Ishak score (classified by AJCC)** \n* F0: None to moderate fibrosis (Ishak Score 0-4) \n* F1: Cirrhosis/severe fibrosis (Ishak Score 5-6)\n* **Note:** These are not the same thing as the METAVIR score F0 or F1",
+  "last_modified" : "2024-04-08T16:15:05.126Z",
+  "definition" : [ {
+    "key" : "fibrosis_score",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Any of the following histologically confirmed \n\n* No to moderate fibrosis\n* Ishak fibrosis score 0-4\n* METAVIR score F0-F3\n* Batt-Ludwig score 0-3" ], [ "1", "Any of the following histologically confirmed \n* Advanced/severe fibrosis\n* Developing cirrhosis\n* Incomplete cirrhosis\n* Transition to cirrhosis\n* Cirrhosis, probable or definite\n* Cirrhosis, NOS\n* Ishak fibrosis score 5-6\n* METAVIR score F4\n* Batt-Ludwig score 4" ], [ "7", "Clinical statement of advanced/severe fibrosis or cirrhosis, AND\nNot histologically confirmed or unknown if histologically confirmed" ], [ "8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nStated in medical record that patient does not have advanced cirrhosis/advanced fibrosis, not histologically confirmed or unknown if histologically confirmed\nFibrosis score stated but cannot be assigned to codes 0 or 1\nFibrosis score stated but scoring system not recorded\nFibrosis Score not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source documents:** pathology report (biopsy or FNA path report), surgical resection\n\n**Other names include** Nontumoral hepatic parenchymal fibrosis/cirrhosis (Intrahepatic Bile Duct Tumors)",
+  "coding_guidelines" : "**1)** To use codes 0 and 1, you must have a **histological (microscopic) confirmation** of fibrosis/cirrhosis. Code the absence (code 0) or presence (code 1) of fibrosis as documented in the pathology report. \n\n**2)** If no score is mentioned, descriptive terms may be used to assign codes 0 and 1 – see specific terms in the table below.  \n\n**3)** **Code 7** if there is a **clinical diagnosis (no microscopic confirmation)** of severe fibrosis or cirrhosis.\n\n**4)** **Code 9** If a fibrosis score is stated but the scoring system is not recorded, consult with the physician. If no further information is available.",
+  "rationale" : "Fibrosis Score is a Registry Data Collection Variable in AJCC. This data item was previously collected for Liver, CS SSF #2."
+}

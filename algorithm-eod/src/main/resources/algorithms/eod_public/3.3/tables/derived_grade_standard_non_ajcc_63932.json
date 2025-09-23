@@ -1,0 +1,18 @@
+{
+  "id" : "derived_grade_standard_non_ajcc_63932",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Derived Grade - Standard non AJCC",
+  "title" : "Derived Grade - Standard non AJCC",
+  "last_modified" : "2024-02-14T18:43:06.154Z",
+  "definition" : [ {
+    "key" : "derived_summary_grade",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "A", "Well differentiated" ], [ "B", "Moderately differentiated" ], [ "C", "Poorly differentiated" ], [ "D", "Undifferentiated, anaplastic" ], [ "9", "Grade cannot be assessed; Unknown" ] ]
+}

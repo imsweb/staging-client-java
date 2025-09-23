@@ -1,0 +1,375 @@
+{
+  "id" : "lymphoma",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Lymphoma",
+  "title" : "Lymphoma",
+  "notes" : "9590, 9596-9663, 9673-9699, 9702-9719, 9725-9726, 9735, 9737-9738, 9826-9827 (varying primary sites and histologies)\n* C700-C729, C751-C753: 9690, 9719 (2018-2022 only) (See **Note 2**)\n\nC000-C440, C442-C689, C691-C694, C698-C809: 9591 and Schema Discriminator 1: 3, 9 \n\n*See SSDI Manual, Appendix A: Schema ID 00790: Lymphoma for detailed listing of primary site/histology combinations for this schema*\n\n**Note 1:** **Sources used in the development of this schema**\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)\n* SEER Summary Staging Manual-2000: Codes and Coding Instructions (https://seer.cancer.gov/tools/ssm/ssm2000/)\n* Collaborative Stage Data Collection System, version 02.05:  https://cancerstaging.org/cstage/Pages/default.aspx \n* Chapter 79 *Hodgkin and Non-Hodgkin Lymphomas*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.\n* Chapter 80 *Pediatric Hodgkin and Non-Hodgkin Lymphomas*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.\n\n**Note 2:** **Histologies moved to Brain, CNS, Intracranial Gland** \n* For the histologies listed below, these have moved to the Brain, CNS Other and Intracranial Gland schemas starting with 2023 diagnoses. \n* If you have one of these cases for 2018-2022, then this is the appropriate schema. If you have one of these cases diagnosed on January 1, 2023, forward, see the appropriate schema\n* 9690, 9719 \n    * **Brain**: C700, C710-C719\n    * **CNS Other**: C701, C709, C720-C725, C728-C729\n    * **Intracranial Gland**: C751-C753\n\n**Note 3:** **Other EOD Schemas with the listed histologies**\n* **Brain**: C700, C710-C719 (9680, 9699, 9702-9715)\n* **CNS Other**: C701, C709, C720-C725, C728-C729 (9680, 9699, 9702-9715)\n* **Heme Retic**: 9591 and Schema Discriminator 1: 1, 2 (C000-C440, C442-C689, C691-C694, C698-C809)\n* **Intracranial Gland**: C751-C753 (9680, 9699, 9702-9715)\n* **Lymphoma CLL/SLL**: C000-C440, C442-C689, C691-C694, C698-C809 (9823)\n* **Lymphoma Ocular Adnexa**: C441, C690, C695-C696 (9590-9699, 9673-9699, 9702-9719, 9725-9726, 9734-9738, 9823, 9826-9827, 9930)\n* **Primary Cutaneous Lymphoma**: C440, C442-C449, C510, C609, C632 (9597, 9680, 9708-9709, 9712, 9718-9719, 9726): *Primary Cutaneous Lymphomas*\n\n**Note 4:** **Lugano Staging** \n* The Cotswold modification of the Ann Arbor staging system (used in AJCC 6th and 7th editions) has been updated to the *Lugano classification*. \n* The *Lugano classification* includes an E suffix for lymphoma with either localized extralymphatic presentations (Stage IE) or by contiguous spread from nodal disease (Stage IIE). \n* A change from the Cotswold modification of the Ann Arbor Staging System, E lesions do not apply to patients with Stage III nodal disease; or any patient with nodal disease above and below the diaphragm with concurrent contiguous extralymphatic involvement (Stage IV), which was previously Stage IIIE.\n\n**Note 5:** **Schema includes the preferred terms based on the 2024 WHO Classification of Tumours, Haematolymphoid tumors, 5th edition**\n\n* 9590: Malignant lymphoma, NOS\n* 9591: Malignant lymphoma, non-Hodgkin, NOS\n* 9596: Mediastinal grey zone lymphoma (MGZL)\n* 9597: Primary cutaneous follicle centre lymphoma (PCFCL)\n* 9650: Classic Hodgkin lymphoma (cHL), NOS\n* 9651: Classic Hodgkin lymphoma, lymphocyte-rich (LR-cHL)\n* 9652: Classic Hodgkin lymphoma, mixed cellularity (MC-cHL)\n* 9653: Classic Hodgkin lymphoma, lymphocyte-depleted, NOS (LD-cHL)\n* 9659: Nodular lymphocyte predominant Hodgkin lymphoma (NLPHL)\n* 9663: Classic Hodgkin lymphoma, nodular sclerosis, NOS (NSCHL) \n* 9673: Mantle cell lymphoma (MCL)\n* 9678: Primary effusion lymphoma (PEL)\n* 9679: Primary mediastinal large B-cell lymphoma (PBML/PMBCL)\n* 9680: Diffuse large B-cell lymphoma (DLBCL)\n* 9687: Burkitt lymphoma (BL), NOS\n* 9688: T-cell/histiocyte-rich large B-cell lymphoma (THRLBCL)\n* 9689: Splenic marginal zone lymphoma (SMZL)\n* 9690 Follicular lymphoma (FL), NOS (except C700-C729, C751-C753 for 1/1/2023+)\n* 9691: Follicular lymphoma, grade 2\n* 9695: Follicular lymphoma, grade 1\n* 9698: Follicular lymphoma, grade 3\n* 9699: Extranodal marginal zone lymphoma of mucosa-associated lymphoid tissue (MALT lymphoma)\n* 9702: Peripheral T-cell lymphoma, NOS\n* 9705: Nodal T follicular helper cell lymphoma, angioimmunoblastic type\n* 9708: Subcutaneous panniculitis-like T-cell lymphoma (SPTCL)\n* 9709: Primary cutaneous peripheral T-cell lymphomas (pcCTCL)\n* 9712: Intravascular large B-cell lymphoma (IVLBCL)\n* 9714: Anaplastic large cell lymphoma, ALK-positive (ALCL)\n* 9715: Anaplastic large cell lymphoma, ALK-negative (ALK-ALCL) (2021+ only)\n* 9716: Hepatosplenic T-cell lymphoma (HSTCL)\n* 9717: Intestinal T-cell lymphoma, NOS (ITCL-NOS)\n* 9718: Primary cutaneous anaplastic large cell lymphoma (C-ALCL)\n* 9719: Extranodal NK/T-cell lymphoma (ENKTL) (except C700-C729, C751-C753 for 1/1/2023+)\n* 9725: Hydroa vacciniforme-like lymphoma (2018-2020 only, nonreportable as of 2021)\n* 9726 Primary cutaneous gamma-delta T-cell lymphoma (PCGD-TCL) (2018-2020 only, see code 9687/3 for 2021+)\n* 9735: Plasmablastic lymphoma (PBL)\n* 9737: ALK-positive large B-cell lymphoma  (ALK+LBCL)\n* 9738: KSHV/HHV8-positive diffuse large B-cell lymphoma \n* 9826: Burkitt cell leukemia (2018-2020 only, see code 9687/3 for 2021+)\n* 9827: Adult T-cell leukemia/lymphoma (ATLL)",
+  "schema_selection_table" : "schema_selection_lymphoma",
+  "schema_discriminators" : [ "year_dx", "discriminator_1", "behavior" ],
+  "inputs" : [ {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "naaccr_item" : 390,
+    "naaccr_xml_id" : "dateOfDiagnosis",
+    "table" : "year_dx_validation",
+    "used_for_staging" : true
+  }, {
+    "key" : "site",
+    "name" : "Primary Site",
+    "naaccr_item" : 400,
+    "naaccr_xml_id" : "primarySite",
+    "table" : "primary_site",
+    "used_for_staging" : true
+  }, {
+    "key" : "hist",
+    "name" : "Histology",
+    "naaccr_item" : 522,
+    "naaccr_xml_id" : "histologicTypeIcdO3",
+    "table" : "histology",
+    "used_for_staging" : true
+  }, {
+    "key" : "behavior",
+    "name" : "Behavior",
+    "naaccr_item" : 523,
+    "naaccr_xml_id" : "behaviorCodeIcdO3",
+    "table" : "behavior",
+    "used_for_staging" : true
+  }, {
+    "key" : "discriminator_1",
+    "name" : "Schema Discriminator 1",
+    "naaccr_item" : 3926,
+    "naaccr_xml_id" : "schemaDiscriminator1",
+    "table" : "schema_discriminator_1_63995",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "reporting_source",
+    "name" : "Type of Reporting Source",
+    "naaccr_item" : 500,
+    "naaccr_xml_id" : "typeOfReportingSource",
+    "table" : "type_of_reporting_source_76696",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_clin",
+    "name" : "Tumor Size Clinical",
+    "naaccr_item" : 752,
+    "naaccr_xml_id" : "tumorSizeClinical",
+    "default" : "999",
+    "table" : "tumor_size_clinical_dna_64119",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_path",
+    "name" : "Tumor Size Pathological",
+    "naaccr_item" : 754,
+    "naaccr_xml_id" : "tumorSizePathologic",
+    "default" : "999",
+    "table" : "tumor_size_pathological_dna_6742",
+    "used_for_staging" : false
+  }, {
+    "key" : "size_summary",
+    "name" : "Tumor Size Summary",
+    "naaccr_item" : 756,
+    "naaccr_xml_id" : "tumorSizeSummary",
+    "default" : "999",
+    "table" : "tumor_size_summary_dna_13275",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_pos",
+    "name" : "Regional Nodes Positive",
+    "naaccr_item" : 820,
+    "naaccr_xml_id" : "regionalNodesPositive",
+    "default" : "99",
+    "table" : "nodes_pos_dna_91511",
+    "used_for_staging" : false
+  }, {
+    "key" : "nodes_exam",
+    "name" : "Regional Nodes Examined",
+    "naaccr_item" : 830,
+    "naaccr_xml_id" : "regionalNodesExamined",
+    "default" : "99",
+    "table" : "nodes_exam_dna_95635",
+    "used_for_staging" : false
+  }, {
+    "key" : "neoadjuvant_therapy",
+    "name" : "Neoadjuvant Therapy",
+    "naaccr_item" : 1632,
+    "naaccr_xml_id" : "neoadjuvantTherapy",
+    "default" : "0",
+    "table" : "neoadjuvant_therapy_37302",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SEER_REQUIRED",
+      "start" : 2021
+    } ]
+  }, {
+    "key" : "neoadj_tx_clinical_response",
+    "name" : "Neoadjuvant Therapy – Clinical Response",
+    "naaccr_item" : 1633,
+    "naaccr_xml_id" : "neoadjuvTherapyClinicalResponse",
+    "default" : "0",
+    "table" : "neoadj_tx_clinical_response_31723",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SEER_REQUIRED",
+      "start" : 2021
+    } ]
+  }, {
+    "key" : "neoadj_tx_treatment_effect",
+    "name" : "Neoadjuvant Therapy – Treatment Effect",
+    "naaccr_item" : 1634,
+    "naaccr_xml_id" : "neoadjuvTherapyTreatmentEffect",
+    "default" : "0",
+    "table" : "neoadj_tx_treatment_effect_52725",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SEER_REQUIRED",
+      "start" : 2021
+    } ]
+  }, {
+    "key" : "eod_primary_tumor",
+    "name" : "EOD Primary Tumor",
+    "naaccr_item" : 772,
+    "naaccr_xml_id" : "eodPrimaryTumor",
+    "default" : "999",
+    "table" : "eod_primary_tumor_72245",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_regional_nodes",
+    "name" : "EOD Regional Nodes",
+    "naaccr_item" : 774,
+    "naaccr_xml_id" : "eodRegionalNodes",
+    "default" : "888",
+    "table" : "nodes_dna",
+    "used_for_staging" : true
+  }, {
+    "key" : "eod_mets",
+    "name" : "EOD Mets",
+    "naaccr_item" : 776,
+    "naaccr_xml_id" : "eodMets",
+    "default" : "88",
+    "table" : "mets_hna",
+    "used_for_staging" : true
+  }, {
+    "key" : "ss2018",
+    "name" : "SS2018",
+    "naaccr_item" : 764,
+    "naaccr_xml_id" : "summaryStage2018",
+    "table" : "ss2018_lymphoma_27031",
+    "used_for_staging" : false
+  }, {
+    "key" : "grade_clin",
+    "name" : "Grade Clinical",
+    "naaccr_item" : 3843,
+    "naaccr_xml_id" : "gradeClinical",
+    "default" : "8",
+    "table" : "grade_clinical_18316",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_path",
+    "name" : "Grade Pathological",
+    "naaccr_item" : 3844,
+    "naaccr_xml_id" : "gradePathological",
+    "default" : "8",
+    "table" : "grade_pathological_73388",
+    "used_for_staging" : true,
+    "metadata" : [ {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_post_therapy_clin",
+    "name" : "Grade Post Therapy Clin (yc)",
+    "naaccr_item" : 1068,
+    "naaccr_xml_id" : "gradePostTherapyClin",
+    "table" : "grade_post_therapy_clin_74830",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "grade_post_therapy_path",
+    "name" : "Grade Post Therapy Path (yp)",
+    "naaccr_item" : 3845,
+    "naaccr_xml_id" : "gradePostTherapy",
+    "table" : "grade_post_therapy_path_65729",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "NPCR_REQUIRED"
+    }, {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED"
+    } ]
+  }, {
+    "key" : "b_symptoms",
+    "name" : "B Symptoms",
+    "naaccr_item" : 3812,
+    "naaccr_xml_id" : "bSymptoms",
+    "default" : "8",
+    "table" : "systemic_symptoms_at_dx_60639",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "CCCR_REQUIRED"
+    }, {
+      "name" : "SEER_REQUIRED",
+      "start" : 2018,
+      "end" : 2025
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
+      "start" : 2026
+    } ]
+  }, {
+    "key" : "hiv",
+    "name" : "HIV Status",
+    "naaccr_item" : 3859,
+    "naaccr_xml_id" : "hivStatus",
+    "default" : "8",
+    "table" : "hiv_status_12569",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED"
+    }, {
+      "name" : "COC_REQUIRED",
+      "start" : 2018,
+      "end" : 2020
+    } ]
+  }, {
+    "key" : "intern_prog_index",
+    "name" : "NCCN International Prognostic Index (IPI)",
+    "naaccr_item" : 3896,
+    "naaccr_xml_id" : "nccnInternationalPrognosticIndex",
+    "default" : "X8",
+    "table" : "intern_prognostic_index_90310",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "COC_REQUIRED"
+    }, {
+      "name" : "SSDI"
+    }, {
+      "name" : "SEER_REQUIRED",
+      "start" : 2018,
+      "end" : 2025
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
+      "start" : 2026
+    } ]
+  }, {
+    "key" : "ptld",
+    "name" : "PTLD",
+    "naaccr_item" : 1172,
+    "naaccr_xml_id" : "ptld",
+    "default" : "8",
+    "table" : "ptld_17694",
+    "used_for_staging" : false,
+    "metadata" : [ {
+      "name" : "SSDI",
+      "start" : 2025
+    }, {
+      "name" : "SEER_REQUIRED",
+      "start" : 2025
+    }, {
+      "name" : "NPCR_REQUIRED",
+      "start" : 2025
+    }, {
+      "name" : "COC_REQUIRED",
+      "start" : 2025
+    } ]
+  } ],
+  "outputs" : [ {
+    "key" : "naaccr_schema_id",
+    "name" : "Schema ID",
+    "naaccr_item" : 3800,
+    "naaccr_xml_id" : "schemaId",
+    "default" : "00790"
+  }, {
+    "key" : "derived_version",
+    "name" : "Derived Version",
+    "default" : "{{ctx_alg_version}}"
+  }, {
+    "key" : "ss2018_derived",
+    "name" : "Derived Summary Stage 2018",
+    "naaccr_item" : 762,
+    "naaccr_xml_id" : "derivedSummaryStage2018",
+    "table" : "derived_ss2018_lymphoma_35135",
+    "default" : "9"
+  }, {
+    "key" : "derived_summary_grade",
+    "name" : "Derived Summary Grade 2018",
+    "naaccr_item" : 1975,
+    "naaccr_xml_id" : "derivedSummaryGrade2018",
+    "table" : "derived_grade_21945"
+  } ],
+  "mappings" : [ {
+    "id" : "summary_stage_2018",
+    "name" : "Summary Stage 2018",
+    "tables" : [ {
+      "id" : "derived_summary_grade_na_6690",
+      "inputs" : [ "grade_path", "grade_clin" ],
+      "outputs" : [ "derived_summary_grade" ]
+    }, {
+      "id" : "eod_primary_tumor_72245",
+      "inputs" : [ "eod_primary_tumor" ],
+      "outputs" : [ "ss2018_t" ]
+    }, {
+      "id" : "nodes_dna",
+      "inputs" : [ "eod_regional_nodes" ],
+      "outputs" : [ "ss2018_n" ]
+    }, {
+      "id" : "mets_hna",
+      "inputs" : [ "eod_mets" ],
+      "outputs" : [ "ss2018_m" ]
+    }, {
+      "id" : "summary_stage_lymphoma_25139",
+      "inputs" : [ "ss2018_m", "ss2018_n", "ss2018_t" ],
+      "outputs" : [ "ss2018_derived" ]
+    } ]
+  } ],
+  "involved_tables" : [ "neoadjuvant_therapy_37302", "tumor_size_clinical_dna_64119", "ss2018_lymphoma_27031", "hiv_status_12569", "nodes_exam_dna_95635", "tumor_size_summary_dna_13275", "ptld_17694", "neoadj_tx_clinical_response_31723", "grade_post_therapy_clin_74830", "histology", "derived_ss2018_lymphoma_35135", "schema_discriminator_1_63995", "intern_prognostic_index_90310", "mets_hna", "behavior", "nodes_dna", "derived_grade_21945", "schema_selection_lymphoma", "tumor_size_pathological_dna_6742", "type_of_reporting_source_76696", "summary_stage_lymphoma_25139", "primary_site", "neoadj_tx_treatment_effect_52725", "year_dx_validation", "systemic_symptoms_at_dx_60639", "derived_summary_grade_na_6690", "grade_post_therapy_path_65729", "eod_primary_tumor_72245", "grade_clinical_18316", "grade_pathological_73388", "nodes_pos_dna_91511" ],
+  "last_modified" : "2025-09-19T18:54:58.887Z",
+  "on_invalid_input" : "CONTINUE"
+}

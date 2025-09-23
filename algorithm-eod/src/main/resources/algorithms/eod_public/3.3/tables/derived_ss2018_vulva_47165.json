@@ -1,0 +1,19 @@
+{
+  "id" : "derived_ss2018_vulva_47165",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Derived SS2018: Vulva",
+  "title" : "Derived Summary Stage 2018: Vulva",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-02-15T18:22:27.760Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "In situ: noninvasive, intraepithelial" ], [ "1", "Localized only (localized, NOS)\n\n* Invasive carcinoma WITH or WITHOUT stromal invasion confined to\n  + Musculature\n  + Submucosa\n  + Vulva including skin\n\n FIGO Stage I (IA, IB, I NOS)" ], [ "2", "Regional by direct extension only\n\n  + Adjacent perineal structures\n  + Anus\n  + Bladder wall or bladder, NOS excluding mucosa\n  + Perianal skin\n  + Rectal wall or rectum, NOS excluding mucosa\n  + Urethra, NOS \n     * Lower/distal third of urethra\n  + Vagina, NOS\n  + Vulva and perineum involved WITH or WITHOUT stromal invasion\n\nFIGO Stage II" ], [ "3", "Regional lymph node(s) involved only\n\n  + Femoral\n  + Inguinal, NOS\n     + Inguinofemoral (groin)\n     + Node of Cloquet or Rosenmuller (highest deep inguinal)\n     + Superficial inguinal \n  + Regional lymph node(s), NOS\n    * Lymph node(s), NOS\n\nFIGO Stage III (IIIA, IIIB, IIIC, III NOS), IVA\n* Localized tumor WITH regional lymph node involvement" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n- Codes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant site(s) (including further contiguous extension) \n     * Bladder mucosa\n     * Fixed to pubic bone (pelvic bone)\n     * Perineal body\n     * Rectal mucosa\n     * Urethra: upper/proximal two-thirds\n\n\n- Distant lymph node(s), NOS\n  - Pelvic, NOS\n  + Iliac, NOS\n     + Common\n     + External\n     + Internal (hypogastric) (obturator)\n   + Paracervical\n   + Parametrial\n   + Sacral, NOS\n      + Lateral (laterosacral)\n      + Middle (promontorial) (Gerota's node)\n      + Presacral\n      + Uterosacral\n\n\n- Distant metastasis, NOS\n  + Carcinomatosis\n  + Distant metastasis WITH or WITHOUT distant lymph node(s)\n\n\nFIGO Stage IVA\n* NONE or UNKNOWN regional lymph node involvement\n\nFIGO Stage IVB, IV NOS" ], [ "9", "Unknown if extension or metastasis" ] ]
+}

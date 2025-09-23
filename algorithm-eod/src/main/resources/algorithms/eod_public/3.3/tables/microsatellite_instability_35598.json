@@ -1,0 +1,22 @@
+{
+  "id" : "microsatellite_instability_35598",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Microsatellite Instability",
+  "title" : "Microsatellite Instability (MSI)",
+  "description" : "The microsatellite instability (MSI) test is a genetic test performed on tumor tissue to look for differences in length of certain non-functioning sections of DNA. The differences are caused by problems with the genes that encode proteins that normally repair certain types of DNA damage. Knowing whether cancer is microsatellite instability high may help plan the best treatment\n\nMicrosatellites are short, repeated, sequences of DNA. Cancer cells that have large numbers of microsatellites that may have defects in the ability to correct mistakes that occur when DNA is copied in the cell. Microsatellite instability is found most often in colorectal cancer, other types of gastrointestinal cancer, and endometrial cancer. It may also be found in cancers of the breast, prostate, bladder, and thyroid.",
+  "notes" : "**Note 1:** **Effective years**\n* This SSDI is effective for diagnosis years 2026+\n* For cases diagnosed 2018-2025, this SSDI must be blank\n\n**Note 2:** **Physician Statement**\n* Physician statement of MSI can be used to code this data item when no other information is available.\n\n**Note 3:** **Applicable stages**\n* MSI may be recorded for all stages; however, it is primarily performed for invasive neoplasms\n* For non-invasive neoplasms (behavior /2), code to 9 if no information available.\n\n**Note 4:** **Results from nodal or metastatic tissue**\n* Results from nodal or metastatic tissue may be used for Microsatellite Instability.",
+  "last_modified" : "2025-04-18T16:11:03.927Z",
+  "definition" : [ {
+    "key" : "msi",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "Microsatellite instability (MSI) stable; microsatellite stable (MSS); negative, NOS\nAND/OR\nMismatch repair (MMR) intact, no loss of nuclear expression of MMR proteins\nMMR proficient (pMMR or MMR-P)" ], [ "1", "MSI unstable low (MSI-L)" ], [ "2", "MSI unstable high (MSI-H)\nAND/OR\nMMR deficient (dMMR or MMR-D) loss of nuclear expression of one or more MMR proteins, MMR protein deficient)" ], [ "8", "Not applicable: Information not collected for this case\n(If this information is required by your standard setter, use of code 8 may result in an edit error.)" ], [ "9", "Not documented in medical record\nMSI-indeterminate \nMSI-equivocal\nMicrosatellite instability not assessed or unknown if assessed" ], [ "", "Must be blank if diagnosis year is before 2026" ] ],
+  "additional_info" : "**Source documents:** pathology report\n\n**Other names include** MSI, Mismatch repair, MMR, MSI-H\n\nFor further information, refer to the **Carcinoma of the Endometrium** Reporting cancer protocol published by the College of American Pathologists for the AJCC Staging System *Corpus Uteri-Carcinoma and Adenocarcinoma*",
+  "coding_guidelines" : "**Microsatellite Instability (MSI)**\n* Testing for MSI may be done by immunology or genetic testing. Only genetic testing results will specify whether the MSI is low or high.\n* MSI is looking at instability in informative markers\n\n\n**1)** **Code 0**\n* MSS (Code 0)\n * Stable (Code 0)\n * Negative (Code 0)\n * Low probability of MSI-H (Code 0)\n* MSS/MSI-L (Code 0)\n\n **2)** **Code 1**\n* MSI-L (Code 1)\n\n**3)** **Code 2**\n* Unstable, high (Code 2)\n* Unstable, NOS (no designation of high or low) (Code 2)\n * MSI-H (Code 2)\n\n**4)** **Code 9**\n* MSI-I (intermediate) (Code 9)\n\n**Mismatch Repair (MMR)**\n* Testing for Mismatch Repair (MMR) is usually done by immunohistochemistry (IHC).\n* Most common markers are MLH1, MSH2, MSH6, PMS2\n\n \n **1)** **Code 0**\n* No loss of nuclear expression (code 0)\n* Mismatch repair (MMR) intact (code 0)\n* MMR proficient (pMMR or MMR-P) (code 0)\n * MMR normal (code 0)\n\n **2)** **Code 2**\n* Loss of nuclear expression (code 2)\n* MMR deficient (dMMR or MMR-D) (code 2)\n * MMR abnormal (code 2)\n\n**MSI and MMR**\n **1)** **Code 0** If all tests done are negative\n**2)** **Code 2** If both tests are done and one or both are positive"
+}

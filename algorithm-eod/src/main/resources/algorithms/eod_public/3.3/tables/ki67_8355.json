@@ -1,0 +1,23 @@
+{
+  "id" : "ki67_8355",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Ki-67",
+  "title" : "Ki-67 (MIB-1)",
+  "description" : "Ki-67 (MIB-1) (Proliferative Index) is a marker of cell proliferation.  A high value indicates a tumor that is proliferating more rapidly. Codes and coding instructions for this data item are site-specific.",
+  "notes" : "**Note 1:** **Physician Statement**\n* Physician statement of Ki-67 (MIB-1), also referred to as the “Proliferative Index” can be used to code this data item when no other information is available.\n\n**Note 2:** **In-situ and Invasive components present**\n* If Ki-67 is done on both the in situ and invasive components in the primary tumor, code the Ki-67 value from the invasive component\n* If in situ and invasive components present and Ki-67 only done on the in-situ component in the primary tumor, code unknown\n\n**Note 3:** **Results from nodal or metastatic tissue**\n * Results from nodal or metastatic tissue may be used ONLY when there is no evidence of primary tumor\n   * *Note:* In-situ is evidence of primary tumor\n\n**Note 4:** **Neoadjuvant Therapy**\n* Record the assay from tumor specimens prior to neoadjuvant therapy.\n* If neoadjuvant therapy is given and there are no Ki-67 results from pre-treatment specimens, report the findings from post-treatment specimens.",
+  "last_modified" : "2024-04-08T20:04:06.134Z",
+  "definition" : [ {
+    "key" : "ki67",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0.0-100.0", "0.0 to 100.0 percent positive: enter percent positive" ], [ "XXX.7", "Test done,  actual percentage not stated" ], [ "XXX.8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code XXX.8 will result in an edit error.)" ], [ "XXX.9", "Not documented in medical record\nKi-67 (MIB-1) not assessed or unknown if assessed" ] ],
+  "additional_info" : "**Source documents:** pathology report\n\nFor further information, refer to the **Breast Biomarker Reporting** cancer protocols published by the College of American Pathologists for the AJCC Staging System *Breast*",
+  "coding_guidelines" : "Ki-67 results are reported as the percentage cell nuclei that stain positive.  As of early 2017 there are no established standards for interpretation of results or for cutoffs for positive and negative.  \n\n* ***Examples:***\n    Ki-67 reported as 14%. Code 14.0\n    Ki-67 reported as 8.6%. Code 8.6",
+  "rationale" : "Ki-67 (MIB-1) (Proliferative Index) is a Registry Data Collection Variable in AJCC. It was a new data item for breast cases diagnosed 1/1/2018+.  It will apply to neuroendocrine tumors (NET) of the gastrointestinal tract (AJCC Chapters 29 – 34) for cases diagnosed 1/1/2021+. High Ki-67 is an adverse prognostic factor and Ki-67 is a component of grade for these tumors.  NCCN guidelines recommend that tumor differentiation, mitotic rate and Ki-67 should be recorded in the pathology report for these tumors."
+}

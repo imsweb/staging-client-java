@@ -1,0 +1,26 @@
+{
+  "id" : "urethra_prostatic_urethra_30106",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Schema Discriminator 1",
+  "title" : "Schema Discriminator 1: Urethra/Prostatic Urethra",
+  "description" : "Urethra (male and female) and prostatic urethra have the same ICD-O topography code (C680). However, for purposes of stage grouping AJCC 8th edition, they each have different definitions for T or primary tumor extension. A schema discriminator is necessary to distinguish between these primary sites so that the appropriate sub(chapter)/schema is used.",
+  "notes" : "**Note:** **Schema discriminator for C680** \n* A schema discriminator is used to discriminate between urethra (male and female) and prostatic urethra. Code the site in which the tumor arose.\n\n  • **Urethra: Male Penile Urethra and Female Urethra (see code 1)**\n   * Subsites include Urethra, NOS, Urethral Gland, Cowper gland\n\n  • **Urethra: Prostatic Urethra (see code 2)**\n   * Subsites include Prostatic urethra, Prostatic utricle",
+  "last_modified" : "2024-04-30T19:22:02.284Z",
+  "definition" : [ {
+    "key" : "discriminator_1",
+    "name" : "Code",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  }, {
+    "key" : "disease",
+    "name" : "Schema ID #/Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "1", "Male Penile Urethra\nFemale Urethra\nUrethral Gland\nCowper gland\n\nUrethra, NOS", "00631: Urethra" ], [ "2", "Males only\n- Prostatic urethra\n- Prostatic utricle", "00633: Urethra-Prostatic" ] ],
+  "additional_info" : "**Source documents:** Pathology report, imaging",
+  "rationale" : "A schema discriminator is used to assign AJCC ID when site and histology alone are insufficient to identify the applicable AJCC staging method and to assign Schema ID, which links each case to the appropriate SSDIs, Grade, Summary Stage and EOD data collection system."
+}

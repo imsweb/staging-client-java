@@ -1,0 +1,19 @@
+{
+  "id" : "derived_ss2018_appendix_76889",
+  "algorithm" : "eod_public",
+  "version" : "3.3",
+  "name" : "Derived SS2018: Appendix",
+  "title" : "Derived Summary Stage 2018: Appendix",
+  "subtitle" : "Derived Summary Stage 2018",
+  "last_modified" : "2024-04-25T13:38:55.109Z",
+  "definition" : [ {
+    "key" : "ss2018_derived",
+    "name" : "SS2018",
+    "type" : "INPUT"
+  }, {
+    "key" : "description",
+    "name" : "Description",
+    "type" : "DESCRIPTION"
+  } ],
+  "rows" : [ [ "0", "In situ, intraepithelial, noninvasive\n- Acellular mucin or mucinous epithelium may invade into the muscularis propria\n- (Adeno) carcinoma, noninvasive, in a polyp or adenoma\n- Low-grade appendiceal mucinous neoplasm confined by the muscularis propria (LAMN) (in situ)\n- High-grade appendiceal mucinous neoplasm confined by the muscularis propria (HAMN) (in situ)" ], [ "1", "Localized only (localized, NOS)\n- Confined to appendix, NOS\n- Confined to polyp, NOS\n- Extension through wall, NOS\n- Invasion through muscularis propria\n- Lamina propria \n- Mucosa (intramucosal, NOS)\n- Muscularis mucosae\n- Non-peritonealized pericolic tissues invaded\n- Perimuscular tissue invaded\n- Submucosa \n- Subserosa \n  - Includes acellular mucin or mucinous epithelium that extends into the subserosa (LAMN tumors)\n- Transmural, NOS\n- Wall, NOS" ], [ "2", "Regional by direct extension only\n- Abdominal wall\n- Adherent to other organs or structures\n- Adjacent tissue(s), NOS\n- Connective tissue\n- Fat, NOS\n- Greater omentum\n- Mesenteric fat\n- Mesentery \n- Mesoappendix\n  - Includes acellular mucin or mucinous epithelium that extends into the mesoappendix \n    - WITH or WITHOUT involvement of the serosa (LAMN tumors)\n- Pericolic fat\n- Retroperitoneum\n- Serosa (mesothelium) (visceral peritoneum)\n- Small intestine\n- Tumor found in adhesion(s) if microscopic examination performed" ], [ "3", "Regional lymph node(s) involved only\n- Tumor deposits (TD) in subserosa or mesentery WITHOUT regional lymph node metastases\n\n\n- Cecal\n    + Anterior (prececal)\n    + Posterior (retrocecal)\n    + Right colic\n- Colic, NOS\n- Epicolic (adjacent to bowel wall)\n- Ileocolic\n- Mesenteric, NOS\n- Mesocolic, NOS\n- Paracolic/pericolic\n- Regional lymph node(s), NOS\n  + Lymph node(s), NOS" ], [ "4", "Regional by BOTH direct extension AND regional lymph node(s) involved\n- Codes (2) + (3)" ], [ "7", "Distant site(s)/lymph node(s) involved\n- Distant site(s) (including further contiguous extension) \n  + Adrenal (suprarenal) gland\n  + Bladder\n  + Diaphragm\n  + Fallopian tube\n  + Fistula to skin\n  + Gallbladder\n  + Intraperitoneal spread/peritoneal metastasis (peritoneal carcinomastosis)\n     + WITH or WITHOUT peritoneal mucinous deposits containing tumor cells\n     + Includes peritoneal spread with LAMN tumors\n  + Kidney\n  + Liver\n  + Other segment(s) of colon/rectum via serosa\n  + Ovary\n  + Ureter\n  + Uterus\n- Distant lymph node(s), NOS\n  + Inferior mesenteric\n  + Superior mesenteric\n- Distant metastasis, NOS\n  + Carcinomatosis\n  + Distant metastasis WITH or WITHOUT distant lymph node(s)" ], [ "9", "Unknown if extension or metastasis" ] ]
+}
