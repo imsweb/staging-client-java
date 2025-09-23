@@ -3,9 +3,9 @@ plugins {
 }
 
 dependencies {
-    api "com.fasterxml.jackson.core:jackson-core:2.20.0"
-    api "com.fasterxml.jackson.core:jackson-annotations:2.20.0"
-    api "com.fasterxml.jackson.core:jackson-databind:2.20.0"
+    api "com.fasterxml.jackson.core:jackson-core:2.19.1"
+    api "com.fasterxml.jackson.core:jackson-annotations:2.19.1"
+    api "com.fasterxml.jackson.core:jackson-databind:2.19.1"
 
     implementation "org.cache2k:cache2k-api:2.6.1.Final"
     runtimeOnly "org.cache2k:cache2k-core:2.6.1.Final"
