@@ -6,7 +6,7 @@ plugins {
     id 'com.github.spotbugs' version '6.1.11'
     id 'com.adarshr.test-logger' version '4.0.0'
     id 'com.github.ben-manes.versions' version '0.52.0'
-    id 'org.sonatype.gradle.plugins.scan' version '3.1.1'
+    id 'org.sonatype.gradle.plugins.scan' version '3.1.4'
     id 'org.sonarqube' version '6.1.0.5360'
     id 'com.vanniktech.maven.publish' version '0.31.0'
 }
@@ -38,13 +38,13 @@ subprojects {
     version = '11.5.1'
 
     dependencies {
-        testImplementation platform('org.junit:junit-bom:5.12.2')
+        testImplementation platform('org.junit:junit-bom:5.13.4')
         testImplementation 'org.junit.jupiter:junit-jupiter-api'
         testImplementation 'org.junit.jupiter:junit-jupiter-params'
         testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
         testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.12.2'
 
-        testImplementation 'org.assertj:assertj-core:3.27.3'
+        testImplementation 'org.assertj:assertj-core:3.27.6'
         testImplementation 'com.google.code.bean-matchers:bean-matchers:0.14'
         testImplementation 'org.slf4j:slf4j-simple:2.0.17'
     }
