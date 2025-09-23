@@ -5,7 +5,7 @@ import java.io.InputStream;
 
 import org.junit.jupiter.api.BeforeAll;
 
-public class ExternalStagingFileDataProviderTest extends FileDataProviderTest {
+class ExternalStagingFileDataProviderTest extends FileDataProviderTest {
 
     private static Staging _STAGING;
 

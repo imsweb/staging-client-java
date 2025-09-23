@@ -41,7 +41,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class EodStagingTest extends StagingTest {
 
     @BeforeAll
-    public static void init() {
+    static void init() {
         _STAGING = Staging.getInstance(EodDataProvider.getInstance(EodVersion.LATEST));
     }
 

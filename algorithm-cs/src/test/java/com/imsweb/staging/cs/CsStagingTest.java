@@ -49,12 +49,12 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
-public class CsStagingTest extends StagingTest {
+class CsStagingTest extends StagingTest {
 
     private static final Logger _LOG = LoggerFactory.getLogger(CsStagingTest.class);
 
     @BeforeAll
-    public static void init() {
+    static void init() {
         _STAGING = Staging.getInstance(CsDataProvider.getInstance(CsVersion.V020550));
     }
 

@@ -41,7 +41,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class TnmStagingTest extends StagingTest {
 
     @BeforeAll
-    public static void init() {
+    static void init() {
         _STAGING = Staging.getInstance(TnmDataProvider.getInstance(TnmVersion.LATEST));
     }
 

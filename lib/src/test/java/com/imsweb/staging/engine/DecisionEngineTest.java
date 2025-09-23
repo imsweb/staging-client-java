@@ -49,12 +49,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
  * Test class for DecisionEngine
  */
-public class DecisionEngineTest {
+class DecisionEngineTest {
 
     private static DecisionEngine _ENGINE;
 
     @BeforeAll
-    public static void init() {
+    static void init() {
         InMemoryDataProvider provider = new InMemoryDataProvider("test", "1.0");
 
         StagingTable table = new StagingTable("table_lookup_sample");
