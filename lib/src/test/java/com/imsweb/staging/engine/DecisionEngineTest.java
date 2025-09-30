@@ -489,6 +489,22 @@ class DecisionEngineTest {
     }
 
     @Test
+    void testMatchTableWithNoRows() {
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
+        StagingTable table = new StagingTable("testNoRows");
+        table.addColumnDefinition("a", ColumnType.INPUT);
+        table.addColumnDefinition("result", ColumnType.ENDPOINT);
+        provider.addTable(table);
+
+        Table tableMissing = provider.getTable("testNoRows");
+
+        Map<String, String> input = new HashMap<>();
+        input.put("a", "");
+        List<? extends Endpoint> endpoints = DecisionEngine.matchTable(tableMissing, input);
+        assertNull(endpoints);
+    }
+
+    @Test
     void testMatchMissingVsAll() {
         InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
         StagingTable table = new StagingTable("testMissingAndAll");
