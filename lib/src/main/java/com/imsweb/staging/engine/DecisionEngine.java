@@ -130,20 +130,22 @@ public class DecisionEngine {
         if (context == null)
             throw new IllegalStateException(_CONTEXT_MISSING_MESSAGE);
 
-        for (int i = 0; i < table.getTableRows().size(); i++) {
-            boolean matchAll = true;
-            for (ColumnDefinition col : table.getColumnDefinitions()) {
-                if (ColumnType.INPUT.equals(col.getType()) && (keysToMatch == null || keysToMatch.contains(col.getKey())))
-                    matchAll = testMatch(table.getTableRows().get(i).getColumnInput(col.getKey()), context.get(col.getKey()), context);
+        if (table.getTableRows() != null) {
+            for (int i = 0; i < table.getTableRows().size(); i++) {
+                boolean matchAll = true;
+                for (ColumnDefinition col : table.getColumnDefinitions()) {
+                    if (ColumnType.INPUT.equals(col.getType()) && (keysToMatch == null || keysToMatch.contains(col.getKey())))
+                        matchAll = testMatch(table.getTableRows().get(i).getColumnInput(col.getKey()), context.get(col.getKey()), context);
 
-                if (!matchAll)
+                    if (!matchAll)
+                        break;
+                }
+
+                // if all inputs match, we are done
+                if (matchAll) {
+                    rowIndex = i;
                     break;
-            }
-
-            // if all inputs match, we are done
-            if (matchAll) {
-                rowIndex = i;
-                break;
+                }
             }
         }
 
