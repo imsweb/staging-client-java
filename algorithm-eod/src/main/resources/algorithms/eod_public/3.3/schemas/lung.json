@@ -234,6 +234,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
+      "end" : 2023
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
+      "start" : 2024,
       "end" : 2024
     } ]
   }, {
@@ -251,6 +255,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
+      "end" : 2023
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
+      "start" : 2024,
       "end" : 2024
     } ]
   }, {
@@ -340,6 +348,6 @@
     } ]
   } ],
   "involved_tables" : [ "neoadjuvant_therapy_37302", "derived_grade_46639", "grade_post_therapy_path_41285", "mets_hab", "grade_pathological_31963", "grade_post_therapy_clin_41222", "tumor_size_pathological_full_62176", "nodes_pos_fpa", "alk_rearrangement_610", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "neoadj_tx_treatment_effect_4391", "combined_grade_56638", "behavior", "schema_selection_lung", "derived_ss2018_lung_59907", "tumor_size_clinical_full_74867", "nodes_dai", "egfr_mutational_analysis_51122", "type_of_reporting_source_76696", "visceral_pleural_invasion_25940", "tumor_size_summary_full_31213", "primary_site", "separate_tumor_nodules_69006", "year_dx_validation", "extension_baj", "grade_clinical_73056", "summary_stage_rpa", "ss2018_lung_41334" ],
-  "last_modified" : "2025-09-19T18:54:45.126Z",
+  "last_modified" : "2025-11-14T20:06:09.118Z",
   "on_invalid_input" : "CONTINUE"
 }

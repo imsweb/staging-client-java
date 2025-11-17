@@ -269,6 +269,6 @@
     } ]
   } ],
   "involved_tables" : [ "seer_mets_48348", "neoadjuvant_therapy_37302", "nodes_pos_fpa", "derived_ss2018_urinary_other_89509", "grade_post_therapy_clin_69737", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "nodes_dcz", "schema_selection_urinary_other", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "grade_clinical_standard_non_ajcc_32473", "grade_pathological_standard_non_ajcc_5627", "derived_grade_standard_non_ajcc_63932", "extension_bcy", "type_of_reporting_source_76696", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "neoadj_tx_treatment_effect_18122", "primary_site", "grade_post_therapy_path_75348", "ss2018_urinary_other_87865", "year_dx_validation", "summary_stage_rpa" ],
-  "last_modified" : "2025-09-19T18:54:47.532Z",
+  "last_modified" : "2025-11-14T20:05:41.516Z",
   "on_invalid_input" : "CONTINUE"
 }

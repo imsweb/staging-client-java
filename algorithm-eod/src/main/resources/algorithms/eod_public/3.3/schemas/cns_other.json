@@ -330,6 +330,6 @@
     } ]
   } ],
   "involved_tables" : [ "neoadjuvant_therapy_37302", "mgmt_17454", "grade_post_therapy_path_86055", "chromosome_1p_status_40269", "nodes_exam_dna_95635", "neoadj_tx_clinical_response_31723", "schema_selection_cns_other", "histology", "chromosome_19q_status_72683", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "grade_clinical_19997", "nodes_dna", "mets_haw", "derived_ss2018_cns_other_22397", "summary_stage_benign_3306", "type_of_reporting_source_76696", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "grade_pathological_11803", "derived_grade_12594", "neoadj_tx_treatment_effect_18122", "extension_bcd", "ss2018_cns_other_67712", "primary_site", "grade_post_therapy_clin_26948", "year_dx_validation", "brain_molecular_markers_75370", "nodes_pos_dna_91511" ],
-  "last_modified" : "2025-09-19T18:54:53.868Z",
+  "last_modified" : "2025-11-14T20:05:15.319Z",
   "on_invalid_input" : "CONTINUE"
 }

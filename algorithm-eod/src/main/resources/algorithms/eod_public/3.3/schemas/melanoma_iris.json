@@ -403,6 +403,6 @@
     } ]
   } ],
   "involved_tables" : [ "neoadjuvant_therapy_37302", "tumor_size_clinical_dna_64119", "grade_post_therapy_clin_2503", "nodes_pos_fpa", "tumor_size_summary_dna_13275", "neoadj_tx_clinical_response_31723", "derived_grade_93981", "histology", "nodes_exam_76029", "grade_pathological_46618", "combined_grade_56638", "schema_selection_melanoma_iris", "behavior", "extension_bfr", "grade_post_therapy_path_58350", "eod_regional_nodes_79068", "extravascular_matrix_patterns_1397", "chromosome_8q_status_83582", "measured_basal_diameter_70699", "melanoma_ciliary_body_melanoma_iris_79773", "tumor_size_pathological_dna_6742", "type_of_reporting_source_76696", "derived_ss2018_melanoma_uvea_22506", "microvascular_density_70589", "neoadj_tx_treatment_effect_18122", "primary_site", "mitotic_count_uveal_melanoma_26990", "ss2018_melanoma_choroid_ciliary_body_iris_21929", "measured_thickness_84907", "year_dx_validation", "chromosome_3_status_93464", "summary_stage_rpa", "grade_clinical_54911", "seer_mets_melanomachoroid_55264" ],
-  "last_modified" : "2025-09-19T18:54:49.233Z",
+  "last_modified" : "2025-11-14T20:06:02.493Z",
   "on_invalid_input" : "CONTINUE"
 }

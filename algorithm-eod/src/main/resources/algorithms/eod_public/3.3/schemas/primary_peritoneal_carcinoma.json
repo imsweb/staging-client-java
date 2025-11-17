@@ -241,10 +241,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   }, {
     "key" : "ca125_pretx_interpretation",
@@ -278,10 +278,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   } ],
   "outputs" : [ {
@@ -334,6 +334,6 @@
     } ]
   } ],
   "involved_tables" : [ "residual_tumor_volume_post_cytoreduction_90653", "grade_post_therapy_path_91649", "neoadjuvant_therapy_37302", "nodes_pos_fpa", "mets_hah", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "nodes_day", "grade_clinical_69174", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "schema_selection_primary_peritoneal_carcinoma", "derived_grade_40528", "derived_ss2018_ovary_and_primary_peritoneal_carcinoma_26044", "type_of_reporting_source_76696", "ss2018_ovary_fallopian_tube_and_peritoneal_carcinoma_21678", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "sex_assigned_at_birth_63290", "primary_site", "figo_stage_30513", "grade_pathological_42127", "grade_post_therapy_clin_54917", "year_dx_validation", "ca_125_pretx_interpretation_51295", "summary_stage_rpa", "eod_primary_tumor_96275", "neoadj_tx_treatment_effect_61650" ],
-  "last_modified" : "2025-09-19T18:54:34.682Z",
+  "last_modified" : "2025-11-14T20:06:10.466Z",
   "on_invalid_input" : "CONTINUE"
 }

@@ -4,7 +4,7 @@
   "version" : "3.3",
   "name" : "Lymphoma-CLL/SLL",
   "title" : "Lymphoma-CLL/SLL",
-  "notes" : "9823 (EXCEPT C441, C690, C695-C696)\n\n**Note 1:** **Sources used in the development of this schema**\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)\n* SEER Summary Staging Manual-2000: Codes and Coding Instructions (https://seer.cancer.gov/tools/ssm/ssm2000/)\n* Collaborative Stage Data Collection System, version 02.05:  https://cancerstaging.org/cstage/Pages/default.aspx \n* Chapter 79 *Hodgkin and Non-Hodgkin Lymphomas*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.\n* Chapter 80 *Pediatric Hodgkin and Non-Hodgkin Lymphomas*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.\n\n**Note 2:** **See the following schema for the listed primary sites**\n* C441, C690, C695-C696 (9823): *Lymphoma Ocular Adnexa*\n\n**Note 3:** **CLL/SLL staging**\n* Chronic lymphocytic leukemia/Small lymphocytic lymphoma (CLL/SLL) is always staged as a lymphoma.\n\n**Note 4:** **Lugano Staging** \n* The Cotswold modification of the Ann Arbor staging system (used in AJCC 6th and 7th editions) has been updated to the *Lugano classification*. \n* The *Lugano classification* includes an E suffix for lymphoma with either localized extralymphatic presentations (Stage IE) or by contiguous spread from nodal disease (Stage IIE). \n* A change from the Cotswold modification of the Ann Arbor Staging System, E lesions do not apply to patients with Stage III nodal disease; or any patient with nodal disease above and below the diaphragm with concurrent contiguous extralymphatic involvement (Stage IV), which was previously Stage IIIE.\n\n**Note 5:** **Additional data items for CLL/SLL** \n* In addition to coding EOD Primary Tumor, the following data items are also needed to assign a stage group for CLL/SLL.\n  * Lymphocytosis\n  * Adenopathy\n  * Organomegaly\n  * Anemia\n  * Thrombocytopenia",
+  "notes" : "**9823: Chronic lymphocytic leukemia/small lymphocytic lymphoma (CLL/SLL)** *(EXCEPT C441, C690, C695-C696)*\n\n**Note 1:** **Sources used in the development of this schema**\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)\n* SEER Summary Staging Manual-2000: Codes and Coding Instructions (https://seer.cancer.gov/tools/ssm/ssm2000/)\n* Collaborative Stage Data Collection System, version 02.05:  https://cancerstaging.org/cstage/Pages/default.aspx \n* Chapter 79 *Hodgkin and Non-Hodgkin Lymphomas*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.\n* Chapter 80 *Pediatric Hodgkin and Non-Hodgkin Lymphomas*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.\n\n**Note 2:** **See the following schema for the listed primary sites**\n* C441, C690, C695-C696 (9823): *Lymphoma Ocular Adnexa*\n\n**Note 3:** **CLL/SLL staging**\n* Chronic lymphocytic leukemia/Small lymphocytic lymphoma (CLL/SLL) is always staged as a lymphoma.\n\n**Note 4:** **Lugano Staging** \n* The Cotswold modification of the Ann Arbor staging system (used in AJCC 6th and 7th editions) has been updated to the *Lugano classification*. \n* The *Lugano classification* includes an E suffix for lymphoma with either localized extralymphatic presentations (Stage IE) or by contiguous spread from nodal disease (Stage IIE). \n* A change from the Cotswold modification of the Ann Arbor Staging System, E lesions do not apply to patients with Stage III nodal disease; or any patient with nodal disease above and below the diaphragm with concurrent contiguous extralymphatic involvement (Stage IV), which was previously Stage IIIE.\n\n**Note 5:** **Additional data items for CLL/SLL** \n* In addition to coding EOD Primary Tumor, the following data items are also needed to assign a stage group for CLL/SLL.\n  * Lymphocytosis\n  * Adenopathy\n  * Organomegaly\n  * Anemia\n  * Thrombocytopenia",
   "schema_selection_table" : "schema_selection_chronic_lymphocytic_leukemia_small_lymphocytic_lymphoma_cll_sll",
   "schema_discriminators" : [ "behavior" ],
   "inputs" : [ {
@@ -236,12 +236,7 @@
     }, {
       "name" : "CCCR_REQUIRED"
     }, {
-      "name" : "SEER_REQUIRED",
-      "start" : 2018,
-      "end" : 2025
-    }, {
-      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "name" : "SEER_REQUIRED"
     } ]
   }, {
     "key" : "hiv",
@@ -254,7 +249,9 @@
     "metadata" : [ {
       "name" : "SSDI"
     }, {
-      "name" : "SEER_REQUIRED"
+      "name" : "SEER_REQUIRED",
+      "start" : 2018,
+      "end" : 2023
     }, {
       "name" : "COC_REQUIRED",
       "start" : 2018,
@@ -275,10 +272,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   }, {
     "key" : "lymphocytosis",
@@ -445,6 +442,6 @@
     } ]
   } ],
   "involved_tables" : [ "neoadjuvant_therapy_37302", "tumor_size_clinical_dna_64119", "thrombocytopenia_8479", "ss2018_lymphoma_27031", "lymphocytosis_79150", "hiv_status_12569", "derived_rai_stage_73218", "nodes_exam_dna_95635", "tumor_size_summary_dna_13275", "ptld_17694", "neoadj_tx_clinical_response_31723", "grade_post_therapy_clin_74830", "histology", "derived_ss2018_lymphoma_35135", "derive_rai_stage_42032", "intern_prognostic_index_90310", "mets_hna", "behavior", "adenopathy_40816", "nodes_dna", "eod_primary_tumor_copy_25294", "derived_grade_21945", "tumor_size_pathological_dna_6742", "type_of_reporting_source_76696", "summary_stage_lymphoma_25139", "anemia_15893", "organomegaly_16131", "primary_site", "neoadj_tx_treatment_effect_52725", "schema_selection_chronic_lymphocytic_leukemia_small_lymphocytic_lymphoma_cll_sll", "year_dx_validation", "systemic_symptoms_at_dx_60639", "derived_summary_grade_na_6690", "grade_post_therapy_path_65729", "grade_clinical_18316", "grade_pathological_73388", "nodes_pos_dna_91511" ],
-  "last_modified" : "2025-09-19T18:55:11.913Z",
+  "last_modified" : "2025-11-14T20:06:16.063Z",
   "on_invalid_input" : "CONTINUE"
 }

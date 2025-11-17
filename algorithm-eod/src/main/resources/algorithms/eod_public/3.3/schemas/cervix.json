@@ -377,6 +377,6 @@
     } ]
   } ],
   "involved_tables" : [ "lymph_nodes_distant_assessment_method_24499", "grade_post_therapy_clin_61658", "neoadjuvant_therapy_37302", "nodes_dbc", "mets_han", "tumor_size_pathological_43328", "grade_clinical_6485", "nodes_pos_fpa", "ln_status_para_aortic_41020", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "extension_bbk", "combined_grade_56638", "behavior", "figo_stage_cervix_46535", "tumor_size_clinical_48894", "grade_post_therapy_path_40048", "derived_ss2018_cervix_8763", "type_of_reporting_source_76696", "neoadj_tx_treatment_effect_18122", "lymph_nodes_assessment_method_pelvic_33476", "primary_site", "schema_selection_cervix", "lymph_nodes_distant_mediastinal_scalene_90567", "ss2018_cervix_64954", "ln_status_pelvic_31753", "grade_pathological_84704", "year_dx_validation", "lymph_nodes_assessment_method_para_aortic_56026", "derived_grade_69945", "summary_stage_rpa", "tumor_size_summary_47973" ],
-  "last_modified" : "2025-09-19T18:55:08.355Z",
+  "last_modified" : "2025-11-14T20:05:20.221Z",
   "on_invalid_input" : "CONTINUE"
 }

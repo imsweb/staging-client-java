@@ -4,7 +4,7 @@
   "version" : "3.3",
   "name" : "Oropharynx HPV-Independent",
   "title" : "Oropharynx HPV-Independent",
-  "notes" : "**2018-2024**\nC111 and Schema Discriminator 1: Nasopharynx/PharyngealTonsil: 2 AND Schema Discriminator 2: Oropharyngeal p16: 1, 9 (8000-8700) \n\n**2025+**\nC019, C024, C051-C052, C090-C091, C098-C099, C100, C102-C104, C108-C109 and Schema Discriminator 2: Oropharyngeal p16: 1, 9 (8000-8700)\n\nC019 Base of tongue, NOS\nC024 Lingual tonsil\nC051 Soft palate, NOS\nC052 Uvula\nC090 Tonsillar fossa \nC091 Tonsillar pillar \nC098 Overlapping lesion of tonsil \nC099 Tonsil, NOS \nC100 Vallecula\nC102 Lateral wall of oropharynx\nC103 Posterior wall of oropharynx\nC104 Branchial cleft (site of neoplasm)\nC108 Overlapping lesion of oropharynx\nC109 Oropharynx, NOS\nC111 Pharyngeal tonsil\n\n**Note 1:** **Sources used in the development of this schema**\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)\n* SEER Summary Staging Manual-2000: Codes and Coding Instructions (https://seer.cancer.gov/tools/ssm/ssm2000/)\n* Collaborative Stage Data Collection System, version 02.05:  https://cancerstaging.org/cstage/Pages/default.aspx \n* Chapter 11 *Oropharynx (p16-) and Hypopharynx*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.\n\n**Note 2:** **Other EOD Schemas with Oropharynx sites**\n* **GIST**: 8935-8936\n* **Kaposi Sarcoma**: 9140\n* **Melanoma Head and Neck**: 8720-8790\n* **Mycosis Fungoides**: 9700-9701\n* **Oropharynx HPV-Mediated (2018-2025)**: C019, C024, C051-C052, C090-C091, C098-C099, C100, C102-C104, C108-C109 and Schema Discriminator 2: Oropharyngeal p16: 2 (8000-8700)\n* **Oropharynx HPV-Associated (p16+) (2026+)**: C019, C024, C051-C052, C090-C091, C098-C099, C100, C102-C104, C108-C109 and Schema Discriminator 2: Oropharyngeal p16: 2 (8000-8700)\n* **Nasopharynx (2018-2024)** C111 AND Schema Discriminator 1: Nasopharynx/PharyngealTonsil:1 (8000-8700) or Year of Diagnosis is 2025 or later\n* **Soft Tissue Head and Neck**: 8710-8714, 8800-8803, 8810-8905, 8912, 8921, 8932-8934, 8940-8990, 9000-9016, 9030-9043, 9045-9110, 9121-9138, 9141-9230, 9240-9580, 9582\n* **Soft Tissue Other**: 8992\n* **Soft Tissue Rare**: 8804-8806, 8910, 8920, 8930-8931, 8991, 9020, 9044, 9120, 9231, 9581\n\n**Note 3:** **p16 immunotesting** \n* p16 immunotesting is mandatory to use this staging system for HPV-associated cancer. HPV by in situ hybridization (ISH) may be done as an alternative. \n* If a case of oropharyngeal cancer has p16+, then the Oropharynx HPV-Associated schema is used. \n* If case is p16- or does not have p16, then this schema is used.",
+  "notes" : "**2018-2024**\nC111 and Schema Discriminator 1: Nasopharynx/PharyngealTonsil: 2 AND Schema Discriminator 2: Oropharyngeal p16: 1, 9 (8000-8700) \n\n**2018+**\nC019, C024, C051-C052, C090-C091, C098-C099, C100, C102-C104, C108-C109 and Schema Discriminator 2: Oropharyngeal p16: 1, 9 (8000-8700)\n\n**2026+**\nC101 and Schema Discriminator 2: Oropharyngeal p16: 1, 9 (8000-8700)\n\nC019 Base of tongue, NOS\nC024 Lingual tonsil\nC051 Soft palate, NOS\nC052 Uvula\nC090 Tonsillar fossa \nC091 Tonsillar pillar \nC098 Overlapping lesion of tonsil \nC099 Tonsil, NOS \nC100 Vallecula\nC101 Anterior surface of epiglottis\nC102 Lateral wall of oropharynx\nC103 Posterior wall of oropharynx\nC104 Branchial cleft (site of neoplasm)\nC108 Overlapping lesion of oropharynx\nC109 Oropharynx, NOS\nC111 Pharyngeal tonsil\n\n**Note 1:** **Sources used in the development of this schema**\n* SEER Extent of Disease 1988: Codes and Coding Instructions (3rd Edition, 1998) (https://seer.cancer.gov/archive/manuals/EOD10Dig.3rd.pdf)\n* SEER Summary Staging Manual-2000: Codes and Coding Instructions (https://seer.cancer.gov/tools/ssm/ssm2000/)\n* Collaborative Stage Data Collection System, version 02.05:  https://cancerstaging.org/cstage/Pages/default.aspx \n* Chapter 11 *Oropharynx (p16-) and Hypopharynx*, in the AJCC Cancer Staging Manual, Eighth Edition (2017) published by Springer International Publishing. Used with permission of the American College of Surgeons, Chicago, Illinois.\n\n**Note 2:** **Other EOD Schemas with Oropharynx sites**\n* **GIST**: 8935-8936\n* **Kaposi Sarcoma**: 9140\n* **Melanoma Head and Neck**: 8720-8790\n* **Mycosis Fungoides**: 9700-9701\n* **Oropharynx HPV-Mediated (2018-2025)**: C019, C024, C051-C052, C090-C091, C098-C099, C100, C102-C104, C108-C109 and Schema Discriminator 2: Oropharyngeal p16: 2 (8000-8700)\n* **Oropharynx HPV-Associated (p16+) (2026+)**: C019, C024, C051-C052, C090-C091, C098-C099, C100, C102-C104, C108-C109 and Schema Discriminator 2: Oropharyngeal p16: 2 (8000-8700)\n* **Nasopharynx (2018-2024)** C111 AND Schema Discriminator 1: Nasopharynx/PharyngealTonsil:1 (8000-8700) or Year of Diagnosis is 2025 or later\n* **Soft Tissue Head and Neck**: 8710-8714, 8800-8803, 8810-8905, 8912, 8921, 8932-8934, 8940-8990, 9000-9016, 9030-9043, 9045-9110, 9121-9138, 9141-9230, 9240-9580, 9582\n* **Soft Tissue Other**: 8992\n* **Soft Tissue Rare**: 8804-8806, 8910, 8920, 8930-8931, 8991, 9020, 9044, 9120, 9231, 9581\n\n**Note 3:** **p16 immunotesting** \n* p16 immunotesting is mandatory to use this staging system for HPV-associated cancer. HPV by in situ hybridization (ISH) may be done as an alternative. \n* If a case of oropharyngeal cancer has p16+, then the Oropharynx HPV-Associated schema is used. \n* If case is p16- or does not have p16, then this schema is used.",
   "schema_selection_table" : "schema_selection_tongue_base",
   "schema_discriminators" : [ "year_dx", "discriminator_1", "discriminator_2" ],
   "inputs" : [ {
@@ -288,10 +288,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   }, {
     "key" : "ln_size_of_mets",
@@ -310,10 +310,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   }, {
     "key" : "seer_ssf1",
@@ -377,6 +377,6 @@
     } ]
   } ],
   "involved_tables" : [ "extranodal_extension_head_and_neck_pathological_87046", "neoadjuvant_therapy_37302", "nasopharynx_pharyngealtonsil_84756", "tumor_size_pathological_43328", "derived_grade_46639", "grade_post_therapy_path_41285", "grade_pathological_31963", "grade_post_therapy_clin_41222", "nodes_pos_fpa", "oropharyngeal_p16_44685", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "derived_ss2018_oropharynx_79318", "schema_selection_tongue_base", "combined_grade_56638", "behavior", "eod_mets_29252", "ss2018_oropharynx_excluding_melanoma_8720_8790_9999", "tumor_size_clinical_48894", "eod_regional_nodes_55756", "type_of_reporting_source_76696", "neoadj_tx_treatment_effect_18122", "p16_hpv_human_papilloma_virus_status_head_and_neck_509", "primary_site", "extranodal_extension_head_and_neck_clinical_79321", "year_dx_validation", "grade_clinical_73056", "summary_stage_rpa", "tumor_size_summary_47973", "ln_size_70140", "extension_bam" ],
-  "last_modified" : "2025-09-19T18:54:47.792Z",
+  "last_modified" : "2025-11-14T20:05:05.480Z",
   "on_invalid_input" : "CONTINUE"
 }

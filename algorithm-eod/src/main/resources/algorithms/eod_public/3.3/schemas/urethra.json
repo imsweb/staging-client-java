@@ -289,6 +289,6 @@
     } ]
   } ],
   "involved_tables" : [ "eod_mets_83665", "neoadjuvant_therapy_37302", "nodes_pos_fpa", "urethra_prostatic_urethra_30106", "neoadj_tx_clinical_response_31723", "grade_post_therapy_path_55848", "histology", "nodes_exam_76029", "schema_selection_urethra", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "seer_primary_tumor_94875", "derived_grade_84046", "type_of_reporting_source_76696", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "neoadj_tx_treatment_effect_18122", "primary_site", "derived_ss2018_urethra_73432", "grade_pathological_59975", "grade_post_therapy_clin_68213", "year_dx_validation", "summary_stage_rpa", "grade_clinical_91989", "ss2018_urethra_14363", "nodes_dbu" ],
-  "last_modified" : "2025-09-19T18:55:07.740Z",
+  "last_modified" : "2025-11-14T20:05:12.652Z",
   "on_invalid_input" : "CONTINUE"
 }

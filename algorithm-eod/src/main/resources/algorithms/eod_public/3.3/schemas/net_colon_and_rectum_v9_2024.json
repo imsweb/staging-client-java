@@ -285,6 +285,6 @@
     } ]
   } ],
   "involved_tables" : [ "nodes_dfe", "neoadjuvant_therapy_37302", "grade_post_therapy_clin_2541", "ss2018_colon_and_rectum_including_net_40538", "tumor_size_pathological_full_62176", "nodes_pos_fpa", "mets_hci", "neoadj_tx_clinical_response_31723", "ki_67_67661", "histology", "nodes_exam_76029", "extension_bfi", "derived_ss2018_colon_and_rectum_35271", "combined_grade_56638", "behavior", "tumor_size_clinical_full_74867", "type_of_reporting_source_76696", "grade_pathological_26086", "tumor_size_summary_full_31213", "neoadj_tx_treatment_effect_18122", "grade_post_therapy_path_76876", "primary_site", "grade_clinical_26768", "year_dx_validation", "summary_stage_rpa", "derived_grade_27440", "schema_selection_net_colon_and_rectum_v9_2024" ],
-  "last_modified" : "2025-09-19T18:54:51.913Z",
+  "last_modified" : "2025-11-14T20:05:57.514Z",
   "on_invalid_input" : "CONTINUE"
 }

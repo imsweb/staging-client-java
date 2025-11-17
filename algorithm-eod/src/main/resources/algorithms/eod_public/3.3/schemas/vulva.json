@@ -364,6 +364,6 @@
     } ]
   } ],
   "involved_tables" : [ "schema_selection_vulva", "ln_status_femoral_inguinal_13374", "nodes_dbb", "ln_status_pelvic_93438", "grade_post_therapy_clin_61658", "neoadjuvant_therapy_37302", "tumor_size_pathological_43328", "grade_clinical_6485", "nodes_pos_fpa", "derived_ss2018_vulva_47165", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "mets_hba", "lymph_nodes_assessment_method_femoral_46948", "extension_bbi", "combined_grade_56638", "behavior", "ss2018_vulva_49198", "tumor_size_clinical_48894", "grade_post_therapy_path_40048", "ln_assessment_method_pelvic_vulva_10928", "type_of_reporting_source_76696", "figo_stage_vulva_69787", "neoadj_tx_treatment_effect_18122", "lymph_node_laterality_65685", "primary_site", "grade_pathological_84704", "year_dx_validation", "derived_grade_69945", "summary_stage_rpa", "tumor_size_summary_47973" ],
-  "last_modified" : "2025-09-19T18:54:57.915Z",
+  "last_modified" : "2025-11-14T20:06:01.574Z",
   "on_invalid_input" : "CONTINUE"
 }

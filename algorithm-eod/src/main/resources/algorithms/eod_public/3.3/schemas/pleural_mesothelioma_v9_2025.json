@@ -36,6 +36,13 @@
     "table" : "behavior",
     "used_for_staging" : false
   }, {
+    "key" : "reporting_source",
+    "name" : "Type of Reporting Source",
+    "naaccr_item" : 500,
+    "naaccr_xml_id" : "typeOfReportingSource",
+    "table" : "type_of_reporting_source_76696",
+    "used_for_staging" : false
+  }, {
     "key" : "size_clin",
     "name" : "Tumor Size Clinical",
     "naaccr_item" : 752,
@@ -227,13 +234,6 @@
     }, {
       "name" : "SEER_REQUIRED"
     } ]
-  }, {
-    "key" : "reporting_source",
-    "name" : "Type of Reporting Source",
-    "naaccr_item" : 500,
-    "naaccr_xml_id" : "typeOfReportingSource",
-    "table" : "type_of_reporting_source_76696",
-    "used_for_staging" : false
   } ],
   "outputs" : [ {
     "key" : "naaccr_schema_id",
@@ -285,6 +285,6 @@
     } ]
   } ],
   "involved_tables" : [ "tumor_size_summary_full_15510", "neoadjuvant_therapy_37302", "derived_grade_46639", "eod_mets_v9_3184", "nodes_pos_fpa", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "pleural_effusion_40041", "schema_selection_pleural_mesothelioma_v9_2025", "combined_grade_56638", "behavior", "grade_post_therapy_path_yp_v9_717", "tumor_size_pathological_full_93442", "tumor_size_clinical_full_19656", "grade_clinical_v9_88505", "grade_pathological_v9_76065", "eod_regional_nodes_v9_57286", "eod_primary_tumor_v9_52408", "type_of_reporting_source_76696", "ss2018_pleura_60930", "grade_post_therapy_clin_yc_v9_85438", "neoadj_tx_treatment_effect_18122", "primary_site", "year_dx_validation", "summary_stage_rpa", "derived_ss2018_pleural_mesothelioma_74611" ],
-  "last_modified" : "2025-09-19T18:54:38.885Z",
+  "last_modified" : "2025-11-14T20:05:09.594Z",
   "on_invalid_input" : "CONTINUE"
 }

@@ -250,10 +250,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   }, {
     "key" : "ln_size_of_mets",
@@ -272,10 +272,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   }, {
     "key" : "seer_ssf1",
@@ -339,6 +339,6 @@
     } ]
   } ],
   "involved_tables" : [ "extranodal_extension_head_and_neck_pathological_87046", "neoadjuvant_therapy_37302", "tumor_size_pathological_43328", "derived_grade_46639", "grade_post_therapy_path_41285", "grade_pathological_31963", "grade_post_therapy_clin_41222", "nodes_pos_fpa", "schema_selection_hypopharynx", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "eod_mets_95518", "combined_grade_56638", "behavior", "extension_bar", "tumor_size_clinical_48894", "type_of_reporting_source_76696", "derived_ss2018_hypopharynx_33792", "neoadj_tx_treatment_effect_18122", "ss2018_hypopharynx_excluding_melanoma_8720_8790_copy_30010", "p16_hpv_human_papilloma_virus_status_head_and_neck_509", "primary_site", "extranodal_extension_head_and_neck_clinical_79321", "eod_regional_nodes_21853", "year_dx_validation", "grade_clinical_73056", "summary_stage_rpa", "tumor_size_summary_47973", "ln_size_70140" ],
-  "last_modified" : "2025-09-19T18:55:02.757Z",
+  "last_modified" : "2025-11-14T20:06:07.141Z",
   "on_invalid_input" : "CONTINUE"
 }

@@ -250,10 +250,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   }, {
     "key" : "high_risk_features",
@@ -270,10 +270,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   } ],
   "outputs" : [ {
@@ -326,6 +326,6 @@
     } ]
   } ],
   "involved_tables" : [ "nodes_pos_fah", "neoadjuvant_therapy_37302", "tumor_size_pathological_43328", "derived_grade_46639", "grade_post_therapy_path_41285", "eod_regional_nodes_7080", "grade_pathological_31963", "grade_post_therapy_clin_41222", "summary_stage_rac", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "combined_grade_56638", "behavior", "tumor_size_clinical_48894", "derived_ss2018_skin_except_eyelid_95559", "type_of_reporting_source_76696", "high_risk_features_73750", "schema_selection_cutaneous_squamous_cell_carcinoma_head_and_neck", "eod_mets_3742", "neoadj_tx_treatment_effect_18122", "primary_site", "ss2018_skin_other_56341", "perineural_invasion_84622", "year_dx_validation", "grade_clinical_73056", "ln_size_70140", "tumor_size_summary_47973", "seer_primary_tumor_9084" ],
-  "last_modified" : "2025-09-19T18:55:04.556Z",
+  "last_modified" : "2025-11-14T20:06:07.898Z",
   "on_invalid_input" : "CONTINUE"
 }

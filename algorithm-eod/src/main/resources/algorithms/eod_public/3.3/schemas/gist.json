@@ -305,6 +305,6 @@
     } ]
   } ],
   "involved_tables" : [ "kit_gene_immunohistochemistry_33220", "nodes_dfd", "neoadjuvant_therapy_37302", "grade_clinical_21060", "derived_grade_gist_82068", "primary_peritoneum_tumor_19475", "grade_post_therapy_path_83202", "tumor_size_pathological_full_62176", "nodes_pos_fpa", "mets_hch", "neoadj_tx_clinical_response_31723", "ss2018_gist_23534", "histology", "nodes_exam_76029", "grade_pathological_68805", "extension_bfh", "derived_ss2018_gist_48315", "grade_post_therapy_clin_93998", "neoadj_tx_treatment_effect_4391", "combined_grade_56638", "behavior", "tumor_size_clinical_full_74867", "type_of_reporting_source_76696", "tumor_size_summary_full_31213", "schema_selection_gist_appendix", "primary_site", "year_dx_validation", "summary_stage_rpa" ],
-  "last_modified" : "2025-09-19T18:55:08.878Z",
+  "last_modified" : "2025-11-14T20:05:11.315Z",
   "on_invalid_input" : "CONTINUE"
 }

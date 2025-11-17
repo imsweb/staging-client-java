@@ -234,10 +234,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   } ],
   "outputs" : [ {
@@ -290,6 +290,6 @@
     } ]
   } ],
   "involved_tables" : [ "extension_bfv", "neoadjuvant_therapy_37302", "grade_post_therapy_clin_27082", "tumor_size_pathological_43328", "derived_ss2018_retroperitoneum_11521", "nodes_pos_fpa", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "bone_invasion_96628", "neoadj_tx_treatment_effect_4391", "combined_grade_56638", "grade_pathological_19141", "grade_post_therapy_path_35393", "ss2018_soft_tissue_retroperitoneum_5644", "tumor_size_clinical_48894", "type_of_reporting_source_76696", "schema_selection_retroperitoneum", "grade_clinical_64933", "sex_assigned_at_birth_63290", "eod_mets_23953", "primary_site", "nodes_dfq", "derived_grade_48704", "year_dx_validation", "summary_stage_rpa", "tumor_size_summary_47973" ],
-  "last_modified" : "2025-09-19T18:54:53.224Z",
+  "last_modified" : "2025-11-14T20:05:18.969Z",
   "on_invalid_input" : "CONTINUE"
 }

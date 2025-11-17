@@ -295,6 +295,6 @@
     } ]
   } ],
   "involved_tables" : [ "neoadjuvant_therapy_37302", "tumor_size_pathological_43328", "ss2018_thyroid_33058", "schema_selection_thyroid", "nodes_pos_fpa", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "eod_mets_91154", "age_at_diagnosis_validation_65093", "combined_grade_56638", "grade_post_therapy_clin_95734", "thyroid_gland_thyroglossal_duct_21498", "behavior", "eod_regional_nodes_29442", "grade_clinical_standard_94331", "tumor_size_clinical_48894", "derived_grade_standard_1196", "type_of_reporting_source_76696", "neoadj_tx_treatment_effect_18122", "primary_site", "derived_ss2018_thyroid_44895", "year_dx_validation", "grade_pathological_standard_94268", "summary_stage_rpa", "seer_primary_tumor_6275", "grade_post_therapy_path_32110", "tumor_size_summary_47973" ],
-  "last_modified" : "2025-09-19T18:54:46.251Z",
+  "last_modified" : "2025-11-14T20:05:13.792Z",
   "on_invalid_input" : "CONTINUE"
 }

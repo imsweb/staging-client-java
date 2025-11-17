@@ -321,6 +321,6 @@
     } ]
   } ],
   "involved_tables" : [ "extranodal_extension_head_and_neck_pathological_87046", "neoadjuvant_therapy_37302", "grade_pathological_91031", "tumor_size_pathological_43328", "grade_clinical_73461", "nodes_pos_fpa", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "grade_post_therapy_path_yp_8036", "grade_post_therapy_clin_yc_31990", "combined_grade_56638", "behavior", "ss2018_major_salivary_glands_43893", "tumor_size_clinical_48894", "derived_grade_standard_1196", "type_of_reporting_source_76696", "eod_regional_nodes_36470", "derived_ss2018_major_salivary_glands_88669", "neoadj_tx_treatment_effect_18122", "primary_site", "extranodal_extension_head_and_neck_clinical_79321", "year_dx_validation", "summary_stage_rpa", "eod_primary_tumor_38280", "schema_selection_major_salivary_glands_v9_2026", "ln_size_70140", "tumor_size_summary_47973", "eod_mets_71734" ],
-  "last_modified" : "2025-09-19T18:54:56.201Z",
+  "last_modified" : "2025-11-14T20:06:03.929Z",
   "on_invalid_input" : "CONTINUE"
 }

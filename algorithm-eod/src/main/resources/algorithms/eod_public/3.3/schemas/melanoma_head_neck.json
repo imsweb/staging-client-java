@@ -250,10 +250,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   }, {
     "key" : "ln_size_of_mets",
@@ -272,10 +272,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   }, {
     "key" : "ln_hn_1_2_3",
@@ -292,10 +292,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   }, {
     "key" : "ln_hn_4_5",
@@ -312,10 +312,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   }, {
     "key" : "ln_hn_6_7",
@@ -332,10 +332,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   }, {
     "key" : "ln_hn_other",
@@ -352,10 +352,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   } ],
   "outputs" : [ {
@@ -408,6 +408,6 @@
     } ]
   } ],
   "involved_tables" : [ "extranodal_extension_head_and_neck_pathological_87046", "neoadjuvant_therapy_37302", "eod_mets_mucosal_head_and_neck_45697", "lymph_nodes_head_and_neck_levels_i_iii_19222", "ss2018_melanoma_head_and_neck_8720_8790_46168", "nodes_pos_fpa", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "seer_regional_nodes_91716", "tumor_size_summary_63115", "combined_grade_56638", "schema_selection_melanoma_buccal_mucosa", "behavior", "grade_post_therapy_clin_95734", "grade_clinical_standard_94331", "lymph_nodes_head_and_neck_other_31141", "derived_grade_standard_1196", "lymph_nodes_head_and_neck_levels_vi_vii_32325", "type_of_reporting_source_76696", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "neoadj_tx_treatment_effect_18122", "derived_ss2018_melanoma_head_and_neck_82003", "seer_primary_tumor_head_neck_melanoma_38698", "primary_site", "extranodal_extension_head_and_neck_clinical_79321", "grade_pathological_standard_94268", "year_dx_validation", "lymph_nodes_head_and_neck_levels_iv_v_55093", "summary_stage_rpa", "grade_post_therapy_path_32110", "ln_size_70140" ],
-  "last_modified" : "2025-09-19T18:54:57.025Z",
+  "last_modified" : "2025-11-14T20:06:06.338Z",
   "on_invalid_input" : "CONTINUE"
 }

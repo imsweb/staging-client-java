@@ -264,6 +264,6 @@
     } ]
   } ],
   "involved_tables" : [ "neoadjuvant_therapy_37302", "tumor_size_clinical_dna_64119", "grade_post_therapy_path_36935", "nodes_pos_fpa", "tumor_size_summary_dna_13275", "neoadj_tx_clinical_response_31723", "grade_post_therapy_clin_1647", "histology", "nodes_exam_76029", "mets_hna", "combined_grade_56638", "grade_pathological_40399", "tumor_size_pathological_dna_6742", "derived_ss2018_kaposi_sarcoma_84609", "type_of_reporting_source_76696", "derived_grade_71227", "neoadj_tx_treatment_effect_18122", "grade_clinical_41135", "primary_site", "ss2018_kaposi_sarcoma_17563", "year_dx_validation", "nodes_dby", "summary_stage_rpa", "schema_selection_kaposi_sarcoma", "extension_bcj" ],
-  "last_modified" : "2025-09-19T18:54:34.459Z",
+  "last_modified" : "2025-11-14T20:05:43.353Z",
   "on_invalid_input" : "CONTINUE"
 }

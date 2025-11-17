@@ -238,10 +238,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   } ],
   "outputs" : [ {
@@ -294,6 +294,6 @@
     } ]
   } ],
   "involved_tables" : [ "tumor_size_summary_full_15510", "neoadjuvant_therapy_37302", "schema_discriminator_2_15990", "seer_primary_tumor_53926", "eod_mets_33408", "grade_post_therapy_path_36935", "nodes_pos_fpa", "neoadj_tx_clinical_response_31723", "grade_post_therapy_clin_1647", "histology", "nodes_exam_76029", "schema_selection_heart_mediastinum", "bone_invasion_96628", "neoadj_tx_treatment_effect_4391", "combined_grade_56638", "ss2018_soft_tissue_31311", "tumor_size_pathological_full_93442", "tumor_size_clinical_full_19656", "derived_ss2018_soft_tissue_and_sarcomas_99149", "grade_pathological_40399", "type_of_reporting_source_76696", "derived_grade_71227", "grade_clinical_41135", "primary_site", "year_dx_validation", "seer_regional_nodes_19661", "summary_stage_rpa" ],
-  "last_modified" : "2025-09-19T18:55:13.745Z",
+  "last_modified" : "2025-11-14T20:06:09.583Z",
   "on_invalid_input" : "CONTINUE"
 }

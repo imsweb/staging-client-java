@@ -6,7 +6,7 @@
   "title" : "Oncotype Dx Recurrence Score - DCIS",
   "description" : "Oncotype Dx Recurrence Score-DCIS is a numeric score of a genomic test to predict the likelihood of distant recurrence of invasive breast cancer based on the assessment of 21 genes.\n\nThe Oncotype DX DCIS score is a genomic test that estimates the likelihood of local recurrence (DCIS or invasive) for a patient with DCIS.  The results may be used clinically to evaluate benefits of radiation therapy following surgery.",
   "notes" : "**Note 1:** **Physician statement**\n* Physician statement of Oncotype Dx Recurrence Score-DCIS can be used to code this data item when no other is available.\n\n**Note 2:** **Type of Test**\n* Record only the results of an Oncotype Dx-DCIS recurrence score in this data item. If some other test is used for scoring, assign code XX9.\n\n**Note 3:** **Multiple tests, multiple results**\n* In cases where Oncotype Dx-DCIS is reported on more than one in situ breast tumor specimen, record the highest value.\n\n**Note 4:** **Related data item** \n* Code this data item using the same report used to record the related data item 3905: Oncotype Dx Risk Level-DCIS.",
-  "last_modified" : "2025-02-24T14:52:14.338Z",
+  "last_modified" : "2025-11-06T19:57:41.681Z",
   "definition" : [ {
     "key" : "oncotype_dx_score_dcis",
     "name" : "Code",
@@ -18,6 +18,6 @@
   } ],
   "rows" : [ [ "000-100", "Enter actual recurrence score between 0 and 100" ], [ "XX6", "Not applicable, invasive case" ], [ "XX7", "Test ordered, results not in chart" ], [ "XX8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code XX8 will result in an edit error.)" ], [ "XX9", "Not documented in medical record\nOncotype Dx recurrence score-DCIS not assessed or unknown if assessed" ] ],
   "additional_info" : "**Source documents:** Oncotype Dx DCIS laboratory report, other statements in medical record",
-  "coding_guidelines" : "**1)** **Code 01-100** for the actual recurrence score\n* The actual recurrence score takes priority over codes XX4 and XX5\n\n**2)** **Code XX6** if the case is invasive (/3)\n**3)** **Code XX7** If the only information available is the Oncotype Dx-DCIS Risk Level\n**4)** **Code XX9** when Oncotype DX recurrence score\n* LCIS tumors\n* Cannot be determined by the pathologist (e.g., inadequate specimen)\n* It is unknown whether the Oncotype DX recurrence-DCIS score test was performed\n* The patient has only a clinical diagnosis of breast cancer (no tissue diagnosis)",
+  "coding_guidelines" : "**1)** **Code 01-100** for the actual recurrence score\n* The actual recurrence score takes priority over codes XX4 and XX5\n\n**2)** **Code XX6** if the case is invasive (/3)\n\n**3)** **Code XX7** If the only information available is the Oncotype Dx-DCIS Risk Level\n\n**4)** **Code XX9** when Oncotype DX recurrence score\n* LCIS tumors\n* Cannot be determined by the pathologist (e.g., inadequate specimen)\n* It is unknown whether the Oncotype DX recurrence-DCIS score test was performed\n* The patient has only a clinical diagnosis of breast cancer (no tissue diagnosis)",
   "rationale" : "Oncotype Dx Recurrence Score-DCIS is a Registry Data Collection Variable in AJCC. It is a new data item for cases diagnosed 1/1/2018+."
 }

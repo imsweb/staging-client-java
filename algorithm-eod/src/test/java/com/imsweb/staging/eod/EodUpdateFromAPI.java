@@ -13,7 +13,7 @@ import com.imsweb.staging.updater.UpdaterUtils;
 public class EodUpdateFromAPI {
 
     public static void main(String[] args) throws IOException {
-        UpdaterUtils.update("eod", "3.3", new HashSet<>(Collections.singletonList("STAGING")), Paths.get("c:/tmp"));
+        UpdaterUtils.update("eod", "3.3", new HashSet<>(Collections.singletonList("STAGING")), Paths.get("c:/dev/tmp"));
     }
 
 }

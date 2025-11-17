@@ -6,7 +6,7 @@
   "title" : "HER2 IHC Summary",
   "description" : "HER2 IHC Summary is the summary score for HER2 testing by IHC.\n\nThe simplest test used is the IHC (immunohistochemistry). An immunohistochemistry (IHC) test identifies the protein expressed by the gene (ERBB2), and an in-situ hybridization (ISH) test identifies the number of copies of the gene (ERBB2) itself. If the IHC test is borderline or indeterminate, an ISH (in situ hybridization) test may be performed. \n\nReporting Results of HER2 Testing by Immunohistochemistry (IHC)\n* Negative (Score 0): No staining observed or incomplete, faint/barely perceptible membrane staining in ≤10% of invasive tumor cells\n* Negative (Score 1+): Incomplete, faint/barely perceptible membrane staining in >10% of invasive tumor cells\n* Equivocal (Score 2+): Incomplete and/or weak to moderate circumferential membrane staining in >10% of invasive tumor cells or complete, intense, circumferential membrane staining in ≤10% of invasive tumor cells\n* Positive (Score 3+): Complete, intense, circumferential membrane staining in >10% of invasive tumor cells",
   "notes" : "**Note 1:** This SSDI is no longer required by any of the standard setters starting with 2021 diagnoses. \n* For cases diagnosed 2021+, this SSDI may be left blank\n\n**Note 2:** Physician statement of HER2 IHC Summary can be used to code this data item when no other information is available.\n\n**Note 3:** The HER2 IHC test performed on the primary breast tissue is to be recorded in this data item. \n\n**Note 4:** A 2+ (equivocal) finding by IHC should result in additional testing with ISH to determine gene copy number.\n\n**Note 5:** Do not use results from the following tests to record HER2 \n  * MammaPrint\n  * EndoPredict\n  * PAM 50 (Prosigna)\n  * Any other test that records HER2",
-  "last_modified" : "2024-03-28T19:51:11.442Z",
+  "last_modified" : "2025-11-05T21:00:44.030Z",
   "definition" : [ {
     "key" : "her2_ihc_summary",
     "name" : "Code",
@@ -17,6 +17,6 @@
     "type" : "DESCRIPTION"
   } ],
   "rows" : [ [ "0", "Negative (Score 0)" ], [ "1", "Negative (Score 1+)" ], [ "2", "Equivocal (Score 2+)\nStated as equivocal\nBorderline" ], [ "3", "Positive (Score 3+)\nStated as positive" ], [ "4", "Stated as negative, but score not stated " ], [ "7", "Test ordered, results not in chart" ], [ "8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code 8 will result in an edit error.)" ], [ "9", "Not documented in medical record\nCannot be determined (indeterminate)\nHER2 IHC Summary not assessed or unknown if assessed" ], [ "", "May be blank if diagnosis year is after 2020" ] ],
-  "additional_info" : "* **Source documents:** pathology report\n* **For further information,** refer to the **Breast Biomarker Reporting** cancer protocols published by the College of American Pathologists for the AJCC Staging System *Breast*",
+  "additional_info" : "* **Source documents:** pathology report\n* **For further information,** refer to the **Breast Biomarker Reporting** cancer protocols published by the College of American Pathologists for the AJCC Staging System *Breast*.",
   "rationale" : "HER2 IHC Summary is a Registry Data Collection Variable in AJCC. It is a new data item for cases diagnosed 1/1/2018+."
 }

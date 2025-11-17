@@ -269,6 +269,6 @@
     } ]
   } ],
   "involved_tables" : [ "schema_selection_net_adrenal_gland", "neoadjuvant_therapy_37302", "tumor_size_pathological_43328", "nodes_pos_fpa", "neoadj_tx_clinical_response_31723", "eod_regional_nodes_97333", "histology", "nodes_exam_76029", "combined_grade_56638", "grade_post_therapy_clin_95734", "behavior", "seer_mets_21628", "grade_clinical_standard_94331", "derived_ss2018_adrenal_gland_258", "tumor_size_clinical_48894", "derived_grade_standard_1196", "type_of_reporting_source_76696", "ss2018_adrenal_gland_including_net_adrenal_70096", "neoadj_tx_treatment_effect_18122", "seer_primary_tumor_52444", "primary_site", "year_dx_validation", "grade_pathological_standard_94268", "summary_stage_rpa", "grade_post_therapy_path_32110", "tumor_size_summary_47973" ],
-  "last_modified" : "2025-09-19T18:55:09.768Z",
+  "last_modified" : "2025-11-14T20:05:21.084Z",
   "on_invalid_input" : "CONTINUE"
 }

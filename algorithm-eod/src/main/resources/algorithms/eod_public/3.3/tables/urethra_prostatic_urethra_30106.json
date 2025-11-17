@@ -5,8 +5,8 @@
   "name" : "Schema Discriminator 1",
   "title" : "Schema Discriminator 1: Urethra/Prostatic Urethra",
   "description" : "Urethra (male and female) and prostatic urethra have the same ICD-O topography code (C680). However, for purposes of stage grouping AJCC 8th edition, they each have different definitions for T or primary tumor extension. A schema discriminator is necessary to distinguish between these primary sites so that the appropriate sub(chapter)/schema is used.",
-  "notes" : "**Note:** **Schema discriminator for C680** \n* A schema discriminator is used to discriminate between urethra (male and female) and prostatic urethra. Code the site in which the tumor arose.\n\n  • **Urethra: Male Penile Urethra and Female Urethra (see code 1)**\n   * Subsites include Urethra, NOS, Urethral Gland, Cowper gland\n\n  • **Urethra: Prostatic Urethra (see code 2)**\n   * Subsites include Prostatic urethra, Prostatic utricle",
-  "last_modified" : "2024-04-30T19:22:02.284Z",
+  "notes" : "**Note:** **Schema discriminator for C680** \n* A schema discriminator is used to discriminate between urethra (male and female) and prostatic urethra. Code the site in which the tumor arose.\n\n* **Urethra: Male Penile Urethra and Female Urethra (see code 1)**  \n\n     Subsites include Urethra, NOS, Urethral Gland, Cowper gland\n\n* **Urethra: Prostatic Urethra (see code 2)**\n\n     Subsites include Prostatic urethra, Prostatic utricle",
+  "last_modified" : "2025-11-06T21:25:02.755Z",
   "definition" : [ {
     "key" : "discriminator_1",
     "name" : "Code",

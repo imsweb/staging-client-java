@@ -5,8 +5,8 @@
   "name" : "Schema Discriminator 1",
   "title" : "Schema Discriminator 1: Melanoma Ciliary Body/Melanoma Iris",
   "description" : "Iris and ciliary body have the same ICD-O topography code (C694). However, for purposes of stage grouping AJCC 8th edition, they each have different definitions for T or primary tumor extension. A schema discriminator is necessary to distinguish between these primary sites so that the appropriate sub(chapter)/schema is used.",
-  "notes" : "**Note:** **Schema discriminator for C694** \n* A schema discriminator is used to discriminate between melanoma tumors with primary site code C694: Ciliary Body/Iris. Code the site in which the tumor arose. \n* **00672: Melanoma Ciliary Body (see code 1)**\nSubsites include Ciliary body, crystalline lens, sclera, uveal tract, intraocular, eyeball\n* **00671: Melanoma Iris (see code 2)**\nSubsite includes Iris",
-  "last_modified" : "2024-04-30T19:08:01.698Z",
+  "notes" : "**Note:** **Schema discriminator for C694** \n\n* A schema discriminator is used to discriminate between melanoma tumors with primary site code C694: Ciliary Body/Iris. Code the site in which the tumor arose. \n\n* **00672: Melanoma Ciliary Body (see code 1)**\n\n     Subsites include Ciliary body, crystalline lens, sclera, uveal tract, intraocular, eyeball\n\n* **00671: Melanoma Iris (see code 2)**\n\n     Subsite includes Iris",
+  "last_modified" : "2025-11-06T21:24:29.631Z",
   "definition" : [ {
     "key" : "discriminator_1",
     "name" : "Code",

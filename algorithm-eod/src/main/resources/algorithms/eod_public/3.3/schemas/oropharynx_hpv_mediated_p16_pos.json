@@ -288,6 +288,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
+      "end" : 2023
+    }, {
+      "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
+      "start" : 2024,
       "end" : 2025
     } ]
   }, {
@@ -369,6 +373,6 @@
     } ]
   } ],
   "involved_tables" : [ "extranodal_extension_head_and_neck_pathological_87046", "neoadjuvant_therapy_37302", "schema_selection_oropharynx", "nasopharynx_pharyngealtonsil_84756", "tumor_size_pathological_43328", "nodes_pos_fpa", "oropharyngeal_p16_44685", "eod_mets_80017", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "derived_ss2018_oropharynx_79318", "combined_grade_56638", "behavior", "nodes_dcu", "grade_post_therapy_clin_95734", "grade_clinical_standard_94331", "extension_bap", "ss2018_oropharynx_excluding_melanoma_8720_8790_9999", "tumor_size_clinical_48894", "derived_grade_standard_1196", "type_of_reporting_source_76696", "neoadj_tx_treatment_effect_18122", "p16_hpv_human_papilloma_virus_status_head_and_neck_509", "primary_site", "extranodal_extension_head_and_neck_clinical_79321", "grade_pathological_standard_94268", "year_dx_validation", "summary_stage_rpa", "grade_post_therapy_path_32110", "tumor_size_summary_47973", "ln_size_70140" ],
-  "last_modified" : "2025-09-19T18:54:53.527Z",
+  "last_modified" : "2025-11-14T20:06:05.897Z",
   "on_invalid_input" : "CONTINUE"
 }

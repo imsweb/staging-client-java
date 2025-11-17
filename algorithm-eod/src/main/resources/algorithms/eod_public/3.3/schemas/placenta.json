@@ -233,10 +233,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   }, {
     "key" : "gestational_prog_index",
@@ -306,6 +306,6 @@
     } ]
   } ],
   "involved_tables" : [ "mets_hak", "neoadjuvant_therapy_37302", "derived_ss2018_placenta_6507", "nodes_dfm", "nodes_exam_dna_95635", "schema_selection_placenta", "neoadj_tx_clinical_response_31723", "histology", "figo_stage_placenta_73452", "tumor_size_summary_63115", "combined_grade_56638", "grade_post_therapy_clin_95734", "behavior", "extension_bbm", "grade_clinical_standard_94331", "derived_grade_standard_1196", "ss2018_placenta_66365", "type_of_reporting_source_76696", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "neoadj_tx_treatment_effect_18122", "primary_site", "gestational_prog_index_28647", "year_dx_validation", "grade_pathological_standard_94268", "summary_stage_rpa", "grade_post_therapy_path_32110", "nodes_pos_dna_91511" ],
-  "last_modified" : "2025-09-19T18:55:12.525Z",
+  "last_modified" : "2025-11-14T20:06:14.492Z",
   "on_invalid_input" : "CONTINUE"
 }

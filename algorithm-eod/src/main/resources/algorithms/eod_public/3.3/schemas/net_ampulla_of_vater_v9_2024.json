@@ -285,6 +285,6 @@
     } ]
   } ],
   "involved_tables" : [ "neoadjuvant_therapy_37302", "grade_post_therapy_clin_2541", "eod_primary_tumor_55521", "nodes_pos_fpa", "neoadj_tx_clinical_response_31723", "ki_67_67661", "histology", "nodes_exam_76029", "tumor_size_summary_63115", "derived_ss2018_ampulla_of_vater_2679", "combined_grade_56638", "behavior", "ss2018_ampulla_of_vater_including_net_96311", "type_of_reporting_source_76696", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "eod_mets_88527", "grade_pathological_26086", "neoadj_tx_treatment_effect_18122", "grade_post_therapy_path_76876", "primary_site", "grade_clinical_26768", "schema_selection_net_ampulla_of_vater_v9_2024", "year_dx_validation", "summary_stage_rpa", "eod_regional_nodes_48374", "derived_grade_27440" ],
-  "last_modified" : "2025-09-19T18:54:44.831Z",
+  "last_modified" : "2025-11-14T20:05:09.154Z",
   "on_invalid_input" : "CONTINUE"
 }
