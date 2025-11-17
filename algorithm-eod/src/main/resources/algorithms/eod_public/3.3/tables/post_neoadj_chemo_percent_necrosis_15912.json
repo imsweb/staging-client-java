@@ -6,7 +6,7 @@
   "title" : "Percent Necrosis Post Neoadjuvant",
   "description" : "Percent Necrosis Post Neoadjuvant is a prognostic factor for bone sarcomas. \n\nFor osteosarcoma and Ewing’s sarcoma/PNET, response to neoadjuvant chemotherapy is a prognostic factor.  Patients with more than 90% tumor necrosis have a more favorable prognosis than those with less response.  The CAP protocol for bone tumor resection provides the pathologist with specific instructions for determining the percentage of tumor necrosis.  A separate method (system of Picci) may describe response to treatment in grades: grade I (macroscopic viable tumor), grade II (microscopic viable tumor), or grade III (no viable tumor).  Do not code the Picci grade system in this data item.",
   "notes" : "**Note:** **Physician Statement** \n* Physician statement of microscopically confirmed Percent Necrosis Post Neoadjuvant Chemotherapy can be used to code this data item if no other documentation is available.",
-  "last_modified" : "2025-04-09T14:10:29.289Z",
+  "last_modified" : "2025-11-05T20:46:50.873Z",
   "definition" : [ {
     "key" : "post_neoadj_chemo_percent_necrosis",
     "name" : "Code",
@@ -17,7 +17,7 @@
     "type" : "DESCRIPTION"
   } ],
   "rows" : [ [ "0.0", "Tumor necrosis not identified/not present" ], [ "0.1-100.0", "0.1 - 100.0 percent tumor necrosis\n(Percentage of tumor necrosis to nearest tenth of a percent)" ], [ "XXX.2", "Tumor necrosis present, percent not stated" ], [ "XXX.8", "Not applicable:  Information not collected for this case\nIf this item is required by your standard setter, use of code XXX.8 will result in an edit error." ], [ "XXX.9", "Not documented in medical record\nNo histologic examined of primary site\nNo neoadjuvant therapy\nNo surgical resection of primary site is performed" ] ],
-  "additional_info" : "**Source documents:** pathology report\n\n**Other names include** Histologic treatment response, therapy response, chemotherapy effect\n\n**For further information**, refer to the **Bone** cancer protocol published by the College of American Pathologists for the AJCC Staging System *Bone*",
+  "additional_info" : "**Source documents:** pathology report\n\n**Other names include** Histologic treatment response, therapy response, chemotherapy effect\n\n**For further information**, refer to the **Bone** cancer protocol published by the College of American Pathologists for the AJCC Staging System *Bone*.",
   "coding_guidelines" : "**1)** Record the highest percentage value of the tumor necrosis post neo-adjuvant therapy as stated by the pathologist or in the pathology report.\n* Code the value of the tumor necrosis to the nearest tenth of a percent\n\n**2)** **Codes 001.0-100.0**. Record the percentage value of tumor necrosis post neo-adjuvant chemotherapy as stated by the pathologist in the pathology report\n\n**3)** **Code XXX.9** when\n* Surgical resection of the primary site is the initial therapy; therefore, no neoadjuvant therapy was performed\n* Surgical resection of the primary site after neoadjuvant therapy is performed and there is no mention of percent necrosis",
   "rationale" : "Percent Necrosis Post Neoadjuvant is a Registry Data Collection Variable for AJCC.  It was previously collected as Bone, CS SSF #3."
 }

@@ -4,7 +4,7 @@
   "version" : "3.3",
   "name" : "Schema Selection LarynxSupraglottic",
   "title" : "Schema selection for LarynxSupraglottic",
-  "last_modified" : "2025-09-15T19:35:40.982Z",
+  "last_modified" : "2025-09-26T19:33:45.012Z",
   "definition" : [ {
     "key" : "site",
     "name" : "Primary Site",
@@ -14,9 +14,13 @@
     "name" : "Histology",
     "type" : "INPUT"
   }, {
+    "key" : "year_dx",
+    "name" : "Year of Diagnosis",
+    "type" : "INPUT"
+  }, {
     "key" : "result",
     "name" : "Result",
     "type" : "ENDPOINT"
   } ],
-  "rows" : [ [ "C101,C321", "8000-8700", "MATCH" ] ]
+  "rows" : [ [ "C321", "8000-8700", "*", "MATCH" ], [ "C101", "8000-8700", "2018-2025", "MATCH" ] ]
 }

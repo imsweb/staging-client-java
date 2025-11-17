@@ -342,7 +342,7 @@
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     } ]
   } ],
   "outputs" : [ {
@@ -395,6 +395,6 @@
     } ]
   } ],
   "involved_tables" : [ "neoadjuvant_therapy_37302", "tumor_size_pathological_43328", "ss2018_liver_84469", "derived_grade_46639", "grade_post_therapy_path_41285", "grade_pathological_31963", "grade_post_therapy_clin_41222", "nodes_pos_fpa", "mets_haf", "extension_bbc", "derived_ss2018_liver_13967", "neoadj_tx_clinical_response_31723", "afp_pretx_lab_value_25871", "fibrosis_score_38658", "histology", "nodes_exam_76029", "bilirubin_pretx_unit_98627", "inr_prothrombin_time_6158", "combined_grade_56638", "behavior", "nodes_dau", "bilirubin_pretx_lab_value_68660", "schema_selection_liver", "tumor_size_clinical_48894", "type_of_reporting_source_76696", "creatinine_pretx_lab_value_56869", "afp_pretx_interpretation_66147", "neoadj_tx_treatment_effect_18122", "primary_site", "year_dx_validation", "grade_clinical_73056", "summary_stage_rpa", "tumor_size_summary_47973", "creatinine_pretx_unit_26973" ],
-  "last_modified" : "2025-09-19T18:54:48.098Z",
+  "last_modified" : "2025-11-14T20:05:18.214Z",
   "on_invalid_input" : "CONTINUE"
 }

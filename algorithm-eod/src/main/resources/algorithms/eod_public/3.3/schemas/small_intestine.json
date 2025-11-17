@@ -269,6 +269,6 @@
     } ]
   } ],
   "involved_tables" : [ "neoadjuvant_therapy_37302", "derived_grade_46639", "grade_post_therapy_path_41285", "grade_pathological_31963", "grade_post_therapy_clin_41222", "nodes_pos_fpa", "neoadj_tx_clinical_response_31723", "derived_ss2018_small_intestine_48854", "histology", "schema_selection_small_intestine", "nodes_exam_76029", "extension_bbe", "nodes_daw", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "ss2018_small_intestine_including_net_85335", "mets_hbo", "type_of_reporting_source_76696", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "neoadj_tx_treatment_effect_18122", "primary_site", "year_dx_validation", "grade_clinical_73056", "summary_stage_rpa" ],
-  "last_modified" : "2025-09-19T18:54:41.789Z",
+  "last_modified" : "2025-11-14T20:05:41.143Z",
   "on_invalid_input" : "CONTINUE"
 }

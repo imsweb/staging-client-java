@@ -269,6 +269,6 @@
     } ]
   } ],
   "involved_tables" : [ "neoadjuvant_therapy_37302", "schema_selection_pharynx_other", "derived_ss2018_pharynx_other_63252", "nodes_pos_fpa", "grade_post_therapy_clin_69737", "seer_mets_sinus_othervs2_15755", "extension_bdd", "neoadj_tx_clinical_response_31723", "nodes_daq", "histology", "nodes_exam_76029", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "grade_clinical_standard_non_ajcc_32473", "grade_pathological_standard_non_ajcc_5627", "derived_grade_standard_non_ajcc_63932", "type_of_reporting_source_76696", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "neoadj_tx_treatment_effect_18122", "primary_site", "ss2018_pharynx_nos_excluding_melanoma_8720_8790_3303", "grade_post_therapy_path_75348", "year_dx_validation", "summary_stage_rpa" ],
-  "last_modified" : "2025-09-19T18:54:33.921Z",
+  "last_modified" : "2025-11-14T20:05:14.258Z",
   "on_invalid_input" : "CONTINUE"
 }

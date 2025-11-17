@@ -269,6 +269,6 @@
     } ]
   } ],
   "involved_tables" : [ "neoadjuvant_therapy_37302", "eod_mets_25281", "nodes_pos_fpa", "nodes_dbe", "neoadj_tx_clinical_response_31723", "grade_post_therapy_path_55848", "histology", "nodes_exam_76029", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "extension_bbn", "derived_grade_84046", "schema_selection_kidney_renal_pelvis", "derived_ss2018_kidney_renal_pelvis_4595", "type_of_reporting_source_76696", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "neoadj_tx_treatment_effect_18122", "primary_site", "grade_pathological_59975", "grade_post_therapy_clin_68213", "year_dx_validation", "summary_stage_rpa", "grade_clinical_91989", "ss2018_kidney_renal_pelvis_29650" ],
-  "last_modified" : "2025-09-19T18:55:08.615Z",
+  "last_modified" : "2025-11-14T20:05:49.319Z",
   "on_invalid_input" : "CONTINUE"
 }

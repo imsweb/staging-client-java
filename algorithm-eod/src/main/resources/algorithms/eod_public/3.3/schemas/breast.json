@@ -384,7 +384,7 @@
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     } ]
   }, {
     "key" : "multigene_signature_method",
@@ -401,7 +401,7 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     } ]
   }, {
     "key" : "multigene_signature_result",
@@ -418,7 +418,7 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     } ]
   }, {
     "key" : "response_neoadjuv_therapy",
@@ -457,7 +457,7 @@
     "key" : "rcb_class",
     "name" : "RCB Class",
     "naaccr_item" : 1179,
-    "naaccr_xml_id" : "rcbClass",
+    "naaccr_xml_id" : "residualCancerBurdenClass",
     "default" : "8",
     "table" : "rcb_class_750",
     "used_for_staging" : false,
@@ -490,7 +490,7 @@
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     } ]
   }, {
     "key" : "oncotype_dx_risk_level_dcis",
@@ -511,7 +511,7 @@
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     } ]
   }, {
     "key" : "er_allred_score",
@@ -719,6 +719,6 @@
     } ]
   } ],
   "involved_tables" : [ "neoadjuvant_therapy_37302", "her2_ish_sp_copy_no_95955", "er_percent_positive_61867", "oncotype_dx_recur_score_73667", "grade_post_therapy_clin_88214", "her2_ish_summary_40783", "grade_pathological_47031", "schema_selection_breast", "ss2018_breast_69079", "neoadj_tx_clinical_response_31723", "histology", "sentinel_nodes_pos_95909", "rcb_class_750", "nodes_exam_76029", "nodes_pos_fab", "er_summary_44166", "her2_summary_30512", "her2_ish_dp_copy_no_89821", "tumor_size_clinical_breast_34385", "combined_grade_breast_8723", "her2_ish_dual_probe_ration_4635", "nodes_daj", "type_of_reporting_source_76696", "her2_ihc_summary_57693", "pr_allred_score_83938", "sentinel_nodes_exam_7235", "summary_stage_rpa", "extension_bak", "tumor_size_pathological_breast_85445", "pr_summary_49534", "oncotype_dx_risk_level_11033", "multigene_signature_result_37000", "derived_ss2018_breast_7622", "ki67_8355", "oncotype_dx_recurrence_score_dcis_70549", "grade_post_therapy_path_47044", "response_to_neoadjuvant_therapy_57695", "er_allred_score_36612", "grade_clinical_91491", "pr_percent_positive_94563", "mets_hau", "behavior", "neoadj_tx_treatment_effect_34708", "multigene_signature_method_85043", "behavior_with_primary_tumor_for_ss2018_t_69793", "derived_grade_76001", "primary_site", "number_of_positive_ipsilateral_level_i_ii_axillary_lymph_nodes_79439", "tumor_size_summary_breast_14624", "year_dx_validation", "oncotype_dx_risk_level_dcis_53080", "residual_cancer_burden_62520" ],
-  "last_modified" : "2025-09-19T18:54:57.644Z",
+  "last_modified" : "2025-11-14T20:06:13.255Z",
   "on_invalid_input" : "CONTINUE"
 }

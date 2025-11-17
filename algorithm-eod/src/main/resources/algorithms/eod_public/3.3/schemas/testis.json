@@ -282,10 +282,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   }, {
     "key" : "hcg_pre_orch_lab_value",
@@ -317,10 +317,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   }, {
     "key" : "ldh_pre_orch_range",
@@ -337,10 +337,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   }, {
     "key" : "afp_post_orch_lab_value",
@@ -372,10 +372,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   }, {
     "key" : "hcg_post_orch_lab_value",
@@ -407,10 +407,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   }, {
     "key" : "ldh_post_orch_range",
@@ -427,10 +427,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   } ],
   "outputs" : [ {
@@ -483,6 +483,6 @@
     } ]
   } ],
   "involved_tables" : [ "neoadjuvant_therapy_37302", "nodes_pos_fpa", "nodes_ddf", "neoadj_tx_clinical_response_31723", "derived_ss2018_testis_36736", "histology", "ldh_pre_orchiectomy_range_42762", "nodes_exam_76029", "extension_bdh", "hcg_post_orchiectomy_range_92334", "schema_selection_testis", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "grade_post_therapy_clin_95734", "s_category_pathologic_34448", "grade_clinical_standard_94331", "ldh_post_orchiectomy_range_38574", "derived_grade_standard_1196", "mets_hbb", "type_of_reporting_source_76696", "hcg_pre_orchiectomy_lab_value_55584", "afp_pre_orchiectomy_lab_value_94162", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "afp_pre_orchiectomy_range_11386", "neoadj_tx_treatment_effect_18122", "s_category_clinical_19191", "primary_site", "hcg_post_orchiectomy_lab_value_13834", "hcg_pre_orchiectomy_range_67679", "afp_post_orchiectomy_range_84758", "grade_pathological_standard_94268", "afp_post_orchiectomy_lab_value_90733", "year_dx_validation", "summary_stage_rpa", "grade_post_therapy_path_32110", "ss2018_testis_82848" ],
-  "last_modified" : "2025-09-19T18:54:36.794Z",
+  "last_modified" : "2025-11-14T20:05:51.551Z",
   "on_invalid_input" : "CONTINUE"
 }

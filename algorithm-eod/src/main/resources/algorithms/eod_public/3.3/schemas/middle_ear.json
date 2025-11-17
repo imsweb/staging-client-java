@@ -269,6 +269,6 @@
     } ]
   } ],
   "involved_tables" : [ "neoadjuvant_therapy_37302", "ss2018_middle_ear_16857", "nodes_pos_fpa", "grade_post_therapy_clin_69737", "seer_mets_sinus_othervs2_15755", "schema_selection_middle_ear", "neoadj_tx_clinical_response_31723", "nodes_daq", "derived_ss2018_middle_ear_38870", "histology", "nodes_exam_76029", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "extension_bcr", "grade_clinical_standard_non_ajcc_32473", "grade_pathological_standard_non_ajcc_5627", "derived_grade_standard_non_ajcc_63932", "type_of_reporting_source_76696", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "neoadj_tx_treatment_effect_18122", "primary_site", "grade_post_therapy_path_75348", "year_dx_validation", "summary_stage_rpa" ],
-  "last_modified" : "2025-09-19T18:54:51.644Z",
+  "last_modified" : "2025-11-14T20:05:16.920Z",
   "on_invalid_input" : "CONTINUE"
 }

@@ -275,6 +275,6 @@
     } ]
   } ],
   "involved_tables" : [ "neoadjuvant_therapy_37302", "derived_ss2018_ill_defined_other_41227", "occult_head_and_neck_lymph_nodes_10277", "nodes_exam_dna_95635", "grade_post_therapy_clin_69737", "schema_selection_ill_defined_other", "neoadj_tx_clinical_response_31723", "histology", "mets_hna", "tumor_size_summary_63115", "combined_grade_56638", "nodes_dna", "grade_clinical_standard_non_ajcc_32473", "extension_bna", "grade_pathological_standard_non_ajcc_5627", "derived_grade_standard_non_ajcc_63932", "tumor_size_pathological_25597", "summary_stage_lymphoma_25139", "tumor_size_clinical_60979", "primary_site", "grade_post_therapy_path_75348", "neoadj_tx_treatment_effect_52725", "year_dx_validation", "ss2018_ill_defined_18664", "nodes_pos_dna_91511" ],
-  "last_modified" : "2025-09-19T18:54:42.095Z",
+  "last_modified" : "2025-11-14T20:05:16.583Z",
   "on_invalid_input" : "CONTINUE"
 }

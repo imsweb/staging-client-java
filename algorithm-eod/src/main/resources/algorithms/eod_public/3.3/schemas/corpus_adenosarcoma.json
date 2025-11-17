@@ -226,10 +226,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   }, {
     "key" : "num_pos_pelvic_nodes",
@@ -357,6 +357,6 @@
     } ]
   } ],
   "involved_tables" : [ "peritoneal_cytology_with_primary_tumor_for_ss2018_t_19664", "neoadjuvant_therapy_37302", "number_of_postive_pelvic_nodes_94512", "nodes_pos_fpa", "derived_ss2018_corpus_sarcoma_68247", "nodes_dfh", "eod_mets_26533", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "grade_post_therapy_clin_72770", "grade_post_therapy_path_48957", "tumor_size_summary_63115", "extension_bfl", "combined_grade_56638", "peritoneal_cytology_38674", "number_of_positive_para_aortic_nodes_62533", "ss2018_corpus_sarcoma_75896", "schema_selection_corpus_adenosarcoma", "figo_stage_corpus_adenosarcoma_24886", "derived_grade_91894", "type_of_reporting_source_76696", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "grade_clinical_24620", "grade_pathological_40052", "neoadj_tx_treatment_effect_18122", "primary_site", "number_of_examined_para_aortic_nodes_38078", "number_of_examined_pelvic_nodes_60771", "year_dx_validation", "summary_stage_rpa" ],
-  "last_modified" : "2025-09-19T18:55:10.656Z",
+  "last_modified" : "2025-11-14T20:05:26.876Z",
   "on_invalid_input" : "CONTINUE"
 }

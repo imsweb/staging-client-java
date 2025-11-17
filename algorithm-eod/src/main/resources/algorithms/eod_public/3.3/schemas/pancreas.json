@@ -288,6 +288,6 @@
     } ]
   } ],
   "involved_tables" : [ "grade_post_therapy_clin_61658", "neoadjuvant_therapy_37302", "ss2018_pancreas_95507", "tumor_size_pathological_43328", "grade_clinical_6485", "nodes_pos_fpa", "neoadj_tx_treatment_effect_90678", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "seer_mets_66514", "combined_grade_56638", "schema_selection_pancreas_body_tail", "behavior", "tumor_size_clinical_48894", "grade_post_therapy_path_40048", "type_of_reporting_source_76696", "seer_primary_tumor_95193", "primary_site", "ca_19_9_pretx_lab_value_17332", "grade_pathological_84704", "year_dx_validation", "eod_regional_nodes_11936", "derived_grade_69945", "summary_stage_rpa", "tumor_size_summary_47973", "derived_ss2018_pancreas_85813" ],
-  "last_modified" : "2025-09-19T18:55:13.131Z",
+  "last_modified" : "2025-11-14T20:05:34.982Z",
   "on_invalid_input" : "CONTINUE"
 }

@@ -249,12 +249,8 @@
     }, {
       "name" : "CCCR_REQUIRED"
     }, {
-      "name" : "SEER_REQUIRED",
-      "start" : 2025,
-      "end" : 2025
-    }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2025
     } ]
   }, {
     "key" : "ln_size_of_mets",
@@ -271,12 +267,8 @@
     }, {
       "name" : "CCCR_REQUIRED"
     }, {
-      "name" : "SEER_REQUIRED",
-      "start" : 2025,
-      "end" : 2025
-    }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2025
     } ]
   } ],
   "outputs" : [ {
@@ -329,6 +321,6 @@
     } ]
   } ],
   "involved_tables" : [ "extranodal_extension_head_and_neck_pathological_87046", "eod_mets_v9_58862", "neoadjuvant_therapy_37302", "schema_selection_nasopharynx_v9_2025", "nodes_pos_fpa", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "derived_ss2018_nasopharynx_69453", "eod_regional_nodes_v9_73197", "eod_primary_tumor_v9_192", "tumor_size_summary_63115", "combined_grade_56638", "grade_post_therapy_clin_95734", "behavior", "grade_clinical_standard_94331", "derived_grade_standard_1196", "type_of_reporting_source_76696", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "neoadj_tx_treatment_effect_18122", "ss2018_nasopharynx_excluding_melanoma_8720_8790_copy_99106", "primary_site", "extranodal_extension_head_and_neck_clinical_79321", "year_dx_validation", "grade_pathological_standard_94268", "summary_stage_rpa", "ln_size_70140", "grade_post_therapy_path_32110" ],
-  "last_modified" : "2025-09-19T18:55:00.426Z",
+  "last_modified" : "2025-11-14T20:05:59.634Z",
   "on_invalid_input" : "CONTINUE"
 }

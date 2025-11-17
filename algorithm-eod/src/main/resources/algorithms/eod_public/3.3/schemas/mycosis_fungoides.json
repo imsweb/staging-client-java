@@ -287,6 +287,6 @@
     } ]
   } ],
   "involved_tables" : [ "derived_ss2018_mycosis_fungoides_14217", "neoadjuvant_therapy_37302", "peripheral_blood_involv_92357", "nodes_pos_fpa", "mets_haz", "neoadj_tx_clinical_response_31723", "grade_post_therapy_clin_74830", "histology", "nodes_exam_76029", "tumor_size_summary_63115", "behavior", "ss2018_mycosis_fungoides_94448", "derived_grade_21945", "type_of_reporting_source_76696", "tumor_size_pathological_25597", "nodes_dce", "tumor_size_clinical_60979", "primary_site", "neoadj_tx_treatment_effect_52725", "year_dx_validation", "derived_summary_grade_na_6690", "grade_post_therapy_path_65729", "summary_stage_rpa", "grade_clinical_18316", "extension_bcp", "grade_pathological_73388", "schema_selection_mycosis_fungoides" ],
-  "last_modified" : "2025-09-19T18:54:52.925Z",
+  "last_modified" : "2025-11-14T20:05:46.823Z",
   "on_invalid_input" : "CONTINUE"
 }

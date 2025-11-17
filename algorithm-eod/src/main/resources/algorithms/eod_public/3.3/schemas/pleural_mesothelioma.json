@@ -285,6 +285,6 @@
     } ]
   } ],
   "involved_tables" : [ "tumor_size_summary_full_15510", "neoadjuvant_therapy_37302", "derived_grade_46639", "grade_post_therapy_path_41285", "grade_pathological_31963", "grade_post_therapy_clin_41222", "extension_bbx", "nodes_pos_fpa", "schema_selection_pleura", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "pleural_effusion_40041", "mets_hat", "combined_grade_56638", "behavior", "tumor_size_pathological_full_93442", "tumor_size_clinical_full_19656", "type_of_reporting_source_76696", "ss2018_pleura_60930", "neoadj_tx_treatment_effect_18122", "primary_site", "nodes_dbq", "year_dx_validation", "grade_clinical_73056", "summary_stage_rpa", "derived_ss2018_pleural_mesothelioma_74611" ],
-  "last_modified" : "2025-09-19T18:55:00.729Z",
+  "last_modified" : "2025-11-14T20:05:34.169Z",
   "on_invalid_input" : "CONTINUE"
 }

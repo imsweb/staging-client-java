@@ -232,12 +232,8 @@
     }, {
       "name" : "SSDI"
     }, {
-      "name" : "SEER_REQUIRED",
-      "start" : 2025,
-      "end" : 2025
-    }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2025
     } ]
   }, {
     "key" : "visceral_pleural_invasion",
@@ -252,12 +248,8 @@
     }, {
       "name" : "SSDI"
     }, {
-      "name" : "SEER_REQUIRED",
-      "start" : 2025,
-      "end" : 2025
-    }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2025
     } ]
   }, {
     "key" : "alk_rearrangement",
@@ -320,7 +312,7 @@
     "key" : "stas",
     "name" : "Lung STAS",
     "naaccr_item" : 1176,
-    "naaccr_xml_id" : "lungSTAS",
+    "naaccr_xml_id" : "spreadThroughAirSpacesStas",
     "default" : "8",
     "table" : "spread_through_air_spaces_stas_67834",
     "used_for_staging" : false,
@@ -385,6 +377,6 @@
     } ]
   } ],
   "involved_tables" : [ "neoadjuvant_therapy_37302", "pd_l1_61573", "derived_grade_46639", "grade_post_therapy_path_41285", "grade_pathological_31963", "eod_primary_tumor_v9_75679", "grade_post_therapy_clin_41222", "tumor_size_pathological_full_62176", "nodes_pos_fpa", "schema_selection_lung_v9_2025", "alk_rearrangement_610", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "neoadj_tx_treatment_effect_4391", "combined_grade_56638", "behavior", "eod_mets_v9_76161", "derived_ss2018_lung_59907", "tumor_size_clinical_full_74867", "egfr_mutational_analysis_51122", "type_of_reporting_source_76696", "visceral_pleural_invasion_25940", "tumor_size_summary_full_31213", "primary_site", "separate_tumor_nodules_69006", "eod_regional_nodes_v9_56625", "year_dx_validation", "grade_clinical_73056", "summary_stage_rpa", "spread_through_air_spaces_stas_67834", "ss2018_lung_41334" ],
-  "last_modified" : "2025-09-19T18:55:09.463Z",
+  "last_modified" : "2025-11-14T20:06:08.669Z",
   "on_invalid_input" : "CONTINUE"
 }

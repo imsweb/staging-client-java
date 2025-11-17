@@ -269,6 +269,6 @@
     } ]
   } ],
   "involved_tables" : [ "neoadjuvant_therapy_37302", "nodes_pos_fpa", "derived_ss2018_bladder_71090", "neoadj_tx_clinical_response_31723", "grade_post_therapy_path_55848", "histology", "nodes_exam_76029", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "derived_grade_84046", "schema_selection_bladder", "nodes_dck", "type_of_reporting_source_76696", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "neoadj_tx_treatment_effect_18122", "primary_site", "grade_pathological_59975", "extension_bcb", "grade_post_therapy_clin_68213", "year_dx_validation", "ss2018_bladder_57733", "summary_stage_rpa", "eod_mets_91004", "grade_clinical_91989" ],
-  "last_modified" : "2025-09-19T18:55:10.354Z",
+  "last_modified" : "2025-11-14T20:05:38.836Z",
   "on_invalid_input" : "CONTINUE"
 }

@@ -284,6 +284,6 @@
     } ]
   } ],
   "involved_tables" : [ "neoadjuvant_therapy_37302", "nodes_pos_fpa", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "tumor_size_summary_63115", "combined_grade_56638", "grade_post_therapy_clin_95734", "behavior", "derived_ss2018_melanoma_conjunctiva_64436", "grade_clinical_standard_94331", "extension_bcs", "derived_grade_standard_1196", "ss2018_melanoma_conjunctiva_86342", "schema_selection_melanoma_conjunctiva", "type_of_reporting_source_76696", "tumor_size_pathological_25597", "eod_regional_nodes_8284", "tumor_size_clinical_60979", "neoadj_tx_treatment_effect_18122", "primary_site", "measured_thickness_84907", "year_dx_validation", "grade_pathological_standard_94268", "summary_stage_rpa", "grade_post_therapy_path_32110", "eod_mets_74247" ],
-  "last_modified" : "2025-09-19T18:55:14.057Z",
+  "last_modified" : "2025-11-14T20:05:13.066Z",
   "on_invalid_input" : "CONTINUE"
 }

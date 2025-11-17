@@ -269,6 +269,6 @@
     } ]
   } ],
   "involved_tables" : [ "neoadjuvant_therapy_37302", "schema_selection_parathyroid", "ss2018_parathyroid_99309", "nodes_pos_fpa", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "grade_clinical_25704", "tumor_size_summary_63115", "combined_grade_56638", "grade_post_therapy_clin_35900", "behavior", "seer_regional_nodes_17757", "type_of_reporting_source_76696", "grade_pathological_27152", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "neoadj_tx_treatment_effect_18122", "primary_site", "year_dx_validation", "grade_post_therapy_path_30693", "summary_stage_rpa", "seer_primary_tumor_25824", "mets_hbv", "derived_ss2018_parathyroid_93552", "derived_grade_2099" ],
-  "last_modified" : "2025-09-19T18:54:44.531Z",
+  "last_modified" : "2025-11-14T20:05:21.425Z",
   "on_invalid_input" : "CONTINUE"
 }

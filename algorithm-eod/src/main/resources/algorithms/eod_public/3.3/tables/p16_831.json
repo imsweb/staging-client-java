@@ -4,9 +4,9 @@
   "version" : "3.3",
   "name" : "p16",
   "title" : "p16",
-  "description" : "The p16 biomarker is overexpressed (produced) in response to HPV.  It is therefore a surrogate marker for HPV disease.\np16 is a tumor suppressor protein also known as cyclin-dependent kinase inhibitor 2A. The p16 biomarker is overexpressed (produced) in response to HPV. It is therefore a surrogate marker for HPV disease.",
+  "description" : "The p16 biomarker is overexpressed (produced) in response to HPV.  It is therefore a surrogate marker for HPV disease.\n\np16 is a tumor suppressor protein also known as cyclin-dependent kinase inhibitor 2A. The p16 biomarker is overexpressed (produced) in response to HPV. It is therefore a surrogate marker for HPV disease.",
   "notes" : "**Note 1:** **Effective years**\n* This SSDI is effective for diagnosis years 2024+\n* For cases diagnosed 2018-2023, this SSDI must be blank\n\n**Note 2:** **p16 Results ONLY**\n* This data item must be based on testing results for p16 overexpression.\n* Testing for HPV by DNA, mRNA, antibody, or other methods should not be coded in this data item\n* Do not confuse p16 with HPV, which is a specific strain of virus. A statement of a patient being HPV positive, or negative is not enough to code this data item\n* Code 0 for p16 expression of weak intensity or limited distribution.",
-  "last_modified" : "2024-04-06T14:17:04.159Z",
+  "last_modified" : "2025-11-06T20:13:12.313Z",
   "definition" : [ {
     "key" : "p16",
     "name" : "p16",

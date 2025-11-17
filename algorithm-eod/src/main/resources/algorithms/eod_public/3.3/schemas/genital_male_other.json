@@ -269,6 +269,6 @@
     } ]
   } ],
   "involved_tables" : [ "seer_mets_48348", "neoadjuvant_therapy_37302", "nodes_pos_fpa", "grade_post_therapy_clin_69737", "neoadj_tx_clinical_response_31723", "histology", "nodes_exam_76029", "tumor_size_summary_63115", "combined_grade_56638", "behavior", "nodes_dca", "grade_clinical_standard_non_ajcc_32473", "grade_pathological_standard_non_ajcc_5627", "derived_grade_standard_non_ajcc_63932", "type_of_reporting_source_76696", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "neoadj_tx_treatment_effect_18122", "derived_ss2018_genital_male_other_41924", "primary_site", "grade_post_therapy_path_75348", "year_dx_validation", "extension_bcl", "summary_stage_rpa", "schema_selection_genital_male_other", "ss2018_genital_male_other_44390" ],
-  "last_modified" : "2025-09-19T18:54:38.558Z",
+  "last_modified" : "2025-11-14T20:05:08.714Z",
   "on_invalid_input" : "CONTINUE"
 }

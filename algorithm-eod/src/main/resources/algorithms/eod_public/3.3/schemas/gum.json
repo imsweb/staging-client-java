@@ -250,10 +250,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   }, {
     "key" : "ln_size_of_mets",
@@ -272,10 +272,10 @@
     }, {
       "name" : "SEER_REQUIRED",
       "start" : 2018,
-      "end" : 2025
+      "end" : 2023
     }, {
       "name" : "SEER_REQUIRED_WHEN_COC_ANALYTIC",
-      "start" : 2026
+      "start" : 2024
     } ]
   }, {
     "key" : "seer_ssf1",
@@ -339,6 +339,6 @@
     } ]
   } ],
   "involved_tables" : [ "extranodal_extension_head_and_neck_pathological_87046", "grade_post_therapy_clin_61658", "neoadjuvant_therapy_37302", "tumor_size_pathological_43328", "grade_clinical_6485", "nodes_pos_fpa", "neoadj_tx_clinical_response_31723", "schema_selection_gum_lower", "histology", "nodes_exam_76029", "extension_bdl", "combined_grade_56638", "behavior", "ss2018_gum_75440", "nodes_daa", "tumor_size_clinical_48894", "seer_mets_lip_lower_28596", "grade_post_therapy_path_40048", "type_of_reporting_source_76696", "derived_ss2018_gum_32702", "neoadj_tx_treatment_effect_18122", "p16_hpv_human_papilloma_virus_status_head_and_neck_509", "primary_site", "extranodal_extension_head_and_neck_clinical_79321", "grade_pathological_84704", "year_dx_validation", "derived_grade_69945", "summary_stage_rpa", "tumor_size_summary_47973", "ln_size_70140" ],
-  "last_modified" : "2025-09-19T18:55:05.398Z",
+  "last_modified" : "2025-11-14T20:05:17.778Z",
   "on_invalid_input" : "CONTINUE"
 }

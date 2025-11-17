@@ -6,7 +6,7 @@
   "title" : "NCCN International Prognostic Index (IPI)",
   "description" : "The NCCN International Prognostic Index (IPI) (previously only “IPI”) is used to define risk groups for specific lymphomas using a 0-8 score range, based on age, stage, number of extranodal sites of involvement, patient’s performance status and LDH level.\n\nThe NCCN International Prognostic Index (IPI) has been developed for lymphomas and predicts outcome based on the following adverse factors:\n* Age greater than or equal to 60 years \n* Serum LDH greater than normal\n* Performance status 2-4 \n* Stage III or IV\n* Extranodal involvement greater than 1 site\n* Kidney and Adrenal Involvement (CNS Lymphomas only)",
   "notes" : "**Note 1:** **Physician Statement** \n* Physician statement of NCCN IPI **must** be used to code this data item. \n  * Do not calculate points or assign risk. Only record points or risk if a physician has documented them\n  * Use points over risk if both are available\n\n**Note 2:** **NCCN is applicable for non-Hodgkin lymphomas only.**\n* If you have a score for Hodgkin lymphomas (IPS), do not record that information here. Code X9.\n\n**Note 3:** **NCCN and Rai Stage** \n* A low, intermediate or high risk associated with a Rai Stage is not recorded in this data item.",
-  "last_modified" : "2025-05-15T12:02:52.395Z",
+  "last_modified" : "2025-11-05T22:00:50.661Z",
   "definition" : [ {
     "key" : "intern_prog_index",
     "name" : "Code",
@@ -17,6 +17,6 @@
     "type" : "DESCRIPTION"
   } ],
   "rows" : [ [ "00-08", "0-8 points" ], [ "X1", "Stated as low risk (0-1 point)" ], [ "X2", "Stated as low intermediate risk (2-3 points)" ], [ "X3", "Stated as intermediate risk (4-5 points)" ], [ "X4", "Stated as high risk (6-8 points)" ], [ "X8", "Not applicable: Information not collected for this case\n(If this item is required by your standard setter, use of code X8 will result in an edit error.)" ], [ "X9", "Not documented in medical record\nNCCN International Prognostic Index (IPI) not assessed or unknown if assessed" ] ],
-  "additional_info" : "**Source documents:** patient history, progress notes, consultant notes, other statements in medical record.\n\n**Other names include:** NCCN CNS IPI (for CNS primaries)",
+  "additional_info" : "**Source documents:** patient history, progress notes, consultant notes, other statements in medical record\n\n**Other names include:** NCCN CNS IPI (for CNS primaries)",
   "rationale" : "NCCN International Prognostic Index (IPI) is a Registry Data Collection Variable in AJCC. It was previously collected for Lymphomas, SSF #3."
 }
