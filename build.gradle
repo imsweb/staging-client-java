@@ -1,13 +1,9 @@
-import com.vanniktech.maven.publish.JavaLibrary
-import com.vanniktech.maven.publish.JavadocJar
-import com.vanniktech.maven.publish.SonatypeHost
-
 plugins {
     id 'com.github.spotbugs' version '6.1.11'
     id 'com.adarshr.test-logger' version '4.0.0'
     id 'com.github.ben-manes.versions' version '0.52.0'
     id 'org.sonarqube' version '6.3.1.5724'
-    id 'com.vanniktech.maven.publish' version '0.31.0'
+    id 'com.vanniktech.maven.publish' version '0.35.0'
 }
 
 sonarqube {
@@ -116,9 +112,7 @@ subprojects {
     }
 
     mavenPublishing {
-        configure(new JavaLibrary(new JavadocJar.Javadoc(), true))
-
-        publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL, true)
+        publishToMavenCentral()
         signAllPublications()
 
         pom {
@@ -152,7 +146,7 @@ subprojects {
     }
 
     wrapper {
-        gradleVersion = '8.14'
+        gradleVersion = '9.2.0'
         distributionType = Wrapper.DistributionType.ALL
     }
 }
