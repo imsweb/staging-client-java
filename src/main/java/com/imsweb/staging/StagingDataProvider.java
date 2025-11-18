@@ -62,8 +62,25 @@ public abstract class StagingDataProvider implements DataProvider {
 
     protected Trie _trie;
 
+    /**
+     * SchemaLookup is mutable which is not good when using it as a key in the lookup cache; switch
+     * to a lookup key made up of the inputs as the cache key
+     */
+    record SchemaLookupKey(Map<String, String> inputs) {
+
+        public SchemaLookupKey(Map<String, String> inputs) {
+            this.inputs = inputs.entrySet().stream()
+                    .filter(e -> e.getKey() != null) // keep keys non-null
+                    .collect(Collectors.toUnmodifiableMap(
+                            Map.Entry::getKey,
+                            e -> e.getValue() == null ? "" : e.getValue() // normalize null values
+                    ));
+        }
+
+    }
+
     // lookup cache
-    private final Cache<SchemaLookup, List<Schema>> _lookupCache;
+    private final Cache<SchemaLookupKey, List<Schema>> _lookupCache;
 
     // site/hist cache
     private final Cache<String, Set<String>> _validValuesCache;
@@ -88,10 +105,13 @@ public abstract class StagingDataProvider implements DataProvider {
         _mapper.setVisibility(PropertyAccessor.GETTER, Visibility.ANY);
 
         // cache schema lookups
-        _lookupCache = new Cache2kBuilder<SchemaLookup, List<Schema>>() {}
+        _lookupCache = new Cache2kBuilder<SchemaLookupKey, List<Schema>>() {}
                 .entryCapacity(500)
                 .eternal(true)
-                .loader(this::getSchemas)
+                .loader(key -> {
+                    SchemaLookup lookup = new SchemaLookup(key.inputs());
+                    return getSchemas(lookup);
+                })
                 .build();
 
         // cache the valid values for certain tables including site and histology
@@ -469,7 +489,7 @@ public abstract class StagingDataProvider implements DataProvider {
         if (lookup.getSite() == null || lookup.getHistology() == null)
             return getSchemas(lookup);
 
-        return _lookupCache.get(lookup);
+        return _lookupCache.get(new SchemaLookupKey(lookup.getInputs()));
     }
 
     /**
