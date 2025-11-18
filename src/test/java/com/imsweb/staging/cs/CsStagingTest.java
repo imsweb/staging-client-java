@@ -41,6 +41,7 @@ import com.imsweb.staging.entities.StagingData.Result;
 import com.imsweb.staging.entities.Table;
 import com.imsweb.staging.entities.TableRow;
 import com.imsweb.staging.entities.impl.StagingMetadata;
+import com.imsweb.staging.util.Stopwatch;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -819,6 +820,7 @@ class CsStagingTest extends StagingTest {
 
     @Test
     void testAllValidInputs() throws IOException {
+        Stopwatch sw = Stopwatch.create();
         GZIPInputStream is = new GZIPInputStream(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("cs/test-data/020550/valid_inputs.020550.txt.gz")));
         LineNumberReader reader = new LineNumberReader(new InputStreamReader(is, StandardCharsets.UTF_8));
 
@@ -841,7 +843,7 @@ class CsStagingTest extends StagingTest {
             line = reader.readLine();
         }
 
-        _LOG.info("Processed {} lines.", reader.getLineNumber());
+        _LOG.info("Processed {} lines in {}.", reader.getLineNumber(), sw);
 
         reader.close();
     }
