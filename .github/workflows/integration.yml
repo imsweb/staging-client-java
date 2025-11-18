@@ -20,7 +20,7 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: '21'
-          cache: 'gradle'
+          cache: 'maven'
 
       - name: Cache SonarCloud packages
         uses: actions/cache@v4
@@ -34,5 +34,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          chmod +x gradlew
-          ./gradlew build sonar
+          chmod +x ./mvnw
+          ./mvnw -B verify sonar:sonar
