@@ -1,15 +1,9 @@
-# Run the full CS ingration comparison
-#
-# This is just a proof of concept for now since the raw input is not available as it
-# is too large to include in repository.
-
 name: cs-comparison
 
 on: workflow_dispatch
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -19,11 +13,20 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
-          distribution: 'adopt'
+          distribution: 'temurin'
           java-version: '21'
-          cache: 'gradle'
+          cache: 'maven'
 
-      - name: CS Comparison
+      - name: Cache Maven packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Build and run CS Comparison
         run: |
-          chmod +x gradlew
-          ./gradlew :staging-client-java-cs:csIntegrationTest
+          chmod +x ./mvnw
+          ./mvnw -B clean package -DskipTests
+          ./mvnw exec:java -Dexec.mainClass="com.imsweb.staging.cs.CsComparisonMain"
