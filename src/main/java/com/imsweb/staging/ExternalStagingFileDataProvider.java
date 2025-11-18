@@ -8,6 +8,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -43,6 +46,28 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
     private final Map<String, StagingTable> _tables = new HashMap<>();
     private final Map<String, StagingSchema> _schemas = new HashMap<>();
     private final Map<String, GlossaryDefinition> _glossaryTerms = new HashMap<>();
+
+    /**
+     * Constructor loads all schemas and sets up table cache
+     * @param zipFilePath full path to algorithm zip file
+     * @throws IOException exception for file operations
+     */
+    public ExternalStagingFileDataProvider(Path zipFilePath) throws IOException {
+        super();
+
+        try (InputStream is = Files.newInputStream(zipFilePath)) {
+            init(is);
+        }
+    }
+
+    /**
+     * Constructor loads all schemas and sets up table cache
+     * @param zipFileName full path to algorithm zip file
+     * @throws IOException exception for file operations
+     */
+    public ExternalStagingFileDataProvider(String zipFileName) throws IOException {
+        this(Paths.get(zipFileName));
+    }
 
     /**
      * Constructor loads all schemas and sets up table cache
