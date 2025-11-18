@@ -43,7 +43,7 @@ jobs:
         if: ${{startsWith(github.ref, 'refs/tags/v') }}
         with:
           files: |
-            algorithm-cs/build/algorithms/*.zip
-            algorithm-eod/build/algorithms/*.zip
-            algorithm-tnm/build/algorithms/*.zip
-            algorithm-pediatric/build/algorithms/*.zip
+            target/test-classes/algorithms/cs-*.zip
+            target/test-classes/algorithms/eod_public-*.zip
+            target/test-classes/algorithms/pediatric-*.zip
+            target/test-classes/algorithms/tnm-*.zip

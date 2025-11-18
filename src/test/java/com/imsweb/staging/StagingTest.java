@@ -3,6 +3,11 @@
  */
 package com.imsweb.staging;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collection;
@@ -12,6 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -40,6 +46,7 @@ public abstract class StagingTest {
     private static final Logger _LOG = LoggerFactory.getLogger(StagingTest.class);
 
     protected static Staging _STAGING;
+    protected static StagingDataProvider _PROVIDER;
 
     /**
      * Return the algorithm name
@@ -52,9 +59,22 @@ public abstract class StagingTest {
     public abstract String getVersion();
 
     /**
-     * Return the staging data provider
+     * Return the full path of specified algorithm
      */
-    public abstract StagingFileDataProvider getProvider();
+    public static Path getAlgorithmPath(String algorithm) throws URISyntaxException, IOException {
+        Path algorithmsDir = Paths.get(Thread.currentThread()
+                .getContextClassLoader()
+                .getResource("algorithms")
+                .toURI());
+
+        try (Stream<Path> files = Files.list(algorithmsDir)) {
+            return files
+                    .filter(Files::isRegularFile)
+                    .filter(path -> path.getFileName().toString().startsWith(algorithm + "-"))
+                    .findFirst()
+                    .orElseThrow(() -> new IllegalStateException("No " + algorithm + "  file found in algorithms directory"));
+        }
+    }
 
     @Test
     public void testInitialization() {

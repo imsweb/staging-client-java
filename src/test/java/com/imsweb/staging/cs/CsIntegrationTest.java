@@ -6,6 +6,7 @@ package com.imsweb.staging.cs;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.text.NumberFormat;
 import java.util.Collections;
@@ -18,10 +19,12 @@ import java.util.zip.GZIPInputStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.imsweb.staging.ExternalStagingFileDataProvider;
 import com.imsweb.staging.Staging;
-import com.imsweb.staging.cs.CsDataProvider.CsVersion;
 import com.imsweb.staging.cs.IntegrationUtils.IntegrationResult;
 import com.imsweb.staging.util.Stopwatch;
+
+import static com.imsweb.staging.StagingTest.getAlgorithmPath;
 
 @SuppressWarnings("java:S2187")
 public class CsIntegrationTest {
@@ -31,12 +34,12 @@ public class CsIntegrationTest {
     // set this to null to process all, or a list of schema filename to process
     private static final List<String> _SCHEMA_FILES = Collections.emptyList();
 
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) throws IOException, InterruptedException, URISyntaxException {
         execute();
     }
 
-    private static void execute() throws IOException, InterruptedException {
-        Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.V020550));
+    private static void execute() throws IOException, InterruptedException, URISyntaxException {
+        Staging staging = Staging.getInstance(new ExternalStagingFileDataProvider(getAlgorithmPath("cs")));
 
         // only do schema selection test if running all schemas
         if (_SCHEMA_FILES.isEmpty()) {

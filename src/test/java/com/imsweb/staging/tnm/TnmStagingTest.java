@@ -3,6 +3,8 @@
  */
 package com.imsweb.staging.tnm;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Collections;
@@ -16,9 +18,9 @@ import java.util.stream.Collectors;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import com.imsweb.staging.ExternalStagingFileDataProvider;
 import com.imsweb.staging.Staging;
 import com.imsweb.staging.StagingDataProvider;
-import com.imsweb.staging.StagingFileDataProvider;
 import com.imsweb.staging.StagingTest;
 import com.imsweb.staging.entities.Input;
 import com.imsweb.staging.entities.Output;
@@ -28,7 +30,6 @@ import com.imsweb.staging.entities.StagingData;
 import com.imsweb.staging.entities.StagingData.Result;
 import com.imsweb.staging.entities.Table;
 import com.imsweb.staging.entities.impl.StagingMetadata;
-import com.imsweb.staging.tnm.TnmDataProvider.TnmVersion;
 import com.imsweb.staging.tnm.TnmStagingData.TnmOutput;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -41,8 +42,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class TnmStagingTest extends StagingTest {
 
     @BeforeAll
-    static void init() {
-        _STAGING = Staging.getInstance(TnmDataProvider.getInstance(TnmVersion.LATEST));
+    static void init() throws URISyntaxException, IOException {
+        _PROVIDER = new ExternalStagingFileDataProvider(getAlgorithmPath("tnm"));
+        _STAGING = Staging.getInstance(_PROVIDER);
     }
 
     @Override
@@ -52,12 +54,7 @@ class TnmStagingTest extends StagingTest {
 
     @Override
     public String getVersion() {
-        return TnmVersion.V2_0.getVersion();
-    }
-
-    @Override
-    public StagingFileDataProvider getProvider() {
-        return TnmDataProvider.getInstance(TnmVersion.LATEST);
+        return "2.0";
     }
 
     @Test
@@ -67,15 +64,6 @@ class TnmStagingTest extends StagingTest {
 
         assertNotNull(_STAGING.getSchema("urethra"));
         assertNotNull(_STAGING.getTable("ssf4_mpn"));
-    }
-
-    @Test
-    void testVersionInitializationTypes() {
-        Staging staging10 = Staging.getInstance(TnmDataProvider.getInstance(TnmVersion.V2_0));
-        assertEquals(TnmVersion.LATEST.getVersion(), staging10.getVersion());
-
-        Staging stagingLatest = Staging.getInstance(TnmDataProvider.getInstance());
-        assertEquals(TnmVersion.LATEST.getVersion(), stagingLatest.getVersion());
     }
 
     @Test
@@ -171,7 +159,7 @@ class TnmStagingTest extends StagingTest {
         assertEquals("testis", lookup.getFirst().getId());
 
         // now invalidate the cache
-        TnmDataProvider.getInstance(TnmVersion.V2_0).invalidateCache();
+        _PROVIDER.invalidateCache();
 
         // try the lookup again
         lookup = _STAGING.lookupSchema(new TnmSchemaLookup("C629", "9231"));
@@ -275,7 +263,7 @@ class TnmStagingTest extends StagingTest {
         assertEquals(10, data.getOutput().size());
 
         // check outputs
-        assertEquals(TnmVersion.LATEST.getVersion(), data.getOutput(TnmOutput.DERIVED_VERSION));
+        assertEquals(getVersion(), data.getOutput(TnmOutput.DERIVED_VERSION));
         assertEquals("3", data.getOutput(TnmOutput.CLIN_STAGE_GROUP));
         assertEquals("4", data.getOutput(TnmOutput.PATH_STAGE_GROUP));
         assertEquals("4", data.getOutput(TnmOutput.COMBINED_STAGE_GROUP));
@@ -483,7 +471,7 @@ class TnmStagingTest extends StagingTest {
 
     @Test
     void testCachedSiteAndHistology() {
-        StagingDataProvider provider = getProvider();
+        StagingDataProvider provider = _PROVIDER;
         assertFalse(provider.getValidSites().isEmpty());
         assertFalse(provider.getValidHistologies().isEmpty());
 

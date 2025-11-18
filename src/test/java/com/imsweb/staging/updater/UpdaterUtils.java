@@ -76,8 +76,8 @@ public final class UpdaterUtils {
         // create an object mapper used to output the entities
         ObjectMapper mapper = new ObjectMapper();
         mapper.setDefaultPropertyInclusion(JsonInclude.Value.construct(Include.ALWAYS, Include.NON_NULL));
-        mapper.setSerializationInclusion(Include.NON_NULL);
-        mapper.setSerializationInclusion(Include.NON_EMPTY);
+        mapper.setDefaultPropertyInclusion(Include.NON_NULL);
+        mapper.setDefaultPropertyInclusion(Include.NON_EMPTY);
         mapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
         mapper.setDateFormat(format);

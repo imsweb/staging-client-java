@@ -3,6 +3,8 @@
  */
 package com.imsweb.staging.pediatric;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
@@ -18,9 +20,9 @@ import java.util.stream.Stream;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import com.imsweb.staging.ExternalStagingFileDataProvider;
 import com.imsweb.staging.Staging;
 import com.imsweb.staging.StagingDataProvider;
-import com.imsweb.staging.StagingFileDataProvider;
 import com.imsweb.staging.StagingTest;
 import com.imsweb.staging.entities.Input;
 import com.imsweb.staging.entities.Metadata;
@@ -28,7 +30,6 @@ import com.imsweb.staging.entities.Output;
 import com.imsweb.staging.entities.Schema;
 import com.imsweb.staging.entities.SchemaLookup;
 import com.imsweb.staging.entities.StagingData.Result;
-import com.imsweb.staging.pediatric.PediatricDataProvider.PediatricVersion;
 import com.imsweb.staging.pediatric.PediatricStagingData.PediatricInput;
 import com.imsweb.staging.pediatric.PediatricStagingData.PediatricOutput;
 import com.imsweb.staging.pediatric.PediatricStagingData.PediatricStagingInputBuilder;
@@ -38,8 +39,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 class PediatricStagingTest extends StagingTest {
 
     @BeforeAll
-    static void init() {
-        _STAGING = Staging.getInstance(PediatricDataProvider.getInstance(PediatricVersion.V1_3));
+    static void init() throws URISyntaxException, IOException {
+        _PROVIDER = new ExternalStagingFileDataProvider(getAlgorithmPath("pediatric"));
+        _STAGING = Staging.getInstance(_PROVIDER);
     }
 
     @Override
@@ -49,12 +51,7 @@ class PediatricStagingTest extends StagingTest {
 
     @Override
     public String getVersion() {
-        return PediatricVersion.V1_3.getVersion();
-    }
-
-    @Override
-    public StagingFileDataProvider getProvider() {
-        return PediatricDataProvider.getInstance(PediatricVersion.LATEST);
+        return "1.3";
     }
 
     @Test
@@ -64,15 +61,6 @@ class PediatricStagingTest extends StagingTest {
 
         assertThat(_STAGING.getSchema("ependymoma")).isNotNull();
         assertThat(_STAGING.getTable("n_myc_amplification_57417")).isNotNull();
-    }
-
-    @Test
-    void testVersionInitializationTypes() {
-        Staging staging10 = Staging.getInstance(PediatricDataProvider.getInstance(PediatricVersion.V1_3));
-        assertThat(staging10.getVersion()).isEqualTo(PediatricVersion.LATEST.getVersion());
-
-        Staging stagingLatest = Staging.getInstance(PediatricDataProvider.getInstance());
-        assertThat(stagingLatest.getVersion()).isEqualTo(PediatricVersion.LATEST.getVersion());
     }
 
     @Test
@@ -201,7 +189,7 @@ class PediatricStagingTest extends StagingTest {
         assertThat(lookup.getFirst().getId()).isEqualTo(schemaId);
 
         // now invalidate the cache
-        PediatricDataProvider.getInstance(PediatricVersion.V1_3).invalidateCache();
+        _PROVIDER.invalidateCache();
 
         // try the lookup again
         lookup = _STAGING.lookupSchema(new PediatricSchemaLookup(site, hist));
@@ -246,11 +234,11 @@ class PediatricStagingTest extends StagingTest {
         assertThat(data.getOutput()).hasSize(11);
 
         // check outputs
-        assertThat(data.getOutput(PediatricOutput.DERIVED_VERSION)).isEqualTo(PediatricVersion.LATEST.getVersion());
+        assertThat(data.getOutput(PediatricOutput.DERIVED_VERSION)).isEqualTo(getVersion());
 
         assertThat(data.getOutput())
                 .hasSize(11)
-                .hasFieldOrPropertyWithValue(PediatricOutput.DERIVED_VERSION.toString(), PediatricVersion.LATEST.getVersion())
+                .hasFieldOrPropertyWithValue(PediatricOutput.DERIVED_VERSION.toString(), getVersion())
                 .hasFieldOrPropertyWithValue(PediatricOutput.TORONTO_VERSION_NUMBER.toString(), "2")
                 .hasFieldOrPropertyWithValue(PediatricOutput.PEDIATRIC_ID.toString(), "10c2")
                 .hasFieldOrPropertyWithValue(PediatricOutput.PEDIATRIC_GROUP.toString(), "1")
@@ -409,7 +397,7 @@ class PediatricStagingTest extends StagingTest {
 
     @Test
     void testCachedSiteAndHistology() {
-        StagingDataProvider provider = getProvider();
+        StagingDataProvider provider = _PROVIDER;
         assertThat(provider.getValidSites()).isNotEmpty();
         assertThat(provider.getValidHistologies()).isNotEmpty();
 

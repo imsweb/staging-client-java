@@ -6,15 +6,13 @@ import java.util.HashSet;
 
 import com.imsweb.staging.updater.UpdaterUtils;
 
-import static com.imsweb.staging.pediatric.PediatricDataProvider.PediatricVersion.LATEST;
-
 /**
  * Update the pediatric data from the API
  */
 public class PediatricUpdateFromAPI {
 
     public static void main(String[] args) throws IOException {
-        UpdaterUtils.update("pediatric", LATEST.getVersion(), new HashSet<>(Collections.singletonList("STAGING")));
+        UpdaterUtils.update("pediatric", "1.3", new HashSet<>(Collections.singletonList("STAGING")));
     }
 
 }

@@ -3,6 +3,8 @@
  */
 package com.imsweb.staging.eod;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Collections;
@@ -15,9 +17,9 @@ import java.util.stream.Collectors;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import com.imsweb.staging.ExternalStagingFileDataProvider;
 import com.imsweb.staging.Staging;
 import com.imsweb.staging.StagingDataProvider;
-import com.imsweb.staging.StagingFileDataProvider;
 import com.imsweb.staging.StagingTest;
 import com.imsweb.staging.entities.GlossaryDefinition;
 import com.imsweb.staging.entities.Input;
@@ -28,7 +30,6 @@ import com.imsweb.staging.entities.StagingData;
 import com.imsweb.staging.entities.StagingData.Result;
 import com.imsweb.staging.entities.Table;
 import com.imsweb.staging.entities.impl.StagingMetadata;
-import com.imsweb.staging.eod.EodDataProvider.EodVersion;
 import com.imsweb.staging.eod.EodStagingData.EodInput;
 import com.imsweb.staging.eod.EodStagingData.EodOutput;
 import com.imsweb.staging.eod.EodStagingData.EodStagingInputBuilder;
@@ -41,8 +42,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class EodStagingTest extends StagingTest {
 
     @BeforeAll
-    static void init() {
-        _STAGING = Staging.getInstance(EodDataProvider.getInstance(EodVersion.LATEST));
+    static void init() throws URISyntaxException, IOException {
+        _PROVIDER = new ExternalStagingFileDataProvider(getAlgorithmPath("eod_public"));
+        _STAGING = Staging.getInstance(_PROVIDER);
     }
 
     @Override
@@ -52,12 +54,7 @@ class EodStagingTest extends StagingTest {
 
     @Override
     public String getVersion() {
-        return EodVersion.V3_3.getVersion();
-    }
-
-    @Override
-    public StagingFileDataProvider getProvider() {
-        return EodDataProvider.getInstance(EodVersion.LATEST);
+        return "3.3";
     }
 
     @Test
@@ -67,15 +64,6 @@ class EodStagingTest extends StagingTest {
 
         assertThat(_STAGING.getSchema("urethra")).isNotNull();
         assertThat(_STAGING.getTable("ss2018_urethra_14363")).isNotNull();
-    }
-
-    @Test
-    void testVersionInitializationTypes() {
-        Staging staging10 = Staging.getInstance(EodDataProvider.getInstance(EodVersion.V3_3));
-        assertThat(staging10.getVersion()).isEqualTo(EodVersion.LATEST.getVersion());
-
-        Staging stagingLatest = Staging.getInstance(EodDataProvider.getInstance());
-        assertThat(stagingLatest.getVersion()).isEqualTo(EodVersion.LATEST.getVersion());
     }
 
     @Test
@@ -196,7 +184,7 @@ class EodStagingTest extends StagingTest {
         assertThat(lookup.getFirst().getId()).isEqualTo("soft_tissue_rare");
 
         // now invalidate the cache
-        EodDataProvider.getInstance(EodVersion.V3_3).invalidateCache();
+        _PROVIDER.invalidateCache();
 
         // try the lookup again
         lookup = _STAGING.lookupSchema(new EodSchemaLookup("C629", "9231"));
@@ -246,7 +234,7 @@ class EodStagingTest extends StagingTest {
         assertThat(data.getOutput()).hasSize(4);
 
         // check outputs
-        assertThat(data.getOutput(EodOutput.DERIVED_VERSION)).isEqualTo(EodVersion.LATEST.getVersion());
+        assertThat(data.getOutput(EodOutput.DERIVED_VERSION)).isEqualTo(getVersion());
         assertThat(data.getOutput(EodOutput.NAACCR_SCHEMA_ID)).isEqualTo("00280");
         assertThat(data.getOutput(EodOutput.SS_2018_DERIVED)).isEqualTo("7");
         assertThat(data.getOutput(EodOutput.DERIVED_SUMMARY_GRADE)).isEqualTo("9");
@@ -284,7 +272,7 @@ class EodStagingTest extends StagingTest {
         assertThat(data.getOutput()).hasSize(4);
 
         // check outputs
-        assertThat(data.getOutput(EodOutput.DERIVED_VERSION)).isEqualTo(EodVersion.LATEST.getVersion());
+        assertThat(data.getOutput(EodOutput.DERIVED_VERSION)).isEqualTo(getVersion());
         assertThat(data.getOutput(EodOutput.SS_2018_DERIVED)).isEqualTo("3");
         assertThat(data.getOutput(EodOutput.NAACCR_SCHEMA_ID)).isEqualTo("00480");
         assertThat(data.getOutput(EodOutput.DERIVED_SUMMARY_GRADE)).isEqualTo("1");
@@ -483,20 +471,13 @@ class EodStagingTest extends StagingTest {
 
     @Test
     void testGlossary() {
-        assertEquals(2, _STAGING.getGlossaryTerms().size());
-        GlossaryDefinition entry = _STAGING.getGlossaryDefinition("Level VA");
+        assertEquals(1, _STAGING.getGlossaryTerms().size());
+        GlossaryDefinition entry = _STAGING.getGlossaryDefinition("Level V lymph nodes");
         assertNotNull(entry);
         assertEquals("Level V lymph nodes", entry.getName());
         assertTrue(entry.getDefinition().startsWith("The two groups dorsal cervical nodes along the spinal"));
         assertEquals(Arrays.asList("Level VA", "Level VB"), entry.getAlternateNames());
         assertNotNull(entry.getLastModified());
-
-        /* There are hardly any glossary terms anymore
-        Set<String> hits = _STAGING.getSchemaGlossary("urethra");
-        assertEquals(0, hits.size());
-        hits = _STAGING.getTableGlossary("nodes_dad");
-        assertEquals(3, hits.size());
-         */
     }
 
     @Test
@@ -517,7 +498,7 @@ class EodStagingTest extends StagingTest {
 
     @Test
     void testCachedSiteAndHistology() {
-        StagingDataProvider provider = getProvider();
+        StagingDataProvider provider = _PROVIDER;
         assertThat(provider.getValidSites()).isNotEmpty();
         assertThat(provider.getValidHistologies()).isNotEmpty();
 

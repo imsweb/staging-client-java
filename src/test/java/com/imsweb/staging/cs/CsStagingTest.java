@@ -6,6 +6,7 @@ package com.imsweb.staging.cs;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
+import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -24,10 +25,9 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.imsweb.staging.ExternalStagingFileDataProvider;
 import com.imsweb.staging.Staging;
-import com.imsweb.staging.StagingFileDataProvider;
 import com.imsweb.staging.StagingTest;
-import com.imsweb.staging.cs.CsDataProvider.CsVersion;
 import com.imsweb.staging.cs.CsStagingData.CsOutput;
 import com.imsweb.staging.cs.CsStagingData.CsStagingInputBuilder;
 import com.imsweb.staging.cs.IntegrationUtils.IntegrationResult;
@@ -55,8 +55,9 @@ class CsStagingTest extends StagingTest {
     private static final Logger _LOG = LoggerFactory.getLogger(CsStagingTest.class);
 
     @BeforeAll
-    static void init() {
-        _STAGING = Staging.getInstance(CsDataProvider.getInstance(CsVersion.V020550));
+    static void init() throws URISyntaxException, IOException {
+        _PROVIDER = new ExternalStagingFileDataProvider(getAlgorithmPath("cs"));
+        _STAGING = Staging.getInstance(_PROVIDER);
     }
 
     @Override
@@ -66,12 +67,7 @@ class CsStagingTest extends StagingTest {
 
     @Override
     public String getVersion() {
-        return CsVersion.V020550.getVersion();
-    }
-
-    @Override
-    public StagingFileDataProvider getProvider() {
-        return CsDataProvider.getInstance(CsVersion.V020550);
+        return "02.05.50";
     }
 
     @Test
@@ -81,15 +77,6 @@ class CsStagingTest extends StagingTest {
 
         assertNotNull(_STAGING.getSchema("urethra"));
         assertNotNull(_STAGING.getTable("extension_bdi"));
-    }
-
-    @Test
-    void testVersionInitializationTypes() {
-        Staging staging020550 = Staging.getInstance(CsDataProvider.getInstance(CsVersion.V020550));
-        assertEquals("02.05.50", staging020550.getVersion());
-
-        Staging stagingLatest = Staging.getInstance(CsDataProvider.getInstance());
-        assertEquals("02.05.50", stagingLatest.getVersion());
     }
 
     @Test
@@ -179,7 +166,7 @@ class CsStagingTest extends StagingTest {
         assertEquals("testis", lookup.getFirst().getId());
 
         // now invalidate the cache
-        getProvider().invalidateCache();
+        _PROVIDER.invalidateCache();
 
         // try the lookup again
         lookup = _STAGING.lookupSchema(new CsSchemaLookup("C629", "9231", ""));
