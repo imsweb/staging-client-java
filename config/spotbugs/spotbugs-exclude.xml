@@ -24,6 +24,10 @@
         <Bug pattern="THROWS_METHOD_THROWS_CLAUSE_BASIC_EXCEPTION"/>
     </Match>
     <Match>
+        <Class name="com.imsweb.staging.ExternalStagingFileDataProvider"/>
+        <Bug pattern="PATH_TRAVERSAL_IN"/>
+    </Match>
+    <Match>
         <Bug pattern="EI_EXPOSE_REP"/>
     </Match>
     <Match>
