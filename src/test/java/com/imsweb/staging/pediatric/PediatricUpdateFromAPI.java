@@ -1,6 +1,7 @@
 package com.imsweb.staging.pediatric;
 
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.HashSet;
 
@@ -12,7 +13,7 @@ import com.imsweb.staging.updater.UpdaterUtils;
 public class PediatricUpdateFromAPI {
 
     public static void main(String[] args) throws IOException {
-        UpdaterUtils.update("pediatric", "1.3", new HashSet<>(Collections.singletonList("STAGING")));
+        UpdaterUtils.update("pediatric", "1.3", new HashSet<>(Collections.singletonList("STAGING")), Paths.get("c:/dev/tmp"));
     }
 
 }

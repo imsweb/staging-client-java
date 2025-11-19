@@ -2,6 +2,7 @@ package com.imsweb.staging.updater;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.UncheckedIOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -16,6 +17,9 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -202,6 +206,15 @@ public final class UpdaterUtils {
         Files.write(Paths.get(glossaryDir + "/terms.txt"), keywords, StandardCharsets.UTF_8);
         _LOG.info("Saved glossary terms to {}/terms.txt", schemaDir);
 
+        // Zip up schemas/, tables/, glossary/
+        Path versionDir = Paths.get(baseDirectory);
+        zipAlgorithm(algorithm, version, versionDir);
+
+        _LOG.info("Created ZIP: {}/{}-{}.zip",
+                versionDir.getParent().getParent(),
+                algorithm,
+                version);
+
         stopwatch.stop();
         _LOG.info("Completed in {}", stopwatch);
     }
@@ -228,6 +241,38 @@ public final class UpdaterUtils {
         }
 
         return count;
+    }
+
+    /**
+     * Zip the algorithm
+     */
+    private static void zipAlgorithm(String algorithm, String version, Path versionDir) throws IOException {
+        Path algorithmsDir = versionDir.getParent().getParent();   // .../algorithms
+        Path zipPath = algorithmsDir.resolve(algorithm + "-" + version + ".zip");
+
+        try (ZipOutputStream zos = new ZipOutputStream(Files.newOutputStream(zipPath))) {
+            for (String folder : new String[] {"schemas", "tables", "glossary"}) {
+                Path folderPath = versionDir.resolve(folder);
+                if (!Files.exists(folderPath))
+                    continue;
+
+                try (Stream<Path> walk = Files.walk(folderPath)) {
+                    walk.filter(Files::isRegularFile)
+                            .forEach(path -> {
+                                Path relative = versionDir.relativize(path);
+                                ZipEntry entry = new ZipEntry(relative.toString().replace('\\', '/'));
+                                try {
+                                    zos.putNextEntry(entry);
+                                    Files.copy(path, zos);
+                                    zos.closeEntry();
+                                }
+                                catch (IOException e) {
+                                    throw new UncheckedIOException(e);
+                                }
+                            });
+                }
+            }
+        }
     }
 
 }
