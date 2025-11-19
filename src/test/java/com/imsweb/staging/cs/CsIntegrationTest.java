@@ -78,7 +78,7 @@ public class CsIntegrationTest {
 
         String perMs = String.format("%.3f", ((float)stopwatch.elapsed(TimeUnit.MILLISECONDS) / totalCases));
         _LOG.info("");
-        _LOG.info("Completed {}} cases ({} files) in {} ({}ms/case).", NumberFormat.getNumberInstance(Locale.US).format(totalCases), totalFiles, stopwatch, perMs);
+        _LOG.info("Completed {} cases ({} files) in {} ({}ms/case).", NumberFormat.getNumberInstance(Locale.US).format(totalCases), totalFiles, stopwatch, perMs);
         if (totalFailures > 0)
             _LOG.error("There were {} failing cases.", NumberFormat.getNumberInstance(Locale.US).format(totalFailures));
     }
