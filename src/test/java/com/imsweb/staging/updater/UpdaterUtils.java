@@ -4,9 +4,11 @@ import java.io.File;
 import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -56,6 +58,7 @@ public final class UpdaterUtils {
 
     private static final Logger _LOG = LoggerFactory.getLogger(UpdaterUtils.class);
 
+    private static final Path TEST_ALGORITHMS_DIR = Paths.get("src", "test", "resources", "algorithms");
     private static final Pattern _ID_CHARACTERS = Pattern.compile("[a-z0-9_]+");
 
     /**
@@ -208,12 +211,10 @@ public final class UpdaterUtils {
 
         // Zip up schemas/, tables/, glossary/
         Path versionDir = Paths.get(baseDirectory);
-        zipAlgorithm(algorithm, version, versionDir);
+        Path zipPath = zipAlgorithm(algorithm, version, versionDir);
+        _LOG.info("Created ZIP: {}/{}-{}.zip", versionDir.getParent().getParent(), algorithm, version);
 
-        _LOG.info("Created ZIP: {}/{}-{}.zip",
-                versionDir.getParent().getParent(),
-                algorithm,
-                version);
+        copyZipToProject(algorithm, zipPath);
 
         stopwatch.stop();
         _LOG.info("Completed in {}", stopwatch);
@@ -246,7 +247,8 @@ public final class UpdaterUtils {
     /**
      * Zip the algorithm
      */
-    private static void zipAlgorithm(String algorithm, String version, Path versionDir) throws IOException {
+    private static Path zipAlgorithm(String algorithm, String version, Path versionDir) throws IOException {
+        // versionDir = .../algorithms/<algorithm>/<version>
         Path algorithmsDir = versionDir.getParent().getParent();   // .../algorithms
         Path zipPath = algorithmsDir.resolve(algorithm + "-" + version + ".zip");
 
@@ -273,6 +275,36 @@ public final class UpdaterUtils {
                 }
             }
         }
+
+        return zipPath;
+    }
+
+    /**
+     * Move zip file into project deleting the existing one; only one version of an algorithm should exist in the project at once
+     */
+    private static void copyZipToProject(String algorithm, Path zipPath) throws IOException {
+        if (!Files.exists(TEST_ALGORITHMS_DIR)) {
+            _LOG.info("Test algorithms directory {} does not exist; skipping copy of {}", TEST_ALGORITHMS_DIR.toAbsolutePath(), zipPath.getFileName());
+            return;
+        }
+
+        if (!Files.isDirectory(TEST_ALGORITHMS_DIR))
+            throw new IllegalStateException("Not a directory: " + TEST_ALGORITHMS_DIR.toAbsolutePath());
+
+        // delete existing zips for this algorithm
+        try (DirectoryStream<Path> stream = Files.newDirectoryStream(TEST_ALGORITHMS_DIR, algorithm + "-*.zip")) {
+            for (Path oldZip : stream) {
+                _LOG.info("Deleting old ZIP {}", oldZip.toAbsolutePath());
+                Files.deleteIfExists(oldZip);
+            }
+        }
+
+        // copy new zip
+        Path dest = TEST_ALGORITHMS_DIR.resolve(zipPath.getFileName());
+        Files.createDirectories(TEST_ALGORITHMS_DIR);
+        Files.copy(zipPath, dest, StandardCopyOption.REPLACE_EXISTING);
+
+        _LOG.info("Installed {} into {}", dest.getFileName(), dest.toAbsolutePath());
     }
 
 }
