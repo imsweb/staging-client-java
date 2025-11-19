@@ -17,7 +17,6 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 import com.imsweb.staging.entities.ColumnDefinition;
 import com.imsweb.staging.entities.ColumnDefinition.ColumnType;
@@ -839,7 +838,7 @@ public class DecisionEngine {
             result.addError(new ErrorBuilder(Type.MATCH_NOT_FOUND)
                     .message("Match not found in table '" + tableId + "' (" + getTableInputsAsString(table, result.getContext()) + ")")
                     .table(tableId)
-                    .columns(table.getColumnDefinitions().stream().filter(c -> c.getType().equals(ColumnType.ENDPOINT)).map(ColumnDefinition::getKey).collect(Collectors.toList()))
+                    .columns(table.getColumnDefinitions().stream().filter(c -> c.getType().equals(ColumnType.ENDPOINT)).map(ColumnDefinition::getKey).toList())
                     .build());
         }
         else {

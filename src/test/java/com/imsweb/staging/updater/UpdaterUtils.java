@@ -198,7 +198,7 @@ public final class UpdaterUtils {
         List<String> keywords = glossaryEntries.entrySet().stream()
                 .sorted(Entry.comparingByKey())
                 .map(e -> e.getKey() + "~" + e.getValue())
-                .collect(Collectors.toList());
+                .toList();
         Files.write(Paths.get(glossaryDir + "/terms.txt"), keywords, StandardCharsets.UTF_8);
         _LOG.info("Saved glossary terms to {}/terms.txt", schemaDir);
 
