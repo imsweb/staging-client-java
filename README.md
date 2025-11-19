@@ -23,14 +23,6 @@ In each Pediatric schema, valid values, definitions, and registrar notes are pro
 For cancer cases diagnosed January 1, 2024 and later, the NCI SEER program will collect the Pediatric Data Collection System fields. The schemas have been
 developed to be compatible with the Toronto Staging v1.1 definitions.
 
-To get started using the Pediatric staging algorithm, instantiate a `Staging` instance:
-
-```java
-Staging staging = Staging.getInstance(PediatricDataProvider.getInstance(PediatricVersion.LATEST));
-```
-
-If a specific version is needed, the algorithm zip file can be downloaded and initialized using an `ExternalStagingFileDataProvider`.
-
 | Version         | Release                                                                      | Algorithm ZIP                                                                                                  |
 |-----------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | 1.3             | [11.7.1](https://github.com/imsweb/staging-client-java/releases/tag/v11.7.1) | [pediatric-1.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.7.1/pediatric-1.3.zip) |
@@ -63,14 +55,6 @@ been developed to be compatible with the AJCC 8th Edition chapter definitions.
 All the standard setting organizations will collect the predictive and prognostic factors through Site Specific Data Items (SSDIs). Unlike the SSFs, these data items have
 formats and code structures specific to the data item.
 
-To get started using the EOD algorithm, instantiate a `Staging` instance:
-
-```java
-Staging staging = Staging.getInstance(EodDataProvider.getInstance(EodVersion.LATEST));
-```
-
-If a specific version is needed, the algorithm zip file can be downloaded and initialized using an `ExternalStagingFileDataProvider`.
-
 | Version        | Release                                                                      | Algorithm ZIP                                                                                                    |
 |----------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
 | 3.3            | [11.7.1](https://github.com/imsweb/staging-client-java/releases/tag/v11.7.1) | [eod_public-3.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.7.1/eod_public-3.3.zip) |
@@ -96,14 +80,6 @@ classification. UICC 7th edition and AJCC 7th edition TNM categories and stage g
 For diagnosis years 2016-2017, SEER Summary Stage 2000 is required. SEER Summary Stage 2000 should be collected manually unless the registry is collecting
 Collaborative Stage, which would derive Summary Stage 2000.
 
-To get started using the TNM algorithm, instantiate a `Staging` instance:
-
-```java
-Staging staging = Staging.getInstance(TnmDataProvider.getInstance(TnmVersion.LATEST));
-```
-
-If a specific version is needed, the algorithm zip file can be downloaded and initialized using an `ExternalStagingFileDataProvider`.
-
 | Version | Release                                                                      | Algorithm ZIP                                                                                      |
 |---------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | 2.0     | [10.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.0.0) | [tnm-2.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/tnm-2.0.zip) |
@@ -114,12 +90,6 @@ If a specific version is needed, the algorithm zip file can be downloaded and in
 Collaborative Stage is a unified data collection system designed to provide a common data set to meet the needs of all three staging systems (TNM, SEER EOD, and SEER SS). It
 provides a comprehensive system to improve data quality by standardizing rules for timing, clinical and pathologic assessments, and compatibility across all the systems for
 all cancer sites.
-
-To get started using the CS algorithm, instantiate a `Staging` instance:
-
-```java
-Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.LATEST));
-```
 
 | Version  | Release                                                                      | Algorithm ZIP                                                                                              |
 |----------|------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
