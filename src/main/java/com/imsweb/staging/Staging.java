@@ -3,6 +3,8 @@
  */
 package com.imsweb.staging;
 
+import java.io.IOException;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collection;
@@ -62,6 +64,24 @@ public final class Staging {
      */
     public static Staging getInstance(StagingDataProvider provider) {
         return new Staging(provider);
+    }
+
+    /**
+     * Create an instance of the Staging object based on a Path representing an algorithm zip file
+     * @param algorithmPath path to an algorithm zip file
+     * @return a Staging instance
+     */
+    public static Staging getInstance(Path algorithmPath) throws IOException {
+        return new Staging(new ExternalStagingFileDataProvider(algorithmPath));
+    }
+
+    /**
+     * Create an instance of the Staging object based on the String representing a full path to an algorithm zip file
+     * @param algorithmPath path to an algorithm zip file
+     * @return a Staging instance
+     */
+    public static Staging getInstance(String algorithmPath) throws IOException {
+        return new Staging(new ExternalStagingFileDataProvider(algorithmPath));
     }
 
     /**

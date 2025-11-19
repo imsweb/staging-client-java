@@ -31,11 +31,15 @@ class ExternalStagingFileDataProviderTest extends FileDataProviderTest {
     void testConstructorWithPath() throws IOException {
         Path zipPath = Paths.get("src/test/resources/external_algorithm.zip");
         ExternalStagingFileDataProvider provider = new ExternalStagingFileDataProvider(zipPath);
-
         assertThat(provider.getAlgorithm()).isNotBlank();
         assertThat(provider.getVersion()).isNotBlank();
         assertThat(provider.getSchemaIds()).isNotEmpty();
         assertThat(provider.getTableIds()).isNotEmpty();
+
+        // test the direct Staging instance
+        Staging staging = Staging.getInstance(zipPath);
+        assertThat(staging.getSchemaIds()).isNotEmpty();
+        assertThat(staging.getTableIds()).isNotEmpty();
     }
 
     @Test
@@ -47,6 +51,11 @@ class ExternalStagingFileDataProviderTest extends FileDataProviderTest {
         assertThat(provider.getVersion()).isNotBlank();
         assertThat(provider.getSchemaIds()).isNotEmpty();
         assertThat(provider.getTableIds()).isNotEmpty();
+
+        // test the direct Staging instance
+        Staging staging = Staging.getInstance(zipFileName);
+        assertThat(staging.getSchemaIds()).isNotEmpty();
+        assertThat(staging.getTableIds()).isNotEmpty();
     }
 
     @Test

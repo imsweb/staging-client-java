@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -62,10 +63,9 @@ public abstract class StagingTest {
      * Return the full path of specified algorithm
      */
     public static Path getAlgorithmPath(String algorithm) throws URISyntaxException, IOException {
-        Path algorithmsDir = Paths.get(Thread.currentThread()
+        Path algorithmsDir = Paths.get(Objects.requireNonNull(Thread.currentThread()
                 .getContextClassLoader()
-                .getResource("algorithms")
-                .toURI());
+                .getResource("algorithms")).toURI());
 
         try (Stream<Path> files = Files.list(algorithmsDir)) {
             return files

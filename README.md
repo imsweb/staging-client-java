@@ -10,7 +10,7 @@ A cancer staging client library for Java applications.
 
 ### Pediatric Data Collection System (PDCS or Pediatric)
 
-Pediatric Data Collection System (Pediatric) is a set of three data items that describe how far a cancer has spread at the time of diagnosis for Pediatric cancers. 
+Pediatric Data Collection System (Pediatric) is a set of three data items that describe how far a cancer has spread at the time of diagnosis for Pediatric cancers.
 PDCS can be collected for cases diagnosed in 2018 and later.
 
 In each Pediatric schema, valid values, definitions, and registrar notes are provided for
@@ -20,29 +20,29 @@ In each Pediatric schema, valid values, definitions, and registrar notes are pro
 - Pediatric Mets
 - Site-Specific Data Items (SSDIs)
 
-For cancer cases diagnosed January 1, 2024 and later, the NCI SEER program will collect the Pediatric Data Collection System fields. The schemas have been 
+For cancer cases diagnosed January 1, 2024 and later, the NCI SEER program will collect the Pediatric Data Collection System fields. The schemas have been
 developed to be compatible with the Toronto Staging v1.1 definitions.
 
 To get started using the Pediatric staging algorithm, instantiate a `Staging` instance:
 
 ```java
-Staging staging=Staging.getInstance(PediatricDataProvider.getInstance(PediatricVersion.LATEST));
+Staging staging = Staging.getInstance(PediatricDataProvider.getInstance(PediatricVersion.LATEST));
 ```
 
 If a specific version is needed, the algorithm zip file can be downloaded and initialized using an `ExternalStagingFileDataProvider`.
 
-| Version       | Release                                                                      | Algorithm ZIP                                                                                                  |
-|---------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| 1.3           | [11.7.1](https://github.com/imsweb/staging-client-java/releases/tag/v11.7.1) | [pediatric-1.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.7.1/pediatric-1.3.zip) |
-| 1.3 (**BETA**)    | [11.6.0](https://github.com/imsweb/staging-client-java/releases/tag/v11.6.0) | [pediatric-1.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.6.0/pediatric-1.3.zip) |
+| Version         | Release                                                                      | Algorithm ZIP                                                                                                  |
+|-----------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+| 1.3             | [11.7.1](https://github.com/imsweb/staging-client-java/releases/tag/v11.7.1) | [pediatric-1.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.7.1/pediatric-1.3.zip) |
+| 1.3 (**BETA**)  | [11.6.0](https://github.com/imsweb/staging-client-java/releases/tag/v11.6.0) | [pediatric-1.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.6.0/pediatric-1.3.zip) |
 | 1.2 (*revised*) | [11.3.2](https://github.com/imsweb/staging-client-java/releases/tag/v11.3.2) | [pediatric-1.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.3.2/pediatric-1.2.zip) |
-| 1.2           | [11.2.5](https://github.com/imsweb/staging-client-java/releases/tag/v11.2.5) | [pediatric-1.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.2.5/pediatric-1.2.zip) |
-| 1.1           | [11.2.2](https://github.com/imsweb/staging-client-java/releases/tag/v11.2.2) | [pediatric-1.1.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.2.2/pediatric-1.1.zip) |
-| 1.0           | [11.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v11.0.0) | [pediatric-1.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.0.0/pediatric-1.0.zip) |
-| 0.5           | [10.2.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.2.0) | [toronto-0.5.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.2.0/toronto-0.5.zip)     |
-| 0.4           | [10.1.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.1.0) | [toronto-0.4.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.1.0/toronto-0.4.zip)     |
-| 0.3           | [10.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.0.0) | [toronto-0.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/toronto-0.3.zip)     |
-| 0.2           | [9.1](https://github.com/imsweb/staging-client-java/releases/tag/v9.1)       | [toronto-0.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v9.1/toronto-0.2.zip)        |
+| 1.2             | [11.2.5](https://github.com/imsweb/staging-client-java/releases/tag/v11.2.5) | [pediatric-1.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.2.5/pediatric-1.2.zip) |
+| 1.1             | [11.2.2](https://github.com/imsweb/staging-client-java/releases/tag/v11.2.2) | [pediatric-1.1.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.2.2/pediatric-1.1.zip) |
+| 1.0             | [11.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v11.0.0) | [pediatric-1.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.0.0/pediatric-1.0.zip) |
+| 0.5             | [10.2.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.2.0) | [toronto-0.5.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.2.0/toronto-0.5.zip)     |
+| 0.4             | [10.1.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.1.0) | [toronto-0.4.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.1.0/toronto-0.4.zip)     |
+| 0.3             | [10.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.0.0) | [toronto-0.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/toronto-0.3.zip)     |
+| 0.2             | [9.1](https://github.com/imsweb/staging-client-java/releases/tag/v9.1)       | [toronto-0.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v9.1/toronto-0.2.zip)        |
 
 ### EOD
 
@@ -66,19 +66,19 @@ formats and code structures specific to the data item.
 To get started using the EOD algorithm, instantiate a `Staging` instance:
 
 ```java
-Staging staging=Staging.getInstance(EodDataProvider.getInstance(EodVersion.LATEST));
+Staging staging = Staging.getInstance(EodDataProvider.getInstance(EodVersion.LATEST));
 ```
 
 If a specific version is needed, the algorithm zip file can be downloaded and initialized using an `ExternalStagingFileDataProvider`.
 
-| Version | Release                                                                      | Algorithm ZIP                                                                                                    |
-|---------|------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| 3.3     | [11.7.1](https://github.com/imsweb/staging-client-java/releases/tag/v11.7.1) | [eod_public-3.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.7.1/eod_public-3.3.zip) |
+| Version        | Release                                                                      | Algorithm ZIP                                                                                                    |
+|----------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| 3.3            | [11.7.1](https://github.com/imsweb/staging-client-java/releases/tag/v11.7.1) | [eod_public-3.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.7.1/eod_public-3.3.zip) |
 | 3.3 (**BETA**) | [11.6.0](https://github.com/imsweb/staging-client-java/releases/tag/v11.6.0) | [eod_public-3.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.6.0/eod_public-3.3.zip) |
-| 3.2     | [11.4.1](https://github.com/imsweb/staging-client-java/releases/tag/v11.4.1) | [eod_public-3.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.3.1/eod_public-3.2.zip) |
-| 3.1     | [10.3.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.3.0) | [eod_public-3.1.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.3.0/eod_public-3.1.zip) |
-| 3.0     | [10.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.0.0) | [eod_public-3.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/eod_public-3.0.zip) |
-| 2.1     | [8.0](https://github.com/imsweb/staging-client-java/releases/tag/v8.0)       | [eod_public-2.1.zip](https://github.com/imsweb/staging-client-java/releases/download/v8.0/eod_public-2.1.zip)    |
+| 3.2            | [11.4.1](https://github.com/imsweb/staging-client-java/releases/tag/v11.4.1) | [eod_public-3.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.3.1/eod_public-3.2.zip) |
+| 3.1            | [10.3.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.3.0) | [eod_public-3.1.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.3.0/eod_public-3.1.zip) |
+| 3.0            | [10.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.0.0) | [eod_public-3.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/eod_public-3.0.zip) |
+| 2.1            | [8.0](https://github.com/imsweb/staging-client-java/releases/tag/v8.0)       | [eod_public-2.1.zip](https://github.com/imsweb/staging-client-java/releases/download/v8.0/eod_public-2.1.zip)    |
 
 ### TNM
 
@@ -99,7 +99,7 @@ Collaborative Stage, which would derive Summary Stage 2000.
 To get started using the TNM algorithm, instantiate a `Staging` instance:
 
 ```java
-Staging staging=Staging.getInstance(TnmDataProvider.getInstance(TnmVersion.LATEST));
+Staging staging = Staging.getInstance(TnmDataProvider.getInstance(TnmVersion.LATEST));
 ```
 
 If a specific version is needed, the algorithm zip file can be downloaded and initialized using an `ExternalStagingFileDataProvider`.
@@ -118,7 +118,7 @@ all cancer sites.
 To get started using the CS algorithm, instantiate a `Staging` instance:
 
 ```java
-Staging staging=Staging.getInstance(CsDataProvider.getInstance(CsVersion.LATEST));
+Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.LATEST));
 ```
 
 | Version  | Release                                                                      | Algorithm ZIP                                                                                              |
@@ -129,7 +129,7 @@ Staging staging=Staging.getInstance(CsDataProvider.getInstance(CsVersion.LATEST)
 
 Java 8 is the minimum version required to use the library.
 
-If you are interested in just the library without any bundled algorithm, it can be included with the following.
+It can be included with the following.
 
 Maven
 
@@ -148,41 +148,8 @@ Gradle
 compile 'com.imsweb:staging-client-java:x.x.x'
 ```
 
-If you are interested in a specific algorithm, you can include them using their specific artifact.
-
-Maven
-
-```xml
-<dependency>
-    <groupId>com.imsweb</groupId>
-    <artifactId>staging-client-java-cs</artifactId>
-    <version>x.x.x</version>
-</dependency>
-<dependency>
-    <groupId>com.imsweb</groupId>
-    <artifactId>staging-client-java-eod-public</artifactId>
-    <version>x.x.x</version>
-</dependency>
-<dependency>
-    <groupId>com.imsweb</groupId>
-    <artifactId>staging-client-java-tnm</artifactId>
-    <version>x.x.x</version>
-</dependency>
-<dependency>
-    <groupId>com.imsweb</groupId>
-    <artifactId>staging-client-java-pediatric</artifactId>
-    <version>x.x.x</version>
-</dependency>
-```
-
-Gradle
-
-```groovy
-implementation 'com.imsweb:staging-client-java-cs:x.x.x'
-implementation 'com.imsweb:staging-client-java-eod-public:x.x.x'
-implementation 'com.imsweb:staging-client-java-tnm:x.x.x'
-implementation 'com.imsweb:staging-client-java-pediatric:x.x.x'
-```
+Note that the library does NOT include the algorithms. They must be downloaded separately. The versions are linked above or
+can be found in each release.
 
 ## Usage
 
@@ -190,25 +157,12 @@ More detailed documentation can be found in the [Wiki](https://github.com/imsweb
 
 ### Get a `Staging` instance
 
-Everything starts with getting an instance of the `Staging` object. There are `DataProvider` objects for each staging algorithm and version. The `Staging`
-object is thread safe and cached so subsequent calls to `Staging.getInstance()` will return the same object.
-
-For example, for the Collaborative Staging algorithm, the call will look like this:
-
-```java
-Staging staging = Staging.getInstance(CsDataProvider.getInstance(CsVersion.LATEST));
-```
-
-There could be times when you want to load either a private algorithm or even an older version of an existing algorithm. You can get the algorithm
-zip file from the release page and load it using `ExternalStagingFileDataProvider`.
+Everything starts with getting an instance of the `Staging` object. You will need an algorithm zip file to load. All avaiable algorithm and version
+download links are listed at the top of this file. Creating a staging instance involves loading all the information from the algorithms and is 
+expensive. The staging instance should be maintained once loaded.
 
 ```java
-Path path = Paths.get("C:/path/to/algorithm", "tnm-1.9.zip");
-try(InputStream is = Files.newInputStream(path)) {
-   Staging staging = Staging.getInstance(new ExternalStagingFileDataProvider(is));
-
-   // use staging instance
-}
+Staging staging = Staging.getInstance(Paths.get("C:/path/to/algorithm/cs.02.05.50.zip"));
 ```
 
 ### Schemas
@@ -278,9 +232,13 @@ customized for the specific inputs needed to lookup a schema.
 For Collaborative Staging, use the `CsSchemaLookup` object (each algorithm has their own lookup class). Here is a lookup based on site and histology.
 
 ```java
-List<Schema> lookup = staging.lookupSchema(new CsSchemaLookup("C629","9231"));
-assertEquals(1, lookup.size());
-assertEquals("testis", lookup.get(0).getId());
+List<Schema> lookup = staging.lookupSchema(new CsSchemaLookup("C629", "9231"));
+
+assertEquals(1,lookup.size());
+
+assertEquals("testis",lookup.get(0).
+
+getId());
 ```
 
 If the call returns a single result, then it was successful. If it returns more than one result, then it needs a discriminator. Information about the required discriminator
@@ -289,16 +247,32 @@ sets of discriminators that can be determined based on the result.
 
 ```java
 // do not supply a discriminator
-List<Schema> lookup = staging.lookupSchema(new CsSchemaLookup("C111","8200"));
+List<Schema> lookup = staging.lookupSchema(new CsSchemaLookup("C111", "8200"));
+
 assertEquals(2,lookup.size());
-for(Schema schema : lookup)
-   assertTrue(schema.getSchemaDiscriminators().contains(CsStagingData.SSF25_KEY));
+        for(
+Schema schema :lookup)
+
+assertTrue(schema.getSchemaDiscriminators().
+
+contains(CsStagingData.SSF25_KEY));
 
 // supply a discriminator
-lookup = staging.lookupSchema(new CsSchemaLookup("C111","8200","010"));
-assertEquals(1, lookup.size());
-assertEquals("nasopharynx", lookup.get(0).getId());
-assertEquals(Integer.valueOf(34), lookup.get(0).getSchemaNum());
+lookup =staging.
+
+lookupSchema(new CsSchemaLookup("C111","8200","010"));
+
+assertEquals(1,lookup.size());
+
+assertEquals("nasopharynx",lookup.get(0).
+
+getId());
+
+assertEquals(Integer.valueOf(34),lookup.
+
+get(0).
+
+getSchemaNum());
 ```
 
 ### Calculate stage
@@ -319,80 +293,161 @@ include the ones that are used in the schema being staged.
 
 ```java
 CsStagingData data = new CsStagingData();
-data.setInput(CsInput.PRIMARY_SITE,"C680");
-data.setInput(CsInput.HISTOLOGY,"8000");
-data.setInput(CsInput.BEHAVIOR,"3");
-data.setInput(CsInput.GRADE,"9");
-data.setInput(CsInput.DX_YEAR,"2013");
-data.setInput(CsInput.CS_VERSION_ORIGINAL,"020550");
-data.setInput(CsInput.TUMOR_SIZE,"075");
-data.setInput(CsInput.EXTENSION,"100");
-data.setInput(CsInput.EXTENSION_EVAL,"9");
-data.setInput(CsInput.LYMPH_NODES,"100");
-data.setInput(CsInput.LYMPH_NODES_EVAL,"9");
-data.setInput(CsInput.REGIONAL_NODES_POSITIVE,"99");
-data.setInput(CsInput.REGIONAL_NODES_EXAMINED,"99");
-data.setInput(CsInput.METS_AT_DX,"10");
-data.setInput(CsInput.METS_EVAL,"9");
-data.setInput(CsInput.LVI,"9");
-data.setInput(CsInput.AGE_AT_DX,"060");
-data.setSsf(1, "020");
+data.
+
+setInput(CsInput.PRIMARY_SITE,"C680");
+data.
+
+setInput(CsInput.HISTOLOGY,"8000");
+data.
+
+setInput(CsInput.BEHAVIOR,"3");
+data.
+
+setInput(CsInput.GRADE,"9");
+data.
+
+setInput(CsInput.DX_YEAR,"2013");
+data.
+
+setInput(CsInput.CS_VERSION_ORIGINAL,"020550");
+data.
+
+setInput(CsInput.TUMOR_SIZE,"075");
+data.
+
+setInput(CsInput.EXTENSION,"100");
+data.
+
+setInput(CsInput.EXTENSION_EVAL,"9");
+data.
+
+setInput(CsInput.LYMPH_NODES,"100");
+data.
+
+setInput(CsInput.LYMPH_NODES_EVAL,"9");
+data.
+
+setInput(CsInput.REGIONAL_NODES_POSITIVE,"99");
+data.
+
+setInput(CsInput.REGIONAL_NODES_EXAMINED,"99");
+data.
+
+setInput(CsInput.METS_AT_DX,"10");
+data.
+
+setInput(CsInput.METS_EVAL,"9");
+data.
+
+setInput(CsInput.LVI,"9");
+data.
+
+setInput(CsInput.AGE_AT_DX,"060");
+data.
+
+setSsf(1,"020");
 
 // perform the staging
-staging.stage(data);
+staging.
+
+stage(data);
 
 assertEquals(Result.STAGED, data.getResult());
-assertEquals("urethra", data.getSchemaId());
-assertEquals(0, data.getErrors().size());
-assertEquals(37, data.getPath().size());
+
+assertEquals("urethra",data.getSchemaId());
+
+assertEquals(0,data.getErrors().
+
+size());
+
+assertEquals(37,data.getPath().
+
+size());
 
 // check output
-assertEquals("129", data.getOutput(CsOutput.SCHEMA_NUMBER));
-assertEquals("020550", data.getOutput(CsOutput.CSVER_DERIVED));
+assertEquals("129",data.getOutput(CsOutput.SCHEMA_NUMBER));
+
+assertEquals("020550",data.getOutput(CsOutput.CSVER_DERIVED));
 
 // AJCC 6
-assertEquals("T1", data.getOutput(CsOutput.AJCC6_T));
-assertEquals("c", data.getOutput(CsOutput.AJCC6_TDESCRIPTOR));
-assertEquals("N1", data.getOutput(CsOutput.AJCC6_N));
-assertEquals("c", data.getOutput(CsOutput.AJCC6_NDESCRIPTOR));
-assertEquals("M1", data.getOutput(CsOutput.AJCC6_M));
-assertEquals("c", data.getOutput(CsOutput.AJCC6_MDESCRIPTOR));
-assertEquals("IV", data.getOutput(CsOutput.AJCC6_STAGE));
-assertEquals("10", data.getOutput(CsOutput.STOR_AJCC6_T));
-assertEquals("c", data.getOutput(CsOutput.STOR_AJCC6_TDESCRIPTOR));
-assertEquals("10", data.getOutput(CsOutput.STOR_AJCC6_N));
-assertEquals("c", data.getOutput(CsOutput.STOR_AJCC6_NDESCRIPTOR));
-assertEquals("10", data.getOutput(CsOutput.STOR_AJCC6_M));
-assertEquals("c", data.getOutput(CsOutput.STOR_AJCC6_MDESCRIPTOR));
-assertEquals("70", data.getOutput(CsOutput.STOR_AJCC6_STAGE));
+assertEquals("T1",data.getOutput(CsOutput.AJCC6_T));
+
+assertEquals("c",data.getOutput(CsOutput.AJCC6_TDESCRIPTOR));
+
+assertEquals("N1",data.getOutput(CsOutput.AJCC6_N));
+
+assertEquals("c",data.getOutput(CsOutput.AJCC6_NDESCRIPTOR));
+
+assertEquals("M1",data.getOutput(CsOutput.AJCC6_M));
+
+assertEquals("c",data.getOutput(CsOutput.AJCC6_MDESCRIPTOR));
+
+assertEquals("IV",data.getOutput(CsOutput.AJCC6_STAGE));
+
+assertEquals("10",data.getOutput(CsOutput.STOR_AJCC6_T));
+
+assertEquals("c",data.getOutput(CsOutput.STOR_AJCC6_TDESCRIPTOR));
+
+assertEquals("10",data.getOutput(CsOutput.STOR_AJCC6_N));
+
+assertEquals("c",data.getOutput(CsOutput.STOR_AJCC6_NDESCRIPTOR));
+
+assertEquals("10",data.getOutput(CsOutput.STOR_AJCC6_M));
+
+assertEquals("c",data.getOutput(CsOutput.STOR_AJCC6_MDESCRIPTOR));
+
+assertEquals("70",data.getOutput(CsOutput.STOR_AJCC6_STAGE));
 
 // AJCC 7
-assertEquals("T1", data.getOutput(CsOutput.AJCC7_T));
-assertEquals("c", data.getOutput(CsOutput.AJCC7_TDESCRIPTOR));
-assertEquals("N1", data.getOutput(CsOutput.AJCC7_N));
-assertEquals("c", data.getOutput(CsOutput.AJCC7_NDESCRIPTOR));
-assertEquals("M1", data.getOutput(CsOutput.AJCC7_M));
-assertEquals("c", data.getOutput(CsOutput.AJCC7_MDESCRIPTOR));
-assertEquals("IV", data.getOutput(CsOutput.AJCC7_STAGE));
-assertEquals("100", data.getOutput(CsOutput.STOR_AJCC7_T));
-assertEquals("c", data.getOutput(CsOutput.STOR_AJCC6_TDESCRIPTOR));
-assertEquals("100", data.getOutput(CsOutput.STOR_AJCC7_N));
-assertEquals("c", data.getOutput(CsOutput.STOR_AJCC7_NDESCRIPTOR));
-assertEquals("100", data.getOutput(CsOutput.STOR_AJCC7_M));
-assertEquals("c", data.getOutput(CsOutput.STOR_AJCC7_MDESCRIPTOR));
-assertEquals("700", data.getOutput(CsOutput.STOR_AJCC7_STAGE));
+assertEquals("T1",data.getOutput(CsOutput.AJCC7_T));
+
+assertEquals("c",data.getOutput(CsOutput.AJCC7_TDESCRIPTOR));
+
+assertEquals("N1",data.getOutput(CsOutput.AJCC7_N));
+
+assertEquals("c",data.getOutput(CsOutput.AJCC7_NDESCRIPTOR));
+
+assertEquals("M1",data.getOutput(CsOutput.AJCC7_M));
+
+assertEquals("c",data.getOutput(CsOutput.AJCC7_MDESCRIPTOR));
+
+assertEquals("IV",data.getOutput(CsOutput.AJCC7_STAGE));
+
+assertEquals("100",data.getOutput(CsOutput.STOR_AJCC7_T));
+
+assertEquals("c",data.getOutput(CsOutput.STOR_AJCC6_TDESCRIPTOR));
+
+assertEquals("100",data.getOutput(CsOutput.STOR_AJCC7_N));
+
+assertEquals("c",data.getOutput(CsOutput.STOR_AJCC7_NDESCRIPTOR));
+
+assertEquals("100",data.getOutput(CsOutput.STOR_AJCC7_M));
+
+assertEquals("c",data.getOutput(CsOutput.STOR_AJCC7_MDESCRIPTOR));
+
+assertEquals("700",data.getOutput(CsOutput.STOR_AJCC7_STAGE));
 
 // Summary Stage
-assertEquals("L", data.getOutput(CsOutput.SS1977_T));
-assertEquals("RN" ,data.getOutput(CsOutput.SS1977_N));
-assertEquals("D", data.getOutput(CsOutput.SS1977_M));
-assertEquals("D", data.getOutput(CsOutput.SS1977_STAGE));
-assertEquals("L", data.getOutput(CsOutput.SS2000_T));
-assertEquals("RN" ,data.getOutput(CsOutput.SS2000_N));
-assertEquals("D", data.getOutput(CsOutput.SS2000_M));
-assertEquals("D", data.getOutput(CsOutput.SS2000_STAGE));
-assertEquals("7", data.getOutput(CsOutput.STOR_SS1977_STAGE));
-assertEquals("7", data.getOutput(CsOutput.STOR_SS2000_STAGE));
+assertEquals("L",data.getOutput(CsOutput.SS1977_T));
+
+assertEquals("RN",data.getOutput(CsOutput.SS1977_N));
+
+assertEquals("D",data.getOutput(CsOutput.SS1977_M));
+
+assertEquals("D",data.getOutput(CsOutput.SS1977_STAGE));
+
+assertEquals("L",data.getOutput(CsOutput.SS2000_T));
+
+assertEquals("RN",data.getOutput(CsOutput.SS2000_N));
+
+assertEquals("D",data.getOutput(CsOutput.SS2000_M));
+
+assertEquals("D",data.getOutput(CsOutput.SS2000_STAGE));
+
+assertEquals("7",data.getOutput(CsOutput.STOR_SS1977_STAGE));
+
+assertEquals("7",data.getOutput(CsOutput.STOR_SS2000_STAGE));
 ```
 
 ## About SEER
