@@ -25,22 +25,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      # Debug: make sure the class actually exists in this branch
-      - name: Debug – locate CsIntegrationTest
-        run: |
-          pwd
-          echo "Searching for CsIntegrationTest.java and .class..."
-          find . -maxdepth 6 -type f \( -name 'CsIntegrationTest.java' -o -name 'CsIntegrationTest.class' \) -print || echo "Not found"
-
-      - name: Compile tests
-        run: |
-          chmod +x ./mvnw
-          ./mvnw -B test-compile -DskipTests
-
       # Run the comparison using the test classpath
       - name: Build and run CS Comparison
         run: |
-          ./mvnw -B exec:java \
-            -DskipTests \
-            -Dexec.mainClass=com.imsweb.staging.cs.CsIntegrationTest \
-            -Dexec.classpathScope=test
+          chmod +x ./mvnw
+          ./mvnw -B test-compile -DskipTests
+          ./mvnw -B exec:java -DskipTests -Dexec.mainClass=com.imsweb.staging.cs.CsIntegrationTest -Dexec.classpathScope=test
