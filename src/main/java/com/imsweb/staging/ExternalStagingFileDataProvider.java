@@ -3,10 +3,10 @@
  */
 package com.imsweb.staging;
 
-import java.io.BufferedReader;
+import java.io.BufferedInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -15,7 +15,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import java.util.stream.Collectors;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
@@ -46,6 +45,11 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
     private final Map<String, StagingTable> _tables = new HashMap<>();
     private final Map<String, StagingSchema> _schemas = new HashMap<>();
     private final Map<String, GlossaryDefinition> _glossaryTerms = new HashMap<>();
+
+    private static final int THRESHOLD_ENTRIES = 10000;
+    private static final long THRESHOLD_ENTRY_SIZE = 10L * 1024 * 1024;
+    private static final long THRESHOLD_SIZE = 100_000_000; // 100 MB
+    private static final double THRESHOLD_RATIO = 50;
 
     /**
      * Constructor loads all schemas and sets up table cache
@@ -80,11 +84,28 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
         init(is);
     }
 
+    private record EntryData(String json, long uncompressedSize) {}
+
     /**
-     * Read a zip entry from an inputstream and return as a byte array
+     * Read a zip entry from an inputstream and return as a String
      */
-    private static String extractEntry(InputStream is) {
-        return new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8)).lines().collect(Collectors.joining("\n"));
+    private static EntryData readEntrySafely(InputStream is) throws IOException {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        byte[] buffer = new byte[8192];
+        long total = 0;
+        int read;
+
+        while ((read = is.read(buffer)) != -1) {
+            total += read;
+
+            if (total > THRESHOLD_ENTRY_SIZE)
+                throw new IllegalStateException("Zip entry is too large; maximum permitted per entry is " + THRESHOLD_ENTRY_SIZE + " bytes");
+
+            baos.write(buffer, 0, read);
+        }
+
+        String json = baos.toString(StandardCharsets.UTF_8);
+        return new EntryData(json, total);
     }
 
     /**
@@ -93,17 +114,37 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
     private void init(InputStream is) throws IOException {
         Set<String> algorithms = new HashSet<>();
         Set<String> versions = new HashSet<>();
+        long totalSizeArchive = 0L;
+        int totalEntries = 0;
 
         TrieBuilder builder = Trie.builder().onlyWholeWords().ignoreCase();
 
-        try (ZipInputStream stream = new ZipInputStream(is)) {
+        try (ZipInputStream stream = new ZipInputStream(new BufferedInputStream(is))) {
             ZipEntry entry;
             while ((entry = stream.getNextEntry()) != null) {
                 if (entry.isDirectory() || !entry.getName().endsWith(".json"))
                     continue;
 
+                totalEntries++;
+
+                if (totalEntries > THRESHOLD_ENTRIES)
+                    throw new IllegalStateException("Algorithm zip file has too many entries; maximum permitted is " + THRESHOLD_ENTRIES);
+
+                EntryData data = readEntrySafely(stream);
+
+                totalSizeArchive += data.uncompressedSize;
+                if (totalSizeArchive > THRESHOLD_SIZE)
+                    throw new IllegalStateException("Algorithm zip file uncompressed size is too large; maximum permitted is " + THRESHOLD_SIZE + " bytes");
+
+                long compressedSize = entry.getCompressedSize(); // may be -1 if unknown
+                if (compressedSize > 0) {
+                    double ratio = (double)data.uncompressedSize / (double)compressedSize;
+                    if (ratio > THRESHOLD_RATIO)
+                        throw new IllegalStateException("Zip entry compression ratio too high (" + ratio + "); potential zip bomb");
+                }
+
                 if (entry.getName().startsWith("tables")) {
-                    StagingTable table = getMapper().reader().readValue(getMapper().getFactory().createParser(extractEntry(stream)), StagingTable.class);
+                    StagingTable table = getMapper().reader().readValue(getMapper().getFactory().createParser(data.json()), StagingTable.class);
 
                     initTable(table);
 
@@ -113,7 +154,7 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
                     _tables.put(table.getId(), table);
                 }
                 else if (entry.getName().startsWith("schemas")) {
-                    StagingSchema schema = getMapper().reader().readValue(getMapper().getFactory().createParser(extractEntry(stream)), StagingSchema.class);
+                    StagingSchema schema = getMapper().reader().readValue(getMapper().getFactory().createParser(data.json()), StagingSchema.class);
 
                     initSchema(schema);
 
@@ -123,7 +164,7 @@ public class ExternalStagingFileDataProvider extends StagingDataProvider {
                     _schemas.put(schema.getId(), schema);
                 }
                 else if (entry.getName().startsWith("glossary")) {
-                    GlossaryDefinition glossary = getMapper().reader().readValue(getMapper().getFactory().createParser(extractEntry(stream)), GlossaryDefinition.class);
+                    GlossaryDefinition glossary = getMapper().reader().readValue(getMapper().getFactory().createParser(data.json()), GlossaryDefinition.class);
                     _glossaryTerms.put(glossary.getName(), glossary);
                     builder.addKeyword(glossary.getName());
                 }

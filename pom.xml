@@ -46,7 +46,6 @@
         <ahocorasick.version>0.6.3</ahocorasick.version>
         <commons.lang3.version>3.20.0</commons.lang3.version>
         <cache2k.version>2.6.1.Final</cache2k.version>
-        <zt-zip.version>1.17</zt-zip.version>
         <seerapi-client.version>5.9</seerapi-client.version>
 
         <!-- Test deps -->
@@ -105,12 +104,6 @@
             <artifactId>cache2k-core</artifactId>
             <version>${cache2k.version}</version>
             <scope>runtime</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.zeroturnaround</groupId>
-            <artifactId>zt-zip</artifactId>
-            <version>${zt-zip.version}</version>
         </dependency>
 
         <dependency>
