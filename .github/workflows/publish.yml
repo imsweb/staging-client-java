@@ -53,7 +53,7 @@ jobs:
           cache: 'maven'
 
           # Must match <id> in <distributionManagement>
-          server-id: ossrh
+          server-id: central
 
           # These are Maven properties in settings.xml; values come from env below
           server-username: MAVEN_CENTRAL_USERNAME
