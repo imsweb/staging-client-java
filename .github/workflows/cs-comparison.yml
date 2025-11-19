@@ -28,5 +28,7 @@ jobs:
       - name: Build and run CS Comparison
         run: |
           chmod +x ./mvnw
-          ./mvnw -B clean package -DskipTests
-          ./mvnw exec:java -Dexec.mainClass="com.imsweb.staging.cs.CsIntegrationTest"
+          ./mvnw -B exec:java \
+            -DskipTests \
+            -Dexec.mainClass=com.imsweb.staging.cs.CsIntegrationTest \
+            -Dexec.classpathScope=test
