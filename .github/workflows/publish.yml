@@ -1,4 +1,30 @@
 # Publish to Maven Central (Maven)
+#
+# Non-SNAPSHOT releases are done automatically on Git tag. SNAPSHOT releases are not handled by CI; use
+# the following command to release a SNAPSHOT (ensure the version in pom.xml is a SNAPSHOT version):
+#
+# $ .\mvnw.cmd deploy -DskipTests
+#
+# Note that to release locally you will need to set up a settings.xml file in you user
+# home .m2 directory. The username and password is generated at:
+#
+#    https://central.sonatype.com/usertoken.
+#
+# Here is the settings.xml file:
+#
+#  <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+#            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+#            xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+#                                https://maven.apache.org/xsd/settings-1.0.0.xsd">
+#     <servers>
+#        <server>
+#        <!-- must match <id>ossrh</id> in distributionManagement -->
+#           <id>central</id>
+#           <username>USERNAME FROM GENERATED TOKEN</username>
+#           <password>PASSWORD FROM GENERATED TOKEN</password>
+#        </server>
+#     </servers>
+#  </settings>
 
 name: publish
 
