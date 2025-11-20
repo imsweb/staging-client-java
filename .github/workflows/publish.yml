@@ -32,7 +32,7 @@ on:
   repository_dispatch:
     types: manual-publish
   release:
-    types: [ created ]
+    types: [ published ]
 
 jobs:
   publish:
