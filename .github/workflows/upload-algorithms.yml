@@ -3,38 +3,22 @@
 name: upload-algorithms
 
 on:
-  repository_dispatch:
-    types: manual-publish
   release:
-    types: [ created ]
+    types: [published]
 
 jobs:
   publish:
-
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up JDK
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'adopt'
-          java-version: '21'
-
-      - name: Create algorithm zips
-        if: ${{startsWith(github.ref, 'refs/tags/v') }}
-        run: |
-          chmod +x gradlew
-          ./gradlew zipAlgorithms
-
       - name: Add algorithms to release
         uses: softprops/action-gh-release@v1
-        if: ${{startsWith(github.ref, 'refs/tags/v') }}
         with:
           files: |
-            algorithm-cs/build/algorithms/*.zip
-            algorithm-eod/build/algorithms/*.zip
-            algorithm-tnm/build/algorithms/*.zip
-            algorithm-pediatric/build/algorithms/*.zip
+            src/test/resources/algorithms/cs-*.zip
+            src/test/resources/algorithms/eod_public-*.zip
+            src/test/resources/algorithms/pediatric-*.zip
+            src/test/resources/algorithms/tnm-*.zip
