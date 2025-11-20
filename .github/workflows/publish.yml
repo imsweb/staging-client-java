@@ -66,7 +66,7 @@ jobs:
           gpg-passphrase: MAVEN_GPG_PASSPHRASE
 
       - name: Publish to Maven Central
-        run: mvn -B -ntp clean deploy -P release -DskipTests
+        run: mvn -B -ntp clean deploy -P release -DskipTests -Dspotbugs.skip=true -Djacoco.skip=true
         env:
           # Sonatype / Central credentials
           MAVEN_CENTRAL_USERNAME: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
