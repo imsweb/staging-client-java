@@ -107,12 +107,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.imsweb</groupId>
-            <artifactId>seerapi-client-java</artifactId>
-            <version>${seerapi-client.version}</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>${slf4j.version}</version>
@@ -137,8 +131,12 @@
             <version>${bean-matchers.version}</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- Simple logger for tests; optional -->
+        <dependency>
+            <groupId>com.imsweb</groupId>
+            <artifactId>seerapi-client-java</artifactId>
+            <version>${seerapi-client.version}</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
