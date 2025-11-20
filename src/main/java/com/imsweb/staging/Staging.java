@@ -4,6 +4,7 @@
 package com.imsweb.staging;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -58,12 +59,21 @@ public final class Staging {
     }
 
     /**
-     * Create an instance of the Staging object with a pre-constructed provider
+     * Create an instance of the Staging object based on a provider
      * @param provider StagingDataProvider
      * @return a Staging instance
      */
     public static Staging getInstance(StagingDataProvider provider) {
         return new Staging(provider);
+    }
+
+    /**
+     * Create an instance of the Staging object based on an InputStream
+     * @param is InputStream pointing to algoruthm zip file
+     * @return a Staging instance
+     */
+    public static Staging getInstance(InputStream is) throws IOException {
+        return new Staging(new ExternalStagingFileDataProvider(is));
     }
 
     /**

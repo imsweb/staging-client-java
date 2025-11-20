@@ -18,7 +18,7 @@ class ExternalStagingFileDataProviderTest extends FileDataProviderTest {
     @BeforeAll
     static void setup() throws IOException {
         try (InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream("external_algorithm.zip")) {
-            _STAGING = Staging.getInstance(new ExternalStagingFileDataProvider(is));
+            _STAGING = Staging.getInstance(is);
         }
     }
 
