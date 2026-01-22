@@ -82,6 +82,7 @@ Collaborative Stage, which would derive Summary Stage 2000.
 
 | Version | Release                                                                      | Algorithm ZIP                                                                                      |
 |---------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| 2.1     | [11.9.0](https://github.com/imsweb/staging-client-java/releases/tag/v11.9.0) | [tnm-2.1.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.9.0/tnm-2.1.zip) |
 | 2.0     | [10.0.0](https://github.com/imsweb/staging-client-java/releases/tag/v10.0.0) | [tnm-2.0.zip](https://github.com/imsweb/staging-client-java/releases/download/v10.0.0/tnm-2.0.zip) |
 | 1.9     | [8.0](https://github.com/imsweb/staging-client-java/releases/tag/v8.0)       | [tnm-1.9.zip](https://github.com/imsweb/staging-client-java/releases/download/v8.0/tnm-1.9.zip)    |
 
