@@ -9,12 +9,12 @@ import com.imsweb.staging.entities.SchemaLookup;
 
 import static com.imsweb.staging.entities.StagingData.HISTOLOGY_KEY;
 import static com.imsweb.staging.entities.StagingData.PRIMARY_SITE_KEY;
-import static com.imsweb.staging.tnm.TnmStagingData.SEX_KEY;
+import static com.imsweb.staging.tnm.TnmStagingData.SEX_AT_BIRTH_KEY;
 import static com.imsweb.staging.tnm.TnmStagingData.SSF25_KEY;
 
 public class TnmSchemaLookup extends SchemaLookup {
 
-    private static final Set<String> _ALLOWED_KEYS = Set.of(PRIMARY_SITE_KEY, HISTOLOGY_KEY, SSF25_KEY, SEX_KEY);
+    private static final Set<String> _ALLOWED_KEYS = Set.of(PRIMARY_SITE_KEY, HISTOLOGY_KEY, SSF25_KEY, SEX_AT_BIRTH_KEY);
 
     /**
      * Constructor

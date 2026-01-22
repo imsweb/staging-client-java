@@ -13,7 +13,7 @@ import com.imsweb.staging.updater.UpdaterUtils;
 public class TnmUpdateFromAPI {
 
     public static void main(String[] args) throws IOException {
-        UpdaterUtils.update("tnm", "2.0", new HashSet<>(Collections.singletonList("STAGING")), Paths.get("c:/dev/tmp"));
+        UpdaterUtils.update("tnm", "2.1", new HashSet<>(Collections.singletonList("STAGING")), Paths.get("c:/dev/tmp"));
     }
 
 }
