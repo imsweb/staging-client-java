@@ -54,7 +54,7 @@ class TnmStagingTest extends StagingTest {
 
     @Override
     public String getVersion() {
-        return "2.0";
+        return "2.1";
     }
 
     @Test
@@ -69,7 +69,7 @@ class TnmStagingTest extends StagingTest {
     @Test
     void testDescriminatorKeys() {
         assertEquals(new HashSet<>(Collections.singletonList("ssf25")), _STAGING.getSchema("nasopharynx").getSchemaDiscriminators());
-        assertEquals(new HashSet<>(Collections.singletonList("sex")), _STAGING.getSchema("peritoneum_female_gen").getSchemaDiscriminators());
+        assertEquals(new HashSet<>(Collections.singletonList("sex_at_birth")), _STAGING.getSchema("peritoneum_female_gen").getSchemaDiscriminators());
     }
 
     @Test

@@ -8,7 +8,7 @@ import com.imsweb.staging.entities.StagingData;
 public class TnmStagingData extends StagingData {
 
     // key definitions
-    public static final String SEX_KEY = "sex";
+    public static final String SEX_AT_BIRTH_KEY = "sex_at_birth";
     public static final String SSF25_KEY = "ssf25";
 
     // SSF prefix
@@ -20,7 +20,7 @@ public class TnmStagingData extends StagingData {
         HISTOLOGY("hist"),
         BEHAVIOR("behavior"),
         GRADE("grade"),
-        SEX("sex"),
+        SEX("sex_at_birth"),
         DX_YEAR("year_dx"),
         AGE_AT_DX("age_dx"),
         CLIN_STAGE_GROUP_DIRECT("clin_stage_group_direct"),
