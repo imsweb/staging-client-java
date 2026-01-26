@@ -50,7 +50,7 @@
 
         <!-- Test deps -->
         <junit.jupiter.version>5.11.2</junit.jupiter.version>
-        <assertj.version>3.27.6</assertj.version>
+        <assertj.version>3.27.7</assertj.version>
         <slf4j.version>2.0.17</slf4j.version>
         <bean-matchers.version>0.14</bean-matchers.version>
 
