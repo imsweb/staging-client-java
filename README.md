@@ -98,7 +98,7 @@ all cancer sites.
 
 ## Download
 
-Java 8 is the minimum version required to use the library.
+Java 21 is the minimum version required to use the library.
 
 It can be included with the following.
 
