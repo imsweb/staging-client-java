@@ -667,7 +667,12 @@ public class DecisionEngine {
         return result;
     }
 
+    /**
+     * Trims every non-null value in the supplied context.
+     * @param context the context to normalize
+     */
     private void trimContext(Map<String, String> context) {
+        // Trim all context strings so whitespace-only values are treated as blank.
         for (Entry<String, String> entry : context.entrySet()) {
             if (entry.getValue() != null) {
                 entry.setValue(entry.getValue().trim());
@@ -675,6 +680,13 @@ public class DecisionEngine {
         }
     }
 
+    /**
+     * Resolves missing input defaults and validates non-blank inputs against their configured tables.
+     * @param schema the schema being processed
+     * @param context the current processing context
+     * @param result the result to receive validation errors
+     * @return {@code true} when processing should continue; {@code false} when the schema's invalid-input policy requires failure
+     */
     private boolean validateInputs(Schema schema, Map<String, String> context, Result result) {
         boolean stopForBadInput = false;
         for (String key : schema.getInputMap().keySet()) {
@@ -682,11 +694,13 @@ public class DecisionEngine {
 
             String value = context.get(input.getKey());
 
+            // If no value was supplied, resolve its default and add it to the context.
             if (value == null) {
                 value = getDefault(input, context, result);
                 context.put(input.getKey(), value);
             }
 
+            // Blank inputs do not need validation against their associated table.
             if (value != null && !value.isEmpty() && input.getTable() != null) {
                 Table lookup = getProvider().getTable(input.getTable());
 
@@ -700,6 +714,7 @@ public class DecisionEngine {
                     result.addError(new ErrorBuilder(Boolean.TRUE.equals(input.getUsedForStaging()) ? Type.INVALID_REQUIRED_INPUT : Type.INVALID_NON_REQUIRED_INPUT).message(
                             "Invalid '" + input.getKey() + "' value (" + value + ")").key(input.getKey()).table(input.getTable()).build());
 
+                    // The schema controls whether this invalid input should stop processing.
                     if (Schema.StagingInputErrorHandler.FAIL.equals(schema.getOnInvalidInput()) || (Boolean.TRUE.equals(input.getUsedForStaging())
                             && Schema.StagingInputErrorHandler.FAIL_WHEN_USED_FOR_STAGING.equals(schema.getOnInvalidInput())))
                         stopForBadInput = true;
@@ -709,6 +724,11 @@ public class DecisionEngine {
         return !stopForBadInput;
     }
 
+    /**
+     * Initializes output defaults followed by schema-level initial-context values.
+     * @param schema the schema being processed
+     * @param context the context to initialize
+     */
     private void initializeSchemaContext(Schema schema, Map<String, String> context) {
         // Output defaults must be available to the schema's initial-context expressions.
         for (Entry<String, ? extends Output> entry : schema.getOutputMap().entrySet())
@@ -719,11 +739,18 @@ public class DecisionEngine {
                 context.put(keyValue.getKey(), translateValue(keyValue.getValue(), context));
     }
 
+    /**
+     * Executes each mapping whose inclusion and exclusion criteria match the current context.
+     * @param schema the schema containing the mappings
+     * @param context the current processing context
+     * @param result the result to update
+     */
     private void executeMappings(Schema schema, Map<String, String> context, Result result) {
         if (schema.getMappings() == null)
             return;
 
         for (Mapping mapping : schema.getMappings()) {
+            // Only mappings that pass their inclusion and exclusion criteria are processed.
             if (!isMappingInvolved(mapping, context))
                 continue;
 
@@ -733,34 +760,68 @@ public class DecisionEngine {
         }
     }
 
+    /**
+     * Records the mapping's inclusion and exclusion tables in the result path.
+     * @param mapping the involved mapping
+     * @param result the result to update
+     */
     private void recordInvolvementPaths(Mapping mapping, Result result) {
+        // Inclusion and exclusion tables participate in processing and belong in the result path.
         recordPaths(mapping.getId(), mapping.getInclusionTables(), result);
         recordPaths(mapping.getId(), mapping.getExclusionTables(), result);
     }
 
+    /**
+     * Records a collection of table paths for a mapping.
+     * @param mappingId the mapping identifier
+     * @param paths the table paths to record, or {@code null}
+     * @param result the result to update
+     */
     private void recordPaths(String mappingId, List<? extends TablePath> paths, Result result) {
         if (paths != null)
             for (TablePath path : paths)
                 result.addPath(mappingId, path.getId());
     }
 
+    /**
+     * Adds mapping-level initial-context values to the processing context.
+     * @param mapping the mapping being processed
+     * @param context the context to initialize
+     */
     private void initializeMappingContext(Mapping mapping, Map<String, String> context) {
+        // Mapping-specific values are available to every table path in this mapping.
         if (mapping.getInitialContext() != null)
             for (KeyValue keyValue : mapping.getInitialContext())
                 context.put(keyValue.getKey(), keyValue.getValue());
     }
 
+    /**
+     * Executes the mapping's table paths in order until all paths complete or a STOP endpoint is reached.
+     * @param mapping the mapping being processed
+     * @param context the current processing context
+     * @param result the result to update
+     */
     private void executeTablePaths(Mapping mapping, Map<String, String> context, Result result) {
         if (mapping.getTablePaths() == null)
             return;
 
+        // A STOP endpoint ends the remaining table paths for this mapping.
         for (TablePath path : mapping.getTablePaths()) {
             if (!executeTablePath(mapping.getId(), path, context, result))
                 break;
         }
     }
 
+    /**
+     * Applies temporary input mappings and executes one table path, including any JUMP tables.
+     * @param mappingId the mapping identifier
+     * @param path the table path to execute
+     * @param context the current processing context
+     * @param result the result to update
+     * @return {@code true} when processing should continue; {@code false} when a STOP endpoint was reached
+     */
     private boolean executeTablePath(String mappingId, TablePath path, Map<String, String> context, Result result) {
+        // Input mappings create aliases used while processing this path and any JUMP tables it reaches.
         applyInputMappings(path, context, result);
         try {
             return process(mappingId, path.getId(), path, result, new ArrayDeque<>());
@@ -771,6 +832,12 @@ public class DecisionEngine {
         }
     }
 
+    /**
+     * Adds the table path's temporary input aliases to the context.
+     * @param path the table path defining the aliases
+     * @param context the context to update
+     * @param result the result to receive unknown-source errors
+     */
     private void applyInputMappings(TablePath path, Map<String, String> context, Result result) {
         if (path.getInputMapping() == null)
             return;
@@ -790,12 +857,23 @@ public class DecisionEngine {
         }
     }
 
+    /**
+     * Removes the table path's temporary input aliases from the context.
+     * @param path the table path defining the aliases
+     * @param context the context to update
+     */
     private void removeInputMappings(TablePath path, Map<String, String> context) {
         if (path.getInputMapping() != null)
             for (KeyMapping key : path.getInputMapping())
                 context.remove(key.getTo());
     }
 
+    /**
+     * Removes non-output values and validates configured outputs against their associated tables.
+     * @param schema the schema defining the outputs
+     * @param context the final processing context
+     * @param result the result to receive validation errors
+     */
     private void validateOutputs(Schema schema, Map<String, String> context, Result result) {
         if (schema.getOutputMap() != null && !schema.getOutputMap().isEmpty()) {
             Iterator<Entry<String, String>> iter = context.entrySet().iterator();
@@ -803,6 +881,7 @@ public class DecisionEngine {
                 Map.Entry<String, String> entry = iter.next();
                 Output output = schema.getOutputMap().get(entry.getKey());
 
+                // Once outputs are defined, internal and input values are removed from the returned context.
                 if (output == null)
                     iter.remove();
                 else if (output.getTable() != null) {
@@ -813,6 +892,7 @@ public class DecisionEngine {
                         continue;
                     }
 
+                    // Validate the final output value when the output declares a validation table.
                     List<? extends Endpoint> endpoints = matchTable(lookup, context);
                     if (endpoints == null) {
                         String value = context.get(output.getKey());
@@ -833,7 +913,6 @@ public class DecisionEngine {
      * @param stack a stack which tracks the path and makes sure the path doesn't enter an infinite recursive state
      * @return a boolean indicating whether processing should continue
      */
-
     protected boolean process(String mappingId, String tableId, TablePath path, Result result, Deque<String> stack) {
         boolean continueProcessing = true;
 
@@ -891,7 +970,14 @@ public class DecisionEngine {
         return continueProcessing;
     }
 
+    /**
+     * Applies a value endpoint to its mapped output keys, resolving templates against the current context.
+     * @param endpoint the value endpoint to apply
+     * @param path the table path defining output mappings
+     * @param context the context to update
+     */
     private void applyEndpointValue(Endpoint endpoint, TablePath path, Map<String, String> context) {
+        // A null endpoint value removes its destination; otherwise templates resolve against the current context.
         for (String key : getMappedOutputKeys(endpoint.getResultKey(), path)) {
             if (endpoint.getValue() == null)
                 context.remove(key);
@@ -900,10 +986,17 @@ public class DecisionEngine {
         }
     }
 
+    /**
+     * Resolves the destination keys for an endpoint result key.
+     * @param resultKey the endpoint result key
+     * @param path the table path defining output mappings
+     * @return the mapped destination keys, or the original result key when no mapping applies
+     */
     private List<String> getMappedOutputKeys(String resultKey, TablePath path) {
         if (path.getOutputMapping() == null)
             return Collections.singletonList(resultKey);
 
+        // One endpoint can populate multiple destination keys through output mappings.
         List<String> mappedKeys = path.getOutputMapping().stream()
                 .filter(key -> key.getFrom().equals(resultKey))
                 .map(KeyMapping::getTo)
