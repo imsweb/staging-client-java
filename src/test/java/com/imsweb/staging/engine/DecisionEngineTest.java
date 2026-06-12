@@ -82,8 +82,9 @@ class DecisionEngineTest {
 
         Map<String, String> context = new HashMap<>();
         context.put("input", "A");
-        assertEquals(0, DecisionEngine.findMatchingTableRow(provider.getTable("matching"), context));
-        assertThrows(IllegalStateException.class, () -> DecisionEngine.findMatchingTableRow(provider.getTable("matching"), null));
+        Table matchingTable = provider.getTable("matching");
+        assertEquals(0, DecisionEngine.findMatchingTableRow(matchingTable, context));
+        assertThrows(IllegalStateException.class, () -> DecisionEngine.findMatchingTableRow(matchingTable, null));
     }
 
     @BeforeAll
@@ -1392,7 +1393,8 @@ class DecisionEngineTest {
         assertTrue(engine.isMappingInvolved(exclusion, context));
 
         assertThrows(IllegalStateException.class, () -> engine.isMappingInvolved(inclusion, null));
-        assertThrows(IllegalStateException.class, () -> engine.getInvolvedMappings(new StagingSchema("schema"), null));
+        StagingSchema schema = new StagingSchema("schema");
+        assertThrows(IllegalStateException.class, () -> engine.getInvolvedMappings(schema, null));
 
         inclusion.setInclusionTables(Collections.singletonList(new StagingTablePath("missing")));
         assertThrows(IllegalStateException.class, () -> engine.isMappingInvolved(inclusion, context));
