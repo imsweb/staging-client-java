@@ -39,6 +39,7 @@ import com.imsweb.staging.entities.impl.StagingSchemaOutput;
 import com.imsweb.staging.entities.impl.StagingTable;
 import com.imsweb.staging.entities.impl.StagingTablePath;
 
+import static com.imsweb.staging.engine.DecisionEngine.BLANK_OUTPUT;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -1477,10 +1478,10 @@ class DecisionEngineTest {
 
         Map<String, String> context = new HashMap<>();
 
-        assertEquals(DecisionEngine.BLANK_OUTPUT + "," + DecisionEngine.BLANK_OUTPUT, DecisionEngine.getTableInputsAsString(table, context));
+        assertEquals(BLANK_OUTPUT + "," + BLANK_OUTPUT, DecisionEngine.getTableInputsAsString(table, context));
 
         context.put("b", "25");
-        assertEquals(DecisionEngine.BLANK_OUTPUT + ",25", DecisionEngine.getTableInputsAsString(table, context));
+        assertEquals(BLANK_OUTPUT + ",25", DecisionEngine.getTableInputsAsString(table, context));
 
         context.put("a", "7");
         assertEquals("7,25", DecisionEngine.getTableInputsAsString(table, context));
@@ -1551,7 +1552,7 @@ class DecisionEngineTest {
         input.put("input1", "000");
         result = engine.process("sample_outputs", input);
         assertTrue(result.hasErrors());
-        assertEquals("Invalid 'output1' value (" + DecisionEngine.BLANK_OUTPUT + ")", result.getErrors().getFirst().getMessage());
+        assertEquals("Invalid 'output1' value (" + BLANK_OUTPUT + ")", result.getErrors().getFirst().getMessage());
 
         assertEquals(new HashSet<>(Arrays.asList("table_input", "table_output")), engine.getInvolvedTables(schema));
 
