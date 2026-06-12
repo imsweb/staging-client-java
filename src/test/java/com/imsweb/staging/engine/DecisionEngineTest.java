@@ -968,6 +968,45 @@ class DecisionEngineTest {
     }
 
     @Test
+    void testStopIsNotOverwrittenByLaterJump() {
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
+
+        StagingTable table = new StagingTable("table_stop_then_jump");
+        table.addColumnDefinition("input", ColumnType.INPUT);
+        table.addColumnDefinition("stop", ColumnType.ENDPOINT);
+        table.addColumnDefinition("jump", ColumnType.ENDPOINT);
+        table.addRawRow("1", "STOP", "JUMP:table_jump_target");
+        provider.addTable(table);
+
+        table = new StagingTable("table_jump_target");
+        table.addColumnDefinition("input", ColumnType.INPUT);
+        table.addColumnDefinition("jumped", ColumnType.ENDPOINT);
+        table.addRawRow("1", "VALUE:YES");
+        provider.addTable(table);
+
+        table = new StagingTable("table_after_stop");
+        table.addColumnDefinition("input", ColumnType.INPUT);
+        table.addColumnDefinition("continued", ColumnType.ENDPOINT);
+        table.addRawRow("1", "VALUE:YES");
+        provider.addTable(table);
+
+        StagingSchema schema = new StagingSchema("stop_then_jump");
+        schema.setSchemaSelectionTable("table_stop_then_jump");
+        schema.addInput("input");
+        schema.addMapping(new StagingMapping("m1", Arrays.asList(new StagingTablePath("table_stop_then_jump"), new StagingTablePath("table_after_stop"))));
+        provider.addSchema(schema);
+
+        Map<String, String> context = new HashMap<>();
+        context.put("input", "1");
+        Result result = new DecisionEngine(provider).process(schema, context);
+
+        assertFalse(result.hasErrors());
+        assertEquals(Collections.singletonList("m1.table_stop_then_jump"), result.getPath());
+        assertFalse(context.containsKey("jumped"));
+        assertFalse(context.containsKey("continued"));
+    }
+
+    @Test
     void testProcessWithBlanks() {
         Map<String, String> input = new HashMap<>();
         input.put("x", "1");

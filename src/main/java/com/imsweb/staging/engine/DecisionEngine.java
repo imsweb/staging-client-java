@@ -845,7 +845,7 @@ public class DecisionEngine {
             for (Endpoint endpoint : endpoints) {
                 if (EndpointType.STOP.equals(endpoint.getType()))
                     continueProcessing = false;
-                else if (EndpointType.JUMP.equals(endpoint.getType()))
+                else if (EndpointType.JUMP.equals(endpoint.getType()) && continueProcessing)
                     continueProcessing = process(mappingId, endpoint.getValue(), path, result, stack);
                 else if (EndpointType.ERROR.equals(endpoint.getType())) {
                     String message = endpoint.getValue();
