@@ -44,7 +44,8 @@ import com.imsweb.staging.entities.TableRow;
 public class DecisionEngine {
 
     // string to use for blank or null in error strings
-    public static final String _BLANK_OUTPUT = "<blank>";
+    public static final String BLANK_OUTPUT = "<blank>";
+
     private static final Pattern _TEMPLATE_REFERENCE = Pattern.compile("\\{\\{(.*?)}}");
     private final DataProvider _provider;
 
@@ -205,7 +206,7 @@ public class DecisionEngine {
             for (ColumnDefinition def : table.getColumnDefinitions())
                 if (ColumnType.INPUT.equals(def.getType())) {
                     String value = context.get(def.getKey());
-                    inputs.add((value == null || value.trim().isEmpty()) ? _BLANK_OUTPUT : value.trim());
+                    inputs.add((value == null || value.trim().isEmpty()) ? BLANK_OUTPUT : value.trim());
                 }
 
         return String.join(",", inputs);
@@ -815,7 +816,7 @@ public class DecisionEngine {
                     List<? extends Endpoint> endpoints = matchTable(lookup, context);
                     if (endpoints == null) {
                         String value = context.get(output.getKey());
-                        result.addError(new ErrorBuilder(Type.INVALID_OUTPUT).message("Invalid '" + output.getKey() + "' value (" + (value.isEmpty() ? _BLANK_OUTPUT : value) + ")").key(
+                        result.addError(new ErrorBuilder(Type.INVALID_OUTPUT).message("Invalid '" + output.getKey() + "' value (" + (value.isEmpty() ? BLANK_OUTPUT : value) + ")").key(
                                 output.getKey()).table(output.getTable()).build());
                     }
                 }
