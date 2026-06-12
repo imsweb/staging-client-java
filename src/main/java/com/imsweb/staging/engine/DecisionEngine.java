@@ -14,6 +14,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Objects;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -46,16 +47,17 @@ public class DecisionEngine {
     // string to use for blank or null in error strings
     public static final String _BLANK_OUTPUT = "<blank>";
     private static final Pattern _TEMPLATE_REFERENCE = Pattern.compile("\\{\\{(.*?)}}");
-    private DataProvider _provider;
+    private final DataProvider _provider;
 
     private static final String _CONTEXT_MISSING_MESSAGE = "Context must not be missing";
 
     /**
      * Construct the decision engine with the passed data provider
      * @param provider a DataProvider
+     * @throws NullPointerException if provider is null
      */
     public DecisionEngine(DataProvider provider) {
-        setProvider(provider);
+        _provider = Objects.requireNonNull(provider, "Provider must not be null");
     }
 
     /**
@@ -216,14 +218,6 @@ public class DecisionEngine {
      */
     public DataProvider getProvider() {
         return _provider;
-    }
-
-    /**
-     * Sets the provider and initiaizes all definitions and tables
-     * @param provider a DataProvider
-     */
-    public void setProvider(DataProvider provider) {
-        _provider = provider;
     }
 
     /**
@@ -646,6 +640,10 @@ public class DecisionEngine {
 
     /**
      * Using the supplied context, process a schema.  The results will be added to the context.
+     * <p>
+     * Input-mapping destination keys on a table path are temporary aliases scoped to that path. They are added before the path is processed and removed afterward. An input-mapping
+     * destination must therefore not be used to preserve a pre-existing context value; any previous value with the same key is overwritten and is not restored.
+     * </p>
      * @param schema a schema
      * @param context a Map containing the context
      * @return a Result
@@ -666,8 +664,10 @@ public class DecisionEngine {
             String value = context.get(input.getKey());
 
             // if value not supplied, use the default or defaultTable and set it back into the context; if not supplied and no default, set the input the blank
-            if (value == null)
-                context.put(input.getKey(), getDefault(input, context, result));
+            if (value == null) {
+                value = getDefault(input, context, result);
+                context.put(input.getKey(), value);
+            }
 
             // validate value against associated table if supplied; if a value is not supplied, or blank, there is no need to validate it against the table
             if (value != null && !value.isEmpty() && input.getTable() != null) {
@@ -845,7 +845,7 @@ public class DecisionEngine {
             for (Endpoint endpoint : endpoints) {
                 if (EndpointType.STOP.equals(endpoint.getType()))
                     continueProcessing = false;
-                else if (EndpointType.JUMP.equals(endpoint.getType()))
+                else if (EndpointType.JUMP.equals(endpoint.getType()) && continueProcessing)
                     continueProcessing = process(mappingId, endpoint.getValue(), path, result, stack);
                 else if (EndpointType.ERROR.equals(endpoint.getType())) {
                     String message = endpoint.getValue();
