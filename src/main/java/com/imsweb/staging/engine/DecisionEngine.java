@@ -41,7 +41,6 @@ import com.imsweb.staging.entities.TableRow;
 /**
  * An engine for processing declarative algorithms.
  */
-@SuppressWarnings("java:S3776")
 public class DecisionEngine {
 
     // string to use for blank or null in error strings
@@ -651,25 +650,42 @@ public class DecisionEngine {
     public Result process(Schema schema, Map<String, String> context) {
         Result result = new Result(context);
 
-        // trim all context Strings; " " will match ""
-        for (Entry<String, String> entry : context.entrySet())
-            if (entry.getValue() != null)
-                context.put(entry.getKey(), entry.getValue().trim());
+        trimContext(context);
 
-        // validate inputs
+        if (!validateInputs(schema, context, result)) {
+            result.setType(Result.Type.FAILED_INPUT);
+            return result;
+        }
+
+        initializeSchemaContext(schema, context);
+
+        executeMappings(schema, context, result);
+
+        validateOutputs(schema, context, result);
+
+        return result;
+    }
+
+    private void trimContext(Map<String, String> context) {
+        for (Entry<String, String> entry : context.entrySet()) {
+            if (entry.getValue() != null) {
+                entry.setValue(entry.getValue().trim());
+            }
+        }
+    }
+
+    private boolean validateInputs(Schema schema, Map<String, String> context, Result result) {
         boolean stopForBadInput = false;
         for (String key : schema.getInputMap().keySet()) {
             Input input = schema.getInputMap().get(key);
 
             String value = context.get(input.getKey());
 
-            // if value not supplied, use the default or defaultTable and set it back into the context; if not supplied and no default, set the input the blank
             if (value == null) {
                 value = getDefault(input, context, result);
                 context.put(input.getKey(), value);
             }
 
-            // validate value against associated table if supplied; if a value is not supplied, or blank, there is no need to validate it against the table
             if (value != null && !value.isEmpty() && input.getTable() != null) {
                 Table lookup = getProvider().getTable(input.getTable());
 
@@ -683,97 +699,109 @@ public class DecisionEngine {
                     result.addError(new ErrorBuilder(Boolean.TRUE.equals(input.getUsedForStaging()) ? Type.INVALID_REQUIRED_INPUT : Type.INVALID_NON_REQUIRED_INPUT).message(
                             "Invalid '" + input.getKey() + "' value (" + value + ")").key(input.getKey()).table(input.getTable()).build());
 
-                    // if the schema error handling is set to FAIL or if the input is required for staging and the error handling is set to FAIL_WHEN_REQUIRED_FOR_STAGING,
-                    // then stop processing and return a failure result
                     if (Schema.StagingInputErrorHandler.FAIL.equals(schema.getOnInvalidInput()) || (Boolean.TRUE.equals(input.getUsedForStaging())
                             && Schema.StagingInputErrorHandler.FAIL_WHEN_USED_FOR_STAGING.equals(schema.getOnInvalidInput())))
                         stopForBadInput = true;
                 }
             }
         }
+        return !stopForBadInput;
+    }
 
-        // if an invalid input was flagged to stop processing, set result and exit
-        if (stopForBadInput) {
-            result.setType(Result.Type.FAILED_INPUT);
-            return result;
-        }
-
-        // add all output keys to the context; if no default is supplied, use an empty string
+    private void initializeSchemaContext(Schema schema, Map<String, String> context) {
+        // Output defaults must be available to the schema's initial-context expressions.
         for (Entry<String, ? extends Output> entry : schema.getOutputMap().entrySet())
             context.put(entry.getValue().getKey(), entry.getValue().getDefault() != null ? translateValue(entry.getValue().getDefault(), context) : "");
 
-        // add the initial context
         if (schema.getInitialContext() != null)
             for (KeyValue keyValue : schema.getInitialContext())
                 context.put(keyValue.getKey(), translateValue(keyValue.getValue(), context));
+    }
 
-        // process each mapping if it is "involved", which is checked using the current context against inclusion/exclusion criteria
-        if (schema.getMappings() != null) {
-            for (Mapping mapping : schema.getMappings()) {
-                // make sure mapping passes inclusion/exclusion tables if present
-                if (isMappingInvolved(mapping, context)) {
-                    // if there are any inclusion/exclusion tables, add them to path
-                    if (mapping.getInclusionTables() != null)
-                        for (TablePath path : mapping.getInclusionTables())
-                            result.addPath(mapping.getId(), path.getId());
-                    if (mapping.getExclusionTables() != null)
-                        for (TablePath path : mapping.getExclusionTables())
-                            result.addPath(mapping.getId(), path.getId());
+    private void executeMappings(Schema schema, Map<String, String> context, Result result) {
+        if (schema.getMappings() == null)
+            return;
 
-                    // set the mapping-specific initial context if any
-                    if (mapping.getInitialContext() != null)
-                        for (KeyValue keyValue : mapping.getInitialContext())
-                            context.put(keyValue.getKey(), keyValue.getValue());
+        for (Mapping mapping : schema.getMappings()) {
+            if (!isMappingInvolved(mapping, context))
+                continue;
 
-                    // loop over all table paths in the mapping
-                    if (mapping.getTablePaths() != null) {
-                        for (TablePath path : mapping.getTablePaths()) {
-                            String tableId = path.getId();
-
-                            // if there is input mapping defined, add the new mapping to the context
-                            if (path.getInputMapping() != null) {
-                                for (KeyMapping key : path.getInputMapping()) {
-                                    String mapFromKey = key.getFrom();
-
-                                    if (!context.containsKey(mapFromKey)) {
-                                        result.addError(new ErrorBuilder(Type.UNKNOWN_INPUT_MAPPING).message("Input mapping '" + mapFromKey + "' does not exist for table '" + tableId + "'").key(
-                                                mapFromKey).table(tableId).build());
-                                        continue;
-                                    }
-
-                                    context.put(key.getTo(), context.get(mapFromKey));
-                                }
-                            }
-
-                            // create a stack to keep track of table calls and ensure there is no infinite recursion
-                            Deque<String> stack = new ArrayDeque<>();
-
-                            // recursively process the mapping; if false is returned, stop all processing
-                            boolean continueProcessing = process(mapping.getId(), tableId, path, result, stack);
-
-                            // remove the temporary input mappings
-                            if (path.getInputMapping() != null) {
-                                for (KeyMapping key : path.getInputMapping())
-                                    context.remove(key.getTo());
-                            }
-
-                            if (!continueProcessing)
-                                break;
-                        }
-                    }
-                }
-
-            }
+            recordInvolvementPaths(mapping, result);
+            initializeMappingContext(mapping, context);
+            executeTablePaths(mapping, context, result);
         }
+    }
 
-        // if outputs were specified, remove any extra keys and validate the others if a table was specified
+    private void recordInvolvementPaths(Mapping mapping, Result result) {
+        recordPaths(mapping.getId(), mapping.getInclusionTables(), result);
+        recordPaths(mapping.getId(), mapping.getExclusionTables(), result);
+    }
+
+    private void recordPaths(String mappingId, List<? extends TablePath> paths, Result result) {
+        if (paths != null)
+            for (TablePath path : paths)
+                result.addPath(mappingId, path.getId());
+    }
+
+    private void initializeMappingContext(Mapping mapping, Map<String, String> context) {
+        if (mapping.getInitialContext() != null)
+            for (KeyValue keyValue : mapping.getInitialContext())
+                context.put(keyValue.getKey(), keyValue.getValue());
+    }
+
+    private void executeTablePaths(Mapping mapping, Map<String, String> context, Result result) {
+        if (mapping.getTablePaths() == null)
+            return;
+
+        for (TablePath path : mapping.getTablePaths()) {
+            if (!executeTablePath(mapping.getId(), path, context, result))
+                break;
+        }
+    }
+
+    private boolean executeTablePath(String mappingId, TablePath path, Map<String, String> context, Result result) {
+        applyInputMappings(path, context, result);
+        try {
+            return process(mappingId, path.getId(), path, result, new ArrayDeque<>());
+        }
+        finally {
+            // Input-mapping destinations are temporary aliases scoped to this table path.
+            removeInputMappings(path, context);
+        }
+    }
+
+    private void applyInputMappings(TablePath path, Map<String, String> context, Result result) {
+        if (path.getInputMapping() == null)
+            return;
+
+        for (KeyMapping key : path.getInputMapping()) {
+            String sourceKey = key.getFrom();
+            if (!context.containsKey(sourceKey)) {
+                result.addError(new ErrorBuilder(Type.UNKNOWN_INPUT_MAPPING)
+                        .message("Input mapping '" + sourceKey + "' does not exist for table '" + path.getId() + "'")
+                        .key(sourceKey)
+                        .table(path.getId())
+                        .build());
+                continue;
+            }
+
+            context.put(key.getTo(), context.get(sourceKey));
+        }
+    }
+
+    private void removeInputMappings(TablePath path, Map<String, String> context) {
+        if (path.getInputMapping() != null)
+            for (KeyMapping key : path.getInputMapping())
+                context.remove(key.getTo());
+    }
+
+    private void validateOutputs(Schema schema, Map<String, String> context, Result result) {
         if (schema.getOutputMap() != null && !schema.getOutputMap().isEmpty()) {
             Iterator<Entry<String, String>> iter = context.entrySet().iterator();
             while (iter.hasNext()) {
                 Map.Entry<String, String> entry = iter.next();
                 Output output = schema.getOutputMap().get(entry.getKey());
 
-                // if the key is not defined in the output, remove it
                 if (output == null)
                     iter.remove();
                 else if (output.getTable() != null) {
@@ -784,7 +812,6 @@ public class DecisionEngine {
                         continue;
                     }
 
-                    // verify the value of the output key is contained in the associated table
                     List<? extends Endpoint> endpoints = matchTable(lookup, context);
                     if (endpoints == null) {
                         String value = context.get(output.getKey());
@@ -794,8 +821,6 @@ public class DecisionEngine {
                 }
             }
         }
-
-        return result;
     }
 
     /**
@@ -804,7 +829,7 @@ public class DecisionEngine {
      * @param tableId a Table identifier
      * @param path a TablePath
      * @param result a Result
-     * @param stack a stack which tracks the path and makes sure the path doesn't enter an infinite recusive state
+     * @param stack a stack which tracks the path and makes sure the path doesn't enter an infinite recursive state
      * @return a boolean indicating whether processing should continue
      */
 
@@ -854,28 +879,8 @@ public class DecisionEngine {
 
                     result.addError(new ErrorBuilder(Type.STAGING_ERROR).message(message).table(tableId).columns(Collections.singletonList(endpoint.getResultKey())).build());
                 }
-                else if (EndpointType.VALUE.equals(endpoint.getType())) {
-                    // if output mapping(s) were provided, check whether the key was mapped
-                    List<String> mappedKeys = new ArrayList<>();
-                    if (path.getOutputMapping() != null) {
-                        for (KeyMapping key : path.getOutputMapping()) {
-                            if (key.getFrom().equals(endpoint.getResultKey()))
-                                mappedKeys.add(key.getTo());
-                        }
-                    }
-
-                    // if the value is null, that is indicating that the key should be removed from the context; otherwise set the value into the context
-                    if (mappedKeys.isEmpty())
-                        mappedKeys = Collections.singletonList(endpoint.getResultKey());
-
-                    // iterate over all the mappings for this endpoint key
-                    for (String key : mappedKeys) {
-                        if (endpoint.getValue() == null)
-                            result.getContext().remove(key);
-                        else
-                            result.getContext().put(key, translateValue(endpoint.getValue(), result.getContext()));
-                    }
-                }
+                else if (EndpointType.VALUE.equals(endpoint.getType()))
+                    applyEndpointValue(endpoint, path, result.getContext());
             }
         }
 
@@ -883,6 +888,26 @@ public class DecisionEngine {
         stack.pop();
 
         return continueProcessing;
+    }
+
+    private void applyEndpointValue(Endpoint endpoint, TablePath path, Map<String, String> context) {
+        for (String key : getMappedOutputKeys(endpoint.getResultKey(), path)) {
+            if (endpoint.getValue() == null)
+                context.remove(key);
+            else
+                context.put(key, translateValue(endpoint.getValue(), context));
+        }
+    }
+
+    private List<String> getMappedOutputKeys(String resultKey, TablePath path) {
+        if (path.getOutputMapping() == null)
+            return Collections.singletonList(resultKey);
+
+        List<String> mappedKeys = path.getOutputMapping().stream()
+                .filter(key -> key.getFrom().equals(resultKey))
+                .map(KeyMapping::getTo)
+                .toList();
+        return mappedKeys.isEmpty() ? Collections.singletonList(resultKey) : mappedKeys;
     }
 
 }
