@@ -1482,6 +1482,89 @@ class DecisionEngineTest {
     }
 
     @Test
+    void testDefaultInputValidation() {
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
+
+        StagingTable table = new StagingTable("valid_inputs");
+        table.addColumnDefinition("input", ColumnType.INPUT);
+        table.addRawRow("A");
+        provider.addTable(table);
+
+        table = new StagingTable("invalid_default");
+        table.addColumnDefinition("selector", ColumnType.INPUT);
+        table.addColumnDefinition("input", ColumnType.ENDPOINT);
+        table.addRawRow("*", "VALUE:X");
+        provider.addTable(table);
+
+        StagingSchema schema = new StagingSchema("valid_literal_default");
+        schema.setSchemaSelectionTable("valid_inputs");
+        schema.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
+        StagingSchemaInput input = new StagingSchemaInput("input", "input", "valid_inputs");
+        input.setDefault("A");
+        schema.addInput(input);
+        provider.addSchema(schema);
+
+        schema = new StagingSchema("invalid_literal_default");
+        schema.setSchemaSelectionTable("valid_inputs");
+        schema.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
+        input = new StagingSchemaInput("input", "input", "valid_inputs");
+        input.setDefault("X");
+        schema.addInput(input);
+        provider.addSchema(schema);
+
+        schema = new StagingSchema("invalid_required_default");
+        schema.setSchemaSelectionTable("valid_inputs");
+        schema.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL_WHEN_USED_FOR_STAGING);
+        input = new StagingSchemaInput("input", "input", "valid_inputs");
+        input.setDefault("X");
+        input.setUsedForStaging(true);
+        schema.addInput(input);
+        provider.addSchema(schema);
+
+        schema = new StagingSchema("invalid_non_required_default");
+        schema.setSchemaSelectionTable("valid_inputs");
+        schema.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL_WHEN_USED_FOR_STAGING);
+        input = new StagingSchemaInput("input", "input", "valid_inputs");
+        input.setDefault("X");
+        input.setUsedForStaging(false);
+        schema.addInput(input);
+        provider.addSchema(schema);
+
+        schema = new StagingSchema("invalid_table_default");
+        schema.setSchemaSelectionTable("valid_inputs");
+        schema.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL);
+        input = new StagingSchemaInput("input", "input", "valid_inputs");
+        input.setDefaultTable("invalid_default");
+        schema.addInput(input);
+        provider.addSchema(schema);
+
+        DecisionEngine engine = new DecisionEngine(provider);
+
+        Result result = engine.process("valid_literal_default", new HashMap<>());
+        assertEquals(Type.STAGED, result.getType());
+        assertFalse(result.hasErrors());
+        assertEquals("A", result.getContext().get("input"));
+
+        result = engine.process("invalid_literal_default", new HashMap<>());
+        assertEquals(Type.FAILED_INPUT, result.getType());
+        assertEquals(Error.Type.INVALID_NON_REQUIRED_INPUT, result.getErrors().getFirst().getType());
+        assertEquals("X", result.getContext().get("input"));
+
+        result = engine.process("invalid_required_default", new HashMap<>());
+        assertEquals(Type.FAILED_INPUT, result.getType());
+        assertEquals(Error.Type.INVALID_REQUIRED_INPUT, result.getErrors().getFirst().getType());
+
+        result = engine.process("invalid_non_required_default", new HashMap<>());
+        assertEquals(Type.STAGED, result.getType());
+        assertEquals(Error.Type.INVALID_NON_REQUIRED_INPUT, result.getErrors().getFirst().getType());
+
+        result = engine.process("invalid_table_default", new HashMap<>());
+        assertEquals(Type.FAILED_INPUT, result.getType());
+        assertEquals(Error.Type.INVALID_NON_REQUIRED_INPUT, result.getErrors().getFirst().getType());
+        assertEquals("X", result.getContext().get("input"));
+    }
+
+    @Test
     void testInitialContextReferences() {
         StagingSchema schema = new StagingSchema("test_initial_context");
         schema.setSchemaSelectionTable("table_selection");
