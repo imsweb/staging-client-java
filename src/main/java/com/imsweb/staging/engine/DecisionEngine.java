@@ -47,9 +47,9 @@ public class DecisionEngine {
     public static final String BLANK_OUTPUT = "<blank>";
 
     private static final Pattern _TEMPLATE_REFERENCE = Pattern.compile("\\{\\{(.*?)}}");
-    private final DataProvider _provider;
-
     private static final String _CONTEXT_MISSING_MESSAGE = "Context must not be missing";
+
+    private final DataProvider _provider;
 
     /**
      * Construct the decision engine with the passed data provider
