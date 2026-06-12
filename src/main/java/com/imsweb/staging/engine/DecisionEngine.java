@@ -14,6 +14,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Objects;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -46,16 +47,17 @@ public class DecisionEngine {
     // string to use for blank or null in error strings
     public static final String _BLANK_OUTPUT = "<blank>";
     private static final Pattern _TEMPLATE_REFERENCE = Pattern.compile("\\{\\{(.*?)}}");
-    private DataProvider _provider;
+    private final DataProvider _provider;
 
     private static final String _CONTEXT_MISSING_MESSAGE = "Context must not be missing";
 
     /**
      * Construct the decision engine with the passed data provider
      * @param provider a DataProvider
+     * @throws NullPointerException if provider is null
      */
     public DecisionEngine(DataProvider provider) {
-        setProvider(provider);
+        _provider = Objects.requireNonNull(provider, "Provider must not be null");
     }
 
     /**
@@ -216,14 +218,6 @@ public class DecisionEngine {
      */
     public DataProvider getProvider() {
         return _provider;
-    }
-
-    /**
-     * Sets the provider and initiaizes all definitions and tables
-     * @param provider a DataProvider
-     */
-    public void setProvider(DataProvider provider) {
-        _provider = provider;
     }
 
     /**

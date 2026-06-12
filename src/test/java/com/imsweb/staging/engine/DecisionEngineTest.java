@@ -53,6 +53,12 @@ class DecisionEngineTest {
 
     private static DecisionEngine _ENGINE;
 
+    @Test
+    void testProviderIsRequired() {
+        NullPointerException exception = assertThrows(NullPointerException.class, () -> new DecisionEngine(null));
+        assertEquals("Provider must not be null", exception.getMessage());
+    }
+
     @BeforeAll
     static void init() {
         InMemoryDataProvider provider = new InMemoryDataProvider("test", "1.0");
