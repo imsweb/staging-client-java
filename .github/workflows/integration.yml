@@ -2,7 +2,7 @@
 
 name: integration
 
-on: [ push, pull_request ]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -18,9 +18,9 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
+          distribution: temurin
           java-version: '21'
-          cache: 'maven'
+          cache: maven
 
       - name: Cache Maven packages
         uses: actions/cache@v4
@@ -31,6 +31,7 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: Cache SonarCloud packages
+        if: github.actor != 'dependabot[bot]'
         uses: actions/cache@v4
         with:
           path: ~/.sonar/cache
@@ -39,9 +40,14 @@ jobs:
             ${{ runner.os }}-sonar
 
       - name: Build and test
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           chmod +x ./mvnw
-          ./mvnw -B verify sonar:sonar
+          ./mvnw -B verify
+
+      - name: SonarCloud Analysis
+        if: github.actor != 'dependabot[bot]'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          ./mvnw -B sonar:sonar
