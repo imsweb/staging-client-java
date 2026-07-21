@@ -81,6 +81,12 @@ public class CsIntegrationTest {
         _LOG.info("Completed {} cases ({} files) in {} ({}ms/case).", NumberFormat.getNumberInstance(Locale.US).format(totalCases), totalFiles, stopwatch, perMs);
         if (totalFailures > 0)
             _LOG.error("There were {} failing cases.", NumberFormat.getNumberInstance(Locale.US).format(totalFailures));
+        failIfNecessary(totalFailures);
+    }
+
+    static void failIfNecessary(long totalFailures) {
+        if (totalFailures > 0)
+            throw new IllegalStateException("CS comparison failed with " + NumberFormat.getNumberInstance(Locale.US).format(totalFailures) + " failing cases.");
     }
 
 }

@@ -60,8 +60,8 @@ class SchemaLookupTest {
     void testNotEquals() {
         SchemaLookup lookup = new SchemaLookup("C629", "9100");
 
-        assertNotEquals(lookup, null);
-        assertNotEquals(lookup, "C629");
+        assertNotEquals(null, lookup);
+        assertNotEquals("C629", lookup);
         assertNotEquals(lookup, new TestSchemaLookup("C629", "9100"));
         assertNotEquals(new SchemaLookup("C509", "9100"), lookup);
         assertNotEquals(new SchemaLookup("C629", "8000"), lookup);
