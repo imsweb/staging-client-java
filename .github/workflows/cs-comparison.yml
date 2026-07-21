@@ -25,9 +25,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      # Run the comparison using the test classpath
-      - name: Build and run CS Comparison
+      - name: Build and run CS comparison
         run: |
           chmod +x ./mvnw
-          ./mvnw -B test-compile -DskipTests
-          ./mvnw -B exec:java -DskipTests -Dexec.mainClass=com.imsweb.staging.cs.CsIntegrationTest -Dexec.classpathScope=test
+          ./mvnw -B -Pcs-comparison verify
