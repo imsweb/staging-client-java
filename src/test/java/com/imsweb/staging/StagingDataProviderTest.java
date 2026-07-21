@@ -204,7 +204,7 @@ class StagingDataProviderTest {
             )
         );
 
-        RuntimeException noInputException = assertThrows(RuntimeException.class, () -> noInputs.getValidSites());
+        RuntimeException noInputException = assertThrows(RuntimeException.class, noInputs::getValidSites);
         assertInvalidInputDefinition(noInputException);
 
         InMemoryDataProvider multipleInputs = new InMemoryDataProvider("test", "1.0");
@@ -216,9 +216,7 @@ class StagingDataProviderTest {
             )
         );
 
-        RuntimeException multipleInputException = assertThrows(RuntimeException.class, () ->
-            multipleInputs.getValidSites()
-        );
+        RuntimeException multipleInputException = assertThrows(RuntimeException.class, multipleInputs::getValidSites);
         assertInvalidInputDefinition(multipleInputException);
     }
 
