@@ -1,22 +1,23 @@
 package com.imsweb.staging;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import com.imsweb.staging.entities.ColumnDefinition.ColumnType;
+import com.imsweb.staging.entities.Range;
+import com.imsweb.staging.entities.impl.StagingColumnDefinition;
+import com.imsweb.staging.entities.impl.StagingSchema;
+import com.imsweb.staging.entities.impl.StagingTable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
-
+import java.util.Set;
 import org.junit.jupiter.api.Test;
-
-import com.imsweb.staging.entities.ColumnDefinition.ColumnType;
-import com.imsweb.staging.entities.Range;
-import com.imsweb.staging.entities.impl.StagingColumnDefinition;
-import com.imsweb.staging.entities.impl.StagingTable;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class StagingDataProviderTest {
 
@@ -138,7 +139,9 @@ class StagingDataProviderTest {
     void testTableRowParsing() {
         StagingTable table = new StagingTable();
         table.setId("test_table");
-        table.setColumnDefinitions(Collections.singletonList(new StagingColumnDefinition("key1", "Input 1", ColumnType.INPUT)));
+        table.setColumnDefinitions(
+            Collections.singletonList(new StagingColumnDefinition("key1", "Input 1", ColumnType.INPUT))
+        );
         table.setRawRows(new ArrayList<>());
         table.getRawRows().add(Collections.singletonList(",1,2,3"));
         table.getRawRows().add(Collections.singletonList("1,2,3,"));
@@ -150,6 +153,107 @@ class StagingDataProviderTest {
         assertEquals(2, table.getTableRows().size());
         assertEquals(4, table.getTableRows().get(0).getInputs().get("key1").size());
         assertEquals(4, table.getTableRows().get(1).getInputs().get("key1").size());
+    }
+
+    @Test
+    void testInMemoryProviderContract() {
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test Algorithm", "1.2.3");
+
+        assertEquals("Test Algorithm", provider.getAlgorithm());
+        assertEquals("1.2.3", provider.getVersion());
+        assertTrue(provider.getTableIds().isEmpty());
+        assertTrue(provider.getSchemaIds().isEmpty());
+        assertNull(provider.getTable("missing"));
+        assertNull(provider.getSchema("missing"));
+
+        StagingSchema schema = new StagingSchema("present");
+        schema.setSchemaSelectionTable("selection");
+        provider.addSchema(schema);
+        assertEquals(Set.of("present"), provider.getSchemaIds());
+        assertEquals(schema, provider.getSchema("present"));
+    }
+
+    @Test
+    void testInMemoryGlossaryIsUnsupported() {
+        InMemoryDataProvider provider = new InMemoryDataProvider("test", "1.0");
+
+        assertGlossaryUnsupported(provider::getGlossaryTerms);
+        assertGlossaryUnsupported(() -> provider.getGlossaryDefinition("term"));
+        assertGlossaryUnsupported(() -> provider.getGlossaryMatches("text"));
+    }
+
+    private static void assertGlossaryUnsupported(Runnable operation) {
+        IllegalStateException exception = assertThrows(IllegalStateException.class, operation::run);
+        assertEquals("Glossary not supported in this provider", exception.getMessage());
+    }
+
+    @Test
+    void testValidValuesForMissingTable() {
+        StagingDataProvider provider = new InMemoryDataProvider("test", "1.0");
+
+        assertEquals(Collections.emptySet(), provider.getValidSites());
+    }
+
+    @Test
+    void testValidValuesRequireExactlyOneInputDefinition() {
+        InMemoryDataProvider noInputs = new InMemoryDataProvider("test", "1.0");
+        noInputs.addTable(
+            table(
+                StagingDataProvider.PRIMARY_SITE_TABLE,
+                new StagingColumnDefinition("result", "Result", ColumnType.ENDPOINT)
+            )
+        );
+
+        RuntimeException noInputException = assertThrows(RuntimeException.class, noInputs::getValidSites);
+        assertInvalidInputDefinition(noInputException);
+
+        InMemoryDataProvider multipleInputs = new InMemoryDataProvider("test", "1.0");
+        multipleInputs.addTable(
+            table(
+                StagingDataProvider.PRIMARY_SITE_TABLE,
+                new StagingColumnDefinition("site", "Site", ColumnType.INPUT),
+                new StagingColumnDefinition("other", "Other", ColumnType.INPUT)
+            )
+        );
+
+        RuntimeException multipleInputException = assertThrows(RuntimeException.class, multipleInputs::getValidSites);
+        assertInvalidInputDefinition(multipleInputException);
+    }
+
+    private static void assertInvalidInputDefinition(RuntimeException exception) {
+        assertTrue(exception.getCause() instanceof IllegalStateException);
+        assertEquals(
+            "Table 'primary_site' must have one and only one INPUT column.",
+            exception.getCause().getMessage()
+        );
+    }
+
+    @Test
+    void testValidValuesExpandRangesWithZeroPadding() {
+        InMemoryDataProvider provider = new InMemoryDataProvider("test", "1.0");
+        StagingTable table = table(
+            StagingDataProvider.PRIMARY_SITE_TABLE,
+            new StagingColumnDefinition("site", "Site", ColumnType.INPUT)
+        );
+        table.setRawRows(
+            Arrays.asList(
+                Collections.singletonList("001"),
+                Collections.singletonList("003-005"),
+                Collections.singletonList("010")
+            )
+        );
+        provider.addTable(table);
+
+        assertEquals(Set.of("001", "003", "004", "005", "010"), provider.getValidSites());
+        assertTrue(provider.isValidSite("004"));
+        assertFalse(provider.isValidSite("4"));
+    }
+
+    private static StagingTable table(String id, StagingColumnDefinition... definitions) {
+        StagingTable table = new StagingTable(id);
+        table.setColumnDefinitions(Arrays.asList(definitions));
+        table.setRawRows(Collections.emptyList());
+        return table;
     }
 
     @Test

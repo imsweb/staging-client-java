@@ -44,6 +44,13 @@ jobs:
           chmod +x ./mvnw
           ./mvnw -B verify
 
+      - name: Upload JaCoCo report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jacoco-report
+          path: target/site/jacoco/
+
       - name: SonarCloud Analysis
         if: github.actor != 'dependabot[bot]'
         env:

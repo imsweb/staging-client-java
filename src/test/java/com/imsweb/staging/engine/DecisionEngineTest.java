@@ -4,18 +4,15 @@
  */
 package com.imsweb.staging.engine;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import static com.imsweb.staging.engine.DecisionEngine.BLANK_OUTPUT;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.tuple;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.imsweb.staging.InMemoryDataProvider;
 import com.imsweb.staging.entities.ColumnDefinition.ColumnType;
@@ -38,16 +35,17 @@ import com.imsweb.staging.entities.impl.StagingSchemaInput;
 import com.imsweb.staging.entities.impl.StagingSchemaOutput;
 import com.imsweb.staging.entities.impl.StagingTable;
 import com.imsweb.staging.entities.impl.StagingTablePath;
-
-import static com.imsweb.staging.engine.DecisionEngine.BLANK_OUTPUT;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.tuple;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 /**
  * Test class for DecisionEngine
@@ -242,7 +240,9 @@ class DecisionEngineTest {
         schema.addInput("c");
         schema.addInitialContext("d", "HARD-CODE");
         StagingMapping mapping = new StagingMapping("m1");
-        mapping.setTablePaths(Arrays.asList(new StagingTablePath("table_sample_first"), new StagingTablePath("table_sample_second")));
+        mapping.setTablePaths(
+            Arrays.asList(new StagingTablePath("table_sample_first"), new StagingTablePath("table_sample_second"))
+        );
         schema.addMapping(mapping);
         provider.addSchema(schema);
 
@@ -256,7 +256,9 @@ class DecisionEngineTest {
         schema.addInput("a");
         schema.addInput("b");
         schema.addInput("c");
-        schema.addMapping(new StagingMapping("m1", Collections.singletonList(new StagingTablePath("table_multiple_inputs"))));
+        schema.addMapping(
+            new StagingMapping("m1", Collections.singletonList(new StagingTablePath("table_multiple_inputs")))
+        );
         provider.addSchema(schema);
 
         schema = new StagingSchema("starting_recursion");
@@ -404,8 +406,8 @@ class DecisionEngineTest {
 
         input.put("size", "003");
         assertThat(DecisionEngine.matchTable(matchTable, input))
-                .extracting(Endpoint::getType, Endpoint::getValue, Endpoint::getResultKey)
-                .containsExactly(tuple(EndpointType.JUMP, "some_crazy_table", "size_result"));
+            .extracting(Endpoint::getType, Endpoint::getValue, Endpoint::getResultKey)
+            .containsExactly(tuple(EndpointType.JUMP, "some_crazy_table", "size_result"));
 
         input.put("size", "014");
         List<? extends Endpoint> results = DecisionEngine.matchTable(matchTable, input);
@@ -416,8 +418,8 @@ class DecisionEngineTest {
 
         input.put("size", "086");
         assertThat(DecisionEngine.matchTable(matchTable, input))
-                .extracting(Endpoint::getType, Endpoint::getValue, Endpoint::getResultKey)
-                .containsExactly(tuple(EndpointType.ERROR, "Get that huge stuff out of here!", "size_result"));
+            .extracting(Endpoint::getType, Endpoint::getValue, Endpoint::getResultKey)
+            .containsExactly(tuple(EndpointType.ERROR, "Get that huge stuff out of here!", "size_result"));
 
         // try with a value not in the table
         input.put("size", "021");
@@ -497,30 +499,30 @@ class DecisionEngineTest {
 
         // specify to only match on key1, there should be a match to the first line
         assertThat(DecisionEngine.matchTable(matchTable, input, new HashSet<>(Collections.singletonList("key1"))))
-                .extracting(Endpoint::getType, Endpoint::getValue, Endpoint::getResultKey)
-                .containsExactly(tuple(EndpointType.MATCH, "LINE1", "result"));
+            .extracting(Endpoint::getType, Endpoint::getValue, Endpoint::getResultKey)
+            .containsExactly(tuple(EndpointType.MATCH, "LINE1", "result"));
 
         // add key2 to the input map and there should be a match
         input.put("key2", "7");
         assertThat(DecisionEngine.matchTable(matchTable, input))
-                .extracting(Endpoint::getType, Endpoint::getValue, Endpoint::getResultKey)
-                .containsExactly(tuple(EndpointType.MATCH, "LINE2", "result"));
+            .extracting(Endpoint::getType, Endpoint::getValue, Endpoint::getResultKey)
+            .containsExactly(tuple(EndpointType.MATCH, "LINE2", "result"));
 
         // if searching on key1 only, even though key2 was supplied should still match to first line
         assertThat(DecisionEngine.matchTable(matchTable, input, new HashSet<>(Collections.singletonList("key1"))))
-                .extracting(Endpoint::getType, Endpoint::getValue, Endpoint::getResultKey)
-                .containsExactly(tuple(EndpointType.MATCH, "LINE1", "result"));
+            .extracting(Endpoint::getType, Endpoint::getValue, Endpoint::getResultKey)
+            .containsExactly(tuple(EndpointType.MATCH, "LINE1", "result"));
 
         // supply an empty set of keys (the same meaning as not passing any keys
         assertThat(DecisionEngine.matchTable(matchTable, input, new HashSet<>()))
-                .extracting(Endpoint::getType, Endpoint::getValue, Endpoint::getResultKey)
-                .containsExactly(tuple(EndpointType.MATCH, "LINE1", "result"));
+            .extracting(Endpoint::getType, Endpoint::getValue, Endpoint::getResultKey)
+            .containsExactly(tuple(EndpointType.MATCH, "LINE1", "result"));
 
         // supply an invalid key.  I think this should find nothing, but for the moment finds a match to the first row since none of the cells were
         // compared to.  It is the same as matching to a table with no INPUTS which would currently find a match to the first row.
         assertThat(DecisionEngine.matchTable(matchTable, input, new HashSet<>(Collections.singletonList("bad_key"))))
-                .extracting(Endpoint::getType, Endpoint::getValue, Endpoint::getResultKey)
-                .containsExactly(tuple(EndpointType.MATCH, "LINE1", "result"));
+            .extracting(Endpoint::getType, Endpoint::getValue, Endpoint::getResultKey)
+            .containsExactly(tuple(EndpointType.MATCH, "LINE1", "result"));
     }
 
     @Test
@@ -537,6 +539,10 @@ class DecisionEngineTest {
         input.put("a", "");
         List<? extends Endpoint> endpoints = DecisionEngine.matchTable(tableMissing, input);
         assertNull(endpoints);
+
+        // A malformed table with no parsed row collection also has no match.
+        ((StagingTable) tableMissing).setTableRows(null);
+        assertNull(DecisionEngine.matchTable(tableMissing, input));
     }
 
     @Test
@@ -584,7 +590,9 @@ class DecisionEngineTest {
         schema.setSchemaSelectionTable("table_selection");
         schema.addInput("a");
         schema.addInput("b");
-        schema.addMapping(new StagingMapping("m1", Collections.singletonList(new StagingTablePath("table_key_references"))));
+        schema.addMapping(
+            new StagingMapping("m1", Collections.singletonList(new StagingTablePath("table_key_references")))
+        );
         provider.addSchema(schema);
         DecisionEngine engine = new DecisionEngine(provider);
 
@@ -809,7 +817,7 @@ class DecisionEngineTest {
     void testParameterLookupValidation() {
         Map<String, String> input = new HashMap<>();
         input.put("a", "3");
-        input.put("b", "31");  // value is not in lookup table
+        input.put("b", "31"); // value is not in lookup table
 
         Result result = _ENGINE.process("starting_sample", input);
 
@@ -836,7 +844,7 @@ class DecisionEngineTest {
     void testSingleTableProcess() {
         Map<String, String> input = new HashMap<>();
         input.put("a", "7");
-        input.put("b", "03");  // should map to "hemeretic" without using second table
+        input.put("b", "03"); // should map to "hemeretic" without using second table
         input.put("e", "X");
         Result result = _ENGINE.process("starting_sample", input);
 
@@ -917,7 +925,10 @@ class DecisionEngineTest {
         result = _ENGINE.process("starting_sample", input);
         assertEquals(1, result.getErrors().size());
         assertEquals(2, result.getPath().size());
-        assertEquals("Matching resulted in an error in table 'table_sample_first' for column 'result' (8,99)", result.getErrors().getFirst().getMessage());
+        assertEquals(
+            "Matching resulted in an error in table 'table_sample_first' for column 'result' (8,99)",
+            result.getErrors().getFirst().getMessage()
+        );
         assertNull(result.getErrors().getFirst().getKey());
         assertEquals("table_sample_first", result.getErrors().getFirst().getTable());
         assertEquals(Collections.singletonList("result"), result.getErrors().getFirst().getColumns());
@@ -933,6 +944,7 @@ class DecisionEngineTest {
         table.addRawRow("1", "VALUE:FOUND1");
         table.addRawRow("2", "VALUE");
         table.addRawRow("3", "VALUE:");
+        table.addRawRow("4", "ERROR");
         table.addRawRow("*", "MATCH");
         provider.addTable(table);
 
@@ -942,13 +954,21 @@ class DecisionEngineTest {
         inputKey.setDefault("0");
         schema.addInput(inputKey);
         schema.addInitialContext("result", "0");
-        schema.addMapping(new StagingMapping("m1", Collections.singletonList(new StagingTablePath("table_null_values"))));
+        StagingTablePath nullValuePath = new StagingTablePath("table_null_values");
+        nullValuePath.addOutputMapping("other", "mapped");
+        schema.addMapping(new StagingMapping("m1", Collections.singletonList(nullValuePath)));
         provider.addSchema(schema);
         DecisionEngine engine = new DecisionEngine(provider);
 
         Map<String, String> input = new HashMap<>();
         Result result = engine.process("starting_null_values", input);
 
+        assertFalse(result.hasErrors());
+        assertEquals("0", input.get("result"));
+
+        input.clear();
+        input.put("a", null);
+        result = engine.process("starting_null_values", input);
         assertFalse(result.hasErrors());
         assertEquals("0", input.get("result"));
 
@@ -969,6 +989,20 @@ class DecisionEngineTest {
         result = engine.process("starting_null_values", input);
         assertFalse(result.hasErrors());
         assertEquals("", input.get("result"));
+
+        input.clear();
+        input.put("a", "4");
+        result = engine.process("starting_null_values", input);
+        assertThat(result.getErrors())
+            .extracting(Error::getType, Error::getMessage, Error::getTable, Error::getColumns)
+            .containsExactly(
+                tuple(
+                    Error.Type.STAGING_ERROR,
+                    "Matching resulted in an error in table 'table_null_values' for column 'result' (4)",
+                    "table_null_values",
+                    Collections.singletonList("result")
+                )
+            );
     }
 
     @Test
@@ -1028,7 +1062,12 @@ class DecisionEngineTest {
         StagingSchema schema = new StagingSchema("stop_then_jump");
         schema.setSchemaSelectionTable("table_stop_then_jump");
         schema.addInput("input");
-        schema.addMapping(new StagingMapping("m1", Arrays.asList(new StagingTablePath("table_stop_then_jump"), new StagingTablePath("table_after_stop"))));
+        schema.addMapping(
+            new StagingMapping(
+                "m1",
+                Arrays.asList(new StagingTablePath("table_stop_then_jump"), new StagingTablePath("table_after_stop"))
+            )
+        );
         provider.addSchema(schema);
 
         Map<String, String> context = new HashMap<>();
@@ -1393,6 +1432,10 @@ class DecisionEngineTest {
         context.put("source", "B");
         assertTrue(engine.isMappingInvolved(exclusion, context));
 
+        context.clear();
+        assertFalse(engine.isMappingInvolved(inclusion, context));
+        assertTrue(engine.isMappingInvolved(exclusion, context));
+
         assertThrows(IllegalStateException.class, () -> engine.isMappingInvolved(inclusion, null));
         StagingSchema schema = new StagingSchema("schema");
         assertThrows(IllegalStateException.class, () -> engine.getInvolvedMappings(schema, null));
@@ -1406,12 +1449,20 @@ class DecisionEngineTest {
     @Test
     void testMissingSchemaAndTableReferences() {
         InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
+        StagingTable table = new StagingTable("null_output_key");
+        table.addColumnDefinition(null, ColumnType.ENDPOINT);
+        provider.addTable(table);
         DecisionEngine engine = new DecisionEngine(provider);
 
         assertThrows(IllegalStateException.class, () -> engine.process("missing", new HashMap<>()));
         assertThrows(IllegalStateException.class, () -> engine.getInvolvedTables("missing"));
         assertTrue(engine.getInputs(new StagingTablePath("missing")).isEmpty());
         assertTrue(engine.getOutputs(new StagingTablePath("missing")).isEmpty());
+        assertTrue(engine.getInputs((StagingTablePath) null).isEmpty());
+        assertTrue(engine.getOutputs((StagingTablePath) null).isEmpty());
+        assertTrue(engine.getInputs(new StagingMapping("empty"), new HashSet<>()).isEmpty());
+        assertTrue(engine.getOutputs(new StagingMapping("empty")).isEmpty());
+        assertTrue(engine.getOutputs(new StagingTablePath("null_output_key")).isEmpty());
 
         StagingTablePath path = new StagingTablePath("starting_table");
         Result result = new Result(new HashMap<>());
@@ -1445,7 +1496,10 @@ class DecisionEngineTest {
         assertEquals(asSet("a", "b", "c"), _ENGINE.getInputs(provider.getSchema("starting_inclusions")));
         assertEquals(asSet("a"), _ENGINE.getInputs(provider.getSchema("starting_recursion")));
         assertEquals(asSet("a", "b", "c"), _ENGINE.getInputs(provider.getSchema("starting_multiple_endpoints")));
-        assertEquals(asSet("b", "not_in_input_list"), _ENGINE.getInputs(provider.getSchema("starting_inclusions_extra_inputs")));
+        assertEquals(
+            asSet("b", "not_in_input_list"),
+            _ENGINE.getInputs(provider.getSchema("starting_inclusions_extra_inputs"))
+        );
         assertEquals(asSet("main_input"), _ENGINE.getInputs(provider.getSchema("starting_intermediate_values")));
     }
 
@@ -1457,9 +1511,18 @@ class DecisionEngineTest {
         assertEquals(asSet("result", "shared_result"), _ENGINE.getOutputs(provider.getSchema("starting_sample")));
         assertEquals(asSet("result", "special"), _ENGINE.getOutputs(provider.getSchema("starting_inclusions")));
         assertEquals(asSet("result"), _ENGINE.getOutputs(provider.getSchema("starting_recursion")));
-        assertEquals(asSet("result", "r1", "r2", "r3"), _ENGINE.getOutputs(provider.getSchema("starting_multiple_endpoints")));
-        assertEquals(asSet("mapped_result"), _ENGINE.getOutputs(provider.getSchema("starting_inclusions_extra_inputs")));
-        assertEquals(asSet("intermediate_output", "final_output"), _ENGINE.getOutputs(provider.getSchema("starting_intermediate_values")));
+        assertEquals(
+            asSet("result", "r1", "r2", "r3"),
+            _ENGINE.getOutputs(provider.getSchema("starting_multiple_endpoints"))
+        );
+        assertEquals(
+            asSet("mapped_result"),
+            _ENGINE.getOutputs(provider.getSchema("starting_inclusions_extra_inputs"))
+        );
+        assertEquals(
+            asSet("intermediate_output", "final_output"),
+            _ENGINE.getOutputs(provider.getSchema("starting_intermediate_values"))
+        );
     }
 
     @Test
@@ -1617,6 +1680,15 @@ class DecisionEngineTest {
         schema.addInput(input);
         provider.addSchema(schema);
 
+        schema = new StagingSchema("invalid_required_continue");
+        schema.setSchemaSelectionTable("valid_inputs");
+        schema.setOnInvalidInput(Schema.StagingInputErrorHandler.CONTINUE);
+        input = new StagingSchemaInput("input", "input", "valid_inputs");
+        input.setDefault("X");
+        input.setUsedForStaging(true);
+        schema.addInput(input);
+        provider.addSchema(schema);
+
         schema = new StagingSchema("invalid_non_required_default");
         schema.setSchemaSelectionTable("valid_inputs");
         schema.setOnInvalidInput(Schema.StagingInputErrorHandler.FAIL_WHEN_USED_FOR_STAGING);
@@ -1650,6 +1722,10 @@ class DecisionEngineTest {
         assertEquals(Type.FAILED_INPUT, result.getType());
         assertEquals(Error.Type.INVALID_REQUIRED_INPUT, result.getErrors().getFirst().getType());
 
+        result = engine.process("invalid_required_continue", new HashMap<>());
+        assertEquals(Type.STAGED, result.getType());
+        assertEquals(Error.Type.INVALID_REQUIRED_INPUT, result.getErrors().getFirst().getType());
+
         result = engine.process("invalid_non_required_default", new HashMap<>());
         assertEquals(Type.STAGED, result.getType());
         assertEquals(Error.Type.INVALID_NON_REQUIRED_INPUT, result.getErrors().getFirst().getType());
@@ -1658,6 +1734,27 @@ class DecisionEngineTest {
         assertEquals(Type.FAILED_INPUT, result.getType());
         assertEquals(Error.Type.INVALID_NON_REQUIRED_INPUT, result.getErrors().getFirst().getType());
         assertEquals("X", result.getContext().get("input"));
+    }
+
+    @Test
+    void testDefaultTableMatchWithoutRequestedValue() {
+        InMemoryDataProvider provider = new InMemoryDataProvider("Test", "1.0");
+        StagingTable table = new StagingTable("malformed_default");
+        table.addColumnDefinition("selector", ColumnType.INPUT);
+        table.addColumnDefinition("other", ColumnType.ENDPOINT);
+        table.addRawRow("*", "VALUE:fallback");
+        provider.addTable(table);
+
+        StagingSchemaInput input = new StagingSchemaInput("requested");
+        input.setDefaultTable("malformed_default");
+        Result result = new Result(new HashMap<>());
+
+        assertEquals("", new DecisionEngine(provider).getDefault(input, result.getContext(), result));
+        assertThat(result.getErrors())
+            .extracting(Error::getType, Error::getKey, Error::getMessage)
+            .containsExactly(
+                tuple(Error.Type.MATCH_NOT_FOUND, "requested", "Default table malformed_default did not find a match")
+            );
     }
 
     @Test
@@ -1817,6 +1914,7 @@ class DecisionEngineTest {
         table.addRawRow("001", "VALUE:000");
         table.addRawRow("002", "VALUE:{{input1}}");
         provider.addTable(table);
+        table.setExtraInput(new HashSet<>(Arrays.asList("input1", "unmapped", "output1")));
 
         StagingSchema schema = new StagingSchema("sample_outputs");
         schema.setSchemaSelectionTable("table_selection");
@@ -1832,7 +1930,17 @@ class DecisionEngineTest {
 
         DecisionEngine engine = new DecisionEngine(provider);
 
-        assertEquals(new HashSet<>(Collections.singletonList("remapped1")), engine.getInputs(schema.getMappings().getFirst().getTablePaths().getFirst()));
+        assertEquals(
+            new HashSet<>(Arrays.asList("remapped1", "unmapped")),
+            engine.getInputs(schema.getMappings().getFirst().getTablePaths().getFirst())
+        );
+
+        StagingTable sharedKeyTable = new StagingTable("shared_input_output");
+        sharedKeyTable.addColumnDefinition("shared", ColumnType.INPUT);
+        sharedKeyTable.addColumnDefinition("shared", ColumnType.ENDPOINT);
+        provider.addTable(sharedKeyTable);
+
+        assertEquals(Collections.singleton("shared"), engine.getInputs(new StagingTablePath("shared_input_output")));
     }
 
     @Test
@@ -1891,7 +1999,12 @@ class DecisionEngineTest {
 
         // first, verify getInvolvedTables is working with default tables
         Set<String> tables = engine.getInvolvedTables("test_default_table");
-        assertThat(tables).containsExactlyInAnyOrder("table_input1", "table_input2", "table_input2_default", "table_mapping");
+        assertThat(tables).containsExactlyInAnyOrder(
+            "table_input1",
+            "table_input2",
+            "table_input2_default",
+            "table_mapping"
+        );
 
         // test a case where the default_table make a successful lookup
         Map<String, String> context = new HashMap<>();
@@ -1928,7 +2041,11 @@ class DecisionEngineTest {
         assertFalse(result1.hasErrors());
 
         // test a case where the default_table did not exist
-        schema.getInputs().stream().filter(i -> i.getDefaultTable() != null).forEach(i -> i.setDefaultTable("does_not_exist"));
+        schema
+            .getInputs()
+            .stream()
+            .filter(i -> i.getDefaultTable() != null)
+            .forEach(i -> i.setDefaultTable("does_not_exist"));
         context = new HashMap<>();
         context.put("input1", "000");
         result = engine.process("test_default_table", context);
@@ -1947,7 +2064,11 @@ class DecisionEngineTest {
         assertEquals("Default table does not exist: does_not_exist", result1.getErrors().getFirst().getMessage());
 
         // test a case where the default table did not find a match
-        schema.getInputs().stream().filter(i -> i.getDefaultTable() != null).forEach(i -> i.setDefaultTable("table_input2_default"));
+        schema
+            .getInputs()
+            .stream()
+            .filter(i -> i.getDefaultTable() != null)
+            .forEach(i -> i.setDefaultTable("table_input2_default"));
         provider.getTable("table_input2_default").setRawRows(new ArrayList<>());
         provider.initTable(provider.getTable("table_input2_default"));
         context = new HashMap<>();
@@ -1956,7 +2077,10 @@ class DecisionEngineTest {
         assertEquals(Type.STAGED, result.getType());
         assertEquals(1, result.getErrors().size());
         assertEquals("input2", result.getErrors().getFirst().getKey());
-        assertEquals("Default table table_input2_default did not find a match", result.getErrors().getFirst().getMessage());
+        assertEquals(
+            "Default table table_input2_default did not find a match",
+            result.getErrors().getFirst().getMessage()
+        );
 
         // check same case with getDefault method
         context = new HashMap<>();
@@ -1965,7 +2089,9 @@ class DecisionEngineTest {
         assertEquals("", engine.getDefault(input2, context, result1));
         assertEquals(1, result1.getErrors().size());
         assertEquals("input2", result.getErrors().getFirst().getKey());
-        assertEquals("Default table table_input2_default did not find a match", result.getErrors().getFirst().getMessage());
+        assertEquals(
+            "Default table table_input2_default did not find a match",
+            result.getErrors().getFirst().getMessage()
+        );
     }
-
 }
