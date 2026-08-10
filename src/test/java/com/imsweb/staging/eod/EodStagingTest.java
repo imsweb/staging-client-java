@@ -300,7 +300,7 @@ class EodStagingTest extends StagingTest {
         data.setInput(EodInput.PRIMARY_SITE, "C111");
         data.setInput(EodInput.HISTOLOGY, "8200");
         _STAGING.stage(data);
-        assertThat(data.getResult()).isEqualTo(Result.FAILED_MULITPLE_MATCHING_SCHEMAS);
+        assertThat(data.getResult()).isEqualTo(Result.FAILED_MULTIPLE_MATCHING_SCHEMAS);
     }
 
     @Test

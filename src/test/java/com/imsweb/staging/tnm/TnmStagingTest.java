@@ -297,7 +297,7 @@ class TnmStagingTest extends StagingTest {
         data.setInput(TnmStagingData.TnmInput.PRIMARY_SITE, "C111");
         data.setInput(TnmStagingData.TnmInput.HISTOLOGY, "8200");
         _STAGING.stage(data);
-        assertEquals(Result.FAILED_MULITPLE_MATCHING_SCHEMAS, data.getResult());
+        assertEquals(Result.FAILED_MULTIPLE_MATCHING_SCHEMAS, data.getResult());
     }
 
     @Test

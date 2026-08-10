@@ -42,6 +42,12 @@ public class StagingData {
         FAILED_NO_MATCHING_SCHEMA,
 
         // multiple matching schemas were found; a discriminator is probably needed
+        FAILED_MULTIPLE_MATCHING_SCHEMAS,
+
+        /**
+         * @deprecated use {@link #FAILED_MULTIPLE_MATCHING_SCHEMAS}
+         */
+        @Deprecated(since = "12.0", forRemoval = true)
         FAILED_MULITPLE_MATCHING_SCHEMAS,
 
         // year of DX out of valid range

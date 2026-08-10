@@ -625,6 +625,10 @@ public class DecisionEngine {
 
     /**
      * Using the supplied context, process a schema.  The results will be added to the context.
+      * <p>
+      * **The context Map is mutated in place.** Input values are trimmed, defaults are resolved,
+      * and the map's contents are replaced with only the staging outputs by the time this method returns.
+      * Do not reuse the same Map instance across multiple calls unless you deep-copy it first.
      * @param schemaId an schema identifier
      * @param context a Map containing the context
      * @return a Result
@@ -640,6 +644,10 @@ public class DecisionEngine {
 
     /**
      * Using the supplied context, process a schema.  The results will be added to the context.
+      * <p>
+      * **The context Map is mutated in place.** Input values are trimmed, defaults are resolved,
+      * and the map's contents are replaced with only the staging outputs by the time this method returns.
+      * Do not reuse the same Map instance across multiple calls unless you deep-copy it first.
      * <p>
      * Input-mapping destination keys on a table path are temporary aliases scoped to that path. They are added before the path is processed and removed afterward. An input-mapping
      * destination must therefore not be used to preserve a pre-existing context value; any previous value with the same key is overwritten and is not restored.

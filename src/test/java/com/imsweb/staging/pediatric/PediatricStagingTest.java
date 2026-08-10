@@ -270,16 +270,16 @@ class PediatricStagingTest extends StagingTest {
         data.setInput(PediatricInput.PRIMARY_SITE, "C699");
         data.setInput(PediatricInput.HISTOLOGY, "9500");
         _STAGING.stage(data);
-        assertThat(data.getResult()).isEqualTo(Result.FAILED_MULITPLE_MATCHING_SCHEMAS);
+        assertThat(data.getResult()).isEqualTo(Result.FAILED_MULTIPLE_MATCHING_SCHEMAS);
 
         // test other constructors
         _STAGING.stage(new PediatricStagingData("C699", "9500", "15"));
-        assertThat(data.getResult()).isEqualTo(Result.FAILED_MULITPLE_MATCHING_SCHEMAS);
+        assertThat(data.getResult()).isEqualTo(Result.FAILED_MULTIPLE_MATCHING_SCHEMAS);
 
         data = new PediatricStagingData("C699", "9500");
         data.setInput(PediatricInput.AGE_DX, "15");
         _STAGING.stage(data);
-        assertThat(data.getResult()).isEqualTo(Result.FAILED_MULITPLE_MATCHING_SCHEMAS);
+        assertThat(data.getResult()).isEqualTo(Result.FAILED_MULTIPLE_MATCHING_SCHEMAS);
 
         assertThat(data.getInput(PediatricInput.PRIMARY_SITE)).isEqualTo("C699");
         assertThat(data.getInput(PediatricInput.HISTOLOGY)).isEqualTo("9500");

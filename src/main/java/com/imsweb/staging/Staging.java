@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -583,7 +582,7 @@ public final class Staging {
             if (schemas.isEmpty())
                 data.setResult(StagingData.Result.FAILED_NO_MATCHING_SCHEMA);
             else
-                data.setResult(StagingData.Result.FAILED_MULITPLE_MATCHING_SCHEMAS);
+                data.setResult(StagingData.Result.FAILED_MULTIPLE_MATCHING_SCHEMAS);
             return data;
         }
 
@@ -682,8 +681,7 @@ public final class Staging {
         context.put(CTX_ALGORITHM_VERSION, getVersion());
 
         // put the current year in the context
-        Calendar now = Calendar.getInstance();
-        context.put(CTX_YEAR_CURRENT, String.valueOf(now.get(Calendar.YEAR)));
+        context.put(CTX_YEAR_CURRENT, String.valueOf(java.time.LocalDate.now().getYear()));
     }
 
     /**
