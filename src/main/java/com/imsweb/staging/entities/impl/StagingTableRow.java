@@ -46,11 +46,13 @@ public class StagingTableRow implements TableRow {
      * @param key key
      * @param range range
      */
-    @SuppressWarnings("unchecked")
     @Override
-    public void addInput(String key, List<? extends Range> range) {
-        _inputs.put(key, (List<StagingRange>)range);
-    }
+        public void addInput(String key, List<? extends Range> range) {
+            List<StagingRange> staging = new ArrayList<>();
+            for (Range r : range)
+                staging.add((StagingRange)r);
+            _inputs.put(key, staging);
+        }
 
     @Override
     @JsonProperty("endpoint")
@@ -63,7 +65,9 @@ public class StagingTableRow implements TableRow {
     }
 
     @Override
-    public void addEndpoint(Endpoint endpoint) {
-        _endpoints.add((StagingEndpoint)endpoint);
-    }
+        public void addEndpoint(Endpoint endpoint) {
+            if (!(endpoint instanceof StagingEndpoint s))
+                throw new IllegalArgumentException("Only StagingEndpoint accepted: " + endpoint.getClass().getName());
+            _endpoints.add(s);
+        }
 }
