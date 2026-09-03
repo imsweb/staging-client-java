@@ -13,7 +13,7 @@ import com.imsweb.staging.updater.UpdaterUtils;
 public class PediatricUpdateFromAPI {
 
     public static void main(String[] args) throws IOException {
-        UpdaterUtils.update("pediatric", "1.3", new HashSet<>(Collections.singletonList("STAGING")), Paths.get("c:/dev/tmp"));
+        UpdaterUtils.update("pediatric", "1.4", new HashSet<>(Collections.singletonList("STAGING")), Paths.get("c:/dev/tmp"));
     }
 
 }

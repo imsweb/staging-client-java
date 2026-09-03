@@ -51,7 +51,7 @@ class PediatricStagingTest extends StagingTest {
 
     @Override
     public String getVersion() {
-        return "1.3";
+        return "1.4";
     }
 
     @Test
