@@ -25,6 +25,7 @@ developed to be compatible with the Toronto Staging v1.1 definitions.
 
 | Version         | Release                                                                      | Algorithm ZIP                                                                                                  |
 |-----------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+| 1.4             | [11.10.0](https://github.com/imsweb/staging-client-java/releases/tag/v11.10.0) | [pediatric-1.4.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.10.0/pediatric-1.4.zip) |
 | 1.3             | [11.7.1](https://github.com/imsweb/staging-client-java/releases/tag/v11.7.1) | [pediatric-1.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.7.1/pediatric-1.3.zip) |
 | 1.3 (**BETA**)  | [11.6.0](https://github.com/imsweb/staging-client-java/releases/tag/v11.6.0) | [pediatric-1.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.6.0/pediatric-1.3.zip) |
 | 1.2 (*revised*) | [11.3.2](https://github.com/imsweb/staging-client-java/releases/tag/v11.3.2) | [pediatric-1.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.3.2/pediatric-1.2.zip) |
