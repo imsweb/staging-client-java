@@ -105,7 +105,6 @@ public class EodStagingData extends StagingData {
         GESTATIONAL_PROG_INDEX("gestational_prog_index"),
         HER2_SUMMARY("her2_summary"),
         LDH_LEVEL("ldh_level"),
-        LN_POS_AXILLARY_LEVEL_1_2("ln_pos_axillary_level_1_2"),
         LN_SIZE_OF_METS("ln_size_of_mets"),
         MEASURED_BASAL_DIAMETER("measured_basal_diameter"),
         MEASURED_THICKNESS("measured_thickness"),
