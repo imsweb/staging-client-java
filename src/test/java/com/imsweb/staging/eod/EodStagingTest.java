@@ -54,12 +54,12 @@ class EodStagingTest extends StagingTest {
 
     @Override
     public String getVersion() {
-        return "3.3";
+        return "3.4";
     }
 
     @Test
     void testBasicInitialization() {
-        assertThat(_STAGING.getSchemaIds()).hasSize(141);
+        assertThat(_STAGING.getSchemaIds()).hasSize(149);
         assertThat(_STAGING.getTableIds()).isNotEmpty();
 
         assertThat(_STAGING.getSchema("urethra")).isNotNull();
@@ -134,7 +134,7 @@ class EodStagingTest extends StagingTest {
 
         // test searching on only hist
         lookup = _STAGING.lookupSchema(new EodSchemaLookup(null, "9702"));
-        assertThat(lookup).hasSize(8);
+        assertThat(lookup).hasSize(2);
 
         // test that searching on only discriminator_1 returns no results
         schemaLookup = new EodSchemaLookup(null, null);
@@ -307,19 +307,36 @@ class EodStagingTest extends StagingTest {
     void testInvolvedTables() {
         Set<String> tables = _STAGING.getInvolvedTables("adnexa_uterine_other");
 
-        assertThat(tables).containsOnly("seer_mets_48348", "nodes_dcc", "grade_clinical_standard_non_ajcc_32473", "grade_pathological_standard_non_ajcc_5627",
-                "adnexa_uterine_other_97891", "nodes_pos_fpa", "tumor_size_pathological_25597", "tumor_size_clinical_60979", "primary_site", "histology",
-                "nodes_exam_76029", "grade_post_therapy_clin_69737", "grade_post_therapy_path_75348", "schema_selection_adnexa_uterine_other",
-                "year_dx_validation", "summary_stage_rpa", "tumor_size_summary_63115", "extension_bcn", "combined_grade_56638", "neoadjuvant_therapy_37302",
-                "derived_grade_standard_non_ajcc_63932", "neoadj_tx_treatment_effect_18122", "neoadj_tx_clinical_response_31723", "ss2018_adnexa_uterine_other_values_44976",
-                "behavior", "type_of_reporting_source_76696");
+        assertThat(tables).containsOnly("seer_mets_48348",
+                "nodes_dcc",
+                "grade_clinical_standard_non_ajcc_32473",
+                "grade_pathological_standard_non_ajcc_5627",
+                "adnexa_uterine_other_97891",
+                "nodes_pos_fpa",
+                "tumor_size_pathological_25597",
+                "tumor_size_clinical_60979",
+                "primary_site",
+                "histology",
+                "nodes_exam_76029",
+                "grade_post_therapy_clin_69737",
+                "grade_post_therapy_path_75348",
+                "schema_selection_adnexa_uterine_other",
+                "year_dx_validation",
+                "summary_stage_rpa",
+                "tumor_size_summary_63115",
+                "extension_bcn",
+                "combined_grade_56638",
+                "derived_grade_standard_non_ajcc_63932",
+                "ss2018_adnexa_uterine_other_values_44976",
+                "behavior",
+                "type_of_reporting_source_76696");
     }
 
     @Test
     void testInvolvedSchemas() {
         Set<String> schemas = _STAGING.getInvolvedSchemas("her2_summary_30512");
 
-        assertThat(schemas).isEqualTo(new HashSet<>(Collections.singletonList("breast")));
+        assertThat(schemas).isEqualTo(new HashSet<>(Arrays.asList("breast", "breast_v9_2027")));
     }
 
     @Test
@@ -445,7 +462,7 @@ class EodStagingTest extends StagingTest {
         assertThat(data.getErrors()).hasSize(5);
         assertThat(data.getPath()).hasSize(5);
         assertThat(data.getOutput()).hasSize(4);
-        assertThat(data.getOutput()).containsEntry(EodOutput.DERIVED_VERSION.toString(), "3.3");
+        assertThat(data.getOutput()).containsEntry(EodOutput.DERIVED_VERSION.toString(), "3.4");
     }
 
     @Test
