@@ -58,7 +58,7 @@ formats and code structures specific to the data item.
 
 | Version        | Release                                                                        | Algorithm ZIP                                                                                                     |
 |----------------|--------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| 3.4            | [11.11.0](https://github.com/imsweb/staging-client-java/releases/tag/v11.11.0) | [eod_public-3.4.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.11.0/eod_public-3.4.zip) |
+| 3.4            | [11.11.1](https://github.com/imsweb/staging-client-java/releases/tag/v11.11.1) | [eod_public-3.4.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.11.1/eod_public-3.4.zip) |
 | 3.3            | [11.7.1](https://github.com/imsweb/staging-client-java/releases/tag/v11.7.1)   | [eod_public-3.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.7.1/eod_public-3.3.zip)  |
 | 3.3 (**BETA**) | [11.6.0](https://github.com/imsweb/staging-client-java/releases/tag/v11.6.0)   | [eod_public-3.3.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.6.0/eod_public-3.3.zip)  |
 | 3.2            | [11.4.1](https://github.com/imsweb/staging-client-java/releases/tag/v11.4.1)   | [eod_public-3.2.zip](https://github.com/imsweb/staging-client-java/releases/download/v11.3.1/eod_public-3.2.zip)  |
